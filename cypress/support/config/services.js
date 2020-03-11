@@ -1282,17 +1282,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/hausa/labarai-51622389', // CPS MAP with video clip
+              '/hausa/labarai-51622389', // CPS MAP with video clip
               // '/hausa/multimedia/2012/07/120712_click', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/hausa/23269030', // CPS MAP with video clip
+              '/hausa/23269030', // CPS MAP with video clip
               // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -1477,12 +1477,15 @@ const genServices = {
         environments: {
           live: {
             paths: ['/igbo/articles/ckjn8jnrn75o'], // CPS MAP with audio clip
-            test: {
-              paths: ['/igbo/articles/cr1lw620ygjo'],
-            },
-            local: {
-              paths: ['/igbo/articles/cr1lw620ygjo'],
-            },
+            enabled: true,
+          },
+          test: {
+            paths: ['/igbo/articles/cr1lw620ygjo'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/igbo/articles/cr1lw620ygjo'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1538,6 +1541,7 @@ const genServices = {
           },
           local: {
             paths: ['/igbo/media-23256786'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -1656,17 +1660,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/indonesia/media-51703269', // CPS MAP with video clip
+              '/indonesia/media-51703269', // CPS MAP with video clip
               // '/indonesia/bahasa_inggris/2016/08/160817_video_inggris', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/indonesia/media-23269037', // CPS MAP with video clip
+              '/indonesia/media-23269037', // CPS MAP with video clip
               // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -1784,6 +1788,7 @@ const genServices = {
           },
           local: {
             paths: ['/japanese/video-23248670'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -1914,6 +1919,7 @@ const genServices = {
           },
           local: {
             paths: ['/korean/media-23248686'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -2032,17 +2038,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/kyrgyz/magazine-51509456', // CPS MAP with video clip
+              '/kyrgyz/magazine-51509456', // CPS MAP with video clip
               // '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/kyrgyz/media-23257484', // CPS MAP with video clip
+              '/kyrgyz/media-23257484', // CPS MAP with video clip
               // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2164,6 +2170,7 @@ const genServices = {
           },
           local: {
             paths: ['/marathi/media-23127353'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -2440,17 +2447,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/nepali/news-51675223', // CPS MAP with video clip
+              '/nepali/news-51675223', // CPS MAP with video clip
               // '/nepali/multimedia/2013/08/130806_boudhavideo', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/nepali/media-23269034', // CPS MAP with audio clip
+              '/nepali/media-23269034', // CPS MAP with audio clip
               // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2516,6 +2523,7 @@ const genServices = {
           },
           local: {
             paths: ['/news/articles/cn7k01xp8kxo'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -2532,6 +2540,7 @@ const genServices = {
           },
           local: {
             paths: ['/news/articles/cxvxrj8tvppo'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -2621,17 +2630,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/pashto/world-51657953', // CPS MAP with video clip
+              '/pashto/world-51657953', // CPS MAP with video clip
               // '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/pashto/media-23257523', // CPS MAP with video clip
+              '/pashto/media-23257523', // CPS MAP with video clip
               // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -2697,6 +2706,7 @@ const genServices = {
           },
           local: {
             paths: ['/persian/articles/cej3lzd5e0go'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -2713,6 +2723,7 @@ const genServices = {
           },
           local: {
             paths: ['/persian/articles/cxvxrj8tvppo'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -2729,6 +2740,7 @@ const genServices = {
           },
           local: {
             paths: ['/persian'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -2780,6 +2792,7 @@ const genServices = {
               '/persian/iran-23231114', // CPS MAP with audio clip
               // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
+            enabled: true,
           },
           smoke: true,
         },
@@ -2882,14 +2895,17 @@ const genServices = {
         environments: {
           live: {
             paths: ['/pidgin/tori-50974590'], // CPS MAP with video clip
-            test: {
-              paths: ['/pidgin/23248703'], // CPS MAP with video clip
-              local: {
-                paths: ['/pidgin/23248703'], // CPS MAP with video clip
-              },
-              smoke: true,
-            },
+            enabled: true,
           },
+          test: {
+            paths: ['/pidgin/23248703'], // CPS MAP with video clip
+            enabled: true,
+          },
+          local: {
+            paths: ['/pidgin/23248703'], // CPS MAP with video clip
+            enabled: true,
+          },
+          smoke: true,
         },
       },
       photoGalleryPage: {
@@ -2904,6 +2920,7 @@ const genServices = {
           },
           local: {
             paths: ['/pidgin/sport-23252855'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -3099,18 +3116,19 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/punjabi/india-51325361', // CPS MAP with video clip
+              '/punjabi/india-51325361', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/punjabi/media-23248705', // CPS MAP with video clip
+              '/punjabi/media-23248705', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/punjabi/media-23248705'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -3280,6 +3298,7 @@ const genServices = {
           },
           local: {
             paths: ['/scotland/articles/czwj5l0n210o'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -3326,6 +3345,7 @@ const genServices = {
           },
           local: {
             paths: ['/serbian/articles/c805k05kr73o/cyr'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -3342,6 +3362,7 @@ const genServices = {
           },
           local: {
             paths: ['/serbian/articles/cabcdefghijo/cyr'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -3376,6 +3397,7 @@ const genServices = {
           },
           local: {
             paths: [], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
+            enabled: false,
           },
         },
         smoke: false,
@@ -3434,6 +3456,7 @@ const genServices = {
           },
           local: {
             paths: ['/serbian/articles/c805k05kr73o/lat'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -3604,17 +3627,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/sinhala/sri-lanka-51375061', // CPS MAP with video clip
+              '/sinhala/sri-lanka-51375061', // CPS MAP with video clip
               // '/sinhala/world/2015/09/150919_technology_at_schools', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/sinhala/world-23257567', // CPS MAP with video clip
+              '/sinhala/world-23257567', // CPS MAP with video clip
               // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -3739,17 +3762,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/somali/51642476', // CPS MAP with video clip
+              '/somali/51642476', // CPS MAP with video clip
               // '/somali/war/2010/09/100929_business', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/somali/hayadeed-23269042', // CPS MAP with video clip
+              '/somali/hayadeed-23269042', // CPS MAP with video clip
               // '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -3889,17 +3912,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/swahili/gnb-51703829', // CPS MAP with video clip
+              '/swahili/gnb-51703829', // CPS MAP with video clip
               // '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/swahili/media-23268999', // CPS MAP with audio clip
+              '/swahili/media-23268999', // CPS MAP with audio clip
               // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -4025,17 +4048,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/tamil/sport-51702939', // CPS MAP with video clip
+              '/tamil/sport-51702939', // CPS MAP with video clip
               // '/tamil/global/2014/07/140713_animalsvideo', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/tamil/india-23268994', // CPS MAP with video clip
+              '/tamil/india-23268994', // CPS MAP with video clip
               // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -4145,18 +4168,19 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/telugu/india-51309092', // CPS MAP with video clip
+              '/telugu/india-51309092', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/telugu/international-23263261', // CPS MAP with video clip
+              '/telugu/international-23263261', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/telugu/international-23263261'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -4259,18 +4283,19 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/thai/international-51285795', // CPS MAP with video clip
+              '/thai/international-51285795', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/thai/23122810', // CPS MAP with video clip
+              '/thai/23122810', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/thai/23122810'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -4389,18 +4414,19 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/tigrinya/news-51249937', // CPS MAP with video clip
+              '/tigrinya/news-51249937', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/tigrinya/news-23263262', // CPS MAP with video clip
+              '/tigrinya/news-23263262', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/news-23263262'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -4503,17 +4529,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/turkce/haberler-dunya-51621819', // CPS MAP with video clip
+              '/turkce/haberler-dunya-51621819', // CPS MAP with video clip
               // '/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/turkce/media-23268997', // CPS MAP with audio clip
+              '/turkce/media-23268997', // CPS MAP with audio clip
               // '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -4579,6 +4605,7 @@ const genServices = {
           },
           local: {
             paths: ['/ukchina/articles/c0e8weny66ko/simp'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -4741,6 +4768,7 @@ const genServices = {
           },
           local: {
             paths: [], // Enable once variants supported '/ukchina/trad/49375846'
+            enabled: false,
           },
         },
         smoke: false,
@@ -4973,14 +5001,14 @@ const genServices = {
               '/urdu/entertainment-51584098', // CPS MAP with audio clip
               // '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/urdu/world-23268929', // CPS MAP with video clip
               // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -5114,6 +5142,7 @@ const genServices = {
           },
           local: {
             paths: ['/uzbek/sport-23248721'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: true,
@@ -5216,17 +5245,17 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/vietnamese/forum-51506476', // CPS MAP with video clip
+              '/vietnamese/forum-51506476', // CPS MAP with video clip
               // '/vietnamese/multimedia/2015/04/150428_david_wheat_interview', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/vietnamese/media-23257614', // CPS MAP with video clip
+              '/vietnamese/media-23257614', // CPS MAP with video clip
               // '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -5336,18 +5365,19 @@ const genServices = {
         environments: {
           live: {
             paths: [
-              // '/yoruba/afrika-51116686', // CPS MAP with video clip
+              '/yoruba/afrika-51116686', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              // '/yoruba/media-23256797', // CPS MAP with video clip
+              '/yoruba/media-23256797', // CPS MAP with video clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/yoruba/media-23256797'], // CPS MAP with video clip
+            enabled: true,
           },
         },
         smoke: false,
@@ -5569,6 +5599,7 @@ const genServices = {
           },
           local: {
             paths: [], // Once variant support is available '/zhongwen/trad/chinese-news-49631219'
+            enabled: false,
           },
         },
         smoke: false,
@@ -5585,6 +5616,7 @@ const genServices = {
           },
           local: {
             paths: ['/zhongwen/trad/chinese-news-49065935'],
+            enabled: true,
           },
           smoke: true,
         },
@@ -5592,12 +5624,15 @@ const genServices = {
           environments: {
             live: {
               paths: [],
+              enabled: false,
             },
             test: {
               paths: [],
+              enabled: false,
             },
             local: {
               paths: [],
+              enabled: false,
             },
           },
           smoke: false,
