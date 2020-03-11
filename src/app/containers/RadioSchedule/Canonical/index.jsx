@@ -2,6 +2,14 @@ import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from 'styled-components';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import RadioSchedule from '@bbc/psammead-radio-schedule';
 import moment from 'moment';
 import findLastIndex from 'ramda/src/findLastIndex';
@@ -12,6 +20,24 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
+
+const MarginWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_TRPL};
+  }
+`;
+
+const RadioScheduleSection = styled.section.attrs(() => ({
+  role: 'region',
+  'aria-labelledby': 'Radio-Schedule',
+}))``;
+
+const FrontPageRadioScheduleSection = styled(RadioScheduleSection)`
+  margin: 0 auto;
+`;
 
 const RadioFrequencyLink = styled(Link)`
   font-size: 14px;
@@ -103,8 +129,6 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     fetchRadioScheduleData(endpoint);
   }, [endpoint, service, script, timezone, locale]);
 
-  console.log(schedule);
-
   if (!schedule) {
     return null;
   }
@@ -114,7 +138,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   );
 
   return (
-    <>
+    <FrontPageRadioScheduleSection>
       <SectionLabel
         script={script}
         labelId="Radio-Schedule"
@@ -124,7 +148,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
       >
         {header}
       </SectionLabel>
-      {schedule && (
+      <MarginWrapper>
         <RadioSchedule
           schedules={schedule}
           locale={locale}
@@ -133,10 +157,10 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
           service={service}
           dir={dir}
         />
-      )}
+      </MarginWrapper>
       {frequenciesPageUrl &&
         renderFrequencyLink(frequenciesPageUrl, frequenciesPageLabel)}
-    </>
+    </FrontPageRadioScheduleSection>
   );
 };
 
