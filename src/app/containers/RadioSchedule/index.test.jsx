@@ -5,12 +5,12 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import '@testing-library/jest-dom/extend-expect';
-import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/radioschedule.json';
+import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 
 const localRadioScheduleEndpoint = service => {
   const localhostURL = 'http://localhost:7080';
   const localServiceURL = `${localhostURL}/${service}`;
-  return `${localServiceURL}/bbc_${service}_radio/radioschedule.json`;
+  return `${localServiceURL}/bbc_${service}_radio/schedule.json`;
 };
 
 const getToggleState = enabled => ({
