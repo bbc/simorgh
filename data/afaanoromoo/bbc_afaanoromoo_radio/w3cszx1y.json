@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx1y",
+    "locators": {},
+    "type": "WSRADIO",
+    "createdBy": "bbc_oromo_radio",
+    "language": "om",
+    "lastUpdated": 1583601860035,
+    "firstPublished": 1582565117000,
+    "lastPublished": 1582565117000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Oduu BBC Afaan Oromoo - BBC News Afaan Oromoo",
+      "pageIdentifier": "Afaan Oromoo.bbc_oromo_radio.w3cszx1y.page",
+      "producerId": "2",
+      "contentType": "player-ondemand",
+      "producer": "AFAAN_OROMOO"
+    },
+    "passport": null,
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media"],
+    "title": "Oduu BBC Afaan Oromoo"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w3cszx1y",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/03/2020 GMT",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w4hqvgbm",
+            "types": ["Original"],
+            "duration": 883,
+            "durationISO8601": "PT14M43S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1586120670000,
+            "availableFrom": 1583517870000
+          }
+        ],
+        "imageCopyright": null
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Oduu BBC Afaan Oromoo"
+    },
+    "locators": {
+      "pid": "w3cszx1y"
+    },
+    "media": {
+      "id": "w3cszx1y",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/03/2020 GMT",
+      "synopses": {
+        "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+        "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w4hqvgbm",
+          "types": ["Original"],
+          "duration": 883,
+          "durationISO8601": "PT14M43S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1586120670000,
+          "availableFrom": 1583517870000
+        }
+      ],
+      "imageCopyright": null
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null
+    },
+    "brand": {
+      "pid": "w13xttnw",
+      "title": "Oduu BBC Afaan Oromoo"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx1y"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Afaan oromoo",
+      "uri": "/afaan oromoo"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx46"
+            },
+            "media": {
+              "id": "w3cszx46",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgdw",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586034270000,
+                  "availableFrom": 1583431470000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx46"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx6g"
+            },
+            "media": {
+              "id": "w3cszx6g",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgh4",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585947870000,
+                  "availableFrom": 1583345070000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx6g"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx5b"
+            },
+            "media": {
+              "id": "w3cszx5b",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "03/03/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgg0",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585861470000,
+                  "availableFrom": 1583258670000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx5b"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx32"
+            },
+            "media": {
+              "id": "w3cszx32",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "02/03/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgcr",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585775070000,
+                  "availableFrom": 1583172270000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx32"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx1x"
+            },
+            "media": {
+              "id": "w3cszx1x",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "28/02/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgbl",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585515870000,
+                  "availableFrom": 1582913070000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx1x"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx45"
+            },
+            "media": {
+              "id": "w3cszx45",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "27/02/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgdv",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585429470000,
+                  "availableFrom": 1582826670000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx45"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx6f"
+            },
+            "media": {
+              "id": "w3cszx6f",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "26/02/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgh3",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585343070000,
+                  "availableFrom": 1582740270000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx6f"
+          },
+          {
+            "headlines": {
+              "headline": "Oduu BBC Afaan Oromoo"
+            },
+            "locators": {
+              "pid": "w3cszx59"
+            },
+            "media": {
+              "id": "w3cszx59",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "25/02/2020 GMT",
+              "synopses": {
+                "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+                "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w4hqvgfz",
+                  "types": ["Original"],
+                  "duration": 883,
+                  "durationISO8601": "PT14M43S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585256670000,
+                  "availableFrom": 1582653870000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "w13xttnw",
+              "title": "Oduu BBC Afaan Oromoo"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_oromo_radio/w3cszx59"
+          }
+        ]
+      }
+    ]
+  }
+}

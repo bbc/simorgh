@@ -60,7 +60,7 @@ export const service = {
     imageCopyrightOffscreenText: 'Autor fotografije, ',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/serbian/lat/institutional-50173730',
         text: 'Zašto BBC zaslužuje vaše poverenje',
       },
       externalLink: {
@@ -257,7 +257,7 @@ export const service = {
     imageCopyrightOffscreenText: 'Аутор фотографије, ',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/serbian/cyr/institutional-50173730',
         text: 'Зашто ББЦ заслужује ваше поверење',
       },
       externalLink: {
