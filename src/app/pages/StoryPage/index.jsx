@@ -184,7 +184,11 @@ const StoryPage = ({ pageData }) => {
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
-        <GridSecondaryColumn item columns={gridColsSecondary}>
+        <GridSecondaryColumn
+          item
+          columns={gridColsSecondary}
+          parentColumns={gridColumns}
+        >
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
