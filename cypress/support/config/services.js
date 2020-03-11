@@ -6,7 +6,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/afaanoromoo/articles/ce3nlgrelv1o'],
             enabled: true,
@@ -23,7 +23,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -40,7 +40,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/afaanoromoo'],
             enabled: true,
@@ -57,7 +57,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
             enabled: true,
@@ -74,7 +74,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/afaanoromoo/oduu-51248626', // CPS MAP with video clip
@@ -94,7 +94,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -111,7 +111,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -136,7 +136,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/afrique/articles/cx80n852v6mo'],
             enabled: true,
@@ -153,7 +153,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -170,7 +170,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -187,7 +187,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
             enabled: true,
@@ -204,7 +204,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -221,7 +221,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -238,7 +238,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -263,7 +263,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/amharic/articles/c0lgxqknqkdo'],
             enabled: true,
@@ -280,7 +280,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -297,7 +297,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/amharic'],
             enabled: true,
@@ -314,7 +314,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
             enabled: true,
@@ -331,7 +331,7 @@ const genServices = {
         smoke: true,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/amharic/news-51270657', // CPS MAP with video clip
@@ -352,7 +352,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -369,7 +369,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -394,7 +394,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/arabic/articles/c8j91j2ljppo'],
             enabled: true,
@@ -411,7 +411,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -428,7 +428,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -445,7 +445,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
             enabled: true,
@@ -462,7 +462,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -479,7 +479,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -496,7 +496,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -521,7 +521,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/azeri/articles/cv0lm08kngmo'],
             enabled: true,
@@ -538,7 +538,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -555,7 +555,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/azeri'],
             enabled: true,
@@ -571,9 +571,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/azeri/international-51331762', // CPS MAP with video clip
@@ -599,7 +599,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -616,7 +616,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -641,7 +641,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/bengali/articles/cv90149zq1eo'],
             enabled: true,
@@ -658,7 +658,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -675,7 +675,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/bengali'],
             enabled: true,
@@ -692,7 +692,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
             enabled: true,
@@ -709,7 +709,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/bengali/news-51660521', // CPS MAP with video clip
@@ -735,7 +735,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -752,7 +752,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -777,7 +777,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/burmese/articles/c41px3vd4nxo'],
             enabled: true,
@@ -794,7 +794,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -811,7 +811,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/burmese'],
             enabled: true,
@@ -828,7 +828,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/burmese/bbc_burmese_radio/liveradio'],
             enabled: true,
@@ -845,7 +845,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/burmese/media-48707353', // CPS MAP with video clip
@@ -871,7 +871,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -888,7 +888,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -913,7 +913,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -930,7 +930,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -946,11 +946,11 @@ const genServices = {
         },
         smoke: false,
       },
-      frontPage: { envs: undefined, smoke: false },
-      liveRadio: { envs: undefined, smoke: false },
-      mediaAssetPage: { envs: undefined, smoke: false },
-      photoGalleryPage: { envs: undefined, smoke: false },
-      storyPage: { envs: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
     },
   },
   gahuza: {
@@ -960,7 +960,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/gahuza/articles/cryd02nzn81o'],
             enabled: true,
@@ -977,7 +977,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -994,7 +994,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/gahuza'],
             enabled: true,
@@ -1011,7 +1011,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
             enabled: true,
@@ -1028,7 +1028,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/gahuza/amakuru-51710168', // CPS MAP with audio clip
@@ -1054,7 +1054,7 @@ const genServices = {
         },
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1071,7 +1071,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1096,7 +1096,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/gujarati/articles/c2rnxj48elwo'],
             enabled: true,
@@ -1113,7 +1113,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1130,7 +1130,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/gujarati'],
             enabled: true,
@@ -1146,9 +1146,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/gujarati/media-51389006', // CPS MAP with video clip
@@ -1169,7 +1169,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1186,7 +1186,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1211,7 +1211,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/hausa/articles/c41rj1z261zo'],
             enabled: true,
@@ -1228,7 +1228,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1245,7 +1245,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1262,7 +1262,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
             enabled: true,
@@ -1279,7 +1279,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/hausa/labarai-51622389', // CPS MAP with video clip
@@ -1305,7 +1305,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1322,7 +1322,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1347,7 +1347,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/hindi/articles/cd80y3ezl8go'],
             enabled: true,
@@ -1364,7 +1364,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1381,7 +1381,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1398,7 +1398,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/hindi/bbc_hindi_radio/liveradio'],
             enabled: true,
@@ -1415,7 +1415,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1432,7 +1432,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1449,7 +1449,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1474,7 +1474,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/igbo/articles/ckjn8jnrn75o'], // CPS MAP with audio clip
             test: {
@@ -1488,7 +1488,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1505,7 +1505,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/igbo'],
             enabled: true,
@@ -1521,9 +1521,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/igbo/media-42986440', // CPS MAP with audio clip
@@ -1543,7 +1543,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1560,7 +1560,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1585,7 +1585,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/indonesia/articles/cvd36dly8zdo'],
             enabled: true,
@@ -1602,7 +1602,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1619,7 +1619,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/indonesia'],
             enabled: true,
@@ -1636,7 +1636,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
             enabled: true,
@@ -1653,7 +1653,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/indonesia/media-51703269', // CPS MAP with video clip
@@ -1679,7 +1679,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1696,7 +1696,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1721,7 +1721,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/japanese/articles/cj4m7n5nrd8o'],
             enabled: true,
@@ -1738,7 +1738,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1755,7 +1755,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/japanese'],
             enabled: true,
@@ -1771,9 +1771,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1789,7 +1789,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1806,7 +1806,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1831,7 +1831,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/korean/articles/crym1243d97o'],
             enabled: true,
@@ -1848,7 +1848,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1865,7 +1865,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1882,7 +1882,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/korean/bbc_korean_radio/liveradio'],
             enabled: true,
@@ -1899,7 +1899,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/korean/international-51367672', // CPS MAP with video clip
@@ -1919,7 +1919,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1936,7 +1936,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1961,7 +1961,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/kyrgyz/articles/c414v42gy75o'],
             enabled: true,
@@ -1978,7 +1978,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -1995,7 +1995,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/kyrgyz'],
             enabled: true,
@@ -2012,7 +2012,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
             enabled: true,
@@ -2029,7 +2029,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/kyrgyz/magazine-51509456', // CPS MAP with video clip
@@ -2055,7 +2055,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2072,7 +2072,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2097,7 +2097,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/marathi/articles/cvjxwvn04yjo'],
             enabled: true,
@@ -2114,7 +2114,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2131,7 +2131,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/marathi'],
             enabled: true,
@@ -2147,9 +2147,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/marathi/media-51314817', // CPS MAP with video clip
@@ -2169,7 +2169,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2186,7 +2186,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2211,7 +2211,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/mundo/articles/cdwrpl7qwqqo'],
             enabled: true,
@@ -2228,7 +2228,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2245,7 +2245,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2261,9 +2261,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2280,7 +2280,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2297,7 +2297,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2322,7 +2322,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2339,7 +2339,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2355,11 +2355,11 @@ const genServices = {
         },
         smoke: false,
       },
-      frontPage: { envs: undefined, smoke: false },
-      liveRadio: { envs: undefined, smoke: false },
-      mediaAssetPage: { envs: undefined, smoke: false },
-      photoGalleryPage: { envs: undefined, smoke: false },
-      storyPage: { envs: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
     },
   },
   nepali: {
@@ -2369,7 +2369,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/nepali/articles/c16ljg1v008o'],
             enabled: true,
@@ -2386,7 +2386,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2403,7 +2403,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/nepali'],
             enabled: true,
@@ -2420,7 +2420,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
             enabled: true,
@@ -2437,7 +2437,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/nepali/news-51675223', // CPS MAP with video clip
@@ -2463,7 +2463,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2480,7 +2480,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2505,7 +2505,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/news/articles/cj7xrxz0e8zo'],
             enabled: true,
@@ -2521,7 +2521,7 @@ const genServices = {
         },
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2536,11 +2536,11 @@ const genServices = {
           smoke: true,
         },
       },
-      frontPage: { envs: undefined, smoke: false },
-      liveRadio: { envs: undefined, smoke: false },
-      mediaAssetPage: { envs: undefined, smoke: false },
-      photoGalleryPage: { envs: undefined, smoke: false },
-      storyPage: { envs: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
     },
   },
   pashto: {
@@ -2550,7 +2550,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/pashto/articles/c70970g2251o'],
             enabled: true,
@@ -2567,7 +2567,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2584,7 +2584,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2601,7 +2601,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
             enabled: true,
@@ -2618,7 +2618,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/pashto/world-51657953', // CPS MAP with video clip
@@ -2644,7 +2644,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2661,7 +2661,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2686,7 +2686,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/persian/articles/c7eel0lmr4do'],
             enabled: true,
@@ -2702,7 +2702,7 @@ const genServices = {
         },
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2718,7 +2718,7 @@ const genServices = {
         },
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2734,7 +2734,7 @@ const genServices = {
         },
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/persian/bbc_persian_radio/liveradio',
@@ -2760,7 +2760,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/persian/world-51497110', // CPS MAP with video clip
@@ -2785,7 +2785,7 @@ const genServices = {
         },
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2802,7 +2802,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2827,7 +2827,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/pidgin/articles/cgwk9w4zlg8o'],
             enabled: true,
@@ -2844,7 +2844,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2861,7 +2861,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/pidgin'],
             enabled: true,
@@ -2877,9 +2877,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/pidgin/tori-50974590'], // CPS MAP with video clip
             test: {
@@ -2893,7 +2893,7 @@ const genServices = {
         },
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2909,7 +2909,7 @@ const genServices = {
         },
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2934,7 +2934,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/portuguese/articles/cpg5prg95lmo'],
             enabled: true,
@@ -2951,7 +2951,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2968,7 +2968,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -2984,9 +2984,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3003,7 +3003,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3020,7 +3020,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3044,7 +3044,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/punjabi/articles/c39p51156lyo'],
             enabled: true,
@@ -3061,7 +3061,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3078,7 +3078,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/punjabi'],
             enabled: true,
@@ -3094,9 +3094,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/punjabi/india-51325361', // CPS MAP with video clip
@@ -3116,7 +3116,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3133,7 +3133,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3158,7 +3158,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/russian/articles/c6ygxgl53w9o'],
             enabled: true,
@@ -3175,7 +3175,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3192,7 +3192,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3208,9 +3208,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3227,7 +3227,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3244,7 +3244,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3269,7 +3269,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/scotland/articles/cm49v4x1r9lo'],
             enabled: true,
@@ -3285,7 +3285,7 @@ const genServices = {
         },
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3301,11 +3301,11 @@ const genServices = {
         },
         smoke: false,
       },
-      frontPage: { envs: undefined, smoke: false },
-      liveRadio: { envs: undefined, smoke: false },
-      mediaAssetPage: { envs: undefined, smoke: false },
-      photoGalleryPage: { envs: undefined, smoke: false },
-      storyPage: { envs: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
     },
   },
   serbianCyr: {
@@ -3315,7 +3315,7 @@ const genServices = {
     variant: 'cyr',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3331,7 +3331,7 @@ const genServices = {
         },
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3347,7 +3347,7 @@ const genServices = {
         },
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3363,9 +3363,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3381,7 +3381,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3398,7 +3398,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3423,7 +3423,7 @@ const genServices = {
     variant: 'lat',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3439,7 +3439,7 @@ const genServices = {
         },
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3456,7 +3456,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3472,9 +3472,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3491,7 +3491,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3508,7 +3508,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3533,7 +3533,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/sinhala/articles/cldr38jnwd2o'],
             enabled: true,
@@ -3550,7 +3550,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3567,7 +3567,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/sinhala'],
             enabled: true,
@@ -3584,7 +3584,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
             enabled: true,
@@ -3601,7 +3601,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/sinhala/sri-lanka-51375061', // CPS MAP with video clip
@@ -3627,7 +3627,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3644,7 +3644,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3668,7 +3668,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/somali/articles/c8z79d4mzrlo'],
             enabled: true,
@@ -3685,7 +3685,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3702,7 +3702,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3719,7 +3719,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
             enabled: true,
@@ -3736,7 +3736,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/somali/51642476', // CPS MAP with video clip
@@ -3762,7 +3762,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3779,7 +3779,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3802,13 +3802,13 @@ const genServices = {
     font: undefined,
     variant: 'default',
     pageTypes: {
-      articles: { envs: undefined, smoke: false },
-      errorPage404: { envs: undefined, smoke: false },
-      frontPage: { envs: undefined, smoke: false },
-      liveRadio: { envs: undefined, smoke: false },
-      mediaAssetPage: { envs: undefined, smoke: false },
-      photoGalleryPage: { envs: undefined, smoke: false },
-      storyPage: { envs: undefined, smoke: false },
+      articles: { environments: undefined, smoke: false },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: { environments: undefined, smoke: false },
     },
   },
   swahili: {
@@ -3818,7 +3818,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/swahili/articles/cw794z3gpd5o'],
             enabled: true,
@@ -3835,7 +3835,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3852,7 +3852,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3869,7 +3869,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
             enabled: true,
@@ -3886,7 +3886,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/swahili/gnb-51703829', // CPS MAP with video clip
@@ -3912,7 +3912,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3929,7 +3929,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3954,7 +3954,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/tamil/articles/cvr4752gr13o'],
             enabled: true,
@@ -3971,7 +3971,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -3988,7 +3988,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/tamil'],
             enabled: true,
@@ -4005,7 +4005,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/tamil/bbc_tamil_radio/liveradio'],
             enabled: true,
@@ -4022,7 +4022,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/tamil/sport-51702939', // CPS MAP with video clip
@@ -4048,7 +4048,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4065,7 +4065,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4090,7 +4090,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/telugu/articles/c1x76pey3x3o'],
             enabled: true,
@@ -4107,7 +4107,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4124,7 +4124,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/telugu'],
             enabled: true,
@@ -4140,9 +4140,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/telugu/india-51309092', // CPS MAP with video clip
@@ -4162,7 +4162,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4179,7 +4179,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4204,7 +4204,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/thai/articles/czx7w3zyme1o'],
             enabled: true,
@@ -4221,7 +4221,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4238,7 +4238,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/thai'],
             enabled: true,
@@ -4254,9 +4254,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/thai/international-51285795', // CPS MAP with video clip
@@ -4276,7 +4276,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4293,7 +4293,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4318,7 +4318,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/tigrinya/articles/c3vq38ve33xo'],
             enabled: true,
@@ -4335,7 +4335,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4352,7 +4352,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/tigrinya'],
             enabled: true,
@@ -4369,7 +4369,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
             enabled: true,
@@ -4386,7 +4386,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/tigrinya/news-51249937', // CPS MAP with video clip
@@ -4406,7 +4406,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4423,7 +4423,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4448,7 +4448,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/turkce/articles/cpgzpzjl3pdo'],
             enabled: true,
@@ -4465,7 +4465,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4482,7 +4482,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/turkce'],
             enabled: true,
@@ -4498,9 +4498,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/turkce/haberler-dunya-51621819', // CPS MAP with video clip
@@ -4526,7 +4526,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4543,7 +4543,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4568,7 +4568,7 @@ const genServices = {
     variant: 'simp',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4584,7 +4584,7 @@ const genServices = {
         },
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4601,7 +4601,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4617,9 +4617,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4636,7 +4636,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4653,7 +4653,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4678,7 +4678,7 @@ const genServices = {
     variant: 'trad',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4695,7 +4695,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4712,7 +4712,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4728,9 +4728,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4746,7 +4746,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4763,7 +4763,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4788,7 +4788,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/ukrainian/articles/c8zv0eed9gko'],
             enabled: true,
@@ -4805,7 +4805,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4822,7 +4822,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4838,9 +4838,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4857,7 +4857,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4874,7 +4874,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4899,7 +4899,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/urdu/articles/c4qg7qq63y6o'],
             enabled: true,
@@ -4916,7 +4916,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -4933,7 +4933,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/urdu'],
             enabled: true,
@@ -4950,7 +4950,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
             enabled: true,
@@ -4967,7 +4967,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               '/urdu/entertainment-51584098', // CPS MAP with audio clip
@@ -4993,7 +4993,7 @@ const genServices = {
         smoke: true,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5010,7 +5010,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5035,7 +5035,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5052,7 +5052,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5069,7 +5069,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/uzbek'],
             enabled: true,
@@ -5086,7 +5086,7 @@ const genServices = {
         smoke: false,
       },
       liveRadio: {
-        envs: {
+        environments: {
           live: {
             paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
             enabled: true,
@@ -5103,7 +5103,7 @@ const genServices = {
         smoke: false,
       },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5119,7 +5119,7 @@ const genServices = {
         smoke: true,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5136,7 +5136,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5161,7 +5161,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/vietnamese/articles/cpgqngyexq7o'],
             enabled: true,
@@ -5178,7 +5178,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5195,7 +5195,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/vietnamese'],
             enabled: true,
@@ -5211,9 +5211,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/vietnamese/forum-51506476', // CPS MAP with video clip
@@ -5239,7 +5239,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5256,7 +5256,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5281,7 +5281,7 @@ const genServices = {
     variant: 'default',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: ['/yoruba/articles/cg7qz71en35o'],
             enabled: true,
@@ -5298,7 +5298,7 @@ const genServices = {
         smoke: false,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5315,7 +5315,7 @@ const genServices = {
         smoke: false,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: ['/yoruba'],
             enabled: true,
@@ -5331,9 +5331,9 @@ const genServices = {
         },
         smoke: false,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [
               // '/yoruba/afrika-51116686', // CPS MAP with video clip
@@ -5353,7 +5353,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5370,7 +5370,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5395,7 +5395,7 @@ const genServices = {
     variant: 'simp',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5412,7 +5412,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5429,7 +5429,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5445,9 +5445,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5464,7 +5464,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5481,7 +5481,7 @@ const genServices = {
         smoke: false,
       },
       storyPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5506,7 +5506,7 @@ const genServices = {
     variant: 'trad',
     pageTypes: {
       articles: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5523,7 +5523,7 @@ const genServices = {
         smoke: true,
       },
       errorPage404: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5540,7 +5540,7 @@ const genServices = {
         smoke: true,
       },
       frontPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5556,9 +5556,9 @@ const genServices = {
         },
         smoke: true,
       },
-      liveRadio: { envs: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
       mediaAssetPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5574,7 +5574,7 @@ const genServices = {
         smoke: false,
       },
       photoGalleryPage: {
-        envs: {
+        environments: {
           live: {
             paths: [],
             enabled: false,
@@ -5589,7 +5589,7 @@ const genServices = {
           smoke: true,
         },
         storyPage: {
-          envs: {
+          environments: {
             live: {
               paths: [],
             },
