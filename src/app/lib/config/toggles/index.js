@@ -18,9 +18,15 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
-    ads: {
+    scriptLink: {
       enabled: true,
     },
+    variantCookie: {
+      enabled: true,
+    },
+    ads: {
+      enabled: true,
+    }, 
   },
   test: {
     chartbeatAnalytics: {
@@ -40,6 +46,12 @@ const toggles = {
     },
     radioSchedule: {
       enabled: false,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
     },
     ads: {
       enabled: true,
@@ -64,6 +76,12 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
     ads: {
       enabled: false,
     },
@@ -86,6 +104,12 @@ const toggles = {
     },
     radioSchedule: {
       enabled: false,
+    },   
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
     },
     ads: {
       enabled: false,

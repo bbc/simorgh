@@ -4,14 +4,14 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
-    class="GhostGrid-sc-12lwanc-1 kGasFS"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
       >
         <div
           class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
@@ -231,14 +231,14 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
-    class="GhostGrid-sc-12lwanc-1 kGasFS"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
       >
         <div
           class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
