@@ -1,0 +1,560 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x32355t5635",
+    "locators": {},
+    "type": "WSRADIO",
+    "createdBy": "bbc_persian_radio",
+    "language": "fa",
+    "lastUpdated": 1583601860035,
+    "firstPublished": 1582518913000,
+    "lastPublished": 1582518913000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "چشم انداز بامدادی - BBC News فارسی",
+      "pageIdentifier": "persian.bbc_persian_radio.w172x32355t5635.page",
+      "producerId": "69",
+      "contentType": "player-ondemand",
+      "producer": "PERSIAN"
+    },
+    "passport": null,
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media"],
+    "title": "چشم انداز بامدادی"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172x32355t5635",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/03/2020 GMT",
+        "synopses": {
+          "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+          "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1msh7kgr8kyfbf",
+            "types": ["Original"],
+            "duration": 3330,
+            "durationISO8601": "PT55M30S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1586064570000,
+            "availableFrom": 1583472570000
+          }
+        ],
+        "imageCopyright": null
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "چشم انداز بامدادی"
+    },
+    "locators": {
+      "pid": "w172x32355t5635"
+    },
+    "media": {
+      "id": "w172x32355t5635",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/03/2020 GMT",
+      "synopses": {
+        "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+        "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+        "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1msh7kgr8kyfbf",
+          "types": ["Original"],
+          "duration": 3330,
+          "durationISO8601": "PT55M30S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1586064570000,
+          "availableFrom": 1583472570000
+        }
+      ],
+      "imageCopyright": null
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null
+    },
+    "brand": {
+      "pid": "p0340vyx",
+      "title": "چشم انداز بامدادی"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x32355t5635"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Persian",
+      "uri": "/persian"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x32355t8308"
+            },
+            "media": {
+              "id": "w172x32355t8308",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "07/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7kgr8l1b7j",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586150970000,
+                  "availableFrom": 1583558970000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x32355t8308"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x31pfthxb1h"
+            },
+            "media": {
+              "id": "w172x31pfthxb1h",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "07/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7k20x8pk8r",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586147400000,
+                  "availableFrom": 1583555400000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x31pfthxb1h"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x31pfthtf4d"
+            },
+            "media": {
+              "id": "w172x31pfthtf4d",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "06/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7k20x8lncn",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586061000000,
+                  "availableFrom": 1583469000000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x31pfthtf4d"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x32355t2962"
+            },
+            "media": {
+              "id": "w172x32355t2962",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7kgr8kvjfb",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585978170000,
+                  "availableFrom": 1583386170000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x32355t2962"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x31pfthqj79"
+            },
+            "media": {
+              "id": "w172x31pfthqj79",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7k20x8hrgk",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585974600000,
+                  "availableFrom": 1583382600000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x31pfthqj79"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x32355szd8z"
+            },
+            "media": {
+              "id": "w172x32355szd8z",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7kgr8krmj7",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585891770000,
+                  "availableFrom": 1583299770000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x32355szd8z"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x31pfthmmb6"
+            },
+            "media": {
+              "id": "w172x31pfthmmb6",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7k20x8dvkg",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585888200000,
+                  "availableFrom": 1583296200000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x31pfthmmb6"
+          },
+          {
+            "headlines": {
+              "headline": "چشم انداز بامدادی"
+            },
+            "locators": {
+              "pid": "w172x32355swhcw"
+            },
+            "media": {
+              "id": "w172x32355swhcw",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "03/03/2020 GMT",
+              "synopses": {
+                "short": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "medium": "چشم انداز بامدادی مجله خبری رادیو فارسی بی‌بی‌سی است که شامل خبر، گزارش، گفتگو و تحلیل درباره رویدادهای ایران، منطقه و جهان است.",
+                "long": "چشم انداز بامدادی، مجله خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1msh7kgr8knqm4",
+                  "types": ["Original"],
+                  "duration": 3330,
+                  "durationISO8601": "PT55M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585805370000,
+                  "availableFrom": 1583213370000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlgt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340vyx",
+              "title": "چشم انداز بامدادی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/w172x32355swhcw"
+          }
+        ]
+      }
+    ]
+  }
+}
