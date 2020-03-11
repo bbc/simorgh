@@ -13,7 +13,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import Amp from './Amp';
 import useToggle from '../Toggle/useToggle';
 
-const StyledAd = styled.section`
+const StyledAd = styled.div`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
@@ -37,12 +37,14 @@ const AdContainer = () => {
     return null;
   }
 
-  const Ad = isAmp ? Amp : null;
+  //   const Ad = isAmp ? Amp : Canonical;
 
   return (
-    <StyledAd>
-      <Ad id={id} service={service} />
-    </StyledAd>
+    isAmp && (
+      <StyledAd>
+        <Amp id={id} service={service} />
+      </StyledAd>
+    )
   );
 };
 
