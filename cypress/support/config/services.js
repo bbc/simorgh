@@ -5146,7 +5146,7 @@ const genServices = {
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
