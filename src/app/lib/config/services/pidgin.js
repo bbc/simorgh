@@ -234,6 +234,12 @@ export const service = {
           href: 'https://www.bbc.com/pidgin/institutional-42188215',
           text: 'Call BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. De external site no concern BBC.',
     },
