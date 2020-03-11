@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -21,20 +20,10 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
-  /* z-index needs explicitly set as the psammead section label component uses negative z-indices */
-  z-index: 0;
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
-
-  span {
-    background-color: transparent;
-  }
-
-  span[dir] {
-    background-color: ${C_GHOST};
-  }
 `;
 
 const FeaturesAnalysis = ({ content }) => {
