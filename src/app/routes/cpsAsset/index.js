@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import path from 'ramda/src/path';
 import getInitialData from './getInitialData';
 import { MediaAssetPage, PhotoGalleryPage, StoryPage, FrontPage } from '#pages';
@@ -14,25 +15,26 @@ import {
 const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
 
-  switch (type) {
-    case STORY_PAGE:
-      return StoryPage({ ...props, pageType: type });
-    case PHOTO_GALLERY_PAGE:
-      return PhotoGalleryPage({ ...props, pageType: type });
-    case MEDIA_ASSET_PAGE:
-      return MediaAssetPage({ ...props, pageType: type });
-    case FEATURE_INDEX_PAGE:
-      return FrontPage({ ...props, pageType: type });
-    default:
-      // Return 404 error page if page type does not match those above
-      return ErrorPage({ ...props, pageType: 'error', status: 404 });
-  }
+  const PageType = {
+    [STORY_PAGE]: StoryPage,
+    [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
+    [MEDIA_ASSET_PAGE]: MediaAssetPage,
+    [FEATURE_INDEX_PAGE]: FrontPage,
+  }[type];
+
+  return PageType
+    ? PageType({ ...props, pageType: type })
+    : ErrorPage({ ...props, pageType: 'error', status: 404 });
 };
+
+const getAssetId = path(['pageData', 'metadata', 'id']);
+const pageIsSame = (prevProps, nextProps) =>
+  getAssetId(prevProps) === getAssetId(nextProps);
 
 export default {
   path: [cpsAssetPagePath, legacyAssetPagePath],
   exact: true,
-  component: CpsAsset,
+  component: memo(CpsAsset, pageIsSame),
   getInitialData,
   pageType: 'cpsAsset',
 };
