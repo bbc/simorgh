@@ -329,7 +329,7 @@ const genServices = {
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         environments: {
