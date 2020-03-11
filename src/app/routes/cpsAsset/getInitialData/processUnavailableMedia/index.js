@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 
@@ -20,9 +19,6 @@ const addUnavailableMediaBlock = pageData => {
 };
 
 const transformer = pageData => {
-  const pageType = path(['metadata', 'type'], pageData);
-  if (pageType !== 'MAP') return pageData;
-
   const blockTypes = pathOr([], ['metadata', 'blockTypes'], pageData);
   const mediaTypes = blockTypes.filter(blockType =>
     ['media', 'legacyMedia', 'version'].includes(blockType),

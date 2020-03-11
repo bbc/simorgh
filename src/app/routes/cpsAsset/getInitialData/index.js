@@ -1,4 +1,5 @@
 import pipe from 'ramda/src/pipe';
+import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -21,7 +22,6 @@ const formatPageData = pipe(
   timestampToMilliseconds,
 );
 const processOptimoBlocks = pipe(
-  processUnavailableMedia,
   addHeadlineBlock,
   addSummaryBlock,
   augmentWithTimestamp,
@@ -34,7 +34,13 @@ const transformJson = async json => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
-    return processOptimoBlocks(optimoBlocks);
+
+    // Check for media availability and show a placeholder if media is absent.
+    const pageType = path(['metadata', 'type'], optimoBlocks);
+    const processedMediaBlocks =
+      pageType === 'MAP' ? processUnavailableMedia(optimoBlocks) : optimoBlocks;
+
+    return processOptimoBlocks(processedMediaBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
@@ -42,8 +48,8 @@ const transformJson = async json => {
   }
 };
 
-export default async path => {
-  const { json, ...rest } = await fetchPageData(path);
+export default async urlPath => {
+  const { json, ...rest } = await fetchPageData(urlPath);
 
   return {
     ...rest,
