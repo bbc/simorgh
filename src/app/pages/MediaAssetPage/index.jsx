@@ -83,6 +83,7 @@ const MediaAssetPage = ({ pageData }) => {
 
     // "Versions" are live streams
     version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+    unavailableMedia: MediaMessage,
   };
 
   const StyledGhostGrid = styled(GhostGrid)`
