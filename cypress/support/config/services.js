@@ -274,54 +274,54 @@ const genServices = {
           local: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
           },
-          smoke: true,
         },
-        mediaAssetPage: {
-          envs: {
-            live: {
-              paths: [
-                // '/amharic/news-51270657', // CPS MAP with video clip
-              ],
-            },
-            test: {
-              paths: [
-                // '/amharic/news-23263266', // CPS MAP with video clip
-              ],
-            },
-            local: {
-              paths: ['/amharic/news-23263266'], // CPS MAP with video clip
-            },
+        smoke: true,
+      },
+      mediaAssetPage: {
+        envs: {
+          live: {
+            paths: [
+              // '/amharic/news-51270657', // CPS MAP with video clip
+            ],
           },
-          smoke: false,
-        },
-        photoGalleryPage: {
-          envs: {
-            live: {
-              paths: [],
-            },
-            test: {
-              paths: [],
-            },
-            local: {
-              paths: ['/amharic/42743191'],
-            },
+          test: {
+            paths: [
+              // '/amharic/news-23263266', // CPS MAP with video clip
+            ],
           },
-          smoke: false,
-        },
-        storyPage: {
-          envs: {
-            live: {
-              paths: [],
-            },
-            test: {
-              paths: [],
-            },
-            local: {
-              paths: [],
-            },
+          local: {
+            paths: ['/amharic/news-23263266'], // CPS MAP with video clip
           },
-          smoke: false,
         },
+        smoke: false,
+      },
+      photoGalleryPage: {
+        envs: {
+          live: {
+            paths: [],
+          },
+          test: {
+            paths: [],
+          },
+          local: {
+            paths: ['/amharic/42743191'],
+          },
+        },
+        smoke: false,
+      },
+      storyPage: {
+        envs: {
+          live: {
+            paths: [],
+          },
+          test: {
+            paths: [],
+          },
+          local: {
+            paths: [],
+          },
+        },
+        smoke: false,
       },
     },
   },
@@ -1254,55 +1254,55 @@ const genServices = {
               paths: ['/igbo/articles/cr1lw620ygjo'],
             },
           },
-          smoke: false,
         },
-        errorPage404: {
-          envs: {
-            live: {
-              paths: [],
-            },
-            test: {
-              paths: [],
-            },
-            local: {
-              paths: ['/igbo/articles/cxvxrj8tvppo'],
-            },
+        smoke: false,
+      },
+      errorPage404: {
+        envs: {
+          live: {
+            paths: [],
           },
-          smoke: false,
-        },
-        frontPage: {
-          envs: {
-            live: {
-              paths: ['/igbo'],
-            },
-            test: {
-              paths: ['/igbo'],
-            },
-            local: {
-              paths: ['/igbo'],
-            },
+          test: {
+            paths: [],
           },
-          smoke: false,
-        },
-        liveRadio: { envs: undefined, smoke: false },
-        mediaAssetPage: {
-          envs: {
-            live: {
-              paths: [
-                // '/igbo/media-42986440', // CPS MAP with audio clip
-              ],
-            },
-            test: {
-              paths: [
-                // '/igbo/media-23256786' // CPS MAP with video clip
-              ],
-            },
-            local: {
-              paths: ['/igbo/media-23256786'], // CPS MAP with video clip
-            },
+          local: {
+            paths: ['/igbo/articles/cxvxrj8tvppo'],
           },
-          smoke: false,
         },
+        smoke: false,
+      },
+      frontPage: {
+        envs: {
+          live: {
+            paths: ['/igbo'],
+          },
+          test: {
+            paths: ['/igbo'],
+          },
+          local: {
+            paths: ['/igbo'],
+          },
+        },
+        smoke: false,
+      },
+      liveRadio: { envs: undefined, smoke: false },
+      mediaAssetPage: {
+        envs: {
+          live: {
+            paths: [
+              // '/igbo/media-42986440', // CPS MAP with audio clip
+            ],
+          },
+          test: {
+            paths: [
+              // '/igbo/media-23256786' // CPS MAP with video clip
+            ],
+          },
+          local: {
+            paths: ['/igbo/media-23256786'], // CPS MAP with video clip
+          },
+        },
+        smoke: false,
       },
       photoGalleryPage: {
         envs: {
