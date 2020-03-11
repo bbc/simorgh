@@ -1477,7 +1477,7 @@ const genServices = {
       articles: {
         environments: {
           live: {
-            paths: ['/igbo/articles/ckjn8jnrn75o'], // CPS MAP with audio clip
+            paths: ['/igbo/articles/ckjn8jnrn75o'],
             enabled: true,
           },
           test: {
@@ -2625,7 +2625,7 @@ const genServices = {
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
@@ -3757,7 +3757,7 @@ const genServices = {
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
