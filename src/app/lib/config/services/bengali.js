@@ -212,10 +212,6 @@ export const service = {
         url: '/bengali',
       },
       {
-        title: 'খবর',
-        url: '/bengali/news',
-      },
-      {
         title: 'অডিও',
         url: '/bengali/media/audio',
       },
