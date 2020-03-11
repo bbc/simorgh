@@ -89,7 +89,7 @@ const genServices = {
           },
           local: {
             paths: ['/afaanoromoo/23149891'], // CPS MAP with video clip
-            enabled: true
+            enabled: true,
           },
         },
         smoke: false,
@@ -1051,8 +1051,8 @@ const genServices = {
             ],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       photoGalleryPage: {
         environments: {
@@ -1536,7 +1536,7 @@ const genServices = {
           },
           test: {
             paths: [
-              '/igbo/media-23256786' // CPS MAP with video clip
+              '/igbo/media-23256786', // CPS MAP with video clip
             ],
             enabled: false,
           },
@@ -2526,8 +2526,8 @@ const genServices = {
             paths: ['/news/articles/cn7k01xp8kxo'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -2543,8 +2543,8 @@ const genServices = {
             paths: ['/news/articles/cxvxrj8tvppo'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
@@ -2709,8 +2709,8 @@ const genServices = {
             paths: ['/persian/articles/cej3lzd5e0go'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -2726,8 +2726,8 @@ const genServices = {
             paths: ['/persian/articles/cxvxrj8tvppo'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       frontPage: {
         environments: {
@@ -2743,8 +2743,8 @@ const genServices = {
             paths: ['/persian'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       liveRadio: {
         environments: {
@@ -2795,8 +2795,8 @@ const genServices = {
             ],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       photoGalleryPage: {
         environments: {
@@ -2906,8 +2906,8 @@ const genServices = {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       photoGalleryPage: {
         environments: {
@@ -2923,8 +2923,8 @@ const genServices = {
             paths: ['/pidgin/sport-23252855'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       storyPage: {
         environments: {
@@ -3301,8 +3301,8 @@ const genServices = {
             paths: ['/scotland/articles/czwj5l0n210o'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -3348,8 +3348,8 @@ const genServices = {
             paths: ['/serbian/articles/c805k05kr73o/cyr'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -3365,8 +3365,8 @@ const genServices = {
             paths: ['/serbian/articles/cabcdefghijo/cyr'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       frontPage: {
         environments: {
@@ -3459,8 +3459,8 @@ const genServices = {
             paths: ['/serbian/articles/c805k05kr73o/lat'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -4608,8 +4608,8 @@ const genServices = {
             paths: ['/ukchina/articles/c0e8weny66ko/simp'],
             enabled: true,
           },
-          smoke: true,
         },
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -5619,25 +5619,25 @@ const genServices = {
             paths: ['/zhongwen/trad/chinese-news-49065935'],
             enabled: true,
           },
-          smoke: true,
         },
-        storyPage: {
-          environments: {
-            live: {
-              paths: [],
-              enabled: false,
-            },
-            test: {
-              paths: [],
-              enabled: false,
-            },
-            local: {
-              paths: [],
-              enabled: false,
-            },
+        smoke: true,
+      },
+      storyPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
           },
-          smoke: false,
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
         },
+        smoke: false,
       },
     },
   },
