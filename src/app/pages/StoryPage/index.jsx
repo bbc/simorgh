@@ -105,6 +105,18 @@ const StoryPage = ({ pageData }) => {
     padding: ${GEL_SPACING_DBL};
   `;
 
+  /**
+   * this should be the defacto wrapper for OJs
+   * as it displays a conditional padding, which
+   * works well for mobile view.
+   */
+  const ResponsiveComponentWrapper = styled.div`
+    margin-bottom: ${GEL_SPACING_TRPL};
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_DBL};
+    }
+  `;
+
   const gridColumns = {
     group0: 8,
     group1: 8,
@@ -185,13 +197,17 @@ const StoryPage = ({ pageData }) => {
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
-        <GridSecondaryColumn item columns={gridColsSecondary}>
+        <GridSecondaryColumn
+          item
+          columns={gridColsSecondary}
+          parentColumns={gridColumns}
+        >
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
-          <ComponentWrapper>
+          <ResponsiveComponentWrapper>
             <FeaturesAnalysis content={features} />
-          </ComponentWrapper>
+          </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>

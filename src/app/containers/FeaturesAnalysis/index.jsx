@@ -60,7 +60,7 @@ const FeaturesAnalysis = ({ content }) => {
           dir={dir}
           labelId="features-analysis-heading"
         >
-          Featured &amp; Analysis {/** this should be translated */}
+          Features &amp; Analysis
         </StyledSectionLabel>
 
         <StoryPromoUl>
@@ -76,9 +76,6 @@ const FeaturesAnalysis = ({ content }) => {
 };
 
 FeaturesAnalysis.propTypes = {
-  // We Reuse the front page story item blocks
-  // Both pages use CPS, so the data schema is the same
-  // This can be found under Frontpage data payloads: content.groups.find(group => group.type === 'feature-main').items
   content: arrayOf(shape(storyItem)),
 };
 

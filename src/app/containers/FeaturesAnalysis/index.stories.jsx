@@ -14,7 +14,7 @@ const getFeaturesAnalysis = platform => ({ service, dir, data }) => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={platform === 'amp'}
-        pageType="STY" /* Can also be one of other CPS pagetypes */
+        pageType="STY"
         pathname="/"
         service={service}
       >
