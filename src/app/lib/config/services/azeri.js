@@ -190,6 +190,12 @@ export const service = {
           href: 'https://www.bbc.com/azeri/institutional-37131054',
           text: 'BBC ilə Əlaqə',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
