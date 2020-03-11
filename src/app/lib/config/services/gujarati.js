@@ -195,6 +195,12 @@ export const service = {
           href: 'https://www.bbc.com/gujarati/institutional-42224948',
           text: 'બીબીસીનો સંપર્ક કરો',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
     },

@@ -245,6 +245,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: '聯絡BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
