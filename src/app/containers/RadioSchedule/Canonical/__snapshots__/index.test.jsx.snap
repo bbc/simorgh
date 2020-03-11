@@ -259,7 +259,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 .c12 {
-  padding: 1rem 0 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .c9 {
@@ -269,6 +269,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 
 .c11 {
   position: relative;
+  padding-bottom: 1rem;
 }
 
 .c4 {
@@ -1507,7 +1508,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 .c12 {
-  padding: 1rem 0 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .c9 {
@@ -1517,6 +1518,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 
 .c11 {
   position: relative;
+  padding-bottom: 1rem;
 }
 
 .c4 {
