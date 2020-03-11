@@ -24,62 +24,65 @@ afterEach(() => {
 // Require after mock to allow mocking of JS object
 const { ToggleContext, ToggleContextProvider } = require('./index');
 
-fetchMock.mock(
-  'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true',
-  JSON.stringify({
-    toggles: {
-      ads: {
-        enabled: true,
-        value: '',
-      },
-    },
-  }),
-);
-
 describe('ToggleContext with remote feature toggles', () => {
-  describe('given feature toggle is enabled', () => {
+  describe('given the feature toggle is enabled', () => {
+    togglesConfig.local.chartbeatAnalytics.enabled = true;
+
     it('should render the feature component', () => {
-      togglesConfig.local.chartbeatAnalytics.enabled = true;
-      const LogComponenent = () => {
-        const { toggleState } = useContext(ToggleContext);
+      const TestComponent = () => {
+        const chartbeatIsEnabled = useContext(ToggleContext).toggleState
+          .chartbeatAnalytics.enabled;
+
         return (
-          toggleState.chartbeatAnalytics.enabled && (
-            <div>chartbeatAnalytics</div>
-          )
+          chartbeatIsEnabled && <div>Dummy Chartbeat Analytics Component</div>
         );
       };
       const { getByText } = render(
         <ToggleContextProvider service="mundo">
-          <LogComponenent />
+          <TestComponent />
         </ToggleContextProvider>,
       );
 
-      expect(getByText('chartbeatAnalytics')).toBeInTheDocument();
+      expect(
+        getByText('Dummy Chartbeat Analytics Component'),
+      ).toBeInTheDocument();
     });
   });
 
-  xdescribe('given feature toggle is enabled and remote feature toggle is enabled (in iSite)', () => {
-    xit('should render the feature component', async () => {
+  describe('given feature toggle is disabled locally and enabled remotely i.e. enabled in iSite', () => {
+    togglesConfig.local.ads.enabled = false;
+    fetchMock.mock(
+      'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true',
+      JSON.stringify({
+        toggles: {
+          ads: {
+            enabled: true,
+            value: '',
+          },
+        },
+      }),
+    );
+
+    it('should render the feature component', async () => {
       let getByText;
-      togglesConfig.local.ads.enabled = false;
 
-      const LogComponenent = () => {
-        const { toggleState } = useContext(ToggleContext);
+      const TestComponent = () => {
+        const adsIsEnabled = useContext(ToggleContext).toggleState.ads.enabled;
 
-        return toggleState.ads.enabled && <div>ads</div>;
+        return adsIsEnabled && <div>Dummy Ad Component</div>;
       };
 
       act(() => {
         // todo not sure this is working
         const thing = render(
           <ToggleContextProvider service="mundo">
-            <LogComponenent />
+            <TestComponent />
           </ToggleContextProvider>,
         );
         getByText = thing.getByText;
       });
 
-      expect(getByText('ads')).toBeInTheDocument();
+      expect(getByText('Dummy Ad Component')).toBeInTheDocument();
     });
   });
 });
