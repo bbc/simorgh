@@ -139,7 +139,7 @@ const StoryPromoContainer = ({
     return null;
   }
 
-  const topStory = promoType === 'top';
+  const topStory = promoType === 'top' || promoType === 'leading';
 
   const Info = (
     <>
