@@ -120,6 +120,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
         labelId="Radio-Schedule"
         service={service}
         dir={dir}
+        bar={false}
       >
         {header}
       </SectionLabel>
