@@ -13,6 +13,7 @@ import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
+import processUnavailableMedia from './processUnavailableMedia';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -27,6 +28,7 @@ const processOptimoBlocks = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
+  processUnavailableMedia,
 );
 const transformJson = async json => {
   try {
