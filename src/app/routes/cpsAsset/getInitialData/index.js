@@ -21,6 +21,7 @@ const formatPageData = pipe(
   timestampToMilliseconds,
 );
 const processOptimoBlocks = pipe(
+  processUnavailableMedia,
   addHeadlineBlock,
   addSummaryBlock,
   augmentWithTimestamp,
@@ -28,7 +29,6 @@ const processOptimoBlocks = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
-  processUnavailableMedia,
 );
 const transformJson = async json => {
   try {
