@@ -26,31 +26,32 @@ const ToggleContextProvider = ({ children, service, origin }) => {
       remoteFeatureToggles.enabled &&
       service.match(remoteFeatureToggles.value)
     ) {
-      const isRemoteToggle = Object.keys(simorghToggles).some(toggle =>
-        REMOTE_TOGGLES.includes(toggle),
-      );
-      if (isRemoteToggle) {
-        const fetchAndUpdateToggles = async () => {
-          try {
-            console.log('fetching', constructTogglesEndpoint(service, origin));
-            const response = await fetch(
-              constructTogglesEndpoint(service, origin),
-            );
+      // const isRemoteToggle = true;
+      // const isRemoteToggle = Object.keys(simorghToggles).some(toggle =>
+      //   REMOTE_TOGGLES.includes(toggle),
+      // );
+      // if (isRemoteToggle) {
+      const fetchAndUpdateToggles = async () => {
+        try {
+          // console.log('fetching', constructTogglesEndpoint(service, origin));
+          const response = await fetch(
+            constructTogglesEndpoint(service, origin),
+          );
 
-            const jsonData = await response.json();
-            console.log(jsonData);
+          const jsonData = await response.json();
+          console.log('jsondata', jsonData);
 
-            // container code: const { ads } = toggleContext(); if(ads && ads.enabled)
-            // When we make the server request, the geoiplookup won't need to be made.
-            // Containers that require a geoip-specific setup
-            //
-            toggleDispatch(updateToggles(jsonData));
-          } catch (error) {
-            logger.error(`Error: ${error}`);
-          }
-        };
-        fetchAndUpdateToggles();
-      }
+          // container code: const { ads } = toggleContext(); if(ads && ads.enabled)
+          // When we make the server request, the geoiplookup won't need to be made.
+          // Containers that require a geoip-specific setup
+          //
+          toggleDispatch(updateToggles(jsonData));
+        } catch (error) {
+          logger.error(`hi Error: ${error}`);
+        }
+      };
+      fetchAndUpdateToggles();
+      // }
     }
   }, [
     service,
@@ -59,7 +60,7 @@ const ToggleContextProvider = ({ children, service, origin }) => {
     remoteFeatureToggles.value,
     simorghToggles,
   ]);
-
+  console.log('just before return');
   return (
     <ToggleContext.Provider value={{ toggleState, toggleDispatch }}>
       {children}
