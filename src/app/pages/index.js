@@ -7,12 +7,24 @@ import withLoading from '#containers/PageHandlers/withLoading';
 import withData from '#containers/PageHandlers/withData';
 import withVariant from '#containers/PageHandlers/withVariant';
 
-const LoadableArticlePage = loadable(() => import('./ArticlePage'));
-const LoadableFrontPage = loadable(() => import('./FrontPage'));
-const LoadableMediaAssetPage = loadable(() => import('./MediaAssetPage'));
-const LoadablePhotoGalleryPage = loadable(() => import('./PhotoGalleryPage'));
-const LoadableRadioPage = loadable(() => import('./RadioPage'));
-const LoadableStoryPage = loadable(() => import('./StoryPage'));
+const LoadableArticlePage = loadable(() =>
+  import(/* webpackPrefetch: true */ './ArticlePage'),
+);
+const LoadableFrontPage = loadable(() =>
+  import(/* webpackPrefetch: true */ './FrontPage'),
+);
+const LoadableMediaAssetPage = loadable(() =>
+  import(/* webpackPrefetch: true */ './MediaAssetPage'),
+);
+const LoadablePhotoGalleryPage = loadable(() =>
+  import(/* webpackPrefetch: true */ './PhotoGalleryPage'),
+);
+const LoadableRadioPage = loadable(() =>
+  import(/* webpackPrefetch: true */ './RadioPage'),
+);
+const LoadableStoryPage = loadable(() =>
+  import(/* webpackPrefetch: true */ './StoryPage'),
+);
 
 const applyBasicPageHandlers = pipe(
   withData,
