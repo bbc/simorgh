@@ -1,4 +1,6 @@
-import { path, pathOr, assocPath } from 'ramda/src';
+import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
+import assocPath from 'ramda/src/assocPath';
 
 const UNAVAILABLE_MEDIA_TEXT = 'unavailableMedia';
 const unavailableMediaBlock = {
