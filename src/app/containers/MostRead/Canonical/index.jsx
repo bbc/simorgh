@@ -167,7 +167,7 @@ const CanonicalMostRead = ({
             <MostReadItemWrapper
               dir={dir}
               key={item.id}
-              maxTwoColumns={maxTwoColumns}
+              columnLayout={columnLayout}
             >
               <MostReadRank
                 service={service}
