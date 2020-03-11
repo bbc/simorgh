@@ -25,7 +25,7 @@ const fileTransport = new (transports.File)({
   json: true,
   level: LOG_LEVEL,
   maxFiles: 2,
-  maxsize: 104857600, // 100MB
+  maxsize: 1000, // 100MB
   tailable: true
 });
 
