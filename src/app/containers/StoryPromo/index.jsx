@@ -41,7 +41,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = topStory
-    ? '(max-width: 600px) 100vw, (max-width: 1008px) 33vw, 237px'
+    ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
     : '(max-width: 1008px) 33vw, 237px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
