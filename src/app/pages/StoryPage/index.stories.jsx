@@ -20,6 +20,7 @@ styStories.add('Mundo', () => {
         status={200}
         pageData={pageData}
         service="mundo"
+        mostReadEndpointOverride="./data/mundo/mostRead/index.json"
       />
     </BrowserRouter>
   );

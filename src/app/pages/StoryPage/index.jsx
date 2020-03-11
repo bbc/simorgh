@@ -32,7 +32,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 
-const StoryPage = ({ pageData }) => {
+const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -184,7 +184,11 @@ const StoryPage = ({ pageData }) => {
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
-        <GridSecondaryColumn item columns={gridColsSecondary}>
+        <GridSecondaryColumn
+          item
+          columns={gridColsSecondary}
+          parentColumns={gridColumns}
+        >
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
@@ -192,7 +196,10 @@ const StoryPage = ({ pageData }) => {
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
           <ComponentWrapper>
-            <MostReadContainer columnLayout="oneColumn" />
+            <MostReadContainer
+              mostReadEndpointOverride={mostReadEndpointOverride}
+              columnLayout="oneColumn"
+            />
           </ComponentWrapper>
         </GridSecondaryColumn>
       </StyledGrid>
