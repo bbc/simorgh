@@ -25,13 +25,13 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
+import Include from '#containers/Include';
 import {
   getFirstPublished,
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
-import Include from '#containers/Include';
 
 const StoryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
