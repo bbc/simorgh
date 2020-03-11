@@ -29,7 +29,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           if ($p.attr('src').includes(envConfig.assetOrigin)) {
             return expect($p.attr('src')).to.match(
               new RegExp(
-                `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
+                `(\\/static\\/js\\/(main|vendor|${config[service].name}|.+Page)-\\w+\\.\\w+\\.js)`,
                 'g',
               ),
             );
