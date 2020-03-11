@@ -1,7 +1,11 @@
 import { Then } from 'cypress-cucumber-preprocessor/steps';
 
+const isAmp = () => {
+  return Cypress.env('isAmp');
+};
+
 const iframeSelector = () => {
-  return Cypress.env('isAmp') ? 'amp-iframe iframe' : 'iframe';
+  return isAmp() ? 'amp-iframe iframe' : 'iframe';
 };
 
 export const assertMediaIsPlaying = () => {
@@ -28,22 +32,28 @@ export const playMedia = (outerIFrameClass, playButton) => {
   cy.get(iframeSelector()).then(iframe => {
     cy.wrap(iframe.contents().find('iframe'))
       .should(inner => expect(inner.contents().find(playButton)).to.exist)
-      .then(inner => cy.wrap(inner.contents().find(playButton)).click());
+      .then(inner =>
+        cy.wrap(inner.contents().find(playButton)).click({ force: true }),
+      );
   });
 };
 
 export const playMediaWithPlaceholder = (outerIFrameClass, playButton) => {
-  cy.get(`div[class^="${outerIFrameClass}"]`)
-    .within(() => {
-      cy.get(playButton);
-    })
-    .click()
-    .should('not.exist')
-    .then(() => {
-      cy.get('iframe').then($iframe => {
-        assertMediaPlayerIsReady($iframe);
+  if (isAmp()) {
+    playMedia(outerIFrameClass, playButton);
+  } else {
+    cy.get(`div[class^="${outerIFrameClass}"]`)
+      .within(() => {
+        cy.get(playButton);
+      })
+      .click()
+      .should('not.exist')
+      .then(() => {
+        cy.get('iframe').then($iframe => {
+          assertMediaPlayerIsReady($iframe);
+        });
       });
-    });
+  }
 };
 
 Then('the video clip plays', () => {
