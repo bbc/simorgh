@@ -61,7 +61,7 @@ const FeaturesAnalysis = ({ content }) => {
           dir={dir}
           labelId="features-analysis-heading"
         >
-          Featured &amp; Analysis {/** this should be translated */}
+          Features &amp; Analysis
         </StyledSectionLabel>
 
         <StoryPromoUl>
