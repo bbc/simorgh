@@ -77,9 +77,6 @@ const FeaturesAnalysis = ({ content }) => {
 };
 
 FeaturesAnalysis.propTypes = {
-  // We Reuse the front page story item blocks
-  // Both pages use CPS, so the data schema is the same
-  // This can be found under Frontpage data payloads: content.groups.find(group => group.type === 'feature-main').items
   content: arrayOf(shape(storyItem)),
 };
 
