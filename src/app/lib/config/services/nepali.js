@@ -207,10 +207,6 @@ export const service = {
         url: '/nepali',
       },
       {
-        title: 'समाचार',
-        url: '/nepali/news',
-      },
-      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/multimedia/radio_programmes',
       },
