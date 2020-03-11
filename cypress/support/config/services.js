@@ -31,8 +31,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-          test: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+          live: [
+            // '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          ],
+          test: [
+            // '/afaanoromoo/bbc_afaanoromoo_radio/liveradio',
+          ],
           local: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
         },
         smoke: false,
@@ -99,8 +103,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/afrique/bbc_afrique_radio/liveradio'],
-          test: ['/afrique/bbc_afrique_radio/liveradio'],
+          live: [
+            // '/afrique/bbc_afrique_radio/liveradio',
+          ],
+          test: [
+            // '/afrique/bbc_afrique_radio/liveradio'
+          ],
           local: ['/afrique/bbc_afrique_radio/liveradio'],
         },
         smoke: false,
@@ -231,8 +239,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/arabic/bbc_arabic_radio/liveradio'],
-          test: ['/arabic/bbc_arabic_radio/liveradio'],
+          live: [
+            // '/arabic/bbc_arabic_radio/liveradio',
+          ],
+          test: [
+            // '/arabic/bbc_arabic_radio/liveradio',
+          ],
           local: ['/arabic/bbc_arabic_radio/liveradio'],
         },
         smoke: false,
@@ -434,8 +446,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/burmese/bbc_burmese_radio/liveradio'],
-          test: ['/burmese/bbc_burmese_radio/liveradio'],
+          live: [
+            // '/burmese/bbc_burmese_radio/liveradio',
+          ],
+          test: [
+            // '/burmese/bbc_burmese_radio/liveradio',
+          ],
           local: ['/burmese/bbc_burmese_radio/liveradio'],
         },
         smoke: false,
@@ -536,8 +552,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/gahuza/bbc_gahuza_radio/liveradio'],
-          test: ['/gahuza/bbc_gahuza_radio/liveradio'],
+          live: [
+            // '/gahuza/bbc_gahuza_radio/liveradio',
+          ],
+          test: [
+            // '/gahuza/bbc_gahuza_radio/liveradio',
+          ],
           local: ['/gahuza/bbc_gahuza_radio/liveradio'],
         },
         smoke: false,
@@ -670,8 +690,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/hausa/bbc_hausa_radio/liveradio'],
-          test: ['/hausa/bbc_hausa_radio/liveradio'],
+          live: [
+            // '/hausa/bbc_hausa_radio/liveradio',
+          ],
+          test: [
+            // '/hausa/bbc_hausa_radio/liveradio',
+          ],
           local: ['/hausa/bbc_hausa_radio/liveradio'],
         },
         smoke: false,
@@ -743,8 +767,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/hindi/bbc_hindi_radio/liveradio'],
-          test: ['/hindi/bbc_hindi_radio/liveradio'],
+          live: [
+            // '/hindi/bbc_hindi_radio/liveradio',
+          ],
+          test: [
+            // '/hindi/bbc_hindi_radio/liveradio',
+          ],
           local: ['/hindi/bbc_hindi_radio/liveradio'],
         },
         smoke: false,
@@ -868,8 +896,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/indonesia/bbc_indonesian_radio/liveradio'],
-          test: ['/indonesia/bbc_indonesian_radio/liveradio'],
+          live: [
+            // '/indonesia/bbc_indonesian_radio/liveradio',
+          ],
+          test: [
+            // '/indonesia/bbc_indonesian_radio/liveradio',
+          ],
           local: ['/indonesia/bbc_indonesian_radio/liveradio'],
         },
         smoke: false,
@@ -998,8 +1030,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/korean/bbc_korean_radio/liveradio'],
-          test: ['/korean/bbc_korean_radio/liveradio'],
+          live: [
+            // '/korean/bbc_korean_radio/liveradio',
+          ],
+          test: [
+            // '/korean/bbc_korean_radio/liveradio',
+          ],
           local: ['/korean/bbc_korean_radio/liveradio'],
         },
         smoke: false,
@@ -1066,8 +1102,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
-          test: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
+          live: [
+            // '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+          ],
+          test: [
+            // '/kyrgyz/bbc_kyrgyz_radio/liveradio',
+          ],
           local: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
         },
         smoke: false,
@@ -1286,8 +1326,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/nepali/bbc_nepali_radio/liveradio'],
-          test: ['/nepali/bbc_nepali_radio/liveradio'],
+          live: [
+            // '/nepali/bbc_nepali_radio/liveradio',
+          ],
+          test: [
+            // '/nepali/bbc_nepali_radio/liveradio',
+          ],
           local: ['/nepali/bbc_nepali_radio/liveradio'],
         },
         smoke: false,
@@ -1392,7 +1436,7 @@ const genServices = {
           test: ['/pashto/bbc_pashto_radio/liveradio'],
           local: ['/pashto/bbc_pashto_radio/liveradio'],
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         paths: {
@@ -1917,8 +1961,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/sinhala/bbc_sinhala_radio/liveradio'],
-          test: ['/sinhala/bbc_sinhala_radio/liveradio'],
+          live: [
+            // '/sinhala/bbc_sinhala_radio/liveradio',
+          ],
+          test: [
+            // '/sinhala/bbc_sinhala_radio/liveradio',
+          ],
           local: ['/sinhala/bbc_sinhala_radio/liveradio'],
         },
         smoke: false,
@@ -1993,7 +2041,7 @@ const genServices = {
           test: ['/somali/bbc_somali_radio/liveradio'],
           local: ['/somali/bbc_somali_radio/liveradio'],
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         paths: {
@@ -2076,8 +2124,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/swahili/bbc_swahili_radio/liveradio'],
-          test: ['/swahili/bbc_swahili_radio/liveradio'],
+          live: [
+            // '/swahili/bbc_swahili_radio/liveradio',
+          ],
+          test: [
+            // '/swahili/bbc_swahili_radio/liveradio',
+          ],
           local: ['/swahili/bbc_swahili_radio/liveradio'],
         },
         smoke: false,
@@ -2149,8 +2201,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/tamil/bbc_tamil_radio/liveradio'],
-          test: ['/tamil/bbc_tamil_radio/liveradio'],
+          live: [
+            // '/tamil/bbc_tamil_radio/liveradio',
+          ],
+          test: [
+            // '/tamil/bbc_tamil_radio/liveradio',
+          ],
           local: ['/tamil/bbc_tamil_radio/liveradio'],
         },
         smoke: false,
@@ -2344,8 +2400,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
-          test: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
+          live: [
+            // '/tigrinya/bbc_tigrinya_radio/liveradio',
+          ],
+          test: [
+            // '/tigrinya/bbc_tigrinya_radio/liveradio',
+          ],
           local: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
         },
         smoke: false,
@@ -2649,8 +2709,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/urdu/bbc_urdu_radio/liveradio'],
-          test: ['/urdu/bbc_urdu_radio/liveradio'],
+          live: [
+            // '/urdu/bbc_urdu_radio/liveradio',
+          ],
+          test: [
+            // '/urdu/bbc_urdu_radio/liveradio',
+          ],
           local: ['/urdu/bbc_urdu_radio/liveradio'],
         },
         smoke: false,
@@ -2722,8 +2786,12 @@ const genServices = {
       },
       liveRadio: {
         paths: {
-          live: ['/uzbek/bbc_uzbek_radio/liveradio'],
-          test: ['/uzbek/bbc_uzbek_radio/liveradio'],
+          live: [
+            // '/uzbek/bbc_uzbek_radio/liveradio',
+          ],
+          test: [
+            // '/uzbek/bbc_uzbek_radio/liveradio',
+          ],
           local: ['/uzbek/bbc_uzbek_radio/liveradio'],
         },
         smoke: false,
