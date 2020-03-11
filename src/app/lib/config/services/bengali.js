@@ -200,6 +200,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',

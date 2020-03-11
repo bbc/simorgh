@@ -195,6 +195,12 @@ export const service = {
           href: 'https://www.bbc.com/turkce/kurumsal-36767474',
           text: "BBC'yle temas kurun",
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',

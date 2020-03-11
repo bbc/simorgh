@@ -204,6 +204,12 @@ export const service = {
           href: 'https://www.bbc.com/tamil/institutional-37288738',
           text: 'பிபிசி-யை தொடர்பு கொள்க',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',

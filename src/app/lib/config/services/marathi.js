@@ -192,6 +192,12 @@ export const service = {
           href: 'https://www.bbc.com/marathi/institutional-42227676',
           text: 'बीबीसीशी संपर्क साधाा',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',

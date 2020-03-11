@@ -189,6 +189,12 @@ export const service = {
           href: 'https://www.bbc.com/vietnamese/institutional-37623842',
           text: 'Liên hệ BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',

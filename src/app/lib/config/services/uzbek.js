@@ -197,6 +197,12 @@ export const service = {
           href: 'https://www.bbc.com/uzbek/institutional-36826360',
           text: 'Би-би-си билан боғланиш',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
     },

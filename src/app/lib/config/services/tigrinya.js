@@ -188,6 +188,12 @@ export const service = {
           href: 'https://www.bbc.com/tigrinya/institutional-42228875',
           text: 'ንቢቢሲ ንምርካብ',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን።',
     },

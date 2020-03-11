@@ -206,6 +206,12 @@ export const service = {
           href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',

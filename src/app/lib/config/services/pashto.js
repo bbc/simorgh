@@ -206,6 +206,12 @@ export const service = {
           href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
     },

@@ -200,6 +200,12 @@ export const service = {
           href: 'https://www.bbc.com/mundo/institucional-36400011',
           text: 'Contacta a la BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',

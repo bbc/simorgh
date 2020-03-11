@@ -202,6 +202,12 @@ export const service = {
           href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
           text: 'Wasiliana na BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
     },

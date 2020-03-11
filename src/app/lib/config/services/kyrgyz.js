@@ -201,6 +201,12 @@ export const service = {
           href: 'https://www.bbc.com/kyrgyz/institutional-38157284',
           text: 'Би-Би-Си менен байланышыңыз',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',

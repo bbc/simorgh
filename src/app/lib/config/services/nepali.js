@@ -196,6 +196,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         '२०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',

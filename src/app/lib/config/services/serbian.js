@@ -285,6 +285,12 @@ export const service = {
           href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
           text: 'Контактирајте ББЦ',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. ББЦ није одговоран за садржај других сајтова.',
     },
