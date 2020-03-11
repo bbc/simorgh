@@ -39,8 +39,12 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/afaanoromoo/oduu-51248626'],
-          test: ['/afaanoromoo/23149891'],
+          live: [
+            // '/afaanoromoo/oduu-51248626'
+          ],
+          test: [
+            // '/afaanoromoo/23149891'
+          ],
           local: ['/afaanoromoo/23149891'],
         },
         smoke: false,
@@ -167,8 +171,12 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/amharic/news-51270657'],
-          test: ['/amharic/news-23263266'],
+          live: [
+            // '/amharic/news-51270657'
+          ],
+          test: [
+            // '/amharic/news-23263266'
+          ],
           local: ['/amharic/news-23263266'],
         },
         smoke: false,
@@ -289,15 +297,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/azeri/international-51331762', // CPS MAP
+            // '/azeri/international-51331762', // CPS MAP
             // '/azeri/multimedia/2012/09/120919_georgia_prison_video', // TC2 MAP
           ],
           test: [
-            '/azeri/azerbaijan-23257464', // CPS MAP
+            // '/azeri/azerbaijan-23257464', // CPS MAP
             // '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
           local: [
-            '/azeri/azerbaijan-23257464', // CPS MAP
+            // '/azeri/azerbaijan-23257464', // CPS MAP
             // '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
         },
@@ -362,15 +370,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/bengali/news-51660521', // CPS MAP
+            // '/bengali/news-51660521', // CPS MAP
             // '/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video', // TC2 MAP
           ],
           test: [
-            '/bengali/media-23269006', // CPS MAP
+            // '/bengali/media-23269006', // CPS MAP
             // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            'bengali/media-23269006', // CPS MAP
+            // 'bengali/media-23269006', // CPS MAP
             // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -435,15 +443,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/burmese/media-48707353', // CPS MAP
+            // '/burmese/media-48707353', // CPS MAP
             // '/burmese/multimedia/2016/01/160108_korean_cook', // TC2 MAP
           ],
           test: [
-            '/burmese/media-23269011', // CPS MAP
+            // '/burmese/media-23269011', // CPS MAP
             // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            '/burmese/media-23269011', // CPS MAP
+            // '/burmese/media-23269011', // CPS MAP
             // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -537,7 +545,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/gahuza/48549182', // CPS MAP
+            // '/gahuza/48549182', // CPS MAP
             // '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP
           ],
           test: [
@@ -602,8 +610,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/gujarati/media-51389006'],
-          test: ['/gujarati/other-news-23130286'],
+          live: [
+            // '/gujarati/media-51389006'
+          ],
+          test: [
+            // '/gujarati/other-news-23130286'
+          ],
           local: ['/gujarati/other-news-23130286'],
         },
         smoke: false,
@@ -667,15 +679,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/hausa/labarai-51622389', // CPS MAP
+            // '/hausa/labarai-51622389', // CPS MAP
             // '/hausa/multimedia/2012/07/120712_click', // TC2 MAP
           ],
           test: [
-            '/hausa/23269030', // CPS MAP
+            // '/hausa/23269030', // CPS MAP
             // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
           ],
           local: [
-            '/hausa/23269030', // CPS MAP
+            // '/hausa/23269030', // CPS MAP
             // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
           ],
         },
@@ -796,8 +808,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/igbo/media-42986440'],
-          test: ['/igbo/media-23256786'],
+          live: [
+            // '/igbo/media-42986440'
+          ],
+          test: [
+            // '/igbo/media-23256786'
+          ],
           local: ['/igbo/media-23256786'],
         },
         smoke: false,
@@ -861,15 +877,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/indonesia/media-51703269', // CPS MAP
+            // '/indonesia/media-51703269', // CPS MAP
             // '/indonesia/bahasa_inggris/2016/08/160817_video_inggris', // TC2 MAP
           ],
           test: [
-            '/indonesia/media-23269037', // CPS MAP
+            // '/indonesia/media-23269037', // CPS MAP
             // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
           ],
           local: [
-            '/indonesia/media-23269037', // CPS MAP
+            // '/indonesia/media-23269037', // CPS MAP
             // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
           ],
         },
@@ -990,8 +1006,12 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/korean/international-51367672'],
-          test: [],
+          live: [
+            // '/korean/international-51367672'
+          ],
+          test: [
+            // '/korean/media-23248686'
+          ],
           local: ['/korean/media-23248686'],
         },
         smoke: false,
@@ -1055,15 +1075,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/kyrgyz/magazine-51509456', // CPS MAP
+            // '/kyrgyz/magazine-51509456', // CPS MAP
             // '/kyrgyz/multimedia/2014/09/140903_iv_auturgan', // TC2 MAP
           ],
           test: [
-            '/kyrgyz/media-23257484', // CPS MAP
+            // '/kyrgyz/media-23257484', // CPS MAP
             // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
           local: [
-            '/kyrgyz/media-23257484', // CPS MAP
+            // '/kyrgyz/media-23257484', // CPS MAP
             // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
         },
@@ -1120,8 +1140,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/marathi/media-51314817'],
-          test: ['/marathi/media-23127353'],
+          live: [
+            // '/marathi/media-51314817'
+          ],
+          test: [
+            // '/marathi/media-23127353'
+          ],
           local: ['/marathi/media-23127353'],
         },
         smoke: false,
@@ -1271,15 +1295,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/nepali/news-51675223', // CPS MAP
+            // '/nepali/news-51675223', // CPS MAP
             // '/nepali/multimedia/2013/08/130806_boudhavideo', // TC2 MAP
           ],
           test: [
-            '/nepali/media-23269034', // CPS MAP with audio clip
+            // '/nepali/media-23269034', // CPS MAP with audio clip
             // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            '/nepali/media-23269034', // CPS MAP
+            '/nepali/media-23269034', // CPS MAP with audio clip
             // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -1373,15 +1397,15 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/pashto/world-51657953', // CPS MAP
+            // '/pashto/world-51657953', // CPS MAP
             // '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP
           ],
           test: [
-            '/pashto/media-23257523', // CPS MAP
+            // '/pashto/media-23257523', // CPS MAP
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            '/pashto/media-23257523', // CPS MAP
+            // '/pashto/media-23257523', // CPS MAP
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -1467,7 +1491,7 @@ const genServices = {
             // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
           ],
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -1521,10 +1545,10 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: ['/pidgin/tori-50974590'], // CPS MAP with video clip & related content
-          test: ['/pidgin/23248703'],
-          local: ['/pidgin/23248703'],
+          test: ['/pidgin/23248703'], // CPS MAP
+          local: ['/pidgin/23248703'], // CPS MAP
         },
-        smoke: false,
+        smoke: true,
       },
       photoGalleryPage: {
         paths: {
@@ -1633,8 +1657,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/punjabi/india-51325361'],
-          test: ['/punjabi/media-23248705'],
+          live: [
+            // '/punjabi/india-51325361'
+          ],
+          test: [
+            // '/punjabi/media-23248705'
+          ],
           local: ['/punjabi/media-23248705'],
         },
         smoke: false,
@@ -1898,11 +1926,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/sinhala/sri-lanka-51375061', // CPS MAP
+            // '/sinhala/sri-lanka-51375061', // CPS MAP
             // '/sinhala/world/2015/09/150919_technology_at_schools', // TC2 MAP
           ],
           test: [
-            '/sinhala/world-23257567', // CPS MAP
+            // '/sinhala/world-23257567', // CPS MAP
             // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
           ],
           local: [
@@ -1970,11 +1998,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/somali/51642476', // CPS MAP
+            // '/somali/51642476', // CPS MAP
             // '/somali/war/2010/09/100929_business', // TC2 MAP
           ],
           test: [
-            '/somali/hayadeed-23269042', // CPS MAP
+            // '/somali/hayadeed-23269042', // CPS MAP
             // '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP
           ],
           local: [
@@ -2057,7 +2085,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/swahili/gnb-51703829', // CPS MAP
+            // '/swahili/gnb-51703829', // CPS MAP
             // '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP
           ],
           test: [
@@ -2130,7 +2158,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/tamil/sport-51702939', // CPS MAP
+            // '/tamil/sport-51702939', // CPS MAP
             // '/tamil/global/2014/07/140713_animalsvideo', // TC2 MAP
           ],
           test: [
@@ -2195,8 +2223,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/telugu/india-51309092'],
-          test: ['/telugu/international-23263261'],
+          live: [
+            // '/telugu/india-51309092'
+          ],
+          test: [
+            // '/telugu/international-23263261'
+          ],
           local: ['/telugu/international-23263261'],
         },
         smoke: false,
@@ -2252,8 +2284,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/thai/international-51285795'],
-          test: ['/thai/23122810'],
+          live: [
+            // '/thai/international-51285795'
+          ],
+          test: [
+            // '/thai/23122810'
+          ],
           local: ['/thai/23122810'],
         },
         smoke: false,
@@ -2316,8 +2352,12 @@ const genServices = {
       },
       mediaAssetPage: {
         paths: {
-          live: ['/tigrinya/news-51249937'],
-          test: ['/tigrinya/news-23263262'],
+          live: [
+            // '/tigrinya/news-51249937'
+          ],
+          test: [
+            // '/tigrinya/news-23263262'
+          ],
           local: ['/tigrinya/news-23263262'],
         },
         smoke: false,
@@ -2374,11 +2414,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/turkce/haberler-dunya-51621819', // CPS MAP
+            // '/turkce/haberler-dunya-51621819', // CPS MAP
             // '/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon', // TC2 MAP
           ],
           test: [
-            '/turkce/media-23268997', // CPS MAP with audio clip
+            // '/turkce/media-23268997', // CPS MAP with audio clip
             // '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP
           ],
           local: [
@@ -2618,7 +2658,7 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/urdu/punjabi-video-42830182', // CPS MAP
+            // '/urdu/punjabi-video-42830182', // CPS MAP
             // '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP
           ],
           test: [
@@ -2748,11 +2788,11 @@ const genServices = {
       mediaAssetPage: {
         paths: {
           live: [
-            '/vietnamese/forum-51506476', // CPS MAP
+            // '/vietnamese/forum-51506476', // CPS MAP
             // '/vietnamese/multimedia/2015/04/150428_david_wheat_interview', // TC2 MAP
           ],
           test: [
-            '/vietnamese/media-23257614', // CPS MAP
+            // '/vietnamese/media-23257614', // CPS MAP
             // '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP
           ],
           local: [
@@ -2813,8 +2853,12 @@ const genServices = {
       liveRadio: { paths: undefined, smoke: false },
       mediaAssetPage: {
         paths: {
-          live: ['/yoruba/afrika-51116686'], // CPS MAP with video
-          test: ['/yoruba/media-23256797'],
+          live: [
+            // '/yoruba/afrika-51116686'
+          ], // CPS MAP with video
+          test: [
+            // '/yoruba/media-23256797'
+          ],
           local: ['/yoruba/media-23256797'],
         },
         smoke: false,
