@@ -48,7 +48,7 @@ Feature: Media Player
             | hausa/multimedia/2016/07/160714_tc2_audiomap     |
             | hausa/multimedia/2016/07/160714_tc2_audiomap.amp |
 
-    @live @focus
+    @live
     Scenario Outline: Video clip plays on a Media Asset Page
         Given I navigate to <URL>
         When I click the play video button
