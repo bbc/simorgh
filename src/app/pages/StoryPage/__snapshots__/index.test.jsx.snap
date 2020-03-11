@@ -724,6 +724,54 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c43 {
+    width: calc(33.333333333333336%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c43 {
+    width: calc(25%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c43 {
     display: block;
@@ -2234,6 +2282,54 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @supports (display:grid) {
   .c44 {
     display: block;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c45 {
+    width: calc(33.333333333333336%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c45 {
+    width: calc(25%);
+    display: inline-block;
+    vertical-align: top;
   }
 }
 

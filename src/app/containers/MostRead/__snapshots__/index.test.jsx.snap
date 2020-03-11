@@ -147,6 +147,54 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c9 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c9 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c9 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c9 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c9 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c9 {
     display: block;
@@ -167,19 +215,19 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c12 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c12 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c12 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
@@ -191,31 +239,31 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:37.5rem) {
   .c12 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c12 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c16 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c16 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c16 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
@@ -233,25 +281,25 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:80rem) {
   .c16 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c17 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c17 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
@@ -263,7 +311,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:37.5rem) {
   .c17 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
@@ -275,19 +323,19 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c18 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c18 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c18 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
@@ -305,25 +353,25 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:80rem) {
   .c18 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c19 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c19 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c19 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
@@ -335,13 +383,49 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:37.5rem) {
   .c19 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c19 {
-    min-width: auto;
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c20 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c20 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c20 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c20 {
+    min-width: 3rem;
   }
 }
 
@@ -788,7 +872,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c18"
+            class="c20"
             dir="rtl"
           >
             <span
