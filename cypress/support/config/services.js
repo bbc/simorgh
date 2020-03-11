@@ -305,7 +305,7 @@ const genServices = {
             // '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
           local: [
-            // '/azeri/azerbaijan-23257464', // CPS MAP
+            '/azeri/azerbaijan-23257464', // CPS MAP
             // '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP
           ],
         },
@@ -378,7 +378,7 @@ const genServices = {
             // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            // 'bengali/media-23269006', // CPS MAP
+            'bengali/media-23269006', // CPS MAP
             // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -451,7 +451,7 @@ const genServices = {
             // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            // '/burmese/media-23269011', // CPS MAP
+            '/burmese/media-23269011', // CPS MAP
             // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP
           ],
         },
@@ -687,7 +687,7 @@ const genServices = {
             // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
           ],
           local: [
-            // '/hausa/23269030', // CPS MAP
+            '/hausa/23269030', // CPS MAP
             // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
           ],
         },
@@ -885,7 +885,7 @@ const genServices = {
             // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
           ],
           local: [
-            // '/indonesia/media-23269037', // CPS MAP
+            '/indonesia/media-23269037', // CPS MAP
             // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP
           ],
         },
@@ -1083,7 +1083,7 @@ const genServices = {
             // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
           local: [
-            // '/kyrgyz/media-23257484', // CPS MAP
+            '/kyrgyz/media-23257484', // CPS MAP
             // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP
           ],
         },
@@ -1405,7 +1405,7 @@ const genServices = {
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
           local: [
-            // '/pashto/media-23257523', // CPS MAP
+            '/pashto/media-23257523', // CPS MAP
             // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
           ],
         },
