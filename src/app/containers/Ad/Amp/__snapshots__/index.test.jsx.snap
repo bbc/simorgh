@@ -1,28 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
-.c0 {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-@media (min-width:37.5rem) {
-  .c0 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
-    margin-top: 2rem;
-    max-width: 63rem;
-  }
-}
-
-<div
-  class="c0"
->
+exports[`AMP Navigation Snapshots should correctly render an AMP leaderboard ad 1`] = `
+<div>
   <amp-ad
     data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
     data-amp-slot-index="0"
@@ -63,5 +42,3 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   </amp-ad>
 </div>
 `;
-
-exports[`Ad Container Snapshots should not render an AMP ad for News 1`] = `<div />`;
