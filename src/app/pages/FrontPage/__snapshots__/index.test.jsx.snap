@@ -25,7 +25,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 chartbeat
               </div>
               <main
-                class="StyledFrontPageMain-sc-58u5qv-0 jXCNVc"
                 role="main"
               >
                 <h1
@@ -48,7 +47,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                   </span>
                 </h1>
                 <div
-                  class="StyledFrontPageDiv-sc-58u5qv-1 biyoqx"
+                  class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu"
                 >
                   <section
                     aria-labelledby="Top-stories"
@@ -751,7 +750,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         role="list"
                       >
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -785,15 +784,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-05-21"
                                 >
-                                  De one we dem update for: 
-                                  21st May 2019
+                                  De one we dem update for: 21st May 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -827,15 +825,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-11-05"
                                 >
-                                  De one we dem update for: 
-                                  5th November 2019
+                                  De one we dem update for: 5th November 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -869,15 +866,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-11-05"
                                 >
-                                  De one we dem update for: 
-                                  5th November 2019
+                                  De one we dem update for: 5th November 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -911,15 +907,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-11-06"
                                 >
-                                  De one we dem update for: 
-                                  6th November 2019
+                                  De one we dem update for: 6th November 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -953,15 +948,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-11-06"
                                 >
-                                  De one we dem update for: 
-                                  6th November 2019
+                                  De one we dem update for: 6th November 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -995,15 +989,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-10-18"
                                 >
-                                  De one we dem update for: 
-                                  18th October 2019
+                                  De one we dem update for: 18th October 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1037,15 +1030,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-10-25"
                                 >
-                                  De one we dem update for: 
-                                  25th October 2019
+                                  De one we dem update for: 25th October 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1079,15 +1071,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-05-23"
                                 >
-                                  De one we dem update for: 
-                                  23rd May 2019
+                                  De one we dem update for: 23rd May 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1121,15 +1112,14 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-11-06"
                                 >
-                                  De one we dem update for: 
-                                  6th November 2019
+                                  De one we dem update for: 6th November 2019
                                 </time>
                               </div>
                             </div>
                           </div>
                         </li>
                         <li
-                          class="GridComponent-nf79gm-0 bvkVj StyledGrid-u0d8kd-4 ereTEa"
+                          class="GridComponent-nf79gm-0 cvevRu StyledGrid-u0d8kd-4 ereTEa"
                           dir="ltr"
                           role="listitem"
                         >
@@ -1163,8 +1153,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                   class="StyledTimestamp-um718p-0 kVWTyt"
                                   datetime="2019-05-21"
                                 >
-                                  De one we dem update for: 
-                                  21st May 2019
+                                  De one we dem update for: 21st May 2019
                                 </time>
                               </div>
                             </div>

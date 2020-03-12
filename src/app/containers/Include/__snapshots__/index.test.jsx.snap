@@ -5,7 +5,7 @@ exports[`IncludeContainer should not render any HTML when include toggle is disa
 exports[`IncludeContainer should render HTML when include toggle is enabled 1`] = `
 <div>
   <div
-    class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+    class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
   >
     <div>
        

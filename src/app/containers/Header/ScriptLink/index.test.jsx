@@ -7,6 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
+import { ToggleContext } from '#contexts/ToggleContext';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukChinaServiceConfig } from '#lib/config/services/ukchina';
 import * as cookies from '#contexts/UserContext/cookies';
@@ -30,6 +31,7 @@ const userContextMock = {
 
 const requestContextMock = {
   variant: 'lat',
+  env: 'test',
 };
 
 const withRouter = (component, matchPath, path) => {
@@ -48,21 +50,62 @@ const withRouter = (component, matchPath, path) => {
   };
 };
 
+const defaultToggleState = {
+  local: {
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+  },
+  test: {
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+  },
+  live: {
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+  },
+};
+
+const mockToggleDispatch = jest.fn();
+
+const toggleContextMock = {
+  toggleState: defaultToggleState,
+  toggleDispatch: mockToggleDispatch,
+};
+
 /* eslint-disable react/prop-types */
 const ScriptLinkContainerWithContext = ({
   serviceContext = serbianServiceConfig.lat,
   requestContext = requestContextMock,
+  toggleContext = toggleContextMock,
 }) => (
-  <ServiceContext.Provider value={serviceContext}>
-    <UserContext.Provider value={userContextMock}>
-      <RequestContext.Provider value={requestContext}>
-        <ScriptLinkContainer />
-      </RequestContext.Provider>
-    </UserContext.Provider>
-  </ServiceContext.Provider>
+  <ToggleContext.Provider value={toggleContext}>
+    <ServiceContext.Provider value={serviceContext}>
+      <UserContext.Provider value={userContextMock}>
+        <RequestContext.Provider value={requestContext}>
+          <ScriptLinkContainer />
+        </RequestContext.Provider>
+      </UserContext.Provider>
+    </ServiceContext.Provider>
+  </ToggleContext.Provider>
 );
 
 describe(`Script Link`, () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   shouldMatchSnapshot(
     'should render correctly',
     <MemoryRouter initialEntries={['/serbian/lat']}>
@@ -101,7 +144,7 @@ describe(`Script Link`, () => {
         variantPath:
           '/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         serviceContext: ukChinaServiceConfig.trad,
-        requestContext: { variant: 'trad' },
+        requestContext: { variant: 'trad', env: 'test' },
         otherVariant: 'simp',
       },
     };
@@ -115,6 +158,7 @@ describe(`Script Link`, () => {
             variantPath,
             serviceContext = serbianServiceConfig.lat,
             requestContext = requestContextMock,
+            toggleContext = toggleContextMock,
             otherVariant = 'cyr',
           } = testCases[testCase];
 
@@ -122,6 +166,7 @@ describe(`Script Link`, () => {
             <ScriptLinkContainerWithContext
               serviceContext={serviceContext}
               requestContext={requestContext}
+              toggleContext={toggleContext}
             />,
             matchPath,
             path,
@@ -146,6 +191,7 @@ describe(`Script Link`, () => {
             variantPath,
             serviceContext = serbianServiceConfig.lat,
             requestContext = requestContextMock,
+            toggleContext = toggleContextMock,
             otherVariant = 'cyr',
           } = testCases[testCase];
 
@@ -153,6 +199,7 @@ describe(`Script Link`, () => {
             <ScriptLinkContainerWithContext
               serviceContext={serviceContext}
               requestContext={requestContext}
+              toggleContext={toggleContext}
             />,
             matchPath,
             `${path}.amp`,
@@ -177,6 +224,32 @@ describe(`Script Link`, () => {
       fireEvent.click(scriptLink);
       expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(1);
     });
+
+    it('should not set preferred variant cookie when variantCookie toggle is disabled', () => {
+      const testToggles = {
+        test: {
+          scriptLink: {
+            enabled: true,
+          },
+          variantCookie: {
+            enabled: false,
+          },
+        },
+      };
+      const { container } = withRouter(
+        <ScriptLinkContainerWithContext
+          toggleContext={{
+            toggleState: testToggles,
+            toggleDispatch: mockToggleDispatch,
+          }}
+        />,
+        frontPagePath,
+        '/serbian/lat',
+      );
+      const scriptLink = container.querySelector('a[data-variant="cyr"]');
+      fireEvent.click(scriptLink);
+      expect(setPreferredVariantCookieSpy).toHaveBeenCalledTimes(0);
+    });
   });
 
   describe('getVariantHref', () => {
@@ -187,6 +260,7 @@ describe(`Script Link`, () => {
         getVariantHref({
           path,
           params: { foo: 'foo', bar: 'bar', variant: '/lat' },
+          service: 'serbian',
           variant: 'cyr',
         }),
       ).toEqual('/foo/bar/cyr');
@@ -200,9 +274,75 @@ describe(`Script Link`, () => {
         getVariantHref({
           path,
           params: { foo: 'foo', bar: 'bar', variant: '/lat', amp: '.amp' },
+          service: 'serbian',
           variant: 'cyr',
         }),
       ).toEqual('/foo/bar/cyr');
     });
+
+    it('should generate fallback if no path defined', () => {
+      expect(
+        getVariantHref({
+          params: {},
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+    });
+
+    it('should generate fallback if path does not match defined route from config', () => {
+      expect(
+        getVariantHref({
+          path: '/',
+          params: {},
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+    });
+
+    it('should generate fallback if a parameter specified in the path is not provided', () => {
+      expect(
+        getVariantHref({
+          path: '/:foo',
+          params: {},
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+
+      expect(
+        getVariantHref({
+          path: '/:foo:bar',
+          params: { foo: 'foo' },
+          service: 'serbian',
+          variant: 'cyr',
+        }),
+      ).toEqual('/serbian/cyr');
+    });
+  });
+
+  it('should not render when scriptLink toggle is off', () => {
+    const testToggles = {
+      test: {
+        scriptLink: {
+          enabled: false,
+        },
+        variantCookie: {
+          enabled: false,
+        },
+      },
+    };
+    const { container } = withRouter(
+      <ScriptLinkContainerWithContext
+        toggleContext={{
+          toggleState: testToggles,
+          toggleDispatch: mockToggleDispatch,
+        }}
+      />,
+      frontPagePath,
+      '/serbian/lat',
+    );
+    expect(container).toBeEmpty();
   });
 });

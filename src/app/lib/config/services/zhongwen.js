@@ -86,7 +86,7 @@ export const service = {
       header: '热读',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -277,6 +277,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: '聯絡BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
@@ -284,7 +290,7 @@ export const service = {
       header: '熱讀',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
