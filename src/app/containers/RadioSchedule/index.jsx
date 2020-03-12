@@ -8,6 +8,7 @@ import propSatisfies from 'ramda/src/propSatisfies';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
 import webLogger from '#lib/logger.web';
+import { getLink } from './endpoint';
 
 const logger = webLogger();
 
@@ -35,13 +36,6 @@ const RadioScheduleContainer = ({ endpoint }) => {
       return 'onDemand';
     }
     return 'next';
-  };
-
-  const getLink = (state, program) => {
-    const url = `/${service}/${program.serviceId}`;
-    return state === 'live'
-      ? `${url}/liveradio`
-      : `${url}/${program.broadcast.pid}`;
   };
 
   const handleResponse = async response => {
@@ -79,7 +73,12 @@ const RadioScheduleContainer = ({ endpoint }) => {
           state: currentState,
           stateLabel: currentState,
           startTime: program.publishedTimeStart,
-          link: getLink(currentState, program),
+          link: getLink({
+            service,
+            currentState,
+            programServiceId: program.serviceId,
+            broadcastPid: program.broadcast.pid,
+          }),
           brandTitle: program.brand.title,
           episodeTitle: program.episode.presentationTitle,
           summary: program.episode.synopses.short,
