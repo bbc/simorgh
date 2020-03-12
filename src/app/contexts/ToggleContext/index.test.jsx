@@ -4,46 +4,35 @@ import fetchMock from 'fetch-mock';
 import '@testing-library/jest-dom/extend-expect';
 import { queryByText } from '@testing-library/dom';
 import togglesConfig from '#lib/config/toggles';
+import { ToggleContext, ToggleContextProvider } from '.';
 
-// const mockTogglesResponseAdsOn = {
-//   toggles: { ads: { enabled: true, value: '' } },
-// };
-// const mockTogglesResponseAdsOff = {
-//   toggles: { ads: { enabled: false, value: '' } },
-// };
+process.env.SIMORGH_APP_ENV = 'local';
+process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 
-beforeEach(() => {
-  process.env.SIMORGH_APP_ENV = 'local';
-  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
-  global.fetch = fetch;
-});
+// eslint-disable-next-line react/prop-types
+const TestComponent = ({ toggle, children }) => {
+  const toggleIsEnabled = useContext(ToggleContext).toggleState[toggle].enabled;
+
+  return toggleIsEnabled && <div>{children}</div>;
+};
 
 afterEach(() => {
   fetchMock.restore();
 });
 
-// Require after mock to allow mocking of JS object
-const { ToggleContext, ToggleContextProvider } = require('./index');
-
 describe('ToggleContext with feature toggles', () => {
   describe('given the feature toggle is enabled', () => {
     beforeEach(() => {
       togglesConfig.local.chartbeatAnalytics.enabled = true;
-      togglesConfig.local.remoteFeatureToggles.enabled = false;
+      togglesConfig.local.enableFetchingToggles.enabled = false;
     });
 
-    it('should render the feature component', () => {
-      const TestComponent = () => {
-        const chartbeatIsEnabled = useContext(ToggleContext).toggleState
-          .chartbeatAnalytics.enabled;
-
-        return (
-          chartbeatIsEnabled && <div>Dummy Chartbeat Analytics Component</div>
-        );
-      };
+    it('should render the test component', () => {
       const { getByText } = render(
         <ToggleContextProvider service="mundo">
-          <TestComponent />
+          <TestComponent toggle="chartbeatAnalytics">
+            Dummy Chartbeat Analytics Component
+          </TestComponent>
         </ToggleContextProvider>,
       );
 
@@ -56,21 +45,15 @@ describe('ToggleContext with feature toggles', () => {
   describe('given the feature toggle is disabled', () => {
     beforeEach(() => {
       togglesConfig.local.chartbeatAnalytics.enabled = false;
-      togglesConfig.local.remoteFeatureToggles.enabled = false;
+      togglesConfig.local.enableFetchingToggles.enabled = false;
     });
 
-    it('should render the feature component', () => {
-      const TestComponent = () => {
-        const chartbeatIsEnabled = useContext(ToggleContext).toggleState
-          .chartbeatAnalytics.enabled;
-
-        return (
-          chartbeatIsEnabled && <div>Dummy Chartbeat Analytics Component</div>
-        );
-      };
+    it('should render the test component', () => {
       const { container } = render(
         <ToggleContextProvider service="mundo">
-          <TestComponent />
+          <TestComponent toggle="chartbeatAnalytics">
+            Dummy Chartbeat Analytics Component
+          </TestComponent>
         </ToggleContextProvider>,
       );
 
@@ -80,51 +63,132 @@ describe('ToggleContext with feature toggles', () => {
     });
   });
 
-  describe('given feature toggle is disabled locally and enabled remotely i.e. enabled in iSite', () => {
-    let container;
+  [
+    {
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: true,
+      remoteAdToggleValue: true,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).toBeInTheDocument(),
+    },
+    {
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: true,
+      remoteAdToggleValue: false,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).not.toBeInTheDocument(),
+    },
+    {
+      localAdToggleValue: true,
+      enableFetchingTogglesValue: true,
+      remoteAdToggleValue: false,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).not.toBeInTheDocument(),
+    },
+    {
+      localAdToggleValue: true,
+      enableFetchingTogglesValue: false,
+      remoteAdToggleValue: null,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).toBeInTheDocument(),
+    },
+    {
+      localAdToggleValue: true,
+      enableFetchingTogglesValue: true,
+      remoteAdToggleValue: true,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).toBeInTheDocument(),
+    },
+    {
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: false,
+      remoteAdToggleValue: false,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).not.toBeInTheDocument(),
+    },
+    {
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: false,
+      remoteAdToggleValue: false,
+      expectation: container =>
+        expect(
+          queryByText(container, 'Dummy Ad Component'),
+        ).not.toBeInTheDocument(),
+    },
+  ].forEach(
+    ({
+      localAdToggleValue,
+      enableFetchingTogglesValue,
+      remoteAdToggleValue,
+      expectation,
+    }) => {
+      describe(`given the local ads toggle is ${localAdToggleValue} and the fetching of toggles is ${
+        enableFetchingTogglesValue
+          ? `true and the remote ads toggle value is ${remoteAdToggleValue}`
+          : 'false'
+      }`, () => {
+        const togglesUrl =
+          'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true';
 
-    beforeEach(() => {
-      container = document.createElement('div');
-      document.body.appendChild(container);
-      togglesConfig.local.ads.enabled = false; // local ads toggle is false
-      togglesConfig.local.remoteFeatureToggles.enabled = true;
-      fetchMock.mock(
-        'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true',
-        JSON.stringify({
-          toggles: {
-            ads: {
-              enabled: true, // remote ads toggle is true
-              value: '',
+        beforeEach(() => {
+          togglesConfig.local.ads.enabled = localAdToggleValue;
+          togglesConfig.local.enableFetchingToggles.enabled = enableFetchingTogglesValue;
+          fetchMock.mock(togglesUrl, {
+            toggles: {
+              ads: {
+                enabled: remoteAdToggleValue,
+                value: '',
+              },
             },
-          },
-        }),
-      );
-    });
+          });
+        });
 
-    afterEach(() => {
-      document.body.removeChild(container);
-      container = null;
-    });
+        it(`should ${
+          enableFetchingTogglesValue ? 'call' : 'not call'
+        } the toggles endpoint`, async () => {
+          await act(async () => {
+            await render(
+              <ToggleContextProvider service="mundo">
+                <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+              </ToggleContextProvider>,
+            );
+          });
 
-    it('should render the feature component', async () => {
-      act(() => {
-        const TestComponent = () => {
-          const adsIsEnabled = useContext(ToggleContext).toggleState.ads
-            .enabled;
-          console.log('adsIsEnabled', adsIsEnabled);
-          return adsIsEnabled && <div>Dummy Ad Component</div>;
-        };
-        // todo not sure this is working
-        const renderResult = render(
-          <ToggleContextProvider service="mundo">
-            <TestComponent />
-          </ToggleContextProvider>,
-        );
-        container = renderResult.container;
+          if (enableFetchingTogglesValue) {
+            expect(fetchMock.calls(togglesUrl).length).toBeTruthy();
+          } else {
+            expect(fetchMock.calls(togglesUrl).length).toBeFalsy();
+          }
+        });
+
+        it(`should ${
+          localAdToggleValue || remoteAdToggleValue ? 'render' : 'not render'
+        } the test component`, async () => {
+          let container;
+
+          await act(async () => {
+            container = await render(
+              <ToggleContextProvider service="mundo">
+                <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+              </ToggleContextProvider>,
+            ).container;
+          });
+
+          expectation(container);
+        });
       });
-      console.log('just before expect');
-      // console.log('querybytext', queryByText(container, 'Dummy Ad Component'));
-      expect(queryByText(container, 'Dummy Ad Component')).toBeInTheDocument();
-    });
-  });
+    },
+  );
 });

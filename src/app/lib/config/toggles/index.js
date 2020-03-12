@@ -21,7 +21,7 @@ const toggles = {
     radioSchedule: {
       enabled: true,
     },
-    remoteFeatureToggles: {
+    enableFetchingToggles: {
       enabled: true,
       value: '(mundo|news)',
     },
@@ -48,7 +48,7 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
-    remoteFeatureToggles: {
+    enableFetchingToggles: {
       enabled: true,
       value: '(mundo|news)',
     },
@@ -72,7 +72,7 @@ const toggles = {
     radioSchedule: {
       enabled: false,
     },
-    remoteFeatureToggles: {
+    enableFetchingToggles: {
       enabled: false,
       value: '(mundo|news)',
     },

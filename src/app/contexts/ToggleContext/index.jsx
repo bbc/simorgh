@@ -19,12 +19,12 @@ const ToggleContextProvider = ({ children, service, origin }) => {
   const environment = process.env.SIMORGH_APP_ENV || 'local';
 
   // temp method to only enable remote freature toggling for test and for a list of services
-  const { remoteFeatureToggles } = defaultToggles[environment];
+  const { enableFetchingToggles } = defaultToggles[environment];
 
   useEffect(() => {
     if (
-      remoteFeatureToggles.enabled &&
-      service.match(remoteFeatureToggles.value)
+      enableFetchingToggles.enabled &&
+      service.match(enableFetchingToggles.value)
     ) {
       // const isRemoteToggle = true;
       // const isRemoteToggle = Object.keys(simorghToggles).some(toggle =>
@@ -33,13 +33,11 @@ const ToggleContextProvider = ({ children, service, origin }) => {
       // if (isRemoteToggle) {
       const fetchAndUpdateToggles = async () => {
         try {
-          // console.log('fetching', constructTogglesEndpoint(service, origin));
           const response = await fetch(
             constructTogglesEndpoint(service, origin),
           );
 
           const jsonData = await response.json();
-          console.log('jsondata', jsonData);
 
           // container code: const { ads } = toggleContext(); if(ads && ads.enabled)
           // When we make the server request, the geoiplookup won't need to be made.
@@ -56,11 +54,10 @@ const ToggleContextProvider = ({ children, service, origin }) => {
   }, [
     service,
     origin,
-    remoteFeatureToggles.enabled,
-    remoteFeatureToggles.value,
+    enableFetchingToggles.enabled,
+    enableFetchingToggles.value,
     simorghToggles,
   ]);
-  console.log('just before return');
   return (
     <ToggleContext.Provider value={{ toggleState, toggleDispatch }}>
       {children}
