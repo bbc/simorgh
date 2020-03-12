@@ -27,7 +27,7 @@ import IndexAlsosContainer from './IndexAlsos';
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
 
-const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
+const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
@@ -40,7 +40,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
-  const sizes = topStory
+  const sizes = useLargeImages
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
     : '(max-width: 1008px) 33vw, 237px';
   const DEFAULT_IMAGE_RES = 660;
@@ -62,7 +62,7 @@ const StoryPromoImage = ({ topStory, imageValues, lazyLoad }) => {
 };
 
 StoryPromoImage.propTypes = {
-  topStory: bool.isRequired,
+  useLargeImages: bool.isRequired,
   lazyLoad: bool,
   imageValues: storyItem.indexImage,
 };
@@ -139,7 +139,7 @@ const StoryPromoContainer = ({
     return null;
   }
 
-  const topStory = promoType === 'top' || promoType === 'leading';
+  const useLargeImages = promoType === 'top' || promoType === 'leading';
 
   const Info = (
     <>
@@ -201,7 +201,7 @@ const StoryPromoContainer = ({
   const imageValues = pathOr(null, ['indexImage'], item);
   const Image = (
     <StoryPromoImage
-      topStory={topStory}
+      useLargeImages={useLargeImages}
       lazyLoad={lazyLoadImage}
       imageValues={imageValues}
     />
