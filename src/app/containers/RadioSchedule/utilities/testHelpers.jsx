@@ -4,12 +4,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-const localRadioScheduleEndpoint = service => {
-  const localhostURL = 'http://localhost:7080';
-  const localServiceURL = `${localhostURL}/${service}`;
-  return `${localServiceURL}/bbc_${service}_radio/schedule.json`;
-};
-
 const getToggleState = enabled => ({
   local: { radioSchedule: { enabled } },
   test: { radioSchedule: { enabled } },
@@ -30,9 +24,7 @@ const RadioSchedulesWithContext = ({
       pathname={`/${service}`}
     >
       <ServiceContextProvider service={service}>
-        <RadioScheduleContainer
-          endpoint={localRadioScheduleEndpoint(service)}
-        />
+        <RadioScheduleContainer />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContext.Provider>
