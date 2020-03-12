@@ -17,7 +17,7 @@ describe('Canonical RadioSchedule', () => {
     fetch.mockResponse(JSON.stringify(hausaRadioScheduleData));
 
     await matchSnapshotAsync(
-      <RadioSchedulesWithContext service="arabic" radioScheduleToggle />,
+      <RadioSchedulesWithContext service="hausa" radioScheduleToggle />,
     );
   });
 });
