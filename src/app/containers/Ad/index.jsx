@@ -42,14 +42,15 @@ const AdContainer = () => {
   }
 
   //   const Ad = isAmp ? Amp : Canonical;
-
-  return (
-    isAmp && (
+  if (isAmp) {
+    return (
       <StyledAd>
         <Amp service={service} />
       </StyledAd>
-    )
-  );
+    );
+  }
+
+  return null;
 };
 
 export default AdContainer;
