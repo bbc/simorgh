@@ -4,6 +4,7 @@ exports[`Ad Container should correctly render an amp leaderboard ad 1`] = `
 .c0 {
   margin: 0 auto;
   width: 100%;
+  text-align: center;
 }
 
 @media (min-width:37.5rem) {
