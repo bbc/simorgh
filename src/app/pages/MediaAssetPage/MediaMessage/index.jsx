@@ -15,6 +15,9 @@ import {
 import { MediaMessage } from '@bbc/psammead-media-player';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
 const StyledMessageContainer = styled.div`
@@ -39,9 +42,25 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 
 export default () => {
   const { translations, service } = useContext(ServiceContext);
-  const contentNotAvailableMessage =
-    path(['media', 'contentExpired'], translations) ||
-    'This content is not available';
+  const translatedText = path(['media', 'contentExpired'], translations);
+  const message = 'This content is no longer available';
+  const contentNotAvailableMessage = translatedText || message;
+  const isTextNotTranslated =
+    !translatedText ||
+    (service !== 'news' && contentNotAvailableMessage === message);
+
+  if (isTextNotTranslated) {
+    logger.info(
+      JSON.stringify(
+        {
+          event: 'no_translation_found',
+          message: `No ${service} translation found for "${message}"`,
+        },
+        null,
+        2,
+      ),
+    );
+  }
 
   return (
     <Wrapper>
