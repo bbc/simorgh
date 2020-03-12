@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -10,6 +11,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
+
 import Amp from './Amp';
 import useToggle from '../Toggle/useToggle';
 
@@ -31,10 +33,8 @@ const StyledAd = styled.div`
 
 const AdContainer = () => {
   const { isAmp } = useContext(RequestContext);
-  const {
-    service,
-    ads: { hasAds },
-  } = useContext(ServiceContext);
+  const { service, ads } = useContext(ServiceContext);
+  const hasAds = pathOr(false, ['hasAds'], ads);
   const { enabled: adsEnabled } = useToggle('ads');
 
   if (!adsEnabled || !hasAds) {
