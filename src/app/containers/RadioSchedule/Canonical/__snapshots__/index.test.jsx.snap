@@ -2007,6 +2007,135 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                 class="c17"
                 datetime="2020-03-11"
               >
+                19:29
+              </time>
+            </span>
+          </div>
+        </div>
+        <div
+          class="c18"
+        >
+          <div
+            class="c19"
+          >
+            <h3
+              class="c20"
+            >
+              <a
+                class="c21"
+                href="/arabic/bbc_hausa_radio/p0857r4p"
+              >
+                <span
+                  class=""
+                  role="text"
+                >
+                  <span>
+                    Shirin Yamma
+                  </span>
+                  <span
+                    class="c22"
+                  >
+                    , 
+                    19:29
+                    , 
+                  </span>
+                  <span
+                    class="c23"
+                  >
+                    11/03/2020 GMT
+                  </span>
+                </span>
+              </a>
+            </h3>
+            <p
+              class="c24"
+            >
+              Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.
+            </p>
+          </div>
+          <div
+            class="c25"
+          >
+            <span
+              class="c26"
+            >
+              <svg
+                aria-hidden="true"
+                class="c27"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </span>
+            <time
+              class="c28"
+              datetime="PT30M"
+              dir="rtl"
+            >
+              <span
+                class="c22"
+              >
+                 Duration 30,00 
+              </span>
+              <span
+                aria-hidden="true"
+                class="Duration0 "
+              >
+                30:00
+              </span>
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c11"
+        data-e2e="onDemand"
+        dir="rtl"
+        role="listitem"
+      >
+        <div
+          class="c12"
+        >
+          <div
+            class="c13"
+          >
+            <span
+              class="c14"
+              dir="rtl"
+            >
+              <svg
+                aria-hidden="true"
+                class="c15"
+                focusable="false"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                />
+                <path
+                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                />
+              </svg>
+            </span>
+            <span
+              aria-hidden="true"
+              class="c16"
+              dir="rtl"
+            >
+              <time
+                class="c17"
+                datetime="2020-03-11"
+              >
                 13:59
               </time>
             </span>
@@ -2226,135 +2355,6 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
       </li>
       <li
         class="c10 c11"
-        data-e2e="onDemand"
-        dir="rtl"
-        role="listitem"
-      >
-        <div
-          class="c12"
-        >
-          <div
-            class="c13"
-          >
-            <span
-              class="c14"
-              dir="rtl"
-            >
-              <svg
-                aria-hidden="true"
-                class="c15"
-                focusable="false"
-                height="13"
-                viewBox="0 0 13 13"
-                width="13"
-              >
-                <path
-                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                />
-                <path
-                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                />
-              </svg>
-            </span>
-            <span
-              aria-hidden="true"
-              class="c16"
-              dir="rtl"
-            >
-              <time
-                class="c17"
-                datetime="2020-03-11"
-              >
-                05:29
-              </time>
-            </span>
-          </div>
-        </div>
-        <div
-          class="c18"
-        >
-          <div
-            class="c19"
-          >
-            <h3
-              class="c20"
-            >
-              <a
-                class="c21"
-                href="/arabic/bbc_hausa_radio/p0855vx6"
-              >
-                <span
-                  class=""
-                  role="text"
-                >
-                  <span>
-                    Shirin Safe
-                  </span>
-                  <span
-                    class="c22"
-                  >
-                    , 
-                    05:29
-                    , 
-                  </span>
-                  <span
-                    class="c23"
-                  >
-                    11/03/2020 GMT
-                  </span>
-                </span>
-              </a>
-            </h3>
-            <p
-              class="c24"
-            >
-              Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.
-            </p>
-          </div>
-          <div
-            class="c25"
-          >
-            <span
-              class="c26"
-            >
-              <svg
-                aria-hidden="true"
-                class="c27"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 13 12"
-                width="13px"
-              >
-                <path
-                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                />
-                <path
-                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                />
-              </svg>
-            </span>
-            <time
-              class="c28"
-              datetime="PT30M"
-              dir="rtl"
-            >
-              <span
-                class="c22"
-              >
-                 Duration 30,00 
-              </span>
-              <span
-                aria-hidden="true"
-                class="Duration0 "
-              >
-                30:00
-              </span>
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="c10 c11"
         data-e2e="next"
         dir="rtl"
         role="listitem"
@@ -2392,9 +2392,9 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             >
               <time
                 class="c17"
-                datetime="2020-03-11"
+                datetime="2020-03-12"
               >
-                19:29
+                05:29
               </time>
             </span>
           </div>
@@ -2424,19 +2424,19 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                 </span>
                 <span>
                    
-                  Shirin Yamma
+                  Shirin Safe
                 </span>
                 <span
                   class="c22"
                 >
                   , 
-                  19:29
+                  05:29
                   , 
                 </span>
                 <span
                   class="c31"
                 >
-                  11/03/2020 GMT
+                  12/03/2020 GMT
                 </span>
               </span>
             </h3>
