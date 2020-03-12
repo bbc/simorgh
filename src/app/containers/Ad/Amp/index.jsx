@@ -1,21 +1,18 @@
 import React from 'react';
 
-const constructAdJsonData = ({ id, service }) => {
+const constructAdJsonData = ({ service }) => {
   const data = {
     targeting: {
       slot: 'leaderboard',
       asset_type: 'index',
-      story_id: id,
       channel: service,
-      sectn: service,
-      subject: '',
     },
   };
 
   return data;
 };
 
-const ampAdPropsMobile = ({ id, service }) => ({
+const ampAdPropsMobile = ({ service }) => ({
   media: '(max-width: 599px)',
   type: 'doubleclick',
   width: '320',
@@ -24,10 +21,10 @@ const ampAdPropsMobile = ({ id, service }) => ({
   'data-slot': '/4817/bbccom.test.site.amp.news',
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  json: JSON.stringify(constructAdJsonData({ id, service })),
+  json: JSON.stringify(constructAdJsonData({ service })),
 });
 
-const ampAdPropsDesktop = ({ id, service }) => ({
+const ampAdPropsDesktop = ({ service }) => ({
   media: '(min-width: 600px)',
   type: 'doubleclick',
   width: '970',
@@ -36,14 +33,14 @@ const ampAdPropsDesktop = ({ id, service }) => ({
   'data-slot': '/4817/bbccom.test.site.amp.news',
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  json: JSON.stringify(constructAdJsonData({ id, service })),
+  json: JSON.stringify(constructAdJsonData({ service })),
 });
 
 // eslint-disable-next-line react/prop-types
-const AmpAd = ({ id, service }) => {
+const AmpAd = ({ service }) => {
   return (
     <>
-      <amp-ad {...ampAdPropsMobile({ id, service })}>
+      <amp-ad {...ampAdPropsMobile({ service })}>
         <amp-img
           placeholder
           width="320"
@@ -53,7 +50,7 @@ const AmpAd = ({ id, service }) => {
         />
       </amp-ad>
 
-      <amp-ad {...ampAdPropsDesktop({ id, service })}>
+      <amp-ad {...ampAdPropsDesktop({ service })}>
         <amp-img
           placeholder
           width="970"

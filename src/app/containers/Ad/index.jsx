@@ -30,7 +30,7 @@ const StyledAd = styled.div`
 `;
 
 const AdContainer = () => {
-  const { id, isAmp } = useContext(RequestContext);
+  const { isAmp } = useContext(RequestContext);
   const {
     service,
     ads: { hasAds },
@@ -46,7 +46,7 @@ const AdContainer = () => {
   return (
     isAmp && (
       <StyledAd>
-        <Amp id={id} service={service} />
+        <Amp service={service} />
       </StyledAd>
     )
   );
