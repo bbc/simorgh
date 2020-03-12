@@ -1256,5 +1256,3 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   </div>
 </section>
 `;
-
-exports[`Canonical RadioSchedule renders correctly for a service with a radio schedule and page frequency URL 1`] = `<div />`;
