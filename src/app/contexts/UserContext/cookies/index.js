@@ -1,5 +1,6 @@
 import Cookie from 'js-cookie';
 import { getVariantCookieName } from '#lib/utilities/variantHandler';
+import setCookie from '#lib/utilities/setCookie';
 
 export const getCookiePolicy = () => {
   const POLICY_COOKIE = 'ckns_policy';
@@ -23,5 +24,6 @@ export const setPreferredVariantCookie = (service, variant) => {
   }
 
   const variantCookieName = `ckps_${getVariantCookieName(service)}`;
-  Cookie.set(variantCookieName, variant);
+  const COOKIE_EXPIRY = 365;
+  setCookie(variantCookieName, variant, COOKIE_EXPIRY);
 };

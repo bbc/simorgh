@@ -13,9 +13,9 @@ const removeDomainRestrictions = domain => {
   return domain;
 };
 
-const setCookie = (name, value) =>
+const setCookie = (name, value, expires = COOKIE_EXPIRY) =>
   Cookie.set(name, value, {
-    expires: COOKIE_EXPIRY,
+    expires,
     domain: removeDomainRestrictions(document.domain),
   });
 
