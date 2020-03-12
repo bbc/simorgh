@@ -56,7 +56,7 @@ export default (radioScheduleData, service) => {
         state: currentState,
         stateLabel: currentState,
         startTime: program.publishedTimeStart,
-        link: getLink(currentState, program),
+        link: getLink(currentState, program, service),
         brandTitle: program.brand.title,
         episodeTitle: program.episode.presentationTitle,
         summary: program.episode.synopses.short,

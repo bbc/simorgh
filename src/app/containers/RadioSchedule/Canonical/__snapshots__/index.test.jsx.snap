@@ -334,6 +334,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 
 .c0 {
   margin: 0 auto;
+  width: 100%;
 }
 
 .c34 {
@@ -672,6 +673,12 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 @media (min-width:63rem) {
   .c7 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    max-width: 63rem;
   }
 }
 
