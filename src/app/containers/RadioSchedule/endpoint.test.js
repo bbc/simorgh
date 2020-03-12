@@ -93,4 +93,15 @@ describe('getLink', () => {
       }),
     ).toBe('/persian/bbc_dari_radio/p07zbtbf');
   });
+  // todo - need to check if following behaviour is valid
+  xit('should return liveradio link when broadcastPid is not provided', () => {
+    expect(
+      getLink({
+        service: 'persian',
+        currentState: 'anyotherstate',
+        programServiceId: 'bbc_dari_radio',
+        broadcastPid: null,
+      }),
+    ).toBe('/persian/bbc_dari_radio/liveradio');
+  });
 });
