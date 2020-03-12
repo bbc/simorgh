@@ -54,7 +54,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
           ).then($iframe => {
             cy.wrap($iframe.prop('contentWindow'), {
-              timeout: 20000,
+              timeout: 30000,
             })
               .its('embeddedMedia.playerInstances.mediaPlayer.ready')
               .should('eq', true);
@@ -70,7 +70,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .then(inner => cy.wrap(inner.contents().find(playButton)).click())
               .then(() => {
                 cy.wrap(iframe.prop('contentWindow'), {
-                  timeout: 20000,
+                  timeout: 30000,
                 })
                   .its('embeddedMedia.playerInstances.mediaPlayer')
                   .invoke('currentTime')
