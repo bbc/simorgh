@@ -40,9 +40,7 @@ const MarginWrapper = styled.div`
 const RadioScheduleSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Radio-Schedule',
-}))``;
-
-const FrontPageRadioScheduleSection = styled(RadioScheduleSection)`
+}))`
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -92,12 +90,8 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     return null;
   }
 
-  const renderFrequencyLink = (link, label) => (
-    <RadioFrequencyLink link={link}>{label}</RadioFrequencyLink>
-  );
-
   return (
-    <FrontPageRadioScheduleSection>
+    <RadioScheduleSection>
       <RadioScheduleSectionLabel
         script={script}
         labelId="Radio-Schedule"
@@ -116,10 +110,13 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
           service={service}
           dir={dir}
         />
-        {frequenciesPageUrl &&
-          renderFrequencyLink(frequenciesPageUrl, frequenciesPageLabel)}
+        {frequenciesPageUrl && (
+          <RadioFrequencyLink href={frequenciesPageUrl}>
+            {frequenciesPageLabel}
+          </RadioFrequencyLink>
+        )}
       </MarginWrapper>
-    </FrontPageRadioScheduleSection>
+    </RadioScheduleSection>
   );
 };
 
