@@ -73,7 +73,7 @@ describe('getLocalRadioScheduleEndpoint', () => {
 });
 
 describe('getLink', () => {
-  it('should return program link when state is live', () => {
+  it('should return liveradio link when state is live', () => {
     expect(
       getLink({
         service: 'persian',
@@ -83,7 +83,7 @@ describe('getLink', () => {
       }),
     ).toBe('/persian/bbc_dari_radio/liveradio');
   });
-  it('should return liveradio link when state is not live', () => {
+  it('should return program link when state is not live', () => {
     expect(
       getLink({
         service: 'persian',
