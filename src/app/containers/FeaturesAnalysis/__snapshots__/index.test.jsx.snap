@@ -4,14 +4,14 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-r0jyv5-0 ftAujp"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-r0jyv5-1 bEUQmd"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-r0jyv5-1 dRpDSS"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -30,7 +30,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 dir="ltr"
                 id="features-analysis-heading"
               >
-                Featured & Analysis 
+                Features & Analysis
               </span>
             </span>
           </div>
