@@ -35,7 +35,7 @@ const ampAdPropsDesktop = ({ id, service }) => ({
   'data-slot': '/4817/bbccom.test.site.amp.news',
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  'data-multi-size': '970x250, 728x90',
+  'data-multi-size': '970x250,728x90',
   json: JSON.stringify(constructAdJsonData({ id, service })),
 });
 

@@ -17,6 +17,7 @@ const StyledAd = styled.div`
   /* To centre page layout for Group 4+ */
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
+  text-align: center;
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
