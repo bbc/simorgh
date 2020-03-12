@@ -205,6 +205,12 @@ export const service = {
           href: 'https://www.bbc.com/somali/hayadeed-37098613',
           text: 'La xiriir BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
