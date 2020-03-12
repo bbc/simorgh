@@ -1,5 +1,7 @@
 import moment from 'moment';
-import { pathOr, findLastIndex, propSatisfies } from 'ramda/src';
+import findLastIndex from 'ramda/src/findLastIndex';
+import propSatisfies from 'ramda/src/propSatisfies';
+import pathOr from 'ramda/src/pathOr';
 
 const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
