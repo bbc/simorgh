@@ -12,8 +12,8 @@ const baseUrl = 'http://localhost:7080';
 const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
 
 const getSmokePaths = config => {
-  const { paths, smoke } = config;
-  return smoke && paths ? paths.local : null;
+  const { environments, smoke } = config;
+  return smoke && environments ? environments.local.paths : null;
 };
 
 const getUrls = pageType =>
