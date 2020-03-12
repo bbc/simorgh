@@ -28,6 +28,9 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                 class="StyledFrontPageMain-sc-58u5qv-0 jXCNVc"
                 role="main"
               >
+                <div
+                  class="GreyBox-sc-58u5qv-2 ztXJU"
+                />
                 <h1
                   class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
                   id="content"
