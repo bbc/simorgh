@@ -16,26 +16,26 @@ const constructAdJsonData = ({ id, service }) => {
 };
 
 const ampAdPropsMobile = ({ id, service }) => ({
-  media: '(min-width: 400px) and (max-width: 1008px)',
+  media: '(max-width: 599px)',
   type: 'doubleclick',
   width: '320',
   height: '50',
+  'data-multi-size': '320x50,300x50',
   'data-slot': '/4817/bbccom.test.site.amp.news',
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  'data-multi-size': '320x50,300x50',
   json: JSON.stringify(constructAdJsonData({ id, service })),
 });
 
 const ampAdPropsDesktop = ({ id, service }) => ({
-  media: '(min-width: 1008px)',
+  media: '(min-width: 600px)',
   type: 'doubleclick',
   width: '970',
   height: '250',
+  'data-multi-size': '970x250,728x90',
   'data-slot': '/4817/bbccom.test.site.amp.news',
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
-  'data-multi-size': '970x250,728x90',
   json: JSON.stringify(constructAdJsonData({ id, service })),
 });
 
