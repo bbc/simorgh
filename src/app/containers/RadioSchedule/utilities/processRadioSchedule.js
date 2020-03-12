@@ -1,6 +1,5 @@
 import moment from 'moment';
-import findLastIndex from 'ramda/src/findLastIndex';
-import propSatisfies from 'ramda/src/propSatisfies';
+import { pathOr, findLastIndex, propSatisfies } from 'ramda/src';
 
 const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
@@ -52,15 +51,15 @@ export default (radioScheduleData, service) => {
         service,
       );
       return {
-        id: program.broadcast.pid,
+        id: pathOr(null, ['broadcast', 'pid'], program),
         state: currentState,
         stateLabel: currentState,
-        startTime: program.publishedTimeStart,
+        startTime: pathOr(null, ['publishedTimeStart'], program),
         link: getLink(currentState, program, service),
-        brandTitle: program.brand.title,
-        episodeTitle: program.episode.presentationTitle,
-        summary: program.episode.synopses.short,
-        duration: program.publishedTimeDuration,
+        brandTitle: pathOr(null, ['brand', 'title'], program),
+        episodeTitle: pathOr(null, ['episode', 'presentationTitle'], program),
+        summary: pathOr(null, ['episode', 'synopses', 'short'], program),
+        duration: pathOr(null, ['publishedTimeDuration'], program),
         durationLabel: 'Duration',
       };
     });
