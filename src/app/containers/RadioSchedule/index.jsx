@@ -8,7 +8,7 @@ import propSatisfies from 'ramda/src/propSatisfies';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
 import webLogger from '#lib/logger.web';
-import { getLink } from './endpoint';
+import { getLink } from '#lib/utilities/getRadioSchedulesUrls';
 
 const logger = webLogger();
 

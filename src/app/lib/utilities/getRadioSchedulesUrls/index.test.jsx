@@ -2,7 +2,7 @@ import {
   getRadioScheduleEndpoint,
   getLocalRadioScheduleEndpoint,
   getLink,
-} from './endpoint';
+} from '.';
 
 describe('getRadioScheduleEndpoint', () => {
   it('should return endpoint when passed service', () => {

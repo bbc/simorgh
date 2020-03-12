@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
-import { getRadioScheduleEndpoint } from './endpoint';
+import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
 const getToggleState = enabled => ({
   local: { radioSchedule: { enabled } },
