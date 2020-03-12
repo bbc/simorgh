@@ -23,9 +23,19 @@ const getTotalSizeOfFilesBeginningWith = string => {
     .reduce((totalKB, fileSizeInKB) => totalKB + fileSizeInKB, 0);
   return Math.round(sizeInBytes / 1000);
 };
+const getSizesOfFilesThatMatch = regex =>
+  jsFiles
+    .filter(fileName => fileName.match(regex))
+    .map(fileName => ({
+      name: fileName.replace(/(?<=\w)-.+$/, ' bundle'),
+      size: Math.round(
+        getFileSize(`build/public/static/js/${fileName}`) / 1000,
+      ),
+    }));
 
 const mainBundleSize = getTotalSizeOfFilesBeginningWith('main');
 const vendorBundleSize = getTotalSizeOfFilesBeginningWith('vendor');
+const pageBundleSizes = getSizesOfFilesThatMatch(/.+Page/);
 
 const getServiceBundleSize = service =>
   mainBundleSize + vendorBundleSize + getTotalSizeOfFilesBeginningWith(service);
@@ -98,15 +108,19 @@ const bundlesToLog = [
     name: 'Vendor bundle',
     size: vendorBundleSize,
   },
+  ...pageBundleSizes,
   {
-    name: `Smallest bundle`,
+    name: `Smallest service bundle`,
     ...smallestBundle,
   },
   {
-    name: `Largest bundle`,
+    name: `Largest service bundle`,
     ...largestBundle,
   },
-  { name: 'Average bundle', size: Math.round(totalSize / services.length) },
+  {
+    name: 'Average service bundle',
+    size: Math.round(totalSize / services.length),
+  },
 ];
 
 const maxSizeDigits = 5;
