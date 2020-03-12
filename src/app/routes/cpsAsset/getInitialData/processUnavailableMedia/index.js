@@ -29,11 +29,15 @@ const transformer = pageData => {
   const showPlaceholder = mediaTypes.length === 0;
   if (showPlaceholder) {
     if (!blockTypes.includes('external_vpid')) {
-      logger.warning(
-        JSON.stringify({
-          event: 'no_media_block',
-          message: 'No media detected in response',
-        }),
+      logger.warn(
+        JSON.stringify(
+          {
+            event: 'no_media_block',
+            message: 'No media detected in response',
+          },
+          null,
+          2,
+        ),
       );
     }
     return addUnavailableMediaBlock(pageData);
