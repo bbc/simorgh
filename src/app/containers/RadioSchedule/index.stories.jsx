@@ -7,6 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { getLocalRadioScheduleEndpoint } from './endpoint';
 
 // Currently, only these services have radio schedule data
 const validServices = [
@@ -18,9 +19,6 @@ const validServices = [
   'somali',
 ];
 
-const staticRadioScheduleURL = service =>
-  `./data/${service}/bbc_${service}_radio/radioschedule.json`;
-
 const renderRadioScheduleContainer = service => (
   <ToggleContextProvider>
     <RequestContextProvider
@@ -30,7 +28,9 @@ const renderRadioScheduleContainer = service => (
       pathname={`/${service}`}
     >
       <ServiceContextProvider service={service}>
-        <RadioScheduleContainer endpoint={staticRadioScheduleURL(service)} />
+        <RadioScheduleContainer
+          endpoint={getLocalRadioScheduleEndpoint({ service })}
+        />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>

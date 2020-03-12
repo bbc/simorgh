@@ -5,13 +5,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import '@testing-library/jest-dom/extend-expect';
-import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/radioschedule.json';
-
-const localRadioScheduleEndpoint = service => {
-  const localhostURL = 'http://localhost:7080';
-  const localServiceURL = `${localhostURL}/${service}`;
-  return `${localServiceURL}/bbc_${service}_radio/radioschedule.json`;
-};
+import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
+import { getRadioScheduleEndpoint } from './endpoint';
 
 const getToggleState = enabled => ({
   local: { radioSchedule: { enabled } },
@@ -34,7 +29,7 @@ const RadioSchedulesWithContext = ({
     >
       <ServiceContextProvider service={service}>
         <RadioScheduleContainer
-          endpoint={localRadioScheduleEndpoint(service)}
+          endpoint={getRadioScheduleEndpoint({ service })}
         />
       </ServiceContextProvider>
     </RequestContextProvider>
