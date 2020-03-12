@@ -1,6 +1,7 @@
 import {
   getRadioScheduleEndpoint,
   getLocalRadioScheduleEndpoint,
+  getLink,
 } from './endpoint';
 
 describe('getRadioScheduleEndpoint', () => {
@@ -68,5 +69,28 @@ describe('getLocalRadioScheduleEndpoint', () => {
         radioService: 'dari',
       }),
     ).toBe('./data/persian/bbc_dari_radio/schedule.json');
+  });
+});
+
+describe('getLink', () => {
+  it('should return program link when state is live', () => {
+    expect(
+      getLink({
+        service: 'persian',
+        currentState: 'live',
+        programServiceId: 'bbc_dari_radio',
+        broadcastPid: 'p07zbtbf',
+      }),
+    ).toBe('/persian/bbc_dari_radio/liveradio');
+  });
+  it('should return liveradio link when state is not live', () => {
+    expect(
+      getLink({
+        service: 'persian',
+        currentState: 'anyotherstate',
+        programServiceId: 'bbc_dari_radio',
+        broadcastPid: 'p07zbtbf',
+      }),
+    ).toBe('/persian/bbc_dari_radio/p07zbtbf');
   });
 });
