@@ -1,5 +1,8 @@
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const UNAVAILABLE_MEDIA_TEXT = 'unavailableMedia';
 const unavailableMediaBlock = {
@@ -25,6 +28,14 @@ const transformer = pageData => {
   );
   const showPlaceholder = mediaTypes.length === 0;
   if (showPlaceholder) {
+    if (!blockTypes.includes('external_vpid')) {
+      logger.warning(
+        JSON.stringify({
+          event: 'no_media_block',
+          message: 'No media detected in response',
+        }),
+      );
+    }
     return addUnavailableMediaBlock(pageData);
   }
   return pageData;
