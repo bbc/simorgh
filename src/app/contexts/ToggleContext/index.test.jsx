@@ -72,19 +72,11 @@ describe('ToggleContext with feature toggles', () => {
       localAdToggleValue: false,
       enableFetchingTogglesValue: false,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint,
-      remoteAdToggleValue: false,
+      remoteAdToggleValue: 'anything here, since value should not be fetched',
       renderExpectation: shouldNotRenderAd,
     },
     {
-      service: 'mundo',
-      localAdToggleValue: false,
-      enableFetchingTogglesValue: false,
-      remoteToggleExpectation: shouldNotCallTogglesEndpoint,
-      remoteAdToggleValue: false,
-      renderExpectation: shouldNotRenderAd,
-    },
-    {
-      service: 'randomservice-not-in-values-list',
+      service: 'service-not-in-allowlist',
       localAdToggleValue: true,
       enableFetchingTogglesValue: false,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
@@ -92,7 +84,7 @@ describe('ToggleContext with feature toggles', () => {
       renderExpectation: shouldRenderAd, // rendered since following local toggle
     },
     {
-      service: 'randomservice-not-in-values-list',
+      service: 'service-not-in-allowlist',
       localAdToggleValue: false,
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
@@ -100,7 +92,7 @@ describe('ToggleContext with feature toggles', () => {
       renderExpectation: shouldNotRenderAd, // not rendered since following local toggle
     },
     {
-      service: 'randomservice-not-in-values-list',
+      service: 'service-not-in-allowlist',
       localAdToggleValue: true,
       enableFetchingTogglesValue: true,
       remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
@@ -116,56 +108,63 @@ describe('ToggleContext with feature toggles', () => {
       remoteToggleExpectation,
       renderExpectation,
     }) => {
-      describe(`given the local ads toggle is ${localAdToggleValue} and the fetching of toggles is ${
-        enableFetchingTogglesValue
-          ? `true and the remote ads toggle value is ${remoteAdToggleValue}`
-          : 'false'
-      }`, () => {
-        const togglesUrl = `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true`;
+      describe(`given service is ${service}`, () => {
+        describe(`given the local ads toggle is ${localAdToggleValue} and the fetching of toggles is ${
+          enableFetchingTogglesValue
+            ? `true and the remote ads toggle value is ${remoteAdToggleValue}`
+            : 'false'
+        }`, () => {
+          const togglesUrl = `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true`;
 
-        beforeEach(() => {
-          togglesConfig.local.ads.enabled = localAdToggleValue;
-          togglesConfig.local.enableFetchingToggles.enabled = enableFetchingTogglesValue;
-          fetchMock.mock(togglesUrl, {
-            toggles: {
-              ads: {
-                enabled: remoteAdToggleValue,
-                value: '',
+          beforeEach(() => {
+            togglesConfig.local.ads.enabled = localAdToggleValue;
+            togglesConfig.local.enableFetchingToggles.enabled = enableFetchingTogglesValue;
+            fetchMock.mock(togglesUrl, {
+              toggles: {
+                ads: {
+                  enabled: remoteAdToggleValue,
+                  value: '',
+                },
               },
-            },
+              geoIp: {
+                ukCombined: true,
+                advertiseCombined: false,
+                countryCode: 'gb',
+              },
+            });
           });
-        });
-        afterEach(() => {
-          fetchMock.restore();
-        });
-        it(`should ${
-          enableFetchingTogglesValue ? 'call' : 'not call'
-        } the toggles endpoint`, async () => {
-          await act(async () => {
-            await render(
-              <ToggleContextProvider service={service}>
-                <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
-              </ToggleContextProvider>,
-            );
+          afterEach(() => {
+            fetchMock.restore();
           });
+          it(`should ${
+            enableFetchingTogglesValue ? 'call' : 'not call'
+          } the toggles endpoint`, async () => {
+            await act(async () => {
+              await render(
+                <ToggleContextProvider service={service}>
+                  <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+                </ToggleContextProvider>,
+              );
+            });
 
-          remoteToggleExpectation(togglesUrl);
-        });
-
-        it(`should ${
-          localAdToggleValue || remoteAdToggleValue ? 'render' : 'not render'
-        } the test component`, async () => {
-          let container;
-
-          await act(async () => {
-            container = await render(
-              <ToggleContextProvider service={service}>
-                <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
-              </ToggleContextProvider>,
-            ).container;
+            remoteToggleExpectation(togglesUrl);
           });
 
-          renderExpectation(container);
+          it(`should ${
+            localAdToggleValue || remoteAdToggleValue ? 'render' : 'not render'
+          } the test component`, async () => {
+            let container;
+
+            await act(async () => {
+              container = await render(
+                <ToggleContextProvider service={service}>
+                  <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
+                </ToggleContextProvider>,
+              ).container;
+            });
+
+            renderExpectation(container);
+          });
         });
       });
     },
