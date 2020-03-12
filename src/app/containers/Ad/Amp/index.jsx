@@ -45,7 +45,7 @@ const AmpAd = ({ service }) => {
           placeholder
           width="320"
           height="50"
-          src="https://via.placeholder.com/300"
+          src="https://via.placeholder.com/320x50"
           layout="responsive"
         />
       </amp-ad>
@@ -55,7 +55,7 @@ const AmpAd = ({ service }) => {
           placeholder
           width="970"
           height="250"
-          src="https://via.placeholder.com/300"
+          src="https://via.placeholder.com/970x250"
           layout="responsive"
         />
       </amp-ad>
