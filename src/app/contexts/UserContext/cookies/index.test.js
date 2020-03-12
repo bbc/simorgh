@@ -83,7 +83,10 @@ describe('UserContext cookies', () => {
     it('should set preferred variant if personalisation cookies enabled', () => {
       Cookie.get.mockReturnValue('111');
       setPreferredVariantCookie('foo', 'bar');
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_foo', 'bar');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_foo', 'bar', {
+        domain: '.bbc.com',
+        expires: 365,
+      });
     });
 
     it('should not set preferred variant if personalisation cookies not enabled', () => {
@@ -103,19 +106,28 @@ describe('UserContext cookies', () => {
     it('should set ckps_serbian for serbian', () => {
       Cookie.get.mockReturnValue('111');
       setPreferredVariantCookie('serbian', 'lat');
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat', {
+        domain: '.bbc.com',
+        expires: 365,
+      });
     });
 
     it('should set ckps_chinese for zhongwen', () => {
       Cookie.get.mockReturnValue('111');
       setPreferredVariantCookie('zhongwen', 'simp');
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp', {
+        domain: '.bbc.com',
+        expires: 365,
+      });
     });
 
     it('should set ckps_chinese for ukchina', () => {
       Cookie.get.mockReturnValue('111');
       setPreferredVariantCookie('ukchina', 'simp');
-      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp', {
+        domain: '.bbc.com',
+        expires: 365,
+      });
     });
   });
 
