@@ -44,7 +44,9 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    ads: false,
+    ads: {
+      hasAds: false,
+    },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
     lang: `zh-hans`,
@@ -243,7 +245,9 @@ export const service = {
   },
   trad: {
     ...baseServiceConfig,
-    ads: false,
+    ads: {
+      hasAds: false,
+    },
     lang: `zh-hant`,
     locale: `zh-hant`,
     externalLinkText: ', 外部鏈接',

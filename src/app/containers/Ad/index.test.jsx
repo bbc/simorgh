@@ -38,7 +38,7 @@ const toggleContextMock = {
 
 describe('Ad Container', () => {
   shouldMatchSnapshot(
-    'should correctly render an amp leaderboard ad',
+    'should correctly render an amp ad',
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"

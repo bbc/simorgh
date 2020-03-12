@@ -31,10 +31,13 @@ const StyledAd = styled.div`
 
 const AdContainer = () => {
   const { id, isAmp } = useContext(RequestContext);
-  const { service, ads } = useContext(ServiceContext);
+  const {
+    service,
+    ads: { hasAds },
+  } = useContext(ServiceContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
-  if (!adsEnabled || !ads) {
+  if (!adsEnabled || !hasAds) {
     return null;
   }
 
