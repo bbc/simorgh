@@ -16,131 +16,112 @@ const TestComponent = ({ toggle, children }) => {
   return toggleIsEnabled && <div>{children}</div>;
 };
 
-afterEach(() => {
-  fetchMock.restore();
-});
+const shouldCallTogglesEndpoint = togglesUrl =>
+  expect(fetchMock.calls(togglesUrl).length).toBeTruthy();
+const shouldNotCallTogglesEndpoint = togglesUrl =>
+  expect(fetchMock.calls(togglesUrl).length).toBeFalsy();
+const shouldRenderAd = container =>
+  expect(queryByText(container, 'Dummy Ad Component')).toBeInTheDocument();
+const shouldNotRenderAd = container =>
+  expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 describe('ToggleContext with feature toggles', () => {
-  describe('given the feature toggle is enabled', () => {
-    beforeEach(() => {
-      togglesConfig.local.chartbeatAnalytics.enabled = true;
-      togglesConfig.local.enableFetchingToggles.enabled = false;
-    });
-
-    it('should render the test component', () => {
-      const { getByText } = render(
-        <ToggleContextProvider service="mundo">
-          <TestComponent toggle="chartbeatAnalytics">
-            Dummy Chartbeat Analytics Component
-          </TestComponent>
-        </ToggleContextProvider>,
-      );
-
-      expect(
-        getByText('Dummy Chartbeat Analytics Component'),
-      ).toBeInTheDocument();
-    });
-  });
-
-  describe('given the feature toggle is disabled', () => {
-    beforeEach(() => {
-      togglesConfig.local.chartbeatAnalytics.enabled = false;
-      togglesConfig.local.enableFetchingToggles.enabled = false;
-    });
-
-    it('should render the test component', () => {
-      const { container } = render(
-        <ToggleContextProvider service="mundo">
-          <TestComponent toggle="chartbeatAnalytics">
-            Dummy Chartbeat Analytics Component
-          </TestComponent>
-        </ToggleContextProvider>,
-      );
-
-      expect(
-        queryByText(container, 'Dummy Chartbeat Analytics Component'),
-      ).not.toBeInTheDocument();
-    });
-  });
-
   [
     {
+      service: 'mundo',
       localAdToggleValue: false,
       enableFetchingTogglesValue: true,
+      remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: true,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).toBeInTheDocument(),
+      renderExpectation: shouldRenderAd,
     },
     {
+      service: 'mundo',
       localAdToggleValue: false,
       enableFetchingTogglesValue: true,
+      remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: false,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).not.toBeInTheDocument(),
+      renderExpectation: shouldNotRenderAd,
     },
     {
+      service: 'mundo',
       localAdToggleValue: true,
       enableFetchingTogglesValue: true,
+      remoteToggleExpectation: shouldCallTogglesEndpoint,
       remoteAdToggleValue: false,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).not.toBeInTheDocument(),
+      renderExpectation: shouldNotRenderAd,
     },
     {
+      service: 'mundo',
+      localAdToggleValue: true,
+      enableFetchingTogglesValue: true,
+      remoteToggleExpectation: shouldCallTogglesEndpoint,
+      remoteAdToggleValue: true,
+      renderExpectation: shouldRenderAd,
+    },
+    {
+      service: 'mundo',
       localAdToggleValue: true,
       enableFetchingTogglesValue: false,
+      remoteToggleExpectation: shouldNotCallTogglesEndpoint,
       remoteAdToggleValue: null,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).toBeInTheDocument(),
+      renderExpectation: shouldRenderAd,
     },
     {
+      service: 'mundo',
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: false,
+      remoteToggleExpectation: shouldNotCallTogglesEndpoint,
+      remoteAdToggleValue: false,
+      renderExpectation: shouldNotRenderAd,
+    },
+    {
+      service: 'mundo',
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: false,
+      remoteToggleExpectation: shouldNotCallTogglesEndpoint,
+      remoteAdToggleValue: false,
+      renderExpectation: shouldNotRenderAd,
+    },
+    {
+      service: 'randomservice-not-in-values-list',
+      localAdToggleValue: true,
+      enableFetchingTogglesValue: false,
+      remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
+      remoteAdToggleValue: null,
+      renderExpectation: shouldRenderAd, // rendered since following local toggle
+    },
+    {
+      service: 'randomservice-not-in-values-list',
+      localAdToggleValue: false,
+      enableFetchingTogglesValue: true,
+      remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
+      remoteAdToggleValue: true,
+      renderExpectation: shouldNotRenderAd, // not rendered since following local toggle
+    },
+    {
+      service: 'randomservice-not-in-values-list',
       localAdToggleValue: true,
       enableFetchingTogglesValue: true,
+      remoteToggleExpectation: shouldNotCallTogglesEndpoint, // service not in allowlist so not fetched
       remoteAdToggleValue: true,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).toBeInTheDocument(),
-    },
-    {
-      localAdToggleValue: false,
-      enableFetchingTogglesValue: false,
-      remoteAdToggleValue: false,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).not.toBeInTheDocument(),
-    },
-    {
-      localAdToggleValue: false,
-      enableFetchingTogglesValue: false,
-      remoteAdToggleValue: false,
-      expectation: container =>
-        expect(
-          queryByText(container, 'Dummy Ad Component'),
-        ).not.toBeInTheDocument(),
+      renderExpectation: shouldRenderAd, // rendered since following local toggle
     },
   ].forEach(
     ({
       localAdToggleValue,
       enableFetchingTogglesValue,
       remoteAdToggleValue,
-      expectation,
+      service,
+      remoteToggleExpectation,
+      renderExpectation,
     }) => {
       describe(`given the local ads toggle is ${localAdToggleValue} and the fetching of toggles is ${
         enableFetchingTogglesValue
           ? `true and the remote ads toggle value is ${remoteAdToggleValue}`
           : 'false'
       }`, () => {
-        const togglesUrl =
-          'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true';
+        const togglesUrl = `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=${service}&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true`;
 
         beforeEach(() => {
           togglesConfig.local.ads.enabled = localAdToggleValue;
@@ -154,23 +135,21 @@ describe('ToggleContext with feature toggles', () => {
             },
           });
         });
-
+        afterEach(() => {
+          fetchMock.restore();
+        });
         it(`should ${
           enableFetchingTogglesValue ? 'call' : 'not call'
         } the toggles endpoint`, async () => {
           await act(async () => {
             await render(
-              <ToggleContextProvider service="mundo">
+              <ToggleContextProvider service={service}>
                 <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
               </ToggleContextProvider>,
             );
           });
 
-          if (enableFetchingTogglesValue) {
-            expect(fetchMock.calls(togglesUrl).length).toBeTruthy();
-          } else {
-            expect(fetchMock.calls(togglesUrl).length).toBeFalsy();
-          }
+          remoteToggleExpectation(togglesUrl);
         });
 
         it(`should ${
@@ -180,13 +159,13 @@ describe('ToggleContext with feature toggles', () => {
 
           await act(async () => {
             container = await render(
-              <ToggleContextProvider service="mundo">
+              <ToggleContextProvider service={service}>
                 <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
               </ToggleContextProvider>,
             ).container;
           });
 
-          expectation(container);
+          renderExpectation(container);
         });
       });
     },
