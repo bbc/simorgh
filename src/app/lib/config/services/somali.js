@@ -239,10 +239,6 @@ export const service = {
         url: '/somali/aqoon_guud',
       },
       {
-        title: 'Maqal',
-        url: '/somali/media/audio',
-      },
-      {
         title: 'Muuqaal',
         url: '/somali/media/video',
       },
