@@ -12,7 +12,7 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
-const createAssetPage = ({ pageData }, service) => (
+const createAssetPage = (pageData, service) => (
   <StaticRouter>
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
@@ -93,7 +93,7 @@ describe('OnDemand Radio Page ', () => {
       'some-ondemand-radio-path',
     );
     const { getByText } = render(
-      createAssetPage({ pageData: pageDataWithWithoutVideo }, 'pashto'),
+      createAssetPage(pageDataWithWithoutVideo, 'pashto'),
     );
 
     expect(getByText('دغه فایل نور د لاسرسي وړ نه دی.')).toBeInTheDocument();
