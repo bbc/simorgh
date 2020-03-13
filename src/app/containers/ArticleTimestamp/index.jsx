@@ -13,6 +13,10 @@ import {
   formatType,
   isValidDateTime,
 } from './helpers';
+import shouldDisplayLastUpdatedTimestamp from './shouldDisplayLastUpdatedTimestamp';
+
+const FirstPublishedTimestamp = Timestamp;
+const LastUpdatedTimestamp = Timestamp;
 
 const ArticleTimestamp = ({
   firstPublished,
@@ -57,15 +61,19 @@ const ArticleTimestamp = ({
 
   const Wrapper = popOut ? PopOutGridItemMedium : GridItemConstrainedMedium;
 
-  const timeDifferenceMinutes = (lastPublished - firstPublished) / 1000 / 60;
+  const displayLastUpdatedTimestamp = shouldDisplayLastUpdatedTimestamp({
+    minutesTolerance,
+    firstPublished,
+    lastPublished,
+  });
 
   return (
     <Wrapper className={className}>
-      <Timestamp {...timestampProps} {...firstPublishedProps} />
-      {timeDifferenceMinutes > minutesTolerance && (
+      <FirstPublishedTimestamp {...timestampProps} {...firstPublishedProps} />
+      {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
         <div>
-          <Timestamp {...timestampProps} {...lastPublishedProps} />
+          <LastUpdatedTimestamp {...timestampProps} {...lastPublishedProps} />
         </div>
       )}
     </Wrapper>

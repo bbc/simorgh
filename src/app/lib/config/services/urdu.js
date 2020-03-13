@@ -44,7 +44,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -159,6 +158,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/urdu/institutional-49282935',
@@ -189,6 +191,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zn8th1lwb",
+    "locators": {},
+    "type": "WSRADIO",
+    "createdBy": "bbc_sinhala_radio",
+    "language": "si",
+    "lastUpdated": 1583601860035,
+    "firstPublished": 1582561533000,
+    "lastPublished": 1582561533000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "බීබීසී සිරස ඔස්සේ - BBC News සිංහල",
+      "pageIdentifier": "sinhala.bbc_sinhala_radio.w172x8zn8th1lwb.page",
+      "producerId": "82",
+      "contentType": "player-ondemand",
+      "producer": "SINHALA"
+    },
+    "passport": null,
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media"],
+    "title": "බීබීසී සිරස ඔස්සේ"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172x8zn8th1lwb",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/03/2020 GMT",
+        "synopses": {
+          "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+          "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshfpbdvllmrc",
+            "types": ["Original"],
+            "duration": 300,
+            "durationISO8601": "PT5M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1586105100000,
+            "availableFrom": 1583513100000
+          }
+        ],
+        "imageCopyright": null
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "බීබීසී සිරස ඔස්සේ"
+    },
+    "locators": {
+      "pid": "w172x8zn8th1lwb"
+    },
+    "media": {
+      "id": "w172x8zn8th1lwb",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/03/2020 GMT",
+      "synopses": {
+        "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+        "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshfpbdvllmrc",
+          "types": ["Original"],
+          "duration": 300,
+          "durationISO8601": "PT5M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1586105100000,
+          "availableFrom": 1583513100000
+        }
+      ],
+      "imageCopyright": null
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null
+    },
+    "brand": {
+      "pid": "p0341109",
+      "title": "බීබීසී සිරස ඔස්සේ"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zn8th1lwb"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Sinhala",
+      "uri": "/sinhala"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zn8tgypz7"
+            },
+            "media": {
+              "id": "w172x8zn8tgypz7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpbdvlhqv8",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586018700000,
+                  "availableFrom": 1583426700000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zn8tgypz7"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zn8tgvt24"
+            },
+            "media": {
+              "id": "w172x8zn8tgvt24",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpbdvldty5",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585932300000,
+                  "availableFrom": 1583340300000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zn8tgvt24"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zn8tgrx51"
+            },
+            "media": {
+              "id": "w172x8zn8tgrx51",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "03/03/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpbdvl9y12",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585845900000,
+                  "availableFrom": 1583253900000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zn8tgrx51"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zn8tgp07y"
+            },
+            "media": {
+              "id": "w172x8zn8tgp07y",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "02/03/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpbdvl713z",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585759500000,
+                  "availableFrom": 1583167500000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zn8tgp07y"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zmxk58g8h"
+            },
+            "media": {
+              "id": "w172x8zmxk58g8h",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "28/02/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpb1l8th4j",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585500300000,
+                  "availableFrom": 1582908300000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zmxk58g8h"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zmxk55kcd"
+            },
+            "media": {
+              "id": "w172x8zmxk55kcd",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "27/02/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpb1l8ql7f",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585413900000,
+                  "availableFrom": 1582821900000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zmxk55kcd"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zmxk52ng9"
+            },
+            "media": {
+              "id": "w172x8zmxk52ng9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "26/02/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpb1l8mpbb",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585327500000,
+                  "availableFrom": 1582735500000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zmxk52ng9"
+          },
+          {
+            "headlines": {
+              "headline": "බීබීසී සිරස ඔස්සේ"
+            },
+            "locators": {
+              "pid": "w172x8zmxk4zrk6"
+            },
+            "media": {
+              "id": "w172x8zmxk4zrk6",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "25/02/2020 GMT",
+              "synopses": {
+                "short": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය",
+                "medium": "සිරස ගුවන් විදුලිය ඔස්සේ ගුවන් ගන්නා බීබීසී සිංහල පුවත් සංග්‍රහය"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfpb1l8jsf7",
+                  "types": ["Original"],
+                  "duration": 300,
+                  "durationISO8601": "PT5M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585241100000,
+                  "availableFrom": 1582649100000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dlq3.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0341109",
+              "title": "බීබීසී සිරස ඔස්සේ"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_sinhala_radio/w172x8zmxk4zrk6"
+          }
+        ]
+      }
+    ]
+  }
+}

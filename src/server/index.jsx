@@ -114,7 +114,16 @@ if (process.env.SIMORGH_APP_ENV !== 'local') {
 const sendDataFile = (res, dataFilePath, next) => {
   res.sendFile(dataFilePath, {}, sendErr => {
     if (sendErr) {
-      logger.error(sendErr);
+      logger.error(
+        JSON.stringify(
+          {
+            event: 'local_sendfile_error',
+            message: sendErr,
+          },
+          null,
+          2,
+        ),
+      );
       next(sendErr);
     }
   });
@@ -219,7 +228,16 @@ server
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, error => {
       if (error) {
-        logger.error(error);
+        logger.error(
+          JSON.stringify(
+            {
+              event: 'server_sendfile_error_sw',
+              message: error,
+            },
+            null,
+            2,
+          ),
+        );
         res.status(500).send('Unable to find service worker.');
       }
     });
@@ -238,16 +256,24 @@ server
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(`Path: [${urlPath}] URL: [${url}]`);
+    logger.info(
+      JSON.stringify(
+        {
+          event: 'ssr_request_received',
+          url,
+          urlPath,
+          headers,
+        },
+        null,
+        2,
+      ),
+    );
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
       const data = await route.getInitialData(url);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
-
-      // Temp log to test upstream change
-      logger.info(`Headers: ${JSON.stringify(headers, null, 2)}`);
 
       data.path = urlPath;
       data.timeOnServer = Date.now();
@@ -270,8 +296,22 @@ server
         throw new Error('unknown result');
       }
     } catch ({ message, status }) {
+      logger.error(
+        JSON.stringify(
+          {
+            event: 'ssr_request_failed',
+            status: status || 500,
+            message,
+            url,
+            urlPath,
+            headers,
+          },
+          null,
+          2,
+        ),
+      );
+
       // Return an internal server error for any uncaught errors
-      logger.error(`status: ${status || 500} - ${message}`);
       res.status(500).send(message);
     }
   });
