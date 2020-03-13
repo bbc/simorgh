@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import { within } from '@testing-library/dom';
 import { MemoryRouter } from 'react-router-dom';
 import { matchPath } from 'react-router';
+import Url from 'url-parse';
 import routes from '../app/routes';
 // eslint-disable-next-line import/no-named-as-default
 import App from '#containers/App/App';
@@ -11,16 +12,18 @@ const getByTextSpecial = getByText => text =>
   getByText((content, node) => {
     const hasText = ({ textContent }) => textContent === text;
     const nodeHasText = hasText(node);
-    const childrenDontHaveText = Array.from(node.children).every(
-      child => !hasText(child),
-    );
+    const childrenDontHaveText =
+      node &&
+      node.children &&
+      Array.from(node.children).every(child => !hasText(child));
 
     return nodeHasText && childrenDontHaveText;
   });
 
 export default async url => {
-  const pathname = url.replace('https://www.bbc.com', '');
-  const jsonData = require(`./pageData/${pathname}`); // eslint-disable-line import/no-dynamic-require, global-require
+  const pageUrl = new Url(url);
+  const { pathname } = pageUrl;
+  const jsonData = require(`./pageData${pathname}`); // eslint-disable-line import/no-dynamic-require, global-require
   fetch.mockResponse(JSON.stringify(jsonData));
 
   const { getInitialData } = routes.find(({ path }) =>
