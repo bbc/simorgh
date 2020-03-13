@@ -81,7 +81,7 @@
     "@bbc/psammead-most-read": "^4.0.2",
     "@bbc/psammead-navigation": "^6.0.2",
     "@bbc/psammead-paragraph": "^2.2.26",
-    "@bbc/psammead-radio-schedule": "0.1.0-alpha.19",
+    "@bbc/psammead-radio-schedule": "0.1.0-alpha.20",
     "@bbc/psammead-rich-text-transforms": "^2.0.0",
     "@bbc/psammead-script-link": "^1.0.11",
     "@bbc/psammead-section-label": "^5.0.1",
