@@ -1,49 +1,24 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
-import { renderHook } from '@testing-library/react-hooks';
+import { render, queryByText } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+// import { act } from 'react-dom/test-utils';
 import useToggle from './useToggle';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-
-const wrapper = ({ children }) => (
-  <ToggleContextProvider service="mundo">{children}</ToggleContextProvider>
-);
-
-const { useContext } = jest.requireMock('react');
-
 describe('useToggle custom hook', () => {
   afterEach(() => jest.clearAllMocks());
-  test('should return true for foo toggle on test', () => {
-    useContext.mockReturnValueOnce({ env: 'test' }).mockReturnValueOnce({
-      toggleState: {
-        foo: { enabled: true },
-      },
-    });
-
-    const { result } = renderHook(() => useToggle('foo'), {
-      wrapper,
-    });
-
-    expect(result.current.enabled).toBe(true);
-  });
-
-  test('should return false for foo toggle on live', () => {
-    useContext.mockReturnValueOnce({ env: 'live' }).mockReturnValueOnce({
-      toggleState: {
-        foo: { enabled: false },
-      },
-    });
-    const { result } = renderHook(() => useToggle('foo'), {
-      wrapper,
-    });
-
-    expect(result.current.enabled).toBe(false);
+  test('should return true for ads toggle', () => {
+    const TestComponent = () => {
+      const { enabled } = useToggle('ads');
+      process.env.SIMORGH_APP_ENV = 'test';
+      return <>{enabled.toString()}</>;
+    };
+    const { container } = render(
+      <ToggleContextProvider service="mundo" origin="https://www.test.bbc.com">
+        <TestComponent />
+      </ToggleContextProvider>,
+    );
+    expect(queryByText(container, 'true')).toBeInTheDocument();
   });
 });

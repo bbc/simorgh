@@ -48,6 +48,7 @@ const ToggleContextProvider = ({ children, service, origin }) => {
     enableFetchingToggles.value,
     simorghToggles,
   ]);
+
   return (
     <ToggleContext.Provider value={{ toggleState, toggleDispatch }}>
       {children}
