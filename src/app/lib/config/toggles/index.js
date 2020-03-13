@@ -29,7 +29,7 @@ const toggles = {
   },
   test: {
     ads: {
-      fetchValue: true,
+      enabled: true,
     },
     chartbeatAnalytics: {
       enabled: true,
