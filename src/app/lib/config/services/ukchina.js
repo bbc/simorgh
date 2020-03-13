@@ -52,7 +52,7 @@ export const service = {
     imageCopyrightOffscreenText: '图像来源, ',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/ukchina/simp/institutional-51359562',
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
@@ -221,7 +221,7 @@ export const service = {
     imageCopyrightOffscreenText: '圖像來源，',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/ukchina/trad/institutional-51359562',
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
@@ -244,6 +244,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: '聯絡BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',

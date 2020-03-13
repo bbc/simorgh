@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x601yx5z2n1",
+    "locators": {},
+    "type": "WSRADIO",
+    "createdBy": "bbc_afrique_radio",
+    "language": "fr",
+    "lastUpdated": 1583601860035,
+    "firstPublished": 1582529718000,
+    "lastPublished": 1582529718000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Le Journal - BBC News Afrique",
+      "pageIdentifier": "afrique.bbc_afrique_radio.w172x601yx5z2n1.page",
+      "producerId": "3",
+      "contentType": "player-ondemand",
+      "producer": "AFRIQUE"
+    },
+    "passport": null,
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media"],
+    "title": "Le Journal"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172x601yx5z2n1",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/03/2020 GMT",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshbpq04f4kql",
+            "types": ["Original"],
+            "duration": 600,
+            "durationISO8601": "PT10M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1586070600000,
+            "availableFrom": 1583478600000
+          }
+        ],
+        "imageCopyright": null
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Le Journal"
+    },
+    "locators": {
+      "pid": "w172x601yx5z2n1"
+    },
+    "media": {
+      "id": "w172x601yx5z2n1",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/03/2020 GMT",
+      "synopses": {
+        "short": "Le premier rendez-vous d'information de la soirée.",
+        "medium": "Le premier rendez-vous d'information de la soirée."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshbpq04f4kql",
+          "types": ["Original"],
+          "duration": 600,
+          "durationISO8601": "PT10M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1586070600000,
+          "availableFrom": 1583478600000
+        }
+      ],
+      "imageCopyright": null
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null
+    },
+    "brand": {
+      "pid": "p03p35rt",
+      "title": "Le Journal"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x601yx5z2n1"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x601yx5z0rz"
+            },
+            "media": {
+              "id": "w172x601yx5z0rz",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "06/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbpq04f4hvj",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586068800000,
+                  "availableFrom": 1583476800000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x601yx5z0rz"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x5zn7jwm9p8"
+            },
+            "media": {
+              "id": "w172x5zn7jwm9p8",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "06/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbp98s3ssrt",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586067300000,
+                  "availableFrom": 1583475300000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x5zn7jwm9p8"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x5zn7jwm5y4"
+            },
+            "media": {
+              "id": "w172x5zn7jwm5y4",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "06/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbp98s3sp0p",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586063700000,
+                  "availableFrom": 1583471700000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x5zn7jwm5y4"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x601yx5w5qy"
+            },
+            "media": {
+              "id": "w172x601yx5w5qy",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbpq04f1nth",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585984200000,
+                  "availableFrom": 1583392200000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x601yx5w5qy"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x601yx5w3vw"
+            },
+            "media": {
+              "id": "w172x601yx5w3vw",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbpq04f1lyf",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585982400000,
+                  "availableFrom": 1583390400000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x601yx5w3vw"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x5zn7jwjds5"
+            },
+            "media": {
+              "id": "w172x5zn7jwjds5",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbp98s3pwvq",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585980900000,
+                  "availableFrom": 1583388900000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x5zn7jwjds5"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x5zn7jwj911"
+            },
+            "media": {
+              "id": "w172x5zn7jwj911",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbp98s3ps3l",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585977300000,
+                  "availableFrom": 1583385300000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x5zn7jwj911"
+          },
+          {
+            "headlines": {
+              "headline": "Le Journal"
+            },
+            "locators": {
+              "pid": "w172x601yx5s8tv"
+            },
+            "media": {
+              "id": "w172x601yx5s8tv",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "Le premier rendez-vous d'information de la soirée.",
+                "medium": "Le premier rendez-vous d'information de la soirée."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshbpq04dyrxd",
+                  "types": ["Original"],
+                  "duration": 600,
+                  "durationISO8601": "PT10M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585897800000,
+                  "availableFrom": 1583305800000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p03p35rt",
+              "title": "Le Journal"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_afrique_radio/w172x601yx5s8tv"
+          }
+        ]
+      }
+    ]
+  }
+}

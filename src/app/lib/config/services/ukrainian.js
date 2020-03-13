@@ -169,7 +169,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/ukrainian/institutional-50170368',
         text: 'Чому BBC заслуговує на довіру',
       },
       externalLink: {
@@ -192,6 +192,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/ukrainian/institutional-38146278',
           text: "Зв'язатися з BBC",
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
