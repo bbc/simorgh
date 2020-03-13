@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import renderApp from '../renderApp';
+import renderApp from '../../renderApp';
 
 export default ({ pageUrl, copyrightText, brandingText, brandingLink }) => {
   describe('Footer', () => {

@@ -1,16 +1,19 @@
-import { waitForDomChange } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import renderApp from '../renderApp';
+import { renderFullHTML } from '../../renderApp';
+
+let document;
 
 export default ({ pageUrl, pageTitle, canonicalUrl, language }) => {
-  describe('Common SEO tests', () => {
-    beforeEach(() => renderApp(pageUrl));
+  describe('SEO', () => {
+    beforeEach(async () => {
+      const jsdom = await renderFullHTML(pageUrl);
+      document = jsdom.document;
+    });
 
-    it('should have a page title', async () => {
-      await waitForDomChange();
-      const title = document.querySelector('head title');
+    it('should have a page title', () => {
+      const { title } = document;
 
-      expect(title.textContent).toEqual(pageTitle);
+      expect(title).toEqual(pageTitle);
     });
 
     it('should render an H1', () => {
@@ -20,16 +23,12 @@ export default ({ pageUrl, pageTitle, canonicalUrl, language }) => {
     });
 
     it('should include the canonical URL', async () => {
-      await waitForDomChange();
-
       const canonicalEl = document.querySelector('head link[rel="canonical"]');
 
       expect(canonicalEl.getAttribute('href')).toEqual(canonicalUrl);
     });
 
     it('should have a correct robot meta tag', async () => {
-      await waitForDomChange();
-
       const robotsEl = document.querySelector('head meta[name="robots"]');
       const robotsContent = robotsEl.getAttribute('content');
 
@@ -37,11 +36,13 @@ export default ({ pageUrl, pageTitle, canonicalUrl, language }) => {
     });
 
     it('should have lang attribute', async () => {
-      await waitForDomChange();
-
       const htmlEl = document.querySelector('html');
 
       expect(htmlEl.getAttribute('lang')).toEqual(language);
+    });
+
+    it('should have correct things (example of failing test)', async () => {
+      expect(true).toEqual(false);
     });
   });
 };
