@@ -141,7 +141,10 @@ describe('ToggleContext with feature toggles', () => {
           } the toggles endpoint`, async () => {
             await act(async () => {
               await render(
-                <ToggleContextProvider service={service}>
+                <ToggleContextProvider
+                  service={service}
+                  origin="https://www.test.bbc.com"
+                >
                   <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
                 </ToggleContextProvider>,
               );
@@ -157,7 +160,10 @@ describe('ToggleContext with feature toggles', () => {
 
             await act(async () => {
               container = await render(
-                <ToggleContextProvider service={service}>
+                <ToggleContextProvider
+                  service={service}
+                  origin="https://www.test.bbc.com"
+                >
                   <TestComponent toggle="ads">Dummy Ad Component</TestComponent>
                 </ToggleContextProvider>,
               ).container;

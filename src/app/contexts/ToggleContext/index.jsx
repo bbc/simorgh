@@ -23,7 +23,7 @@ const ToggleContextProvider = ({ children, service, origin }) => {
   useEffect(() => {
     const shouldFetchAndUpdateToggles =
       enableFetchingToggles.enabled &&
-      service.match(enableFetchingToggles.value);
+      RegExp(enableFetchingToggles.value).test(service);
 
     if (shouldFetchAndUpdateToggles) {
       const fetchAndUpdateToggles = async () => {
@@ -36,7 +36,16 @@ const ToggleContextProvider = ({ children, service, origin }) => {
 
           toggleDispatch(updateToggles(jsonData));
         } catch (error) {
-          logger.error(`hi Error: ${error}`);
+          logger.error(
+            JSON.stringify(
+              {
+                event: 'toggle_fetch_error',
+                message: error,
+              },
+              null,
+              2,
+            ),
+          );
         }
       };
       fetchAndUpdateToggles();
