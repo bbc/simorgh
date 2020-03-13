@@ -1,6 +1,6 @@
 import { shape, arrayOf, string } from 'prop-types';
 
-const versionPropTypes = {
+const versionPropTypes = shape({
   available: string.isRequired,
   caption: string.isRequired,
   duration: string,
@@ -17,6 +17,6 @@ const versionPropTypes = {
       versionId: string.isRequired,
     }),
   ),
-};
+});
 
 export default versionPropTypes;

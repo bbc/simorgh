@@ -6,6 +6,7 @@ import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
 import routes from './index';
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import frontPageJson from '#data/pidgin/frontpage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
@@ -66,6 +67,24 @@ it('should route to and render live radio page', async () => {
     service: 'korean',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should route to and render the skeleton onDemand Radio page', async () => {
+  fetch.mockResponse(JSON.stringify(onDemandRadioPageJson));
+  const pathname = '/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData(pathname);
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'indonesia',
+  });
+
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+    'Konten ini sudah tidak tersedia lagi.';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
