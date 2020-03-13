@@ -10,7 +10,7 @@ import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import getInitialData from '#app/routes/radio/getInitialData';
+import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
 const createAssetPage = ({ pageData }, service) => (
   <StaticRouter>
