@@ -11,6 +11,7 @@ export default () => {
     });
 
     it('should render the headline', () => {
+      // Need to getAllByText because of the VisuallyHiddenHeadline
       const headlineEl = app.getAllByText(
         'Konflik Iran-AS: Lima penyebab krisis tak kunjung usai',
       );
