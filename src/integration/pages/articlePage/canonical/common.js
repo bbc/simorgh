@@ -14,8 +14,8 @@ export default () => {
     runCommonSeoTests({
       pageUrl: ARTICLE_PAGE_URL,
       pageTitle:
-        "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",
-      canonicalUrl: 'http://localhost/pidgin/tori-51745682',
+        'This is the SEO headline of this test article - BBC News Pidgin',
+      canonicalUrl: 'http://localhost/pidgin/articles/cgwk9w4zlg8o',
       language: 'pcm',
     });
 

@@ -12,7 +12,7 @@ export default () => {
 
     it('should render the headline', () => {
       const headlineEl = app.getByText(
-        "Adams Oshiomhole say 'I still be APC National Chairman'",
+        'This is the headline of this test article',
       );
 
       expect(headlineEl).toBeInTheDocument();
