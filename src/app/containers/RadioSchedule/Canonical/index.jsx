@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from 'styled-components';
+import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -61,14 +62,20 @@ const RadioFrequencyLink = styled(Link)`
 
 const CanonicalRadioSchedule = ({ endpoint }) => {
   const [schedule, setRadioSchedule] = useState();
-  const {
-    service,
-    script,
-    dir,
-    timezone,
-    locale,
-    radioSchedule: { header, frequenciesPageUrl, frequenciesPageLabel },
-  } = useContext(ServiceContext);
+  const { service, script, dir, timezone, locale, radioSchedule } = useContext(
+    ServiceContext,
+  );
+  const header = pathOr(null, ['header'], radioSchedule);
+  const frequenciesPageUrl = pathOr(
+    null,
+    ['frequenciesPageUrl'],
+    radioSchedule,
+  );
+  const frequenciesPageLabel = pathOr(
+    null,
+    ['frequenciesPageLabel'],
+    radioSchedule,
+  );
 
   useEffect(() => {
     const handleResponse = async response => {
