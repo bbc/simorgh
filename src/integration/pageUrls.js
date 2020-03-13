@@ -1,8 +1,19 @@
-module.exports = {
-  LIVE_RADIO_PAGE_URL: 'https://www.bbc.com/korean/bbc_korean_radio/liveradio',
-  FRONT_PAGE_URL: 'https://www.bbc.com/pidgin',
-  ARTICLE_PAGE_URL: 'https://www.bbc.com/pidgin/tori-51745682',
-  MEDIA_ASSET_PAGE_URL: 'https://www.bbc.com/pidgin/51738216',
-  PHOTO_GALLERY_PAGE_URL: 'https://www.bbc.com/persian/world-features-50129475',
-  STORY_PAGE_URL: 'https://www.test.bbc.com/pidgin/23259748',
+/* eslint-disable global-require */
+const getURLs = () => {
+  global.Cypress = { env: () => {} };
+  const services = require('../../cypress/support/config/services');
+
+  const urls = {};
+  Object.keys(services).forEach(service => {
+    Object.keys(services[service].pageTypes).forEach(pageType => {
+      const { paths } = services[service].pageTypes[pageType];
+      const livePaths = (paths && paths.live) || [];
+      livePaths.forEach(path => {
+        urls[path] = `https://www.bbc.com${path}`;
+      });
+    });
+  });
+  return urls;
 };
+
+module.exports = getURLs;
