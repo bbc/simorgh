@@ -24,7 +24,7 @@ const fileTransport = new (transports.File)({
   humanReadableUnhandledException: true,
   json: true,
   level: LOG_LEVEL,
-  maxFiles: 2,
+  maxFiles: 5,
   maxsize: 104857600, // 100MB
   tailable: true
 });
