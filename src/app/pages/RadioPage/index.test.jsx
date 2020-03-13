@@ -23,10 +23,13 @@ describe('Radio Page Main', () => {
     const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider service="amharic">
+      <ToggleContextProvider
+        service="amharic"
+        origin="https://www.test.bbc.com"
+      >
         <ServiceContextProvider service="amharic">
           <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
+            bbcOrigin="https://www.test.bbc.com"
             isAmp={false}
             pageType="media"
             pathname="/pathname"
@@ -46,10 +49,13 @@ describe('Radio Page Main', () => {
     const { pageData } = await getInitialData('some-live-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider service="amharic">
+      <ToggleContextProvider
+        service="amharic"
+        origin="https://www.test.bbc.com"
+      >
         <ServiceContextProvider service="amharic">
           <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
+            bbcOrigin="https://www.test.bbc.com"
             isAmp
             pageType="media"
             pathname="/pathname"

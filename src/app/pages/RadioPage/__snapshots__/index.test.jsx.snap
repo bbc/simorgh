@@ -681,7 +681,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       rel="canonical"
     />
     <link
-      href="https://www.test.bbc.co.uk/pathname.amp"
+      href="https://www.test.bbc.com/pathname.amp"
       rel="amphtml"
     />
     <link

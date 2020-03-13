@@ -81,16 +81,6 @@ describe(`Header`, () => {
     expect(document.querySelector(`header nav`)).not.toBeNull();
   });
 
-  it('should NOT output a nav bar for articles on live', () => {
-    render(
-      HeaderContainerWithContext({
-        pageType: 'article',
-        bbcOrigin: 'https://www.bbc.com',
-      }),
-    );
-    expect(document.querySelector(`header nav`)).toBeNull();
-  });
-
   it('should render a Brand with a Skip to content link, linking to #content', () => {
     render(
       HeaderContainerWithContext({

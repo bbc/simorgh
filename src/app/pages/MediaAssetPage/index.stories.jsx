@@ -34,6 +34,7 @@ platforms.forEach(platform => {
       <ToggleContextProvider
         value={{ toggleState: defaultToggles }}
         service="pidgin"
+        origin="https://www.test.bbc.com"
       >
         <BrowserRouter>
           <MediaAssetPage

@@ -23,7 +23,7 @@ const staticRadioScheduleURL = service =>
   `./data/${service}/bbc_${service}_radio/radioschedule.json`;
 
 const renderRadioScheduleContainer = service => (
-  <ToggleContextProvider service={service}>
+  <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
     <RequestContextProvider
       isAmp={false}
       pageType="frontPage"
