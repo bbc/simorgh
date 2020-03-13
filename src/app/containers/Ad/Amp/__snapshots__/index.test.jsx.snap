@@ -17,7 +17,7 @@ exports[`AMP Navigation Snapshots should correctly render an AMP leaderboard ad 
       height="50"
       layout="responsive"
       placeholder="true"
-      src="https://via.placeholder.com/300"
+      src="https://via.placeholder.com/320x50"
       width="320"
     />
   </amp-ad>
@@ -36,7 +36,7 @@ exports[`AMP Navigation Snapshots should correctly render an AMP leaderboard ad 
       height="250"
       layout="responsive"
       placeholder="true"
-      src="https://via.placeholder.com/300"
+      src="https://via.placeholder.com/970x250"
       width="970"
     />
   </amp-ad>
