@@ -68,6 +68,7 @@ const ConstrainedMostReadSection = styled(MostReadSection)`
     margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUIN};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+    width: 100%; /* Needed for IE11 */
     margin: 0 auto ${GEL_SPACING_TRPL};
     padding: 0 ${GEL_SPACING_DBL};
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};

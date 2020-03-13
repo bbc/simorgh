@@ -53,9 +53,7 @@ const runTestsForPage = ({
       const paths = getPaths(service, pageType);
 
       paths.forEach(currentPath => {
-        describe(`${pageType} - ${service} -${
-          paths.length > 1 ? ` ${currentPath} -` : ''
-        } Canonical`, () => {
+        describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
@@ -94,9 +92,7 @@ const runTestsForPage = ({
         });
 
         // Switch to AMP page URL (NB all our pages have AMP variants)
-        describe(`${pageType} - ${service} -${
-          paths.length > 1 ? ` ${currentPath} -` : ''
-        } Amp`, () => {
+        describe(`${pageType} - ${currentPath} - AMP`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(`${currentPath}.amp`, pageType);
