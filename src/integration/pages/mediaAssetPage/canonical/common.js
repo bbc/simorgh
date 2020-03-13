@@ -14,8 +14,8 @@ export default () => {
 
     runCommonSeoTests({
       pageUrl: MEDIA_ASSET_PAGE_URL,
-      pageTitle: `Konflik Iran-AS: Lima penyebab krisis tak kunjung usai - BBC News Indonesia`,
-      canonicalUrl: 'http://localhost/indonesia/media-51102836',
+      pageTitle: `Hari perempuan internasional: Bergulat demi kebebasan perempuan - BBC News Indonesia`,
+      canonicalUrl: 'http://localhost/indonesia/indonesia-51772194',
       language: 'id',
     });
 
