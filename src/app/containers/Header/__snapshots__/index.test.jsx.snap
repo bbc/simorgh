@@ -838,18 +838,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
             >
               <a
                 class="c22"
-                href="/pidgin/media/audio"
-              >
-                Audio
-              </a>
-            </li>
-            <li
-              class="c20 c21"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="c22"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
@@ -943,17 +931,6 @@ exports[`Header should render correctly for WS frontPage 1`] = `
               href="/pidgin/media/video"
             >
               Video
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/media/audio"
-            >
-              Audio
             </a>
           </li>
           <li
@@ -1835,18 +1812,6 @@ exports[`Header should render correctly for WS radio page 1`] = `
             >
               <a
                 class="c22"
-                href="/pidgin/media/audio"
-              >
-                Audio
-              </a>
-            </li>
-            <li
-              class="c20 c21"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="c22"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
@@ -1940,17 +1905,6 @@ exports[`Header should render correctly for WS radio page 1`] = `
               href="/pidgin/media/video"
             >
               Video
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/media/audio"
-            >
-              Audio
             </a>
           </li>
           <li
@@ -2832,18 +2786,6 @@ exports[`Header should render correctly for news article 1`] = `
             >
               <a
                 class="c22"
-                href="/pidgin/media/audio"
-              >
-                Audio
-              </a>
-            </li>
-            <li
-              class="c20 c21"
-              dir="ltr"
-              role="listitem"
-            >
-              <a
-                class="c22"
                 href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
               >
                 Sport
@@ -2937,17 +2879,6 @@ exports[`Header should render correctly for news article 1`] = `
               href="/pidgin/media/video"
             >
               Video
-            </a>
-          </li>
-          <li
-            class="c25"
-            role="listitem"
-          >
-            <a
-              class="c26"
-              href="/pidgin/media/audio"
-            >
-              Audio
             </a>
           </li>
           <li
