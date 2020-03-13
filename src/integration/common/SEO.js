@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import renderApp from '../renderApp';
 
 export default ({ pageUrl, pageTitle }) => {
-  describe('Common SEO tests', () => {
+  describe('SEO', () => {
     beforeEach(() => renderApp(pageUrl));
 
     it('should have a page title', async () => {

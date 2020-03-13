@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/extend-expect';
 import renderApp from '../renderApp';
 
 export default ({ pageUrl }) => {
-  describe('a11y tests', () => {
+  describe('a11y', () => {
     beforeEach(() => renderApp(pageUrl));
 
     it('should render an H1 with the correct attributes', () => {
