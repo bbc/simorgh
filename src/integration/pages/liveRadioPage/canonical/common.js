@@ -1,8 +1,16 @@
-import { runFooterTests, runCommonSeoTests } from '../../../common/canonical';
+import {
+  runFooterTests,
+  runCommonSeoTests,
+  runCommonAnalyticsTests,
+} from '../../../common/canonical';
 import { LIVE_RADIO_PAGE_URL } from '../../../pageUrls';
 
 export default () => {
   describe('Common', () => {
+    runCommonAnalyticsTests({
+      pageUrl: LIVE_RADIO_PAGE_URL,
+    });
+
     runCommonSeoTests({
       pageUrl: LIVE_RADIO_PAGE_URL,
       pageTitle: 'BBC 코리아 라디오 - BBC News 코리아',
