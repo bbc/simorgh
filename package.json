@@ -78,7 +78,7 @@
     "@bbc/psammead-locales": "^4.1.2",
     "@bbc/psammead-media-indicator": "^4.0.4",
     "@bbc/psammead-media-player": "^2.7.4",
-    "@bbc/psammead-most-read": "^4.0.1",
+    "@bbc/psammead-most-read": "^4.0.2",
     "@bbc/psammead-navigation": "^6.0.2",
     "@bbc/psammead-paragraph": "^2.2.26",
     "@bbc/psammead-radio-schedule": "0.1.0-alpha.19",
