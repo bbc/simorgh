@@ -1,8 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
-  Grid,
-  GhostGrid,
+  GridWrapper,
   GridItemConstrainedSmall,
   GridItemConstrainedMedium,
   GridItemConstrainedMediumNoMargin,
@@ -14,38 +13,35 @@ import {
   PopOutGridItemMedium,
 } from '.';
 
-describe('Styled Grid items', () => {
-  describe('Grid', () => {
-    shouldMatchSnapshot('should render correctly', <Grid />);
-  });
-  describe('GhostGrid', () => {
-    shouldMatchSnapshot('should render correctly', <GhostGrid />);
+describe('Styled GridWrapper items', () => {
+  describe('GridWrapper', () => {
+    shouldMatchSnapshot('should render correctly', <GridWrapper />);
   });
 
   describe('GridItemConstrainedSmall', () => {
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedSmall>
           <NestedGridItemSmall gridColumnStart="1" gridSpan={{ default: '1' }}>
             <div>1/4 or 1/5 or 1/8</div>
           </NestedGridItemSmall>
         </GridItemConstrainedSmall>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span 8',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedSmall>
           <NestedGridItemSmall gridColumnStart="1" gridSpan={{ default: '6' }}>
             <div>4/4 or 5/5 or 8/8</div>
           </NestedGridItemSmall>
         </GridItemConstrainedSmall>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span columns depending on breakpoint',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedSmall>
           <NestedGridItemSmall
             gridColumnStart="1"
@@ -62,34 +58,34 @@ describe('Styled Grid items', () => {
             </div>
           </NestedGridItemSmall>
         </GridItemConstrainedSmall>
-      </Grid>,
+      </GridWrapper>,
     );
   });
 
   describe('GridItemConstrainedMedium', () => {
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedMedium>
           <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '1' }}>
             <div>1/4 or 1/5 or 1/8</div>
           </NestedGridItemMedium>
         </GridItemConstrainedMedium>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span 8',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedMedium>
           <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '8' }}>
             <div>4/4 or 5/5 or 8/8</div>
           </NestedGridItemMedium>
         </GridItemConstrainedMedium>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span columns depending on breakpoint',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedMedium>
           <NestedGridItemMedium
             gridColumnStart="1"
@@ -106,34 +102,34 @@ describe('Styled Grid items', () => {
             </div>
           </NestedGridItemMedium>
         </GridItemConstrainedMedium>
-      </Grid>,
+      </GridWrapper>,
     );
   });
 
   describe('GridItemConstrainedMediumNoMargin', () => {
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedMediumNoMargin>
           <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '1' }}>
             <div>1/4 or 1/5 or 1/8</div>
           </NestedGridItemMedium>
         </GridItemConstrainedMediumNoMargin>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span 8',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedMediumNoMargin>
           <NestedGridItemMedium gridColumnStart="1" gridSpan={{ default: '8' }}>
             <div>4/4 or 5/5 or 8/8</div>
           </NestedGridItemMedium>
         </GridItemConstrainedMediumNoMargin>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span columns depending on breakpoint',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedMediumNoMargin>
           <NestedGridItemMedium
             gridColumnStart="1"
@@ -150,34 +146,34 @@ describe('Styled Grid items', () => {
             </div>
           </NestedGridItemMedium>
         </GridItemConstrainedMediumNoMargin>
-      </Grid>,
+      </GridWrapper>,
     );
   });
 
   describe('GridItemConstrainedLarge', () => {
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedLarge>
           <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '1' }}>
             <div>1/4 or 1/5 or 1/8</div>
           </NestedGridItemLarge>
         </GridItemConstrainedLarge>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span 8',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedLarge>
           <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '8' }}>
             <div>4/4 or 5/5 or 8/8</div>
           </NestedGridItemLarge>
         </GridItemConstrainedLarge>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span columns depending on breakpoint',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedLarge>
           <NestedGridItemLarge
             gridColumnStart="1"
@@ -194,34 +190,34 @@ describe('Styled Grid items', () => {
             </div>
           </NestedGridItemLarge>
         </GridItemConstrainedLarge>
-      </Grid>,
+      </GridWrapper>,
     );
   });
 
   describe('GridItemConstrainedLargeNoMargin', () => {
     shouldMatchSnapshot(
       'should start at column 1 & span 1',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedLargeNoMargin>
           <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '1' }}>
             <div>1/4 or 1/5 or 1/8</div>
           </NestedGridItemLarge>
         </GridItemConstrainedLargeNoMargin>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span 8',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedLargeNoMargin>
           <NestedGridItemLarge gridColumnStart="1" gridSpan={{ default: '20' }}>
             <div>4/4 or 5/5 or 8/8</div>
           </NestedGridItemLarge>
         </GridItemConstrainedLargeNoMargin>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should start at column 1 & span columns depending on breakpoint',
-      <Grid>
+      <GridWrapper>
         <GridItemConstrainedLargeNoMargin>
           <NestedGridItemLarge
             gridColumnStart="1"
@@ -238,13 +234,13 @@ describe('Styled Grid items', () => {
             </div>
           </NestedGridItemLarge>
         </GridItemConstrainedLargeNoMargin>
-      </Grid>,
+      </GridWrapper>,
     );
     shouldMatchSnapshot(
       'should pop out of grid at Group 5 breakpoint',
-      <Grid>
+      <GridWrapper>
         <PopOutGridItemMedium>Group 5 pop out grid.</PopOutGridItemMedium>
-      </Grid>,
+      </GridWrapper>,
     );
   });
 });

@@ -1,227 +1,175 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": false,
-          "caption": "Audio test for articles, UK only",
-          "embedding": false,
-          "format": "audio",
-          "id": "p01n6y6z",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
-          "subType": "episode",
-          "synopses": {
-            "short": "Audio test for articles, UK only"
-          },
-          "title": "Audio test for articles, UK only",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1563782700000,
-              "availableTerritories": {
-                "nonUk": false,
-                "uk": true,
-                "world": false
-              },
-              "duration": 343,
-              "durationISO8601": "PT5M43S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01n6yb1",
-              "warnings": {
-                "long": "Contains some strong language.",
-                "short": "Contains some strong language."
-              }
-            }
-          ]
+  "content": {
+    "blocks": [
+      {
+        "available": true,
+        "caption": "NI stream test",
+        "duration": "PT0S",
+        "embedding": false,
+        "externalId": "bbc_one_northern_ireland_hd",
+        "format": "video",
+        "id": "63501283",
+        "image": {
+          "altText": "church",
+          "caption": "audio",
+          "copyrightHolder": "Hmm",
+          "height": 360,
+          "href": "http://b.files.bbci.co.uk/51BB/test/_63732902_p01n6y7l.jpg",
+          "id": "63501283",
+          "path": "/cpsdevpb/51BB/test/_63732902_p01n6y7l.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
         },
-        {
-          "markupType": "plain_text",
-          "role": "introduction",
-          "text": "Raia wanne wa kigeni waliowasili nchini Uganda na dalili za virusi vya corona wametengwa katika hospitali ya Entebbe, Waziri wa afya amethibitisha.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Bila ya kutaja uraia wao, afisa mahusiano wa waziri wa afya bwana Emmanuel Ainebyoona alisema kuwa raia hao wamechukuliwa katika uwanja wa ndege wa kimataifa wa Entebbe.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "&quot;Sampuli ya vipimo vyao vimepelekwa katika kituo cha utafiti wa virusi nchini humo (UVRI). Na tutaitaarifu umma &quot; gazeti la Daily Monitor limemnukuu.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "crosshead",
-          "type": "crosshead"
-        },
-        {
-          "items": [
-            {
-              "markupType": "plain_text",
-              "text": "one",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "two",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "three",
-              "type": "listItem"
-            }
-          ],
-          "numbered": false,
-          "type": "list"
-        },
-        {
-          "items": [
-            {
-              "markupType": "plain_text",
-              "text": "one",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "two",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "three",
-              "type": "listItem"
-            }
-          ],
-          "numbered": true,
-          "type": "list"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "swahili.embedded_video.media_asset.23268999.page",
-        "cps_asset_id": "23268999",
-        "cps_asset_type": "map"
+        "live": true,
+        "subType": "primary",
+        "type": "version"
       },
-      "blockTypes": [
-        "media",
-        "paragraph",
-        "crosshead",
-        "list"
-      ],
-      "createdBy": "swahili-v6",
-      "firstPublished": 1583163256000,
-      "id": "urn:bbc:ares::asset:swahili/media-23268999",
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Raia wanne wa kigeni waliowasili nchini Uganda na dalili za virusi vya corona wametengwa katika hospitali ya Entebbe, Waziri wa afya amethibitisha.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Bila ya kutaja uraia wao, afisa mahusiano wa waziri wa afya bwana Emmanuel Ainebyoona alisema kuwa raia hao wamechukuliwa katika uwanja wa ndege wa kimataifa wa Entebbe.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;Sampuli ya vipimo vyao vimepelekwa katika kituo cha utafiti wa virusi nchini humo (UVRI). Na tutaitaarifu umma &quot; gazeti la Daily Monitor limemnukuu.",
+        "type": "paragraph"
+      },
+      { "markupType": "plain_text", "text": "crosshead", "type": "crosshead" },
+      {
+        "items": [
+          { "markupType": "plain_text", "text": "one", "type": "listItem" },
+          { "markupType": "plain_text", "text": "two", "type": "listItem" },
+          { "markupType": "plain_text", "text": "three", "type": "listItem" }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "items": [
+          { "markupType": "plain_text", "text": "one", "type": "listItem" },
+          { "markupType": "plain_text", "text": "two", "type": "listItem" },
+          { "markupType": "plain_text", "text": "three", "type": "listItem" }
+        ],
+        "numbered": true,
+        "type": "list"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "swahili.embedded_video.media_asset.23268999.page",
+      "cps_asset_id": "23268999",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["version", "paragraph", "crosshead", "list"],
+    "createdBy": "swahili-v6",
+    "firstPublished": 1583163256000,
+    "id": "urn:bbc:ares::asset:swahili/media-23268999",
+    "includeComments": false,
+    "language": "sw",
+    "lastPublished": 1584028973000,
+    "lastUpdated": 1584028982581,
+    "locators": {
+      "assetId": "23268999",
+      "assetUri": "/swahili/media-23268999",
+      "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
+      "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
       "includeComments": false,
-      "language": "sw",
-      "lastPublished": 1583163257000,
-      "lastUpdated": 1583163268972,
-      "locators": {
-        "assetId": "23268999",
-        "assetUri": "/swahili/media-23268999",
-        "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
-        "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "timestamp": 1583163256000,
-      "type": "MAP",
-      "version": "v1.1.6"
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
     },
-    "promo": {
-      "headlines": {
-        "headline": "Swahili test page Audio test for articles, UK only",
-        "shortHeadline": "Swahili test page Audio test for articles, UK only"
-      },
-      "id": "urn:bbc:ares::asset:swahili/media-23268999",
-      "indexImage": {
+    "tags": {},
+    "timestamp": 1583163256000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Swahili test page Audio test for articles, UK only test stream",
+      "shortHeadline": "Swahili test page Audio test for articles, UK only test stream"
+    },
+    "id": "urn:bbc:ares::asset:swahili/media-23268999",
+    "indexImage": {
+      "altText": "church",
+      "caption": "audio",
+      "copyrightHolder": "Hmm",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/14C1F/test/_63732058_p01n6y7l.jpg",
+      "id": "63732058",
+      "path": "/cpsdevpb/14C1F/test/_63732058_p01n6y7l.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "sw",
+    "locators": {
+      "assetId": "23268999",
+      "assetUri": "/swahili/media-23268999",
+      "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
+      "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed"
+    },
+    "media": {
+      "available": true,
+      "caption": "NI stream test",
+      "duration": "PT0S",
+      "embedding": false,
+      "externalId": "bbc_one_northern_ireland_hd",
+      "format": "video",
+      "id": "63501283",
+      "image": {
         "altText": "church",
         "caption": "audio",
         "copyrightHolder": "Hmm",
-        "height": 576,
-        "href": "http://b.files.bbci.co.uk/14C1F/test/_63732058_p01n6y7l.jpg",
-        "id": "63732058",
-        "path": "/cpsdevpb/14C1F/test/_63732058_p01n6y7l.jpg",
-        "subType": "index",
+        "height": 360,
+        "href": "http://b.files.bbci.co.uk/51BB/test/_63732902_p01n6y7l.jpg",
+        "id": "63501283",
+        "path": "/cpsdevpb/51BB/test/_63732902_p01n6y7l.jpg",
+        "subType": "thumbnail",
         "type": "image",
-        "width": 1024
+        "width": 640
       },
-      "language": "sw",
-      "locators": {
-        "assetId": "23268999",
-        "assetUri": "/swahili/media-23268999",
-        "cpsUrn": "urn:bbc:content:assetUri:swahili/media-23268999",
-        "curie": "http://www.bbc.co.uk/asset/31f81487-2e93-5a42-ae5a-e289cd114aed"
-      },
-      "media": {
-        "advertising": false,
-        "caption": "Audio test for articles, UK only",
-        "embedding": false,
-        "format": "audio",
-        "id": "p01n6y6z",
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n6y7l.jpg",
-        "subType": "episode",
-        "synopses": {
-          "short": "Audio test for articles, UK only"
-        },
-        "title": "Audio test for articles, UK only",
-        "type": "media",
-        "versions": [
-          {
-            "availableFrom": 1563782700000,
-            "availableTerritories": {
-              "nonUk": false,
-              "uk": true,
-              "world": false
-            },
-            "duration": 343,
-            "durationISO8601": "PT5M43S",
-            "types": [
-              "Original"
-            ],
-            "versionId": "p01n6yb1",
-            "warnings": {
-              "long": "Contains some strong language.",
-              "short": "Contains some strong language."
-            }
-          }
-        ]
-      },
-      "passport": {
-        "taggings": []
-      },
-      "summary": "swahili",
-      "timestamp": 1583163256000,
-      "type": "cps"
+      "live": true,
+      "subType": "primary",
+      "type": "version"
     },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/swahili/media"
-      },
-      "site": {
-        "name": "BBC Swahili",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/swahili"
-      }
+    "passport": { "taggings": [] },
+    "summary": "swahili",
+    "timestamp": 1583163256000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/swahili/media"
+    },
+    "site": {
+      "name": "BBC Swahili",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/swahili"
     }
   }
+}
