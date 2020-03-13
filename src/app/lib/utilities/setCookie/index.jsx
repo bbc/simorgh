@@ -2,7 +2,7 @@ import Cookie from 'js-cookie';
 
 const COOKIE_EXPIRY = 365;
 
-export const removeDomainRestrictions = domain => {
+export const getCookieDomain = domain => {
   const domainParts = domain.split('.');
   const isBBCDomain = domainParts.includes('bbc');
 
@@ -16,7 +16,7 @@ export const removeDomainRestrictions = domain => {
 const setCookie = (name, value, expires = COOKIE_EXPIRY) =>
   Cookie.set(name, value, {
     expires,
-    domain: removeDomainRestrictions(document.domain),
+    domain: getCookieDomain(document.domain),
   });
 
 export default setCookie;

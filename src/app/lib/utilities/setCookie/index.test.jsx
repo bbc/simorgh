@@ -1,5 +1,5 @@
 import Cookie from 'js-cookie';
-import setCookie, { removeDomainRestrictions } from '.';
+import setCookie, { getCookieDomain } from '.';
 
 const cookieSpy = jest.spyOn(Cookie, 'set');
 
@@ -26,11 +26,19 @@ describe('setCookie Assertion Tests', () => {
   });
   describe('Domain Restrictions', () => {
     it('should return .bbc.com as the domain given a .bbc.com link', () => {
-      expect(removeDomainRestrictions('www.test.bbc.com')).toBe('.bbc.com');
+      expect(getCookieDomain('www.test.bbc.com')).toBe('.bbc.com');
     });
-
     it('should return the given domain if it is not a .bbc.com link', () => {
-      expect(removeDomainRestrictions('www.foo.com')).toBe('www.foo.com');
+      expect(getCookieDomain('www.foo.com')).toBe('www.foo.com');
+    });
+    it('should return the domain exactly as .bbc.com if domain ends with .bbc.com', () => {
+      expect(getCookieDomain('anysubdomain.bbc.com')).toBe('.bbc.com');
+    });
+    it('should return the domain exactly as .bbc.co.uk if domain ends with .bbc.co.uk', () => {
+      expect(getCookieDomain('anysubdomain.bbc.co.uk')).toBe('.bbc.co.uk');
+    });
+    it('should return exactly the same domain given if the domain is anything else', () => {
+      expect(getCookieDomain('localhost')).toBe('localhost');
     });
   });
 });

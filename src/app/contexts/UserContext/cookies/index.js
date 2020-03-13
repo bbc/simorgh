@@ -24,6 +24,6 @@ export const setPreferredVariantCookie = (service, variant) => {
   }
 
   const variantCookieName = `ckps_${getVariantCookieName(service)}`;
-  const COOKIE_EXPIRY = 365;
+  const COOKIE_EXPIRY = 7;
   setCookie(variantCookieName, variant, COOKIE_EXPIRY);
 };
