@@ -70,8 +70,9 @@ describe('Logger node - for the server', () => {
           humanReadableUnhandledException: true,
           json: true,
           level: 'info',
-          maxFiles: 1,
+          maxFiles: 5,
           maxsize: 104857600,
+          tailable: true,
         });
       });
 
@@ -85,8 +86,9 @@ describe('Logger node - for the server', () => {
           humanReadableUnhandledException: true,
           json: true,
           level: 'info',
-          maxFiles: 1,
+          maxFiles: 5,
           maxsize: 104857600,
+          tailable: true,
         });
       });
 
