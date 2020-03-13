@@ -259,10 +259,6 @@ export const service = {
         url: '/portuguese/salasocial',
       },
       {
-        title: 'Galeria de Fotos',
-        url: '/portuguese/media/photogalleries',
-      },
-      {
         title: 'Vídeos',
         url: '/portuguese/media/video',
       },

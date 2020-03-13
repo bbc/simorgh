@@ -267,10 +267,6 @@ export const service = {
         url: '/arabic/inthepress',
       },
       {
-        title: 'صور',
-        url: '/arabic/media/photogalleries',
-      },
-      {
         title: 'برامجنا',
         url: '/arabic/tv-and-radio-37728883',
       },

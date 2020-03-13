@@ -250,10 +250,6 @@ export const service = {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/ka_qayb_gal/programmes',
       },
-      {
-        title: 'Sawirro',
-        url: '/somali/media/photogalleries',
-      },
     ],
   },
 };

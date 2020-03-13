@@ -226,16 +226,8 @@ export const service = {
         url: '/swahili/media/video',
       },
       {
-        title: 'Sauti',
-        url: '/swahili/media/audio',
-      },
-      {
         title: 'Vipindi vya Redio',
         url: '/swahili/kwa_kina/redio',
-      },
-      {
-        title: 'Picha',
-        url: '/swahili/media/photogalleries',
       },
     ],
   },

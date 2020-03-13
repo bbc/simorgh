@@ -240,10 +240,6 @@ export const service = {
         title: 'Shirye-shiryen rediyo',
         url: '/hausa/media-43322903',
       },
-      {
-        title: 'Hotuna',
-        url: '/hausa/media/photogalleries',
-      },
     ],
   },
 };

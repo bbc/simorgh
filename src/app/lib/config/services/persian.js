@@ -278,10 +278,6 @@ export const service = {
         url: '/persian/interactivity',
       },
       {
-        title: 'عکس',
-        url: '/persian/media/photogalleries',
-      },
-      {
         title: 'ناظران می‌گویند...',
         url: '/persian/blogs/viewpoints',
       },

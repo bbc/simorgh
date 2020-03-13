@@ -234,14 +234,6 @@ export const service = {
         url: '/vietnamese/english',
       },
       {
-        title: 'Hình ảnh',
-        url: '/vietnamese/media/photogalleries',
-      },
-      {
-        title: 'Audio',
-        url: '/vietnamese/media/audio',
-      },
-      {
         title: 'Video',
         url: '/vietnamese/media/video',
       },

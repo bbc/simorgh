@@ -188,10 +188,6 @@ export const service = {
         url: '/pidgin/media/video',
       },
       {
-        title: 'Audio',
-        url: '/pidgin/media/audio',
-      },
-      {
         title: 'Sport',
         url: '/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
       },

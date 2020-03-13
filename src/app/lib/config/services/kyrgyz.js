@@ -242,10 +242,6 @@ export const service = {
         url: '/kyrgyz/magazine',
       },
       {
-        title: 'Аудио',
-        url: '/kyrgyz/media/audio',
-      },
-      {
         title: 'Блог',
         url: '/kyrgyz/blog',
       },

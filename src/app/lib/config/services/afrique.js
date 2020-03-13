@@ -261,10 +261,6 @@ export const service = {
         url: '/afrique/media/video',
       },
       {
-        title: 'En images',
-        url: '/afrique/media/photogalleries',
-      },
-      {
         title: 'Nos émissions',
         url: '/afrique/nos_emissions/radio',
       },

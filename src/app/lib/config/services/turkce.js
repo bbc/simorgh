@@ -224,10 +224,6 @@ export const service = {
         url: '/turkce/media/video',
       },
       {
-        title: 'Fotoğraf',
-        url: '/turkce/media/photogalleries',
-      },
-      {
         title: 'Dergi',
         url: '/turkce/dergi',
       },

@@ -246,10 +246,6 @@ export const service = {
         url: '/pashto/media/video',
       },
       {
-        title: 'انځورونه',
-        url: '/pashto/media/photogalleries',
-      },
-      {
         title: 'ځانګړې پاڼې',
         url: '/pashto/in_depth',
       },

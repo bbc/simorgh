@@ -219,10 +219,6 @@ export const service = {
         url: '/gahuza/imikino',
       },
       {
-        title: 'Umviriza',
-        url: '/gahuza/media/audio',
-      },
-      {
         title: 'Video',
         url: '/gahuza/media/video',
       },
