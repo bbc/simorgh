@@ -41,7 +41,7 @@ export default ({ pageUrl, pageTitle, canonicalUrl, language }) => {
       expect(htmlEl.getAttribute('lang')).toEqual(language);
     });
 
-    it('should have correct things (example of failing test)', async () => {
+    it.skip('should have correct things (example of failing test)', async () => {
       expect(true).toEqual(false);
     });
   });
