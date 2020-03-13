@@ -19,7 +19,7 @@ const validServices = [
 ];
 
 const staticRadioScheduleURL = service =>
-  `./data/${service}/bbc_${service}_radio/radioschedule.json`;
+  `./data/${service}/bbc_${service}_radio/schedule.json`;
 
 const renderRadioScheduleContainer = service => (
   <ToggleContextProvider>
@@ -30,7 +30,9 @@ const renderRadioScheduleContainer = service => (
       pathname={`/${service}`}
     >
       <ServiceContextProvider service={service}>
-        <RadioScheduleContainer endpoint={staticRadioScheduleURL(service)} />
+        <RadioScheduleContainer
+          radioScheduleEndpointOverride={staticRadioScheduleURL(service)}
+        />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>
