@@ -4,17 +4,17 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
-    class="GhostGrid-sc-12lwanc-1 kGasFS"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -29,7 +29,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 jiurmA"
+                  class="Title-wx5kdp-4 BeqZV"
                   dir="ltr"
                   id="related-content-heading"
                 >
@@ -231,17 +231,17 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="related-content-heading"
-    class="GhostGrid-sc-12lwanc-1 kGasFS"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 Wrapper-sc-1itct8j-0 jJqbCR"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
       >
         <div
-          class="SectionLabelWrapper-sc-1x4gwjz-1 gKFUvc StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
         >
           <div
             class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -256,7 +256,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="FlexRow-wx5kdp-2 dVBNyZ"
               >
                 <span
-                  class="Title-wx5kdp-4 jiurmA"
+                  class="Title-wx5kdp-4 BeqZV"
                   dir="ltr"
                   id="related-content-heading"
                 >

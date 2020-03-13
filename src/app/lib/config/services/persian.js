@@ -45,7 +45,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'صفحه اول',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -180,6 +179,10 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/persian/institutional-49283091',
@@ -209,6 +212,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/persian/institutional-37542244',
           text: 'تماس با بی بی سی',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',

@@ -44,7 +44,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -167,6 +166,9 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/bengali/institutional-50409861',
@@ -197,6 +199,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
@@ -207,10 +215,6 @@ export const service = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
-      },
-      {
-        title: 'খবর',
-        url: '/bengali/news',
       },
       {
         title: 'অডিও',
