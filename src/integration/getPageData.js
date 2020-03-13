@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
-const pathnames = require('./pageUrls');
+const getPaths = require('./pageUrls');
 
 const writeJson = (pathname, filePath, json) => {
   fs.writeFile(filePath, JSON.stringify(json), 'utf8', error => {
@@ -45,4 +45,4 @@ const init = _pathname => {
     .catch(console.log);
 };
 
-Object.values(pathnames).forEach(init);
+Object.values(getPaths()).forEach(init);
