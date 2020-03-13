@@ -3,7 +3,7 @@ import { mediaMetadataPropTypes } from '../metadata';
 import { onDemandRadioPromoPropTypes } from '../promo';
 import onDemandRadioPageContentPropTypes from './content';
 
-export const onDemandMockPageDataPropTypes = shape({
+export const onDemandRadioPageDataPropTypes = shape({
   metadata: shape(mediaMetadataPropTypes).isRequired,
   promo: shape(onDemandRadioPromoPropTypes).isRequired,
   content: shape(onDemandRadioPageContentPropTypes).isRequired,
@@ -11,7 +11,7 @@ export const onDemandMockPageDataPropTypes = shape({
 
 const onDemandMockPagePropTypes = {
   isAmp: bool,
-  data: onDemandMockPageDataPropTypes,
+  data: onDemandRadioPageDataPropTypes,
   service: string,
   status: number,
 };
