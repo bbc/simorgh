@@ -3,6 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
+import legacyMedia from './blocks/legacyMedia';
 import image from './blocks/image';
 import list from './blocks/list';
 import subheadline from './blocks/subheadline';
@@ -20,15 +21,15 @@ const typesToConvert = {
   list,
   media,
   version,
-  legacyMedia: block => ({ model: {}, ...block }),
+  legacyMedia,
 };
 
-const parseBlockByType = block => {
+const parseBlockByType = (block, json) => {
   if (!path(['type'], block)) return false;
 
   const { type } = block;
 
-  const parsedBlock = (typesToConvert[type] || handleMissingType)(block);
+  const parsedBlock = (typesToConvert[type] || handleMissingType)(block, json);
 
   if (!parsedBlock) {
     return null;
@@ -39,9 +40,12 @@ const parseBlockByType = block => {
 
 const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
+
   const blocks = pathOr([], ['content', 'blocks'], json);
 
-  const parsedBlocks = await Promise.all(blocks.map(parseBlockByType));
+  const parsedBlocks = await Promise.all(
+    blocks.map(block => parseBlockByType(block, json)),
+  );
 
   return {
     ...json,

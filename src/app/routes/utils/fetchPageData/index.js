@@ -32,7 +32,18 @@ const handleResponse = url => async response => {
 
   if (upstreamStatusCodesToPropagate.includes(status)) {
     if (status === STATUS_NOT_FOUND) {
-      logger.error(`Data not found when requesting ${url}`);
+      logger.error(
+        JSON.stringify(
+          {
+            event: 'data_response_404',
+            status,
+            message: `Data not found when requesting ${url}`,
+            url,
+          },
+          null,
+          2,
+        ),
+      );
     }
 
     return {
@@ -51,7 +62,16 @@ const handleResponse = url => async response => {
 const handleError = e => {
   const error = e.toString();
 
-  logger.error(error);
+  logger.error(
+    JSON.stringify(
+      {
+        event: 'data_fetch_error',
+        message: error,
+      },
+      null,
+      2,
+    ),
+  );
 
   return {
     error,

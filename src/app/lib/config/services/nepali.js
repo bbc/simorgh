@@ -39,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -163,6 +162,9 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/nepali/institutional-50318130',
@@ -193,6 +195,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         '२०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
@@ -203,10 +211,6 @@ export const service = {
       {
         title: 'मुख पृष्ठ',
         url: '/nepali',
-      },
-      {
-        title: 'समाचार',
-        url: '/nepali/news',
       },
       {
         title: 'पछिल्लो कार्यक्रम',
