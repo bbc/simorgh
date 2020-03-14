@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+    "locators": {
+      "assetUri": "/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+      "curie": "http://www.bbc.co.uk/asset/26d70558-1414-11e4-ab51-ec853db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "kyrgyz",
+    "language": "ky",
+    "lastUpdated": 1569476636134,
+    "firstPublished": 1406304132,
+    "lastPublished": 1406304657,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [ "legacyMedia" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "33618708",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140725_egypt_tentmaking.emp.xml",
+        "type": "legacyMedia"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Египет элинин байыркы өнөрү коркунучта",
+      "headline": "Египет элинин байыркы өнөрү коркунучта"
+    },
+    "locators": {
+      "assetUri": "/kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+      "curie": "http://www.bbc.co.uk/asset/26d70558-1414-11e4-ab51-ec853db9bd6e"
+    },
+    "summary": "Өзгөчө оймо чийме, түркүн түстөр менен чатырларды кооздоо египеттиктердин байыркы өнөрү. Бирок арзан товарлар массалык түрдө чыга баштагандан бери анын келечеги коркунучка кептелүүдө.",
+    "timestamp": 1569476636134,
+    "passport": {},
+    "media": {
+      "id": "33618708",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/kyrgyz/meta/dps/2014/07/emp/140725_egypt_tentmaking.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e211",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/07/24/140724172052_egypt_tents_decoration_144x81__nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/07/24/140724172052_egypt_tents_decoration_144x81__nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "",
+      "copyrightHolder": " ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:kyrgyz/entertainment/2014/07/140725_egypt_tentmaking",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Маданий жаңылыктар",
+      "uri": "/kyrgyz/entertainment",
+      "type": "simple"
+    },
+    "site": { "subType": "site", "name": "BBCkyrgyz.com", "uri": "/kyrgyz", "type": "simple" },
+    "groups": []
+  }
+}

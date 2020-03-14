@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -20,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Обновлено',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
+    chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
@@ -46,7 +48,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +58,7 @@ export const service = {
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Новости по теме',
+      navMenuText: 'Разделы',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',
@@ -172,7 +174,11 @@ export const service = {
     mostRead: {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -204,6 +210,12 @@ export const service = {
           href: 'https://www.bbc.com/russian/institutional-36517237',
           text: 'Связаться с Би-би-си',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. Би-би-си на несет ответственности за содержание других сайтов.',
@@ -215,6 +227,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
     navigation: [
@@ -239,7 +252,6 @@ export const service = {
         url: '/russian/media-47937790',
       },
     ],
-    navigationSection: 'Разделы',
   },
 };
 

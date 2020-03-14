@@ -19,6 +19,7 @@ export const service = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',
+    chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
     defaultImageAltText: 'BBC News پښتو',
@@ -44,7 +45,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -55,6 +55,7 @@ export const service = {
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'اسی بارے میں',
+      navMenuText: 'برخې',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -166,6 +167,13 @@ export const service = {
       header: 'ډېر لوستل شوي',
       lastUpdated: 'د خپرېدو نیټه',
       numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
@@ -196,6 +204,12 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
@@ -244,7 +258,6 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
-    navigationSection: 'برخې',
   },
 };
 

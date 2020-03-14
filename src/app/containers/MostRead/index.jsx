@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { bool, string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
@@ -7,30 +7,54 @@ import Canonical from './Canonical';
 
 const getMostReadEndpoint = ({ service, variant }) =>
   variant
-    ? `/${service}/most_read/${variant}.json`
-    : `/${service}/most_read.json`;
+    ? `/${service}/mostread/${variant}.json`
+    : `/${service}/mostread.json`;
 
-const MostReadContainer = ({ endpointOverride }) => {
-  const { variant } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+const MostReadContainer = ({
+  mostReadEndpointOverride,
+  maxTwoColumns,
+  constrainMaxWidth,
+  isOnFrontPage,
+}) => {
+  const { variant, isAmp } = useContext(RequestContext);
+  const {
+    service,
+    mostRead: { hasMostRead },
+  } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
-  if (!enabled) {
+
+  const mostReadEnabled = !isAmp && enabled && hasMostRead;
+
+  if (!mostReadEnabled) {
     return null;
   }
 
   const endpoint =
-    endpointOverride || getMostReadEndpoint({ service, variant });
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
-  return <Canonical endpoint={endpoint} />;
+  return (
+    <Canonical
+      endpoint={endpoint}
+      constrainMaxWidth={constrainMaxWidth}
+      maxTwoColumns={maxTwoColumns}
+      isOnFrontPage={isOnFrontPage}
+    />
+  );
 };
 
 MostReadContainer.propTypes = {
-  endpointOverride: string,
+  mostReadEndpointOverride: string,
+  constrainMaxWidth: bool,
+  maxTwoColumns: bool,
+  isOnFrontPage: bool,
 };
 
 MostReadContainer.defaultProps = {
-  endpointOverride: null,
+  mostReadEndpointOverride: null,
+  constrainMaxWidth: false,
+  maxTwoColumns: false,
+  isOnFrontPage: false,
 };
 
 export default MostReadContainer;

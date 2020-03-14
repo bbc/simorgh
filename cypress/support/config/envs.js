@@ -21,17 +21,6 @@ const config = {
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
   },
-  stage: {
-    baseUrl: 'https://www.stage.bbc.com',
-    dataUrl: 'https://www.stage.bbc.com',
-    assetUrl: 'https://news.test.files.bbci.co.uk/include/articles/public',
-    assetOrigin: 'https://news.test.files.bbci.co.uk',
-    atiUrl: 'https://logws1363.ati-host.net?',
-    chartbeatEnabled: true,
-    avEmbedBaseUrl: 'https://polling.bbc.co.uk',
-    standaloneErrorPages: false,
-    alwaysCheckForFallback: true,
-  },
   local: {
     baseUrl: 'http://localhost:7080',
     dataUrl: 'http://localhost:7080',

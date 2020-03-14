@@ -13,6 +13,7 @@ export const service = {
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
+    chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
     serviceLocalizedName: 'తెలుగు',
@@ -39,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'వార్తలు',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
+      navMenuText: 'విభాగాలు',
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',
         audioPlayer: 'ఆడియో ప్లేయర్',
@@ -159,7 +160,11 @@ export const service = {
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -190,6 +195,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/telugu/institutional-42227910',
           text: 'బీబీసీని సంప్రదించండి',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -223,7 +234,6 @@ export const service = {
         url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
       },
     ],
-    navigationSection: 'విభాగాలు',
   },
 };
 

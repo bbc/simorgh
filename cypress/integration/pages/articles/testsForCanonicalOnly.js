@@ -1,5 +1,4 @@
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData, getBlockByType } from './helpers';
 
@@ -39,7 +38,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
       cy.get('head link[rel="amphtml"]').should(
         'have.attr',
         'href',
-        `${window.location.origin}${config[service].pageTypes.articles.path}.amp`,
+        `${window.location.origin}${Cypress.env('currentPath')}.amp`,
       );
     });
 
@@ -179,7 +178,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                         // `timeout` only applies to the methods chained below.
                         // `its()` benefits from this, and will wait up to 8s
                         // for the mediaPlayer instance to become available.
-                        timeout: 8000,
+                        timeout: 20000,
                       })
                         .its('embeddedMedia.playerInstances.mediaPlayer')
                         .invoke('currentTime')
@@ -201,7 +200,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                     // `timeout` only applies to the methods chained below.
                     // `its()` benefits from this, and will wait up to 8s
                     // for the mediaPlayer instance to become available.
-                    timeout: 8000,
+                    timeout: 20000,
                   })
                     .its(
                       'embeddedMedia.playerInstances.mediaPlayer._settings.ui.subtitles.enabled',

@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+    "locators": {
+      "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "afrique",
+    "language": "fr",
+    "lastUpdated": 1550148508980,
+    "firstPublished": 1415728482,
+    "lastPublished": 1417671433,
+    "options": {
+      "includeComments": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "35793410", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "35793410",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Le &quot;porno vengeur&quot; arrive en Afrique. Première victime de marque de ce phénomène venu des Etats-Unis: une star ougandaise de la chanson, Desire Luzinda, dont l'ex-petit-ami a publié des photos compromettantes d'elle sur internet, juste pour se venger.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Il l’accusait d'être infidèle.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Les photos ont fait le tour des réseaux sociaux et été publiées dans les journaux, suscitant un torrent de commentaires.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Desire Luzinda a demandé pardon à ses fans.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Elle a expliqué que les clichés avaient été pris par son ex-amant nigerian, dans un “moment de folie”.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "“Ma confiance a été trahie”, dit-elle.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "L’ex-petit-ami est désormais recherché par la police.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "La chanteuse aussi a été convoquée par la police.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Une star ougandaise victime de “porno vengeur”",
+      "headline": "Une star ougandaise victime de “porno vengeur”"
+    },
+    "locators": {
+      "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
+    },
+    "summary": "Le \"porno vengeur\" arrive en Afrique. Première victime de marque de ce phénomène: une star ougandaise de la chanson, Desire Luzinda.",
+    "timestamp": 1550148508980,
+    "passport": {},
+    "media": {
+      "id": "35793410",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e495",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_304x171__nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_304x171__nocredit.jpg",
+      "height": 171,
+      "width": 304,
+      "altText": "",
+      "copyrightHolder": " ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Nos émissions",
+      "uri": "/afrique/nos_emissions",
+      "type": "simple"
+    },
+    "site": { "subType": "site", "name": "BBCAfrique.com", "uri": "/afrique", "type": "simple" },
+    "groups": []
+  }
+}

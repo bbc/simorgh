@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+    "locators": {
+      "assetUri": "/vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+      "curie": "http://www.bbc.co.uk/asset/6adefc24-edc1-11e4-b0ab-3fa93db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "vietnamese",
+    "language": "vi",
+    "lastUpdated": 1552976060199,
+    "firstPublished": 1430237581,
+    "lastPublished": 1430607748,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "38491575" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "38491575",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/04/emp/150428_david_wheat_interview.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Một Thiếu tá Hải quân Mỹ ngồi tù ở Hỏa Lò hơn bảy năm khi chiến đấu cơ bị trúng đạn kể lại cho BBC về những gì đã xảy ra.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Vào tháng 10 năm 1965, phi cơ của Thiếu tá Tá Hải quân David Wheat và phi công trưởng là Trung Tá Roderick Mayer điều khiển bị bắn hạ ở miền Bắc Việt Nam. Ông David Wheat bị bắt và đưa về nhà tù Hỏa Lò ở Hà Nội trong khi đồng đội tử nạn. Cuộc phỏng vấn dành cho Nguyễn Hoàng của BBC tiếng Việt thực hiện vào tháng 04/2015 ở California.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>BBC: Nhiệm vụ của ông được giao trong lần bay bị bắn hạ là gì?</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "David Wheat: Nhiệm vụ của lần không kích đó của chúng tôi là ném bom một cây cầu ở Thái Nguyên để chặn đường tiếp tế từ Trung Quốc sang. Khi phi cơ của chúng tôi bị trúng đạn thì vì được huấn luyện từ trước tôi thấy là cần phải bấm nút để bật thoát ra ngoài. Và khi xuống đất rồi thì tôi tháo dây dù ra và bò ngược lên đồi và trốn trong bụi cây. Tôi có thể nhìn thấy đồng đội của tôi vẫn còn dù gắn vào người và anh ta bị thương rất nặng. Tôi nghĩ rằng một hai ngày sau đó thì anh ta qua đời.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Lúc đó tôi bị thương ở đầu gối và không đi được. Khi dân quân phát hiện ra tôi thì họ lục soát xem trong người có gì hay không và dẫn đi. Có người nhổ nước bọt vào tôi. Có hai dân quân đỡ tôi để đi lên đồi và sau đó họ kiếm được một cái cáng và đưa tôi đi. Rồi từ làng này qua làng khác và rốt cùng là dùng xe quân sự chở tôi về Hỏa Lò hay còn gọi là ''Khách sạn Hilton'' vào sáng sớm.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC:Việc hỏi cung được thực hiện như thế nào?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Tôi được đưa vào một phòng giam khoảng 12 foot vuông (9 mét vuông) và trong phòng không có gì cả. Chỉ là nền gạch đỏ và tôi nằm xuống ngủ vì tôi mệt quá. Chẳng bao lâu sau thì họ hỏi cung tôi. Vào thời điểm đó là giai đoạn kể như đầu tiên của tù binh chiến tranh nên những gì tôi khai họ cũng không biết thực hư thế nào. Một ngày hỏi cung hai lần, một lần vào khoảng 10 giờ sáng và một lần vào khoảng 5 giờ chiều.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Và tôi bắt đầu nghĩ tới cách liên lạc với các tù binh ở các phòng giam khác như thế nào. Bữa ăn thì có cơm với bí ngô và thỉnh thoảng có chuối, nghiền ra ăn cùng với cơm.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC: Ông trao đổi với tù binh khác trong nhà giam như thế nào?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Trong khu nhà giam chúng tôi thì có khoảng 6-8 phòng giam và mỗi người bị giam riêng biệt. Chúng tôi đã được học cách gõ vào tường để liên lạc với nhau bằng mã riêng và chỉ cần dùng một bàn tay là có thể ra ký hiệu về chữ cái và số. Chúng tôi cũng thỉnh thoảng ho hoặc hắng giọng theo cách mã hóa các chữ cái để nói chuyện với nhau.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Chúng tôi cũng viết lên giấy đi vệ sinh để liên lạc với nhau hoặc khi bị thẩm vấn thì đôi khi bẻ đầu bút chì và gài mẩu chì đó vào quần áo để dùng sau này khi cần viết cho nhau. Và hộp thư của chúng tôi nằm trong nhà tắm, để ở chỗ không ai để ý cả. Nếu chúng tôi mà bị phát hiện là liên lạc với nhau trong tù thì chúng tôi bị phạt nặng.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC:Trong những năm tháng ở tù thì ông thường nghĩ về điều gì nhất?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Nghĩ nhiều nhất là ngày tự do. Cả ngày thì chẳng có việc gì làm nên cũng chỉ nghĩ ngợi là khi ra tù thì mình sẽ đi đâu, làm gì. Vì tôi độc thân khi đó nên tôi nghĩ về căn nhà mình xây sau này cho mình sẽ thế nào. Rèm cửa kiểu cách ra sao. Chủ đề này có thể giúp tôi nghĩ ngợi khoảng một tháng.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Rồi cũng rất chán và không thể ép mình nghĩ mãi về một chủ đề. Đôi khi thể nằm mơ ra cái gì đó khác như xe hơi chẳng hạn thì lại nghĩ về đi du lịch. Cứ như thế và rồi khi chán thì lại quay lại nghĩ về chủ đề cũ là xây nhà mà mình đã nghĩ vài tuần trước.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Đôi khi ngồi quan sát xem con nhện nó bắt ruồi thế nào. Và chán quá nữa thì ngồi giết một vài con kiến để rồi gây náo loạn cho cả đàn kiến đang di chuyển phải đổi hướng đi. Hoặc xem kiến mang thức ăn về tổ thế nào.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC:Ông có thể kể lại ngày ông được trả tự do? Ông có được thông báo trước?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Trước khi chúng tôi được thả thì chúng tôi được chuyển đi một nơi khác vì đó là vào mùa Giáng sinh 1972 khi đó có ném bom ở Hà Nội. Nhưng sau đó họ lại đưa chúng tôi trở lại 'Khách sạn Hilton'. Khi hiệp định Paris được ký kết vào năm 1973 thì một trong các điều khoản là phải thông báo cho tù binh chiến tranh là họ sẽ được thả. Và chúng tôi được thông báo là họ sẽ sớm thả chúng tôi nhưng không biết sớm là thế nào. Sau đó khoảng hai tuần thì chúng tôi được thả. Và đêm trước hôm thả chúng tôi thì họ tập trung tất cả vào một khu và phân phát quần áo dân sự, tất, giày...",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Rồi sáng hôm đó họ đưa chúng tôi ra sân bay bằng xe buýt. Lúc đó chúng tôi cũng chưa vui vì vẫn còn nằm trong sự kiểm soát của họ. Sau đó khi ra sân bay rồi thì chúng tôi được trao cho quân nhân Mỹ để lên phi cơ. Chỉ khi máy bay ra đường băng và bắt đầu cất cánh thì tôi mới thấy thở phào là sau 7 năm rưỡi thì cuối cùng cảm thấy giây phút đang trở về quê hương mình.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC: 7 năm 4 tháng tù có ảnh hưởng gì tới thể lực và tâm trí của ông?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Trong suốt thời gian ở tù thì tôi không có vấn đề gì về thần kinh. Về thể lực cũng không bị ảnh hưởng đáng kể gì. Nhưng tôi bị áp xe răng vào năm cuối ở tù nên một bên mặt tôi bị sưng vù nhưng sau đó đỡ hơn. Và Hải quân Mỹ có chương trình khám, điều trị hay trợ giúp tù binh chiến tranh về tâm lý và thể lực và vẫn còn áp dụng cho tới tận bây giờ. Cuộc chiến Việt Nam có thể xem là có dài ngày đối với tù binh chiến tranh so với các cuộc chiến khác như Triều Tiên.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC: Ông trở lại thăm Hỏa Lò vào năm 2013, ông thấy gì ở đó và ông đã đi tới những đâu ở Việt Nam?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Tôi và vợ tôi đi cùng với một cựu thủy quân lục chiến cùng vợ ông và một vài người bạn người Mỹ gốc Việt trở về Việt Nam lần đó. Khi máy bay hạ cánh ở sân bay Nội Bài thì tôi có cảm giác khó tả vì đây vẫn là một nước Cộng sản và chẳng biết điều gì sẽ xảy ra ở một nước Cộng sản cả.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Chúng tôi đi taxi khá dễ chịu về khách sạn ở Hà Nội và chúng tôi ở một khách sạn rất đẹp. Sau đó thì chúng tôi bàn tới chuyện là phải quay lại “Khách sạn Hilton” và tôi đi qua cổng chính nhà tù, cái cổng mà tôi đã ra rồi lại vào ít nhất là bốn lần. Tôi rẽ phải và đi vào chính nơi tôi từng bị giam.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Tất nhiên là phòng giam có thay đổi so với trước đây bởi người ta mở rộng ra thành phòng lớn hơn (sau hiệp định Paris 1973) nhưng tôi vẫn nhớ như in chỗ mà tôi hay đứng, hay ngồi. Rồi chúng tôi đi sang khu trưng bày hiện vật và một phòng giam mà người ta tái hiện lại. Trong đó có một cái giường đơn cho một người nằm. Nhưng thời gian chúng tôi bị giam ở đó thì không có giường, tức là tôi ngủ trên nền bê tông. Rồi có một cậu hướng dẫn cho du khách thăm quan kể về những gì đã xảy ra ở đây. Tôi bảo cậu ấy rằng “Này cậu, tôi đã từng ở đây và tôi biết cái gì là sự thật, cái gì không&quot;. Đó là lần ghé thăm thú vị và tôi vui là vợ tôi biết được nơi tôi từng bị giam tại đây.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic><bold>BBC: Việt Nam và Hoa Kỳ đang cải thiện quan hệ trong đó có hợp tác quân sự. Hà Nội muốn Washington bỏ lệnh cấm bán vũ khí sát thương, ông nghĩ gì về đề nghị này?</bold></italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Tôi đã từng nghe nói về việc này và tôi thực sự không có bình luận gì về chủ đề này. Nhưng tôi muốn nói tiếp rằng chuyến thăm của chúng tôi tới nhiều nơi ở Việt Nam, từ Hà Nội tới Huế, Đà Nẵng, rồi một số nơi ở miền Nam, và Sài Gòn thì mọi thứ thật tuyệt.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mọi người đều chăm chỉ làm việc và bận rộn kiếm sống. Có những tour du lịch cho người ít tiền và người giàu có hơn. Đối với chúng tôi đó là chuyến đi thật tuyệt vời.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>Thiếu tá Hải quân David Wheat là bạn cùng tù với Thượng Nghị sỹ John McCain, người cũng bị giam tại Hỏa Lò và ra tù sau ông Wheat một tháng. Ông David Wheat sinh ngày 16 tháng 12, năm 1939 tại thành phố Duluth, tiểu bang Minnesota. Tốt nghiệp Đại học Minnesota năm 1963, sau đó ghi danh vào Trường Sỹ quan Phi công Hải quân Hoa Kỳ.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Phi công Mỹ  ở Hỏa Lò 'mong ngày tự do'",
+      "headline": "Phi công Mỹ  ở Hỏa Lò 'mong ngày tự do'"
+    },
+    "locators": {
+      "assetUri": "/vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+      "curie": "http://www.bbc.co.uk/asset/6adefc24-edc1-11e4-b0ab-3fa93db9bd6e"
+    },
+    "summary": "Một Thiếu tá Hải quân Mỹ ngồi tù ở Hỏa Lò hơn bảy năm nói điều nghĩ đến nhiều nhất là 'ngày tự do'.",
+    "timestamp": 1552976060199,
+    "passport": {},
+    "media": {
+      "id": "38491575",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/vietnamese/meta/dps/2015/04/emp/150428_david_wheat_interview.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e246",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2015/04/28/150428160747_david_wheat_640x360_bbcvietnamese.com_nocredit.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "",
+      "copyrightHolder": "bbcvietnamese.com",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:vietnamese/multimedia/2015/04/150428_david_wheat_interview",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Multimedia",
+      "uri": "/vietnamese/multimedia",
+      "type": "simple"
+    },
+    "site": { "subType": "site", "name": "BBCVietnamese.com", "uri": "/vietnamese", "type": "simple" },
+    "groups": []
+  }
+}

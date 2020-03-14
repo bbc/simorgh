@@ -25,14 +25,38 @@ const getMediaType = (cpsType, mediaType) => {
   return isPGL ? 'photogallery' : media.toLowerCase();
 };
 
-const buildIndexAlsosMediaIndicator = (cpsType, mediaType, service) => {
+const buildIndexAlsosMediaIndicator = ({
+  cpsType,
+  mediaType,
+  script,
+  service,
+  dir,
+}) => {
   const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
   return (
     indexAlsosMediaType && (
-      <MediaIndicator service={service} type={indexAlsosMediaType} indexAlsos />
+      <MediaIndicator
+        type={indexAlsosMediaType}
+        script={script}
+        service={service}
+        dir={dir}
+        isInline
+      />
     )
   );
+};
+
+buildIndexAlsosMediaIndicator.propTypes = {
+  cpsType: string.isRequired,
+  mediaType: string.isRequired,
+  script: string.isRequired,
+  service: string.isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+buildIndexAlsosMediaIndicator.defaultProps = {
+  dir: 'ltr',
 };
 
 /*
@@ -54,11 +78,13 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
           const { id, cpsType, mediaType } = item;
           const headline = pathOr(null, ['headlines', 'headline'], item);
           const url = pathOr(null, ['locators', 'assetUri'], item);
-          const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator(
+          const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator({
             cpsType,
             mediaType,
+            script,
             service,
-          );
+            dir,
+          });
           const indexAlsoMediaType =
             mediaTranslations[getMediaType(cpsType, mediaType)];
 

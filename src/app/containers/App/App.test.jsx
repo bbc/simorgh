@@ -12,7 +12,11 @@ jest.mock('react-router-config');
 
 describe('App', () => {
   let wrapper;
-  const initialData = { pageData: 'Some initial data' };
+  const timeOnServer = 1582534951721;
+  const initialData = {
+    pageData: 'Some initial data',
+    timeOnServer,
+  };
   const error = 'Error!';
   const match = { params: { service: 'news', amp: false, variant: '/simp' } };
   const history = { action: 'POP' };
@@ -48,6 +52,8 @@ describe('App', () => {
       bbcOrigin: 'https://www.bbc.co.uk',
       pageData: initialData.pageData,
       error: undefined,
+      errorCode: undefined,
+      id: undefined,
       isAmp: false,
       loading: false,
       pageType: 'article',
@@ -55,6 +61,7 @@ describe('App', () => {
       pathname: 'pathnameOne',
       previousPath: null,
       variant: 'simp',
+      timeOnServer: initialData.timeOnServer,
     });
     expect(wrapper).toMatchSnapshot();
   });
@@ -82,12 +89,19 @@ describe('App', () => {
         // clear `route.getInitialData` and `reactRouterConfig.renderRoutes` mocks
         jest.clearAllMocks();
       });
+
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
           route.getInitialData.mockImplementation(() => {
             return new Promise(resolve => {
               setTimeout(
-                () => resolve({ pageData: null, status: null, error }),
+                () =>
+                  resolve({
+                    pageData: null,
+                    status: null,
+                    error,
+                    timeOnServer: null,
+                  }),
                 600,
               );
             });
@@ -118,6 +132,7 @@ describe('App', () => {
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
+              timeOnServer: null,
             },
           );
 
@@ -131,6 +146,7 @@ describe('App', () => {
               status: null,
               error,
               errorCode: null,
+              id: undefined,
               isAmp: false,
               loading: false,
               pageType: 'article',
@@ -138,6 +154,7 @@ describe('App', () => {
               pathname: 'pathnameTwo',
               previousPath: 'pathnameOne',
               variant: 'simp',
+              timeOnServer: null,
             },
           );
         });
@@ -146,7 +163,10 @@ describe('App', () => {
       describe('successful fetch of route, match, and initial props', () => {
         it('should call set state with new data', async () => {
           const pathname = 'pathnameThree';
-          const data = { pageData: 'Really cool data', status: 200 };
+          const data = {
+            pageData: 'Really cool data',
+            status: 200,
+          };
 
           route.getInitialData.mockImplementation(() => {
             return new Promise(resolve => {
@@ -182,6 +202,7 @@ describe('App', () => {
               pathname: 'pathnameThree',
               previousPath: 'pathnameTwo',
               variant: 'simp',
+              timeOnServer: null,
             },
           );
 

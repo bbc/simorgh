@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'ਅਪਡੇਟ',
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
+    chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
     serviceLocalizedName: 'ਪੰਜਾਬੀ',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ਨਿਊਜ਼',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'ਮੌਜੂਦਾ ਪੇਜ',
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
+      navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -149,7 +150,11 @@ export const service = {
     mostRead: {
       header: 'ਸਭ ਤੋਂ ਵੱਧ ਪੜ੍ਹਿਆ ਗਿਆ',
       lastUpdated: 'ਆਖ਼ਰੀ ਅਪਡੇਟ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     navigation: [
       {
@@ -177,7 +182,6 @@ export const service = {
         url: '/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8',
       },
     ],
-    navigationSection: 'ਸੈਕਸ਼ਨਜ਼',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/punjabi/institutional-49282853',
@@ -207,6 +211,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/punjabi/institutional-42227903',
           text: 'ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ',

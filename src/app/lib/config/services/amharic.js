@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'ተሻሽሏል',
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
+    chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',
@@ -42,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,6 +53,7 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
+      navMenuText: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -150,7 +151,11 @@ export const service = {
     mostRead: {
       header: 'ብዙ የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -182,6 +187,12 @@ export const service = {
           href: 'https://www.bbc.com/amharic/institutional-42228117',
           text: 'ቢቢሲን ያግኙ',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
     },
@@ -204,7 +215,6 @@ export const service = {
         url: '/amharic/popular/read',
       },
     ],
-    navigationSection: 'ክፍሎች',
     timezone: 'Africa/Addis_Ababa',
   },
 };

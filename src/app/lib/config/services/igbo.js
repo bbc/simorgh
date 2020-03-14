@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
+    chartbeatDomain: 'igbo.bbc.co.uk',
     brandName: 'BBC News Ìgbò',
     product: 'BBC News',
     serviceLocalizedName: 'Ìgbò',
@@ -42,7 +43,6 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,6 +53,7 @@ export const service = {
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
+      navMenuText: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -162,7 +163,11 @@ export const service = {
     mostRead: {
       header: 'Akachasị Gụọ',
       lastUpdated: 'Emelitere ikpeazụ na:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     navigation: [
       {
@@ -212,8 +217,13 @@ export const service = {
           href: 'https://www.bbc.com/igbo/institutional-43090448',
           text: 'Kpọtụrụ BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
-      navigationSection: 'Ngalaba',
       copyrightText:
         'BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.',
     },

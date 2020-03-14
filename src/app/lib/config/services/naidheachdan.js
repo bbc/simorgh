@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Ùraichte',
     atiAnalyticsAppName: 'news-naidheachdan',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Naidheachdan',
     product: 'BBC News',
     serviceLocalizedName: 'Naidheachdan',
@@ -47,7 +48,6 @@ export const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Dachaigh',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -58,6 +58,7 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
+      navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -166,6 +167,10 @@ export const service = {
       header: 'As motha leughte',
       lastUpdated: 'Air ùrachadh mu dheireadh:',
       numberOfItems: 5,
+      hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -198,6 +203,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'Cuir fios dhan BhBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         "BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh",
@@ -221,7 +232,6 @@ export const service = {
         url: '/news/scotland',
       },
     ],
-    navigationSection: 'Earrannan',
   },
 };
 

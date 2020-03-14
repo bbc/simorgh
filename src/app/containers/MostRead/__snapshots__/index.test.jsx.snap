@@ -1,546 +1,835 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MostReadContainerCanonical renders most read as expected on canonical for news 1`] = `
-<div>
-  <section
-    aria-labelledby="Most-Read"
-    class="StyledSection-sc-1vo7scf-0 hnJSoe"
-    role="region"
+exports[`MostReadContainerCanonical Assertion should render most read correctly for arabic 1`] = `
+.c8 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c13 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c15 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c15:hover,
+.c15:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c15:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c14 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c10 {
+  position: relative;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.c5 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  background-color: #FDFDFD;
+  margin: 1rem 0;
+  padding-left: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+.c0 {
+  position: relative;
+  z-index: 0;
+  margin-top: 2rem;
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+}
+
+@supports (display:grid) {
+  .c7 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c9 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c9 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c9 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c9 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c9 {
+    width: calc(20%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c9 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c8 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (min-width:80rem) {
+  .c8 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c12 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c12 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c12 {
+    min-width: 2.1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c12 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c16 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    min-width: 2.1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c16 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c17 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c17 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c17 {
+    min-width: 2.1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c17 {
+    min-width: 3rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c18 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c18 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c18 {
+    min-width: 2.1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c18 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c19 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c19 {
+    min-width: 1.8rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c19 {
+    min-width: 2.1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c15 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c15 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c14 {
+    padding-left: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c5 {
+    font-size: 1.625rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    margin: 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c1 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c0 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c6 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
+    margin-top: 1.5rem;
+  }
+}
+
+<section
+  aria-labelledby="Most-Read"
+  class=""
+  data-e2e="most-read"
+  role="region"
+>
+  <div
+    class="c0"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
+      class="c1"
+    />
+    <h2
+      class="c2"
     >
-      <h2
-        class="Heading-sc-1x4gwjz-2 eZofTG"
+      <div
+        class="c3"
       >
-        <div
-          class="FlexColumn-wx5kdp-0 dgpsiS"
+        <span
+          class="c4"
         >
           <span
-            class="FlexRow-wx5kdp-2 dVBNyZ"
+            class="c5"
+            dir="rtl"
+            id="Most-Read"
           >
-            <span
-              class="Title-wx5kdp-4 frglla"
-              dir="ltr"
-              id="Most-Read"
-            >
-              Most read
-            </span>
+            الأكثر قراءة
           </span>
-        </div>
-      </h2>
-    </div>
+        </span>
+      </div>
+    </h2>
+  </div>
+  <div
+    class="c6"
+  >
     <ol
-      class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 iUmfRN"
-      dir="ltr"
+      class="c7 c8"
+      dir="rtl"
       role="list"
     >
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 efQjRq"
-            dir="ltr"
+            class="c12"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               1
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/election-2019-50319044"
+              class="c15"
+              href="/arabic/science-and-tech-50304255"
             >
-              Labour bans three candidates from standing
+              "ضغط زوجي على يدي وقال إنه يريد أن يعيش، فوجدت طريقة لإنقاذه"
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 joapIi"
-            dir="ltr"
+            class="c16"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               2
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/election-2019-50318810"
+              class="c15"
+              href="/arabic/trending-50318120"
             >
-              Bercow: Brexit 'biggest foreign policy mistake'
+              موجة دعم لصاحب مطعم خسر أمواله بسبب قطار الرياض
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 efQjRq"
-            dir="ltr"
+            class="c12"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               3
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/business-50313824"
+              class="c15"
+              href="/arabic/inthepress-50311506"
             >
-              Virgin Media switches phone customers from BT
+              صحيفة آي: الصين ترغم نساء الإيغور على "النوم" مع المراقبين الحكوميين
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 joapIi"
-            dir="ltr"
+            class="c16"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               4
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/live/election-2019-50313404"
+              class="c15"
+              href="/arabic/world-50289909"
             >
-              Latest on day one of campaign as minister resigns
+              قتل الآلاف ومثل جرائمه على الشاشة ورحل بهدوء
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 fqCBaQ"
-            dir="ltr"
+            class="c17"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               5
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/education-50317690"
+              class="c15"
+              href="/arabic/middleeast-50315873"
             >
-              Nativity play warning over school polling stations
+              هل تفضي "مبادرة" نائب البرلمان المصري أحمد طنطاوي إلى عزله؟
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 iEwnJq"
-            dir="ltr"
+            class="c18"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               6
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/newsbeat-50304072"
+              class="c15"
+              href="/arabic/middleeast-50310165"
             >
-              Prisoner backed by Rihanna 'scared' of execution
+              تقرير أممي: طائرة اجنبية هاجمت مركز المهاجرين في ليبيا
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 jXbaUI"
-            dir="ltr"
+            class="c19"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               7
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/uk-50320800"
+              class="c15"
+              href="/arabic/world-50315560"
             >
-              Catholic Church 'shocked to core' by child abuse
+              زين منزله بمليون مصباح وزحمة الزوار دفعته لإطفائها
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 iEwnJq"
-            dir="ltr"
+            class="c18"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               8
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/uk-wales-politics-50302173"
+              class="c15"
+              href="/arabic/middleeast-50321488"
             >
-              Minister quits in aide's rape trial 'sabotage' row
+              أردوغان يعلن إلقاء القبض على زوجة أبو بكر البغدادي
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 jXbaUI"
-            dir="ltr"
+            class="c19"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               9
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/uk-scotland-scotland-business-50157515"
+              class="c15"
+              href="/arabic/middleeast-50315489"
             >
-              'Being a good guy boss left me £1.2m in debt'
+              الجيش العراقي يندد بقطع المنشآت وسد الطرق
             </a>
           </div>
         </div>
       </li>
       <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
+        class="c9 c10"
+        dir="rtl"
         role="listitem"
       >
         <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
+          class="c11"
         >
           <div
-            class="StyledWrapper-fs4y6m-0 iEwnJq"
-            dir="ltr"
+            class="c18"
+            dir="rtl"
           >
             <span
-              class="StyledSpan-fs4y6m-1 kQXLWt"
+              class="c13"
             >
               10
             </span>
           </div>
           <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
+            class="c14"
+            dir="rtl"
           >
             <a
-              class="StyledLink-u0d8kd-0 fIQnQI"
-              href="/news/world-latin-america-50314700"
+              class="c15"
+              href="/arabic/vert-cul-50292811"
             >
-              US boy walked 23km for help after Mexico ambush
+              عالم فني رائع كان يُمنع تصويره خلال الحقبة السوفيتية
             </a>
           </div>
         </div>
       </li>
     </ol>
-  </section>
-</div>
-`;
-
-exports[`MostReadContainerCanonical renders most read as expected on canonical for zhongwen 1`] = `
-<div>
-  <section
-    aria-labelledby="Most-Read"
-    class="StyledSection-sc-1vo7scf-0 hnJSoe"
-    role="region"
-  >
-    <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 fKCwVP"
-    >
-      <h2
-        class="Heading-sc-1x4gwjz-2 eZofTG"
-      >
-        <div
-          class="FlexColumn-wx5kdp-0 dgpsiS"
-        >
-          <span
-            class="FlexRow-wx5kdp-2 dVBNyZ"
-          >
-            <span
-              class="Title-wx5kdp-4 bkfSEj"
-              dir="ltr"
-              id="Most-Read"
-            >
-              热读
-            </span>
-          </span>
-        </div>
-      </h2>
-    </div>
-    <ol
-      class="GridComponent-nf79gm-0 iUNUcT StyledGrid-sc-1ofyujo-0 labiJP"
-      dir="ltr"
-      role="list"
-    >
-      <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
-        >
-          <div
-            class="StyledWrapper-fs4y6m-0 detGYC"
-            dir="ltr"
-          >
-            <span
-              class="StyledSpan-fs4y6m-1 lkhpcW"
-            >
-              1
-            </span>
-          </div>
-          <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
-          >
-            <a
-              class="StyledLink-u0d8kd-0 gZYLRU"
-              href="/zhongwen/simp/chinese-news-50312750"
-            >
-              何君尧被刺伤 香港再有地方选举候选人遭袭
-            </a>
-          </div>
-        </div>
-      </li>
-      <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
-        >
-          <div
-            class="StyledWrapper-fs4y6m-0 detGYC"
-            dir="ltr"
-          >
-            <span
-              class="StyledSpan-fs4y6m-1 lkhpcW"
-            >
-              2
-            </span>
-          </div>
-          <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
-          >
-            <a
-              class="StyledLink-u0d8kd-0 gZYLRU"
-              href="/zhongwen/simp/uk-50313393"
-            >
-              英国大学“受专制国家干预” 中国影响成为议会报告聚焦点
-            </a>
-          </div>
-        </div>
-      </li>
-      <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
-        >
-          <div
-            class="StyledWrapper-fs4y6m-0 detGYC"
-            dir="ltr"
-          >
-            <span
-              class="StyledSpan-fs4y6m-1 lkhpcW"
-            >
-              3
-            </span>
-          </div>
-          <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
-          >
-            <a
-              class="StyledLink-u0d8kd-0 gZYLRU"
-              href="/zhongwen/simp/world-49630566"
-            >
-              成人网站Pornhub“坐收复仇式色情影片之利”　
-            </a>
-          </div>
-        </div>
-      </li>
-      <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
-        >
-          <div
-            class="StyledWrapper-fs4y6m-0 detGYC"
-            dir="ltr"
-          >
-            <span
-              class="StyledSpan-fs4y6m-1 lkhpcW"
-            >
-              4
-            </span>
-          </div>
-          <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
-          >
-            <a
-              class="StyledLink-u0d8kd-0 gZYLRU"
-              href="/zhongwen/simp/chinese-news-50292336"
-            >
-              中国人脸识别第一案：技术、法律与国际争议
-            </a>
-          </div>
-        </div>
-      </li>
-      <li
-        class="GridComponent-nf79gm-0 jFrerj StyledGrid-u0d8kd-4 ereTEa"
-        dir="ltr"
-        role="listitem"
-      >
-        <div
-          class="ItemWrapper-u0d8kd-3 juBlKT"
-        >
-          <div
-            class="StyledWrapper-fs4y6m-0 detGYC"
-            dir="ltr"
-          >
-            <span
-              class="StyledSpan-fs4y6m-1 lkhpcW"
-            >
-              5
-            </span>
-          </div>
-          <div
-            class="StyledItem-u0d8kd-1 ihPUFl"
-            dir="ltr"
-          >
-            <a
-              class="StyledLink-u0d8kd-0 gZYLRU"
-              href="/zhongwen/simp/world-50320490"
-            >
-              英国大选2019：竞选打响第一枪 各党亮出承诺
-            </a>
-          </div>
-        </div>
-      </li>
-    </ol>
-  </section>
-</div>
+  </div>
+</section>
 `;

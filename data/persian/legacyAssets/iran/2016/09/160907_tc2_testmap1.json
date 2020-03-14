@@ -1,0 +1,102 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
+        "id": "17698244",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "میسر عالی سازمان ملل در امور حقوق بشر به تندی از سیاستمدارهایی که آنها را عوام‌فریب و خیال‌پرداز خوانده، انتقاد کرده است. زید رعد حسین گفته است افرادی مثل دونالد ترامپ، نامزد ریاست جمهوری آمریکا و خرت ویلدرز، سیاستمدار راست گرای هلندی و نایجل فراژ، سیاستمدار بریتانیایی از شیوه های تبلیغاتی داعش استفاده می کنند. سعیده هاشمی گزارش می دهد.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698244", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "persian",
+    "firstPublished": 1473242019000,
+    "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
+    "includeComments": false,
+    "language": "fa",
+    "lastPublished": 1473242019000,
+    "lastUpdated": 1582019287717,
+    "locators": {
+      "assetId": "17698244",
+      "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1473242019000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+      "shortHeadline": "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد"
+    },
+    "id": "urn:bbc:ares::asset:persian/iran/2016/09/160907_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e237",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "fa",
+    "locators": {
+      "assetId": "17698244",
+      "assetUri": "/persian/iran/2016/09/160907_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/iran/2016/09/160907_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/persian/meta/dps/junk/2016/09/emp/160907_tc2_testmap1.emp.xml",
+      "id": "17698244",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "دفتر جامعه جهانی بهایی در سازمان ملل متحد، با انتشار نامه ای سرگشاده خطاب به حسن روحانی رئیس جمهور ایران خواستار رسیدگی به \"بی عدالتی های اقتصادی وارده بر بهاییان\" در ایرن کشور شد.",
+    "timestamp": 1473242019000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "ايران",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/persian/iran"
+    },
+    "site": {
+      "name": "BBCPersian.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/persian"
+    }
+  }
+}

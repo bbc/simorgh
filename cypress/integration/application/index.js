@@ -1,8 +1,6 @@
 import config from '../../support/config/services';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
-
-const serviceHasPageType = (service, pageType) =>
-  config[service].pageTypes[pageType].path !== undefined;
+import serviceHasPageType from '../../support/helpers/serviceHasPageType';
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
 

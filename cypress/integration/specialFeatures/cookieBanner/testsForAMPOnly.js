@@ -1,14 +1,13 @@
 import config from '../../../support/config/services';
+import getPaths from '../../../support/helpers/getPaths';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import describeForEuOnly from '../../../support/helpers/describeForEuOnly';
+import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
 const serviceFilter = service =>
   Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
-
-const filterPageTypes = (service, pageType) =>
-  config[service].pageTypes[pageType].path !== undefined;
 
 const getPrivacyBanner = (service, variant) =>
   cy.contains(
@@ -46,8 +45,6 @@ const getCookieBannerReject = (service, variant) =>
         .reject,
     );
 
-const makeArray = arrayOrString => [].concat(arrayOrString);
-
 const visitPage = (pageType, path) => {
   cy.visit(`${path}.amp`, {
     failOnStatusCode: !pageType.includes('error'),
@@ -58,9 +55,9 @@ Object.keys(config)
   .filter(serviceFilter)
   .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => filterPageTypes(service, pageType))
+      .filter(pageType => serviceHasPageType(service, pageType))
       .forEach(pageType => {
-        const paths = makeArray(config[service].pageTypes[pageType].path);
+        const paths = getPaths(service, pageType);
         paths.forEach(path => {
           describeForEuOnly(
             `Amp Cookie Banner Test for ${service} ${pageType} ${path}`,

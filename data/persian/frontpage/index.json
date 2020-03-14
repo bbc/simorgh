@@ -524,6 +524,206 @@
             },
             "id": "urn:bbc:ares::asset:persian/iran-48959544",
             "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "وضعیت گله‌های آهو پس از آتش‌سوزی قصر شیرین"
+            },
+            "locators": {
+              "assetUri": "/persian/iran-48748368",
+              "cpsUrn": "urn:bbc:content:assetUri:persian/iran-48748368"
+            },
+            "summary": "تصاویری از گله‌های آهو در میان مراتع سوخته در منطقه قراویز قصر شیرین؛ این تصاویر را مهدی از قصرشیرین برای بی‌بی‌سی فارسی فرستاده که نشان می‌دهد بخشی از زیستگاه این آهوها در اثر آتش‌سوزی ۲۵ خردادماه از بین رفته است.",
+            "timestamp": 1561391192000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07f1jyg",
+              "subType": "clip",
+              "format": "video",
+              "title": "وضعیت گله‌های آهو در منطقه قراویز",
+              "synopses": {
+                "short": "وضعیت گله‌های آهو در منطقه قراویز",
+                "long": "وضعیت گله‌های آهو در منطقه حفاظت شده قراویز نگران کننده است. این تصاویر را مهدی از قصرشیرین برای بی‌بی‌سی فارسی فرستاده که نشان می‌دهد بخشی از زیستگاه این آهوها در اثر آتش‌سوزی از بین رفته است.",
+                "medium": "وضعیت گله‌های آهو در منطقه حفاظت شده قراویز نگران کننده است. این تصاویر نشان می‌دهد بخشی از زیستگاه این آهوها در اثر آتش‌سوزی از بین رفته است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07f1lj7.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "وضعیت گله‌های آهو پس از آتش‌سوزی قصر شیرین",
+              "versions": [
+                {
+                  "versionId": "p07f1jyj",
+                  "types": ["Original"],
+                  "duration": 62,
+                  "durationISO8601": "PT1M2S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1561390901
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107520350",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14B6/production/_107520350_p07f1lj7.jpg",
+              "path": "/cpsprodpb/14B6/production/_107520350_p07f1lj7.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "وضعیت گله‌های آهو پس از آتش‌سوزی قصر شیرین",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:persian/iran-48748368",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "لب‌خوانی شما با آهنگ‌های احمد ظاهر"
+            },
+            "locators": {
+              "assetUri": "/persian/interactivity-48648491",
+              "cpsUrn": "urn:bbc:content:assetUri:persian/interactivity-48648491"
+            },
+            "summary": "به مناسبت چهلمین سالگرد درگذشت احمد ظاهر، خواننده پرآوازه افغانستان از شما خواسته بودیم تا با آهنگی از او که مورد علاقه شماست لب‌خوانی (دابسمش) کنید و برای ما بفرستید.",
+            "timestamp": 1560611631000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "48648492",
+              "subType": "index",
+              "format": "video",
+              "externalId": "p07d7vmc",
+              "entityType": "Clip",
+              "caption": "لب‌خوانی شما با آهنگ‌های احمد ظاهر"
+            },
+            "indexImage": {
+              "id": "107390907",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/114FD/production/_107390907_p07d7wcg.jpg",
+              "path": "/cpsprodpb/114FD/production/_107390907_p07d7wcg.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "لب‌خوانی شما با آهنگ‌های احمد ظاهر",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "نظرات، عکس ها و مطالب شما",
+              "uri": "/persian/interactivity",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:persian/interactivity-48648491",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ادعاهای تازه از آزار جنسی در دولت افغانستان"
+            },
+            "locators": {
+              "assetUri": "/persian/afghanistan-48954301",
+              "cpsUrn": "urn:bbc:content:assetUri:persian/afghanistan-48954301"
+            },
+            "summary": "دولت افغانستان با اتهام‌ آزار جنسی علیه زنان روبرو شده است.",
+            "timestamp": 1562857214000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gmw2p",
+              "subType": "clip",
+              "format": "video",
+              "title": "ادعاهای تازه از آزار جنسی در دولت افغانستان",
+              "synopses": {
+                "short": "ادعاهای تازه از آزار جنسی در دولت افغانستان",
+                "long": "دولت افغانستان با اتهام‌ آزار جنسی علیه زنان روبرو شده است. حدود دو ماه پیش یک مشاور سابق رئیس جمهوری عده ای از دولتمردان را متهم کرد که در ازای دادن شغل به زنان، از آنها درخواست رابطه جنسی کرده‌اند. دولت افغانستان این ادعاها را رد کرده اما بی بی سی با زنانی مصاحبه کرده  که ادعا می کنند مقام های عالی حکومتی آنها را مورد آزار جنسی قرار داده‌اند. در گزارش یوگیتا لیمای، برای محافظت از این زنها، هویتشان پنهان شده است.",
+                "medium": "دولت افغانستان با اتهام‌ آزار جنسی علیه زنان روبرو شده است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gmwfb.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "ادعاهای تازه از آزار جنسی در دولت افغانستان",
+              "versions": [
+                {
+                  "versionId": "p07gmw2v",
+                  "types": ["Original"],
+                  "duration": 244,
+                  "durationISO8601": "PT4M4S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562856665
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107839002",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4E7D/production/_107839002_p07gmwfb.jpg",
+              "path": "/cpsprodpb/4E7D/production/_107839002_p07gmwfb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ادعاهای تازه از آزار جنسی در دولت افغانستان",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "صفحه افغانستان",
+              "uri": "/persian/afghanistan",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:persian/afghanistan-48954301",
+            "type": "cps"
           }
         ],
         "semanticGroupName": "Top stories overflow"

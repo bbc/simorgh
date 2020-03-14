@@ -1,0 +1,1323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Asset Page AV player should render version (live audio stream) 1`] = `
+<DocumentFragment>
+  <div
+    id="ContextsContainer"
+  >
+    <div
+      id="PageWrapperContainer"
+    >
+      <div
+        id="LoadingContainer"
+      >
+        <div
+          id="ErrorContainer"
+        >
+          <div
+            id="DataContainer"
+          >
+            <noscript />
+            <main
+              class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+              role="main"
+            >
+              <h1
+                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                id="content"
+                tabindex="-1"
+              >
+                Ўзбек деҳқонининг косаси нега оқармайдиshort
+              </h1>
+              <div
+                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI"
+              >
+                <figure
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                >
+                  <div
+                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
+                  >
+                    <iframe
+                      allow="autoplay; fullscreen"
+                      allowfullscreen=""
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
+                      scrolling="no"
+                      src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+                      title="Медиа плейер"
+                    />
+                    <noscript />
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
+              >
+                <strong
+                  aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайдиshort
+                </strong>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 bAgcOD"
+                  datetime="2019-09-13"
+                >
+                  13 сентябр 2019
+                </time>
+                <div>
+                  <time
+                    class="StyledTimestamp-um718p-0 bAgcOD"
+                    datetime="2019-11-06"
+                  >
+                    Янгиланди 6 ноябр 2019
+                  </time>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  <b>
+                    Ўзбек деҳқонининг косаси нега оқармайди
+                  </b>
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  <b>
+                    Ўзбек деҳқонининг косаси нега оқармайди
+                  </b>
+                  <b>
+                     heading
+                  </b>
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  <i
+                    class="italic-sc-1a0jt7x-0 bbwGZK"
+                  >
+                    <b>
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </b>
+                  </i>
+                  <i
+                    class="italic-sc-1a0jt7x-0 bbwGZK"
+                  >
+                    <b>
+                       heading
+                    </b>
+                  </i>
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  <b>
+                    Ўзбек деҳқонининг косаси нега оқармайди
+                  </b>
+                  <b>
+                     crosshead 
+                  </b>
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Шу йил апрел ойида Ўзбекистон Президенти Ислом 
+                  <a
+                    class="InlineLink-hkwpaz-0 idscKS"
+                    href="https://bbc.com/uzbek"
+                  >
+                    Каримов ўзининг
+                  </a>
+                   Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб 
+                  <b>
+                    чиқишда турли муаммоларга юз тутиб
+                  </b>
+                   келишган, апрель ойида президент қарори билан "Ўзагроэкспорт" мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  "Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга 
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
+                >
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <b>
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </b>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      Ўзбек деҳқонининг косаси нега оқармайди
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
+                >
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/uzbek"
+                      >
+                        Ўзбек деҳқонининг косаси нега оқармайди
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK"
+              >
+                <figure
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                >
+                  <div
+                    class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX"
+                  >
+                    <div
+                      class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                        <p
+                          class="Copyright-sc-11lgtw-0 hDvIfz"
+                          role="text"
+                        >
+                          <span
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          >
+                            Сурат манбаси, 
+                          </span>
+                          <span
+                            lang="en-GB"
+                          >
+                            AFP
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL"
+                    />
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайди transmission info 
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Ўзбек деҳқонининг косаси нега оқармайди footer 
+                </p>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Media Asset Page should render component 1`] = `
+<DocumentFragment>
+  <div
+    id="ContextsContainer"
+  >
+    <div
+      id="PageWrapperContainer"
+    >
+      <div
+        id="LoadingContainer"
+      >
+        <div
+          id="ErrorContainer"
+        >
+          <div
+            id="DataContainer"
+          >
+            <noscript />
+            <main
+              class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+              role="main"
+            >
+              <h1
+                class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                id="content"
+                tabindex="-1"
+              >
+                Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
+              </h1>
+              <div
+                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI"
+              >
+                <figure
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                >
+                  <div
+                    class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK"
+                  >
+                    <iframe
+                      allow="autoplay; fullscreen"
+                      allowfullscreen=""
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
+                      scrolling="no"
+                      src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                      title="Media player"
+                    />
+                    <noscript />
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
+              >
+                <strong
+                  aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+                >
+                  Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & &lt; &gt;
+                </strong>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG"
+              >
+                <time
+                  class="StyledTimestamp-um718p-0 bAgcOD"
+                  datetime="2019-09-13"
+                >
+                  13 September 2019
+                </time>
+                <div>
+                  <time
+                    class="StyledTimestamp-um718p-0 bAgcOD"
+                    datetime="2019-11-20"
+                  >
+                    New Informate 20 November 2019
+                  </time>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  <b>
+                    This is an introduction in bold. & &lt; &gt;
+                  </b>
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <h2
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+                  id="This-is-a-heading-<->"
+                  tabindex="-1"
+                >
+                  This is a heading & &lt; &gt;
+                </h2>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <h2
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+                  id="This-is-a-subheading-<->"
+                  tabindex="-1"
+                >
+                  This is a subheading & &lt; &gt;
+                </h2>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <h2
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+                  id="This-is-a-crosshead-<->"
+                  tabindex="-1"
+                >
+                  This is a crosshead & &lt; &gt;
+                </h2>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Bulleted list:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
+                >
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Numbered list:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
+                >
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="http://www.bbc.com/afrique/23248423"
+                      >
+                        &lt;Media Asset Page&gt;
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      <a
+                        class="InlineLink-hkwpaz-0 idscKS"
+                        href="https://bbc.com/pidgin"
+                      >
+                        this is the link text
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Lorem ipsum dolor sit amet, 
+                  <b>
+                    consectetur
+                  </b>
+                   adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  <b>
+                     ullamco laboris nisi ut aliquip 
+                  </b>
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                  <i
+                    class="italic-sc-1a0jt7x-0 bbwGZK"
+                  >
+                     in voluptate velit esse cillum 
+                  </i>
+                  dolore "eu fugiat nulla" pariatur. 
+                  <a
+                    class="InlineLink-hkwpaz-0 idscKS"
+                    href="https://bbc.com/pidgin"
+                  >
+                    Excepteur
+                  </a>
+                   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Testing special characters: !"£$%^&*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Table:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Social media embed:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Quote box:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Correspondent quote box:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Fact box:
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  ­
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  Lorem ipsum
+                  <a
+                    class="InlineLink-hkwpaz-0 idscKS"
+                    href="https://bbc.com/pidgin"
+                  >
+                     dolor sit amet
+                  </a>
+                  , consectetur adipiscing elit
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK"
+              >
+                <figure
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                >
+                  <div
+                    class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX"
+                  >
+                    <div
+                      class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                        <p
+                          class="Copyright-sc-11lgtw-0 hDvIfz"
+                          role="text"
+                        >
+                          <span
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          >
+                            Wia dis foto come from, 
+                          </span>
+                          <span
+                            lang="en-GB"
+                          >
+                            Google
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL"
+                    >
+                      <figcaption
+                        class="Caption-sc-16x70so-0 bjgllj"
+                      >
+                        <span
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                        >
+                          Wetin we call dis foto, 
+                        </span>
+                        <p>
+                          Psammead was named after the mythical sand creature
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK"
+              >
+                <figure
+                  class="Figure-sc-6a3dhy-0 gJUCFc"
+                >
+                  <div
+                    class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX"
+                  >
+                    <div
+                      class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa"
+                    >
+                      <div
+                        class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                      >
+                        <div
+                          class="lazyload-placeholder"
+                        />
+                        <noscript />
+                        <p
+                          class="Copyright-sc-11lgtw-0 hDvIfz"
+                          role="text"
+                        >
+                          <span
+                            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                          >
+                            Wia dis foto come from, 
+                          </span>
+                          <span
+                            lang="en-GB"
+                          >
+                            Butterfly person
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL"
+                    >
+                      <figcaption
+                        class="Caption-sc-16x70so-0 bjgllj"
+                      >
+                        <span
+                          class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                        >
+                          Wetin we call dis foto, 
+                        </span>
+                        <p>
+                          A pretty little butterfly & &lt; &gt;
+                        </p>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <div
+                  class="Wrapper-e2169q-0 kopXQT"
+                >
+                  <ul
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </li>
+                    <li
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                      role="listitem"
+                    >
+                      v3 draft
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  This is transmission info 
+                </p>
+              </div>
+              <div
+                class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+              >
+                <p
+                  class="Paragraph-k859h4-0 hymSIv"
+                >
+                  This is the footer 
+                </p>
+              </div>
+            </main>
+            <section
+              aria-labelledby="related-content-heading"
+              class="GridWrapper-sc-12lwanc-0 hgpaqH"
+              role="region"
+            >
+              <div
+                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+              >
+                <div
+                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                >
+                  <div
+                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                  >
+                    <div
+                      class="Bar-sc-1x4gwjz-0 jsgdXU"
+                    />
+                    <h2
+                      class="Heading-sc-1x4gwjz-2 eZofTG"
+                    >
+                      <div
+                        class="FlexColumn-wx5kdp-0 dgpsiS"
+                      >
+                        <span
+                          class="FlexRow-wx5kdp-2 dVBNyZ"
+                        >
+                          <span
+                            class="Title-wx5kdp-4 BeqZV"
+                            dir="ltr"
+                            id="related-content-heading"
+                          >
+                            Another thing we de for inside dis tori
+                          </span>
+                        </span>
+                      </div>
+                    </h2>
+                  </div>
+                  <ul
+                    class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                    dir="ltr"
+                    role="list"
+                  >
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              Police Arrest 3 ontop Anambra Church Attack
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            />
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            >
+                              <div
+                                aria-hidden="true"
+                                class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                                    focusable="false"
+                                    height="13px"
+                                    viewBox="0 0 32 26"
+                                    width="16px"
+                                  >
+                                    <path
+                                      d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                                    />
+                                    <circle
+                                      cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                >
+                                  Image gallery, 
+                                </span>
+                                <span>
+                                  Kenya Elections Pictures: 8 August 2017
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            This na some of the picture wey our eye see as Kenya people go vote for election today
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-08"
+                          >
+                            8th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      dir="ltr"
+                      role="listitem"
+                    >
+                      <div
+                        class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+                      >
+                        <div
+                          class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                          dir="ltr"
+                        >
+                          <div
+                            class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+                          >
+                            <div
+                              class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                            <div
+                              class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                            >
+                              <div
+                                aria-hidden="true"
+                                class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                                dir="ltr"
+                              >
+                                <div
+                                  class="FlexWrapper-sc-1p6h86b-1 fQsOMp"
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                                    focusable="false"
+                                    height="12px"
+                                    viewBox="0 0 13 12"
+                                    width="13px"
+                                  >
+                                    <path
+                                      d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                                    />
+                                    <path
+                                      d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                                    />
+                                  </svg>
+                                  <time
+                                    class="StyledTime-jpt91x-0 bYtFje"
+                                    datetime="PT15S"
+                                  >
+                                    0:15
+                                  </time>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                          dir="ltr"
+                        >
+                          <h3
+                            class="Headline-sc-1dvfmi3-3 hSJrur"
+                          >
+                            <a
+                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                            >
+                              <span
+                                role="text"
+                              >
+                                <span
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                >
+                                  Audio, 
+                                </span>
+                                <span>
+                                  BBC News Pidgin One Minute News
+                                </span>
+                                <span
+                                  class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                                >
+                                  , 0,15
+                                </span>
+                              </span>
+                            </a>
+                          </h3>
+                          <p
+                            class="Summary-sc-1dvfmi3-4 eaCWBB"
+                          >
+                            All di local and world tori wey you suppose know in 60 seconds!
+                          </p>
+                          <time
+                            class="StyledTimestamp-um718p-0 kVWTyt"
+                            datetime="2017-08-17"
+                          >
+                            17th August 2017
+                          </time>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

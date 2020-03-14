@@ -1,5 +1,5 @@
 import csp from 'helmet-csp';
-import getRouteProps from '#app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
@@ -90,7 +90,10 @@ export const generateConnectSrc = context => {
   }
 
   if (context.isAmp) {
-    connectSrc.push('https://cdn.ampproject.org');
+    connectSrc.push(
+      'https://cdn.ampproject.org',
+      'https://amp-error-reporting.appspot.com',
+    );
     return connectSrc;
   }
 
@@ -117,6 +120,8 @@ const constructCspHeader = context => ({
       'https://chartbeat.com',
       'https://*.chartbeat.com',
     ],
+    'worker-src': context.isAmp ? ['blob:'] : ["'self'"],
+    'child-src': context.isAmp ? ['blob:'] : ["'self'"],
   },
 });
 

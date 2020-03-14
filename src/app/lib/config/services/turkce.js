@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
@@ -20,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Güncelleme',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
+    chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
@@ -46,7 +48,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Haberler',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +58,7 @@ export const service = {
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
+      navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -160,11 +162,15 @@ export const service = {
     mostRead: {
       header: 'En çok okunanlar',
       lastUpdated: 'Son güncelleme:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/turkce/kurumsal-50221017',
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
@@ -188,6 +194,12 @@ export const service = {
           href: 'https://www.bbc.com/turkce/kurumsal-36767474',
           text: "BBC'yle temas kurun",
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
@@ -199,6 +211,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'Asia/Istanbul',
     navigation: [
@@ -239,7 +252,6 @@ export const service = {
         url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
     ],
-    navigationSection: 'Kategoriler',
   },
 };
 

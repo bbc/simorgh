@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
+      navMenuText: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -167,6 +168,14 @@ export const service = {
       header: 'Les plus lus',
       lastUpdated: 'Dernière mise à jour:',
       numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
@@ -197,6 +206,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826644',
           text: 'Contactez la BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -254,7 +269,6 @@ export const service = {
         url: '/afrique/nos_emissions/radio',
       },
     ],
-    navigationSection: 'Rubriques',
   },
 };
 

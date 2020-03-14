@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'New Informate',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
+    chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
     serviceLocalizedName: 'Pidgin',
@@ -42,7 +43,6 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,6 +53,7 @@ export const service = {
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
+      navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -159,7 +160,11 @@ export const service = {
     mostRead: {
       header: 'De one we dem de read well well',
       lastUpdated: 'De one we dem update for:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     navigation: [
       {
@@ -199,7 +204,6 @@ export const service = {
         url: '/pidgin/popular/read',
       },
     ],
-    navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/pidgin/institutional-48528766',
@@ -229,6 +233,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/pidgin/institutional-42188215',
           text: 'Call BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. De external site no concern BBC.',

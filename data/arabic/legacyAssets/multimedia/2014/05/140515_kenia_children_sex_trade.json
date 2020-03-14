@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:arabic/multimedia/2014/05/140515_kenia_children_sex_trade",
+    "locators": {
+      "assetUri": "/arabic/multimedia/2014/05/140515_kenia_children_sex_trade",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/multimedia/2014/05/140515_kenia_children_sex_trade",
+      "curie": "http://www.bbc.co.uk/asset/1f8e72ae-dc24-11e3-82f1-aed33db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "arabic_1024",
+    "language": "ar",
+    "lastUpdated": 1550244877281,
+    "firstPublished": 1400153345,
+    "lastPublished": 1400153537,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": true,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "32017394",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/arabic/meta/dps/2014/05/emp/140515_kenia_children_sex_trade.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "لا تحتوي مدينة ماليندي الساحلية في جنوب كينيا على شواطئ شاسعة ومناظر خلابة فقط، وإنما تخفي أيضا دعارة مستشرية ومتزايدة للأطفال.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ويضطر أطفال لا تتجاوز أعمارهم الثانية عشرة لممارسة الجنس مع السياح مقابل مبالغ مغرية.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وتقول السلطات إن هذه الممارسات تدر أموالا طائلة على الفتيات والفتية على حد سواء، لذا يجبر كثيرون على ترك مدارسهم لهذا الغرض.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "أطفال كينيون يمارسون الجنس مع السياح من أجل مبالغ مغرية",
+      "headline": "أطفال كينيون يمارسون الجنس مع السياح من أجل مبالغ مغرية"
+    },
+    "locators": {
+      "assetUri": "/arabic/multimedia/2014/05/140515_kenia_children_sex_trade",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/multimedia/2014/05/140515_kenia_children_sex_trade",
+      "curie": "http://www.bbc.co.uk/asset/1f8e72ae-dc24-11e3-82f1-aed33db9bd6e"
+    },
+    "summary": "مدينة ماليندي الساحلية في جنوب كينيا،لا تحتوي على شواطئ شاسعة ومناظر خلابة فقط، وإنما تخفي أيضا دعارة مستشرية ومتزايدة للأطفال.",
+    "timestamp": 1550244877281,
+    "passport": {},
+    "media": {
+      "id": "32017394",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/arabic/meta/dps/2014/05/emp/140515_kenia_children_sex_trade.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e228",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/05/15/140515110911_kenya_sex_144x81_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/05/15/140515110911_kenya_sex_144x81_bbc_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "فتيات من مدينة ماليندي",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/multimedia/2014/05/140515_kenia_children_sex_trade",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "فيديو وصور", "uri": "/arabic/multimedia", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCArabic.com", "uri": "/arabic", "type": "simple" },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "حملة كبيرة ضد تجارة الجنس في الصين",
+              "headline": "حملة كبيرة ضد تجارة الجنس في الصين"
+            },
+            "locators": {
+              "assetUri": "/arabic/multimedia/2014/02/140211_china_sex_trade",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/multimedia/2014/02/140211_china_sex_trade"
+            },
+            "summary": "قام الآلاف من رجال الشرطة الصينية بحملة ضد تجارة الجنس في مدينة دونغوان التي تعرف بعاصمة الجنس الصينية. وجاءت تلك الحملة بعد تحقيق تلفزيوني كشف عن انتشار الدعارة في المدينة.",
+            "timestamp": 1392123424,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:arabic/multimedia/2014/02/140211_china_sex_trade",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"الجنس مقابل السمك\" أحد أسباب انتشار الأيدز في كينيا",
+              "headline": "\"الجنس مقابل السمك\" أحد أسباب انتشار الأيدز في كينيا"
+            },
+            "locators": {
+              "assetUri": "/arabic/multimedia/2014/02/140217_odd_kenya_fish_instead_sex",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/multimedia/2014/02/140217_odd_kenya_fish_instead_sex"
+            },
+            "summary": "التقديرات في كينيا تشير إلى إصابة 1.5 مليون مواطن بفيروس مرض نقص المناعة المكتسبة لإيدز. أحد أسباب انتشار هذه الإصابة هو بيع الصيادين حصيلتهم من السمك في المناطق الريفية مقابل ممارسة الجنس مع بائعات الأسواق.",
+            "timestamp": 1392711100,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:arabic/multimedia/2014/02/140217_odd_kenya_fish_instead_sex",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

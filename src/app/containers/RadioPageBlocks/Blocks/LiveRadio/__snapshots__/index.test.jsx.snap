@@ -5,6 +5,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
   height: 165px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c1 {
@@ -13,6 +14,12 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width:63rem) {
@@ -80,6 +87,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
   height: 165px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c1 {
@@ -98,6 +106,12 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width:63rem) {
@@ -150,6 +164,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   height: 165px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c1 {
@@ -158,6 +173,12 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width:63rem) {
@@ -216,6 +237,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   height: 165px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .c1 {
@@ -234,6 +256,12 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width:63rem) {

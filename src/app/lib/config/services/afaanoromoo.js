@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Haaromsameera',
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
+    chartbeatDomain: 'afaanoromoo.bbc.co.uk',
     brandName: 'BBC News Afaan Oromoo',
     product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
@@ -39,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Oduu',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      navMenuText: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -143,7 +144,7 @@ export const service = {
         video: 'Viidiyoo',
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
-        liveLabel: 'JIRADHU',
+        liveLabel: 'KALLATTIIN',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -153,7 +154,11 @@ export const service = {
     mostRead: {
       header: "Baay'ee kan dubbifame",
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -185,6 +190,12 @@ export const service = {
           href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
           text: 'BBC qunnami',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
@@ -208,7 +219,6 @@ export const service = {
         url: '/afaanoromoo/popular/read',
       },
     ],
-    navigationSection: 'Kutaawwan',
     timezone: 'Africa/Addis_Ababa',
     liveRadio: {
       externalIdOverrides: { bbc_oromo_radio: 'bbc_afaanoromoo_radio' },

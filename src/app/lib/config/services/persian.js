@@ -18,6 +18,7 @@ export const service = {
     articleTimestampPrefix: 'به روز شده در',
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
+    chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
@@ -44,7 +45,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'صفحه اول',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -55,6 +55,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -175,7 +176,12 @@ export const service = {
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
@@ -206,6 +212,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/persian/institutional-37542244',
           text: 'تماس با بی بی سی',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
@@ -286,7 +298,6 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
-    navigationSection: 'صفحه ها',
   },
 };
 

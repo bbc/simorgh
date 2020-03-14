@@ -20,6 +20,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
@@ -47,7 +48,6 @@ export const service = {
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
     passportHomes: ['BBCScotland'],
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_DARK_SALTIRE}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +57,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -159,6 +160,10 @@ export const service = {
       header: 'Most read',
       lastUpdated: 'Last updated:',
       numberOfItems: 5,
+      hasMostRead: false,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       externalLink: {
@@ -189,6 +194,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: 'Contact the BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

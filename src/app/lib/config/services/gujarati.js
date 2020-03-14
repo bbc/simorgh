@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'અપડેટેડ',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
+    chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
     serviceLocalizedName: 'ગુજરાતી',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'સમાચાર',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'સામગ્રી પર જાઓ',
       relatedContent: 'સંબંધિત સમાચાર',
+      navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
@@ -158,7 +159,11 @@ export const service = {
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
       lastUpdated: 'લાસ્ટ અપડેટ:',
-      numberOfItems: 5,
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -189,6 +194,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/gujarati/institutional-42224948',
           text: 'બીબીસીનો સંપર્ક કરો',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
@@ -221,7 +232,6 @@ export const service = {
         url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
       },
     ],
-    navigationSection: 'વિભાગો',
   },
 };
 

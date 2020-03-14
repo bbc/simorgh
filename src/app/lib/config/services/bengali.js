@@ -16,6 +16,7 @@ export const service = {
     articleTimestampPrefix: 'আপডেট হয়েছে',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
+    chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
     serviceLocalizedName: 'বাংলা',
@@ -43,7 +44,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -54,6 +54,7 @@ export const service = {
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
+      navMenuText: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
         audioPlayer: 'অডিও প্লেয়ার',
@@ -163,6 +164,10 @@ export const service = {
       header: 'সর্বাধিক পঠিত',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -194,6 +199,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
@@ -204,10 +215,6 @@ export const service = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
-      },
-      {
-        title: 'খবর',
-        url: '/bengali/news',
       },
       {
         title: 'অডিও',
@@ -222,7 +229,6 @@ export const service = {
         url: '/bengali/media/photogalleries',
       },
     ],
-    navigationSection: 'সেকশন',
   },
 };
 

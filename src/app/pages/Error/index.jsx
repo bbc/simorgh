@@ -1,6 +1,6 @@
 import React from 'react';
 import { number } from 'prop-types';
-import compose from 'ramda/src/compose';
+import pipe from 'ramda/src/pipe';
 import ErrorMain from '../../containers/ErrorMain';
 
 import withContexts from '../../containers/PageHandlers/withContexts';
@@ -20,10 +20,10 @@ ErrorContainer.defaultProps = {
   errorCode: null,
 };
 
-const EnhancedErrorContainer = compose(
-  withContexts,
-  withPageWrapper,
+const EnhancedErrorContainer = pipe(
   withLoading,
+  withPageWrapper,
+  withContexts,
 )(ErrorContainer);
 
 export default EnhancedErrorContainer;

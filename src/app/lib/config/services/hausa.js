@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Wanda aka sabunta',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
+    chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
     serviceLocalizedName: 'Hausa',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Labaran Duniya',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      navMenuText: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -160,6 +161,13 @@ export const service = {
       header: 'Wanda aka fi karantawa',
       lastUpdated: 'Na baya-bayan nan:',
       numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
     },
     footer: {
       trustProjectLink: {
@@ -190,6 +198,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377092',
           text: 'Tuntubi BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -231,7 +245,6 @@ export const service = {
         url: '/hausa/media/photogalleries',
       },
     ],
-    navigationSection: 'Sassa',
   },
 };
 

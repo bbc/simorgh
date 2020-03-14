@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/multimedia/2016/05/160505_v_diving_record",
+    "locators": {
+      "assetUri": "/russian/multimedia/2016/05/160505_v_diving_record",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/multimedia/2016/05/160505_v_diving_record",
+      "curie": "http://www.bbc.co.uk/asset/c4fe41fc-12a4-11e6-b1d8-5aab3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "russian_1024",
+    "language": "ru",
+    "lastUpdated": 1550150250594,
+    "firstPublished": 1462441945,
+    "lastPublished": 1462441945,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "43703851", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "43703851",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/russian/meta/dps/2016/05/emp/160505_v_diving_record.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Новозеландский фридайвер Уильям Трабридж, обладатель ряда мировых рекордов в этом виде спорта, установил новое мировое достижение: опустился без акваланга на глубину 124 с лишним метра.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В данном случае речь идет о так называемом свободном погружении – без ласт.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Для того чтобы опуститься на рекордную глубину и подняться на поверхность, Трабриджу потребовалось задержать дыхание на 4 минуты 24 секунды.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Это уже второй рекорд, поставленный 35-летним спортсменом за последние дни: в предыдущий раз он примерно за такое же время погрузился на глубину 122 метра.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Погружение проходило возле Багамских островов.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Видео не сопровождается комментарием.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Новый рекорд во фридайвинге: 124 метра под водой без акваланга",
+      "headline": "Новый рекорд фридайвинга: 124 метра под водой без акваланга"
+    },
+    "locators": {
+      "assetUri": "/russian/multimedia/2016/05/160505_v_diving_record",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/multimedia/2016/05/160505_v_diving_record",
+      "curie": "http://www.bbc.co.uk/asset/c4fe41fc-12a4-11e6-b1d8-5aab3db9bd6e"
+    },
+    "summary": "Новозеландский фридайвер Уильям Трабридж, обладатель ряда мировых рекордов, установил новое мировое достижение: опустился без акваланга на глубину 124 с лишним метра.",
+    "timestamp": 1550150250594,
+    "passport": {},
+    "media": {
+      "id": "43703851",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/russian/meta/dps/2016/05/emp/160505_v_diving_record.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e275",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "Фридайвер",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/multimedia/2016/05/160505_v_diving_record",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Видео и фото", "uri": "/russian/multimedia", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCRussian.com", "uri": "/russian", "type": "simple" },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Британец победил в прыжках с 27-метровой скалы",
+              "headline": "Британец победил в прыжках с 27-метровой скалы"
+            },
+            "locators": {
+              "assetUri": "/russian/multimedia/2013/09/130916_v_cliff_diving_hunt",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/multimedia/2013/09/130916_v_cliff_diving_hunt"
+            },
+            "summary": "Победителем шестого этапа чемпионата мира по клифф-дайвингу стал британец Гэри Хант. Второе место - за россиянином Артемом Сильченко.",
+            "timestamp": 1379314242,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:russian/multimedia/2013/09/130916_v_cliff_diving_hunt",
+            "type": "cps"
+          },
+          {
+            "name": "Евгения Селезнева: всю жизнь головой вниз",
+            "uri": "http://www.bbc.co.uk/russian/multimedia/2011/12/111114_v_olympic_zhenya_diving",
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Собаки-серфингисты покоряют Австралию",
+              "headline": "Собаки-серфингисты покоряют Австралию"
+            },
+            "locators": {
+              "assetUri": "/russian/multimedia/2016/03/160307_v_dogs_surfing",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/multimedia/2016/03/160307_v_dogs_surfing"
+            },
+            "summary": "В австралийском штате Квинсленд открылся крупный международный фестиваль серфинга.",
+            "timestamp": 1457351764,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:russian/multimedia/2016/03/160307_v_dogs_surfing",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

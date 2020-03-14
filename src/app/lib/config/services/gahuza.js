@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Vyavuguruwe ',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
+    chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
     serviceLocalizedName: 'Gahuza',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,10 +49,11 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      navMenuText: 'Imice',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Ibikinwa',
+        audioPlayer: 'Kina amajwi',
+        videoPlayer: 'Kina amasanamu',
       },
       error: {
         404: {
@@ -137,7 +138,7 @@ export const service = {
       media: {
         noJs: 'Ntibishobora gukina mu cuma cawe',
         contentExpired: 'Ibi ntibikiboneka.',
-        audio: 'Umviriza',
+        audio: 'Amajwi',
         photogallery: 'Amasanamu',
         video: 'Video',
         bbc_gahuza_radio: {
@@ -145,12 +146,12 @@ export const service = {
           subtitle:
             'Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Umviriza',
+        watch: 'Raba',
         liveLabel: 'LIVE',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Ikiganiro ca radiyo giheruka',
+        nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
+        duration: 'Umwanya bimara',
       },
     },
     brandSVG,
@@ -158,6 +159,10 @@ export const service = {
       header: 'Ibisomwa cane',
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -189,6 +194,12 @@ export const service = {
           href: 'https://www.bbc.com/gahuza/institutional-35754061',
           text: 'Vugana na BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
@@ -216,7 +227,6 @@ export const service = {
         url: '/gahuza/media/video',
       },
     ],
-    navigationSection: 'Imice',
   },
 };
 

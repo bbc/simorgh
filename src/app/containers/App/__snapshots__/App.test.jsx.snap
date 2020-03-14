@@ -11,6 +11,7 @@ exports[`App should return rendered routes 1`] = `
   initialData={
     Object {
       "pageData": "Some initial data",
+      "timeOnServer": 1582534951721,
     }
   }
   location={

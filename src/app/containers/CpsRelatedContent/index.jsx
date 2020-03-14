@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, bool, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -15,15 +15,15 @@ import {
 import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GhostGrid, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
+import Grid from '../../components/Grid';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
-
   /* z-index needs explicitly set as the psammead section label component uses negative z-indices */
   z-index: 0;
 `;
@@ -43,17 +43,29 @@ const formatItem = (item, env) => {
   return assocPath(['locators', 'assetUri'], `${baseUri}${uriSuffix}`, item);
 };
 
-const CpsRelatedContent = ({ content }) => {
+const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-labelledby': 'related-content-heading',
+  };
+  const RelatedContentWrapper = ({ children }) =>
+    enableGridWrapper ? (
+      <GridWrapper {...a11yAttributes}>
+        <Wrapper>{children}</Wrapper>
+      </GridWrapper>
+    ) : (
+      <Wrapper {...a11yAttributes}>{children}</Wrapper>
+    );
+  RelatedContentWrapper.propTypes = {
+    children: node.isRequired,
+  };
   if (!content.length) return null;
 
   return (
-    <GhostGrid
-      as="aside"
-      role="complementary"
-      aria-labelledby="related-content-heading"
-    >
+    <RelatedContentWrapper>
       <Wrapper>
         <StyledSectionLabel
           script={script}
@@ -63,18 +75,42 @@ const CpsRelatedContent = ({ content }) => {
         >
           {translations.relatedContent}
         </StyledSectionLabel>
-
-        <StoryPromoUl>
+        <Grid
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 8,
+            group5: 8,
+          }}
+          as={StoryPromoUl}
+          enableGelGutters
+          dir={dir}
+        >
           {content
             .map(item => formatItem(item, env))
             .map(item => (
-              <StoryPromoLi key={item.id || item.uri}>
-                <StoryPromo item={item} />
-              </StoryPromoLi>
+              <Grid
+                item
+                columns={{
+                  group0: 6,
+                  group1: 6,
+                  group2: 6,
+                  group3: 6,
+                  group4: 4,
+                  group5: 4,
+                }}
+                as={StoryPromoLi}
+                key={item.id || item.uri}
+                dir={dir}
+              >
+                <StoryPromo item={item} dir={dir} />
+              </Grid>
             ))}
-        </StoryPromoUl>
+        </Grid>
       </Wrapper>
-    </GhostGrid>
+    </RelatedContentWrapper>
   );
 };
 
@@ -83,10 +119,12 @@ CpsRelatedContent.propTypes = {
   // Both pages use CPS, so the data schema is the same
   // This can be found under CPS ARES payloads: relatedContent.groups[0].promos
   content: arrayOf(shape(storyItem)),
+  enableGridWrapper: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
+  enableGridWrapper: false,
 };
 
 export default CpsRelatedContent;

@@ -1,475 +1,646 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares::asset:mundo/23263889",
-    "locators": {
-      "assetUri": "/mundo/23263889",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
-      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f"
-    },
-    "type": "STY",
-    "createdBy": "mundo-v6",
-    "language": "es",
-    "lastUpdated": 1580922784342,
-    "firstPublished": 1580745507000,
-    "lastPublished": 1580922773000,
-    "timestamp": 1580745507000,
-    "options": {
-      "isIgorSeoTagsEnabled": false,
-      "includeComments": false,
-      "allowRightHandSide": true,
-      "isFactCheck": false,
-      "allowDateStamp": true,
-      "suitableForSyndication": true,
-      "hasNewsTracker": false,
-      "allowRelatedStoriesBox": true,
-      "isKeyContent": false,
-      "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
-      "isBreakingNews": false,
-      "allowPrintingSharingLinks": true
-    },
-    "analyticsLabels": {
-      "cps_asset_type": "sty",
-      "counterName": "mundo.story.23263889.page",
-      "cps_asset_id": "23263889"
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5ad86270c93a9f000eecb255",
-          "campaignName": "Amuse me"
-        }
-      ],
-      "language": "es",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
-      "passportId": "d7d7cd86-30b1-412f-8c9e-712f806c7357",
-      "locator": "urn:bbc:cps:asset:23263889",
-      "availability": "AVAILABLE",
-      "taggings": [
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/coreconcepts/editorialSensitivity",
-          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+  "metadata":{
+     "id":"urn:bbc:ares::asset:mundo/23263889",
+     "locators":{
+        "assetUri":"/mundo/23263889",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/23263889",
+        "curie":"http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+        "assetId":"23263889"
+     },
+     "type":"STY",
+     "createdBy":"mundo-v6",
+     "language":"es",
+     "lastUpdated":1582806264492,
+     "firstPublished":1580745507000,
+     "lastPublished":1582806255000,
+     "timestamp":1582540624000,
+     "options":{
+        "isIgorSeoTagsEnabled":false,
+        "includeComments":false,
+        "allowRightHandSide":true,
+        "isFactCheck":false,
+        "allowDateStamp":true,
+        "suitableForSyndication":true,
+        "hasNewsTracker":false,
+        "allowRelatedStoriesBox":true,
+        "isKeyContent":false,
+        "allowHeadline":true,
+        "allowAdvertising":true,
+        "hasContentWarning":false,
+        "isBreakingNews":false,
+        "allowPrintingSharingLinks":true
+     },
+     "analyticsLabels":{
+        "cps_asset_type":"sty",
+        "counterName":"mundo.story.23263889.page",
+        "cps_asset_id":"23263889"
+     },
+     "passport":{
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+           "categoryName":"News"
         },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
-          "value": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/passport/predicate/About",
-          "value": "http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id"
-        }
-      ]
-    },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Life",
-          "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
-          "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": []
-        },
-        {
-          "thingLabel": "Fake news",
-          "thingUri": "http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
-          "thingId": "e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
-          "thingType": ["Theme", "Thing"],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Fake_news",
-            "http://www.wikidata.org/entity/Q28549308"
-          ],
-          "topicName": "Noticias falsas",
-          "topicId": "c0wr1lxyeqet",
-          "curationList": [
-            {
-              "curationId": "86ded5f5-6950-4ae5-9de0-72c44cc2f2ea",
-              "curationType": "vivo-stream"
-            }
-          ]
-        }
-      ]
-    },
-    "version": "v1.1.5",
-    "blockTypes": [
-      "image",
-      "paragraph",
-      "crosshead",
-      "list",
-      "heading",
-      "subheading",
-      "social_embed",
-      "media",
-      "include"
-    ],
-    "includeComments": false
-  },
-  "content": {
-    "blocks": [
-      {
-        "id": "63730607",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-        "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Index image large",
-        "caption": "Index Image Large",
-        "copyrightHolder": "Kaylee Garrick",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "The first paragraph is manually marked up as an &quot;introduction&quot;, which renders it in bold.",
-        "role": "introduction",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "The next paragraph isn't marked up in any way - it's just &quot;normal&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "This is a crosshead",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic><italic> </italic>or <bold><italic>both</italic></bold>.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "<bold><italic>Bold and italic can also be rendered together.</italic></bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "numbered": false,
-        "items": [
-          {
-            "text": "This is a bulleted list",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "Bullet 2",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "Bullet 3",
-            "markupType": "plain_text",
-            "type": "listItem"
-          }
+        "campaigns":[
+           {
+              "campaignId":"5ad86270c93a9f000eecb255",
+              "campaignName":"Amuse me"
+           }
         ],
-        "type": "list"
-      },
-      {
-        "text": "This is a normal paragraph again.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "This is a Heading",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Normal paragraph.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "numbered": true,
-        "items": [
-          {
-            "text": "This is a numbered list",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "Number 2",
-            "markupType": "plain_text",
-            "type": "listItem"
-          },
-          {
-            "text": "Number 3, and so on",
-            "markupType": "plain_text",
-            "type": "listItem"
-          }
-        ],
-        "type": "list"
-      },
-      {
-        "id": "63730095",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
-        "path": "/cpsdevpb/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "image",
-        "caption": "Body image #1 with caption",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Another paragraph of body text.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "This is a Subheading",
-        "markupType": "plain_text",
-        "type": "subheading"
-      },
-      {
-        "text": "A grey line appears after a subheading.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "This is a paragraph with an <link><caption>inline link</caption><altText>Link</altText><url href=\"https://www.bbc.co.uk/news/uk-scotland-north-east-orkney-shetland-51190283\" platform=\"highweb\"/></link> to an internal site. Here's a link to an <link><caption>external site</caption><altText>Google</altText><url href=\"http://www.google.com\" platform=\"highweb\"/></link>.",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "text": "More normal paragraph text. The body image below doesn't have a caption, but does have copyright.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "63730603",
-        "subType": "body",
-        "href": "http://b.files.bbci.co.uk/778B/test/_63730603_dogs-kayleegarrick.jpg",
-        "path": "/cpsdevpb/778B/test/_63730603_dogs-kayleegarrick.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Dogs",
-        "copyrightHolder": "Kaylee Garrick",
-        "positionHint": "full-width",
-        "type": "image"
-      },
-      {
-        "text": "Social embed examples below for Twitter, YouTube and Instagram.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Twitter",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://twitter.com/BBCWorld/status/1224253149176791040",
-        "source": "twitter",
-        "type": "social_embed"
-      },
-      {
-        "text": "YouTube",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://youtu.be/J4KzO1P6gW4",
-        "source": "youtube",
-        "type": "social_embed"
-      },
-      {
-        "text": "Instagram",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_web_copy_link",
-        "source": "instagram",
-        "type": "social_embed"
-      },
-      {
-        "text": "Embedded MAP: video",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "p01k6msm",
-        "subType": "clip",
-        "format": "video",
-        "title": "Five things ants can teach us about management",
-        "synopses": {
-          "short": "They may be tiny, but us humans could learn a thing or two from ants."
-        },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-        "embedding": true,
-        "advertising": true,
-        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-        "versions": [
-          {
-            "versionId": "p01k6msp",
-            "types": ["Original"],
-            "duration": 191,
-            "durationISO8601": "PT3M11S",
-            "warnings": {
-              "short": "Contains strong language and adult humour.",
-              "long": "Contains strong language and adult humour."
-            },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1540218932000
-          }
-        ],
-        "imageCopyright": "BBC",
-        "type": "media"
-      },
-      {
-        "text": "Embedded MAP: audio",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "p01m7d07",
-        "subType": "clip",
-        "format": "audio",
-        "title": "Birmingham checkout",
-        "synopses": {
-          "short": "Some audio from a supermarket checkout in Birmingham"
-        },
-        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-        "embedding": false,
-        "advertising": false,
-        "caption": "Some audio from a supermarket checkout in Birmingham",
-        "versions": [
-          {
-            "versionId": "p01m7d09",
-            "types": ["Original"],
-            "duration": 127,
-            "durationISO8601": "PT2M7S",
-            "warnings": {
-              "short": "Contains some strong language.",
-              "long": "Contains some strong language."
-            },
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
-            "availableFrom": 1555067395000
-          }
-        ],
-        "imageCopyright": "Getty Images",
-        "type": "media"
-      },
-      {
-        "text": "Includes: VisJo",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "required": false,
-        "tile": "Include from VisJo",
-        "href": "/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
-        "platform": "highweb",
-        "type": "include"
-      },
-      {
-        "text": "Includes: IDT2",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      }
-    ]
-  },
-  "promo": {
-    "headlines": {
-      "shortHeadline": "WS STY TEST - Headline",
-      "headline": "WS STY TEST - Full Headline"
-    },
-    "locators": {
-      "assetUri": "/mundo/23263889",
-      "cpsUrn": "urn:bbc:content:assetUri:mundo/23263889",
-      "curie": "http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f"
-    },
-    "summary": "This is the summary",
-    "timestamp": 1580745507000,
-    "language": "es",
-    "byline": {
-      "name": "James Bond",
-      "title": "Spy",
-      "persons": [
-        {
-          "name": "James Bond",
-          "function": "Spy"
-        }
-      ]
-    },
-    "passport": {
-      "category": {
-        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-        "categoryName": "News"
-      },
-      "campaigns": [
-        {
-          "campaignId": "5ad86270c93a9f000eecb255",
-          "campaignName": "Amuse me"
-        }
-      ],
-      "taggings": []
-    },
-    "indexImage": {
-      "id": "63730607",
-      "subType": "index",
-      "href": "http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-      "path": "/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "Some cool looking dogs on the beach.",
-      "copyrightHolder": "Kaylee Garrick",
-      "type": "image"
-    },
-    "id": "urn:bbc:ares::asset:mundo/23263889",
-    "type": "cps"
-  },
-  "relatedContent": {
-    "section": {
-      "subType": "index",
-      "name": "Noticias",
-      "uri": "/mundo/front_page",
-      "type": "simple"
-    },
-    "site": {
-      "subType": "site",
-      "name": "BBC Mundo",
-      "uri": "/mundo",
-      "type": "simple"
-    },
-    "groups": [
-      {
-        "type": "related-urls",
-        "promos": [
-          {
-            "name": "Related URL Link 1",
-            "uri": "http://www.bbc.co.uk",
-            "type": "link"
-          },
-          {
-            "name": "Related URL Link 2",
-            "uri": "http://www.bbc.co.uk/news",
-            "type": "link"
-          }
+        "language":"es",
+        "home":"http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+        "passportId":"d7d7cd86-30b1-412f-8c9e-712f806c7357",
+        "locator":"urn:bbc:cps:asset:23263889",
+        "availability":"AVAILABLE",
+        "taggings":[
+           {
+              "predicate":"http://www.bbc.co.uk/ontologies/coreconcepts/editorialSensitivity",
+              "value":"http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+           },
+           {
+              "predicate":"http://www.bbc.co.uk/ontologies/passport/predicate/About",
+              "value":"http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id"
+           },
+           {
+              "predicate":"http://www.bbc.co.uk/ontologies/passport/predicate/About",
+              "value":"http://www.bbc.co.uk/things/b9bb453a-a3e2-46b4-9d20-35efa09d72b8#id"
+           }
         ]
-      }
-    ]
+     },
+     "tags":{
+        "about":[
+           {
+              "thingLabel":"Life",
+              "thingUri":"http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+              "thingId":"0239ab33-1cfc-4f5d-babb-a8159711af3e",
+              "thingType":[
+                 "Theme",
+                 "Thing"
+              ],
+              "thingSameAs":[
+
+              ]
+           },
+           {
+              "thingLabel":"Fake news",
+              "thingUri":"http://www.bbc.co.uk/things/e7539dc8-5cfb-413a-b4fe-0ad77bc665aa#id",
+              "thingId":"e7539dc8-5cfb-413a-b4fe-0ad77bc665aa",
+              "thingType":[
+                 "Theme",
+                 "Thing"
+              ],
+              "thingSameAs":[
+                 "http://dbpedia.org/resource/Fake_news",
+                 "http://www.wikidata.org/entity/Q28549308"
+              ],
+              "topicName":"Noticias falsas",
+              "topicId":"c0wr1lxyeqet",
+              "curationList":[
+                 {
+                    "curationId":"86ded5f5-6950-4ae5-9de0-72c44cc2f2ea",
+                    "curationType":"vivo-stream"
+                 }
+              ]
+           }
+        ]
+     },
+     "version":"v1.1.6",
+     "blockTypes":[
+        "image",
+        "paragraph",
+        "crosshead",
+        "list",
+        "heading",
+        "subheading",
+        "social_embed",
+        "media",
+        "include"
+     ],
+     "includeComments":false
+  },
+  "content":{
+     "blocks":[
+        {
+           "id":"63730607",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+           "path":"/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+           "height":549,
+           "width":976,
+           "altText":"Index image large",
+           "caption":"Index Image Large",
+           "copyrightHolder":"Kaylee Garrick",
+           "positionHint":"full-width",
+           "type":"image"
+        },
+        {
+           "text":"The first paragraph is manually marked up as an &quot;introduction&quot;, which renders it in bold.",
+           "role":"introduction",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"The next paragraph isn't marked up in any way - it's just &quot;normal&quot;.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"This is a crosshead",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"Paragraphs can contain <bold>bold </bold>and <italic>italic </italic>in CPS at the moment, and these are rendered on the page as <bold>bold </bold>and <italic>italic</italic>or <bold><italic>both</italic></bold>.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"<bold><italic>Bold and italic can also be rendered together.</italic></bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"This is a bulleted list",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Bullet 2",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Bullet 3",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "text":"This is a normal paragraph again.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"This is a Heading",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "text":"Normal paragraph.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "numbered":true,
+           "items":[
+              {
+                 "text":"This is a numbered list",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Number 2",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Number 3, and so on",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "id":"63730095",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+           "path":"/cpsdevpb/E67B/test/_63730095_b8013ff8-b115-4364-8f1a-67459cd8d9d9.jpg",
+           "height":549,
+           "width":976,
+           "altText":"image",
+           "caption":"Body image #1 with caption",
+           "copyrightHolder":"Getty Images",
+           "positionHint":"full-width",
+           "type":"image"
+        },
+        {
+           "text":"Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. Longer paragraph of normal body text. ",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Another paragraph of body text.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"This is a Subheading",
+           "markupType":"plain_text",
+           "type":"subheading"
+        },
+        {
+           "text":"A grey line appears after a subheading.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"This is a paragraph with an <link><caption>inline link</caption><altText>Link</altText><url href=\"https://www.bbc.co.uk/news/uk-scotland-north-east-orkney-shetland-51190283\" platform=\"highweb\"/></link> to an internal site. Here's a link to an <link><caption>external site</caption><altText>Google</altText><url href=\"http://www.google.com\" platform=\"highweb\"/></link>.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"More normal paragraph text. The body image below doesn't have a caption, but does have copyright.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"63730603",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/778B/test/_63730603_dogs-kayleegarrick.jpg",
+           "path":"/cpsdevpb/778B/test/_63730603_dogs-kayleegarrick.jpg",
+           "height":549,
+           "width":976,
+           "altText":"Dogs",
+           "copyrightHolder":"Kaylee Garrick",
+           "positionHint":"full-width",
+           "type":"image"
+        },
+        {
+           "text":"Social embed examples below for Twitter, YouTube and Instagram.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Twitter",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "href":"https://twitter.com/BBCWorld/status/1224253149176791040",
+           "source":"twitter",
+           "type":"social_embed"
+        },
+        {
+           "text":"YouTube",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "href":"https://youtu.be/J4KzO1P6gW4",
+           "source":"youtube",
+           "type":"social_embed"
+        },
+        {
+           "text":"Instagram",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "href":"https://www.instagram.com/p/B8FPf4ZphHi/?utm_source=ig_web_copy_link",
+           "source":"instagram",
+           "type":"social_embed"
+        },
+        {
+           "text":"Embedded MAP: video",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"p01k6msm",
+           "subType":"clip",
+           "format":"video",
+           "title":"Five things ants can teach us about management",
+           "synopses":{
+              "short":"They may be tiny, but us humans could learn a thing or two from ants."
+           },
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+           "embedding":true,
+           "advertising":true,
+           "caption":"They may be tiny, but us humans could learn a thing or two from ants.",
+           "versions":[
+              {
+                 "versionId":"p01k6msp",
+                 "types":[
+                    "Original"
+                 ],
+                 "duration":191,
+                 "durationISO8601":"PT3M11S",
+                 "warnings":{
+                    "short":"Contains strong language and adult humour.",
+                    "long":"Contains strong language and adult humour."
+                 },
+                 "availableTerritories":{
+                    "uk":true,
+                    "nonUk":true,
+                    "world":false
+                 },
+                 "availableFrom":1540218932000
+              }
+           ],
+           "imageCopyright":"BBC",
+           "type":"media"
+        },
+        {
+           "text":"Embedded MAP: audio",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"p01m7d07",
+           "subType":"clip",
+           "format":"audio",
+           "title":"Birmingham checkout",
+           "synopses":{
+              "short":"Some audio from a supermarket checkout in Birmingham"
+           },
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+           "embedding":false,
+           "advertising":false,
+           "caption":"Some audio from a supermarket checkout in Birmingham",
+           "versions":[
+              {
+                 "versionId":"p01m7d09",
+                 "types":[
+                    "Original"
+                 ],
+                 "duration":127,
+                 "durationISO8601":"PT2M7S",
+                 "warnings":{
+                    "short":"Contains some strong language.",
+                    "long":"Contains some strong language."
+                 },
+                 "availableTerritories":{
+                    "uk":true,
+                    "nonUk":true,
+                    "world":false
+                 },
+                 "availableFrom":1555067395000
+              }
+           ],
+           "imageCopyright":"Getty Images",
+           "type":"media"
+        },
+        {
+           "text":"Includes: VisJo",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "required":false,
+           "tile":"Include from VisJo",
+           "href":"/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
+           "platform":"highweb",
+           "type":"include"
+        },
+        {
+           "text":"Includes: IDT2",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "required":false,
+           "tile":"IDT2 Include",
+           "href":"/idt2/41a6ad82-8bad-482e-9645-301af4a8e857",
+           "platform":"highweb",
+           "type":"include"
+        },
+        {
+           "text":"Includes: IDT1: A quiz!",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "required":false,
+           "tile":"A quiz!",
+           "href":"/indepthtoolkit/quizzes/sistema_solar_Quiz_Mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
+           "platform":"highweb",
+           "type":"include"
+        },
+        {
+           "text":"Here come some different shape images:",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Square:",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"63731104",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/9CB1/test/_63731104_hi000087716.jpg",
+           "path":"/cpsdevpb/9CB1/test/_63731104_hi000087716.jpg",
+           "height":1546,
+           "width":1546,
+           "altText":"Prince Charles",
+           "caption":"Prince Charles at a party",
+           "copyrightHolder":"BBC",
+           "positionHint":"full-width",
+           "type":"image"
+        },
+        {
+           "text":"Portrait:",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"63731107",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/111E1/test/_63731107_tv000191235.jpg",
+           "path":"/cpsdevpb/111E1/test/_63731107_tv000191235.jpg",
+           "height":768,
+           "width":576,
+           "altText":"Patrick Stewart",
+           "caption":"Is this Captain Picard or Hercule Poirot?",
+           "copyrightHolder":"BBC",
+           "positionHint":"full-width",
+           "type":"image"
+        },
+        {
+           "text":"Random:",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"63731109",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/16001/test/_63731109_tv000050092.jpg",
+           "path":"/cpsdevpb/16001/test/_63731109_tv000050092.jpg",
+           "height":549,
+           "width":700,
+           "altText":"Centre Court at Wimbledon",
+           "caption":"This image is a random shape",
+           "copyrightHolder":"BBC",
+           "positionHint":"full-width",
+           "type":"image"
+        },
+        {
+           "text":"This is the end",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        }
+     ]
+  },
+  "promo":{
+     "headlines":{
+        "shortHeadline":"WS STY TEST - Headline",
+        "headline":"WS STY TEST - Full Headline"
+     },
+     "locators":{
+        "assetUri":"/mundo/23263889",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/23263889",
+        "curie":"http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+        "assetId":"23263889"
+     },
+     "summary":"This is the summary",
+     "timestamp":1582540624000,
+     "language":"es",
+     "byline":{
+        "name":"James Bond",
+        "title":"Spy",
+        "persons":[
+           {
+              "name":"James Bond",
+              "function":"Spy"
+           }
+        ]
+     },
+     "passport":{
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+           "categoryName":"News"
+        },
+        "campaigns":[
+           {
+              "campaignId":"5ad86270c93a9f000eecb255",
+              "campaignName":"Amuse me"
+           }
+        ],
+        "taggings":[
+
+        ]
+     },
+     "indexImage":{
+        "id":"63730607",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "path":"/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Index image large",
+        "caption":"Index Image Large",
+        "copyrightHolder":"Kaylee Garrick",
+        "type":"image"
+     },
+     "id":"urn:bbc:ares::asset:mundo/23263889",
+     "type":"cps"
+  },
+  "relatedContent":{
+     "section":{
+        "subType":"index",
+        "name":"Noticias",
+        "uri":"/mundo/front_page",
+        "type":"simple"
+     },
+     "site":{
+        "subType":"site",
+        "name":"BBC Mundo",
+        "uri":"/mundo",
+        "type":"simple"
+     },
+     "groups":[
+        {
+           "type":"see-alsos",
+           "promos":[
+              {
+                 "headlines":{
+                    "shortHeadline":"Wapinzani waafikiana nchini South Sudan",
+                    "headline":"Mambo makuu kuhusu makubaliano mapya ya amani Sudan Kusini"
+                 },
+                 "locators":{
+                    "assetUri":"/swahili/23210641",
+                    "cpsUrn":"urn:bbc:content:assetUri:/swahili/23210641"
+                 },
+                 "summary":"Mahasimu nchini Sudan Kusini wameweka saini makubaliano ya kugawana madaraka huku Rais Salva Kirr akitoa wito wa kutaka kuwepo amani kwenye nchi ambapo vita vya wenyewe kwa wenyewe vimesababisha vifo vya maelfu ya watu.",
+                 "timestamp":1533557370000,
+                 "language":"sw",
+                 "cpsType":"STY",
+                 "indexImage":{
+                    "id":"63685549",
+                    "subType":"index",
+                    "href":"http://b.files.bbci.co.uk/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+                    "path":"/cpsdevpb/1715E/test/_63685549_c5daa10f-fea1-48bb-9570-dd61904a22bc.jpg",
+                    "height":549,
+                    "width":976,
+                    "altText":"A Sudanese man gathers branches to build his destroyed house in Abyei.",
+                    "caption":"A Sudanese man gathers branches as he a builds a new roof for his destroyed house in Abyei.",
+                    "copyrightHolder":"BBC",
+                    "type":"image"
+                 },
+                 "id":"urn:bbc:ares::asset:swahili/23210641",
+                 "type":"cps"
+              },
+              {
+                 "headlines":{
+                    "shortHeadline":"Audio map page test",
+                    "headline":"Audio map page test"
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/23245765",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/23245765"
+                 },
+                 "summary":"Audio map page test",
+                 "timestamp":1564757533000,
+                 "language":"es",
+                 "cpsType":"MAP",
+                 "mediaType":"Audio",
+                 "id":"urn:bbc:ares::asset:mundo/23245765",
+                 "type":"cps"
+              },
+              {
+                 "headlines":{
+                    "shortHeadline":"Your pictures: Breakfast",
+                    "headline":"Your pictures: Breakfast"
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/noticias-america-latina-23048887",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-america-latina-23048887"
+                 },
+                 "summary":"Readers' photos on the theme breakfast.",
+                 "timestamp":1464780136000,
+                 "language":"es",
+                 "cpsType":"PGL",
+                 "id":"urn:bbc:ares::asset:mundo/noticias-america-latina-23048887",
+                 "type":"cps"
+              },
+              {
+                 "name":"I am a podcast",
+                 "uri":"https://www.bbc.com",
+                 "type":"link"
+              }
+           ]
+        },
+        {
+           "type":"related-urls",
+           "promos":[
+              {
+                 "name":"Related URL Link 1",
+                 "uri":"http://www.bbc.co.uk",
+                 "type":"link"
+              },
+              {
+                 "name":"Related URL Link 2",
+                 "uri":"http://www.bbc.co.uk/news",
+                 "type":"link"
+              }
+           ]
+        }
+     ]
   }
 }

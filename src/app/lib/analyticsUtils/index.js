@@ -1,6 +1,7 @@
 import Cookie from 'js-cookie';
 import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import onClient from '../utilities/onClient';
 
 export const getDestination = statsDestination => {
@@ -163,6 +164,13 @@ export const getPublishedDatetime = (attribute, data) => {
   return publishedDatetime && isValidDateTime(publishedDatetime)
     ? getISODate(publishedDatetime)
     : null;
+};
+
+export const getContentId = (assetType, pageData) => {
+  const curie = path(['metadata', 'locators', 'curie'], pageData);
+  const guid = curie.split('/').pop();
+  const contentId = `urn:bbc:${assetType}:`.concat(guid);
+  return contentId;
 };
 
 export const getProducer = service => {
