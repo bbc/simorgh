@@ -39,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -162,6 +161,9 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/gahuza/institutional-49283343',
@@ -191,6 +193,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/gahuza/institutional-35754061',
           text: 'Vugana na BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',

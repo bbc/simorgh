@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6v0vz",
+    "locators": {},
+    "type": "WSRADIO",
+    "createdBy": "bbc_gahuza_radio",
+    "language": "rw",
+    "lastUpdated": 1583601860035,
+    "firstPublished": 1582561533000,
+    "lastPublished": 1582561533000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Amakuru ya Gahuzamiryango - BBC News Gahuza",
+      "pageIdentifier": "gahuza.bbc_gahuza_radio.w172x7rkcj6v0vz.page",
+      "producerId": "40",
+      "contentType": "player-ondemand",
+      "producer": "GAHUZA"
+    },
+    "passport": null,
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media"],
+    "title": "Amakuru ya Gahuzamiryango"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172x7rkcj6v0vz",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/03/2020 GMT",
+        "synopses": {
+          "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+          "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshdg6drg0hyj",
+            "types": ["Original"],
+            "duration": 1800,
+            "durationISO8601": "PT30M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1586105970000,
+            "availableFrom": 1583513970000
+          }
+        ],
+        "imageCopyright": null
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Amakuru ya Gahuzamiryango"
+    },
+    "locators": {
+      "pid": "w172x7rkcj6v0vz"
+    },
+    "media": {
+      "id": "w172x7rkcj6v0vz",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/03/2020 GMT",
+      "synopses": {
+        "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+        "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshdg6drg0hyj",
+          "types": ["Original"],
+          "duration": 1800,
+          "durationISO8601": "PT30M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1586105970000,
+          "availableFrom": 1583513970000
+        }
+      ],
+      "imageCopyright": null
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null
+    },
+    "brand": {
+      "pid": "p0340x2n",
+      "title": "Amakuru ya Gahuzamiryango"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6v0vz"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Gahuza",
+      "uri": "/gahuza"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rkcj6r3yw"
+            },
+            "media": {
+              "id": "w172x7rkcj6r3yw",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/03/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg6drfxm1f",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1586019570000,
+                  "availableFrom": 1583427570000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6r3yw"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rkcj6n71s"
+            },
+            "media": {
+              "id": "w172x7rkcj6n71s",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg6drftq4b",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585933170000,
+                  "availableFrom": 1583341170000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6n71s"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rkcj6kb4p"
+            },
+            "media": {
+              "id": "w172x7rkcj6kb4p",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "03/03/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg6drfqt77",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585846770000,
+                  "availableFrom": 1583254770000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6kb4p"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rkcj6gf7l"
+            },
+            "media": {
+              "id": "w172x7rkcj6gf7l",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "02/03/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg6drfmxb4",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585760370000,
+                  "availableFrom": 1583168370000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rkcj6gf7l"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rk07x1w84"
+            },
+            "media": {
+              "id": "w172x7rk07x1w84",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "28/02/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg61h47cbp",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585501170000,
+                  "availableFrom": 1582909170000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rk07x1w84"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rk07wyzc1"
+            },
+            "media": {
+              "id": "w172x7rk07wyzc1",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "27/02/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg61h44gfl",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585414770000,
+                  "availableFrom": 1582822770000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rk07wyzc1"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rk07ww2fy"
+            },
+            "media": {
+              "id": "w172x7rk07ww2fy",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "26/02/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg61h41kjh",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585328370000,
+                  "availableFrom": 1582736370000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rk07ww2fy"
+          },
+          {
+            "headlines": {
+              "headline": "Amakuru ya Gahuzamiryango"
+            },
+            "locators": {
+              "pid": "w172x7rk07ws5jv"
+            },
+            "media": {
+              "id": "w172x7rk07ws5jv",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "25/02/2020 GMT",
+              "synopses": {
+                "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
+                "medium": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshdg61h3ynmd",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585241970000,
+                  "availableFrom": 1582649970000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p0340x2n",
+              "title": "Amakuru ya Gahuzamiryango"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/w172x7rk07ws5jv"
+          }
+        ]
+      }
+    ]
+  }
+}

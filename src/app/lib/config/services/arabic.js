@@ -43,7 +43,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -169,6 +168,13 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/arabic/institutional-49283069',
@@ -198,6 +204,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

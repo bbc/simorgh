@@ -15,9 +15,9 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
-  const imageResolutions = [70, 95, 144, 183, 240, 320, 624];
+  const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
-  const sizes = '(max-width: 1008px) 33vw, 237px';
+  const sizes = '(max-width: 1008px) 50vw, 496px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 

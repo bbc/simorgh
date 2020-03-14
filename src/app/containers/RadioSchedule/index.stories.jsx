@@ -6,21 +6,20 @@ import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // Currently, only these services have radio schedule data
 const validServices = [
   'arabic',
-  'gahuza',
   'hausa',
   'korean',
   'pashto',
   'persian',
   'somali',
-  'urdu',
 ];
 
 const staticRadioScheduleURL = service =>
-  `./data/${service}/bbc_${service}_radio/radioschedule.json`;
+  `./data/${service}/bbc_${service}_radio/schedule.json`;
 
 const renderRadioScheduleContainer = service => (
   <ToggleContextProvider>
@@ -31,7 +30,9 @@ const renderRadioScheduleContainer = service => (
       pathname={`/${service}`}
     >
       <ServiceContextProvider service={service}>
-        <RadioScheduleContainer endpoint={staticRadioScheduleURL(service)} />
+        <RadioScheduleContainer
+          radioScheduleEndpointOverride={staticRadioScheduleURL(service)}
+        />
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContextProvider>
@@ -39,9 +40,10 @@ const renderRadioScheduleContainer = service => (
 
 const stories = storiesOf('Containers|RadioSchedule', module)
   .addDecorator(withKnobs)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(
     withServicesKnob({
-      defaultService: 'arabic',
+      defaultService: 'korean',
       services: validServices,
     }),
   )

@@ -39,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Labaran Duniya',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -164,6 +163,12 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
@@ -193,6 +198,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377092',
           text: 'Tuntubi BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

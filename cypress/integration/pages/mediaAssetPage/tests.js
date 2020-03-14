@@ -51,7 +51,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
 
     it('legacy MAP should render a link using an <a> with href rather than a plain text <link>', () => {
       const requestPath = Cypress.env('currentPath');
-      const isLegacyAsset = requestPath.split('/').length > 4;
+      const isLegacyAsset = requestPath.split('/').length > 5;
 
       if (isLegacyAsset) {
         cy.request(`${requestPath}.json`).then(({ body }) => {
@@ -78,17 +78,26 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const numRelatedContentGroups = body.relatedContent.groups.length;
 
-        if (numRelatedContentGroups > 0) {
-          const assetURI =
-            body.relatedContent.groups[0].promos[0].locators.assetUri;
-          cy.get('li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]')
-            .find('h3')
-            .within(() => {
-              cy.get('a')
-                .should('have.attr', 'href')
-                .and('include', assetURI);
-            });
+        const requestPath = Cypress.env('currentPath');
+        const isLegacyAsset = requestPath.split('/').length > 5;
+        if (isLegacyAsset) {
+          return cy.log('Test skipped because legacy MAP');
         }
+
+        if (numRelatedContentGroups <= 0) {
+          return cy.log('Test skipped because no related content');
+        }
+        const assetURI =
+          body.relatedContent.groups[0].promos[0].locators.assetUri;
+
+        cy.get('li[class^="StoryPromoLi"] > div[class^="StoryPromoWrapper"]')
+          .find('h3')
+          .within(() => {
+            cy.get('a')
+              .should('have.attr', 'href')
+              .and('include', assetURI);
+          });
+        return cy.log('Not legacy MAP, has related content');
       });
     });
   });

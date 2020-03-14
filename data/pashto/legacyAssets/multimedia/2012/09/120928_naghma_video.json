@@ -24,7 +24,7 @@
     "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "20195860" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -82,8 +82,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "ملټي ميډيا", "uri": "/pashto/multimedia", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCPashto.com", "uri": "/pashto", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "ملټي ميډيا",
+      "uri": "/pashto/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCPashto.com",
+      "uri": "/pashto",
+      "type": "simple"
+    },
     "groups": []
   }
 }
