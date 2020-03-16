@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IncludeContainer should not render any HTML when include toggle is disabled 1`] = `<div />`;
+
+exports[`IncludeContainer should not render any HTML when response returns with a status other than 200 1`] = `<div />`;
+
+exports[`IncludeContainer should render HTML when include toggle is enabled 1`] = `
+<div>
+  <div
+    class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+  >
+    <div>
+       
+      <script
+        type="text/javascript"
+      >
+        var count=0; function incrementCount(cnt){count=cnt + 1; document.getElementById('count').innerHTML=count;}; function decrementCount(cnt){count=cnt - 1; document.getElementById('count').innerHTML=count;}; 
+      </script>
+        
+      <style>
+        html{display: inline-flex;}span{background-color: #333; border-radius: 3px; color: #fff; padding: 1px 5px;}button{background-color: #fff; border: 1px solid currentColor; border-radius: 3px; cursor: pointer; outline: 0;}button:active{background-color: #333; color: #fff;}button, span{margin: 0 2px;}
+      </style>
+         
+      <div>
+         
+        <span
+          id="count"
+        >
+          0
+        </span>
+         
+        <button
+          onclick="incrementCount(count)"
+        >
+          Increase Count
+        </button>
+         
+        <button
+          onclick="decrementCount(count)"
+        >
+          Decrease Count
+        </button>
+         
+      </div>
+    </div>
+    ,
+  </div>
+</div>
+`;
