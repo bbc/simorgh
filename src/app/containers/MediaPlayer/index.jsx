@@ -14,8 +14,8 @@ import {
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import getImagePlaceholder from './helpers/getImagePlaceholder';
-import getImagePlaceholderSrcSet from './helpers/getImagePlaceholderSrcSet';
+import getImagePlaceholder from './utilities/getImagePlaceholder';
+import getImagePlaceholderSrcSet from './utilities/getImagePlaceholderSrcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
 import useToggle from '../Toggle/useToggle';

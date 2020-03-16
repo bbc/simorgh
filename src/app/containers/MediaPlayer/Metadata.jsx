@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { shape, string } from 'prop-types';
-import { mediaPlayerMetadata } from './helpers/metadata';
+import { mediaPlayerMetadata } from './utilities/metadata';
 
 const Metadata = ({ aresMediaBlock, embedSource }) => {
   const aresMediaBlocks = pathOr(null, ['model', 'blocks'], aresMediaBlock);
