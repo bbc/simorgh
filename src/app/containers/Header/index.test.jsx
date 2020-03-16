@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
@@ -7,16 +8,29 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
+import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 
 const defaultToggleState = {
   test: {
     navOnArticles: {
       enabled: true,
     },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
   },
   live: {
     navOnArticles: {
       enabled: false,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
     },
   },
 };
@@ -27,8 +41,9 @@ const mockToggleDispatch = jest.fn();
 const HeaderContainerWithContext = ({
   pageType,
   service = 'pidgin',
-  serviceContext = pidginServiceConfig.default,
+  serviceContext = pidginServiceConfig,
   bbcOrigin = 'https://www.test.bbc.com',
+  variant = 'default',
 }) => (
   <ToggleContext.Provider
     value={{
@@ -36,7 +51,7 @@ const HeaderContainerWithContext = ({
       toggleDispatch: mockToggleDispatch,
     }}
   >
-    <ServiceContext.Provider value={serviceContext}>
+    <ServiceContext.Provider value={serviceContext[variant]}>
       <RequestContextProvider
         isAmp={false}
         pageType={pageType}
@@ -44,6 +59,7 @@ const HeaderContainerWithContext = ({
         statusCode={200}
         bbcOrigin={bbcOrigin}
         pathname="/pathname"
+        variant={variant}
       >
         <HeaderContainer />
       </RequestContextProvider>
@@ -103,5 +119,34 @@ describe(`Header`, () => {
 
     const skipLink = document.querySelector("a[href$='#content']");
     expect(skipLink).toBeVisible();
+  });
+
+  const scriptLinkSelector = 'a[data-variant]';
+
+  it('should not render script link for a service without variants', () => {
+    render(
+      HeaderContainerWithContext({
+        pageType: 'frontPage',
+        service: 'pidgin',
+        serviceContext: pidginServiceConfig,
+      }),
+    );
+    expect(document.querySelectorAll(scriptLinkSelector).length).toBe(0);
+  });
+
+  it('should render script link for a service with variants', () => {
+    const { container } = render(
+      HeaderContainerWithContext({
+        pageType: 'frontPage',
+        service: 'serbian',
+        serviceContext: serbianServiceConfig,
+        variant: 'cyr',
+      }),
+      {
+        wrapper: MemoryRouter,
+      },
+    );
+
+    expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
   });
 });

@@ -293,14 +293,14 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             class="c6"
             lang="en-GB"
           >
-            Gee ntị Live,
+            Gee ntị Live, 
           </span>
           <span
             aria-hidden="true"
             class="c7"
             dir="ltr"
           >
-            LIVE
+            NA EME UGBU A 
           </span>
           <span>
             Test Radio Bulletin promo
@@ -641,14 +641,14 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             class="c6"
             lang="en-GB"
           >
-            Lee Live,
+            Lee Live, 
           </span>
           <span
             aria-hidden="true"
             class="c7"
             dir="ltr"
           >
-            LIVE
+            NA EME UGBU A 
           </span>
           <span>
             Test TV Bulletin promo
@@ -974,7 +974,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
             class="c6"
             lang="en-GB"
           >
-            Gee ntị,
+            Gee ntị, 
           </span>
           <span>
             Test Radio Bulletin promo
@@ -1306,7 +1306,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
             class="c6"
             lang="en-GB"
           >
-            Lee,
+            Lee, 
           </span>
           <span>
             Test TV Bulletin promo

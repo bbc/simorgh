@@ -1,66 +1,37 @@
-import React, { useContext, useEffect, useState } from 'react';
-import 'isomorphic-fetch';
+import React, { useContext } from 'react';
 import { string } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '../Toggle/useToggle';
-import webLogger from '#lib/logger.web';
+import Canonical from './Canonical';
 
-const logger = webLogger();
+const getRadioScheduleEndpoint = service =>
+  `/${service}/bbc_${service}_radio/schedule.json`;
 
-const RadioScheduleContainer = ({ endpoint }) => {
+const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { enabled } = useToggle('radioSchedule');
-  const { hasRadioSchedule } = useContext(ServiceContext);
-  const radioScheduleEnabled = enabled && hasRadioSchedule;
-
-  const [schedule, setRadioSchedule] = useState([]);
-
-  const handleResponse = async response => {
-    const radioScheduleData = await response.json();
-    setRadioSchedule(radioScheduleData.schedules);
-  };
-
-  useEffect(() => {
-    const fetchRadioScheduleData = pathname =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
-
-    if (radioScheduleEnabled) {
-      fetchRadioScheduleData(endpoint);
-    }
-  }, [endpoint, radioScheduleEnabled]);
+  const { isAmp } = useContext(RequestContext);
+  const { service, radioSchedule } = useContext(ServiceContext);
+  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   if (!radioScheduleEnabled) {
     return null;
   }
 
-  return (
-    <>
-      <p>Radio Schedules</p>
-      {schedule.map(
-        ({
-          broadcast,
-          transmissionTimeStart,
-          transmissionTimeEnd,
-          episode: {
-            presentationTitle,
-            synopses: { short },
-          },
-        }) => (
-          <ul key={broadcast.pid}>
-            <li>{presentationTitle}</li>
-            <li>{short}</li>
-            <li>{transmissionTimeStart}</li>
-            <li>{transmissionTimeEnd}</li>
-          </ul>
-        ),
-      )}
-    </>
-  );
+  const endpoint =
+    radioScheduleEndpointOverride || getRadioScheduleEndpoint(service);
+
+  return <Canonical endpoint={endpoint} />;
 };
 
 RadioScheduleContainer.propTypes = {
-  endpoint: string.isRequired,
+  radioScheduleEndpointOverride: string,
+};
+
+RadioScheduleContainer.defaultProps = {
+  radioScheduleEndpointOverride: null,
 };
 
 export default RadioScheduleContainer;

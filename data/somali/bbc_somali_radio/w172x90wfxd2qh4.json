@@ -1,0 +1,550 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90wfxd2qh4",
+    "locators": {},
+    "type": "WSRADIO",
+    "createdBy": "bbc_somali_radio",
+    "language": "so",
+    "lastUpdated": 1583601860035,
+    "firstPublished": 1582565117000,
+    "lastPublished": 1582565117000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Caawa Iyo Caalamka - BBC News Somali",
+      "pageIdentifier": "somali.bbc_somali_radio.w172x90wfxd2qh4.page",
+      "producerId": "83",
+      "contentType": "player-ondemand",
+      "producer": "SOMALI"
+    },
+    "passport": null,
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media"],
+    "title": "Caawa Iyo Caalamka"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172x90wfxd2qh4",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "06/03/2020 GMT",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshfqkkyhmrc5",
+            "types": ["Original"],
+            "duration": 1800,
+            "durationISO8601": "PT30M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1586111370000,
+            "availableFrom": 1583519370000
+          }
+        ],
+        "imageCopyright": null
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Caawa Iyo Caalamka"
+    },
+    "locators": {
+      "pid": "w172x90wfxd2qh4"
+    },
+    "media": {
+      "id": "w172x90wfxd2qh4",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "06/03/2020 GMT",
+      "synopses": {
+        "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+        "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshfqkkyhmrc5",
+          "types": ["Original"],
+          "duration": 1800,
+          "durationISO8601": "PT30M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1586111370000,
+          "availableFrom": 1583519370000
+        }
+      ],
+      "imageCopyright": null
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null
+    },
+    "brand": {
+      "pid": "p034117l",
+      "title": "Caawa Iyo Caalamka"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90wfxd2qh4"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Somali",
+      "uri": "/somali"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x90wfxcwxny"
+            },
+            "media": {
+              "id": "w172x90wfxcwxny",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "04/03/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqkkyhfyjz",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585938570000,
+                  "availableFrom": 1583346570000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90wfxcwxny"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x90wfxct0rv"
+            },
+            "media": {
+              "id": "w172x90wfxct0rv",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "03/03/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqkkyhc1mw",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585852170000,
+                  "availableFrom": 1583260170000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90wfxct0rv"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x91958p1s2d"
+            },
+            "media": {
+              "id": "w172x91958p1s2d",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "02/03/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqz99slsyf",
+                  "types": ["Original"],
+                  "duration": 1200,
+                  "durationISO8601": "PT20M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585765170000,
+                  "availableFrom": 1583173170000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x91958p1s2d"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x90w2n2hcph"
+            },
+            "media": {
+              "id": "w172x90w2n2hcph",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "01/03/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqk6p61dkj",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585679370000,
+                  "availableFrom": 1583087370000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90w2n2hcph"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x90w2n29kw9"
+            },
+            "media": {
+              "id": "w172x90w2n29kw9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "28/02/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqk6p5vlrb",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585506570000,
+                  "availableFrom": 1582914570000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90w2n29kw9"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x90w2n23s23"
+            },
+            "media": {
+              "id": "w172x90w2n23s23",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "26/02/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqk6p5nsy4",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585333770000,
+                  "availableFrom": 1582741770000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90w2n23s23"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x90w2n20w50"
+            },
+            "media": {
+              "id": "w172x90w2n20w50",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "25/02/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqk6p5kx11",
+                  "types": ["Original"],
+                  "duration": 1800,
+                  "durationISO8601": "PT30M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585247370000,
+                  "availableFrom": 1582655370000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x90w2n20w50"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172x918t0c8mgk"
+            },
+            "media": {
+              "id": "w172x918t0c8mgk",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "24/02/2020 GMT",
+              "synopses": {
+                "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+                "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshfqyy1gtnbl",
+                  "types": ["Original"],
+                  "duration": 1200,
+                  "durationISO8601": "PT20M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1585160370000,
+                  "availableFrom": 1582568370000
+                }
+              ],
+              "imageCopyright": null
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null
+            },
+            "brand": {
+              "pid": "p034117l",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_radio/w172x918t0c8mgk"
+          }
+        ]
+      }
+    ]
+  }
+}
