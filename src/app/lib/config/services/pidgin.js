@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: true,
+    },
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'New Informate',
@@ -37,8 +40,9 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
     fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',
     isTrustProjectParticipant: true,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
@@ -233,6 +237,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/pidgin/institutional-42188215',
           text: 'Call BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. De external site no concern BBC.',

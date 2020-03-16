@@ -14,10 +14,10 @@ import {
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
+import getImagePlaceholder from './utilities/getImagePlaceholder';
+import getImagePlaceholderSrcSet from './utilities/getImagePlaceholderSrcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
-import buildIChefURL from '#lib/utilities/ichefURL';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -26,7 +26,6 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 
-const DEFAULT_WIDTH = 512;
 const MediaPlayerContainer = ({
   blocks,
   assetId,
@@ -102,12 +101,9 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
-  const placeholderSrc = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_WIDTH,
-  });
+  const placeholderSrcset = getImagePlaceholderSrcSet(originCode, locator);
+
+  const placeholderSrc = getImagePlaceholder(originCode, locator);
 
   const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,

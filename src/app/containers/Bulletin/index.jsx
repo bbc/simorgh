@@ -3,7 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '@bbc/psammead-bulletin';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
-import { createSrcset } from '#lib/utilities/srcSet';
+import createSrcset from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
@@ -17,7 +17,7 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
-  const sizes = '(max-width: 1008px) 33vw, 237px';
+  const sizes = '(max-width: 1008px) 50vw, 496px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 

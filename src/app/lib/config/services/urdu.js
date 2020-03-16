@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ur',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -36,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
     twitterSite: '@bbcurdu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/urdu/institutional-49282935#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/urdu/institutional-49282935',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
@@ -191,6 +195,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

@@ -23,8 +23,6 @@ const baseServiceConfig = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCChina',
   twitterSite: '@BBCChina',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
@@ -41,6 +39,9 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
     lang: `zh-hans`,
@@ -50,6 +51,10 @@ export const service = {
     videoCaptionOffscreenText: '视频加注文字, ',
     imageCaptionOffscreenText: '图像加注文字, ',
     imageCopyrightOffscreenText: '图像来源, ',
+    noBylinesPolicy:
+      'https://www.bbc.com/ukchina/simp/institutional-51359562#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/ukchina/simp/institutional-51359562',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/ukchina/simp/institutional-51359562',
@@ -75,6 +80,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: '联络BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
@@ -210,6 +221,9 @@ export const service = {
   },
   trad: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     lang: `zh-hant`,
     locale: `zh-hant`,
     externalLinkText: ', 外部鏈接',
@@ -219,6 +233,10 @@ export const service = {
     videoCaptionOffscreenText: '視頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
+    noBylinesPolicy:
+      'https://www.bbc.com/ukchina/trad/institutional-51359562#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/ukchina/trad/institutional-51359562',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/ukchina/trad/institutional-51359562',
@@ -244,6 +262,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: '聯絡BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',

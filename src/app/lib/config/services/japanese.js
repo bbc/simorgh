@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ja`,
     articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
@@ -33,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/japanese/help-49677253#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/japanese/help-49677253',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
@@ -186,6 +190,12 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/contact',
           text: 'BBCに連絡する',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBCは外部サイトの内容に責任を負いません。',

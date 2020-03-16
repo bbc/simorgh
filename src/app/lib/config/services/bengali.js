@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'আপডেট হয়েছে',
@@ -36,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbangla',
     twitterSite: '@bbcbangla',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/bengali/institutional-50409861#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
     script: bengali,
     manifestPath: '/manifest.json',
@@ -199,6 +203,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
@@ -209,10 +219,6 @@ export const service = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
-      },
-      {
-        title: 'খবর',
-        url: '/bengali/news',
       },
       {
         title: 'অডিও',
