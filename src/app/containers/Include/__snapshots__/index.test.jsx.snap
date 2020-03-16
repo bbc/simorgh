@@ -10,17 +10,61 @@ exports[`IncludeContainer should render HTML when include toggle is enabled 1`] 
     class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
   >
     <div>
-       
+      
+
+
       <script
         type="text/javascript"
       >
-        var count=0; function incrementCount(cnt){count=cnt + 1; document.getElementById('count').innerHTML=count;}; function decrementCount(cnt){count=cnt - 1; document.getElementById('count').innerHTML=count;}; 
-      </script>
         
+    var count = 0;
+
+    function incrementCount(cnt) {
+        count = cnt + 1;
+        document.getElementById('count').innerHTML = count;
+    };
+
+    function decrementCount(cnt) {
+        count = cnt - 1;
+        document.getElementById('count').innerHTML = count;
+    };
+
+      </script>
+      
+
+    
       <style>
-        html{display: inline-flex;}span{background-color: #333; border-radius: 3px; color: #fff; padding: 1px 5px;}button{background-color: #fff; border: 1px solid currentColor; border-radius: 3px; cursor: pointer; outline: 0;}button:active{background-color: #333; color: #fff;}button, span{margin: 0 2px;}
+        
+        html {
+            display: inline-flex;
+        }
+        span {
+            background-color: #333;
+            border-radius: 3px;
+            color: #fff;
+            padding: 1px 5px;
+        }
+        button {
+            background-color: #fff;
+            border: 1px solid currentColor;
+            border-radius: 3px;
+            cursor: pointer;
+            outline: 0;
+        }
+        button:active {
+            background-color: #333;
+            color: #fff;
+        }
+        button,
+        span {
+            margin: 0 2px;
+        }
+    
       </style>
-         
+      
+
+
+    
       <div>
          
         <span
@@ -28,20 +72,26 @@ exports[`IncludeContainer should render HTML when include toggle is enabled 1`] 
         >
           0
         </span>
-         
+        
+        
         <button
           onclick="incrementCount(count)"
         >
           Increase Count
         </button>
-         
+        
+        
         <button
           onclick="decrementCount(count)"
         >
           Decrease Count
         </button>
-         
+        
+    
       </div>
+      
+
+
     </div>
     ,
   </div>
