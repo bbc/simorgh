@@ -45,7 +45,7 @@ const toggles = {
       enabled: true,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
     },
     scriptLink: {
       enabled: true,
