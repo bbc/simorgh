@@ -9,6 +9,60 @@ export const mediaPromoPropTypes = {
   type: string,
 };
 
+export const onDemandRadioPromoPropTypes = {
+  headlines: shape({
+    headline: string,
+  }),
+  locators: shape({
+    pid: string,
+  }),
+  media: shape({
+    id: string,
+    subType: string,
+    format: string,
+    title: string,
+    synopses: shape({
+      short: string,
+      medium: string,
+    }),
+    imageUrl: string,
+    embedding: bool,
+    advertising: bool,
+    versions: arrayOf(
+      shape({
+        versionId: string,
+        types: arrayOf(string),
+        duration: number,
+        durationISO8601: string,
+        warnings: shape({}),
+        availableTerritories: shape({
+          uk: bool,
+          nonUk: bool,
+          world: bool,
+        }),
+        availableUntil: number,
+        availableFrom: number,
+      }),
+    ),
+    imageCopyright: string,
+  }),
+  indexImage: shape({
+    id: string,
+    subType: string,
+    href: string,
+    path: string,
+    height: number,
+    width: number,
+    altText: string,
+    copyrightHolder: string,
+  }),
+  brand: shape({
+    pid: string,
+    title: string,
+  }),
+  id: string,
+};
+
 export const optimoPromoPropTypes = {
   id: string.isRequired,
   headlines: shape({
