@@ -112,7 +112,7 @@
     "ora": "^4.0.3",
     "path-to-regexp": "^6.1.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
-    "ramda": "^0.26.1",
+    "ramda": "^0.27.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
