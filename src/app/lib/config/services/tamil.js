@@ -40,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'முகப்பு',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -170,6 +169,9 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/tamil/institutional-50288575',
@@ -200,6 +202,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/tamil/institutional-37288738',
           text: 'பிபிசி-யை தொடர்பு கொள்க',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

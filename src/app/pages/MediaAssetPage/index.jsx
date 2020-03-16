@@ -11,7 +11,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import pathOr from 'ramda/src/pathOr';
 import MediaMessage from './MediaMessage';
-import { GhostGrid } from '#lib/styledGrid';
+import { GridWrapper } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -20,7 +20,7 @@ import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import MediaPlayer from '#containers/CpsAssetMediaPlayer';
+import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ATIAnalytics from '#containers/ATIAnalytics';
@@ -70,14 +70,22 @@ const MediaAssetPage = ({ pageData }) => {
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
+
+    // There are niche scenarios where we receive legacy MAPs that contain modern video blocks
+    // This is not something we currently support, so we return an error message
     video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
-      : props => <MediaPlayer {...props} assetUri={assetUri} />,
-    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    legacyMedia: MediaMessage,
+      : props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+
+    legacyMedia: props => (
+      <CpsAssetMediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
+    ),
+
+    // "Versions" are live streams
+    version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
   };
 
-  const StyledGhostGrid = styled(GhostGrid)`
+  const StyledGrid = styled(GridWrapper)`
     width: 100%;
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -116,9 +124,9 @@ const MediaAssetPage = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGhostGrid as="main" role="main">
+      <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGhostGrid>
+      </StyledGrid>
       <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );

@@ -29,7 +29,9 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
+  radioSchedule: {
+    hasRadioSchedule: false,
+  },
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -84,7 +86,7 @@ export const service = {
       header: '热读',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -132,6 +134,11 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/simp',
       },
     ],
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+      variant: 'trad',
+    },
     translations: {
       seeAll: '浏览全部',
       home: '主页',
@@ -270,6 +277,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: '聯絡BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
@@ -277,7 +290,7 @@ export const service = {
       header: '熱讀',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -325,6 +338,11 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/trad',
       },
     ],
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+      variant: 'simp',
+    },
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',

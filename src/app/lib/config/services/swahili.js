@@ -39,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -167,6 +166,10 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/swahili/taasisi-49283417',
@@ -197,6 +200,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
           text: 'Wasiliana na BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',

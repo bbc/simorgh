@@ -2,6 +2,7 @@ import Cookie from 'js-cookie';
 import {
   getCookiePolicy,
   getPreferredVariant,
+  setPreferredVariantCookie,
   personalisationEnabled,
 } from '.';
 
@@ -44,6 +45,89 @@ describe('UserContext cookies', () => {
     it('should return cookie value from js-cookie', () => {
       Cookie.get.mockReturnValue('trad');
       expect(getPreferredVariant('zhongwen')).toEqual('trad');
+    });
+
+    it('should get a cookie using check ckps_chinese for zhongwen', () => {
+      Cookie.get.mockReturnValue('trad');
+      getPreferredVariant('zhongwen');
+      expect(Cookie.get).toBeCalledWith('ckps_chinese');
+    });
+
+    it('should get a cookie using check ckps_chinese for ukchina', () => {
+      Cookie.get.mockReturnValue('trad');
+      getPreferredVariant('ukchina');
+      expect(Cookie.get).toBeCalledWith('ckps_chinese');
+    });
+
+    it('should get a cookie using check ckps_serbian for serbian', () => {
+      Cookie.get.mockReturnValue('lat');
+      getPreferredVariant('serbian');
+      expect(Cookie.get).toBeCalledWith('ckps_serbian');
+    });
+  });
+
+  describe('setPreferredVariant', () => {
+    Cookie.set = jest.fn();
+    it('should not set invalid service or variant', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('news', '');
+      expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariantCookie('');
+      expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariantCookie('news');
+      expect(Cookie.set).not.toHaveBeenCalled();
+      setPreferredVariantCookie();
+      expect(Cookie.set).not.toHaveBeenCalled();
+    });
+
+    it('should set preferred variant if personalisation cookies enabled', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('foo', 'bar');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_foo', 'bar', {
+        domain: '.bbc.com',
+        expires: 7,
+      });
+    });
+
+    it('should not set preferred variant if personalisation cookies not enabled', () => {
+      Cookie.get.mockReturnValue('110');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+
+      Cookie.get.mockReturnValue('100');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+
+      Cookie.get.mockReturnValue('000');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).not.toHaveBeenCalled();
+    });
+
+    it('should set ckps_serbian for serbian', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('serbian', 'lat');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_serbian', 'lat', {
+        domain: '.bbc.com',
+        expires: 7,
+      });
+    });
+
+    it('should set ckps_chinese for zhongwen', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('zhongwen', 'simp');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp', {
+        domain: '.bbc.com',
+        expires: 7,
+      });
+    });
+
+    it('should set ckps_chinese for ukchina', () => {
+      Cookie.get.mockReturnValue('111');
+      setPreferredVariantCookie('ukchina', 'simp');
+      expect(Cookie.set).toHaveBeenCalledWith('ckps_chinese', 'simp', {
+        domain: '.bbc.com',
+        expires: 7,
+      });
     });
   });
 

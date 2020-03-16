@@ -45,7 +45,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -170,6 +169,12 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
+      frequenciesPageLabel: 'Radio Frequencies Link Label',
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/pashto/institutional-49283007',
@@ -199,6 +204,12 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
