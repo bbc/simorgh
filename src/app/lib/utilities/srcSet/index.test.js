@@ -1,4 +1,4 @@
-import { createSrcset, getPlaceholderSrcSet } from '.';
+import createSrcset from '.';
 
 describe('create srcset', () => {
   const srcsetScenarios = [
@@ -45,15 +45,4 @@ describe('create srcset', () => {
       });
     },
   );
-});
-
-describe('Placeholder srcset', () => {
-  const locator = 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg';
-  const originCode = 'mpv';
-  const expected =
-    'https://ichef.test.bbci.co.uk/images/ic/240xn/p01kdbpk.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kdbpk.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kdbpk.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kdbpk.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kdbpk.jpg 800w';
-  it('should placeholder image with srcset', () => {
-    const placeholderSrcset = getPlaceholderSrcSet({ locator, originCode });
-    expect(placeholderSrcset).toEqual(expected);
-  });
 });

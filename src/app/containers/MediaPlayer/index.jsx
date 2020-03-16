@@ -14,10 +14,10 @@ import {
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
-import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
+import getImagePlaceholder from './helpers/getImagePlaceholder';
+import getImagePlaceholderSrcSet from './helpers/getImagePlaceholderSrcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
-import buildIChefURL from '#lib/utilities/ichefURL';
 import useToggle from '../Toggle/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -25,9 +25,6 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
-
-const DEFAULT_WIDTH = 512;
-const DEFAULT_IMAGE = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/amp_audio_placeholder.png`;
 
 const MediaPlayerContainer = ({
   blocks,
@@ -104,15 +101,9 @@ const MediaPlayerContainer = ({
     return null; // this should be the holding image with an error overlay
   }
 
-  const placeholderSrcset =
-    getPlaceholderSrcSet({ originCode, locator }) || DEFAULT_IMAGE;
+  const placeholderSrcset = getImagePlaceholderSrcSet(originCode, locator);
 
-  const placeholderSrc =
-    buildIChefURL({
-      originCode,
-      locator,
-      resolution: DEFAULT_WIDTH,
-    }) || DEFAULT_IMAGE;
+  const placeholderSrc = getImagePlaceholder(originCode, locator);
 
   const embedSource = getEmbedUrl({
     mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,

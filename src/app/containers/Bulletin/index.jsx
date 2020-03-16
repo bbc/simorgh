@@ -3,7 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '@bbc/psammead-bulletin';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
-import { createSrcset } from '#lib/utilities/srcSet';
+import createSrcset from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
