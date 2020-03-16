@@ -10,6 +10,7 @@
       "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
     },
     "summary": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
+    "timestamp": 1580745507000,
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
@@ -80,6 +81,7 @@
       "curie": "http://www.bbc.co.uk/asset/bc8c6f47-cc26-1a49-8bd8-fc679131aa17"
     },
     "summary": "مجموعة منتقاة من الصور لنجم هوليود كيرك دوغلاس بمناسبة مرور مئة عام عام على مولده",
+    "timestamp": 1580745507000,
     "passport": {
       "taggings": []
     },

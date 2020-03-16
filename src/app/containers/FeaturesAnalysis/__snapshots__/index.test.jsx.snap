@@ -85,6 +85,12 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               >
                 This is a test asset used in Simorgh, please do not edit it without asking.
               </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="2020-02-03"
+              >
+                3rd February 2020
+              </time>
             </div>
           </div>
         </li>
@@ -133,6 +139,12 @@ exports[`CpsRelatedContent should render Story Feature components when given app
               >
                 Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
               </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="2020-02-03"
+              >
+                3rd February 2020
+              </time>
             </div>
           </div>
         </li>

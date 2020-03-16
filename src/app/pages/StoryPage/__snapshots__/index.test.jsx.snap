@@ -154,6 +154,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   transition: visibility 0.2s linear;
 }
 
+.c57 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c28 {
   padding-top: 56.25%;
   position: relative;
@@ -659,6 +669,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c20 {
     padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c57 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c57 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1828,6 +1852,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               >
                                 This is a test asset used in Simorgh, please do not edit it without asking.
                               </p>
+                              <time
+                                class="c57"
+                                datetime="2020-02-03"
+                              >
+                                3rd February 2020
+                              </time>
                             </div>
                           </div>
                         </li>
@@ -1876,6 +1906,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               >
                                 Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                               </p>
+                              <time
+                                class="c57"
+                                datetime="2020-02-03"
+                              >
+                                3rd February 2020
+                              </time>
                             </div>
                           </div>
                         </li>
@@ -2069,6 +2105,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 .c22:last-child {
   padding-bottom: 1rem;
+}
+
+.c59 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c30 {
@@ -2592,6 +2638,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) {
   .c22 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c59 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c59 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3991,6 +4051,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   >
                                     This is a test asset used in Simorgh, please do not edit it without asking.
                                   </p>
+                                  <time
+                                    class="c59"
+                                    datetime="2020-02-03"
+                                  >
+                                    3rd February 2020
+                                  </time>
                                 </div>
                               </div>
                             </li>
@@ -4039,6 +4105,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   >
                                     Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                                   </p>
+                                  <time
+                                    class="c59"
+                                    datetime="2020-02-03"
+                                  >
+                                    3rd February 2020
+                                  </time>
                                 </div>
                               </div>
                             </li>
