@@ -1,10 +1,10 @@
 import Cookie from 'js-cookie';
+import setCookie from '#lib/utilities/setCookie';
 import setCookieOven from './setCookieOven';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
-const COOKIE_EXPIRY = 365;
 const COOKIE_BANNER_APPROVED = '1';
 const EXPLICIT_COOKIE_ACCEPTED_VALUES = ['1', '2'];
 const POLICY_APPROVED = '111';
@@ -13,23 +13,6 @@ const PRIVACY_COOKIE_CURRENT = 'july2019';
 const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
-
-const removeDomainRestrictions = domain => {
-  const domainParts = domain.split('.');
-  const isBBCDomain = domainParts.includes('bbc');
-
-  if (isBBCDomain) {
-    const indexOfBBCDomainName = domainParts.indexOf('bbc');
-    return `.${domainParts.slice(indexOfBBCDomainName).join('.')}`;
-  }
-  return domain;
-};
-
-const setCookie = (name, value) =>
-  Cookie.set(name, value, {
-    expires: COOKIE_EXPIRY,
-    domain: removeDomainRestrictions(document.domain),
-  });
 
 const setPolicyCookie = (value, logger) => {
   setCookie(POLICY_COOKIE, value);
