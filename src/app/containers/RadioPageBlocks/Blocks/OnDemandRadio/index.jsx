@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
-import { string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import MediaMessage from '#pages/MediaAssetPage/MediaMessage';
 
@@ -18,11 +17,11 @@ const MediaPlayerInnerWrapper = styled.div`
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
 
-const OnDemandRadioContainer = ({ id }) => {
+const OnDemandRadioContainer = () => {
   const { platform } = useContext(RequestContext);
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
-  if (!isValidPlatform || !id) return null;
+  if (!isValidPlatform) return null;
 
   return (
     <MediaPlayerOuterWrapper>
@@ -31,10 +30,6 @@ const OnDemandRadioContainer = ({ id }) => {
       </MediaPlayerInnerWrapper>
     </MediaPlayerOuterWrapper>
   );
-};
-
-OnDemandRadioContainer.propTypes = {
-  id: string.isRequired,
 };
 
 export default OnDemandRadioContainer;

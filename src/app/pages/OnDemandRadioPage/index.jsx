@@ -4,11 +4,10 @@ import styled from 'styled-components';
 import path from 'ramda/src/path';
 import MetadataContainer from '../../containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import RadioPageBlocks from '../../containers/RadioPageBlocks';
+import OnDemandRadio from '#containers/RadioPageBlocks/Blocks/OnDemandRadio';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const OnDemandRadioPage = ({ pageData }) => {
-  const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
   const { dir } = useContext(ServiceContext);
@@ -59,7 +58,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <RadioPageBlocks blocks={blocks} onDemand />
+          <OnDemandRadio />
         </Grid>
       </StyledGelPageGrid>
     </>
