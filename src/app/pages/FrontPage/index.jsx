@@ -29,7 +29,6 @@ import MostReadContainer from '#containers/MostRead';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-import useToggles from '#containers/Toggle/useToggle';
 
 export const StyledFrontPageMain = styled.main`
   background-color: ${C_GHOST};
@@ -63,12 +62,6 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
-const GreyBox = styled.div`
-  background: #ccc;
-  height: 5rem;
-  padding-top: 1rem;
-`;
-
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
@@ -76,7 +69,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     translations,
     frontPageTitle,
   } = useContext(ServiceContext);
-  const { enabled } = useToggles('ads');
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -114,7 +106,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <StyledFrontPageMain role="main">
-        {enabled && <GreyBox />}
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
