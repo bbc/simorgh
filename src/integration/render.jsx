@@ -45,11 +45,13 @@ const getParams = pathname => {
   const { params } = matchPath(pathname, {
     path,
   });
+
   return params;
 };
 
 const getService = pathname => {
   const { service } = getParams(pathname);
+
   return service;
 };
 
@@ -99,10 +101,10 @@ export const renderAsReact = async url => {
 
 /*
  * renderAsJsDom should only be used for writing integration tests that are not user oriented such as analytics or SEO or
- * require full DOM rendering for access to attributes on the `html`, things inside of `noscript` tags or things inside of
- * the head of the document. This function will not render a working React app so will not attach event listeners or use state
- * or rerender. Instead it will return the full page HTML inside of a JSDOM emulation of a web browser that you can use to
- * query the DOM and assert markup has been rendered correctly.
+ * require full DOM rendering for access to attributes on the `html` element, things inside of `noscript` tags or things inside of
+ * the head of the document such as meta tags. This function will not render a working React app so will not attach event listeners
+ * or use state or rerender. Instead it will return the full page HTML inside of a JSDOM emulation of a web browser that you can
+ * use to query the DOM and assert markup has been rendered correctly.
  */
 export const renderAsJsDom = async url => {
   Helmet.canUseDOM = false;
