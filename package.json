@@ -114,7 +114,7 @@
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "^0.26.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "react-lazyload": "^2.6.5",
     "react-router": "^5.1.2",
