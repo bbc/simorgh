@@ -33,7 +33,7 @@ const IncludeContainer = ({ href }) => {
     }
   }, [href, enabled]);
 
-  const shouldNotDisplayInclude = hasError || !(markup && enabled);
+  const shouldNotDisplayInclude = hasError || !markup || !enabled;
 
   if (shouldNotDisplayInclude) {
     return null;
