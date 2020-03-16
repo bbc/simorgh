@@ -2776,7 +2776,9 @@ const genServices = {
         environments: {
           live: {
             paths: [
+              '/persian/media-49522521', // CPS MAP with live stream
               '/persian/world-51497110', // CPS MAP with video clip
+              '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
               // '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP with video clip
             ],
             enabled: true,
