@@ -4,6 +4,7 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -36,6 +37,9 @@ const RadioScheduleSection = styled.section.attrs(() => ({
 
   /* To remove GEL Margins */
   margin: 0 -${GEL_MARGIN_BELOW_400PX};
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    padding-bottom: ${GEL_SPACING_DBL};
+  }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_MARGIN_ABOVE_400PX};
@@ -46,17 +50,20 @@ const RadioScheduleSection = styled.section.attrs(() => ({
 const MarginWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 0;
   width: 100%; /* Needed for IE11 */
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     margin-top: ${GEL_SPACING_DBL};
   }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_DBL};
+  }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_TRPL};
-  }
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-bottom: ${GEL_SPACING_DBL};
+    padding-bottom: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
     margin-bottom: ${GEL_SPACING_TRPL};
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
@@ -66,9 +73,13 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
   margin-left: auto;
   margin-right: auto;
   width: 100%; /* Needed for IE11 */
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING_TRPL};
+  }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_QUAD};
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+    padding-top: ${GEL_SPACING_QUAD};
   }
 `;
 
