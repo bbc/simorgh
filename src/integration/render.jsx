@@ -10,6 +10,10 @@ import routes from '../app/routes';
 import App from '#containers/App/App'; // eslint-disable-line import/no-named-as-default
 import DocumentComponent from '../server/Document/component';
 
+/* getByText can only select text inside of one dom element and you will see error:
+ * "Unable to find an element with the text: 'example'. This could be because the text is broken up by multiple elements."
+ * Use getByTextSpecial to select text that spans multiple dom elements e.g. <h1>This is a <span>headline</span></h1>
+ */
 const getByTextSpecial = getByText => text =>
   getByText((content, node) => {
     const hasText = ({ textContent }) => textContent === text;
@@ -69,7 +73,13 @@ const getAppComponent = async url => {
   );
 };
 
-export default async url => {
+/*
+ * renderAsReact renders page components using React Testing Library which exposes helpful methods and utilities to encourage
+ * writing UI integration tests that closely resemble how our web pages are used by real users. More info https://testing-library.com/docs/guiding-principles
+ * React Testing Library will only render everything inside of the `body` tag. For SEO/Analytics tests that do not concern the user and
+ * require full DOM rendering you will need to use `renderAsJsDom` function.
+ */
+export const renderAsReact = async url => {
   const appComponent = await getAppComponent(url);
   const renderResult = render(appComponent);
 
@@ -87,7 +97,14 @@ export default async url => {
   };
 };
 
-export const renderFullHTML = async url => {
+/*
+ * renderAsJsDom should only be used for writing integration tests that are not user oriented such as analytics or SEO or
+ * require full DOM rendering for access to attributes on the `html`, things inside of `noscript` tags or things inside of
+ * the head of the document. This function will not render a working React app so will not attach event listeners or use state
+ * or rerender. Instead it will return the full page HTML inside of a JSDOM emulation of a web browser that you can use to
+ * query the DOM and assert markup has been rendered correctly.
+ */
+export const renderAsJsDom = async url => {
   Helmet.canUseDOM = false;
 
   const pathname = getPathname(url);
