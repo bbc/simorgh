@@ -1,6 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import nodeLogger from '#lib/logger.node';
+import logCodes from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -32,7 +33,7 @@ const transformer = pageData => {
       logger.warn(
         JSON.stringify(
           {
-            event: 'no_media_block',
+            event: logCodes.noMediaBlock,
             message: 'No media detected in response',
           },
           null,

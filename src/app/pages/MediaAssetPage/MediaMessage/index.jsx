@@ -16,6 +16,7 @@ import { MediaMessage } from '@bbc/psammead-media-player';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import nodeLogger from '#lib/logger.node';
+import logCodes from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -53,7 +54,7 @@ export default () => {
     logger.info(
       JSON.stringify(
         {
-          event: 'no_translation_found',
+          event: logCodes.noTranslationFound,
           message: `No ${service} translation found for "${message}"`,
         },
         null,
