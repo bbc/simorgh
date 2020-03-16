@@ -130,5 +130,5 @@ export const renderAsJsDom = async url => {
 
   const { window } = new JSDOM(staticMarkup);
 
-  return { window, document: window.document };
+  return { window, document: window.document }; // TODO it would be nice to work out how to add window/document to the global scope like React testing Library does
 };
