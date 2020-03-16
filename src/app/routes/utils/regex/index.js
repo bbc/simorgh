@@ -7,6 +7,7 @@ import {
   getSwRegex,
   getManifestRegex,
   getCpsAssetRegex,
+  getLiveRadioRegex,
   getRadioAndTVRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
@@ -31,6 +32,9 @@ export const frontPageManifestPath = getManifestRegex(allServices);
 
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
+
+export const liveRadioPath = getLiveRadioRegex(allServices);
+export const liveRadioDataPath = `${liveRadioPath}.json`;
 
 export const radioAndTvPath = getRadioAndTVRegex(allServices);
 export const radioAndTvDataPath = `${radioAndTvPath}.json`;
