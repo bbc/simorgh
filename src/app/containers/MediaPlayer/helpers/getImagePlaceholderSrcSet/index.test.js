@@ -14,7 +14,7 @@ describe('getImagePlaceholderSrcSet', () => {
     it('should be returned if no origin code', () => {
       const originCode = undefined;
       const locator = 'locator';
-      expect(getImagePlaceholderSrcSet({ originCode, locator })).toBe(
+      expect(getImagePlaceholderSrcSet(originCode, locator)).toBe(
         defaultImageSet,
       );
     });
@@ -22,7 +22,7 @@ describe('getImagePlaceholderSrcSet', () => {
     it('should be returned if no locator', () => {
       const originCode = 'originCode';
       const locator = undefined;
-      expect(getImagePlaceholderSrcSet({ originCode, locator })).toBe(
+      expect(getImagePlaceholderSrcSet(originCode, locator)).toBe(
         defaultImageSet,
       );
     });
