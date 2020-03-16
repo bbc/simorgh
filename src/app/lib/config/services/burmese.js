@@ -154,7 +154,7 @@ export const service = {
           subtitle:
             'မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။',
         },
-        listen: 'Listen',
+        listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
@@ -198,6 +198,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/burmese/institutional-37577525',
           text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

@@ -20,19 +20,15 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
+import RadioScheduleContainer from '#containers/RadioSchedule';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
-
-export const StyledFrontPageMain = styled.main`
-  background-color: ${C_GHOST};
-`;
 
 export const StyledFrontPageDiv = styled.div`
   /* To add GEL Margins */
@@ -105,7 +101,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <StyledFrontPageMain role="main">
+      <main role="main">
         <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
           {offScreenText}
         </VisuallyHiddenText>
@@ -114,11 +110,12 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
+              {group.type === 'top-stories' && <RadioScheduleContainer />}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}
         </StyledFrontPageDiv>
-      </StyledFrontPageMain>
+      </main>
     </>
   );
 };
