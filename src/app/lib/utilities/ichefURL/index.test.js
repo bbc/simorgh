@@ -30,22 +30,4 @@ describe('getIchefURL', () => {
     const originCode = 'pips';
     expect(getIChefURL({ locator, originCode })).toEqual(locator);
   });
-
-  it('should return empty string if locator undefined', () => {
-    const locator = undefined;
-    const originCode = 'origin';
-    expect(getIChefURL({ locator, originCode })).toEqual('');
-  });
-
-  it('should return empty string if originCode undefined', () => {
-    const locator = 'locator';
-    const originCode = undefined;
-    expect(getIChefURL({ locator, originCode })).toEqual('');
-  });
-
-  it('should return empty string if both locator and originCode undefined', () => {
-    const locator = undefined;
-    const originCode = undefined;
-    expect(getIChefURL({ locator, originCode })).toEqual('');
-  });
 });
