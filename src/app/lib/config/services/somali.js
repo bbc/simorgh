@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
+    chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
     serviceLocalizedName: 'Somali',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Somali',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
+      navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -170,6 +171,10 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/somali/hayadeed-49283375',
@@ -199,6 +204,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/somali/hayadeed-37098613',
           text: 'La xiriir BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -244,7 +255,6 @@ export const service = {
         url: '/somali/media/photogalleries',
       },
     ],
-    navigationSection: 'Qaybaha',
   },
 };
 

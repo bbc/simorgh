@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'अद्यावधिक गरिएको समय',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
+    chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
+      navMenuText: 'सूची',
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -161,6 +162,9 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/nepali/institutional-50318130',
@@ -191,6 +195,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         '२०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
@@ -201,10 +211,6 @@ export const service = {
       {
         title: 'मुख पृष्ठ',
         url: '/nepali',
-      },
-      {
-        title: 'समाचार',
-        url: '/nepali/news',
       },
       {
         title: 'पछिल्लो कार्यक्रम',
@@ -219,7 +225,6 @@ export const service = {
         url: '/nepali/media/video',
       },
     ],
-    navigationSection: 'सूची',
   },
 };
 

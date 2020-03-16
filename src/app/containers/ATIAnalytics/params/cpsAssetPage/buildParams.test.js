@@ -4,6 +4,7 @@ import {
 } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
+import payloadLegacy from '#data/gahuza/legacyAssets/video/2016/01/160108_australia_fire_video.json';
 
 // Mocks
 analyticsUtils.getAtUserId = jest.fn();
@@ -19,6 +20,17 @@ const requestContext = {
   statsDestination: 'statsDestination',
   previousPath: 'previousPath',
   origin: 'origin',
+  canonicalLink: 'https://www.bbc.com/pidgin/51536047',
+};
+
+const requestContextLegacy = {
+  platform: 'platform',
+  isUK: 'isUK',
+  statsDestination: 'statsDestination',
+  previousPath: 'previousPath',
+  origin: 'origin',
+  canonicalLink:
+    'https://www.bbc.com/gahuza/video/2016/01/160108_australia_fire_video',
 };
 
 const serviceContext = {
@@ -32,7 +44,7 @@ const expectation = {
   appName: serviceContext.atiAnalyticsAppName,
   categoryName: 'News',
   campaigns: payload.metadata.passport.campaigns,
-  contentId: payload.metadata.id,
+  contentId: 'urn:bbc:cps:a753e377-f11b-5646-9c9b-4775bfa4e692',
   contentType: 'test-content-type',
   language: payload.metadata.language,
   libraryVersion: analyticsUtils.LIBRARY_VERSION,
@@ -47,6 +59,21 @@ const expectation = {
   ldpThingLabels: 'Technology~Nigeria',
   ldpThingIds:
     '31684f19-84d6-41f6-b033-7ae08098572a~3d5d5e30-dd50-4041-96d5-c970b20005b9',
+};
+
+const expectationLegacy = {
+  appName: serviceContext.atiAnalyticsAppName,
+  contentId: 'urn:bbc:topcat:3ed6950e-b63b-11e5-b876-9dc73db9bd6e',
+  contentType: 'test-content-type',
+  language: payloadLegacy.metadata.language,
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
+  pageTitle: `${payloadLegacy.promo.headlines.headline} - ${serviceContext.brandName}`,
+  platform: requestContextLegacy.platform,
+  producerId: serviceContext.atiAnalyticsProducerId,
+  statsDestination: requestContextLegacy.statsDestination,
+  service: 'service',
+  timePublished: analyticsUtils.getPublishedDatetime(),
+  timeUpdated: analyticsUtils.getPublishedDatetime(),
 };
 
 describe('buildCpsAssetPageATIParams', () => {
@@ -78,6 +105,16 @@ describe('buildCpsAssetPageATIParams', () => {
       'test-content-type',
     );
     expect(result).toEqual({ ...expectation, pageIdentifier: 'invalid' });
+  });
+
+  it('should return the right object', () => {
+    const result = buildCpsAssetPageATIParams(
+      payloadLegacy,
+      requestContextLegacy,
+      serviceContext,
+      'test-content-type',
+    );
+    expect(result).toEqual(expectationLegacy);
   });
 });
 

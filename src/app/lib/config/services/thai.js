@@ -14,6 +14,7 @@ export const service = {
     articleTimestampPrefix: 'ปรับปรุงแล้ว',
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
+    chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
     serviceLocalizedName: 'ไทย',
@@ -40,7 +41,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -51,6 +51,7 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านข่าวนี้เพิ่มเติม',
+      navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',
@@ -157,6 +158,9 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     navigation: [
       {
         title: 'หน้าแรก',
@@ -187,7 +191,6 @@ export const service = {
         url: '/thai/popular/read',
       },
     ],
-    navigationSection: 'หมวดข่าว',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/thai/institutional-49281839',
@@ -217,6 +220,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/thai/institutional-37981748',
           text: 'ติดต่อบีบีซี',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

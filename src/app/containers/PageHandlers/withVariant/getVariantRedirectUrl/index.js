@@ -1,4 +1,4 @@
-import pathToRegexp from 'path-to-regexp';
+import { compile } from 'path-to-regexp';
 import {
   getVariant,
   variantSanitiser,
@@ -15,7 +15,7 @@ const getVariantRedirectUrl = ({ path, params, service, variant }) => {
     variant: variantSanitiser(variant),
   });
 
-  const pathTo = pathToRegexp.compile(path);
+  const pathTo = compile(path);
 
   const isCookieVariantRedirect =
     cookieVariant &&

@@ -69,7 +69,7 @@ describe('LinkedData', () => {
   };
 
   shouldMatchSnapshot(
-    'should correctly render linked data for CPS PGL page',
+    'should correctly render linked data for Photo Gallery page',
     <Context>
       <LinkedData {...propsForPGL} />
     </Context>,

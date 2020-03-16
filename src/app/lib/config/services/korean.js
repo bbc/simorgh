@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: '최종 송고일',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
+    chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
     serviceLocalizedName: '코리아',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: '홈페이지',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
       relatedContent: '관련 기사 더 보기',
+      navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -151,6 +152,10 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC News Radio',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/korean/institutional-49283197',
@@ -181,6 +186,12 @@ export const service = {
           href: 'https://www.bbc.com/korean/institutional-42224941',
           text: '고객센터',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
@@ -204,7 +215,6 @@ export const service = {
         url: '/korean/popular/read',
       },
     ],
-    navigationSection: '섹션',
     timezone: 'Asia/Seoul',
   },
 };

@@ -1,10 +1,12 @@
+import React from 'react';
+import { render, wait } from '@testing-library/react';
 import arabicMostReadData from '#data/arabic/mostRead';
 import { service as arabicConfig } from '#app/lib/config/services/arabic';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
   setStaleLastRecordTimeStamp,
-  renderMostReadContainer,
+  MostReadWithContext,
 } from '../utilities/testHelpers';
 
 const services = {
@@ -17,36 +19,30 @@ const services = {
 };
 
 describe('MostReadContainerCanonical', () => {
-  let container;
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-  });
-
   afterEach(() => {
-    container = null;
     fetch.resetMocks();
   });
 
   Object.keys(services).forEach(service => {
     it(`should render items without timestamps for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
-      const mostReadHeader = config.mostRead.header;
+      const { header, numberOfItems } = config.mostRead;
+
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
 
-      await renderMostReadContainer({
-        container,
-        isAmp: false,
-        service,
-        variant,
-        mostReadToggle: true,
-      });
-
-      expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
-      expect(container.querySelectorAll('li').length).toEqual(
-        config.mostRead.numberOfItems,
+      const { container } = render(
+        <MostReadWithContext
+          service={service}
+          variant={variant}
+          mostReadToggle
+        />,
       );
-      expect(container.querySelectorAll('time').length).toEqual(0);
+
+      await wait(() => {
+        expect(container.querySelector('h2').textContent).toEqual(header);
+        expect(container.querySelectorAll('li').length).toEqual(numberOfItems);
+        expect(container.querySelectorAll('time').length).toEqual(0);
+      });
     });
 
     it(`should render items with timestamps as they are older than 60 days for ${service}`, async () => {
@@ -60,21 +56,25 @@ describe('MostReadContainerCanonical', () => {
 
       fetch.mockResponse(JSON.stringify(setStalePromoTimestamp(mostReadData)));
 
-      await renderMostReadContainer({
-        container,
-        isAmp: false,
-        service,
-        variant,
-        mostReadToggle: true,
-      });
+      const { container } = render(
+        <MostReadWithContext
+          service={service}
+          variant={variant}
+          mostReadToggle
+        />,
+      );
 
-      expect(container.querySelector('h2').textContent).toEqual(mostReadHeader);
-      expect(container.querySelectorAll('li').length).toEqual(
-        config.mostRead.numberOfItems,
-      );
-      expect(container.querySelectorAll('time')[0].textContent).toEqual(
-        expectedLastUpdated,
-      );
+      await wait(() => {
+        expect(container.querySelector('h2').textContent).toEqual(
+          mostReadHeader,
+        );
+        expect(container.querySelectorAll('li').length).toEqual(
+          config.mostRead.numberOfItems,
+        );
+        expect(container.querySelectorAll('time')[0].textContent).toEqual(
+          expectedLastUpdated,
+        );
+      });
     });
 
     it(`should not render most read when lastRecordTimeStamp is not fresh for ${service}`, async () => {
@@ -83,16 +83,17 @@ describe('MostReadContainerCanonical', () => {
       fetch.mockResponse(
         JSON.stringify(setStaleLastRecordTimeStamp(mostReadData)),
       );
+      const { container } = render(
+        <MostReadWithContext
+          service={service}
+          variant={variant}
+          mostReadToggle
+        />,
+      );
 
-      await renderMostReadContainer({
-        container,
-        isAmp: false,
-        service,
-        variant,
-        mostReadToggle: true,
+      await wait(() => {
+        expect(container.innerHTML).toEqual('');
       });
-
-      expect(container.innerHTML).toEqual('');
     });
   });
 });

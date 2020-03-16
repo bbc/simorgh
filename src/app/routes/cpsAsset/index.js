@@ -1,17 +1,14 @@
 import path from 'ramda/src/path';
-import getInitialData from '../fetchPageData';
-import MediaAssetPage from '#pages/MediaAssetPage';
-import CpsSty from '#pages/CpsSty';
-import CpsPgl from '#pages/CpsPgl';
-import FrontPage from '#pages/FrontPage';
+import getInitialData from './getInitialData';
+import { MediaAssetPage, PhotoGalleryPage, StoryPage, FrontPage } from '#pages';
 import ErrorPage from '#pages/Error';
-import { cpsAssetPagePath } from '../regex';
+import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
-} from '../pageTypes';
+} from '../utils/pageTypes';
 
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
@@ -19,9 +16,9 @@ const CpsAsset = props => {
 
   switch (type) {
     case STORY_PAGE:
-      return CpsSty({ ...props, pageType: type });
+      return StoryPage({ ...props, pageType: type });
     case PHOTO_GALLERY_PAGE:
-      return CpsPgl({ ...props, pageType: type });
+      return PhotoGalleryPage({ ...props, pageType: type });
     case MEDIA_ASSET_PAGE:
       return MediaAssetPage({ ...props, pageType: type });
     case FEATURE_INDEX_PAGE:
@@ -33,7 +30,7 @@ const CpsAsset = props => {
 };
 
 export default {
-  path: cpsAssetPagePath,
+  path: [cpsAssetPagePath, legacyAssetPagePath],
   exact: true,
   component: CpsAsset,
   getInitialData,

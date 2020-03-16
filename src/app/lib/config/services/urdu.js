@@ -17,6 +17,7 @@ export const service = {
     articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
+    chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
     defaultImageAltText: 'BBC News اردو',
@@ -43,17 +44,17 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
+      navMenuText: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -140,14 +141,14 @@ export const service = {
         noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
         contentExpired: 'یہ مواد اب دستیاب نہیں',
         audio: 'آڈیو',
-        photogallery: 'تصاویری گیلری',
+        photogallery: 'تصاویر',
         video: 'ویڈیو',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'سنیں',
+        watch: 'دیکھیں',
         liveLabel: 'لائیو',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'گذشتہ ریڈیو پروگرام',
+        nextRadioShow: 'اگلا ریڈیو پروگرام',
+        duration: 'دورانیہ',
       },
     },
     brandSVG,
@@ -157,10 +158,13 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/urdu/institutional-49282935',
-        text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
+        text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -182,11 +186,17 @@ export const service = {
         {
           href:
             'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
-          text: 'Cookies',
+          text: 'کوکیز',
         },
         {
           href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -240,7 +250,6 @@ export const service = {
         url: '/urdu/media/photogalleries',
       },
     ],
-    navigationSection: 'سیکشن',
   },
 };
 

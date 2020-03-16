@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Actualización',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
@@ -47,7 +48,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -58,6 +58,7 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
+      navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -165,6 +166,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -195,6 +199,12 @@ export const service = {
           href: 'https://www.bbc.com/mundo/institucional-36400011',
           text: 'Contacta a la BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',
@@ -213,10 +223,6 @@ export const service = {
       {
         title: 'Noticias',
         url: '/mundo',
-      },
-      {
-        title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
       },
       {
         title: 'América Latina',
@@ -255,11 +261,14 @@ export const service = {
         url: '/mundo/media/video',
       },
       {
+        title: 'Hay Festival',
+        url: '/mundo/noticias-36795069',
+      },
+      {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
       },
     ],
-    navigationSection: 'Secciones',
   },
 };
 

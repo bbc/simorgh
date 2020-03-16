@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
 import MostReadContainer from '..';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -40,33 +38,29 @@ const getToggleState = enabled => ({
   test: { mostRead: { enabled } },
 });
 
-export const renderMostReadContainer = async ({
-  container,
-  isAmp,
+/* eslint-disable react/prop-types */
+export const MostReadWithContext = ({
+  isAmp = false,
   service,
   variant = null,
   mostReadToggle = false,
-}) =>
-  act(async () => {
-    ReactDOM.render(
-      <ToggleContext.Provider
-        value={{ toggleState: getToggleState(mostReadToggle) }}
-      >
-        <RequestContextProvider
-          bbcOrigin={`http://localhost:7080/${service}/articles/c0000000000o`}
-          id="c0000000000o"
-          isAmp={isAmp}
-          pageType="article"
-          service={service}
-          statusCode={200}
-          pathname={`/${service}`}
-          variant={variant}
-        >
-          <ServiceContextProvider service={service} variant={variant}>
-            <MostReadContainer />
-          </ServiceContextProvider>
-        </RequestContextProvider>
-      </ToggleContext.Provider>,
-      container,
-    );
-  });
+}) => (
+  <ToggleContext.Provider
+    value={{ toggleState: getToggleState(mostReadToggle) }}
+  >
+    <RequestContextProvider
+      bbcOrigin={`http://localhost:7080/${service}`}
+      isAmp={isAmp}
+      pageType="frontPage"
+      service={service}
+      statusCode={200}
+      pathname={`/${service}`}
+      variant={variant}
+    >
+      <ServiceContextProvider service={service} variant={variant}>
+        <MostReadContainer />
+      </ServiceContextProvider>
+    </RequestContextProvider>
+  </ToggleContext.Provider>
+);
+/* eslint-enable react/prop-types */

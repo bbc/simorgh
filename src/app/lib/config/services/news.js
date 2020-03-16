@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Updated',
     atiAnalyticsAppName: 'news',
     atiAnalyticsProducerId: '64',
+    chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC News',
     product: 'BBC News',
     defaultImage:
@@ -47,7 +48,6 @@ export const service = {
     manifestPath: '/articles/manifest.json',
     swPath: '/articles/sw.js',
     frontPageTitle: 'Home',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +57,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -164,6 +165,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: false,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -197,6 +201,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: 'Contact the BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -262,7 +272,6 @@ export const service = {
         url: '/news/video_and_audio/headlines',
       },
     ],
-    navigationSection: 'Sections',
   },
 };
 

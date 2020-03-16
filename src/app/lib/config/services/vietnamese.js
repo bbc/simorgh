@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Cập nhật',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
+    chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
@@ -39,7 +40,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +50,7 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -153,6 +154,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/vietnamese/institutional-49283563',
@@ -183,6 +187,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/vietnamese/institutional-37623842',
           text: 'Liên hệ BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -236,7 +246,6 @@ export const service = {
         url: '/vietnamese/media/video',
       },
     ],
-    navigationSection: 'Mục',
   },
 };
 

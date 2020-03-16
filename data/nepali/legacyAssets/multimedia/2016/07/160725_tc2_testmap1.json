@@ -1,0 +1,110 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/nepali/meta/dps/junk/2016/07/emp/160725_tc2_testmap1.emp.xml",
+        "id": "17697967",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "पश्चिम लण्डनको एक अस्पतालमा बिरामीहरुलाई तंग्रन सघाउन बलिउड नृत्यको प्रयोग भैरहेकोबारे बीबीसीका राहुल जोगलेकरको रिपोर्ट (भिडियो) ।",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17697967",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "legacyMedia",
+      "paragraph"
+    ],
+    "createdBy": "nepali",
+    "firstPublished": 1469461574000,
+    "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",
+    "includeComments": false,
+    "language": "ne",
+    "lastPublished": 1469461574000,
+    "lastUpdated": 1583244348190,
+    "locators": {
+      "assetId": "17697967",
+      "assetUri": "/nepali/multimedia/2016/07/160725_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2016/07/160725_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/1f27213a-527e-11e6-8b75-81730d6c36a9"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1469461574000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "बलिउड नृत्यद्वारा उपचार",
+      "shortHeadline": "बलिउड नृत्यद्वारा उपचार"
+    },
+    "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145826_duarte_3_144x81_bbc_nocredit.jpg",
+      "id": "d5e208",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145826_duarte_3_144x81_bbc_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "ne",
+    "locators": {
+      "assetId": "17697967",
+      "assetUri": "/nepali/multimedia/2016/07/160725_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:nepali/multimedia/2016/07/160725_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/1f27213a-527e-11e6-8b75-81730d6c36a9"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/nepali/meta/dps/junk/2016/07/emp/160725_tc2_testmap1.emp.xml",
+      "id": "17697967",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "पश्चिम लण्डनको एक अस्पतालमा बिरामीहरुलाई तंग्रन सघाउन बलिउड नृत्यको प्रयोग भैरहेकोबारे बीबीसीका राहुल जोगलेकरको रिपोर्ट (भिडियो) ।",
+    "timestamp": 1469461574000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Multimedia",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/nepali/multimedia"
+    },
+    "site": {
+      "name": "BBCNepali.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/nepali"
+    }
+  }
+}

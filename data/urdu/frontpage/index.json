@@ -32,7 +32,8 @@
       "av-stories-now",
       "programmes-standard",
       "section-digest",
-      "feature-main"
+      "feature-main",
+      "av-live-streams"
     ],
     "title": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
     "summary": "تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"
@@ -325,6 +326,25 @@
             ],
             "id": "urn:bbc:ares::asset:urdu/sport-48905087",
             "type": "cps"
+          },
+          {
+            "assetTypeCode": "PRO",
+            "contentType": "RadioBulletin",
+            "indexImage": {
+              "altText": "trott and kenny",
+              "copyrightHolder": "Getty Images",
+              "height": 371,
+              "href": "http://b.files.bbci.co.uk/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg",
+              "id": "63503431",
+              "path": "/cpsdevpb/3476/test/_63503431_160817051639_kenny_and_trott_640x360_getty_nocredit.jpg",
+              "subType": "index",
+              "width": 660
+            },
+            "name": "radio ریو اولمپکس 2016",
+            "summary": "مقابلہ جرمنی سے ہوگا۔",
+            "timestamp": 1471520983000,
+            "type": "link",
+            "uri": "http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           }
         ],
         "semanticGroupName": "More top stories"
@@ -2659,6 +2679,301 @@
           }
         },
         "semanticGroupName": "College of journalism"
+      },
+      {
+        "items": [
+          {
+            "assetTypeCode": "PRO",
+            "contentType": "TVBulletin",
+            "indexImage": {
+              "altText": "bbc",
+              "copyrightHolder": "BBC",
+              "height": 261,
+              "href": "http://b.files.bbci.co.uk/18466/test/_63503499_p01ds890.jpg",
+              "id": "63503499",
+              "path": "/cpsdevpb/18466/test/_63503499_p01ds890.jpg",
+              "subType": "index",
+              "width": 464
+            },
+            "name": "سیربین لائیو دیکھیے",
+            "summary": "بی بی سی اردو کا پروگرام سیربین پیر سے جمعہ پاکستان کے معیاری وقت کے مطابق شام ساڑھے سات",
+            "timestamp": 1471530832000,
+            "type": "link",
+            "uri": "http://www.bbc.com/urdu/multimedia/2013/04/000000_urdu_tv_programme"
+          },
+          {
+            "headlines": {
+              "headline": "ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘"
+            },
+            "locators": {
+              "assetUri": "/urdu/sport-48906136",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/sport-48906136"
+            },
+            "summary": "جب بلوچستان میں ہزارہ کمیونٹی کو دہشت گردی کا نشانہ بنایا جا رہا تھا تو کراٹے انسٹرکٹر غلام علی نے ہزارہ نوجوانوں کو ایک پلیٹ فارم دیا اور اس محنت کا صلہ ان شاگردوں نے عالمی سطح پر کامیابیاں حاصل کر کے دیا۔",
+            "timestamp": 1562904284000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07g9jwk",
+              "subType": "clip",
+              "format": "video",
+              "title": "ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘",
+              "synopses": {
+                "short": "غلام علی: ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘",
+                "long": "پاکستان کے شہر کوئٹہ میں ہزارہ کمیونٹی سے تعلق رکھنے والے غلام علی ہزارہ نے تقریباً 37 سال قبل کراٹے کھیلنا شروع کیا۔ جب بلوچستان میں ہزارہ کمیونٹی کو دہشت گردی کا نشانہ بنایا جا رہا تھا تو انھوں نے مقامی ہزارہ نوجوانوں کو کراٹے کلب کی شکل میں ایک پلیٹ فارم دیا اور ان شاگردوں نے عالمی سطح پر کامیابیاں حاصل کر کے ان کا نام روشن کر دیا۔ دیکھیے موسیٰ یاوری کی ڈیجیٹل ویڈیو۔"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gpdb2.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "کنگ میکر",
+              "versions": [
+                {
+                  "versionId": "p07g9jwm",
+                  "types": ["Original"],
+                  "duration": 136,
+                  "durationISO8601": "PT2M16S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562567500
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107845017",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1158E/production/_107845017_p07gpd79.jpg",
+              "path": "/cpsprodpb/1158E/production/_107845017_p07gpd79.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ہزارہ نوجوانوں کا کراٹے ’کنگ میکر‘",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/sport-48906136",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/48958655",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/48958655"
+            },
+            "summary": "گذشتہ دو دہائیوں میں ہمارے پیروں کے سائز میں تقریباً دو سائز تک اضافہ ہو گیا ہے۔ مگر اس کی وجہ کیا ہے؟",
+            "timestamp": 1562892900000,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07gp8dy",
+              "subType": "clip",
+              "format": "video",
+              "title": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟",
+              "synopses": {
+                "short": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gp8hq.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "کیا انسانی پیروں کا سائز بڑھ رہا ہے؟",
+              "versions": [
+                {
+                  "versionId": "p07gp8f0",
+                  "types": ["Original"],
+                  "duration": 113,
+                  "durationISO8601": "PT1M53S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562892481
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107843145",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D376/production/_107843145_p07gp8hq.jpg",
+              "path": "/cpsprodpb/D376/production/_107843145_p07gp8hq.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "پاؤں",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news",
+              "uri": "/urdu/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:urdu/48958655",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "فلم انڈسٹری چھوڑنے والی کشمیری اداکارہ زائرہ وسیم کے کیریئر پر ایک نظر"
+            },
+            "locators": {
+              "assetUri": "/urdu/entertainment-48948755",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/entertainment-48948755"
+            },
+            "summary": "پرسنالٹی آف دی ویک زائرہ وسیم نے 15 سال کی عمر میں فلم دنگل سے اپنے کیریئر کا آغاز کیا اور سپر سٹار بننے کے صرف تین سال بعد انھوں نے فلم انڈسٹری کو خیرباد کہہ دیا۔",
+            "timestamp": 1562851879000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07ffy5j",
+              "subType": "clip",
+              "format": "audio",
+              "title": "پرسنالٹی آف دی ویک: اداکارہ، ریئلٹی شو جج، یوگا گرو اور بزنس وومن شلپا شیٹی",
+              "synopses": {
+                "short": "آج وہ ایک کامیاب ریئلٹی شو جج ہیں۔"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07fg0p6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "پرسنالٹی آف دی ویک: اداکارہ، ریئلٹی شو جج، یوگا گرو اور بزنس وومن شلپا شیٹی",
+              "versions": [
+                {
+                  "versionId": "p07ffy5n",
+                  "types": ["Original"],
+                  "duration": 274,
+                  "durationISO8601": "PT4M34S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1561723561
+                }
+              ]
+            },
+            "indexImage": {
+              "id": "107835822",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5945/production/_107835822_p07gm883.jpg",
+              "path": "/cpsprodpb/5945/production/_107835822_p07gm883.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "زائرہ وسیم",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/entertainment-48948755",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "ایک بو اچھی یا بری کیسے بنتی ہے؟"
+            },
+            "locators": {
+              "assetUri": "/urdu/science-48817061",
+              "cpsUrn": "urn:bbc:content:assetUri:urdu/science-48817061"
+            },
+            "summary": "ہمارا دماغ ایک بو کو کیسے سمجھتا ہے اور کیا یہ ممکن ہے کہ دو لوگوں کو ایک بو سونگھنے میں ایک جیسی ہی لگے؟",
+            "timestamp": 1562736984000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07frc36",
+              "subType": "clip",
+              "format": "video",
+              "title": "ایک بو اچھی یا بری کیسے بنتی ہے؟",
+              "synopses": {
+                "short": "ایک بو اچھی یا بری کیسے بنتی ہے؟",
+                "long": "انسان کھربوں قسم کی بو سونگھ سکتا ہے، آپ دنیا کو کس نظر سے دیکھتے ہیں بو اس پر بھی اثر کرتی ہے۔ لیکن ہمارا دماغ ایک بو کو کیسے سمجھتا ہے؟ اور کیا یہ ممکن ہے کہ دو لوگوں کو ایک بو سونگھنے میں ایک جیسی ہی لگے؟",
+                "medium": "ہمارا دماغ ایک بو کو کیسے سمجھتا ہے اور کیا یہ ممکن ہے کہ دو لوگوں کو ایک بو سونگھنے میں ایک جیسی ہی لگے؟"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07frcz7.jpg",
+              "embedding": false,
+              "advertising": false,
+              "caption": "انسان کھربوں قسم کی بو سونگھ سکتا ہے",
+              "versions": [
+                {
+                  "versionId": "p07frc38",
+                  "types": ["Original"],
+                  "duration": 132,
+                  "durationISO8601": "PT2M12S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1562059193
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "107711143",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/853F/production/_107711143_p07frcz7.jpg",
+              "path": "/cpsprodpb/853F/production/_107711143_p07frcz7.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "بُو",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:urdu/science-48817061",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "AV stories live",
+        "strapline": {
+          "name": "سیربین ٹی وی لائیو"
+        },
+        "title": "AV stories live",
+        "type": "av-live-streams"
       }
     ]
   },

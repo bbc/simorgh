@@ -16,8 +16,8 @@ import {
   testsThatNeverRunDuringSmokeTestingForAllCanonicalPages,
 } from '../../integration/pages/testsForAllCanonicalPages';
 
-const serviceHasPageType = (service, pageType) =>
-  config[service].pageTypes[pageType].path !== undefined;
+import getPaths from './getPaths';
+import serviceHasPageType from './serviceHasPageType';
 
 const visitPage = (path, pageType) => {
   const expectedContentType = 'text/html';
@@ -50,13 +50,10 @@ const runTestsForPage = ({
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
-      const { path } = config[service].pageTypes[pageType];
-      const paths = Array.isArray(path) ? path : [path];
+      const paths = getPaths(service, pageType);
 
       paths.forEach(currentPath => {
-        describe(`${pageType} - ${service} -${
-          paths.length > 1 ? ` ${currentPath} -` : ''
-        } Canonical`, () => {
+        describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(currentPath, pageType);
@@ -95,9 +92,7 @@ const runTestsForPage = ({
         });
 
         // Switch to AMP page URL (NB all our pages have AMP variants)
-        describe(`${pageType} - ${service} -${
-          paths.length > 1 ? ` ${currentPath} -` : ''
-        } Amp`, () => {
+        describe(`${pageType} - ${currentPath} - AMP`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
             visitPage(`${currentPath}.amp`, pageType);

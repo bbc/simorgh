@@ -10,6 +10,7 @@ const baseServiceConfig = {
   articleTimestampPrefix: '最近更新：',
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
+  chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',
   serviceLocalizedName: '中文',
@@ -28,7 +29,9 @@ const baseServiceConfig = {
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
-  hasRadioSchedule: false,
+  radioSchedule: {
+    hasRadioSchedule: false,
+  },
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
@@ -83,7 +86,7 @@ export const service = {
       header: '热读',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -131,13 +134,18 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/simp',
       },
     ],
-    navigationSection: '分类',
+    scriptLink: {
+      text: '繁',
+      offscreenText: 'Traditional',
+      variant: 'trad',
+    },
     translations: {
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
+      navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
@@ -269,6 +277,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: '聯絡BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC對外部網站內容不負責任。',
     },
@@ -276,7 +290,7 @@ export const service = {
       header: '熱讀',
       lastUpdated: '最近更新：',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     navigation: [
       {
@@ -324,13 +338,18 @@ export const service = {
         url: 'http://www.bbc.co.uk/ukchina/trad',
       },
     ],
-    navigationSection: '分類',
+    scriptLink: {
+      text: '简',
+      offscreenText: 'Simplified',
+      variant: 'simp',
+    },
     translations: {
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
+      navMenuText: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',

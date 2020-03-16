@@ -5,7 +5,7 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import MediaAssetPage from '.';
+import { MediaAssetPage } from '..';
 import pageData from './fixtureData';
 
 const defaultToggles = {

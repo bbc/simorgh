@@ -1,0 +1,104 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "format": "audio",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/kyrgyz/meta/dps/junk/2015/03/emp/150330_map_test.emp.xml",
+        "id": "17692134",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Жерүй алтын кенин иштетүүгө конкурстун биринчи айлампасы жыйынтыкталды. Документтерин тапшырган үч компаниянын баары экинчиси айлампага өттү. Көп чырга аралашып келген, Кыргызстандагы экинчи ири алтын кенин иштетчү компания май айында аныкталып калат деп күтүлүүдө.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Таластагы Жерүй алтын кенин иштетүү каалоосу менен Британиядан инвестор тапкан жергиликтүү “Кыргызалтын” жана Орусиянын “Всток-геолдобыча”, “Алдан золото ГРК” деген эки ишканасы кайрылган. Февралда башталган кабыл алуунун жыйынтыгы кечээ чыгарылып, үч компания тең экинчи айлампага ат салышууга киришти.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17692134", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "kyrgyz",
+    "firstPublished": 1427730161000,
+    "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150330_map_test",
+    "includeComments": false,
+    "language": "ky",
+    "lastPublished": 1427730161000,
+    "lastUpdated": 1582030793390,
+    "locators": {
+      "assetId": "17692134",
+      "assetUri": "/kyrgyz/multimedia/2015/03/150330_map_test",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150330_map_test",
+      "curie": "http://www.bbc.co.uk/asset/3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
+    },
+    "options": {
+      "allowAdvertising": false,
+      "allowDateStamp": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1427730161000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "\"Сапар\": Биринчи дүйнөлүк согуштун 100 жылдыгы",
+      "shortHeadline": "\"Сапар\": Биринчи дүйнөлүк согуштун 100 жылдыгы"
+    },
+    "id": "urn:bbc:ares::asset:kyrgyz/multimedia/2015/03/150330_map_test",
+    "indexImage": {
+      "altText": "ds",
+      "copyrightHolder": "BBC World Service",
+      "height": 63,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130100_112x63.jpg",
+      "id": "d5e206",
+      "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130100_112x63.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 112
+    },
+    "language": "ky",
+    "locators": {
+      "assetId": "17692134",
+      "assetUri": "/kyrgyz/multimedia/2015/03/150330_map_test",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/multimedia/2015/03/150330_map_test",
+      "curie": "http://www.bbc.co.uk/asset/3a722316-d6f3-11e4-b8fa-be05f7c8d5b8"
+    },
+    "media": {
+      "format": "audio",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/kyrgyz/meta/dps/junk/2015/03/emp/150330_map_test.emp.xml",
+      "id": "17692134",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Жерүй алтын кенин иштетүүгө конкурстун биринчи айлампасы жыйынтыкталды. Документтерин тапшырган үч компаниянын баары экинчиси айлампага өттү.",
+    "timestamp": 1427730161000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Мультимедиа",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/kyrgyz/multimedia"
+    },
+    "site": {
+      "name": "BBCkyrgyz.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/kyrgyz"
+    }
+  }
+}

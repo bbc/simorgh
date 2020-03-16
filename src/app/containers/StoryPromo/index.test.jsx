@@ -2,6 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import '@testing-library/jest-dom/extend-expect';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relItems from './IndexAlsos/relatedItems';
@@ -253,11 +254,24 @@ describe('StoryPromo Container', () => {
       `should render ${name} correctly for amp`,
       <WrappedStoryPromo platform="amp" item={data} />,
     );
+
+    shouldMatchSnapshot(
+      `should render ${name} promoType top on amp`,
+      <WrappedStoryPromo platform="amp" item={data} promoType="top" />,
+    );
+    shouldMatchSnapshot(
+      `should render ${name} promoType leading on amp`,
+      <WrappedStoryPromo platform="amp" item={data} promoType="leading" />,
+    );
   });
 
   shouldMatchSnapshot(
     `should render multiple Index Alsos correctly for canonical`,
-    <WrappedStoryPromo platform="canonical" item={indexAlsosItem} topStory />,
+    <WrappedStoryPromo
+      platform="canonical"
+      item={indexAlsosItem}
+      promoType="top"
+    />,
   );
 
   describe('assertion tests', () => {
@@ -462,7 +476,7 @@ describe('StoryPromo Container', () => {
     describe('With Index Alsos', () => {
       it('should render a list with two related items', () => {
         const { container } = render(
-          <WrappedStoryPromo item={indexAlsosItem} topStory />,
+          <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(1);
@@ -471,10 +485,29 @@ describe('StoryPromo Container', () => {
 
       it('should render a related item not contained within a list', () => {
         const { container } = render(
-          <WrappedStoryPromo item={onlyOneRelatedItem} topStory />,
+          <WrappedStoryPromo item={onlyOneRelatedItem} promoType="top" />,
         );
         expect(container.getElementsByTagName('ul')).toHaveLength(0);
         expect(container.getElementsByTagName('li')).toHaveLength(0);
+      });
+    });
+
+    describe('Live Story Promo', () => {
+      it('should render a live story promo with live text', () => {
+        const { getByText } = render(<WrappedStoryPromo item={liveItem} />);
+        const label = getByText('NA EME UGBU A');
+        expect(label).toBeInTheDocument();
+        expect(label).not.toHaveAttribute('aria-hidden', 'true');
+      });
+
+      it('should render a live story promo as aria-hidden, with visually hidden text if the label is in english', () => {
+        const { getByText } = render(
+          <WrappedStoryPromo item={liveItem} service="news" />,
+        );
+
+        const label = getByText('LIVE');
+        expect(label).toBeInTheDocument();
+        expect(label).toHaveAttribute('aria-hidden', 'true');
       });
     });
   });

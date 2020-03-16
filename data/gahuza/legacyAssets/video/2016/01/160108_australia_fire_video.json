@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gahuza/video/2016/01/160108_australia_fire_video",
+    "locators": {
+      "assetUri": "/gahuza/video/2016/01/160108_australia_fire_video",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2016/01/160108_australia_fire_video",
+      "curie": "http://www.bbc.co.uk/asset/3ed6950e-b63b-11e5-b876-9dc73db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "greatlakes",
+    "language": "rw",
+    "lastUpdated": 1573763006651,
+    "firstPublished": 1452280157000,
+    "lastPublished": 1452280420000,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "42074194"
+    },
+    "tags": {},
+    "version": "v1.1.3",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p03dyj2x",
+        "subType": "clip",
+        "format": "video",
+        "title": "Umuriro w'akaga muri Australia",
+        "synopses": {
+          "short": "Umuriro wahereye mw'ishamba atongoye umuji wa Yarloop"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p03dyj8b.jpg",
+        "embedding": false,
+        "advertising": true,
+        "versions": [
+          {
+            "versionId": "p03dyj3j",
+            "types": ["Original"],
+            "duration": 16,
+            "durationISO8601": "PT16S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1452279148000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Hari umuriro wa nyakanga watongoye amazu agera kuri 95 muri Australia.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mu muji wa Yarloop, n'ubu umuriro ukaba ukomeza kwaka.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Umuriro w'akaga muri Australia",
+      "headline": "Umuriro w'akaga muri Australia"
+    },
+    "locators": {
+      "assetUri": "/gahuza/video/2016/01/160108_australia_fire_video",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2016/01/160108_australia_fire_video",
+      "curie": "http://www.bbc.co.uk/asset/3ed6950e-b63b-11e5-b876-9dc73db9bd6e"
+    },
+    "summary": "Umuriro wahereye mw'ishamba atongoye umuji wa Yarloop",
+    "timestamp": 1573763006651,
+    "passport": {
+      "taggings": []
+    },
+    "media": {
+      "id": "p03dyj2x",
+      "subType": "clip",
+      "format": "video",
+      "title": "Umuriro w'akaga muri Australia",
+      "synopses": {
+        "short": "Umuriro wahereye mw'ishamba atongoye umuji wa Yarloop"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p03dyj8b.jpg",
+      "embedding": false,
+      "advertising": true,
+      "versions": [
+        {
+          "versionId": "p03dyj3j",
+          "types": ["Original"],
+          "duration": 16,
+          "durationISO8601": "PT16S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1452279148000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "d5e267",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/01/08/160108031624_the_waroona_fire_512x288__nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/01/08/160108031624_the_waroona_fire_512x288__nocredit.jpg",
+      "height": 288,
+      "width": 512,
+      "altText": "",
+      "copyrightHolder": " ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/video/2016/01/160108_australia_fire_video",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Video",
+      "uri": "/gahuza/video",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCGahuza.com",
+      "uri": "/gahuza",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

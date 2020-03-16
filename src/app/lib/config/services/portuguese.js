@@ -21,6 +21,7 @@ export const service = {
     articleTimestampPrefix: 'Atualizado',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
+    chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
@@ -49,7 +50,6 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -60,6 +60,7 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
+      navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -167,6 +168,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -196,6 +200,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/portuguese/institutional-36202456',
           text: 'Fale com a BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -257,7 +267,6 @@ export const service = {
         url: '/portuguese/media/video',
       },
     ],
-    navigationSection: 'Seções',
   },
 };
 

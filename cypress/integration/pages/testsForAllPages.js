@@ -11,7 +11,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {});
 };
 
-// For testing feastures that may differ across services but share a common logic e.g. translated strings.
+// For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfigforAllPages = ({
   service,
   pageType,
@@ -79,19 +79,26 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             const mediaAssetPageType = 'mediaAssetPage';
             const articlesPageType = 'articles';
             const photoGalleryPageType = 'photoGalleryPage';
+            const storyPageType = 'storyPage';
+
+            const cpsPageTypes = [
+              mediaAssetPageType,
+              photoGalleryPageType,
+              storyPageType,
+            ];
 
             const { indexImage } = body.promo;
             const imagePath = indexImage ? indexImage.path : null;
 
             const imageAltText =
-              (indexImage && pageType === mediaAssetPageType) ||
-              (indexImage && pageType === photoGalleryPageType)
+              indexImage &&
+              cpsPageTypes.includes(pageType) &&
+              indexImage.altText
                 ? indexImage.altText
                 : appConfig[config[service].name][variant].defaultImageAltText;
 
             const imageSrc =
-              (imagePath && pageType === mediaAssetPageType) ||
-              (imagePath && pageType === photoGalleryPageType)
+              imagePath && cpsPageTypes.includes(pageType)
                 ? getBrandedImage({
                     imagePath,
                     serviceName: config[service].name,
@@ -102,6 +109,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               articlesPageType,
               mediaAssetPageType,
               photoGalleryPageType,
+              storyPageType,
             ].includes(pageType)
               ? 'article'
               : 'website';
@@ -223,6 +231,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                     description = body.promo.summary;
                     title = body.promo.headlines.headline;
                     break;
+                  case 'storyPage':
+                    description = body.promo.summary;
+                    title = body.promo.headlines.headline;
+                    break;
                   default:
                     description = '';
                     title = '';
@@ -233,7 +245,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 }`;
 
                 cy.get('head').within(() => {
-                  cy.title().should('eq', pageTitle);
+                  cy.title().should('eq', pageTitle.replace(/ +/g, ' '));
                   cy.get('meta[property="og:description"]').should(
                     'have.attr',
                     'content',
@@ -338,7 +350,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         });
       }
 
-      it('should have a visible banner', () => {
+      it('should have a visible banner, with a skip to content link', () => {
         cy.get('header')
           .should('have.lengthOf', 1)
           .find('div[class^="Banner"]')
@@ -348,6 +360,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           .should('have.attr', 'href', `/${config[service].name}`)
           .find('svg')
           .should('be.visible');
+        cy.get('div[class^="Banner"]')
+          .find('a[class^="SkipLink"]')
+          .should('have.attr', 'href', '#content');
       });
 
       if (appConfig[config[service].name][variant].navigation) {
@@ -355,14 +370,11 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           pageType !== 'articles' ||
           (pageType === 'articles' && useAppToggles.navOnArticles.enabled)
         ) {
-          it('should have one visible navigation with a skiplink to h1', () => {
+          it('should have one visible navigation', () => {
             cy.get('nav')
               .should('have.lengthOf', 1)
               .should('be.visible')
-              .find('a[class^="SkipLink"]')
-              .should('have.lengthOf', 1)
-              .should('have.attr', 'href', '#content');
-            cy.get('nav a[class^="StyledLink"]')
+              .find('a[class^="StyledLink"]')
               .should(
                 'have.attr',
                 'href',
@@ -376,6 +388,34 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               .should('have.lengthOf', 1)
               .should('have.attr', 'id', 'content');
           });
+
+          const serviceName = config[service].name;
+          // limit number of tests to 2 services for navigation toggling
+          const testMobileNav =
+            serviceName === 'ukchina' || serviceName === 'persian';
+
+          if (testMobileNav) {
+            it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
+              cy.viewport(320, 480);
+              cy.get('nav')
+                .find('div[class^="StyledScrollableNav"]')
+                .should('be.visible');
+
+              cy.get('nav')
+                .find('ul[class^="DropdownUl"]')
+                .should('not.be.visible');
+
+              cy.get('nav button').click();
+
+              cy.get('nav')
+                .find('div[class^="StyledScrollableNav"]')
+                .should('not.be.visible');
+
+              cy.get('nav')
+                .find('ul[class^="DropdownUl"]')
+                .should('be.visible');
+            });
+          }
         }
       }
     });
@@ -406,64 +446,36 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
               : appConfig[config[service].name][variant].product,
           );
       });
-
-      it('should contain copyright text', () => {
-        cy.get('footer p').should(
-          'contain',
-          appConfig[config[service].name][variant].footer.copyrightText,
-        );
-      });
-
-      it('copyright symbol should be wrapped in span', () => {
-        cy.get('footer span').should('contain', '©');
-      });
-
-      it('should contain a link in the copyright text', () => {
-        cy.get('footer p')
-          .children('a')
-          .should('have.attr', 'href')
-          .and(
-            'contain',
-            appConfig[config[service].name][variant].footer.externalLink.href,
-          );
-      });
     });
-    if (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage') {
-      describe('CPS PGL and MAP Tests', () => {
-        // Expects a second timestamp only if lastPublished is 1 minute later than firstPublished.
-        // This is due to a CPS asset bug, see issue simorgh#5065
+    if (
+      ['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType)
+    ) {
+      describe('Photo Gallery, Story Page and MAP Tests', () => {
         it('should render a timestamp', () => {
-          cy.request(`${config[service].pageTypes[pageType].path}.json`).then(
-            ({ body }) => {
-              const { lastPublished, firstPublished } = body.metadata;
-              const timeDifferenceMinutes =
-                (lastPublished - firstPublished) / 1000 / 60;
-              const minutesTolerance = 1;
-              const hasTimestampPrefix =
-                timeDifferenceMinutes > minutesTolerance;
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            if (body.metadata.options.allowDateStamp) {
               cy.get('time')
                 .eq(0)
                 .should('be.visible')
                 .should('have.attr', 'datetime')
                 .should('not.be.empty');
-
-              if (hasTimestampPrefix) {
-                cy.get('time')
-                  .eq(1)
-                  .should('be.visible')
-                  .should(
-                    'contain',
-                    appConfig[config[service].name][variant || 'default']
-                      .articleTimestampPrefix,
-                  )
-                  .should('have.attr', 'datetime');
-              }
-            },
-          );
+            } else {
+              cy.log('Test skipped - allowDateStamp false within metadata');
+            }
+          });
         });
+        if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
+          it('should render a H1, which displays the headline', () => {
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
+              ({ body }) => {
+                cy.get('h1').should('contain', body.promo.headlines.headline);
+              },
+            );
+          });
+        }
       });
     }
-    // End of block (pageType === 'mediaAssetPage' || pageType === 'photoGalleryPage')
+    // End of block (['mediaAssetPage', 'photoGalleryPage', 'storyPage'].includes(pageType))
   });
 };
 
@@ -472,33 +484,5 @@ export const testsThatNeverRunDuringSmokeTestingForAllPageTypes = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {
-    if (Cypress.env('APP_ENV') === 'live') {
-      describe('Page links test', () => {
-        it('Top navigation links should not 404', () => {
-          cy.get('header a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-
-        it('Footer links should not 404', () => {
-          cy.get('footer a').each(element => {
-            const url = element.attr('href');
-            cy.request({
-              url,
-              failOnStatusCode: false,
-            }).then(resp => {
-              expect(resp.status).to.not.equal(404, `Received 404 for ${url}`);
-            });
-          });
-        });
-      });
-    }
-  });
+  describe(`Running testsToNeverSmokeTestForAllPageTypes for ${service} ${pageType}`, () => {});
 };

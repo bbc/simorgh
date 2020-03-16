@@ -4,7 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsMetadata from './index';
-import { articleDataNews } from '../../pages/Article/fixtureData';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
 const getISOStringDate = date => new Date(date).toISOString();
 

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled, { css } from 'styled-components';
+import pathOr from 'ramda/src/pathOr';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
@@ -14,14 +14,30 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
-import { StoryPromoUl, StoryPromoLi } from '@bbc/psammead-story-promo-list';
-import pathOr from 'ramda/src/pathOr';
+import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import Grid from '@bbc/psammead-grid';
 import UsefulLinksComponent from './UsefulLinks';
-import BulletinContainer from '../Bulletin';
-import StoryPromoContainer from '../StoryPromo';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
+import {
+  getAllowedItems,
+  removeFirstSlotRadioBulletin,
+  removeTVBulletinsIfNotAVLiveStream,
+  removeItemsWithoutUrlOrHeadline,
+} from './utilities/filterAllowedItems';
+import getRows from './utilities/storyRowsSplitter';
+import getRowDetails from './utilities/rowDetails';
+import { TopRow } from '../FrontPageStoryRows';
+
+const StyledFrontPageSection = styled.section`
+  /* To centre page layout for Group 4+ */
+  margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+  }
+`;
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
 const FirstSectionTopMargin = styled.div`
@@ -31,26 +47,24 @@ const FirstSectionTopMargin = styled.div`
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING_TRPL};
           }
-
-          @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-            margin-top: ${GEL_SPACING_QUAD};
-          }
         `
       : css`
           @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
             margin-top: ${GEL_SPACING};
           }
         `}
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+  }
 `;
 
 // Apply the right margin-top between the section label and the promos
-const TopMargin = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
+const SpacingDiv = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING_DBL};
   }
-
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
+    padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
@@ -66,72 +80,78 @@ const MarginWrapper = ({ firstSection, oneItem, children }) => {
   }
 
   if (oneItem) {
-    return <TopMargin>{children}</TopMargin>;
+    return <SpacingDiv>{children}</SpacingDiv>;
   }
 
   return children;
 };
 
-const StoryPromoListItem = styled(StoryPromoLi)`
-  ${({ isBulletin, isFirstPromo }) =>
-    isBulletin &&
-    css`
-      @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-        ${isFirstPromo
-          ? `padding-bottom: ${GEL_SPACING_TRPL};`
-          : `padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};`}
-      }
-    `}
-`;
+const parentGridColumns = {
+  group0: 6,
+  group1: 6,
+  group2: 6,
+  group3: 6,
+  group4: 8,
+  group5: 8,
+};
 
-const isBulletin = item =>
-  item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
+const renderPromos = (items, isFirstSection, dir) => {
+  const rows = getRows(items, isFirstSection);
+  const rowsDetails = getRowDetails(rows);
 
-const renderPromo = (item, index, firstSection) => {
-  const topStory = firstSection && index === 0;
-  const lazyLoadImage = !topStory; // don't lazy load image if it is a top story
+  // Don't use StoryPromoUl and Li if there is only one story in one row
+  const sectionHasSingleStory =
+    rowsDetails.length === 1 && rowsDetails[0].stories.length === 1;
 
-  if (isBulletin(item)) {
-    return <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} />;
-  }
+  const renderedRows = rowsDetails.map(row => (
+    <row.RowComponent
+      key={row.stories[0].id}
+      stories={row.stories}
+      isFirstSection={isFirstSection}
+      displayImages={row.displayImages}
+      dir={dir}
+      parentColumns={parentGridColumns}
+      parentEnableGelGutters // value is set to true here and passed to each Row component's Grid item
+    />
+  ));
 
   return (
-    <StoryPromoContainer
-      item={item}
-      topStory={topStory}
-      lazyLoadImage={lazyLoadImage}
-    />
+    <MarginWrapper
+      firstSection={isFirstSection}
+      dir={dir}
+      oneItem={sectionHasSingleStory}
+    >
+      {sectionHasSingleStory ? (
+        <TopRow stories={items} dir={dir} sectionHasSingleStory />
+      ) : (
+        <Grid
+          columns={parentGridColumns}
+          enableGelGutters
+          dir={dir}
+          as={StoryPromoUl}
+        >
+          {renderedRows}
+        </Grid>
+      )}
+    </MarginWrapper>
   );
 };
 
-const sectionBody = (group, items, script, service, isFirstSection) => {
+const sectionBody = ({
+  group,
+  items,
+  script,
+  service,
+  isFirstSection,
+  dir,
+}) => {
   if (group.semanticGroupName === 'Useful links') {
     return (
       <UsefulLinksComponent items={items} script={script} service={service} />
     );
   }
 
-  return items.length > 1 ? (
-    <MarginWrapper firstSection={isFirstSection}>
-      <StoryPromoUl>
-        {items.map((item, index) => {
-          return (
-            <StoryPromoListItem
-              key={item.id}
-              isFirstPromo={index === 0}
-              isBulletin={isBulletin(item)}
-            >
-              {renderPromo(item, index, isFirstSection)}
-            </StoryPromoListItem>
-          );
-        })}
-      </StoryPromoUl>
-    </MarginWrapper>
-  ) : (
-    <MarginWrapper firstSection={isFirstSection} oneItem>
-      {renderPromo(items[0], 0, isFirstSection)}
-    </MarginWrapper>
-  );
+  return renderPromos(items, isFirstSection, dir);
 };
 
 const FrontPageSection = ({ bar, group, sectionNumber }) => {
@@ -141,9 +161,23 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const strapline = pathOr(null, ['strapline', 'name'], group);
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
-  const items = pathOr(null, ['items'], group);
+  const type = pathOr(null, ['type'], group);
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
+
+  const radioFilteredItems = removeFirstSlotRadioBulletin(
+    pathOr(null, ['items'], group),
+  );
+
+  const bulletinFilteredItems = removeTVBulletinsIfNotAVLiveStream({
+    items: radioFilteredItems,
+    type,
+  });
+
+  const items = removeItemsWithoutUrlOrHeadline(bulletinFilteredItems);
+
+  // We have a cap on the number of allowed items per section
+  const allowedItems = getAllowedItems(items, isFirstSection);
 
   // The current implementation of SectionLabel *requires* a strapline to be
   // present in order to render. It is currently *not possible* to render a
@@ -161,8 +195,7 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
     // (<section> tags *should* imply `role="region"`)
     // While this may be true in a perfect world, we set it in order to get
     // the greatest possible support.
-    // eslint-disable-next-line jsx-a11y/no-redundant-roles
-    <section role="region" aria-labelledby={sectionLabelId}>
+    <StyledFrontPageSection role="region" aria-labelledby={sectionLabelId}>
       <SectionLabel
         script={script}
         labelId={sectionLabelId}
@@ -175,8 +208,15 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
       >
         {group.strapline.name}
       </SectionLabel>
-      {sectionBody(group, items, script, service, isFirstSection)}
-    </section>
+      {sectionBody({
+        group,
+        items: allowedItems,
+        script,
+        service,
+        isFirstSection,
+        dir,
+      })}
+    </StyledFrontPageSection>
   );
 };
 

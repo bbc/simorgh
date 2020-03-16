@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
-import { shape } from 'prop-types';
+import { shape, bool } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
@@ -8,7 +8,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import formatDuration from '#lib/utilities/formatDuration';
 import { storyItem } from '#models/propTypes/storyItem';
 
-const LinkContents = ({ item }) => {
+const LinkContents = ({ item, isInline }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -35,10 +35,18 @@ const LinkContents = ({ item }) => {
 
   // Always gets the first version. Smarter logic may be needed in the future.
   const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
+  let offScreenDuration;
 
-  const separator = ',';
-  const duration = moment.duration(rawDuration, 'seconds');
-  const durationString = formatDuration({ duration, separator });
+  if (rawDuration && !isInline) {
+    const separator = ',';
+    const duration = moment.duration(rawDuration, 'seconds');
+    const durationString = formatDuration({ duration, separator });
+
+    offScreenDuration = (
+      // once we have 'duration' translations, we could place those here
+      <VisuallyHiddenText>{`, ${durationString}`}</VisuallyHiddenText>
+    );
+  }
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
@@ -46,16 +54,18 @@ const LinkContents = ({ item }) => {
     <span role="text">
       <VisuallyHiddenText>{mediaTranslations[type]}, </VisuallyHiddenText>
       <span>{content}</span>
-      {rawDuration && (
-        // once we have 'duration' translations, we could place those here
-        <VisuallyHiddenText>{`, ${durationString}`}</VisuallyHiddenText>
-      )}
+      {offScreenDuration}
     </span>
   );
 };
 
 LinkContents.propTypes = {
   item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
+  isInline: bool,
+};
+
+LinkContents.defaultProps = {
+  isInline: false,
 };
 
 export default LinkContents;

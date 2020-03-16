@@ -60,6 +60,18 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   margin-right: 0.5rem;
 }
 
+.c1 {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+}
+
 .c0 {
   position: relative;
   background-color: #F2F2F2;
@@ -69,17 +81,26 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   background-color: #F2F2F2;
 }
 
-.c1 {
-  vertical-align: top;
-  display: inline-block;
-  grid-column: 1 / span 6;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+.c4 {
+  color: #222222;
+  margin: 0;
+  padding: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
-.c3 {
-  grid-column: 1 / span 6;
-  display: inline-block;
-  width: 100%;
+.c8 {
+  color: #3F3F42;
+  margin: 0;
+  padding: 0 0.5rem 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c10 {
@@ -103,11 +124,6 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 }
 
 .c9 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -124,29 +140,11 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c8 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
-}
-
-.c4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  margin: 0;
-  padding: 0.5rem;
 }
 
 .c2 {
@@ -162,10 +160,14 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: 33.33%;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c1 {
-    grid-column: 1 / span 2;
-    width: 33.33%;
     padding: 0;
   }
 }
@@ -173,12 +175,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 @supports (grid-template-columns:fit-content(200px)) {
   .c1 {
     width: initial;
+    grid-column: 1 / span 6;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
-    grid-column: 3 / span 4;
     width: 66.67%;
     padding-left: 1rem;
   }
@@ -187,32 +189,29 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 @supports (grid-template-columns:fit-content(200px)) {
   .c3 {
     width: initial;
-    padding: 0;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c9 {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
   }
 }
 
@@ -230,39 +229,34 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c8 {
     padding-left: 0;
-    padding-right: 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c9 {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -299,14 +293,14 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
             class="c6"
             lang="en-GB"
           >
-            Gee ntị Live,
+            Gee ntị Live, 
           </span>
           <span
             aria-hidden="true"
             class="c7"
             dir="ltr"
           >
-            LIVE
+            NA EME UGBU A 
           </span>
           <span>
             Test Radio Bulletin promo
@@ -316,6 +310,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
     </h3>
     <p
       class="c8"
+      dir="ltr"
     >
       Test Radio summary
     </p>
@@ -410,6 +405,18 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   margin-right: 0.5rem;
 }
 
+.c1 {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+}
+
 .c0 {
   position: relative;
   background-color: #F2F2F2;
@@ -418,17 +425,26 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   grid-column-gap: 1rem;
 }
 
-.c1 {
-  vertical-align: top;
-  display: inline-block;
-  grid-column: 1 / span 6;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+.c4 {
+  color: #222222;
+  margin: 0;
+  padding: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 
-.c3 {
-  grid-column: 1 / span 6;
-  display: inline-block;
-  width: 100%;
+.c8 {
+  color: #3F3F42;
+  margin: 0;
+  padding: 0 0.5rem 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c10 {
@@ -452,11 +468,6 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 .c9 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   background-color: #B80000;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -473,29 +484,11 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c8 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
-}
-
-.c4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  margin: 0;
-  padding: 0.5rem;
 }
 
 .c2 {
@@ -512,15 +505,13 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
-    padding: 1rem;
+  .c1 {
+    width: 50%;
   }
 }
 
 @media (min-width:37.5rem) {
   .c1 {
-    grid-column: 1 / span 3;
-    width: 50%;
     padding: 0;
   }
 }
@@ -528,12 +519,12 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 @supports (grid-template-columns:fit-content(200px)) {
   .c1 {
     width: initial;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) {
   .c3 {
-    grid-column: 4 / span 3;
     width: 50%;
     padding-left: 1rem;
   }
@@ -542,31 +533,33 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 @supports (grid-template-columns:fit-content(200px)) {
   .c3 {
     width: initial;
-    padding: 0;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding: 0.5rem 1rem;
+  .c4 {
+    padding: 0 0 0.5rem 0;
   }
 }
 
@@ -592,29 +585,26 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding: 0 0 0.5rem 0;
+  .c9 {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -651,14 +641,14 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
             class="c6"
             lang="en-GB"
           >
-            Lee Live,
+            Lee Live, 
           </span>
           <span
             aria-hidden="true"
             class="c7"
             dir="ltr"
           >
-            LIVE
+            NA EME UGBU A 
           </span>
           <span>
             Test TV Bulletin promo
@@ -668,6 +658,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
     </h3>
     <p
       class="c8"
+      dir="ltr"
     >
       Test TV summary
     </p>
@@ -750,6 +741,18 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   color: #6E6E73;
 }
 
+.c1 {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+}
+
 .c0 {
   position: relative;
   background-color: #F2F2F2;
@@ -759,17 +762,26 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   background-color: #F2F2F2;
 }
 
-.c1 {
-  vertical-align: top;
-  display: inline-block;
-  grid-column: 1 / span 6;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+.c4 {
+  color: #222222;
+  margin: 0;
+  padding: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
 }
 
-.c3 {
-  grid-column: 1 / span 6;
-  display: inline-block;
-  width: 100%;
+.c7 {
+  color: #3F3F42;
+  margin: 0;
+  padding: 0 0.5rem 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c9 {
@@ -793,11 +805,6 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .c8 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -814,29 +821,11 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c7 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
-}
-
-.c4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  margin: 0;
-  padding: 0.5rem;
 }
 
 .c2 {
@@ -852,10 +841,14 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c1 {
+    width: 33.33%;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c1 {
-    grid-column: 1 / span 2;
-    width: 33.33%;
     padding: 0;
   }
 }
@@ -863,12 +856,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 @supports (grid-template-columns:fit-content(200px)) {
   .c1 {
     width: initial;
+    grid-column: 1 / span 6;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
-    grid-column: 3 / span 4;
     width: 66.67%;
     padding-left: 1rem;
   }
@@ -877,32 +870,29 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 @supports (grid-template-columns:fit-content(200px)) {
   .c3 {
     width: initial;
-    padding: 0;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c4 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
   }
 }
 
@@ -920,39 +910,34 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c7 {
     padding-left: 0;
-    padding-right: 0.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0;
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c8 {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -989,7 +974,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
             class="c6"
             lang="en-GB"
           >
-            Gee ntị,
+            Gee ntị, 
           </span>
           <span>
             Test Radio Bulletin promo
@@ -999,6 +984,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
     </h3>
     <p
       class="c7"
+      dir="ltr"
     >
       Test Radio summary
     </p>
@@ -1084,6 +1070,18 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   color: #6E6E73;
 }
 
+.c1 {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.c3 {
+  display: inline-block;
+  width: 100%;
+}
+
 .c0 {
   position: relative;
   background-color: #F2F2F2;
@@ -1092,17 +1090,26 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   grid-column-gap: 1rem;
 }
 
-.c1 {
-  vertical-align: top;
-  display: inline-block;
-  grid-column: 1 / span 6;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+.c4 {
+  color: #222222;
+  margin: 0;
+  padding: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
 }
 
-.c3 {
-  grid-column: 1 / span 6;
-  display: inline-block;
-  width: 100%;
+.c7 {
+  color: #3F3F42;
+  margin: 0;
+  padding: 0 0.5rem 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c9 {
@@ -1126,11 +1133,6 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 .c8 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
   background-color: #222222;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
@@ -1147,29 +1149,11 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.c7 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #3F3F42;
-  margin: 0;
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
-}
-
-.c4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #222222;
-  margin: 0;
-  padding: 0.5rem;
 }
 
 .c2 {
@@ -1186,15 +1170,13 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
-    padding: 1rem;
+  .c1 {
+    width: 50%;
   }
 }
 
 @media (min-width:37.5rem) {
   .c1 {
-    grid-column: 1 / span 3;
-    width: 50%;
     padding: 0;
   }
 }
@@ -1202,12 +1184,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 @supports (grid-template-columns:fit-content(200px)) {
   .c1 {
     width: initial;
+    grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:37.5rem) {
   .c3 {
-    grid-column: 4 / span 3;
     width: 50%;
     padding-left: 1rem;
   }
@@ -1216,31 +1198,33 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 @supports (grid-template-columns:fit-content(200px)) {
   .c3 {
     width: initial;
-    padding: 0;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    padding: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+  .c4 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c8 {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding: 0.5rem 1rem;
+  .c4 {
+    padding: 0 0 0.5rem 0;
   }
 }
 
@@ -1266,29 +1250,26 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c4 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c4 {
-    padding: 0 0 0.5rem 0;
+  .c8 {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -1325,7 +1306,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
             class="c6"
             lang="en-GB"
           >
-            Lee,
+            Lee, 
           </span>
           <span>
             Test TV Bulletin promo
@@ -1335,6 +1316,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
     </h3>
     <p
       class="c7"
+      dir="ltr"
     >
       Test TV summary
     </p>

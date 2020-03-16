@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
-import getRouteProps from '../app/routes/fetchPageData/utils/getRouteProps';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
@@ -48,7 +48,7 @@ jest.mock('@loadable/server', () => ({
   }),
 }));
 
-jest.mock('../app/routes/fetchPageData/utils/getRouteProps');
+jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 
 const mockRouteProps = ({
   id,
@@ -652,7 +652,7 @@ describe('Server', () => {
     describe('for radio schedules', () => {
       it('should respond with JSON for service with radio schedule', async () => {
         const { body } = await makeRequest(
-          '/arabic/bbc_arabic_radio/radioschedule.json',
+          '/arabic/bbc_arabic_radio/schedule.json',
         );
         expect(body).toEqual(
           expect.objectContaining({ schedules: expect.any(Object) }),
@@ -661,14 +661,14 @@ describe('Server', () => {
 
       it('should respond with 404 for service without radio schedule', async () => {
         const { statusCode } = await makeRequest(
-          '/pidgin/bbc_pidgin_radio/radioschedule.json',
+          '/pidgin/bbc_pidgin_radio/schedule.json',
         );
         expect(statusCode).toEqual(404);
       });
 
       it('should respond with 404 for invalid service paths', async () => {
         const { statusCode } = await makeRequest(
-          '/arabic/bbc_pidgin_radio/radioschedule.json',
+          '/arabic/bbc_pidgin_radio/schedule.json',
         );
         expect(statusCode).toEqual(404);
       });

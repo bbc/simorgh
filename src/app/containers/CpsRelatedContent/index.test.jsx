@@ -8,8 +8,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
-import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
+import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
@@ -28,7 +27,7 @@ const renderRelatedContent = ({
         service="pidgin"
         statusCode={200}
       >
-        <CpsRelatedContent content={content} />
+        <CpsRelatedContent content={content} enableGridWrapper />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -75,13 +74,14 @@ describe('CpsRelatedContent', () => {
       },
     ];
 
-    const pageData = await preprocessor(
-      {
+    fetch.mockResponse(
+      JSON.stringify({
         ...pidginPageData,
         relatedContent: { groups: [{ promos: initialPromo }] },
-      },
-      cpsAssetPreprocessorRules,
+      }),
     );
+
+    const { pageData } = await getInitialData('some-cps-path');
 
     const transformedPromos = path(
       ['relatedContent', 'groups', 0, 'promos'],

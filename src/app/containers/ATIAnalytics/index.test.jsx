@@ -2,13 +2,12 @@ import React from 'react';
 import { node, string } from 'prop-types';
 import { render } from '@testing-library/react';
 import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
-import { articleDataNews } from '#pages/Article/fixtureData';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
-import pglAssetData from '#pages/CpsPgl/fixtureData.json';
-import styAssetData from '#pages/CpsSty/fixtureData.json';
+import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
+import styAssetData from '#pages/StoryPage/fixtureData.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
@@ -198,7 +197,7 @@ describe('ATI Analytics Container', () => {
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]',
         'x2=[responsive]',
         'x3=[news]',
         'x4=[pcm]',
@@ -235,7 +234,7 @@ describe('ATI Analytics Container', () => {
         `re=\${availableScreenWidth}x\${availableScreenHeight}`,
         'hl=00-00-00',
         `lng=\${browserLanguage}`,
-        'x1=[urn:bbc:ares::asset:pidgin/23248703]',
+        'x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]',
         'x2=[amp]',
         'x3=[news]',
         'x4=[pcm]',
@@ -275,7 +274,7 @@ describe('ATI Analytics Container', () => {
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[urn:bbc:ares::asset:azeri/azerbaijan-44208474]',
+        'x1=[urn:bbc:cps:38229308-a0fb-654a-a274-19bec0414560]',
         'x2=[responsive]',
         'x3=[news]',
         'x4=[az]',
@@ -312,7 +311,7 @@ describe('ATI Analytics Container', () => {
         `re=\${availableScreenWidth}x\${availableScreenHeight}`,
         'hl=00-00-00',
         `lng=\${browserLanguage}`,
-        'x1=[urn:bbc:ares::asset:azeri/azerbaijan-44208474]',
+        'x1=[urn:bbc:cps:38229308-a0fb-654a-a274-19bec0414560]',
         'x2=[amp]',
         'x3=[news]',
         'x4=[az]',
@@ -352,7 +351,7 @@ describe('ATI Analytics Container', () => {
         're=1024x768',
         'hl=00-00-00',
         'lng=en-US',
-        'x1=[urn:bbc:ares::asset:mundo/23263889]',
+        'x1=[urn:bbc:cps:f776ad93-e486-b14a-b5ea-55955dd0644f]',
         'x2=[responsive]',
         'x3=[news]',
         'x4=[es]',
@@ -390,7 +389,7 @@ describe('ATI Analytics Container', () => {
         `re=\${availableScreenWidth}x\${availableScreenHeight}`,
         'hl=00-00-00',
         `lng=\${browserLanguage}`,
-        'x1=[urn:bbc:ares::asset:mundo/23263889]',
+        'x1=[urn:bbc:cps:f776ad93-e486-b14a-b5ea-55955dd0644f]',
         'x2=[amp]',
         'x3=[news]',
         'x4=[es]',

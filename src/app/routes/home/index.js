@@ -1,6 +1,6 @@
-import getInitialData from '../fetchPageData';
-import FrontPage from '#pages/FrontPage';
-import { frontPagePath } from '../regex';
+import { FrontPage } from '#pages';
+import getInitialData from './getInitialData';
+import { frontPagePath } from '../utils/regex';
 
 export default {
   path: frontPagePath,

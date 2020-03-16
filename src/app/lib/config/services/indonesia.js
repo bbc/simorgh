@@ -12,6 +12,7 @@ export const service = {
     articleTimestampPrefix: 'Diperbarui',
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
+    chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
@@ -38,7 +39,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Berita',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +49,7 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
+      navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
         audioPlayer: 'Pemutar Audio',
@@ -156,6 +157,9 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    radioSchedule: {
+      hasRadioSchedule: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/indonesia/institutional-49283175',
@@ -187,6 +191,12 @@ export const service = {
           href: 'https://www.bbc.com/indonesia/institutional-37818427',
           text: 'Hubungi BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
@@ -214,7 +224,6 @@ export const service = {
         url: '/indonesia/laporan-khusus-51267199',
       },
     ],
-    navigationSection: 'Kategori',
     timezone: 'Asia/Jakarta',
   },
 };

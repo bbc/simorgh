@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LinkedData should correctly render linked data for CPS PGL page 1`] = `
+exports[`LinkedData should correctly render linked data for Photo Gallery page 1`] = `
 <html>
   <head>
     <script

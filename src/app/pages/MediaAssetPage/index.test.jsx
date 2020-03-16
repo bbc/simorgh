@@ -8,12 +8,11 @@ import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import CpsMapPage from '.';
+import { MediaAssetPage } from '..';
 import mapPageData from '#data/pidgin/cpsAssets/23248703';
 import uzbekPageData from '#data/uzbek/cpsAssets/sport-23248721';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
-import preprocessor from '#lib/utilities/preprocessor';
-import { cpsAssetPreprocessorRules } from '#app/routes/fetchPageData/utils/preprocessorRulesConfig';
+import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 const toggleState = {
   local: {
@@ -45,14 +44,14 @@ const createAssetPage = ({ pageData }, service) => (
           service={service}
           statusCode={200}
         >
-          <CpsMapPage service={service} pageData={pageData} />
+          <MediaAssetPage service={service} pageData={pageData} />
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContext.Provider>
   </StaticRouter>
 );
 
-jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
@@ -62,7 +61,7 @@ jest.mock('../../containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
+jest.mock('#containers/PageHandlers/withLoading', () => Component => {
   const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
@@ -72,7 +71,7 @@ jest.mock('../../containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withError', () => Component => {
+jest.mock('#containers/PageHandlers/withError', () => Component => {
   const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
@@ -82,7 +81,7 @@ jest.mock('../../containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withData', () => Component => {
+jest.mock('#containers/PageHandlers/withData', () => Component => {
   const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
@@ -92,7 +91,7 @@ jest.mock('../../containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('../../containers/PageHandlers/withContexts', () => Component => {
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
@@ -127,7 +126,9 @@ describe('Media Asset Page', () => {
   let asFragment;
   let getByText;
   beforeEach(async () => {
-    pageData = await preprocessor(mapPageData, cpsAssetPreprocessorRules);
+    fetch.mockResponse(JSON.stringify(mapPageData));
+    const response = await getInitialData('some-map-path');
+    pageData = response.pageData;
 
     ({ asFragment, getByText } = render(
       createAssetPage({ pageData }, 'pidgin'),
@@ -220,7 +221,9 @@ describe('Media Asset Page', () => {
     };
 
     it('should render version (live audio stream)', async () => {
-      pageData = await preprocessor(uzbekPageData, cpsAssetPreprocessorRules);
+      fetch.mockResponse(JSON.stringify(uzbekPageData));
+      const response = await getInitialData('some-map-path');
+      pageData = response.pageData;
       const liveStreamBlock = getLiveStreamBlock(pageData);
       liveStreamSource = getLiveStreamSource(liveStreamBlock);
       expect(liveStreamBlock.type).toBe('version');
@@ -297,10 +300,12 @@ describe('Media Asset Page', () => {
 });
 
 it('should not show the timestamp when allowDateStamp is false', async () => {
+  fetch.mockResponse(JSON.stringify(mapPageData));
+  const { pageData } = await getInitialData('some-map-path');
   const pageDataWithHiddenTimestamp = assocPath(
     ['metadata', 'options', 'allowDateStamp'],
     false,
-    await preprocessor(mapPageData, cpsAssetPreprocessorRules),
+    pageData,
   );
 
   render(createAssetPage({ pageData: pageDataWithHiddenTimestamp }, 'pidgin'));
@@ -309,15 +314,17 @@ it('should not show the timestamp when allowDateStamp is false', async () => {
 });
 
 it('should not show the iframe when available is false', async () => {
+  fetch.mockResponse(JSON.stringify(uzbekPageData));
+  const { pageData } = await getInitialData('some-map-path');
   const uzbekDataExpiredLivestream = assocPath(
     ['content', 'blocks', 0, 'available'],
     false,
-    uzbekPageData,
+    pageData,
   );
 
-  const pageDataWithExpiredLiveStream = await preprocessor(
-    uzbekDataExpiredLivestream,
-    cpsAssetPreprocessorRules,
+  fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
+    'some-map-path',
   );
 
   render(createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'));
@@ -332,11 +339,10 @@ it('should show the media message when available is false', async () => {
     uzbekPageData,
   );
 
-  const pageDataWithExpiredLiveStream = await preprocessor(
-    uzbekDataExpiredLivestream,
-    cpsAssetPreprocessorRules,
+  fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
+    'some-map-path',
   );
-
   const { getByText } = render(
     createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
   );
@@ -347,7 +353,8 @@ it('should show the media message when available is false', async () => {
 });
 
 it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-  const pageData = await preprocessor(igboPageData, cpsAssetPreprocessorRules);
+  fetch.mockResponse(JSON.stringify(igboPageData));
+  const { pageData } = await getInitialData('some-map-path');
 
   const { getByText } = render(createAssetPage({ pageData }, 'igbo'));
 
