@@ -10,6 +10,7 @@
       "curie": "http://www.bbc.co.uk/asset/954b3c17-7900-9342-aa1a-6857067770d7"
     },
     "summary": "This is a test asset used in Simorgh, please do not edit it without asking.",
+    "timestamp": 1580745507000,
     "byline": {
       "name": "By Andrew Overtyped Marr",
       "title": "BBC News - Overtyped",
@@ -58,6 +59,7 @@
       "curie": "http://www.bbc.co.uk/asset/40af9483-cf8c-254f-b5f8-af1fa2a74436"
     },
     "summary": "Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.",
+    "timestamp": 1580745507000,
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
