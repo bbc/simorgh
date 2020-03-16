@@ -4,6 +4,7 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
 import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -13,10 +14,13 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_MARGIN_BELOW_400PX,
+  GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { Link } from '@bbc/psammead-story-promo';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import webLogger from '#lib/logger.web';
@@ -38,12 +42,25 @@ const MarginWrapper = styled.div`
   }
 `;
 
+const AddBackgroundColor = styled.section`
+  /* To remove GEL Margins */
+  margin: 0 -${GEL_MARGIN_BELOW_400PX};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 -${GEL_MARGIN_ABOVE_400PX};
+  }
+  background-color: ${C_LUNAR};
+`;
+
 const RadioScheduleSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Radio-Schedule',
 }))`
+  padding: 0 ${GEL_MARGIN_BELOW_400PX};
   margin: 0 auto;
   width: 100%; /* Needed for IE11 */
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_MARGIN_ABOVE_400PX};
+  }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
@@ -98,32 +115,34 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   }
 
   return (
-    <RadioScheduleSection>
-      <RadioScheduleSectionLabel
-        script={script}
-        labelId="Radio-Schedule"
-        service={service}
-        dir={dir}
-        bar={false}
-      >
-        {header}
-      </RadioScheduleSectionLabel>
-      <MarginWrapper>
-        <RadioSchedule
-          schedules={schedule}
-          locale={locale}
-          timezone={timezone}
+    <AddBackgroundColor>
+      <RadioScheduleSection>
+        <RadioScheduleSectionLabel
           script={script}
+          labelId="Radio-Schedule"
           service={service}
           dir={dir}
-        />
-        {frequenciesPageUrl && (
-          <RadioFrequencyLink href={frequenciesPageUrl}>
-            {frequenciesPageLabel}
-          </RadioFrequencyLink>
-        )}
-      </MarginWrapper>
-    </RadioScheduleSection>
+          bar={false}
+        >
+          {header}
+        </RadioScheduleSectionLabel>
+        <MarginWrapper>
+          <RadioSchedule
+            schedules={schedule}
+            locale={locale}
+            timezone={timezone}
+            script={script}
+            service={service}
+            dir={dir}
+          />
+          {frequenciesPageUrl && (
+            <RadioFrequencyLink href={frequenciesPageUrl}>
+              {frequenciesPageLabel}
+            </RadioFrequencyLink>
+          )}
+        </MarginWrapper>
+      </RadioScheduleSection>
+    </AddBackgroundColor>
   );
 };
 
