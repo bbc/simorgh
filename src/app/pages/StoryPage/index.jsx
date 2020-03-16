@@ -20,6 +20,7 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import MostReadContainer from '#containers/MostRead';
+import FeaturesAnalysis from '#containers/FeaturesAnalysis';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -102,6 +103,18 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const ComponentWrapper = styled.div`
     margin-bottom: ${GEL_SPACING_TRPL};
     padding: ${GEL_SPACING_DBL};
+  `;
+
+  /**
+   * this should be the defacto wrapper for OJs
+   * as it displays a conditional padding, which
+   * works well for mobile view.
+   */
+  const ResponsiveComponentWrapper = styled.div`
+    margin-bottom: ${GEL_SPACING_TRPL};
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_DBL};
+    }
   `;
 
   const gridColumns = {
@@ -192,6 +205,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
+          <ResponsiveComponentWrapper>
+            <FeaturesAnalysis />
+          </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>

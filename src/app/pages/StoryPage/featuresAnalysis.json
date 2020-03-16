@@ -1,0 +1,88 @@
+[
+  {
+    "headlines": {
+      "shortHeadline": "STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?",
+      "headline": "STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"
+    },
+    "locators": {
+      "assetUri": "/igbo/afirika-23252735",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-23252735",
+      "curie": "http://www.bbc.co.uk/asset/954b3c17-7900-9342-aa1a-6857067770d7"
+    },
+    "summary": "This is a test asset used in Simorgh, please do not edit it without asking.",
+    "byline": {
+      "name": "By Andrew Overtyped Marr",
+      "title": "BBC News - Overtyped",
+      "persons": [
+        {
+          "name": "Andrew Marr",
+          "function": "BBC News",
+          "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/50002000/jpg/_50002170_andrew_marr_112_bbc.jpg"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5ad86270c93a9f000eecb255",
+          "campaignName": "Amuse me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "63724372",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+      "path": "/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Some people at the NTA awards",
+      "copyrightHolder": "Joe Maher",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:igbo/afirika-23252735",
+    "type": "cps"
+  },
+  {
+    "headlines": {
+      "shortHeadline": "Zimbabwe eferela Robert Mugabe aka",
+      "headline": "Robert Mugabe: Zimbabwe eferela nwa amadi a aka"
+    },
+    "locators": {
+      "assetUri": "/igbo/afirika-49666505",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/afirika-49666505",
+      "curie": "http://www.bbc.co.uk/asset/40af9483-cf8c-254f-b5f8-af1fa2a74436"
+    },
+    "summary": "Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "108810335",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/D035/production/_108810335_mugabe2.jpg",
+      "path": "/cpsprodpb/D035/production/_108810335_mugabe2.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+      "caption": "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:igbo/afirika-49666505",
+    "type": "cps"
+  }
+]
