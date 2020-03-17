@@ -75,6 +75,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 
 .c2:hover,
 .c2:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -826,6 +827,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 
 .c2:hover,
 .c2:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -1485,6 +1487,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 
 .c2:hover,
 .c2:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -2147,6 +2150,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -2855,6 +2859,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -3476,6 +3481,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
