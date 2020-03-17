@@ -339,16 +339,13 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 .c7 {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-bottom: 0;
-  margin-top: 0;
   width: 100%;
 }
 
 .c2 {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-top: 0;
   width: 100%;
 }

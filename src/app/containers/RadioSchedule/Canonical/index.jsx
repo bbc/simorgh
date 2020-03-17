@@ -48,10 +48,8 @@ const RadioScheduleSection = styled.section.attrs(() => ({
 `;
 
 const MarginWrapper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-bottom: 0;
-  margin-top: 0;
   width: 100%; /* Needed for IE11 */
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-bottom: ${GEL_SPACING_DBL};
@@ -68,8 +66,7 @@ const MarginWrapper = styled.div`
 `;
 
 const RadioScheduleSectionLabel = styled(SectionLabel)`
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-top: 0;
   width: 100%; /* Needed for IE11 */
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
