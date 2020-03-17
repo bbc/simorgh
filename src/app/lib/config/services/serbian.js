@@ -90,6 +90,12 @@ export const service = {
           href: 'https://www.bbc.com/serbian/lat/institutional-43543431',
           text: 'Kontaktirajte BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
