@@ -21,8 +21,6 @@ const baseServiceConfig = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   isTrustProjectParticipant: true,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
@@ -48,6 +46,10 @@ export const service = {
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
+    noBylinesPolicy:
+      'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/serbian/lat/institutional-50173730',
     script: latinDiacritics,
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
@@ -244,6 +246,10 @@ export const service = {
     frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
+    noBylinesPolicy:
+      'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/serbian/cyr/institutional-50173730',
     script: cyrillicAndLatin,
     serviceLocalizedName: 'на српском',
     serviceName: 'News на српском',
