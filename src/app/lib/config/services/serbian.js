@@ -41,6 +41,9 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     articleTimestampPrefix: 'Ažurirano',
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
@@ -237,6 +240,9 @@ export const service = {
   },
   cyr: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     articleTimestampPrefix: 'Ажурирано',
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
