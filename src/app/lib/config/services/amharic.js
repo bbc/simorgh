@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
@@ -141,7 +144,7 @@ export const service = {
         video: 'ቪዲዮ',
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
-        liveLabel: 'ቀጥታ ስርጭት',
+        liveLabel: 'ቀጥታ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -186,6 +189,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/amharic/institutional-42228117',
           text: 'ቢቢሲን ያግኙ',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',

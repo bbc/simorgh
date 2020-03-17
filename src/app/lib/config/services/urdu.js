@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ur',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -191,6 +194,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

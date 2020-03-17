@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
@@ -204,6 +207,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

@@ -7,6 +7,9 @@ import 'moment/locale/ko';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '최종 송고일',
@@ -185,6 +188,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/korean/institutional-42224941',
           text: '고객센터',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

@@ -8,6 +8,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
@@ -202,6 +205,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/tamil/institutional-37288738',
           text: 'பிபிசி-யை தொடர்பு கொள்க',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

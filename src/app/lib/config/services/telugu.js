@@ -8,6 +8,9 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
@@ -195,6 +198,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/telugu/institutional-42227910',
           text: 'బీబీసీని సంప్రదించండి',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

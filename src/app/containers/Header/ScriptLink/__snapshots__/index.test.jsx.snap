@@ -20,7 +20,7 @@ exports[`Script Link should render correctly 1`] = `
   margin: 0.1875rem;
   display: inline-block;
   height: calc(100%);
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .c0:hover > span,
@@ -67,7 +67,7 @@ exports[`Script Link should render correctly 1`] = `
   }
 
   .c0 > span {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem;
     line-height: calc(2.5rem - 0.5rem);
   }
 }
