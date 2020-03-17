@@ -20,7 +20,10 @@ describe('pageIsSame', () => {
   });
   it('should return false when props have a different assetId', () => {
     expect(
-      pageIsSame(exampleProps, assocPath([], 'different-id', exampleProps)),
+      pageIsSame(
+        exampleProps,
+        assocPath(['pageData', 'metadata', 'id'], 'different-id', exampleProps),
+      ),
     ).toBe(false);
   });
 });
