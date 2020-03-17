@@ -1,11 +1,12 @@
 import '@testing-library/jest-dom/extend-expect';
-import { renderFullHTML } from '../../renderApp';
+import { renderAsJsDom } from '../../render';
 
 export default ({ pageUrl }) => {
   describe('Analytics', () => {
     it('should have a noscript img tag with the ati url', async () => {
       process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
-      const { document } = await renderFullHTML(pageUrl);
+      const { document } = await renderAsJsDom(pageUrl);
+
       const noscriptImage = document.querySelector('noscript img');
 
       expect(noscriptImage.tagName).toEqual('IMG');

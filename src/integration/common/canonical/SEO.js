@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom/extend-expect';
-import { renderFullHTML } from '../../renderApp';
+import { renderAsJsDom } from '../../render';
 
 let document;
 
 export default ({ pageUrl, pageTitle, canonicalUrl, language }) => {
   describe('SEO', () => {
     beforeEach(async () => {
-      const jsdom = await renderFullHTML(pageUrl);
+      const jsdom = await renderAsJsDom(pageUrl);
       document = jsdom.document;
     });
 
