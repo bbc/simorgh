@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',

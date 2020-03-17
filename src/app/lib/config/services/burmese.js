@@ -8,6 +8,9 @@ import 'moment/locale/my';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
