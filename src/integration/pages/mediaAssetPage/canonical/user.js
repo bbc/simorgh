@@ -42,7 +42,7 @@ export default () => {
     });
 
     it.skip('should render related content', () => {
-      const relatedContentListEl = document.querySelector('[role="listitem"]');
+      const relatedContentListEl = document.querySelector('[role="listitem"]'); // TODO: distinguish between bulleted list and related content
       const relatedContentItem = app
         .within(relatedContentListEl)
         .getByTextSpecial(
