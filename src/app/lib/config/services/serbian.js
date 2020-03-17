@@ -112,7 +112,7 @@ export const service = {
       },
       {
         title: 'Srbija',
-        url: '/serbian/lat/1791445f-977a-4e6d-b490-51f84bb4fc52',
+        url: '/serbian/lat/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
       {
         title: 'Balkan',
@@ -317,7 +317,7 @@ export const service = {
       },
       {
         title: 'Србија',
-        url: '/serbian/cyr/1791445f-977a-4e6d-b490-51f84bb4fc52',
+        url: '/serbian/cyr/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
       {
         title: 'Балкан',
