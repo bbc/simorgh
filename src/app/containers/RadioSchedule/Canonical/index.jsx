@@ -135,6 +135,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
         service={service}
         dir={dir}
         bar={false}
+        backgroundColor={C_LUNAR}
       >
         {header}
       </RadioScheduleSectionLabel>
