@@ -7,6 +7,9 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',

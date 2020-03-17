@@ -173,6 +173,7 @@ exports[`Header should render correctly for WS frontPage 1`] = `
 
 .c16:hover,
 .c16:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -1170,6 +1171,7 @@ exports[`Header should render correctly for WS radio page 1`] = `
 
 .c16:hover,
 .c16:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -2167,6 +2169,7 @@ exports[`Header should render correctly for news article 1`] = `
 
 .c16:hover,
 .c16:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
