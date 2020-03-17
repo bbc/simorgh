@@ -1,39 +1,34 @@
 /* eslint-disable react/no-danger */
 import React, { useEffect, useState } from 'react';
-import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
-import webLogger from '#lib/logger.web';
 import useToggle from '../Toggle/useToggle';
 
-const logger = webLogger();
+const decodeHTML = str => {
+  const replacedParts = {
+    '&quot;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+  };
+  const replacementsRegex = new RegExp(
+    Object.keys(replacedParts).join('|'),
+    'gi',
+  );
+  return str.replace(replacementsRegex, match => replacedParts[match]);
+};
 
-const IncludeContainer = ({ href }) => {
+const IncludeContainer = ({ html }) => {
   const [markup, setMarkup] = useState(null);
-  const [hasError, setError] = useState(false);
   const { enabled } = useToggle('include');
 
   useEffect(() => {
-    const fetchMarkup = async () => {
-      try {
-        const res = await fetch(href);
-        if (res.status !== 200) {
-          throw new Error('Failed to fetch');
-        } else {
-          const html = await res.text();
-          setMarkup(html);
-        }
-      } catch (e) {
-        setError(true);
-        logger.error(`HTTP Error: "${e}"`);
-      }
-    };
     if (enabled) {
-      fetchMarkup();
+      setMarkup(decodeHTML(html));
     }
-  }, [href, enabled]);
+  }, [html, enabled]);
 
-  const shouldNotDisplayInclude = hasError || !markup || !enabled;
+  const shouldNotDisplayInclude = !markup || !enabled;
 
   if (shouldNotDisplayInclude) {
     return null;
@@ -47,7 +42,7 @@ const IncludeContainer = ({ href }) => {
 };
 
 IncludeContainer.propTypes = {
-  href: string.isRequired,
+  html: string.isRequired,
 };
 
 export default IncludeContainer;
