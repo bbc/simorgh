@@ -8,6 +8,9 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
