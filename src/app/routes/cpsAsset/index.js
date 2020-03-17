@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import path from 'ramda/src/path';
+import pageIsSame from '../utils/pageIsSame';
 import getInitialData from './getInitialData';
 import { MediaAssetPage, PhotoGalleryPage, StoryPage, FrontPage } from '#pages';
 import ErrorPage from '#pages/Error';
@@ -26,10 +27,6 @@ const CpsAsset = props => {
     ? PageType({ ...props, pageType: type })
     : ErrorPage({ ...props, pageType: 'error', status: 404 });
 };
-
-const getAssetId = path(['pageData', 'metadata', 'id']);
-const pageIsSame = (prevProps, nextProps) =>
-  getAssetId(prevProps) === getAssetId(nextProps);
 
 export default {
   path: [cpsAssetPagePath, legacyAssetPagePath],
