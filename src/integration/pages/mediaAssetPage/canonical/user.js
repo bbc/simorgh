@@ -31,7 +31,7 @@ export default () => {
     });
 
     it.skip('should render a bulleted list', () => {
-      const bulletedListItemEl = document.querySelector('[role="listitem"]');
+      const bulletedListItemEl = document.querySelector('[role="listitem"]'); // TODO: distinguish between bulleted list and related content
       const listIem = app
         .within(bulletedListItemEl)
         .getByTextSpecial(
