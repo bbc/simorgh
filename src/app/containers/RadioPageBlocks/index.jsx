@@ -24,7 +24,6 @@ const RadioPageBlocks = ({ blocks }) => {
     const isFirstBlock = index === 0;
     const idAttr = isFirstBlock ? SKIP_LINK_ANCHOR_ID : null;
     const blockType = id || type;
-
     const Block = pathOr(UnknownBlock, [blockType], blockMap);
 
     return (

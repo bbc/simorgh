@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
@@ -141,7 +144,7 @@ export const service = {
         video: 'ቪዲዮ',
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
-        liveLabel: 'ቀጥታ ስርጭት',
+        liveLabel: 'ቀጥታ',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
