@@ -241,7 +241,7 @@ export const service = {
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
     externalLinkText: ', спољна страница',
-    frontPageTitle: ', спољна страница',
+    frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
     script: cyrillicAndLatin,
