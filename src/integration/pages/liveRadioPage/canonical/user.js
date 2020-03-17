@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import renderApp from '../../../renderApp';
+import { renderAsReact } from '../../../render';
 import { LIVE_RADIO_PAGE_URL } from '../../../pageUrls';
 
 export default () => {
@@ -7,7 +7,7 @@ export default () => {
     let app;
 
     beforeEach(async () => {
-      app = await renderApp(LIVE_RADIO_PAGE_URL);
+      app = await renderAsReact(LIVE_RADIO_PAGE_URL);
     });
 
     it('should render the headline', () => {

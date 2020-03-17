@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom/extend-expect';
-import renderApp from '../../renderApp';
+import { renderAsReact } from '../../render';
 
 export default ({ pageUrl }) => {
   describe('a11y', () => {
-    beforeEach(() => renderApp(pageUrl));
+    beforeEach(() => renderAsReact(pageUrl));
 
     it('should render an H1 with the correct attributes', () => {
       const headlineEl = document.querySelector(

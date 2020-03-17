@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom/extend-expect';
-import renderApp from '../../renderApp';
+import { renderAsReact } from '../../render';
 
 export default ({ pageUrl, copyrightText, brandingText, brandingLink }) => {
   describe('Footer', () => {
     let app;
 
     beforeEach(async () => {
-      app = await renderApp(pageUrl);
+      app = await renderAsReact(pageUrl);
     });
 
     it('should render footer copyright text', () => {
