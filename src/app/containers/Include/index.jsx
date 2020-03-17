@@ -19,16 +19,9 @@ const decodeHTML = str => {
 };
 
 const IncludeContainer = ({ html }) => {
-  const [markup, setMarkup] = useState(null);
   const { enabled } = useToggle('include');
 
-  useEffect(() => {
-    if (enabled) {
-      setMarkup(decodeHTML(html));
-    }
-  }, [html, enabled]);
-
-  const shouldNotDisplayInclude = !markup || !enabled;
+  const shouldNotDisplayInclude = !html || !enabled;
 
   if (shouldNotDisplayInclude) {
     return null;
@@ -36,7 +29,7 @@ const IncludeContainer = ({ html }) => {
 
   return (
     <GridItemConstrainedMedium>
-      <div dangerouslySetInnerHTML={{ __html: markup }} />,
+      <div dangerouslySetInnerHTML={{ __html: decodeHTML(html) }} />
     </GridItemConstrainedMedium>
   );
 };
