@@ -9,8 +9,8 @@ const writeJson = (pathname, filePath, json) => {
       // eslint-disable-next-line no-console
       console.info('An Error Occurred -- ', error);
     } else {
-      console.info(`Successfully downloaded ${pathname}`);
       // eslint-disable-next-line no-console
+      console.info(`Successfully downloaded ${pathname}`);
     }
   });
 };
