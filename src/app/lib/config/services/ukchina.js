@@ -79,6 +79,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: '联络BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
     },
