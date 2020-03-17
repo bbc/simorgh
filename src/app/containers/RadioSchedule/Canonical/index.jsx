@@ -8,10 +8,10 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -51,10 +51,8 @@ const MarginWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0;
+  margin-top: 0;
   width: 100%; /* Needed for IE11 */
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-bottom: ${GEL_SPACING_DBL};
   }
@@ -72,8 +70,12 @@ const MarginWrapper = styled.div`
 const RadioScheduleSectionLabel = styled(SectionLabel)`
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0;
   width: 100%; /* Needed for IE11 */
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING};
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
