@@ -3,6 +3,7 @@ import {
   runCommonSeoTests,
   runCommonA11yTests,
   runCommonAnalyticsTests,
+  runChartbeatTests,
 } from '../../../common/canonical';
 import { MEDIA_ASSET_PAGE_URL } from '../../../pageUrls';
 
@@ -20,6 +21,8 @@ export default () => {
     });
 
     runCommonA11yTests({ pageUrl: MEDIA_ASSET_PAGE_URL });
+
+    runChartbeatTests({ pageUrl: MEDIA_ASSET_PAGE_URL });
 
     runFooterTests({
       pageUrl: MEDIA_ASSET_PAGE_URL,
