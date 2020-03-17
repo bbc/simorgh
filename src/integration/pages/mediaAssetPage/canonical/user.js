@@ -11,6 +11,12 @@ export default () => {
       app = await renderAsReact(MEDIA_ASSET_PAGE_URL);
     });
 
+    it('should render a media player', () => {
+      const mediaPlayer = document.querySelector('iframe'); // TODO: need a more accurate selector
+
+      expect(mediaPlayer).toBeInTheDocument();
+    });
+
     it('should render the headline', () => {
       const headlineEl = getHeadlineElement();
       const headline = app
@@ -20,6 +26,13 @@ export default () => {
         );
 
       expect(headline).toBeInTheDocument();
+    });
+
+    it('should render the timestamp', () => {
+      const timestampEl = document.querySelector('time');
+      const timestamp = app.within(timestampEl).getByText('8 Maret 2020');
+
+      expect(timestamp).toBeInTheDocument();
     });
 
     it('should render a paragraph', () => {
