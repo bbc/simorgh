@@ -11,7 +11,7 @@ export default () => {
       app = await renderAsReact(MEDIA_ASSET_PAGE_URL);
     });
 
-    it('should render a media player', () => {
+    it('should render the media player', () => {
       const mediaPlayer = document.querySelector('iframe'); // TODO: need a more accurate selector
 
       expect(mediaPlayer).toBeInTheDocument();
