@@ -4,13 +4,26 @@ const convertInclude = ({ href, url, type, ...rest }) => {
     idt2: 'idt2',
     include: 'vj',
   };
-  const typeExtraction = href.split('/')[1];
 
-  if (!supportedTypes[typeExtraction]) {
+  // This determines if the href has a leading '/'
+  const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
+
+  // This checks if the supportedType is in the correct position of the href
+  const hrefIsSupported = () => supportedType =>
+    href && href.startsWith(supportedType, hrefTypePostion());
+
+  // This extracts the type from the href
+  const typeExtraction = Object.keys(supportedTypes).find(
+    hrefIsSupported(href),
+  );
+
+  // This determines if the type is supported
+  const includeType = supportedTypes[typeExtraction];
+
+  if (!includeType) {
     return null;
   }
 
-  const includeType = supportedTypes[typeExtraction];
   return {
     type,
     model: {
