@@ -44,6 +44,9 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     externalLinkText: ', 外部链接',
     frontPageTitle: '主页',
     lang: `zh-hans`,
@@ -78,6 +81,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: '联络BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBC对外部网站内容不负责任。',
@@ -242,6 +251,9 @@ export const service = {
   },
   trad: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     lang: `zh-hant`,
     locale: `zh-hant`,
     externalLinkText: ', 外部鏈接',

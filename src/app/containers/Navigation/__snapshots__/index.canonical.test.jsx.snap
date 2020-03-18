@@ -43,6 +43,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
