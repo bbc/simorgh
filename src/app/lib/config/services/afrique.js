@@ -7,6 +7,9 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
@@ -206,6 +209,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826644',
           text: 'Contactez la BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

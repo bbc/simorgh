@@ -26,6 +26,12 @@ const toggles = {
       value:
         '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
     },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
   },
   test: {
     ads: {
@@ -47,7 +53,13 @@ const toggles = {
       enabled: true,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
     },
     enableFetchingToggles: {
       enabled: true,
@@ -78,6 +90,15 @@ const toggles = {
       enabled: false,
       value:
         '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+    ads: {
+      enabled: false,
     },
   },
 };

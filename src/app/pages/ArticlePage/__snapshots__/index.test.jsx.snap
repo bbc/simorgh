@@ -11,10 +11,10 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GhostGrid-sc-12lwanc-1 kGasFS"
+      class="GridWrapper-sc-12lwanc-0 hgpaqH"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
@@ -25,7 +25,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
       >
         <p
           class="Paragraph-k859h4-0 hymSIv"
@@ -37,7 +37,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 bMQBFX"
+    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 LgbeX"
     data-e2e="most-read"
     role="region"
   >
@@ -110,8 +110,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-05-21"
                 >
-                  De one we dem update for: 
-                  21st May 2019
+                  De one we dem update for: 21st May 2019
                 </time>
               </div>
             </div>
@@ -152,8 +151,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-11-05"
                 >
-                  De one we dem update for: 
-                  5th November 2019
+                  De one we dem update for: 5th November 2019
                 </time>
               </div>
             </div>
@@ -194,8 +192,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-11-05"
                 >
-                  De one we dem update for: 
-                  5th November 2019
+                  De one we dem update for: 5th November 2019
                 </time>
               </div>
             </div>
@@ -236,8 +233,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-11-06"
                 >
-                  De one we dem update for: 
-                  6th November 2019
+                  De one we dem update for: 6th November 2019
                 </time>
               </div>
             </div>
@@ -278,8 +274,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-11-06"
                 >
-                  De one we dem update for: 
-                  6th November 2019
+                  De one we dem update for: 6th November 2019
                 </time>
               </div>
             </div>
@@ -320,8 +315,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-10-18"
                 >
-                  De one we dem update for: 
-                  18th October 2019
+                  De one we dem update for: 18th October 2019
                 </time>
               </div>
             </div>
@@ -362,8 +356,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-10-25"
                 >
-                  De one we dem update for: 
-                  25th October 2019
+                  De one we dem update for: 25th October 2019
                 </time>
               </div>
             </div>
@@ -404,8 +397,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-05-23"
                 >
-                  De one we dem update for: 
-                  23rd May 2019
+                  De one we dem update for: 23rd May 2019
                 </time>
               </div>
             </div>
@@ -446,8 +438,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-11-06"
                 >
-                  De one we dem update for: 
-                  6th November 2019
+                  De one we dem update for: 6th November 2019
                 </time>
               </div>
             </div>
@@ -488,8 +479,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 kVWTyt"
                   datetime="2019-05-21"
                 >
-                  De one we dem update for: 
-                  21st May 2019
+                  De one we dem update for: 21st May 2019
                 </time>
               </div>
             </div>
@@ -512,10 +502,10 @@ exports[`should render a news article correctly 1`] = `
     role="main"
   >
     <div
-      class="GhostGrid-sc-12lwanc-1 kGasFS"
+      class="GridWrapper-sc-12lwanc-0 hgpaqH"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
@@ -526,7 +516,7 @@ exports[`should render a news article correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
       >
         <p
           class="Paragraph-k859h4-0 dSVJxu"
@@ -550,10 +540,10 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     role="main"
   >
     <div
-      class="GhostGrid-sc-12lwanc-1 kGasFS"
+      class="GridWrapper-sc-12lwanc-0 hgpaqH"
     >
       <div
-        class="GridItemConstrainedLarge-sc-12lwanc-5 dBAoSC"
+        class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae"
       >
         <h1
           class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bYbRDq"
@@ -564,7 +554,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
         </h1>
       </div>
       <div
-        class="GridItemConstrainedMedium-sc-12lwanc-3 imiJTj"
+        class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
       >
         <p
           class="Paragraph-k859h4-0 jfPMLX"
@@ -576,7 +566,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </main>
   <section
     aria-labelledby="Most-Read"
-    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 bMQBFX"
+    class="MostReadSection-sc-6bm912-1 ConstrainedMostReadSection-sc-6bm912-3 LgbeX"
     data-e2e="most-read"
     role="region"
   >
@@ -649,8 +639,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -691,8 +680,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -733,8 +721,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -775,8 +762,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -817,8 +803,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -859,8 +844,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -901,8 +885,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -943,8 +926,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -985,8 +967,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>
@@ -1027,8 +1008,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
                   class="StyledTimestamp-um718p-0 fMHMrb"
                   datetime="2019-11-06"
                 >
-                  به روز شده در 
-                  ۶ نوامبر ۲۰۱۹
+                  به روز شده در ۶ نوامبر ۲۰۱۹
                 </time>
               </div>
             </div>

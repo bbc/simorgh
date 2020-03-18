@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `uk`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Оновлення даних: ',
@@ -162,14 +165,14 @@ export const service = {
       header: 'Найпопулярніше',
       lastUpdated: 'Останнє оновлення:',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/ukrainian/institutional-50170368',
         text: 'Чому BBC заслуговує на довіру',
       },
       externalLink: {
@@ -193,6 +196,12 @@ export const service = {
           href: 'https://www.bbc.com/ukrainian/institutional-38146278',
           text: "Зв'язатися з BBC",
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. ВВС не несе відповідальності за контент інших сайтів.',
@@ -201,28 +210,8 @@ export const service = {
     timezone: 'GMT',
     navigation: [
       {
-        title: 'Головна',
-        url: '/ukrainian',
-      },
-      {
         title: 'Новини',
-        url: '/ukrainian/news',
-      },
-      {
-        title: 'Україна',
-        url: '/ukrainian/topics/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c',
-      },
-      {
-        title: 'Політика',
-        url: '/ukrainian/topics/75612fa6-147c-4a43-97fa-fcf70d9cced3',
-      },
-      {
-        title: 'Економіка',
-        url: '/ukrainian/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
-      },
-      {
-        title: 'Суспільство',
-        url: '/ukrainian/topics/5307a8d9-f620-40f5-92d4-f99c919a6ffa',
+        url: '/ukrainian',
       },
       {
         title: 'Наука',
@@ -237,40 +226,20 @@ export const service = {
         url: '/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
       {
-        title: 'Спорт',
-        url: '/ukrainian/sport',
-      },
-      {
-        title: 'РУС',
-        url: '/ukrainian/ukraine_in_russian',
-      },
-      {
-        title: 'BBC Журнал',
+        title: 'Журнал',
         url: '/ukrainian/magazine',
+      },
+      {
+        title: 'Книга року ВВС',
+        url: '/ukrainian/features-50320117',
       },
       {
         title: 'Блоги',
         url: '/ukrainian/blogs',
       },
       {
-        title: 'Також у новинах',
-        url: '/ukrainian/other_news',
-      },
-      {
-        title: 'Спецпроекти',
-        url: '/ukrainian/in_depth',
-      },
-      {
-        title: 'Фото',
-        url: '/ukrainian/media/photogalleries',
-      },
-      {
-        title: 'Відео',
-        url: '/ukrainian/media/video',
-      },
-      {
-        title: 'Learning English',
-        url: '/ukrainian/learning_english',
+        title: 'РУС',
+        url: '/ukrainian/ukraine_in_russian',
       },
     ],
   },

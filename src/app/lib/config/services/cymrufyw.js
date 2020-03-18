@@ -15,6 +15,9 @@ import 'moment/locale/cy';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
@@ -194,6 +197,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: "Cysylltwch â'r BBC",
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

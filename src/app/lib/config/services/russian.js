@@ -16,6 +16,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
@@ -175,7 +178,7 @@ export const service = {
       header: 'Самое популярное',
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
-      hasMostRead: false,
+      hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -209,6 +212,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/russian/institutional-36517237',
           text: 'Связаться с Би-би-си',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
