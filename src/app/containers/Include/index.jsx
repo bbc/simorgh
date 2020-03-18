@@ -21,19 +21,28 @@ const decodeHTML = str => {
 const IncludeContainer = ({ html }) => {
   const { enabled } = useToggle('include');
 
-  if (!enabled) {
+  const shouldNotRenderInclude = !enabled || !html;
+
+  if (shouldNotRenderInclude) {
     return null;
   }
 
   return (
     <GridItemConstrainedMedium>
-      <div dangerouslySetInnerHTML={{ __html: decodeHTML(html) }} />
+      <div
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: decodeHTML(html) }}
+      />
     </GridItemConstrainedMedium>
   );
 };
 
 IncludeContainer.propTypes = {
-  html: string.isRequired,
+  html: string,
+};
+
+IncludeContainer.defaultProps = {
+  html: null,
 };
 
 export default IncludeContainer;

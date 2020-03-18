@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`IncludeContainer should not render any HTML when html prop is null 1`] = `<div />`;
+
 exports[`IncludeContainer should not render any HTML when include toggle is disabled 1`] = `<div />`;
 
 exports[`IncludeContainer should render HTML when include toggle is enabled 1`] = `

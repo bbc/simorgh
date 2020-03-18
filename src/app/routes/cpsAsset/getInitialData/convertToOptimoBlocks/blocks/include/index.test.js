@@ -131,6 +131,31 @@ describe('convertInclude', () => {
     expect(fetch).toHaveBeenCalled();
   });
 
+  it('should convert an include block to an idt2 block with html set to null when fetch returns with status other than 200', async () => {
+    jest.mock('#lib/logger.web', () => jest.fn());
+    fetch.mockResponse(() => Promise.resolve({ status: 304 }));
+    const input = {
+      required: false,
+      tile: 'IDT2 Include',
+      href: 'idt2',
+      platform: 'highweb',
+      type: 'include',
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: 'idt2',
+        required: false,
+        tile: 'IDT2 Include',
+        platform: 'highweb',
+        type: 'idt2',
+        html: null,
+      },
+    };
+    expect(await convertInclude(input)).toEqual(expected);
+    expect(fetch).toHaveBeenCalled();
+  });
+
   it('should return null for an unsupported include type', async () => {
     const input = {
       required: false,

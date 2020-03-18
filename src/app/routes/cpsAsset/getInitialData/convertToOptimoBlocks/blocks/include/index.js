@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
-import webLogger from '#lib/logger.web';
+import nodeLogger from '#lib/logger.node';
 
-const logger = webLogger();
+const logger = nodeLogger(__filename);
 
 // this defaults all VJ and IDT2 includes to the specified urls for now
 // should be removed once mozart routes have been created
@@ -28,7 +28,16 @@ const fetchMarkup = async url => {
       return encodeHTML(html);
     }
   } catch (e) {
-    logger.error(`HTTP Error: "${e}"`);
+    logger.error(
+      JSON.stringify(
+        {
+          event: 'http_fetch_error',
+          message: e,
+        },
+        null,
+        2,
+      ),
+    );
     return null;
   }
 };

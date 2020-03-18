@@ -40,6 +40,20 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should not render any HTML when html prop is null', async () => {
+    const mockToggles = {
+      test: {
+        include: {
+          enabled: false,
+        },
+      },
+    };
+    const { container } = render(
+      <IncludeContainerWithMockContext toggleState={mockToggles} />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
   it('should not render any HTML when include toggle is disabled', async () => {
     const mockToggles = {
       test: {
