@@ -1,3 +1,9 @@
+import runCommonTests from './common';
 import runCanonicalTests from './canonical';
+import runAmpTests from './amp';
 
-describe('Article page', runCanonicalTests);
+describe('Given I am on an article page', () => {
+  runCommonTests();
+  runCanonicalTests();
+  runAmpTests();
+});

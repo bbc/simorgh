@@ -2,8 +2,8 @@ import '@testing-library/jest-dom/extend-expect';
 import { renderAsJsDom } from '../../render';
 
 export default ({ pageUrl }) => {
-  describe('Analytics', () => {
-    it('should have a noscript img tag with the ati url', async () => {
+  describe('When I am analysing metrics', () => {
+    it('I can see the data collected with ATI analytics', async () => {
       process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
       const { document } = await renderAsJsDom(pageUrl);
 

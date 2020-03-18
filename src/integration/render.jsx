@@ -1,5 +1,5 @@
 import React from 'react';
-import { JSDOM } from 'jsdom';
+import { JSDOM, ResourceLoader } from 'jsdom';
 import { Helmet } from 'react-helmet';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { render } from '@testing-library/react';
@@ -57,14 +57,14 @@ const getService = pathname => {
 
 const getPathname = url => url.replace('https://www.bbc.com', '');
 
-const getAppComponent = async url => {
+const getAppComponent = async (url, isAmp = false) => {
   const pathname = getPathname(url);
   const jsonData = require(`./pageData/${pathname}`); // eslint-disable-line import/no-dynamic-require, global-require
   fetch.mockResponse(JSON.stringify(jsonData));
   const pageData = await getPageData(pathname);
 
   return (
-    <MemoryRouter initialEntries={[pathname]}>
+    <MemoryRouter initialEntries={[isAmp ? `${pathname}.amp` : pathname]}>
       <App
         routes={routes}
         initialData={{ pageData, status: 200 }}
@@ -106,12 +106,12 @@ export const renderAsReact = async url => {
  * or use state or rerender. Instead it will return the full page HTML inside of a JSDOM emulation of a web browser that you can
  * use to query the DOM and assert markup has been rendered correctly.
  */
-export const renderAsJsDom = async url => {
+export const renderAsJsDom = async (url, { isAmp = false } = {}) => {
   Helmet.canUseDOM = false;
 
   const pathname = getPathname(url);
   const service = getService(pathname);
-  const appComponent = await getAppComponent(url);
+  const appComponent = await getAppComponent(url, isAmp);
   const appString = renderToString(appComponent);
   const pageData = await getPageData(pathname);
 
@@ -126,11 +126,27 @@ export const renderAsJsDom = async url => {
       styleTags={<></>} // TODO
       scripts={<></>} // TODO
       service={service}
-      isAmp={false} // TODO
+      isAmp={isAmp}
     />,
   );
 
-  const { window } = new JSDOM(staticMarkup);
+  const { window } = new JSDOM(staticMarkup, {
+    runScripts: 'dangerously',
+    resources: 'usable',
+  });
 
   return { window, document: window.document }; // TODO it would be nice to work out how to add window/document to the global scope like React testing Library does
+};
+
+export const renderAsBlah = async path => {
+  const dom = await JSDOM.fromURL(`http://localhost:7080${path}`);
+
+  // console.log(dom.window.document.body.innerHTML);
+
+  return {
+    window: dom.window,
+    document: dom.window.document,
+    container: dom.window.document.body,
+    ...within(dom.window.document.body),
+  };
 };

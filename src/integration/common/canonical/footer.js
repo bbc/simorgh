@@ -9,21 +9,21 @@ export default ({ pageUrl, copyrightText, brandingText, brandingLink }) => {
       app = await renderAsReact(pageUrl);
     });
 
-    it('should render footer copyright text', () => {
+    it('I can see the footer copyright text', () => {
       const footerEl = document.querySelector('footer');
       const copyrightEl = app.within(footerEl).getByTextSpecial(copyrightText);
 
       expect(copyrightEl).toBeInTheDocument();
     });
 
-    it('should render BBC branding', () => {
+    it('I can see the BBC branding', () => {
       const footerEl = document.querySelector('footer');
       const brandingEl = app.within(footerEl).getByTextSpecial(brandingText);
 
       expect(brandingEl).toBeInTheDocument();
     });
 
-    it('should wrap BBC branding with an anchor that links to the homepage', () => {
+    it('I can click on the BBC branding and it would take me to the homepage', () => {
       const footerEl = document.querySelector('footer');
       const brandingEl = app.within(footerEl).getByTextSpecial(brandingText);
       const brandingLinkEl = brandingEl.parentNode;

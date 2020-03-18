@@ -1,16 +1,21 @@
 import '@testing-library/jest-dom/extend-expect';
 import { renderAsReact } from '../../render';
 
-export default ({ pageUrl }) => {
-  describe('a11y', () => {
-    beforeEach(() => renderAsReact(pageUrl));
+export default ({ pageUrl, skipToContentText, headlineText }) => {
+  describe('When I am using assistive technology', () => {
+    let app;
 
-    it('should render an H1 with the correct attributes', () => {
-      const headlineEl = document.querySelector(
-        '[role="main"] h1[id="content"][tabindex="-1"]',
-      );
+    beforeEach(async () => {
+      app = await renderAsReact(pageUrl);
+    });
 
-      expect(headlineEl).toBeInTheDocument();
+    it('I can see a skip to content link that links to the main content of the page', () => {
+      const skipToContentEl = app.getByText(skipToContentText);
+      const mainContentEl = app.getByText(headlineText);
+
+      expect(skipToContentEl.getAttribute('href')).toBe('#content');
+      expect(mainContentEl.getAttribute('id')).toBe('content');
+      expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
     });
   });
 };
