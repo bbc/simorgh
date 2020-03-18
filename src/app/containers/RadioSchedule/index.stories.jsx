@@ -40,7 +40,14 @@ const renderRadioScheduleContainer = service => (
 
 const stories = storiesOf('Containers|RadioSchedule', module)
   .addDecorator(withKnobs)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+  .addDecorator(story => (
+    <WithTimeMachine
+      datetime={1546308000000}
+      dateString="Wednesday, 18 March 2020 09:19:28 GMT"
+    >
+      {story()}
+    </WithTimeMachine>
+  ))
   .addDecorator(
     withServicesKnob({
       defaultService: 'korean',
