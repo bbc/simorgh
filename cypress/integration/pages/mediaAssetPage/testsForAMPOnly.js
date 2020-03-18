@@ -38,7 +38,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
         it('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid(0);
+          cy.hasAmpChartbeatConfigUid();
         });
       }
     });
