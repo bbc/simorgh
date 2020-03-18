@@ -154,6 +154,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   transition: visibility 0.2s linear;
 }
 
+.c53 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c28 {
   padding-top: 56.25%;
   position: relative;
@@ -244,6 +254,84 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
+.c49 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c49 >div {
+  vertical-align: middle;
+}
+
+.c49 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c49 svg {
+  margin: 0;
+}
+
+.c48 {
+  position: relative;
+}
+
+.c50 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c52 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.c51 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c51:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c51:hover,
+.c51:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c51:visited {
+  color: #6E6E73;
+}
+
 .c25 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -284,6 +372,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c33 {
+  margin-top: 0;
+}
+
+.c46 {
+  margin-bottom: 1rem;
+}
+
+.c47 {
   margin-top: 0;
 }
 
@@ -330,10 +426,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-grow: 1;
 }
 
-.c45 {
+.c54 {
   background: #ECEAE7;
   margin-bottom: 1.5rem;
   padding: 1rem;
+}
+
+.c45 {
+  margin-bottom: 1.5rem;
 }
 
 .c29 {
@@ -570,6 +670,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c20 {
     padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c53 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c53 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -817,6 +931,80 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:37.5rem) {
+  .c49 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c49 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c49 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c48 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c50 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c50 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c52 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c52 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c52 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c52 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c25 {
     font-size: 1rem;
@@ -910,6 +1098,42 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (max-width:63rem) {
+  .c46 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c46 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c46 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c46 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c46 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c46 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c8 {
     font-size: 0.875rem;
@@ -925,6 +1149,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c44 {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c45 {
+    padding: 1rem;
   }
 }
 
@@ -1458,26 +1688,134 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 <div
                   class="c45"
                 >
-                  <h2>
-                    This is a component in the second column
-                  </h2>
+                  <section
+                    aria-labelledby="top-stories-heading"
+                    class="c46"
+                    role="region"
+                  >
+                    <div
+                      class="c46"
+                    >
+                      <div
+                        class="c32 c47"
+                      >
+                        <div
+                          class="c34"
+                        />
+                        <h2
+                          class="c35"
+                        >
+                          <div
+                            class="c36"
+                          >
+                            <span
+                              class="c37"
+                            >
+                              <span
+                                class="c38"
+                                dir="ltr"
+                                id="top-stories-heading"
+                              >
+                                Top Stories
+                              </span>
+                            </span>
+                          </div>
+                        </h2>
+                      </div>
+                      <ul
+                        class="c39"
+                        role="list"
+                      >
+                        <li
+                          class="c41"
+                          role="listitem"
+                        >
+                          <div
+                            class="c48"
+                          >
+                            <div
+                              class="c49"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c50"
+                              >
+                                <a
+                                  class="c51"
+                                  href="/mundo/noticias-internacional-51939501"
+                                >
+                                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                                </a>
+                              </h3>
+                              <p
+                                class="c52"
+                              >
+                                Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+                              </p>
+                              <time
+                                class="c53"
+                                datetime="2020-03-18"
+                              >
+                                18th March 2020
+                              </time>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="c41"
+                          role="listitem"
+                        >
+                          <div
+                            class="c48"
+                          >
+                            <div
+                              class="c49"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c50"
+                              >
+                                <a
+                                  class="c51"
+                                  href="/pidgin/tori-51945757"
+                                >
+                                  Nigeria don get five new cases of Coronavirus - See how e happun
+                                </a>
+                              </h3>
+                              <p
+                                class="c52"
+                              >
+                                Nigeria Health say di patients from UK and America travel come di kontri.
+                              </p>
+                              <time
+                                class="c53"
+                                datetime="2020-03-18"
+                              >
+                                one hour wey don pass
+                              </time>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
                 </div>
                 <div
-                  class="c45"
+                  class="c54"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c45"
+                  class="c54"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c45"
+                  class="c54"
                 >
                   <h2>
                     This is a component in the second column
@@ -1661,6 +1999,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
+.c55 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c30 {
   padding-top: 56.25%;
   position: relative;
@@ -1751,6 +2099,84 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
+.c51 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c51 >div {
+  vertical-align: middle;
+}
+
+.c51 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c51 svg {
+  margin: 0;
+}
+
+.c50 {
+  position: relative;
+}
+
+.c52 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c54 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.c53 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c53:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c53:hover,
+.c53:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c53:visited {
+  color: #6E6E73;
+}
+
 .c27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1791,6 +2217,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c35 {
+  margin-top: 0;
+}
+
+.c48 {
+  margin-bottom: 1rem;
+}
+
+.c49 {
   margin-top: 0;
 }
 
@@ -1841,10 +2275,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-grow: 1;
 }
 
-.c47 {
+.c56 {
   background: #ECEAE7;
   margin-bottom: 1.5rem;
   padding: 1rem;
+}
+
+.c47 {
+  margin-bottom: 1.5rem;
 }
 
 .c31 {
@@ -2098,6 +2536,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c55 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c55 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     padding: 0 1rem;
@@ -2342,6 +2794,80 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:37.5rem) {
+  .c51 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c51 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c51 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c50 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c52 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c52 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c54 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c54 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c54 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c54 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c27 {
     font-size: 1rem;
@@ -2435,6 +2961,42 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (max-width:63rem) {
+  .c48 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c48 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c48 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c48 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c48 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c48 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c8 {
     font-size: 0.875rem;
@@ -2456,6 +3018,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c46 {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c47 {
+    padding: 1rem;
   }
 }
 
@@ -3211,26 +3779,134 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <div
                       class="c47"
                     >
-                      <h2>
-                        This is a component in the second column
-                      </h2>
+                      <section
+                        aria-labelledby="top-stories-heading"
+                        class="c48"
+                        role="region"
+                      >
+                        <div
+                          class="c48"
+                        >
+                          <div
+                            class="c34 c49"
+                          >
+                            <div
+                              class="c36"
+                            />
+                            <h2
+                              class="c37"
+                            >
+                              <div
+                                class="c38"
+                              >
+                                <span
+                                  class="c39"
+                                >
+                                  <span
+                                    class="c40"
+                                    dir="ltr"
+                                    id="top-stories-heading"
+                                  >
+                                    Top Stories
+                                  </span>
+                                </span>
+                              </div>
+                            </h2>
+                          </div>
+                          <ul
+                            class="c41"
+                            role="list"
+                          >
+                            <li
+                              class="c43"
+                              role="listitem"
+                            >
+                              <div
+                                class="c50"
+                              >
+                                <div
+                                  class="c51"
+                                  dir="ltr"
+                                >
+                                  <h3
+                                    class="c52"
+                                  >
+                                    <a
+                                      class="c53"
+                                      href="/mundo/noticias-internacional-51939501"
+                                    >
+                                      China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                                    </a>
+                                  </h3>
+                                  <p
+                                    class="c54"
+                                  >
+                                    Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+                                  </p>
+                                  <time
+                                    class="c55"
+                                    datetime="2020-03-18"
+                                  >
+                                    18th March 2020
+                                  </time>
+                                </div>
+                              </div>
+                            </li>
+                            <li
+                              class="c43"
+                              role="listitem"
+                            >
+                              <div
+                                class="c50"
+                              >
+                                <div
+                                  class="c51"
+                                  dir="ltr"
+                                >
+                                  <h3
+                                    class="c52"
+                                  >
+                                    <a
+                                      class="c53"
+                                      href="/pidgin/tori-51945757"
+                                    >
+                                      Nigeria don get five new cases of Coronavirus - See how e happun
+                                    </a>
+                                  </h3>
+                                  <p
+                                    class="c54"
+                                  >
+                                    Nigeria Health say di patients from UK and America travel come di kontri.
+                                  </p>
+                                  <time
+                                    class="c55"
+                                    datetime="2020-03-18"
+                                  >
+                                    one hour wey don pass
+                                  </time>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
                     </div>
                     <div
-                      class="c47"
+                      class="c56"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c47"
+                      class="c56"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c47"
+                      class="c56"
                     >
                       <h2>
                         This is a component in the second column
