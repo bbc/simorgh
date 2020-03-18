@@ -7,7 +7,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 const fakeMarkup = `&lt;div&gt;Visual Jounalism Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/vj.js&quot;&gt;&lt;/script&gt;`;
 
 // eslint-disable-next-line react/prop-types
-const IncludeContainerWithMockContext = ({ toggleState, html }) => (
+const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp={false}
@@ -17,7 +17,7 @@ const IncludeContainerWithMockContext = ({ toggleState, html }) => (
     pathname="/pathname"
   >
     <ToggleContext.Provider value={{ toggleState, toggleDispatch: jest.fn() }}>
-      <IncludeContainer html={html} />
+      <IncludeContainer html={html} type={type} />
     </ToggleContext.Provider>
   </RequestContextProvider>
 );
