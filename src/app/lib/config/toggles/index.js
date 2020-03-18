@@ -24,6 +24,9 @@ const toggles = {
     variantCookie: {
       enabled: true,
     },
+    ads: {
+      enabled: true,
+    },
     include: {
       enabled: true,
     },
@@ -53,8 +56,11 @@ const toggles = {
     variantCookie: {
       enabled: true,
     },
+    ads: {
+      enabled: true,
+    },
     include: {
-      enabled: false,
+      enabled: true,
     },
   },
   stage: {
@@ -81,6 +87,9 @@ const toggles = {
     },
     variantCookie: {
       enabled: true,
+    },
+    ads: {
+      enabled: false,
     },
     include: {
       enabled: false,
@@ -110,6 +119,9 @@ const toggles = {
     },
     variantCookie: {
       enabled: true,
+    },
+    ads: {
+      enabled: false,
     },
     include: {
       enabled: false,

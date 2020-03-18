@@ -182,6 +182,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 .c16:hover,
 .c16:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
