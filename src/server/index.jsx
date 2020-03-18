@@ -326,11 +326,6 @@ server
       ),
     );
 
-    const dataClient = createDataClient({
-      initialCache: {},
-      ssr: true,
-    });
-
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
       const data = await route.getInitialData(url);
@@ -348,7 +343,6 @@ server
         service,
         url,
         variant,
-        dataClient,
       });
 
       if (result.redirectUrl) {
