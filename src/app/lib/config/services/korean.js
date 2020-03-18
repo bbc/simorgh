@@ -7,6 +7,9 @@ import 'moment/locale/ko';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '최종 송고일',
