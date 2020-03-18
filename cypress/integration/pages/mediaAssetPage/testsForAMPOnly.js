@@ -42,6 +42,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         });
       }
     });
+
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
