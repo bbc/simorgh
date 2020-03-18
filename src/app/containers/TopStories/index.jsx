@@ -26,14 +26,6 @@ const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
 `;
 
-// const refineTopStory = topStory => {
-//   return Object.entries(topStory).reduce(
-//     (obj, [key, value]) =>
-//       !['timestamp'].includes(key) ? { ...obj, [key]: value } : obj,
-//     {},
-//   );
-// };
-
 const TopStories = ({ content }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const a11yAttributes = {
