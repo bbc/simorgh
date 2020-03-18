@@ -36,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbctamil',
     twitterSite: '@bbctamil',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/tamil/institutional-50288575#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/tamil/institutional-50288575',
     isTrustProjectParticipant: true,
     script: tamil,
     manifestPath: '/manifest.json',
