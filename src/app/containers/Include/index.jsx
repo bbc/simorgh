@@ -7,6 +7,7 @@ import useToggle from '../Toggle/useToggle';
 const decodeHTML = str => {
   const replacedParts = {
     '&quot;': '"',
+    '&#39;': "'",
     '&amp;': '&',
     '&lt;': '<',
     '&gt;': '>',
@@ -18,10 +19,15 @@ const decodeHTML = str => {
   return str.replace(replacementsRegex, match => replacedParts[match]);
 };
 
-const IncludeContainer = ({ html }) => {
+const IncludeContainer = ({ html, type }) => {
   const { enabled } = useToggle('include');
 
-  const shouldNotRenderInclude = !enabled || !html;
+  const supportedTypes = {
+    idt2: 'idt2',
+    vj: 'vj',
+  };
+
+  const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
 
   if (shouldNotRenderInclude) {
     return null;
@@ -39,6 +45,7 @@ const IncludeContainer = ({ html }) => {
 
 IncludeContainer.propTypes = {
   html: string,
+  type: string.isRequired,
 };
 
 IncludeContainer.defaultProps = {

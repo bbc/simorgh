@@ -54,6 +54,24 @@ describe('IncludeContainer', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should not render any HTML for an unsupported include type', async () => {
+    const mockToggles = {
+      test: {
+        include: {
+          enabled: false,
+        },
+      },
+    };
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={mockToggles}
+        html={fakeMarkup}
+        type="idt20"
+      />,
+    );
+    expect(container).toMatchSnapshot();
+  });
+
   it('should not render any HTML when include toggle is disabled', async () => {
     const mockToggles = {
       test: {

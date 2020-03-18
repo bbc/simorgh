@@ -72,7 +72,6 @@ const StoryPage = ({ pageData }) => {
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
-    idt2: props => <Include {...props} />,
     include: props => <Include {...props} />,
   };
 
