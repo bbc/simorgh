@@ -46,7 +46,7 @@ describe('convertInclude', () => {
     expect(convertInclude(input)).toEqual(expected);
   });
 
-  it('should convert a Visual Journalism include block to type include', () => {
+  it('should convert an include block to a vj block', () => {
     const input = {
       required: false,
       tile: 'Include from VisJo',
@@ -86,6 +86,28 @@ describe('convertInclude', () => {
         tile: 'A quiz!',
         platform: 'highweb',
         type: 'idt1',
+      },
+    };
+    expect(convertInclude(input)).toEqual(expected);
+  });
+
+  it('should convert an include block to an idt2 block with no / in href', () => {
+    const input = {
+      required: false,
+      tile: 'IDT2 Include',
+      href: 'idt2',
+      platform: 'highweb',
+      type: 'include',
+      url: 'https://bbc.com/idt2.html',
+    };
+    const expected = {
+      type: 'include',
+      model: {
+        href: 'https://bbc.com/idt2.html',
+        required: false,
+        tile: 'IDT2 Include',
+        platform: 'highweb',
+        type: 'idt2',
       },
     };
     expect(convertInclude(input)).toEqual(expected);
