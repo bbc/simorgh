@@ -5,8 +5,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
 const getToggleState = enabled => ({
-  local: { radioSchedule: { enabled } },
-  test: { radioSchedule: { enabled } },
+  radioSchedule: { enabled },
 });
 
 /* eslint-disable react/prop-types */
@@ -15,7 +14,10 @@ const RadioSchedulesWithContext = ({
   radioScheduleToggle = false,
 }) => (
   <ToggleContext.Provider
-    value={{ toggleState: getToggleState(radioScheduleToggle) }}
+    value={{
+      toggleState: getToggleState(radioScheduleToggle),
+      toggleDispatch: jest.fn(),
+    }}
   >
     <RequestContextProvider
       isAmp={false}

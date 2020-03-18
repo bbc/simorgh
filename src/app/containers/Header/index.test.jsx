@@ -14,6 +14,12 @@ const defaultToggleState = {
   navOnArticles: {
     enabled: true,
   },
+  scriptLink: {
+    enabled: true,
+  },
+  variantCookie: {
+    enabled: true,
+  },
 };
 
 const mockToggleDispatch = jest.fn();
