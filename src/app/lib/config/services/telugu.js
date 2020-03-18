@@ -36,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/telugu/institutional-50420343#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/telugu/institutional-50420343',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
