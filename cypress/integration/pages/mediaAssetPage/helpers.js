@@ -22,7 +22,7 @@ export const hasMedia = body => {
   return mediaTypes.some(type => body.metadata.blockTypes.includes(type));
 };
 
-const getServiceId = body => {
+const getMediaId = body => {
   const mediaBlock = body.promo.media;
   const versionId = mediaBlock.versions && mediaBlock.versions[0].versionId;
   const id = mediaBlock.externalId || mediaBlock.id;
@@ -31,14 +31,13 @@ const getServiceId = body => {
 };
 
 export const getEmbedUrl = (body, language) => {
-  const isLegacyMedia = body.promo.media.type === 'legacyMedia';
-  const prefix = isLegacyMedia ? 'legacy' : 'cps';
+  const prefix = body.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
 
   return [
     envConfig.avEmbedBaseUrl,
     'ws/av-embeds',
     `${prefix}${body.metadata.locators.assetUri}`,
-    getServiceId(body),
+    getMediaId(body),
     language,
   ].join('/');
 };
