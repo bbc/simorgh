@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '../Toggle/useToggle';
@@ -21,9 +21,7 @@ const decodeHTML = str => {
 const IncludeContainer = ({ html }) => {
   const { enabled } = useToggle('include');
 
-  const shouldNotDisplayInclude = !html || !enabled;
-
-  if (shouldNotDisplayInclude) {
+  if (!enabled) {
     return null;
   }
 

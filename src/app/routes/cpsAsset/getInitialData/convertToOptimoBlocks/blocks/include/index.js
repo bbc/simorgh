@@ -10,7 +10,7 @@ const includeUrls = {
   idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
 };
 
-const encodeHTML = str =>
+export const encodeHTML = str =>
   String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
