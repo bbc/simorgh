@@ -17,7 +17,7 @@ const convertInclude = ({ href, url, type, ...rest }) => {
     hrefIsSupported(href),
   );
 
-  // This determines if the type is supported
+  // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
 
   if (!includeType) {
