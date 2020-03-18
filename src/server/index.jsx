@@ -1,3 +1,4 @@
+import React from 'react';
 import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
@@ -25,6 +26,18 @@ import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,
 } from './utilities/constructCspHeader';
+import Application from './Application';
+
+import {
+  DataProvider,
+  createDataClient,
+  getDataFromTree,
+} from 'react-isomorphic-data';
+import {
+  renderToStringWithData,
+  createPrefetchTags,
+} from 'react-isomorphic-data/ssr';
+import { renderToString } from 'react-dom/server';
 
 const fs = require('fs');
 
@@ -255,6 +268,50 @@ server
       });
     },
   )
+  .get('/test', async (req, res) => {
+    const dataClient = createDataClient({
+      initialCache: {},
+      ssr: true,
+    });
+
+    const reactApp = (
+      <DataProvider client={dataClient}>
+        <Application />
+      </DataProvider>
+    );
+
+    try {
+      await getDataFromTree(reactApp, dataClient);
+    } catch (err) {
+      console.log(`ohhhh ohh: ${err}`);
+    }
+
+    let markup;
+    // pass the same dataClient instance you are passing to your provider here
+    try {
+      markup = await renderToStringWithData(reactApp, dataClient);
+    } catch (err) {
+      console.error('Error while trying to getDataFromTree', err);
+    }
+
+    res.send(
+      `<!doctype html>
+          <html lang="">
+          <head>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta charSet='utf-8' />
+            <title>Razzle TypeScript</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script>
+              window.__cache=${JSON.stringify(dataClient.cache)}
+            </script>
+          </head>
+          <body>
+            <div id="root">${markup}</div>
+          </body>
+        </html>`,
+    );
+  })
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
     logger.info(
       JSON.stringify(
@@ -268,6 +325,11 @@ server
         2,
       ),
     );
+
+    const dataClient = createDataClient({
+      initialCache: {},
+      ssr: true,
+    });
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
@@ -286,6 +348,7 @@ server
         service,
         url,
         variant,
+        dataClient,
       });
 
       if (result.redirectUrl) {
