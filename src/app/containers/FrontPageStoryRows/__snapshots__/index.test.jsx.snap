@@ -2680,6 +2680,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   display: inline;
 }
 
+.c19 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
 .c7 {
   position: static;
   color: #222222;
@@ -2809,7 +2821,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c19 {
+.c20 {
   font-size: 1rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -2920,6 +2932,34 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c19 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c3 {
     width: 33.33%;
@@ -3021,14 +3061,14 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
@@ -3175,8 +3215,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             سیربین ٹی وی پروگرام آن ڈیمانڈ
           </a>
         </h3>
-        <time
+        <p
           class="c19"
+        >
+          سیربین پیر سے جمعہ پاکستان کے مقامی وقت کے مطابق شام سات بجے بی بی سی اردو ڈاٹ کام پر لائیو دیکھا جا سکتا ہے۔ اس لنک پر آپ اس کا آن ڈیمانڈ ورژن دیکھ سکتے ہیں۔
+        </p>
+        <time
+          class="c20"
           datetime="2017-02-07"
         >
           7 فبراير/ شباط 2017
@@ -3206,8 +3251,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             رمضان، عید اور سپیشل پکوان
           </a>
         </h3>
-        <time
+        <p
           class="c19"
+        >
+          کیا آپ نے کبھی غور کیا کہ بعض ریستوران اور ڈھابے کھانے کے لیے دوسروں سے زیادہ مشہور کیوں ہوتے ہیں؟ ٹیکنالوجی کے اس دور میں بھی کیا کھانا بنانے کی خفیہ تراکیب موجود ہیں۔ بی بی سی اردو کی اس نئی سیریز میں ہم آپ کو ایسی ہی کچھ دکانوں اور ڈھابوں پر لے چلیں گے تاکہ آپ جان سکیں کہ آخر ان کا کھانا اتنا مشہور کیوں ہے؟
+        </p>
+        <time
+          class="c20"
           datetime="2019-05-21"
         >
           21 مايو/ أيار 2019
@@ -3237,8 +3287,13 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
           </a>
         </h3>
-        <time
+        <p
           class="c19"
+        >
+          انگلینڈ اور ویلز میں جاری دنیائے کرکٹ کے سب سے بڑے مقابلوں پر بی بی سی اردو کی خصوصی کوریج دیکھنے کے لیے کلک کریں
+        </p>
+        <time
+          class="c20"
           datetime="2019-06-03"
         >
           3 يونيو/ حزيران 2019
@@ -3307,6 +3362,18 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
   font-size: 0.9375rem;
   line-height: 1.25rem;
   display: inline;
+}
+
+.c10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .c5 {
@@ -3450,6 +3517,34 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c10 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c6 {
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -3556,6 +3651,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             Audio promo
           </a>
         </h3>
+        <p
+          class="c10"
+        >
+          Summary
+        </p>
         <time
           class="c6"
           datetime="2019-08-06"
