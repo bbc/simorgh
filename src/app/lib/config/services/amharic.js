@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `am`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ተሻሽሏል',
@@ -36,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/amharic/institutional-49283133#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/amharic/institutional-49283133',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',

@@ -12,6 +12,24 @@ const generateVideoBlock = block => {
   return generatedBlock;
 };
 
+const generateImageBlock = () => {
+  return {
+    type: 'image',
+    model: {
+      blocks: [
+        {
+          type: 'rawImage',
+          model: {
+            copyrightHolder: '',
+            locator: `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}images/media_placeholder.png`,
+            originCode: 'pips',
+          },
+        },
+      ],
+    },
+  };
+};
+
 const convertMedia = block => {
   const convertedBlock = {
     type: 'legacyMedia',
@@ -21,7 +39,7 @@ const convertMedia = block => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block)],
+            blocks: [generateVideoBlock(block), generateImageBlock()],
           },
         },
       ],
