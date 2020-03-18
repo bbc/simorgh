@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import moment from 'moment';
 import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -38,12 +39,13 @@ const renderRadioScheduleContainer = service => (
   </ToggleContextProvider>
 );
 
+moment.locale('en-GB'); // needed for Time Machine date string
 const stories = storiesOf('Containers|RadioSchedule', module)
   .addDecorator(withKnobs)
   .addDecorator(story => (
     <WithTimeMachine
-      datetime={1546308000000}
-      dateString="Wednesday, 18 March 2020 09:19:28 GMT"
+      datetime={moment.utc().format('x')}
+      dateString={moment.utc().format('LLLL')}
     >
       {story()}
     </WithTimeMachine>
