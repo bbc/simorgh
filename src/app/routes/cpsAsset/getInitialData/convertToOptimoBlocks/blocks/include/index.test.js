@@ -138,7 +138,6 @@ describe('convertInclude', () => {
       href: '/idt3/111-222-333-444-555',
       platform: 'highweb',
       type: 'include',
-      url: 'https://bbc.com/idt20.html',
     };
     expect(await convertInclude(input)).toEqual(null);
   });
@@ -150,7 +149,6 @@ describe('convertInclude', () => {
       href: 'idt3/111-222-333-444-555',
       platform: 'highweb',
       type: 'include',
-      url: 'https://bbc.com/idt20.html',
     };
     expect(await convertInclude(input)).toEqual(null);
   });
@@ -162,7 +160,6 @@ describe('convertInclude', () => {
       href: null,
       platform: 'highweb',
       type: 'include',
-      url: 'https://bbc.com/idt20.html',
     };
     expect(await convertInclude(input)).toEqual(null);
     expect(fetch).not.toHaveBeenCalled();
