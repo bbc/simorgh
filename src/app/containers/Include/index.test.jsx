@@ -35,6 +35,7 @@ describe('IncludeContainer', () => {
       <IncludeContainerWithMockContext
         toggleState={mockToggles}
         html={fakeMarkup}
+        type="idt2"
       />,
     );
     expect(container).toMatchSnapshot();
@@ -49,7 +50,7 @@ describe('IncludeContainer', () => {
       },
     };
     const { container } = render(
-      <IncludeContainerWithMockContext toggleState={mockToggles} />,
+      <IncludeContainerWithMockContext toggleState={mockToggles} type="idt2" />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -84,6 +85,7 @@ describe('IncludeContainer', () => {
       <IncludeContainerWithMockContext
         toggleState={mockToggles}
         html={fakeMarkup}
+        type="idt2"
       />,
     );
     expect(container).toMatchSnapshot();
