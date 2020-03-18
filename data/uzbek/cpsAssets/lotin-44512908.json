@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/lotin-44512908",
+    "locators": {
+      "assetUri": "/uzbek/lotin-44512908",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-44512908",
+      "curie": "http://www.bbc.co.uk/asset/24726c25-85f0-6642-85bd-5d211923c145"
+    },
+    "type": "MAP",
+    "createdBy": "uzbek-v6",
+    "language": "uz-Latn",
+    "lastUpdated": 1549913304899,
+    "firstPublished": 1529248797,
+    "lastPublished": 1529248799,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "counterName": "uzbek.latin.media_asset.44512908.page",
+      "cps_asset_id": "44512908",
+      "cps_asset_type": "map"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v0.4.14",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p06bc123",
+        "subType": "clip",
+        "format": "video",
+        "title": "Мирзиёев Ўзбекистонни қашшоқликдан чиқара оладими?",
+        "synopses": {
+          "short": "Мирзиёев Ўзбекистонни қашшоқликдан чиқара оладими?",
+          "long": "Жаҳоннинг 127 давлати бўйича иқтисодий таҳлил ва башоратларни қилиб келадиган Focus Economics гуруҳи  Ўзбекистонни дунёнинг энг қашшоқ ўн давлати қаторига қўйган.",
+          "medium": "Жаҳоннинг 127 давлати бўйича иқтисодий таҳлил ва башоратларни қилиб келадиган Focus Economics гуруҳи  Ўзбекистонни дунёнинг энг қашшоқ ўн давлати қаторига қўйган."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06bc18q.jpg",
+        "embedding": true,
+        "warnings": {},
+        "advertising": true,
+        "caption": "Mirziyoyev Oʻzbekistonni qashshoqlikdan chiqara oladimi?",
+        "versions": [
+          {
+            "versionId": "p06bc127",
+            "types": ["Original"],
+            "duration": 372,
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            }
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Oʻtgan hafta Fargʻonaga safari chogʻida Mirziyoyev &quot;mening eng katta maqsadim - odamlarni boy qilish&quot;, deb aytgan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Bu esa, iqtisodchilar tilida qashshoqlikni tugatish, degani.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Jahonning 127 davlati boʻyicha iqtisodiy tahlil va bashoratlarni qilib keladigan Focus Economics guruhi Oʻzbekistonni dunyoning eng qashshoq oʻn davlati qatoriga qoʻygan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Qashshoq oʻntalikdan oʻrin olgan davlatlarning aksari Sub Sahara Afrikasi davlatlaridir.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ulardagi mushtarak jihat - yakkahokim boshqaruv, zaif moliyaviy institutlar va korruptsiya xorij sarmoyalarining mamlakatga kirib kelishiga qarshilik qiladi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Hozirda Oʻzbekiston Islom Karimov boshqaruvining merosi boʻlgan xorij sarmoyasi yoʻlidagi ana shu toʻsiqlardan qutulishga harakat qilmoqda.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>BBCUZBEK.COM bilan Telegram orqali +44 7858860002 nomeri bilan bogʻlaning. Telegram kanalimiz: https://t.me/bbcuzbek</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Mirziyoyev Oʻzbekistonni qashshoqlikdan chiqara oladimi?",
+      "headline": "Mirziyoyev Oʻzbekistonni qashshoqlikdan chiqara oladimi?"
+    },
+    "locators": {
+      "assetUri": "/uzbek/lotin-44512908",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin-44512908",
+      "curie": "http://www.bbc.co.uk/asset/24726c25-85f0-6642-85bd-5d211923c145"
+    },
+    "summary": "Oʻtgan hafta Fargʻonaga safari chogʻida Mirziyoyev \"mening eng katta maqsadim - odamlarni boy qilish\", deb aytgan. Focus Economics guruhi Oʻzbekistonni dunyoning eng qashshoq oʻn davlati qatoriga qoʻygan.",
+    "timestamp": 1549913304899,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p06bc123",
+      "subType": "clip",
+      "format": "video",
+      "title": "Мирзиёев Ўзбекистонни қашшоқликдан чиқара оладими?",
+      "synopses": {
+        "short": "Мирзиёев Ўзбекистонни қашшоқликдан чиқара оладими?",
+        "long": "Жаҳоннинг 127 давлати бўйича иқтисодий таҳлил ва башоратларни қилиб келадиган Focus Economics гуруҳи  Ўзбекистонни дунёнинг энг қашшоқ ўн давлати қаторига қўйган.",
+        "medium": "Жаҳоннинг 127 давлати бўйича иқтисодий таҳлил ва башоратларни қилиб келадиган Focus Economics гуруҳи  Ўзбекистонни дунёнинг энг қашшоқ ўн давлати қаторига қўйган."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06bc18q.jpg",
+      "embedding": true,
+      "warnings": {},
+      "advertising": true,
+      "caption": "Mirziyoyev Oʻzbekistonni qashshoqlikdan chiqara oladimi?",
+      "versions": [
+        {
+          "versionId": "p06bc127",
+          "types": ["Original"],
+          "duration": 372,
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          }
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "102083882",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/70A6/production/_102083882_p06bc18q.jpg",
+      "path": "/cpsprodpb/70A6/production/_102083882_p06bc18q.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Жаҳоннинг 127 давлати бўйича иқтисодий таҳлил ва башоратларни қилиб келадиган Focus Economics гуруҳи Ўзбекистонни дунёнинг энг қашшоқ ўн давлати қаторига қўйган.",
+      "copyrightHolder": "Жаҳоннинг 127 давлати бўйича иқтисодий таҳлил ва б",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/lotin-44512908",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Lotinda",
+      "uri": "/uzbek/lotin",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Ўзбек тилидаги янгиликлар",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
