@@ -29,8 +29,8 @@ Cypress.Commands.add('hasGlobalChartbeatConfig', () => {
 });
 
 // Should be moved into integration/pages/index.js once all pages have Chartbeat
-Cypress.Commands.add('hasAmpChartbeatConfigUid', () => {
+Cypress.Commands.add('hasAmpChartbeatConfigUid', (position = 1) => {
   cy.get('amp-analytics script[type="application/json"]')
-    .eq(1)
+    .eq(position)
     .should('contain', '50924');
 });
