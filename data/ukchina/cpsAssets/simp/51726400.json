@@ -1,0 +1,716 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/simp/51726400",
+    "locators": {
+      "assetUri": "/ukchina/simp/51726400",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/51726400",
+      "curie": "http://www.bbc.co.uk/asset/747e6cf0-8452-6b4f-a60f-d01ede147013",
+      "assetId": "51726400"
+    },
+    "type": "MAP",
+    "createdBy": "ukchina-v6",
+    "language": "zh-Hans",
+    "lastUpdated": 1583247207227,
+    "firstPublished": 1583247195000,
+    "lastPublished": 1583247196000,
+    "timestamp": 1583247195000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "ukchinasimp.media_asset.51726400.page",
+      "cps_asset_id": "51726400"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nature",
+          "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
+          "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Nature"]
+        },
+        {
+          "thingLabel": "Animals",
+          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Animal",
+            "http://www.wikidata.org/entity/Q729"
+          ]
+        },
+        {
+          "thingLabel": "United States",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": ["nsl:Topic", "Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/6252001/"]
+        },
+        {
+          "thingLabel": "Conservation",
+          "thingUri": "http://www.bbc.co.uk/things/bce059a1-1a05-4b8d-aac8-381699aaa2f0#id",
+          "thingId": "bce059a1-1a05-4b8d-aac8-381699aaa2f0",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Conservation_(ethic)",
+            "http://www.wikidata.org/entity/Q628403"
+          ]
+        },
+        {
+          "thingLabel": "Climate change",
+          "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+          "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+          "thingType": ["Thing", "Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Climate_change",
+            "http://www.wikidata.org/entity/Q125928"
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.6",
+    "blockTypes": ["media", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p084t5g4",
+        "subType": "clip",
+        "format": "video",
+        "title": "加利福尼亚小镇居民区的不速之客",
+        "synopses": {
+          "short": "加利福尼亚小镇居民区的不速之客"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084t6zf.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "加利福尼亚小镇居民区的不速之客",
+        "versions": [
+          {
+            "versionId": "p084t5gc",
+            "types": ["Original"],
+            "duration": 62,
+            "durationISO8601": "PT1M2S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1582714352000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "加利福尼亚洛杉矶附近一个小镇上来了位不速之客，体重180公斤。",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "它是来逛街还是访友？",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>ukchina/simp/50000925</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "适者生存 进城生活的野生动物如何顺应新环境",
+                  "headline": "城市动物：野生动物进城后如何适应新环境",
+                  "overtyped": "适者生存 进城生活的野生动物如何顺应新环境"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/ukchina/simp/50000925"
+                },
+                "summary": "进了城的乌鸦想吃核桃学会了新技巧，蜥蜴为爬上围墙和玻璃也逼着自己改变，来看看动物进城后如何努力求生存。",
+                "timestamp": 1570703032000,
+                "language": "zh-Hans",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:ukchina/simp/50000925",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>ukchina/simp/vert-fut-51141229</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "城市再野生化 受惠者不只是野生动物",
+                  "headline": "城市再野生化 受惠者不只是野生动物",
+                  "overtyped": "城市再野生化 受惠者不只是野生动物"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/ukchina/simp/vert-fut-51141229"
+                },
+                "summary": "人口密集、噪音和污染，城市环境对野生动物的生存是一大挑战，但想要吸引野生动物回到城市，其实只需要小小的改变。",
+                "timestamp": 1579265771000,
+                "language": "zh-Hans",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-51141229",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>ukchina/simp/50058344</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "野生动物摄影大奖：狐狸和土拨鼠的“生死瞬间”",
+                  "headline": "野生动物摄影大奖：狐狸和土拨鼠的“生死瞬间”",
+                  "overtyped": "野生动物摄影大奖：狐狸和土拨鼠的“生死瞬间”"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/ukchina/simp/50058344"
+                },
+                "summary": "这张照片看起来应该是“搞笑对白”摄影比赛的作品，但事实上，照片捕捉的却是狐狸和土拨鼠之间惊险万分的生死一瞬间。",
+                "timestamp": 1571232557000,
+                "language": "zh-Hans",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:ukchina/simp/50058344",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>ukchina/simp/51489883</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "老鼠打架的魅力：地铁老鼠抢夜宵斩获摄影人气大奖",
+                  "headline": "野生动物摄影大赛：地铁老鼠为食而战 斩获人气大奖",
+                  "overtyped": "老鼠打架的魅力：地铁老鼠抢夜宵斩获摄影人气大奖"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/ukchina/simp/51489883"
+                },
+                "summary": "伦敦地铁隧道里出没的老鼠为一片糕饼碎屑撕破脸开打，在一旁等待的摄影师按下快门，捕捉精彩瞬间，赢得摄影大奖。",
+                "timestamp": 1581592610000,
+                "language": "zh-Hans",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:ukchina/simp/51489883",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>ukchina/simp/51660332</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "2020年度水下摄影大奖 揭秘野生动物环境",
+                  "headline": "2020年度水下摄影大奖 展现隐秘世界千姿百态",
+                  "overtyped": "2020年度水下摄影大奖 揭秘野生动物环境"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/ukchina/simp/51660332"
+                },
+                "summary": "来自70个国家的摄影师们，将镜头对准海洋、湖泊和河流中的野生动物，让世人看到自然环境下它们的生存状态。",
+                "timestamp": 1582803328000,
+                "language": "zh-Hans",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:ukchina/simp/51660332",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>ukchina/simp/vert-earth-50660218</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "图辑：“如果企鹅会飞”野生动物摄影作品",
+                  "headline": "图辑：“如果企鹅会飞”野生动物摄影作品",
+                  "overtyped": "图辑：“如果企鹅会飞”野生动物摄影作品"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/ukchina/simp/vert-earth-50660218"
+                },
+                "summary": "熟睡中的海豹一脸萌样、躲避海豹捕食的企鹅飞越水面，还有河马咬死幼崽的照片，都是今年“野生动物摄影奖”的作品。",
+                "timestamp": 1575469581000,
+                "language": "zh-Hans",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-50660218",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "加利福尼亚小镇居民区的不速之客",
+      "headline": "加利福尼亚小镇居民区的不速之客"
+    },
+    "locators": {
+      "assetUri": "/ukchina/simp/51726400",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/51726400",
+      "curie": "http://www.bbc.co.uk/asset/747e6cf0-8452-6b4f-a60f-d01ede147013",
+      "assetId": "51726400"
+    },
+    "summary": "美国加利福尼亚州洛杉矶附近的一个小镇上出现了一位不速之客在街上闲逛，体重180公斤的庞然大物到居民区溜达。",
+    "timestamp": 1583247195000,
+    "language": "zh-Hans",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ],
+      "taggings": []
+    },
+    "media": {
+      "id": "p084t5g4",
+      "subType": "clip",
+      "format": "video",
+      "title": "加利福尼亚小镇居民区的不速之客",
+      "synopses": {
+        "short": "加利福尼亚小镇居民区的不速之客"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p084t6zf.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "加利福尼亚小镇居民区的不速之客",
+      "versions": [
+        {
+          "versionId": "p084t5gc",
+          "types": ["Original"],
+          "duration": 62,
+          "durationISO8601": "PT1M2S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1582714352000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "111043454",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/B17A/production/_111043454_p084t6zf.jpg",
+      "path": "/cpsprodpb/B17A/production/_111043454_p084t6zf.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "黑熊",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/simp/51726400",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "主页",
+      "uri": "/ukchina/simp/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC英伦网",
+      "uri": "/ukchina/simp",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "适者生存 进城生活的野生动物如何顺应新环境",
+              "headline": "城市动物：野生动物进城后如何适应新环境"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/50000925",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/50000925"
+            },
+            "summary": "进了城的乌鸦想吃核桃学会了新技巧，蜥蜴为爬上围墙和玻璃也逼着自己改变，来看看动物进城后如何努力求生存。",
+            "timestamp": 1570703032000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108587282",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6E76/production/_108587282_gettyimages-1024243774.jpg",
+              "path": "/cpsprodpb/6E76/production/_108587282_gettyimages-1024243774.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "乌鸫( Turdus mercula) 唱歌",
+              "caption": "城市里的乌鸫( Turdus mercula) 经常在漆黑的深夜唱歌。",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/50000925",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "城市再野生化 受惠者不只是野生动物",
+              "headline": "城市再野生化 受惠者不只是野生动物"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-51141229",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-fut-51141229"
+            },
+            "summary": "人口密集、噪音和污染，城市环境对野生动物的生存是一大挑战，但想要吸引野生动物回到城市，其实只需要小小的改变。",
+            "timestamp": 1579265771000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110535638",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/146C5/production/_110535638_ce474142-4b53-4e22-b394-60edaa176111.jpg",
+              "path": "/cpsprodpb/146C5/production/_110535638_ce474142-4b53-4e22-b394-60edaa176111.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（Credit: Getty Images）",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-51141229",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "新型冠状病毒疫情可能是野生动物的福祉",
+              "headline": "武汉肺炎：疫情爆发可能是野生动物的福祉"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/51314901",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/51314901"
+            },
+            "summary": "中国宣布疫情解除前禁止贩卖运输野生动物。专家称，若禁令成永久措施，有助保护濒临绝种的野生动物及维护公共健康。",
+            "timestamp": 1580474136000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110713392",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7293/production/_110713392_gettyimages-2856742.jpg",
+              "path": "/cpsprodpb/7293/production/_110713392_gettyimages-2856742.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "中国农民在广州野生动物市场上出售三只孔雀。",
+              "caption": "中国野生动植物贸易被指将几种鸟类推向灭绝的边缘（图为中国农民在广州的野生动物市场上出售孔雀，资料照片）。",
+              "copyrightHolder": "LIU JIN",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/51314901",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "老鼠打架的魅力：地铁老鼠抢夜宵斩获摄影人气大奖",
+              "headline": "野生动物摄影大赛：地铁老鼠为食而战 斩获人气大奖"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/51489883",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/51489883"
+            },
+            "summary": "伦敦地铁隧道里出没的老鼠为一片糕饼碎屑撕破脸开打，在一旁等待的摄影师按下快门，捕捉精彩瞬间，赢得摄影大奖。",
+            "timestamp": 1581592610000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110872837",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12063/production/_110872837_index-sam-rowley.jpg",
+              "path": "/cpsprodpb/12063/production/_110872837_index-sam-rowley.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Squabbling mice",
+              "copyrightHolder": "Sam Rowley/WPY",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/51489883",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "保护野生动物 高科技打击盗猎者",
+              "headline": "保护野生动物 高科技打击盗猎者"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-earth-47471003",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-earth-47471003"
+            },
+            "summary": "中国宣布将解除对医用虎骨和犀牛角的禁令，举世为之震惊。不断取得突破的高科技如何打击盗猎者，保护野生动物？",
+            "timestamp": 1551880563000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105913237",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11E0F/production/_105913237_2fjie1c20e61000.jpg",
+              "path": "/cpsprodpb/11E0F/production/_105913237_2fjie1c20e61000.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "打击偷猎者",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-47471003",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "图辑：“如果企鹅会飞”野生动物摄影作品",
+              "headline": "图辑：“如果企鹅会飞”野生动物摄影作品"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-earth-50660218",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-earth-50660218"
+            },
+            "summary": "熟睡中的海豹一脸萌样、躲避海豹捕食的企鹅飞越水面，还有河马咬死幼崽的照片，都是今年“野生动物摄影奖”的作品。",
+            "timestamp": 1575469581000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110001446",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FB9A/production/_110001446_8d25eb63-52a2-4cd6-9cbd-e0af7d7a4cab.jpg",
+              "path": "/cpsprodpb/FB9A/production/_110001446_8d25eb63-52a2-4cd6-9cbd-e0af7d7a4cab.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（Credit: Eduardo Del Álamo）",
+              "copyrightHolder": "Eduardo Del Álamo",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-50660218",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "高科技保护非洲野生动物",
+              "headline": "高科技保护非洲野生动物"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-41736931",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-fut-41736931"
+            },
+            "summary": "肯尼亚野生动物是旅游业的一大吸引力，但盗猎者对此构成威胁。现在人们将部落的影响力和最新科技互相结合来对付盗猎者。",
+            "timestamp": 1508845098000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "98455929",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16B1B/production/_98455929_p05j25nh.jpg",
+              "path": "/cpsprodpb/16B1B/production/_98455929_p05j25nh.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（Credit: Alamy）",
+              "copyrightHolder": "Alamy",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-41736931",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "野生动物世界中的武术冠军",
+              "headline": "野生动物世界中的武术冠军"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-earth-40506379",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/vert-earth-40506379"
+            },
+            "summary": "拳王穆罕穆德·阿里拳头的厉害众所周知，但是如果和这些野生动物比起来，人类的拳王就相形见拙。",
+            "timestamp": 1499249346000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "96811901",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2A9F/production/_96811901_6d8f4955-1bc7-4f18-acfc-85a04ebba49e.jpg",
+              "path": "/cpsprodpb/2A9F/production/_96811901_6d8f4955-1bc7-4f18-acfc-85a04ebba49e.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "草原斑马",
+              "caption": "草原斑马（拉丁学名 Equus quagga）（图片来源: Lou Coetzer/naturepl.com）",
+              "copyrightHolder": "Lou Coetzer",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-earth-40506379",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "2020年度水下摄影大奖 揭秘野生动物环境",
+              "headline": "2020年度水下摄影大奖 展现隐秘世界千姿百态"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/51660332",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/51660332"
+            },
+            "summary": "来自70个国家的摄影师们，将镜头对准海洋、湖泊和河流中的野生动物，让世人看到自然环境下它们的生存状态。",
+            "timestamp": 1582803328000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111033809",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/162D1/production/_111033809_upy2020-index.jpg",
+              "path": "/cpsprodpb/162D1/production/_111033809_upy2020-index.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "南极的海豹",
+              "copyrightHolder": "Greg Lecoeur",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/51660332",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "野生动物摄影大奖：狐狸和土拨鼠的“生死瞬间”",
+              "headline": "野生动物摄影大奖：狐狸和土拨鼠的“生死瞬间”"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/50058344",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/50058344"
+            },
+            "summary": "这张照片看起来应该是“搞笑对白”摄影比赛的作品，但事实上，照片捕捉的却是狐狸和土拨鼠之间惊险万分的生死一瞬间。",
+            "timestamp": 1571232557000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "109220229",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1682A/production/_109220229_index_yongqing-bao-copy.jpg",
+              "path": "/cpsprodpb/1682A/production/_109220229_index_yongqing-bao-copy.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Grad Prize Winner",
+              "copyrightHolder": "Yongqing Bao",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/50058344",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "肺炎疫情：从野生动物身上追踪病毒源头",
+              "headline": "肺炎疫情：从野生动物身上追踪病毒源头"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/51644906",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukchina/simp/51644906"
+            },
+            "summary": "一场调查新型冠状病毒如何从动物转移到人体的竞赛已经打响，BBC记者布里格斯报道了科学家试图追踪疫情来源的过程。",
+            "timestamp": 1582715836000,
+            "language": "zh-Hans",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110911749",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/171F7/production/_110911749_gettyimages-51341736.jpg",
+              "path": "/cpsprodpb/171F7/production/_110911749_gettyimages-51341736.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "一只被走私贩运的穿山甲出现在吉隆坡：这种动物是疫情最初爆发时的嫌犯之一。",
+              "caption": "一只被走私贩运的穿山甲出现在吉隆坡：这种动物是疫情最初爆发时的嫌犯之一。",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/51644906",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

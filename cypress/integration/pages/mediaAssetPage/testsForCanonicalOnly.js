@@ -80,6 +80,17 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         }
       });
     });
+
+    describe('Chartbeat', () => {
+      if (envConfig.chartbeatEnabled) {
+        it('should have a script with src value set to chartbeat source', () => {
+          cy.hasScriptWithChartbeatSrc();
+        });
+        it('should have chartbeat config set to window object', () => {
+          cy.hasGlobalChartbeatConfig();
+        });
+      }
+    });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.

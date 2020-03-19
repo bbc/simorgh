@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: `th`,
@@ -34,8 +37,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbc_thailand',
     twitterSite: '@bbc_thailand',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/thai/institutional-49281839#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/thai/institutional-49281839',
     isTrustProjectParticipant: true,
     script: thai,
     manifestPath: '/manifest.json',

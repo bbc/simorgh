@@ -12,6 +12,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ps',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -38,8 +41,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
     twitterSite: '@bbcpashto',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/pashto/institutional-49283007#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/pashto/institutional-49283007',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
