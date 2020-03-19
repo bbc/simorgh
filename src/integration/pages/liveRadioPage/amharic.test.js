@@ -27,7 +27,7 @@ describe('Given I am on the Amharic live radio amp/canonical page', () => {
     });
   });
 
-  describe('When I am a search engine', () => {
+  describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
       pageTitle: 'ያድምጡ - BBC News አማርኛ',
       canonicalUrl: 'http://localhost:7080/amharic/bbc_amharic_radio/liveradio',

@@ -40,7 +40,7 @@ describe('Given I am on a Pidgin article amp/canonical page', () => {
     });
   });
 
-  describe('When I am a search engine', () => {
+  describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
       pageTitle:
         "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",

@@ -41,7 +41,7 @@ describe('Given I am on a Mundo article amp/canonical page', () => {
     });
   });
 
-  describe('When I am a search engine', () => {
+  describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
       pageTitle:
         'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo',

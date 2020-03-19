@@ -27,7 +27,7 @@ describe('Given I am on the Korean live radio page amp/canonical', () => {
     });
   });
 
-  describe('When I am a search engine', () => {
+  describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
       pageTitle: 'BBC 코리아 라디오 - BBC News 코리아',
       canonicalUrl: 'http://localhost:7080/korean/bbc_korean_radio/liveradio',
