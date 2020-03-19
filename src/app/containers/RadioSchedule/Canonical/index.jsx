@@ -32,36 +32,48 @@ const RadioScheduleSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Radio-Schedule',
 }))`
-  background-color: ${C_LUNAR};
-  padding: 0 ${GEL_MARGIN_BELOW_400PX};
-
-  /* To remove GEL Margins */
-  margin: 0 -${GEL_MARGIN_BELOW_400PX};
+  background-color: red;
+  padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding-bottom: ${GEL_SPACING_DBL};
+    /* To remove GEL Margins */
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
+    padding: 0 ${GEL_MARGIN_BELOW_400PX};
   }
-
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_MARGIN_ABOVE_400PX};
-    margin: 0 -${GEL_MARGIN_ABOVE_400PX}; /* To remove GEL Margins */
+    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_ABOVE_400PX} 0;
+  }
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
   }
 `;
 
-const MarginWrapper = styled.div`
+// const MarginWrapper = styled.div`
+//   margin: 0 auto;
+//   padding-bottom: 0;
+//   width: 100%; /* Needed for IE11 */
+//   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+//     padding-bottom: ${GEL_SPACING_DBL};
+//   }
+//   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+//     margin-top: ${GEL_SPACING_DBL};
+//     padding-bottom: ${GEL_SPACING_DBL};
+//   }
+//   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+//     padding-bottom: ${GEL_SPACING_TRPL};
+//     margin-bottom: ${GEL_SPACING_TRPL};
+//     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+//   }
+// `;
+
+const RadioScheduleWrapper = styled.div`
   margin: 0 auto;
-  padding-bottom: 0;
-  width: 100%; /* Needed for IE11 */
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_DBL};
-  }
+  padding-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-    padding-bottom: ${GEL_SPACING_DBL};
+    margin-top: ${GEL_SPACING};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-    margin-bottom: ${GEL_SPACING_TRPL};
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+    padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
@@ -76,7 +88,6 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
     padding-top: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
     padding-top: ${GEL_SPACING_QUAD};
   }
@@ -136,7 +147,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
       >
         {header}
       </RadioScheduleSectionLabel>
-      <MarginWrapper>
+      <RadioScheduleWrapper>
         <RadioSchedule
           schedules={schedule}
           locale={locale}
@@ -150,7 +161,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
             {frequenciesPageLabel}
           </RadioFrequencyLink>
         )}
-      </MarginWrapper>
+      </RadioScheduleWrapper>
     </RadioScheduleSection>
   );
 };
