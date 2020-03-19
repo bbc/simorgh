@@ -6,7 +6,6 @@ import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -79,11 +78,8 @@ const RadioScheduleWrapper = styled.div`
 
 const RadioScheduleSectionLabel = styled(SectionLabel)`
   margin: 0 auto;
-  padding-top: 0;
   width: 100%; /* Needed for IE11 */
-  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    padding-top: ${GEL_SPACING};
-  }
+  padding-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_TRPL};
   }
