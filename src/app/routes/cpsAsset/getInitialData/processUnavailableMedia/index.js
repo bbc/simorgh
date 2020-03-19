@@ -40,10 +40,10 @@ const logIfNoMedia = blockTypes => {
 
 const transformer = pageData => {
   const blockTypes = pathOr([], ['metadata', 'blockTypes'], pageData);
-  const showPlaceholder = blockTypes.some(blockType =>
+  const hasPlayableMedia = blockTypes.some(blockType =>
     ['media', 'legacyMedia', 'version'].includes(blockType),
   );
-  if (showPlaceholder) {
+  if (!hasPlayableMedia) {
     logIfNoMedia(blockTypes);
     return addUnavailableMediaBlock(pageData);
   }

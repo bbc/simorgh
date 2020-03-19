@@ -23,7 +23,7 @@ const formatPageData = pipe(
   timestampToMilliseconds,
 );
 
-const only = (pageType, transformer) => (pageData, ...args) => {
+export const only = (pageType, transformer) => (pageData, ...args) => {
   const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
   return isCorrectPageType ? transformer(pageData, ...args) : pageData;
 };
