@@ -3922,14 +3922,14 @@ const genServices = {
           },
           test: {
             paths: [
-              '/swahili/media-23268999', // CPS MAP with live stream
+              // '/swahili/media-23268999', // CPS MAP with live stream
               '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
           local: {
             paths: [
-              '/swahili/media-23268999', // CPS MAP with live stream
+              // '/swahili/media-23268999', // CPS MAP with live stream
               '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
             ],
             enabled: true,
