@@ -11,12 +11,14 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 // Currently, only these services have radio schedule data
 const validServices = [
+  'afrique',
   'arabic',
   'hausa',
   'korean',
   'pashto',
   'persian',
   'somali',
+  'swahili',
 ];
 
 const staticRadioScheduleURL = service =>

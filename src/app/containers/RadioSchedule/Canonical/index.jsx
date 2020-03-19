@@ -3,6 +3,7 @@ import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
+import moment from 'moment';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -67,7 +68,8 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     ServiceContext,
   );
   const { timeOnServer } = useContext(RequestContext);
-
+  moment.locale('en-GB');
+  const timeOnClient = parseInt(moment.utc().format('x'), 10);
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -87,7 +89,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
       const schedules = processRadioSchedule(
         radioScheduleData,
         service,
-        timeOnServer,
+        timeOnServer || timeOnClient,
       );
       setRadioSchedule(schedules);
     };
