@@ -1,7 +1,7 @@
 const JsdomEnvironment = require('jest-environment-jsdom');
 const render = require('./render');
 
-class CustomEnvironment extends JsdomEnvironment {
+class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
     super(config, context);
     this.docblockPragmas = context.docblockPragmas;
@@ -31,4 +31,4 @@ class CustomEnvironment extends JsdomEnvironment {
   }
 }
 
-module.exports = CustomEnvironment;
+module.exports = IntegrationTestEnvironment;
