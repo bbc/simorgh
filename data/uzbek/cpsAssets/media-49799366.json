@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/media-49799366",
+    "locators": {
+      "assetUri": "/uzbek/media-49799366",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/media-49799366",
+      "curie": "http://www.bbc.co.uk/asset/2c66e20f-ff54-974f-a518-42473abf35cf",
+      "assetId": "49799366"
+    },
+    "type": "MAP",
+    "createdBy": "uzbek-v6",
+    "language": "uz-Cyrl",
+    "lastUpdated": 1584527334498,
+    "firstPublished": 1569250368000,
+    "lastPublished": 1584527327000,
+    "timestamp": 1569250368000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "uzbek.embedded_video.media_asset.49799366.page",
+      "cps_asset_id": "49799366"
+    },
+    "tags": {},
+    "version": "v1.1.8",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07p3gkd",
+        "subType": "clip",
+        "format": "video",
+        "title": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+        "synopses": {
+          "short": "Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+          "medium": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07p3gmj.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+        "versions": [
+          {
+            "versionId": "p07p3gkj",
+            "types": ["Original"],
+            "duration": 107,
+            "durationISO8601": "PT1M47S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1569250223000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<link><caption>Рус тилида инглиз тили бўйича тестлар</caption><url href=\"https://www.bbc.com/russian/learning-english-37095319\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<link><caption>BBC Learning English</caption><url href=\"http://www.bbc.co.uk/learningenglish\" platform=\"highweb\"/></link> сайтидаги дарслар",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+      "headline": "Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?"
+    },
+    "locators": {
+      "assetUri": "/uzbek/media-49799366",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/media-49799366",
+      "curie": "http://www.bbc.co.uk/asset/2c66e20f-ff54-974f-a518-42473abf35cf",
+      "assetId": "49799366"
+    },
+    "summary": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+    "timestamp": 1569250368000,
+    "language": "uz-Cyrl",
+    "passport": {
+      "taggings": []
+    },
+    "media": {
+      "id": "p07p3gkd",
+      "subType": "clip",
+      "format": "video",
+      "title": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+      "synopses": {
+        "short": "Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+        "medium": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07p3gmj.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+      "versions": [
+        {
+          "versionId": "p07p3gkj",
+          "types": ["Original"],
+          "duration": 107,
+          "durationISO8601": "PT1M47S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1569250223000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "109023933",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/848C/production/_109023933_bcchineseuzb976x549.jpg",
+      "path": "/cpsprodpb/848C/production/_109023933_bcchineseuzb976x549.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "BBC News Uzbek билан инглиз тилини ўрганинг! Хитой ва инглиз тиллари глобал етакчилик учун курашмоқдами?",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/media-49799366",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/uzbek/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Ўзбек тилидаги янгиликлар",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "BBC Uzbek билан инглиз тили: \"Great\" сўзини қўллашнинг 5 усули",
+              "headline": "BBC Uzbek билан инглиз тили: \"Great\" сўзини қўллашнинг 5 усули"
+            },
+            "locators": {
+              "assetUri": "/uzbek/interactive-50041453",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/interactive-50041453"
+            },
+            "summary": "Замонавий инглиз тилида 'GREAT' сўзининг қандай муқобиллари бор? Видеолавҳамизни томоша қилинг. \"Би-би-си да инглиз тили дарслари\" лойиҳаси.",
+            "timestamp": 1571055161000,
+            "language": "uz-Cyrl",
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07r0dzr",
+              "subType": "clip",
+              "format": "video",
+              "title": "Инглиз тили: \"Great\" сўзини қўллашнинг 5 усули",
+              "synopses": {
+                "short": "Инглиз тили: \"Great\" сўзини қўллашнинг 5 усули",
+                "long": "Кўркам пойабзал! Лаззатли таом! Ғаройиб фильм! Бу ҳақда инглизлар қандай гапиради? Замонавий инглиз тилида 'GREAT' сўзининг қандай муқобиллари бор? Видеолавҳамизни томоша қилинг. \"Би-би-си да инглиз тили дарслари\" лойиҳаси.",
+                "medium": "Замонавий инглиз тилида 'GREAT' сўзининг қандай муқобиллари бор? Видеолавҳамизни томоша қилинг. \"Би-би-си да инглиз тили дарслари\" лойиҳаси."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07r0hdw.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Инглиз тили: \"Great\" сўзини қўллашнинг 5 усули",
+              "versions": [
+                {
+                  "versionId": "p07r0dzv",
+                  "types": ["Original"],
+                  "duration": 105,
+                  "durationISO8601": "PT1M45S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1571054689000
+                }
+              ],
+              "imageCopyright": "BBC",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "109227489",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/180A8/production/_109227489_p07r0hdw.jpg",
+              "path": "/cpsprodpb/180A8/production/_109227489_p07r0hdw.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "Инглиз тили: Great сўзининг қўлланиши",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:uzbek/interactive-50041453",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "BBC News Uzbek билан инглиз тилини ўрганинг! Инглиз тили бўйича тест: грамматика, 1-қисм",
+              "headline": "BBC News Uzbek билан инглиз тилини ўрганинг! Инглиз тили бўйича тест: грамматика, 1-қисм"
+            },
+            "locators": {
+              "assetUri": "/uzbek/interactive-49332456",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/interactive-49332456"
+            },
+            "summary": "Инглиз тилида замонлар, феъллар, гап тузилмалари: инглиз тили грамматикаси қанчалик енгил? Тестдан ўтинг ва билимингизни синанг!",
+            "timestamp": 1568034443000,
+            "language": "uz-Cyrl",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108300700",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/02BC/production/_108300700_160816100928_do_you_speak_english38_976x549_thinkstock.jpg",
+              "path": "/cpsprodpb/02BC/production/_108300700_160816100928_do_you_speak_english38_976x549_thinkstock.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Do you speak English?",
+              "copyrightHolder": "iStock",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:uzbek/interactive-49332456",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "BBC News Uzbek билан Инглиз тили: \"Чалғитувчи cўзлар\" тести",
+              "headline": "Инглиз тили бўйича тест: чалғитувчи cўзлар / Би-би-си да \"Инглиз тили дарслари\" лойиҳаси"
+            },
+            "locators": {
+              "assetUri": "/uzbek/interactive-49695860",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/interactive-49695860"
+            },
+            "summary": "Инглиз тилидаги кўпчиликнинг бошини қотирувчи сўзлар тестидан ўтинг, билимингизни синанг.",
+            "timestamp": 1568396827000,
+            "language": "uz-Cyrl",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108805937",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/120DE/production/_108805937_quizconfusingwordsuzb.jpg",
+              "path": "/cpsprodpb/120DE/production/_108805937_quizconfusingwordsuzb.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Инглиз тили: чалғитувчи cўзлар",
+              "copyrightHolder": "DeanDrobot",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:uzbek/interactive-49695860",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "BBC News Uzbek билан инглиз тилини ўрганинг!",
+              "headline": "BBC News Uzbek билан инглиз тилини ўрганинг!"
+            },
+            "locators": {
+              "assetUri": "/uzbek/interactive-49959680",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/interactive-49959680"
+            },
+            "summary": "BBC News Uzbek билан инглиз тилини ўрганинг! Видеодарсларимизни томоша қилинг ва тестларимиз орқали инглиз тили борасидаги билимларингизни синанг.",
+            "timestamp": 1574694948000,
+            "language": "uz-Cyrl",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "109825825",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/CE74/production/_109825825_cinema__uzb_cover_for_youtube.jpg",
+              "path": "/cpsprodpb/CE74/production/_109825825_cinema__uzb_cover_for_youtube.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "BBC",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:uzbek/interactive-49959680",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Английский язык: уроки, тесты, викторины BBC Learning English, лайфхаки",
+              "headline": "Английский язык: видео, аудио, уроки, тесты BBC Learning English, лайфхаки, викторины \"Проверь себя\", мультфильмы: каталог за разные годы",
+              "overtyped": "Рус тилида инглиз тили бўйича тестлар"
+            },
+            "locators": {
+              "assetUri": "/russian/learning-english-37095319",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/learning-english-37095319"
+            },
+            "summary": "Английский язык: видео, уроки, тесты BBC Learning English, новости на английском, мультфильмы, лайфхаки, викторины \"Проверь себя\": здесь - ответ на вопрос \"Как выучить английский самостоятельно и бесплатно?\"",
+            "timestamp": 1584446661000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110933697",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13711/production/_110933697_learchivetemplate-nc.png",
+              "path": "/cpsprodpb/13711/production/_110933697_learchivetemplate-nc.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Английский язык: видео, аудио, уроки, тесты и викторины BBC Learning English, лайфхаки",
+              "caption": "Английский язык: видео, аудио, уроки, тесты и викторины BBC Learning English, лайфхаки",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/learning-english-37095319",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

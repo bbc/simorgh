@@ -36,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/japanese/help-49677253#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/japanese/help-49677253',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
