@@ -22,7 +22,14 @@ const formatPageData = pipe(
   parseInternalLinks,
   timestampToMilliseconds,
 );
+
+const only = (pageType, transformer) => (pageData, ...args) => {
+  const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
+  return isCorrectPageType ? transformer(pageData, ...args) : pageData;
+};
+
 const processOptimoBlocks = pipe(
+  only(MEDIA_ASSET_PAGE, processUnavailableMedia),
   addHeadlineBlock,
   addSummaryBlock,
   augmentWithTimestamp,
@@ -35,15 +42,7 @@ const transformJson = async json => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
-
-    // Check for media availability and show a placeholder if media is absent.
-    const pageType = path(['metadata', 'type'], optimoBlocks);
-    const processedMediaBlocks =
-      pageType === MEDIA_ASSET_PAGE
-        ? processUnavailableMedia(optimoBlocks)
-        : optimoBlocks;
-
-    return processOptimoBlocks(processedMediaBlocks);
+    return processOptimoBlocks(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
