@@ -6,7 +6,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);

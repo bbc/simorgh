@@ -4,7 +4,7 @@ import React from 'react';
 import fetchMock from 'fetch-mock';
 import { renderHook, act } from '@testing-library/react-hooks';
 import '@testing-library/jest-dom/extend-expect';
-import useToggle from './useToggle';
+import useToggle from '.';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 jest.mock('../../lib/config/toggles/index.js', () => ({

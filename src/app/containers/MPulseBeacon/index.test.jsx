@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { isNull } from '@bbc/psammead-test-helpers';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import loggerMock from '#testHelpers/loggerMock';
 import MPulseBeaconContainer from './index';
 import onClient from '#lib/utilities/onClient';
