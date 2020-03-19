@@ -1,11 +1,12 @@
 import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import nodeLogger from '#lib/logger.node';
-import logCodes from '#lib/logger.const';
+import { NO_MEDIA_BLOCK } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
 const UNAVAILABLE_MEDIA_TEXT = 'unavailableMedia';
+const REVOKED_MEDIA = 'external_vpid';
 export const unavailableMediaBlock = {
   type: UNAVAILABLE_MEDIA_TEXT,
   model: {},
@@ -14,7 +15,7 @@ export const unavailableMediaBlock = {
 
 export const addUnavailableMediaBlock = pageData => {
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const filteredBlocks = blocks.filter(block => block.type !== 'external_vpid');
+  const filteredBlocks = blocks.filter(block => block.type !== REVOKED_MEDIA);
   return assocPath(
     ['content', 'model', 'blocks'],
     [unavailableMediaBlock, ...filteredBlocks],
@@ -29,11 +30,11 @@ const transformer = pageData => {
   );
   const showPlaceholder = mediaTypes.length === 0;
   if (showPlaceholder) {
-    if (!blockTypes.includes('external_vpid')) {
+    if (!blockTypes.includes(REVOKED_MEDIA)) {
       logger.warn(
         JSON.stringify(
           {
-            event: logCodes.noMediaBlock,
+            event: NO_MEDIA_BLOCK,
             message: 'No media detected in response',
           },
           null,

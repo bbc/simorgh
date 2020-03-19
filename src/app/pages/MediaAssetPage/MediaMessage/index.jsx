@@ -16,7 +16,7 @@ import { MediaMessage } from '@bbc/psammead-media-player';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import nodeLogger from '#lib/logger.node';
-import logCodes from '#lib/logger.const';
+import { NO_TRANSLATION_FOUND } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -46,15 +46,15 @@ export default () => {
   const translatedText = path(['media', 'contentExpired'], translations);
   const message = 'This content is no longer available';
   const contentNotAvailableMessage = translatedText || message;
-  const isTextNotTranslated =
+  const isNotTranslated =
     !translatedText ||
     (service !== 'news' && contentNotAvailableMessage === message);
 
-  if (isTextNotTranslated) {
+  if (isNotTranslated) {
     logger.info(
       JSON.stringify(
         {
-          event: logCodes.noTranslationFound,
+          event: NO_TRANSLATION_FOUND,
           message: `No ${service} translation found for "${message}"`,
         },
         null,

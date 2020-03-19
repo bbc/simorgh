@@ -15,6 +15,7 @@ import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -38,7 +39,9 @@ const transformJson = async json => {
     // Check for media availability and show a placeholder if media is absent.
     const pageType = path(['metadata', 'type'], optimoBlocks);
     const processedMediaBlocks =
-      pageType === 'MAP' ? processUnavailableMedia(optimoBlocks) : optimoBlocks;
+      pageType === MEDIA_ASSET_PAGE
+        ? processUnavailableMedia(optimoBlocks)
+        : optimoBlocks;
 
     return processOptimoBlocks(processedMediaBlocks);
   } catch (e) {
