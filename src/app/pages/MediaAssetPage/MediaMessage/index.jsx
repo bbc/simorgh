@@ -47,8 +47,7 @@ export default () => {
   const message = 'This content is no longer available';
   const contentNotAvailableMessage = translatedText || message;
   const isNotTranslated =
-    !translatedText ||
-    (service !== 'news' && contentNotAvailableMessage === message);
+    service !== 'news' && contentNotAvailableMessage === message;
 
   if (isNotTranslated) {
     logger.info(

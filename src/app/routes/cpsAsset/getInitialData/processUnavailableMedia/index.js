@@ -23,6 +23,21 @@ export const addUnavailableMediaBlock = pageData => {
   );
 };
 
+const logIfNoMedia = blockTypes => {
+  if (!blockTypes.includes(REVOKED_MEDIA)) {
+    logger.warn(
+      JSON.stringify(
+        {
+          event: NO_MEDIA_BLOCK,
+          message: 'No media detected in response',
+        },
+        null,
+        2,
+      ),
+    );
+  }
+};
+
 const transformer = pageData => {
   const blockTypes = pathOr([], ['metadata', 'blockTypes'], pageData);
   const mediaTypes = blockTypes.filter(blockType =>
@@ -30,18 +45,7 @@ const transformer = pageData => {
   );
   const showPlaceholder = mediaTypes.length === 0;
   if (showPlaceholder) {
-    if (!blockTypes.includes(REVOKED_MEDIA)) {
-      logger.warn(
-        JSON.stringify(
-          {
-            event: NO_MEDIA_BLOCK,
-            message: 'No media detected in response',
-          },
-          null,
-          2,
-        ),
-      );
-    }
+    logIfNoMedia(blockTypes);
     return addUnavailableMediaBlock(pageData);
   }
   return pageData;
