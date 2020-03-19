@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import fetchMock from 'fetch-mock';
@@ -6,18 +7,31 @@ import '@testing-library/jest-dom/extend-expect';
 import useToggle from './useToggle';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-process.env.SIMORGH_APP_ENV = 'test';
-process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+jest.mock('../../lib/config/toggles/index.js', () => ({
+  test: {
+    enableFetchingToggles: {
+      enabled: true,
+      value: 'mundo',
+    },
+    ads: {
+      enabled: true,
+    },
+  },
+}));
 
-const togglesUrl = `https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true`;
+const togglesUrl =
+  'https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=mundo&__amp_source_origin=https://www.test.bbc.com&geoiplookup=true';
 
-afterEach(() => {
+beforeEach(() => {
+  process.env.SIMORGH_APP_ENV = 'test';
+  process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+
   fetchMock.restore();
 });
 
 describe('useToggle custom hook', () => {
   describe('Given ads toggle that is fetched from the toggle service is enabled', () => {
-    beforeEach(() => {
+    it('return enabled true', async () => {
       fetchMock.mock(togglesUrl, {
         toggles: {
           ads: {
@@ -26,9 +40,6 @@ describe('useToggle custom hook', () => {
           },
         },
       });
-    });
-
-    it('return enabled true', async () => {
       let result;
       const wrapper = ({ children }) => (
         <ToggleContextProvider
@@ -48,10 +59,7 @@ describe('useToggle custom hook', () => {
   });
 
   describe('Given ads toggle that is fetched from the toggle service is disabled', () => {
-    afterEach(() => {
-      fetchMock.restore();
-    });
-    beforeEach(() => {
+    it('return enabled false', async () => {
       fetchMock.mock(togglesUrl, {
         toggles: {
           ads: {
@@ -60,9 +68,6 @@ describe('useToggle custom hook', () => {
           },
         },
       });
-    });
-
-    it('return enabled false', async () => {
       let result;
       const wrapper = ({ children }) => (
         <ToggleContextProvider
@@ -82,10 +87,7 @@ describe('useToggle custom hook', () => {
   });
 
   describe('Given ads toggle that is fetched from the toggle service does not exist', () => {
-    afterEach(() => {
-      fetchMock.restore();
-    });
-    beforeEach(() => {
+    it('return enabled null', async () => {
       fetchMock.mock(togglesUrl, {
         toggles: {
           ads: {
@@ -94,9 +96,6 @@ describe('useToggle custom hook', () => {
           },
         },
       });
-    });
-
-    it('return enabled null', async () => {
       let result;
       const wrapper = ({ children }) => (
         <ToggleContextProvider
@@ -114,6 +113,35 @@ describe('useToggle custom hook', () => {
       });
 
       expect(result.current).toEqual({ enabled: null });
+    });
+  });
+
+  describe('Given ads toggle that is fetched from the toggle service returns a 503', () => {
+    it('should log the fetch error', async () => {
+      console.error = jest.fn();
+      fetchMock.mock(togglesUrl, 503);
+      const wrapper = ({ children }) => (
+        <ToggleContextProvider
+          service="mundo"
+          origin="https://www.test.bbc.com"
+        >
+          {children}
+        </ToggleContextProvider>
+      );
+
+      await act(async () => {
+        renderHook(() => useToggle('ads'), {
+          wrapper,
+        });
+      });
+
+      expect(console.error).toHaveBeenCalledWith(
+        `error - ${JSON.stringify(
+          { event: 'toggle_fetch_error', message: {} },
+          null,
+          2,
+        )}`,
+      );
     });
   });
 });
