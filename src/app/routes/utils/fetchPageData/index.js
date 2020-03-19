@@ -85,8 +85,14 @@ const fetchData = pathname => {
   logger.info(`DataRequest: [${url}]`);
 
   return fetch(url)
-    .then(handleResponse(url))
-    .catch(handleError);
+    .then(handleResponse(url));
 };
 
-export default fetchData;
+const withRetries = (fn, maximumAttempts, handleError) => {
+  if (maximumAttempts <= 1) return (...args) => fn(...args).catch(handleError);
+
+  return (...args) => fn(...args).catch(() =>
+    withRetries(fn, maximumAttempts - 1)(...args))
+}
+
+export default withRetries(fetchData, 3, handleError);
