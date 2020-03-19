@@ -34,6 +34,15 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
         }
       });
     });
+
+    describe('Chartbeat', () => {
+      if (envConfig.chartbeatEnabled) {
+        it('should have chartbeat config UID', () => {
+          cy.hasAmpChartbeatConfigUid();
+        });
+      }
+    });
+
     describe('AMP Status', () => {
       it('should return a 200 response', () => {
         cy.testResponseCodeAndType(
