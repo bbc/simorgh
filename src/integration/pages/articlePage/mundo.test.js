@@ -11,13 +11,13 @@ import {
   runCommonA11yTests,
 } from '../../common';
 
-describe('Given I am on a Pidgin article amp page', () => {
+describe('Given I am on a Mundo article amp page', () => {
   describe('When I am a user', () => {
     runAmpUserTests();
   });
 });
 
-describe('Given I am on a Pidgin article canonical page', () => {
+describe('Given I am on a Mundo article canonical page', () => {
   describe('When I am a user', () => {
     runCanonicalUserTests({
       imageAltText:
@@ -32,7 +32,7 @@ describe('Given I am on a Pidgin article canonical page', () => {
   });
 });
 
-describe('Given I am on a Pidgin article amp/canonical page', () => {
+describe('Given I am on a Mundo article amp/canonical page', () => {
   describe('When I am a user', () => {
     runFooterTests({
       copyrightText:
