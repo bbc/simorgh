@@ -1,3 +1,4 @@
+import paths from 'ramda/src/paths';
 import envConfig from '../../../support/config/envs';
 
 export const getBlockByType = (blocks, blockType) => {
@@ -24,10 +25,13 @@ export const hasMedia = body => {
 
 const getMediaId = body => {
   const mediaBlock = body.promo.media;
-  const versionId = mediaBlock.versions && mediaBlock.versions[0].versionId;
-  const id = mediaBlock.externalId || mediaBlock.id;
 
-  return versionId || id;
+  const [versionId, externalId, id] = paths(
+    [['versions', 0, 'versionId'], ['externalId'], ['id']],
+    mediaBlock,
+  );
+
+  return versionId || externalId || id;
 };
 
 export const getEmbedUrl = (body, language) => {
