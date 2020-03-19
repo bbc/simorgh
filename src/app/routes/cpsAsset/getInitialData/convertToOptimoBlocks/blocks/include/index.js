@@ -21,7 +21,7 @@ export const encodeHTML = str =>
 
 const fetchMarkup = async url => {
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { timeout: 2000 });
     if (res.status !== 200) {
       throw new Error('Failed to fetch');
     } else {
