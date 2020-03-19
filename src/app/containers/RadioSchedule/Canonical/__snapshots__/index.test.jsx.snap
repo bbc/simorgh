@@ -334,20 +334,19 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 
 .c0 {
   background-color: #F2F2F2;
-  padding: 0 0.5rem;
-  margin: 0 -0.5rem;
+  padding: 0 1rem;
 }
 
 .c7 {
   margin: 0 auto;
-  padding-bottom: 0;
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .c2 {
   margin: 0 auto;
-  padding-top: 0;
   width: 100%;
+  padding-top: 0.5rem;
 }
 
 .c34 {
@@ -667,41 +666,33 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 
 @media (max-width:24.9375rem) {
   .c0 {
-    padding-bottom: 1rem;
+    margin: 2rem -0.5rem 0;
+    padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) {
   .c0 {
-    padding: 0 1rem;
-    margin: 0 -1rem;
+    margin: 2rem -1rem 0;
   }
 }
 
-@media (min-width:25rem) {
-  .c7 {
-    padding-bottom: 1rem;
+@media (min-width:37.5rem) {
+  .c0 {
+    margin: 1.5rem -1rem 0;
   }
 }
 
 @media (min-width:37.5rem) {
   .c7 {
     margin-top: 1.5rem;
-    padding-bottom: 1rem;
   }
 }
 
 @media (min-width:63rem) {
   .c7 {
-    padding-bottom: 1.5rem;
-    margin-bottom: 1.5rem;
     max-width: 63rem;
-  }
-}
-
-@media (max-width:37.4375rem) {
-  .c2 {
-    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -713,7 +704,6 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 
 @media (min-width:63rem) {
   .c2 {
-    margin-top: 2rem;
     max-width: 63rem;
     padding-top: 2rem;
   }
