@@ -1,4 +1,3 @@
-import moment from 'moment';
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
 import pathOr from 'ramda/src/pathOr';
@@ -22,13 +21,11 @@ const getLink = (state, program, service) => {
     : `${url}/${program.broadcast.pid}`;
 };
 
-export default (radioScheduleData, service) => {
-  const currentTime = parseInt(moment.utc().format('x'), 10);
-
+export default (radioScheduleData, service, currentServerTime) => {
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
   const latestProgramIndex = findLastIndex(
-    propSatisfies(time => time < currentTime, 'publishedTimeStart'),
+    propSatisfies(time => time < currentServerTime, 'publishedTimeStart'),
   )(radioScheduleData.schedules);
 
   const radioSchedules = radioScheduleData.schedules;
@@ -47,7 +44,7 @@ export default (radioScheduleData, service) => {
     schedulesToShow &&
     schedulesToShow.map(program => {
       const currentState = getProgramState(
-        currentTime,
+        currentServerTime,
         program.publishedTimeStart,
         program.publishedTimeEnd,
         service,
