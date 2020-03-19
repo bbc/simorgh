@@ -31,7 +31,7 @@ const RadioScheduleSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Radio-Schedule',
 }))`
-  background-color: red;
+  background-color: ${C_LUNAR};
   padding: 0 ${GEL_MARGIN_ABOVE_400PX};
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     /* To remove GEL Margins */
@@ -46,29 +46,12 @@ const RadioScheduleSection = styled.section.attrs(() => ({
   }
 `;
 
-// const MarginWrapper = styled.div`
-//   margin: 0 auto;
-//   padding-bottom: 0;
-//   width: 100%; /* Needed for IE11 */
-//   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-//     padding-bottom: ${GEL_SPACING_DBL};
-//   }
-//   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-//     margin-top: ${GEL_SPACING_DBL};
-//     padding-bottom: ${GEL_SPACING_DBL};
-//   }
-//   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-//     padding-bottom: ${GEL_SPACING_TRPL};
-//     margin-bottom: ${GEL_SPACING_TRPL};
-//     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-//   }
-// `;
-
 const RadioScheduleWrapper = styled.div`
   margin: 0 auto;
+  width: 100%; /* Needed for IE11 */
   padding-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING};
+    margin-top: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
