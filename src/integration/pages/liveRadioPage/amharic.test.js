@@ -3,7 +3,11 @@
  */
 
 import runUserTests from './user';
-import { runFooterTests, runCommonSeoTests } from '../../common';
+import {
+  runFooterTests,
+  runCommonSeoTests,
+  runCommonA11yTests,
+} from '../../common';
 
 describe('Given I am on the Amharic live radio page', () => {
   describe('When I am on amp/canonical', () => {
@@ -26,6 +30,13 @@ describe('Given I am on the Amharic live radio page', () => {
         canonicalUrl:
           'http://localhost:7080/amharic/bbc_amharic_radio/liveradio',
         language: 'am',
+      });
+    });
+
+    describe('When I am using assistive technology', () => {
+      runCommonA11yTests({
+        skipToContentText: 'ወደ ዋናው ይዘት ይለፉ',
+        headlineText: 'ያድምጡ',
       });
     });
   });

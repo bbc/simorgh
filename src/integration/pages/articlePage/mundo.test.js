@@ -8,6 +8,7 @@ import {
   runFooterTests,
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
+  runCommonA11yTests,
 } from '../../common';
 
 describe('Given I am on a Pidgin article amp page', () => {
@@ -49,5 +50,10 @@ describe('Given I am on a Pidgin article amp/canonical page', () => {
     });
   });
 
-  describe('When I am using assistive technology', () => {});
+  describe('When I am using assistive technology', () => {
+    runCommonA11yTests({
+      skipToContentText: 'Ir al contenido',
+      headlineText: 'Este es el titular de este artículo de prueba.',
+    });
+  });
 });

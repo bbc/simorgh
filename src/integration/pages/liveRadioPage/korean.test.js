@@ -3,7 +3,11 @@
  */
 
 import runUserTests from './user';
-import { runFooterTests, runCommonSeoTests } from '../../common';
+import {
+  runFooterTests,
+  runCommonSeoTests,
+  runCommonA11yTests,
+} from '../../common';
 
 describe('Given I am on the Korean live radio page', () => {
   describe('When I am on amp/canonical', () => {
@@ -25,6 +29,13 @@ describe('Given I am on the Korean live radio page', () => {
         pageTitle: 'BBC 코리아 라디오 - BBC News 코리아',
         canonicalUrl: 'http://localhost:7080/korean/bbc_korean_radio/liveradio',
         language: 'ko',
+      });
+    });
+
+    describe('When I am using assistive technology', () => {
+      runCommonA11yTests({
+        skipToContentText: '내용으로 건너뛰기',
+        headlineText: 'BBC 코리아 라디오',
       });
     });
   });
