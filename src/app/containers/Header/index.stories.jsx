@@ -13,7 +13,10 @@ storiesOf('Containers|Header', module)
   .addDecorator(withServicesKnob())
   .add('default', ({ service, variant }) => {
     return (
-      <ToggleContextProvider service="mundo" origin="https://www.test.bbc.com">
+      <ToggleContextProvider
+        service={service}
+        origin="https://www.test.bbc.com"
+      >
         <ServiceContextProvider service={service} variant={variant}>
           <RequestContextProvider
             isAmp={false}
