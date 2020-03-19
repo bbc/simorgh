@@ -14,7 +14,7 @@ describe('Given I am on the Amharic live radio amp page', () => {});
 describe('Given I am on the Amharic live radio canonical page', () => {});
 
 describe('Given I am on the Amharic live radio amp/canonical page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'ያድምጡ',
       summaryText: 'ዝግጅቶቻችንን’',

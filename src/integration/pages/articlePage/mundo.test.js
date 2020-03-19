@@ -12,13 +12,13 @@ import {
 } from '../../common';
 
 describe('Given I am on a Mundo article amp page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runAmpUserTests();
   });
 });
 
 describe('Given I am on a Mundo article canonical page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runCanonicalUserTests({
       imageAltText:
         'Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título.',
@@ -33,7 +33,7 @@ describe('Given I am on a Mundo article canonical page', () => {
 });
 
 describe('Given I am on a Mundo article amp/canonical page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runFooterTests({
       copyrightText:
         '© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos.',

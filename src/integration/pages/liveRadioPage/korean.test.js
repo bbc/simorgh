@@ -14,7 +14,7 @@ describe('Given I am on the Korean live radio amp page', () => {});
 describe('Given I am on the Korean live radio canonical page', () => {});
 
 describe('Given I am on the Korean live radio page amp/canonical', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'BBC 코리아 라디오',
       summaryText: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',

@@ -12,13 +12,13 @@ import {
 } from '../../common';
 
 describe('Given I am on a Pidgin article amp page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runAmpUserTests();
   });
 });
 
 describe('Given I am on a Pidgin article canonical page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runCanonicalUserTests({
       imageAltText: 'Comrade Adams Oshiomole',
       imageCaptionText:
@@ -32,7 +32,7 @@ describe('Given I am on a Pidgin article canonical page', () => {
 });
 
 describe('Given I am on a Pidgin article amp/canonical page', () => {
-  describe('When I am a user', () => {
+  describe('When I am using the website', () => {
     runFooterTests({
       copyrightText:
         '© 2020 BBC. De external site no concern BBC. De way wey we de take go external link.',
