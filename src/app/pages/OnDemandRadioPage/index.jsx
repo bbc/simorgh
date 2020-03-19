@@ -4,12 +4,21 @@ import styled from 'styled-components';
 import path from 'ramda/src/path';
 import MetadataContainer from '../../containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import OnDemandRadio from '#containers/RadioPageBlocks/Blocks/OnDemandRadio';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
+import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
+import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+
+const SKIP_LINK_ANCHOR_ID = 'content';
+
 const OnDemandRadioPage = ({ pageData }) => {
+  const blocks = path(['content', 'blocks'], pageData);
+  const dateTitle = path(['0', 'title'], blocks);
+  const idAttr = SKIP_LINK_ANCHOR_ID;
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
+  const programmeTitle = path(['title'], metadata);
+  const summary = path(['0', 'synopses', 'short'], blocks);
   const { dir } = useContext(ServiceContext);
   const StyledGelPageGrid = styled(GelPageGrid)`
     flex-grow: 1;
@@ -58,7 +67,9 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <OnDemandRadio />
+          <HeadingBlock idAttr={idAttr} text={programmeTitle} />
+          <ParagraphBlock text={dateTitle} />
+          <ParagraphBlock text={summary} />
         </Grid>
       </StyledGelPageGrid>
     </>
