@@ -6,13 +6,13 @@ import logCodes from '#lib/logger.const';
 const logger = nodeLogger(__filename);
 
 const UNAVAILABLE_MEDIA_TEXT = 'unavailableMedia';
-const unavailableMediaBlock = {
+export const unavailableMediaBlock = {
   type: UNAVAILABLE_MEDIA_TEXT,
   model: {},
   id: UNAVAILABLE_MEDIA_TEXT,
 };
 
-const addUnavailableMediaBlock = pageData => {
+export const addUnavailableMediaBlock = pageData => {
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const filteredBlocks = blocks.filter(block => block.type !== 'external_vpid');
   return assocPath(
