@@ -81,19 +81,17 @@ OnDemandRadioPage.propTypes = {
     metadata: shape({
       id: string,
       tags: object,
-    }),
-    promo: shape({
-      subtype: string,
-      name: string,
+      title: string.isRequired,
     }),
     content: shape({
       blocks: arrayOf(
         shape({
-          uuid: string,
           id: string,
-          externalId: string,
-          text: string,
-          type: string,
+          title: string.isRequired,
+          synopses: shape({
+            short: string,
+            medium: string,
+          }).isRequired,
         }),
       ),
     }),
