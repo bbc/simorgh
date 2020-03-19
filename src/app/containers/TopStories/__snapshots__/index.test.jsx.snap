@@ -68,9 +68,9 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
-                datetime="2020-03-18"
+                datetime="2020-02-03"
               >
-                18th March 2020
+                3rd February 2020
               </time>
             </div>
           </div>
@@ -103,9 +103,9 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
               </p>
               <time
                 class="StyledTimestamp-um718p-0 kVWTyt"
-                datetime="2020-03-18"
+                datetime="2020-02-03"
               >
-                one hour wey don pass
+                3rd February 2020
               </time>
             </div>
           </div>

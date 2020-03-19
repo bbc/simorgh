@@ -1754,9 +1754,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               </p>
                               <time
                                 class="c53"
-                                datetime="2020-03-18"
+                                datetime="2020-02-03"
                               >
-                                18th March 2020
+                                3rd February 2020
                               </time>
                             </div>
                           </div>
@@ -1789,9 +1789,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               </p>
                               <time
                                 class="c53"
-                                datetime="2020-03-18"
+                                datetime="2020-02-03"
                               >
-                                one hour wey don pass
+                                3rd February 2020
                               </time>
                             </div>
                           </div>
@@ -3845,9 +3845,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </p>
                                   <time
                                     class="c55"
-                                    datetime="2020-03-18"
+                                    datetime="2020-02-03"
                                   >
-                                    18th March 2020
+                                    3rd February 2020
                                   </time>
                                 </div>
                               </div>
@@ -3880,9 +3880,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   </p>
                                   <time
                                     class="c55"
-                                    datetime="2020-03-18"
+                                    datetime="2020-02-03"
                                   >
-                                    one hour wey don pass
+                                    3rd February 2020
                                   </time>
                                 </div>
                               </div>
