@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
+import { useData } from 'react-isomorphic-data';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from 'styled-components';
@@ -61,7 +62,6 @@ const RadioFrequencyLink = styled(Link)`
 `;
 
 const CanonicalRadioSchedule = ({ endpoint }) => {
-  const [schedule, setRadioSchedule] = useState();
   const { service, script, dir, timezone, locale, radioSchedule } = useContext(
     ServiceContext,
   );
@@ -77,21 +77,20 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     radioSchedule,
   );
 
-  useEffect(() => {
-    const handleResponse = async response => {
-      const radioScheduleData = await response.json();
+  const { data } = useData(
+    `http://localhost:7080${endpoint}`,
+    {},
+    {},
+    {
+      ssr: false,
+    },
+  );
 
-      const schedules = processRadioSchedule(radioScheduleData, service);
-      setRadioSchedule(schedules);
-    };
+  if (!data) {
+    return <div style={{ textAlign: 'center' }}>🤙 Loading 🤙</div>;
+  }
 
-    const fetchRadioScheduleData = pathname =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
-
-    fetchRadioScheduleData(endpoint);
-  }, [endpoint, service, script, timezone, locale]);
+  const schedule = processRadioSchedule(data, service);
 
   if (!schedule) {
     return null;

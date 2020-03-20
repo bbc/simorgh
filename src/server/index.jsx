@@ -386,7 +386,7 @@ server
           dataClient,
         );
       } catch (err) {
-        console.errror(err);
+        console.error(err);
       }
 
       try {

@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
+import { useData } from 'react-isomorphic-data';
+import { transformJson } from '../../routes/home/getInitialData';
 import { string } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
@@ -60,13 +62,30 @@ export const StyledFrontPageDiv = styled.div`
   }
 `;
 
-const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
+const FrontPage = ({ mostReadEndpointOverride }) => {
   const {
     product,
     serviceLocalizedName,
     translations,
     frontPageTitle,
+    service,
   } = useContext(ServiceContext);
+
+  const { data } = useData(
+    `http://localhost:7080/${service}.json`,
+    {},
+    {},
+    {
+      ssr: true,
+    },
+  );
+
+  if (!data) {
+    return '🤙 Loading 🤙';
+  }
+
+  const pageData = transformJson(data);
+
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
@@ -109,14 +128,13 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
         </VisuallyHiddenText>
         <StyledFrontPageDiv>
           <AdContainer />
+          {renderMostRead()}
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
               {group.type === 'top-stories' && <RadioScheduleContainer />}
             </Fragment>
           ))}
-          {!hasUsefulLinks && renderMostRead()}
         </StyledFrontPageDiv>
       </main>
     </>
