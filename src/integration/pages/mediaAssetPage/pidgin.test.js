@@ -1,9 +1,11 @@
 /**
- * @pathname /pidgin/articles/cwl08rd38l6o
+ * @pathname /pidgin/23248703
  */
 
 import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
+import runUserTests from './user';
+
 import {
   runFooterTests,
   runCommonSeoTests,
@@ -11,19 +13,15 @@ import {
   runCommonA11yTests,
 } from '../../common';
 
-describe('Given I am on a Pidgin AMP Article page', () => {
+describe('Given I am on a Pidgin AMP Media Asset Page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
 });
 
-describe('Given I am on a Pidgin Canonical Article page', () => {
+describe('Given I am on a Pidgin Canonical Media Asset Page', () => {
   describe('When I am using the website', () => {
-    runCanonicalUserTests({
-      imageAltText: 'Map of France showing Paris and Cognac',
-      imageCaptionText:
-        'This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.',
-    });
+    runCanonicalUserTests();
   });
 
   describe('When I am analysing user/performance metrics', () => {
@@ -31,8 +29,15 @@ describe('Given I am on a Pidgin Canonical Article page', () => {
   });
 });
 
-describe('Given I am on a Pidgin AMP/Canonical Article page', () => {
+describe('Given I am on a Pidgin AMP/Canonical Media Asset Page', () => {
   describe('When I am using the website', () => {
+    runUserTests({
+      headlineText:
+        'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >',
+      timestamp: '13 September 2019',
+      bulletedListItemText: 'v3 draft',
+    });
+
     runFooterTests({
       copyrightText:
         '© 2020 BBC. De external site no concern BBC. De way wey we de take go external link.',
@@ -43,8 +48,8 @@ describe('Given I am on a Pidgin AMP/Canonical Article page', () => {
   describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
       pageTitle:
-        'This is the SEO headline of this test article - BBC News Pidgin',
-      canonicalUrl: 'http://localhost:7080/pidgin/articles/cwl08rd38l6o',
+        'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin',
+      canonicalUrl: 'http://localhost:7080/pidgin/23248703',
       language: 'pcm',
     });
   });
@@ -52,7 +57,8 @@ describe('Given I am on a Pidgin AMP/Canonical Article page', () => {
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
       skipToContentText: 'Waka go wetin de inside',
-      headlineText: 'This is the headline of this test article',
+      headlineText:
+        'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >',
     });
   });
 });
