@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukrainian/media-40962249",
+    "locators": {
+      "assetUri": "/ukrainian/media-40962249",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-40962249",
+      "curie": "http://www.bbc.co.uk/asset/e8887c53-d231-db4f-ad42-018f90d9e93d"
+    },
+    "type": "MAP",
+    "createdBy": "ukrainian-v6",
+    "language": "ru",
+    "lastUpdated": 1550609792418,
+    "firstPublished": 1502974945,
+    "lastPublished": 1502974946,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "ukrainian.embedded_media.media_asset.40962249.page",
+      "cps_asset_id": "40962249"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["media", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p05cczb8",
+        "subType": "clip",
+        "format": "video",
+        "title": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
+        "synopses": {
+          "short": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
+          "medium": "Август 1937 года известен как начало “Большого террора” в СССР. Одна из узниц ГУЛАГа рассказала Би-би-си о том, что ей довелось пережить.",
+          "long": "Август 1937 года известен как начало “Большого террора” в СССР. С секретного приказа НКВД № 00447 начался период наиболее массовых сталинских репрессий: миллионы людей в СССР были расстреляны и отправлены в лагеря системы ГУЛАГ.\n\nВера Голубева была приговорена по ст. 19-58-8 УК СССР к десяти годам заключения  в Озерлаге – особом лагере для политических заключенных в системе ГУЛАГа в Иркутской области. \n\nВ лагере она находилась с 1951 по 1955 год. \n\nВ интервью с корреспондентом Би-би-си Сарой Рейнсфорд она вспоминает свой арест и тяжелейшие условия заключения."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05cll5w.jpg",
+        "embedding": true,
+        "warnings": {},
+        "advertising": true,
+        "caption": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
+        "versions": [
+          {
+            "versionId": "p05cfdcy",
+            "types": ["Editorial"],
+            "duration": 132,
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            }
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Август 1937 года известен как начало “Большого террора” в СССР. С секретного приказа НКВД № 00447 начался период наиболее массовых сталинских репрессий: миллионы людей в СССР были расстреляны и отправлены в лагеря системы ГУЛАГ.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Вера Голубева была приговорена по ст. 19-58-8 УК СССР к десяти годам заключения  в Озерлаге – особом лагере для политических заключенных в системе ГУЛАГа в Иркутской области. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В лагере она находилась с 1951 по 1955 год. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В интервью с корреспондентом ВВС Сарой Рейнсфорд она вспоминает свой арест и тяжелейшие условия заключения.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Сталин исчез из музея ГУЛАГа</caption><url href=\"http://www.bbc.com/ukrainian/ukraine_in_russian/2015/03/150304_ru_s_gulag_prison_museum\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"Многие с ума сходили, не выдерживали\": воспоминания узницы ГУЛАГа",
+      "headline": "\"Многие с ума сходили, не выдерживали\": воспоминания узницы ГУЛАГа"
+    },
+    "locators": {
+      "assetUri": "/ukrainian/media-40962249",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-40962249",
+      "curie": "http://www.bbc.co.uk/asset/e8887c53-d231-db4f-ad42-018f90d9e93d"
+    },
+    "summary": "Август 1937 года известен как начало “Большого террора” в СССР. Одна из узниц ГУЛАГа Вера Голубева рассказала корреспонденту Би-би-си Саре Рейнсфорд о том, что ей довелось пережить.",
+    "timestamp": 1550609792418,
+    "passport": {},
+    "media": {
+      "id": "p05cczb8",
+      "subType": "clip",
+      "format": "video",
+      "title": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
+      "synopses": {
+        "short": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
+        "medium": "Август 1937 года известен как начало “Большого террора” в СССР. Одна из узниц ГУЛАГа рассказала Би-би-си о том, что ей довелось пережить.",
+        "long": "Август 1937 года известен как начало “Большого террора” в СССР. С секретного приказа НКВД № 00447 начался период наиболее массовых сталинских репрессий: миллионы людей в СССР были расстреляны и отправлены в лагеря системы ГУЛАГ.\n\nВера Голубева была приговорена по ст. 19-58-8 УК СССР к десяти годам заключения  в Озерлаге – особом лагере для политических заключенных в системе ГУЛАГа в Иркутской области. \n\nВ лагере она находилась с 1951 по 1955 год. \n\nВ интервью с корреспондентом Би-би-си Сарой Рейнсфорд она вспоминает свой арест и тяжелейшие условия заключения."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05cll5w.jpg",
+      "embedding": true,
+      "warnings": {},
+      "advertising": true,
+      "caption": "\"Многие с ума сходили, не выдерживали\": узница ГУЛАГа вспоминает свой арест",
+      "versions": [
+        {
+          "versionId": "p05cfdcy",
+          "types": ["Editorial"],
+          "duration": 132,
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          }
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "97300510",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/05DC/production/_97300510_p05cfddc.jpg",
+      "path": "/cpsprodpb/05DC/production/_97300510_p05cfddc.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Вера Голубева провела 4 года в в Озерлаге – особом лагере для политических заключенных в системе ГУЛАГа в Иркутской области.",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/media-40962249",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/ukrainian/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Україна",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "name": "Сталин исчез из музея ГУЛАГа",
+            "uri": "http://www.bbc.com/ukrainian/ukraine_in_russian/2015/03/150304_ru_s_gulag_prison_museum",
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Как петлюровец Довженко \"исправлял\" биографию",
+              "headline": "Как петлюровец Довженко \"исправлял\" биографию"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/blogs-russian-38807549",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/blogs-russian-38807549"
+            },
+            "summary": "Фильмы Александра Довженко \"Звенигора\" и \"Арсенал\" стали попытками \"исправить\" свою биографию. Ведь в 1917 году будущий режиссер воевал в петлюровской армии.",
+            "timestamp": 1485866701,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "93884632",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5C60/production/_93884632_289988.jpg",
+              "path": "/cpsprodpb/5C60/production/_93884632_289988.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Олександр Довженко",
+              "copyrightHolder": "ukrinform",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/blogs-russian-38807549",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Как быть, если вас считают русской шпионкой?",
+              "headline": "\"Сладкая ловушка\": как быть, если вас считают русской шпионкой?"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/features-russian-39899056",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-russian-39899056"
+            },
+            "summary": "Когда Светлана Лохова увидела, что по всему интернету ходят сообщения, что она, может быть, российская шпионка, она сначала подумала, что это шутка. Однако в реальности все оказалось куда серьезнее.",
+            "timestamp": 1494593961,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "96017137",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11DD3/production/_96017137_promo.jpg",
+              "path": "/cpsprodpb/11DD3/production/_96017137_promo.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Светлана Лохова",
+              "copyrightHolder": "Svetlana Lokhova",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/features-russian-39899056",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Режиссер Менделюк: Горькая жатва - это голос жертв Голодомора",
+              "headline": "Режиссер Менделюк: Горькая жатва - это голос жертв Голодомора"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/features-russian-38928171",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-russian-38928171"
+            },
+            "summary": "В феврале в украинский прокат выходит фильм \"Горькая жатва\" - первая голливудская лента, посвященная теме Голодомора.",
+            "timestamp": 1486716293,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "94232460",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1917/production/_94232460_untitlyuopop-o-op-op898989oyuyued.jpg",
+              "path": "/cpsprodpb/1917/production/_94232460_untitlyuopop-o-op-op898989oyuyued.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Гіркі жнива",
+              "caption": "Заледве якийсь голлівудський фільм виходить без палких поцілунків...",
+              "copyrightHolder": "bitterharvestfilm.com",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/features-russian-38928171",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"Украина или Малороссия?\" - дискуссия, из-за которой застрелился Хвылевой",
+              "headline": "\"Украина или Малороссия?\" - дискуссия, из-за которой застрелился Хвылевой"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/blogs-russian-38735932",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/blogs-russian-38735932"
+            },
+            "summary": "90 лет назад в тогдашней украинской столице Харькове разворачивалась бурная литературная дискуссия, в которой все заметнее становились политические акценты. Суть противостояния определяло название памфлета Хвылевого - \"Украина или Малороссия?\".",
+            "timestamp": 1485277653,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "93791473",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/922B/production/_93791473_046112.jpg",
+              "path": "/cpsprodpb/922B/production/_93791473_046112.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Микола Хвильовий",
+              "copyrightHolder": "Ukrinform",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/blogs-russian-38735932",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Десять мифов об Украинской революции",
+              "headline": "Десять мифов об Украинской революции"
+            },
+            "locators": {
+              "assetUri": "/ukrainian/features-russian-39254197",
+              "cpsUrn": "urn:bbc:content:assetUri:/ukrainian/features-russian-39254197"
+            },
+            "summary": "Институт национальной памяти собрал опровержения десяти исторических мифов о событиях Украинской революции 1917-1921 годов.",
+            "timestamp": 1489405483,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "95056795",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E975/production/_95056795_map.jpg",
+              "path": "/cpsprodpb/E975/production/_95056795_map.jpg",
+              "height": 690,
+              "width": 1227,
+              "altText": "Німецька карта Української Народної Республіки. 1918 р.",
+              "caption": "Німецька карта Української Народної Республіки. 1918 р.",
+              "copyrightHolder": "УІНП",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:ukrainian/features-russian-39254197",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

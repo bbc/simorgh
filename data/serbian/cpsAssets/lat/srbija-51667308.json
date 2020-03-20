@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:serbian/lat/srbija-51667308",
+    "locators": {
+      "assetUri": "/serbian/lat/srbija-51667308",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-51667308",
+      "curie": "http://www.bbc.co.uk/asset/e5cded2a-2965-7641-a586-360f979e56db",
+      "assetId": "51667308"
+    },
+    "type": "MAP",
+    "createdBy": "serbian-v6",
+    "language": "sr-Latn",
+    "lastUpdated": 1583490609685,
+    "firstPublished": 1582884079000,
+    "lastPublished": 1583490601000,
+    "timestamp": 1583490592000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "serbianlat.serbia.media_asset.51667308.page",
+      "cps_asset_id": "51667308"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+        "categoryName": "Explainer"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Italy",
+          "thingUri": "http://www.bbc.co.uk/things/0021de37-b64a-46ac-a4bb-5bdbdf0908ec#id",
+          "thingId": "0021de37-b64a-46ac-a4bb-5bdbdf0908ec",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/3175395/"]
+        },
+        {
+          "thingLabel": "Serbia",
+          "thingUri": "http://www.bbc.co.uk/things/1791445f-977a-4e6d-b490-51f84bb4fc52#id",
+          "thingId": "1791445f-977a-4e6d-b490-51f84bb4fc52",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/6290252/"]
+        },
+        {
+          "thingLabel": "Coronavirus outbreak",
+          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingType": ["Thing", "Event"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q290805"]
+        },
+        {
+          "thingLabel": "Croatia",
+          "thingUri": "http://www.bbc.co.uk/things/e53fdfab-4671-4ba4-8794-3b41e81a2911#id",
+          "thingId": "e53fdfab-4671-4ba4-8794-3b41e81a2911",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/3202326/"]
+        }
+      ]
+    },
+    "version": "v1.1.7",
+    "blockTypes": ["media", "paragraph", "image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p085v87m",
+        "subType": "clip",
+        "format": "video",
+        "title": "Корона вирус у Србији: Како да се заштитимо и не паничимо",
+        "synopses": {
+          "short": "Корона вирус у Србији: Како да се заштитимо и не паничимо"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085v8w0.jpg",
+        "embedding": true,
+        "advertising": false,
+        "caption": "Korona virus u Srbiji: Kako da se zaštitimo i ne paničimo",
+        "versions": [
+          {
+            "versionId": "p085v87q",
+            "types": ["Original"],
+            "duration": 182,
+            "durationISO8601": "PT3M2S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1583489669000
+          }
+        ],
+        "type": "media"
+      },
+      {
+        "text": "Prvi slučaj novog korona virusa registrovan je u Srbiji, a broj obolelih raste u regionu.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Nadležni kažu da razloga za brigu nema, a ipak,  veliki broj građana razmišlja o tome kako se zaštititi. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Razgovarali smo sa epidemiologom Zoranom Radovanovićem o tome šta možemo sami da uradimo kako bismo se zaštitili od korona virusa, zašto je važno da ne paničimo i kako da ne paničimo. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>Pripremila: Petra Živić </italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "106279669",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/179B9/production/_106279669_fb1c6c40-2f65-4fc3-9432-c4967c0d59c7.jpg",
+        "path": "/cpsprodpb/179B9/production/_106279669_fb1c6c40-2f65-4fc3-9432-c4967c0d59c7.jpg",
+        "height": 2,
+        "width": 624,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "<bold><italic>Svi građani Srbije, a pre svega oni koji su boravili u rizičnim područjima, neophodne informacije mogu da dobiju putem broja 06</italic></bold><bold><italic>4</italic></bold><bold><italic>/8945-235.</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>Ministarstvo zdravlja dva puta dnevno objavljuje sve informacije </italic></bold><bold><italic>o </italic></bold><bold><italic>korona</italic></bold><bold><italic>virus</italic></bold><bold><italic>u </italic></bold><bold><italic>na stranici </italic></bold><link><caption>covid19.rs</caption><url href=\"http://covid19.rs/\" platform=\"highweb\"/></link><bold><italic>.</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "106279669",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/179B9/production/_106279669_fb1c6c40-2f65-4fc3-9432-c4967c0d59c7.jpg",
+        "path": "/cpsprodpb/179B9/production/_106279669_fb1c6c40-2f65-4fc3-9432-c4967c0d59c7.jpg",
+        "height": 2,
+        "width": 624,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "<italic>Pratite nas na </italic><link><caption>Fejsbuku</caption><url href=\"https://www.facebook.com/BBCNewsnasrpskom/\" platform=\"highweb\"/></link><italic> i </italic><link><caption>Tviteru</caption><url href=\"https://twitter.com/bbcnasrpskom\" platform=\"highweb\"/></link><italic>. Ako imate predlog teme za nas, javite se na bbcnasrpskom@bbc.co.uk</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Korona virus u Srbiji: Kako da se zaštitimo i ne paničimo",
+      "headline": "Korona virus u Srbiji: Kako da se zaštitimo i ne paničimo"
+    },
+    "locators": {
+      "assetUri": "/serbian/lat/srbija-51667308",
+      "cpsUrn": "urn:bbc:content:assetUri:serbian/lat/srbija-51667308",
+      "curie": "http://www.bbc.co.uk/asset/e5cded2a-2965-7641-a586-360f979e56db",
+      "assetId": "51667308"
+    },
+    "summary": "Korona virus stigao je u Srbiju - šta možemo da uradimo da se zaštitimo?",
+    "timestamp": 1583490592000,
+    "language": "sr-Latn",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+        "categoryName": "Explainer"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "taggings": []
+    },
+    "media": {
+      "id": "p085v87m",
+      "subType": "clip",
+      "format": "video",
+      "title": "Корона вирус у Србији: Како да се заштитимо и не паничимо",
+      "synopses": {
+        "short": "Корона вирус у Србији: Како да се заштитимо и не паничимо"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p085v8w0.jpg",
+      "embedding": true,
+      "advertising": false,
+      "caption": "Korona virus u Srbiji: Kako da se zaštitimo i ne paničimo",
+      "versions": [
+        {
+          "versionId": "p085v87q",
+          "types": ["Original"],
+          "duration": 182,
+          "durationISO8601": "PT3M2S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1583489669000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "111162152",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/6226/production/_111162152_p085v8w0.jpg",
+      "path": "/cpsprodpb/6226/production/_111162152_p085v8w0.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Korona u Srbiji",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:serbian/lat/srbija-51667308",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Srbija",
+      "uri": "/serbian/lat/srbija",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News na srpskom",
+      "uri": "/serbian/lat",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Korona virus: Francuska i Nemačka se spremaju za epidemiju, šta je sa ostatkom Evrope",
+              "headline": "Korona virus: Francuska i Nemačka se spremaju za epidemiju, šta je sa ostatkom Evrope"
+            },
+            "locators": {
+              "assetUri": "/serbian/lat/svet-51656881",
+              "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/svet-51656881"
+            },
+            "summary": "U Srbiji je do sada testirano najmanje 25 osoba za koje se sumnjalo da su zaražene.",
+            "timestamp": 1582832572000,
+            "language": "sr-Latn",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111035211",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2BF5/production/_111035211_gettyimages-1208572867.jpg",
+              "path": "/cpsprodpb/2BF5/production/_111035211_gettyimages-1208572867.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Italijanka sa maskom na licu",
+              "caption": "Italijanka sa maskom na licu",
+              "copyrightHolder": "Emanuele Cremaschi",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:serbian/lat/svet-51656881",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Život u doba korone: Balkanke u Kini - mesec dana kasnije",
+              "headline": "Korona virus: Priča o Balkankama iz Kine - mesec dana kasnije"
+            },
+            "locators": {
+              "assetUri": "/serbian/lat/balkan-51636571",
+              "cpsUrn": "urn:bbc:content:assetUri:/serbian/lat/balkan-51636571"
+            },
+            "summary": "Srba u Kini je sve manje, pa su oni koji su ostali napravili grupu po imenu „Poslednji Mohikanci\"",
+            "timestamp": 1582704682000,
+            "language": "sr-Latn",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111037293",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9969/production/_111037293_gettyimages-1199162438223.jpg",
+              "path": "/cpsprodpb/9969/production/_111037293_gettyimages-1199162438223.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Korona",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:serbian/lat/balkan-51636571",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
