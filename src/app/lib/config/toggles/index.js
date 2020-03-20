@@ -1,7 +1,7 @@
 const toggles = {
   local: {
     chartbeatAnalytics: {
-      enabled: true,
+      enabled: false,
     },
     mediaPlayer: {
       enabled: true,
