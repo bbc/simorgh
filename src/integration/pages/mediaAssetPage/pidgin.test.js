@@ -35,8 +35,9 @@ describe('Given I am on a Pidgin AMP/Canonical Media Asset Page', () => {
       headlineText:
         'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >',
       timestamp: '13 September 2019',
-      bulletedListItemText:
+      bulletedListItem:
         'sunt in culpa qui officia deserunt mollit anim id est laborum',
+      relatedContentHeadline: 'BBC News Pidgin One Minute News',
     });
 
     runFooterTests({
