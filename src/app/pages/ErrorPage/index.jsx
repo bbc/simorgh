@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { number, oneOf, string, shape } from 'prop-types';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
-import ErrorPageComponent from '../../components/ErrorPage';
+import ErrorMain from '#app/components/ErrorMain';
 
 /*
  * MVP Metadata for the error
@@ -33,7 +33,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
   );
 };
 
-const ErrorMain = ({ status }) => {
+const ErrorPage = ({ errorCode }) => {
   const {
     brandName,
     dir,
@@ -43,7 +43,7 @@ const ErrorMain = ({ status }) => {
     themeColor,
     translations,
   } = useContext(ServiceContext);
-  const messaging = translations.error[status] || translations.error[500];
+  const messaging = translations.error[errorCode] || translations.error[500];
 
   return (
     <>
@@ -54,18 +54,13 @@ const ErrorMain = ({ status }) => {
         messaging={messaging}
         themeColor={themeColor}
       />
-      <ErrorPageComponent
-        {...messaging}
-        dir={dir}
-        script={script}
-        service={service}
-      />
+      <ErrorMain {...messaging} dir={dir} script={script} service={service} />
     </>
   );
 };
 
-ErrorMain.propTypes = {
-  status: number.isRequired,
+ErrorPage.propTypes = {
+  errorCode: number.isRequired,
 };
 
 ErrorMetadata.propTypes = {
@@ -76,4 +71,4 @@ ErrorMetadata.propTypes = {
   themeColor: string.isRequired,
 };
 
-export default ErrorMain;
+export default ErrorPage;
