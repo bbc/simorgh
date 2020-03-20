@@ -3,6 +3,7 @@ const { jestDirAlias } = require('./dirAlias');
 module.exports = {
   projects: [
     {
+      displayName: 'Unit Tests',
       reporters: [
         'default',
         [
