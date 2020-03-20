@@ -17,7 +17,7 @@ const WithVariant = Component => {
       service,
       variant,
     });
-
+    console.log('bdsfhsf' + redirectPath);
     if (!redirectPath) {
       return <Component {...props} />;
     }

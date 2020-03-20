@@ -2,15 +2,32 @@
 import React from 'react';
 import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
-import { ClientApp } from './app/containers/App';
+import { BrowserRouter } from 'react-router-dom';
+import App from '#containers/app/App';
 import routes from './app/routes';
 import { template, templateStyles } from '#lib/joinUsTemplate';
 import loggerNode from '#lib/logger.node';
+import { DataProvider, createDataClient } from 'react-isomorphic-data';
 
 const logger = loggerNode();
 
 const data = window.SIMORGH_DATA || {};
+const compoentData = window.__cache || {};
 const root = document.getElementById('root');
+
+// Create a store for all component data fetches
+const dataClient = createDataClient({
+  initialCache: compoentData,
+  ssr: false,
+});
+
+const ClientApp = ({ data, routes }) => (
+  <DataProvider client={dataClient}>
+    <BrowserRouter>
+      <App initialData={data} routes={routes} />
+    </BrowserRouter>
+  </DataProvider>
+);
 
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only

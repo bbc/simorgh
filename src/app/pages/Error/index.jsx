@@ -7,9 +7,10 @@ import withContexts from '../../containers/PageHandlers/withContexts';
 import withPageWrapper from '../../containers/PageHandlers/withPageWrapper';
 import withLoading from '../../containers/PageHandlers/withLoading';
 
-const ErrorContainer = ({ status, errorCode }) => (
-  <ErrorMain status={errorCode || status} />
-);
+const ErrorContainer = ({ status, errorCode }) => {
+  console.log('oops');
+  return <ErrorMain status={errorCode || status} />;
+};
 
 ErrorContainer.propTypes = {
   status: number.isRequired,

@@ -21,6 +21,7 @@ const Document = ({
   helmet,
   isAmp,
   scripts,
+  componentData,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -80,6 +81,14 @@ const Document = ({
             /* eslint-disable-next-line react/no-danger */
             dangerouslySetInnerHTML={{
               __html: `window.SIMORGH_DATA=${serialisedData}`,
+            }}
+          />
+        )}
+        {scriptsAllowed && (
+          <script
+            /* eslint-disable-next-line react/no-danger */
+            dangerouslySetInnerHTML={{
+              __html: `window.__cache=${JSON.stringify(componentData)}`,
             }}
           />
         )}

@@ -30,6 +30,7 @@ import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
+import { withData } from 'react-isomorphic-data';
 
 export const StyledFrontPageDiv = styled.div`
   /* To add GEL Margins */
@@ -131,4 +132,13 @@ FrontPage.defaultProps = {
   mostReadEndpointOverride: null,
 };
 
-export default FrontPage;
+export default withData({
+  url: 'https://jsonplaceholder.typicode.com/todos/1',
+  name: 'todosData',
+  dataOptions: {
+    ssr: true,
+    fetchPolicy: 'cache-first',
+  },
+})(FrontPage);
+
+// export default FrontPage;

@@ -1,10 +1,12 @@
 import React from 'react';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
-// not part of react-helmet
 import helmet from 'helmet';
+// not part of react-helmet
+import { Helmet } from 'react-helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
 import {
@@ -20,7 +22,6 @@ import {
   legacyAssetPageDataPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
-import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
@@ -33,11 +34,15 @@ import {
   createDataClient,
   getDataFromTree,
 } from 'react-isomorphic-data';
-import {
-  renderToStringWithData,
-  createPrefetchTags,
-} from 'react-isomorphic-data/ssr';
-import { renderToString } from 'react-dom/server';
+import { renderToStringWithData } from 'react-isomorphic-data/ssr';
+
+import { StaticRouter } from 'react-router-dom';
+import SimorghApp from '../app/containers/App/App';
+import { ChunkExtractor } from '@loadable/server';
+import { ServerStyleSheet } from 'styled-components';
+import DocumentComponent from './Document/component';
+import getAssetOrigins from './utilities/getAssetOrigins';
+import { getStyleTag } from './styles';
 
 const fs = require('fs');
 
@@ -335,7 +340,13 @@ server
       data.path = urlPath;
       data.timeOnServer = Date.now();
 
-      const result = await renderDocument({
+      // Create a store for all component data fetches
+      const dataClient = createDataClient({
+        initialCache: {},
+        ssr: true,
+      });
+
+      const ServerAppProps = {
         bbcOrigin,
         data,
         isAmp,
@@ -343,15 +354,97 @@ server
         service,
         url,
         variant,
-      });
+      };
 
-      if (result.redirectUrl) {
-        res.redirect(301, result.redirectUrl);
-      } else if (result.html) {
-        res.status(status).send(result.html);
-      } else {
-        throw new Error('unknown result');
+      const ServerApp = ({ ServerAppProps }) => (
+        <DataProvider client={dataClient}>
+          <StaticRouter location={url} {...ServerAppProps}>
+            <SimorghApp
+              initialData={ServerAppProps.data}
+              routes={ServerAppProps.routes}
+              bbcOrigin={ServerAppProps.bbcOrigin}
+            />
+          </StaticRouter>
+        </DataProvider>
+      );
+
+      const sheet = new ServerStyleSheet();
+
+      const statsFile = path.resolve(
+        `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+      );
+
+      const extractor = new ChunkExtractor({ statsFile });
+
+      const context = {};
+      let app;
+      try {
+        app = await renderToStringWithData(
+          extractor.collectChunks(
+            sheet.collectStyles(<ServerApp ServerAppProps={ServerAppProps} />),
+          ),
+          dataClient,
+        );
+      } catch (err) {
+        console.errror(err);
       }
+
+      try {
+        await getDataFromTree(app, dataClient);
+      } catch (err) {
+        console.log(`ohhhh ohh: ${err}`);
+      }
+
+      let markup;
+
+      const scripts = extractor.getScriptElements({
+        crossOrigin: 'anonymous',
+        type: 'text/javascript',
+        defer: true,
+      });
+      const headHelmet = Helmet.renderStatic();
+      const assetOrigins = getAssetOrigins(service);
+
+      // pass the same dataClient instance you are passing to your provider here
+      try {
+        // markup = renderToString(app);
+        // markup = await renderToStringWithData(app, dataClient);
+        const doc = renderToStaticMarkup(
+          <DocumentComponent
+            assetOrigins={assetOrigins}
+            scripts={scripts}
+            app={app}
+            data={data}
+            componentData={dataClient.cache}
+            styleTags={getStyleTag(sheet, isAmp)}
+            helmet={headHelmet}
+            service={service}
+            isAmp={isAmp}
+          />,
+        );
+
+        res.status(status).send(`<!doctype html>${doc}`);
+      } catch (err) {
+        console.error('Error while trying to getDataFromTree', err);
+      }
+
+      //   const result = await renderDocument({
+      //     bbcOrigin,
+      //     data,
+      //     isAmp,
+      //     routes,
+      //     service,
+      //     url,
+      //     variant,
+      //   });
+
+      //   if (result.redirectUrl) {
+      //     res.redirect(301, result.redirectUrl);
+      //   } else if (result.html) {
+      //     res.status(status).send(result.html);
+      //   } else {
+      //     throw new Error('unknown result');
+      //   }
     } catch ({ message, status }) {
       logger.error(
         JSON.stringify(
