@@ -13,11 +13,11 @@ const SKIP_LINK_ANCHOR_ID = 'content';
 
 const OnDemandRadioPage = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
-  const dateTitle = path(['0', 'title'], blocks);
+  const episodeTitle = path(['0', 'title'], blocks);
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
-  const programmeTitle = path(['title'], metadata);
+  const brandTitle = path(['title'], metadata);
   const summary = path(['0', 'synopses', 'short'], blocks);
   const { dir } = useContext(ServiceContext);
   const StyledGelPageGrid = styled(GelPageGrid)`
@@ -67,8 +67,8 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <HeadingBlock idAttr={idAttr} text={programmeTitle} />
-          <ParagraphBlock text={dateTitle} />
+          <HeadingBlock idAttr={idAttr} text={brandTitle} />
+          <ParagraphBlock text={episodeTitle} />
           <ParagraphBlock text={summary} />
         </Grid>
       </StyledGelPageGrid>
