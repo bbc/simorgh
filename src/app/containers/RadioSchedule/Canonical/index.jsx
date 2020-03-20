@@ -68,7 +68,6 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     ServiceContext,
   );
   const { timeOnServer } = useContext(RequestContext);
-  moment.locale('en-GB');
   const timeOnClient = parseInt(moment.utc().format('x'), 10);
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
