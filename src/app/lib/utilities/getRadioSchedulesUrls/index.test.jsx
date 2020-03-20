@@ -1,8 +1,4 @@
-import {
-  getRadioScheduleEndpoint,
-  getLocalRadioScheduleEndpoint,
-  getLink,
-} from '.';
+import { getRadioScheduleEndpoint, getLocalRadioScheduleEndpoint } from '.';
 
 describe('getRadioScheduleEndpoint', () => {
   it('should return endpoint when passed service', () => {
@@ -20,7 +16,7 @@ describe('getRadioScheduleEndpoint', () => {
       expect(
         getRadioScheduleEndpoint({
           service: 'hausa',
-          queryString: 'renderer_env=live',
+          queryString: '?renderer_env=live',
           env: 'live',
         }),
       ).toBe('/hausa/bbc_hausa_radio/schedule.json');
@@ -29,7 +25,7 @@ describe('getRadioScheduleEndpoint', () => {
       expect(
         getRadioScheduleEndpoint({
           service: 'hausa',
-          queryString: 'renderer_env=live',
+          queryString: '?renderer_env=live',
           env: 'test',
         }),
       ).toBe('/hausa/bbc_hausa_radio/schedule.json?renderer_env=live');
@@ -38,7 +34,7 @@ describe('getRadioScheduleEndpoint', () => {
       expect(
         getRadioScheduleEndpoint({
           service: 'hausa',
-          queryString: 'renderer_env=live',
+          queryString: '?renderer_env=live',
           env: 'local',
         }),
       ).toBe('/hausa/bbc_hausa_radio/schedule.json?renderer_env=live');
@@ -48,7 +44,7 @@ describe('getRadioScheduleEndpoint', () => {
         getRadioScheduleEndpoint({
           service: 'persian',
           radioService: 'dari',
-          queryString: 'renderer_env=live',
+          queryString: '?renderer_env=live',
           env: 'test',
         }),
       ).toBe('/persian/bbc_dari_radio/schedule.json?renderer_env=live');
@@ -69,39 +65,5 @@ describe('getLocalRadioScheduleEndpoint', () => {
         radioService: 'dari',
       }),
     ).toBe('./data/persian/bbc_dari_radio/schedule.json');
-  });
-});
-
-describe('getLink', () => {
-  it('should return liveradio link when state is live', () => {
-    expect(
-      getLink({
-        service: 'persian',
-        currentState: 'live',
-        programServiceId: 'bbc_dari_radio',
-        broadcastPid: 'p07zbtbf',
-      }),
-    ).toBe('/persian/bbc_dari_radio/liveradio');
-  });
-  it('should return program link when state is not live', () => {
-    expect(
-      getLink({
-        service: 'persian',
-        currentState: 'anyotherstate',
-        programServiceId: 'bbc_dari_radio',
-        broadcastPid: 'p07zbtbf',
-      }),
-    ).toBe('/persian/bbc_dari_radio/p07zbtbf');
-  });
-  // todo - need to check if following behaviour is valid
-  xit('should return liveradio link when broadcastPid is not provided', () => {
-    expect(
-      getLink({
-        service: 'persian',
-        currentState: 'anyotherstate',
-        programServiceId: 'bbc_dari_radio',
-        broadcastPid: null,
-      }),
-    ).toBe('/persian/bbc_dari_radio/liveradio');
   });
 });
