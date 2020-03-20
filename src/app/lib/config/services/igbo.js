@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ig',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mgbe ikpeazụ e tinyere ya ozi ọhụrụ',
@@ -37,8 +40,9 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Ogbako',
     fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',
     isTrustProjectParticipant: true,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated

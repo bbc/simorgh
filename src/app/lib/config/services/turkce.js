@@ -16,6 +16,9 @@ import 'moment/locale/tr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Güncelleme',
@@ -41,8 +44,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcturkce',
     twitterSite: '@bbcturkce',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/turkce/kurumsal-50221017#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/turkce/kurumsal-50221017',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
