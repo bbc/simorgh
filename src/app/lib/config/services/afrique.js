@@ -7,6 +7,9 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
@@ -32,8 +35,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcafrique',
     twitterSite: '@bbcafrique',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/afrique/institutionelles-49283281#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',

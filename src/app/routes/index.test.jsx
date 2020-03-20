@@ -6,6 +6,7 @@ import { renderRoutes } from 'react-router-config';
 import { matchPath } from 'react-router';
 import routes from './index';
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
 import frontPageJson from '#data/pidgin/frontpage/index.json';
 import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
@@ -24,7 +25,14 @@ const getMatchingRoute = pathname =>
     }),
   );
 
-const renderRouter = ({ pathname, pageData, pageType, service, status }) =>
+const renderRouter = ({
+  pathname,
+  pageData,
+  pageType,
+  service,
+  status,
+  errorCode,
+}) =>
   render(
     <MemoryRouter initialEntries={[pathname]}>
       {renderRoutes(routes, {
@@ -34,6 +42,7 @@ const renderRouter = ({ pathname, pageData, pageType, service, status }) =>
         service,
         isAmp: false,
         status: status || 200,
+        ...(errorCode && { errorCode }),
       })}
     </MemoryRouter>,
   );
@@ -66,6 +75,24 @@ it('should route to and render live radio page', async () => {
     service: 'korean',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC 코리아 라디오';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should route to and render the skeleton onDemand Radio page', async () => {
+  fetch.mockResponse(JSON.stringify(onDemandRadioPageJson));
+  const pathname = '/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData(pathname);
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'indonesia',
+  });
+
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
+    'Konten ini sudah tidak tersedia lagi.';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
@@ -208,7 +235,22 @@ it('should route to and render a feature index page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route fallback to and render a 500 error page', async () => {
+it('should route to and render a 500 error page', async () => {
+  const pathname = '/igbo/500';
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { errorCode } = await getInitialData(pathname);
+  const { getByText } = renderRouter({
+    pathname,
+    pageType,
+    errorCode,
+    service: 'igbo',
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '500';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should fallback to and render a 500 error page if there is a problem with page data', async () => {
   fetch.mockResponse(undefined);
   const pathname = '/afrique';
   const { getByText } = renderRouter({
@@ -222,16 +264,47 @@ it('should route fallback to and render a 500 error page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should fallback to and render a 404 error page', async () => {
-  fetch.mockResponse(JSON.stringify({ status: 404 }));
-  const pathname = '/pidgin/articles/cwl08rd38p6o';
-  const { pageType } = getMatchingRoute(pathname);
+it('should route to and render a 404 error page', async () => {
+  const pathname = '/igbo/404';
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { errorCode } = await getInitialData(pathname);
   const { getByText } = renderRouter({
     pathname,
-    pageData: undefined,
     pageType,
+    errorCode,
+    service: 'igbo',
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should render a 404 error page if a data fetch responds with a 404', async () => {
+  fetch.mockResponse(null, { status: 404 });
+  const pathname = '/pidgin/articles/cwl08rd38p6o';
+  const { pageType, getInitialData } = getMatchingRoute(pathname);
+  const { status } = await getInitialData(pathname);
+  const { getByText } = renderRouter({
+    pathname,
+    pageType,
+    status,
     service: 'pidgin',
-    status: 404,
+  });
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
+it('should fallback to and render a 404 error page if no route match is found', async () => {
+  const pathname = '/a/path/that/does/not/exist';
+  const { pageType, getInitialData } =
+    getMatchingRoute(pathname) || routes[routes.length - 1];
+  const { errorCode } = await getInitialData(pathname);
+  const { getByText } = renderRouter({
+    pathname,
+    pageType,
+    errorCode,
+    service: 'pidgin',
   });
   const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = '404';
 

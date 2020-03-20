@@ -24,6 +24,9 @@ const toggles = {
     variantCookie: {
       enabled: true,
     },
+    ads: {
+      enabled: true,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -42,12 +45,15 @@ const toggles = {
       enabled: true,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
     },
     scriptLink: {
       enabled: true,
     },
     variantCookie: {
+      enabled: true,
+    },
+    ads: {
       enabled: true,
     },
   },
@@ -76,6 +82,9 @@ const toggles = {
     variantCookie: {
       enabled: true,
     },
+    ads: {
+      enabled: false,
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -101,6 +110,9 @@ const toggles = {
     },
     variantCookie: {
       enabled: true,
+    },
+    ads: {
+      enabled: false,
     },
   },
 };

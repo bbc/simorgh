@@ -29,7 +29,9 @@ const renderRadioScheduleContainer = service => (
     >
       <ServiceContextProvider service={service}>
         <RadioScheduleContainer
-          endpoint={getLocalRadioScheduleEndpoint({ service })}
+          radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
+            service,
+          })}
         />
       </ServiceContextProvider>
     </RequestContextProvider>
