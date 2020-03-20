@@ -88,7 +88,7 @@ describe('OnDemand Radio Page ', () => {
     );
   });
 
-  it('should show the programme title for OnDemand Radio Pages', async () => {
+  it('should show the brand title for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
@@ -121,6 +121,10 @@ describe('OnDemand Radio Page ', () => {
       createAssetPage(pageDataWithWithoutVideo, 'indonesia'),
     );
 
-    expect(getByText('05/03/2020 GMT')).toBeInTheDocument();
+    expect(
+      getByText(
+        'Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.',
+      ),
+    ).toBeInTheDocument();
   });
 });
