@@ -22,7 +22,9 @@ const getHeadlineBlocks = json => {
 };
 
 const firstBlockIsVideo = blocks =>
-  ['video', 'version', 'legacyMedia'].includes(path(['0', 'type'], blocks));
+  ['video', 'version', 'legacyMedia', 'unavailableMedia'].includes(
+    path(['0', 'type'], blocks),
+  );
 
 const insertHeadlineBlocks = originalJson => {
   const json = deepClone(originalJson);
