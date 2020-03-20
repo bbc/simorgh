@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import { renderAsJsDom } from '../../render';
+import { renderAsJsDom } from '../render';
 
 export default ({ pageUrl }) => {
   describe('Chartbeat', () => {
