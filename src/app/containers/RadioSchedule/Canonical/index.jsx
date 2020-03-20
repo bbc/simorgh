@@ -18,6 +18,7 @@ import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { Link } from '@bbc/psammead-story-promo';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import webLogger from '#lib/logger.web';
 
@@ -65,6 +66,8 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   const { service, script, dir, timezone, locale, radioSchedule } = useContext(
     ServiceContext,
   );
+  const { timeOnServer } = useContext(RequestContext);
+
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -81,7 +84,11 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     const handleResponse = async response => {
       const radioScheduleData = await response.json();
 
-      const schedules = processRadioSchedule(radioScheduleData, service);
+      const schedules = processRadioSchedule(
+        radioScheduleData,
+        service,
+        timeOnServer,
+      );
       setRadioSchedule(schedules);
     };
 

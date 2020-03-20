@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukrainian/multimedia_russian/2014/03/140301_ru_n_crimea_parliament_seizure",
+    "locators": {
+      "assetUri": "/ukrainian/multimedia_russian/2014/03/140301_ru_n_crimea_parliament_seizure",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia_russian/2014/03/140301_ru_n_crimea_parliament_seizure",
+      "curie": "http://www.bbc.co.uk/asset/90548210-a12f-11e3-a2bf-57b53db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "ukrainian",
+    "language": "ru",
+    "lastUpdated": 1550599922054,
+    "firstPublished": 1393671140,
+    "lastPublished": 1393671422,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "30470992",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/03/emp/140301_ru_n_crimea_parliament_seizure.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Камеры видеонаблюдения зафиксировали момент захвата парламента Крыма в Симферополе неизвестными вооруженнными людьми.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "На кадрах видно, как возле входных дверей здания происходит взрыв, после чего группа мужчин в форме без опознавательных знаков заходит внутрь.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "На записи также указано время - около 4:30 утра в четверг.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В пятницу исполняющий обязанности президента Украины Александр Турчинов обвинил Россию во введении войск с целью спровоцировать конфликт.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>Видео без звука и комментария.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Захват парламента Крыма - видео с камер наблюдения",
+      "headline": "Захват парламента Крыма - видео с камер наблюдения"
+    },
+    "locators": {
+      "assetUri": "/ukrainian/multimedia_russian/2014/03/140301_ru_n_crimea_parliament_seizure",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/multimedia_russian/2014/03/140301_ru_n_crimea_parliament_seizure",
+      "curie": "http://www.bbc.co.uk/asset/90548210-a12f-11e3-a2bf-57b53db9bd6e"
+    },
+    "summary": "Камеры видеонаблюдения зафиксировали момент захвата парламента Крыма в Симферополе неизвестными вооруженнными людьми.",
+    "timestamp": 1550599922054,
+    "passport": {},
+    "media": {
+      "id": "30470992",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/ukrainian/meta/dps/2014/03/emp/140301_ru_n_crimea_parliament_seizure.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e237",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/03/01/140301103051_crimea_parliament_seizure_144x81_reuters_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/03/01/140301103051_crimea_parliament_seizure_144x81_reuters_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "захват парламента в Крыму",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/multimedia_russian/2014/03/140301_ru_n_crimea_parliament_seizure",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Відео і Фото",
+      "uri": "/ukrainian/multimedia_russian",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCUkrainian.com",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

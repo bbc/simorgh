@@ -4,7 +4,7 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "scripts": {
-    "amp:validate": "wait-on http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp && amphtml-validator http://localhost:7080/korean/bbc_korean_radio/liveradio.amp",
+    "amp:validate": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp && amphtml-validator http://localhost:7080/korean/bbc_korean_radio/liveradio.amp && amphtml-validator http://localhost:7080/pidgin/23248703.amp && amphtml-validator http://localhost:7080/azeri/multimedia/2015/08/150804_azeri_test.amp",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && xvfb-run -a bbc-a11y",
     "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack && node ./scripts/bundleSize.js",
@@ -32,7 +32,8 @@
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
-    "test:integration": "node src/integration/getPageData.js && jest ./src/integration/pages/**/*.test.js --watch",
+    "test:integration": "jest ./src/integration/pages/**/*.test.js --watch",
+    "test:integration:watch": "npm run test:integration -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
   },
@@ -80,7 +81,7 @@
     "@bbc/psammead-media-indicator": "^4.0.4",
     "@bbc/psammead-media-player": "^2.7.5",
     "@bbc/psammead-most-read": "^2.0.3",
-    "@bbc/psammead-navigation": "^6.0.5",
+    "@bbc/psammead-navigation": "^6.0.6",
     "@bbc/psammead-paragraph": "^2.2.26",
     "@bbc/psammead-radio-schedule": "0.1.0-alpha.20",
     "@bbc/psammead-rich-text-transforms": "^2.0.0",
