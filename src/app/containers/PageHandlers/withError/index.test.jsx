@@ -3,7 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import WithError from '.';
 
 // eslint-disable-next-line react/prop-types
-jest.mock('../../ErrorMain', () => () => <h1>This is an error.</h1>);
+jest.mock('#pages/ErrorPage', () => () => <h1>This is an error.</h1>);
 
 describe('withError HOC', () => {
   const Component = () => <h1>Hola</h1>;

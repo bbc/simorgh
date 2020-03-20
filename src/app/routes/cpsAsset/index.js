@@ -2,8 +2,13 @@ import { memo } from 'react';
 import path from 'ramda/src/path';
 import pageIsSame from '../utils/pageIsSame';
 import getInitialData from './getInitialData';
-import { MediaAssetPage, PhotoGalleryPage, StoryPage, FrontPage } from '#pages';
-import ErrorPage from '#pages/Error';
+import {
+  ErrorPage,
+  FrontPage,
+  MediaAssetPage,
+  PhotoGalleryPage,
+  StoryPage,
+} from '#pages';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
@@ -25,7 +30,7 @@ const CpsAsset = props => {
 
   return PageType
     ? PageType({ ...props, pageType: type })
-    : ErrorPage({ ...props, pageType: 'error', status: 404 });
+    : ErrorPage({ ...props, pageType: 'error', errorCode: 404 });
 };
 
 export default {

@@ -22,6 +22,7 @@ const RadioSchedulesWithContext = ({
       pageType="frontPage"
       service={service}
       pathname={`/${service}`}
+      timeOnServer={Date.now()}
     >
       <ServiceContextProvider service={service}>
         <RadioScheduleContainer />
