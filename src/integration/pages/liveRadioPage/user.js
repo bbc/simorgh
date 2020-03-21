@@ -1,15 +1,15 @@
 const { amp, canonical } = global;
 
 export default ({ headlineText, summaryText }) => {
-  [amp, canonical].forEach(app => {
+  [amp, canonical].forEach(page => {
     it('I can see the headline', () => {
-      const headlineEl = app.getByText(headlineText);
+      const headlineEl = page.getByText(headlineText);
 
       expect(headlineEl).toBeInTheDocument();
     });
 
     it('I can see the summary', () => {
-      const summaryEl = app.getByText(summaryText);
+      const summaryEl = page.getByText(summaryText);
 
       expect(summaryEl).toBeInTheDocument();
     });
