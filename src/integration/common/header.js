@@ -26,7 +26,7 @@ export default ({ skipToContentText }) => {
   });
 };
 
-// TODO decide which of these amp/canonical header tests from Cypress to implement
+// TODO decide which of these AMP/Canonical header tests from Cypress to implement
 // it("should have offscreen text with product's language code set to English", () => {});
 // it('should not set the language code for localised name', () => {});
 // it('should not have a language attribute if no serviceLocalizedName set', () => {});

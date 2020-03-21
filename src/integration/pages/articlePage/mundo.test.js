@@ -13,7 +13,7 @@ import {
   runCoreAmpTests,
 } from '../../common';
 
-describe('Given I am on a Mundo article amp page', () => {
+describe('Given I am on a Mundo article AMP page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
@@ -21,7 +21,7 @@ describe('Given I am on a Mundo article amp page', () => {
   runCoreAmpTests();
 });
 
-describe('Given I am on a Mundo article canonical page', () => {
+describe('Given I am on a Mundo article Canonical page', () => {
   describe('When I am using the website', () => {
     runCanonicalUserTests({
       imageAltText:
@@ -36,7 +36,7 @@ describe('Given I am on a Mundo article canonical page', () => {
   });
 });
 
-describe('Given I am on a Mundo article amp/canonical page', () => {
+describe('Given I am on a Mundo article AMP/Canonical page', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
       skipToContentText: 'Ir al contenido',

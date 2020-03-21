@@ -13,7 +13,7 @@ import {
   runCoreAmpTests,
 } from '../../common';
 
-describe('Given I am on a Pidgin article amp page', () => {
+describe('Given I am on a Pidgin article AMP page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
@@ -21,7 +21,7 @@ describe('Given I am on a Pidgin article amp page', () => {
   runCoreAmpTests();
 });
 
-describe('Given I am on a Pidgin article canonical page', () => {
+describe('Given I am on a Pidgin article Canonical page', () => {
   describe('When I am using the website', () => {
     runCanonicalUserTests({
       imageAltText: 'Comrade Adams Oshiomole',
@@ -35,7 +35,7 @@ describe('Given I am on a Pidgin article canonical page', () => {
   });
 });
 
-describe('Given I am on a Pidgin article amp/canonical page', () => {
+describe('Given I am on a Pidgin article AMP/Canonical page', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
       skipToContentText: 'Waka go wetin de inside',

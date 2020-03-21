@@ -17,9 +17,9 @@ describe('Given I am on the Korean live radio AMP page', () => {
   runCoreAmpTests();
 });
 
-describe('Given I am on the Korean live radio canonical page', () => {});
+describe('Given I am on the Korean live radio Canonical page', () => {});
 
-describe('Given I am on the Korean live radio page amp/canonical', () => {
+describe('Given I am on the Korean live radio page AMP/Canonical', () => {
   describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'BBC 코리아 라디오',

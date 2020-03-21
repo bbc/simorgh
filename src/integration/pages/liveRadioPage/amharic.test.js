@@ -11,15 +11,15 @@ import {
   runCoreAmpTests,
 } from '../../common';
 
-describe('Given I am on the Amharic live radio amp page', () => {
+describe('Given I am on the Amharic live radio AMP page', () => {
   describe('When I am using the website', () => {});
 
   runCoreAmpTests();
 });
 
-describe('Given I am on the Amharic live radio canonical page', () => {});
+describe('Given I am on the Amharic live radio Canonical page', () => {});
 
-describe('Given I am on the Amharic live radio amp/canonical page', () => {
+describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
   describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'ያድምጡ',
