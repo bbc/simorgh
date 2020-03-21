@@ -6,6 +6,7 @@ import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
+  runHeaderTests,
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
   runCommonA11yTests,
@@ -33,6 +34,10 @@ describe('Given I am on a Pidgin article canonical page', () => {
 
 describe('Given I am on a Pidgin article amp/canonical page', () => {
   describe('When I am using the website', () => {
+    runHeaderTests({
+      skipToContentText: 'Waka go wetin de inside',
+    });
+
     runFooterTests({
       copyrightText:
         '© 2020 BBC. De external site no concern BBC. De way wey we de take go external link.',

@@ -5,6 +5,7 @@
 import runUserTests from './user';
 import {
   runFooterTests,
+  runHeaderTests,
   runCommonSeoTests,
   runCommonA11yTests,
 } from '../../common';
@@ -18,6 +19,10 @@ describe('Given I am on the Korean live radio page amp/canonical', () => {
     runUserTests({
       headlineText: 'BBC 코리아 라디오',
       summaryText: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
+    });
+
+    runHeaderTests({
+      skipToContentText: '내용으로 건너뛰기',
     });
 
     runFooterTests({

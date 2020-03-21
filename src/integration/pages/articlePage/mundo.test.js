@@ -6,6 +6,7 @@ import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
+  runHeaderTests,
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
   runCommonA11yTests,
@@ -34,6 +35,10 @@ describe('Given I am on a Mundo article canonical page', () => {
 
 describe('Given I am on a Mundo article amp/canonical page', () => {
   describe('When I am using the website', () => {
+    runHeaderTests({
+      skipToContentText: 'Ir al contenido',
+    });
+
     runFooterTests({
       copyrightText:
         '© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos.',

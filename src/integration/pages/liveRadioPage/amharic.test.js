@@ -5,6 +5,7 @@
 import runUserTests from './user';
 import {
   runFooterTests,
+  runHeaderTests,
   runCommonSeoTests,
   runCommonA11yTests,
 } from '../../common';
@@ -18,6 +19,10 @@ describe('Given I am on the Amharic live radio amp/canonical page', () => {
     runUserTests({
       headlineText: 'ያድምጡ',
       summaryText: 'ዝግጅቶቻችንን’',
+    });
+
+    runHeaderTests({
+      skipToContentText: 'ወደ ዋናው ይዘት ይለፉ',
     });
 
     runFooterTests({
