@@ -37,6 +37,25 @@ describe('Given I am on the Korean live radio page amp/canonical', () => {
       pageTitle: 'BBC 코리아 라디오 - BBC News 코리아',
       canonicalUrl: 'http://localhost:7080/korean/bbc_korean_radio/liveradio',
       language: 'ko',
+      fbAdmins: '100004154058350',
+      fbAppId: '1609039196070050',
+      ogImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+      ogImageAlt: 'BBC News 코리아',
+      ogLocale: 'ko-KO',
+      ogType: 'website',
+      ogUrl: 'http://localhost:7080/korean/bbc_korean_radio/liveradio',
+      ogSiteName: 'BBC News 코리아',
+      twitterCard: 'summary_large_image',
+      twitterCreator: '@bbcnews',
+      twitterImageAlt: 'BBC News 코리아',
+      twitterImageSrc:
+        'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+      twitterSite: '@bbcnews',
+      ogDescription: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
+      ogTitle: 'BBC 코리아 라디오 - BBC News 코리아',
+      twitterDescription:
+        '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
+      twitterTitle: 'BBC 코리아 라디오 - BBC News 코리아',
     });
   });
 

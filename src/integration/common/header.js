@@ -2,24 +2,26 @@ const { amp, canonical } = global;
 
 export default ({ skipToContentText }) => {
   [amp, canonical].forEach(page => {
-    it('I can see the BBC branding', () => {
-      const brandingEl = page.document.querySelector('footer svg');
+    describe(`And using ${page.platform}`, () => {
+      it('I can see the BBC branding', () => {
+        const brandingEl = page.document.querySelector('footer svg');
 
-      expect(brandingEl).toBeInTheDocument();
-    });
+        expect(brandingEl).toBeInTheDocument();
+      });
 
-    it('I can see the navigation', () => {
-      const navigationItemEls = page.document.querySelector(
-        'header nav ul > li > a',
-      );
+      it('I can see the navigation', () => {
+        const navigationItemEls = page.document.querySelector(
+          'header nav ul > li > a',
+        );
 
-      expect(navigationItemEls).toBeInTheDocument();
-    });
+        expect(navigationItemEls).toBeInTheDocument();
+      });
 
-    it('I can see a skip to content link', () => {
-      const skipToContentEl = page.getByText(skipToContentText);
+      it('I can see a skip to content link', () => {
+        const skipToContentEl = page.getByText(skipToContentText);
 
-      expect(skipToContentEl).toBeInTheDocument();
+        expect(skipToContentEl).toBeInTheDocument();
+      });
     });
   });
 };

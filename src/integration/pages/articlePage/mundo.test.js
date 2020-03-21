@@ -52,6 +52,28 @@ describe('Given I am on a Mundo article amp/canonical page', () => {
         'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo',
       canonicalUrl: 'http://localhost:7080/mundo/articles/ce42wzqr2mko',
       language: 'es',
+      fbAdmins: '100004154058350',
+      fbAppId: '1609039196070050',
+      ogImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      ogImageAlt: 'BBC News Mundo',
+      ogLocale: 'es-005',
+      ogType: 'article',
+      ogUrl: 'http://localhost:7080/mundo/articles/ce42wzqr2mko',
+      ogSiteName: 'BBC News Mundo',
+      twitterCard: 'summary_large_image',
+      twitterCreator: '@bbcmundo',
+      twitterImageAlt: 'BBC News Mundo',
+      twitterImageSrc:
+        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+      twitterSite: '@bbcmundo',
+      ogDescription:
+        'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas',
+      ogTitle:
+        'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo',
+      twitterDescription:
+        'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas',
+      twitterTitle:
+        'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo',
     });
   });
 

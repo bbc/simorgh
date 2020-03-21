@@ -51,6 +51,27 @@ describe('Given I am on a Pidgin article amp/canonical page', () => {
         "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",
       canonicalUrl: 'http://localhost:7080/pidgin/tori-51745682',
       language: 'pcm',
+      fbAdmins: '100004154058350',
+      fbAppId: '1609039196070050',
+      ogImage:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg',
+      ogImageAlt: 'Adams Oshiomole',
+      ogLocale: 'pcm',
+      ogType: 'article',
+      ogUrl: 'http://localhost:7080/pidgin/tori-51745682',
+      ogSiteName: 'BBC News Pidgin',
+      twitterCard: 'summary_large_image',
+      twitterCreator: '@BBCNews',
+      twitterImageAlt: 'Adams Oshiomole',
+      twitterImageSrc:
+        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg',
+      twitterSite: '@BBCNews',
+      ogDescription: 'Oga Oshiomhole don cari di mata go Court of Appeal.',
+      ogTitle:
+        "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",
+      twitterDescription: 'Oga Oshiomhole don cari di mata go Court of Appeal.',
+      twitterTitle:
+        "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",
     });
   });
 

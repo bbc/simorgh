@@ -37,6 +37,24 @@ describe('Given I am on the Amharic live radio amp/canonical page', () => {
       pageTitle: 'ያድምጡ - BBC News አማርኛ',
       canonicalUrl: 'http://localhost:7080/amharic/bbc_amharic_radio/liveradio',
       language: 'am',
+      fbAdmins: '100004154058350',
+      fbAppId: '1609039196070050',
+      ogImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
+      ogImageAlt: 'BBC News አማርኛ',
+      ogLocale: 'am-ET',
+      ogType: 'website',
+      ogUrl: 'http://localhost:7080/amharic/bbc_amharic_radio/liveradio',
+      ogSiteName: 'BBC News አማርኛ',
+      twitterCard: 'summary_large_image',
+      twitterCreator: '@bbcnews',
+      twitterImageAlt: 'BBC News አማርኛ',
+      twitterImageSrc:
+        'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
+      twitterSite: '@bbcnews',
+      ogDescription: 'ዝግጅቶቻችንን’',
+      ogTitle: 'ያድምጡ - BBC News አማርኛ',
+      twitterDescription: 'ዝግጅቶቻችንን’',
+      twitterTitle: 'ያድምጡ - BBC News አማርኛ',
     });
   });
 

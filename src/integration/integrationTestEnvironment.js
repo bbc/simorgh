@@ -16,8 +16,8 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
 
     const [canonical, amp] = await Promise.all([renderCanonical, renderAmp]);
 
-    this.global.canonical = canonical;
-    this.global.amp = amp;
+    this.global.canonical = { ...canonical, platform: 'Canonical' };
+    this.global.amp = { ...amp, platform: 'AMP' };
   }
 
   async teardown() {
