@@ -3,6 +3,7 @@ const { amp, canonical } = global;
 export default ({
   pageTitle,
   canonicalUrl,
+  readingDirection,
   language,
   fbAdmins,
   fbAppId,
@@ -55,6 +56,12 @@ export default ({
         const htmlEl = page.document.querySelector('html');
 
         expect(htmlEl.getAttribute('lang')).toEqual(language);
+      });
+
+      it('it can see the dir attribute', () => {
+        const htmlEl = page.document.querySelector('html');
+
+        expect(htmlEl.getAttribute('dir')).toEqual(readingDirection);
       });
 
       it('it can see the shared metadata', () => {
@@ -131,17 +138,3 @@ export default ({
     });
   });
 };
-
-// it('should have correct title & description metadata', () => {});
-// it('should have dir matching service config', () => {});
-// it('have correct translations', () => {});
-// it('should render the BBC News branding', () => {});
-// it('should not set the language code for localised name', () => {});
-// it('should not have a language attribute if no serviceLocalizedName set', () => {});
-// it('should have a visible banner, with a skip to content link', () => {});
-// it('should have one visible navigation', () => {});
-// it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {});
-// it('should have a visible footer', () => {});
-// it('should render the BBC branding', () => {});
-// it('should render a timestamp', () => {});
-// it('should render a H1, which displays the headline', () => {});

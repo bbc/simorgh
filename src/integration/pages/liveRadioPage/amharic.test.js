@@ -36,6 +36,7 @@ describe('Given I am on the Amharic live radio amp/canonical page', () => {
     runCommonSeoTests({
       pageTitle: 'ያድምጡ - BBC News አማርኛ',
       canonicalUrl: 'http://localhost:7080/amharic/bbc_amharic_radio/liveradio',
+      readingDirection: 'ltr',
       language: 'am',
       fbAdmins: '100004154058350',
       fbAppId: '1609039196070050',

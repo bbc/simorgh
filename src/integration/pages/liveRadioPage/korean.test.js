@@ -36,6 +36,7 @@ describe('Given I am on the Korean live radio page amp/canonical', () => {
     runCommonSeoTests({
       pageTitle: 'BBC 코리아 라디오 - BBC News 코리아',
       canonicalUrl: 'http://localhost:7080/korean/bbc_korean_radio/liveradio',
+      readingDirection: 'ltr',
       language: 'ko',
       fbAdmins: '100004154058350',
       fbAppId: '1609039196070050',

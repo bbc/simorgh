@@ -50,6 +50,7 @@ describe('Given I am on a Pidgin article amp/canonical page', () => {
       pageTitle:
         "Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin",
       canonicalUrl: 'http://localhost:7080/pidgin/tori-51745682',
+      readingDirection: 'ltr',
       language: 'pcm',
       fbAdmins: '100004154058350',
       fbAppId: '1609039196070050',

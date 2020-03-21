@@ -51,6 +51,7 @@ describe('Given I am on a Mundo article amp/canonical page', () => {
       pageTitle:
         'Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo',
       canonicalUrl: 'http://localhost:7080/mundo/articles/ce42wzqr2mko',
+      readingDirection: 'ltr',
       language: 'es',
       fbAdmins: '100004154058350',
       fbAppId: '1609039196070050',
