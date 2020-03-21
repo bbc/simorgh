@@ -10,12 +10,15 @@ import {
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
   runCommonA11yTests,
+  runCoreAmpTests,
 } from '../../common';
 
 describe('Given I am on a Mundo article amp page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
+
+  runCoreAmpTests();
 });
 
 describe('Given I am on a Mundo article canonical page', () => {

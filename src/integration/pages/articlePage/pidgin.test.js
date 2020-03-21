@@ -10,12 +10,15 @@ import {
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
   runCommonA11yTests,
+  runCoreAmpTests,
 } from '../../common';
 
 describe('Given I am on a Pidgin article amp page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
+
+  runCoreAmpTests();
 });
 
 describe('Given I am on a Pidgin article canonical page', () => {

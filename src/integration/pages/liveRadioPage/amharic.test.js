@@ -8,9 +8,14 @@ import {
   runHeaderTests,
   runCommonSeoTests,
   runCommonA11yTests,
+  runCoreAmpTests,
 } from '../../common';
 
-describe('Given I am on the Amharic live radio amp page', () => {});
+describe('Given I am on the Amharic live radio amp page', () => {
+  describe('When I am using the website', () => {});
+
+  runCoreAmpTests();
+});
 
 describe('Given I am on the Amharic live radio canonical page', () => {});
 
