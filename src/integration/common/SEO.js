@@ -22,6 +22,7 @@ export default ({
   ogTitle,
   twitterDescription,
   twitterTitle,
+  linkedData,
 }) => {
   [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {
@@ -134,6 +135,13 @@ export default ({
           twitterDescription,
         );
         expect(twitterTitleEl.getAttribute('content')).toBe(twitterTitle);
+      });
+
+      it('it can see the linked data', () => {
+        expect(
+          page.document.querySelector('script[type="application/ld+json"]')
+            .textContent,
+        ).toEqual(linkedData);
       });
     });
   });
