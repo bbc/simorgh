@@ -3,6 +3,8 @@
  */
 
 import runUserTests from './user';
+import runUserAmpTests from './user.amp';
+import runUserCanonicalTests from './user.canonical';
 import {
   runFooterTests,
   runHeaderTests,
@@ -13,7 +15,12 @@ import {
 } from '../../common';
 
 describe('Given I am on the Amharic live radio AMP page', () => {
-  describe('When I am using the website', () => {});
+  describe('When I am using the website', () => {
+    runUserAmpTests({
+      audioEmbedUrl:
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp',
+    });
+  });
 
   describe('When the application starts', () => {
     runCoreAmpTests();
@@ -21,7 +28,12 @@ describe('Given I am on the Amharic live radio AMP page', () => {
 });
 
 describe('Given I am on the Amharic live radio Canonical page', () => {
-  describe('When I am using the website', () => {});
+  describe('When I am using the website', () => {
+    runUserCanonicalTests({
+      audioEmbedUrl:
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am',
+    });
+  });
 
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'amharic' });
