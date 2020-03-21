@@ -4,6 +4,7 @@ import runHeaderTests from './header';
 import runCommonSeoTests from './SEO';
 import runCommonA11yTests from './a11y';
 import runCoreAmpTests from './core.amp';
+import runCoreCanonicalTests from './core.canonical';
 
 export {
   runFooterTests,
@@ -12,4 +13,5 @@ export {
   runCommonA11yTests,
   runCommonCanonicalAnalyticsTests,
   runCoreAmpTests,
+  runCoreCanonicalTests,
 };

@@ -11,6 +11,7 @@ import {
   runCommonCanonicalAnalyticsTests,
   runCommonA11yTests,
   runCoreAmpTests,
+  runCoreCanonicalTests,
 } from '../../common';
 
 describe('Given I am on a Mundo article AMP page', () => {
@@ -18,7 +19,9 @@ describe('Given I am on a Mundo article AMP page', () => {
     runAmpUserTests();
   });
 
-  runCoreAmpTests();
+  describe('When the application starts', () => {
+    runCoreAmpTests();
+  });
 });
 
 describe('Given I am on a Mundo article Canonical page', () => {
@@ -33,6 +36,10 @@ describe('Given I am on a Mundo article Canonical page', () => {
 
   describe('When I am analysing user/performance metrics', () => {
     runCommonCanonicalAnalyticsTests();
+  });
+
+  describe('When the application starts', () => {
+    runCoreCanonicalTests({ service: 'mundo' });
   });
 });
 

@@ -11,14 +11,16 @@ import {
   runCommonCanonicalAnalyticsTests,
   runCommonA11yTests,
   runCoreAmpTests,
+  runCoreCanonicalTests,
 } from '../../common';
 
 describe('Given I am on a Pidgin article AMP page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
-
-  runCoreAmpTests();
+  describe('When the application starts', () => {
+    runCoreAmpTests();
+  });
 });
 
 describe('Given I am on a Pidgin article Canonical page', () => {
@@ -32,6 +34,10 @@ describe('Given I am on a Pidgin article Canonical page', () => {
 
   describe('When I am analysing user/performance metrics', () => {
     runCommonCanonicalAnalyticsTests();
+  });
+
+  describe('When the application starts', () => {
+    runCoreCanonicalTests({ service: 'pidgin' });
   });
 });
 

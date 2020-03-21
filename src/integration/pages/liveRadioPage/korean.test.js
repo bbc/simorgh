@@ -9,15 +9,24 @@ import {
   runCommonSeoTests,
   runCommonA11yTests,
   runCoreAmpTests,
+  runCoreCanonicalTests,
 } from '../../common';
 
 describe('Given I am on the Korean live radio AMP page', () => {
   describe('When I am using the website', () => {});
 
-  runCoreAmpTests();
+  describe('When the application starts', () => {
+    runCoreAmpTests();
+  });
 });
 
-describe('Given I am on the Korean live radio Canonical page', () => {});
+describe('Given I am on the Korean live radio Canonical page', () => {
+  describe('When I am using the website', () => {});
+
+  describe('When the application starts', () => {
+    runCoreCanonicalTests({ service: 'korean' });
+  });
+});
 
 describe('Given I am on the Korean live radio page AMP/Canonical', () => {
   describe('When I am using the website', () => {
