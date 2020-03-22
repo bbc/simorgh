@@ -3,7 +3,7 @@ const { amp, canonical } = global;
 export default ({ hasScriptFonts = false } = {}) => {
   [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {
-      it('should have resource hints', () => {
+      it('Resource hints tell the browser to load some things in advance', () => {
         const resources = [
           'http://localhost:7080',
           'https://ichef.bbci.co.uk',

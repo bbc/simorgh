@@ -87,7 +87,7 @@ describe('Given I am on a Pidgin article AMP/Canonical page', () => {
         '{"@context":"http://schema.org","@type":"ReportageNewsArticle","url":"http://localhost:7080/pidgin/tori-51745682","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/tori-51745682","name":"Adams Oshiomhole say \'I still be APC National Chairman\'"},"headline":"Adams Oshiomhole say \'I still be APC National Chairman\'","description":"Oga Oshiomhole don cari di mata go Court of Appeal.","datePublished":"2020-03-04T18:58:43.000Z","dateModified":"2020-03-04T19:27:57.000Z","about":[{"@type":"Thing","name":"Nigeria"},{"@type":"Thing","name":"Nigeria politics","sameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}',
     });
 
-    describe('When the application starts', () => {
+    describe('When optimising the application performance', () => {
       runPerformaceTests();
     });
   });
