@@ -9,6 +9,7 @@ import {
   runHeaderTests,
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
+  runCommonAmpAnalyticsTests,
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
@@ -19,8 +20,13 @@ describe('Given I am on a Pidgin article AMP page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
+
   describe('When the application starts', () => {
     runCoreAmpTests();
+  });
+
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonAmpAnalyticsTests();
   });
 });
 

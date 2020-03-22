@@ -13,6 +13,7 @@ import {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformaceTests,
+  runCommonAmpAnalyticsTests,
 } from '../../common';
 
 describe('Given I am on the Korean live radio AMP page', () => {
@@ -25,6 +26,10 @@ describe('Given I am on the Korean live radio AMP page', () => {
 
   describe('When the application starts', () => {
     runCoreAmpTests();
+  });
+
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonAmpAnalyticsTests();
   });
 });
 

@@ -9,6 +9,7 @@ import {
   runHeaderTests,
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
+  runCommonAmpAnalyticsTests,
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
@@ -22,6 +23,10 @@ describe('Given I am on a Mundo article AMP page', () => {
 
   describe('When the application starts', () => {
     runCoreAmpTests();
+  });
+
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonAmpAnalyticsTests();
   });
 });
 

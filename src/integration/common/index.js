@@ -1,4 +1,5 @@
 import runCommonCanonicalAnalyticsTests from './analytics.canonical';
+import runCommonAmpAnalyticsTests from './analytics.amp';
 import runFooterTests from './footer';
 import runHeaderTests from './header';
 import runCommonSeoTests from './SEO';
@@ -13,6 +14,7 @@ export {
   runCommonSeoTests,
   runCommonA11yTests,
   runCommonCanonicalAnalyticsTests,
+  runCommonAmpAnalyticsTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformaceTests,
