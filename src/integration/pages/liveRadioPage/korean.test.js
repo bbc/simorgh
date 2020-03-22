@@ -12,6 +12,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
+  runPerformaceTests,
 } from '../../common';
 
 describe('Given I am on the Korean live radio AMP page', () => {
@@ -85,6 +86,10 @@ describe('Given I am on the Korean live radio page AMP/Canonical', () => {
       twitterTitle: 'BBC 코리아 라디오 - BBC News 코리아',
       linkedData:
         '{"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/bbc_korean_radio/liveradio","name":"BBC 코리아 라디오"}}',
+    });
+
+    describe('When the application starts', () => {
+      runPerformaceTests();
     });
   });
 

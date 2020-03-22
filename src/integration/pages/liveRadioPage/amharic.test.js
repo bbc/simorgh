@@ -12,6 +12,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
+  runPerformaceTests,
 } from '../../common';
 
 describe('Given I am on the Amharic live radio AMP page', () => {
@@ -84,6 +85,10 @@ describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
       twitterTitle: 'ያድምጡ - BBC News አማርኛ',
       linkedData:
         '{"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/amharic/bbc_amharic_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/amharic/institutional-49283133","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/amharic/bbc_amharic_radio/liveradio","name":"ያድምጡ"}}',
+    });
+
+    describe('When the application starts', () => {
+      runPerformaceTests();
     });
   });
 
