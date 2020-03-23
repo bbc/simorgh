@@ -39,7 +39,7 @@ const CustomParagraph = styled(Paragraph)`
   padding-top: 0.2rem;
 `;
 
-const ErrorPage = ({
+const ErrorMain = ({
   statusCode,
   title,
   message,
@@ -117,7 +117,7 @@ const ErrorPage = ({
   </StyledGelPageGrid>
 );
 
-ErrorPage.propTypes = {
+ErrorMain.propTypes = {
   statusCode: string.isRequired,
   title: string.isRequired,
   message: string.isRequired,
@@ -131,9 +131,9 @@ ErrorPage.propTypes = {
   service: string.isRequired,
 };
 
-ErrorPage.defaultProps = {
+ErrorMain.defaultProps = {
   callToActionFirst: null,
   callToActionLast: null,
 };
 
-export default ErrorPage;
+export default ErrorMain;
