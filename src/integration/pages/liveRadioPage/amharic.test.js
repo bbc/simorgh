@@ -12,7 +12,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runCommonAmpAnalyticsTests,
 } from '../../common';
 
@@ -93,7 +93,7 @@ describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
     });
 
     describe('When optimising the application performance', () => {
-      runPerformaceTests();
+      runPerformanceTests();
     });
   });
 

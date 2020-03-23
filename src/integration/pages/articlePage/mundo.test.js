@@ -13,7 +13,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
 } from '../../common';
 
 describe('Given I am on a Mundo article AMP page', () => {
@@ -30,7 +30,7 @@ describe('Given I am on a Mundo article AMP page', () => {
   });
 });
 
-describe('Given I am on a Mundo article Canonical page', () => {
+describe('Given I am on a Mundo Canonical Article page', () => {
   describe('When I am using the website', () => {
     runCanonicalUserTests({
       imageAltText:
@@ -96,7 +96,7 @@ describe('Given I am on a Mundo article AMP/Canonical page', () => {
     });
 
     describe('When optimising the application performance', () => {
-      runPerformaceTests();
+      runPerformanceTests();
     });
   });
 

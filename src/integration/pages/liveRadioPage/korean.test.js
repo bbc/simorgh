@@ -12,7 +12,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runCommonAmpAnalyticsTests,
 } from '../../common';
 
@@ -94,7 +94,7 @@ describe('Given I am on the Korean live radio page AMP/Canonical', () => {
     });
 
     describe('When optimising the application performance', () => {
-      runPerformaceTests();
+      runPerformanceTests();
     });
   });
 
