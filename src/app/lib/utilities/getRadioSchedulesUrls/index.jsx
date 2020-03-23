@@ -4,10 +4,9 @@ export const getRadioScheduleEndpoint = ({
   env,
   queryString,
 }) => {
-  if (env !== 'live' && queryString) {
-    return `/${service}/bbc_${radioService}_radio/schedule.json${queryString}`;
-  }
-  return `/${service}/bbc_${radioService}_radio/schedule.json`;
+  const query = env !== 'live' && queryString ? queryString : '';
+
+  return `/${service}/bbc_${radioService}_radio/schedule.json${query}`;
 };
 
 export const getLocalRadioScheduleEndpoint = ({
