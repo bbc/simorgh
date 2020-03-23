@@ -108,7 +108,7 @@
     "js-cookie": "^2.2.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
-    "morgan": "^1.9.1",
+    "morgan": "^1.10.0",
     "ora": "^4.0.3",
     "path-to-regexp": "^6.1.0",
     "polyfill-crypto.getrandomvalues": "1.0.0",
