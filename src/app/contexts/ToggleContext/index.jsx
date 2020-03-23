@@ -17,7 +17,7 @@ const ToggleContextProvider = ({ children, service, origin }) => {
 
   const environment = process.env.SIMORGH_APP_ENV || 'local';
 
-  // temp method to only enable remote freature toggling for test and for a list of services
+  // temp method to only enable remote feature toggling for test and for a list of services
   const { enableFetchingToggles } = defaultToggles[environment];
 
   useEffect(() => {
