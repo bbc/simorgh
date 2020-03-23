@@ -6,9 +6,6 @@ import { queryByText } from '@testing-library/dom';
 import togglesConfig from '#lib/config/toggles';
 import { ToggleContext, ToggleContextProvider } from '.';
 
-process.env.SIMORGH_APP_ENV = 'local';
-process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
-
 // eslint-disable-next-line react/prop-types
 const TestComponent = ({ toggle, children }) => {
   const toggleIsEnabled = useContext(ToggleContext).toggleState[toggle].enabled;
@@ -26,6 +23,10 @@ const shouldNotRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 describe('ToggleContext with feature toggles', () => {
+  before(() => {
+    process.env.SIMORGH_APP_ENV = 'local';
+    process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
+  });
   [
     {
       service: 'mundo',
