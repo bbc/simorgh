@@ -198,56 +198,27 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
     />
   </head>
   <body>
-    .c7 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c8 {
+    .c3 {
+  font-size: 2rem;
+  line-height: 2.625rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c9 {
+  color: #3F3F42;
   display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c6 {
-  padding-top: 56.25%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c5 {
-  margin-top: 0.5rem;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .c4 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 .c1 {
@@ -334,83 +305,37 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c9 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c9 {
-    padding: 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c5 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c5 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width:63rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -438,35 +363,23 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           class="c2"
           dir="rtl"
         >
-          <div
+          <h1
             class="c3"
+            id="content"
+            tabindex="-1"
           >
-            <div
-              class="c4"
-            >
-              <div
-                class="c5"
-              >
-                <div
-                  class="c6"
-                >
-                  <div
-                    class="c7"
-                  >
-                    <div
-                      class="c8"
-                    >
-                      <strong
-                        class="c9"
-                      >
-                        دغه فایل نور د لاسرسي وړ نه دی.
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            وروستي خبرونه
+          </h1>
+          <p
+            class="c4"
+          >
+            04/02/2020 GMT
+          </p>
+          <p
+            class="c4"
+          >
+            د نړۍ وروستي خبرونه
+          </p>
         </div>
       </main>
     </div>
@@ -475,56 +388,27 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 `;
 
 exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
-.c7 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c8 {
+.c3 {
+  font-size: 2rem;
+  line-height: 2.625rem;
   font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
-}
-
-.c9 {
+  color: #3F3F42;
   display: block;
-  font-weight: normal;
-  bottom: 0;
-  position: absolute;
-  padding: 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
-}
-
-.c6 {
-  padding-top: 56.25%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.c5 {
-  margin-top: 0.5rem;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .c4 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
 }
 
 .c1 {
@@ -611,83 +495,37 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:37.5rem) {
-  .c8 {
-    font-size: 0.875rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c8 {
-    background-color: transparent;
-  }
-}
-
-@media screen and (-ms-high-contrast:active) {
-  .c9 {
-    background-color: window;
-  }
-}
-
-@media (min-width:25rem) {
-  .c9 {
-    padding: 1rem;
-  }
-}
-
-@media (max-width:63rem) {
-  .c5 {
-    grid-column: 1 / span 6;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
-    grid-column: 3 / span 6;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    grid-column: 6 / span 12;
-  }
-}
-
-@media (max-width:25rem) {
-  .c5 {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .c5 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:25rem) {
-  .c5 {
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c5 {
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width:63rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c3 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1.375rem;
+    line-height: 2rem;
   }
 }
 
@@ -915,35 +753,23 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           class="c2"
           dir="rtl"
         >
-          <div
+          <h1
             class="c3"
+            id="content"
+            tabindex="-1"
           >
-            <div
-              class="c4"
-            >
-              <div
-                class="c5"
-              >
-                <div
-                  class="c6"
-                >
-                  <div
-                    class="c7"
-                  >
-                    <div
-                      class="c8"
-                    >
-                      <strong
-                        class="c9"
-                      >
-                        دغه فایل نور د لاسرسي وړ نه دی.
-                      </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            وروستي خبرونه
+          </h1>
+          <p
+            class="c4"
+          >
+            04/02/2020 GMT
+          </p>
+          <p
+            class="c4"
+          >
+            د نړۍ وروستي خبرونه
+          </p>
         </div>
       </main>
     </div>
