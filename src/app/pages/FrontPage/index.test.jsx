@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { render, wait, waitForElement } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -17,13 +18,15 @@ const requestContextData = {
 };
 
 const FrontPageWithContext = props => (
-  <ToggleContextProvider>
-    <RequestContextProvider {...requestContextData}>
-      <ServiceContextProvider service="pidgin">
-        <FrontPage {...props} />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
+  <BrowserRouter>
+    <ToggleContextProvider>
+      <RequestContextProvider {...requestContextData}>
+        <ServiceContextProvider service="pidgin">
+          <FrontPage {...props} />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </BrowserRouter>
 );
 
 let pageData;
