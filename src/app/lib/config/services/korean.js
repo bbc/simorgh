@@ -158,7 +158,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'BBC 코리아 라디오',
     },
     footer: {
       trustProjectLink: {
