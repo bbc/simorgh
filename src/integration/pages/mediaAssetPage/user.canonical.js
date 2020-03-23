@@ -1,8 +1,10 @@
 const { canonical: page } = global;
 
-export default () => {
-  it('should render the media player', () => {
-    const mediaPlayer = page.document.querySelector('iframe'); // TODO: need a more accurate selector
+export default ({ mediaEmbedUrl }) => {
+  it('I can see an media player embed', () => {
+    const mediaPlayer = page.document.querySelector(
+      `iframe[src="${mediaEmbedUrl}"]`,
+    );
 
     expect(mediaPlayer).toBeInTheDocument();
   });

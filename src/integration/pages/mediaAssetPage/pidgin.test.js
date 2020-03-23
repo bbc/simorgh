@@ -16,13 +16,20 @@ import {
 
 describe('Given I am on a Pidgin AMP Media Asset Page', () => {
   describe('When I am using the website', () => {
-    runAmpUserTests();
+    runAmpUserTests({
+      imageUrl: 'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg',
+      mediaEmbedUrl:
+        'https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp',
+    });
   });
 });
 
 describe('Given I am on a Pidgin Canonical Media Asset Page', () => {
   describe('When I am using the website', () => {
-    runCanonicalUserTests();
+    runCanonicalUserTests({
+      mediaEmbedUrl:
+        'https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm',
+    });
   });
 
   describe('When I am analysing user/performance metrics', () => {
