@@ -1,4 +1,4 @@
-import shouldRenderHeadline from '../../utilities/shouldRenderHeadline';
+const { within } = require('@testing-library/dom');
 
 const { amp, canonical } = global;
 
@@ -10,11 +10,18 @@ export default ({
 }) => {
   [amp, canonical].forEach(page => {
     it('I can see the headline', () => {
-      shouldRenderHeadline(page, headlineText);
+      const { getByText } = within(
+        page.document.querySelector('h1[id="content"]'),
+      );
+
+      const headline = getByText(headlineText);
+      expect(headline).toBeInTheDocument();
     });
 
     it('I can see the timestamp', () => {
-      const timestampEl = page.getByText(timestamp);
+      const { getByText } = within(page.document.querySelector('time'));
+
+      const timestampEl = getByText(timestamp);
 
       expect(timestampEl).toBeInTheDocument();
     });
@@ -22,9 +29,7 @@ export default ({
     it('I can see the bulleted list item', () => {
       const [bulletedListItemEl] = page.getAllByText(bulletedListItem);
       expect(bulletedListItemEl).toBeInTheDocument();
-      expect(bulletedListItemEl.getAttribute('class')).toContain(
-        'BulletedListItem',
-      );
+      expect(bulletedListItemEl.getAttribute('class')).toBe('BulletedListItem');
     });
 
     it('I can see related content', () => {
