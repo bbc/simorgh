@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
@@ -20,22 +21,24 @@ const validServices = [
 ];
 
 const renderRadioScheduleContainer = service => (
-  <ToggleContextProvider>
-    <RequestContextProvider
-      isAmp={false}
-      pageType="frontPage"
-      service={service}
-      pathname={`/${service}`}
-    >
-      <ServiceContextProvider service={service}>
-        <RadioScheduleContainer
-          radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
-            service,
-          })}
-        />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
+  <BrowserRouter>
+    <ToggleContextProvider>
+      <RequestContextProvider
+        isAmp={false}
+        pageType="frontPage"
+        service={service}
+        pathname={`/${service}`}
+      >
+        <ServiceContextProvider service={service}>
+          <RadioScheduleContainer
+            radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
+              service,
+            })}
+          />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </BrowserRouter>
 );
 
 const stories = storiesOf('Containers|RadioSchedule', module)
