@@ -1,17 +1,19 @@
 const { amp, canonical } = global;
 
 export default ({ headlineText, summaryText }) => {
-  [amp, canonical].forEach(app => {
-    it('I can see the headline', () => {
-      const headlineEl = app.getByText(headlineText);
+  [amp, canonical].forEach(page => {
+    describe(`And using ${page.platform}`, () => {
+      it('I can see the headline', () => {
+        const headlineEl = page.getByText(headlineText);
 
-      expect(headlineEl).toBeInTheDocument();
-    });
+        expect(headlineEl).toBeInTheDocument();
+      });
 
-    it('I can see the summary', () => {
-      const summaryEl = app.getByText(summaryText);
+      it('I can see the summary', () => {
+        const summaryEl = page.getByText(summaryText);
 
-      expect(summaryEl).toBeInTheDocument();
+        expect(summaryEl).toBeInTheDocument();
+      });
     });
   });
 };
