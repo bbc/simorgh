@@ -23,14 +23,14 @@ export const buildCpsAssetPageATIParams = (
 
   const { metadata, promo } = pageData;
 
-  const getChapter1 = pageIdentifier => pageIdentifier.split('.')[1];
+  const getChapter1 = (pageIdentifier) => pageIdentifier.split('.')[1];
 
   const page = path(['analyticsLabels', 'counterName'], metadata);
   const isValidPage = page && typeof page === 'string' && page.includes('.');
   const chapter1 = isValidPage ? getChapter1(page) : false;
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingLabel', pageData);
-  const isLegacyAsset = url => url.split('/').length > 7;
+  const isLegacyAsset = (url) => url.split('/').length > 7;
 
   return {
     appName: atiAnalyticsAppName,

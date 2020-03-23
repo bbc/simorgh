@@ -6,7 +6,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
-const getRadioScheduleEndpoint = service =>
+const getRadioScheduleEndpoint = (service) =>
   `/${service}/bbc_${service}_radio/schedule.json`;
 
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {

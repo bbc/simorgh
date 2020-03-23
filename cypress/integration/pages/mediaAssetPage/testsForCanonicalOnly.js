@@ -34,7 +34,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         // Ensure media player is ready
         cy.get(
           'div[class^="StyledVideoContainer"] iframe[class^="StyledIframe"]',
-        ).then($iframe => {
+        ).then(($iframe) => {
           cy.wrap($iframe.prop('contentWindow'), {
             timeout: 30000,
           })
@@ -44,10 +44,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
 
         const playButton = 'button.p_cta';
 
-        cy.get('iframe').then(iframe => {
+        cy.get('iframe').then((iframe) => {
           cy.wrap(iframe.contents().find('iframe'))
-            .should(inner => expect(inner.contents().find(playButton)).to.exist)
-            .then(inner => cy.wrap(inner.contents().find(playButton)).click())
+            .should(
+              (inner) => expect(inner.contents().find(playButton)).to.exist,
+            )
+            .then((inner) => cy.wrap(inner.contents().find(playButton)).click())
             .then(() => {
               cy.wrap(iframe.prop('contentWindow'), {
                 timeout: 45000,

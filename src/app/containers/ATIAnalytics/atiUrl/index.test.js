@@ -7,11 +7,7 @@ const mockAndSet = ({ name, source }, response) => {
   source[name].mockImplementation(() => response);
 };
 
-const splitUrl = url =>
-  url
-    .replace(/&/g, ',')
-    .replace(/\?/g, ',')
-    .split(',');
+const splitUrl = (url) => url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
 
 const analyticsUtilFunctions = [
   { name: 'getDestination', source: genericLabelHelpers },
@@ -33,7 +29,7 @@ describe('getThingAttributes', () => {
   });
 
   it('should not add empty or null values', () => {
-    analyticsUtilFunctions.forEach(func => {
+    analyticsUtilFunctions.forEach((func) => {
       mockAndSet(func, null);
     });
 
@@ -41,11 +37,11 @@ describe('getThingAttributes', () => {
     const atiPathArray = splitUrl(atiPath);
     const expectedValues = [];
 
-    expectedValues.forEach(value => expect(atiPathArray).toContain(value));
+    expectedValues.forEach((value) => expect(atiPathArray).toContain(value));
   });
 
   it('should take in optional props and add them as correct query params', () => {
-    analyticsUtilFunctions.forEach(func => {
+    analyticsUtilFunctions.forEach((func) => {
       mockAndSet(func, null);
     });
 
@@ -79,11 +75,13 @@ describe('getThingAttributes', () => {
     ];
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
-    expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+    expectedValues.forEach((value) =>
+      expect(queryParamsArray).toContain(value),
+    );
   });
 
   it('should call relevant functions when', () => {
-    analyticsUtilFunctions.forEach(func => {
+    analyticsUtilFunctions.forEach((func) => {
       mockAndSet(func, func.name);
     });
 
@@ -110,7 +108,9 @@ describe('getThingAttributes', () => {
     ];
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
-    expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+    expectedValues.forEach((value) =>
+      expect(queryParamsArray).toContain(value),
+    );
   });
 });
 

@@ -1,285 +1,254 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:igbo/media-42986440",
-        "locators": {
-            "assetUri": "/igbo/media-42986440",
-            "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
-            "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96"
-        },
-        "type": "MAP",
-        "createdBy": "igbo-v6",
-        "language": "ig",
-        "lastUpdated": 1567528261626,
-        "firstPublished": 1518073032,
-        "lastPublished": 1567528246,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "igbo.embedded_media.media_asset.42986440.page",
-            "cps_asset_id": "42986440"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "Update me"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Nigeria",
-                    "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-                    "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                    ],
-                    "topicName": "Naijiria",
-                    "topicId": "c5qvpxrx6wyt",
-                    "curationList": [
-                        {
-                            "curationId": "010d96d0-32ba-4a8c-8622-4f184aeb4689",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Sport",
-                    "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
-                    "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
-                    "thingType": [
-                        "http://data.press.net/ontology/classification/Classification",
-                        "http://www.bbc.co.uk/ontologies/classification/RootClassification",
-                        "Theme",
-                        "Thing",
-                        "skos:Concept"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Sport"
-                    ],
-                    "topicName": "Egwuruegwu",
-                    "topicId": "cnq68k0x2vrt",
-                    "curationList": [
-                        {
-                            "curationId": "a8d48174-ad49-4acd-9966-3d30e5f257d1",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Nigeria politics",
-                    "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
-                    "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Politics_of_Nigeria"
-                    ],
-                    "topicName": "Ndọrọndọrọ ọchịchị Naịjirịa",
-                    "topicId": "cyx5k282g39t",
-                    "curationList": [
-                        {
-                            "curationId": "166bc102-a4c7-4052-9d3e-a0701b6202be",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "United States",
-                    "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
-                    "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
-                    "thingType": [
-                        "nsl:Topic",
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/6252001/"
-                    ],
-                    "topicName": "Amerika",
-                    "topicId": "c06gq32v6d2t",
-                    "curationList": [
-                        {
-                            "curationId": "8e883929-d8dc-425e-8d81-f9e06c6668f7",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Africa",
-                    "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
-                    "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "news:Place"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Africa",
-                        "http://sws.geonames.org/6255146/",
-                        "http://www.wikidata.org/entity/Q15"
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:igbo/media-42986440",
+    "locators": {
+      "assetUri": "/igbo/media-42986440",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
+      "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "igbo-v6",
+    "language": "ig",
+    "lastUpdated": 1567528261626,
+    "firstPublished": 1518073032,
+    "lastPublished": 1567528246,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "igbo.embedded_media.media_asset.42986440.page",
+      "cps_asset_id": "42986440"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nigeria",
+          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2328926/"],
+          "topicName": "Naijiria",
+          "topicId": "c5qvpxrx6wyt",
+          "curationList": [
             {
-                "id": "p07mbwlp",
-                "subType": "clip",
-                "format": "audio",
-                "title": "BBC Nkeji",
-                "synopses": {
-                    "short": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
-                    "medium": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile."
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbwy0.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
-                "versions": [
-                    {
-                        "versionId": "p07mbwls",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 60,
-                        "durationISO8601": "PT1M",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableUntil": 1567614230,
-                        "availableFrom": 1567527830
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "Akụkọ ga-amasị gị ikọ mgbe ọbụla",
-                "markupType": "plain_text",
-                "type": "paragraph"
+              "curationId": "010d96d0-32ba-4a8c-8622-4f184aeb4689",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        },
+        {
+          "thingLabel": "Sport",
+          "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+          "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+          "thingType": [
+            "http://data.press.net/ontology/classification/Classification",
+            "http://www.bbc.co.uk/ontologies/classification/RootClassification",
+            "Theme",
+            "Thing",
+            "skos:Concept"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Sport"],
+          "topicName": "Egwuruegwu",
+          "topicId": "cnq68k0x2vrt",
+          "curationList": [
+            {
+              "curationId": "a8d48174-ad49-4acd-9966-3d30e5f257d1",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Nigeria politics",
+          "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
+          "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics_of_Nigeria"],
+          "topicName": "Ndọrọndọrọ ọchịchị Naịjirịa",
+          "topicId": "cyx5k282g39t",
+          "curationList": [
+            {
+              "curationId": "166bc102-a4c7-4052-9d3e-a0701b6202be",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "United States",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": ["nsl:Topic", "Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/6252001/"],
+          "topicName": "Amerika",
+          "topicId": "c06gq32v6d2t",
+          "curationList": [
+            {
+              "curationId": "8e883929-d8dc-425e-8d81-f9e06c6668f7",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Africa",
+          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+          "thingType": ["Place", "Thing", "news:Place"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Africa",
+            "http://sws.geonames.org/6255146/",
+            "http://www.wikidata.org/entity/Q15"
+          ]
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "BBC Nkeji",
-            "headline": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile"
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mbwlp",
+        "subType": "clip",
+        "format": "audio",
+        "title": "BBC Nkeji",
+        "synopses": {
+          "short": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+          "medium": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile."
         },
-        "locators": {
-            "assetUri": "/igbo/media-42986440",
-            "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
-            "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96"
-        },
-        "summary": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile.",
-        "timestamp": 1567528261626,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbwy0.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+        "versions": [
+          {
+            "versionId": "p07mbwls",
+            "types": ["Original"],
+            "duration": 60,
+            "durationISO8601": "PT1M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "Update me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mbwlp",
-            "subType": "clip",
-            "format": "audio",
-            "title": "BBC Nkeji",
-            "synopses": {
-                "short": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
-                "medium": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbwy0.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
-            "versions": [
-                {
-                    "versionId": "p07mbwls",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 60,
-                    "durationISO8601": "PT1M",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableUntil": 1567614230,
-                    "availableFrom": 1567527830
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108601828",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/1437A/production/_108601828_p07mbwy0.jpg",
-            "path": "/cpsprodpb/1437A/production/_108601828_p07mbwy0.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "BBC Nkeji",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:igbo/media-42986440",
-        "type": "cps"
+            "availableUntil": 1567614230,
+            "availableFrom": 1567527830
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Akụkọ ga-amasị gị ikọ mgbe ọbụla",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "BBC Nkeji",
+      "headline": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/igbo/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC News Ìgbò",
-            "uri": "/igbo",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/igbo/media-42986440",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/media-42986440",
+      "curie": "http://www.bbc.co.uk/asset/c951fc3d-2f39-084c-b111-3d4985995b96"
+    },
+    "summary": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile.",
+    "timestamp": 1567528261626,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mbwlp",
+      "subType": "clip",
+      "format": "audio",
+      "title": "BBC Nkeji",
+      "synopses": {
+        "short": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+        "medium": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbwy0.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Akụkọ ga-amasị gị ị ga-achọ ikọ taa niile",
+      "versions": [
+        {
+          "versionId": "p07mbwls",
+          "types": ["Original"],
+          "duration": 60,
+          "durationISO8601": "PT1M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableUntil": 1567614230,
+          "availableFrom": 1567527830
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108601828",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/1437A/production/_108601828_p07mbwy0.jpg",
+      "path": "/cpsprodpb/1437A/production/_108601828_p07mbwy0.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "BBC Nkeji",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:igbo/media-42986440",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/igbo/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News Ìgbò",
+      "uri": "/igbo",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

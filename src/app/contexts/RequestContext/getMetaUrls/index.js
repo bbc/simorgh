@@ -1,4 +1,4 @@
-const getAmpUrl = url => `${url}.amp`;
+const getAmpUrl = (url) => `${url}.amp`;
 
 const getCanonicalUrl = (origin, pathname) => {
   const ampRegex = /(.amp)/g;
@@ -7,12 +7,12 @@ const getCanonicalUrl = (origin, pathname) => {
   return canonicalUrl.replace(ampRegex, '');
 };
 
-const getUkCanonicalUrl = url => {
+const getUkCanonicalUrl = (url) => {
   const tldRegex = /(.com|.co.uk)/g;
   return url.replace(tldRegex, '.co.uk');
 };
 
-const getNonUkCanonicalUrl = url => {
+const getNonUkCanonicalUrl = (url) => {
   const tldRegex = /(.com|.co.uk)/g;
   return url.replace(tldRegex, '.com');
 };

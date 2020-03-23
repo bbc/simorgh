@@ -33,7 +33,7 @@ const chooseOffscreenText = (
       return defaultText;
   }
 };
-const renderParagraph = block => {
+const renderParagraph = (block) => {
   const paragraphBlock = pathOr(null, ['model', 'blocks'], block);
   return (
     <p key={pathOr(null, ['0', 'id'], paragraphBlock)}>
@@ -44,7 +44,7 @@ const renderParagraph = block => {
 const renderCaption = (paragraphBlocks, offscreenText, script, service) => (
   <Caption script={script} service={service}>
     {offscreenText && <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>}
-    {paragraphBlocks.map(block => renderParagraph(block))}
+    {paragraphBlocks.map((block) => renderParagraph(block))}
   </Caption>
 );
 

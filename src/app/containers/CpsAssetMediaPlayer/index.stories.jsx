@@ -18,18 +18,18 @@ const defaultToggles = {
   },
 };
 
-const isAmp = platform => platform === 'AMP';
+const isAmp = (platform) => platform === 'AMP';
 
 const platforms = ['Canonical', 'AMP'];
 
-platforms.forEach(platform => {
+platforms.forEach((platform) => {
   const mapMediaPlayerStories = storiesOf(
     `Containers|MAP Media Player/${platform}`,
     module,
   );
 
   mapMediaPlayerStories
-    .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+    .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>)
     .addDecorator(withKnobs);
 
   if (isAmp(platform)) {

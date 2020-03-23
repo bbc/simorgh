@@ -1,206 +1,193 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:yoruba/media-42985961",
-        "locators": {
-            "assetUri": "/yoruba/media-42985961",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
-            "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd"
-        },
-        "type": "MAP",
-        "createdBy": "yoruba-v6",
-        "language": "yo",
-        "lastUpdated": 1567530163159,
-        "firstPublished": 1518072696,
-        "lastPublished": 1567530149,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "yoruba.embedded_media.media_asset.42985961.page",
-            "cps_asset_id": "42985961"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "Update me"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Nigeria",
-                    "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-                    "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/2328926/"
-                    ],
-                    "topicName": "Orilẹede Naijiria",
-                    "topicId": "cr50y07d1vqt",
-                    "curationList": [
-                        {
-                            "curationId": "6a457100-20bf-41a2-bdc3-c0f08add9380",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:yoruba/media-42985961",
+    "locators": {
+      "assetUri": "/yoruba/media-42985961",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
+      "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "yoruba-v6",
+    "language": "yo",
+    "lastUpdated": 1567530163159,
+    "firstPublished": 1518072696,
+    "lastPublished": 1567530149,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "yoruba.embedded_media.media_asset.42985961.page",
+      "cps_asset_id": "42985961"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nigeria",
+          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2328926/"],
+          "topicName": "Orilẹede Naijiria",
+          "topicId": "cr50y07d1vqt",
+          "curationList": [
             {
-                "id": "p07mbz8r",
-                "subType": "clip",
-                "format": "audio",
-                "title": "Ìṣẹ́jú kan BBC",
-                "synopses": {
-                    "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
-                    "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbzbc.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
-                "versions": [
-                    {
-                        "versionId": "p07mbz8t",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 58,
-                        "durationISO8601": "PT58S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableUntil": 1567616269,
-                        "availableFrom": 1567529869
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.     ",
-                "markupType": "plain_text",
-                "type": "paragraph"
+              "curationId": "6a457100-20bf-41a2-bdc3-c0f08add9380",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "Ìṣẹ́jú kan BBC",
-            "headline": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan"
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mbz8r",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Ìṣẹ́jú kan BBC",
+        "synopses": {
+          "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
+          "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
         },
-        "locators": {
-            "assetUri": "/yoruba/media-42985961",
-            "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
-            "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd"
-        },
-        "summary": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.",
-        "timestamp": 1567530163159,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbzbc.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
+        "versions": [
+          {
+            "versionId": "p07mbz8t",
+            "types": ["Original"],
+            "duration": 58,
+            "durationISO8601": "PT58S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "Update me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mbz8r",
-            "subType": "clip",
-            "format": "audio",
-            "title": "Ìṣẹ́jú kan BBC",
-            "synopses": {
-                "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
-                "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbzbc.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
-            "versions": [
-                {
-                    "versionId": "p07mbz8t",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 58,
-                    "durationISO8601": "PT58S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableUntil": 1567616269,
-                    "availableFrom": 1567529869
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108603836",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/F956/production/_108603836_p07mbzbc.jpg",
-            "path": "/cpsprodpb/F956/production/_108603836_p07mbzbc.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Ìṣẹ́jú kan BBC",
-            "caption": "Ìṣẹ́jú kan BBC",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:yoruba/media-42985961",
-        "type": "cps"
+            "availableUntil": 1567616269,
+            "availableFrom": 1567529869
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.     ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Ìṣẹ́jú kan BBC",
+      "headline": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/yoruba/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC News Yorùbá",
-            "uri": "/yoruba",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/yoruba/media-42985961",
+      "cpsUrn": "urn:bbc:content:assetUri:yoruba/media-42985961",
+      "curie": "http://www.bbc.co.uk/asset/e74e06ec-eaf0-ce4f-aff0-262c453086cd"
+    },
+    "summary": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC.",
+    "timestamp": 1567530163159,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "Update me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mbz8r",
+      "subType": "clip",
+      "format": "audio",
+      "title": "Ìṣẹ́jú kan BBC",
+      "synopses": {
+        "short": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
+        "medium": "Àkójọpọ̀ ìsẹ̀lẹ̀ jákèjádò àgbáyé láàárín ìṣẹ́jú kan lórí BBC."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mbzbc.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Ìsẹ̀lẹ̀ jákèjádò orílẹ̀èdè àgbáyé láàárín ìṣẹ́jú kan",
+      "versions": [
+        {
+          "versionId": "p07mbz8t",
+          "types": ["Original"],
+          "duration": 58,
+          "durationISO8601": "PT58S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableUntil": 1567616269,
+          "availableFrom": 1567529869
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108603836",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/F956/production/_108603836_p07mbzbc.jpg",
+      "path": "/cpsprodpb/F956/production/_108603836_p07mbzbc.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Ìṣẹ́jú kan BBC",
+      "caption": "Ìṣẹ́jú kan BBC",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:yoruba/media-42985961",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/yoruba/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News Yorùbá",
+      "uri": "/yoruba",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

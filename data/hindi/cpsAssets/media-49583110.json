@@ -1,195 +1,188 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:hindi/media-49583110",
-        "locators": {
-            "assetUri": "/hindi/media-49583110",
-            "cpsUrn": "urn:bbc:content:assetUri:hindi/media-49583110",
-            "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:hindi/media-49583110",
+    "locators": {
+      "assetUri": "/hindi/media-49583110",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/media-49583110",
+      "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe"
+    },
+    "type": "MAP",
+    "createdBy": "hindi-v6",
+    "language": "hi",
+    "lastUpdated": 1567669582448,
+    "firstPublished": 1567669572,
+    "lastPublished": 1567669573,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "hindi.embedded_media.media_asset.49583110.page",
+      "cps_asset_id": "49583110"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mdv1t",
+        "subType": "clip",
+        "format": "video",
+        "title": "सरदार सरोवर बांध की क़ीमत चुकाते गांव",
+        "synopses": {
+          "short": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
+          "long": "मध्य प्रदेश के बडवानी ज़िले में इन दिनों सैकड़ों गांव पानी में डूबे हैं.\nपर ये पानी बाढ़ का नहीं, बल्कि सरदार सरोवर बांध का है.\nजिसने इन्हें बड़े तालाब की शक्ल दे दी है.\nतीस हज़ार से अधिक परिवार प्रभावित हुए हैं, और सामाजिक कार्यकर्ता मेधा पाटेकर को नौ दिन तक अनशन पर बैठना पड़ा.\nदेखिए, बीबीसी संवाददाता तेजस वैद्य की ये रिपोर्ट",
+          "medium": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव,मुख्यमंत्री कमलनाथ ने दिया राहत का भरोसा"
         },
-        "type": "MAP",
-        "createdBy": "hindi-v6",
-        "language": "hi",
-        "lastUpdated": 1567669582448,
-        "firstPublished": 1567669572,
-        "lastPublished": 1567669573,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "hindi.embedded_media.media_asset.49583110.page",
-            "cps_asset_id": "49583110"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mdvv7.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
+        "versions": [
+          {
+            "versionId": "p07mdv1w",
+            "types": ["Original"],
+            "duration": 142,
+            "durationISO8601": "PT2M22S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+            "availableFrom": 1567602218
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      },
+      {
+        "text": "मध्य प्रदेश के बडवानी ज़िले में इन दिनों सैकड़ों गाँव पानी में डूबे हैं. ये पानी बाढ़ का नहीं, बल्कि सरदार सरोवर बांध का है.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "गाँव बड़े तालाब में तब्दील हो गए हैं. तीस हज़ार से अधिक परिवार प्रभावित हुए हैं और सामाजिक कार्यकर्ता मेधा पाटेकर को नौ दिनों तक अनशन पर बैठना पड़ा.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "देखिए, बीबीसी संवाददाता तेजस वैद्य की ये रिपोर्ट",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>(बीबीसी हिन्दी के एंड्रॉएड ऐप के लिए आप </bold><link><caption>यहां क्लिक</caption><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"highweb\"/><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"enhancedmobile\"/></link><bold> कर सकते हैं. आप हमें </bold><link><caption>फ़ेसबुक</caption><url href=\"https://www.facebook.com/bbchindi\" platform=\"highweb\"/><url href=\"https://www.facebook.com/bbchindi\" platform=\"enhancedmobile\"/></link><bold> और </bold><link><caption>ट्विटर</caption><url href=\"https://twitter.com/BBCHindi\" platform=\"highweb\"/><url href=\"https://twitter.com/BBCHindi\" platform=\"enhancedmobile\"/></link><bold> पर फ़ॉलो भी कर सकते हैं.)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "सरदार सरोवर बांध की क़ीमत चुकाते गाँव",
+      "headline": "सरदार सरोवर बांध की क़ीमत चुकाते गाँव"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07mdv1t",
-                "subType": "clip",
-                "format": "video",
-                "title": "सरदार सरोवर बांध की क़ीमत चुकाते गांव",
-                "synopses": {
-                    "short": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
-                    "long": "मध्य प्रदेश के बडवानी ज़िले में इन दिनों सैकड़ों गांव पानी में डूबे हैं.\nपर ये पानी बाढ़ का नहीं, बल्कि सरदार सरोवर बांध का है.\nजिसने इन्हें बड़े तालाब की शक्ल दे दी है.\nतीस हज़ार से अधिक परिवार प्रभावित हुए हैं, और सामाजिक कार्यकर्ता मेधा पाटेकर को नौ दिन तक अनशन पर बैठना पड़ा.\nदेखिए, बीबीसी संवाददाता तेजस वैद्य की ये रिपोर्ट",
-                    "medium": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव,मुख्यमंत्री कमलनाथ ने दिया राहत का भरोसा"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mdvv7.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
-                "versions": [
-                    {
-                        "versionId": "p07mdv1w",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 142,
-                        "durationISO8601": "PT2M22S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567602218
-                    }
-                ],
-                "type": "media"
-            },
-            {
-                "text": "मध्य प्रदेश के बडवानी ज़िले में इन दिनों सैकड़ों गाँव पानी में डूबे हैं. ये पानी बाढ़ का नहीं, बल्कि सरदार सरोवर बांध का है.",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "गाँव बड़े तालाब में तब्दील हो गए हैं. तीस हज़ार से अधिक परिवार प्रभावित हुए हैं और सामाजिक कार्यकर्ता मेधा पाटेकर को नौ दिनों तक अनशन पर बैठना पड़ा.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "देखिए, बीबीसी संवाददाता तेजस वैद्य की ये रिपोर्ट",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>(बीबीसी हिन्दी के एंड्रॉएड ऐप के लिए आप </bold><link><caption>यहां क्लिक</caption><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"highweb\"/><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"enhancedmobile\"/></link><bold> कर सकते हैं. आप हमें </bold><link><caption>फ़ेसबुक</caption><url href=\"https://www.facebook.com/bbchindi\" platform=\"highweb\"/><url href=\"https://www.facebook.com/bbchindi\" platform=\"enhancedmobile\"/></link><bold> और </bold><link><caption>ट्विटर</caption><url href=\"https://twitter.com/BBCHindi\" platform=\"highweb\"/><url href=\"https://twitter.com/BBCHindi\" platform=\"enhancedmobile\"/></link><bold> पर फ़ॉलो भी कर सकते हैं.)</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            }
-        ]
+    "locators": {
+      "assetUri": "/hindi/media-49583110",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/media-49583110",
+      "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe"
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "सरदार सरोवर बांध की क़ीमत चुकाते गाँव",
-            "headline": "सरदार सरोवर बांध की क़ीमत चुकाते गाँव"
-        },
-        "locators": {
-            "assetUri": "/hindi/media-49583110",
-            "cpsUrn": "urn:bbc:content:assetUri:hindi/media-49583110",
-            "curie": "http://www.bbc.co.uk/asset/3534b2e5-d04e-0240-a507-284f30240abe"
-        },
-        "summary": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव.",
-        "timestamp": 1567669582448,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mdv1t",
-            "subType": "clip",
-            "format": "video",
-            "title": "सरदार सरोवर बांध की क़ीमत चुकाते गांव",
-            "synopses": {
-                "short": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
-                "long": "मध्य प्रदेश के बडवानी ज़िले में इन दिनों सैकड़ों गांव पानी में डूबे हैं.\nपर ये पानी बाढ़ का नहीं, बल्कि सरदार सरोवर बांध का है.\nजिसने इन्हें बड़े तालाब की शक्ल दे दी है.\nतीस हज़ार से अधिक परिवार प्रभावित हुए हैं, और सामाजिक कार्यकर्ता मेधा पाटेकर को नौ दिन तक अनशन पर बैठना पड़ा.\nदेखिए, बीबीसी संवाददाता तेजस वैद्य की ये रिपोर्ट",
-                "medium": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव,मुख्यमंत्री कमलनाथ ने दिया राहत का भरोसा"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mdvv7.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
-            "versions": [
-                {
-                    "versionId": "p07mdv1w",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 142,
-                    "durationISO8601": "PT2M22S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567602218
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108613936",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/F9BB/production/_108613936_p07mdvv7.jpg",
-            "path": "/cpsprodpb/F9BB/production/_108613936_p07mdvv7.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "नर्मदा",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:hindi/media-49583110",
-        "type": "cps"
+    "summary": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव.",
+    "timestamp": 1567669582448,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/hindi/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC Hindi",
-            "uri": "/hindi",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "media": {
+      "id": "p07mdv1t",
+      "subType": "clip",
+      "format": "video",
+      "title": "सरदार सरोवर बांध की क़ीमत चुकाते गांव",
+      "synopses": {
+        "short": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
+        "long": "मध्य प्रदेश के बडवानी ज़िले में इन दिनों सैकड़ों गांव पानी में डूबे हैं.\nपर ये पानी बाढ़ का नहीं, बल्कि सरदार सरोवर बांध का है.\nजिसने इन्हें बड़े तालाब की शक्ल दे दी है.\nतीस हज़ार से अधिक परिवार प्रभावित हुए हैं, और सामाजिक कार्यकर्ता मेधा पाटेकर को नौ दिन तक अनशन पर बैठना पड़ा.\nदेखिए, बीबीसी संवाददाता तेजस वैद्य की ये रिपोर्ट",
+        "medium": "सरदार सरोवर बांध का जलस्तर बढ़ने से डूब गए हैं मध्य प्रदेश के कई गांव,मुख्यमंत्री कमलनाथ ने दिया राहत का भरोसा"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mdvv7.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "क्यों डूब रहे हैं नर्मदा के नदी के आस पास के गांव",
+      "versions": [
+        {
+          "versionId": "p07mdv1w",
+          "types": ["Original"],
+          "duration": 142,
+          "durationISO8601": "PT2M22S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567602218
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108613936",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/F9BB/production/_108613936_p07mdvv7.jpg",
+      "path": "/cpsprodpb/F9BB/production/_108613936_p07mdvv7.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "नर्मदा",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:hindi/media-49583110",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/hindi/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

@@ -13,7 +13,7 @@ const onDemandRadioFixtures = {
   pashto,
 };
 
-const matchFixtures = service => ({
+const matchFixtures = (service) => ({
   params: {
     mediaId: 'liveradio',
     serviceId: {
@@ -26,7 +26,7 @@ const matchFixtures = service => ({
 const status = 200;
 
 storiesOf('Pages|OnDemand Radio Page', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(
     withServicesKnob({

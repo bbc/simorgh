@@ -82,7 +82,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   );
 
   useEffect(() => {
-    const handleResponse = async response => {
+    const handleResponse = async (response) => {
       const radioScheduleData = await response.json();
 
       const schedules = processRadioSchedule(
@@ -93,10 +93,10 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
       setRadioSchedule(schedules);
     };
 
-    const fetchRadioScheduleData = pathname =>
+    const fetchRadioScheduleData = (pathname) =>
       fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
+        .catch((e) => logger.error(`HTTP Error: "${e}"`));
 
     fetchRadioScheduleData(endpoint);
   }, [endpoint, service, script, timezone, locale]);

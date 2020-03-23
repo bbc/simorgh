@@ -11,7 +11,7 @@ const envMapping = {
   live: 'live',
 };
 
-const useToggle = toggleName => {
+const useToggle = (toggleName) => {
   const { env } = useContext(RequestContext);
   const { toggleState } = useContext(ToggleContext);
 

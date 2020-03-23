@@ -9,7 +9,7 @@ const convertInclude = ({ href, url, type, ...rest }) => {
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => supportedType =>
+  const hrefIsSupported = () => (supportedType) =>
     href && href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href

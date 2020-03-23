@@ -74,7 +74,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
   return (
     <IndexAlsos offScreenText={relatedContent} data-e2e="index-alsos">
       <IndexAlsosWrapper>
-        {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map(item => {
+        {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map((item) => {
           const { id, cpsType, mediaType } = item;
           const headline = pathOr(null, ['headlines', 'headline'], item);
           const url = pathOr(null, ['locators', 'assetUri'], item);

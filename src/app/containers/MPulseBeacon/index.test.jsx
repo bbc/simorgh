@@ -12,7 +12,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 let container;
-const useToggleMock = enabled => ({ enabled });
+const useToggleMock = (enabled) => ({ enabled });
 
 jest.mock('./boomr', () => jest.fn());
 jest.mock('../Toggle/useToggle', () => jest.fn());

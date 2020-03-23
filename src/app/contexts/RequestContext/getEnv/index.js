@@ -1,4 +1,4 @@
-const getEnv = origin => {
+const getEnv = (origin) => {
   if (origin.includes('local')) {
     return 'local';
   }

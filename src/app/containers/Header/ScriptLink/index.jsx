@@ -24,7 +24,7 @@ export const getVariantHref = ({ path, params, service, variant }) => {
         amp: undefined, // we don't want to link to AMP pages directly
       },
       {
-        encode: value => value,
+        encode: (value) => value,
       },
     );
   } catch {
