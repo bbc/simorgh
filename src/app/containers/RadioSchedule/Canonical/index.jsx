@@ -3,6 +3,7 @@ import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
+import moment from 'moment';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -18,6 +19,7 @@ import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { Link } from '@bbc/psammead-story-promo';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import webLogger from '#lib/logger.web';
 
@@ -65,6 +67,8 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   const { service, script, dir, timezone, locale, radioSchedule } = useContext(
     ServiceContext,
   );
+  const { timeOnServer } = useContext(RequestContext);
+  const timeOnClient = parseInt(moment.utc().format('x'), 10);
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -81,7 +85,11 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     const handleResponse = async response => {
       const radioScheduleData = await response.json();
 
-      const schedules = processRadioSchedule(radioScheduleData, service);
+      const schedules = processRadioSchedule(
+        radioScheduleData,
+        service,
+        timeOnServer || timeOnClient,
+      );
       setRadioSchedule(schedules);
     };
 
