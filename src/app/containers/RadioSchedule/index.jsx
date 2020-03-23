@@ -8,9 +8,6 @@ import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
-// const getRadioScheduleEndpoint = service =>
-//   `/${service}/bbc_${service}_radio/schedule.json`;
-
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { enabled } = useToggle('radioSchedule');
   const { isAmp, env } = useContext(RequestContext);
