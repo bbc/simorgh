@@ -13,7 +13,7 @@ const SKIP_LINK_ANCHOR_ID = 'content';
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
-    metadata,
+    language,
     brandTitle,
     episodeTitle,
     headline,
@@ -29,7 +29,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     <>
       <MetadataContainer
         title={headline}
-        lang={metadata.language}
+        lang={language}
         description={shortSynopsis}
         openGraphType="website"
       />

@@ -9,5 +9,5 @@ it('should return essential data for a page to render', async () => {
   expect(pageData.headline).toEqual('وروستي خبرونه');
   expect(pageData.episodeTitle).toEqual('04/02/2020 GMT');
   expect(pageData.summary).toEqual('د نړۍ وروستي خبرونه');
-  expect(pageData.metadata.language).toEqual('ps');
+  expect(pageData.language).toEqual('ps');
 });
