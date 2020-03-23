@@ -27,18 +27,21 @@ export default ({
         expect(timestampEl).toBeInTheDocument();
       });
 
-      it('I can see the bulleted list item', () => {
-        const [bulletedListItemEl] = page.getAllByText(bulletedListItem);
-        expect(bulletedListItemEl).toBeInTheDocument();
-        expect(bulletedListItemEl.getAttribute('class')).toContain(
-          'BulletedListItem',
+      it.skip('I can see the bulleted list item', () => {
+        const { getAllByText } = within(
+          page.document.querySelector(`[class^="Wrapper"]`),
         );
+
+        const [bulletedListItemEl] = getAllByText(bulletedListItem);
+        expect(bulletedListItemEl).toBeInTheDocument();
       });
 
       it('I can see related content', () => {
-        const [relatedContentItemEl] = page.getAllByText(
-          relatedContentHeadline,
+        const { getByText } = within(
+          page.document.querySelector(`[class^="StoryPromoUl"]`),
         );
+        const relatedContentItemEl = getByText(relatedContentHeadline);
+
         expect(relatedContentItemEl).toBeInTheDocument();
       });
     });
