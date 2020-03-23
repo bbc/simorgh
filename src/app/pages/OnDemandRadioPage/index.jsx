@@ -1,15 +1,26 @@
 import React, { useContext } from 'react';
-import { string, shape, object, arrayOf } from 'prop-types';
+import { string, shape } from 'prop-types';
 import styled from 'styled-components';
-import path from 'ramda/src/path';
 import MetadataContainer from '../../containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import OnDemandRadio from '#containers/RadioPageBlocks/Blocks/OnDemandRadio';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
+import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
+import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+
+const SKIP_LINK_ANCHOR_ID = 'content';
+
 const OnDemandRadioPage = ({ pageData }) => {
-  const promo = path(['promo'], pageData);
-  const metadata = path(['metadata'], pageData);
+  const idAttr = SKIP_LINK_ANCHOR_ID;
+  const {
+    language,
+    brandTitle,
+    episodeTitle,
+    headline,
+    summary,
+    shortSynopsis,
+  } = pageData;
+
   const { dir } = useContext(ServiceContext);
   const StyledGelPageGrid = styled(GelPageGrid)`
     flex-grow: 1;
@@ -17,9 +28,9 @@ const OnDemandRadioPage = ({ pageData }) => {
   return (
     <>
       <MetadataContainer
-        title={promo.headlines.headline}
-        lang={metadata.language}
-        description={promo.media.synopses.short}
+        title={headline}
+        lang={language}
+        description={shortSynopsis}
         openGraphType="website"
       />
 
@@ -58,7 +69,9 @@ const OnDemandRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <OnDemandRadio />
+          <HeadingBlock idAttr={idAttr} text={brandTitle} />
+          <ParagraphBlock text={episodeTitle} />
+          <ParagraphBlock text={summary} />
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -67,25 +80,11 @@ const OnDemandRadioPage = ({ pageData }) => {
 
 OnDemandRadioPage.propTypes = {
   pageData: shape({
-    metadata: shape({
-      id: string,
-      tags: object,
-    }),
-    promo: shape({
-      subtype: string,
-      name: string,
-    }),
-    content: shape({
-      blocks: arrayOf(
-        shape({
-          uuid: string,
-          id: string,
-          externalId: string,
-          text: string,
-          type: string,
-        }),
-      ),
-    }),
+    brandTitle: string,
+    episodeTitle: string,
+    headline: string,
+    summary: string,
+    language: string,
   }).isRequired,
 };
 
