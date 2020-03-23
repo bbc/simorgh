@@ -17,7 +17,6 @@ export const mediaMetadataPropTypes = {
   createdBy: string,
   firstPublished: number,
   id: string.isRequired,
-  title: string.isRequired,
   language: string.isRequired,
   lastPublished: number,
   lastUpdated: number,
