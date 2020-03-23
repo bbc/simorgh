@@ -1,0 +1,373 @@
+{
+  "schedules": [
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411ml",
+        "synopses": {
+          "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+          "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+        },
+        "title": "Dira Ya Dunia"
+      },
+      "broadcast": {
+        "bid": "w1mshfv8fhj3vx3.imi:ws.bbc.co.uk/SWAHA1583767770",
+        "pid": "p084zksk"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x94l9gdkv12",
+        "presentationTitle": "09/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+          "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT1H",
+      "publishedTimeEnd": 1583771370000,
+      "publishedTimeStart": 1583767770000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583771370000,
+      "transmissionTimeStart": 1583767770000,
+      "updateTime": 1582817178000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshfv8fhj3vx3"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411mj",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        },
+        "title": "Amka Na BBC"
+      },
+      "broadcast": {
+        "bid": "w1mshftvq46tlry.imi:ws.bbc.co.uk/SWAHA1583809170",
+        "pid": "p08518yf"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x945l338kwx",
+        "presentationTitle": "10/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1583810940000,
+      "publishedTimeStart": 1583809170000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583810940000,
+      "transmissionTimeStart": 1583809170000,
+      "updateTime": 1582856792000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshftvq46tlry"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411mj",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        },
+        "title": "Amka Na BBC"
+      },
+      "broadcast": {
+        "bid": "w1mshftvq46tqj2.imi:ws.bbc.co.uk/SWAHA1583812770",
+        "pid": "p0851cny"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x945l338pn1",
+        "presentationTitle": "10/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1583814540000,
+      "publishedTimeStart": 1583812770000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583814540000,
+      "transmissionTimeStart": 1583812770000,
+      "updateTime": 1582860357000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshftvq46tqj2"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411ml",
+        "synopses": {
+          "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+          "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+        },
+        "title": "Dira Ya Dunia"
+      },
+      "broadcast": {
+        "bid": "w1mshfv8fhj6rt6.imi:ws.bbc.co.uk/SWAHA1583854170",
+        "pid": "p0853qmn"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x94l9gdnqy5",
+        "presentationTitle": "10/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+          "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT1H",
+      "publishedTimeEnd": 1583857770000,
+      "publishedTimeStart": 1583854170000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583857770000,
+      "transmissionTimeStart": 1583854170000,
+      "updateTime": 1582903655000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshfv8fhj6rt6"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411mj",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        },
+        "title": "Amka Na BBC"
+      },
+      "broadcast": {
+        "bid": "w1mshftvq46xhp1.imi:ws.bbc.co.uk/SWAHA1583895570",
+        "pid": "p0855m6g"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x945l33cgt0",
+        "presentationTitle": "11/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1583897340000,
+      "publishedTimeStart": 1583895570000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583897340000,
+      "transmissionTimeStart": 1583895570000,
+      "updateTime": 1582943174000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshftvq46xhp1"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411mj",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        },
+        "title": "Amka Na BBC"
+      },
+      "broadcast": {
+        "bid": "w1mshftvq46xmf5.imi:ws.bbc.co.uk/SWAHA1583899170",
+        "pid": "p0855p8r"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x945l33clk4",
+        "presentationTitle": "11/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1583900940000,
+      "publishedTimeStart": 1583899170000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583900940000,
+      "transmissionTimeStart": 1583899170000,
+      "updateTime": 1582946754000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshftvq46xmf5"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411ml",
+        "synopses": {
+          "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+          "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+        },
+        "title": "Dira Ya Dunia"
+      },
+      "broadcast": {
+        "bid": "w1mshfv8fhj9nq9.imi:ws.bbc.co.uk/SWAHA1583940570",
+        "pid": "p0857800"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x94l9gdrmv8",
+        "presentationTitle": "11/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki",
+          "short": "Kipindi cha habari, makala na mahojiano cha kila siku kuanzia saa kumi na mbili unusu jioni Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT1H",
+      "publishedTimeEnd": 1583944170000,
+      "publishedTimeStart": 1583940570000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583944170000,
+      "transmissionTimeStart": 1583940570000,
+      "updateTime": 1582989985000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshfv8fhj9nq9"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411mj",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        },
+        "title": "Amka Na BBC"
+      },
+      "broadcast": {
+        "bid": "w1mshftvq470dl4.imi:ws.bbc.co.uk/SWAHA1583981970",
+        "pid": "p0858dc1"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x945l33gcq3",
+        "presentationTitle": "12/03/2020 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1583983740000,
+      "publishedTimeStart": 1583981970000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1583983740000,
+      "transmissionTimeStart": 1583981970000,
+      "updateTime": 1583029577000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshftvq470dl4"
+      }
+    },
+    {
+      "brand": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "p03411mj",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        },
+        "title": "Amka Na BBC"
+      },
+      "broadcast": {
+        "bid": "w1mshftvq470jb8.imi:ws.bbc.co.uk/SWAHA1583985570",
+        "pid": "p0858fzy"
+      },
+      "episode": {
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpq0.jpg",
+        "pid": "w172x945l33ghg7",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "synopses": {
+          "medium": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki",
+          "short": "Kipindi cha habari, mahojiano na makala kila siku saa kumi na mbili na saa moja asubuhi Afrika Mashariki"
+        }
+      },
+      "isAudioDescribed": false,
+      "isBlanked": false,
+      "isCritical": false,
+      "isRepeat": false,
+      "isSimulcast": true,
+      "partnerId": "s0000001",
+      "publishedTimeDuration": "PT29M30S",
+      "publishedTimeEnd": 1893490170000,
+      "publishedTimeStart": 1893488400000,
+      "serviceId": "bbc_swahili_radio",
+      "transmissionTimeEnd": 1893490170000,
+      "transmissionTimeStart": 1893488400000,
+      "updateTime": 1893488400000,
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_swahili_radio",
+      "version": {
+        "pid": "w1mshftvq470jb8"
+      }
+    }
+  ]
+}
