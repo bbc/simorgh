@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from 'styled-components';
@@ -20,9 +20,7 @@ import { Link } from '@bbc/psammead-story-promo';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
-import webLogger from '#lib/logger.web';
-
-const logger = webLogger();
+import useData from './useData';
 
 const MarginWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
@@ -62,11 +60,17 @@ const RadioFrequencyLink = styled(Link)`
 `;
 
 const CanonicalRadioSchedule = ({ endpoint }) => {
-  const [schedule, setRadioSchedule] = useState();
+  const radioScheduleData = useData(endpoint);
+
   const { service, script, dir, timezone, locale, radioSchedule } = useContext(
     ServiceContext,
   );
+
   const { timeOnServer } = useContext(RequestContext);
+
+  if (!radioScheduleData) {
+    return null;
+  }
 
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
@@ -80,29 +84,11 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     radioSchedule,
   );
 
-  useEffect(() => {
-    const handleResponse = async response => {
-      const radioScheduleData = await response.json();
-
-      const schedules = processRadioSchedule(
-        radioScheduleData,
-        service,
-        timeOnServer,
-      );
-      setRadioSchedule(schedules);
-    };
-
-    const fetchRadioScheduleData = pathname =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
-
-    fetchRadioScheduleData(endpoint);
-  }, [endpoint, service, script, timezone, locale]);
-
-  if (!schedule) {
-    return null;
-  }
+  const schedule = processRadioSchedule(
+    radioScheduleData,
+    service,
+    timeOnServer,
+  );
 
   return (
     <RadioScheduleSection>

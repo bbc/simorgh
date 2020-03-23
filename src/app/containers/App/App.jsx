@@ -16,10 +16,11 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, status, error, timeOnServer } = initialData;
+  const { pageData, ssrData, status, error, timeOnServer } = initialData;
 
   const [state, setState] = useState({
     pageData,
+    ssrData,
     status,
     service,
     variant,

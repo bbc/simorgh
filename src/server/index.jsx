@@ -271,7 +271,7 @@ server
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
-      const data = await route.getInitialData(url);
+      const data = await route.getInitialData(url, service);
       const { status } = data;
       const bbcOrigin = headers['bbc-origin'];
 

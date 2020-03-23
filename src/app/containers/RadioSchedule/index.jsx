@@ -7,7 +7,7 @@ import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
 const getRadioScheduleEndpoint = service =>
-  `/${service}/bbc_${service}_radio/schedule.json`;
+  `${process.env.SIMORGH_BASE_URL}/${service}/bbc_${service}_radio/schedule.json`;
 
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { enabled } = useToggle('radioSchedule');

@@ -15,6 +15,7 @@ export const RequestContextProvider = ({
   id,
   isAmp,
   pageType,
+  ssrData,
   service,
   statusCode,
   previousPath,
@@ -50,6 +51,7 @@ export const RequestContextProvider = ({
     previousPath,
     variant,
     timeOnServer,
+    ssrData,
     ...getMetaUrls(origin, pathname),
   };
 
