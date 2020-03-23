@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorMain should correctly render for 404 1`] = `
+exports[`ErrorPage should correctly render for 404 1`] = `
 .c6 {
   color: #222222;
   border-bottom: 1px solid #B80000;
@@ -305,7 +305,7 @@ exports[`ErrorMain should correctly render for 404 1`] = `
 </html>
 `;
 
-exports[`ErrorMain should correctly render for 404 for persian 1`] = `
+exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 <html
   dir="rtl"
   lang="fa"
@@ -610,7 +610,7 @@ exports[`ErrorMain should correctly render for 404 for persian 1`] = `
 </html>
 `;
 
-exports[`ErrorMain should correctly render for 500 1`] = `
+exports[`ErrorPage should correctly render for 500 1`] = `
 <html
   dir="ltr"
   lang="en-GB"
@@ -910,7 +910,7 @@ exports[`ErrorMain should correctly render for 500 1`] = `
 </html>
 `;
 
-exports[`ErrorMain should correctly render for 500 for persian 1`] = `
+exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 <html
   dir="rtl"
   lang="fa"
@@ -1210,7 +1210,7 @@ exports[`ErrorMain should correctly render for 500 for persian 1`] = `
 </html>
 `;
 
-exports[`ErrorMain should correctly render for other status code 1`] = `
+exports[`ErrorPage should correctly render for other status code 1`] = `
 <html
   dir="ltr"
   lang="en-GB"
