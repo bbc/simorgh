@@ -6,10 +6,8 @@ fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 it('should return essential data for a page to render', async () => {
   const { pageData } = await getInitialData('mock-on-demand-radio-path');
 
-  expect(pageData.promo.headlines.headline).toEqual('وروستي خبرونه');
-  expect(pageData.metadata.id).toEqual(
-    'urn:bbc:ares:ws_media:page:bbc_pashto_radio/w172x8nvf4bchz5',
-  );
+  expect(pageData.headline).toEqual('وروستي خبرونه');
+  expect(pageData.episodeTitle).toEqual('04/02/2020 GMT');
+  expect(pageData.summary).toEqual('د نړۍ وروستي خبرونه');
   expect(pageData.metadata.language).toEqual('ps');
-  expect(pageData.content.blocks.length).toBeTruthy();
 });
