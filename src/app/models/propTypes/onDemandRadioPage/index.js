@@ -1,10 +1,7 @@
 import { bool, shape, string, number } from 'prop-types';
 
 export const onDemandRadioPageDataPropTypes = shape({
-  metadata: shape({
-    id: string,
-    language: string,
-  }),
+  language: string,
   brandTitle: string,
   episodeTitle: string,
   headline: string,

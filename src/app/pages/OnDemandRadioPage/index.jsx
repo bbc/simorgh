@@ -84,10 +84,7 @@ OnDemandRadioPage.propTypes = {
     episodeTitle: string,
     headline: string,
     summary: string,
-    metadata: shape({
-      language: string,
-      id: string,
-    }),
+    language: string,
   }).isRequired,
 };
 
