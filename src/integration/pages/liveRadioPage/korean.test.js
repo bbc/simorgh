@@ -14,6 +14,7 @@ import {
   runCoreCanonicalTests,
   runPerformaceTests,
   runCommonAmpAnalyticsTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on the Korean live radio AMP page', () => {
@@ -103,5 +104,9 @@ describe('Given I am on the Korean live radio page AMP/Canonical', () => {
       skipToContentText: '내용으로 건너뛰기',
       headlineText: 'BBC 코리아 라디오',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });

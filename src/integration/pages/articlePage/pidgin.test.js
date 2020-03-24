@@ -14,6 +14,7 @@ import {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformaceTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on a Pidgin article AMP page', () => {
@@ -103,5 +104,9 @@ describe('Given I am on a Pidgin article AMP/Canonical page', () => {
       skipToContentText: 'Waka go wetin de inside',
       headlineText: "Adams Oshiomhole say 'I still be APC National Chairman'",
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });

@@ -54,7 +54,7 @@ module.exports = {
       collectCoverageFrom: ['**/src/integration/**/*.{js,jsx}'],
       setupFiles: ['./src/testHelpers/jest-setup.js'],
       testMatch: ['**/src/integration/**/*.test.{js,jsx}'],
-      snapshotSerializers: ['enzyme-to-json/serializer'],
+      snapshotSerializers: ['jest-serializer-html'],
       setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
       moduleNameMapper: jestDirAlias,
       transform: {
