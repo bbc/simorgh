@@ -9,16 +9,15 @@ const logger = webLogger();
 const ToggleContext = createContext({});
 
 const ToggleContextProvider = ({ children, service, origin }) => {
-  const simorghToggles = defaultToggles[process.env.SIMORGH_APP_ENV || 'local'];
+  const environment = process.env.SIMORGH_APP_ENV || 'local';
+  const simorghToggles = defaultToggles[environment];
   const [toggleState, toggleDispatch] = useReducer(
     toggleReducer,
     simorghToggles,
   );
 
-  const environment = process.env.SIMORGH_APP_ENV || 'local';
-
   // temp method to only enable remote feature toggling for test and for a list of services
-  const { enableFetchingToggles } = defaultToggles[environment];
+  const { enableFetchingToggles } = simorghToggles;
 
   useEffect(() => {
     const shouldFetchAndUpdateToggles =
