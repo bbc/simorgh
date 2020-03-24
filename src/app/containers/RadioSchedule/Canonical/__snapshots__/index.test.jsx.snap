@@ -329,7 +329,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   font-weight: 400;
   font-style: normal;
   color: #222222;
-  background-color: #FDFDFD;
+  background-color: #F2F2F2;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -354,8 +354,20 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 .c0 {
+  background-color: #F2F2F2;
+  padding: 0 1rem;
+}
+
+.c7 {
   margin: 0 auto;
   width: 100%;
+  padding-bottom: 1rem;
+}
+
+.c2 {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 0.5rem;
 }
 
 .c36 {
@@ -701,9 +713,22 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   }
 }
 
-@media (max-width:37.4375rem) {
-  .c7 {
-    margin-top: 1rem;
+@media (max-width:24.9375rem) {
+  .c0 {
+    margin: 2rem -0.5rem 0;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    margin: 2rem -1rem 0;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    margin: 1.5rem -1rem 0;
   }
 }
 
@@ -713,27 +738,23 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   }
 }
 
-@media (max-width:62.9375rem) {
-  .c7 {
-    margin-bottom: 1rem;
-  }
-}
-
 @media (min-width:63rem) {
   .c7 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .c0 {
     max-width: 63rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    padding-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
   .c2 {
-    margin-top: 2rem;
+    max-width: 63rem;
+    padding-top: 2rem;
   }
 }
 
