@@ -780,7 +780,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             dir="rtl"
             id="Radio-Schedule"
           >
-            BBC News Radio
+            أحدث نشرة أخبار
           </span>
         </span>
       </div>
@@ -1333,7 +1333,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
       class="c36"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
-      Radio Frequencies Link Label
+      استقبال البث
     </a>
   </div>
 </section>
