@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import { string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
-
-const getRadioScheduleEndpoint = service =>
-  `/${service}/bbc_${service}_radio/schedule.json`;
+import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
 const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const { enabled } = useToggle('radioSchedule');
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, env } = useContext(RequestContext);
   const { service, radioSchedule } = useContext(ServiceContext);
+  const location = useLocation();
   const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
   const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
@@ -21,7 +21,12 @@ const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   }
 
   const endpoint =
-    radioScheduleEndpointOverride || getRadioScheduleEndpoint(service);
+    radioScheduleEndpointOverride ||
+    getRadioScheduleEndpoint({
+      service,
+      env,
+      queryString: location.search,
+    });
 
   return <Canonical endpoint={endpoint} />;
 };
