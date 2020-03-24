@@ -179,8 +179,8 @@ export const service = {
       hasRadioSchedule: true,
       frequenciesPageUrl:
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'Nos fréquences',
+      header: 'Journaux et Magazines',
     },
     footer: {
       trustProjectLink: {
