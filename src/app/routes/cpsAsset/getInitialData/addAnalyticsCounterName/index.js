@@ -1,9 +1,8 @@
 import assocPath from 'ramda/src/assocPath';
 import path from 'ramda/src/path';
+import hasPath from 'ramda/src/hasPath';
 
-const hasCounterName = pagedata => {
-  return path(['metadata', 'analyticsLabels', 'counterName'], pagedata);
-};
+const hasCounterName = hasPath(['metadata', 'analyticsLabels', 'counterName']);
 
 const transformer = pagedata => {
   if (hasCounterName(pagedata)) return pagedata;
