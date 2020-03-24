@@ -120,6 +120,7 @@
     "react-router": "^5.1.2",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
+    "serialize-javascript": "^3.0.0",
     "styled-components": "^4.4.1",
     "styled-normalize": "^8.0.7",
     "url-parse": "^1.4.7",

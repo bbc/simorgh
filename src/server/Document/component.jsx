@@ -1,4 +1,5 @@
 import React from 'react';
+import serialize from 'serialize-javascript';
 import styled from 'styled-components';
 import {
   AMP_SCRIPT,
@@ -27,7 +28,7 @@ const Document = ({
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const serialisedData = JSON.stringify(data);
+  const serialisedData = serialize(data);
   const scriptsAllowed = !isAmp;
   const StyledDiv = styled.div`
     min-height: 100vh;
