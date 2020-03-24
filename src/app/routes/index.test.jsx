@@ -91,8 +91,7 @@ it('should route to and render the skeleton onDemand Radio page', async () => {
     service: 'indonesia',
   });
 
-  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-    'Konten ini sudah tidak tersedia lagi.';
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'Dunia Pagi Ini';
 
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });

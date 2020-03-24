@@ -18,15 +18,15 @@ const requestContextData = {
 };
 
 const FrontPageWithContext = props => (
-  <ToggleContextProvider>
-    <RequestContextProvider {...requestContextData}>
-      <ServiceContextProvider service="pidgin">
-        <BrowserRouter>
+  <BrowserRouter>
+    <ToggleContextProvider>
+      <RequestContextProvider {...requestContextData}>
+        <ServiceContextProvider service="pidgin">
           <FrontPage {...props} />
-        </BrowserRouter>
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </BrowserRouter>
 );
 
 let pageData;
