@@ -181,10 +181,10 @@
   },
   "marathi": {
     "default": {
-      "one minute ago": "1 मिनिटा पूर्वी",
-      "five minutes ago": "5 मिनिटां पूर्वी",
-      "one hour ago": "1 तासा पूर्वी",
-      "five hours ago": "5 तासां पूर्वी",
+      "one minute ago": "1 मिनिटापूर्वी",
+      "five minutes ago": "5 मिनिटांपूर्वी",
+      "one hour ago": "1 तासापूर्वी",
+      "five hours ago": "5 तासांपूर्वी",
       "exact date": "10 ऑक्टोबर 2018",
       "exact date and time with timezone": "12 जुलै 2019, 18:25 IST"
     }
@@ -302,17 +302,17 @@
   "serbian": {
     "lat": {
       "one minute ago": "Pre 1 minuta",
-      "five minutes ago": "Pre minuta: 5",
+      "five minutes ago": "Pre 5 minuta",
       "one hour ago": "Pre 1 sata",
-      "five hours ago": "Pre sati: 5",
+      "five hours ago": "Pre 5 sati",
       "exact date": "10 oktobar 2018",
       "exact date and time with timezone": "12 jul 2019, 12:55 GMT"
     },
     "cyr": {
       "one minute ago": "Пре 1 минута",
-      "five minutes ago": "Пре минута: 5",
+      "five minutes ago": "Пре 5 минута",
       "one hour ago": "Пре 1 сата",
-      "five hours ago": "Пре сати: 5",
+      "five hours ago": "Пре 5 сати",
       "exact date": "10 октобар 2018",
       "exact date and time with timezone": "12 јул 2019, 12:55 GMT"
     }
