@@ -11,6 +11,14 @@ const includeUrls = {
   idt1: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt1.html',
 };
 
+export const encodeHTML = str =>
+  String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 const fetchMarkup = async url => {
   try {
     const res = await fetch(url, { timeout: 3000 });
@@ -18,7 +26,7 @@ const fetchMarkup = async url => {
       throw new Error('Failed to fetch');
     } else {
       const html = await res.text();
-      return html;
+      return encodeHTML(html);
     }
   } catch (e) {
     logger.error(

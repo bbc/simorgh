@@ -4,6 +4,21 @@ import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '../Toggle/useToggle';
 
+const decodeHTML = str => {
+  const replacedParts = {
+    '&quot;': '"',
+    '&#39;': "'",
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+  };
+  const replacementsRegex = new RegExp(
+    Object.keys(replacedParts).join('|'),
+    'gi',
+  );
+  return str.replace(replacementsRegex, match => replacedParts[match]);
+};
+
 const IncludeContainer = ({ html, type }) => {
   const { enabled } = useToggle('include');
 
@@ -22,7 +37,7 @@ const IncludeContainer = ({ html, type }) => {
     <GridItemConstrainedMedium>
       <div
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: decodeHTML(html) }}
       />
     </GridItemConstrainedMedium>
   );
