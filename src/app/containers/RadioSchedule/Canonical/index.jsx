@@ -15,6 +15,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { Link } from '@bbc/psammead-story-promo';
@@ -58,6 +59,7 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
 `;
 
 const RadioFrequencyLink = styled(Link)`
+  ${({ service }) => getSansRegular(service)};
   font-size: 14px;
   line-height: 18px;
 `;
@@ -126,7 +128,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
           dir={dir}
         />
         {frequenciesPageUrl && (
-          <RadioFrequencyLink href={frequenciesPageUrl}>
+          <RadioFrequencyLink href={frequenciesPageUrl} service={service}>
             {frequenciesPageLabel}
           </RadioFrequencyLink>
         )}
