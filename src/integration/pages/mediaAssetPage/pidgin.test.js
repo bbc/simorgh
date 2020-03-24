@@ -15,6 +15,7 @@ import {
   runCoreAmpTests,
   runCommonA11yTests,
   runPerformanceTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on a Pidgin AMP Media Asset Page', () => {
@@ -115,5 +116,9 @@ describe('Given I am on a Pidgin Media Asset Page', () => {
       headlineText:
         'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });
