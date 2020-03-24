@@ -2561,7 +2561,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-d0ae3f07.b0328da7.js"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2569,7 +2569,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-f71cff67.b4cf7ca7.js"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

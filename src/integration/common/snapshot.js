@@ -12,13 +12,19 @@ const replaceUUIDs = html =>
   html.replace(/"uuid":".+?"/gm, '"uuid":"mock-uuid"');
 
 const replaceDataStyledAttributes = html =>
-  html.replace(/data-styled=".+?"/g, 'data-styled=""');
+  html.replace(/data-styled=".+?"/gm, 'data-styled=""');
+
+const replaceStaticScriptSrc = html =>
+  html.replace(/static\/js\/main-.+?.js/gm, replacement => {
+    return `${replacement.split('.')[0]}.js`;
+  });
 
 const getFixedHtml = pipe(
   replaceTimeOnServer,
   replaceIds,
   replaceUUIDs,
   replaceDataStyledAttributes,
+  replaceStaticScriptSrc,
 );
 
 export default () => {

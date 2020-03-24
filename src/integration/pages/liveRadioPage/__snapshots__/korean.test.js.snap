@@ -313,10 +313,10 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
 .bpERjU{max-width:80rem;margin:0 auto;padding-top:0.5rem);}
 /* sc-component-id: StyledParagraph-sc-1gggobt-2 */
 .jQPFnr{color:#FFFFFF;margin:0;padding:1rem 0;}
-/* sc-component-id: StyledDiv-sc-1dngwtn-0 */
-.riLLS{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FDFDFD;}
 /* sc-component-id: StyledGelPageGrid-sc-1539sby-0 */
 .fIPmtH{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;} @media (min-width:63rem) and (max-width:79.9375rem){.fIPmtH{margin:0 auto;max-width:63rem;}} @media (min-width:80rem){.fIPmtH{margin:0 auto;max-width:80rem;}}
+/* sc-component-id: StyledDiv-sc-1dngwtn-0 */
+.riLLS{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FDFDFD;}
     </style>
     <script data-react-helmet="true"
             async
@@ -1183,12 +1183,12 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
 .bpERjU{max-width:80rem;margin:0 auto;padding-top:0.5rem);}
 /* sc-component-id: StyledParagraph-sc-1gggobt-2 */
 .jQPFnr{color:#FFFFFF;margin:0;padding:1rem 0;}
+/* sc-component-id: StyledGelPageGrid-sc-1539sby-0 */
+.fIPmtH{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;} @media (min-width:63rem) and (max-width:79.9375rem){.fIPmtH{margin:0 auto;max-width:63rem;}} @media (min-width:80rem){.fIPmtH{margin:0 auto;max-width:80rem;}}
 /* sc-component-id: StyledIframe-fuo2ed-0 */
 .dIyDYU{border:0;left:0;overflow:hidden;position:absolute;top:0;width:100%;height:100%;}
 /* sc-component-id: StyledDiv-sc-1dngwtn-0 */
 .riLLS{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FDFDFD;}
-/* sc-component-id: StyledGelPageGrid-sc-1539sby-0 */
-.fIPmtH{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;} @media (min-width:63rem) and (max-width:79.9375rem){.fIPmtH{margin:0 auto;max-width:63rem;}} @media (min-width:80rem){.fIPmtH{margin:0 auto;max-width:80rem;}}
     </style>
     <script data-react-helmet="true"
             type="application/ld+json"
@@ -1620,7 +1620,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-d0ae3f07.b0328da7.js"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1628,7 +1628,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-f71cff67.b4cf7ca7.js"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

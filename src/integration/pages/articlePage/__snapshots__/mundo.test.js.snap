@@ -2266,7 +2266,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-d0ae3f07.b0328da7.js"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2274,7 +2274,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-f71cff67.b4cf7ca7.js"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
