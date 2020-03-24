@@ -1,0 +1,1268 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574361380000,
+      "publishedTimeStart": 1575310187000,
+      "publishedTimeEnd": 1575311070000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575310187000,
+      "transmissionTimeEnd": 1575311070000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk8k.imi:ws.bbc.co.uk/TIGRI1575310187",
+        "pid": "p07vqj9l"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzzr",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk8k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574361381000,
+      "publishedTimeStart": 1575311070000,
+      "publishedTimeEnd": 1575311370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575311070000,
+      "transmissionTimeEnd": 1575311370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575311070",
+        "pid": "p07vqj9p"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574364993000,
+      "publishedTimeStart": 1575313770000,
+      "publishedTimeEnd": 1575314670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575313787000,
+      "transmissionTimeEnd": 1575314670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk8k.imi:ws.bbc.co.uk/TIGRI1575313770",
+        "pid": "p07vqqk4"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzzr",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk8k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574364994000,
+      "publishedTimeStart": 1575314670000,
+      "publishedTimeEnd": 1575314970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575314670000,
+      "transmissionTimeEnd": 1575314970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575314670",
+        "pid": "p07vqqk7"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574368565000,
+      "publishedTimeStart": 1575317370000,
+      "publishedTimeEnd": 1575318270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575317387000,
+      "transmissionTimeEnd": 1575318270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk8k.imi:ws.bbc.co.uk/TIGRI1575317370",
+        "pid": "p07vqtbq"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzzr",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk8k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574368566000,
+      "publishedTimeStart": 1575318270000,
+      "publishedTimeEnd": 1575318570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575318270000,
+      "transmissionTimeEnd": 1575318570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575318270",
+        "pid": "p07vqtbr"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574372162000,
+      "publishedTimeStart": 1575320970000,
+      "publishedTimeEnd": 1575321870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575320987000,
+      "transmissionTimeEnd": 1575321870000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk8k.imi:ws.bbc.co.uk/TIGRI1575320970",
+        "pid": "p07vqxmt"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzzr",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk8k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574372162000,
+      "publishedTimeStart": 1575321870000,
+      "publishedTimeEnd": 1575322170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575321870000,
+      "transmissionTimeEnd": 1575322170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575321870",
+        "pid": "p07vqxmv"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574447775000,
+      "publishedTimeStart": 1575396587000,
+      "publishedTimeEnd": 1575397470000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575396587000,
+      "transmissionTimeEnd": 1575397470000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkbt.imi:ws.bbc.co.uk/TIGRI1575396587",
+        "pid": "p07vtm8j"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0020",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkbt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574447775000,
+      "publishedTimeStart": 1575397470000,
+      "publishedTimeEnd": 1575397770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575397470000,
+      "transmissionTimeEnd": 1575397770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575397470",
+        "pid": "p07vtm8k"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574451377000,
+      "publishedTimeStart": 1575400170000,
+      "publishedTimeEnd": 1575401070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575400187000,
+      "transmissionTimeEnd": 1575401070000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkbt.imi:ws.bbc.co.uk/TIGRI1575400170",
+        "pid": "p07vtrrf"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0020",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkbt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574451377000,
+      "publishedTimeStart": 1575401070000,
+      "publishedTimeEnd": 1575401370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575401070000,
+      "transmissionTimeEnd": 1575401370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575401070",
+        "pid": "p07vtrrh"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574454966000,
+      "publishedTimeStart": 1575403770000,
+      "publishedTimeEnd": 1575404670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575403787000,
+      "transmissionTimeEnd": 1575404670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkbt.imi:ws.bbc.co.uk/TIGRI1575403770",
+        "pid": "p07vtw37"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0020",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkbt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574454966000,
+      "publishedTimeStart": 1575404670000,
+      "publishedTimeEnd": 1575404970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575404670000,
+      "transmissionTimeEnd": 1575404970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575404670",
+        "pid": "p07vtw39"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574458559000,
+      "publishedTimeStart": 1575407370000,
+      "publishedTimeEnd": 1575408270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575407387000,
+      "transmissionTimeEnd": 1575408270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkbt.imi:ws.bbc.co.uk/TIGRI1575407370",
+        "pid": "p07vty53"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0020",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkbt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574458559000,
+      "publishedTimeStart": 1575408270000,
+      "publishedTimeEnd": 1575408570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575408270000,
+      "transmissionTimeEnd": 1575408570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575408270",
+        "pid": "p07vty57"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574534315000,
+      "publishedTimeStart": 1575482987000,
+      "publishedTimeEnd": 1575483870000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575482987000,
+      "transmissionTimeEnd": 1575483870000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkcy.imi:ws.bbc.co.uk/TIGRI1575482987",
+        "pid": "p07vwhf8"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0034",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkcy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574534315000,
+      "publishedTimeStart": 1575483870000,
+      "publishedTimeEnd": 1575484170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575483870000,
+      "transmissionTimeEnd": 1575484170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575483870",
+        "pid": "p07vwhf9"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574537900000,
+      "publishedTimeStart": 1575486570000,
+      "publishedTimeEnd": 1575487470000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575486587000,
+      "transmissionTimeEnd": 1575487470000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkcy.imi:ws.bbc.co.uk/TIGRI1575486570",
+        "pid": "p07vwkgw"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0034",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkcy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574537902000,
+      "publishedTimeStart": 1575487470000,
+      "publishedTimeEnd": 1575487770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575487470000,
+      "transmissionTimeEnd": 1575487770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575487470",
+        "pid": "p07vwkgy"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574541401000,
+      "publishedTimeStart": 1575490170000,
+      "publishedTimeEnd": 1575491070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575490187000,
+      "transmissionTimeEnd": 1575491070000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkcy.imi:ws.bbc.co.uk/TIGRI1575490170",
+        "pid": "p07vwmt6"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0034",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkcy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574541402000,
+      "publishedTimeStart": 1575491070000,
+      "publishedTimeEnd": 1575491370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575491070000,
+      "transmissionTimeEnd": 1575491370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575491070",
+        "pid": "p07vwmt9"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574544976000,
+      "publishedTimeStart": 1575493770000,
+      "publishedTimeEnd": 1575494670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575493787000,
+      "transmissionTimeEnd": 1575494670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvkcy.imi:ws.bbc.co.uk/TIGRI1575493770",
+        "pid": "p07vwq8n"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct0034",
+        "presentationTitle": "04/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvkcy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574544977000,
+      "publishedTimeStart": 1575494670000,
+      "publishedTimeEnd": 1575494970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575494670000,
+      "transmissionTimeEnd": 1575494970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk55.imi:ws.bbc.co.uk/TIGRI1575494670",
+        "pid": "p07vwq8p"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzwc",
+        "presentationTitle": "02/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzwc.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk55"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574620581000,
+      "publishedTimeStart": 1575569387000,
+      "publishedTimeEnd": 1575570270000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1575569387000,
+      "transmissionTimeEnd": 1575570270000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk9p.imi:ws.bbc.co.uk/TIGRI1575569387",
+        "pid": "p07vy1gr"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct000w",
+        "presentationTitle": "05/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk9p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574620581000,
+      "publishedTimeStart": 1575570270000,
+      "publishedTimeEnd": 1575570570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575570270000,
+      "transmissionTimeEnd": 1575570570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575570270",
+        "pid": "p07vy1gs"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574624173000,
+      "publishedTimeStart": 1575572970000,
+      "publishedTimeEnd": 1575573870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575572987000,
+      "transmissionTimeEnd": 1575573870000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk9p.imi:ws.bbc.co.uk/TIGRI1575572970",
+        "pid": "p07vy3tv"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct000w",
+        "presentationTitle": "05/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk9p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574624173000,
+      "publishedTimeStart": 1575573870000,
+      "publishedTimeEnd": 1575574170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575573870000,
+      "transmissionTimeEnd": 1575574170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575573870",
+        "pid": "p07vy3tx"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574627764000,
+      "publishedTimeStart": 1575576570000,
+      "publishedTimeEnd": 1575577470000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575576587000,
+      "transmissionTimeEnd": 1575577470000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk9p.imi:ws.bbc.co.uk/TIGRI1575576570",
+        "pid": "p07vy6h8"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct000w",
+        "presentationTitle": "05/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk9p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574627765000,
+      "publishedTimeStart": 1575577470000,
+      "publishedTimeEnd": 1575577770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575577470000,
+      "transmissionTimeEnd": 1575577770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575577470",
+        "pid": "p07vy6h9"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574631361000,
+      "publishedTimeStart": 1575580170000,
+      "publishedTimeEnd": 1575581070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1575580187000,
+      "transmissionTimeEnd": 1575581070000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk9p.imi:ws.bbc.co.uk/TIGRI1575580170",
+        "pid": "p07vy8st"
+      },
+      "brand": {
+        "pid": "w13xttny",
+        "title": "ቢቢሲ ትግርኛ ዜና / ዜና፡ ካብ ቢቢሲ ትግርኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "episode": {
+        "pid": "w3ct000w",
+        "presentationTitle": "05/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws312.png",
+        "synopses": {
+          "short": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም",
+          "medium": "ናይ 15 ደቒቕ ዜናን እዋናዊ ዛዕባታትን ዝሽፍን ፕሮግራም"
+        }
+      },
+      "version": {
+        "pid": "w4hqvk9p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_tigrinya_radio",
+      "serviceId": "bbc_tigrinya_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1574631362000,
+      "publishedTimeStart": 1575581070000,
+      "publishedTimeEnd": 1575581370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1575581070000,
+      "transmissionTimeEnd": 1575581370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvk69.imi:ws.bbc.co.uk/TIGRI1575581070",
+        "pid": "p07vy8sv"
+      },
+      "brand": {
+        "pid": "w13xttnz",
+        "title": "ቢቢሲ ትግርኛ፡ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttnz.jpg",
+        "synopses": {
+          "short": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን",
+          "medium": "ናይ 5 ደቒቕ መደብ ትምህርቲ ቋንቋ እንግሊዝኛ፡ ንጀመርቲ፡ ማእከላይን ዝለዓለ ደረጃን"
+        }
+      },
+      "episode": {
+        "pid": "w3cszzxh",
+        "presentationTitle": "03/12/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszzxh.jpg",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvk69"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1268 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584033973000,
+      "publishedTimeStart": 1584985787000,
+      "publishedTimeEnd": 1584986670000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1584985787000,
+      "transmissionTimeEnd": 1584986670000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgcv.imi:ws.bbc.co.uk/OROMO1584985787",
+        "pid": "p086gm0d"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx35",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgcv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584037589000,
+      "publishedTimeStart": 1584986670000,
+      "publishedTimeEnd": 1584986970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1584986670000,
+      "transmissionTimeEnd": 1584986970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1584986670",
+        "pid": "p086gsq6"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584041184000,
+      "publishedTimeStart": 1584989370000,
+      "publishedTimeEnd": 1584990270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1584989387000,
+      "transmissionTimeEnd": 1584990270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgcv.imi:ws.bbc.co.uk/OROMO1584989370",
+        "pid": "p086gzkx"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx35",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgcv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584041180000,
+      "publishedTimeStart": 1584990270000,
+      "publishedTimeEnd": 1584990570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1584990270000,
+      "transmissionTimeEnd": 1584990570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1584990270",
+        "pid": "p086gzky"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584044772000,
+      "publishedTimeStart": 1584992970000,
+      "publishedTimeEnd": 1584993870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1584992987000,
+      "transmissionTimeEnd": 1584993870000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgcv.imi:ws.bbc.co.uk/OROMO1584992970",
+        "pid": "p086h3ly"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx35",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgcv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584044768000,
+      "publishedTimeStart": 1584993870000,
+      "publishedTimeEnd": 1584994170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1584993870000,
+      "transmissionTimeEnd": 1584994170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1584993870",
+        "pid": "p086h3m0"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584048370000,
+      "publishedTimeStart": 1584996570000,
+      "publishedTimeEnd": 1584997470000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1584996587000,
+      "transmissionTimeEnd": 1584997470000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgcv.imi:ws.bbc.co.uk/OROMO1584996570",
+        "pid": "p086h6rj"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx35",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgcv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584048366000,
+      "publishedTimeStart": 1584997470000,
+      "publishedTimeEnd": 1584997770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1584997470000,
+      "transmissionTimeEnd": 1584997770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1584997470",
+        "pid": "p086h6rl"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584120383000,
+      "publishedTimeStart": 1585072187000,
+      "publishedTimeEnd": 1585073070000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1585072187000,
+      "transmissionTimeEnd": 1585073070000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgg3.imi:ws.bbc.co.uk/OROMO1585072187",
+        "pid": "p086l6d2"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx5f",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgg3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584124012000,
+      "publishedTimeStart": 1585073070000,
+      "publishedTimeEnd": 1585073370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585073070000,
+      "transmissionTimeEnd": 1585073370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585073070",
+        "pid": "p086lfc1"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584127582000,
+      "publishedTimeStart": 1585075770000,
+      "publishedTimeEnd": 1585076670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585075787000,
+      "transmissionTimeEnd": 1585076670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgg3.imi:ws.bbc.co.uk/OROMO1585075770",
+        "pid": "p086lnhl"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx5f",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgg3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584127578000,
+      "publishedTimeStart": 1585076670000,
+      "publishedTimeEnd": 1585076970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585076670000,
+      "transmissionTimeEnd": 1585076970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585076670",
+        "pid": "p086lnhp"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584131171000,
+      "publishedTimeStart": 1585079370000,
+      "publishedTimeEnd": 1585080270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585079387000,
+      "transmissionTimeEnd": 1585080270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgg3.imi:ws.bbc.co.uk/OROMO1585079370",
+        "pid": "p086lv4t"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx5f",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgg3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584131167000,
+      "publishedTimeStart": 1585080270000,
+      "publishedTimeEnd": 1585080570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585080270000,
+      "transmissionTimeEnd": 1585080570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585080270",
+        "pid": "p086lv4v"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584134772000,
+      "publishedTimeStart": 1585082970000,
+      "publishedTimeEnd": 1585083870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585082987000,
+      "transmissionTimeEnd": 1585083870000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgg3.imi:ws.bbc.co.uk/OROMO1585082970",
+        "pid": "p086lz9y"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx5f",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "version": {
+        "pid": "w4hqvgg3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584134770000,
+      "publishedTimeStart": 1585083870000,
+      "publishedTimeEnd": 1585084170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585083870000,
+      "transmissionTimeEnd": 1585084170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585083870",
+        "pid": "p086lz9z"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584206766000,
+      "publishedTimeStart": 1585158587000,
+      "publishedTimeEnd": 1585159470000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1585158587000,
+      "transmissionTimeEnd": 1585159470000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgh7.imi:ws.bbc.co.uk/OROMO1585158587",
+        "pid": "p086nwff"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx6k",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgh7"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584210390000,
+      "publishedTimeStart": 1585159470000,
+      "publishedTimeEnd": 1585159770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585159470000,
+      "transmissionTimeEnd": 1585159770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1585159470",
+        "pid": "p086p19w"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584213987000,
+      "publishedTimeStart": 1585162170000,
+      "publishedTimeEnd": 1585163070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585162187000,
+      "transmissionTimeEnd": 1585163070000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgh7.imi:ws.bbc.co.uk/OROMO1585162170",
+        "pid": "p086p3jd"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx6k",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgh7"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584213984000,
+      "publishedTimeStart": 1585163070000,
+      "publishedTimeEnd": 1585163370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585163070000,
+      "transmissionTimeEnd": 1585163370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1585163070",
+        "pid": "p086p3jf"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584217572000,
+      "publishedTimeStart": 1585165770000,
+      "publishedTimeEnd": 1585166670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585165787000,
+      "transmissionTimeEnd": 1585166670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgh7.imi:ws.bbc.co.uk/OROMO1585165770",
+        "pid": "p086p5w3"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx6k",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgh7"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584217569000,
+      "publishedTimeStart": 1585166670000,
+      "publishedTimeEnd": 1585166970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585166670000,
+      "transmissionTimeEnd": 1585166970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1585166670",
+        "pid": "p086p5w5"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584221175000,
+      "publishedTimeStart": 1585169370000,
+      "publishedTimeEnd": 1585170270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585169387000,
+      "transmissionTimeEnd": 1585170270000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgh7.imi:ws.bbc.co.uk/OROMO1585169370",
+        "pid": "p086p7x0"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx6k",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgh7"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584221171000,
+      "publishedTimeStart": 1585170270000,
+      "publishedTimeEnd": 1585170570000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585170270000,
+      "transmissionTimeEnd": 1585170570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg8g.imi:ws.bbc.co.uk/OROMO1585170270",
+        "pid": "p086p7x1"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwzs",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg8g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584293169000,
+      "publishedTimeStart": 1585244987000,
+      "publishedTimeEnd": 1585245870000,
+      "publishedTimeDuration": "PT14M43S",
+      "transmissionTimeStart": 1585244987000,
+      "transmissionTimeEnd": 1585245870000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgdz.imi:ws.bbc.co.uk/OROMO1585244987",
+        "pid": "p086qlp0"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx49",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgdz"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584296790000,
+      "publishedTimeStart": 1585245870000,
+      "publishedTimeEnd": 1585246170000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585245870000,
+      "transmissionTimeEnd": 1585246170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585245870",
+        "pid": "p086qp9q"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584300387000,
+      "publishedTimeStart": 1585248570000,
+      "publishedTimeEnd": 1585249470000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585248587000,
+      "transmissionTimeEnd": 1585249470000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgdz.imi:ws.bbc.co.uk/OROMO1585248570",
+        "pid": "p086qryp"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx49",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgdz"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584300382000,
+      "publishedTimeStart": 1585249470000,
+      "publishedTimeEnd": 1585249770000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585249470000,
+      "transmissionTimeEnd": 1585249770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585249470",
+        "pid": "p086qryq"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584303970000,
+      "publishedTimeStart": 1585252170000,
+      "publishedTimeEnd": 1585253070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585252187000,
+      "transmissionTimeEnd": 1585253070000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgdz.imi:ws.bbc.co.uk/OROMO1585252170",
+        "pid": "p086qv8h"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx49",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgdz"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584303965000,
+      "publishedTimeStart": 1585253070000,
+      "publishedTimeEnd": 1585253370000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585253070000,
+      "transmissionTimeEnd": 1585253370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585253070",
+        "pid": "p086qv8j"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584307572000,
+      "publishedTimeStart": 1585255770000,
+      "publishedTimeEnd": 1585256670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585255787000,
+      "transmissionTimeEnd": 1585256670000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvgdz.imi:ws.bbc.co.uk/OROMO1585255770",
+        "pid": "p086qxcg"
+      },
+      "brand": {
+        "pid": "w13xttnw",
+        "title": "Oduu BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx49",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+          "medium": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 "
+        }
+      },
+      "version": {
+        "pid": "w4hqvgdz"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_oromo_radio",
+      "serviceId": "bbc_oromo_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584307568000,
+      "publishedTimeStart": 1585256670000,
+      "publishedTimeEnd": 1585256970000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585256670000,
+      "transmissionTimeEnd": 1585256970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvg9l.imi:ws.bbc.co.uk/OROMO1585256670",
+        "pid": "p086qxch"
+      },
+      "brand": {
+        "pid": "w13xttnx",
+        "title": "Barnoota Ingilish BBC Afaan Oromoo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {
+          "short": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5",
+          "medium": "Barnoota Ingilish sadarkaa jalqabaa, jiddugaleessaa fi olaanaa daqiiqaa 5"
+        }
+      },
+      "episode": {
+        "pid": "w3cszx0x",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05ws2zm.png",
+        "synopses": {}
+      },
+      "version": {
+        "pid": "w4hqvg9l"
+      }
+    }
+  ]
+}

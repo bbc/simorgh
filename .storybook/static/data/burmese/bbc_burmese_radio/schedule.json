@@ -1,0 +1,496 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570800474000,
+      "publishedTimeStart": 1571750970000,
+      "publishedTimeEnd": 1571751870000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571750970000,
+      "transmissionTimeEnd": 1571751870000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrh8.imi:ws.bbc.co.uk/BURMA1571750970",
+        "pid": "p07qtb2h"
+      },
+      "brand": {
+        "pid": "p0340rnm",
+        "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8pc",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrh8"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570800476000,
+      "publishedTimeStart": 1571751870000,
+      "publishedTimeEnd": 1571752770000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571751900000,
+      "transmissionTimeEnd": 1571752770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrh8.imi:ws.bbc.co.uk/BURMA1571751870",
+        "pid": "p07qtb2n"
+      },
+      "brand": {
+        "pid": "p0340rnm",
+        "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8pc",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrh8"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570836355000,
+      "publishedTimeStart": 1571788770000,
+      "publishedTimeEnd": 1571789670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571788770000,
+      "transmissionTimeEnd": 1571789670000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrsk.imi:ws.bbc.co.uk/BURMA1571788770",
+        "pid": "p07qvzp3"
+      },
+      "brand": {
+        "pid": "p030z23n",
+        "title": "ဘီဘီစီမြန်မာပိုင်းနံနက်ခင်းအစီအစဉ်၊",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8zn",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrsk"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570839938000,
+      "publishedTimeStart": 1571789670000,
+      "publishedTimeEnd": 1571790570000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571789700000,
+      "transmissionTimeEnd": 1571790570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrsk.imi:ws.bbc.co.uk/BURMA1571789670",
+        "pid": "p07qw21c"
+      },
+      "brand": {
+        "pid": "p030z23n",
+        "title": "ဘီဘီစီမြန်မာပိုင်းနံနက်ခင်းအစီအစဉ်၊",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8zn",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrsk"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570886775000,
+      "publishedTimeStart": 1571837370000,
+      "publishedTimeEnd": 1571838270000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571837370000,
+      "transmissionTimeEnd": 1571838270000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrjd.imi:ws.bbc.co.uk/BURMA1571837370",
+        "pid": "p07qx2cc"
+      },
+      "brand": {
+        "pid": "p0340rnm",
+        "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8qh",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrjd"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570886776000,
+      "publishedTimeStart": 1571838270000,
+      "publishedTimeEnd": 1571839170000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571838300000,
+      "transmissionTimeEnd": 1571839170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrjd.imi:ws.bbc.co.uk/BURMA1571838270",
+        "pid": "p07qx2cf"
+      },
+      "brand": {
+        "pid": "p0340rnm",
+        "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8qh",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrjd"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570922758000,
+      "publishedTimeStart": 1571875170000,
+      "publishedTimeEnd": 1571876070000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571875170000,
+      "transmissionTimeEnd": 1571876070000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrq9.imi:ws.bbc.co.uk/BURMA1571875170",
+        "pid": "p07qxsjx"
+      },
+      "brand": {
+        "pid": "p030z23n",
+        "title": "ဘီဘီစီမြန်မာပိုင်းနံနက်ခင်းအစီအစဉ်၊",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8xd",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrq9"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570926343000,
+      "publishedTimeStart": 1571876070000,
+      "publishedTimeEnd": 1571876970000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571876100000,
+      "transmissionTimeEnd": 1571876970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrq9.imi:ws.bbc.co.uk/BURMA1571876070",
+        "pid": "p07qxv3k"
+      },
+      "brand": {
+        "pid": "p030z23n",
+        "title": "ဘီဘီစီမြန်မာပိုင်းနံနက်ခင်းအစီအစဉ်၊",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8xd",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrq9"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570973177000,
+      "publishedTimeStart": 1571923770000,
+      "publishedTimeEnd": 1571924670000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571923770000,
+      "transmissionTimeEnd": 1571924670000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrg4.imi:ws.bbc.co.uk/BURMA1571923770",
+        "pid": "p07qymf1"
+      },
+      "brand": {
+        "pid": "p0340rnm",
+        "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8n7",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrg4"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570973178000,
+      "publishedTimeStart": 1571924670000,
+      "publishedTimeEnd": 1571925570000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571924700000,
+      "transmissionTimeEnd": 1571925570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrg4.imi:ws.bbc.co.uk/BURMA1571924670",
+        "pid": "p07qymf2"
+      },
+      "brand": {
+        "pid": "p0340rnm",
+        "title": "ကမ္ဘာ့မျက်မှောက်ရေးရာ။",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8n7",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ",
+          "medium": "သတင်းနှင့်ကမ္ဘာ့မျက်မှောက်ရေးရာ"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrg4"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1571009168000,
+      "publishedTimeStart": 1571961570000,
+      "publishedTimeEnd": 1571962470000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571961570000,
+      "transmissionTimeEnd": 1571962470000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrks.imi:ws.bbc.co.uk/BURMA1571961570",
+        "pid": "p07qzczh"
+      },
+      "brand": {
+        "pid": "p030z23n",
+        "title": "ဘီဘီစီမြန်မာပိုင်းနံနက်ခင်းအစီအစဉ်၊",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8rw",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrks"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_burmese_radio",
+      "serviceId": "bbc_burmese_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1571012741000,
+      "publishedTimeStart": 1571962470000,
+      "publishedTimeEnd": 1571963370000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1571962500000,
+      "transmissionTimeEnd": 1571963370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqsrks.imi:ws.bbc.co.uk/BURMA1571962470",
+        "pid": "p07qzfrg"
+      },
+      "brand": {
+        "pid": "p030z23n",
+        "title": "ဘီဘီစီမြန်မာပိုင်းနံနက်ခင်းအစီအစဉ်၊",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "episode": {
+        "pid": "w3csy8rw",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dk5d.jpg",
+        "synopses": {
+          "short": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်",
+          "medium": "ဘီဘီစီမြန်မာပိုင်း နံနက်ခင်းအသံလွှင့်အစီအစဉ်"
+        }
+      },
+      "version": {
+        "pid": "w4hqsrks"
+      }
+    }
+  ]
+}

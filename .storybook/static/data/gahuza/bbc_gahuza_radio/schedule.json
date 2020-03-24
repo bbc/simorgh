@@ -4,20 +4,20 @@
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_gahuza_radio",
       "serviceId": "bbc_gahuza_radio",
       "partnerId": "s0000001",
-      "updateTime": 1574354158000,
-      "publishedTimeStart": 1575304170000,
-      "publishedTimeEnd": 1575305970000,
+      "updateTime": 1584030361000,
+      "publishedTimeStart": 1584980970000,
+      "publishedTimeEnd": 1584982770000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1575304170000,
-      "transmissionTimeEnd": 1575305970000,
+      "transmissionTimeStart": 1584980970000,
+      "transmissionTimeEnd": 1584982770000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshdg1p8bhzf7.imi:ws.bbc.co.uk/KRWNA1575304170",
-        "pid": "p07vq4gv"
+        "bid": "w1mshdg7hkczc4n.imi:ws.bbc.co.uk/KRWNA1584980970",
+        "pid": "p086gdrm"
       },
       "brand": {
         "pid": "p0340x2n",
@@ -29,8 +29,8 @@
         }
       },
       "episode": {
-        "pid": "w172x7rdn13bhbp",
-        "presentationTitle": "02/12/2019 GMT",
+        "pid": "w172x7rlgb4sw23",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
         "synopses": {
           "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
@@ -38,27 +38,27 @@
         }
       },
       "version": {
-        "pid": "w1mshdg1p8bhzf7"
+        "pid": "w1mshdg7hkczc4n"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_gahuza_radio",
       "serviceId": "bbc_gahuza_radio",
       "partnerId": "s0000001",
-      "updateTime": 1574440595000,
-      "publishedTimeStart": 1575390570000,
-      "publishedTimeEnd": 1575392370000,
+      "updateTime": 1584116920000,
+      "publishedTimeStart": 1585067370000,
+      "publishedTimeEnd": 1585069170000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1575390570000,
-      "transmissionTimeEnd": 1575392370000,
+      "transmissionTimeStart": 1585067370000,
+      "transmissionTimeEnd": 1585069170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshdg1p8blwbb.imi:ws.bbc.co.uk/KRWNA1575390570",
-        "pid": "p07vt8x4"
+        "bid": "w1mshdg7hkd281r.imi:ws.bbc.co.uk/KRWNA1585067370",
+        "pid": "p086kz9t"
       },
       "brand": {
         "pid": "p0340x2n",
@@ -70,8 +70,8 @@
         }
       },
       "episode": {
-        "pid": "w172x7rdn13fd7s",
-        "presentationTitle": "03/12/2019 GMT",
+        "pid": "w172x7rlgb4wrz6",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
         "synopses": {
           "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
@@ -79,27 +79,27 @@
         }
       },
       "version": {
-        "pid": "w1mshdg1p8blwbb"
+        "pid": "w1mshdg7hkd281r"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_gahuza_radio",
       "serviceId": "bbc_gahuza_radio",
       "partnerId": "s0000001",
-      "updateTime": 1574526937000,
-      "publishedTimeStart": 1575476970000,
-      "publishedTimeEnd": 1575478770000,
+      "updateTime": 1584203140000,
+      "publishedTimeStart": 1585153770000,
+      "publishedTimeEnd": 1585155570000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1575476970000,
-      "transmissionTimeEnd": 1575478770000,
+      "transmissionTimeStart": 1585153770000,
+      "transmissionTimeEnd": 1585155570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshdg1p8bps7f.imi:ws.bbc.co.uk/KRWNA1575476970",
-        "pid": "p07vw7qj"
+        "bid": "w1mshdg7hkd54yv.imi:ws.bbc.co.uk/KRWNA1585153770",
+        "pid": "p086ntf6"
       },
       "brand": {
         "pid": "p0340x2n",
@@ -111,8 +111,8 @@
         }
       },
       "episode": {
-        "pid": "w172x7rdn13j94w",
-        "presentationTitle": "04/12/2019 GMT",
+        "pid": "w172x7rlgb4znw9",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
         "synopses": {
           "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
@@ -120,27 +120,27 @@
         }
       },
       "version": {
-        "pid": "w1mshdg1p8bps7f"
+        "pid": "w1mshdg7hkd54yv"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_gahuza_radio",
       "serviceId": "bbc_gahuza_radio",
       "partnerId": "s0000001",
-      "updateTime": 1893488400000,
-      "publishedTimeStart": 1893488400000,
-      "publishedTimeEnd": 1893490200000,
+      "updateTime": 1584289544000,
+      "publishedTimeStart": 1585240170000,
+      "publishedTimeEnd": 1585241970000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1893488400000,
-      "transmissionTimeEnd": 1893490200000,
+      "transmissionTimeStart": 1585240170000,
+      "transmissionTimeEnd": 1585241970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshdg1p8bsp4j.imi:ws.bbc.co.uk/KRWNA1575563370",
-        "pid": "p07vxw1p"
+        "bid": "w1mshdg7hkd81vy.imi:ws.bbc.co.uk/KRWNA1585240170",
+        "pid": "p086qhrg"
       },
       "brand": {
         "pid": "p0340x2n",
@@ -152,8 +152,8 @@
         }
       },
       "episode": {
-        "pid": "w172x7rdn13m61z",
-        "presentationTitle": "01/01/2030 09:00 GMT",
+        "pid": "w172x7rlgb52ksd",
+        "presentationTitle": "26/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dkln.jpg",
         "synopses": {
           "short": "Amakuru yo hirya no hino yibanda cyane cyane ku karere k'ibiyaga bigari muri Afrika, n'amakuru mpuzamakungu.",
@@ -161,7 +161,7 @@
         }
       },
       "version": {
-        "pid": "w1mshdg1p8bsp4j"
+        "pid": "w1mshdg7hkd81vy"
       }
     }
   ]
