@@ -15,7 +15,7 @@ const getFixedHtml = pipe(replaceTimeOnServer, replaceIds, replaceUUIDs);
 
 export default () => {
   [amp, canonical].forEach(page => {
-    describe(`For the ${page.platform} platform`, () => {
+    describe(`And using ${page.platform}`, () => {
       it('I can see the server-rendered HTML', () => {
         const html = page.document.querySelector('html').outerHTML;
         const fixedHtml = getFixedHtml(html);

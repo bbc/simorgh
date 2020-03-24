@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given I am on a Pidgin Article page When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Pidgin Article page When I view the source code in the browser And using AMP I can see the server-rendered HTML 1`] = `
 <html lang="pcm"
       dir="ltr"
       amp
@@ -1114,7 +1114,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
 </html>
 `;
 
-exports[`Given I am on a Pidgin Article page When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Pidgin Article page When I view the source code in the browser And using Canonical I can see the server-rendered HTML 1`] = `
 <html lang="pcm"
       class="no-js"
       dir="ltr"
