@@ -1,6 +1,6 @@
 import pipe from 'ramda/src/pipe';
 
-const { amp, canonical } = global;
+const { canonical } = global;
 
 // replace things in the HTML that change every render such as random IDs and timeOnServer
 const replaceTimeOnServer = html =>
@@ -28,7 +28,7 @@ const getFixedHtml = pipe(
 );
 
 export default () => {
-  [amp, canonical].forEach(page => {
+  [canonical].forEach(page => {
     describe(`For the ${page.platform} platform`, () => {
       it('I can see the server-rendered HTML', () => {
         const html = page.document.querySelector('html').outerHTML;
