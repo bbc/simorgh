@@ -1,0 +1,1652 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given I am on the Korean live radio page AMP/Canonical When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ko"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ko-KO"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="BBC 코리아 라디오 - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/korean/bbc_korean_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="BBC 코리아 라디오 - BBC News 코리아"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      BBC 코리아 라디오 - BBC News 코리아
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/korean/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/korean/bbc_korean_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <style amp-custom>
+      /* sc-component-id: Headline-sc-1kh1qhu-0 */
+.krtLLo{font-size:1.75rem;line-height:2rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:700;font-style:normal;color:#3F3F42;display:block;margin:0;padding:2rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.krtLLo{font-size:2rem;line-height:2.625rem;}} @media (min-width:37.5rem){.krtLLo{font-size:2.75rem;line-height:3.625rem;}} @media (min-width:37.5rem){.krtLLo{padding:2.5rem 0;}}
+/* sc-component-id: Paragraph-k859h4-0 */
+.Kskll{font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.Kskll{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.Kskll{font-size:1rem;line-height:1.75rem;}}
+/* sc-component-id: VisuallyHiddenText-sc-1yjwwa5-0 */
+.jFfEvX{-webkit-clip-path:inset(100%);clip-path:inset(100%);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}
+/* sc-component-id: MenuIcon-sc-1nq0eki-0 */
+.gKIQph{color:#fff;fill:currentColor;}
+/* sc-component-id: StyledImg-sc-7vx2mr-0 */
+.hIxkbt{display:block;width:100%;visibility:visible;}
+/* sc-component-id: StyledWrapper-sc-1pnftlt-0 */
+.jywlaE{position:absolute;top:0;left:0;width:100%;height:100%;}
+/* sc-component-id: MessageWrapper-sc-1pnftlt-1 */
+.ktBRKg{font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;top:0;left:0;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34,34,34,0.75);} @media (min-width:37.5rem){.ktBRKg{font-size:0.875rem;}} @media screen and (-ms-high-contrast:active){.ktBRKg{background-color:transparent;}}
+/* sc-component-id: StyledMessage-sc-1pnftlt-2 */
+.iRlUPR{display:block;font-weight:normal;bottom:0;position:absolute;padding:0.5rem;border-bottom:0.0625rem solid transparent;} @media screen and (-ms-high-contrast:active){.iRlUPR{background-color:window;}} @media (min-width:25rem){.iRlUPR{padding:1rem;}}
+/* sc-component-id: StyledAudioContainer-sc-13p1a4d-1 */
+.fmBvXq{height:165px;position:relative;overflow:hidden;margin-bottom:1rem;} @media (min-width:63rem){.fmBvXq{margin-bottom:2rem;}}
+/* sc-component-id: GridComponent-nf79gm-0 */
+@media (max-width:14.9375rem){} @media (min-width:15rem) and (max-width:24.9375rem){} @media (min-width:25rem) and (max-width:37.4375rem){} @media (min-width:37.5rem) and (max-width:62.9375rem){} @media (min-width:63rem) and (max-width:79.9375rem){} @media (min-width:80rem){} @supports (display:grid){.iakllL{display:grid;position:initial;}@media (max-width:14.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:0.5rem;}}@media (min-width:15rem) and (max-width:24.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:0.5rem;}}@media (min-width:25rem) and (max-width:37.4375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:0.5rem;}}@media (min-width:37.5rem) and (max-width:62.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:1rem;}}@media (min-width:63rem) and (max-width:79.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(8,1fr);grid-column-end:span 8;grid-column-gap:1rem;}}@media (min-width:80rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(20,1fr);grid-column-end:span 20;grid-column-gap:1rem;}}}@media (max-width:14.9375rem){.kMhoTR{padding:0 0.5rem;width:calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);margin:0 0.25rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:15rem) and (max-width:24.9375rem){.kMhoTR{padding:0 0.5rem;width:calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);margin:0 0.25rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:25rem) and (max-width:37.4375rem){.kMhoTR{padding:0 1rem;width:calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);margin:0 0.25rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:37.5rem) and (max-width:62.9375rem){.kMhoTR{padding:0 1rem;width:calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);margin:0 0.5rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:63rem) and (max-width:79.9375rem){.kMhoTR{width:calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );margin:0 0.5rem;margin-left:12.5%;display:inline-block;vertical-align:top;}} @media (min-width:80rem){.kMhoTR{width:calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );margin:0 0.5rem;margin-left:20%;display:inline-block;vertical-align:top;}} @supports (display:grid){.kMhoTR{display:block;}@media (max-width:14.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 0.5rem;grid-column-start:1;}}@media (min-width:15rem) and (max-width:24.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 0.5rem;grid-column-start:1;}}@media (min-width:25rem) and (max-width:37.4375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 1rem;grid-column-start:1;}}@media (min-width:37.5rem) and (max-width:62.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 1rem;grid-column-start:1;}}@media (min-width:63rem) and (max-width:79.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-start:2;}}@media (min-width:80rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(12,1fr);grid-column-end:span 12;grid-column-start:5;}}}
+/* sc-component-id: MediaPlayerOuterWrapper-sc-1hns5mj-0 */
+@media (min-width:63rem){.hdCRkd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}}
+/* sc-component-id: MediaPlayerInnerWrapper-sc-1hns5mj-1 */
+.cfTqqs{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:50rem;max-width:calc(100vw - 2rem);}
+/* sc-component-id: sc-global-954647048 */
+html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{display:block;} h1{font-size:2em;margin:0.67em 0;} hr{box-sizing:content-box;height:0;overflow:visible;} pre{font-family:monospace,monospace;font-size:1em;} a{background-color:transparent;} abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;} b,strong{font-weight:bolder;} code,kbd,samp{font-family:monospace,monospace;font-size:1em;} small{font-size:80%;} sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;} sub{bottom:-0.25em;} sup{top:-0.5em;} img{border-style:none;} button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;} button,input{overflow:visible;} button,select{text-transform:none;} button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;} button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;} button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText;} fieldset{padding:0.35em 0.75em 0.625em;} legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;} progress{vertical-align:baseline;} textarea{overflow:auto;} [type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;} [type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;} [type="search"]{-webkit-appearance:textfield;outline-offset:-2px;} [type="search"]::-webkit-search-decoration{-webkit-appearance:none;} ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;} details{display:block;} summary{display:list-item;} template{display:none;} [hidden]{display:none;} html{box-sizing:border-box;font-size:100%;} *,*:before,*:after{box-sizing:inherit;}
+/* sc-component-id: SkipLink-wmpyxz-0 */
+.dUSIGf{position:absolute;-webkit-clip-path:inset(100%);clip-path:inset(100%);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;padding:0.75rem 0.5rem;background-color:#FFFFFF;border:0.1875rem solid #000;color:#333;-webkit-text-decoration:none;text-decoration:none;font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;} @media (min-width:20rem) and (max-width:37.4375rem){.dUSIGf{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.dUSIGf{font-size:1rem;line-height:1.75rem;}} .dUSIGf:focus{-webkit-clip-path:none;clip-path:none;-webkit-clip:auto;clip:auto;height:auto;width:auto;top:0;left:0;} @media (min-width:25rem){.dUSIGf:focus{top:0.5rem;}} @media (max-width:37.4375rem){.dUSIGf{padding:0.5rem;}}
+/* sc-component-id: SvgWrapper-m3awbo-0 */
+.dPXtDJ{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:80rem;margin:0 auto;} @media (max-width:14.9375rem){.dPXtDJ{display:block;}}
+/* sc-component-id: Banner-m3awbo-1 */
+.fDRnKv{background-color:#B80000;min-height:2.5rem;width:100%;padding:0 0.5rem;border-bottom:0.0625rem solid transparent;} @media (min-width:25rem){.fDRnKv{min-height:3.25rem;padding:0 1rem;}} @media (max-width:14.9375rem){}.gpxnCd{background-color:#B80000;min-height:2.5rem;width:100%;padding:0 0.5rem;border-top:0.0625rem solid transparent;} @media (min-width:25rem){.gpxnCd{min-height:3.25rem;padding:0 1rem;}} @media (max-width:14.9375rem){}
+/* sc-component-id: StyledLink-m3awbo-2 */
+.cUhFgi{display:inline-block;width:100%;max-width:14.5632rem;min-width:9.7088rem;-webkit-flex:1 1 9.7088rem;-ms-flex:1 1 9.7088rem;flex:1 1 9.7088rem;-ms-flex-preferred-size:14.5632rem;} @media (max-width:14.9375rem){.cUhFgi{display:block;}}
+/* sc-component-id: BrandSvg-m3awbo-3 */
+.gTUCvL{box-sizing:content-box;color:#FFFFFF;fill:currentColor;padding-top:0.625rem;padding-bottom:0.375rem;height:1.5rem;width:100%;max-width:14.5632rem;min-width:9.7088rem;-webkit-flex:1 1 9.7088rem;-ms-flex:1 1 9.7088rem;flex:1 1 9.7088rem;-ms-flex-preferred-size:14.5632rem;} @media (min-width:25rem){.gTUCvL{padding-top:1rem;padding-bottom:0.75rem;}} @media (min-width:37.5rem){.gTUCvL{padding-top:1.25rem;padding-bottom:1rem;}} @media screen and (-ms-high-contrast:active),print{.gTUCvL{fill:windowText;}} .StyledLink-m3awbo-2:hover .gTUCvL,.StyledLink-m3awbo-2:focus .gTUCvL{-webkit-text-decoration:none;text-decoration:none;border-bottom:0.25rem solid #FFFFFF;margin-bottom:-0.25rem;}
+/* sc-component-id: AmpDropdown-ukxuly-1 */
+.dMLYwY{background-color:#222222;clear:both;} @media (min-width:37.5rem){.dMLYwY{display:none;visibility:hidden;}}
+/* sc-component-id: DropdownUl-ukxuly-2 */
+.louIo{list-style-type:none;margin:0;padding:0 0.5rem;border-bottom:0.125rem solid #3F3F42;}
+/* sc-component-id: StyledDropdownLi-ukxuly-3 */
+.dIsymM{padding:0.75rem 0;border-bottom:0.0625rem solid #3F3F42;} .dIsymM:last-child{padding-bottom:1rem;border:0;}
+/* sc-component-id: StyledDropdownLink-ukxuly-4 */
+.aqqdZ{font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;color:#FFFFFF;-webkit-text-decoration:none;text-decoration:none;} @media (min-width:20rem) and (max-width:37.4375rem){.aqqdZ{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.aqqdZ{font-size:1rem;line-height:1.75rem;}} .aqqdZ:hover,.aqqdZ:focus{-webkit-text-decoration:underline;text-decoration:underline;}
+/* sc-component-id: MenuButton-ukxuly-6 */
+.gAGcRq{position:relative;padding:0;margin:0;background-color:transparent;border:0;float:left;height:2.875rem;width:2.875rem;} .gAGcRq:hover,.gAGcRq:focus{cursor:pointer;box-shadow:inset 0 0 0 0.25rem #FFFFFF;} .gAGcRq:hover::after,.gAGcRq:focus::after{content:'';position:absolute;left:0;right:0;bottom:0;top:0;border:0.25rem solid #FFFFFF;} @media (min-width:37.5rem){.gAGcRq{display:none;visibility:hidden;}} @media (min-width:20rem){.gAGcRq{height:3rem;width:3rem;}} .gAGcRq svg{vertical-align:middle;}
+/* sc-component-id: NavWrapper-sc-158x7z5-0 */
+.ermFdP{position:relative;max-width:80rem;margin:0 auto;}
+/* sc-component-id: StyledUnorderedList-sc-158x7z5-1 */
+.ckFfoH{list-style-type:none;padding:0;margin:0;position:relative;} @media (min-width:37.5rem){.ckFfoH{overflow:hidden;}}
+/* sc-component-id: StyledLink-sc-158x7z5-2 */
+.gvYbSn{font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;color:#FDFDFD;cursor:pointer;-webkit-text-decoration:none;text-decoration:none;display:inline-block;padding:0.75rem;} @media (min-width:20rem) and (max-width:37.4375rem){.gvYbSn{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.gvYbSn{font-size:1rem;line-height:1.75rem;}} @media (max-width:37.4375rem){.gvYbSn{padding:0.75rem 0.5rem;}} .gvYbSn:hover::after{content:'';position:absolute;left:0;right:0;bottom:0;border-bottom:0.25rem solid #FFFFFF;} .gvYbSn:focus::after{content:'';position:absolute;left:0;right:0;bottom:0;border-bottom:0.25rem solid #FFFFFF;top:0;border:0.25rem solid #FFFFFF;}
+/* sc-component-id: StyledListItem-sc-158x7z5-3 */
+.COeze{display:inline-block;position:relative;z-index:2;} @media (max-width:37.4375rem){.COeze:last-child{margin-right:3rem;}} @media (min-width:37.5rem){.COeze::after{content:'';position:absolute;bottom:0;width:80rem;border-bottom:0.0625rem solid #eab3b3;z-index:-1;}}
+/* sc-component-id: StyledNav-sc-158x7z5-5 */
+.jTxPjl{position:relative;background-color:#B80000;border-top:0.0625rem solid #FFFFFF;} @media (max-width:37.4375rem){.jTxPjl.si-nav-open{background-color:#222222;}} .jTxPjl .StyledListItem-sc-158x7z5-3::after{left:0;}
+/* sc-component-id: StyledScrollableNav-sc-1nc6e54-0 */
+@media (max-width:37.4375rem){.hGNZJz{white-space:nowrap;overflow-x:scroll;-webkit-scroll-behavior:auto;-moz-scroll-behavior:auto;-ms-scroll-behavior:auto;scroll-behavior:auto;-webkit-overflow-scrolling:touch;-webkit-scrollbar-width:none;-moz-scrollbar-width:none;-ms-scrollbar-width:none;scrollbar-width:none;-ms-overflow-style:none;}.hGNZJz::-webkit-scrollbar{display:none;}.hGNZJz:after{content:' ';height:100%;width:3rem;position:absolute;right:0;bottom:0;z-index:3;overflow:hidden;pointer-events:none;background:linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );}@media (min-width:25rem){.hGNZJz:after{width:6rem;}}}
+/* sc-component-id: StyledAmpScrollableNavigation-thcau0-0 */
+@media (max-width:37.4375rem){.eHufvQ.si-nav-scrollable-hidden{display:none;visibility:hidden;}}
+/* sc-component-id: Wrapper-sc-7g3fro-0 */
+.bBwfkj{font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;background-color:#323232;padding:1rem 0.5rem;} @media (min-width:25rem){.bBwfkj{padding:1rem;}}
+/* sc-component-id: CenterWrapper-sc-7g3fro-1 */
+.ggwfud{max-width:80rem;margin:0 auto;} .ggwfud::after{content:'\\0020';display:block;height:0;clear:both;overflow:hidden;visibility:hidden;}
+/* sc-component-id: Title-sc-7g3fro-2 */
+.bTxfUP{font-size:1rem;line-height:1.375rem;color:#FFFFFF;font-weight:700;padding:0;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.bTxfUP{font-size:1.125rem;line-height:1.625rem;}} @media (min-width:37.5rem){.bTxfUP{font-size:1.25rem;line-height:1.5rem;}} @media (min-width:37.5rem){.bTxfUP{float:left;margin-right:3.5%;width:22%;}}
+/* sc-component-id: Options-sc-7g3fro-3 */
+.iOCwEu{font-size:0.9375rem;line-height:1.25rem;color:#F6A21D;font-weight:600;padding:0;margin:0;list-style-type:none;} @media (min-width:20rem) and (max-width:37.4375rem){.iOCwEu{font-size:0.9375rem;line-height:1.25rem;}} @media (min-width:37.5rem){.iOCwEu{font-size:0.9375rem;line-height:1.25rem;}} .iOCwEu li + li{padding-top:0.5rem;} @media (min-width:37.5rem){.iOCwEu{width:18%;float:right;}}
+/* sc-component-id: ConsentBannerText-sc-7g3fro-4 */
+.keksKX{font-size:0.9375rem;line-height:1.25rem;color:#BEBEBE;} @media (min-width:20rem) and (max-width:37.4375rem){.keksKX{font-size:0.9375rem;line-height:1.25rem;}} @media (min-width:37.5rem){.keksKX{font-size:0.9375rem;line-height:1.25rem;}} @media (min-width:37.5rem){.keksKX{margin:0;float:left;width:53%;}} .keksKX a{color:#F6A21D;-webkit-text-decoration:none;text-decoration:none;} .keksKX a:focus,.keksKX a:hover{color:#FFFFFF;}
+/* sc-component-id: ListItem-sc-7g3fro-5 */
+.dguCpL button{font-size:1rem;line-height:1.375rem;color:#F6A21D;font-weight:700;background:none;border:none;padding:0;margin:0;cursor:pointer;} @media (min-width:20rem) and (max-width:37.4375rem){.dguCpL button{font-size:1.125rem;line-height:1.625rem;}} @media (min-width:37.5rem){.dguCpL button{font-size:1.25rem;line-height:1.5rem;}} .dguCpL button:focus,.dguCpL button:hover{color:#FFFFFF;} .dguCpL a{color:#F6A21D;-webkit-text-decoration:none;text-decoration:none;} .dguCpL a:focus,.dguCpL a:hover{color:#FFFFFF;}
+/* sc-component-id: AmpConsentWrapper-sc-18egs7-0 */
+.bfTTJR amp-consent{position:static;display:block;}
+/* sc-component-id: StyledLink-nhmg8j-0 */
+.dHbSzF{padding:0.5rem 0 0.5rem;color:#FFFFFF;font-weight:700;-webkit-text-decoration:none;text-decoration:none;display:block;}.jHQlUp{padding:0.5rem 0 0.5rem;color:#FFFFFF;font-weight:700;-webkit-text-decoration:none;text-decoration:none;display:inline;}
+/* sc-component-id: StyleLinkText-nhmg8j-1 */
+.StyledLink-nhmg8j-0:hover .fPnERB,.StyledLink-nhmg8j-0:focus .fPnERB{-webkit-text-decoration:underline;text-decoration:underline;}
+/* sc-component-id: StyledList-sc-2e1ekc-0 */
+.gRKcvt{border-bottom:0.0625rem solid #3F3F42;list-style-type:none;margin:0;padding:0 0 0.5rem;-webkit-column-count:4;column-count:4;} @supports (grid-template-columns:fit-content(200px)){.gRKcvt{display:grid;grid-auto-flow:column;}} @media (max-width:14.9375rem){.gRKcvt{grid-auto-flow:row;-webkit-column-count:1;column-count:1;}} @media (min-width:15rem) and (max-width:37.4375rem){.gRKcvt{grid-column-gap:0.5rem;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat( 4,auto );-webkit-column-count:2;column-count:2;}} @media (min-width:37.5rem) and (max-width:62.9375rem){.gRKcvt{grid-column-gap:1rem;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat( 3,auto );-webkit-column-count:3;column-count:3;}} @media (min-width:63rem) and (max-width:79.9375rem){.gRKcvt{grid-column-gap:1rem;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat( 3,auto );-webkit-column-count:4;column-count:4;}} @media (min-width:80rem){.gRKcvt{grid-column-gap:1rem;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat( 3,auto );-webkit-column-count:5;column-count:5;}} .gRKcvt > li:first-child{border-bottom:0.0625rem solid #3F3F42;padding:0.5rem 0;margin-bottom:0.5rem;grid-column:1/-1;width:100%;-webkit-column-span:all;column-span:all;}
+/* sc-component-id: StyledListItem-sc-2e1ekc-1 */
+.kUOQdM{min-width:50%;-webkit-column-gap:1rem;column-gap:1rem;-webkit-break-inside:avoid-column;break-inside:avoid-column;}
+/* sc-component-id: SitewideLinksWrapper-sc-1gggobt-0 */
+.kzZWAD{background-color:#222222;font-size:0.875rem;line-height:1rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;} @media (max-width:25rem){.kzZWAD{padding:0 0.5rem;}} @media (min-width:25rem){.kzZWAD{padding:0 1rem;}} @media (min-width:20rem) and (max-width:37.4375rem){.kzZWAD{line-height:1.125rem;}} @media (min-width:37.5rem){.kzZWAD{font-size:0.8125rem;}}
+/* sc-component-id: ConstrainedWrapper-sc-1gggobt-1 */
+.bpERjU{max-width:80rem;margin:0 auto;padding-top:0.5rem);}
+/* sc-component-id: StyledParagraph-sc-1gggobt-2 */
+.jQPFnr{color:#FFFFFF;margin:0;padding:1rem 0;}
+/* sc-component-id: StyledGelPageGrid-sc-1539sby-0 */
+.fIPmtH{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;} @media (min-width:63rem) and (max-width:79.9375rem){.fIPmtH{margin:0 auto;max-width:63rem;}} @media (min-width:80rem){.fIPmtH{margin:0 auto;max-width:80rem;}}
+/* sc-component-id: StyledDiv-sc-1dngwtn-0 */
+.riLLS{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FDFDFD;}
+    </style>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/bbc_korean_radio/liveradio","name":"BBC 코리아 라디오"}}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 bBwfkj"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    개인정보와 쿠키 처리방침을 변경했습니다
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        알겠습니다
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        변경사항을 확인하세요
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 bBwfkj"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    쿠키생성에 동의하시나요
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    BBC는 이용자의 최적의 온라인 경험을 위해
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      쿠키
+                    </a>
+                    정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        네, 동의합니다
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        아니요, 재 세팅 하겠습니다
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 dUSIGf"
+            >
+              내용으로 건너뛰기
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                섹션
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=57&p=korean.bbc_korean_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_korean_radio]&x2=[amp]&x3=[news-korean]&x4=[ko]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC+코리아+라디오+-+BBC+News+코리아]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            dir="ltr"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 kMhoTR"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 krtLLo"
+          >
+            BBC 코리아 라디오
+          </h1>
+          <p class="Paragraph-k859h4-0 Kskll">
+            세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다
+          </p>
+          <div class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd">
+            <div class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"
+                            title="Audio player"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img layout="fill"
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img alt
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          This audio cannot play in your browser. Please enable Javascript or try a different browser.
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-49283197"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News를 신뢰할 수 있는 이유
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    이용 약관
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC 소개
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    개인정보취급방침
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    쿠키정책
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-42224941"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    고객센터
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Given I am on the Korean live radio page AMP/Canonical When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ko"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ko-KO"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="BBC 코리아 라디오 - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/korean/bbc_korean_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="BBC 코리아 라디오 - BBC News 코리아"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      BBC 코리아 라디오 - BBC News 코리아
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/korean/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/korean/bbc_korean_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/korean/bbc_korean_radio/liveradio.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <style data-styled="riLLS  fDRnKv gpxnCd dPXtDJ cUhFgi gTUCvL jFfEvX dUSIGf dWucaK ermFdP UDeIc gAGcRq gKIQph hGNZJz ckFfoH COeze gvYbSn NlGZD louIo dIsymM aqqdZ fIPmtH iakllL kMhoTR krtLLo Kskll hdCRkd cfTqqs fmBvXq dIyDYU jywlaE ktBRKg iRlUPR kzZWAD bpERjU gRKcvt kUOQdM dHbSzF jHQlUp fPnERB jQPFnr"
+           data-styled-version="4.4.1"
+    >
+      /* sc-component-id: Headline-sc-1kh1qhu-0 */
+.krtLLo{font-size:1.75rem;line-height:2rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:700;font-style:normal;color:#3F3F42;display:block;margin:0;padding:2rem 0;} @media (min-width:20rem) and (max-width:37.4375rem){.krtLLo{font-size:2rem;line-height:2.625rem;}} @media (min-width:37.5rem){.krtLLo{font-size:2.75rem;line-height:3.625rem;}} @media (min-width:37.5rem){.krtLLo{padding:2.5rem 0;}}
+/* sc-component-id: Paragraph-k859h4-0 */
+.Kskll{font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;color:#3F3F42;padding-bottom:1.5rem;margin:0;} @media (min-width:20rem) and (max-width:37.4375rem){.Kskll{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.Kskll{font-size:1rem;line-height:1.75rem;}}
+/* sc-component-id: VisuallyHiddenText-sc-1yjwwa5-0 */
+.jFfEvX{-webkit-clip-path:inset(100%);clip-path:inset(100%);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px;margin:0;}
+/* sc-component-id: MenuIcon-sc-1nq0eki-0 */
+.gKIQph{color:#fff;fill:currentColor;}
+/* sc-component-id: StyledWrapper-sc-1pnftlt-0 */
+.jywlaE{position:absolute;top:0;left:0;width:100%;height:100%;}
+/* sc-component-id: MessageWrapper-sc-1pnftlt-1 */
+.ktBRKg{font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;font-size:0.9375rem;line-height:1.125rem;width:100%;height:100%;position:absolute;top:0;left:0;border:0.0625rem solid transparent;color:#FFFFFF;background-color:rgba(34,34,34,0.75);} @media (min-width:37.5rem){.ktBRKg{font-size:0.875rem;}} @media screen and (-ms-high-contrast:active){.ktBRKg{background-color:transparent;}}
+/* sc-component-id: StyledMessage-sc-1pnftlt-2 */
+.iRlUPR{display:block;font-weight:normal;bottom:0;position:absolute;padding:0.5rem;border-bottom:0.0625rem solid transparent;} @media screen and (-ms-high-contrast:active){.iRlUPR{background-color:window;}} @media (min-width:25rem){.iRlUPR{padding:1rem;}}
+/* sc-component-id: StyledAudioContainer-sc-13p1a4d-1 */
+.fmBvXq{height:165px;position:relative;overflow:hidden;margin-bottom:1rem;} @media (min-width:63rem){.fmBvXq{margin-bottom:2rem;}}
+/* sc-component-id: GridComponent-nf79gm-0 */
+@media (max-width:14.9375rem){} @media (min-width:15rem) and (max-width:24.9375rem){} @media (min-width:25rem) and (max-width:37.4375rem){} @media (min-width:37.5rem) and (max-width:62.9375rem){} @media (min-width:63rem) and (max-width:79.9375rem){} @media (min-width:80rem){} @supports (display:grid){.iakllL{display:grid;position:initial;}@media (max-width:14.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:0.5rem;}}@media (min-width:15rem) and (max-width:24.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:0.5rem;}}@media (min-width:25rem) and (max-width:37.4375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:0.5rem;}}@media (min-width:37.5rem) and (max-width:62.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-gap:1rem;}}@media (min-width:63rem) and (max-width:79.9375rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(8,1fr);grid-column-end:span 8;grid-column-gap:1rem;}}@media (min-width:80rem){.iakllL{width:initial;margin:0;grid-template-columns:repeat(20,1fr);grid-column-end:span 20;grid-column-gap:1rem;}}}@media (max-width:14.9375rem){.kMhoTR{padding:0 0.5rem;width:calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);margin:0 0.25rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:15rem) and (max-width:24.9375rem){.kMhoTR{padding:0 0.5rem;width:calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);margin:0 0.25rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:25rem) and (max-width:37.4375rem){.kMhoTR{padding:0 1rem;width:calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);margin:0 0.25rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:37.5rem) and (max-width:62.9375rem){.kMhoTR{padding:0 1rem;width:calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);margin:0 0.5rem;margin-left:0%;display:inline-block;vertical-align:top;}} @media (min-width:63rem) and (max-width:79.9375rem){.kMhoTR{width:calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );margin:0 0.5rem;margin-left:12.5%;display:inline-block;vertical-align:top;}} @media (min-width:80rem){.kMhoTR{width:calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );margin:0 0.5rem;margin-left:20%;display:inline-block;vertical-align:top;}} @supports (display:grid){.kMhoTR{display:block;}@media (max-width:14.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 0.5rem;grid-column-start:1;}}@media (min-width:15rem) and (max-width:24.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 0.5rem;grid-column-start:1;}}@media (min-width:25rem) and (max-width:37.4375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 1rem;grid-column-start:1;}}@media (min-width:37.5rem) and (max-width:62.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;padding:0 1rem;grid-column-start:1;}}@media (min-width:63rem) and (max-width:79.9375rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(6,1fr);grid-column-end:span 6;grid-column-start:2;}}@media (min-width:80rem){.kMhoTR{width:initial;margin:0;grid-template-columns:repeat(12,1fr);grid-column-end:span 12;grid-column-start:5;}}}
+/* sc-component-id: MediaPlayerOuterWrapper-sc-1hns5mj-0 */
+@media (min-width:63rem){.hdCRkd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}}
+/* sc-component-id: MediaPlayerInnerWrapper-sc-1hns5mj-1 */
+.cfTqqs{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:50rem;max-width:calc(100vw - 2rem);}
+/* sc-component-id: sc-global-954647048 */
+html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{display:block;} h1{font-size:2em;margin:0.67em 0;} hr{box-sizing:content-box;height:0;overflow:visible;} pre{font-family:monospace,monospace;font-size:1em;} a{background-color:transparent;} abbr[title]{border-bottom:none;-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;} b,strong{font-weight:bolder;} code,kbd,samp{font-family:monospace,monospace;font-size:1em;} small{font-size:80%;} sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;} sub{bottom:-0.25em;} sup{top:-0.5em;} img{border-style:none;} button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;} button,input{overflow:visible;} button,select{text-transform:none;} button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;} button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0;} button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText;} fieldset{padding:0.35em 0.75em 0.625em;} legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal;} progress{vertical-align:baseline;} textarea{overflow:auto;} [type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0;} [type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;} [type="search"]{-webkit-appearance:textfield;outline-offset:-2px;} [type="search"]::-webkit-search-decoration{-webkit-appearance:none;} ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit;} details{display:block;} summary{display:list-item;} template{display:none;} [hidden]{display:none;} html{box-sizing:border-box;font-size:100%;} *,*:before,*:after{box-sizing:inherit;}
+/* sc-component-id: SkipLink-wmpyxz-0 */
+.dUSIGf{position:absolute;-webkit-clip-path:inset(100%);clip-path:inset(100%);-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;padding:0.75rem 0.5rem;background-color:#FFFFFF;border:0.1875rem solid #000;color:#333;-webkit-text-decoration:none;text-decoration:none;font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;} @media (min-width:20rem) and (max-width:37.4375rem){.dUSIGf{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.dUSIGf{font-size:1rem;line-height:1.75rem;}} .dUSIGf:focus{-webkit-clip-path:none;clip-path:none;-webkit-clip:auto;clip:auto;height:auto;width:auto;top:0;left:0;} @media (min-width:25rem){.dUSIGf:focus{top:0.5rem;}} @media (max-width:37.4375rem){.dUSIGf{padding:0.5rem;}}
+/* sc-component-id: SvgWrapper-m3awbo-0 */
+.dPXtDJ{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;max-width:80rem;margin:0 auto;} @media (max-width:14.9375rem){.dPXtDJ{display:block;}}
+/* sc-component-id: Banner-m3awbo-1 */
+.fDRnKv{background-color:#B80000;min-height:2.5rem;width:100%;padding:0 0.5rem;border-bottom:0.0625rem solid transparent;} @media (min-width:25rem){.fDRnKv{min-height:3.25rem;padding:0 1rem;}} @media (max-width:14.9375rem){}.gpxnCd{background-color:#B80000;min-height:2.5rem;width:100%;padding:0 0.5rem;border-top:0.0625rem solid transparent;} @media (min-width:25rem){.gpxnCd{min-height:3.25rem;padding:0 1rem;}} @media (max-width:14.9375rem){}
+/* sc-component-id: StyledLink-m3awbo-2 */
+.cUhFgi{display:inline-block;width:100%;max-width:14.5632rem;min-width:9.7088rem;-webkit-flex:1 1 9.7088rem;-ms-flex:1 1 9.7088rem;flex:1 1 9.7088rem;-ms-flex-preferred-size:14.5632rem;} @media (max-width:14.9375rem){.cUhFgi{display:block;}}
+/* sc-component-id: BrandSvg-m3awbo-3 */
+.gTUCvL{box-sizing:content-box;color:#FFFFFF;fill:currentColor;padding-top:0.625rem;padding-bottom:0.375rem;height:1.5rem;width:100%;max-width:14.5632rem;min-width:9.7088rem;-webkit-flex:1 1 9.7088rem;-ms-flex:1 1 9.7088rem;flex:1 1 9.7088rem;-ms-flex-preferred-size:14.5632rem;} @media (min-width:25rem){.gTUCvL{padding-top:1rem;padding-bottom:0.75rem;}} @media (min-width:37.5rem){.gTUCvL{padding-top:1.25rem;padding-bottom:1rem;}} @media screen and (-ms-high-contrast:active),print{.gTUCvL{fill:windowText;}} .StyledLink-m3awbo-2:hover .gTUCvL,.StyledLink-m3awbo-2:focus .gTUCvL{-webkit-text-decoration:none;text-decoration:none;border-bottom:0.25rem solid #FFFFFF;margin-bottom:-0.25rem;}
+/* sc-component-id: StyledDropdown-ukxuly-0 */
+.NlGZD{background-color:#222222;clear:both;overflow:hidden;height:0;-webkit-transition:all 0.2s ease-out;transition:all 0.2s ease-out;-webkit-transition-timing-function:cubic-bezier(0,0,0.58,1);transition-timing-function:cubic-bezier(0,0,0.58,1);visibility:hidden;} @media (min-width:37.5rem){.NlGZD{display:none;visibility:hidden;}} @media (prefers-reduced-motion:reduce){.NlGZD{-webkit-transition:none;transition:none;}}
+/* sc-component-id: DropdownUl-ukxuly-2 */
+.louIo{list-style-type:none;margin:0;padding:0 0.5rem;border-bottom:0.125rem solid #3F3F42;}
+/* sc-component-id: StyledDropdownLi-ukxuly-3 */
+.dIsymM{padding:0.75rem 0;border-bottom:0.0625rem solid #3F3F42;} .dIsymM:last-child{padding-bottom:1rem;border:0;}
+/* sc-component-id: StyledDropdownLink-ukxuly-4 */
+.aqqdZ{font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;color:#FFFFFF;-webkit-text-decoration:none;text-decoration:none;} @media (min-width:20rem) and (max-width:37.4375rem){.aqqdZ{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.aqqdZ{font-size:1rem;line-height:1.75rem;}} .aqqdZ:hover,.aqqdZ:focus{-webkit-text-decoration:underline;text-decoration:underline;}
+/* sc-component-id: MenuButton-ukxuly-6 */
+.gAGcRq{position:relative;padding:0;margin:0;background-color:transparent;border:0;float:left;height:2.875rem;width:2.875rem;} .gAGcRq:hover,.gAGcRq:focus{cursor:pointer;box-shadow:inset 0 0 0 0.25rem #FFFFFF;} .gAGcRq:hover::after,.gAGcRq:focus::after{content:'';position:absolute;left:0;right:0;bottom:0;top:0;border:0.25rem solid #FFFFFF;} @media (min-width:37.5rem){.gAGcRq{display:none;visibility:hidden;}} @media (min-width:20rem){.gAGcRq{height:3rem;width:3rem;}} .gAGcRq svg{vertical-align:middle;}
+/* sc-component-id: NavWrapper-sc-158x7z5-0 */
+.ermFdP{position:relative;max-width:80rem;margin:0 auto;}
+/* sc-component-id: StyledUnorderedList-sc-158x7z5-1 */
+.ckFfoH{list-style-type:none;padding:0;margin:0;position:relative;} @media (min-width:37.5rem){.ckFfoH{overflow:hidden;}}
+/* sc-component-id: StyledLink-sc-158x7z5-2 */
+.gvYbSn{font-size:1rem;line-height:1.375rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;color:#FDFDFD;cursor:pointer;-webkit-text-decoration:none;text-decoration:none;display:inline-block;padding:0.75rem;} @media (min-width:20rem) and (max-width:37.4375rem){.gvYbSn{font-size:1rem;line-height:1.5rem;}} @media (min-width:37.5rem){.gvYbSn{font-size:1rem;line-height:1.75rem;}} @media (max-width:37.4375rem){.gvYbSn{padding:0.75rem 0.5rem;}} .gvYbSn:hover::after{content:'';position:absolute;left:0;right:0;bottom:0;border-bottom:0.25rem solid #FFFFFF;} .gvYbSn:focus::after{content:'';position:absolute;left:0;right:0;bottom:0;border-bottom:0.25rem solid #FFFFFF;top:0;border:0.25rem solid #FFFFFF;}
+/* sc-component-id: StyledListItem-sc-158x7z5-3 */
+.COeze{display:inline-block;position:relative;z-index:2;} @media (max-width:37.4375rem){.COeze:last-child{margin-right:3rem;}} @media (min-width:37.5rem){.COeze::after{content:'';position:absolute;bottom:0;width:80rem;border-bottom:0.0625rem solid #eab3b3;z-index:-1;}}
+/* sc-component-id: StyledNav-sc-158x7z5-5 */
+.dWucaK{position:relative;background-color:#B80000;border-top:0.0625rem solid #FFFFFF;} .dWucaK .StyledListItem-sc-158x7z5-3::after{left:0;}
+/* sc-component-id: StyledScrollableNav-sc-1nc6e54-0 */
+@media (max-width:37.4375rem){.hGNZJz{white-space:nowrap;overflow-x:scroll;-webkit-scroll-behavior:auto;-moz-scroll-behavior:auto;-ms-scroll-behavior:auto;scroll-behavior:auto;-webkit-overflow-scrolling:touch;-webkit-scrollbar-width:none;-moz-scrollbar-width:none;-ms-scrollbar-width:none;scrollbar-width:none;-ms-overflow-style:none;}.hGNZJz::-webkit-scrollbar{display:none;}.hGNZJz:after{content:' ';height:100%;width:3rem;position:absolute;right:0;bottom:0;z-index:3;overflow:hidden;pointer-events:none;background:linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );}@media (min-width:25rem){.hGNZJz:after{width:6rem;}}}
+/* sc-component-id: ScrollableWrapper-t4argr-0 */
+.UDeIc{position:relative;}
+/* sc-component-id: StyledLink-nhmg8j-0 */
+.dHbSzF{padding:0.5rem 0 0.5rem;color:#FFFFFF;font-weight:700;-webkit-text-decoration:none;text-decoration:none;display:block;}.jHQlUp{padding:0.5rem 0 0.5rem;color:#FFFFFF;font-weight:700;-webkit-text-decoration:none;text-decoration:none;display:inline;}
+/* sc-component-id: StyleLinkText-nhmg8j-1 */
+.StyledLink-nhmg8j-0:hover .fPnERB,.StyledLink-nhmg8j-0:focus .fPnERB{-webkit-text-decoration:underline;text-decoration:underline;}
+/* sc-component-id: StyledList-sc-2e1ekc-0 */
+.gRKcvt{border-bottom:0.0625rem solid #3F3F42;list-style-type:none;margin:0;padding:0 0 0.5rem;-webkit-column-count:4;column-count:4;} @supports (grid-template-columns:fit-content(200px)){.gRKcvt{display:grid;grid-auto-flow:column;}} @media (max-width:14.9375rem){.gRKcvt{grid-auto-flow:row;-webkit-column-count:1;column-count:1;}} @media (min-width:15rem) and (max-width:37.4375rem){.gRKcvt{grid-column-gap:0.5rem;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat( 4,auto );-webkit-column-count:2;column-count:2;}} @media (min-width:37.5rem) and (max-width:62.9375rem){.gRKcvt{grid-column-gap:1rem;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat( 3,auto );-webkit-column-count:3;column-count:3;}} @media (min-width:63rem) and (max-width:79.9375rem){.gRKcvt{grid-column-gap:1rem;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat( 3,auto );-webkit-column-count:4;column-count:4;}} @media (min-width:80rem){.gRKcvt{grid-column-gap:1rem;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat( 3,auto );-webkit-column-count:5;column-count:5;}} .gRKcvt > li:first-child{border-bottom:0.0625rem solid #3F3F42;padding:0.5rem 0;margin-bottom:0.5rem;grid-column:1/-1;width:100%;-webkit-column-span:all;column-span:all;}
+/* sc-component-id: StyledListItem-sc-2e1ekc-1 */
+.kUOQdM{min-width:50%;-webkit-column-gap:1rem;column-gap:1rem;-webkit-break-inside:avoid-column;break-inside:avoid-column;}
+/* sc-component-id: SitewideLinksWrapper-sc-1gggobt-0 */
+.kzZWAD{background-color:#222222;font-size:0.875rem;line-height:1rem;font-family:"Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;font-weight:400;font-style:normal;} @media (max-width:25rem){.kzZWAD{padding:0 0.5rem;}} @media (min-width:25rem){.kzZWAD{padding:0 1rem;}} @media (min-width:20rem) and (max-width:37.4375rem){.kzZWAD{line-height:1.125rem;}} @media (min-width:37.5rem){.kzZWAD{font-size:0.8125rem;}}
+/* sc-component-id: ConstrainedWrapper-sc-1gggobt-1 */
+.bpERjU{max-width:80rem;margin:0 auto;padding-top:0.5rem);}
+/* sc-component-id: StyledParagraph-sc-1gggobt-2 */
+.jQPFnr{color:#FFFFFF;margin:0;padding:1rem 0;}
+/* sc-component-id: StyledGelPageGrid-sc-1539sby-0 */
+.fIPmtH{-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;} @media (min-width:63rem) and (max-width:79.9375rem){.fIPmtH{margin:0 auto;max-width:63rem;}} @media (min-width:80rem){.fIPmtH{margin:0 auto;max-width:80rem;}}
+/* sc-component-id: StyledDiv-sc-1dngwtn-0 */
+.riLLS{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FDFDFD;}
+/* sc-component-id: StyledIframe-fuo2ed-0 */
+.dIyDYU{border:0;left:0;overflow:hidden;position:absolute;top:0;width:100%;height:100%;}
+    </style>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/bbc_korean_radio/liveradio","name":"BBC 코리아 라디오"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 dUSIGf"
+            >
+              내용으로 건너뛰기
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  섹션
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      뉴스
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/media/video"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      비디오
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/downloads"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      다운로드
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      TOP 뉴스
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=57&amp;p=korean.bbc_korean_radio.liveradio.page&amp;x1=[urn:bbc:ares::ws_live:bbc_korean_radio]&amp;x2=[responsive]&amp;x3=[news-korean]&amp;x4=[ko]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[BBC+코리아+라디오+-+BBC+News+코리아]"
+        >
+      </noscript>
+      <main role="main"
+            dir="ltr"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 kMhoTR"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 krtLLo"
+          >
+            BBC 코리아 라디오
+          </h1>
+          <p class="Paragraph-k859h4-0 Kskll">
+            세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다
+          </p>
+          <div class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd">
+            <div class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+                        title="Audio player"
+                        allow="autoplay; fullscreen"
+                        scrolling="no"
+                        allowfullscreen
+                        class="StyledIframe-fuo2ed-0 dIyDYU"
+                >
+                </iframe>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        This audio cannot play in your browser. Please enable Javascript or try a different browser.
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-49283197"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News를 신뢰할 수 있는 이유
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    이용 약관
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC 소개
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    개인정보취급방침
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    쿠키정책
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-42224941"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    고객센터
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"BBC 코리아 라디오","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_korean_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_korean_radio"},"type":"WS-LIVE","createdBy":"korean","language":"ko","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"BBC 코리아 라디오 - BBC News 코리아","pageIdentifier":"korean.bbc_korean_radio.liveradio.page","producerId":"57","contentType":"player-live","producer":"KOREAN"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"BBC 코리아 라디오","summary":"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다","uri":"/korean/bbc_korean_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"korean","uri":"/korean","type":"simple"},"groups":[]}},"path":"/korean/bbc_korean_radio/liveradio","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [16]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.0b1e2e0d.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.d74170c1.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.e39181c3.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.66824c3d.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.e621d1aa.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.d7a5f65e.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.bdbcdbcb.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="korean"
+            src="http://localhost:7080/static/js/korean-31ecd969.956ec19f.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

@@ -14,6 +14,7 @@ import {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformanceTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on a Pidgin AMP Article page', () => {
@@ -102,5 +103,9 @@ describe('Given I am on a Pidgin Article page', () => {
       skipToContentText: 'Waka go wetin de inside',
       headlineText: 'This is the headline of this test article',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });

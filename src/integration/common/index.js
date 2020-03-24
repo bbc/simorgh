@@ -7,6 +7,7 @@ import runCommonA11yTests from './a11y';
 import runCoreAmpTests from './core.amp';
 import runCoreCanonicalTests from './core.canonical';
 import runPerformanceTests from './performance';
+import runSnapshotTests from './snapshot';
 
 export {
   runFooterTests,
@@ -18,4 +19,5 @@ export {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformanceTests,
+  runSnapshotTests,
 };

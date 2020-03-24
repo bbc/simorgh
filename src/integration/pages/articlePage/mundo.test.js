@@ -14,6 +14,7 @@ import {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformanceTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on a Mundo AMP Article page', () => {
@@ -105,5 +106,9 @@ describe('Given I am on a Mundo Article page', () => {
       skipToContentText: 'Ir al contenido',
       headlineText: 'Este es el titular de este artículo de prueba.',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });

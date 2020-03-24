@@ -14,6 +14,7 @@ import {
   runCoreCanonicalTests,
   runPerformanceTests,
   runCommonAmpAnalyticsTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on the Amharic live radio AMP page', () => {
@@ -102,5 +103,9 @@ describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
       skipToContentText: 'ወደ ዋናው ይዘት ይለፉ',
       headlineText: 'ያድምጡ',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });
