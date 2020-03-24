@@ -446,12 +446,12 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
                   <h2 dir="ltr"
                       class="Title-sc-7g3fro-2 iqsZpo"
                   >
-                    Hemos actualizado nuestra Política de Privacidad y Cookies
+                    Hemos actualizado nuestra política de privacidad y cookies
                   </h2>
                   <p dir="ltr"
                      class="ConsentBannerText-sc-7g3fro-4 kOYkDy"
                   >
-                    Hemos realizado cambios importantes en nuestra Política de Privacidad y Cookies y queremos que sepas lo que esto significa para ti y tus datos.
+                    Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.
                   </p>
                   <ul dir="ltr"
                       class="Options-sc-7g3fro-3 iZFJYN"
@@ -519,7 +519,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
                          on="tap:consent.reject"
                          data-cookie-banner="reject"
                       >
-                        No, llévame a los ajustes
+                        No, llévame a la configuración
                       </a>
                     </li>
                   </ul>
@@ -972,7 +972,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
                       >
                       <div class="MessageWrapper-sc-1pnftlt-1 dHbulA">
                         <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                          To play this content, please enable JavaScript, or try a different browser
+                          Para ver este contenido, favor activar JavaScript, o intentar con otro navegador
                         </strong>
                       </div>
                     </div>
@@ -1438,7 +1438,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
           href="/favicon.ico"
           type="image/x-icon"
     >
-    <style data-styled="riLLS  fDRnKv gpxnCd dPXtDJ ErOfj isJXNA jFfEvX bbZqWC dWucaK ermFdP UDeIc dGlJrg gKIQph hGNZJz ckFfoH COeze bIwJBN NlGZD louIo dIsymM dUsiqQ hAQCOp hgpaqH gVouae kAojgD tOkbK gJUCFc hfLVVX fkKpIa ichKJL fNqlUz dQLeqZ hIxkbt kzTJkj fvtaWN kSGFFg fVauYi dSVJxu idscKS ijtfss bpuDKK dDNqOp hqEPeM fsOOOd iYcpPO bBTuxK kwlSXK jGavfg gUVBrE cZLyLe nSlOl hDvIfz iGoLNb bpERjU gRKcvt kUOQdM dHbSzF jHQlUp fPnERB jQPFnr"
+    <style data-styled
            data-styled-version="4.4.1"
     >
       /* sc-component-id: SubHeading-sc-1kh1qhu-1 */
@@ -1556,7 +1556,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
 /* sc-component-id: StyledDiv-sc-1dngwtn-0 */
 .riLLS{min-height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#FDFDFD;}
     </style>
-    <style data-styled="eMLfYp"
+    <style data-styled
            data-styled-version="4.4.1"
     >
       /* sc-component-id: sc-keyframes-eMLfYp */
@@ -1972,13 +1972,13 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
                   <div class="GuidanceWrapper-sc-1wm6qsk-0 hqEPeM">
                     <noscript class="StyledNoScript-sc-1wm6qsk-2 fsOOOd">
                       <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO">
-                        To play this content, please enable JavaScript, or try a different browser
+                        Para ver este contenido, favor activar JavaScript, o intentar con otro navegador
                       </strong>
                     </noscript>
                   </div>
                   <button class="Button-sc-34e3rb-0 kwlSXK StyledPlayButton-sc-11nyhtu-1 bBTuxK">
                     <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                      Play video, "Indonesians Mark Eid al-Adha Amidst Earthquakes in Lombok Region", Duration 1,59
+                      Play video, "Indonesians Mark Eid al-Adha Amidst Earthquakes in Lombok Region", Duración 1,59
                     </span>
                     <div aria-hidden="true"
                          class="IconWrapper-sc-34e3rb-1 jGavfg"
@@ -2266,7 +2266,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-d0ae3f07.d7a5f65e.js"
+            src="http://localhost:7080/static/js/main-d0ae3f07.b0328da7.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2274,7 +2274,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-f71cff67.bdbcdbcb.js"
+            src="http://localhost:7080/static/js/main-f71cff67.b4cf7ca7.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2282,7 +2282,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     </script>
     <script async
             data-chunk="mundo"
-            src="http://localhost:7080/static/js/mundo-31ecd969.16ba6958.js"
+            src="http://localhost:7080/static/js/mundo-31ecd969.1836ad12.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

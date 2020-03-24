@@ -11,7 +11,15 @@ const replaceIds = html => html.replace(/"id":".+?"/gm, '"id":"mock-id"');
 const replaceUUIDs = html =>
   html.replace(/"uuid":".+?"/gm, '"uuid":"mock-uuid"');
 
-const getFixedHtml = pipe(replaceTimeOnServer, replaceIds, replaceUUIDs);
+const replaceDataStyledAttributes = html =>
+  html.replace(/data-styled=".+?"/g, 'data-styled=""');
+
+const getFixedHtml = pipe(
+  replaceTimeOnServer,
+  replaceIds,
+  replaceUUIDs,
+  replaceDataStyledAttributes,
+);
 
 export default () => {
   [amp, canonical].forEach(page => {

@@ -1590,7 +1590,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
           href="/favicon.ico"
           type="image/x-icon"
     >
-    <style data-styled="riLLS  fDRnKv gpxnCd dPXtDJ cRiIvG kxNqFm jFfEvX foxPXR dWucaK ermFdP UDeIc dGlJrg gKIQph hGNZJz ckFfoH COeze gLWckh NlGZD louIo dIsymM ikLbnY jEEgFp bsUMYC dAItxV gjgzxV hgNruo eaWWBX gVouae jsOCZS tOkbK gJUCFc hfLVVX fkKpIa ichKJL fNqlUz dQLeqZ hDvIfz bjgllj kIEFGQ fVauYi bAgcOD kVWTyt hymSIv kopXQT zkoYd kHsWph idscKS jHLqCp jJqbCR hlmzdc iLMrCu jsgdXU eZofTG dgpsiS dVBNyZ BeqZV isCYWc dqJaJG buBJys fNYKlW cinwNl dqBekx jJWtYv hSJrur yQgSu eaCWBB hVwiYk lnLoOU gccobV bpERjU gRKcvt kUOQdM dHbSzF jHQlUp fPnERB jQPFnr"
+    <style data-styled
            data-styled-version="4.4.1"
     >
       /* sc-component-id: SubHeading-sc-1kh1qhu-1 */
@@ -1732,7 +1732,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
 /* sc-component-id: ComponentWrapper-w14rad-4 */
 .lnLoOU{background:#ECEAE7;margin-bottom:1.5rem;padding:1rem;}
     </style>
-    <style data-styled="eMLfYp"
+    <style data-styled
            data-styled-version="4.4.1"
     >
       /* sc-component-id: sc-keyframes-eMLfYp */
@@ -2561,7 +2561,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-d0ae3f07.d7a5f65e.js"
+            src="http://localhost:7080/static/js/main-d0ae3f07.b0328da7.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2569,7 +2569,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-f71cff67.bdbcdbcb.js"
+            src="http://localhost:7080/static/js/main-f71cff67.b4cf7ca7.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
