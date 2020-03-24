@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
@@ -8,6 +9,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
 // Currently, only these services have radio schedule data
 const validServices = [
@@ -21,24 +23,25 @@ const validServices = [
   'swahili',
 ];
 
-const staticRadioScheduleURL = service =>
-  `./data/${service}/bbc_${service}_radio/schedule.json`;
-
 const renderRadioScheduleContainer = service => (
-  <ToggleContextProvider>
-    <RequestContextProvider
-      isAmp={false}
-      pageType="frontPage"
-      service={service}
-      pathname={`/${service}`}
-    >
-      <ServiceContextProvider service={service}>
-        <RadioScheduleContainer
-          radioScheduleEndpointOverride={staticRadioScheduleURL(service)}
-        />
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  </ToggleContextProvider>
+  <BrowserRouter>
+    <ToggleContextProvider>
+      <RequestContextProvider
+        isAmp={false}
+        pageType="frontPage"
+        service={service}
+        pathname={`/${service}`}
+      >
+        <ServiceContextProvider service={service}>
+          <RadioScheduleContainer
+            radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
+              service,
+            })}
+          />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  </BrowserRouter>
 );
 
 moment.locale('en-GB'); // needed for Time Machine date string
