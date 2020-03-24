@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchausa',
     twitterSite: '@bbchausa',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/hausa/game-da-mu-49283501',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -169,8 +170,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
+      header: 'Shirye-shiryenmu',
     },
     footer: {
       trustProjectLink: {

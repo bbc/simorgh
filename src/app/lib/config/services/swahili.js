@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/swahili/taasisi-49283417#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -171,7 +172,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'Vipindi vya Redio',
     },
     footer: {
       trustProjectLink: {

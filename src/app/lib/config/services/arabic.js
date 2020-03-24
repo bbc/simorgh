@@ -39,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCArabic',
     twitterSite: '@BBCArabic',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/arabic/institutional-49283069#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/arabic/institutional-49283069',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
@@ -175,8 +176,8 @@ export const service = {
       hasRadioSchedule: true,
       frequenciesPageUrl:
         '/arabic/institutional/2011/01/000000_frequencies_radio',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'استقبال البث',
+      header: 'أحدث نشرة أخبار',
     },
     footer: {
       trustProjectLink: {

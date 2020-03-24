@@ -36,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcburmese',
     twitterSite: '@bbcburmese',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/burmese/institutional-51387206#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/burmese/institutional-51387206',
     isTrustProjectParticipant: true,
     script: burmese,
     manifestPath: '/manifest.json',

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import RadioScheduleContainer from '..';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -22,9 +23,12 @@ const RadioSchedulesWithContext = ({
       pageType="frontPage"
       service={service}
       pathname={`/${service}`}
+      timeOnServer={Date.now()}
     >
       <ServiceContextProvider service={service}>
-        <RadioScheduleContainer />
+        <BrowserRouter>
+          <RadioScheduleContainer />
+        </BrowserRouter>
       </ServiceContextProvider>
     </RequestContextProvider>
   </ToggleContext.Provider>
