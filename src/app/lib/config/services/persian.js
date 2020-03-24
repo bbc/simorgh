@@ -185,7 +185,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'برنامه‌های رادیو',
     },
     footer: {
       trustProjectLink: {
