@@ -170,8 +170,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
+      header: 'Shirye-shiryenmu',
     },
     footer: {
       trustProjectLink: {

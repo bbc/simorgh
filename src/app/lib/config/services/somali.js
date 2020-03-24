@@ -177,7 +177,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'Barnaamijyada Idaacadda',
     },
     footer: {
       trustProjectLink: {
