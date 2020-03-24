@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given I am on a Mundo article AMP/Canonical page When I view the source code in the browser I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Mundo article AMP/Canonical page When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
 <html lang="es"
       dir="ltr"
       amp
@@ -1184,7 +1184,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
 </html>
 `;
 
-exports[`Given I am on a Mundo article AMP/Canonical page When I view the source code in the browser I can see the server-rendered HTML 2`] = `
+exports[`Given I am on a Mundo article AMP/Canonical page When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
 <html lang="es"
       class="no-js"
       dir="ltr"

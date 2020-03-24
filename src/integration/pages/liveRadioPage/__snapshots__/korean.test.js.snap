@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given I am on the Korean live radio page AMP/Canonical When I view the source code in the browser I can see the server-rendered HTML 1`] = `
+exports[`Given I am on the Korean live radio page AMP/Canonical When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
 <html lang="ko"
       dir="ltr"
       amp
@@ -880,7 +880,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;} body{margin:0;} main{displ
 </html>
 `;
 
-exports[`Given I am on the Korean live radio page AMP/Canonical When I view the source code in the browser I can see the server-rendered HTML 2`] = `
+exports[`Given I am on the Korean live radio page AMP/Canonical When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
 <html lang="ko"
       class="no-js"
       dir="ltr"

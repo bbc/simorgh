@@ -15,11 +15,11 @@ const getFixedHtml = pipe(replaceTimeOnServer, replaceIds, replaceUUIDs);
 
 export default () => {
   [amp, canonical].forEach(page => {
-    it('I can see the server-rendered HTML', () => {
-      const html = page.document.querySelector('html').outerHTML;
-      const fixedHtml = getFixedHtml(html);
+    describe(`For the ${page.platform} platform`, () => {
+      it('I can see the server-rendered HTML', () => {
+        const html = page.document.querySelector('html').outerHTML;
+        const fixedHtml = getFixedHtml(html);
 
-      describe(`And using ${page.platform}`, () => {
         expect(fixedHtml).toMatchSnapshot();
       });
     });
