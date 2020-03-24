@@ -80,6 +80,7 @@ const CanonicalMostRead = ({
   columnLayout,
   constrainMaxWidth,
   isOnFrontPage,
+  pageType,
 }) => {
   const [items, setItems] = useState([]);
   const {
@@ -184,6 +185,7 @@ const CanonicalMostRead = ({
                 script={script}
                 title={item.title}
                 href={item.href}
+                pageType={pageType}
               >
                 {item.timestamp}
               </MostReadLink>
@@ -200,6 +202,7 @@ CanonicalMostRead.propTypes = {
   constrainMaxWidth: bool.isRequired,
   columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   isOnFrontPage: bool,
+  pageType: string.isRequired,
 };
 
 CanonicalMostRead.defaultProps = {

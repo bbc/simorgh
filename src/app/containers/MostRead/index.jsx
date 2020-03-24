@@ -16,7 +16,7 @@ const MostReadContainer = ({
   constrainMaxWidth,
   isOnFrontPage,
 }) => {
-  const { variant, isAmp } = useContext(RequestContext);
+  const { variant, isAmp, pageType } = useContext(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
@@ -39,6 +39,7 @@ const MostReadContainer = ({
       constrainMaxWidth={constrainMaxWidth}
       columnLayout={columnLayout}
       isOnFrontPage={isOnFrontPage}
+      pageType={pageType}
     />
   );
 };
