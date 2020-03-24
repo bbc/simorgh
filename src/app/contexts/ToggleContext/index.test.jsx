@@ -23,7 +23,7 @@ const shouldNotRenderAd = container =>
   expect(queryByText(container, 'Dummy Ad Component')).not.toBeInTheDocument();
 
 describe('ToggleContext with feature toggles', () => {
-  before(() => {
+  beforeAll(() => {
     process.env.SIMORGH_APP_ENV = 'local';
     process.env.SIMORGH_TOGGLES_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
   });

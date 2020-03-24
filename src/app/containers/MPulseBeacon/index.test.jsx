@@ -15,7 +15,7 @@ let container;
 const useToggleMock = enabled => ({ enabled });
 
 jest.mock('./boomr', () => jest.fn());
-jest.mock('../Toggle/useToggle', () => jest.fn());
+jest.mock('../../hooks/useToggle', () => jest.fn());
 jest.mock('#lib/utilities/onClient', () => jest.fn());
 
 let serviceContextMock;
