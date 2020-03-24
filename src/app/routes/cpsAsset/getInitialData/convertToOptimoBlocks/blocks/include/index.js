@@ -13,7 +13,7 @@ const includeUrls = {
 
 const fetchMarkup = async url => {
   try {
-    const res = await fetch(url, { timeout: 12000 });
+    const res = await fetch(url, { timeout: 3000 });
     if (res.status !== 200) {
       throw new Error('Failed to fetch');
     } else {

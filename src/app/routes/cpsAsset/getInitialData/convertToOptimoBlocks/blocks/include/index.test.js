@@ -1,4 +1,4 @@
-import convertInclude, { encodeHTML } from '.';
+import convertInclude from '.';
 
 export const vjMarkup = `<div>Visual Jounalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
@@ -28,7 +28,7 @@ describe('convertInclude', () => {
         tile: 'A quiz!',
         platform: 'highweb',
         type: 'idt1',
-        html: encodeHTML(idt1Markup),
+        html: idt1Markup,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -52,7 +52,7 @@ describe('convertInclude', () => {
         tile: 'IDT2 Include',
         platform: 'highweb',
         type: 'idt2',
-        html: encodeHTML(idt2Markup),
+        html: idt2Markup,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -76,7 +76,7 @@ describe('convertInclude', () => {
         tile: 'Include from VisJo',
         platform: 'highweb',
         type: 'vj',
-        html: encodeHTML(vjMarkup),
+        html: vjMarkup,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -100,7 +100,7 @@ describe('convertInclude', () => {
         tile: 'A quiz!',
         platform: 'highweb',
         type: 'idt1',
-        html: encodeHTML(idt1Markup),
+        html: idt1Markup,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -124,7 +124,7 @@ describe('convertInclude', () => {
         tile: 'IDT2 Include',
         platform: 'highweb',
         type: 'idt2',
-        html: encodeHTML(idt2Markup),
+        html: idt2Markup,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);

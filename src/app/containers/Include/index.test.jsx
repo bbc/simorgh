@@ -4,7 +4,7 @@ import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const fakeMarkup = `&lt;div&gt;Visual Jounalism Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/vj.js&quot;&gt;&lt;/script&gt;`;
+const fakeMarkup = `<div>Visual Jounalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
 // eslint-disable-next-line react/prop-types
 const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
@@ -45,12 +45,16 @@ describe('IncludeContainer', () => {
     const mockToggles = {
       test: {
         include: {
-          enabled: false,
+          enabled: true,
         },
       },
     };
     const { container } = render(
-      <IncludeContainerWithMockContext toggleState={mockToggles} type="idt2" />,
+      <IncludeContainerWithMockContext
+        toggleState={mockToggles}
+        type="idt2"
+        html={null}
+      />,
     );
     expect(container).toMatchSnapshot();
   });
@@ -59,7 +63,7 @@ describe('IncludeContainer', () => {
     const mockToggles = {
       test: {
         include: {
-          enabled: false,
+          enabled: true,
         },
       },
     };
