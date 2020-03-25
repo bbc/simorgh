@@ -57,10 +57,10 @@ export const service = {
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
     defaultImageAltText: 'BBC News na srpskom',
-    defaultCaptionOffscreenText: 'Potpis ',
-    audioCaptionOffscreenText: 'Potpis ispod audio zapisa ',
-    videoCaptionOffscreenText: 'Potpis ispod videa ',
-    imageCaptionOffscreenText: 'Potpis ispod fotografije ',
+    defaultCaptionOffscreenText: 'Potpis, ',
+    audioCaptionOffscreenText: 'Potpis ispod audio zapisa, ',
+    videoCaptionOffscreenText: 'Potpis ispod videa, ',
+    imageCaptionOffscreenText: 'Potpis ispod fotografije, ',
     imageCopyrightOffscreenText: 'Autor fotografije, ',
     footer: {
       trustProjectLink: {
