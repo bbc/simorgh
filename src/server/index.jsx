@@ -28,6 +28,7 @@ import injectCspHeader, {
 } from './utilities/constructCspHeader';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
+  MANIFEST_SENDFILE_ERROR,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   LOCAL_SENDFILE_ERROR,
@@ -239,7 +240,7 @@ server
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
       res.sendFile(manifestPath, {}, error => {
         if (error) {
-          console.log(error); // eslint-disable-line no-console
+          logger.error(MANIFEST_SENDFILE_ERROR, { error });
           res.status(500).send('Unable to find manifest.');
         }
       });
@@ -271,7 +272,7 @@ server
       });
 
       logger.info(ROUTING_INFORMATION, {
-        url: urlPath,
+        urlPath,
         pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
       });
 
@@ -286,7 +287,6 @@ server
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status: status || 500,
         message,
-        url,
         urlPath,
         headers,
       });

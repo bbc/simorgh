@@ -4,6 +4,7 @@ const logCodes = {
   DATA_NOT_FOUND: 'data_response_404',
   SERVER_LISTEN_ERROR: 'server_listen_error',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
+  MANIFEST_SENDFILE_ERROR: 'server_sendfile_error_manifest',
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
