@@ -13,14 +13,22 @@ import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesU
 
 // Currently, only these services have radio schedule data
 const validServices = [
+  'afaanoromoo',
   'afrique',
+  'amharic',
   'arabic',
+  'bengali',
+  'burmese',
+  'gahuza',
   'hausa',
+  'indonesia',
   'korean',
   'pashto',
   'persian',
   'somali',
   'swahili',
+  'tigrinya',
+  'urdu',
 ];
 
 const renderRadioScheduleContainer = service => (
