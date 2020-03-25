@@ -5154,7 +5154,7 @@ const genServices = {
               '/uzbek/lotin/2016/02/160212_latin_gravity_video', // Latin TC2 MAP
               '/uzbek/institutional/2016/03/160313_audio_zokirjon_mashrabov', // Cyrillic TC2 MAP Audio clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
