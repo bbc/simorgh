@@ -12,7 +12,7 @@ const idt2Markup = {
 
 const idt1Markup = {
   plain: `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`,
-  encoded: `&lt;div&gt;IDT 1 Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/idt1.js&quot;&gt;&lt;/script&gt`,
+  encoded: `&lt;div&gt;IDT 1 Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/idt1.js&quot;&gt;&lt;/script&gt;`,
 };
 
 describe('convertInclude', () => {
