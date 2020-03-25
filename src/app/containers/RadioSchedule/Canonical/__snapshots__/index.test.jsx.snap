@@ -354,8 +354,11 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .c34:before {
@@ -709,6 +712,20 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c34 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+}
+
 <section
   aria-labelledby="Radio-Schedule"
   class="c0"
@@ -802,7 +819,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             >
               <a
                 class="c21"
-                href="/arabic/bbc_arabic_radio/p086n0w1"
+                href="/arabic/bbc_arabic_radio/w172xbdttzkf1cl"
               >
                 <span
                   class=""
@@ -931,7 +948,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             >
               <a
                 class="c21"
-                href="/arabic/bbc_arabic_radio/p086mxd4"
+                href="/arabic/bbc_arabic_radio/w172xbf7kbvrmq5"
               >
                 <span
                   class=""
@@ -1060,7 +1077,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             >
               <a
                 class="c21"
-                href="/arabic/bbc_arabic_radio/p086mxd3"
+                href="/arabic/bbc_arabic_radio/w3ct00xt"
               >
                 <span
                   class=""
