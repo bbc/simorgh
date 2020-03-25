@@ -1,0 +1,1480 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577979400000,
+      "publishedTimeStart": 1578929400000,
+      "publishedTimeEnd": 1578930540000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1578929400000,
+      "transmissionTimeEnd": 1578930540000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfp2.imi:ws.bbc.co.uk/KOREA1578929400",
+        "pid": "p07zd007"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwdc",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfp2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577979398000,
+      "publishedTimeStart": 1578930540000,
+      "publishedTimeEnd": 1578931200000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1578930540000,
+      "transmissionTimeEnd": 1578931140000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfhf.imi:ws.bbc.co.uk/KOREA1578930540",
+        "pid": "p07zczzz"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw6q",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw6q.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfhf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577982961000,
+      "publishedTimeStart": 1578931200000,
+      "publishedTimeEnd": 1578932340000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1578931200000,
+      "transmissionTimeEnd": 1578932340000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfp2.imi:ws.bbc.co.uk/KOREA1578931200",
+        "pid": "p07zd4cb"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwdc",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfp2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577982962000,
+      "publishedTimeStart": 1578932340000,
+      "publishedTimeEnd": 1578933000000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1578932340000,
+      "transmissionTimeEnd": 1578932940000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfhf.imi:ws.bbc.co.uk/KOREA1578932340",
+        "pid": "p07zd4cd"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw6q",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw6q.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfhf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577982963000,
+      "publishedTimeStart": 1578933000000,
+      "publishedTimeEnd": 1578934140000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1578933000000,
+      "transmissionTimeEnd": 1578934140000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfp2.imi:ws.bbc.co.uk/KOREA1578933000",
+        "pid": "p07zd4cg"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwdc",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfp2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577982963000,
+      "publishedTimeStart": 1578934140000,
+      "publishedTimeEnd": 1578934800000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1578934140000,
+      "transmissionTimeEnd": 1578934740000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfhf.imi:ws.bbc.co.uk/KOREA1578934140",
+        "pid": "p07zd4cj"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw6q",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw6q.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfhf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577986557000,
+      "publishedTimeStart": 1578934800000,
+      "publishedTimeEnd": 1578935940000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1578934800000,
+      "transmissionTimeEnd": 1578935940000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfp2.imi:ws.bbc.co.uk/KOREA1578934800",
+        "pid": "p07zd7cn"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwdc",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfp2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577986557000,
+      "publishedTimeStart": 1578935940000,
+      "publishedTimeEnd": 1578936600000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1578935940000,
+      "transmissionTimeEnd": 1578936540000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfhf.imi:ws.bbc.co.uk/KOREA1578935940",
+        "pid": "p07zd7cp"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw6q",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw6q.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfhf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577986558000,
+      "publishedTimeStart": 1578936600000,
+      "publishedTimeEnd": 1578937740000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1578936600000,
+      "transmissionTimeEnd": 1578937740000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfp2.imi:ws.bbc.co.uk/KOREA1578936600",
+        "pid": "p07zd7cq"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwdc",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfp2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577986559000,
+      "publishedTimeStart": 1578937740000,
+      "publishedTimeEnd": 1578938400000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1578937740000,
+      "transmissionTimeEnd": 1578938340000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfhf.imi:ws.bbc.co.uk/KOREA1578937740",
+        "pid": "p07zd7cr"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw6q",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw6q.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfhf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577990188000,
+      "publishedTimeStart": 1578938400000,
+      "publishedTimeEnd": 1578939540000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1578938400000,
+      "transmissionTimeEnd": 1578939540000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfp2.imi:ws.bbc.co.uk/KOREA1578938400",
+        "pid": "p07zdbw0"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwdc",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfp2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1577990190000,
+      "publishedTimeStart": 1578939540000,
+      "publishedTimeEnd": 1578940140000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1578939540000,
+      "transmissionTimeEnd": 1578940140000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfhf.imi:ws.bbc.co.uk/KOREA1578939540",
+        "pid": "p07zdbw7"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw6q",
+        "presentationTitle": "2020/01/13 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw6q.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfhf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578065792000,
+      "publishedTimeStart": 1579015800000,
+      "publishedTimeEnd": 1579016940000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579015800000,
+      "transmissionTimeEnd": 1579016940000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfrb.imi:ws.bbc.co.uk/KOREA1579015800",
+        "pid": "p07zgg1h"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwgm",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfrb"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578065793000,
+      "publishedTimeStart": 1579016940000,
+      "publishedTimeEnd": 1579017600000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579016940000,
+      "transmissionTimeEnd": 1579017540000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfkp.imi:ws.bbc.co.uk/KOREA1579016940",
+        "pid": "p07zgg1r"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw8z",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw8z.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfkp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578069363000,
+      "publishedTimeStart": 1579017600000,
+      "publishedTimeEnd": 1579018740000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579017600000,
+      "transmissionTimeEnd": 1579018740000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfrb.imi:ws.bbc.co.uk/KOREA1579017600",
+        "pid": "p07zgm0d"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwgm",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfrb"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578069364000,
+      "publishedTimeStart": 1579018740000,
+      "publishedTimeEnd": 1579019400000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579018740000,
+      "transmissionTimeEnd": 1579019340000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfkp.imi:ws.bbc.co.uk/KOREA1579018740",
+        "pid": "p07zgm0l"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw8z",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw8z.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfkp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578069366000,
+      "publishedTimeStart": 1579019400000,
+      "publishedTimeEnd": 1579020540000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579019400000,
+      "transmissionTimeEnd": 1579020540000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfrb.imi:ws.bbc.co.uk/KOREA1579019400",
+        "pid": "p07zgm0v"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwgm",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfrb"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578069367000,
+      "publishedTimeStart": 1579020540000,
+      "publishedTimeEnd": 1579021200000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579020540000,
+      "transmissionTimeEnd": 1579021140000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfkp.imi:ws.bbc.co.uk/KOREA1579020540",
+        "pid": "p07zgm0w"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw8z",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw8z.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfkp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578072959000,
+      "publishedTimeStart": 1579021200000,
+      "publishedTimeEnd": 1579022340000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579021200000,
+      "transmissionTimeEnd": 1579022340000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfrb.imi:ws.bbc.co.uk/KOREA1579021200",
+        "pid": "p07zgqjv"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwgm",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfrb"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578072961000,
+      "publishedTimeStart": 1579022340000,
+      "publishedTimeEnd": 1579023000000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579022340000,
+      "transmissionTimeEnd": 1579022940000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfkp.imi:ws.bbc.co.uk/KOREA1579022340",
+        "pid": "p07zgqjy"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw8z",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw8z.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfkp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578072961000,
+      "publishedTimeStart": 1579023000000,
+      "publishedTimeEnd": 1579024140000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579023000000,
+      "transmissionTimeEnd": 1579024140000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfrb.imi:ws.bbc.co.uk/KOREA1579023000",
+        "pid": "p07zgqjz"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwgm",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfrb"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578072962000,
+      "publishedTimeStart": 1579024140000,
+      "publishedTimeEnd": 1579024800000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579024140000,
+      "transmissionTimeEnd": 1579024740000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfkp.imi:ws.bbc.co.uk/KOREA1579024140",
+        "pid": "p07zgqk0"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw8z",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw8z.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfkp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578076611000,
+      "publishedTimeStart": 1579024800000,
+      "publishedTimeEnd": 1579025940000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579024800000,
+      "transmissionTimeEnd": 1579025940000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfrb.imi:ws.bbc.co.uk/KOREA1579024800",
+        "pid": "p07zgv8y"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwgm",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfrb"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578076610000,
+      "publishedTimeStart": 1579025940000,
+      "publishedTimeEnd": 1579026540000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1579025940000,
+      "transmissionTimeEnd": 1579026540000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfkp.imi:ws.bbc.co.uk/KOREA1579025940",
+        "pid": "p07zgv8m"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszw8z",
+        "presentationTitle": "2020/01/14 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszw8z.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvfkp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578152190000,
+      "publishedTimeStart": 1579102200000,
+      "publishedTimeEnd": 1579103340000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579102200000,
+      "transmissionTimeEnd": 1579103340000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfsg.imi:ws.bbc.co.uk/KOREA1579102200",
+        "pid": "p07zjcyx"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwhr",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfsg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578152191000,
+      "publishedTimeStart": 1579103340000,
+      "publishedTimeEnd": 1579104000000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579103340000,
+      "transmissionTimeEnd": 1579103940000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvflt.imi:ws.bbc.co.uk/KOREA1579103340",
+        "pid": "p07zjcyy"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwb3",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszwb3.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvflt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578155762000,
+      "publishedTimeStart": 1579104000000,
+      "publishedTimeEnd": 1579105140000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579104000000,
+      "transmissionTimeEnd": 1579105140000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfsg.imi:ws.bbc.co.uk/KOREA1579104000",
+        "pid": "p07zjfyy"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwhr",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfsg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578155764000,
+      "publishedTimeStart": 1579105140000,
+      "publishedTimeEnd": 1579105800000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579105140000,
+      "transmissionTimeEnd": 1579105740000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvflt.imi:ws.bbc.co.uk/KOREA1579105140",
+        "pid": "p07zjfz0"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwb3",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszwb3.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvflt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578155764000,
+      "publishedTimeStart": 1579105800000,
+      "publishedTimeEnd": 1579106940000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579105800000,
+      "transmissionTimeEnd": 1579106940000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfsg.imi:ws.bbc.co.uk/KOREA1579105800",
+        "pid": "p07zjfz1"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwhr",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfsg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578155765000,
+      "publishedTimeStart": 1579106940000,
+      "publishedTimeEnd": 1579107600000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579106940000,
+      "transmissionTimeEnd": 1579107540000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvflt.imi:ws.bbc.co.uk/KOREA1579106940",
+        "pid": "p07zjfz2"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwb3",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszwb3.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvflt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578159356000,
+      "publishedTimeStart": 1579107600000,
+      "publishedTimeEnd": 1579108740000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579107600000,
+      "transmissionTimeEnd": 1579108740000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfsg.imi:ws.bbc.co.uk/KOREA1579107600",
+        "pid": "p07zjk46"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwhr",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfsg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578159358000,
+      "publishedTimeStart": 1579108740000,
+      "publishedTimeEnd": 1579109400000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579108740000,
+      "transmissionTimeEnd": 1579109340000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvflt.imi:ws.bbc.co.uk/KOREA1579108740",
+        "pid": "p07zjk4b"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwb3",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszwb3.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvflt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578159359000,
+      "publishedTimeStart": 1579109400000,
+      "publishedTimeEnd": 1579110540000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579109400000,
+      "transmissionTimeEnd": 1579110540000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfsg.imi:ws.bbc.co.uk/KOREA1579109400",
+        "pid": "p07zjk4d"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwhr",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfsg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578159359000,
+      "publishedTimeStart": 1579110540000,
+      "publishedTimeEnd": 1579111200000,
+      "publishedTimeDuration": "PT11M",
+      "transmissionTimeStart": 1579110540000,
+      "transmissionTimeEnd": 1579111140000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvflt.imi:ws.bbc.co.uk/KOREA1579110540",
+        "pid": "p07zjk4l"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwb3",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszwb3.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvflt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1578162983000,
+      "publishedTimeStart": 1579111200000,
+      "publishedTimeEnd": 1579112340000,
+      "publishedTimeDuration": "PT19M",
+      "transmissionTimeStart": 1579111200000,
+      "transmissionTimeEnd": 1579112340000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvfsg.imi:ws.bbc.co.uk/KOREA1579111200",
+        "pid": "p07zjq2b"
+      },
+      "brand": {
+        "pid": "w13xttll",
+        "title": "BBC 코리아 라디오",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "episode": {
+        "pid": "w3cszwhr",
+        "presentationTitle": "2020/01/15 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
+        "synopses": {
+          "short": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.",
+          "medium": "한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다."
+        }
+      },
+      "version": {
+        "pid": "w4hqvfsg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_korean_radio",
+      "serviceId": "bbc_korean_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893489000000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893489000000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqvflt.imi:ws.bbc.co.uk/KOREA1579112340",
+        "pid": "p07zjq2d"
+      },
+      "brand": {
+        "pid": "w13xttlm",
+        "title": "English Learning with BBC",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/brand/w13xttlm.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "episode": {
+        "pid": "w3cszwb3",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/legacy/episode/w3cszwb3.jpg",
+        "synopses": {
+          "short": "BBC와 함께하는 영어학습 코너입니다",
+          "medium": "BBC와 함께하는 영어학습 코너입니다"
+        }
+      },
+      "version": {
+        "pid": "w4hqvflt"
+      }
+    }
+  ]
+}

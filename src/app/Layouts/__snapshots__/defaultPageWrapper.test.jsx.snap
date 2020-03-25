@@ -182,6 +182,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 
 .c16:hover,
 .c16:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -590,10 +591,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   .c18 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;

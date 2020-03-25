@@ -1,0 +1,2370 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570771570000,
+      "publishedTimeStart": 1571720400000,
+      "publishedTimeEnd": 1571722170000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571720400000,
+      "transmissionTimeEnd": 1571722170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzvmhtg3pny.imi:ws.bbc.co.uk/PASHA1571720400",
+        "pid": "p07qrk22"
+      },
+      "brand": {
+        "pid": "p0340yqy",
+        "title": "د نن خبرې",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w172wvz70mx47dn",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w1msgzvmhtg3pny"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570775181000,
+      "publishedTimeStart": 1571724000000,
+      "publishedTimeEnd": 1571724180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571724000000,
+      "transmissionTimeEnd": 1571724180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstkgpw.imi:ws.bbc.co.uk/PASHA1571724000",
+        "pid": "p07qrnt1"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8l0fl",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstkgpw"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570775181000,
+      "publishedTimeStart": 1571724180000,
+      "publishedTimeEnd": 1571725770000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571724180000,
+      "transmissionTimeEnd": 1571725770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7rr.imi:ws.bbc.co.uk/PASHA1571724180",
+        "pid": "p07qrnt5"
+      },
+      "brand": {
+        "pid": "p056fcjb",
+        "title": "لومړنۍ سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrqh",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7rr"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570778795000,
+      "publishedTimeStart": 1571727600000,
+      "publishedTimeEnd": 1571727780000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571727600000,
+      "transmissionTimeEnd": 1571727780000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstklg0.imi:ws.bbc.co.uk/PASHA1571727600",
+        "pid": "p07qrtps"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8l45q",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstklg0"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570778796000,
+      "publishedTimeStart": 1571727780000,
+      "publishedTimeEnd": 1571729370000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571727780000,
+      "transmissionTimeEnd": 1571729370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt80n.imi:ws.bbc.co.uk/PASHA1571727780",
+        "pid": "p07qrtpv"
+      },
+      "brand": {
+        "pid": "p056fcj9",
+        "title": "دویمه سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrzd",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt80n"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570782399000,
+      "publishedTimeStart": 1571731200000,
+      "publishedTimeEnd": 1571731380000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571731200000,
+      "transmissionTimeEnd": 1571731380000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstkq64.imi:ws.bbc.co.uk/PASHA1571731200",
+        "pid": "p07qs1h0"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8l7xv",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstkq64"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570785969000,
+      "publishedTimeStart": 1571734800000,
+      "publishedTimeEnd": 1571734980000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571734800000,
+      "transmissionTimeEnd": 1571734980000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstkty8.imi:ws.bbc.co.uk/PASHA1571734800",
+        "pid": "p07qs8kh"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8lcnz",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstkty8"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570789603000,
+      "publishedTimeStart": 1571738400000,
+      "publishedTimeEnd": 1571738580000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571738400000,
+      "transmissionTimeEnd": 1571738580000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstkypd.imi:ws.bbc.co.uk/PASHA1571738400",
+        "pid": "p07qsj0w"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8lhf3",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstkypd"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570793255000,
+      "publishedTimeStart": 1571742000000,
+      "publishedTimeEnd": 1571742180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571742000000,
+      "transmissionTimeEnd": 1571742180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstl2fj.imi:ws.bbc.co.uk/PASHA1571742000",
+        "pid": "p07qsqmm"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8lm57",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstl2fj"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570796847000,
+      "publishedTimeStart": 1571745600000,
+      "publishedTimeEnd": 1571745780000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571745600000,
+      "transmissionTimeEnd": 1571745780000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstl65n.imi:ws.bbc.co.uk/PASHA1571745600",
+        "pid": "p07qt27f"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8lqxc",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstl65n"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570800481000,
+      "publishedTimeStart": 1571751000000,
+      "publishedTimeEnd": 1571752620000,
+      "publishedTimeDuration": "PT27M",
+      "transmissionTimeStart": 1571751000000,
+      "transmissionTimeEnd": 1571752620000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt8wq.imi:ws.bbc.co.uk/PASHA1571751000",
+        "pid": "p07qtb39"
+      },
+      "brand": {
+        "pid": "p04xzgwm",
+        "title": "Pashto Tv",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "episode": {
+        "pid": "w3csysvg",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "version": {
+        "pid": "w4hqt8wq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570807794000,
+      "publishedTimeStart": 1571756400000,
+      "publishedTimeEnd": 1571758200000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571756400000,
+      "transmissionTimeEnd": 1571758170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt88k.imi:ws.bbc.co.uk/PASHA1571756400",
+        "pid": "p07qtt98"
+      },
+      "brand": {
+        "pid": "p0340v0j",
+        "title": "ماښامنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys79",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt88k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570807782000,
+      "publishedTimeStart": 1571758200000,
+      "publishedTimeEnd": 1571759970000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571758200000,
+      "transmissionTimeEnd": 1571759970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt9cf.imi:ws.bbc.co.uk/PASHA1571758200",
+        "pid": "p07qtt8v"
+      },
+      "brand": {
+        "pid": "p0340ys9",
+        "title": "ستاسې غږ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csytb5",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt9cf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570811178000,
+      "publishedTimeStart": 1571761800000,
+      "publishedTimeEnd": 1571763570000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571761800000,
+      "transmissionTimeEnd": 1571763570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzjskbj18w3.imi:ws.bbc.co.uk/PASHA1571761800",
+        "pid": "p07qtztk"
+      },
+      "brand": {
+        "pid": "p0340v0h",
+        "title": "خبر و نظر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
+          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
+        }
+      },
+      "episode": {
+        "pid": "w172wvnd24z1tlt",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
+          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
+        }
+      },
+      "version": {
+        "pid": "w1msgzjskbj18w3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570818392000,
+      "publishedTimeStart": 1571767200000,
+      "publishedTimeEnd": 1571769000000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571767200000,
+      "transmissionTimeEnd": 1571768970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt88k.imi:ws.bbc.co.uk/PASHA1571767200",
+        "pid": "p07qvdpr"
+      },
+      "brand": {
+        "pid": "p0340v0j",
+        "title": "ماښامنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys79",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt88k"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570818385000,
+      "publishedTimeStart": 1571769000000,
+      "publishedTimeEnd": 1571770620000,
+      "publishedTimeDuration": "PT27M",
+      "transmissionTimeStart": 1571769000000,
+      "transmissionTimeEnd": 1571770620000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt8wq.imi:ws.bbc.co.uk/PASHA1571769000",
+        "pid": "p07qvdp8"
+      },
+      "brand": {
+        "pid": "p04xzgwm",
+        "title": "Pashto Tv",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "episode": {
+        "pid": "w3csysvg",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "version": {
+        "pid": "w4hqt8wq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570847167000,
+      "publishedTimeStart": 1571796000000,
+      "publishedTimeEnd": 1571797770000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571796000000,
+      "transmissionTimeEnd": 1571797770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7sw.imi:ws.bbc.co.uk/PASHA1571796000",
+        "pid": "p07qw67x"
+      },
+      "brand": {
+        "pid": "p056fcjb",
+        "title": "لومړنۍ سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrrm",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7sw"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570850763000,
+      "publishedTimeStart": 1571799600000,
+      "publishedTimeEnd": 1571801370000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571799600000,
+      "transmissionTimeEnd": 1571801370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt81s.imi:ws.bbc.co.uk/PASHA1571799600",
+        "pid": "p07qw6sy"
+      },
+      "brand": {
+        "pid": "p056fcj9",
+        "title": "دویمه سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys0j",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt81s"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570857973000,
+      "publishedTimeStart": 1571806800000,
+      "publishedTimeEnd": 1571808570000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571806800000,
+      "transmissionTimeEnd": 1571808570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzvmhtg6ll1.imi:ws.bbc.co.uk/PASHA1571806800",
+        "pid": "p07qwc8f"
+      },
+      "brand": {
+        "pid": "p0340yqy",
+        "title": "د نن خبرې",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w172wvz70mx749r",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w1msgzvmhtg6ll1"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570861598000,
+      "publishedTimeStart": 1571810400000,
+      "publishedTimeEnd": 1571810580000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571810400000,
+      "transmissionTimeEnd": 1571810580000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstnclz.imi:ws.bbc.co.uk/PASHA1571810400",
+        "pid": "p07qwh19"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8nxbp",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstnclz"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570861600000,
+      "publishedTimeStart": 1571810580000,
+      "publishedTimeEnd": 1571812170000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571810580000,
+      "transmissionTimeEnd": 1571812170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7sw.imi:ws.bbc.co.uk/PASHA1571810580",
+        "pid": "p07qwh1c"
+      },
+      "brand": {
+        "pid": "p056fcjb",
+        "title": "لومړنۍ سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrrm",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7sw"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570865193000,
+      "publishedTimeStart": 1571814000000,
+      "publishedTimeEnd": 1571814180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571814000000,
+      "transmissionTimeEnd": 1571814180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstnhc3.imi:ws.bbc.co.uk/PASHA1571814000",
+        "pid": "p07qwjm6"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8p12t",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstnhc3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570865195000,
+      "publishedTimeStart": 1571814180000,
+      "publishedTimeEnd": 1571815770000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571814180000,
+      "transmissionTimeEnd": 1571815770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt81s.imi:ws.bbc.co.uk/PASHA1571814180",
+        "pid": "p07qwjm8"
+      },
+      "brand": {
+        "pid": "p056fcj9",
+        "title": "دویمه سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys0j",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt81s"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570868767000,
+      "publishedTimeStart": 1571817600000,
+      "publishedTimeEnd": 1571817780000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571817600000,
+      "transmissionTimeEnd": 1571817780000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstnm37.imi:ws.bbc.co.uk/PASHA1571817600",
+        "pid": "p07qwn6t"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8p4ty",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstnm37"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570872349000,
+      "publishedTimeStart": 1571821200000,
+      "publishedTimeEnd": 1571821380000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571821200000,
+      "transmissionTimeEnd": 1571821380000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstnqvc.imi:ws.bbc.co.uk/PASHA1571821200",
+        "pid": "p07qwr0y"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8p8l2",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstnqvc"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570875989000,
+      "publishedTimeStart": 1571824800000,
+      "publishedTimeEnd": 1571824980000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571824800000,
+      "transmissionTimeEnd": 1571824980000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstnvlh.imi:ws.bbc.co.uk/PASHA1571824800",
+        "pid": "p07qwssy"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8pdb6",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstnvlh"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570875991000,
+      "publishedTimeStart": 1571824980000,
+      "publishedTimeEnd": 1571826570000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571824980000,
+      "transmissionTimeEnd": 1571826570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt9cf.imi:ws.bbc.co.uk/PASHA1571824980",
+        "pid": "p07qwst8"
+      },
+      "brand": {
+        "pid": "p0340ys9",
+        "title": "ستاسې غږ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csytb5",
+        "presentationTitle": "22/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt9cf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570879573000,
+      "publishedTimeStart": 1571828400000,
+      "publishedTimeEnd": 1571828580000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571828400000,
+      "transmissionTimeEnd": 1571828580000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstnzbm.imi:ws.bbc.co.uk/PASHA1571828400",
+        "pid": "p07qwwpg"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8pj2b",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstnzbm"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570883192000,
+      "publishedTimeStart": 1571832000000,
+      "publishedTimeEnd": 1571832180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571832000000,
+      "transmissionTimeEnd": 1571832180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstp32r.imi:ws.bbc.co.uk/PASHA1571832000",
+        "pid": "p07qwzb3"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8pmtg",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstp32r"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570886778000,
+      "publishedTimeStart": 1571837400000,
+      "publishedTimeEnd": 1571839020000,
+      "publishedTimeDuration": "PT27M",
+      "transmissionTimeStart": 1571837400000,
+      "transmissionTimeEnd": 1571839020000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt8xv.imi:ws.bbc.co.uk/PASHA1571837400",
+        "pid": "p07qx2cj"
+      },
+      "brand": {
+        "pid": "p04xzgwm",
+        "title": "Pashto Tv",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "episode": {
+        "pid": "w3csyswl",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "version": {
+        "pid": "w4hqt8xv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570893981000,
+      "publishedTimeStart": 1571842800000,
+      "publishedTimeEnd": 1571844600000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571842800000,
+      "transmissionTimeEnd": 1571844570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt89p.imi:ws.bbc.co.uk/PASHA1571842800",
+        "pid": "p07qx6dc"
+      },
+      "brand": {
+        "pid": "p0340v0j",
+        "title": "ماښامنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys8f",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt89p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570893981000,
+      "publishedTimeStart": 1571844600000,
+      "publishedTimeEnd": 1571846370000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571844600000,
+      "transmissionTimeEnd": 1571846370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt9fp.imi:ws.bbc.co.uk/PASHA1571844600",
+        "pid": "p07qx6dd"
+      },
+      "brand": {
+        "pid": "p0340yrj",
+        "title": "Wednesday Debate",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "Programming from the BBC Pashto Service",
+          "medium": "Programming from the BBC Pashto Service"
+        }
+      },
+      "episode": {
+        "pid": "w3csytdf",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "Programming from the BBC Pashto Service",
+          "medium": "Programming from the BBC Pashto Service"
+        }
+      },
+      "version": {
+        "pid": "w4hqt9fp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570897567000,
+      "publishedTimeStart": 1571848200000,
+      "publishedTimeEnd": 1571849970000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571848200000,
+      "transmissionTimeEnd": 1571849970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzjskbj45s6.imi:ws.bbc.co.uk/PASHA1571848200",
+        "pid": "p07qx8mx"
+      },
+      "brand": {
+        "pid": "p0340v0h",
+        "title": "خبر و نظر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
+          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
+        }
+      },
+      "episode": {
+        "pid": "w172wvnd24z4qhx",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
+          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
+        }
+      },
+      "version": {
+        "pid": "w1msgzjskbj45s6"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570904798000,
+      "publishedTimeStart": 1571853600000,
+      "publishedTimeEnd": 1571855400000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571853600000,
+      "transmissionTimeEnd": 1571855370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt89p.imi:ws.bbc.co.uk/PASHA1571853600",
+        "pid": "p07qxh8d"
+      },
+      "brand": {
+        "pid": "p0340v0j",
+        "title": "ماښامنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys8f",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt89p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570904790000,
+      "publishedTimeStart": 1571855400000,
+      "publishedTimeEnd": 1571857020000,
+      "publishedTimeDuration": "PT27M",
+      "transmissionTimeStart": 1571855400000,
+      "transmissionTimeEnd": 1571857020000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt8xv.imi:ws.bbc.co.uk/PASHA1571855400",
+        "pid": "p07qxh84"
+      },
+      "brand": {
+        "pid": "p04xzgwm",
+        "title": "Pashto Tv",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "episode": {
+        "pid": "w3csyswl",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "version": {
+        "pid": "w4hqt8xv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570933577000,
+      "publishedTimeStart": 1571882400000,
+      "publishedTimeEnd": 1571884170000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571882400000,
+      "transmissionTimeEnd": 1571884170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7qm.imi:ws.bbc.co.uk/PASHA1571882400",
+        "pid": "p07qxwlf"
+      },
+      "brand": {
+        "pid": "p056fcjb",
+        "title": "لومړنۍ سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrpc",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7qm"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570937171000,
+      "publishedTimeStart": 1571886000000,
+      "publishedTimeEnd": 1571887770000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571886000000,
+      "transmissionTimeEnd": 1571887770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7zj.imi:ws.bbc.co.uk/PASHA1571886000",
+        "pid": "p07qxx8t"
+      },
+      "brand": {
+        "pid": "p056fcj9",
+        "title": "دویمه سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyry8",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7zj"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570944369000,
+      "publishedTimeStart": 1571893200000,
+      "publishedTimeEnd": 1571894970000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571893200000,
+      "transmissionTimeEnd": 1571894970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzvmhtg9hh4.imi:ws.bbc.co.uk/PASHA1571893200",
+        "pid": "p07qxzz4"
+      },
+      "brand": {
+        "pid": "p0340yqy",
+        "title": "د نن خبرې",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w172wvz70mxb16v",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w1msgzvmhtg9hh4"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570948017000,
+      "publishedTimeStart": 1571896800000,
+      "publishedTimeEnd": 1571896980000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571896800000,
+      "transmissionTimeEnd": 1571896980000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstr8j2.imi:ws.bbc.co.uk/PASHA1571896800",
+        "pid": "p07qy28y"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8rt7s",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstr8j2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570948017000,
+      "publishedTimeStart": 1571896980000,
+      "publishedTimeEnd": 1571898570000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571896980000,
+      "transmissionTimeEnd": 1571898570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7qm.imi:ws.bbc.co.uk/PASHA1571896980",
+        "pid": "p07qy291"
+      },
+      "brand": {
+        "pid": "p056fcjb",
+        "title": "لومړنۍ سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrpc",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7qm"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570951703000,
+      "publishedTimeStart": 1571900400000,
+      "publishedTimeEnd": 1571900580000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571900400000,
+      "transmissionTimeEnd": 1571900580000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstrd86.imi:ws.bbc.co.uk/PASHA1571900400",
+        "pid": "p07qy3r6"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8rxzx",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstrd86"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570951705000,
+      "publishedTimeStart": 1571900580000,
+      "publishedTimeEnd": 1571902170000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571900580000,
+      "transmissionTimeEnd": 1571902170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7zj.imi:ws.bbc.co.uk/PASHA1571900580",
+        "pid": "p07qy3r9"
+      },
+      "brand": {
+        "pid": "p056fcj9",
+        "title": "دویمه سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyry8",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7zj"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570955207000,
+      "publishedTimeStart": 1571904000000,
+      "publishedTimeEnd": 1571904180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571904000000,
+      "transmissionTimeEnd": 1571904180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstrj0b.imi:ws.bbc.co.uk/PASHA1571904000",
+        "pid": "p07qy69s"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8s1r1",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstrj0b"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570958752000,
+      "publishedTimeStart": 1571907600000,
+      "publishedTimeEnd": 1571907780000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571907600000,
+      "transmissionTimeEnd": 1571907780000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstrmrg.imi:ws.bbc.co.uk/PASHA1571907600",
+        "pid": "p07qy8kb"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8s5h5",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstrmrg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570962392000,
+      "publishedTimeStart": 1571911200000,
+      "publishedTimeEnd": 1571911380000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571911200000,
+      "transmissionTimeEnd": 1571911380000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstrrhl.imi:ws.bbc.co.uk/PASHA1571911200",
+        "pid": "p07qybvp"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8s979",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstrrhl"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570962393000,
+      "publishedTimeStart": 1571911380000,
+      "publishedTimeEnd": 1571912970000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1571911380000,
+      "transmissionTimeEnd": 1571912970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt9fp.imi:ws.bbc.co.uk/PASHA1571911380",
+        "pid": "p07qybvr"
+      },
+      "brand": {
+        "pid": "p0340yrj",
+        "title": "Wednesday Debate",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "Programming from the BBC Pashto Service",
+          "medium": "Programming from the BBC Pashto Service"
+        }
+      },
+      "episode": {
+        "pid": "w3csytdf",
+        "presentationTitle": "23/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "Programming from the BBC Pashto Service",
+          "medium": "Programming from the BBC Pashto Service"
+        }
+      },
+      "version": {
+        "pid": "w4hqt9fp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570965960000,
+      "publishedTimeStart": 1571914800000,
+      "publishedTimeEnd": 1571914980000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571914800000,
+      "transmissionTimeEnd": 1571914980000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstrw7q.imi:ws.bbc.co.uk/PASHA1571914800",
+        "pid": "p07qygtj"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8sdzf",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstrw7q"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570969588000,
+      "publishedTimeStart": 1571918400000,
+      "publishedTimeEnd": 1571918580000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1571918400000,
+      "transmissionTimeEnd": 1571918580000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzklmstrzzv.imi:ws.bbc.co.uk/PASHA1571918400",
+        "pid": "p07qyk45"
+      },
+      "brand": {
+        "pid": "p0340yr4",
+        "title": "وروستي خبرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "episode": {
+        "pid": "w172wvp64m8sjqk",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د نړۍ وروستي خبرونه",
+          "medium": "د نړۍ وروستي خبرونه"
+        }
+      },
+      "version": {
+        "pid": "w1msgzklmstrzzv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570973179000,
+      "publishedTimeStart": 1571922000000,
+      "publishedTimeEnd": 1571923800000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571922000000,
+      "transmissionTimeEnd": 1571923770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtm30.imi:ws.bbc.co.uk/PASHA1571922000",
+        "pid": "p07qymf3"
+      },
+      "brand": {
+        "pid": "p03n4htm",
+        "title": "غږیز کتاب",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
+          "medium": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې."
+        }
+      },
+      "episode": {
+        "pid": "w3csz3lf",
+        "presentationTitle": "20/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
+          "medium": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې."
+        }
+      },
+      "version": {
+        "pid": "w4hqtm30"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570973180000,
+      "publishedTimeStart": 1571923800000,
+      "publishedTimeEnd": 1571925420000,
+      "publishedTimeDuration": "PT27M",
+      "transmissionTimeStart": 1571923800000,
+      "transmissionTimeEnd": 1571925420000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt8vl.imi:ws.bbc.co.uk/PASHA1571923800",
+        "pid": "p07qymf7"
+      },
+      "brand": {
+        "pid": "p04xzgwm",
+        "title": "Pashto Tv",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "episode": {
+        "pid": "w3csystb",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "version": {
+        "pid": "w4hqt8vl"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570980380000,
+      "publishedTimeStart": 1571929200000,
+      "publishedTimeEnd": 1571931000000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571929200000,
+      "transmissionTimeEnd": 1571930970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt87f.imi:ws.bbc.co.uk/PASHA1571929200",
+        "pid": "p07qyrz0"
+      },
+      "brand": {
+        "pid": "p0340v0j",
+        "title": "ماښامنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys65",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt87f"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570980381000,
+      "publishedTimeStart": 1571931000000,
+      "publishedTimeEnd": 1571932770000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571931000000,
+      "transmissionTimeEnd": 1571932770000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt9b9.imi:ws.bbc.co.uk/PASHA1571931000",
+        "pid": "p07qyrz1"
+      },
+      "brand": {
+        "pid": "p0340ys9",
+        "title": "ستاسې غږ",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyt91",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt9b9"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570983968000,
+      "publishedTimeStart": 1571934600000,
+      "publishedTimeEnd": 1571936370000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571934600000,
+      "transmissionTimeEnd": 1571936370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msgzjskbj72p9.imi:ws.bbc.co.uk/PASHA1571934600",
+        "pid": "p07qyv67"
+      },
+      "brand": {
+        "pid": "p0340v0h",
+        "title": "خبر و نظر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
+          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
+        }
+      },
+      "episode": {
+        "pid": "w172wvnd24z7mf0",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
+          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
+        }
+      },
+      "version": {
+        "pid": "w1msgzjskbj72p9"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570991196000,
+      "publishedTimeStart": 1571940000000,
+      "publishedTimeEnd": 1571941800000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1571940000000,
+      "transmissionTimeEnd": 1571941770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt87f.imi:ws.bbc.co.uk/PASHA1571940000",
+        "pid": "p07qz0th"
+      },
+      "brand": {
+        "pid": "p0340v0j",
+        "title": "ماښامنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csys65",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt87f"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1570991188000,
+      "publishedTimeStart": 1571941800000,
+      "publishedTimeEnd": 1571943420000,
+      "publishedTimeDuration": "PT27M",
+      "transmissionTimeStart": 1571941800000,
+      "transmissionTimeEnd": 1571943420000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt8vl.imi:ws.bbc.co.uk/PASHA1571941800",
+        "pid": "p07qz0t1"
+      },
+      "brand": {
+        "pid": "p04xzgwm",
+        "title": "Pashto Tv",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "episode": {
+        "pid": "w3csystb",
+        "presentationTitle": "24/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          
+        }
+      },
+      "version": {
+        "pid": "w4hqt8vl"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1571016396000,
+      "publishedTimeStart": 1571965200000,
+      "publishedTimeEnd": 1571966970000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571965200000,
+      "transmissionTimeEnd": 1571966970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtm30.imi:ws.bbc.co.uk/PASHA1571965200",
+        "pid": "p07qzgps"
+      },
+      "brand": {
+        "pid": "p03n4htm",
+        "title": "غږیز کتاب",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
+          "medium": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې."
+        }
+      },
+      "episode": {
+        "pid": "w3csz3lf",
+        "presentationTitle": "20/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
+          "medium": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې."
+        }
+      },
+      "version": {
+        "pid": "w4hqtm30"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1571019973000,
+      "publishedTimeStart": 1571968800000,
+      "publishedTimeEnd": 1571970570000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1571968800000,
+      "transmissionTimeEnd": 1571970570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7l3.imi:ws.bbc.co.uk/PASHA1571968800",
+        "pid": "p07qzhcb"
+      },
+      "brand": {
+        "pid": "p056fcjb",
+        "title": "لومړنۍ سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrjv",
+        "presentationTitle": "25/10/2019 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7l3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_pashto_radio",
+      "serviceId": "bbc_pashto_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893490170000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893490170000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqt7v0.imi:ws.bbc.co.uk/PASHA1571972400",
+        "pid": "p07qzhx0"
+      },
+      "brand": {
+        "pid": "p056fcj9",
+        "title": "دویمه سهارنۍ خپرونه",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "episode": {
+        "pid": "w3csyrsr",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
+        "synopses": {
+          "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+        }
+      },
+      "version": {
+        "pid": "w4hqt7v0"
+      }
+    }
+  ]
+}
