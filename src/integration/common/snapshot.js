@@ -31,8 +31,9 @@ export default () => {
   [canonical, amp].forEach(page => {
     describe(`For the ${page.platform} platform`, () => {
       it('I can see the server-rendered HTML', () => {
-        removeElements(page.document.querySelectorAll('[data-styled]')); // styles change between each build for some reason
-        removeElements(page.document.querySelectorAll('style[amp-custom]')); // styles change between each build for some reason
+        removeElements(
+          page.document.querySelectorAll('[data-styled], style[amp-custom]'),
+        ); // styles change between each build for some reason
 
         const html = page.document.querySelector('html').outerHTML;
         const fixedHtml = getFixedHtml(html);
