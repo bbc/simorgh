@@ -450,6 +450,7 @@ export const service = {
         listen: 'Слушајте',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',

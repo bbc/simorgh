@@ -393,6 +393,7 @@ export const service = {
         listen: '收聽',
         watch: '觀看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期廣播節目',
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
