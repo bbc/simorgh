@@ -4877,12 +4877,20 @@ const genServices = {
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/world-23087423', // Russian CPS
+              '/ukrainian/other-news-23279018', // Ukrainian CPS
+              '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/world-23087423', // Russian CPS
+              '/ukrainian/other-news-23279018', // Ukrainian CPS
+              '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5140,11 +5148,19 @@ const genServices = {
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/world-23053613', // CPS MAP Cyrillic
+              '/uzbek/23279019', // CPS MAP Latin
+              '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
+            ],
+            enabled: true,
           },
           local: {
-            paths: ['/uzbek/sport-23248721'], // CPS MAP with video clip
+            paths: [
+              '/uzbek/world-23053613', // CPS MAP Cyrillic
+              '/uzbek/23279019', // CPS MAP Latin
+              '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
+            ],
             enabled: true,
           },
         },
