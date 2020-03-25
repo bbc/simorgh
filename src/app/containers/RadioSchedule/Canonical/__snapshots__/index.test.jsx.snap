@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Canonical RadioSchedule contains four programs for a service with a radio schedule 1`] = `<div />`;
+
 exports[`Canonical RadioSchedule renders correctly for a service with a radio schedule and page frequency URL 1`] = `
 .c15 {
   vertical-align: middle;
