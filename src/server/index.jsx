@@ -32,8 +32,6 @@ const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
 
-const publicDirectory = 'build/public';
-
 const cspInjectFun =
   process.env.SIMORGH_APP_ENV === 'local'
     ? localInjectHostCspHeader
@@ -136,13 +134,7 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         res.redirect(301, req.url.slice(0, -1));
       else next();
     })
-    .use(
-      expressStaticGzip(publicDirectory, {
-        enableBrotli: true,
-        orderPreference: ['br'],
-        redirect: false,
-      }),
-    )
+    .use(express.static(`${__dirname}/build/public`))
     .get(articleDataPath, async ({ params }, res, next) => {
       const { service, id, variant } = params;
 
@@ -163,7 +155,7 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
         service,
         variant,
       });
-
+      console.log(dataFilePath);
       sendDataFile(res, dataFilePath, next);
     })
     .get(mostReadDataRegexPath, async ({ params }, res, next) => {
