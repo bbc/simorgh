@@ -25,6 +25,7 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
+import SocialEmbed from '#containers/SocialEmbed';
 import {
   getFirstPublished,
   getLastPublished,
@@ -71,6 +72,7 @@ const StoryPage = ({ pageData }) => {
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
+    social_embed: props => <SocialEmbed {...props} />,
   };
 
   const StyledTimestamp = styled(Timestamp)`
