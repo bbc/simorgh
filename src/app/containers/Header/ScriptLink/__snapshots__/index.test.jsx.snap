@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Script Link should render correctly 1`] = `
-.c0 {
+.c1 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -16,55 +16,60 @@ exports[`Script Link should render correctly 1`] = `
   margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.c0 > span {
+.c2 {
   margin: 0.1875rem;
   display: inline-block;
   height: calc(100%);
   padding: 0 0.5rem;
 }
 
-.c0:hover > span,
-.c0:focus > span {
+.c0:hover .c2,
+.c0:focus .c2 {
   margin: 0;
   border: 0.1875rem solid #FFFFFF;
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c0 {
+  .c1 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c0 {
+  .c1 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c1 {
     line-height: calc(2.25rem - 0.5rem);
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c0 {
+  .c1 {
     height: 2.5rem;
   }
+}
 
-  .c0 > span {
-    padding: 0 0.5rem;
+@media (max-width:37.4375rem) {
+  .c2 {
     line-height: calc(2.5rem - 0.5rem);
   }
 }
 
 <a
-  class="c0"
+  class="c0 c1"
   data-variant="cyr"
   href="/serbian/cyr"
 >
-  Ћир
+  <span
+    class="c2"
+  >
+    Ћир
+  </span>
 </a>
 `;
