@@ -1,10 +1,19 @@
-import convertInclude, { encodeHTML } from '.';
+import convertInclude from '.';
 
-export const vjMarkup = `<div>Visual Jounalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
+const vjMarkup = {
+  plain: `<div>Visual Jounalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`,
+  encoded: `&lt;div&gt;Visual Jounalism Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/vj.js&quot;&gt;&lt;/script&gt;`,
+};
 
-export const idt2Markup = `<div>IDT 2 Markup</div><script type="text/javascript" src="localhost/idt2.js"></script>`;
+const idt2Markup = {
+  plain: `<div>IDT 2 Markup</div><script type="text/javascript" src="localhost/idt2.js"></script>`,
+  encoded: `&lt;div&gt;IDT 2 Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/idt2.js&quot;&gt;&lt;/script&gt;`,
+};
 
-export const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
+const idt1Markup = {
+  plain: `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`,
+  encoded: `&lt;div&gt;IDT 1 Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/idt1.js&quot;&gt;&lt;/script&gt`,
+};
 
 describe('convertInclude', () => {
   afterEach(() => {
@@ -12,7 +21,7 @@ describe('convertInclude', () => {
   });
 
   it('should fetch and convert an include block to an idt1 block', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
+    fetch.mockResponse(() => Promise.resolve(idt1Markup.plain));
     const input = {
       required: false,
       tile: 'A quiz!',
@@ -28,7 +37,7 @@ describe('convertInclude', () => {
         tile: 'A quiz!',
         platform: 'highweb',
         type: 'idt1',
-        html: encodeHTML(idt1Markup),
+        html: idt1Markup.encoded,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -36,7 +45,7 @@ describe('convertInclude', () => {
   });
 
   it('should fetch and convert an include block to an idt2 block', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt2Markup));
+    fetch.mockResponse(() => Promise.resolve(idt2Markup.plain));
     const input = {
       required: false,
       tile: 'IDT2 Include',
@@ -52,7 +61,7 @@ describe('convertInclude', () => {
         tile: 'IDT2 Include',
         platform: 'highweb',
         type: 'idt2',
-        html: encodeHTML(idt2Markup),
+        html: idt2Markup.encoded,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -60,7 +69,7 @@ describe('convertInclude', () => {
   });
 
   it('should fetch and convert an include block to a vj block', async () => {
-    fetch.mockResponse(() => Promise.resolve(vjMarkup));
+    fetch.mockResponse(() => Promise.resolve(vjMarkup.plain));
     const input = {
       required: false,
       tile: 'Include from VisJo',
@@ -76,7 +85,7 @@ describe('convertInclude', () => {
         tile: 'Include from VisJo',
         platform: 'highweb',
         type: 'vj',
-        html: encodeHTML(vjMarkup),
+        html: vjMarkup.encoded,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -84,7 +93,7 @@ describe('convertInclude', () => {
   });
 
   it('should convert an include block to an idt1 block with no leading / in href', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt1Markup));
+    fetch.mockResponse(() => Promise.resolve(idt1Markup.plain));
     const input = {
       required: false,
       tile: 'A quiz!',
@@ -100,7 +109,7 @@ describe('convertInclude', () => {
         tile: 'A quiz!',
         platform: 'highweb',
         type: 'idt1',
-        html: encodeHTML(idt1Markup),
+        html: idt1Markup.encoded,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -108,7 +117,7 @@ describe('convertInclude', () => {
   });
 
   it('should convert an include block to an idt2 block with no / in href', async () => {
-    fetch.mockResponse(() => Promise.resolve(idt2Markup));
+    fetch.mockResponse(() => Promise.resolve(idt2Markup.plain));
     const input = {
       required: false,
       tile: 'IDT2 Include',
@@ -124,7 +133,7 @@ describe('convertInclude', () => {
         tile: 'IDT2 Include',
         platform: 'highweb',
         type: 'idt2',
-        html: encodeHTML(idt2Markup),
+        html: idt2Markup.encoded,
       },
     };
     expect(await convertInclude(input)).toEqual(expected);
@@ -187,6 +196,5 @@ describe('convertInclude', () => {
       type: 'include',
     };
     expect(await convertInclude(input)).toEqual(null);
-    expect(fetch).not.toHaveBeenCalled();
   });
 });
