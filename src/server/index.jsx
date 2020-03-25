@@ -2,6 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
+import pathOr from 'ramda/src/pathOr';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -270,8 +271,8 @@ server
       });
 
       logger.info(ROUTING_INFORMATION, {
-        urlPath,
-        pageType: data.pageData.metadata.type,
+        url: urlPath,
+        pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
       });
 
       if (result.redirectUrl) {
