@@ -2898,11 +2898,11 @@ const genServices = {
         environments: {
           live: {
             paths: ['/pidgin/tori-50974590'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
