@@ -240,6 +240,7 @@ export const service = {
         listen: 'Slušajte',
         watch: 'Gledajte',
         liveLabel: 'UŽIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',

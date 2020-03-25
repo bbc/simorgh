@@ -243,6 +243,7 @@ export const service = {
         listen: '收听',
         watch: '观看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期广播节目',
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
