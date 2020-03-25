@@ -5148,11 +5148,19 @@ const genServices = {
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/world-23053613', // CPS MAP Cyrillic
+              '/uzbek/23279019', // CPS MAP Latin
+              '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
+            ],
+            enabled: true,
           },
           local: {
-            paths: ['/uzbek/sport-23248721'], // CPS MAP with video clip
+            paths: [
+              '/uzbek/world-23053613', // CPS MAP Cyrillic
+              '/uzbek/23279019', // CPS MAP Latin
+              '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
+            ],
             enabled: true,
           },
         },
