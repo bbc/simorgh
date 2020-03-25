@@ -18,7 +18,7 @@ export const getLink = (state, program, service) => {
   const url = `/${service}/${program.serviceId}`;
   return state === 'live'
     ? `${url}/liveradio`
-    : `${url}/${program.broadcast.pid}`;
+    : `${url}/${program.episode.pid}`;
 };
 
 export default (radioScheduleData, service, currentTime) => {
