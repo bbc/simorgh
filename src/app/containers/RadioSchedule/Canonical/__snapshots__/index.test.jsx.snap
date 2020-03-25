@@ -10,7 +10,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   height: 0.725rem;
 }
 
-.c27 {
+.c28 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -48,7 +48,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   color: #6E6E73;
 }
 
-.c22 {
+.c23 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -92,7 +92,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   margin: 0;
 }
 
-.c29 {
+.c31 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -102,7 +102,16 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   margin: 0;
 }
 
-.c30 {
+.c22 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #B80000;
+}
+
+.c32 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -111,7 +120,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   color: #11708C;
 }
 
-.c23 {
+.c24 {
   color: #3F3F42;
   padding: 0.5rem 0;
   display: block;
@@ -122,7 +131,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   line-height: 1.625rem;
 }
 
-.c31 {
+.c33 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: block;
@@ -133,7 +142,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   line-height: 1.625rem;
 }
 
-.c24 {
+.c25 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -144,7 +153,19 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   margin: 0;
 }
 
-.c25 {
+.c26 {
+  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  background-color: #B80000;
+  color: #FFFFFF;
+  border-top: 1px solid transparent;
+}
+
+.c30 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -156,7 +177,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   border-top: 1px solid transparent;
 }
 
-.c32 {
+.c34 {
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -168,7 +189,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   border-top: 1px solid transparent;
 }
 
-.c26 > svg {
+.c27 > svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -176,7 +197,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   margin: 0;
 }
 
-.c33 > svg {
+.c35 > svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -184,7 +205,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   margin: 0;
 }
 
-.c28 {
+.c29 {
   padding-right: 0.5rem;
 }
 
@@ -349,7 +370,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   padding-top: 0.5rem;
 }
 
-.c34 {
+.c36 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -361,7 +382,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   font-style: normal;
 }
 
-.c34:before {
+.c36:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -373,13 +394,13 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   z-index: 1;
 }
 
-.c34:hover,
-.c34:focus {
+.c36:hover,
+.c36:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c34:visited {
+.c36:visited {
   color: #6E6E73;
 }
 
@@ -483,48 +504,6 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c29 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c30 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c30 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
   .c31 {
     font-size: 1.25rem;
     line-height: 1.625rem;
@@ -539,42 +518,112 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c22 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c32 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c24 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c24 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c33 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c33 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c25 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c24 {
+  .c25 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c25 {
+  .c26 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c25 {
+  .c26 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c32 {
+  .c30 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c32 {
+  .c30 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c34 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c34 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
@@ -713,14 +762,14 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c34 {
+  .c36 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c34 {
+  .c36 {
     font-size: 1.125rem;
     line-height: 1.5rem;
   }
@@ -764,6 +813,147 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
     >
       <li
         class="c10 c11"
+        data-e2e="live"
+        dir="rtl"
+        role="listitem"
+      >
+        <div
+          class="c12"
+        >
+          <div
+            class="c13"
+          >
+            <span
+              class="c14"
+              dir="rtl"
+            >
+              <svg
+                aria-hidden="true"
+                class="c15"
+                focusable="false"
+                height="13"
+                viewBox="0 0 13 13"
+                width="13"
+              >
+                <path
+                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                />
+                <path
+                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                />
+              </svg>
+            </span>
+            <span
+              aria-hidden="true"
+              class="c16"
+              dir="rtl"
+            >
+              <time
+                class="c17"
+                datetime="2020-03-25"
+              >
+                10:06
+              </time>
+            </span>
+          </div>
+        </div>
+        <div
+          class="c18"
+        >
+          <div
+            class="c19"
+          >
+            <h3
+              class="c20"
+            >
+              <a
+                class="c21"
+                href="/arabic/bbc_arabic_radio/liveradio"
+              >
+                <span
+                  class=""
+                  role="text"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="c22"
+                  >
+                    LIVE
+                  </span>
+                  <span
+                    class="c23"
+                  >
+                    ,
+                  </span>
+                  <span>
+                     
+                    نقطة حوار
+                  </span>
+                  <span
+                    class="c23"
+                  >
+                    , 
+                    10:06
+                    , 
+                  </span>
+                  <span
+                    class="c24"
+                  >
+                    25/03/2020 GMT
+                  </span>
+                </span>
+              </a>
+            </h3>
+            <p
+              class="c25"
+            >
+              برنامج حواري تفاعلي مع الجمهور للمشاركة بآرائهم في القضايا المختلفة ويبث عبر التليفزيون والإذاعة والأنترنت
+            </p>
+          </div>
+          <div
+            class="c26"
+          >
+            <span
+              class="c27"
+            >
+              <svg
+                aria-hidden="true"
+                class="c28"
+                focusable="false"
+                height="12px"
+                viewBox="0 0 13 12"
+                width="13px"
+              >
+                <path
+                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                />
+                <path
+                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                />
+              </svg>
+            </span>
+            <time
+              class="c29"
+              datetime="PT54M"
+              dir="rtl"
+            >
+              <span
+                class="c23"
+              >
+                 Duration 54,00 
+              </span>
+              <span
+                aria-hidden="true"
+                class="Duration0 "
+              >
+                54:00
+              </span>
+            </time>
+          </div>
+        </div>
+      </li>
+      <li
+        class="c10 c11"
         data-e2e="onDemand"
         dir="rtl"
         role="listitem"
@@ -803,7 +993,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                 class="c17"
                 datetime="2020-03-25"
               >
-                09:00
+                10:00
               </time>
             </span>
           </div>
@@ -819,7 +1009,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             >
               <a
                 class="c21"
-                href="/arabic/bbc_arabic_radio/w172xbdttzkf1cl"
+                href="/arabic/bbc_arabic_radio/w172xbdttzkf53q"
               >
                 <span
                   class=""
@@ -829,14 +1019,14 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                     نشرة الأخبار
                   </span>
                   <span
-                    class="c22"
+                    class="c23"
                   >
                     , 
-                    09:00
+                    10:00
                     , 
                   </span>
                   <span
-                    class="c23"
+                    class="c24"
                   >
                     25/03/2020 GMT
                   </span>
@@ -844,20 +1034,20 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               </a>
             </h3>
             <p
-              class="c24"
+              class="c25"
             >
               نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="c25"
+            class="c30"
           >
             <span
-              class="c26"
+              class="c27"
             >
               <svg
                 aria-hidden="true"
-                class="c27"
+                class="c28"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -872,12 +1062,12 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               </svg>
             </span>
             <time
-              class="c28"
+              class="c29"
               datetime="PT6M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="c23"
               >
                  Duration 06,00 
               </span>
@@ -932,7 +1122,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                 class="c17"
                 datetime="2020-03-25"
               >
-                08:30
+                09:30
               </time>
             </span>
           </div>
@@ -948,7 +1138,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             >
               <a
                 class="c21"
-                href="/arabic/bbc_arabic_radio/w172xbf7kbvrmq5"
+                href="/arabic/bbc_arabic_radio/w172xbf7kbvrrg9"
               >
                 <span
                   class=""
@@ -958,14 +1148,14 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                     موجز الأنباء
                   </span>
                   <span
-                    class="c22"
+                    class="c23"
                   >
                     , 
-                    08:30
+                    09:30
                     , 
                   </span>
                   <span
-                    class="c23"
+                    class="c24"
                   >
                     25/03/2020 GMT
                   </span>
@@ -973,20 +1163,20 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               </a>
             </h3>
             <p
-              class="c24"
+              class="c25"
             >
               نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
             </p>
           </div>
           <div
-            class="c25"
+            class="c30"
           >
             <span
-              class="c26"
+              class="c27"
             >
               <svg
                 aria-hidden="true"
-                class="c27"
+                class="c28"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -1001,12 +1191,12 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               </svg>
             </span>
             <time
-              class="c28"
+              class="c29"
               datetime="PT2M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="c23"
               >
                  Duration 02,00 
               </span>
@@ -1015,135 +1205,6 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                 class="Duration0 "
               >
                 02:00
-              </span>
-            </time>
-          </div>
-        </div>
-      </li>
-      <li
-        class="c10 c11"
-        data-e2e="onDemand"
-        dir="rtl"
-        role="listitem"
-      >
-        <div
-          class="c12"
-        >
-          <div
-            class="c13"
-          >
-            <span
-              class="c14"
-              dir="rtl"
-            >
-              <svg
-                aria-hidden="true"
-                class="c15"
-                focusable="false"
-                height="13"
-                viewBox="0 0 13 13"
-                width="13"
-              >
-                <path
-                  d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                />
-                <path
-                  d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                />
-              </svg>
-            </span>
-            <span
-              aria-hidden="true"
-              class="c16"
-              dir="rtl"
-            >
-              <time
-                class="c17"
-                datetime="2020-03-25"
-              >
-                08:06
-              </time>
-            </span>
-          </div>
-        </div>
-        <div
-          class="c18"
-        >
-          <div
-            class="c19"
-          >
-            <h3
-              class="c20"
-            >
-              <a
-                class="c21"
-                href="/arabic/bbc_arabic_radio/w3ct00xt"
-              >
-                <span
-                  class=""
-                  role="text"
-                >
-                  <span>
-                    بي بي سي اكستر
-                  </span>
-                  <span
-                    class="c22"
-                  >
-                    , 
-                    08:06
-                    , 
-                  </span>
-                  <span
-                    class="c23"
-                  >
-                    24/03/2020 GMT
-                  </span>
-                </span>
-              </a>
-            </h3>
-            <p
-              class="c24"
-            >
-              برنامج شبابي حيوي تفاعلي يتناول كافة الموضوعات والقضايا بالمفهوم الأ شمل للأخبار كالعلوم والثقافة والفن.
-            </p>
-          </div>
-          <div
-            class="c25"
-          >
-            <span
-              class="c26"
-            >
-              <svg
-                aria-hidden="true"
-                class="c27"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 13 12"
-                width="13px"
-              >
-                <path
-                  d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                />
-                <path
-                  d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                />
-              </svg>
-            </span>
-            <time
-              class="c28"
-              datetime="PT24M"
-              dir="rtl"
-            >
-              <span
-                class="c22"
-              >
-                 Duration 24,00 
-              </span>
-              <span
-                aria-hidden="true"
-                class="Duration0 "
-              >
-                24:00
               </span>
             </time>
           </div>
@@ -1190,7 +1251,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                 class="c17"
                 datetime="2020-03-25"
               >
-                09:30
+                11:00
               </time>
             </span>
           </div>
@@ -1202,55 +1263,55 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
             class="c19"
           >
             <h3
-              class="c29"
+              class="c31"
             >
               <span
                 class=""
                 role="text"
               >
                 <span
-                  class="c30"
+                  class="c32"
                 >
                   NEXT
                 </span>
                 <span
-                  class="c22"
+                  class="c23"
                 >
                   ,
                 </span>
                 <span>
                    
-                  موجز الأنباء
+                  نشرة الأخبار
                 </span>
                 <span
-                  class="c22"
+                  class="c23"
                 >
                   , 
-                  09:30
+                  11:00
                   , 
                 </span>
                 <span
-                  class="c31"
+                  class="c33"
                 >
                   25/03/2020 GMT
                 </span>
               </span>
             </h3>
             <p
-              class="c24"
+              class="c25"
             >
-              نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
+              نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
             </p>
           </div>
           <div
-            class="c32"
+            class="c34"
           >
             <span
-              class="c33"
+              class="c35"
             >
               <svg
                 aria-hidden="true"
-                class="c27"
+                class="c28"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 13 12"
@@ -1265,20 +1326,20 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               </svg>
             </span>
             <time
-              class="c28"
-              datetime="PT2M"
+              class="c29"
+              datetime="PT6M"
               dir="rtl"
             >
               <span
-                class="c22"
+                class="c23"
               >
-                 Duration 02,00 
+                 Duration 06,00 
               </span>
               <span
                 aria-hidden="true"
                 class="Duration0 "
               >
-                02:00
+                06:00
               </span>
             </time>
           </div>
@@ -1286,7 +1347,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
       </li>
     </ul>
     <a
-      class="c34"
+      class="c36"
       href="/arabic/institutional/2011/01/000000_frequencies_radio"
     >
       استقبال البث
