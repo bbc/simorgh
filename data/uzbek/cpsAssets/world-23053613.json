@@ -1,0 +1,289 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "nnnnn",
+        "embedding": true,
+        "format": "video",
+        "id": "p01qjbpq",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+        "subType": "clip",
+        "synopses": {
+          "long": "koala ijm aus",
+          "medium": "australia",
+          "short": "koajaa"
+        },
+        "title": "koala",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1582890367000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 15,
+            "durationISO8601": "PT15S",
+            "types": ["Editorial"],
+            "versionId": "p01qjbvb",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Президент Мирзиёев коронавирусга қарши курашда Хитой тажрибасини танлаганини маълум қилди.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Бу танлов шу кеча-кундузда жуда умидли янграйди.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ўзбекистон президенти барча захиралар етарли, аммо мутахассисга эҳтиёж борлигини ҳам билдирган.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Шавкат Мирзиёев вирусга қарши курашда тажрибага эга Хитойдан ёрдам ҳамда мутахассислар сўраганини қайд этди.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Хитой усули қандай ва бу Ўзбекистон шароитида ишлайдими? Видео:",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "uzbek.world.media_asset.23053613.page",
+      "cps_asset_id": "23053613",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "uzbek-v6",
+    "firstPublished": 1466173495000,
+    "id": "urn:bbc:ares::asset:uzbek/world-23053613",
+    "includeComments": false,
+    "language": "uz-Cyrl",
+    "lastPublished": 1585043113000,
+    "lastUpdated": 1585043124068,
+    "locators": {
+      "assetId": "23053613",
+      "assetUri": "/uzbek/world-23053613",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053613",
+      "curie": "http://www.bbc.co.uk/asset/d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+          "thingLabel": "Environment",
+          "thingSameAs": ["http://dbpedia.org/resource/Natural_environment"],
+          "thingType": ["Theme", "news:Theme", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+        },
+        {
+          "thingId": "f7cb7586-737a-419d-b569-15b25da5a2c1",
+          "thingLabel": "Bangladesh",
+          "thingSameAs": ["http://sws.geonames.org/1210997/"],
+          "thingType": ["Place", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/f7cb7586-737a-419d-b569-15b25da5a2c1#id"
+        }
+      ]
+    },
+    "timestamp": 1466593972000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston",
+      "shortHeadline": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/world-23053613",
+    "indexImage": {
+      "altText": "Америкада 2 яшар болани тимсоҳ тортиб кетди",
+      "copyrightHolder": "Alamy",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/B6D9/test/_63490864_p0140swc.jpg",
+      "id": "63490864",
+      "path": "/cpsdevpb/B6D9/test/_63490864_p0140swc.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "uz-Cyrl",
+    "locators": {
+      "assetId": "23053613",
+      "assetUri": "/uzbek/world-23053613",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/world-23053613",
+      "curie": "http://www.bbc.co.uk/asset/d1bef766-a8c0-834e-bfbc-b9c0ca2f04e4"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "nnnnn",
+      "embedding": true,
+      "format": "video",
+      "id": "p01qjbpq",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "koala ijm aus",
+        "medium": "australia",
+        "short": "koajaa"
+      },
+      "title": "koala",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1582890367000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 15,
+          "durationISO8601": "PT15S",
+          "types": ["Editorial"],
+          "versionId": "p01qjbvb",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "summary": "Ўзбекистон, Коронавирус: Мирзиёев Хитой усулини қўлламоқчи - O`zbekiston",
+    "timestamp": 1466593972000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? world фвфв",
+              "shortHeadline": "Марсель полицияси 11 россиялик ишқибозни озод қилди? world фвфв"
+            },
+            "id": "urn:bbc:ares::asset:uzbek/world-23052566",
+            "indexImage": {
+              "altText": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар укц.",
+              "caption": "Бугун Лилль шаҳрида Россия терма жамоасининг Оврўпо чемпионатидаги иккинчи ўйини бўлиб ўтади. Россияликлар Словакия жамоаси билан майдонга тушадилар укцк.",
+              "copyrightHolder": "Alamy",
+              "height": 360,
+              "href": "http://b.files.bbci.co.uk/129BB/test/_63491267_061496d6-59e9-4f7d-921e-8dafd2b027a5.jpg",
+              "id": "63491267",
+              "path": "/cpsdevpb/129BB/test/_63491267_061496d6-59e9-4f7d-921e-8dafd2b027a5.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 640
+            },
+            "language": "uz-Cyrl",
+            "locators": {
+              "assetUri": "/uzbek/world-23052566",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/world-23052566"
+            },
+            "summary": "Франция полицияси аввалроқ қўлга олинган 11 нафар россиялик футбол ишқибозини қўйиб юборган. Бу ҳақида Марселдаги Россия бош консули Сергей Молчанов хабар берди world қфвқ.",
+            "timestamp": 1466590701000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "MAP",
+            "headlines": {
+              "headline": "16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin.",
+              "shortHeadline": "BBCning 60 lahzalik videoyangiliklari"
+            },
+            "id": "urn:bbc:ares::asset:uzbek/lotin-23053619",
+            "indexImage": {
+              "altText": "BBCning 60 lahzalik videoyangiliklari",
+              "caption": "BBCning 60 lahzalik videoyangiliklari",
+              "copyrightHolder": "Alamy",
+              "height": 576,
+              "href": "http://b.files.bbci.co.uk/F9A5/test/_63490936_p0140w5x.jpg",
+              "id": "63490936",
+              "path": "/cpsdevpb/F9A5/test/_63490936_p0140w5x.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
+            },
+            "language": "uz-Latn",
+            "locators": {
+              "assetUri": "/uzbek/lotin-23053619",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/lotin-23053619"
+            },
+            "media": {
+              "caption": "16 iyun kuni jahonda yuz bergan muhim voqealar sharhi Latin.",
+              "entityType": "Clip",
+              "externalId": "p0140vnz",
+              "format": "video",
+              "id": "23053620",
+              "subType": "primary",
+              "type": "external_vpid"
+            },
+            "mediaType": "Video",
+            "summary": "Ha, bugun Angliyaga qarshi maydonga tushajak yulduzi Garet Beyl sharafiga Uelsning shimoliy Bala shahri ma‘muriyati xuddi shunga qaror qilibdi.",
+            "timestamp": 1466177546000,
+            "type": "cps"
+          }
+        ],
+        "type": "see-alsos"
+      },
+      {
+        "promos": [
+          {
+            "id": "urn:bbc:ares::asset:uzbek/uzbekistan-23054651",
+            "language": "uz-Cyrl",
+            "locators": {
+              "assetUri": "/uzbek/uzbekistan-23054651",
+              "cpsUrn": "urn:bbc:content:assetUri:/uzbek/uzbekistan-23054651"
+            },
+            "timestamp": 1466528143000,
+            "title": "Hyperpuff for uzbekistan Ўзбекистон",
+            "type": "hyper"
+          }
+        ],
+        "type": "related-hypers"
+      }
+    ],
+    "section": {
+      "name": "Дунё",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/uzbek/world"
+    },
+    "site": {
+      "name": "Ўзбек тилидаги янгиликлар",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/uzbek"
+    }
+  }
+}
