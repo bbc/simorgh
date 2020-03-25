@@ -4890,7 +4890,7 @@ const genServices = {
               '/ukrainian/other-news-23279018', // Ukrainian CPS
               '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
