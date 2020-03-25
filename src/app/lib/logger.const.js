@@ -9,6 +9,7 @@ const logCodes = {
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
   DATA_REQUEST_RECEIVED: 'data_request_received',
   DATA_FETCH_ERROR: 'data_fetch_error',
+  ROUTING_INFORMATION: 'routing_info',
 };
 
 module.exports = logCodes;

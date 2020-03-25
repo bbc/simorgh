@@ -30,6 +30,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   LOCAL_SENDFILE_ERROR,
+  ROUTING_INFORMATION,
 } from '#lib/logger.const';
 
 const fs = require('fs');
@@ -266,6 +267,11 @@ server
         service,
         url,
         variant,
+      });
+
+      logger.info(ROUTING_INFORMATION, {
+        urlPath,
+        pageType: data.pageData.metadata.type,
       });
 
       if (result.redirectUrl) {
