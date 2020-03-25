@@ -11,11 +11,8 @@ const replaceIds = html => html.replace(/"id":".+?"/gm, '"id":"mock-id"');
 const replaceUUIDs = html =>
   html.replace(/"uuid":".+?"/gm, '"uuid":"mock-uuid"');
 
-const replaceElements = (elements, replacement) => {
-  Array.from(elements).forEach(element => {
-    // eslint-disable-next-line no-param-reassign
-    element.outerHTML = replacement;
-  });
+const removeElements = elements => {
+  Array.from(elements).forEach(element => element.remove());
 };
 
 const replaceStaticScriptSrc = html =>
@@ -34,14 +31,8 @@ export default () => {
   [canonical, amp].forEach(page => {
     describe(`For the ${page.platform} platform`, () => {
       it('I can see the server-rendered HTML', () => {
-        replaceElements(
-          page.document.querySelectorAll('[data-styled]'),
-          '<style inline-style-removed-for-snapshot-purposes></style>',
-        ); // styles change between each build for some reason
-        replaceElements(
-          page.document.querySelectorAll('style[amp-custom]'),
-          '<style inline-style-removed-for-snapshot-purposes></style>',
-        ); // styles change between each build for some reason
+        removeElements(page.document.querySelectorAll('[data-styled]')); // styles change between each build for some reason
+        removeElements(page.document.querySelectorAll('style[amp-custom]')); // styles change between each build for some reason
 
         const html = page.document.querySelector('html').outerHTML;
         const fixedHtml = getFixedHtml(html);
