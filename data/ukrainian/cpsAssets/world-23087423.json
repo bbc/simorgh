@@ -1,0 +1,233 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": ["Original"],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Росія - єдина країна &quot;Великої двадцятки&quot;, окрім самих США, в якій на майбутніх президентських виборах у Сполучених Штатах проголосували б не за Гіларі Клінтон. Безперечним фаворитом росіян став Дональд Трамп. Такі результати дослідження агенції YouGov.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Цей кандидат у президенти від республіканців називає Росію союзником та високо цінує Володимира Путіна. А той, в свою чергу, вважає його талановитим і яскравим політиком.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Симпатію росіян до республіканця Трампа намагається пояснити кореспондент BBC Стівен Розенберг.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "ukrainian.other_news.media_asset.23087423.page",
+      "cps_asset_id": "23087423",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "ukrainian-v6",
+    "firstPublished": 1477664959000,
+    "id": "urn:bbc:ares::asset:ukrainian/world-23087423",
+    "includeComments": false,
+    "language": "ru",
+    "lastPublished": 1477664959000,
+    "lastUpdated": 1585125666937,
+    "locators": {
+      "assetId": "23087423",
+      "assetUri": "/ukrainian/world-23087423",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/world-23087423",
+      "curie": "http://www.bbc.co.uk/asset/e346fdd6-fbe7-7145-80a3-88ae47d62342"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "curationList": [
+            {
+              "curationId": "d8b90db5-39dd-4384-b063-66ed06d161cf",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+          "thingLabel": "Sport",
+          "thingSameAs": ["http://dbpedia.org/resource/Sport"],
+          "thingType": [
+            "bbc:Genre",
+            "tagging:Genre",
+            "http://www.bbc.co.uk/ontologies/classification/RootClassification",
+            "Thing",
+            "Theme",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+          "topicId": "cj1g05wn9ewt",
+          "topicName": "Спорт"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "2c1b9626-97ba-4a50-a057-c81346acd9d6",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+          "thingLabel": "Culture",
+          "thingSameAs": ["http://dbpedia.org/resource/Culture"],
+          "thingType": ["Theme", "news:Theme", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+          "topicId": "cw6eyw7e83nt",
+          "topicName": "КУЛЬТУРА"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "09770199-6932-4f98-aec4-210aca6d65db",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "c7c7fcfe-5246-434e-9422-cdc925fe3a79",
+          "thingLabel": "Donald Trump",
+          "thingSameAs": ["http://dbpedia.org/resource/Donald_Trump"],
+          "thingType": ["Person", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
+          "topicId": "cvg09v6dk22t",
+          "topicName": "Дональд Трамп"
+        }
+      ]
+    },
+    "timestamp": 1477664959000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)",
+      "shortHeadline": "Чому росіяни віддали б голоси за Трампа? (Russian TEST)"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/world-23087423",
+    "indexImage": {
+      "altText": "цуу уйцу єждґячсю",
+      "copyrightHolder": "Magnum Photos",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+      "id": "63519926",
+      "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "ru",
+    "locators": {
+      "assetId": "23087423",
+      "assetUri": "/ukrainian/world-23087423",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/world-23087423",
+      "curie": "http://www.bbc.co.uk/asset/e346fdd6-fbe7-7145-80a3-88ae47d62342"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+      "embedding": true,
+      "format": "video",
+      "id": "p01k6msm",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+      },
+      "title": "Five things ants can teach us about management",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1540218932000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 191,
+          "durationISO8601": "PT3M11S",
+          "types": ["Original"],
+          "versionId": "p01k6msp",
+          "warnings": {
+            "long": "Contains strong language and adult humour.",
+            "short": "Contains strong language and adult humour."
+          }
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "summary": "Росія - єдина країна \"Великої двадцятки\", окрім самих США, в якій на майбутніх президентських виборах у Сполучених Штатах проголосували б не за Гіларі Клінтон.",
+    "timestamp": 1477664959000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Також у новинах",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukrainian/other_news"
+    },
+    "site": {
+      "name": "BBC Україна",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukrainian"
+    }
+  }
+}
