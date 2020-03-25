@@ -1,6 +1,6 @@
 import pipe from 'ramda/src/pipe';
 
-const { amp, canonical } = global;
+const { canonical, amp } = global;
 
 // replace things in the HTML that change every render such as random IDs and timeOnServer
 const replaceTimeOnServer = html =>
@@ -11,12 +11,30 @@ const replaceIds = html => html.replace(/"id":".+?"/gm, '"id":"mock-id"');
 const replaceUUIDs = html =>
   html.replace(/"uuid":".+?"/gm, '"uuid":"mock-uuid"');
 
-const getFixedHtml = pipe(replaceTimeOnServer, replaceIds, replaceUUIDs);
+const removeElements = elements => {
+  Array.from(elements).forEach(element => element.remove());
+};
+
+const replaceStaticScriptSrc = html =>
+  html.replace(/static\/js\/main-.+?.js/gm, replacement => {
+    return `${replacement.split('.')[0]}.js`;
+  });
+
+const getFixedHtml = pipe(
+  replaceTimeOnServer,
+  replaceIds,
+  replaceUUIDs,
+  replaceStaticScriptSrc,
+);
 
 export default () => {
-  [amp, canonical].forEach(page => {
+  [canonical, amp].forEach(page => {
     describe(`And using ${page.platform}`, () => {
       it('I can see the server-rendered HTML', () => {
+        removeElements(
+          page.document.querySelectorAll('[data-styled], style[amp-custom]'),
+        ); // styles change between each build for some reason
+
         const html = page.document.querySelector('html').outerHTML;
         const fixedHtml = getFixedHtml(html);
 
