@@ -27,6 +27,9 @@ const toggles = {
     ads: {
       enabled: true,
     },
+    socialEmbed: {
+      enabled: true,
+    },
   },
   test: {
     chartbeatAnalytics: {
@@ -55,6 +58,9 @@ const toggles = {
     },
     ads: {
       enabled: true,
+    },
+    socialEmbed: {
+      enabled: false,
     },
   },
   stage: {
@@ -85,6 +91,9 @@ const toggles = {
     ads: {
       enabled: false,
     },
+    socialEmbed: {
+      enabled: false,
+    },
   },
   live: {
     chartbeatAnalytics: {
@@ -112,6 +121,9 @@ const toggles = {
       enabled: true,
     },
     ads: {
+      enabled: false,
+    },
+    socialEmbed: {
       enabled: false,
     },
   },
