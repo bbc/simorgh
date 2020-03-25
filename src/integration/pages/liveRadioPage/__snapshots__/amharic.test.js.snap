@@ -238,6 +238,8 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
           href="/favicon.ico"
           type="image/x-icon"
     >
+    <style inline-style-removed-for-snapshot-purposes>
+    </style>
     <script data-react-helmet="true"
             async
             custom-element="amp-bind"
@@ -1038,6 +1040,8 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
           href="/favicon.ico"
           type="image/x-icon"
     >
+    <style inline-style-removed-for-snapshot-purposes>
+    </style>
     <script data-react-helmet="true"
             type="application/ld+json"
     >

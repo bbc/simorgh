@@ -250,6 +250,8 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
           href="/favicon.ico"
           type="image/x-icon"
     >
+    <style inline-style-removed-for-snapshot-purposes>
+    </style>
     <script data-react-helmet="true"
             async
             custom-element="amp-bind"
@@ -1320,6 +1322,10 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
           href="/favicon.ico"
           type="image/x-icon"
     >
+    <style inline-style-removed-for-snapshot-purposes>
+    </style>
+    <style inline-style-removed-for-snapshot-purposes>
+    </style>
     <script data-react-helmet="true"
             type="application/ld+json"
     >
