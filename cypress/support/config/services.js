@@ -3395,12 +3395,12 @@ const genServices = {
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/serbian/cyr/srbija-23278974'],
+            enabled: true,
           },
           local: {
-            paths: [], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
-            enabled: false,
+            paths: ['/serbian/cyr/srbija-23278974'], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
+            enabled: true,
           },
         },
         smoke: false,
