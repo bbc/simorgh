@@ -47,18 +47,45 @@ const folderAndFilename = name => {
   return fileparts.splice(-2).join(path.sep);
 };
 
-const logger = callingFile => {
+const logToFile = callingFile => {
   createLogDirectory(LOG_DIR);
 
   return createLogger({
     format: combine(
       label({ label: folderAndFilename(callingFile) }),
       simple(),
-      timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+      timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
       customFormatting,
     ),
     transports: [fileTransport, consoleTransport],
   });
 };
+
+const processLogMessage = (event, message) => {
+  const logObject = {
+    event,
+    message,
+  };
+
+  return JSON.stringify(logObject, null, 2);
+};
+
+class Logger {
+  constructor(callingFile) {
+    const fileLogger = logToFile(callingFile);
+    this.error = (event, message) =>
+      fileLogger.error(processLogMessage(event, message));
+    this.warn = (event, message) =>
+      fileLogger.warn(processLogMessage(event, message));
+    this.info = (event, message) =>
+      fileLogger.info(processLogMessage(event, message));
+    this.debug = (event, message) =>
+      fileLogger.debug(processLogMessage(event, message));
+    this.verbose = (event, message) =>
+      fileLogger.log(processLogMessage(event, message));
+  }
+}
+
+const logger = callingFile => new Logger(callingFile);
 
 module.exports = logger;

@@ -4,6 +4,11 @@ import onClient from '#lib/utilities/onClient';
 import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
 import getBaseUrl from './utils/getBaseUrl';
 import isLive from '#lib/utilities/isLive';
+import {
+  DATA_REQUEST_RECEIVED,
+  DATA_NOT_FOUND,
+  DATA_FETCH_ERROR,
+} from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 const STATUS_OK = 200;
@@ -32,18 +37,11 @@ const handleResponse = url => async response => {
 
   if (upstreamStatusCodesToPropagate.includes(status)) {
     if (status === STATUS_NOT_FOUND) {
-      logger.error(
-        JSON.stringify(
-          {
-            event: 'data_response_404',
-            status,
-            message: `Data not found when requesting ${url}`,
-            url,
-          },
-          null,
-          2,
-        ),
-      );
+      logger.error(DATA_NOT_FOUND, {
+        message: `Data not found when requesting ${url}`,
+        url,
+        status,
+      });
     }
 
     return {
@@ -62,16 +60,7 @@ const handleResponse = url => async response => {
 const handleError = e => {
   const error = e.toString();
 
-  logger.error(
-    JSON.stringify(
-      {
-        event: 'data_fetch_error',
-        message: error,
-      },
-      null,
-      2,
-    ),
-  );
+  logger.error(DATA_FETCH_ERROR, { error });
 
   return {
     error,
@@ -82,7 +71,7 @@ const handleError = e => {
 const fetchData = pathname => {
   const url = getUrl(pathname);
 
-  logger.info(`DataRequest: [${url}]`);
+  logger.info(DATA_REQUEST_RECEIVED, { url });
 
   return fetch(url)
     .then(handleResponse(url))

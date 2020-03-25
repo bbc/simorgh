@@ -25,16 +25,7 @@ export const addUnavailableMediaBlock = pageData => {
 
 const logIfNoMedia = blockTypes => {
   if (!blockTypes.includes(REVOKED_MEDIA)) {
-    logger.warn(
-      JSON.stringify(
-        {
-          event: NO_MEDIA_BLOCK,
-          message: 'No media detected in response',
-        },
-        null,
-        2,
-      ),
-    );
+    logger.warn(NO_MEDIA_BLOCK, { warning: 'No media detected in response' });
   }
 };
 
