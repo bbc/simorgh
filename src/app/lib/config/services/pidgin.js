@@ -156,6 +156,7 @@ export const service = {
         listen: 'Make you listen',
         watch: 'Look',
         liveLabel: 'AS E DE HAPPEN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
