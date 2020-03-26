@@ -1694,110 +1694,106 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     role="region"
                   >
                     <div
-                      class="c46"
+                      class="c32 c47"
                     >
                       <div
-                        class="c32 c47"
+                        class="c34"
+                      />
+                      <h2
+                        class="c35"
                       >
                         <div
-                          class="c34"
-                        />
-                        <h2
-                          class="c35"
+                          class="c36"
                         >
-                          <div
-                            class="c36"
+                          <span
+                            class="c37"
                           >
                             <span
-                              class="c37"
+                              class="c38"
+                              dir="ltr"
+                              id="top-stories-heading"
                             >
-                              <span
-                                class="c38"
-                                dir="ltr"
-                                id="top-stories-heading"
-                              >
-                                Top Stories
-                              </span>
+                              Top Stories
                             </span>
-                          </div>
-                        </h2>
-                      </div>
-                      <ul
-                        class="c39"
-                        role="list"
-                      >
-                        <li
-                          class="c41"
-                          role="listitem"
-                        >
-                          <div
-                            class="c48"
-                          >
-                            <div
-                              class="c49"
-                              dir="ltr"
-                            >
-                              <h3
-                                class="c50"
-                              >
-                                <a
-                                  class="c51"
-                                  href="/mundo/noticias-internacional-51939501"
-                                >
-                                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                                </a>
-                              </h3>
-                              <p
-                                class="c52"
-                              >
-                                Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-                              </p>
-                              <time
-                                class="c53"
-                                datetime="2020-02-03"
-                              >
-                                3rd February 2020
-                              </time>
-                            </div>
-                          </div>
-                        </li>
-                        <li
-                          class="c41"
-                          role="listitem"
-                        >
-                          <div
-                            class="c48"
-                          >
-                            <div
-                              class="c49"
-                              dir="ltr"
-                            >
-                              <h3
-                                class="c50"
-                              >
-                                <a
-                                  class="c51"
-                                  href="/pidgin/tori-51945757"
-                                >
-                                  Nigeria don get five new cases of Coronavirus - See how e happun
-                                </a>
-                              </h3>
-                              <p
-                                class="c52"
-                              >
-                                Nigeria Health say di patients from UK and America travel come di kontri.
-                              </p>
-                              <time
-                                class="c53"
-                                datetime="2020-02-03"
-                              >
-                                3rd February 2020
-                              </time>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                          </span>
+                        </div>
+                      </h2>
                     </div>
+                    <ul
+                      class="c39"
+                      role="list"
+                    >
+                      <li
+                        class="c41"
+                        role="listitem"
+                      >
+                        <div
+                          class="c48"
+                        >
+                          <div
+                            class="c49"
+                            dir="ltr"
+                          >
+                            <h3
+                              class="c50"
+                            >
+                              <a
+                                class="c51"
+                                href="/mundo/noticias-internacional-51939501"
+                              >
+                                China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                              </a>
+                            </h3>
+                            <p
+                              class="c52"
+                            >
+                              Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+                            </p>
+                            <time
+                              class="c53"
+                              datetime="2020-02-03"
+                            >
+                              3rd February 2020
+                            </time>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="c41"
+                        role="listitem"
+                      >
+                        <div
+                          class="c48"
+                        >
+                          <div
+                            class="c49"
+                            dir="ltr"
+                          >
+                            <h3
+                              class="c50"
+                            >
+                              <a
+                                class="c51"
+                                href="/pidgin/tori-51945757"
+                              >
+                                Nigeria don get five new cases of Coronavirus - See how e happun
+                              </a>
+                            </h3>
+                            <p
+                              class="c52"
+                            >
+                              Nigeria Health say di patients from UK and America travel come di kontri.
+                            </p>
+                            <time
+                              class="c53"
+                              datetime="2020-02-03"
+                            >
+                              3rd February 2020
+                            </time>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </section>
                 </div>
                 <div
@@ -3785,110 +3781,106 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         role="region"
                       >
                         <div
-                          class="c48"
+                          class="c34 c49"
                         >
                           <div
-                            class="c34 c49"
+                            class="c36"
+                          />
+                          <h2
+                            class="c37"
                           >
                             <div
-                              class="c36"
-                            />
-                            <h2
-                              class="c37"
+                              class="c38"
                             >
-                              <div
-                                class="c38"
+                              <span
+                                class="c39"
                               >
                                 <span
-                                  class="c39"
+                                  class="c40"
+                                  dir="ltr"
+                                  id="top-stories-heading"
                                 >
-                                  <span
-                                    class="c40"
-                                    dir="ltr"
-                                    id="top-stories-heading"
-                                  >
-                                    Top Stories
-                                  </span>
+                                  Top Stories
                                 </span>
-                              </div>
-                            </h2>
-                          </div>
-                          <ul
-                            class="c41"
-                            role="list"
-                          >
-                            <li
-                              class="c43"
-                              role="listitem"
-                            >
-                              <div
-                                class="c50"
-                              >
-                                <div
-                                  class="c51"
-                                  dir="ltr"
-                                >
-                                  <h3
-                                    class="c52"
-                                  >
-                                    <a
-                                      class="c53"
-                                      href="/mundo/noticias-internacional-51939501"
-                                    >
-                                      China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                                    </a>
-                                  </h3>
-                                  <p
-                                    class="c54"
-                                  >
-                                    Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-                                  </p>
-                                  <time
-                                    class="c55"
-                                    datetime="2020-02-03"
-                                  >
-                                    3rd February 2020
-                                  </time>
-                                </div>
-                              </div>
-                            </li>
-                            <li
-                              class="c43"
-                              role="listitem"
-                            >
-                              <div
-                                class="c50"
-                              >
-                                <div
-                                  class="c51"
-                                  dir="ltr"
-                                >
-                                  <h3
-                                    class="c52"
-                                  >
-                                    <a
-                                      class="c53"
-                                      href="/pidgin/tori-51945757"
-                                    >
-                                      Nigeria don get five new cases of Coronavirus - See how e happun
-                                    </a>
-                                  </h3>
-                                  <p
-                                    class="c54"
-                                  >
-                                    Nigeria Health say di patients from UK and America travel come di kontri.
-                                  </p>
-                                  <time
-                                    class="c55"
-                                    datetime="2020-02-03"
-                                  >
-                                    3rd February 2020
-                                  </time>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
+                              </span>
+                            </div>
+                          </h2>
                         </div>
+                        <ul
+                          class="c41"
+                          role="list"
+                        >
+                          <li
+                            class="c43"
+                            role="listitem"
+                          >
+                            <div
+                              class="c50"
+                            >
+                              <div
+                                class="c51"
+                                dir="ltr"
+                              >
+                                <h3
+                                  class="c52"
+                                >
+                                  <a
+                                    class="c53"
+                                    href="/mundo/noticias-internacional-51939501"
+                                  >
+                                    China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                                  </a>
+                                </h3>
+                                <p
+                                  class="c54"
+                                >
+                                  Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+                                </p>
+                                <time
+                                  class="c55"
+                                  datetime="2020-02-03"
+                                >
+                                  3rd February 2020
+                                </time>
+                              </div>
+                            </div>
+                          </li>
+                          <li
+                            class="c43"
+                            role="listitem"
+                          >
+                            <div
+                              class="c50"
+                            >
+                              <div
+                                class="c51"
+                                dir="ltr"
+                              >
+                                <h3
+                                  class="c52"
+                                >
+                                  <a
+                                    class="c53"
+                                    href="/pidgin/tori-51945757"
+                                  >
+                                    Nigeria don get five new cases of Coronavirus - See how e happun
+                                  </a>
+                                </h3>
+                                <p
+                                  class="c54"
+                                >
+                                  Nigeria Health say di patients from UK and America travel come di kontri.
+                                </p>
+                                <time
+                                  class="c55"
+                                  datetime="2020-02-03"
+                                >
+                                  3rd February 2020
+                                </time>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
                       </section>
                     </div>
                     <div
