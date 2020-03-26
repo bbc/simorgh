@@ -38,8 +38,8 @@ describe('getProgramState', () => {
   });
   it('should return `onDemand` when currentTime is greater than endTime', () => {
     const currentTime = Date.now();
-    const startTime = Date.now() - 500;
-    const endTime = Date.now() - 1000;
+    const startTime = Date.now() - 1000;
+    const endTime = Date.now() - 500;
 
     expect(getProgramState(currentTime, startTime, endTime)).toBe('onDemand');
   });
