@@ -31,22 +31,22 @@ describe('getLink', () => {
 describe('getProgramState', () => {
   it('should return `live` when currentTime is greater than startTime but less than endTime', () => {
     const currentTime = Date.now();
-    const startTime = Date.now() - 1000;
-    const endTime = Date.now() + 1000;
+    const startTime = currentTime - 1000;
+    const endTime = currentTime + 1000;
 
     expect(getProgramState(currentTime, startTime, endTime)).toBe('live');
   });
   it('should return `onDemand` when currentTime is greater than endTime', () => {
     const currentTime = Date.now();
-    const startTime = Date.now() - 1000;
-    const endTime = Date.now() - 500;
+    const startTime = currentTime - 1000;
+    const endTime = currentTime - 500;
 
     expect(getProgramState(currentTime, startTime, endTime)).toBe('onDemand');
   });
   it('should return `next` when startTime is greater than currentTime', () => {
     const currentTime = Date.now();
-    const startTime = Date.now() + 1000;
-    const endTime = Date.now() + 2000;
+    const startTime = currentTime + 1000;
+    const endTime = currentTime + 2000;
 
     expect(getProgramState(currentTime, startTime, endTime)).toBe('next');
   });
