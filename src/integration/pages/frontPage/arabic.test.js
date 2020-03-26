@@ -1,7 +1,7 @@
 /**
  * @pathname /arabic
  */
-
+import runComponentRenderTest from './user.canonical';
 import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
@@ -45,6 +45,10 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
         '© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية.',
       brandingLink: '/arabic',
     });
+  });
+
+  describe('When I am looking for radio schedule component', () => {
+    runComponentRenderTest();
   });
 
   describe('When a search engine is crawling the website', () => {
