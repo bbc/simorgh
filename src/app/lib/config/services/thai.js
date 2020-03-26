@@ -150,6 +150,7 @@ export const service = {
         listen: 'ฟัง',
         watch: 'ดูู',
         liveLabel: 'สด',
+        nextLabel: 'NEXT',
         previousRadioShow: 'รายการวิทยุก่อนหน้า',
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',

@@ -150,6 +150,7 @@ export const service = {
         listen: 'Dengar',
         watch: 'Tonton',
         liveLabel: 'LANGSUNG',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
