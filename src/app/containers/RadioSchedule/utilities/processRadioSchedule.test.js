@@ -80,7 +80,6 @@ describe('processRadioSchedule', () => {
       programs.forEach(program => {
         expect(program).toHaveProperty('id');
         expect(program).toHaveProperty('state');
-        expect(program).toHaveProperty('stateLabel');
         expect(program).toHaveProperty('startTime');
         expect(program).toHaveProperty('link');
         expect(program).toHaveProperty('brandTitle');
