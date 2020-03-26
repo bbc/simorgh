@@ -5,7 +5,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
-import { C_CHALK } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -21,6 +20,7 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/TopStories';
+import FeaturesAnalysis from '#containers/FeaturesAnalysis';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
@@ -101,7 +101,6 @@ const StoryPage = ({ pageData }) => {
   `;
 
   const ComponentWrapper = styled.div`
-    background: ${C_CHALK};
     margin-bottom: ${GEL_SPACING_TRPL};
     padding: ${GEL_SPACING_DBL};
   `;
@@ -198,13 +197,17 @@ const StoryPage = ({ pageData }) => {
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
-        <GridSecondaryColumn item columns={gridColsSecondary}>
+        <GridSecondaryColumn
+          item
+          columns={gridColsSecondary}
+          parentColumns={gridColumns}
+        >
           <ResponsiveComponentWrapper>
             <TopStories />
           </ResponsiveComponentWrapper>
-          <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
-          </ComponentWrapper>
+          <ResponsiveComponentWrapper>
+            <FeaturesAnalysis />
+          </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
