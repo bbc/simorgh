@@ -1,6 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getMappedServiceId from './helper';
+import { getEmbedUrl } from './helper';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -14,33 +14,29 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   pageType,
   variant,
 }) =>
-  describe(`Amp Tests for ${service} ${pageType}`, () => {
-    describe('AMP Status', () => {
-      it('should return a 200 response', () => {
-        cy.testResponseCodeAndType(
-          `${Cypress.env('currentPath')}.amp`,
-          200,
-          'text/html',
-        );
-      });
-    });
+  describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
+    describe('Audio Player', () => {
+      const { lang } = appConfig[service][variant];
+      let embedUrl;
 
-    describe('live radio body', () => {
-      it('should render an audio player image placeholder', () => {
+      beforeEach(() => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          embedUrl = getEmbedUrl(body, lang);
+        });
+      });
+
+      it('should be rendered', () => {
+        cy.get(`amp-iframe[src*="${embedUrl}"]`).should('be.visible');
+      });
+
+      it('should render an image placeholder', () => {
         cy.get(
           `amp-img[src="${envConfig.assetUrl}/images/amp_audio_placeholder.png"]`,
         ).should('exist');
       });
 
-      it('should render an audio player embed', () => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          const { id, externalId } = body.content.blocks[2];
-          const serviceId = getMappedServiceId(externalId);
-          const { lang } = appConfig[service][variant];
-          cy.get(
-            `amp-iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}/amp"]`,
-          ).should('be.visible');
-        });
+      it('embed URL should be reachable', () => {
+        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
       });
     });
 
