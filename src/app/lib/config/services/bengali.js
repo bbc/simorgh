@@ -158,6 +158,7 @@ export const service = {
         listen: 'শুনুন',
         watch: 'দেখুন',
         liveLabel: 'লাইভ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

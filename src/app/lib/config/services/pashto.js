@@ -161,6 +161,7 @@ export const service = {
         listen: 'Listen',
         watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
