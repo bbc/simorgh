@@ -15,6 +15,7 @@ import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
+import escapeHtmlInBlockTypes from './escapeHtmlInBlockTypes';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const formatPageData = pipe(
@@ -37,6 +38,7 @@ const processOptimoBlocks = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
+  escapeHtmlInBlockTypes(['social_embed']),
 );
 const transformJson = async json => {
   try {
