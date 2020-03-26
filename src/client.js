@@ -13,7 +13,7 @@ const logger = loggerNode();
 const data = window.SIMORGH_DATA || {}; // Initial data fetched on the server
 const root = document.getElementById('root');
 
-// compose Client App
+// Compose Client App
 const ClientApp = ({ initialData, routes }) => (
   <BrowserRouter>
     <App initialData={initialData} routes={routes} />
