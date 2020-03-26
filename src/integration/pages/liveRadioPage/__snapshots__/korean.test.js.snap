@@ -1460,7 +1460,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
     </script>
     <script async
             data-chunk="korean"
-            src="http://localhost:7080/static/js/korean-31ecd969.956ec19f.js"
+            src="http://localhost:7080/static/js/korean-31ecd969.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

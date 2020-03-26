@@ -1480,7 +1480,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="amharic"
-            src="http://localhost:7080/static/js/amharic-31ecd969.2311404f.js"
+            src="http://localhost:7080/static/js/amharic-31ecd969.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
