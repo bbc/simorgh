@@ -924,13 +924,14 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               <span
                 class="c23"
               >
-                 Duration 00,00 
+                 Duration 
+                2,00,00 
               </span>
               <span
                 aria-hidden="true"
                 class="Duration0 "
               >
-                00:00
+                2:00:00
               </span>
             </time>
           </div>
@@ -1051,7 +1052,8 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               <span
                 class="c23"
               >
-                 Duration 02,00 
+                 Duration 
+                02,00 
               </span>
               <span
                 aria-hidden="true"
@@ -1178,7 +1180,8 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               <span
                 class="c23"
               >
-                 Duration 06,00 
+                 Duration 
+                06,00 
               </span>
               <span
                 aria-hidden="true"
@@ -1306,13 +1309,14 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
               <span
                 class="c23"
               >
-                 Duration 30,30 
+                 Duration 
+                1,30,30 
               </span>
               <span
                 aria-hidden="true"
                 class="Duration0 "
               >
-                30:30
+                1:30:30
               </span>
             </time>
           </div>
