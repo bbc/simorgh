@@ -1,5 +1,3 @@
-const { amp } = global;
-
 export default () => {
   it('Core AMP scripts are loaded in the head of the document', () => {
     const ampScripts = [

@@ -1,5 +1,3 @@
-const { amp } = global;
-
 export default () => {
   it('AMP analytics config is loaded', () => {
     expect(
