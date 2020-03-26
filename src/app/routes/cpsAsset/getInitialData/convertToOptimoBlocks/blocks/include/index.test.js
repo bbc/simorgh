@@ -166,6 +166,7 @@ describe('convertInclude', () => {
   });
 
   it('should return null for an unsupported include type', async () => {
+    fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const input = {
       required: false,
       tile: 'A random include',
@@ -174,9 +175,11 @@ describe('convertInclude', () => {
       type: 'include',
     };
     expect(await convertInclude(input)).toEqual(null);
+    expect(fetch).not.toHaveBeenCalled();
   });
 
   it('should return null for an unsupported include type with no leading / in href', async () => {
+    fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const input = {
       required: false,
       tile: 'A random include',
@@ -185,9 +188,11 @@ describe('convertInclude', () => {
       type: 'include',
     };
     expect(await convertInclude(input)).toEqual(null);
+    expect(fetch).not.toHaveBeenCalled();
   });
 
   it('should return null for null/undefined href', async () => {
+    fetch.mockResponse(() => Promise.resolve('No fetch call'));
     const input = {
       required: false,
       tile: 'A random include',
@@ -196,5 +201,6 @@ describe('convertInclude', () => {
       type: 'include',
     };
     expect(await convertInclude(input)).toEqual(null);
+    expect(fetch).not.toHaveBeenCalled();
   });
 });
