@@ -145,7 +145,6 @@ export const service = {
     ],
     scriptLink: {
       text: '繁',
-      offscreenText: 'Traditional',
       variant: 'trad',
     },
     translations: {
@@ -355,7 +354,6 @@ export const service = {
     ],
     scriptLink: {
       text: '简',
-      offscreenText: 'Simplified',
       variant: 'simp',
     },
     translations: {
