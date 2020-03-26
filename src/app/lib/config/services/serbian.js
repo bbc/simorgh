@@ -135,7 +135,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Ћир',
-      offscreenText: 'Cyrillic',
       variant: 'cyr',
     },
     translations: {
@@ -240,6 +239,7 @@ export const service = {
         listen: 'Slušajte',
         watch: 'Gledajte',
         liveLabel: 'UŽIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
@@ -344,7 +344,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Lat',
-      offscreenText: 'Latin',
       variant: 'lat',
     },
     translations: {
@@ -449,6 +448,7 @@ export const service = {
         listen: 'Слушајте',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',
