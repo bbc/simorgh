@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, node } from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -15,7 +15,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 
-const Wrapper = styled(GridItemConstrainedLarge)`
+const TopStoriesWrapper = styled(GridItemConstrainedLarge).attrs({
+  as: 'section',
+  role: 'region',
+  'aria-labelledby': 'top-stories-heading',
+})`
   margin-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
@@ -28,39 +32,27 @@ const StyledSectionLabel = styled(SectionLabel)`
 
 const TopStories = ({ content }) => {
   const { script, service, dir } = useContext(ServiceContext);
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': 'top-stories-heading',
-  };
-  const TopStoriesWrapper = ({ children }) => (
-    <Wrapper {...a11yAttributes}>{children}</Wrapper>
-  );
-  TopStoriesWrapper.propTypes = {
-    children: node.isRequired,
-  };
-  if (!topStories.length) return null;
+
+  if (!content || !content.length) return null;
 
   return (
     <TopStoriesWrapper>
-      <Wrapper>
-        <StyledSectionLabel
-          script={script}
-          service={service}
-          dir={dir}
-          labelId="top-stories-heading"
-        >
-          Top Stories
-        </StyledSectionLabel>
+      <StyledSectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId="top-stories-heading"
+      >
+        Top Stories
+      </StyledSectionLabel>
 
-        <StoryPromoUl>
-          {content.map(item => (
-            <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo item={item} dir={dir} displayImage={false} />
-            </StoryPromoLi>
-          ))}
-        </StoryPromoUl>
-      </Wrapper>
+      <StoryPromoUl>
+        {content.map(item => (
+          <StoryPromoLi key={item.id || item.uri}>
+            <StoryPromo item={item} dir={dir} displayImage={false} />
+          </StoryPromoLi>
+        ))}
+      </StoryPromoUl>
     </TopStoriesWrapper>
   );
 };
