@@ -154,7 +154,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   transition: visibility 0.2s linear;
 }
 
-.c57 {
+.c53 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -254,34 +254,67 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
-.c50 {
+.c56 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c53 {
+.c49 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c49 >div {
+  vertical-align: middle;
+}
+
+.c49 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c49 svg {
+  margin: 0;
+}
+
+.c59 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c49 {
+.c48 {
   position: relative;
 }
 
-.c51 {
+.c57 {
   position: relative;
 }
 
-.c52 > * {
+.c58 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c54 {
+.c50 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c60 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -292,7 +325,19 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   line-height: 1.25rem;
 }
 
-.c56 {
+.c52 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.c61 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -303,14 +348,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0.5rem;
 }
 
-.c55 {
+.c51 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c55:before {
+.c51:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -322,13 +367,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.c55:hover,
-.c55:focus {
+.c51:hover,
+.c51:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c55:visited {
+.c51:visited {
   color: #6E6E73;
 }
 
@@ -375,11 +420,19 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   margin-top: 0;
 }
 
-.c47 {
+.c46 {
   margin-bottom: 1rem;
 }
 
-.c48 {
+.c47 {
+  margin-top: 0;
+}
+
+.c54 {
+  margin-bottom: 1rem;
+}
+
+.c55 {
   margin-top: 0;
 }
 
@@ -426,12 +479,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-grow: 1;
 }
 
-.c45 {
+.c62 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c46 {
+.c45 {
   margin-bottom: 1.5rem;
 }
 
@@ -673,14 +726,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c57 {
+  .c53 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c57 {
+  .c53 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -979,27 +1032,27 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) {
-  .c50 {
+  .c56 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c50 {
+  .c56 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c53 {
+  .c49 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c53 {
+  .c49 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1007,7 +1060,31 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c53 {
+  .c49 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c59 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c59 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c59 {
     display: block;
     width: initial;
     padding: initial;
@@ -1016,7 +1093,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c49 {
+  .c48 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1024,56 +1101,98 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) {
-  .c52 {
+  .c58 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c52 > * {
+  .c58 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c54 {
+  .c50 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c54 {
+  .c50 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c56 {
+  .c60 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c60 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c52 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c52 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c56 {
+  .c52 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c56 {
+  .c52 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c61 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c61 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c61 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c61 {
     display: none;
     visibility: hidden;
   }
@@ -1173,37 +1292,73 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:63rem) {
-  .c47 {
+  .c46 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c47 {
+  .c46 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c47 {
+  .c46 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c47 {
+  .c46 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c47 {
+  .c46 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c47 {
+  .c46 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c54 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c54 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c54 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c54 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c54 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c54 {
     margin-bottom: 1.5rem;
   }
 }
@@ -1227,7 +1382,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c45 {
     padding: 1rem;
   }
 }
@@ -1871,18 +2026,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="c46"
+                  class="c45"
                 >
                   <section
                     aria-labelledby="features-analysis-heading"
-                    class="c47"
+                    class="c54"
                     role="region"
                   >
                     <div
-                      class="c47"
+                      class="c54"
                     >
                       <div
-                        class="c32 c48"
+                        class="c32 c55"
                       >
                         <div
                           class="c34"
@@ -1916,14 +2071,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                           >
                             <div
-                              class="c50"
+                              class="c56"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c57"
                               >
                                 <div
                                   class="c15"
@@ -1933,31 +2088,31 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   />
                                 </div>
                                 <div
-                                  class="c52"
+                                  class="c58"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c53"
+                              class="c59"
                               dir="ltr"
                             >
                               <h3
-                                class="c54"
+                                class="c60"
                               >
                                 <a
-                                  class="c55"
+                                  class="c51"
                                   href="/igbo/afirika-23252735"
                                 >
                                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                 </a>
                               </h3>
                               <p
-                                class="c56"
+                                class="c61"
                               >
                                 This is a test asset used in Simorgh, please do not edit it without asking.
                               </p>
                               <time
-                                class="c57"
+                                class="c53"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -1970,14 +2125,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           role="listitem"
                         >
                           <div
-                            class="c49"
+                            class="c48"
                           >
                             <div
-                              class="c50"
+                              class="c56"
                               dir="ltr"
                             >
                               <div
-                                class="c51"
+                                class="c57"
                               >
                                 <div
                                   class="c15"
@@ -1987,31 +2142,31 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   />
                                 </div>
                                 <div
-                                  class="c52"
+                                  class="c58"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c53"
+                              class="c59"
                               dir="ltr"
                             >
                               <h3
-                                class="c54"
+                                class="c60"
                               >
                                 <a
-                                  class="c55"
+                                  class="c51"
                                   href="/igbo/afirika-49666505"
                                 >
                                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                 </a>
                               </h3>
                               <p
-                                class="c56"
+                                class="c61"
                               >
                                 Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                               </p>
                               <time
-                                class="c57"
+                                class="c53"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -2024,14 +2179,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="c54"
+                  class="c62"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c54"
+                  class="c62"
                 >
                   <h2>
                     This is a component in the second column
@@ -2215,7 +2370,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
-.c59 {
+.c55 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -2315,34 +2470,67 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
-.c52 {
+.c58 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c55 {
+.c51 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.c51 >div {
+  vertical-align: middle;
+}
+
+.c51 >div {
+  display: inline-block;
+  vertical-align: initial;
+}
+
+.c51 svg {
+  margin: 0;
+}
+
+.c61 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c51 {
+.c50 {
   position: relative;
 }
 
-.c53 {
+.c59 {
   position: relative;
 }
 
-.c54 > * {
+.c60 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c56 {
+.c52 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  display: inline;
+}
+
+.c62 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2353,7 +2541,19 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.25rem;
 }
 
-.c58 {
+.c54 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.c63 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2364,14 +2564,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c57 {
+.c53 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c57:before {
+.c53:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2383,13 +2583,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.c57:hover,
-.c57:focus {
+.c53:hover,
+.c53:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c57:visited {
+.c53:visited {
   color: #6E6E73;
 }
 
@@ -2436,11 +2636,19 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   margin-top: 0;
 }
 
-.c49 {
+.c48 {
   margin-bottom: 1rem;
 }
 
-.c50 {
+.c49 {
+  margin-top: 0;
+}
+
+.c56 {
+  margin-bottom: 1rem;
+}
+
+.c57 {
   margin-top: 0;
 }
 
@@ -2491,12 +2699,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-grow: 1;
 }
 
-.c47 {
+.c64 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c48 {
+.c47 {
   margin-bottom: 1.5rem;
 }
 
@@ -2752,14 +2960,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c59 {
+  .c55 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c59 {
+  .c55 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -3058,27 +3266,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c52 {
+  .c58 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c52 {
+  .c58 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c55 {
+  .c51 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c55 {
+  .c51 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3086,7 +3294,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c55 {
+  .c51 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c61 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c61 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c61 {
     display: block;
     width: initial;
     padding: initial;
@@ -3095,7 +3327,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c51 {
+  .c50 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -3103,56 +3335,98 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c54 {
+  .c60 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c54 > * {
+  .c60 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c56 {
+  .c52 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c56 {
+  .c52 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c58 {
+  .c62 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c62 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c54 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c58 {
+  .c54 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c58 {
+  .c54 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c58 {
+  .c54 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c63 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c63 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c63 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c63 {
     display: none;
     visibility: hidden;
   }
@@ -3252,37 +3526,73 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:63rem) {
-  .c49 {
+  .c48 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c49 {
+  .c48 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c49 {
+  .c48 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c49 {
+  .c48 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c49 {
+  .c48 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c49 {
+  .c48 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c56 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c56 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c56 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c56 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c56 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c56 {
     margin-bottom: 1.5rem;
   }
 }
@@ -3312,7 +3622,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c48 {
+  .c47 {
     padding: 1rem;
   }
 }
@@ -4178,18 +4488,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c48"
+                      class="c47"
                     >
                       <section
                         aria-labelledby="features-analysis-heading"
-                        class="c49"
+                        class="c56"
                         role="region"
                       >
                         <div
-                          class="c49"
+                          class="c56"
                         >
                           <div
-                            class="c34 c50"
+                            class="c34 c57"
                           >
                             <div
                               class="c36"
@@ -4223,14 +4533,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               role="listitem"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c58"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c53"
+                                    class="c59"
                                   >
                                     <div
                                       class="c15"
@@ -4240,31 +4550,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       />
                                     </div>
                                     <div
-                                      class="c54"
+                                      class="c60"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c55"
+                                  class="c61"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c56"
+                                    class="c62"
                                   >
                                     <a
-                                      class="c57"
+                                      class="c53"
                                       href="/igbo/afirika-23252735"
                                     >
                                       STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                     </a>
                                   </h3>
                                   <p
-                                    class="c58"
+                                    class="c63"
                                   >
                                     This is a test asset used in Simorgh, please do not edit it without asking.
                                   </p>
                                   <time
-                                    class="c59"
+                                    class="c55"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -4277,14 +4587,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               role="listitem"
                             >
                               <div
-                                class="c51"
+                                class="c50"
                               >
                                 <div
-                                  class="c52"
+                                  class="c58"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c53"
+                                    class="c59"
                                   >
                                     <div
                                       class="c15"
@@ -4294,31 +4604,31 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       />
                                     </div>
                                     <div
-                                      class="c54"
+                                      class="c60"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c55"
+                                  class="c61"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c56"
+                                    class="c62"
                                   >
                                     <a
-                                      class="c57"
+                                      class="c53"
                                       href="/igbo/afirika-49666505"
                                     >
                                       Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                     </a>
                                   </h3>
                                   <p
-                                    class="c58"
+                                    class="c63"
                                   >
                                     Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                                   </p>
                                   <time
-                                    class="c59"
+                                    class="c55"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -4331,14 +4641,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c56"
+                      class="c64"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c56"
+                      class="c64"
                     >
                       <h2>
                         This is a component in the second column
