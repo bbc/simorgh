@@ -13,7 +13,7 @@ exports[`IncludeContainer should render HTML when include toggle is enabled 1`] 
   >
     <div>
       <div>
-        Visual Jounalism Markup
+        Visual Journalism Markup
       </div>
       <script
         src="localhost/vj.js"
