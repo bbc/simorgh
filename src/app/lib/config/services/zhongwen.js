@@ -265,11 +265,13 @@ export const service = {
     videoCaptionOffscreenText: '音頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/zhongwen/trad/institutional-51359584',
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
@@ -278,11 +280,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38652837',
           text: '使用條款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38652843',
           text: '隱私政策',
         },
         {
@@ -290,8 +292,8 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: '聯絡BBC',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38664417',
+          text: '與BBC聯絡',
         },
         {
           href:
