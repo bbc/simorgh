@@ -168,6 +168,7 @@ export const service = {
         listen: 'Слушать',
         watch: 'Смотреть',
         liveLabel: 'Прямой эфир',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Предыдущая передача',
         nextRadioShow: 'Следующая передача',
         duration: 'Продолжительность',
