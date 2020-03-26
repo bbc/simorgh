@@ -54,11 +54,13 @@ export const service = {
     videoCaptionOffscreenText: '视频加注文字，',
     imageCaptionOffscreenText: '图像加注文字，',
     imageCopyrightOffscreenText: '图像来源，',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/simp/institutional-513595842',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/zhongwen/simp/institutional-51359584',
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
@@ -67,11 +69,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38652837',
           text: '使用条款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38652843',
           text: '隐私政策',
         },
         {
@@ -79,8 +81,8 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
-          text: '联络BBC',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
+          text: '与BBC联络',
         },
         {
           href:
