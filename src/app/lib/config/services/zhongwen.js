@@ -82,7 +82,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
-          text: '与BBC联络',
+          text: '联络BBC',
         },
         {
           href:
@@ -293,7 +293,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/zhongwen/trad/institutional-38664417',
-          text: '與BBC聯絡',
+          text: '聯絡BBC',
         },
         {
           href:
