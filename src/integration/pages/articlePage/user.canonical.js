@@ -1,5 +1,3 @@
-const { canonical } = global;
-
 export default ({ imageAltText, imageCaptionText }) => {
   it('I can see an image with a caption', () => {
     const imageEl = canonical.getByAltText(imageAltText);

@@ -1,5 +1,3 @@
-const { canonical } = global;
-
 export default ({ service }) => {
   it('Bundle scripts are loaded', () => {
     const bundleScriptMatcher = new RegExp(

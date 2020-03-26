@@ -1,5 +1,3 @@
-const { amp } = global;
-
 export default ({ audioEmbedUrl }) => {
   it('I can see an audio player image placeholder', () => {
     const audioPlaceholderImage = amp.document.querySelector(
