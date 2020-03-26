@@ -28,12 +28,6 @@ module.exports = {
         '**/?(*.)+(spec|test).js?(x)',
         '!**/src/integration/**/*.{js,jsx}',
       ],
-      testPathIgnorePatterns: [
-        'node_modules',
-        'build',
-        'puppeteer',
-        'src/integration',
-      ],
       snapshotSerializers: ['enzyme-to-json/serializer'],
       setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
       moduleNameMapper: jestDirAlias,
