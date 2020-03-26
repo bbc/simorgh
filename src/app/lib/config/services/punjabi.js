@@ -145,6 +145,7 @@ export const service = {
         listen: 'ਸੁਣੋ',
         watch: 'ਦੇਖੋ',
         liveLabel: 'ਸਿੱਧਾ ਪ੍ਰਸਾਰਣ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

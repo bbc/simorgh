@@ -160,6 +160,7 @@ export const service = {
         listen: 'सुनिए',
         watch: 'देखिए',
         liveLabel: 'लाइव',
+        nextLabel: 'NEXT',
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',

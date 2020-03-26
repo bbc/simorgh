@@ -83,9 +83,16 @@ const RadioFrequencyLink = styled(Link)`
 
 const CanonicalRadioSchedule = ({ endpoint }) => {
   const [schedule, setRadioSchedule] = useState();
-  const { service, script, dir, timezone, locale, radioSchedule } = useContext(
-    ServiceContext,
-  );
+  const {
+    service,
+    script,
+    dir,
+    timezone,
+    locale,
+    radioSchedule,
+    translations,
+  } = useContext(ServiceContext);
+
   const { timeOnServer } = useContext(RequestContext);
   const timeOnClient = parseInt(moment.utc().format('x'), 10);
   const header = pathOr(null, ['header'], radioSchedule);
@@ -99,6 +106,9 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     ['frequenciesPageLabel'],
     radioSchedule,
   );
+
+  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+  const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   useEffect(() => {
     const handleResponse = async response => {
@@ -144,6 +154,8 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
           script={script}
           service={service}
           dir={dir}
+          liveLabel={liveLabel}
+          nextLabel={nextLabel}
         />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
