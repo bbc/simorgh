@@ -11,6 +11,7 @@ describe('getLink', () => {
   beforeAll(() => {
     service = 'persian';
     program = {
+      ...persianRadioScheduleData.schedules[0],
       serviceId: 'bbc_dari_radio',
       episode: { pid: 'p07zbtbf' },
     };
