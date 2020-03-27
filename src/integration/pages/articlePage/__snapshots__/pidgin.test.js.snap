@@ -2485,7 +2485,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     </script>
     <script async
             data-chunk="pidgin"
-            src="http://localhost:7080/static/js/pidgin-31ecd969.a12df17f.js"
+            src="http://localhost:7080/static/js/pidgin-31ecd969.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

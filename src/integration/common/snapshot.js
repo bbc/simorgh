@@ -16,7 +16,7 @@ const removeElements = elements => {
 };
 
 const replaceStaticScriptSrc = html =>
-  html.replace(/static\/js\/(main-|vendor-).+?\.js/gm, replacement => {
+  html.replace(/static\/js\/.+?\.js/gm, replacement => {
     return `${replacement.split('.')[0]}.js`;
   });
 

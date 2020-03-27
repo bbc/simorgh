@@ -2040,7 +2040,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     </script>
     <script async
             data-chunk="mundo"
-            src="http://localhost:7080/static/js/mundo-31ecd969.1836ad12.js"
+            src="http://localhost:7080/static/js/mundo-31ecd969.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

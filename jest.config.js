@@ -51,7 +51,6 @@ module.exports = {
           },
         ],
       ],
-      collectCoverageFrom: ['**/src/integration/**/*.{js,jsx}'],
       setupFiles: ['./src/testHelpers/jest-setup.js'],
       testMatch: ['**/src/integration/**/*.test.{js,jsx}'],
       snapshotSerializers: ['jest-serializer-html'],
