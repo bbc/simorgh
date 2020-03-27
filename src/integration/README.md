@@ -62,7 +62,7 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 |  ├── onDemandRadioPage
 ```
 
-within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amharic.test.js`, `korean.test.js` where we are testing an Amharic and a Korean live radio pages respectively.
+within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amharic.test.js`, `korean.test.js` where we are testing the Amharic and Korean live radio pages respectively.
 
 ```
 └── liveRadioPage
@@ -82,7 +82,7 @@ We define these tests inside of the `user.js` file and import them into each pag
 
 User tests are the most important tests we write because this is who we build software for. We should also consider a11y tests in our user tests.
 
-We can make use of DOM Testing Library to write better user tests. The main utilities it provides involve querying the DOM in a way that's similar to how the user finds elements on the page e.g. `getByText('This is the headline text')`. This is preferred over something like `document.querySelector('.headline')`. This also makes our user tests more maintainable in the long run as refactors to our components, for example a class name change, don't break our tests and slow us down. When testing something like SEO, something that you cannot see or interact with, then `document.querySelector` is the preferred method of querying the DOM.
+We can make use of DOM Testing Library to write better user tests. The main utilities it provides involve querying the DOM in a way that's similar to how the user finds elements on the page e.g. `getByText('This is the headline text')`. This is preferred over something like `document.querySelector('.headline')`. This also makes our user tests more maintainable in the long run as refactors to our components, for example a class name change, don't break our tests and slow us down. When testing something like SEO, something that you cannot see or interact with, then `document.querySelector` is the go to method for querying the DOM.
 
 All page types have some common UI and functionality. Tests for the common stuff are located in `src/app/integration/pages/common`:
 
@@ -111,7 +111,7 @@ A unit test only ensures that something works in isolation. Even if the units wo
 
 ## What is JSDOM?
 
-[JSDOM](https://github.com/jsdom/jsdom) is a JavaScript emulation of a web-browser. It can also be called a [headless browser](https://en.wikipedia.org/wiki/Headless_browser). Running tests in a JSDOM environment is substantially faster than running tests in a real web browser however we sacrifice some environment accuracy. It can a trade-off worth making for simple DOM querying tests.
+[JSDOM](https://github.com/jsdom/jsdom) is a JavaScript emulation of a web-browser. It can also be called a [headless browser](https://en.wikipedia.org/wiki/Headless_browser). Running tests in a JSDOM environment is substantially faster than running tests in a real web browser however we sacrifice some environment accuracy. It can be a trade-off worth making for simple DOM querying tests.
 
 ## What is Jest?
 
@@ -129,15 +129,15 @@ A docblock pragma is a specially-formatted comment at the top of a test file. We
 
 The Given-When-Then formula is a template intended to guide the writing of acceptance tests for a user story.
 
-(Given) some context
-(When) some action is carried out
-(Then) a particular set of observable consequences should obtain
+- (Given) some context
+- (When) some action is carried out
+- (Then) a particular set of observable consequences should obtain
 
 An example:
 
-Given I am on a Mundo article canonical page
-When I am using the website
-Then I can see an image with a caption.
+- Given I am on a Mundo article canonical page
+- When I am using the website
+- Then I can see an image with a caption.
 
 ## What is a snapshot?
 
