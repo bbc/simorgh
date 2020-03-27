@@ -32,7 +32,7 @@ An example of a test that would check a headline renders in the document on both
 });
 ```
 
-In the above example we have specified a pathname using a [docblock pragma](#what-is-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
+In the above example we have specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
 
 Before our tests run, JSDOM constructs an AMP url and a canonical url and then visits both of them to get the DOM tree that we can use to run our tests against. The AMP and canonical DOM is available on the global scope as you can see in the above example. We can run the same test for AMP and canonical by putting them in an array and iterating on the array. If we only want to run a test on a single platform, for example canonical, then we can just do:
 
