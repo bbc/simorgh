@@ -27,6 +27,21 @@ export const legacyOptimoVideoBlock = {
                 format: 'audio_video',
               },
             },
+            {
+              type: 'image',
+              model: {
+                blocks: [
+                  {
+                    type: 'rawImage',
+                    model: {
+                      copyrightHolder: '',
+                      locator: `http://localhost:7080/images/media_placeholder.png`,
+                      originCode: 'pips',
+                    },
+                  },
+                ],
+              },
+            },
           ],
         },
       },

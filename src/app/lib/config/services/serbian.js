@@ -21,8 +21,6 @@ const baseServiceConfig = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   isTrustProjectParticipant: true,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
@@ -41,6 +39,9 @@ const baseServiceConfig = {
 export const service = {
   lat: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     articleTimestampPrefix: 'Ažurirano',
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
@@ -48,14 +49,18 @@ export const service = {
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
+    noBylinesPolicy:
+      'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/serbian/lat/institutional-50173730',
     script: latinDiacritics,
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
     defaultImageAltText: 'BBC News na srpskom',
-    defaultCaptionOffscreenText: 'Potpis ',
-    audioCaptionOffscreenText: 'Potpis ispod audio zapisa ',
-    videoCaptionOffscreenText: 'Potpis ispod videa ',
-    imageCaptionOffscreenText: 'Potpis ispod fotografije ',
+    defaultCaptionOffscreenText: 'Potpis, ',
+    audioCaptionOffscreenText: 'Potpis ispod audio zapisa, ',
+    videoCaptionOffscreenText: 'Potpis ispod videa, ',
+    imageCaptionOffscreenText: 'Potpis ispod fotografije, ',
     imageCopyrightOffscreenText: 'Autor fotografije, ',
     footer: {
       trustProjectLink: {
@@ -87,6 +92,12 @@ export const service = {
           href: 'https://www.bbc.com/serbian/lat/institutional-43543431',
           text: 'Kontaktirajte BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
@@ -103,7 +114,7 @@ export const service = {
       },
       {
         title: 'Srbija',
-        url: '/serbian/lat/1791445f-977a-4e6d-b490-51f84bb4fc52',
+        url: '/serbian/lat/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
       {
         title: 'Balkan',
@@ -124,7 +135,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Ћир',
-      offscreenText: 'Cyrillic',
       variant: 'cyr',
     },
     translations: {
@@ -229,6 +239,7 @@ export const service = {
         listen: 'Slušajte',
         watch: 'Gledajte',
         liveLabel: 'UŽIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
@@ -237,13 +248,20 @@ export const service = {
   },
   cyr: {
     ...baseServiceConfig,
+    ads: {
+      hasAds: false,
+    },
     articleTimestampPrefix: 'Ажурирано',
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
     externalLinkText: ', спољна страница',
-    frontPageTitle: ', спољна страница',
+    frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
+    noBylinesPolicy:
+      'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/serbian/cyr/institutional-50173730',
     script: cyrillicAndLatin,
     serviceLocalizedName: 'на српском',
     serviceName: 'News на српском',
@@ -283,6 +301,12 @@ export const service = {
           href: 'https://www.bbc.com/serbian/cyr/institutional-43543431',
           text: 'Контактирајте ББЦ',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. ББЦ није одговоран за садржај других сајтова.',
     },
@@ -299,7 +323,7 @@ export const service = {
       },
       {
         title: 'Србија',
-        url: '/serbian/cyr/1791445f-977a-4e6d-b490-51f84bb4fc52',
+        url: '/serbian/cyr/topics/1791445f-977a-4e6d-b490-51f84bb4fc52',
       },
       {
         title: 'Балкан',
@@ -320,7 +344,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Lat',
-      offscreenText: 'Latin',
       variant: 'lat',
     },
     translations: {
@@ -425,6 +448,7 @@ export const service = {
         listen: 'Слушајте',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',

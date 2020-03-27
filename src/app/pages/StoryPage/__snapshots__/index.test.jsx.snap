@@ -154,6 +154,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   transition: visibility 0.2s linear;
 }
 
+.c57 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c28 {
   padding-top: 56.25%;
   position: relative;
@@ -244,6 +254,84 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
+.c50 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c53 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c49 {
+  position: relative;
+}
+
+.c51 {
+  position: relative;
+}
+
+.c52 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c54 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c56 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c55 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c55:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c55:hover,
+.c55:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c55:visited {
+  color: #6E6E73;
+}
+
 .c25 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -284,6 +372,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c33 {
+  margin-top: 0;
+}
+
+.c47 {
+  margin-bottom: 1rem;
+}
+
+.c48 {
   margin-top: 0;
 }
 
@@ -331,9 +427,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .c45 {
-  background: #ECEAE7;
   margin-bottom: 1.5rem;
   padding: 1rem;
+}
+
+.c46 {
+  margin-bottom: 1.5rem;
 }
 
 .c29 {
@@ -573,6 +672,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c57 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c57 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     padding: 0 1rem;
@@ -725,6 +838,54 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c43 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c43 {
+    width: calc(33.333333333333336%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c43 {
+    width: calc(25%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c43 {
     display: block;
@@ -814,6 +975,107 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c41:first-child {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c50 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c50 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c53 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c53 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c53 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c49 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c52 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c52 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c54 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c54 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c56 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c56 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c56 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c56 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -910,6 +1172,42 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (max-width:63rem) {
+  .c47 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c47 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c47 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c47 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c47 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c47 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c8 {
     font-size: 0.875rem;
@@ -925,6 +1223,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c44 {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c46 {
+    padding: 1rem;
   }
 }
 
@@ -1463,11 +1767,157 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </h2>
                 </div>
                 <div
-                  class="c45"
+                  class="c46"
                 >
-                  <h2>
-                    This is a component in the second column
-                  </h2>
+                  <section
+                    aria-labelledby="features-analysis-heading"
+                    class="c47"
+                    role="region"
+                  >
+                    <div
+                      class="c47"
+                    >
+                      <div
+                        class="c32 c48"
+                      >
+                        <div
+                          class="c34"
+                        />
+                        <h2
+                          class="c35"
+                        >
+                          <div
+                            class="c36"
+                          >
+                            <span
+                              class="c37"
+                            >
+                              <span
+                                class="c38"
+                                dir="ltr"
+                                id="features-analysis-heading"
+                              >
+                                Features & Analysis
+                              </span>
+                            </span>
+                          </div>
+                        </h2>
+                      </div>
+                      <ul
+                        class="c39"
+                        role="list"
+                      >
+                        <li
+                          class="c41"
+                          role="listitem"
+                        >
+                          <div
+                            class="c49"
+                          >
+                            <div
+                              class="c50"
+                              dir="ltr"
+                            >
+                              <div
+                                class="c51"
+                              >
+                                <div
+                                  class="c15"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c52"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c53"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c54"
+                              >
+                                <a
+                                  class="c55"
+                                  href="/igbo/afirika-23252735"
+                                >
+                                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                                </a>
+                              </h3>
+                              <p
+                                class="c56"
+                              >
+                                This is a test asset used in Simorgh, please do not edit it without asking.
+                              </p>
+                              <time
+                                class="c57"
+                                datetime="2020-02-03"
+                              >
+                                3rd February 2020
+                              </time>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="c41"
+                          role="listitem"
+                        >
+                          <div
+                            class="c49"
+                          >
+                            <div
+                              class="c50"
+                              dir="ltr"
+                            >
+                              <div
+                                class="c51"
+                              >
+                                <div
+                                  class="c15"
+                                >
+                                  <div
+                                    class="lazyload-placeholder"
+                                  />
+                                </div>
+                                <div
+                                  class="c52"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="c53"
+                              dir="ltr"
+                            >
+                              <h3
+                                class="c54"
+                              >
+                                <a
+                                  class="c55"
+                                  href="/igbo/afirika-49666505"
+                                >
+                                  Robert Mugabe: Zimbabwe eferela nwa amadi a aka
+                                </a>
+                              </h3>
+                              <p
+                                class="c56"
+                              >
+                                Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
+                              </p>
+                              <time
+                                class="c57"
+                                datetime="2020-02-03"
+                              >
+                                3rd February 2020
+                              </time>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
                 </div>
                 <div
                   class="c45"
@@ -1661,6 +2111,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 1rem;
 }
 
+.c59 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .c30 {
   padding-top: 56.25%;
   position: relative;
@@ -1751,6 +2211,84 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
+.c52 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+.c55 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+.c51 {
+  position: relative;
+}
+
+.c53 {
+  position: relative;
+}
+
+.c54 > * {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.c56 {
+  color: #222222;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.c58 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.c57 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c57:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c57:hover,
+.c57:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c57:visited {
+  color: #6E6E73;
+}
+
 .c27 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1791,6 +2329,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c35 {
+  margin-top: 0;
+}
+
+.c49 {
+  margin-bottom: 1rem;
+}
+
+.c50 {
   margin-top: 0;
 }
 
@@ -1842,9 +2388,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .c47 {
-  background: #ECEAE7;
   margin-bottom: 1.5rem;
   padding: 1rem;
+}
+
+.c48 {
+  margin-bottom: 1.5rem;
 }
 
 .c31 {
@@ -2098,6 +2647,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c59 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c59 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
 @media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     padding: 0 1rem;
@@ -2250,6 +2813,54 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (max-width:14.9375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c45 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c45 {
+    width: calc(33.333333333333336%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c45 {
+    width: calc(25%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
 @supports (display:grid) {
   .c45 {
     display: block;
@@ -2339,6 +2950,107 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c43:first-child {
     padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c52 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c52 {
+    width: initial;
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c55 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c55 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c55 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3 / span 4;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c51 {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-column-gap: 0.5rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c54 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c54 > * {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c56 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c56 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c58 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c58 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c58 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:63rem) {
+  .c58 {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -2435,6 +3147,42 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (max-width:63rem) {
+  .c49 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c49 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c49 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c49 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c49 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c49 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width:37.5rem) {
   .c8 {
     font-size: 0.875rem;
@@ -2456,6 +3204,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width:63rem) {
   .c46 {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c48 {
+    padding: 1rem;
   }
 }
 
@@ -2672,7 +3426,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
     </script>
     <script
       type="application/ld+json"
@@ -3216,11 +3970,157 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <div
-                      class="c47"
+                      class="c48"
                     >
-                      <h2>
-                        This is a component in the second column
-                      </h2>
+                      <section
+                        aria-labelledby="features-analysis-heading"
+                        class="c49"
+                        role="region"
+                      >
+                        <div
+                          class="c49"
+                        >
+                          <div
+                            class="c34 c50"
+                          >
+                            <div
+                              class="c36"
+                            />
+                            <h2
+                              class="c37"
+                            >
+                              <div
+                                class="c38"
+                              >
+                                <span
+                                  class="c39"
+                                >
+                                  <span
+                                    class="c40"
+                                    dir="ltr"
+                                    id="features-analysis-heading"
+                                  >
+                                    Features & Analysis
+                                  </span>
+                                </span>
+                              </div>
+                            </h2>
+                          </div>
+                          <ul
+                            class="c41"
+                            role="list"
+                          >
+                            <li
+                              class="c43"
+                              role="listitem"
+                            >
+                              <div
+                                class="c51"
+                              >
+                                <div
+                                  class="c52"
+                                  dir="ltr"
+                                >
+                                  <div
+                                    class="c53"
+                                  >
+                                    <div
+                                      class="c15"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
+                                    <div
+                                      class="c54"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  class="c55"
+                                  dir="ltr"
+                                >
+                                  <h3
+                                    class="c56"
+                                  >
+                                    <a
+                                      class="c57"
+                                      href="/igbo/afirika-23252735"
+                                    >
+                                      STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                                    </a>
+                                  </h3>
+                                  <p
+                                    class="c58"
+                                  >
+                                    This is a test asset used in Simorgh, please do not edit it without asking.
+                                  </p>
+                                  <time
+                                    class="c59"
+                                    datetime="2020-02-03"
+                                  >
+                                    3rd February 2020
+                                  </time>
+                                </div>
+                              </div>
+                            </li>
+                            <li
+                              class="c43"
+                              role="listitem"
+                            >
+                              <div
+                                class="c51"
+                              >
+                                <div
+                                  class="c52"
+                                  dir="ltr"
+                                >
+                                  <div
+                                    class="c53"
+                                  >
+                                    <div
+                                      class="c15"
+                                    >
+                                      <div
+                                        class="lazyload-placeholder"
+                                      />
+                                    </div>
+                                    <div
+                                      class="c54"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  class="c55"
+                                  dir="ltr"
+                                >
+                                  <h3
+                                    class="c56"
+                                  >
+                                    <a
+                                      class="c57"
+                                      href="/igbo/afirika-49666505"
+                                    >
+                                      Robert Mugabe: Zimbabwe eferela nwa amadi a aka
+                                    </a>
+                                  </h3>
+                                  <p
+                                    class="c58"
+                                  >
+                                    Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
+                                  </p>
+                                  <time
+                                    class="c59"
+                                    datetime="2020-02-03"
+                                  >
+                                    3rd February 2020
+                                  </time>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </section>
                     </div>
                     <div
                       class="c47"

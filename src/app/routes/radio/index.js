@@ -1,11 +1,13 @@
+import { memo } from 'react';
 import { RadioPage } from '#pages';
-import { radioAndTvPath } from '../utils/regex';
+import pageIsSame from '../utils/pageIsSame';
+import { liveRadioPath } from '../utils/regex';
 import getInitialData from './getInitialData';
 
 export default {
-  path: radioAndTvPath,
+  path: liveRadioPath,
   exact: true,
-  component: RadioPage,
+  component: memo(RadioPage, pageIsSame),
   getInitialData,
   pageType: 'media',
 };

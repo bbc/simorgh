@@ -1,6 +1,7 @@
 import config from '../../../support/config/services';
-import envConfig from '../../../support/config/envs';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import envConfig from '../../../support/config/envs';
+import { getEmbedUrl } from './helpers';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -15,24 +16,34 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   variant,
 }) =>
   describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
-    it('should render a media player', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const assetUriString = body.metadata.locators.assetUri;
-        if (assetUriString.split('/').length > 4) {
-          cy.log('Test skipped because legacy MAP');
-        } else {
-          const mediaBlock = body.content.blocks[0];
-          const isLiveStream = mediaBlock.type === 'version';
-          const serviceId = isLiveStream
-            ? mediaBlock.externalId
-            : mediaBlock.versions[0].versionId;
-          const language = appConfig[config[service].name][variant].lang;
-          const { assetUri } = body.metadata.locators;
-          cy.get(
-            `iframe[src*="${envConfig.avEmbedBaseUrl}/ws/av-embeds/cps${assetUri}/${serviceId}/${language}"]`,
-          ).should('be.visible');
-        }
+    describe('Media Player', () => {
+      const language = appConfig[config[service].name][variant].lang;
+      let embedUrl;
+
+      beforeEach(() => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          embedUrl = getEmbedUrl(body, language);
+        });
       });
+
+      it('should be rendered', () => {
+        cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+      });
+
+      it('embed URL should be reachable', () => {
+        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+      });
+    });
+
+    describe('Chartbeat', () => {
+      if (envConfig.chartbeatEnabled) {
+        it('should have a script with src value set to chartbeat source', () => {
+          cy.hasScriptWithChartbeatSrc();
+        });
+        it('should have chartbeat config set to window object', () => {
+          cy.hasGlobalChartbeatConfig();
+        });
+      }
     });
   });
 

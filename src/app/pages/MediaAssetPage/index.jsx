@@ -11,7 +11,7 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 import pathOr from 'ramda/src/pathOr';
 import MediaMessage from './MediaMessage';
-import { GhostGrid } from '#lib/styledGrid';
+import { GridWrapper } from '#lib/styledGrid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -83,9 +83,10 @@ const MediaAssetPage = ({ pageData }) => {
 
     // "Versions" are live streams
     version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+    unavailableMedia: MediaMessage,
   };
 
-  const StyledGhostGrid = styled(GhostGrid)`
+  const StyledGrid = styled(GridWrapper)`
     width: 100%;
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -124,9 +125,9 @@ const MediaAssetPage = ({ pageData }) => {
         aboutTags={aboutTags}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGhostGrid as="main" role="main">
+      <StyledGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGhostGrid>
+      </StyledGrid>
       <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );

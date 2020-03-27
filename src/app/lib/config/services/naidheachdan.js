@@ -15,6 +15,9 @@ import 'moment/locale/gd';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `gd`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Ùraichte',
@@ -157,6 +160,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -202,6 +206,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: 'Cuir fios dhan BhBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:

@@ -1,11 +1,11 @@
 import React from 'react';
 import { string, element, shape } from 'prop-types';
-import ErrorMain from '../../ErrorMain';
+import ErrorPage from '#pages/ErrorPage';
 
 const WithError = Component => {
   const ErrorContainer = ({ error, ...props }) => {
     if (!error) return <Component {...props} />;
-    return <ErrorMain status={500} />;
+    return <ErrorPage errorCode={500} />;
   };
 
   ErrorContainer.propTypes = {
