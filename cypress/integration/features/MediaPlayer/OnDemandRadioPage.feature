@@ -1,6 +1,5 @@
 Feature: On Demand Radio Player
 
-    @smoke @test @live
     Scenario Outline: Verify media plays on an On Demand Radio page
         Given I navigate to <URL>
         When I click the play episode button
