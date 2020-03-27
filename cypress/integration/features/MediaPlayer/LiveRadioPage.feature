@@ -1,6 +1,6 @@
 Feature: Live Radio Player
 
-    @smoke @test @live
+    @smoke @test
     Scenario Outline: Verify media plays on Live Radio page
         Given I navigate to <URL>
         When I click the play radio button
