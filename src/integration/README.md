@@ -111,7 +111,7 @@ A unit test only ensures that something works in isolation. Even if the units wo
 
 ## What is JSDOM?
 
-[JSDOM](https://github.com/jsdom/jsdom) is a JavaScript emulation of a web-browser. It can also be called a [headless browser](https://en.wikipedia.org/wiki/Headless_browser). Running tests in a JSDOM environment is substantially faster than running tests in a real web browser however we sacrifice some environment accuracy. It can be a trade-off worth making for simple DOM querying tests.
+[JSDOM](https://github.com/jsdom/jsdom) is a JavaScript emulation of a web-browser. It can also be called a [headless browser](https://en.wikipedia.org/wiki/Headless_browser). Running tests in a JSDOM environment is substantially faster and less flaky than running tests in a real web browser however we sacrifice some environment accuracy. It can be a trade-off worth making for simple DOM querying tests.
 
 ## What is Jest?
 
@@ -150,6 +150,10 @@ Here are some possible answers:
 ### The thing I am testing is not in the DOM
 
 The feature you are trying to test may be rendered on the client side instead of on the server so does not exist in the DOM you are testing. We do not currently have client side rendering working with JSDOM but this is something we want to add in the future.
+
+### Content in an iframe I want to test is not in the DOM
+
+This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient.
 
 ### getByText not working
 
