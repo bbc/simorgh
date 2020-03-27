@@ -1,6 +1,7 @@
 {
   "globals": {
     "amp": true,
-    "canonical": true
+    "canonical": true,
+    "document": "off"
   }
 }
