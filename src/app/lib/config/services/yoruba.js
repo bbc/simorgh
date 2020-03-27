@@ -155,6 +155,7 @@ export const service = {
         listen: 'Gbọ́',
         watch: 'Wò',
         liveLabel: 'NÍ YÀJÓYÀJÓ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
