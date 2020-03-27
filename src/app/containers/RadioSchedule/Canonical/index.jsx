@@ -94,7 +94,6 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
-  const timeOnClient = parseInt(moment.utc().format('x'), 10);
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -113,7 +112,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   useEffect(() => {
     const handleResponse = async (response) => {
       const radioScheduleData = await response.json();
-
+      const timeOnClient = parseInt(moment.utc().format('x'), 10);
       const schedules = processRadioSchedule(
         radioScheduleData,
         service,
@@ -128,7 +127,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
         .catch((e) => logger.error(`HTTP Error: "${e}"`));
 
     fetchRadioScheduleData(endpoint);
-  }, [endpoint, service, script, timezone, locale]);
+  }, [endpoint, locale, script, service, timeOnServer, timezone]);
 
   if (!schedule) {
     return null;
