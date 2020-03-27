@@ -6,5 +6,5 @@ Feature: On Demand Radio Player
         Then the episode plays
         Examples:
             | URL                                                |
-            | indonesia/bbc_indonesian_radio/w172x6r5000f38s     |
-            | indonesia/bbc_indonesian_radio/w172x6r5000f38s.amp |
+            # | indonesia/bbc_indonesian_radio/w172x6r5000f38s     |
+            # | indonesia/bbc_indonesian_radio/w172x6r5000f38s.amp |
