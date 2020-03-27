@@ -127,7 +127,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
         .catch(e => logger.error(`HTTP Error: "${e}"`));
 
     fetchRadioScheduleData(endpoint);
-  }, [endpoint, locale, script, service, timeOnClient, timeOnServer, timezone]);
+  }, [endpoint, locale, script, service, timeOnServer, timezone]);
 
   if (!schedule) {
     return null;
