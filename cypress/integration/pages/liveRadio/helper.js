@@ -1,20 +1,18 @@
 import envConfig from '../../../support/config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
-const getMappedServiceId = externalId =>
+const getBrandId = externalId =>
   externalId === 'bbc_oromo_radio' ? 'bbc_afaanoromoo_radio' : externalId;
 
-export const getEmbedUrl = (body, language) => {
-  const { id, externalId } = body.content.blocks[2];
-  const mediaId = getMappedServiceId(externalId);
+export default (body, language) => {
+  const { externalId } = body.content.blocks[2];
+  const brandId = getBrandId(externalId);
 
   return [
     envConfig.avEmbedBaseUrl,
     'ws/av-embeds/media',
-    mediaId,
-    id,
+    brandId,
+    'liveradio',
     language,
   ].join('/');
 };
-
-export default getEmbedUrl;
