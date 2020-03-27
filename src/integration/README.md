@@ -32,9 +32,9 @@ An example of a test that would check a headline renders in the document on both
 });
 ```
 
-In the above example we have specified a pathname using a docblock pragma. The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
+In the above example we have specified a pathname using a [docblock pragma](#what-is-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
 
-Before our tests run, JSDOM constructs an AMP url and a canonical url and then hits both of them to create a DOM that we can use to run our tests against. The AMP and canonical DOM is available on the global scope as you can see in the above example. We can run the same test for AMP and canonical by putting them in an array and iterating on the array. If we only want to run a test on a single platform then we can just do:
+Before our tests run, JSDOM constructs an AMP url and a canonical url and then visits both of them to get the DOM tree that we can use to run our tests against. The AMP and canonical DOM is available on the global scope as you can see in the above example. We can run the same test for AMP and canonical by putting them in an array and iterating on the array. If we only want to run a test on a single platform, for example canonical, then we can just do:
 
 ```js
 /**
@@ -62,7 +62,7 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 |  ├── onDemandRadioPage
 ```
 
-within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amharic.test.js`, `korean.test.js` where we are testing an Amharic and a Korean live radio page respectively.
+within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amharic.test.js`, `korean.test.js` where we are testing an Amharic and a Korean live radio pages respectively.
 
 ```
 └── liveRadioPage
@@ -78,13 +78,13 @@ within a page type directory we tell Jest where our test suites are by using the
 
 Each page type's test file will have specific user tests, for example in the context of a live radio page, we want to test that a user can see a headline, a description of the live radio stream and a media player.
 
-We define these tests inside of the `user.js` file and import them into each page type test file `amharic.test.js`, `korean.test.js`. Sometimes the UI or UX is slightly different between AMP and canonical. In these cases we have different files for each - `user.amp.js` and `user.canonical.js`. User tests should be focussed on testing things in the page that a user can see or interact with. They should not contain anything to do with SEO, analytics or checking scripts are in the page.
+We define these tests inside of the `user.js` file and import them into each page type test file `amharic.test.js`, `korean.test.js`. Sometimes the UI or UX is slightly different between AMP and canonical. In these cases we have different files for each - `user.amp.js` and `user.canonical.js`. User tests should be focussed on testing things on the page that a user can see or interact with. They should not contain anything to do with SEO, analytics or checking scripts are in the page.
 
 User tests are the most important tests we write because this is who we build software for. We should also consider a11y tests in our user tests.
 
-We can make use of DOM Testing Library to write better user tests. The main utilities it provides involve querying the DOM in a way that's similar to how the user finds elements on the page e.g. `getByText('This is the headline text')`. This is preferred over something like `document.querySelector('.headline')`. This also makes our user tests more maintainable in the long run as refactors to our components, for example a class name change, don't break our tests and slow us down. When testing something like SEO, something that you cannot see or interact with, then `document.querySelector('.headline')` is the preferred method of querying the DOM.
+We can make use of DOM Testing Library to write better user tests. The main utilities it provides involve querying the DOM in a way that's similar to how the user finds elements on the page e.g. `getByText('This is the headline text')`. This is preferred over something like `document.querySelector('.headline')`. This also makes our user tests more maintainable in the long run as refactors to our components, for example a class name change, don't break our tests and slow us down. When testing something like SEO, something that you cannot see or interact with, then `document.querySelector` is the preferred method of querying the DOM.
 
-All page types have some common UI and functionality. Tests for the common stuff are location in `src/app/integration/pages/common`:
+All page types have some common UI and functionality. Tests for the common stuff are located in `src/app/integration/pages/common`:
 
 ```
 ├── common
@@ -101,7 +101,7 @@ All page types have some common UI and functionality. Tests for the common stuff
 |  └── snapshot.js
 ```
 
-As you can see, common UI and functionality includes header/footer, analytics, SEO etc. We can import these in each page type's test file to run these tests.
+As you can see, common UI and functionality includes header and footer UI, analytics reporting, SEO etc. We can import these in each page type's test file to run these tests.
 
 ## I already wrote unit tests for a component. Do I need to write an integration test for this component?
 
@@ -121,13 +121,13 @@ A unit test only ensures that something works in isolation. Even if the units wo
 
 [DOM Testing Library](https://github.com/testing-library/dom-testing-library) provides testing utilities that encourage good testing practices. It provides methods to query the DOM for nodes in a way that's similar to how the user finds elements on the page. All queries available an be found [here](https://testing-library.com/docs/dom-testing-library/api-queries)
 
-## What is docblock pragma?
+## What is a docblock pragma?
 
 A docblock pragma is a specially-formatted comment at the top of a test file. We can use docblock pragmas to alter the environment that tests run in.
 
 ## What is the Given-When-Then stuff all about?
 
-The Given-When-Then formula is a template intended to guide the writing of acceptance tests for a User Story.
+The Given-When-Then formula is a template intended to guide the writing of acceptance tests for a user story.
 
 (Given) some context
 (When) some action is carried out
