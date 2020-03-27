@@ -27,7 +27,7 @@ const fetchMarkup = async url => {
   try {
     const res = await fetch(url, { timeout: 3000 });
     if (res.status !== 200) {
-      throw new Error('Failed to fetch');
+      throw new Error(`Failed to fetch include at: ${url}`);
     } else {
       const html = await res.text();
       return encodeHTML(html);
@@ -36,7 +36,7 @@ const fetchMarkup = async url => {
     logger.error(
       JSON.stringify(
         {
-          event: 'http_fetch_error',
+          event: 'include_fetch_error',
           message: e,
         },
         null,
