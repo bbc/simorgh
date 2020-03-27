@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { compile } from 'path-to-regexp';
 import { useRouteMatch } from 'react-router-dom';
 import ScriptLink from '@bbc/psammead-script-link';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
@@ -43,7 +42,7 @@ const ScriptLinkContainer = () => {
     return null;
   }
 
-  const { text, offscreenText, variant } = scriptLink;
+  const { text, variant } = scriptLink;
 
   return (
     <ScriptLink
@@ -62,8 +61,7 @@ const ScriptLinkContainer = () => {
         );
       }}
     >
-      <span aria-hidden="true">{text}</span>
-      <VisuallyHiddenText>{` ${offscreenText}`}</VisuallyHiddenText>
+      {text}
     </ScriptLink>
   );
 };
