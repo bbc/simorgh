@@ -83,21 +83,19 @@ describe('Given I am on an Indonesian On Demand Radio Page', () => {
       ogType: 'website',
       ogUrl:
         'http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s',
-      ogSiteName: 'BBC News Pidgin',
+      ogSiteName: 'BBC News Indonesia',
+      ogDescription:
+        'Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.',
+      ogTitle: 'Dunia Pagi Ini - BBC News Indonesia',
       twitterCard: 'summary_large_image',
-      twitterCreator: '@BBCNews',
+      twitterCreator: '@bbcindonesia',
       twitterImageAlt: 'BBC News Indonesia',
       twitterImageSrc:
-        'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
-      twitterSite: '@BBCNews',
-      ogDescription:
-        'This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components.',
-      ogTitle:
-        'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin',
+        'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
+      twitterSite: '@bbcindonesia',
       twitterDescription:
-        'This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components.',
-      twitterTitle:
-        'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin',
+        'Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.',
+      twitterTitle: 'Dunia Pagi Ini - BBC News Indonesia',
       linkedData:
         '{"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/23248703","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/23248703","name":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"},"headline":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >","datePublished":"2019-09-13T15:31:44.000Z","dateModified":"2019-11-20T12:24:25.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}',
     });
