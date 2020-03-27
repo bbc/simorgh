@@ -25,6 +25,11 @@ const encodeHTML = str =>
 
 const fetchMarkup = async url => {
   try {
+    /* The timeout value here is arbitrary and subject to change.
+      It's purpose is solely to ensure that we don't allow pending promises delay page rendering on the server, hence a null value is returned when it times out.
+      It's important to note that isomorphic-fetch ensures that the global fetch which doesn’t have a timeout option is used from
+      the context of a browser and node-fetch which has a timeout option is used when we’re not in a browser.
+    */
     const res = await fetch(url, { timeout: 3000 });
     if (res.status !== 200) {
       throw new Error(`Failed to fetch include at: ${url}`);
