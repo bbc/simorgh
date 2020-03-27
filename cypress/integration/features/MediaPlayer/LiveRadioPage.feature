@@ -6,6 +6,6 @@ Feature: Live Radio Player
         When I click the play radio button
         Then the radio plays
         Examples:
-            | URL                                                         |
+            | URL                                   |
             | korean/bbc_korean_radio/liveradio     |
             | korean/bbc_korean_radio/liveradio.amp |
