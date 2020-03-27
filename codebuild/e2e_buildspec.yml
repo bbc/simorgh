@@ -10,8 +10,8 @@ phases:
       - npm run build
   build:
     commands:
-      - npm run cypress:ci
       - npm run cucumber:ci
+      - npm run cypress:ci
 reports:
   JunitReportsTest:
     files:
