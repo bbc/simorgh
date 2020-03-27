@@ -113,7 +113,7 @@ export const service = {
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Nós fizemos importantes modificações nos termos de nossa Política de Privacidade e Cookies e gostaríamos que soubesse o que elas significam para você e para os dados pessoais que você nos forneceu.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -177,7 +177,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/portuguese/institutional-50054434',
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
@@ -204,12 +204,6 @@ export const service = {
         {
           href: 'https://www.bbc.com/portuguese/institutional-36202456',
           text: 'Fale com a BBC',
-        },
-        {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
-          text: 'AdChoices / Do Not Sell My Info',
-          lang: 'en-GB',
         },
       ],
       copyrightText:
