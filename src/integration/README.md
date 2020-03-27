@@ -93,7 +93,7 @@ All page types have some common UI and functionality. Tests for the common stuff
 |  ├── analytics.amp.js
 |  ├── analytics.canonical.js
 |  ├── core.amp.js
-|  ├── core.canonical.js `document.querySelector('.headline')`
+|  ├── core.canonical.js
 |  ├── footer.js
 |  ├── header.js
 |  ├── index.js
