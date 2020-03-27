@@ -135,7 +135,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Ћир',
-      offscreenText: 'Cyrillic',
       variant: 'cyr',
     },
     translations: {
@@ -345,7 +344,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Lat',
-      offscreenText: 'Latin',
       variant: 'lat',
     },
     translations: {
