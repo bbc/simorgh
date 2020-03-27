@@ -145,7 +145,6 @@ export const service = {
     ],
     scriptLink: {
       text: '繁',
-      offscreenText: 'Traditional',
       variant: 'trad',
     },
     translations: {
@@ -243,6 +242,7 @@ export const service = {
         listen: '收听',
         watch: '观看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期广播节目',
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
@@ -354,7 +354,6 @@ export const service = {
     ],
     scriptLink: {
       text: '简',
-      offscreenText: 'Simplified',
       variant: 'simp',
     },
     translations: {
@@ -452,6 +451,7 @@ export const service = {
         listen: '收聽',
         watch: '觀看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期廣播節目',
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',

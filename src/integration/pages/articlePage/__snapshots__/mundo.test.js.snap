@@ -1984,7 +1984,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-253ae210.0b1e2e0d.js"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1992,7 +1992,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-0f485567.d74170c1.js"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2000,7 +2000,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-1f20a385.e39181c3.js"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2008,7 +2008,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-678f84af.66824c3d.js"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2016,7 +2016,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-10e2e882.e621d1aa.js"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -2040,7 +2040,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
     </script>
     <script async
             data-chunk="mundo"
-            src="http://localhost:7080/static/js/mundo-31ecd969.1836ad12.js"
+            src="http://localhost:7080/static/js/mundo-31ecd969.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

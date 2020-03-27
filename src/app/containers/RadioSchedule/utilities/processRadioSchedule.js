@@ -52,7 +52,6 @@ export default (radioScheduleData, service, currentTime) => {
       return {
         id: pathOr(null, ['broadcast', 'pid'], program),
         state: currentState,
-        stateLabel: currentState,
         startTime: pathOr(null, ['publishedTimeStart'], program),
         link: getLink(currentState, program, service),
         brandTitle: pathOr(null, ['brand', 'title'], program),

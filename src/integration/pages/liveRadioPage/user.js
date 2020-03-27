@@ -1,5 +1,3 @@
-const { amp, canonical } = global;
-
 export default ({ headlineText, summaryText }) => {
   [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {

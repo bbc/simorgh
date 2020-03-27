@@ -1,0 +1,103 @@
+[
+  {
+    "headlines": {
+      "shortHeadline": "\"اعتدل في جلستك يا رجل\"",
+      "headline": "\"اعتدل في جلستك يا رجل\""
+    },
+    "locators": {
+      "assetUri": "/arabic/media-49580542",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
+      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
+    },
+    "summary": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
+    "timestamp": 1580745507000,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mf8wy",
+      "subType": "clip",
+      "format": "video",
+      "title": "\"اعتدل في جلستك يا رجل\"",
+      "synopses": {
+        "short": "\"اعتدل في جلستك يا رجل\"",
+        "long": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.\n \nصوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
+        "medium": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mfb6b.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "\"اعتدل في جلستك يا رجل\"",
+      "versions": [
+        {
+          "versionId": "p07mf8x2",
+          "types": [
+            "Original"
+          ],
+          "duration": 36,
+          "durationISO8601": "PT36S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567610367
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108611199",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/18327/production/_108611199_p07mfb6b.jpg",
+      "path": "/cpsprodpb/18327/production/_108611199_p07mfb6b.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "\"اعتدل في جلستك يا رجل\"",
+      "caption": "\"اعتدل في جلستك يا رجل\"",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/media-49580542",
+    "type": "cps"
+  },
+  {
+    "headlines": {
+      "shortHeadline": "بالصور: كيرك دوغلاس يحتفل بعيد ميلاده المئة",
+      "headline": "بالصور: كيرك دوغلاس يحتفل بعيد ميلاده المئة"
+    },
+    "locators": {
+      "assetUri": "/arabic/art-and-culture-38260491",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/art-and-culture-38260491",
+      "curie": "http://www.bbc.co.uk/asset/bc8c6f47-cc26-1a49-8bd8-fc679131aa17"
+    },
+    "summary": "مجموعة منتقاة من الصور لنجم هوليود كيرك دوغلاس بمناسبة مرور مئة عام عام على مولده",
+    "timestamp": 1580745507000,
+    "passport": {
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "92909541",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/38FE/production/_92909541_77.jpg",
+      "path": "/cpsprodpb/38FE/production/_92909541_77.jpg",
+      "height": 371,
+      "width": 660,
+      "altText": "كيرك دوغلاس",
+      "caption": "كيرك دوغلاس وأولاده",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/art-and-culture-38260491",
+    "type": "cps"
+  }
+]

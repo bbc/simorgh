@@ -148,6 +148,7 @@ export const service = {
         listen: 'Listen',
         watch: 'İzləyin',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

@@ -158,6 +158,7 @@ export const service = {
         listen: 'Тингланг',
         watch: 'Кўринг',
         liveLabel: 'ЖОНЛИ ЭФИР',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Аввалги радио дастур',
         nextRadioShow: 'Кейинги радио дастур',
         duration: 'Давомийлиги',

@@ -253,7 +253,7 @@ describe(`Script Link`, () => {
   });
 
   describe('getVariantHref', () => {
-    it('should generate correct variant href on a Canonical page', () => {
+    it('should generate correct variant href on a canonical page', () => {
       const path = '/:foo(foo)/:bar(bar):variant(/simp|/trad|/cyr|/lat)';
 
       expect(
@@ -266,7 +266,7 @@ describe(`Script Link`, () => {
       ).toEqual('/foo/bar/cyr');
     });
 
-    it('should generate correct variant href on an AMP page', () => {
+    it('should generate correct variant href on an amp page', () => {
       const path =
         '/:foo(foo)/:bar(bar):variant(/simp|/trad|/cyr|/lat):amp(.amp)?';
 
