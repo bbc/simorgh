@@ -27,24 +27,32 @@ export default ({
         expect(timestampEl).toBeInTheDocument();
       });
 
-      it('I can see the bulleted list item', () => {
-        const { getAllByRole } = within(page.document.querySelector('main'));
-        const bulletedLists = getAllByRole('list');
-        const [bulletedList] = bulletedLists.filter(list =>
-          list.innerHTML.includes(bulletedListItem),
-        );
-        const { getAllByText } = within(bulletedList);
-        expect(getAllByText(bulletedListItem)[0]).toBeInTheDocument();
-      });
+      if (bulletedListItem) {
+        it('I can see the bulleted list item', () => {
+          const { getAllByRole } = within(page.document.querySelector('main'));
+          const bulletedLists = getAllByRole('list');
+          const [bulletedList] = bulletedLists.filter(list =>
+            list.innerHTML.includes(bulletedListItem),
+          );
+          const { getAllByText } = within(bulletedList);
+          expect(getAllByText(bulletedListItem)[0]).toBeInTheDocument();
+        });
+      } else {
+        it.skip('I can see the bulleted list item - no bulleted list exists on this page', () => {});
+      }
 
-      it('I can see the related content', () => {
-        const { getByText } = within(
-          page.document.querySelector(`[class^="StoryPromoUl"]`),
-        );
-        const relatedContentItemEl = getByText(relatedContentHeadline);
+      if (relatedContentHeadline) {
+        it('I can see the related content', () => {
+          const { getByText } = within(
+            page.document.querySelector(`[class^="StoryPromoUl"]`),
+          );
+          const relatedContentItemEl = getByText(relatedContentHeadline);
 
-        expect(relatedContentItemEl).toBeInTheDocument();
-      });
+          expect(relatedContentItemEl).toBeInTheDocument();
+        });
+      } else {
+        it.skip('I can see the related content - no related content exists on this page', () => {});
+      }
     });
   });
 };
