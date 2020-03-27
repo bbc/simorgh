@@ -1,7 +1,5 @@
 const { within } = require('@testing-library/dom');
 
-const { amp, canonical } = global;
-
 export default ({
   headlineText,
   timestamp,
