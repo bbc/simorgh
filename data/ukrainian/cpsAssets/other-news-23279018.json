@@ -1,0 +1,170 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": ["Original"],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ви колись бачили порожню Площу Ринок у Львові? Показуємо, як виглядають міста України під час карантину.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Львів, Одеса, Кропивницький, Київ - Україна офіційно на карантині.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "З 12 березня його запровадили в Києві, а з 17 березня в столиці припинили роботу метро й всіх розважальних закладів, кафе, ресторанів та ТРЦ.цінує Володимира Путіна. А той, в свою чергу, вважає його талановитим і яскравим політиком.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Симпатію росіян до республіканця Трампа намагається пояснити кореспондент BBC Стівен Розенберг.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "ukrainian.other_news.media_asset.23279018.page",
+      "cps_asset_id": "23279018",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "ukrainian-v6",
+    "firstPublished": 1585041417000,
+    "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
+    "includeComments": false,
+    "language": "uk",
+    "lastPublished": 1585041417000,
+    "lastUpdated": 1585125716817,
+    "locators": {
+      "assetId": "23279018",
+      "assetUri": "/ukrainian/other-news-23279018",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
+      "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585041417000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
+      "shortHeadline": "Коронавірус: як живе Україна на карантині (Ukrainian Test)"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/other-news-23279018",
+    "indexImage": {
+      "altText": "цуу уйцу єждґячсю",
+      "copyrightHolder": "Magnum Photos",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/F60F/test/_63519926_p016cr26.jpg",
+      "id": "63519926",
+      "path": "/cpsdevpb/F60F/test/_63519926_p016cr26.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "uk",
+    "locators": {
+      "assetId": "23279018",
+      "assetUri": "/ukrainian/other-news-23279018",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/other-news-23279018",
+      "curie": "http://www.bbc.co.uk/asset/2af9a514-a7c6-5647-a7f3-786b5b71555a"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+      "embedding": true,
+      "format": "video",
+      "id": "p01k6msm",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+      },
+      "title": "Five things ants can teach us about management",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1540218932000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 191,
+          "durationISO8601": "PT3M11S",
+          "types": ["Original"],
+          "versionId": "p01k6msp",
+          "warnings": {
+            "long": "Contains strong language and adult humour.",
+            "short": "Contains strong language and adult humour."
+          }
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "Коронавірус: як живе Україна на карантині (Ukrainian Test)",
+    "timestamp": 1585041417000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Також у новинах",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukrainian/other_news"
+    },
+    "site": {
+      "name": "BBC Україна",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukrainian"
+    }
+  }
+}

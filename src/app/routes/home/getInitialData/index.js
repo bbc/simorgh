@@ -26,6 +26,7 @@ const servicesWithRadioSchedules = [
 ];
 
 export default async (path, service) => {
+  // need to use import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
   const radioSchedulesUrl = `${process.env.SIMORGH_BASE_URL}/${service}/bbc_${service}_radio/schedule.json`;
 
   const [{ json, ...rest }, radioSchedulesData] = await Promise.all([

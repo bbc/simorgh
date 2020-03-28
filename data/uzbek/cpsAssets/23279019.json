@@ -1,0 +1,198 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "nnnnn",
+        "embedding": true,
+        "format": "video",
+        "id": "p01qjbpq",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+        "subType": "clip",
+        "synopses": {
+          "long": "koala ijm aus",
+          "medium": "australia",
+          "short": "koajaa"
+        },
+        "title": "koala",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1582890367000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 15,
+            "durationISO8601": "PT15S",
+            "types": ["Editorial"],
+            "versionId": "p01qjbvb",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Koʻpchilik shariat qoidalarining qattiqqoʻlligini tanqidga tutadi. Biroq Malayziyadagi Oliy Shariat mahkamasining ayol hakamlaridan biri aksar musulmonlar istiqomat qiladigan ushbu mamlakatdagi ayollar huquqini muhofaza qilishni oʻz vazifasi, deb biladi.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Hakam Nanni Shushayda bir kunda beshdan ortiq sud ishiga raislik qiladi va haftasiga 80 taga yaqin shikoyatni tinglaydi.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Islomning moʻtadil koʻrinishi koʻproq ommalashgan Malayziyada shariat qonunlari taʼsiri tinimsiz oshib bormoqda. Ikki tomonlama huquqiy tizim mavjud mazkur mamlakatning minglab musulmon fuqarolari axloqiy va oilaviy masalalarni hal etishda shariat qonunlariga murojaat etadilar. Musulmon boʻlmagan aholi esa dunyoviy qonunlarga amal qiladi.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Hakam Shushayda meros boʻlashishdan tortib zinoga taalluqli mojarolarga qadar boʻlgan ishlarni koʻrib chiqish bilan shugʻullanadi.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Ammo uning asosiy mutaxassisligi bola huquqlari va koʻpxotinlik masalalarini hal etishga asoslangan.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Shushayda xonim biror erkakning xotin ustiga xotin olishiga ruxsat berishdan oldin koʻplab omillarni koʻrib chiqishi haqida soʻzlaydi.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;Har bir ish oʻzgacha va murakkab. Siz Islom qonunlarini umumlashtirib, erkaklarning huquqi ayollarnikidan yuqori, deya olmaysiz. Men ana shu notoʻgʻri qarashni toʻgʻrilamoq mening istagim,&quot; deydi u.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "corona",
+        "copyrightHolder": "BBC",
+        "height": 351,
+        "href": "http://b.files.bbci.co.uk/153F9/test/_63733078_coronavirus.jpg",
+        "id": "63733078",
+        "path": "/cpsdevpb/153F9/test/_63733078_coronavirus.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 624
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Koʻpxotinlikka asoslangan turmush boshlamoqchi boʻlganlarning bari hakam Shushaydaning qoshida hozir boʻlishi zarur.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "uzbek.media_asset.23279019.page",
+      "cps_asset_id": "23279019",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "image"],
+    "createdBy": "uzbek-v6",
+    "firstPublished": 1585042751000,
+    "id": "urn:bbc:ares::asset:uzbek/23279019",
+    "includeComments": false,
+    "language": "uz-Cyrl",
+    "lastPublished": 1585042752000,
+    "lastUpdated": 1585042764543,
+    "locators": {
+      "assetId": "23279019",
+      "assetUri": "/uzbek/23279019",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/23279019",
+      "curie": "http://www.bbc.co.uk/asset/2f5eada4-d499-df47-ab44-50388599e251"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585042751000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "MAP Uzbek Latin video",
+      "shortHeadline": "MAP Uzbek Latin video"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/23279019",
+    "indexImage": {
+      "altText": "australia",
+      "copyrightHolder": "BBC",
+      "height": 549,
+      "href": "http://b.files.bbci.co.uk/12CE9/test/_63733077_p01qjbvt.jpg",
+      "id": "63733077",
+      "path": "/cpsdevpb/12CE9/test/_63733077_p01qjbvt.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "language": "uz-Cyrl",
+    "locators": {
+      "assetId": "23279019",
+      "assetUri": "/uzbek/23279019",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/23279019",
+      "curie": "http://www.bbc.co.uk/asset/2f5eada4-d499-df47-ab44-50388599e251"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "nnnnn",
+      "embedding": true,
+      "format": "video",
+      "id": "p01qjbpq",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01qjbvt.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "koala ijm aus",
+        "medium": "australia",
+        "short": "koajaa"
+      },
+      "title": "koala",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1582890367000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 15,
+          "durationISO8601": "PT15S",
+          "types": ["Editorial"],
+          "versionId": "p01qjbvb",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "MAP Uzbek Latin video",
+    "timestamp": 1585042751000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Бош саҳифа",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/uzbek/front_page"
+    },
+    "site": {
+      "name": "Ўзбек тилидаги янгиликлар",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/uzbek"
+    }
+  }
+}
