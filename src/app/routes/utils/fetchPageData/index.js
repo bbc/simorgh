@@ -79,8 +79,8 @@ const handleError = e => {
   };
 };
 
-const fetchData = (pathname, isPageData = true) => {
-  const url = isPageData ? getUrl(pathname) : pathname;
+const fetchData = (pathname, useRawPath = false) => {
+  const url = useRawPath ? pathname : getUrl(pathname);
 
   logger.info(`DataRequest: [${url}]`);
 

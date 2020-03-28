@@ -4,9 +4,8 @@ import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
 
-// we'd put this in a hooks folder, not with radio schedules
 const useData = endpoint => {
-  const { ssrData } = useContext(RequestContext); // we would put this in a different context probably
+  const { ssrData } = useContext(RequestContext);
   const initialData = ssrData[endpoint] && ssrData[endpoint].json;
   const [data, setData] = useState(initialData);
 
