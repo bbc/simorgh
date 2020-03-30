@@ -228,10 +228,6 @@ export const service = {
         url: '/azeri/magazine',
       },
       {
-        title: 'Fotoqalereya',
-        url: '/azeri/media/photogalleries',
-      },
-      {
         title: 'Video',
         url: '/azeri/media/video',
       },
