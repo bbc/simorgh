@@ -3,7 +3,7 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '30th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   afrique: {
     articles: '',
@@ -15,7 +15,7 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '30th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   arabic: {
     articles: '',
@@ -27,19 +27,19 @@ const simorghLaunchDates = {
   azeri: {
     articles: '',
     frontPage: '26th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '27th Feb 2020',
   },
   bengali: {
     articles: '',
     frontPage: '',
     liveRadio: '10th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   burmese: {
     articles: '',
     frontPage: '',
     liveRadio: '10th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   cymrufyw: {
     articles: '',
@@ -49,18 +49,18 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '10th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '27th Feb 2020',
   },
   gujarati: {
     articles: '',
     frontPage: '13th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   hausa: {
     articles: '',
     frontPage: '',
     liveRadio: '30th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   hindi: {
     articles: '',
@@ -71,13 +71,13 @@ const simorghLaunchDates = {
   igbo: {
     articles: '',
     frontPage: '15th July 2019',
-    mediaAssetPage: '16th Jan 2019',
+    mediaAssetPage: '16th Jan 2020',
   },
   indonesia: {
     articles: '',
     frontPage: '',
     liveRadio: '30th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   japanese: {
     articles: '',
@@ -88,18 +88,18 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '30th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   kyrgyz: {
     articles: '',
     frontPage: '26th Sept 2019',
     liveRadio: '10th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '27th Feb 2020',
   },
   marathi: {
     articles: '',
     frontPage: '13th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   mundo: {
     articles: '',
@@ -114,7 +114,7 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '14th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   news: {
     articles: '1st April 2019',
@@ -124,18 +124,18 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '14th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   persian: {
     articles: '',
     frontPage: '',
     liveRadio: '4th Feb 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '27th Feb 2020',
   },
   pidgin: {
     articles: '',
     frontPage: '15th July 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '16th Jan 2020',
   },
   portuguese: {
     articles: '',
@@ -145,7 +145,7 @@ const simorghLaunchDates = {
   punjabi: {
     articles: '',
     frontPage: '10th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   russian: {
     articles: '',
@@ -170,13 +170,13 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '14th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '27th Feb 2020',
   },
   somali: {
     articles: '',
     frontPage: '',
     liveRadio: '30th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   sport: {
     articles: '',
@@ -186,34 +186,34 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '10th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   tamil: {
     articles: '',
     frontPage: '14th Jan 2020',
     liveRadio: '14th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   telugu: {
     articles: '',
     frontPage: '13th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   thai: {
     articles: '',
     frontPage: '19th Aug 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   tigrinya: {
     articles: '',
     frontPage: '',
     liveRadio: '30th Sept 2019',
-    mediaAssetPage: '',
+    mediaAssetPage: '6th Feb 2020',
   },
   turkce: {
     articles: '',
     frontPage: '',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   ukchinaSimp: {
     articles: '',
@@ -234,7 +234,7 @@ const simorghLaunchDates = {
     articles: '',
     frontPage: '',
     liveRadio: '4th Feb 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '5th March 2020',
   },
   uzbek: {
     articles: '',
@@ -245,7 +245,7 @@ const simorghLaunchDates = {
   vietnamese: {
     articles: '',
     frontPage: '',
-    mediaAssetPage: '',
+    mediaAssetPage: '27th Feb 2020',
   },
   yoruba: {
     articles: '',
