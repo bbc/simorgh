@@ -32,7 +32,7 @@ const TopStories = ({ content }) => {
   const a11yAttributes = {
     as: 'section',
     role: 'region',
-    'aria-labelledby': 'top-storie-heading',
+    'aria-labelledby': 'top-stories-heading',
   };
 
   const TopStoriesWrapper = ({ children }) => (

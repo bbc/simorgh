@@ -6,6 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 
 import TopStories from '.';
 import topStories from '#pages/StoryPage/topStories.json';
+import topStoriesOneItem from '#pages/StoryPage/topStoriesOneItem.json';
 
 // eslint-disable-next-line react/prop-types
 const renderTopStories = ({
@@ -38,6 +39,21 @@ describe('CpsRelatedContent', () => {
     expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
       topStories.length,
     );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render Top Stories components when without <ul>', () => {
+    // Ensure fixture still has top stories
+    expect(topStoriesOneItem.length).toBe(1);
+
+    const { asFragment } = renderTopStories({ content: topStoriesOneItem });
+
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+      0,
+    );
+
+    expect(document.querySelectorAll(`ul`).length).toBe(0);
 
     expect(asFragment()).toMatchSnapshot();
   });
