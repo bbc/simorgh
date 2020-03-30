@@ -223,6 +223,22 @@ export const service = {
       ],
       copyrightText:
         'BBC. Би-би-си на несет ответственности за содержание других сайтов.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Подпись к видео,',
+          text: 'Внимание: Контент других сайтов может содержать рекламу.',
+        },
+        fallback: {
+          text: "Контент недоступен",
+          linkText: 'Смотреть еще в %provider_name%',
+          linkTextSuffixVisuallyHidden: ', внешняя ссылка',
+          warningText: "Би-би-си на несет ответственности за содержание других сайтов.",
+        },
+        skipLink: {
+          text: 'Пропустить контент из %provider_name%',
+          endTextVisuallyHidden: 'Контент из %provider_name% окончен',
+        },
+      },
     },
     fonts: [
       F_REITH_SANS_BOLD,
