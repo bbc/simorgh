@@ -546,15 +546,6 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/pidgin/media/audio"
-                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
-                  >
-                    Audio
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
                   <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
                      class="StyledDropdownLink-ukxuly-4 ikLbnY"
                   >
@@ -636,16 +627,6 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                      class="StyledLink-sc-158x7z5-2 gLWckh"
                   >
                     Video
-                  </a>
-                </li>
-                <li dir="ltr"
-                    role="listitem"
-                    class="StyledListItem-sc-158x7z5-3 COeze"
-                >
-                  <a href="/pidgin/media/audio"
-                     class="StyledLink-sc-158x7z5-2 gLWckh"
-                  >
-                    Audio
                   </a>
                 </li>
                 <li dir="ltr"
@@ -1691,16 +1672,6 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 COeze"
                   >
-                    <a href="/pidgin/media/audio"
-                       class="StyledLink-sc-158x7z5-2 gLWckh"
-                    >
-                      Audio
-                    </a>
-                  </li>
-                  <li dir="ltr"
-                      role="listitem"
-                      class="StyledListItem-sc-158x7z5-3 COeze"
-                  >
                     <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
                        class="StyledLink-sc-158x7z5-2 gLWckh"
                     >
@@ -1779,15 +1750,6 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                      class="StyledDropdownLink-ukxuly-4 ikLbnY"
                   >
                     Video
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
-                  <a href="/pidgin/media/audio"
-                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
-                  >
-                    Audio
                   </a>
                 </li>
                 <li role="listitem"
