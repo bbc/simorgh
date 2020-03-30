@@ -129,14 +129,6 @@ export const service = {
         url: '/zhongwen/simp/business',
       },
       {
-        title: '图辑',
-        url: '/zhongwen/simp/media/photogalleries',
-      },
-      {
-        title: '音频材料',
-        url: '/zhongwen/simp/media/audio',
-      },
-      {
         title: '视频材料',
         url: '/zhongwen/simp/media/video',
       },
@@ -338,14 +330,6 @@ export const service = {
       {
         title: '財經',
         url: '/zhongwen/trad/business',
-      },
-      {
-        title: '圖輯',
-        url: '/zhongwen/trad/media/photogalleries',
-      },
-      {
-        title: '音頻材料',
-        url: '/zhongwen/trad/media/audio',
       },
       {
         title: '視頻材料',
