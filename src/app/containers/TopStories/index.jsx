@@ -62,7 +62,7 @@ TopStories.propTypes = {
 };
 
 TopStories.defaultProps = {
-  content: topStories, // @TODO: rm this
+  content: topStories, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
 };
 
 export default TopStories;
