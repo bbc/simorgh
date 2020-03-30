@@ -109,7 +109,7 @@ A unit test only ensures that something works in isolation. Even if the units wo
 
 ## Can I just write integration tests and forget about unit tests since integration tests tests
 
-You might then think it makes sense to only write integration tests but there are downsides tests integration tests. One downside is that integration tests are brittle. Because integration tests test a lot of moving parts there are a lot of things that can go wrong and finding where the problem lies can be like finding a needle in a haystack. Unit tests can help signal where we need to make a fix. It's also very difficult to cover all possible test cases of an application using only integration tests. It's much faster and easier to writes tests various states of a React component with unit testing than it is with integration testing.
+You might then think it makes sense to only write integration tests but there are downsides to integration tests. One downside is that integration tests are brittle. Because integration tests test a lot of moving parts there are a lot of things that can go wrong and finding where the problem lies can be like finding a needle in a haystack. Unit tests can help signal where we need to make a fix. It's also very difficult to cover all possible test cases of an application using only integration tests. It's much faster and easier to writes tests various states of a React component with unit testing than it is with integration testing.
 
 ## What is JSDOM?
 
@@ -159,7 +159,7 @@ Here are some possible answers:
 
 - ### Content in an iframe I want to test is not in the DOM
 
-  This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as Cypress.
+  This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as [Cypress](what-is-cypress).
 
 - ### The `getByText` query is not working
 
