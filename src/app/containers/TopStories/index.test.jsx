@@ -22,7 +22,7 @@ const renderTopStories = ({
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={content} enableGridWrapper />
+        <TopStories content={content} />
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
