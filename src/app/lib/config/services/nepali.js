@@ -212,17 +212,17 @@ export const service = {
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ,',
-          text: 'Warning: Third party content may contain adverts',
+          text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
         },
         fallback: {
-          text: "Content is not available",
-          linkText: 'View content on %provider_name%',
+          text: "सामग्री उपलब्ध नहीं है",
+          linkText: '%provider_name% पर और देखिए',
           linkTextSuffixVisuallyHidden: ', बाह्य सामग्री',
           warningText: "बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।",
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'छोड़िए %provider_name% पोस्ट',
+          endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
       },
     },
