@@ -64,6 +64,7 @@ const WithContexts = Component => {
     previousPath: string,
     service: string.isRequired,
     variant: variantPropType,
+    // eslint-disable-next-line react/forbid-prop-types
     ssrData: object,
     timeOnServer: number,
   };
@@ -87,3 +88,23 @@ WithContexts.propTypes = {
 };
 
 export default WithContexts;
+
+// const radioSchedulesShape = shape({
+//   schedules: arrayOf(
+//     shape({
+//       publishedTimeStart: number,
+//       publishedTimeEnd: number,
+//       publishedTimeDuration: string,
+//       serviceId: string,
+//       episode: shape({
+//         pid: string,
+//         presentationTitle: string,
+//         synopses: shape({
+//           short: string,
+//         }),
+//       }),
+//       broadcast: shape({ pid: string }),
+//       brand: shape({ title: string }),
+//     }),
+//   ),
+// });

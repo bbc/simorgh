@@ -6,11 +6,14 @@ const logger = webLogger();
 
 const useData = endpoint => {
   const { ssrData } = useContext(RequestContext);
-  const initialData = ssrData[endpoint] && ssrData[endpoint].json;
+  const initialData = ssrData && ssrData[endpoint];
   const [data, setData] = useState(initialData);
 
   useEffect(() => {
     const handleResponse = async response => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      }
       const json = await response.json();
       setData(json);
     };
@@ -24,9 +27,9 @@ const useData = endpoint => {
       fetchData(endpoint);
     }
 
-    return () => {
-      // remove the initial data from context at this point
-    };
+    // return () => {
+    // for onward journeys, we should remove the initial data from context at this point
+    // };
   }, [endpoint, ssrData, data]);
 
   return data;

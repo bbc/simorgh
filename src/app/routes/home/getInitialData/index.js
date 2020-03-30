@@ -1,4 +1,8 @@
 import pipe from 'ramda/src/pipe';
+import pathOr from 'ramda/src/pathOr';
+import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
+import serviceConfigs from '#server/utilities/serviceConfigs'; // or we could just have an array of services.
+import { getQueryString } from '#lib/utilities/urlParser';
 import fetchPageData from '../../utils/fetchPageData';
 import filterUnknownContentTypes from './filterUnknownContentTypes';
 import filterEmptyGroupItems from './filterEmptyGroupItems';
@@ -14,20 +18,33 @@ const transformJson = pipe(
   filterGroupsWithoutStraplines,
 );
 
-const servicesWithRadioSchedules = [
-  'afrique',
-  'arabic',
-  'hausa',
-  'korean',
-  'pashto',
-  'persian',
-  'somali',
-  'swahili',
-];
-
 export default async (path, service) => {
-  // need to use import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
-  const radioSchedulesUrl = `${process.env.SIMORGH_BASE_URL}/${service}/bbc_${service}_radio/schedule.json`;
+  const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
+  const config = serviceConfigs[service];
+
+  const hasRadioSchedule = pathOr(
+    false,
+    ['default', 'radioSchedule', 'hasRadioSchedule'],
+    config,
+  );
+
+  if (!hasRadioSchedule) {
+    const { json, ...rest } = await fetchPageData(path);
+
+    return {
+      ...rest,
+      ...(json && {
+        pageData: transformJson(json),
+      }),
+    };
+  }
+
+  const radioSchedulesUrl = getRadioScheduleEndpoint({
+    baseUrl: SIMORGH_BASE_URL,
+    service,
+    env: SIMORGH_APP_ENV,
+    queryString: getQueryString(path),
+  });
 
   const [{ json, ...rest }, radioSchedulesData] = await Promise.all([
     fetchPageData(path),
@@ -38,7 +55,9 @@ export default async (path, service) => {
     ...rest,
     ...(json && {
       pageData: transformJson(json),
-      ssrData: { radioSchedulesUrl: radioSchedulesData },
+      ssrData: {
+        [radioSchedulesUrl]: radioSchedulesData && radioSchedulesData.json,
+      },
     }),
   };
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, node, oneOf, string, number } from 'prop-types';
+import { bool, node, oneOf, string, number, object } from 'prop-types';
 import getStatsDestination from './getStatsDestination';
 import getStatsPageIdentifier from './getStatsPageIdentifier';
 import getOriginContext from './getOriginContext';
@@ -80,6 +80,8 @@ RequestContextProvider.propTypes = {
   pathname: string.isRequired,
   previousPath: string,
   variant: variantPropType,
+  // eslint-disable-next-line react/forbid-prop-types
+  ssrData: object,
   timeOnServer: number,
 };
 
@@ -89,5 +91,6 @@ RequestContextProvider.defaultProps = {
   statusCode: null,
   previousPath: null,
   variant: null,
+  ssrData: null,
   timeOnServer: null,
 };

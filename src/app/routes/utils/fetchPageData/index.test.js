@@ -44,6 +44,11 @@ describe('fetchPageData', () => {
       expect(fetch).toHaveBeenCalledWith(expectedUrl);
     });
 
+    it('should call fetch with raw pathname if required', async () => {
+      await fetchPageData('http://test.com/anotherpath.json', true);
+      expect(fetch).toHaveBeenCalledWith('http://test.com/anotherpath.json');
+    });
+
     it('should return expected response', async () => {
       const response = await fetchPageData(requestedPathname);
 
