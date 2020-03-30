@@ -7,10 +7,6 @@ const requestedPathname = '/path/to/asset';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
 const DATA_FETCH_ERROR = 'data_fetch_error';
 
-const asErrorString = message => {
-  return { error: message };
-};
-
 afterEach(() => {
   jest.clearAllMocks();
   fetch.resetMocks();
@@ -78,12 +74,10 @@ describe('fetchPageData', () => {
 
         const response = await fetchPageData(requestedPathname);
 
-        expect(loggerMock.error).toBeCalledWith(
-          DATA_FETCH_ERROR,
-          asErrorString(
+        expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+          error:
             'FetchError: invalid json response body at  reason: Unexpected end of JSON input',
-          ),
-        );
+        });
 
         expect(response).toEqual({
           error:
@@ -99,12 +93,10 @@ describe('fetchPageData', () => {
 
         const response = await fetchPageData(requestedPathname);
 
-        expect(loggerMock.error).toBeCalledWith(
-          DATA_FETCH_ERROR,
-          asErrorString(
+        expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+          error:
             'FetchError: invalid json response body at  reason: Unexpected end of JSON input',
-          ),
-        );
+        });
         expect(response).toEqual({
           error:
             'FetchError: invalid json response body at  reason: Unexpected end of JSON input',
@@ -141,12 +133,9 @@ describe('fetchPageData', () => {
 
         const response = await fetchPageData(requestedPathname);
 
-        expect(loggerMock.error).toBeCalledWith(
-          DATA_FETCH_ERROR,
-          asErrorString(
-            `Error: Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
-          ),
-        );
+        expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+          error: `Error: Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
+        });
 
         expect(response).toEqual({
           status: 500,
@@ -159,12 +148,9 @@ describe('fetchPageData', () => {
 
         const response = await fetchPageData(requestedPathname);
 
-        expect(loggerMock.error).toBeCalledWith(
-          DATA_FETCH_ERROR,
-          asErrorString(
-            `Error: Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
-          ),
-        );
+        expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+          error: `Error: Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
+        });
 
         expect(response).toEqual({
           status: 500,
@@ -173,6 +159,7 @@ describe('fetchPageData', () => {
       });
     });
   });
+
   describe('on client', () => {
     beforeEach(() => {
       setWindowValue('location', true);
@@ -183,12 +170,9 @@ describe('fetchPageData', () => {
 
       const response = await fetchPageData(requestedPathname);
 
-      expect(loggerMock.error).toBeCalledWith(
-        DATA_FETCH_ERROR,
-        asErrorString(
-          `Error: Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
-        ),
-      );
+      expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+        error: `Error: Unexpected upstream response (HTTP status code 418) when requesting ${expectedUrl}`,
+      });
 
       expect(response).toEqual({
         status: 502,
@@ -201,12 +185,9 @@ describe('fetchPageData', () => {
 
       const response = await fetchPageData(requestedPathname);
 
-      expect(loggerMock.error).toBeCalledWith(
-        DATA_FETCH_ERROR,
-        asErrorString(
-          `Error: Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
-        ),
-      );
+      expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+        error: `Error: Unexpected upstream response (HTTP status code 500) when requesting ${expectedUrl}`,
+      });
 
       expect(response).toEqual({
         status: 502,
