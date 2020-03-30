@@ -4,11 +4,11 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 TopStoriesWrapper-shj2ec-0 ijsMs"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 TopStoriesWrapper-sc-14492ea-0 eVRfal"
     role="region"
   >
     <div
-      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-shj2ec-1 gLFyEX"
+      class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
     >
       <div
         class="Bar-sc-1x4gwjz-0 jsgdXU"
