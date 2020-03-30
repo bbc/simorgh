@@ -210,6 +210,22 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption,',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: "Content is not available",
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: "BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.",
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'Africa/Lagos',
