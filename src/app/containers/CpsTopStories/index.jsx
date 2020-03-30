@@ -3,7 +3,11 @@ import { arrayOf, shape, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -24,6 +28,16 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+`;
+
+// Apply the right margin-top between the section label and the promos
+const SpacingDiv = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
 `;
 
 const TopStories = ({ content }) => {
@@ -60,7 +74,9 @@ const TopStories = ({ content }) => {
         </StyledSectionLabel>
 
         {hasSingleStory ? (
-          <StoryPromo item={singleStory} dir={dir} displayImage={false} />
+          <SpacingDiv>
+            <StoryPromo item={singleStory} dir={dir} displayImage={false} />
+          </SpacingDiv>
         ) : (
           <StoryPromoUl>
             {content.map(item => (
