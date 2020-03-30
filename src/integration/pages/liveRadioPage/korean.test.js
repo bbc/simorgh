@@ -14,6 +14,7 @@ import {
   runCoreCanonicalTests,
   runPerformaceTests,
   runCommonAmpAnalyticsTests,
+  runCommonCanonicalAnalyticsTests,
   runSnapshotTests,
 } from '../../common';
 
@@ -40,6 +41,10 @@ describe('Given I am on the Korean live radio Canonical page', () => {
       audioEmbedUrl:
         'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko',
     });
+  });
+
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonCanonicalAnalyticsTests();
   });
 
   describe('When the application starts', () => {
