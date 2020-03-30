@@ -109,7 +109,7 @@ A unit test only ensures that something works in isolation. Even if the units wo
 
 ## Can I just write integration tests and forget about unit tests since integration tests tests
 
-You might then think it makes sense to only write integration tests but there are downsides to integration tests. One downside is that integration tests are brittle. Because integration tests test a lot of moving parts there are a lot of things that can go wrong and finding where the problem lies can be like finding a needle in a haystack. Unit tests can help signal where we need to make a fix. It's also very difficult to cover all possible test cases of an application using only integration tests. It's much faster and easier to writes tests various states of a React component with unit testing than it is with integration testing.
+You might then think it makes sense to only write integration tests but there are downsides to integration tests. One downside is that integration tests are brittle. Because integration tests test a lot of moving parts there are a lot of things that can go wrong and finding where the problem lies can be like finding a needle in a haystack. Unit tests can help signal where we need to make a fix. It's also very difficult to cover all possible test cases of an application using only integration tests. It's much faster and easier to writes tests for various states of a React component with unit testing than it is with integration testing.
 
 ## What is JSDOM?
 
@@ -121,7 +121,7 @@ You might then think it makes sense to only write integration tests but there ar
 
 ## What is DOM Testing Library?
 
-[DOM Testing Library](https://github.com/testing-library/dom-testing-library) provides testing utilities that encourage good testing practices. It provides methods to query the DOM for nodes in a way that's similar to how the user finds elements on the page. All queries available an be found [here](https://testing-library.com/docs/dom-testing-library/api-queries)
+[DOM Testing Library](https://github.com/testing-library/dom-testing-library) provides testing utilities that encourage good testing practices. It provides methods to query the DOM for nodes in a way that's similar to how the user finds elements on the page. All queries available can be found [here](https://testing-library.com/docs/dom-testing-library/api-queries).
 
 ## What is a docblock pragma?
 
@@ -147,7 +147,7 @@ This is a feature provided by Jest. It's not a snapshot of the graphical UI but 
 
 ## What is Cypress
 
-Cypress is a JavaScript-based end-to-end testing framework. Our Cypress tests can be found here https://github.com/bbc/simorgh/tree/latest/cypress.
+Cypress is a JavaScript-based end-to-end testing framework. Our Cypress tests can be found [here](https://github.com/bbc/simorgh/tree/latest/cypress).
 
 ## My test is failing and I don't know why
 
@@ -173,4 +173,4 @@ Here are some possible answers:
   const image = amp.document.querySelector(`amp-img[alt="${imageAltText}"]`)`
   ```
 
-This could be another issue that will be fixed by client side rendering with JSDOM.
+  This could be another issue that will be fixed by client side rendering with JSDOM.
