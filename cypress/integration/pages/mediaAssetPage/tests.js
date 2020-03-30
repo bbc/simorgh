@@ -100,68 +100,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         return cy.log('Not legacy MAP, has related content');
       });
     });
-
-    it('should change to the correct script when the script switch is clicked', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const { language } = body.metadata;
-        // Accepts privacy policy and cookies (with one click?? will this be flakey?)
-        cy.get(
-          '#root > header > div.Wrapper-sc-7g3fro-0.fOqUqv > div > ul > li:nth-child(1) > button',
-        ).click();
-        // This sets up a way of checking the MAP page content is in the right script,
-        // regardless of the content input in CPS, as the timstamp should always match the script
-        // Open to suggestions for a better way. Maybe not necessary.
-        if (language === 'sr-Cyrl') {
-          const cyrMonths = [
-            'јан',
-            'феб',
-            'мар',
-            'апр',
-            'мај',
-            'јун',
-            'јул',
-            'авг',
-            'сеп',
-            'окт',
-            'нов',
-            'дец',
-          ];
-          const cyrRegex = new RegExp(`${cyrMonths.join('|')}`, 'g');
-          // Checks script switcher says Lat
-          cy.get('.kRCdQO > div:nth-child(1) > div:nth-child(3)').contains(
-            'Lat',
-          );
-          // Checks MAP is rendered in correct script
-          cy.get(
-            'div.GridItemConstrainedMedium-sc-12lwanc-2:nth-child(4)',
-          ).contains(cyrRegex);
-          // Clicks script switcher
-          cy.get('#root > header > div > div > div > a').click();
-          // Checks lat cookie is set
-          cy.getCookie('ckps_serbian').should('have.property', 'value', 'lat');
-          // Clicks home button to navigate to home page
-          cy.get(
-            '#root > header > nav > div > div.ScrollableWrapper-t4argr-0.UDeIc > div > ul > li:nth-child(1) > a',
-          ).click();
-          // Checks correct cookie has persisted
-          cy.getCookie('ckps_serbian').should('have.property', 'value', 'lat');
-          // Checks script switcher says Ћир
-          cy.get(
-            '#root > header > div > div > div > a > span > span:nth-child(1)',
-          ).contains('Ћир');
-          // Navigates to a MAP
-          cy.contains('/serbian/lat/srbija-23278974').click();
-
-          cy.get(
-            'div.GridItemConstrainedMedium-sc-12lwanc-2:nth-child(4)',
-          ).contains(cyrRegex);
-        } else if (language === 'sr-Latn') {
-          cy.get('.kRCdQO > div:nth-child(1) > div:nth-child(3)').contains(
-            'Ћир',
-          );
-        }
-      });
-    });
   });
 };
 
