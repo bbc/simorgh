@@ -205,6 +205,22 @@ export const service = {
       ],
       copyrightText:
         "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption,',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: "Content is not available",
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'Warning: Third party content may contain adverts',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     navigation: [
