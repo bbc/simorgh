@@ -231,7 +231,7 @@ export const service = {
           text: "Ce contenu n'est pas disponible",
           linkText: 'Voir plus sur %provider_name%',
           linkTextSuffixVisuallyHidden: ', lien externe',
-          warningText: 'Attention: le contenu externe peut contenir des messages publicitaires',
+          warningText: "La BBC n'est pas responsable du contenu des sites externes.",
         },
         skipLink: {
           text: 'Ignorer %provider_name% publication',
