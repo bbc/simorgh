@@ -228,7 +228,7 @@ const simorghLaunchDates = {
   ukrainian: {
     articles: '',
     frontPage: '',
-    mediaAssetPage: '',
+    mediaAssetPage: '26th March 2020',
   },
   urdu: {
     articles: '',
@@ -239,7 +239,7 @@ const simorghLaunchDates = {
   uzbek: {
     articles: '',
     frontPage: '13th Jan 2020',
-    mediaAssetPage: '',
+    mediaAssetPage: '26th March 2020',
   },
   vietnamese: {
     articles: '',
