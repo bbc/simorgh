@@ -159,6 +159,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'BBC 코리아 라디오',
     },
     footer: {

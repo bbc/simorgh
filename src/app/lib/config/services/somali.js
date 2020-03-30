@@ -178,6 +178,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'Barnaamijyada Idaacadda',
     },
     footer: {

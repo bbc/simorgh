@@ -112,7 +112,9 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <RadioScheduleContainer />}
+              {group.type === 'top-stories' && (
+                <RadioScheduleContainer isOnFrontPage />
+              )}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}
