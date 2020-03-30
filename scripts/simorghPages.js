@@ -4,30 +4,64 @@ const path = require('path');
 const allServices = require('../cypress/support/config/settings');
 const simorghLaunchDates = require('./simorghLaunchDates');
 
+const getUrl = (pageType, env) => {
+  let url;
+
+  if (
+    pageType &&
+    pageType.environments &&
+    pageType.environments[env] &&
+    pageType.environments[env].paths
+  ) {
+    [url] = pageType.environments[env].paths;
+  }
+
+  return url;
+};
+
 const generateLinks = (service, env, domain) => {
   const output = [];
 
-  const { frontPage, liveRadio, articles, mediaAssetPage } = allServices(env)[
-    service
-  ].pageTypes;
+  const {
+    frontPage,
+    liveRadio,
+    articles,
+    mediaAssetPage,
+    photoGalleryPage,
+    storyPage,
+  } = allServices()[service].pageTypes;
 
-  if (frontPage && frontPage.path) {
-    output.push(`[home](${domain}${frontPage.path})`);
+  const frontPageURL = getUrl(frontPage, env);
+  if (frontPageURL) {
+    output.push(`[home](${domain}${frontPageURL})`);
   }
 
-  if (articles && articles.path) {
-    output.push(`[articles](${domain}${articles.path})`);
+  const articleURL = getUrl(articles, env);
+  if (articleURL) {
+    output.push(`[articles](${domain}${articleURL})`);
   }
 
-  if (liveRadio && liveRadio.path) {
-    output.push(`[liveRadio](${domain}${liveRadio.path})`);
+  const liveRadioURL = getUrl(liveRadio, env);
+  if (liveRadioURL) {
+    output.push(`[liveRadio](${domain}${liveRadioURL})`);
   }
 
-  if (mediaAssetPage && mediaAssetPage.path) {
-    output.push(`[MAP](${domain}${mediaAssetPage.path})`);
+  const mapURL = getUrl(mediaAssetPage, env);
+  if (mapURL) {
+    output.push(`[MAP](${domain}${mapURL})`);
   }
 
-  return output.join(' - ');
+  const pglURL = getUrl(photoGalleryPage, env);
+  if (pglURL) {
+    output.push(`[PGL](${domain}${pglURL})`);
+  }
+
+  const styURL = getUrl(storyPage, env);
+  if (styURL) {
+    output.push(`[STY](${domain}${styURL})`);
+  }
+
+  return output.join('<br/>');
 };
 
 const generateLaunchDates = service => {
@@ -50,7 +84,15 @@ const generateLaunchDates = service => {
     output.push(`__MAPs__: ${serviceLaunch.mediaAssetPage}`);
   }
 
-  return output.join(' - ');
+  if (serviceLaunch.photoGalleryPage && serviceLaunch.photoGalleryPage !== '') {
+    output.push(`__PGLs__: ${serviceLaunch.photoGalleryPage}`);
+  }
+
+  if (serviceLaunch.storyPage && serviceLaunch.storyPage !== '') {
+    output.push(`__STYs__: ${serviceLaunch.storyPage}`);
+  }
+
+  return output.join('<br/>');
 };
 
 const scriptDir = path.resolve(__dirname);
@@ -77,7 +119,7 @@ stream.once('open', () => {
       service,
       generateLinks(service, 'local', 'http://localhost:7080'),
       generateLinks(service, 'test', 'https://www.test.bbc.com'),
-      generateLinks(service, 'stage', 'https://www.stage.bbc.com'),
+      generateLinks(service, 'test', 'https://www.stage.bbc.com'),
       generateLinks(service, 'live', 'https://www.bbc.com'),
       generateLaunchDates(service),
     ];
