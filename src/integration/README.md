@@ -170,7 +170,7 @@ Here are some possible answers:
   AMP has some custom components which are transformed by the AMP library on the client side into something that the web-browser can understand. One of these components is `amp-img`. The problem is the `getByAltText` queries the DOM for an `img` element with an `alt` attribute that matches the provided alt-text so the `amp-img` element is not picked up. The current solution is to use `document.querySelector` and search for the `amp-img` element combined with an attribute selector, for example:
 
   ```js
-  const image = amp.document.querySelector(`amp-img[alt="${imageAltText}"]`)`
+  const image = amp.document.querySelector(`amp-img[alt="${imageAltText}"]`);
   ```
 
   This could be another issue that will be fixed by client side rendering with JSDOM.
