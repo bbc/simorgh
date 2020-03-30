@@ -60,7 +60,7 @@ export const service = {
       'https://www.bbc.com/zhongwen/simp/institutional-51359584',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/zhongwen/simp/institutional-51359584',
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
@@ -69,11 +69,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38652837',
           text: '使用条款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38652843',
           text: '隐私政策',
         },
         {
@@ -81,7 +81,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
           text: '联络BBC',
         },
         {
@@ -263,7 +263,7 @@ export const service = {
       'https://www.bbc.com/zhongwen/trad/institutional-51359584',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/zhongwen/trad/institutional-51359584',
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
@@ -272,11 +272,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38652837',
           text: '使用條款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38652843',
           text: '隱私政策',
         },
         {
@@ -284,7 +284,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38664417',
           text: '聯絡BBC',
         },
         {
