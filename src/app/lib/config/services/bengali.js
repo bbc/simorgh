@@ -172,7 +172,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -222,16 +222,8 @@ export const service = {
         url: '/bengali',
       },
       {
-        title: 'অডিও',
-        url: '/bengali/media/audio',
-      },
-      {
         title: 'ভিডিও',
         url: '/bengali/media/video',
-      },
-      {
-        title: 'ফটো গ্যালারি',
-        url: '/bengali/media/photogalleries',
       },
     ],
   },
