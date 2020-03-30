@@ -42,6 +42,20 @@ storiesOf('Containers|Top Stories/Canonical', module)
       dir: 'rtl',
       data: topStoriesRtl,
     }),
+  )
+  .add('igbo (ltr) with one item', () =>
+    canonicalTopStories({
+      service: 'igbo',
+      dir: 'ltr',
+      data: [topStories[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalTopStories({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [topStoriesRtl[0]],
+    }),
   );
 
 storiesOf('Containers|Top Stories/AMP', module)
@@ -59,5 +73,19 @@ storiesOf('Containers|Top Stories/AMP', module)
       service: 'arabic',
       dir: 'rtl',
       data: topStoriesRtl,
+    }),
+  )
+  .add('igbo (ltr) with one item', () =>
+    canonicalTopStories({
+      service: 'igbo',
+      dir: 'ltr',
+      data: [topStories[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalTopStories({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [topStoriesRtl[0]],
     }),
   );
