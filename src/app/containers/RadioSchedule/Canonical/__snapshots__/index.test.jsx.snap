@@ -351,7 +351,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
   padding-top: 0.5rem;
 }
 
-.c36 {
+.c34 {
   font-size: 1.0625rem;
   line-height: 1.5rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
