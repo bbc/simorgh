@@ -6,7 +6,6 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 
 import TopStories from '.';
 import topStories from '#pages/StoryPage/topStories.json';
-import topStoriesOneItem from '#pages/StoryPage/topStoriesOneItem.json';
 
 // eslint-disable-next-line react/prop-types
 const renderTopStories = ({
@@ -44,6 +43,9 @@ describe('CpsRelatedContent', () => {
   });
 
   it('should render Top Stories components when without <ul>', () => {
+    const [topStory] = topStories;
+    const topStoriesOneItem = [topStory];
+
     // Ensure fixture still has top stories
     expect(topStoriesOneItem.length).toBe(1);
 
