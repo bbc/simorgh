@@ -57,7 +57,7 @@ export const service = {
     noBylinesPolicy:
       'https://www.bbc.com/zhongwen/simp/institutional-51359584#authorexpertise',
     publishingPrinciples:
-      'https://www.bbc.com/zhongwen/simp/institutional-513595842',
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/zhongwen/simp/institutional-51359584',
