@@ -54,8 +54,10 @@ export const service = {
     videoCaptionOffscreenText: '视频加注文字，',
     imageCaptionOffscreenText: '图像加注文字，',
     imageCopyrightOffscreenText: '图像来源，',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -263,8 +265,10 @@ export const service = {
     videoCaptionOffscreenText: '音頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
