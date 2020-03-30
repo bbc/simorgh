@@ -161,6 +161,7 @@ export const service = {
         listen: 'கேட்க',
         watch: 'பார்க்க',
         liveLabel: 'நேரலை',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

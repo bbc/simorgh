@@ -157,6 +157,7 @@ export const service = {
         listen: 'Прослухати',
         watch: 'Дивитися',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Попередня радіопрограма',
         nextRadioShow: 'Наступна радіопрограма',
         duration: 'Тривалість',
