@@ -1,3 +1,4 @@
+import { JSDOM } from 'jsdom';
 import pipe from 'ramda/src/pipe';
 
 const { canonical, amp } = global;
@@ -27,18 +28,23 @@ const getFixedHtml = pipe(
   replaceStaticScriptSrc,
 );
 
+const getHtmlString = doc => doc.querySelector('html').outerHTML;
+
 export default () => {
   [canonical, amp].forEach(page => {
     describe(`And using ${page.platform}`, () => {
+      const htmlString = getHtmlString(page.document);
+      const fixedHtml = getFixedHtml(htmlString);
+      const doc = new JSDOM(fixedHtml).window.document; // clone so we don't mutate the dom shared across tests
+
       it('I can see the server-rendered HTML', () => {
         removeElements(
-          page.document.querySelectorAll('[data-styled], style[amp-custom]'),
+          doc.querySelectorAll('[data-styled], style[amp-custom]'),
         ); // styles change between each build for some reason
 
-        const html = page.document.querySelector('html').outerHTML;
-        const fixedHtml = getFixedHtml(html);
+        const html = getHtmlString(doc);
 
-        expect(fixedHtml).toMatchSnapshot();
+        expect(html).toMatchSnapshot();
       });
     });
   });
