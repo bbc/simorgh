@@ -215,6 +215,22 @@ export const service = {
       ],
       copyrightText:
         'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'वीडियो कैप्शन',
+          text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
+        },
+        fallback: {
+          text: "सामग्री् उपलब्ध नहीं है",
+          linkText: 'सोशल नेटवर्क पर और देखिए',
+          linkTextSuffixVisuallyHidden: 'बाहरी सामग्री',
+          warningText: "बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.",
+        },
+        skipLink: {
+          text: 'छोड़िए %provider_name% पोस्ट',
+          endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
+        },
+      },
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
