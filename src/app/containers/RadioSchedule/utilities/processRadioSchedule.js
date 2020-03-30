@@ -2,7 +2,7 @@ import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
 import pathOr from 'ramda/src/pathOr';
 
-const getProgramState = (currentTime, startTime, endTime) => {
+export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
   if (isLive) {
     return 'live';
@@ -14,7 +14,7 @@ const getProgramState = (currentTime, startTime, endTime) => {
   return 'next';
 };
 
-const getLink = (state, program, service) => {
+export const getLink = (state, program, service) => {
   const url = `/${service}/${program.serviceId}`;
   return state === 'live'
     ? `${url}/liveradio`
@@ -52,7 +52,6 @@ export default (radioScheduleData, service, currentTime) => {
       return {
         id: pathOr(null, ['broadcast', 'pid'], program),
         state: currentState,
-        stateLabel: currentState,
         startTime: pathOr(null, ['publishedTimeStart'], program),
         link: getLink(currentState, program, service),
         brandTitle: pathOr(null, ['brand', 'title'], program),
