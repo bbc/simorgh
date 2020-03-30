@@ -20,7 +20,7 @@ const simorghLaunchDates = {
   arabic: {
     articles: '',
     frontPage: '',
-    liveRadio: '',
+    liveRadio: '4th Feb 2020',
     mediaAssetPage: '',
   },
   archive: {},
@@ -59,13 +59,13 @@ const simorghLaunchDates = {
   hausa: {
     articles: '',
     frontPage: '',
-    liveRadio: '',
+    liveRadio: '30th Jan 2020',
     mediaAssetPage: '',
   },
   hindi: {
     articles: '',
     frontPage: '',
-    liveRadio: '',
+    liveRadio: '4th Feb 2020',
     mediaAssetPage: '',
   },
   igbo: {
@@ -129,7 +129,7 @@ const simorghLaunchDates = {
   persian: {
     articles: '',
     frontPage: '',
-    liveRadio: '',
+    liveRadio: '4th Feb 2020',
     mediaAssetPage: '',
   },
   pidgin: {
@@ -175,7 +175,7 @@ const simorghLaunchDates = {
   somali: {
     articles: '',
     frontPage: '',
-    liveRadio: '',
+    liveRadio: '30th Jan 2020',
     mediaAssetPage: '',
   },
   sport: {
@@ -233,12 +233,13 @@ const simorghLaunchDates = {
   urdu: {
     articles: '',
     frontPage: '',
-    liveRadio: '',
+    liveRadio: '4th Feb 2020',
     mediaAssetPage: '',
   },
   uzbek: {
     articles: '',
     frontPage: '13th Jan 2020',
+    liveRadio: '4th Feb 2020',
     mediaAssetPage: '26th March 2020',
   },
   vietnamese: {
