@@ -1,6 +1,6 @@
-// dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 import { SERVER_LISTEN_ERROR } from '#lib/logger.const';
 
+// dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 const dotenv = require('dotenv');
 
 const DOT_ENV_CONFIG = dotenv.config();
