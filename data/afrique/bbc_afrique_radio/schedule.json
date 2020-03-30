@@ -4,20 +4,20 @@
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1893488400000,
-      "publishedTimeStart": 1893488400000,
-      "publishedTimeEnd": 1893488400000,
+      "updateTime": 1583994363000,
+      "publishedTimeStart": 1584943200000,
+      "publishedTimeEnd": 1584944100000,
       "publishedTimeDuration": "PT15M",
-      "transmissionTimeStart": 1893488400000,
-      "transmissionTimeEnd": 1893488400000,
+      "transmissionTimeStart": 1584943200000,
+      "transmissionTimeEnd": 1584944100000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpb09r862d.imi:ws.bbc.co.uk/FRENA1584597600",
-        "pid": "p0860n2k"
+        "bid": "w1mshbpbcl1rmyy.imi:ws.bbc.co.uk/FRENA1584943200",
+        "pid": "p086czts"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -29,34 +29,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5znz2j2pzv",
-        "presentationTitle": "01/01/2030 09:00 GMT",
+        "pid": "w172x5zpbbtl4wd",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpb09r862d" }
+      "version": {
+        "pid": "w1mshbpbcl1rmyy"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583648766000,
-      "publishedTimeStart": 1584598500000,
-      "publishedTimeEnd": 1584598560000,
+      "updateTime": 1583994364000,
+      "publishedTimeStart": 1584944100000,
+      "publishedTimeEnd": 1584944160000,
       "publishedTimeDuration": "PT1M",
-      "transmissionTimeStart": 1584598500000,
-      "transmissionTimeEnd": 1584598560000,
+      "transmissionTimeStart": 1584944100000,
+      "transmissionTimeEnd": 1584944160000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb8y5ry6l03.imi:ws.bbc.co.uk/FRENA1584598500",
-        "pid": "p0860n2l"
+        "bid": "w1mshb8yk17q0wn.imi:ws.bbc.co.uk/FRENA1584944100",
+        "pid": "p086cztw"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -68,34 +70,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5n1nnvn5dr",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5n20y54m99",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshb8y5ry6l03" }
+      "version": {
+        "pid": "w1mshb8yk17q0wn"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583648767000,
-      "publishedTimeStart": 1584598560000,
-      "publishedTimeEnd": 1584598860000,
+      "updateTime": 1583994364000,
+      "publishedTimeStart": 1584944160000,
+      "publishedTimeEnd": 1584944460000,
       "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584598560000,
-      "transmissionTimeEnd": 1584598860000,
+      "transmissionTimeStart": 1584944160000,
+      "transmissionTimeEnd": 1584944460000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbnx8yfxkvq.imi:ws.bbc.co.uk/FRENA1584598560",
-        "pid": "p0860n2m"
+        "bid": "w1mshbnxn6rf0r8.imi:ws.bbc.co.uk/FRENA1584944160",
+        "pid": "p086cztv"
       },
       "brand": {
         "pid": "w13xttn7",
@@ -107,34 +111,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5z87q6r2s5",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5z8lzj7jnq",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com",
           "medium": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com"
         }
       },
-      "version": { "pid": "w1mshbnx8yfxkvq" }
+      "version": {
+        "pid": "w1mshbnxn6rf0r8"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583648770000,
-      "publishedTimeStart": 1584599400000,
-      "publishedTimeEnd": 1584600000000,
+      "updateTime": 1583994368000,
+      "publishedTimeStart": 1584945000000,
+      "publishedTimeEnd": 1584945600000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584599400000,
-      "transmissionTimeEnd": 1584600000000,
+      "transmissionTimeStart": 1584945000000,
+      "transmissionTimeEnd": 1584945600000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpqqp1lx53.imi:ws.bbc.co.uk/FRENA1584599400",
-        "pid": "p0860n2s"
+        "bid": "w1mshbpr2yc3c1n.imi:ws.bbc.co.uk/FRENA1584945000",
+        "pid": "p086czv7"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -146,34 +152,36 @@
         }
       },
       "episode": {
-        "pid": "w172x602pftff2k",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x6031q3xvz3",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpqqp1lx53" }
+      "version": {
+        "pid": "w1mshbpr2yc3c1n"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583648780000,
-      "publishedTimeStart": 1584600180000,
-      "publishedTimeEnd": 1584600300000,
+      "updateTime": 1583994370000,
+      "publishedTimeStart": 1584945780000,
+      "publishedTimeEnd": 1584945900000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584600180000,
-      "transmissionTimeEnd": 1584600300000,
+      "transmissionTimeStart": 1584945780000,
+      "transmissionTimeEnd": 1584945900000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc3kqnbhm7w.imi:ws.bbc.co.uk/FRENA1584600180",
-        "pid": "p0860n3p"
+        "bid": "w1mshc3l2xn024f.imi:ws.bbc.co.uk/FRENA1584945780",
+        "pid": "p086czvf"
       },
       "brand": {
         "pid": "w13xttn8",
@@ -185,34 +193,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6dxpf3b45b",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x6dy1pdtl1w",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique.",
           "medium": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique."
         }
       },
-      "version": { "pid": "w1mshc3kqnbhm7w" }
+      "version": {
+        "pid": "w1mshc3l2xn024f"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583648773000,
-      "publishedTimeStart": 1584600300000,
-      "publishedTimeEnd": 1584600360000,
+      "updateTime": 1583994372000,
+      "publishedTimeStart": 1584945900000,
+      "publishedTimeEnd": 1584945960000,
       "publishedTimeDuration": "PT1M",
-      "transmissionTimeStart": 1584600300000,
-      "transmissionTimeEnd": 1584600360000,
+      "transmissionTimeStart": 1584945900000,
+      "transmissionTimeEnd": 1584945960000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb8y5ry6mw5.imi:ws.bbc.co.uk/FRENA1584600300",
-        "pid": "p0860n2x"
+        "bid": "w1mshb8yk17q2rq.imi:ws.bbc.co.uk/FRENA1584945900",
+        "pid": "p086czvk"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -224,34 +234,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5n1nnvn78t",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5n20y54p5c",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshb8y5ry6mw5" }
+      "version": {
+        "pid": "w1mshb8yk17q2rq"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583648774000,
-      "publishedTimeStart": 1584600600000,
-      "publishedTimeEnd": 1584601200000,
+      "updateTime": 1583994373000,
+      "publishedTimeStart": 1584946200000,
+      "publishedTimeEnd": 1584946800000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584600600000,
-      "transmissionTimeEnd": 1584601170000,
+      "transmissionTimeStart": 1584946200000,
+      "transmissionTimeEnd": 1584946770000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7plpg6vm8p.imi:ws.bbc.co.uk/FRENA1584600600",
-        "pid": "p0860n2z"
+        "bid": "w1msh7pm1qjc257.imi:ws.bbc.co.uk/FRENA1584946200",
+        "pid": "p086czvl"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -263,34 +275,36 @@
         }
       },
       "episode": {
-        "pid": "w172x3673cg2d1f",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x367gmrktxz",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7plpg6vm8p" }
+      "version": {
+        "pid": "w1msh7pm1qjc257"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583652345000,
-      "publishedTimeStart": 1584601200000,
-      "publishedTimeEnd": 1584601800000,
+      "updateTime": 1583997947000,
+      "publishedTimeStart": 1584946800000,
+      "publishedTimeEnd": 1584947400000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584601200000,
-      "transmissionTimeEnd": 1584601800000,
+      "transmissionTimeStart": 1584946800000,
+      "transmissionTimeEnd": 1584947400000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpqqp1lz15.imi:ws.bbc.co.uk/FRENA1584601200",
-        "pid": "p0860q84"
+        "bid": "w1mshbpr2yc3dxq.imi:ws.bbc.co.uk/FRENA1584946800",
+        "pid": "p086d3my"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -302,34 +316,36 @@
         }
       },
       "episode": {
-        "pid": "w172x602pftfgym",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x6031q3xxv5",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpqqp1lz15" }
+      "version": {
+        "pid": "w1mshbpr2yc3dxq"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583652346000,
-      "publishedTimeStart": 1584601800000,
-      "publishedTimeEnd": 1584603000000,
+      "updateTime": 1583997948000,
+      "publishedTimeStart": 1584947400000,
+      "publishedTimeEnd": 1584948600000,
       "publishedTimeDuration": "PT20M",
-      "transmissionTimeStart": 1584601800000,
-      "transmissionTimeEnd": 1584602940000,
+      "transmissionTimeStart": 1584947400000,
+      "transmissionTimeEnd": 1584948540000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7q0dtj69r1.imi:ws.bbc.co.uk/FRENA1584601800",
-        "pid": "p0860q85"
+        "bid": "w1msh7q0s2tprml.imi:ws.bbc.co.uk/FRENA1584947400",
+        "pid": "p086d3mz"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -341,34 +357,36 @@
         }
       },
       "episode": {
-        "pid": "w172x36mtqrf2hs",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x36n601xjdb",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7q0dtj69r1" }
+      "version": {
+        "pid": "w1msh7q0s2tprml"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583655983000,
-      "publishedTimeStart": 1584604800000,
-      "publishedTimeEnd": 1584604920000,
+      "updateTime": 1584001579000,
+      "publishedTimeStart": 1584950400000,
+      "publishedTimeEnd": 1584950520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584604800000,
-      "transmissionTimeEnd": 1584604920000,
+      "transmissionTimeStart": 1584950400000,
+      "transmissionTimeEnd": 1584950520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0r1hd.imi:ws.bbc.co.uk/FRENA1584604800",
-        "pid": "p0860sym"
+        "bid": "w1mshbfjnnb7hcy.imi:ws.bbc.co.uk/FRENA1584950400",
+        "pid": "p086d78f"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -380,34 +398,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84skkdv",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5qwmf3209d",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0r1hd" }
+      "version": {
+        "pid": "w1mshbfjnnb7hcy"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583659553000,
-      "publishedTimeStart": 1584608400000,
-      "publishedTimeEnd": 1584608520000,
+      "updateTime": 1584005382000,
+      "publishedTimeStart": 1584954000000,
+      "publishedTimeEnd": 1584954120000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584608400000,
-      "transmissionTimeEnd": 1584608520000,
+      "transmissionTimeStart": 1584954000000,
+      "transmissionTimeEnd": 1584954120000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0r57j.imi:ws.bbc.co.uk/FRENA1584608400",
-        "pid": "p0860xg6"
+        "bid": "w1mshbfjnnb7m42.imi:ws.bbc.co.uk/FRENA1584954000",
+        "pid": "p086dnxv"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -419,34 +439,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84skp4z",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5qwmf3241j",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0r57j" }
+      "version": {
+        "pid": "w1mshbfjnnb7m42"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583663147000,
-      "publishedTimeStart": 1584612000000,
-      "publishedTimeEnd": 1584612120000,
+      "updateTime": 1584008859000,
+      "publishedTimeStart": 1584957600000,
+      "publishedTimeEnd": 1584957720000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584612000000,
-      "transmissionTimeEnd": 1584612120000,
+      "transmissionTimeStart": 1584957600000,
+      "transmissionTimeEnd": 1584957720000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0r8zn.imi:ws.bbc.co.uk/FRENA1584612000",
-        "pid": "p08610sw"
+        "bid": "w1mshbfjnnb7qw6.imi:ws.bbc.co.uk/FRENA1584957600",
+        "pid": "p086f1xf"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -458,34 +480,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sksx3",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5qwmf327sn",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0r8zn" }
+      "version": {
+        "pid": "w1mshbfjnnb7qw6"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583663149000,
-      "publishedTimeStart": 1584613800000,
-      "publishedTimeEnd": 1584613920000,
+      "updateTime": 1584008840000,
+      "publishedTimeStart": 1584959400000,
+      "publishedTimeEnd": 1584959520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584613800000,
-      "transmissionTimeEnd": 1584613920000,
+      "transmissionTimeStart": 1584959400000,
+      "transmissionTimeEnd": 1584959520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7kgvr.imi:ws.bbc.co.uk/FRENA1584613800",
-        "pid": "p08610t0"
+        "bid": "w1mshbm8rrk1xr9.imi:ws.bbc.co.uk/FRENA1584959400",
+        "pid": "p086f1tr"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -497,34 +521,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80czs6",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5xmqj9wfnr",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7kgvr" }
+      "version": {
+        "pid": "w1mshbm8rrk1xr9"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583666768000,
-      "publishedTimeStart": 1584615600000,
-      "publishedTimeEnd": 1584615720000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584615600000,
-      "transmissionTimeEnd": 1584615720000,
+      "updateTime": 1584008842000,
+      "publishedTimeStart": 1584959520000,
+      "publishedTimeEnd": 1584961200000,
+      "publishedTimeDuration": "PT28M",
+      "transmissionTimeStart": 1584959520000,
+      "transmissionTimeEnd": 1584961140000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0rdqs.imi:ws.bbc.co.uk/FRENA1584615600",
-        "pid": "p086137g"
+        "bid": "w1mshbnhxvg2wj3.imi:ws.bbc.co.uk/FRENA1584959520",
+        "pid": "p086f1v7"
+      },
+      "brand": {
+        "pid": "p030s6ff",
+        "title": "Grand Reportage",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques"
+        }
+      },
+      "episode": {
+        "pid": "w172x5yvwm6xdfk",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques"
+        }
+      },
+      "version": {
+        "pid": "w1mshbnhxvg2wj3"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584012475000,
+      "publishedTimeStart": 1584961200000,
+      "publishedTimeEnd": 1584961320000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1584961200000,
+      "transmissionTimeEnd": 1584961320000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbfjnnb7vmb.imi:ws.bbc.co.uk/FRENA1584961200",
+        "pid": "p086fbdt"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -536,34 +603,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84skxn7",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5qwmf32cjs",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0rdqs" }
+      "version": {
+        "pid": "w1mshbfjnnb7vmb"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583666780000,
-      "publishedTimeStart": 1584615720000,
-      "publishedTimeEnd": 1584615990000,
+      "updateTime": 1584012444000,
+      "publishedTimeStart": 1584961320000,
+      "publishedTimeEnd": 1584961590000,
       "publishedTimeDuration": "PT4M30S",
-      "transmissionTimeStart": 1584615720000,
-      "transmissionTimeEnd": 1584615990000,
+      "transmissionTimeStart": 1584961320000,
+      "transmissionTimeEnd": 1584961590000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc2bkkfh5s7.imi:ws.bbc.co.uk/FRENA1584615720",
-        "pid": "p0861396"
+        "bid": "w1mshc2bxtqzmns.imi:ws.bbc.co.uk/FRENA1584961320",
+        "pid": "p086fbb8"
       },
       "brand": {
         "pid": "p0340mwn",
@@ -575,34 +644,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6cpjb69ppp",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x6cpwlht4l7",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
           "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
-      "version": { "pid": "w1mshc2bkkfh5s7" }
+      "version": {
+        "pid": "w1mshc2bxtqzmns"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583666771000,
-      "publishedTimeStart": 1584617400000,
-      "publishedTimeEnd": 1584617520000,
+      "updateTime": 1584012446000,
+      "publishedTimeStart": 1584963000000,
+      "publishedTimeEnd": 1584963120000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584617400000,
-      "transmissionTimeEnd": 1584617520000,
+      "transmissionTimeStart": 1584963000000,
+      "transmissionTimeEnd": 1584963120000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7kllw.imi:ws.bbc.co.uk/FRENA1584617400",
-        "pid": "p086137j"
+        "bid": "w1mshbm8rrk21hf.imi:ws.bbc.co.uk/FRENA1584963000",
+        "pid": "p086fbbl"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -614,34 +685,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80d3jb",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5xmqj9wkdw",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7kllw" }
+      "version": {
+        "pid": "w1mshbm8rrk21hf"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583666771000,
-      "publishedTimeStart": 1584617520000,
-      "publishedTimeEnd": 1584619200000,
+      "updateTime": 1584012450000,
+      "publishedTimeStart": 1584963120000,
+      "publishedTimeEnd": 1584964800000,
       "publishedTimeDuration": "PT28M",
-      "transmissionTimeStart": 1584617520000,
-      "transmissionTimeEnd": 1584619140000,
+      "transmissionTimeStart": 1584963120000,
+      "transmissionTimeEnd": 1584964740000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7p5z2xjjnv.imi:ws.bbc.co.uk/FRENA1584617520",
-        "pid": "p086137k"
+        "bid": "w1msh7p6bc70zkd.imi:ws.bbc.co.uk/FRENA1584963120",
+        "pid": "p086fbc6"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -653,34 +726,36 @@
         }
       },
       "episode": {
-        "pid": "w172x35td04r9fl",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x35tr8g7rb4",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7p5z2xjjnv" }
+      "version": {
+        "pid": "w1msh7p6bc70zkd"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583670349000,
-      "publishedTimeStart": 1584619200000,
-      "publishedTimeEnd": 1584621000000,
+      "updateTime": 1584016072000,
+      "publishedTimeStart": 1584964800000,
+      "publishedTimeEnd": 1584966600000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584619200000,
-      "transmissionTimeEnd": 1584621000000,
+      "transmissionTimeStart": 1584964800000,
+      "transmissionTimeEnd": 1584966600000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb4tz3xsrdd.imi:ws.bbc.co.uk/FRENA1584619200",
-        "pid": "p08616yw"
+        "bid": "w1mshb4vbd7968y.imi:ws.bbc.co.uk/FRENA1584964800",
+        "pid": "p086fk3h"
       },
       "brand": {
         "pid": "p030s6f5",
@@ -692,34 +767,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5hyg0v7bt1",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5hyt94qspl",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le point de l'actualité à la mi-journée",
           "medium": "Le point de l'actualité à la mi-journée"
         }
       },
-      "version": { "pid": "w1mshb4tz3xsrdd" }
+      "version": {
+        "pid": "w1mshb4vbd7968y"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583670350000,
-      "publishedTimeStart": 1584621900000,
-      "publishedTimeEnd": 1584622020000,
+      "updateTime": 1584016081000,
+      "publishedTimeStart": 1584967500000,
+      "publishedTimeEnd": 1584967620000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584621900000,
-      "transmissionTimeEnd": 1584622020000,
+      "transmissionTimeStart": 1584967500000,
+      "transmissionTimeEnd": 1584967620000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7kr91.imi:ws.bbc.co.uk/FRENA1584621900",
-        "pid": "p08616z2"
+        "bid": "w1mshbm8rrk265l.imi:ws.bbc.co.uk/FRENA1584967500",
+        "pid": "p086fk43"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -731,34 +808,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80d86h",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5xmqj9wq31",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7kr91" }
+      "version": {
+        "pid": "w1mshbm8rrk265l"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583677556000,
-      "publishedTimeStart": 1584626400000,
-      "publishedTimeEnd": 1584626520000,
+      "updateTime": 1584023225000,
+      "publishedTimeStart": 1584972000000,
+      "publishedTimeEnd": 1584972120000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584626400000,
-      "transmissionTimeEnd": 1584626520000,
+      "transmissionTimeStart": 1584972000000,
+      "transmissionTimeEnd": 1584972120000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0rrz5.imi:ws.bbc.co.uk/FRENA1584626400",
-        "pid": "p0861fw1"
+        "bid": "w1mshbfjnnb86vq.imi:ws.bbc.co.uk/FRENA1584972000",
+        "pid": "p086fz86"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -770,34 +849,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sl8wm",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5qwmf32qs5",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0rrz5" }
+      "version": {
+        "pid": "w1mshbfjnnb86vq"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583677560000,
-      "publishedTimeStart": 1584628200000,
-      "publishedTimeEnd": 1584628320000,
+      "updateTime": 1584023235000,
+      "publishedTimeStart": 1584973800000,
+      "publishedTimeEnd": 1584973920000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584628200000,
-      "transmissionTimeEnd": 1584628320000,
+      "transmissionTimeStart": 1584973800000,
+      "transmissionTimeEnd": 1584973920000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7kyv8.imi:ws.bbc.co.uk/FRENA1584628200",
-        "pid": "p0861fw5"
+        "bid": "w1mshbm8rrk2dqt.imi:ws.bbc.co.uk/FRENA1584973800",
+        "pid": "p086fzb1"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -809,34 +890,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80dgrq",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5xmqj9wxn8",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7kyv8" }
+      "version": {
+        "pid": "w1mshbm8rrk2dqt"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583677566000,
-      "publishedTimeStart": 1584628440000,
-      "publishedTimeEnd": 1584628740000,
+      "updateTime": 1584023258000,
+      "publishedTimeStart": 1584974040000,
+      "publishedTimeEnd": 1584974340000,
       "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584628440000,
-      "transmissionTimeEnd": 1584628740000,
+      "transmissionTimeStart": 1584974040000,
+      "transmissionTimeEnd": 1584974340000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc2r8xqv876.imi:ws.bbc.co.uk/FRENA1584628440",
-        "pid": "p0861fwf"
+        "bid": "w1mshc2rn61bq3r.imi:ws.bbc.co.uk/FRENA1584974040",
+        "pid": "p086fzg5"
       },
       "brand": {
         "pid": "p0340mwn",
@@ -848,34 +931,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6d37phns4n",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x6d3lyt5716",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
           "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
-      "version": { "pid": "w1mshc2r8xqv876" }
+      "version": {
+        "pid": "w1mshc2rn61bq3r"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583681181000,
-      "publishedTimeStart": 1584630000000,
-      "publishedTimeEnd": 1584630120000,
+      "updateTime": 1584026851000,
+      "publishedTimeStart": 1584975600000,
+      "publishedTimeEnd": 1584975720000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584630000000,
-      "transmissionTimeEnd": 1584630120000,
+      "transmissionTimeStart": 1584975600000,
+      "transmissionTimeEnd": 1584975720000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0rwq9.imi:ws.bbc.co.uk/FRENA1584630000",
-        "pid": "p0861jby"
+        "bid": "w1mshbfjnnb8blv.imi:ws.bbc.co.uk/FRENA1584975600",
+        "pid": "p086g69m"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -887,34 +972,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sldmr",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5qwmf32vj9",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0rwq9" }
+      "version": {
+        "pid": "w1mshbfjnnb8blv"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583681184000,
-      "publishedTimeStart": 1584631800000,
-      "publishedTimeEnd": 1584631920000,
+      "updateTime": 1584026853000,
+      "publishedTimeStart": 1584977400000,
+      "publishedTimeEnd": 1584977520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584631800000,
-      "transmissionTimeEnd": 1584631920000,
+      "transmissionTimeStart": 1584977400000,
+      "transmissionTimeEnd": 1584977520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7l2ld.imi:ws.bbc.co.uk/FRENA1584631800",
-        "pid": "p0861jc0"
+        "bid": "w1mshbm8rrk2jgy.imi:ws.bbc.co.uk/FRENA1584977400",
+        "pid": "p086g69x"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -926,34 +1013,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80dlhv",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5xmqj9x1dd",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7l2ld" }
+      "version": {
+        "pid": "w1mshbm8rrk2jgy"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583684761000,
-      "publishedTimeStart": 1584633600000,
-      "publishedTimeEnd": 1584633900000,
+      "updateTime": 1584030432000,
+      "publishedTimeStart": 1584979200000,
+      "publishedTimeEnd": 1584979500000,
       "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584633600000,
-      "transmissionTimeEnd": 1584633900000,
+      "transmissionTimeStart": 1584979200000,
+      "transmissionTimeEnd": 1584979500000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfy0rb3np2.imi:ws.bbc.co.uk/FRENA1584633600",
-        "pid": "p0861lwx"
+        "bid": "w1mshbfyd0mm3km.imi:ws.bbc.co.uk/FRENA1584979200",
+        "pid": "p086gdzz"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -965,34 +1054,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5r8zj2y5lj",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5r9bsdfmh2",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfy0rb3np2" }
+      "version": {
+        "pid": "w1mshbfyd0mm3km"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583684763000,
-      "publishedTimeStart": 1584635400000,
-      "publishedTimeEnd": 1584635520000,
+      "updateTime": 1584030444000,
+      "publishedTimeStart": 1584981000000,
+      "publishedTimeEnd": 1584981120000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584635400000,
-      "transmissionTimeEnd": 1584635520000,
+      "transmissionTimeStart": 1584981000000,
+      "transmissionTimeEnd": 1584981120000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7l6bj.imi:ws.bbc.co.uk/FRENA1584635400",
-        "pid": "p0861lx0"
+        "bid": "w1mshbm8rrk2n72.imi:ws.bbc.co.uk/FRENA1584981000",
+        "pid": "p086gf0r"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -1004,34 +1095,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80dq7z",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5xmqj9x54j",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7l6bj" }
+      "version": {
+        "pid": "w1mshbm8rrk2n72"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583691974000,
-      "publishedTimeStart": 1584640800000,
-      "publishedTimeEnd": 1584642600000,
+      "updateTime": 1584037571000,
+      "publishedTimeStart": 1584986400000,
+      "publishedTimeEnd": 1584988200000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584640800000,
-      "transmissionTimeEnd": 1584642570000,
+      "transmissionTimeStart": 1584986400000,
+      "transmissionTimeEnd": 1584988170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb57ph7542t.imi:ws.bbc.co.uk/FRENA1584640800",
-        "pid": "p0861sld"
+        "bid": "w1mshb581rjnkzc.imi:ws.bbc.co.uk/FRENA1584986400",
+        "pid": "p086gsn0"
       },
       "brand": {
         "pid": "p030s6dx",
@@ -1043,34 +1136,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5jc5d4lqhg",
-        "presentationTitle": "19/03/2020 GMT",
+        "pid": "w172x5jcjng35d0",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "La grande édition d'information de la soirée",
           "medium": "La grande édition d'information de la soirée"
         }
       },
-      "version": { "pid": "w1mshb57ph7542t" }
+      "version": {
+        "pid": "w1mshb581rjnkzc"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583731569000,
-      "publishedTimeStart": 1584680400000,
-      "publishedTimeEnd": 1584681300000,
+      "updateTime": 1584077169000,
+      "publishedTimeStart": 1585026000000,
+      "publishedTimeEnd": 1585026900000,
       "publishedTimeDuration": "PT15M",
-      "transmissionTimeStart": 1584680400000,
-      "transmissionTimeEnd": 1584681300000,
+      "transmissionTimeStart": 1585026000000,
+      "transmissionTimeEnd": 1585026900000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpb09rbz7c.imi:ws.bbc.co.uk/FRENA1584680400",
-        "pid": "p0862hvk"
+        "bid": "w1mshbpbcl1vf3x.imi:ws.bbc.co.uk/FRENA1585026000",
+        "pid": "p086hw6l"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -1082,34 +1177,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5znz2j5h4t",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5zpbbtny1c",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpb09rbz7c" }
+      "version": {
+        "pid": "w1mshbpbcl1vf3x"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583731571000,
-      "publishedTimeStart": 1584681300000,
-      "publishedTimeEnd": 1584681360000,
+      "updateTime": 1584077170000,
+      "publishedTimeStart": 1585026900000,
+      "publishedTimeEnd": 1585026960000,
       "publishedTimeDuration": "PT1M",
-      "transmissionTimeStart": 1584681300000,
-      "transmissionTimeEnd": 1584681360000,
+      "transmissionTimeStart": 1585026900000,
+      "transmissionTimeEnd": 1585026960000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb8y5ry9c52.imi:ws.bbc.co.uk/FRENA1584681300",
-        "pid": "p0862hvm"
+        "bid": "w1mshb8yk17st1m.imi:ws.bbc.co.uk/FRENA1585026900",
+        "pid": "p086hw6m"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1121,34 +1218,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5n1nnvqykq",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5n20y57dg8",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshb8y5ry9c52" }
+      "version": {
+        "pid": "w1mshb8yk17st1m"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583731572000,
-      "publishedTimeStart": 1584681360000,
-      "publishedTimeEnd": 1584681840000,
+      "updateTime": 1584077172000,
+      "publishedTimeStart": 1585026960000,
+      "publishedTimeEnd": 1585027440000,
       "publishedTimeDuration": "PT8M",
-      "transmissionTimeStart": 1584681360000,
-      "transmissionTimeEnd": 1584681840000,
+      "transmissionTimeStart": 1585026960000,
+      "transmissionTimeEnd": 1585027440000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc350917phy.imi:ws.bbc.co.uk/FRENA1584681360",
-        "pid": "p0862hvn"
+        "bid": "w1mshc35ckbr4dh.imi:ws.bbc.co.uk/FRENA1585026960",
+        "pid": "p086hw6p"
       },
       "brand": {
         "pid": "p0340mwn",
@@ -1160,34 +1259,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6dhz1t26fd",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x6djbb3kn9y",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
           "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
-      "version": { "pid": "w1mshc350917phy" }
+      "version": {
+        "pid": "w1mshc35ckbr4dh"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583731574000,
-      "publishedTimeStart": 1584682200000,
-      "publishedTimeEnd": 1584682560000,
+      "updateTime": 1584077174000,
+      "publishedTimeStart": 1585027800000,
+      "publishedTimeEnd": 1585028160000,
       "publishedTimeDuration": "PT6M",
-      "transmissionTimeStart": 1584682200000,
-      "transmissionTimeEnd": 1584682560000,
+      "transmissionTimeStart": 1585027800000,
+      "transmissionTimeEnd": 1585028160000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7qf45tmnm7.imi:ws.bbc.co.uk/FRENA1584682200",
-        "pid": "p0862hvq"
+        "bid": "w1msh7qfhg443hs.imi:ws.bbc.co.uk/FRENA1585027800",
+        "pid": "p086hw6q"
       },
       "brand": {
         "pid": "w13xttn6",
@@ -1199,34 +1300,36 @@
         }
       },
       "episode": {
-        "pid": "w172x371k31vfcz",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x371xccbw8j",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information",
           "medium": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information"
         }
       },
-      "version": { "pid": "w1msh7qf45tmnm7" }
+      "version": {
+        "pid": "w1msh7qfhg443hs"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583731575000,
-      "publishedTimeStart": 1584682800000,
-      "publishedTimeEnd": 1584683700000,
+      "updateTime": 1584077175000,
+      "publishedTimeStart": 1585028400000,
+      "publishedTimeEnd": 1585029300000,
       "publishedTimeDuration": "PT15M",
-      "transmissionTimeStart": 1584682800000,
-      "transmissionTimeEnd": 1584683700000,
+      "transmissionTimeStart": 1585028400000,
+      "transmissionTimeEnd": 1585029300000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7ns7qm82d0.imi:ws.bbc.co.uk/FRENA1584682800",
-        "pid": "p0862hvr"
+        "bid": "w1msh7nslzxrj8k.imi:ws.bbc.co.uk/FRENA1585028400",
+        "pid": "p086hw6s"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -1238,34 +1341,36 @@
         }
       },
       "episode": {
-        "pid": "w172x35dnmvgv4r",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x35f0x4z919",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7ns7qm82d0" }
+      "version": {
+        "pid": "w1msh7nslzxrj8k"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735161000,
-      "publishedTimeStart": 1584684000000,
-      "publishedTimeEnd": 1584684900000,
+      "updateTime": 1584080767000,
+      "publishedTimeStart": 1585029600000,
+      "publishedTimeEnd": 1585030500000,
       "publishedTimeDuration": "PT15M",
-      "transmissionTimeStart": 1584684000000,
-      "transmissionTimeEnd": 1584684900000,
+      "transmissionTimeStart": 1585029600000,
+      "transmissionTimeEnd": 1585030500000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpb09rc2zh.imi:ws.bbc.co.uk/FRENA1584684000",
-        "pid": "p0862lds"
+        "bid": "w1mshbpbcl1vjw1.imi:ws.bbc.co.uk/FRENA1585029600",
+        "pid": "p086j02l"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -1277,34 +1382,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5znz2j5lwy",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5zpbbtp1sh",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpb09rc2zh" }
+      "version": {
+        "pid": "w1mshbpbcl1vjw1"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735163000,
-      "publishedTimeStart": 1584684900000,
-      "publishedTimeEnd": 1584684960000,
+      "updateTime": 1584080767000,
+      "publishedTimeStart": 1585030500000,
+      "publishedTimeEnd": 1585030560000,
       "publishedTimeDuration": "PT1M",
-      "transmissionTimeStart": 1584684900000,
-      "transmissionTimeEnd": 1584684960000,
+      "transmissionTimeStart": 1585030500000,
+      "transmissionTimeEnd": 1585030560000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb8y5ry9gx6.imi:ws.bbc.co.uk/FRENA1584684900",
-        "pid": "p0862ldy"
+        "bid": "w1mshb8yk17sxsr.imi:ws.bbc.co.uk/FRENA1585030500",
+        "pid": "p086j02p"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1316,34 +1423,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5n1nnvr29v",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5n20y57j6d",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshb8y5ry9gx6" }
+      "version": {
+        "pid": "w1mshb8yk17sxsr"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735164000,
-      "publishedTimeStart": 1584684960000,
-      "publishedTimeEnd": 1584685260000,
+      "updateTime": 1584080768000,
+      "publishedTimeStart": 1585030560000,
+      "publishedTimeEnd": 1585030860000,
       "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584684960000,
-      "transmissionTimeEnd": 1584685260000,
+      "transmissionTimeStart": 1585030560000,
+      "transmissionTimeEnd": 1585030860000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbnx8yg0grt.imi:ws.bbc.co.uk/FRENA1584684960",
-        "pid": "p0862ldz"
+        "bid": "w1mshbnxn6rhxnc.imi:ws.bbc.co.uk/FRENA1585030560",
+        "pid": "p086j02q"
       },
       "brand": {
         "pid": "w13xttn7",
@@ -1355,34 +1464,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5z87q6tzp8",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5z8lzjbfkt",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com",
           "medium": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com"
         }
       },
-      "version": { "pid": "w1mshbnx8yg0grt" }
+      "version": {
+        "pid": "w1mshbnxn6rhxnc"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735167000,
-      "publishedTimeStart": 1584685800000,
-      "publishedTimeEnd": 1584686400000,
+      "updateTime": 1584080769000,
+      "publishedTimeStart": 1585031400000,
+      "publishedTimeEnd": 1585032000000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584685800000,
-      "transmissionTimeEnd": 1584686400000,
+      "transmissionTimeStart": 1585031400000,
+      "transmissionTimeEnd": 1585032000000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpqqp1pt26.imi:ws.bbc.co.uk/FRENA1584685800",
-        "pid": "p0862lf3"
+        "bid": "w1mshbpr2yc67yr.imi:ws.bbc.co.uk/FRENA1585031400",
+        "pid": "p086j02t"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -1394,34 +1505,36 @@
         }
       },
       "episode": {
-        "pid": "w172x602pftj9zn",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x6031q40rw6",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpqqp1pt26" }
+      "version": {
+        "pid": "w1mshbpr2yc67yr"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735167000,
-      "publishedTimeStart": 1584686580000,
-      "publishedTimeEnd": 1584686700000,
+      "updateTime": 1584080781000,
+      "publishedTimeStart": 1585032180000,
+      "publishedTimeEnd": 1585032300000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584686580000,
-      "transmissionTimeEnd": 1584686700000,
+      "transmissionTimeStart": 1585032180000,
+      "transmissionTimeEnd": 1585032300000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc3kqnblj4z.imi:ws.bbc.co.uk/FRENA1584686580",
-        "pid": "p0862lf5"
+        "bid": "w1mshc3l2xn2z1j.imi:ws.bbc.co.uk/FRENA1585032180",
+        "pid": "p086j04m"
       },
       "brand": {
         "pid": "w13xttn8",
@@ -1433,34 +1546,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6dxpf3f12f",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x6dy1pdxgyz",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique.",
           "medium": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique."
         }
       },
-      "version": { "pid": "w1mshc3kqnblj4z" }
+      "version": {
+        "pid": "w1mshc3l2xn2z1j"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735170000,
-      "publishedTimeStart": 1584686700000,
-      "publishedTimeEnd": 1584686760000,
+      "updateTime": 1584080774000,
+      "publishedTimeStart": 1585032300000,
+      "publishedTimeEnd": 1585032360000,
       "publishedTimeDuration": "PT1M",
-      "transmissionTimeStart": 1584686700000,
-      "transmissionTimeEnd": 1584686760000,
+      "transmissionTimeStart": 1585032300000,
+      "transmissionTimeEnd": 1585032360000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb8y5ry9js8.imi:ws.bbc.co.uk/FRENA1584686700",
-        "pid": "p0862lf8"
+        "bid": "w1mshb8yk17sznt.imi:ws.bbc.co.uk/FRENA1585032300",
+        "pid": "p086j03v"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1472,34 +1587,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5n1nnvr45x",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5n20y57l2g",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshb8y5ry9js8" }
+      "version": {
+        "pid": "w1mshb8yk17sznt"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583735173000,
-      "publishedTimeStart": 1584687000000,
-      "publishedTimeEnd": 1584687600000,
+      "updateTime": 1584080776000,
+      "publishedTimeStart": 1585032600000,
+      "publishedTimeEnd": 1585033200000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584687000000,
-      "transmissionTimeEnd": 1584687570000,
+      "transmissionTimeStart": 1585032600000,
+      "transmissionTimeEnd": 1585033170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7plpg6yj5s.imi:ws.bbc.co.uk/FRENA1584687000",
-        "pid": "p0862lf9"
+        "bid": "w1msh7pm1qjfz2b.imi:ws.bbc.co.uk/FRENA1585032600",
+        "pid": "p086j045"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -1511,34 +1628,36 @@
         }
       },
       "episode": {
-        "pid": "w172x3673cg58yj",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x367gmrnqv2",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7plpg6yj5s" }
+      "version": {
+        "pid": "w1msh7pm1qjfz2b"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583738745000,
-      "publishedTimeStart": 1584687600000,
-      "publishedTimeEnd": 1584688200000,
+      "updateTime": 1584084347000,
+      "publishedTimeStart": 1585033200000,
+      "publishedTimeEnd": 1585033800000,
       "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584687600000,
-      "transmissionTimeEnd": 1584688200000,
+      "transmissionTimeStart": 1585033200000,
+      "transmissionTimeEnd": 1585033800000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbpqqp1pvy8.imi:ws.bbc.co.uk/FRENA1584687600",
-        "pid": "p0862pdh"
+        "bid": "w1mshbpr2yc69tt.imi:ws.bbc.co.uk/FRENA1585033200",
+        "pid": "p086j3nh"
       },
       "brand": {
         "pid": "p03p35rt",
@@ -1550,34 +1669,36 @@
         }
       },
       "episode": {
-        "pid": "w172x602pftjcvq",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x6031q40tr8",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
           "short": "Le premier rendez-vous d'information de la soirée.",
           "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbpqqp1pvy8" }
+      "version": {
+        "pid": "w1mshbpr2yc69tt"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583738747000,
-      "publishedTimeStart": 1584688200000,
-      "publishedTimeEnd": 1584689400000,
+      "updateTime": 1584084348000,
+      "publishedTimeStart": 1585033800000,
+      "publishedTimeEnd": 1585035000000,
       "publishedTimeDuration": "PT20M",
-      "transmissionTimeStart": 1584688200000,
-      "transmissionTimeEnd": 1584689340000,
+      "transmissionTimeStart": 1585033800000,
+      "transmissionTimeEnd": 1585034940000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7q0dtj96n4.imi:ws.bbc.co.uk/FRENA1584688200",
-        "pid": "p0862pdj"
+        "bid": "w1msh7q0s2tsnjp.imi:ws.bbc.co.uk/FRENA1585033800",
+        "pid": "p086j3nn"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -1589,34 +1710,36 @@
         }
       },
       "episode": {
-        "pid": "w172x36mtqrhzdw",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x36n6020f9f",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7q0dtj96n4" }
+      "version": {
+        "pid": "w1msh7q0s2tsnjp"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583742373000,
-      "publishedTimeStart": 1584691200000,
-      "publishedTimeEnd": 1584691320000,
+      "updateTime": 1584087994000,
+      "publishedTimeStart": 1585036800000,
+      "publishedTimeEnd": 1585036920000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584691200000,
-      "transmissionTimeEnd": 1584691320000,
+      "transmissionTimeStart": 1585036800000,
+      "transmissionTimeEnd": 1585036920000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0tydh.imi:ws.bbc.co.uk/FRENA1584691200",
-        "pid": "p0862rpj"
+        "bid": "w1mshbfjnnbbd91.imi:ws.bbc.co.uk/FRENA1585036800",
+        "pid": "p086j7mw"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1628,34 +1751,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sng9y",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5qwmf34x6h",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0tydh" }
+      "version": {
+        "pid": "w1mshbfjnnbbd91"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583745945000,
-      "publishedTimeStart": 1584694800000,
-      "publishedTimeEnd": 1584694920000,
+      "updateTime": 1584091548000,
+      "publishedTimeStart": 1585040400000,
+      "publishedTimeEnd": 1585040520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584694800000,
-      "transmissionTimeEnd": 1584694920000,
+      "transmissionTimeStart": 1585040400000,
+      "transmissionTimeEnd": 1585040520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0v24m.imi:ws.bbc.co.uk/FRENA1584694800",
-        "pid": "p0862wkg"
+        "bid": "w1mshbfjnnbbj15.imi:ws.bbc.co.uk/FRENA1585040400",
+        "pid": "p086jd9n"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1667,34 +1792,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84snl22",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5qwmf350ym",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0v24m" }
+      "version": {
+        "pid": "w1mshbfjnnbbj15"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583749544000,
-      "publishedTimeStart": 1584698400000,
-      "publishedTimeEnd": 1584698520000,
+      "updateTime": 1584095155000,
+      "publishedTimeStart": 1585044000000,
+      "publishedTimeEnd": 1585044120000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584698400000,
-      "transmissionTimeEnd": 1584698520000,
+      "transmissionTimeStart": 1585044000000,
+      "transmissionTimeEnd": 1585044120000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0v5wr.imi:ws.bbc.co.uk/FRENA1584698400",
-        "pid": "p086310c"
+        "bid": "w1mshbfjnnbbms9.imi:ws.bbc.co.uk/FRENA1585044000",
+        "pid": "p086jlbb"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1706,34 +1833,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84snpt6",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5qwmf354pr",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0v5wr" }
+      "version": {
+        "pid": "w1mshbfjnnbbms9"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583749546000,
-      "publishedTimeStart": 1584700200000,
-      "publishedTimeEnd": 1584700320000,
+      "updateTime": 1584095158000,
+      "publishedTimeStart": 1585045800000,
+      "publishedTimeEnd": 1585045920000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584700200000,
-      "transmissionTimeEnd": 1584700320000,
+      "transmissionTimeStart": 1585045800000,
+      "transmissionTimeEnd": 1585045920000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7ncrv.imi:ws.bbc.co.uk/FRENA1584700200",
-        "pid": "p086310p"
+        "bid": "w1mshbm8rrk4tnd.imi:ws.bbc.co.uk/FRENA1585045800",
+        "pid": "p086jlbh"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -1745,34 +1874,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80gwp9",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5xmqj9zbkv",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7ncrv" }
+      "version": {
+        "pid": "w1mshbm8rrk4tnd"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583753184000,
-      "publishedTimeStart": 1584702000000,
-      "publishedTimeEnd": 1584702120000,
+      "updateTime": 1584098889000,
+      "publishedTimeStart": 1585047600000,
+      "publishedTimeEnd": 1585047720000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584702000000,
-      "transmissionTimeEnd": 1584702120000,
+      "transmissionTimeStart": 1585047600000,
+      "transmissionTimeEnd": 1585047720000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0v9mw.imi:ws.bbc.co.uk/FRENA1584702000",
-        "pid": "p086368f"
+        "bid": "w1mshbfjnnbbrjf.imi:ws.bbc.co.uk/FRENA1585047600",
+        "pid": "p086jt4k"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -1784,34 +1915,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sntkb",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5qwmf358fw",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0v9mw" }
+      "version": {
+        "pid": "w1mshbfjnnbbrjf"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583753203000,
-      "publishedTimeStart": 1584702120000,
-      "publishedTimeEnd": 1584702390000,
+      "updateTime": 1584098890000,
+      "publishedTimeStart": 1585047720000,
+      "publishedTimeEnd": 1585047990000,
       "publishedTimeDuration": "PT4M30S",
-      "transmissionTimeStart": 1584702120000,
-      "transmissionTimeEnd": 1584702390000,
+      "transmissionTimeStart": 1585047720000,
+      "transmissionTimeEnd": 1585047990000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc2bkkfl2pb.imi:ws.bbc.co.uk/FRENA1584702120",
-        "pid": "p0863698"
+        "bid": "w1mshc2bxtr2jkw.imi:ws.bbc.co.uk/FRENA1585047720",
+        "pid": "p086jt4l"
       },
       "brand": {
         "pid": "p0340mwn",
@@ -1823,34 +1956,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6cpjb6dlls",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x6cpwlhx1hb",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
           "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
-      "version": { "pid": "w1mshc2bkkfl2pb" }
+      "version": {
+        "pid": "w1mshc2bxtr2jkw"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583753188000,
-      "publishedTimeStart": 1584703800000,
-      "publishedTimeEnd": 1584703920000,
+      "updateTime": 1584098920000,
+      "publishedTimeStart": 1585049400000,
+      "publishedTimeEnd": 1585049520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584703800000,
-      "transmissionTimeEnd": 1584703920000,
+      "transmissionTimeStart": 1585049400000,
+      "transmissionTimeEnd": 1585049520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7nhhz.imi:ws.bbc.co.uk/FRENA1584703800",
-        "pid": "p086368k"
+        "bid": "w1mshbm8rrk4ydj.imi:ws.bbc.co.uk/FRENA1585049400",
+        "pid": "p086jt6m"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -1862,34 +1997,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80h0ff",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5xmqj9zg9z",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7nhhz" }
+      "version": {
+        "pid": "w1mshbm8rrk4ydj"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583753188000,
-      "publishedTimeStart": 1584703920000,
-      "publishedTimeEnd": 1584705600000,
+      "updateTime": 1584098898000,
+      "publishedTimeStart": 1585049520000,
+      "publishedTimeEnd": 1585051200000,
       "publishedTimeDuration": "PT28M",
-      "transmissionTimeStart": 1584703920000,
-      "transmissionTimeEnd": 1584705540000,
+      "transmissionTimeStart": 1585049520000,
+      "transmissionTimeEnd": 1585051140000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh7p5z2xmfky.imi:ws.bbc.co.uk/FRENA1584703920",
-        "pid": "p086368l"
+        "bid": "w1msh7p6bc73wgh.imi:ws.bbc.co.uk/FRENA1585049520",
+        "pid": "p086jt4y"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -1901,34 +2038,36 @@
         }
       },
       "episode": {
-        "pid": "w172x35td04v6bp",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x35tr8gbn77",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1msh7p5z2xmfky" }
+      "version": {
+        "pid": "w1msh7p6bc73wgh"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583756752000,
-      "publishedTimeStart": 1584705600000,
-      "publishedTimeEnd": 1584707400000,
+      "updateTime": 1584102418000,
+      "publishedTimeStart": 1585051200000,
+      "publishedTimeEnd": 1585053000000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584705600000,
-      "transmissionTimeEnd": 1584707400000,
+      "transmissionTimeStart": 1585051200000,
+      "transmissionTimeEnd": 1585053000000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb4tz3xwn9h.imi:ws.bbc.co.uk/FRENA1584705600",
-        "pid": "p0863dzk"
+        "bid": "w1mshb4vbd7d361.imi:ws.bbc.co.uk/FRENA1585051200",
+        "pid": "p086k1nd"
       },
       "brand": {
         "pid": "p030s6f5",
@@ -1940,34 +2079,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5hyg0vb7q4",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5hyt94tplp",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le point de l'actualité à la mi-journée",
           "medium": "Le point de l'actualité à la mi-journée"
         }
       },
-      "version": { "pid": "w1mshb4tz3xwn9h" }
+      "version": {
+        "pid": "w1mshb4vbd7d361"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583756754000,
-      "publishedTimeStart": 1584708300000,
-      "publishedTimeEnd": 1584708420000,
+      "updateTime": 1584102423000,
+      "publishedTimeStart": 1585053900000,
+      "publishedTimeEnd": 1585054020000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584708300000,
-      "transmissionTimeEnd": 1584708420000,
+      "transmissionTimeStart": 1585053900000,
+      "transmissionTimeEnd": 1585054020000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7nn64.imi:ws.bbc.co.uk/FRENA1584708300",
-        "pid": "p0863dzm"
+        "bid": "w1mshbm8rrk532p.imi:ws.bbc.co.uk/FRENA1585053900",
+        "pid": "p086k1ns"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -1979,34 +2120,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80h53l",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5xmqj9zm04",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7nn64" }
+      "version": {
+        "pid": "w1mshbm8rrk532p"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583763958000,
-      "publishedTimeStart": 1584712800000,
-      "publishedTimeEnd": 1584712920000,
+      "updateTime": 1584109639000,
+      "publishedTimeStart": 1585058400000,
+      "publishedTimeEnd": 1585058520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584712800000,
-      "transmissionTimeEnd": 1584712920000,
+      "transmissionTimeStart": 1585058400000,
+      "transmissionTimeEnd": 1585058520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0vnw8.imi:ws.bbc.co.uk/FRENA1584712800",
-        "pid": "p0863syr"
+        "bid": "w1mshbfjnnbc3rt.imi:ws.bbc.co.uk/FRENA1585058400",
+        "pid": "p086khsw"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2018,34 +2161,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sp5sq",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5qwmf35mp8",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0vnw8" }
+      "version": {
+        "pid": "w1mshbfjnnbc3rt"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583763960000,
-      "publishedTimeStart": 1584714600000,
-      "publishedTimeEnd": 1584714720000,
+      "updateTime": 1584109640000,
+      "publishedTimeStart": 1585060200000,
+      "publishedTimeEnd": 1585060320000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584714600000,
-      "transmissionTimeEnd": 1584714720000,
+      "transmissionTimeStart": 1585060200000,
+      "transmissionTimeEnd": 1585060320000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7nvrc.imi:ws.bbc.co.uk/FRENA1584714600",
-        "pid": "p0863syw"
+        "bid": "w1mshbm8rrk59mx.imi:ws.bbc.co.uk/FRENA1585060200",
+        "pid": "p086kht5"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -2057,34 +2202,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80hcnt",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5xmqj9ztkc",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7nvrc" }
+      "version": {
+        "pid": "w1mshbm8rrk59mx"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583763965000,
-      "publishedTimeStart": 1584714840000,
-      "publishedTimeEnd": 1584715140000,
+      "updateTime": 1584109645000,
+      "publishedTimeStart": 1585060440000,
+      "publishedTimeEnd": 1585060740000,
       "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584714840000,
-      "transmissionTimeEnd": 1584715140000,
+      "transmissionTimeStart": 1585060440000,
+      "transmissionTimeEnd": 1585060740000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc2r8xqy549.imi:ws.bbc.co.uk/FRENA1584714840",
-        "pid": "p0863sz2"
+        "bid": "w1mshc2rn61fm0v.imi:ws.bbc.co.uk/FRENA1585060440",
+        "pid": "p086khv1"
       },
       "brand": {
         "pid": "p0340mwn",
@@ -2096,34 +2243,36 @@
         }
       },
       "episode": {
-        "pid": "w172x6d37phrp1r",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x6d3lyt83y9",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
           "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
-      "version": { "pid": "w1mshc2r8xqy549" }
+      "version": {
+        "pid": "w1mshc2rn61fm0v"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583767582000,
-      "publishedTimeStart": 1584716400000,
-      "publishedTimeEnd": 1584716520000,
+      "updateTime": 1584113288000,
+      "publishedTimeStart": 1585062000000,
+      "publishedTimeEnd": 1585062120000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584716400000,
-      "transmissionTimeEnd": 1584716520000,
+      "transmissionTimeStart": 1585062000000,
+      "transmissionTimeEnd": 1585062120000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0vsmd.imi:ws.bbc.co.uk/FRENA1584716400",
-        "pid": "p0863z85"
+        "bid": "w1mshbfjnnbc7hy.imi:ws.bbc.co.uk/FRENA1585062000",
+        "pid": "p086kqdl"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2135,34 +2284,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84sp9jv",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5qwmf35rfd",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0vsmd" }
+      "version": {
+        "pid": "w1mshbfjnnbc7hy"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583767585000,
-      "publishedTimeStart": 1584718200000,
-      "publishedTimeEnd": 1584718320000,
+      "updateTime": 1584113290000,
+      "publishedTimeStart": 1585063800000,
+      "publishedTimeEnd": 1585063920000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584718200000,
-      "transmissionTimeEnd": 1584718320000,
+      "transmissionTimeStart": 1585063800000,
+      "transmissionTimeEnd": 1585063920000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7nzhh.imi:ws.bbc.co.uk/FRENA1584718200",
-        "pid": "p0863z8j"
+        "bid": "w1mshbm8rrk5fd1.imi:ws.bbc.co.uk/FRENA1585063800",
+        "pid": "p086kqdp"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -2174,34 +2325,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80hhdy",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5xmqj9zy9h",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7nzhh" }
+      "version": {
+        "pid": "w1mshbm8rrk5fd1"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583771167000,
-      "publishedTimeStart": 1584720000000,
-      "publishedTimeEnd": 1584720300000,
+      "updateTime": 1584116948000,
+      "publishedTimeStart": 1585065600000,
+      "publishedTimeEnd": 1585065900000,
       "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584720000000,
-      "transmissionTimeEnd": 1584720300000,
+      "transmissionTimeStart": 1585065600000,
+      "transmissionTimeEnd": 1585065900000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfy0rb6kl5.imi:ws.bbc.co.uk/FRENA1584720000",
-        "pid": "p086467r"
+        "bid": "w1mshbfyd0mq0gq.imi:ws.bbc.co.uk/FRENA1585065600",
+        "pid": "p086kzct"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2213,34 +2366,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5r8zj312hm",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5r9bsdjjd5",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfy0rb6kl5" }
+      "version": {
+        "pid": "w1mshbfyd0mq0gq"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583771169000,
-      "publishedTimeStart": 1584721800000,
-      "publishedTimeEnd": 1584721920000,
+      "updateTime": 1584117000000,
+      "publishedTimeStart": 1585067400000,
+      "publishedTimeEnd": 1585067520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584721800000,
-      "transmissionTimeEnd": 1584721920000,
+      "transmissionTimeStart": 1585067400000,
+      "transmissionTimeEnd": 1585067520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbm8dh7p37m.imi:ws.bbc.co.uk/FRENA1584721800",
-        "pid": "p086467v"
+        "bid": "w1mshbm8rrk5k45.imi:ws.bbc.co.uk/FRENA1585067400",
+        "pid": "p086kzhj"
       },
       "brand": {
         "pid": "p0340mwv",
@@ -2252,34 +2407,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5xmc80hm52",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5xmqjb021m",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
           "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbm8dh7p37m" }
+      "version": {
+        "pid": "w1mshbm8rrk5k45"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583778367000,
-      "publishedTimeStart": 1584727200000,
-      "publishedTimeEnd": 1584729000000,
+      "updateTime": 1584123985000,
+      "publishedTimeStart": 1585072800000,
+      "publishedTimeEnd": 1585074600000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584727200000,
-      "transmissionTimeEnd": 1584728970000,
+      "transmissionTimeStart": 1585072800000,
+      "transmissionTimeEnd": 1585074570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb57ph780zx.imi:ws.bbc.co.uk/FRENA1584727200",
-        "pid": "p0864kt8"
+        "bid": "w1mshb581rjrgwg.imi:ws.bbc.co.uk/FRENA1585072800",
+        "pid": "p086lf91"
       },
       "brand": {
         "pid": "p030s6dx",
@@ -2291,73 +2448,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5jc5d4pmdk",
-        "presentationTitle": "20/03/2020 GMT",
+        "pid": "w172x5jcjng6293",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "La grande édition d'information de la soirée",
           "medium": "La grande édition d'information de la soirée"
         }
       },
-      "version": { "pid": "w1mshb57ph780zx" }
+      "version": {
+        "pid": "w1mshb581rjrgwg"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583817983000,
-      "publishedTimeStart": 1584766800000,
-      "publishedTimeEnd": 1584767400000,
-      "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584766800000,
-      "transmissionTimeEnd": 1584767400000,
+      "updateTime": 1584163569000,
+      "publishedTimeStart": 1585112400000,
+      "publishedTimeEnd": 1585113300000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585112400000,
+      "transmissionTimeEnd": 1585113300000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbrcm48546p.imi:ws.bbc.co.uk/FRENA1584766800",
-        "pid": "p0865f82"
+        "bid": "w1mshbpbcl1yb10.imi:ws.bbc.co.uk/FRENA1585112400",
+        "pid": "p086mpdj"
       },
       "brand": {
-        "pid": "p030s6d8",
-        "title": "Le Journal Weekend",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "pid": "p03p35rt",
+        "title": "Le Journal",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
       "episode": {
-        "pid": "w172x61qkx0zn44",
-        "presentationTitle": "21/03/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "pid": "w172x5zpbbtrtyg",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbrcm48546p" }
+      "version": {
+        "pid": "w1mshbpbcl1yb10"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583817973000,
-      "publishedTimeStart": 1584768600000,
-      "publishedTimeEnd": 1584768900000,
-      "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584768600000,
-      "transmissionTimeEnd": 1584768900000,
+      "updateTime": 1584163571000,
+      "publishedTimeStart": 1585113300000,
+      "publishedTimeEnd": 1585113360000,
+      "publishedTimeDuration": "PT1M",
+      "transmissionTimeStart": 1585113300000,
+      "transmissionTimeEnd": 1585113360000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfy0rb864x.imi:ws.bbc.co.uk/FRENA1584768600",
-        "pid": "p0865f77"
+        "bid": "w1mshb8yk17wpyq.imi:ws.bbc.co.uk/FRENA1585113300",
+        "pid": "p086mpdl"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2369,190 +2530,487 @@
         }
       },
       "episode": {
-        "pid": "w172x5r8zj32q2c",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5n20y5b9cc",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfy0rb864x" }
+      "version": {
+        "pid": "w1mshb8yk17wpyq"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583821543000,
-      "publishedTimeStart": 1584770400000,
-      "publishedTimeEnd": 1584771000000,
-      "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584770400000,
-      "transmissionTimeEnd": 1584771000000,
+      "updateTime": 1584163572000,
+      "publishedTimeStart": 1585113360000,
+      "publishedTimeEnd": 1585113840000,
+      "publishedTimeDuration": "PT8M",
+      "transmissionTimeStart": 1585113360000,
+      "transmissionTimeEnd": 1585113840000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbrcm4857yt.imi:ws.bbc.co.uk/FRENA1584770400",
-        "pid": "p0865jx4"
+        "bid": "w1mshc35ckbv19l.imi:ws.bbc.co.uk/FRENA1585113360",
+        "pid": "p086mpdm"
       },
       "brand": {
-        "pid": "p030s6d8",
-        "title": "Le Journal Weekend",
+        "pid": "p0340mwn",
+        "title": "Reportage",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
       "episode": {
-        "pid": "w172x61qkx0zrw8",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x6djbb3nk71",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
         }
       },
-      "version": { "pid": "w1mshbrcm4857yt" }
+      "version": {
+        "pid": "w1mshc35ckbv19l"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583821543000,
-      "publishedTimeStart": 1584771000000,
-      "publishedTimeEnd": 1584772200000,
+      "updateTime": 1584163574000,
+      "publishedTimeStart": 1585114200000,
+      "publishedTimeEnd": 1585114560000,
+      "publishedTimeDuration": "PT6M",
+      "transmissionTimeStart": 1585114200000,
+      "transmissionTimeEnd": 1585114560000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7qfhg470dw.imi:ws.bbc.co.uk/FRENA1585114200",
+        "pid": "p086mpdn"
+      },
+      "brand": {
+        "pid": "w13xttn6",
+        "title": "Actu Monde",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information",
+          "medium": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information"
+        }
+      },
+      "episode": {
+        "pid": "w172x371xccfs5m",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information",
+          "medium": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information"
+        }
+      },
+      "version": {
+        "pid": "w1msh7qfhg470dw"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584163575000,
+      "publishedTimeStart": 1585114800000,
+      "publishedTimeEnd": 1585115700000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585114800000,
+      "transmissionTimeEnd": 1585115700000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7nslzxvf5n.imi:ws.bbc.co.uk/FRENA1585114800",
+        "pid": "p086mpdq"
+      },
+      "brand": {
+        "pid": "p030s6g6",
+        "title": "A Vous L'antenne",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
+          "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
+        }
+      },
+      "episode": {
+        "pid": "w172x35f0x525yd",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
+          "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
+        }
+      },
+      "version": {
+        "pid": "w1msh7nslzxvf5n"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167169000,
+      "publishedTimeStart": 1585116000000,
+      "publishedTimeEnd": 1585116900000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585116000000,
+      "transmissionTimeEnd": 1585116900000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbpbcl1yfs4.imi:ws.bbc.co.uk/FRENA1585116000",
+        "pid": "p086mrzb"
+      },
+      "brand": {
+        "pid": "p03p35rt",
+        "title": "Le Journal",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        }
+      },
+      "episode": {
+        "pid": "w172x5zpbbtrypl",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        }
+      },
+      "version": {
+        "pid": "w1mshbpbcl1yfs4"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167164000,
+      "publishedTimeStart": 1585116900000,
+      "publishedTimeEnd": 1585116960000,
+      "publishedTimeDuration": "PT1M",
+      "transmissionTimeStart": 1585116900000,
+      "transmissionTimeEnd": 1585116960000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshb8yk17wtpv.imi:ws.bbc.co.uk/FRENA1585116900",
+        "pid": "p086mry7"
+      },
+      "brand": {
+        "pid": "p030s6dq",
+        "title": "Bulletin D'informations",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Le tour du monde de l'actualité en 2 minutes",
+          "medium": "Le tour du monde de l'actualité en 2 minutes"
+        }
+      },
+      "episode": {
+        "pid": "w172x5n20y5bf3h",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Le tour du monde de l'actualité en 2 minutes",
+          "medium": "Le tour du monde de l'actualité en 2 minutes"
+        }
+      },
+      "version": {
+        "pid": "w1mshb8yk17wtpv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167165000,
+      "publishedTimeStart": 1585116960000,
+      "publishedTimeEnd": 1585117260000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585116960000,
+      "transmissionTimeEnd": 1585117260000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbnxn6rltkg.imi:ws.bbc.co.uk/FRENA1585116960",
+        "pid": "p086mryc"
+      },
+      "brand": {
+        "pid": "w13xttn7",
+        "title": "Invité Afrique",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com",
+          "medium": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com"
+        }
+      },
+      "episode": {
+        "pid": "w172x5z8lzjfbgx",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com",
+          "medium": "La revue des titres de plusieurs sites mais aussi la promotion du contenu de www.bbcafrique.com"
+        }
+      },
+      "version": {
+        "pid": "w1mshbnxn6rltkg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167167000,
+      "publishedTimeStart": 1585117800000,
+      "publishedTimeEnd": 1585118400000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585117800000,
+      "transmissionTimeEnd": 1585118400000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbpr2yc94vv.imi:ws.bbc.co.uk/FRENA1585117800",
+        "pid": "p086mrys"
+      },
+      "brand": {
+        "pid": "p03p35rt",
+        "title": "Le Journal",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        }
+      },
+      "episode": {
+        "pid": "w172x6031q43ns9",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        }
+      },
+      "version": {
+        "pid": "w1mshbpr2yc94vv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167178000,
+      "publishedTimeStart": 1585118580000,
+      "publishedTimeEnd": 1585118700000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585118580000,
+      "transmissionTimeEnd": 1585118700000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshc3l2xn5vym.imi:ws.bbc.co.uk/FRENA1585118580",
+        "pid": "p086mrzr"
+      },
+      "brand": {
+        "pid": "w13xttn8",
+        "title": "Revue Du Web",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique.",
+          "medium": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique."
+        }
+      },
+      "episode": {
+        "pid": "w172x6dy1pf0cw2",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique.",
+          "medium": "Entretien avec un expert qui analyse des sujets complexes en direct, préenregistré, ou sous forme d'entretien téléphonique."
+        }
+      },
+      "version": {
+        "pid": "w1mshc3l2xn5vym"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167179000,
+      "publishedTimeStart": 1585118700000,
+      "publishedTimeEnd": 1585118760000,
+      "publishedTimeDuration": "PT1M",
+      "transmissionTimeStart": 1585118700000,
+      "transmissionTimeEnd": 1585118760000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshb8yk17wwkx.imi:ws.bbc.co.uk/FRENA1585118700",
+        "pid": "p086mrzs"
+      },
+      "brand": {
+        "pid": "p030s6dq",
+        "title": "Bulletin D'informations",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Le tour du monde de l'actualité en 2 minutes",
+          "medium": "Le tour du monde de l'actualité en 2 minutes"
+        }
+      },
+      "episode": {
+        "pid": "w172x5n20y5bgzk",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Le tour du monde de l'actualité en 2 minutes",
+          "medium": "Le tour du monde de l'actualité en 2 minutes"
+        }
+      },
+      "version": {
+        "pid": "w1mshb8yk17wwkx"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167174000,
+      "publishedTimeStart": 1585119000000,
+      "publishedTimeEnd": 1585119600000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585119000000,
+      "transmissionTimeEnd": 1585119570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7pm1qjjvzf.imi:ws.bbc.co.uk/FRENA1585119000",
+        "pid": "p086mrzk"
+      },
+      "brand": {
+        "pid": "p030s6g6",
+        "title": "A Vous L'antenne",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
+          "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
+        }
+      },
+      "episode": {
+        "pid": "w172x367gmrrmr5",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
+          "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
+        }
+      },
+      "version": {
+        "pid": "w1msh7pm1qjjvzf"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584170748000,
+      "publishedTimeStart": 1585119600000,
+      "publishedTimeEnd": 1585120200000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585119600000,
+      "transmissionTimeEnd": 1585120200000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbpr2yc96qx.imi:ws.bbc.co.uk/FRENA1585119600",
+        "pid": "p086mvcc"
+      },
+      "brand": {
+        "pid": "p03p35rt",
+        "title": "Le Journal",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        }
+      },
+      "episode": {
+        "pid": "w172x6031q43qnc",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
+        }
+      },
+      "version": {
+        "pid": "w1mshbpr2yc96qx"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584170749000,
+      "publishedTimeStart": 1585120200000,
+      "publishedTimeEnd": 1585121400000,
       "publishedTimeDuration": "PT20M",
-      "transmissionTimeStart": 1584771000000,
-      "transmissionTimeEnd": 1584772140000,
+      "transmissionTimeStart": 1585120200000,
+      "transmissionTimeEnd": 1585121340000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbmp3vk2dnc.imi:ws.bbc.co.uk/FRENA1584771000",
-        "pid": "p0865jx8"
-      },
-      "brand": {
-        "pid": "p030s6ff",
-        "title": "Grand Reportage",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
-        "synopses": {
-          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques",
-          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques"
-        }
-      },
-      "episode": {
-        "pid": "w172x5y12m9wxkt",
-        "presentationTitle": "21/03/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
-        "synopses": {
-          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques",
-          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques"
-        }
-      },
-      "version": { "pid": "w1mshbmp3vk2dnc" }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
-      "serviceId": "bbc_afrique_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1583821544000,
-      "publishedTimeStart": 1584772200000,
-      "publishedTimeEnd": 1584772500000,
-      "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584772200000,
-      "transmissionTimeEnd": 1584772500000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1mshbfy0rb89x1.imi:ws.bbc.co.uk/FRENA1584772200",
-        "pid": "p0865jxd"
-      },
-      "brand": {
-        "pid": "p030s6dq",
-        "title": "Bulletin D'informations",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
-        "synopses": {
-          "short": "Le tour du monde de l'actualité en 2 minutes",
-          "medium": "Le tour du monde de l'actualité en 2 minutes"
-        }
-      },
-      "episode": {
-        "pid": "w172x5r8zj32tth",
-        "presentationTitle": "21/03/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
-        "synopses": {
-          "short": "Le tour du monde de l'actualité en 2 minutes",
-          "medium": "Le tour du monde de l'actualité en 2 minutes"
-        }
-      },
-      "version": { "pid": "w1mshbfy0rb89x1" }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
-      "serviceId": "bbc_afrique_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1583825143000,
-      "publishedTimeStart": 1584774000000,
-      "publishedTimeEnd": 1584774600000,
-      "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584774000000,
-      "transmissionTimeEnd": 1584774600000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1mshbrcm485cpy.imi:ws.bbc.co.uk/FRENA1584774000",
-        "pid": "p0865n23"
-      },
-      "brand": {
-        "pid": "p030s6d8",
-        "title": "Le Journal Weekend",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
-        "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
-        }
-      },
-      "episode": {
-        "pid": "w172x61qkx0zwmd",
-        "presentationTitle": "21/03/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
-        "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
-        }
-      },
-      "version": { "pid": "w1mshbrcm485cpy" }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
-      "serviceId": "bbc_afrique_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1583825145000,
-      "publishedTimeStart": 1584775800000,
-      "publishedTimeEnd": 1584777600000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584775800000,
-      "transmissionTimeEnd": 1584777570000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1mshb7999r0xmw.imi:ws.bbc.co.uk/FRENA1584775800",
-        "pid": "p0865n25"
+        "bid": "w1msh7q0s2twkfs.imi:ws.bbc.co.uk/FRENA1585120200",
+        "pid": "p086mvcd"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -2564,34 +3022,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5lds6ngj1j",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x36n6023b6j",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité"
         }
       },
-      "version": { "pid": "w1mshb7999r0xmw" }
+      "version": {
+        "pid": "w1msh7q0s2twkfs"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583828772000,
-      "publishedTimeStart": 1584777600000,
-      "publishedTimeEnd": 1584777720000,
+      "updateTime": 1584174381000,
+      "publishedTimeStart": 1585123200000,
+      "publishedTimeEnd": 1585123320000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584777600000,
-      "transmissionTimeEnd": 1584777720000,
+      "transmissionTimeStart": 1585123200000,
+      "transmissionTimeEnd": 1585123320000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0xv9l.imi:ws.bbc.co.uk/FRENA1584777600",
-        "pid": "p0865qfb"
+        "bid": "w1mshbfjnnbf964.imi:ws.bbc.co.uk/FRENA1585123200",
+        "pid": "p086mxgw"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2603,34 +3063,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84src71",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5qwmf37t3l",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes",
           "medium": "Le tour du monde de l'actualité en 2 minutes"
         }
       },
-      "version": { "pid": "w1mshbfj9d0xv9l" }
+      "version": {
+        "pid": "w1mshbfjnnbf964"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583832373000,
-      "publishedTimeStart": 1584781200000,
-      "publishedTimeEnd": 1584781320000,
+      "updateTime": 1584177955000,
+      "publishedTimeStart": 1585126800000,
+      "publishedTimeEnd": 1585126920000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584781200000,
-      "transmissionTimeEnd": 1584781320000,
+      "transmissionTimeStart": 1585126800000,
+      "transmissionTimeEnd": 1585126920000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0xz1q.imi:ws.bbc.co.uk/FRENA1584781200",
-        "pid": "p0865v81"
+        "bid": "w1mshbfjnnbfdy8.imi:ws.bbc.co.uk/FRENA1585126800",
+        "pid": "p086n0yc"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2642,34 +3104,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84srgz5",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5qwmf37xvq",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfj9d0xz1q" }
+      "version": {
+        "pid": "w1mshbfjnnbfdy8"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583835942000,
-      "publishedTimeStart": 1584784800000,
-      "publishedTimeEnd": 1584784920000,
+      "updateTime": 1584181553000,
+      "publishedTimeStart": 1585130400000,
+      "publishedTimeEnd": 1585130520000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584784800000,
-      "transmissionTimeEnd": 1584784920000,
+      "transmissionTimeStart": 1585130400000,
+      "transmissionTimeEnd": 1585130520000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0y2sv.imi:ws.bbc.co.uk/FRENA1584784800",
-        "pid": "p0865zbp"
+        "bid": "w1mshbfjnnbfjpd.imi:ws.bbc.co.uk/FRENA1585130400",
+        "pid": "p086n521"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2681,34 +3145,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84srlq9",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5qwmf381lv",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfj9d0y2sv" }
+      "version": {
+        "pid": "w1mshbfjnnbfjpd"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583839594000,
-      "publishedTimeStart": 1584788400000,
-      "publishedTimeEnd": 1584788520000,
+      "updateTime": 1584181546000,
+      "publishedTimeStart": 1585132200000,
+      "publishedTimeEnd": 1585132320000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584788400000,
-      "transmissionTimeEnd": 1584788520000,
+      "transmissionTimeStart": 1585132200000,
+      "transmissionTimeEnd": 1585132320000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0y6jz.imi:ws.bbc.co.uk/FRENA1584788400",
-        "pid": "p08664w6"
+        "bid": "w1mshbm8rrk7qkh.imi:ws.bbc.co.uk/FRENA1585132200",
+        "pid": "p086n51s"
+      },
+      "brand": {
+        "pid": "p0340mwv",
+        "title": "BBC Global Newsbeat",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "episode": {
+        "pid": "w172x5xmqjb27gy",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "version": {
+        "pid": "w1mshbm8rrk7qkh"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584185185000,
+      "publishedTimeStart": 1585134000000,
+      "publishedTimeEnd": 1585134120000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585134000000,
+      "transmissionTimeEnd": 1585134120000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbfjnnbfnfj.imi:ws.bbc.co.uk/FRENA1585134000",
+        "pid": "p086n86d"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2720,34 +3227,118 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84srqgf",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5qwmf385bz",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfj9d0y6jz" }
+      "version": {
+        "pid": "w1mshbfjnnbfnfj"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583839597000,
-      "publishedTimeStart": 1584790200000,
-      "publishedTimeEnd": 1584792000000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584790200000,
-      "transmissionTimeEnd": 1584791940000,
+      "updateTime": 1584185174000,
+      "publishedTimeStart": 1585134120000,
+      "publishedTimeEnd": 1585134390000,
+      "publishedTimeDuration": "PT4M30S",
+      "transmissionTimeStart": 1585134120000,
+      "transmissionTimeEnd": 1585134390000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb6wkyfprdr.imi:ws.bbc.co.uk/FRENA1584790200",
-        "pid": "p08664wl"
+        "bid": "w1mshc2bxtr5fgz.imi:ws.bbc.co.uk/FRENA1585134120",
+        "pid": "p086n85h"
+      },
+      "brand": {
+        "pid": "p0340mwn",
+        "title": "Reportage",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        }
+      },
+      "episode": {
+        "pid": "w172x6cpwlhzydf",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        }
+      },
+      "version": {
+        "pid": "w1mshc2bxtr5fgz"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584185188000,
+      "publishedTimeStart": 1585135800000,
+      "publishedTimeEnd": 1585135920000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585135800000,
+      "transmissionTimeEnd": 1585135920000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbm8rrk7v9m.imi:ws.bbc.co.uk/FRENA1585135800",
+        "pid": "p086n86m"
+      },
+      "brand": {
+        "pid": "p0340mwv",
+        "title": "BBC Global Newsbeat",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "episode": {
+        "pid": "w172x5xmqjb2c72",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "version": {
+        "pid": "w1mshbm8rrk7v9m"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584185178000,
+      "publishedTimeStart": 1585135920000,
+      "publishedTimeEnd": 1585137600000,
+      "publishedTimeDuration": "PT28M",
+      "transmissionTimeStart": 1585135920000,
+      "transmissionTimeEnd": 1585137540000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7p6bc76scl.imi:ws.bbc.co.uk/FRENA1585135920",
+        "pid": "p086n861"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -2759,34 +3350,36 @@
         }
       },
       "episode": {
-        "pid": "w172x5l01vc4btd",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x35tr8gfk4b",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
         }
       },
-      "version": { "pid": "w1mshb6wkyfprdr" }
+      "version": {
+        "pid": "w1msh7p6bc76scl"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583843148000,
-      "publishedTimeStart": 1584792000000,
-      "publishedTimeEnd": 1584793800000,
+      "updateTime": 1584188741000,
+      "publishedTimeStart": 1585137600000,
+      "publishedTimeEnd": 1585139400000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1584792000000,
-      "transmissionTimeEnd": 1584793800000,
+      "transmissionTimeStart": 1585137600000,
+      "transmissionTimeEnd": 1585139400000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb4tz3xzk6l.imi:ws.bbc.co.uk/FRENA1584792000",
-        "pid": "p0866c33"
+        "bid": "w1mshb4vbd7h034.imi:ws.bbc.co.uk/FRENA1585137600",
+        "pid": "p086ncd6"
       },
       "brand": {
         "pid": "p030s6f5",
@@ -2798,34 +3391,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5hyg0vf4m7",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5hyt94xlhs",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le point de l'actualité à la mi-journée",
           "medium": "Le point de l'actualité à la mi-journée"
         }
       },
-      "version": { "pid": "w1mshb4tz3xzk6l" }
+      "version": {
+        "pid": "w1mshb4vbd7h034"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583850344000,
-      "publishedTimeStart": 1584799200000,
-      "publishedTimeEnd": 1584799320000,
+      "updateTime": 1584188743000,
+      "publishedTimeStart": 1585140300000,
+      "publishedTimeEnd": 1585140420000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584799200000,
-      "transmissionTimeEnd": 1584799320000,
+      "transmissionTimeStart": 1585140300000,
+      "transmissionTimeEnd": 1585140420000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0yksc.imi:ws.bbc.co.uk/FRENA1584799200",
-        "pid": "p0866ps3"
+        "bid": "w1mshbm8rrk7zzs.imi:ws.bbc.co.uk/FRENA1585140300",
+        "pid": "p086ncd8"
+      },
+      "brand": {
+        "pid": "p0340mwv",
+        "title": "BBC Global Newsbeat",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "episode": {
+        "pid": "w172x5xmqjb2hx7",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "version": {
+        "pid": "w1mshbm8rrk7zzs"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584195959000,
+      "publishedTimeStart": 1585144800000,
+      "publishedTimeEnd": 1585144920000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585144800000,
+      "transmissionTimeEnd": 1585144920000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbfjnnbg0nx.imi:ws.bbc.co.uk/FRENA1585144800",
+        "pid": "p086nnpt"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2837,73 +3473,118 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84ss2pt",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5qwmf38jlc",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfj9d0yksc" }
+      "version": {
+        "pid": "w1mshbfjnnbg0nx"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583850342000,
-      "publishedTimeStart": 1584801000000,
-      "publishedTimeEnd": 1584802200000,
-      "publishedTimeDuration": "PT20M",
-      "transmissionTimeStart": 1584801000000,
-      "transmissionTimeEnd": 1584802200000,
+      "updateTime": 1584195963000,
+      "publishedTimeStart": 1585146600000,
+      "publishedTimeEnd": 1585146720000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585146600000,
+      "transmissionTimeEnd": 1585146720000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbn2v6vg22r.imi:ws.bbc.co.uk/FRENA1584801000",
-        "pid": "p0866ps0"
+        "bid": "w1mshbm8rrk86k0.imi:ws.bbc.co.uk/FRENA1585146600",
+        "pid": "p086nnpx"
       },
       "brand": {
-        "pid": "p030s6ff",
-        "title": "Grand Reportage",
+        "pid": "p0340mwv",
+        "title": "BBC Global Newsbeat",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
-          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques",
-          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques"
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
       "episode": {
-        "pid": "w172x5yfszm8l06",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5xmqjb2qgg",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
-          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques",
-          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques"
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
         }
       },
-      "version": { "pid": "w1mshbn2v6vg22r" }
+      "version": {
+        "pid": "w1mshbm8rrk86k0"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583853954000,
-      "publishedTimeStart": 1584802800000,
-      "publishedTimeEnd": 1584802920000,
-      "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584802800000,
-      "transmissionTimeEnd": 1584802920000,
+      "updateTime": 1584195969000,
+      "publishedTimeStart": 1585146840000,
+      "publishedTimeEnd": 1585147140000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585146840000,
+      "transmissionTimeEnd": 1585147140000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0ypjh.imi:ws.bbc.co.uk/FRENA1584802800",
-        "pid": "p0866w8d"
+        "bid": "w1mshc2rn61jhxy.imi:ws.bbc.co.uk/FRENA1585146840",
+        "pid": "p086nnq5"
+      },
+      "brand": {
+        "pid": "p0340mwn",
+        "title": "Reportage",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        }
+      },
+      "episode": {
+        "pid": "w172x6d3lytc0vd",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        }
+      },
+      "version": {
+        "pid": "w1mshc2rn61jhxy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584199585000,
+      "publishedTimeStart": 1585148400000,
+      "publishedTimeEnd": 1585148520000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585148400000,
+      "transmissionTimeEnd": 1585148520000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbfjnnbg4f1.imi:ws.bbc.co.uk/FRENA1585148400",
+        "pid": "p086nr83"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2915,34 +3596,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84ss6fy",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5qwmf38nbh",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfj9d0ypjh" }
+      "version": {
+        "pid": "w1mshbfjnnbg4f1"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583857559000,
-      "publishedTimeStart": 1584806400000,
-      "publishedTimeEnd": 1584806520000,
+      "updateTime": 1584199587000,
+      "publishedTimeStart": 1585150200000,
+      "publishedTimeEnd": 1585150320000,
       "publishedTimeDuration": "PT2M",
-      "transmissionTimeStart": 1584806400000,
-      "transmissionTimeEnd": 1584806520000,
+      "transmissionTimeStart": 1585150200000,
+      "transmissionTimeEnd": 1585150320000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfj9d0yt8m.imi:ws.bbc.co.uk/FRENA1584806400",
-        "pid": "p08672rb"
+        "bid": "w1mshbm8rrk8b94.imi:ws.bbc.co.uk/FRENA1585150200",
+        "pid": "p086nr89"
+      },
+      "brand": {
+        "pid": "p0340mwv",
+        "title": "BBC Global Newsbeat",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "episode": {
+        "pid": "w172x5xmqjb2v6l",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "version": {
+        "pid": "w1mshbm8rrk8b94"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584203157000,
+      "publishedTimeStart": 1585152000000,
+      "publishedTimeEnd": 1585152300000,
+      "publishedTimeDuration": "PT5M",
+      "transmissionTimeStart": 1585152000000,
+      "transmissionTimeEnd": 1585152300000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshbfyd0msxct.imi:ws.bbc.co.uk/FRENA1585152000",
+        "pid": "p086ntgw"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -2954,34 +3678,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5qw84ssb62",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5r9bsdmf98",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfj9d0yt8m" }
+      "version": {
+        "pid": "w1mshbfyd0msxct"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583864752000,
-      "publishedTimeStart": 1584813600000,
-      "publishedTimeEnd": 1584814500000,
-      "publishedTimeDuration": "PT15M",
-      "transmissionTimeStart": 1584813600000,
-      "transmissionTimeEnd": 1584814500000,
+      "updateTime": 1584203159000,
+      "publishedTimeStart": 1585153800000,
+      "publishedTimeEnd": 1585153920000,
+      "publishedTimeDuration": "PT2M",
+      "transmissionTimeStart": 1585153800000,
+      "transmissionTimeEnd": 1585153920000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb6246v17b9.imi:ws.bbc.co.uk/FRENA1584813600",
-        "pid": "p0867d34"
+        "bid": "w1mshbm8rrk8g18.imi:ws.bbc.co.uk/FRENA1585153800",
+        "pid": "p086nth4"
+      },
+      "brand": {
+        "pid": "p0340mwv",
+        "title": "BBC Global Newsbeat",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "episode": {
+        "pid": "w172x5xmqjb2yyq",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes.",
+          "medium": "Un bulletin d’information qui cible principalement les adolescents et les jeunes sur toutes nos plateformes."
+        }
+      },
+      "version": {
+        "pid": "w1mshbm8rrk8g18"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584210374000,
+      "publishedTimeStart": 1585159200000,
+      "publishedTimeEnd": 1585161000000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585159200000,
+      "transmissionTimeEnd": 1585160970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshb581rjvcsk.imi:ws.bbc.co.uk/FRENA1585159200",
+        "pid": "p086p199"
       },
       "brand": {
         "pid": "p030s6dx",
@@ -2993,73 +3760,77 @@
         }
       },
       "episode": {
-        "pid": "w172x5k5m3rgtqy",
-        "presentationTitle": "21/03/2020 GMT",
+        "pid": "w172x5jcjng8z66",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "La grande édition d'information de la soirée ",
           "medium": "La grande édition d'information de la soirée "
         }
       },
-      "version": { "pid": "w1mshb6246v17b9" }
+      "version": {
+        "pid": "w1mshb581rjvcsk"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583904344000,
-      "publishedTimeStart": 1584853200000,
-      "publishedTimeEnd": 1584853800000,
-      "publishedTimeDuration": "PT10M",
-      "transmissionTimeStart": 1584853200000,
-      "transmissionTimeEnd": 1584853800000,
+      "updateTime": 1584249975000,
+      "publishedTimeStart": 1585198800000,
+      "publishedTimeEnd": 1585199700000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1585198800000,
+      "transmissionTimeEnd": 1585199700000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbrcm48813s.imi:ws.bbc.co.uk/FRENA1584853200",
-        "pid": "p08686pb"
+        "bid": "w1mshbpbcl216y3.imi:ws.bbc.co.uk/FRENA1585198800",
+        "pid": "p086pmtn"
       },
       "brand": {
-        "pid": "p030s6d8",
-        "title": "Le Journal Weekend",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "pid": "p03p35rt",
+        "title": "Le Journal",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
       "episode": {
-        "pid": "w172x61qkx12k17",
-        "presentationTitle": "22/03/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "pid": "w172x5zpbbtvqvk",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
         "synopses": {
-          "short": "Le premier rendez-vous d'information de la soirée",
-          "medium": "Le premier rendez-vous d'information de la soirée"
+          "short": "Le premier rendez-vous d'information de la soirée.",
+          "medium": "Le premier rendez-vous d'information de la soirée."
         }
       },
-      "version": { "pid": "w1mshbrcm48813s" }
+      "version": {
+        "pid": "w1mshbpbcl216y3"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583904351000,
-      "publishedTimeStart": 1584855000000,
-      "publishedTimeEnd": 1584855300000,
-      "publishedTimeDuration": "PT5M",
-      "transmissionTimeStart": 1584855000000,
-      "transmissionTimeEnd": 1584855300000,
+      "updateTime": 1584249977000,
+      "publishedTimeStart": 1585199700000,
+      "publishedTimeEnd": 1585199760000,
+      "publishedTimeDuration": "PT1M",
+      "transmissionTimeStart": 1585199700000,
+      "transmissionTimeEnd": 1585199760000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshbfy0rbc320.imi:ws.bbc.co.uk/FRENA1584855000",
-        "pid": "p08686pj"
+        "bid": "w1mshb8yk17zlvt.imi:ws.bbc.co.uk/FRENA1585199700",
+        "pid": "p086pmtq"
       },
       "brand": {
         "pid": "p030s6dq",
@@ -3071,34 +3842,118 @@
         }
       },
       "episode": {
-        "pid": "w172x5r8zj35lzg",
-        "presentationTitle": "22/03/2020 GMT",
+        "pid": "w172x5n20y5f68g",
+        "presentationTitle": "26/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Le tour du monde de l'actualité en 2 minutes ",
           "medium": "Le tour du monde de l'actualité en 2 minutes "
         }
       },
-      "version": { "pid": "w1mshbfy0rbc320" }
+      "version": {
+        "pid": "w1mshb8yk17zlvt"
+      }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
       "serviceId": "bbc_afrique_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583904347000,
-      "publishedTimeStart": 1584855300000,
-      "publishedTimeEnd": 1584856800000,
-      "publishedTimeDuration": "PT25M",
-      "transmissionTimeStart": 1584855300000,
-      "transmissionTimeEnd": 1584856770000,
+      "updateTime": 1584249988000,
+      "publishedTimeStart": 1585199760000,
+      "publishedTimeEnd": 1585200240000,
+      "publishedTimeDuration": "PT8M",
+      "transmissionTimeStart": 1585199760000,
+      "transmissionTimeEnd": 1585200240000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshb6gvl4f8y3.imi:ws.bbc.co.uk/FRENA1584855300",
-        "pid": "p08686pf"
+        "bid": "w1mshc35ckbxy6p.imi:ws.bbc.co.uk/FRENA1585199760",
+        "pid": "p086pmv1"
+      },
+      "brand": {
+        "pid": "p0340mwn",
+        "title": "Reportage",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        }
+      },
+      "episode": {
+        "pid": "w172x6djbb3rg44",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
+        "synopses": {
+          "short": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.",
+          "medium": "Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques."
+        }
+      },
+      "version": {
+        "pid": "w1mshc35ckbxy6p"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584249980000,
+      "publishedTimeStart": 1585200600000,
+      "publishedTimeEnd": 1585200960000,
+      "publishedTimeDuration": "PT6M",
+      "transmissionTimeStart": 1585200600000,
+      "transmissionTimeEnd": 1585200960000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7qfhg49x9z.imi:ws.bbc.co.uk/FRENA1585200600",
+        "pid": "p086pmts"
+      },
+      "brand": {
+        "pid": "w13xttn6",
+        "title": "Actu Monde",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information",
+          "medium": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information"
+        }
+      },
+      "episode": {
+        "pid": "w172x371xccjp2q",
+        "presentationTitle": "26/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxpx6.jpg",
+        "synopses": {
+          "short": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information",
+          "medium": "C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information"
+        }
+      },
+      "version": {
+        "pid": "w1msh7qfhg49x9z"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_afrique_radio",
+      "serviceId": "bbc_afrique_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893489300000,
+      "publishedTimeDuration": "PT15M",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893489300000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh7nslzxyb2r.imi:ws.bbc.co.uk/FRENA1585201200",
+        "pid": "p086pmtv"
       },
       "brand": {
         "pid": "p030s6g6",
@@ -3110,15 +3965,17 @@
         }
       },
       "episode": {
-        "pid": "w172x5klbh1vwbr",
-        "presentationTitle": "22/03/2020 GMT",
+        "pid": "w172x35f0x552vh",
+        "presentationTitle": "01/01/2030 09:00 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035djqv.jpg",
         "synopses": {
           "short": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité ",
           "medium": "Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité "
         }
       },
-      "version": { "pid": "w1mshb6gvl4f8y3" }
+      "version": {
+        "pid": "w1msh7nslzxyb2r"
+      }
     }
   ]
 }
