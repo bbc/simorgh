@@ -19,7 +19,7 @@ import image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
-import TopStories from '#containers/TopStories';
+import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/FeaturesAnalysis';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
