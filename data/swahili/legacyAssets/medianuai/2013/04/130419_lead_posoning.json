@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:swahili/medianuai/2013/04/130419_lead_posoning",
+    "locators": {
+      "assetUri": "/swahili/medianuai/2013/04/130419_lead_posoning",
+      "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2013/04/130419_lead_posoning",
+      "curie": "http://www.bbc.co.uk/asset/00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
+    },
+    "type": "MAP",
+    "createdBy": "swahili",
+    "language": "sw",
+    "lastUpdated": 1552484259277,
+    "firstPublished": 1366357913,
+    "lastPublished": 1366357939,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "24199072",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/swahili/meta/dps/2013/04/emp/130419_lead_posoning.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Shughuli ya kusafisha mazingira inaendelea katika jimbo la Zamfara, ambako watoto zaidi ya 450 wamefariki kutokana na sumu ya madini ya chuma tangu mwaka 2009.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Maelfu ya waathiriwa wangali wanapokea matibabu baada ya vijiji vyao kuathirika kutokana na madini yenye sumu ya Lead na sumu inayotokana na migodi ya dhahabu.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Shirika la madaktari wasio na mipaka, limetuhumu serikali ya Nigeria kwa kujikokota katika kuchukua hatua za kushughulikia swala hilo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Na kama inavyosimulia taarifa hii, miaka minne baadaye bado kuna kibarua kigumu.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Athari za madini ya Lead Nigeria",
+      "headline": "Athari za madini ya Lead Nigeria"
+    },
+    "locators": {
+      "assetUri": "/swahili/medianuai/2013/04/130419_lead_posoning",
+      "cpsUrn": "urn:bbc:content:assetUri:swahili/medianuai/2013/04/130419_lead_posoning",
+      "curie": "http://www.bbc.co.uk/asset/00c7e7fc-a8c6-11e2-8167-d819a79c3f60"
+    },
+    "summary": "Maelfu ya waathiriwa wanapokea matibabu baada ya vijiji vyao kuathirika kutokana na madini yenye sumu ya Lead na sumu inayotokana na migodi ya dhahabu.",
+    "timestamp": 1552484259277,
+    "passport": {},
+    "media": {
+      "id": "24199072",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/swahili/meta/dps/2013/04/emp/130419_lead_posoning.emp.xml",
+      "type": "legacyMedia"
+    },
+    "id": "urn:bbc:ares::asset:swahili/medianuai/2013/04/130419_lead_posoning",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Medianuai", "uri": "/swahili/medianuai", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCSwahili.com", "uri": "/swahili", "type": "simple" },
+    "groups": []
+  }
+}

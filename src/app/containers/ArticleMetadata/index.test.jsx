@@ -7,7 +7,7 @@ import ArticleMetadata from './index';
 import {
   articleDataNews,
   articleDataPersian,
-} from '#pages/Article/fixtureData';
+} from '#pages/ArticlePage/fixtureData';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -64,17 +64,16 @@ it('should render the article tags', async () => {
   }));
 
   const expected = [
-    { content: 'https://www.facebook.com/bbcnews', name: 'article:author' },
-    { content: '2018-01-01T13:00:00.000Z', name: 'article:modified_time' },
-    { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
     { content: 'Royal Wedding 2018', name: 'article:tag' },
     { content: 'Duchess of Sussex', name: 'article:tag' },
     { content: 'Queen Victoria', name: 'article:tag' },
+    { content: 'https://www.facebook.com/bbcnews', name: 'article:author' },
+    { content: '2018-01-01T13:00:00.000Z', name: 'article:modified_time' },
+    { content: '2018-01-01T12:01:00.000Z', name: 'article:published_time' },
   ];
 
   expect(actual).toEqual(expected);
 });
-
 it('should render the article section meta tag if section provided', async () => {
   await renderMetadataToDocument(
     <Context service="news">

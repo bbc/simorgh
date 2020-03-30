@@ -11,11 +11,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `bn`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'আপডেট হয়েছে',
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
+    chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
     serviceLocalizedName: 'বাংলা',
@@ -35,15 +39,15 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbangla',
     twitterSite: '@bbcbangla',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/bengali/institutional-50409861#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
     script: bengali,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -54,6 +58,7 @@ export const service = {
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
+      navMenuText: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
         audioPlayer: 'অডিও প্লেয়ার',
@@ -140,6 +145,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'আপনার ডিভাইস মিডিয়া প্লেব্যাক সমর্থন করে না',
+        contentExpired: 'এই ফাইলটি আর পাওয়া যাবে না',
         audio: 'অডিও',
         photogallery: 'ফটো গ্যালারি',
         video: 'ভিডিও',
@@ -148,9 +155,10 @@ export const service = {
           subtitle:
             'বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'শুনুন',
+        watch: 'দেখুন',
         liveLabel: 'লাইভ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -159,11 +167,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'সর্বাধিক পঠিত',
-      lastUpdated: 'সর্বশেষ আপডেট হয়েছে: ',
+      lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/bengali/institutional-50409861',
         text: 'বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন',
       },
       externalLink: {
@@ -191,6 +204,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
@@ -203,23 +222,10 @@ export const service = {
         url: '/bengali',
       },
       {
-        title: 'খবর',
-        url: '/bengali/news',
-      },
-      {
-        title: 'অডিও',
-        url: '/bengali/media/audio',
-      },
-      {
         title: 'ভিডিও',
         url: '/bengali/media/video',
       },
-      {
-        title: 'ফটো গ্যালারি',
-        url: '/bengali/media/photogalleries',
-      },
     ],
-    navigationSection: 'সেকশন',
   },
 };
 

@@ -38,7 +38,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -87,6 +87,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
                 srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
                 width="9"
               />
+              <noscript />
             </amp-iframe>
           </div>
         </figure>
@@ -272,7 +273,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;

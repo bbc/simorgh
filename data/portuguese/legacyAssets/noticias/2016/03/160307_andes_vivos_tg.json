@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:portuguese/noticias/2016/03/160307_andes_vivos_tg",
+    "locators": {
+      "assetUri": "/portuguese/noticias/2016/03/160307_andes_vivos_tg",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/noticias/2016/03/160307_andes_vivos_tg",
+      "curie": "http://www.bbc.co.uk/asset/a598320a-e46e-11e5-8dc9-feea3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "portuguese",
+    "language": "pt-BR",
+    "lastUpdated": 1550146713786,
+    "firstPublished": 1457524136,
+    "lastPublished": 1457525316,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "42893847", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph", "image" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "42893847",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/portuguese/meta/dps/2016/03/emp/160307_andes_vivos_tg.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "O uruguaio Roberto Canessa era um dos 45 passageiros do avião que caiu na Cordilheira dos Andes, no Chile, em 1972.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ao todo, 12 pessoas morreram na queda, seis nos dias seguintes - quando uma avalanche atingiu os destroços do avião - e 11 pela escassez de alimentos e pelas condições críticas.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Os 16 sobreviventes, integrantes de um time de rúgbi, tiveram que se alimentar dos corpos para ter qualquer chance de aguentar até o resgate, que demorou dois meses.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Em entrevista ao programa <italic>Victoria Derbyshire</italic>, da BBC, Canessa, que hoje é um bem-sucedido cardiologista, conta o drama que motivou a decisão.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ele está lançando um livro sobre o episódio, ainda sem edição no Brasil, chamado <italic>I Had to Survive: How a Plane Crash in the Andes Inspired My Calling to Save Lives</italic> (&quot;Eu tinha que sobreviver: como um acidente de avião nos Andes inspirou minha vocação para salvar vidas&quot;, em tradução livre).",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "O episódio também inspirou o filme <italic>Vivos</italic> (1993), em que Canessa é interpretado pelo ator Josh Hamilton.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "O resgate demorou dois meses. Canessa, que tinha 19 anos à época, caminhou com um colega por 11 dias até encontrar pastores no pé da cordilheira.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "O avião caiu quando seguia de Montevidéu para Santiago, em outubro de 1972. O piloto teve que fazer um pouso de emergência em um vale após uma forte turbulência em meio a uma tempestade.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "d5e551",
+        "subType": "body",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/03/09/160309115754_andes1_640x360_bbc_nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2016/03/09/160309115754_andes1_640x360_bbc_nocredit.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "",
+        "caption": "'Pensei que se fosse uma das vítimas teria orgulho de meu corpo ser usado por meus colegas como um projeto de vida'",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "No início, eles sobreviveram com barras de chocolate, doces e pequenos lanches que encontraram nas bagagens. Derreteram gelo para água e usaram bancos do avião como camas.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Eles conseguiram fazer um rádio funcionar e ouviram as notícias sobre o fim das buscas ao avião, cerca de uma semana após a queda.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Quando a comida acabou, os sobreviventes tiveram que tomar a decisão radical.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Alguém disse: acho que estou ficando louco, porque estou pensando em comer os corpos. O capitão do time disse: 'Você está louco, não nos tornaremos canibais, com certeza não iremos por esse caminho'&quot;, conta Canessa.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ele também diz ter relutado no começo, mas depois mudou de ideia.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Pensei que se fosse uma das vítimas teria orgulho de meu corpo ser usado por meus colegas como um projeto de vida&quot;, afirma.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Segundo ele, há quem pense que o recurso tenha sido uma &quot;fórmula mágica&quot; da sobrevivência, o que ele nega.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Sobrevivemos porque éramos um time, porque estávamos juntos, porque andamos 11 dias (até encontrar ajuda).&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "'Comi meus amigos para sobreviver', relembra vítima de acidente aéreo",
+      "headline": "'Comi meus amigos para sobreviver', relembra vítima de acidente aéreo"
+    },
+    "locators": {
+      "assetUri": "/portuguese/noticias/2016/03/160307_andes_vivos_tg",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/noticias/2016/03/160307_andes_vivos_tg",
+      "curie": "http://www.bbc.co.uk/asset/a598320a-e46e-11e5-8dc9-feea3db9bd6e"
+    },
+    "summary": "Em entrevista à BBC, o uruguaio Roberto Canessa relata episódio que acabou inspirando sua carreira médica e que agora detalha em livro.",
+    "timestamp": 1550146713786,
+    "passport": {},
+    "media": {
+      "id": "42893847",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/portuguese/meta/dps/2016/03/emp/160307_andes_vivos_tg.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e227",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/03/07/160307143827_andes1_144x81_reproducao_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/03/07/160307143827_andes1_144x81_reproducao_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "",
+      "copyrightHolder": "Reproducao",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/noticias/2016/03/160307_andes_vivos_tg",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Notícias", "uri": "/portuguese/noticias", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCBrasil.com", "uri": "/portuguese", "type": "simple" },
+    "groups": []
+  }
+}

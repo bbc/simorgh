@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ha`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Wanda aka sabunta',
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
+    chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
     serviceLocalizedName: 'Hausa',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchausa',
     twitterSite: '@bbchausa',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/hausa/game-da-mu-49283501#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/hausa/game-da-mu-49283501',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Labaran Duniya',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      navMenuText: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -132,6 +137,8 @@ export const service = {
         },
       },
       media: {
+        noJs: "Na'urarku na da matsalar sauraren sauti",
+        contentExpired: 'Yanzu an daina samar da wannan shiri.',
         audio: 'Sauti',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
@@ -148,6 +155,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Kalla',
         liveLabel: 'KAI TSAYE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -156,11 +164,19 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Wanda aka fi karantawa',
-      lastUpdated: 'Na baya-bayan nan ',
+      lastUpdated: 'Na baya-bayan nan:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
+      frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
+      header: 'Shirye-shiryenmu',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
         text: 'Me yasa za ka aminta da BBC',
       },
       externalLink: {
@@ -187,6 +203,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377092',
           text: 'Tuntubi BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -223,12 +245,7 @@ export const service = {
         title: 'Shirye-shiryen rediyo',
         url: '/hausa/media-43322903',
       },
-      {
-        title: 'Hotuna',
-        url: '/hausa/media/photogalleries',
-      },
     ],
-    navigationSection: 'Sassa',
   },
 };
 

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/multimedia/2013/12/131221_sectarian_war_bowen",
+    "locators": {
+      "assetUri": "/uzbek/multimedia/2013/12/131221_sectarian_war_bowen",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2013/12/131221_sectarian_war_bowen",
+      "curie": "http://www.bbc.co.uk/asset/aff55e94-6a4a-11e3-9e14-93c73db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "uzbek",
+    "language": "uz",
+    "lastUpdated": 1553855382404,
+    "firstPublished": 1387635475,
+    "lastPublished": 1387635522,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "29055878",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/uzbek/meta/dps/2013/12/emp/131221_sectarian_war_bowen.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Би-би-си мухбири Жереми Боуэн шиа ва суннийлар ўртасидаги мазҳабий тўқнашувлар тарихи ва 21 асрда бу қарама-қаршилик нима учун яна аланга олганлигига назар ташлайди.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Шиа ва суннийлар ўртасидаги мазҳабий тўқнашувлар тарихи",
+      "headline": "Шиа ва суннийлар ўртасидаги мазҳабий тўқнашувлар тарихи"
+    },
+    "locators": {
+      "assetUri": "/uzbek/multimedia/2013/12/131221_sectarian_war_bowen",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2013/12/131221_sectarian_war_bowen",
+      "curie": "http://www.bbc.co.uk/asset/aff55e94-6a4a-11e3-9e14-93c73db9bd6e"
+    },
+    "summary": "Шиа ва суннийлар ўртасидаги мазҳабий тўқнашувлар тарихи",
+    "timestamp": 1553855382404,
+    "passport": {},
+    "media": {
+      "id": "29055878",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/uzbek/meta/dps/2013/12/emp/131221_sectarian_war_bowen.emp.xml",
+      "type": "legacyMedia"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/multimedia/2013/12/131221_sectarian_war_bowen",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Multimedia", "uri": "/uzbek/multimedia", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCUzbek.com", "uri": "/uzbek", "type": "simple" },
+    "groups": []
+  }
+}

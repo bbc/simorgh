@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { portuguese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/America/Sao_Paulo';
@@ -15,11 +16,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Atualizado',
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
+    chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
@@ -40,15 +45,16 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/portuguese/institutional-50054434#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/portuguese/institutional-50054434',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Notícias, vídeos, análise e contexto em português',
     passportHomes: ['brasil'],
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -59,6 +65,7 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
+      navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -108,7 +115,7 @@ export const service = {
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Nós fizemos importantes modificações nos termos de nossa Política de Privacidade e Cookies e gostaríamos que soubesse o que elas significam para você e para os dados pessoais que você nos forneceu.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -145,12 +152,16 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        contentExpired: 'Este conteúdo não está mais disponível.',
         audio: 'Áudio',
         photogallery: 'Galeria de fotos',
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
         liveLabel: 'AO VIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -159,11 +170,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Mais lidas',
-      lastUpdated: 'Última atualização: ',
+      lastUpdated: 'Última atualização:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/portuguese/institutional-50054434',
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
@@ -191,6 +207,12 @@ export const service = {
           href: 'https://www.bbc.com/portuguese/institutional-36202456',
           text: 'Fale com a BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos.',
@@ -202,6 +224,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'America/Sao_Paulo',
     navigation: [
@@ -242,15 +265,10 @@ export const service = {
         url: '/portuguese/salasocial',
       },
       {
-        title: 'Galeria de Fotos',
-        url: '/portuguese/media/photogalleries',
-      },
-      {
         title: 'Vídeos',
         url: '/portuguese/media/video',
       },
     ],
-    navigationSection: 'Seções',
   },
 };
 

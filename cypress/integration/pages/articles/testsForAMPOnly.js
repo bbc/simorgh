@@ -1,5 +1,4 @@
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
 import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData } from './helpers';
 
@@ -44,24 +43,22 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
     if (appToggles.mediaPlayer.enabled) {
       describe('Media Player: AMP', () => {
         it('should render a placeholder image', () => {
-          cy.request(`${config[service].pageTypes.articles.path}.json`).then(
-            ({ body }) => {
-              const media = getBlockData('video', body);
-              if (media && media.type === 'video') {
-                cy.get('div[class^="StyledVideoContainer"]').within(() => {
-                  cy.get('amp-img')
-                    .should('have.attr', 'src')
-                    .should('not.be.empty');
-                });
-              }
-            },
-          );
+          cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+            const media = getBlockData('video', body);
+            if (media && media.type === 'video') {
+              cy.get('div[class^="StyledVideoContainer"]').within(() => {
+                cy.get('amp-img')
+                  .should('have.attr', 'src')
+                  .should('not.be.empty');
+              });
+            }
+          });
         });
 
         // Tests requiring iframe access are temporarily being throttled to the 'news' service.
         if (service === 'news') {
           it('should autoplay', () => {
-            cy.request(`${config[service].pageTypes.articles.path}.json`).then(
+            cy.request(`${Cypress.env('currentPath')}.json`).then(
               ({ body }) => {
                 const media = getBlockData('video', body);
                 if (media && media.type === 'video') {
@@ -74,7 +71,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                         // `timeout` only applies to the methods chained below.
                         // `its()` benefits from this, and will wait up to 8s
                         // for the mediaPlayer instance to become available.
-                        timeout: 8000,
+                        timeout: 20000,
                       })
                         .its('embeddedMedia.playerInstances.mediaPlayer')
                         .invoke('currentTime')

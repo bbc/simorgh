@@ -13,15 +13,24 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+    ads: {
+      enabled: true,
     },
   },
   test: {
     chartbeatAnalytics: {
-      enabled: false,
+      enabled: true,
     },
     mediaPlayer: {
       enabled: true,
@@ -33,10 +42,19 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
     radioSchedule: {
-      enabled: false,
+      enabled: true,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+    ads: {
+      enabled: true,
     },
   },
   stage: {
@@ -53,9 +71,18 @@ const toggles = {
       enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
     radioSchedule: {
+      enabled: false,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+    ads: {
       enabled: false,
     },
   },
@@ -70,12 +97,21 @@ const toggles = {
       enabled: true,
     },
     navOnArticles: {
-      enabled: false,
+      enabled: true,
     },
     mostRead: {
-      enabled: false,
+      enabled: true,
     },
     radioSchedule: {
+      enabled: false,
+    },
+    scriptLink: {
+      enabled: true,
+    },
+    variantCookie: {
+      enabled: true,
+    },
+    ads: {
       enabled: false,
     },
   },

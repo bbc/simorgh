@@ -11,11 +11,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
+    chartbeatDomain: 'arabic.bbc.co.uk',
     brandName: 'BBC News عربي',
     product: 'BBC News',
     serviceLocalizedName: 'عربي',
@@ -35,14 +39,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCArabic',
     twitterSite: '@BBCArabic',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/arabic/institutional-49283069#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/arabic/institutional-49283069',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,6 +57,7 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
+      navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -142,6 +147,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'جهازك لا يدعم تشغيل الفيديو',
+        contentExpired: 'هذا المحتوى لم يعد متوفراً',
         audio: 'تسجيل صوتي',
         photogallery: 'معرض الصور',
         video: 'فيديو',
@@ -153,6 +160,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'مباشر',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -161,11 +169,20 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'الأكثر قراءة',
-      lastUpdated: 'آخر تحديث ',
+      lastUpdated: 'آخر تحديث',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageLabel: 'استقبال البث',
+      header: 'أحدث نشرة أخبار',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/arabic/institutional-49283069',
         text: 'لماذا يمكنك الإعتماد على أخبار بي بي سي',
       },
       externalLink: {
@@ -192,6 +209,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/arabic/institutional-37731355',
           text: 'اتصل بـ بي بي سي',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -249,10 +272,6 @@ export const service = {
         url: '/arabic/inthepress',
       },
       {
-        title: 'صور',
-        url: '/arabic/media/photogalleries',
-      },
-      {
         title: 'برامجنا',
         url: '/arabic/tv-and-radio-37728883',
       },
@@ -269,7 +288,6 @@ export const service = {
         url: '/arabic/in_depth',
       },
     ],
-    navigationSection: 'أقسام',
   },
 };
 

@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+    "locators": {
+      "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "ukchina_traditional",
+    "language": "zh-Hant",
+    "lastUpdated": 1555696045559,
+    "firstPublished": 1448016091,
+    "lastPublished": 1448017134,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "41406410"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "41406410",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "BBC2015年度「巾幗百名」 （100 Women）系列節目上演，這也是BBC連續第三年推出這個節目。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "BBC在這個節目中列出了世界上最具激勵精神的100名婦女。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "在今年的「巾幗百名」名單中有30名30歲以下的企業家，還有年齡超過80歲的巾幗英雄。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "BBC英倫網也將目光投向在倫敦的華裔女性，聽聽她們的創業故事和心得。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dara Huang是位於倫敦的建築和市內設計公司Design Haus Liberty的創始人，哈佛研究生，白手起家在倫敦創業。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "她的公司三年裏迅速發展，有20多位建築設計師。Dara的父母從台灣移民美國，她在美國長大。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "另一位創業女性是Sally Wang，來自中國安徽。在英國留學畢業後，她專注英國房地產業，有自己的公司，目前潛心寫書，解讀英國房地產市場和投資置業。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "視頻：倫敦華裔女性談海外創業",
+      "headline": "視頻：倫敦華裔女性談海外創業"
+    },
+    "locators": {
+      "assetUri": "/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+      "curie": "http://www.bbc.co.uk/asset/5225b412-8f73-11e5-b663-a5a63db9bd6e"
+    },
+    "summary": "BBC「巾幗百人」特別報道之際，兩位在倫敦創業的華裔女性分享她們的經驗。",
+    "timestamp": 1555696045559,
+    "passport": {},
+    "media": {
+      "id": "41406410",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/ukchina/simp/meta/dps/2015/11/emp/151120_video_100w_london_chinese_entrepreneurs.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e213",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2015/11/20/151120093631_sally_and_dara_144x81_bbc_nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "音視圖片",
+      "uri": "/ukchina/trad/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcukchina.com",
+      "uri": "/ukchina/trad",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

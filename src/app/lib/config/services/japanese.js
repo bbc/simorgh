@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ja`,
     articleAuthor: `https://www.facebook.com/bbcnews/`,
     articleTimestampPrefix: '更新',
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
+    chartbeatDomain: 'japanese.bbc.co.uk',
     brandName: 'BBCニュース',
     product: 'BBC News',
     serviceLocalizedName: 'ニュース',
@@ -32,14 +36,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsjapan',
     twitterSite: '@bbcnewsjapan',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/japanese/help-49677253#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/japanese/help-49677253',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: '最新ニュース',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +54,7 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      navMenuText: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -133,12 +138,15 @@ export const service = {
         },
       },
       media: {
+        noJs: 'お使いの端末ではメディアプレイバックはご利用になれません',
+        contentExpired: 'このコンテンツはもうご利用いただけません。',
         audio: '音声',
         photogallery: '写真ギャラリー',
         video: 'ビデオ',
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -147,7 +155,12 @@ export const service = {
     brandSVG,
     mostRead: {
       header: '一番人気',
-      lastUpdated: 'Last updated: ',
+      lastUpdated: 'Last updated:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -178,6 +191,12 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/contact',
           text: 'BBCに連絡する',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. BBCは外部サイトの内容に責任を負いません。',
@@ -222,7 +241,6 @@ export const service = {
         url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
-    navigationSection: 'ジャンル',
   },
 };
 

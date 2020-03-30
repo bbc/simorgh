@@ -1,0 +1,102 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/vietnamese/meta/dps/junk/2016/09/emp/160922_tc2_testmap2.emp.xml",
+        "id": "17698461",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Vận động viên Lê Văn Công ngay trong ngày thi đấu đấu tiên của Paralympics Rio 2016 đã đạt kỳ tích, phá vỡ kỷ lục của chính mình và kỷ lục thế giới, giành được tấm huy chương vàng lịch sử đầu tiên cho Việt Nam tại các kỳ Paralympics từ trước tới nay. Anh trò chuyện với BBC Tiếng Việt vào sáng sớm hôm 9/9/2016, một đêm sau khi giành được chiến thắng đẹp như mơ. &quot;Tôi bước vào thi đấu ở hạng cân 49kg với những diễn biến rất căng thẳng. Tới tận giây phút cuối cùng tôi mới bứt lên để giành được chiến thắng.&quot; &quot;Ở hạng cân này quy tụ tới ba vận động viên thay phiên nhau giữ kỷ lục thế giới nên cuộc đấu rất căng thẳng và khó lường. Tôi đã có một chút may mắn, một chút tự tin để giành được tấm huy chương vàng danh giá.&quot; &quot;Bản thân tôi cùng ban huấn luyện tới kỳ Paralympics lần này chỉ đặt ra chỉ tiêu giành được huy chương, nhưng huy chương vàng thì thực sự tôi chưa nghĩ tới vì các đối thủ cùng hạng cân đều rất mạnh.&quot; &quot;Sau khi thất bại ở lần thực hiện động tác cử đẩy lượt thứ hai, tới lượt thứ ba, tôi và ban huấn luyện bàn bạc và đã quyết định tăng thêm 2kg, lên thành 181kg. Lúc đó tôi nghĩ bản thân mình đang giữ kỷ lục thế giới [182kg] thì mình phải cố gắng thực hiện được mức tạ hiện còn đang nằm dưới mức mình đã đạt được.&quot; &quot;Lúc đó tôi chỉ tập trung nghĩ phải thực hiện cho bằng được để giành lại tấm huy chương vàng cao quý.&quot; &quot;Tấm huy chương vàng này sẽ làm thay đổi cuộc sống của tôi rất nhiều. Các nguồn tài trợ và các khoản tiền thưởng sẽ giúp tôi không phải lo nhiều về vấn đề kinh tế, để tôi có thể chú tâm tập luyện, hướng tới các thành tích tốt trong các giải đấu sắp tới.&quot; &quot;Với tấm huy chương vàng giành được, tôi cũng hy vọng là các anh chị em trong đoàn Việt Nam sẽ cố gắng phấn đấu tập luyện thật tốt tại Rio, để không chỉ cạnh tranh được không chỉ một tấm huy chương vàng này mà còn truyền được cảm hứng cho lớp thế hệ sau, và hy vọng các anh chị em khuyết tật sẽ làm được nhiều hơn những gì tôi đã đạt được hôm nay.&quot;",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698461", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "vietnamese",
+    "firstPublished": 1474553442000,
+    "id": "urn:bbc:ares::asset:vietnamese/sport/2016/09/160922_tc2_testmap2",
+    "includeComments": false,
+    "language": "vi",
+    "lastPublished": 1474553442000,
+    "lastUpdated": 1582029532713,
+    "locators": {
+      "assetId": "17698461",
+      "assetUri": "/vietnamese/sport/2016/09/160922_tc2_testmap2",
+      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport/2016/09/160922_tc2_testmap2",
+      "curie": "http://www.bbc.co.uk/asset/33e94bc4-80ce-11e6-ab5d-feb034ba44a4"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1474553442000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "HCV: Lê Văn Công 'bứt lên ở phút cuối'",
+      "shortHeadline": "HCV: Lê Văn Công 'bứt lên ở phút cuối'"
+    },
+    "id": "urn:bbc:ares::asset:vietnamese/sport/2016/09/160922_tc2_testmap2",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e214",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "vi",
+    "locators": {
+      "assetId": "17698461",
+      "assetUri": "/vietnamese/sport/2016/09/160922_tc2_testmap2",
+      "cpsUrn": "urn:bbc:content:assetUri:vietnamese/sport/2016/09/160922_tc2_testmap2",
+      "curie": "http://www.bbc.co.uk/asset/33e94bc4-80ce-11e6-ab5d-feb034ba44a4"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/vietnamese/meta/dps/junk/2016/09/emp/160922_tc2_testmap2.emp.xml",
+      "id": "17698461",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Vận động viên Lê Văn Công ngay trong ngày thi đấu đấu tiên của Paralympics Rio 2016 đã đạt kỳ tích, phá vỡ kỷ lục của chính mình và kỷ lục thế giới, giành được tấm huy chương vàng lịch sử đầu tiên cho Việt Nam tại các kỳ Paralympics từ trước tới nay.",
+    "timestamp": 1474553442000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Thể thao",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/vietnamese/sport"
+    },
+    "site": {
+      "name": "BBCVietnamese.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/vietnamese"
+    }
+  }
+}

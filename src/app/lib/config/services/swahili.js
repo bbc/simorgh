@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
+    chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/swahili/taasisi-49283417#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Swahili',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
+      navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -135,6 +140,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Huwezi kusikiliza tena',
+        contentExpired: 'Taarifa hii haipatikani tena.',
         audio: 'Sauti',
         photogallery: 'Mkusanyiko wa picha',
         video: 'Video',
@@ -151,6 +158,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'Moja kwa moja',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -159,11 +167,17 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Iliyosomwa zaidi',
-      lastUpdated: 'Imeboreshwa mwisho: ',
+      lastUpdated: 'Imeboreshwa mwisho:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'Vipindi vya Redio',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/swahili/taasisi-49283417',
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
@@ -192,6 +206,12 @@ export const service = {
           href: 'https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus',
           text: 'Wasiliana na BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
     },
@@ -211,19 +231,10 @@ export const service = {
         url: '/swahili/media/video',
       },
       {
-        title: 'Sauti',
-        url: '/swahili/media/audio',
-      },
-      {
         title: 'Vipindi vya Redio',
         url: '/swahili/kwa_kina/redio',
       },
-      {
-        title: 'Picha',
-        url: '/swahili/media/photogalleries',
-      },
     ],
-    navigationSection: 'Yaliyomo',
   },
 };
 

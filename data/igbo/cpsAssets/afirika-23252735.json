@@ -312,6 +312,17 @@
         }
       ]
     },
+    "indexImage": {
+      "id": "63724372",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+      "path": "/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Some people at the NTA awards",
+      "copyrightHolder": "Joe Maher",
+      "type": "image"
+    },
     "id": "urn:bbc:ares::asset:igbo/afirika-23252735",
     "type": "cps"
   },

@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { turkce as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Istanbul';
@@ -15,11 +16,15 @@ import 'moment/locale/tr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `tr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Güncelleme',
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
+    chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
@@ -39,14 +44,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcturkce',
     twitterSite: '@bbcturkce',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/turkce/kurumsal-50221017#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/turkce/kurumsal-50221017',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Haberler',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +62,7 @@ export const service = {
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
+      navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -143,12 +149,15 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Cihazınızda ses/video gösterim programı bulunamadı',
+        contentExpired: 'Bu içerik artık oynatılabilir durumda değil.',
         audio: 'Ses dosyası',
         photogallery: 'Fotoğraf galerisi',
         video: 'Video',
         listen: 'Listen',
         watch: 'İzle',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -157,11 +166,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'En çok okunanlar',
-      lastUpdated: 'Son güncelleme: ',
+      lastUpdated: 'Son güncelleme:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/turkce/kurumsal-50221017',
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
@@ -185,6 +199,12 @@ export const service = {
           href: 'https://www.bbc.com/turkce/kurumsal-36767474',
           text: "BBC'yle temas kurun",
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
@@ -196,6 +216,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'Asia/Istanbul',
     navigation: [
@@ -206,10 +227,6 @@ export const service = {
       {
         title: 'Video',
         url: '/turkce/media/video',
-      },
-      {
-        title: 'Fotoğraf',
-        url: '/turkce/media/photogalleries',
       },
       {
         title: 'Dergi',
@@ -236,7 +253,6 @@ export const service = {
         url: '/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
       },
     ],
-    navigationSection: 'Kategoriler',
   },
 };
 

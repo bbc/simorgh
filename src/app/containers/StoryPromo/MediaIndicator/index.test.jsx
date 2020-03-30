@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
+import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import MediaIndicator from '.';
 
 const audioItem = {
@@ -97,53 +97,82 @@ const noMediaFormat = {
 describe('Story Promo Media Indicator', () => {
   shouldMatchSnapshot(
     'should render an audio item correctly',
-    <MediaIndicator item={audioItem} service="news" />,
+    <MediaIndicator dir="ltr" item={audioItem} script={latin} service="news" />,
   );
 
   shouldMatchSnapshot(
     'should render a video item correctly',
-    <MediaIndicator item={videoItem} service="news" />,
+    <MediaIndicator dir="ltr" item={videoItem} script={latin} service="news" />,
   );
 
   shouldMatchSnapshot(
+    'should render video indicator correctly when inline',
+    <MediaIndicator
+      dir="ltr"
+      item={videoItem}
+      script={latin}
+      service="news"
+      isInline
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'should render video indicator correctly when inline on RTL',
+    <MediaIndicator
+      dir="rtl"
+      item={videoItem}
+      script={arabic}
+      service="persian"
+      isInline
+    />,
+  );
+  shouldMatchSnapshot(
     'should render a photo gallery item correctly',
-    <MediaIndicator item={photogalleryItem} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={photogalleryItem}
+      script={latin}
+      service="news"
+    />,
   );
 
   shouldMatchSnapshot(
     'should render correctly even without duration',
-    <MediaIndicator item={noDurationItem} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={noDurationItem}
+      script={latin}
+      service="news"
+    />,
   );
 
   isNull(
     'should not render if item media object has no format',
-    <MediaIndicator item={noMediaFormat} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={noMediaFormat}
+      script={latin}
+      service="news"
+    />,
   );
 
   isNull(
     'should not render if item is not media',
-    <MediaIndicator item={nonMediaItem} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={nonMediaItem}
+      script={latin}
+      service="news"
+    />,
   );
 
   isNull(
     'should not render if item media object is missing',
-    <MediaIndicator item={noMediaObject} service="news" />,
+    <MediaIndicator
+      dir="ltr"
+      item={noMediaObject}
+      script={latin}
+      service="news"
+    />,
   );
-
-  describe('with Index Alsos', () => {
-    shouldMatchSnapshot(
-      'should render a video indicator correctly',
-      <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
-    );
-
-    it('should render ', () => {
-      const { container } = render(
-        <MediaIndicator item={noDurationItem} service="news" indexAlsos />,
-      );
-
-      const span = container.getElementsByTagName('span')[0];
-      expect(span.getAttribute('aria-hidden')).toBeDefined();
-      expect(span.getAttribute('aria-hidden')).toEqual('true');
-    });
-  });
 });

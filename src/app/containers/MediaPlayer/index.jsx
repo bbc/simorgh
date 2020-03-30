@@ -5,9 +5,11 @@ import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Figure from '@bbc/psammead-figure';
+import styled from 'styled-components';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
+  MediaMessage,
 } from '@bbc/psammead-media-player';
 import Caption from '../Caption';
 import Metadata from './Metadata';
@@ -30,12 +32,13 @@ const MediaPlayerContainer = ({
   assetId,
   assetType,
   showPlaceholder,
+  available,
+  isLegacyMedia,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const { lang, translations, service } = useContext(ServiceContext);
   const { enabled } = useToggle('mediaPlayer');
   const location = useLocation();
-
   if (!enabled || !blocks) {
     return null;
   }
@@ -47,7 +50,8 @@ const MediaPlayerContainer = ({
     return null;
   }
 
-  const { originCode, locator } = path(
+  const { originCode, locator } = pathOr(
+    {},
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
@@ -55,6 +59,11 @@ const MediaPlayerContainer = ({
     ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
     aresMediaBlock,
   );
+  const blockId = path(
+    ['model', 'blocks', 0, 'model', 'blockId'],
+    aresMediaBlock,
+  );
+
   const format = path(
     ['model', 'blocks', 0, 'model', 'format'],
     aresMediaBlock,
@@ -89,7 +98,7 @@ const MediaPlayerContainer = ({
     ),
   };
 
-  if (!versionId) {
+  if (!(versionId || blockId)) {
     return null; // this should be the holding image with an error overlay
   }
 
@@ -101,7 +110,7 @@ const MediaPlayerContainer = ({
   });
 
   const embedSource = getEmbedUrl({
-    mediaId: `${assetId}/${versionId}/${lang}`,
+    mediaId: `${assetId}/${isLegacyMedia ? blockId : versionId}/${lang}`,
     type: assetType,
     isAmp,
     queryString: location.search,
@@ -112,7 +121,35 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const landscapeRatio = '56.25%'; // (9/16)*100 = 16:9
+  const StyledMessageContainer = styled.div`
+    padding-top: ${landscapeRatio};
+    position: relative;
+    overflow: hidden;
+  `;
+
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
+  const contentNotAvailableMessage = `This content is no longer available`;
+
+  const translatedNoJSMessage =
+    path(['media', 'noJs'], translations) || noJsMessage;
+
+  const translatedExpiredContentMessage =
+    path(['media', 'contentExpired'], translations) ||
+    contentNotAvailableMessage;
+
+  if (!available) {
+    return (
+      <StyledMessageContainer>
+        <MediaMessage
+          service={service}
+          message={translatedExpiredContentMessage}
+          placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+        />
+      </StyledMessageContainer>
+    );
+  }
 
   return (
     <>
@@ -124,17 +161,19 @@ const MediaPlayerContainer = ({
             placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
             title={iframeTitle}
+            noJsMessage={translatedNoJSMessage}
+            service={service}
           />
         ) : (
           <CanonicalMediaPlayer
             src={embedSource}
-            placeholderSrc={showPlaceholder ? placeholderSrc : null}
+            placeholderSrc={placeholderSrc}
             placeholderSrcset={placeholderSrcset}
             showPlaceholder={showPlaceholder}
             title={iframeTitle}
             service={service}
             mediaInfo={mediaInfo}
-            noJsMessage={noJsMessage}
+            noJsMessage={translatedNoJSMessage}
             noJsClassName="no-js"
           />
         )}
@@ -149,9 +188,13 @@ MediaPlayerContainer.propTypes = {
   assetId: string.isRequired,
   assetType: string.isRequired,
   showPlaceholder: bool.isRequired,
+  available: bool,
+  isLegacyMedia: bool,
 };
 MediaPlayerContainer.defaultProps = {
   ...emptyBlockArrayDefaultProps,
+  available: true,
+  isLegacyMedia: false,
 };
 
 export default MediaPlayerContainer;

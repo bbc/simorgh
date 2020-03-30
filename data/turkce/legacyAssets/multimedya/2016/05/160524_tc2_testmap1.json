@@ -1,0 +1,140 @@
+{
+    "content": {
+      "blocks": [
+        {
+          "aspectRatio": "16:9",
+          "format": "video",
+          "href": "http://a.files.bbci.co.uk/worldservice/test/turkce/meta/dps/junk/2016/05/emp/160524_tc2_testmap1.emp.xml",
+          "id": "17697357",
+          "live": false,
+          "subType": "primary",
+          "type": "legacyMedia"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Suriye'nin kuzeyinde Türkiye sınırındaki Rakka'dan bir grup genç, kenti kontrol altında tutan IŞİD'le internet yoluyla savaşıyor.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Gençler hayatları pahasına kentte yaşananları videoya çekip, dünyaya duyuruyor...",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Birkaçı bu yolda öldürüldü, bazıları aile üyelerini kaybetti.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "IŞİD, grubun liderlerinin başına ödül koyduğu için şimdi başka bir yerde gizleniyor ancak Rakka'daki yurttaş gazeteciler sayesinde kentte yaşananları dışarıya duyurmaya devam ediyorlar.",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "5 bölümlük video animasyon serimizin ikincisinde bu gençler IŞİD'e karşı oluşturdukları haber ağını ve IŞİD'in peşlerine düşüşünü anlatıyor...",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "BÖLÜM 1: IŞİD Rakka'yı ele geçirdi BÖLÜM 3: IŞİD'den karşı atak",
+          "type": "paragraph"
+        },
+        {
+          "markupType": "plain_text",
+          "text": "Prodüktör/Muhabir: Chloe HadjimatheouArapça prodüktörü: Faisal IrshaidKamera: Tony JolliffeVideo editörü: Amanda GunnYapımcı: Richard Knight",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "metadata": {
+      "analyticsLabels": {
+        "cps_asset_id": "17697357",
+        "cps_asset_type": "map"
+      },
+      "blockTypes": [
+        "legacyMedia",
+        "paragraph"
+      ],
+      "createdBy": "turkish",
+      "firstPublished": 1464103796000,
+      "id": "urn:bbc:ares::asset:turkce/multimedya/2016/05/160524_tc2_testmap1",
+      "includeComments": false,
+      "language": "tr",
+      "lastPublished": 1464103796000,
+      "lastUpdated": 1583244042157,
+      "locators": {
+        "assetId": "17697357",
+        "assetUri": "/turkce/multimedya/2016/05/160524_tc2_testmap1",
+        "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/05/160524_tc2_testmap1",
+        "curie": "http://www.bbc.co.uk/asset/3fcfce28-21c3-11e6-acd0-649b984e8732"
+      },
+      "options": {
+        "allowAdvertising": true,
+        "allowDateStamp": true,
+        "allowRightHandSide": true,
+        "includeComments": false,
+        "isBreakingNews": false,
+        "suitableForSyndication": false
+      },
+      "tags": {},
+      "timestamp": 1464103796000,
+      "type": "MAP",
+      "version": "v1.1.6"
+    },
+    "promo": {
+      "headlines": {
+        "headline": "test map IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli",
+        "shortHeadline": "test map IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli"
+      },
+      "id": "urn:bbc:ares::asset:turkce/multimedya/2016/05/160524_tc2_testmap1",
+      "indexImage": {
+        "altText": "",
+        "copyrightHolder": "Getty",
+        "height": 81,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+        "id": "d5e217",
+        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+        "subType": "index",
+        "type": "image",
+        "width": 144
+      },
+      "language": "tr",
+      "locators": {
+        "assetId": "17697357",
+        "assetUri": "/turkce/multimedya/2016/05/160524_tc2_testmap1",
+        "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/05/160524_tc2_testmap1",
+        "curie": "http://www.bbc.co.uk/asset/3fcfce28-21c3-11e6-acd0-649b984e8732"
+      },
+      "media": {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/turkce/meta/dps/junk/2016/05/emp/160524_tc2_testmap1.emp.xml",
+        "id": "17697357",
+        "live": false,
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      "passport": {
+        "taggings": []
+      },
+      "summary": "IŞİD'e direnen Rakkalı gençler 2: Mücadelenin bedeli summary",
+      "timestamp": 1464103796000,
+      "type": "cps"
+    },
+    "relatedContent": {
+      "groups": [],
+      "section": {
+        "name": "Multimedya",
+        "subType": "index",
+        "type": "simple",
+        "uri": "/turkce/multimedya"
+      },
+      "site": {
+        "name": "BBCTurkce.com",
+        "subType": "site",
+        "type": "simple",
+        "uri": "/turkce"
+      }
+    }
+  }

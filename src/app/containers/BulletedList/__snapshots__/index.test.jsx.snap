@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BulletedListContainer should render ltr correctly 1`] = `
-.c1 {
+.c2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -11,7 +11,7 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   list-style-type: none;
 }
 
-.c1 > li::before {
+.c2 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -19,7 +19,7 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   margin-left: -2rem;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
@@ -27,15 +27,19 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   grid-column: 1 / span 6;
 }
 
+.c1 {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c2 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -60,7 +64,7 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -83,29 +87,33 @@ exports[`BulletedListContainer should render ltr correctly 1`] = `
 <div
   class="c0"
 >
-  <ul
+  <div
     class="c1"
-    dir="ltr"
-    role="list"
   >
-    <li
+    <ul
       class="c2"
-      role="listitem"
+      dir="ltr"
+      role="list"
     >
-      It is unordered
-    </li>
-    <li
-      class="c2"
-      role="listitem"
-    >
-      It has three list items
-    </li>
-  </ul>
+      <li
+        class="c3"
+        role="listitem"
+      >
+        It is unordered
+      </li>
+      <li
+        class="c3"
+        role="listitem"
+      >
+        It has three list items
+      </li>
+    </ul>
+  </div>
 </div>
 `;
 
 exports[`BulletedListContainer should render rtl correctly 1`] = `
-.c1 {
+.c2 {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -115,7 +123,7 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   list-style-type: none;
 }
 
-.c1 > li::before {
+.c2 > li::before {
   content: ' ';
   display: inline-block;
   width: 2rem;
@@ -123,7 +131,7 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   margin-right: -2rem;
 }
 
-.c2 {
+.c3 {
   margin-bottom: 1rem;
 }
 
@@ -131,15 +139,19 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   grid-column: 1 / span 6;
 }
 
+.c1 {
+  margin-bottom: 1.5rem;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c1 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c1 {
+  .c2 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -164,7 +176,7 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c0 {
     grid-column: 3 / span 5;
     max-width: 37.75rem;
@@ -187,23 +199,27 @@ exports[`BulletedListContainer should render rtl correctly 1`] = `
 <div
   class="c0"
 >
-  <ul
+  <div
     class="c1"
-    dir="rtl"
-    role="list"
   >
-    <li
+    <ul
       class="c2"
-      role="listitem"
+      dir="rtl"
+      role="list"
     >
-      It is unordered
-    </li>
-    <li
-      class="c2"
-      role="listitem"
-    >
-      It has three list items
-    </li>
-  </ul>
+      <li
+        class="c3"
+        role="listitem"
+      >
+        It is unordered
+      </li>
+      <li
+        class="c3"
+        role="listitem"
+      >
+        It has three list items
+      </li>
+    </ul>
+  </div>
 </div>
 `;

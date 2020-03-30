@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+    "locators": {
+      "assetUri": "/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+      "curie": "http://www.bbc.co.uk/asset/99609098-d4b2-11e5-bba5-fba23db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "turkish",
+    "language": "tr",
+    "lastUpdated": 1550157931009,
+    "firstPublished": 1455632912,
+    "lastPublished": 1455633296,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "42616726", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "42616726",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/turkce/meta/dps/2016/02/emp/160216_vid_genclerde_depresyon.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Uzmanlar gençlerin en sık yaşadığı ruhsal sorunlardan birinin depresyon olduğunu söylüyor.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gençlerde depresyon kendini nasıl gösteriyor? Depresyondaki gençlere yardımcı olmak için neler yapılabilir?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Genç yaşlarda görülen depresyonun detayları video animasyonumuzda...",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Gençlerde depresyon belirtileri nelerdir? ",
+      "headline": "Gençlerde depresyon belirtileri nelerdir? "
+    },
+    "locators": {
+      "assetUri": "/turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+      "curie": "http://www.bbc.co.uk/asset/99609098-d4b2-11e5-bba5-fba23db9bd6e"
+    },
+    "summary": "Uzmanlar gençlerin en sık yaşadığı ruhsal sorunlardan birinin depresyon olduğunu söylüyor. Gençlerde depresyon kendini nasıl gösteriyor? Depresyondaki gençlere yardımcı olmak için neler yapılabilir?",
+    "timestamp": 1550157931009,
+    "passport": {},
+    "media": {
+      "id": "42616726",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/turkce/meta/dps/2016/02/emp/160216_vid_genclerde_depresyon.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e280",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/02/16/160216134014_genclik_depresyon_640x360_bbc_nocredit.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:turkce/multimedya/2016/02/160216_vid_genclerde_depresyon",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Multimedya", "uri": "/turkce/multimedya", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCTurkce.com", "uri": "/turkce", "type": "simple" },
+    "groups": []
+  }
+}

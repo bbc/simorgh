@@ -7,11 +7,15 @@ import 'moment/locale/fr';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Mise à jour',
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
+    chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
@@ -31,14 +35,15 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcafrique',
     twitterSite: '@bbcafrique',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/afrique/institutionelles-49283281#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/afrique/institutionelles-49283281',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Accueil',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +54,7 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
+      navMenuText: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -139,6 +145,9 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
+        contentExpired: "Ce contenu n'est pas disponible",
         audio: 'Audio',
         photogallery: 'Galerie de photos',
         video: 'Vidéo',
@@ -154,6 +163,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Suivez',
         liveLabel: 'EN DIRECT',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -162,11 +172,20 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Les plus lus',
-      lastUpdated: 'Dernière mise à jour: ',
+      lastUpdated: 'Dernière mise à jour:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl:
+        '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
+      frequenciesPageLabel: 'Nos fréquences',
+      header: 'Journaux et Magazines',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/afrique/institutionelles-49283281',
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
@@ -193,6 +212,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/afrique/institutionelles-36826644',
           text: 'Contactez la BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -242,15 +267,10 @@ export const service = {
         url: '/afrique/media/video',
       },
       {
-        title: 'En images',
-        url: '/afrique/media/photogalleries',
-      },
-      {
         title: 'Nos émissions',
         url: '/afrique/nos_emissions/radio',
       },
     ],
-    navigationSection: 'Rubriques',
   },
 };
 

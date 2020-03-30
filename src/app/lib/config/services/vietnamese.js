@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Cập nhật',
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
+    chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
@@ -32,14 +36,15 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/vietnamese/institutional-49283563#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/vietnamese/institutional-49283563',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Tin chính',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +55,7 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -133,12 +139,15 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Máy của bạn không hỗ trợ nghe xem',
+        contentExpired: 'Chương trình không còn nữa.',
         audio: 'Âm thanh',
         photogallery: 'Gallery hình ảnh',
         video: 'Video',
         listen: 'Listen',
         watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -147,11 +156,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Đọc nhiều nhất',
-      lastUpdated: 'Cập nhật gần nhất: ',
+      lastUpdated: 'Cập nhật gần nhất:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/vietnamese/institutional-49283563',
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
@@ -179,6 +193,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/vietnamese/institutional-37623842',
           text: 'Liên hệ BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -220,19 +240,10 @@ export const service = {
         url: '/vietnamese/english',
       },
       {
-        title: 'Hình ảnh',
-        url: '/vietnamese/media/photogalleries',
-      },
-      {
-        title: 'Audio',
-        url: '/vietnamese/media/audio',
-      },
-      {
         title: 'Video',
         url: '/vietnamese/media/video',
       },
     ],
-    navigationSection: 'Mục',
   },
 };
 

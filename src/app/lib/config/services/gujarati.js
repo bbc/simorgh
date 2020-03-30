@@ -7,18 +7,22 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `gu`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'અપડેટેડ',
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
+    chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
     serviceLocalizedName: 'ગુજરાતી',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',
     defaultImageAltText: 'BBC News ગુજરાતી',
     dir: `ltr`,
-    externalLinkText: ', બહારની સામગ્રી ',
+    externalLinkText: ', બહારની સામગ્રી',
     imageCaptionOffscreenText: 'ઇમેજ કૅપ્શન, ',
     videoCaptionOffscreenText: 'વીડિયો કૅપ્શન, ',
     audioCaptionOffscreenText: 'ઓડિયો કૅપ્શન, ',
@@ -31,24 +35,25 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsgujarati',
     twitterSite: '@bbcnewsgujarati',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/gujarati/institutional-50409883#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/gujarati/institutional-50409883',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'સમાચાર',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'વધુ વાંચો ',
+      seeAll: 'વધુ વાંચો',
       home: 'સમાચાર',
       currentPage: 'વર્તમાન પેજ',
-      skipLinkText: 'સામગ્રી પર જાઓ',
+      skipLinkText: 'કન્ટેન્ટ પર જાવ',
       relatedContent: 'સંબંધિત સમાચાર',
+      navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',
         audioPlayer: 'ઓડિયો પ્લેયર',
@@ -77,7 +82,7 @@ export const service = {
             'માફ કરશો, તમે શોધી રહ્યા છો એ પેજ દર્શાવાઈ રહ્યું નથી. કૃપા કરી ફરી કોશિશ કરો',
           solutions: [
             'બ્રાઉઝરનું રિફ્રેશ બટન દબાવો',
-            'કેટલાક સમય બાદ કોશિશ કરો',
+            'થોડા સમય બાદ પ્રયાસ કરો',
           ],
           callToActionFirst: 'વિકલ્પના રૂપે અમારા હોમપેજ ',
           callToActionLinkText: 'BBC News ગુજરાતી',
@@ -115,7 +120,7 @@ export const service = {
               first: 'તમને સારી ઑનલાઇન સેવાઓ આપવા માટે અમે ',
               linkText: 'કુકીઝ',
               last:
-                'નો ઉપયોગ કરીએ છીએ. અમને જણાવો કે તમે આ તમામ કુકીઝથી સહમત છો.',
+                ' નો ઉપયોગ કરીએ છીએ. અમને જણાવો કે તમે આ તમામ કુકીઝથી સહમત છો.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -136,6 +141,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'તમારું ડિવાઇસ મીડિયા પ્લેબૅક સપોર્ટ નથી કરતું',
+        contentExpired: 'આ સામગ્રી હવેથી ઉપલબ્ધ નથી.',
         audio: 'ઓડિયો',
         photogallery: 'ફોટો ગૅલરી',
         video: 'વીડિયો',
@@ -146,25 +153,31 @@ export const service = {
         },
         listen: 'સાંભળો',
         watch: 'જુઓ',
-        liveLabel: 'પેરેંટલ માર્ગદર્શન લૉક ચાલુ કરો',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'આ પહેલાંનો રેડિયો શો',
+        nextRadioShow: 'આગામી રેડિયો શો',
+        duration: 'અવધિ',
       },
     },
     brandSVG,
     mostRead: {
       header: 'સૌથી વધારે વંચાયેલા સમાચાર',
-      lastUpdated: 'લાસ્ટ અપડેટ: ',
+      lastUpdated: 'લાસ્ટ અપડેટ:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/gujarati/institutional-50409883',
-        text: 'તમે બીબીસી પર ભરોસો કેમ કરી શકો',
+        text: 'બીબીસી વિશ્વાસપાત્ર કેમ?',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો.',
+        text: 'બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો',
       },
       links: [
         {
@@ -186,6 +199,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/gujarati/institutional-42224948',
           text: 'બીબીસીનો સંપર્ક કરો',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
@@ -213,8 +232,11 @@ export const service = {
         title: 'આંતરરાષ્ટ્રીય',
         url: '/gujarati/international',
       },
+      {
+        title: '#ISWOTY',
+        url: '/gujarati/resources/idt-0370808c-2dea-4f55-b69f-309a2881ef25',
+      },
     ],
-    navigationSection: 'વિભાગો',
   },
 };
 

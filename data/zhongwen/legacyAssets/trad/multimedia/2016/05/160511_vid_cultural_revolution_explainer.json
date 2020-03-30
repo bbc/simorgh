@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+    "locators": {
+      "assetUri": "/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "curie": "http://www.bbc.co.uk/asset/6145ddd6-1782-11e6-bf35-2e7d3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "chinese_traditional",
+    "language": "zh-Hant",
+    "lastUpdated": 1550916062616,
+    "firstPublished": 1462975922,
+    "lastPublished": 1462976617,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "43781435"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "43781435",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "中共領導人毛澤東50年前發動的「無產階級文化大革命」，掀起了一場持續10年的瘋狂運動，改變了至少一代人的命運。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "多少人顛沛流離、家破人亡、迫害致死；又有多少人在革命的口號中瘋狂。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "50年過去了，我們一起回顧這段歷史。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "視頻：毛澤東發動文革來龍去脈",
+      "headline": "視頻：毛澤東發動文革來龍去脈"
+    },
+    "locators": {
+      "assetUri": "/zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+      "curie": "http://www.bbc.co.uk/asset/6145ddd6-1782-11e6-bf35-2e7d3db9bd6e"
+    },
+    "summary": "中共領導人毛澤東發動「無產階級文化大革命」，掀起了一場持續10年的瘋狂政治運動。50年過去了，我們一起來回顧這段歷史。",
+    "timestamp": 1550916062616,
+    "passport": {},
+    "media": {
+      "id": "43781435",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/zhongwen/simp/meta/dps/2016/05/emp/160511_vid_cultural_revolution_explainer.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e225",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/05/11/160511135650_cult_rev_144x81__nocredit.jpg",
+      "height": 81,
+      "width": 144,
+      "altText": "文革",
+      "copyrightHolder": " ",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:zhongwen/trad/multimedia/2016/05/160511_vid_cultural_revolution_explainer",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "多媒體",
+      "uri": "/zhongwen/trad/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "bbcchinese.com",
+      "uri": "/zhongwen/trad",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

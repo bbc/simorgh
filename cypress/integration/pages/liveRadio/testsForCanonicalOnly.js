@@ -1,7 +1,6 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import config from '../../../support/config/services';
-import getMappedServiceId from './helper';
+import getEmbedUrl from './helper';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -15,29 +14,32 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
   pageType,
   variant,
 }) =>
-  describe(`Canonical Tests for ${service} ${pageType}`, () => {
-    describe('live radio body', () => {
-      it('should render an audio player embed', () => {
-        cy.request(`${config[service].pageTypes.liveRadio.path}.json`).then(
-          ({ body }) => {
-            const { id, externalId } = body.content.blocks[2];
-            const serviceId = getMappedServiceId(externalId);
-            const { lang } = appConfig[service][variant];
-            cy.get(
-              `iframe[src="${envConfig.avEmbedBaseUrl}/ws/av-embeds/media/${serviceId}/${id}/${lang}"]`,
-            ).should('be.visible');
-          },
-        );
+  describe(`testsThatFollowSmokeTestConfigForCanonicalOnly for ${service} ${pageType}`, () => {
+    describe('Audio Player', () => {
+      const { lang } = appConfig[service][variant];
+      let embedUrl;
+
+      beforeEach(() => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          embedUrl = getEmbedUrl(body, lang);
+        });
+      });
+
+      it('should be rendered', () => {
+        cy.get(`iframe[src*="${embedUrl}"]`).should('be.visible');
+      });
+
+      it('embed URL should be reachable', () => {
+        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
       });
     });
 
-    // TODO Chartbeat not yet implemented
     describe('Chartbeat', () => {
       if (envConfig.chartbeatEnabled) {
-        it.skip('should have a script with src value set to chartbeat source', () => {
+        it('should have a script with src value set to chartbeat source', () => {
           cy.hasScriptWithChartbeatSrc();
         });
-        it.skip('should have chartbeat config set to window object', () => {
+        it('should have chartbeat config set to window object', () => {
           cy.hasGlobalChartbeatConfig();
         });
       }

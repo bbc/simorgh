@@ -1,9 +1,7 @@
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
-import applySquashTopstories from '../../../../src/app/lib/utilities/preprocessor/rules/topstories';
 
-const serviceJsonPath = service =>
-  `${config[service].pageTypes.frontPage.path}.json`;
+const serviceJsonPath = () => `${Cypress.env('currentPath')}.json`;
 
 // Limiting to only one service
 const serviceHasIndexAlsos = service => service === 'thai';
@@ -27,29 +25,6 @@ const isValidUsefulLinks = pageData => {
   return false;
 };
 
-const isValidRadioBulletin = pageData => {
-  return pageData.some(group => {
-    const hasStrapline = 'strapline' in group;
-    const hasRadioBulletin = group.items.some(
-      item =>
-        item.assetTypeCode === 'PRO' && item.contentType === 'RadioBulletin',
-    );
-
-    return hasStrapline && hasRadioBulletin;
-  });
-};
-
-const isValidTvBulletin = pageData => {
-  return pageData.some(group => {
-    const hasStrapline = 'strapline' in group;
-    const hasTvBulletin = group.items.some(
-      item => item.assetTypeCode === 'PRO' && item.contentType === 'TVBulletin',
-    );
-
-    return hasStrapline && hasTvBulletin;
-  });
-};
-
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -69,7 +44,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       });
 
       describe('Section', () => {
-        it('should be labelled by a visible section label', () => {
+        it('should be labelled by a visible section label for 1008px & 320px layouts', () => {
+          cy.viewport(1008, 768);
           cy.get('section')
             .should('have.length.of.at.least', 1)
             .should('be.visible')
@@ -89,7 +65,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
             });
         });
 
-        it('should contain at least one story promo', () => {
+        it('should contain at least one story promo for 1008px & 320px layouts', () => {
+          cy.viewport(1008, 768);
           cy.get('section').within(() => {
             cy.get('img')
               .should('have.length.of.at.least', 1)
@@ -123,7 +100,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               .should('be.visible')
               .find('a')
               .should('have.attr', 'href');
-
+            // This check would only run for the top stories section and not any other sections
             cy.get('p').then($el => {
               if ($el.length > 0) {
                 cy.get('p')
@@ -171,7 +148,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         }
 
         it('should contain Index Alsos if relatedItems block exists, but only within topstories block', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const topstories = body.content.groups[0].items[0];
             const relatedItemsExists = 'relatedItems' in topstories;
 
@@ -213,7 +190,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         });
 
         it('should contain Useful Links if valid usefulLinks block data exists', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
+          cy.request(serviceJsonPath()).then(({ body }) => {
             const pageData = body.content.groups;
             if (isValidUsefulLinks(pageData)) {
               cy.get('[data-e2e="useful-links"]')
@@ -227,36 +204,6 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               cy.get('[aria-labelledby="Useful-links"]').should(
                 'not.be.visible',
               );
-            }
-          });
-        });
-
-        it('should contain Radio Bulletin if a promo of type RadioBulletin is in the feed', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = applySquashTopstories(body);
-            const { groups } = pageData.content;
-
-            if (isValidRadioBulletin(groups)) {
-              cy.get('[class^="RadioBulletin"]')
-                .eq(0)
-                .should('be.visible');
-            } else {
-              cy.get('[class^="RadioBulletin"').should('not.be.visible');
-            }
-          });
-        });
-
-        it('should contain TV Bulletin if a promo of type TVBulletin is in the feed', () => {
-          cy.request(serviceJsonPath(service)).then(({ body }) => {
-            const pageData = applySquashTopstories(body);
-            const { groups } = pageData.content;
-
-            if (isValidTvBulletin(groups)) {
-              cy.get('[class^="TVBulletin"]')
-                .eq(0)
-                .should('be.visible');
-            } else {
-              cy.get('[class^="TVBulletin"').should('not.be.visible');
             }
           });
         });

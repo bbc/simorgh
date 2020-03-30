@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `rw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Vyavuguruwe ',
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
+    chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
     serviceLocalizedName: 'Gahuza',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcgahuza',
     twitterSite: '@bbcgahuza',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/gahuza/institutional-49283343#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/gahuza/institutional-49283343',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: "Urupapuro rw'itangiriro",
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,10 +53,11 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      navMenuText: 'Imice',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Ibikinwa',
+        audioPlayer: 'Kina amajwi',
+        videoPlayer: 'Kina amasanamu',
       },
       error: {
         404: {
@@ -135,7 +140,9 @@ export const service = {
         },
       },
       media: {
-        audio: 'Umviriza',
+        noJs: 'Ntibishobora gukina mu cuma cawe',
+        contentExpired: 'Ibi ntibikiboneka.',
+        audio: 'Amajwi',
         photogallery: 'Amasanamu',
         video: 'Video',
         bbc_gahuza_radio: {
@@ -143,22 +150,28 @@ export const service = {
           subtitle:
             'Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Umviriza',
+        watch: 'Raba',
         liveLabel: 'LIVE',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'Ikiganiro ca radiyo giheruka',
+        nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
+        duration: 'Umwanya bimara',
       },
     },
     brandSVG,
     mostRead: {
       header: 'Ibisomwa cane',
-      lastUpdated: 'Ibiheruka kuvugururwa: ',
+      lastUpdated: 'Ibiheruka kuvugururwa:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/gahuza/institutional-49283343',
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
@@ -186,6 +199,12 @@ export const service = {
           href: 'https://www.bbc.com/gahuza/institutional-35754061',
           text: 'Vugana na BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
     },
@@ -205,15 +224,10 @@ export const service = {
         url: '/gahuza/imikino',
       },
       {
-        title: 'Umviriza',
-        url: '/gahuza/media/audio',
-      },
-      {
         title: 'Video',
         url: '/gahuza/media/video',
       },
     ],
-    navigationSection: 'Imice',
   },
 };
 

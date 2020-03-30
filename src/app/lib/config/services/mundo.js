@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { mundo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -15,11 +16,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Actualización',
+    articleTimestampPrefix: 'Actualizado',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
+    chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
@@ -46,7 +51,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Noticias',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +61,7 @@ export const service = {
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
+      navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
         audioPlayer: 'Reproductor de audio',
@@ -71,7 +76,7 @@ export const service = {
           solutions: [
             'Revisa la dirección URL',
             'Presiona el botón de actualizar en tu navegador',
-            'Buscando esta página a través de la barra de búsqueda de la BBC',
+            'Busca esta página a través de la barra de búsqueda de la BBC',
           ],
           callToActionFirst: 'Como alternativa, por favor visita la ',
           callToActionLinkText: 'portada de BBC News Mundo',
@@ -82,7 +87,7 @@ export const service = {
           statusCode: '500',
           title: 'Error interno del servidor',
           message:
-            'Lo sentimos, actualmente no somos capaces de llevarte a la página que buscas. Por favor, intenta:',
+            'Lo sentimos, actualmente no podemos llevarte a la página que buscas. Por favor, intenta::',
           solutions: [
             'Presiona el botón de actualizar en tu navegador',
             'Inténtalo más tarde',
@@ -95,18 +100,18 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: 'Hemos actualizado nuestra Política de Privacidad y Cookies',
+          title: 'Hemos actualizado nuestra política de privacidad y cookies',
           description: {
             uk: {
               first:
-                'Hemos realizado cambios importantes en nuestra Política de Privacidad y Cookies y queremos que sepas lo que esto significa para ti y tus datos.',
+                'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'Hemos realizado cambios importantes en nuestra Política de Privacidad y Cookies y queremos que sepas lo que esto significa para ti y tus datos.',
+                'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -137,27 +142,36 @@ export const service = {
             },
           },
           accept: 'Sí, estoy de acuerdo',
-          reject: 'No, llévame a los ajustes',
+          reject: 'No, llévame a la configuración',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
+        noJs:
+          'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
+        contentExpired: 'Este contenido ya no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',
-        listen: 'Listen',
-        watch: 'Vea',
+        listen: 'Escuchar',
+        watch: 'Ver',
         liveLabel: 'EN VIVO',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'Programa anterior',
+        nextRadioShow: 'Próximo programa',
+        duration: 'Duración',
       },
     },
     brandSVG,
     mostRead: {
       header: 'Más leídas',
-      lastUpdated: 'Última actualización: ',
+      lastUpdated: 'Última actualización:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -189,6 +203,12 @@ export const service = {
           href: 'https://www.bbc.com/mundo/institucional-36400011',
           text: 'Contacta a la BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',
@@ -200,16 +220,13 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
     navigation: [
       {
         title: 'Noticias',
         url: '/mundo',
-      },
-      {
-        title: 'Hay Festival',
-        url: '/mundo/noticias-36795069',
       },
       {
         title: 'América Latina',
@@ -248,11 +265,14 @@ export const service = {
         url: '/mundo/media/video',
       },
       {
+        title: 'Hay Festival',
+        url: '/mundo/noticias-36795069',
+      },
+      {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
       },
     ],
-    navigationSection: 'Secciones',
   },
 };
 

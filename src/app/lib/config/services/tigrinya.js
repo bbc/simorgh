@@ -11,11 +11,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ti`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'ዝተመሓየሸ',
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
+    chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'ትግርኛ',
@@ -35,24 +39,25 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/tigrinya/institutional-49283259#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/tigrinya/institutional-49283259',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'ዜና',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'ኩሉ ረኣይ',
-      home: 'ዜና',
-      currentPage: 'ህሉው ገጽ',
-      skipLinkText: 'ናብቲ ትሕዝቶ ቀጽል',
+      seeAll: 'ንኹሉ ርኣዩ',
+      home: 'መእተዊ ገጽ',
+      currentPage: 'ዘለኹሞ ገጽ',
+      skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
+      navMenuText: 'ክፍልታት',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -61,23 +66,23 @@ export const service = {
       error: {
         404: {
           statusCode: '404',
-          title: 'እቲ ገጽ ኣይኽፈትን',
-          message: 'ይቕረታ! እቲ እትእልሾ ዘለኻ ገጽ፡ ክንረኽቦ ኣይከኣልናን። በጃኻ ነዚ ዝስዕብ ፈትን፡',
+          title: 'እቲ ገጽ ክርከብ ኣይከኣለን',
+          message: 'ይቕረታ! እቲ እትደልዩዎ ዘለኹም ገጽ ከነቕርበልኩም ኣይከኣልናን። በዚ ፈትኑ፡',
           solutions: [
-            'እቲ ዩኣርኤል ትኽክል ምዃኑ ኣረጋግጽ',
-            'ኣብ መአለሺኻ ንዘሎ ደጊምካ መፈተኒ መልጎም ጠውቕ',
-            'ነቲ ናይ ቢቢሲ መአለሺ ስፍራ ተጠቒምካ ነዚ ገጽ ክትረኽቦ ፈትን',
+            'ዝተጠቐምኩምሉ መእተዊ (URL) ቅኑዕ ምዃኑ ኣረጋግጹ',
+            'ኣብ መእተዊኹም (ብራውዘር) ዘሎ መድገሚ ጠውቑ',
+            "ነዚ'ዚ ንምርካብ ናይ ቢቢሲ መእተዊ ክትጥቀሙ ትኽእሉ",
           ],
-          callToActionFirst: 'ከም ኣማራጺ ከኣ ',
-          callToActionLinkText: 'BBC News ትግርኛ',
-          callToActionLast: ' ረኣይ።',
+          callToActionFirst: 'ከም ኣማራጺ ኣብ ናይ ',
+          callToActionLinkText: 'BBC News ትግርኛ ገጽ',
+          callToActionLast: ' ተወከሱ።',
           callToActionLinkUrl: 'https://www.bbc.com/tigrinya',
         },
         500: {
           statusCode: '500',
           title: 'ውሽጣዊ ጸገም ሰርቨር',
-          message: 'ይቕረታ፡ ነቲ ዝደለኻዮ ገጽ ክነቕርበልካ ኣይከኣልናን። በጃኻ፡ ነዚ ዝስዕብ ፈትን፡',
-          solutions: ['ኣብ መአለሺኻ ንዘሎ ደጊምካ መፈተኒ መልጎም ጠውቕ', 'ጸኒሕካ ደጊምካ ፈትን'],
+          message: 'ይቕሬታ፡ ነቲ ዝደለኹሞ ገጽ ክነቕርበልኩም ኣይከኣልናን። በዚ ፈትኑ፡',
+          solutions: ['ኣብ መእተዊኹም (ብራውዘር) ዘሎ መድገሚ ጠውቑ', 'ጸኒሕኩም ክትምለሱ ምስ እትደልዩ'],
           callToActionFirst: 'ከም ኣማራጺ ከኣ ',
           callToActionLinkText: 'BBC News ትግርኛ',
           callToActionLast: ' ረኣይ።',
@@ -108,60 +113,68 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'ኩኪታት ክትጥቀሙ ከምዝተሰማማዕኩም ኣፍልጡና',
+          title: "ኩኪስ' ንምጥቃም ከም ዝተሰማማዕኩም ኣፍልጡና",
           description: {
             uk: {
-              first: 'ኣብ መርበብ ሓበሬታና ዝሓሸ ኣገልግሎት መታን ክትረኽቡ ኢና ',
-              linkText: 'ኩኪታት',
-              last: ' እንጥቀም። በዞም ኩኪታት እዚኦም ከምእተሰማማዕኩም ኣፍሉጡና።',
+              first: 'ኣብ መርበብ ሓበሬታና ዝበለጸ ኣገልግሎት መታን ክትረኽቡ ኢና ',
+              linkText: "'ኩኪስ'",
+              last: " እንጥቀም። ንኹሎም እዞም 'ኩኪስ'  ከም እተሰማማዕኩምሎም ኣፍልጡና።",
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'ንሕና ኾነ መሻርኽትና ከም ',
-              linkText: 'ኩኪታት',
+              first: 'ንሕናን መሻርኽትናን ከም ',
+              linkText: 'ኩኪስ',
               last:
-                ' ዝኣመሰሉ ቴክኖሎጂ ተጠቒምና፡ ነቲ ናትኩም ናይ ኣለሻ ዴታ ብምውህላል ንዓኹም ኣገዳሲ ክኸውን ዝኽእል ትሕዝቶ ወይ መወዓውዒ ንክነርእየኩም ንጥቀመሉ። እንተድኣተሰማሚዕኩም ኣፍልጡና።',
+                "  ዝኣመሰሉ ቴክኖሎጂ ክንጥቀም ዘድልየና፡ ብዛዕባ ናይ ኢንተርነት ኣጠቓቕማኹም ሓበሬታ ብምውህላል ንዓኹም ውልቃዊ ኣገዳስነት ዘለዎ ትሕዝቶ ወይ መወዓውዒ ብዝበለጸ ኣገባብ ንምቕራብ'ዩ። ትሰማምዑ እንተ ዄንኩም ኣፍልጡና።",
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
           },
-          accept: 'እወ! እስማማዕ እየ።',
-          reject: 'ኣይፋል፡ ናብ መተዓራረዪ (ሴቲንግ) ውሰደኒ።',
+          accept: 'እወ፡ እሰማማዕ እየ።',
+          reject: 'ኣይፋል፡ ናብ መተዓራረዪ (ሴቲንግ) ውሰዱኒ።',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
-        audio: 'ድምፂ',
+        noJs: 'ትጥቀምሉ ዘለኹም መሳርሒ ኣይተቐበሎን።',
+        contentExpired: 'እዚ እትደልይዎ ዘለኹም ትሕዝቶ የለን',
+        audio: 'ድምጺ',
         photogallery: 'ስእልታት',
         video: 'ቪድዮ',
-        listen: 'ናይ መወዳእታ ፍጻመታት',
-        watch: 'ተመልከት',
-        liveLabel: 'ቀጥታ ስርጭት',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        listen: 'ስምዑ',
+        watch: 'ተዓዘቡ',
+        liveLabel: 'ቀጥታ',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',
+        nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
+        duration: 'ዕምሪ ፈነወ',
       },
     },
     brandSVG,
     mostRead: {
-      header: 'ብበዝሒ ዝተነበበ',
-      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ: ',
+      header: 'ብብዝሒ ዝተነበ',
+      lastUpdated: 'ንመወዳእታ እዋን ዝተመሓየሸሉ:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'ን BBC News ንምንታይ ክትኣምንዎ ከምዘለኩም',
+        href: 'https://www.bbc.com/tigrinya/institutional-49283259',
+        text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
-        text: 'ንናይ ደገ ርከብ ብዝምልከት፡ ናትና ኣረኣእያ እንታይ ከምዝመስል ኣንብቡ።',
+        text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [
         {
           href: 'https://www.bbc.co.uk/usingthebbc/terms/',
-          text: 'ውዕሊ ኣጠቓቕማ',
+          text: 'ውዕል ተጠቃምነት',
         },
         {
           href: 'https://www.bbc.co.uk/aboutthebbc',
@@ -169,18 +182,24 @@ export const service = {
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/privacy/',
-          text: 'ናይ ምሽጥራውነት ፖሊሲ',
+          text: 'ናይ ስቱርነት ፖሊሲ',
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
-          text: 'ኩኪታት',
+          text: 'ኩኪስ',
         },
         {
           href: 'https://www.bbc.com/tigrinya/institutional-42228875',
-          text: 'ንቢቢሲ የዛርቡ',
+          text: 'ንቢቢሲ ንምርካብ',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
-      copyrightText: 'BBC. ቢቢሲ ንናይ ደገ መርበብ ሓበሬታታት ሓላፍነት ኣይወስድን.',
+      copyrightText: 'BBC. ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን።',
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
@@ -197,7 +216,6 @@ export const service = {
         url: '/tigrinya/popular/read',
       },
     ],
-    navigationSection: 'ክፍልታት',
     timezone: 'Africa/Addis_Ababa',
   },
 };

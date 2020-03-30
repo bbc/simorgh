@@ -2,13 +2,16 @@ import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
+  getContentId,
   LIBRARY_VERSION,
-} from '../../../../lib/analyticsUtils';
+  getThingAttributes,
+} from '#lib/analyticsUtils';
 
 export const buildCpsAssetPageATIParams = (
   pageData,
   requestContext,
   serviceContext,
+  contentType,
 ) => {
   const { platform, statsDestination } = requestContext;
   const {
@@ -20,16 +23,28 @@ export const buildCpsAssetPageATIParams = (
 
   const { metadata, promo } = pageData;
 
-  const getChapter1 = pageIdentifier => pageIdentifier.split('.')[1];
+  const getChapter1 = pageIdentifier => {
+    const chapter = pageIdentifier.split('.')[1];
+    if (['media_asset', 'multimedia'].includes(chapter)) {
+      return null;
+    }
+    return chapter;
+  };
 
   const page = path(['analyticsLabels', 'counterName'], metadata);
   const isValidPage = page && typeof page === 'string' && page.includes('.');
   const chapter1 = isValidPage ? getChapter1(page) : false;
+  const ldpThingIds = getThingAttributes('thingId', pageData);
+  const ldpThingLabels = getThingAttributes('thingLabel', pageData);
+  const isLegacyAsset = url => url.split('/').length > 7;
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: path(['id'], metadata),
-    contentType: 'article-media-asset',
+    contentId: getContentId(
+      isLegacyAsset(requestContext.canonicalLink) ? 'topcat' : 'cps',
+      pageData,
+    ),
+    contentType,
     language: path(['language'], metadata),
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
     pageIdentifier: chapter1 ? `${chapter1}::${page}` : page,
@@ -38,6 +53,8 @@ export const buildCpsAssetPageATIParams = (
     timeUpdated: getPublishedDatetime('lastPublished', pageData),
     categoryName: path(['passport', 'category', 'categoryName'], metadata),
     campaigns: path(['passport', 'campaigns'], metadata),
+    ...(ldpThingIds && { ldpThingIds }),
+    ...(ldpThingLabels && { ldpThingLabels }),
     producerId: atiAnalyticsProducerId,
     libraryVersion: LIBRARY_VERSION,
     statsDestination,
@@ -50,8 +67,14 @@ export const buildCpsAssetPageATIUrl = (
   pageData,
   requestContext,
   serviceContext,
+  contentType,
 ) => {
   return buildATIPageTrackPath(
-    buildCpsAssetPageATIParams(pageData, requestContext, serviceContext),
+    buildCpsAssetPageATIParams(
+      pageData,
+      requestContext,
+      serviceContext,
+      contentType,
+    ),
   );
 };

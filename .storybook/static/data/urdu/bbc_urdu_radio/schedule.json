@@ -1,0 +1,373 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584015974000,
+      "publishedTimeStart": 1584964800000,
+      "publishedTimeEnd": 1584965400000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1584964800000,
+      "transmissionTimeEnd": 1584965400000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7gzv0l.imi:ws.bbc.co.uk/URDUA1584964800",
+        "pid": "p086fjxk"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0772s",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7gzv0l"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584019554000,
+      "publishedTimeStart": 1584968400000,
+      "publishedTimeEnd": 1584969000000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1584968400000,
+      "transmissionTimeEnd": 1584969000000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7gzyrq.imi:ws.bbc.co.uk/URDUA1584968400",
+        "pid": "p086frc4"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z07btx",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7gzyrq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584023159000,
+      "publishedTimeStart": 1584972000000,
+      "publishedTimeEnd": 1584972600000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1584972000000,
+      "transmissionTimeEnd": 1584972600000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h02hv.imi:ws.bbc.co.uk/URDUA1584972000",
+        "pid": "p086fyx7"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z07gl1",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h02hv"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584102374000,
+      "publishedTimeStart": 1585051200000,
+      "publishedTimeEnd": 1585051800000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585051200000,
+      "transmissionTimeEnd": 1585051800000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h2qxp.imi:ws.bbc.co.uk/URDUA1585051200",
+        "pid": "p086k1ks"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0b3zw",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h2qxp"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584106025000,
+      "publishedTimeStart": 1585054800000,
+      "publishedTimeEnd": 1585055400000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585054800000,
+      "transmissionTimeEnd": 1585055400000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h2vnt.imi:ws.bbc.co.uk/URDUA1585054800",
+        "pid": "p086k8rr"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0b7r0",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h2vnt"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584109583000,
+      "publishedTimeStart": 1585058400000,
+      "publishedTimeEnd": 1585059000000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585058400000,
+      "transmissionTimeEnd": 1585059000000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h2zdy.imi:ws.bbc.co.uk/URDUA1585058400",
+        "pid": "p086khpk"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0bch4",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h2zdy"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584188735000,
+      "publishedTimeStart": 1585137600000,
+      "publishedTimeEnd": 1585138200000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585137600000,
+      "transmissionTimeEnd": 1585138200000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h5mts.imi:ws.bbc.co.uk/URDUA1585137600",
+        "pid": "p086nccw"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0f0wz",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h5mts"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584192349000,
+      "publishedTimeStart": 1585141200000,
+      "publishedTimeEnd": 1585141800000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1585141200000,
+      "transmissionTimeEnd": 1585141800000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h5rkx.imi:ws.bbc.co.uk/URDUA1585141200",
+        "pid": "p086nhyv"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0f4n3",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h5rkx"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_urdu_radio",
+      "serviceId": "bbc_urdu_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893489000000,
+      "publishedTimeDuration": "PT10M",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893489000000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshg43h7h5wb1.imi:ws.bbc.co.uk/URDUA1585144800",
+        "pid": "p086nnnt"
+      },
+      "brand": {
+        "pid": "p03413l5",
+        "title": "بی بی سی اردو نیوز بلیٹن",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "episode": {
+        "pid": "w172x9dy2z0f8d7",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dm29.jpg",
+        "synopses": {
+          "short": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن",
+          "medium": "دن بھر کی اہم خبروں پر مشتمل دس منٹ دورانیے کے بی بی سی اردو کے نیوز بلیٹن"
+        }
+      },
+      "version": {
+        "pid": "w1mshg43h7h5wb1"
+      }
+    }
+  ]
+}

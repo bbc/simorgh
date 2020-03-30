@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
+    "locators": {
+      "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
+      "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "azeri",
+    "language": "az",
+    "lastUpdated": 1550232332010,
+    "firstPublished": 1348052917,
+    "lastPublished": 1348053367,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "previouslyArchived": null,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_id": "20005826", "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "20005826",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Milli telekanallarda yayımlanan video zabitlərin məhbusları zorakılıqla döydüyünü göstərir.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gecə saatlarında müxalifətin TV9 telekanalında yayımlanan göruntü bir zabitin məhbusa qarşı süpürgə ilə cinsi zorakılıq etdiyini göstərir.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Həbsxanalara məsul olan nazir Xatuna Kalmaxelidze istefa verib. “8 nömrəli həbsxanada baş verənlər dəhşətlidir və mən Baş Nazirə istefa ərizəmi vermişəm,” - o deyib.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gürcüstan prezidenti Mixail Saakaşvili bu hadisədən sarsıldığını və qəzəbləndiyini, həmçinin zorakılığa görə məsuliyyət daşıyanları cəzalandıracağını söyləyib.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Çərşənbə axşamı yayımdan sonra yüzlərlə etirazçı Gürcüstanın paytaxtı Tbilisidə yürüş keçirib və nazirin istefasını tələb edib.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Məlumata görə on nəfər, o cümlədən həbsxananın rəisi həbs olunub.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gürcüstanda gələn ay prezident seçkiləri keçiriləcək. Prezident Saakaşvilinin ən böyük rəqibi Gürcüstanın ən varlı adamı Bidzina İvanişvili sayılır.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib",
+      "headline": "Həbsxanada zorlama videosu gürcüstanlıları qəzəbləndirib"
+    },
+    "locators": {
+      "assetUri": "/azeri/multimedia/2012/09/120919_georgia_prison_video",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/multimedia/2012/09/120919_georgia_prison_video",
+      "curie": "http://www.bbc.co.uk/asset/ae2c2c32-786a-11e7-b89b-72943db9bd6e"
+    },
+    "summary": "Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.",
+    "timestamp": 1550232332010,
+    "passport": {},
+    "media": {
+      "id": "20005826",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/azeri/meta/dps/2012/09/emp/120919_georgia_prison_video.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d7e216",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2012/09/19/120919091538_georgia_prison_violence_112x63_reutersvideostill_nocredit.jpg",
+      "height": 63,
+      "width": 112,
+      "altText": "Gürcüstan həbsxanalarında zorakılıq",
+      "copyrightHolder": "reuters video still",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:azeri/multimedia/2012/09/120919_georgia_prison_video",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": { "subType": "index", "name": "Multimedia", "uri": "/azeri/multimedia", "type": "simple" },
+    "site": { "subType": "site", "name": "BBCAzeri.com", "uri": "/azeri", "type": "simple" },
+    "groups": []
+  }
+}

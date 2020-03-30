@@ -1,0 +1,496 @@
+{
+  "schedules": [
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584008790000,
+      "publishedTimeStart": 1584961170000,
+      "publishedTimeEnd": 1584963000000,
+      "publishedTimeDuration": "PT30M30S",
+      "transmissionTimeStart": 1584961170000,
+      "transmissionTimeEnd": 1584963000000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfs7k6myc5z.imi:ws.bbc.co.uk/SOMLA1584961170",
+        "pid": "p086f1ms"
+      },
+      "brand": {
+        "pid": "p02n9xd2",
+        "title": "Idaacadda Duhurnimo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "synopses": {
+          "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
+          "medium": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha."
+        }
+      },
+      "episode": {
+        "pid": "w172x92kf5jdb9y",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "synopses": {
+          "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
+          "medium": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha."
+        }
+      },
+      "version": {
+        "pid": "w1mshfs7k6myc5z"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584019555000,
+      "publishedTimeStart": 1584971970000,
+      "publishedTimeEnd": 1584974700000,
+      "publishedTimeDuration": "PT45M30S",
+      "transmissionTimeStart": 1584971970000,
+      "transmissionTimeEnd": 1584974700000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfrttvbm26q.imi:ws.bbc.co.uk/SOMLA1584971970",
+        "pid": "p086frc6"
+      },
+      "brand": {
+        "pid": "p034117k",
+        "title": "Dunida Iyo Maanta",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+          "medium": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida."
+        }
+      },
+      "episode": {
+        "pid": "w172x924pt721bp",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+          "medium": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida."
+        }
+      },
+      "version": {
+        "pid": "w1mshfrttvbm26q"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584033945000,
+      "publishedTimeStart": 1584986370000,
+      "publishedTimeEnd": 1584987570000,
+      "publishedTimeDuration": "PT20M",
+      "transmissionTimeStart": 1584986370000,
+      "transmissionTimeEnd": 1584987570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfr0d3qy7ry.imi:ws.bbc.co.uk/SOMLA1584986370",
+        "pid": "p086gly3"
+      },
+      "brand": {
+        "pid": "p034117l",
+        "title": "Caawa Iyo Caalamka",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        }
+      },
+      "episode": {
+        "pid": "w172x91b82md6wx",
+        "presentationTitle": "23/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        }
+      },
+      "version": {
+        "pid": "w1mshfr0d3qy7ry"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584073524000,
+      "publishedTimeStart": 1585022400000,
+      "publishedTimeEnd": 1585024140000,
+      "publishedTimeDuration": "PT29M",
+      "transmissionTimeStart": 1585022400000,
+      "transmissionTimeEnd": 1585024140000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfsn8kyc23s.imi:ws.bbc.co.uk/SOMLA1585022400",
+        "pid": "p086hs3d"
+      },
+      "brand": {
+        "pid": "p034117j",
+        "title": "Idaacadda Subaxnimo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+          "medium": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha."
+        }
+      },
+      "episode": {
+        "pid": "w172x92z4jtt17r",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+          "medium": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha."
+        }
+      },
+      "version": {
+        "pid": "w1mshfsn8kyc23s"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584095131000,
+      "publishedTimeStart": 1585047570000,
+      "publishedTimeEnd": 1585049400000,
+      "publishedTimeDuration": "PT30M30S",
+      "transmissionTimeStart": 1585047570000,
+      "transmissionTimeEnd": 1585049400000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfs7k6n1832.imi:ws.bbc.co.uk/SOMLA1585047570",
+        "pid": "p086jl8w"
+      },
+      "brand": {
+        "pid": "p02n9xd2",
+        "title": "Idaacadda Duhurnimo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "synopses": {
+          "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
+          "medium": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha."
+        }
+      },
+      "episode": {
+        "pid": "w172x92kf5jh771",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "synopses": {
+          "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
+          "medium": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha."
+        }
+      },
+      "version": {
+        "pid": "w1mshfs7k6n1832"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584106029000,
+      "publishedTimeStart": 1585058370000,
+      "publishedTimeEnd": 1585061970000,
+      "publishedTimeDuration": "PT1H",
+      "transmissionTimeStart": 1585058370000,
+      "transmissionTimeEnd": 1585061970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfrf3h1c9x5.imi:ws.bbc.co.uk/SOMLA1585058370",
+        "pid": "p086k8s2"
+      },
+      "brand": {
+        "pid": "p034117k",
+        "title": "Dunida Iyo Maanta",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+          "medium": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida."
+        }
+      },
+      "episode": {
+        "pid": "w172x91qzfxt914",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+          "medium": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida."
+        }
+      },
+      "version": {
+        "pid": "w1mshfrf3h1c9x5"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584120335000,
+      "publishedTimeStart": 1585072770000,
+      "publishedTimeEnd": 1585074570000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585072770000,
+      "transmissionTimeEnd": 1585074570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfqlnrfphgd.imi:ws.bbc.co.uk/SOMLA1585072770",
+        "pid": "p086l69f"
+      },
+      "brand": {
+        "pid": "p034117l",
+        "title": "Caawa Iyo Caalamka",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        }
+      },
+      "episode": {
+        "pid": "w172x90xjqb4glc",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        }
+      },
+      "version": {
+        "pid": "w1mshfqlnrfphgd"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584159927000,
+      "publishedTimeStart": 1585108800000,
+      "publishedTimeEnd": 1585110540000,
+      "publishedTimeDuration": "PT29M",
+      "transmissionTimeStart": 1585108800000,
+      "transmissionTimeEnd": 1585110540000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfsn8kyfz0w.imi:ws.bbc.co.uk/SOMLA1585108800",
+        "pid": "p086mmqt"
+      },
+      "brand": {
+        "pid": "p034117j",
+        "title": "Idaacadda Subaxnimo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+          "medium": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha."
+        }
+      },
+      "episode": {
+        "pid": "w172x92z4jtwy4v",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+          "medium": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha."
+        }
+      },
+      "version": {
+        "pid": "w1mshfsn8kyfz0w"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584181529000,
+      "publishedTimeStart": 1585133970000,
+      "publishedTimeEnd": 1585135800000,
+      "publishedTimeDuration": "PT30M30S",
+      "transmissionTimeStart": 1585133970000,
+      "transmissionTimeEnd": 1585135800000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfs7k6n4505.imi:ws.bbc.co.uk/SOMLA1585133970",
+        "pid": "p086n515"
+      },
+      "brand": {
+        "pid": "p02n9xd2",
+        "title": "Idaacadda Duhurnimo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "synopses": {
+          "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
+          "medium": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha."
+        }
+      },
+      "episode": {
+        "pid": "w172x92kf5jl444",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "synopses": {
+          "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
+          "medium": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha."
+        }
+      },
+      "version": {
+        "pid": "w1mshfs7k6n4505"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584192351000,
+      "publishedTimeStart": 1585144770000,
+      "publishedTimeEnd": 1585148370000,
+      "publishedTimeDuration": "PT1H",
+      "transmissionTimeStart": 1585144770000,
+      "transmissionTimeEnd": 1585148370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfrf3h1g6t8.imi:ws.bbc.co.uk/SOMLA1585144770",
+        "pid": "p086nhz1"
+      },
+      "brand": {
+        "pid": "p034117k",
+        "title": "Dunida Iyo Maanta",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+          "medium": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida."
+        }
+      },
+      "episode": {
+        "pid": "w172x91qzfxx5y7",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
+          "medium": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida."
+        }
+      },
+      "version": {
+        "pid": "w1mshfrf3h1g6t8"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584206736000,
+      "publishedTimeStart": 1585159170000,
+      "publishedTimeEnd": 1585160970000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585159170000,
+      "transmissionTimeEnd": 1585160970000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfqlnrfsdch.imi:ws.bbc.co.uk/SOMLA1585159170",
+        "pid": "p086nwdg"
+      },
+      "brand": {
+        "pid": "p034117l",
+        "title": "Caawa Iyo Caalamka",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        }
+      },
+      "episode": {
+        "pid": "w172x90xjqb7chg",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
+        }
+      },
+      "version": {
+        "pid": "w1mshfqlnrfsdch"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
+      "serviceId": "bbc_somali_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893490140000,
+      "publishedTimeDuration": "PT29M",
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893490140000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1mshfsn8kyjvxz.imi:ws.bbc.co.uk/SOMLA1585195200",
+        "pid": "p086plpk"
+      },
+      "brand": {
+        "pid": "p034117j",
+        "title": "Idaacadda Subaxnimo",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+          "medium": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha."
+        }
+      },
+      "episode": {
+        "pid": "w172x92z4jtzv1y",
+        "presentationTitle": "01/01/2030 09:00 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
+        "synopses": {
+          "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
+          "medium": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha."
+        }
+      },
+      "version": {
+        "pid": "w1mshfsn8kyjvxz"
+      }
+    }
+  ]
+}

@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `mr`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
+    chartbeatDomain: 'marathi.bbc.co.uk',
     brandName: 'BBC News मराठी',
     product: 'BBC News',
     serviceLocalizedName: 'मराठी',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewsmarathi',
     twitterSite: '@bbcnewsmarathi',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/marathi/institutional-50418391#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/marathi/institutional-50418391',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'बातम्या',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      navMenuText: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
@@ -136,6 +141,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे',
+        contentExpired: 'ही सामग्री यापुढे उपलब्ध नाही',
         audio: 'ऑडिओ',
         photogallery: 'फोटो गॅलरी',
         video: 'व्हीडिओ',
@@ -147,6 +154,7 @@ export const service = {
         listen: 'ऐका',
         watch: 'पाहा',
         liveLabel: 'थेट',
+        nextLabel: 'NEXT',
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
@@ -155,12 +163,17 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'सर्वाधिक वाचलेले',
-      lastUpdated: 'शेवटचा अपडेट: ',
+      lastUpdated: 'शेवटचा अपडेट:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',
-        text: 'तुम्ही बीबीसीवर विश्वास का ठेवू शकता',
+        text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -173,7 +186,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'गोपनीयता धोरण',
+          text: 'गोपनीयतेचं धोरण',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -181,11 +194,17 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/marathi/institutional-42227676',
-          text: 'बीबीसीला संपर्क करा',
+          text: 'बीबीसीशी संपर्क साधाा',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
-        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही',
+        'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
@@ -214,8 +233,11 @@ export const service = {
         title: 'लोकप्रिय',
         url: '/marathi/popular/read',
       },
+      {
+        title: '#ISWOTY',
+        url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
+      },
     ],
-    navigationSection: 'विभाग',
   },
 };
 

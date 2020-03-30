@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
+.c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c3 {
+  color: #fff;
+  fill: currentColor;
+}
+
+.c5 {
+  background-color: #222222;
+  clear: both;
+}
+
+.c2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.c2:hover,
+.c2:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.c2:hover::after,
+.c2:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #FFFFFF;
+}
+
+.c2 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c0 {
+  position: relative;
+  background-color: #B80000;
+  border-top: 0.0625rem solid #FFFFFF;
+}
+
+.c0 .c8::after {
+  left: 0;
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) {
+  .c2 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c0.si-nav-open {
+    background-color: #222222;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c6 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c6::-webkit-scrollbar {
+    display: none;
+  }
+
+  .c6:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c7.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-bind"
+      src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    />
+  </head>
+  <body>
+    <div>
+      <nav
+        class="c0"
+        dir="ltr"
+        id="si-nav"
+        role="navigation"
+      >
+        <div
+          class="c1"
+        >
+          <amp-state
+            id="menuState"
+          >
+            <script
+              type="application/json"
+            >
+              {"expanded":false}
+            </script>
+          </amp-state>
+          <button
+            aria-expanded="false"
+            class="c2"
+            data-amp-bind-aria-expanded="menuState.expanded ? \\"true\\" : \\"false\\""
+            dir="ltr"
+            on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="c3"
+              data-amp-bind-hidden="!menuState.expanded"
+              focusable="false"
+              height="2.75rem"
+              hidden=""
+              viewBox="0 0 44 44"
+              width="2.75rem"
+            >
+              <path
+                d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                fill-rule="evenodd"
+              />
+            </svg>
+            <span
+              class="c4"
+            >
+              menu
+            </span>
+          </button>
+          <div
+            class="c5"
+            hidden=""
+            id="si-nav-dropdown-menu"
+          >
+            <ul
+              data-testid="dropdown"
+            >
+              <li>
+                Dropdown Items
+              </li>
+            </ul>
+          </div>
+          <div
+            class="c6 c7"
+            dir="ltr"
+            id="si-nav-scrollable"
+          >
+            <ul
+              data-testid="scrollable-list"
+            >
+              <li>
+                List Items
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
+`;

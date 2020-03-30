@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
+    chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
     serviceLocalizedName: 'हिंदी',
@@ -31,15 +35,15 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchindi',
     twitterSite: '@bbchindi',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/hindi/institutional-50223932#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/hindi/institutional-50223932',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
       'ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +54,7 @@ export const service = {
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
+      navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
@@ -60,29 +65,29 @@ export const service = {
           statusCode: '404',
           title: 'पेज नहीं मिला',
           message:
-            'माफ़ी चाहते हैं, जो वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
+            'माफ़ी चाहते हैं, हम वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
           solutions: [
             'URL को दोबारा जांचने की',
             'ब्राउज़र का रिफ़्रेश बटन दबाएं',
             'इस पेज को बीबीसी सर्च बार खोलकर खोजने की कोशिश करें',
           ],
           callToActionFirst: 'विकल्प के तौर पर हमारे ',
-          callToActionLinkText: 'होमपेज',
-          callToActionLast: 'पर जाएं',
+          callToActionLinkText: 'होमपेज BBC News हिंदी',
+          callToActionLast: ' पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
         500: {
           statusCode: '500',
           title: 'इंटरनल सर्वर एरर',
           message:
-            'माफ़ी चाहते हैं, जो वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
+            'माफ़ी चाहते हैं, हम वह पन्ना नहीं दिखा पा रहे हैं जिसे आप ढूँढ रहे हैं. कृपया कोशिश करें:',
           solutions: [
             'ब्राउज़र का रिफ़्रेश बटन दबाएं',
             'कुछ समय बाद कोशिश करें',
           ],
           callToActionFirst: 'विकल्प के तौर पर हमारे ',
-          callToActionLinkText: 'होमपेज',
-          callToActionLast: 'पर जाएं',
+          callToActionLinkText: 'होमपेज BBC News हिंदी',
+          callToActionLast: ' पर जाएं',
           callToActionLinkUrl: 'https://www.bbc.com/hindi',
         },
       },
@@ -116,7 +121,7 @@ export const service = {
               first: 'हम ',
               linkText: 'कुकीज़',
               last:
-                'का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -137,6 +142,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'प्लेबैक आपके उपकरण पर नहीं हो पा रहा',
+        contentExpired: 'यह सामग्री अब उपलब्ध नहीं है.',
         audio: 'ऑडियो',
         photogallery: 'फ़ोटो गैलरी',
         video: 'वीडियो',
@@ -150,22 +157,28 @@ export const service = {
           subtitle:
             'बीबीसी दुनिया में देखिए ताज़ा अंतरराष्ट्रीय और क्षेत्रीय ख़बरें, उनका विश्लेषण और सोशल मीडिया की हलचल. साथ ही होंगी कई रोचक ख़बरें भी.',
         },
-        listen: 'Listen',
+        listen: 'सुनिए',
         watch: 'देखिए',
         liveLabel: 'लाइव',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'पिछला रेडियो शो',
+        nextRadioShow: 'अगला रेडियो शो',
+        duration: 'अवधि',
       },
     },
     brandSVG,
     mostRead: {
       header: 'सबसे अधिक पढ़ी गईं',
-      lastUpdated: 'अंतिम अपडेट: ',
+      lastUpdated: 'अंतिम अपडेट:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/hindi/institutional-50223932',
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
@@ -192,6 +205,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/contact/',
           text: 'बीबीसी से संपर्क करें',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -233,15 +252,14 @@ export const service = {
         url: '/hindi/media/video',
       },
       {
-        title: 'तस्वीरें',
-        url: '/hindi/media/photogalleries',
-      },
-      {
         title: 'बीबीसी स्पेशल',
         url: '/hindi/in_depth',
       },
+      {
+        title: '#ISWOTY',
+        url: '/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537',
+      },
     ],
-    navigationSection: 'सेक्शन',
   },
 };
 

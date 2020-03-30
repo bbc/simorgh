@@ -12,12 +12,16 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'fa',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'به روز شده در',
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
+    chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
@@ -37,14 +41,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
     twitterSite: '@bbcpersian',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'صفحه اول',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -55,6 +59,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -143,6 +148,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
+        contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
@@ -164,6 +171,7 @@ export const service = {
         listen: 'Listen',
         watch: 'تماشا کنید',
         liveLabel: 'زنده',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -172,11 +180,17 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'پربیننده‌ترین‌ها',
-      lastUpdated: 'به روز شده در ',
+      lastUpdated: 'به روز شده در',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'برنامه‌های رادیو',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/persian/institutional-49283091',
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {
@@ -203,6 +217,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/persian/institutional-37542244',
           text: 'تماس با بی بی سی',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
@@ -263,10 +283,6 @@ export const service = {
         url: '/persian/interactivity',
       },
       {
-        title: 'عکس',
-        url: '/persian/media/photogalleries',
-      },
-      {
         title: 'ناظران می‌گویند...',
         url: '/persian/blogs/viewpoints',
       },
@@ -283,7 +299,6 @@ export const service = {
         url: '/persian/learningenglish',
       },
     ],
-    navigationSection: 'صفحه ها',
   },
 };
 

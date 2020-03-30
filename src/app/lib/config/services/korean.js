@@ -7,11 +7,15 @@ import 'moment/locale/ko';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: '최종 송고일',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
+    chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
     serviceLocalizedName: '코리아',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/korean/institutional-49283197#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/korean/institutional-49283197',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: '홈페이지',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용으로 건너뛰기',
       relatedContent: '관련 기사 더 보기',
+      navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -131,12 +136,15 @@ export const service = {
         },
       },
       media: {
+        noJs: '사용 기기에서 미디어 재생이 지원되지 않습니다',
+        contentExpired: '더 이상 이용할 수 없는 콘텐츠입니다.',
         audio: '오디오',
         photogallery: '사진 갤러리',
         video: '비디오',
         listen: '청취',
         watch: '감상하기',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -146,10 +154,16 @@ export const service = {
     mostRead: {
       header: 'TOP 뉴스',
       lastUpdated: '최종 송고일',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'BBC 코리아 라디오',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/korean/institutional-49283197',
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
@@ -177,6 +191,12 @@ export const service = {
           href: 'https://www.bbc.com/korean/institutional-42224941',
           text: '고객센터',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
@@ -200,7 +220,6 @@ export const service = {
         url: '/korean/popular/read',
       },
     ],
-    navigationSection: '섹션',
     timezone: 'Asia/Seoul',
   },
 };

@@ -11,12 +11,16 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ur',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'اپ ڈیٹ کی گئی',
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
+    chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
     defaultImageAltText: 'BBC News اردو',
@@ -35,25 +39,26 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
     twitterSite: '@bbcurdu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/urdu/institutional-49282935#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/urdu/institutional-49282935',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
       'خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
+      seeAll: 'سب دیکھیں',
       home: 'صفحۂ اول',
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
+      navMenuText: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -137,26 +142,34 @@ export const service = {
         },
       },
       media: {
+        noJs: 'اپ کی ڈیوائس پر پلے بیک سپورٹ دستیاب نہیں',
+        contentExpired: 'یہ مواد اب دستیاب نہیں',
         audio: 'آڈیو',
-        photogallery: 'تصاویری گیلری',
+        photogallery: 'تصاویر',
         video: 'ویڈیو',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'سنیں',
+        watch: 'دیکھیں',
         liveLabel: 'لائیو',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'گذشتہ ریڈیو پروگرام',
+        nextRadioShow: 'اگلا ریڈیو پروگرام',
+        duration: 'دورانیہ',
       },
     },
     brandSVG,
     mostRead: {
       header: 'سب سے زیادہ پڑھی جانے والی',
-      lastUpdated: 'آخری اپ ڈیٹ ',
+      lastUpdated: 'آخری اپ ڈیٹ',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
-        text: 'جانیے کہ آپ بی بی سی نیوز پر کیوں اعتماد کر سکتے ہیں',
+        href: 'https://www.bbc.com/urdu/institutional-49282935',
+        text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -178,11 +191,17 @@ export const service = {
         {
           href:
             'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
-          text: 'Cookies',
+          text: 'کوکیز',
         },
         {
           href: 'https://www.bbc.com/urdu/institutional-37588285',
           text: 'بی بی سی سے رابطہ کریں',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -220,10 +239,6 @@ export const service = {
         url: '/urdu/science',
       },
       {
-        title: 'آڈیو',
-        url: '/urdu/media/audio',
-      },
-      {
         title: 'ویڈیو',
         url: '/urdu/media/video',
       },
@@ -231,12 +246,7 @@ export const service = {
         title: 'پنجابی ويڈیو',
         url: '/urdu/punjabi_video',
       },
-      {
-        title: 'تصاویر',
-        url: '/urdu/media/photogalleries',
-      },
     ],
-    navigationSection: 'سیکشن',
   },
 };
 

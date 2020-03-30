@@ -1,0 +1,140 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
+        "embedding": false,
+        "format": "video",
+        "id": "p01cynmd",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
+        },
+        "title": "Dorggommii quba abbudduu miilaatiin",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1503567046000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 53,
+            "durationISO8601": "PT53S",
+            "types": ["Original"],
+            "versionId": "p01cynmg",
+            "warnings": {}
+          }
+        ]
+      },
+      { "markupType": "plain_text", "text": "test", "type": "paragraph" }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "afaanoromoo.media_asset.23149891.page",
+      "cps_asset_id": "23149891",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "oromo-v6",
+    "firstPublished": 1503567591000,
+    "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
+    "includeComments": false,
+    "language": "om",
+    "lastPublished": 1580128335000,
+    "lastUpdated": 1580128341788,
+    "locators": {
+      "assetUri": "/afaanoromoo/23149891",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
+      "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1503567591000,
+    "type": "MAP",
+    "version": "v1.1.4"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?",
+      "shortHeadline": "Dorggommii quba abbudduu miilaatiin"
+    },
+    "id": "urn:bbc:ares::asset:afaanoromoo/23149891",
+    "indexImage": {
+      "altText": "Keyframe #5",
+      "copyrightHolder": "BBC",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/12FE6/test/_63589777_p01cynqv.jpg",
+      "id": "63589777",
+      "path": "/cpsdevpb/12FE6/test/_63589777_p01cynqv.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "locators": {
+      "assetUri": "/afaanoromoo/23149891",
+      "cpsUrn": "urn:bbc:content:assetUri:afaanoromoo/23149891",
+      "curie": "http://www.bbc.co.uk/asset/c182ef59-3f36-4844-991f-c35f96b98d23"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "Quba abbudduu miilaatiin yeroo dorggoman",
+      "embedding": false,
+      "format": "video",
+      "id": "p01cynmd",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cynqv.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"
+      },
+      "title": "Dorggommii quba abbudduu miilaatiin",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1503567046000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 53,
+          "durationISO8601": "PT53S",
+          "types": ["Original"],
+          "versionId": "p01cynmg",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "Ingilaanditti dorgommiin quba abbudduu miilaatiin, waggaa waggaan ni gaggeefama.",
+    "timestamp": 1503567591000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Oduu",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/afaanoromoo/front_page"
+    },
+    "site": {
+      "name": "BBC Afaan Oromoo",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/afaanoromoo"
+    }
+  }
+}

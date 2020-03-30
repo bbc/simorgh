@@ -1,11 +1,6 @@
 import React from 'react';
-import { string, shape, arrayOf, objectOf, any } from 'prop-types';
+import { string, shape, arrayOf } from 'prop-types';
 import Metadata from '../Metadata';
-
-const renderTags = tags =>
-  tags.map(({ thingLabel: content }) => (
-    <meta name="article:tag" content={content} key={content} />
-  ));
 
 const ArticleMetadata = ({
   articleId,
@@ -25,13 +20,13 @@ const ArticleMetadata = ({
       lang={lang}
       description={description}
       openGraphType="article"
+      aboutTags={aboutTags}
+      mentionsTags={mentionsTags}
     >
       <meta name="article:author" content={author} />
       <meta name="article:modified_time" content={lastPublished} />
       <meta name="article:published_time" content={firstPublished} />
       {section && <meta name="article:section" content={section} />}
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
     </Metadata>
   );
 
@@ -47,6 +42,7 @@ const tagPropTypes = shape({
 });
 
 ArticleMetadata.propTypes = {
+  articleId: string,
   title: string.isRequired,
   author: string.isRequired,
   firstPublished: string.isRequired,
@@ -56,14 +52,13 @@ ArticleMetadata.propTypes = {
   mentionsTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
   description: string.isRequired,
-  linkedData: objectOf(any),
 };
 
 ArticleMetadata.defaultProps = {
+  articleId: '',
   section: '',
   aboutTags: [],
   mentionsTags: [],
-  linkedData: {},
 };
 
 export default ArticleMetadata;

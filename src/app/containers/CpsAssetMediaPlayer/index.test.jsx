@@ -9,10 +9,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetMediaPlayerContainer from '.';
-import {
-  validAresMediaVideoBlock,
-  defaultToggles,
-} from '../MediaPlayer/fixtureData';
+import { defaultToggles } from '../MediaPlayer/fixtureData';
+import videoBlock from './fixtures';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -47,7 +45,7 @@ describe('MediaPlayer', () => {
     'render the canonical player without a placeholder',
     <GenerateMediaPlayer
       platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
       assetUri="/pidgin/123456789"
     />,
   );
@@ -56,17 +54,34 @@ describe('MediaPlayer', () => {
     'render the amp player',
     <GenerateMediaPlayer
       platform="amp"
-      blocks={[validAresMediaVideoBlock]}
+      blocks={[videoBlock]}
       assetUri="/pidgin/123456789"
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'render canonical legacy media player',
+    <GenerateMediaPlayer
+      platform="canonical"
+      blocks={[videoBlock]}
+      assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
+      isLegacyMedia
+    />,
+  );
+
+  shouldMatchSnapshot(
+    'render amp legacy media player',
+    <GenerateMediaPlayer
+      platform="amp"
+      blocks={[videoBlock]}
+      assetUri="/russian/multimedia/2016/05/160505_v_diving_record"
+      isLegacyMedia
     />,
   );
 
   suppressPropWarnings(['assetUri']);
   isNull(
     'is Null when assetUri is not provided',
-    <GenerateMediaPlayer
-      platform="canonical"
-      blocks={[validAresMediaVideoBlock]}
-    />,
+    <GenerateMediaPlayer platform="canonical" blocks={[videoBlock]} />,
   );
 });

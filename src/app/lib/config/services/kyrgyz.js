@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
+    chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
+      navMenuText: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -135,6 +140,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.',
+        contentExpired: 'Бул маалымат мындан ары ачылбайт',
         audio: 'Аудио',
         photogallery: 'Көз ирмем',
         video: 'Видео',
@@ -151,6 +158,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -159,11 +167,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Эң көп окулгандар',
-      lastUpdated: 'Акыркы жаңылоо: ',
+      lastUpdated: 'Акыркы жаңылоо:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/kyrgyz/institutional-49677275',
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
@@ -191,6 +204,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/kyrgyz/institutional-38157284',
           text: 'Би-Би-Си менен байланышыңыз',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -228,15 +247,10 @@ export const service = {
         url: '/kyrgyz/magazine',
       },
       {
-        title: 'Аудио',
-        url: '/kyrgyz/media/audio',
-      },
-      {
         title: 'Блог',
         url: '/kyrgyz/blog',
       },
     ],
-    navigationSection: 'Бөлүмдөр',
   },
 };
 

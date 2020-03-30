@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292",
+    "locators": {
+      "assetUri": "/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292",
+      "curie": "http://www.bbc.co.uk/asset/466f845c-81c6-11e3-a805-4dcb3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "sinhala",
+    "language": "si",
+    "lastUpdated": 1552723499911,
+    "firstPublished": 1390217433,
+    "lastPublished": 1390219106,
+    "options": {
+      "allowDateStamp": true,
+      "includeComments": false,
+      "allowAdvertising": false,
+      "suitableForSyndication": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": [ "legacyMedia", "paragraph", "crosshead" ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "29621165",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/sinhala/meta/dps/2014/01/emp/140120_disabled_soldiers_pay_292.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "නියමිත වැටුප් නො ගෙවූ බවට චෝදනා කරන තුන්සියයකට ආසන්න ආබාධිත සෙබළ පිරිසක පෙත්සමක් විභාගයට ගැනීමට තීරණය කළ අධිකරණය විරෝධතා ගොනු කිරීමට ආරක්ෂක ලේකම්වරයාට හා යුද හමුදාපතිවරයාට දෙ මසක් කල් දී තිබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ශ්\u200dරී ලංකාවේ ආරක්ෂක බලධාරීන් තමන්ට හිමි මාසික දීමනා ගෙවීම වසර ගණනක් තිස්සේ ප්\u200dරතික්ෂේප කරන බවට චෝදනා කරමින් අභියාචනාධිකරණය හමුවේ යුක්තිය පතා සිටින යුද්ධයෙන් ආබාධිත වූ යුද හමුදා සෙබළුන් සංඛ්\u200dයාව 292ක්.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "වග උත්තර කරුවන් ලෙස නම් කොට ඇත්තේ යුද හමුදාපති, ආරක්ෂක ලේකම් ඇතුළු බලධාරීන්.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "පෙත්සම් කාර සෙබළුන් පවසන්නේ ආබාධිත වන හමුදා සාමාජිකයන්ට හමුදා රෙගුලාසි වලට අනුව විශ්\u200dරාම වැටුප හිමි වන තුරු මාසික වැටුප් හා දීමනා ගෙවීමට රජය බැඳී සිටින බවයි.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "නමුත් තමන්ට එම දීමනා ගෙවීම රජයේ ආරක්ෂක බලධාරීන් ප්\u200dරතික්ෂේප කරමින් සිටින බවයි ඔවුන් ගේ චෝදනාව.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      { "text": "වරප්\u200dරසාදිත සුළු පිරිසක්", "markupType": "plain_text", "type": "crosshead" },
+      {
+        "text": "එහෙත්, යුද හමුදාවේ වරප්\u200dරසාද ලත් සුළු පිරිසක් පමණක් මෙම සහනය භුක්ති විඳින බවයි ඔවුන් ප්\u200dරකාශ කළේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "යුද්ධයෙන් ආබාධිත වීම නිසා මෙම සෙබළුන් නියමිත වයසට පෙර විශ්\u200dරාම ගන්වා තිබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "එල්ටීටීයට එරෙහි යුද්ධය අවසන් බව රජය විසින් ප්\u200dරකාශයට පත් කොට දැනට වසර හතරකට වැඩියි.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "නඩු විභාගය අවසන් වීමෙන් පසුව මාධ්\u200dයවලට අදහස් දැක්වීම පෙත්සම්කාර යුද භටයන් විසින් ප්\u200dරතික්ෂේප කරනු ලැබූ බව කේ එස් උදයකුමාර් වාර්තා කරයි.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඔවුන් මාධ්\u200dයවේදීන් ගෙන් ඉල්ලා සිටියේ අධිකරණය හමුවේ සිදු වූ දේ පමණක් වාර්තා කරන ලෙසයි.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ආබාධිත සෙබළුන්ට වසර ගණනක් වැටුප් නෑ",
+      "headline": "ආබාධිත සෙබළුන්ට වසර ගණනක් වැටුප් නෑ"
+    },
+    "locators": {
+      "assetUri": "/sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292",
+      "curie": "http://www.bbc.co.uk/asset/466f845c-81c6-11e3-a805-4dcb3db9bd6e"
+    },
+    "summary": "ආබාධිත සෙබළ පිරිසක පෙත්සමක් විභාගයට ගැනීමට තීරණය කළ අධිකරණය විරෝධතා ගොනු කිරීමට ආරක්ෂක ලේකම්වරයාට හා යුද හමුදාපතිවරයාට දෙ මසක් කල් දෙයි.",
+    "timestamp": 1552723499911,
+    "passport": {},
+    "media": {
+      "id": "29621165",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/sinhala/meta/dps/2014/01/emp/140120_disabled_soldiers_pay_292.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e222",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/01/20/140120114435_lanka_disabled_112x63_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2014/01/20/140120114435_lanka_disabled_112x63_bbc_nocredit.jpg",
+      "height": 63,
+      "width": 112,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:sinhala/sri_lanka/2014/01/140120_disabled_soldiers_pay_292",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ශ්\u200dරී ලංකා",
+      "uri": "/sinhala/sri_lanka",
+      "type": "simple"
+    },
+    "site": { "subType": "site", "name": "BBCSinhala.com", "uri": "/sinhala", "type": "simple" },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "ආබාධිතයන් සම්බන්ධ සම්මුතිය 'නීතිගත කරන්න' ",
+              "headline": "ආබාධිතයන් සම්බන්ධ සම්මුතිය 'නීතිගත කරන්න' "
+            },
+            "locators": {
+              "assetUri": "/sinhala/sri_lanka/2013/12/131215_disabled_un_nhrc",
+              "cpsUrn": "urn:bbc:content:assetUri:/sinhala/sri_lanka/2013/12/131215_disabled_un_nhrc"
+            },
+            "summary": "ආබාධිත පුද්ගලයන්ගේ අයිතිවාසිකම් ආරක්ෂා කිරීමේ එක්සත් ජාතීන්ගේ සම්මුතිය නීතිගත කිරීමේ අවශ්\u200dයතාවය ශ්\u200dරී ලංකා මානව හිමිකම් කොමිසම අවධාරණය කරයි. ",
+            "timestamp": 1387128352,
+            "cpsType": "MAP",
+            "id": "urn:bbc:ares::asset:sinhala/sri_lanka/2013/12/131215_disabled_un_nhrc",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "ආබාධිත හමුදා සෙබළු යළි තරඟ වදිති",
+              "headline": "ආබාධිත හමුදා සෙබළු යළි තරඟ වදිති"
+            },
+            "locators": {
+              "assetUri": "/sinhala/sri_lanka/2013/09/130930_disabled_soldiers_gallery",
+              "cpsUrn": "urn:bbc:content:assetUri:/sinhala/sri_lanka/2013/09/130930_disabled_soldiers_gallery"
+            },
+            "summary": "යුද්ධයෙන් ආබාධිත භාවයට පත්ව සිටින සිය ගණනක් ශ්\u200dරී ලාංකික  හමුදා සෙබළු වාර්ෂික ආබාධිත යුධ හමුදා ක්\u200dරීඩා උළෙලට එක් වෙති.",
+            "timestamp": 1380551866,
+            "cpsType": "PGL",
+            "id": "urn:bbc:ares::asset:sinhala/sri_lanka/2013/09/130930_disabled_soldiers_gallery",
+            "type": "cps"
+          },
+          {
+            "name": "ප්\u200dරදීප් සංජයගෙන් පසුව ආබාධිතයන්ගේ ක්\u200dරීඩා අමතක කරන්න එපා - ක්\u200dරීඩා සංගමය ",
+            "uri": "http://www.bbc.co.uk/sinhala/multimedia/2012/09/120907_youth_paralympic_medal.shtml",
+            "type": "link"
+          },
+          {
+            "name": "නිසි පහසුකම් ලැබෙනවා නම් උසස් දස්කම් දක්වනවා - ආබාධිත ක්\u200dරීඩකයෝ",
+            "uri": "http://www.bbc.co.uk/sinhala/multimedia/2012/09/120902_paralympic_team.shtml",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}

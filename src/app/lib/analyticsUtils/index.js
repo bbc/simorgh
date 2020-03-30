@@ -1,6 +1,7 @@
 import Cookie from 'js-cookie';
 import uuid from 'uuid/v4';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import onClient from '../utilities/onClient';
 
 export const getDestination = statsDestination => {
@@ -15,8 +16,8 @@ export const getDestination = statsDestination => {
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
-    PLACEHOLDER: 598295,
-    PLACEHOLDER_TEST: 598297,
+    PS_HOMEPAGE: 598273,
+    PS_HOMEPAGE_TEST: 598274,
     BBC_ARCHIVE_PS: 605565,
     BBC_ARCHIVE_PS_TEST: 605566,
   };
@@ -163,6 +164,13 @@ export const getPublishedDatetime = (attribute, data) => {
     : null;
 };
 
+export const getContentId = (assetType, pageData) => {
+  const curie = path(['metadata', 'locators', 'curie'], pageData);
+  const guid = curie.split('/').pop();
+  const contentId = `urn:bbc:${assetType}:`.concat(guid);
+  return contentId;
+};
+
 export const getProducer = service => {
   const producers = {
     igbo: '53',
@@ -260,6 +268,24 @@ export const getComponentInfo = ({ result, componentName, componentData }) => {
       child: pathOr('', ['child'], componentData),
     },
   };
+};
+
+export const getThingAttributes = (attribute, articleData) => {
+  const things = pathOr(null, ['metadata', 'tags', 'about'], articleData);
+
+  if (things) {
+    const attributes = [];
+
+    things.forEach(thing => {
+      if (thing[attribute]) {
+        attributes.push(thing[attribute].trim().replace(/\s/g, '+'));
+      }
+    });
+
+    return attributes.join('~') || null;
+  }
+
+  return null;
 };
 
 export const LIBRARY_VERSION = 'simorgh';

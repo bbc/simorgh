@@ -11,16 +11,14 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
 }
 
 .c0 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c1 {
@@ -35,16 +33,24 @@ exports[`Story Promo Media Indicator should render a photo gallery item correctl
   height: 100%;
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -81,16 +87,14 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 }
 
 .c0 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c1 {
@@ -106,20 +110,27 @@ exports[`Story Promo Media Indicator should render a video item correctly 1`] = 
 }
 
 .c3 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
+  padding: 0 0.25rem;
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -157,16 +168,14 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 }
 
 .c0 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c1 {
@@ -182,20 +191,27 @@ exports[`Story Promo Media Indicator should render an audio item correctly 1`] =
 }
 
 .c3 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
+  padding: 0 0.25rem;
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -236,16 +252,14 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 }
 
 .c0 {
-  padding: 0.5rem 0.25rem;
+  color: #222222;
   background-color: #FFFFFF;
-  display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #222222;
-  height: 2rem;
+  display: block;
 }
 
 .c1 {
@@ -260,16 +274,24 @@ exports[`Story Promo Media Indicator should render correctly even without durati
   height: 100%;
 }
 
-@media (max-width:24.9375rem) {
+@media (min-width:20rem) and (max-width:37.4375rem) {
   .c0 {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
 <div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
   <div
     class="c1"
@@ -290,8 +312,8 @@ exports[`Story Promo Media Indicator should render correctly even without durati
 </div>
 `;
 
-exports[`Story Promo Media Indicator with Index Alsos should render a video indicator correctly 1`] = `
-.c1 {
+exports[`Story Promo Media Indicator should render video indicator correctly when inline 1`] = `
+.c2 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -300,25 +322,138 @@ exports[`Story Promo Media Indicator with Index Alsos should render a video indi
   height: 0.75rem;
 }
 
-.c0 > svg {
-  margin: 0;
+.c0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 0.5rem;
 }
 
-<span
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+<div
   aria-hidden="true"
   class="c0"
+  dir="ltr"
 >
-  <svg
-    aria-hidden="true"
+  <div
     class="c1"
-    focusable="false"
-    height="12px"
-    viewBox="0 0 32 32"
-    width="12px"
   >
-    <polygon
-      points="3,32 29,16 3,0"
-    />
-  </svg>
-</span>
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
+    >
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`Story Promo Media Indicator should render video indicator correctly when inline on RTL 1`] = `
+.c2 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.c0 {
+  color: #222222;
+  background-color: #FFFFFF;
+  font-family: "BBC Nassim Persian",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.5rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+<div
+  aria-hidden="true"
+  class="c0"
+  dir="rtl"
+>
+  <div
+    class="c1"
+  >
+    <svg
+      aria-hidden="true"
+      class="c2"
+      focusable="false"
+      height="12px"
+      viewBox="0 0 32 32"
+      width="12px"
+    >
+      <polygon
+        points="3,32 29,16 3,0"
+      />
+    </svg>
+  </div>
+</div>
 `;

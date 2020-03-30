@@ -7,7 +7,7 @@ import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
 } from '@bbc/psammead-media-player';
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getEmbedUrl from '#lib/utilities/getEmbedUrl';
@@ -73,6 +73,8 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             title={iframeTitle}
             id={idAttr}
             skin="audio"
+            noJsMessage={noJsMessage}
+            service={service}
           />
         ) : (
           <CanonicalMediaPlayer

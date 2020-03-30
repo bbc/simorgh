@@ -29,7 +29,8 @@
       "responsive-inspire",
       "responsive-in-depth",
       "special-reports",
-      "featured-site-top-stories"
+      "featured-site-top-stories",
+      "podcast-promotion"
     ],
     "title": "Domot",
     "summary": "We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."
@@ -1638,6 +1639,36 @@
           "name": "2018 World Cup"
         },
         "semanticGroupName": "Frequency info"
+      },
+      {
+        "type": "podcast-promotion",
+        "title": "Podcasts",
+        "items": [
+          {
+            "name": "This is a Pidgin podcast",
+            "summary": "BBC Pidgin podcast",
+            "indexImage": {
+              "id": "63603127",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
+              "path": "/cpsdevpb/119C2/test/_63603127_78f41206-ccc7-43e2-92a1-3255208a606e.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "slavery",
+              "caption": "Ghanaians in chains in Libya",
+              "copyrightHolder": "Reuters"
+            },
+            "uri": "http://www.bbc.com",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1580900812000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "Podcast"
+        },
+        "semanticGroupName": "Podcasts"
       }
     ]
   },

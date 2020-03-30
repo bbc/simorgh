@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `az`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Yeniləndi',
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
+    chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/azeri/institutional-49283479#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
+      navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -135,12 +140,15 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Sizin qurğunuzda yenidən səsləndirmə mümkün deyil',
+        contentExpired: 'Bu proqramı izləmək/dinləmək artıq mümkün deyil.',
         audio: 'Audio',
         photogallery: 'Foto-qalereya',
         video: 'Video',
         listen: 'Listen',
         watch: 'İzləyin',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -149,11 +157,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ən çox oxunan',
-      lastUpdated: 'Ən son yeniləmə: ',
+      lastUpdated: 'Ən son yeniləmə:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/azeri/institutional-49283479',
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
@@ -182,6 +195,12 @@ export const service = {
           href: 'https://www.bbc.com/azeri/institutional-37131054',
           text: 'BBC ilə Əlaqə',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
     },
@@ -209,15 +228,10 @@ export const service = {
         url: '/azeri/magazine',
       },
       {
-        title: 'Fotoqalereya',
-        url: '/azeri/media/photogalleries',
-      },
-      {
         title: 'Video',
         url: '/azeri/media/video',
       },
     ],
-    navigationSection: 'Bölümlər',
   },
 };
 

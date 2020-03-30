@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
+    commands:
+      - npm ci
+      - npm run build
+  build:
+    commands:
+      - npm run cypress:ci
+reports:
+  JunitReportsTest:
+    files:
+      - '**/*'
+    base-directory: 'cypress/results' # Location of the reports

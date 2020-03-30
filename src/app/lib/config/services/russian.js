@@ -7,6 +7,7 @@ import {
   F_REITH_SANS_REGULAR,
   F_REITH_SERIF_MEDIUM,
   F_REITH_SERIF_MEDIUM_ITALIC,
+  F_REITH_SERIF_LIGHT,
 } from '@bbc/psammead-styles/fonts';
 import { russian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -15,11 +16,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
+    chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
@@ -29,13 +34,13 @@ export const service = {
     externalLinkText: ', внешняя ссылка',
     imageCaptionOffscreenText: 'Подпись к фото, ',
     videoCaptionOffscreenText: 'Подпись к видео, ',
-    audioCaptionOffscreenText: 'Подпись к аудио',
+    audioCaptionOffscreenText: 'Подпись к аудио, ',
     defaultCaptionOffscreenText: 'Подпись, ',
     imageCopyrightOffscreenText: 'Автор фото, ',
     locale: `ru-RU`,
     datetimeLocale: `ru`,
     service: 'russian',
-    serviceName: 'News Русская служба',
+    serviceName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
@@ -46,7 +51,6 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Главная',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -57,6 +61,7 @@ export const service = {
       currentPage: 'Текущая страница',
       skipLinkText: 'Перейти к содержанию',
       relatedContent: 'Новости по теме',
+      navMenuText: 'Разделы',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плеер',
         audioPlayer: 'Аудио плеер',
@@ -144,6 +149,9 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
+        contentExpired: 'Контент больше не доступен.',
         audio: 'Аудио',
         photogallery: 'Фотогалерея',
         video: 'Видео',
@@ -157,18 +165,24 @@ export const service = {
           subtitle:
             'Смотрите лучшие репортажи Би-би-си из России и со всего мира. Каждый день - с понедельника по пятницу – в выпуске теленовостей Би-би-си наши корреспонденты помогут вам понять, что происходит и почему это важно для вас.',
         },
-        listen: 'Listen',
+        listen: 'Слушать',
         watch: 'Смотреть',
-        liveLabel: 'LIVE',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        liveLabel: 'Прямой эфир',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'Предыдущая передача',
+        nextRadioShow: 'Следующая передача',
+        duration: 'Продолжительность',
       },
     },
     brandSVG,
     mostRead: {
       header: 'Самое популярное',
-      lastUpdated: 'Последнее обновление: ',
+      lastUpdated: 'Последнее обновление:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -194,11 +208,17 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Кукис',
+          text: 'Куки',
         },
         {
           href: 'https://www.bbc.com/russian/institutional-36517237',
           text: 'Связаться с Би-би-си',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -211,6 +231,7 @@ export const service = {
       F_REITH_SANS_REGULAR,
       F_REITH_SERIF_MEDIUM,
       F_REITH_SERIF_MEDIUM_ITALIC,
+      F_REITH_SERIF_LIGHT,
     ],
     timezone: 'GMT',
     navigation: [
@@ -235,7 +256,6 @@ export const service = {
         url: '/russian/media-47937790',
       },
     ],
-    navigationSection: 'Разделы',
   },
 };
 

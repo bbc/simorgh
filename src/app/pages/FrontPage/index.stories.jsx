@@ -1,69 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
+import newsData from '#data/news/frontpage';
 import igboData from '#data/igbo/frontpage';
 import pidginData from '#data/pidgin/frontpage';
-import addIdsToItems from '#lib/utilities/preprocessor/rules/addIdsToItems';
 import thaiData from '#data/thai/frontpage';
 import yorubaData from '#data/yoruba/frontpage';
 import punjabiData from '#data/punjabi/frontpage';
-import filterUnknownContentTypes from '#lib/utilities/preprocessor/rules/filterContentType';
-import filterEmptyGroupItems from '#lib/utilities/preprocessor/rules/filterEmptyGroupItems';
-import applySquashTopstories from '#lib/utilities/preprocessor/rules/topstories';
-import preprocess from '#lib/utilities/preprocessor';
-import FrontPage from '.';
-import WithTimeMachine from '#testHelpers/withTimeMachine';
+import serbianCyrData from '#data/serbian/frontpage/cyr';
+import serbianLatData from '#data/serbian/frontpage/lat';
+import { service as newsConfig } from '#lib/config/services/news';
+import { service as igboConfig } from '#lib/config/services/igbo';
+import { service as pidginConfig } from '#lib/config/services/pidgin';
+import { service as thaiConfig } from '#lib/config/services/thai';
+import { service as yorubaConfig } from '#lib/config/services/yoruba';
+import { service as punjabiConfig } from '#lib/config/services/punjabi';
+import { service as serbianConfig } from '#lib/config/services/serbian';
+import { FrontPage } from '..';
 
-const preprocessorRules = [
-  filterUnknownContentTypes,
-  addIdsToItems,
-  filterEmptyGroupItems,
-  applySquashTopstories,
-];
-
-const serviceDatasets = {
-  igbo: igboData,
-  yoruba: yorubaData,
-  pidgin: pidginData,
-  thai: thaiData,
-  punjabi: punjabiData,
+const serviceDataSets = {
+  news: { default: newsData },
+  igbo: { default: igboData },
+  yoruba: { default: yorubaData },
+  pidgin: { default: pidginData },
+  thai: { default: thaiData },
+  punjabi: { default: punjabiData },
+  serbian: {
+    cyr: serbianCyrData,
+    lat: serbianLatData,
+  },
 };
 
-// eslint-disable-next-line react/prop-types
-const DataWrapper = ({ service, children }) => {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    preprocess(serviceDatasets[service], preprocessorRules).then(setData);
-  }, [service]);
-
-  return data ? children(data) : null;
+const serviceConfigs = {
+  news: newsConfig,
+  igbo: igboConfig,
+  pidgin: pidginConfig,
+  thai: thaiConfig,
+  yoruba: yorubaConfig,
+  punjabi: punjabiConfig,
+  serbian: serbianConfig,
 };
 
 const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
-Object.keys(serviceDatasets).forEach(service => {
-  stories.add(service, () => {
-    return (
+Object.keys(serviceDataSets).forEach(service => {
+  Object.keys(serviceDataSets[service]).forEach(variant => {
+    stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => (
       <BrowserRouter>
-        <Route path="/:service">
-          <DataWrapper service={service}>
-            {frontPageData => (
-              <FrontPage
-                pageData={frontPageData}
-                status={200}
-                service={service}
-                isAmp={false}
-                loading={false}
-                error={null}
-                pageType="frontPage"
-              />
-            )}
-          </DataWrapper>
-        </Route>
+        <FrontPage
+          isAmp={false}
+          pageType="frontPage"
+          status={200}
+          pathname={serviceConfigs[service][variant].navigation[0].url}
+          service={service}
+          variant={variant}
+          pageData={serviceDataSets[service][variant]}
+          mostReadEndpointOverride={`./data/${service}/mostRead/${
+            variant === 'default' ? 'index' : variant
+          }.json`}
+        />
       </BrowserRouter>
-    );
+    ));
   });
 });

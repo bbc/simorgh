@@ -8,11 +8,15 @@ import 'moment/locale/my';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
+    chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
     serviceLocalizedName: 'မြန်မာ',
@@ -32,15 +36,15 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcburmese',
     twitterSite: '@bbcburmese',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/burmese/institutional-51387206#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/burmese/institutional-51387206',
     isTrustProjectParticipant: true,
     script: burmese,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
       'ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -51,6 +55,7 @@ export const service = {
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
+      navMenuText: 'ကဏ္ဍများ',
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
         audioPlayer: 'အသံဖိုင်ပလေယာ',
@@ -73,7 +78,7 @@ export const service = {
         },
         500: {
           statusCode: '၅၀၀',
-          title: 'ဘီီဘီစီဆာဗာ၏ အမှား',
+          title: 'ဘီဘီစီဆာဗာ၏ အမှား',
           message:
             'သင်ရှာနေသော စာမျက်နှာကို လောလောဆယ် ရှာမတွေ့ပါ။ ဒီမှာ ကြိုးစားကြည့်ပါ။',
           solutions: [
@@ -138,6 +143,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'သငျ့စကျတှငျ ဒီမီဒီယာဖိုငျကို ဖှငျ့၍ မရပါ။',
+        contentExpired: 'ဒီအစီအစဉျမရှိတော့ပါဘူး။',
         audio: 'အသံ',
         photogallery: 'ဓာတ်ပုံများ',
         video: 'ဗီဒီယို',
@@ -151,22 +158,28 @@ export const service = {
           subtitle:
             'မြန်မာတီဗီ အစီအစဉ်မှာ နောက်ဆုံးရ ထိပ်တန်းရောက် ကမ္ဘာ့သတင်း နဲ့ အားကစား သတင်းတွေကို ကြည့်ရှုနိုင်ပါတယ်။',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'နားဆငျရနျ',
+        watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
+        nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
+        duration: 'ကြာမြင့်ချိန်',
       },
     },
     brandSVG,
     mostRead: {
       header: 'အဖတ်အများဆုံး',
-      lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်: ',
+      lastUpdated: 'နောက်ဆုံးအသစ်တင်ချိန်:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/burmese/institutional-51387206',
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
@@ -189,7 +202,13 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/burmese/institutional-37577525',
-          text: 'ဘီီဘီစီကို ဆက်သွယ်ရန်',
+          text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -223,19 +242,10 @@ export const service = {
         url: '/burmese/economy',
       },
       {
-        title: 'အသံဖိုင်များ',
-        url: '/burmese/media/audio',
-      },
-      {
         title: 'ဗီဒီယိုများ',
         url: '/burmese/media/video',
       },
-      {
-        title: 'ဓာတ်ပုံများ',
-        url: '/burmese/media/photogalleries',
-      },
     ],
-    navigationSection: 'ကဏ္ဍများ',
   },
 };
 

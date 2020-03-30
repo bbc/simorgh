@@ -40,7 +40,7 @@ exports[`Grid should render Grid with columns 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:80rem) {
+@media (min-width:63rem) and (max-width:79.9375rem) {
   .c1 {
     width: calc(33.333333333333336%);
     display: inline-block;
@@ -72,99 +72,6 @@ exports[`Grid should render Grid with columns 1`] = `
   >
     <p>
       item spanning 2 out of 6 columns
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Grid should render GridMaxWidthGroup5 with columns 1`] = `
-.c1 {
-  margin: 0 auto;
-}
-
-@supports (display:grid) {
-  .c0 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c2 {
-    width: calc(33.333333333333336%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c2 {
-    width: calc(33.333333333333336%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c2 {
-    width: calc(33.333333333333336%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c2 {
-    width: calc(33.333333333333336%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:80rem) {
-  .c2 {
-    width: calc(33.333333333333336%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c2 {
-    width: calc(33.333333333333336%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c2 {
-    display: block;
-  }
-}
-
-@media (min-width:63rem) {
-  .c1 {
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c1 {
-    max-width: 80rem;
-  }
-}
-
-<div
-  class="c0 c1"
-  dir="ltr"
->
-  <div
-    class="c2"
-    dir="ltr"
-  >
-    <p>
-      Test
     </p>
   </div>
 </div>

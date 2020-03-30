@@ -12,6 +12,15 @@ global.Cypress = {
   env: jest.fn(),
 };
 
+window.matchMedia = jest.fn().mockImplementation(query => {
+  return {
+    matches: true,
+    media: query,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+  };
+});
+
 Enzyme.configure({ adapter: new Adapter() });
 
 global.fetch = fetch;

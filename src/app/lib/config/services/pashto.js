@@ -12,6 +12,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ps',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -19,6 +22,7 @@ export const service = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     brandName: 'BBC News پښتو',
+    chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
     defaultImageAltText: 'BBC News پښتو',
@@ -37,14 +41,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
     twitterSite: '@bbcpashto',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/pashto/institutional-49283007#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/pashto/institutional-49283007',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'کور پاڼه',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -55,6 +59,7 @@ export const service = {
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'اسی بارے میں',
+      navMenuText: 'برخې',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -138,6 +143,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'په دې وسیله کې د غږ اوريدل او ویډیو لیدنه شونې نه ده.',
+        contentExpired: 'دغه فایل نور د لاسرسي وړ نه دی.',
         audio: 'غږ',
         photogallery: 'د عکسونو البوم',
         video: 'ویډیو',
@@ -154,6 +161,7 @@ export const service = {
         listen: 'Listen',
         watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -162,11 +170,19 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ډېر لوستل شوي',
-      lastUpdated: 'د خپرېدو نیټه ',
+      lastUpdated: 'د خپرېدو نیټه',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
+      frequenciesPageLabel: 'راديويي څپې',
+      header: 'تازه خبرونه واورئ',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/pashto/institutional-49283007',
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {
@@ -193,6 +209,12 @@ export const service = {
         {
           href: 'https://www.bbc.co.uk/pashto/institutional-37622768',
           text: 'زموږ سره اړیکي',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
@@ -229,10 +251,6 @@ export const service = {
         url: '/pashto/media/video',
       },
       {
-        title: 'انځورونه',
-        url: '/pashto/media/photogalleries',
-      },
-      {
         title: 'ځانګړې پاڼې',
         url: '/pashto/in_depth',
       },
@@ -241,7 +259,6 @@ export const service = {
         url: '/pashto/columns',
       },
     ],
-    navigationSection: 'برخې',
   },
 };
 

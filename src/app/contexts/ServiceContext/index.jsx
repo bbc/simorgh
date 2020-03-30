@@ -1,8 +1,8 @@
 import React from 'react';
 import { node, string } from 'prop-types';
 import services from '#lib/config/services/loadableConfig';
-import { getVariant } from '../../lib/utilities/variantHandler';
 import variantPropType from '../../models/propTypes/variants';
+import { getVariant } from '#lib/utilities/variantHandler';
 
 export const ServiceContext = React.createContext({});
 

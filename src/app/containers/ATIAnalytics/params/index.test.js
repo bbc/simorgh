@@ -13,6 +13,7 @@ const requestContext = {
   statsDestination: 'statsDestination',
   previousPath: 'previousPath',
   origin: 'origin',
+  canonicalLink: 'https://www.bbc.com/pidgin/51536047',
 };
 
 const serviceContext = {
@@ -76,6 +77,62 @@ const media = {
     },
   },
 };
+const MAP = {
+  promo: {
+    headlines: {
+      headline: 'headline',
+    },
+  },
+  metadata: {
+    id: 'id',
+    language: 'language',
+    analyticsLabels: {
+      counterName: 'pageIdentifier',
+      pageIdentifier: 'pageIdentifier',
+      pageTitle: 'pageTitle',
+    },
+    firstPublished: 1566574729,
+    lastPublished: 1566577208,
+    locators: {
+      curie: 'http://www.bbc.co.uk/asset/4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+    },
+    passport: {
+      category: {
+        categoryId:
+          'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+        categoryName: 'News',
+      },
+      campaigns: [
+        {
+          campaignId: '5a988e2139461b000e9dabf7',
+          campaignName: 'WS - Inspire me',
+        },
+      ],
+    },
+  },
+};
+const PGL = {
+  promo: {
+    headlines: {
+      headline: 'headline',
+    },
+  },
+  metadata: {
+    id: 'id',
+    language: 'language',
+    analyticsLabels: {
+      counterName: 'pageIdentifier',
+      pageIdentifier: 'pageIdentifier',
+      pageTitle: 'pageTitle',
+    },
+    firstPublished: 1566574729,
+    lastPublished: 1566577208,
+    locators: {
+      curie: 'http://www.bbc.co.uk/asset/4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+    },
+    passport: {},
+  },
+};
 
 describe('ATIAnalytics params', () => {
   describe('buildATIUrl', () => {
@@ -109,6 +166,28 @@ describe('ATIAnalytics params', () => {
       );
       expect(url).toEqual(
         's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[id]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[player-live]&x8=[simorgh]&x9=[pageTitle]',
+      );
+    });
+
+    it('should return the right MAP url', () => {
+      const url = buildATIUrl(
+        MAP,
+        { ...requestContext, pageType: 'MAP' },
+        serviceContext,
+      );
+      expect(url).toEqual(
+        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[article-media-asset]&x8=[simorgh]&x9=[headline+-+brandName]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]&x16=[WS%20-%20Inspire%20me]&x17=[News]',
+      );
+    });
+
+    it('should return the right PGL url', () => {
+      const url = buildATIUrl(
+        PGL,
+        { ...requestContext, pageType: 'PGL' },
+        serviceContext,
+      );
+      expect(url).toEqual(
+        's=598285&s2=atiAnalyticsProducerId&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http://localhost/]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[headline+-+brandName]&x11=[1970-01-01T00:00:00.000Z]&x12=[1970-01-01T00:00:00.000Z]',
       );
     });
   });
@@ -183,6 +262,61 @@ describe('ATIAnalytics params', () => {
         producerId: 'atiAnalyticsProducerId',
         service: 'service',
         statsDestination: 'statsDestination',
+      });
+    });
+
+    it('should return the right MAP params', () => {
+      const params = buildATIClickParams(
+        MAP,
+        { ...requestContext, pageType: 'MAP' },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        categoryName: 'News',
+        campaigns: [
+          {
+            campaignId: '5a988e2139461b000e9dabf7',
+            campaignName: 'WS - Inspire me',
+          },
+        ],
+        contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+        contentType: 'article-media-asset',
+        language: 'language',
+        pageIdentifier: 'pageIdentifier',
+        pageTitle: 'headline - brandName',
+        libraryVersion: 'simorgh',
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+        timePublished: '1970-01-01T00:00:00.000Z',
+        timeUpdated: '1970-01-01T00:00:00.000Z',
+      });
+    });
+
+    it('should return the right PGL params', () => {
+      const params = buildATIClickParams(
+        PGL,
+        { ...requestContext, pageType: 'PGL' },
+        serviceContext,
+      );
+      expect(params).toEqual({
+        appName: 'atiAnalyticsAppName',
+        categoryName: undefined,
+        campaigns: undefined,
+        contentId: 'urn:bbc:cps:4d36f80b-8711-0b4e-8da0-ef76ae8ac470',
+        contentType: 'article-photo-gallery',
+        language: 'language',
+        pageIdentifier: 'pageIdentifier',
+        pageTitle: 'headline - brandName',
+        libraryVersion: 'simorgh',
+        platform: 'platform',
+        producerId: 'atiAnalyticsProducerId',
+        service: 'service',
+        statsDestination: 'statsDestination',
+        timePublished: '1970-01-01T00:00:00.000Z',
+        timeUpdated: '1970-01-01T00:00:00.000Z',
       });
     });
   });

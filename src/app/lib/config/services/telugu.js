@@ -8,11 +8,15 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
+    chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
     serviceLocalizedName: 'తెలుగు',
@@ -32,14 +36,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/telugu/institutional-50420343#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/telugu/institutional-50420343',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'వార్తలు',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -50,6 +54,7 @@ export const service = {
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
+      navMenuText: 'విభాగాలు',
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',
         audioPlayer: 'ఆడియో ప్లేయర్',
@@ -137,6 +142,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'మీ పరికరంలో మీడియా ప్లేబ్యాక్ సదుపాయం లేదు.',
+        contentExpired: 'ఈ కంటెంట్ ఇప్పుడు అందుబాటులో లేదు.',
         audio: 'ఆడియో',
         photogallery: 'ఫొటో గ్యాలరీ',
         video: 'వీడియో',
@@ -148,6 +155,7 @@ export const service = {
         listen: 'వినండి',
         watch: 'చూడండి',
         liveLabel: 'లైవ్',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
@@ -156,7 +164,12 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'ఎక్కువమంది చదివినవి',
-      lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ: ',
+      lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -188,6 +201,12 @@ export const service = {
           href: 'https://www.bbc.com/telugu/institutional-42227910',
           text: 'బీబీసీని సంప్రదించండి',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
@@ -215,8 +234,11 @@ export const service = {
         title: 'అంతర్జాతీయం',
         url: '/telugu/international',
       },
+      {
+        title: '#ISWOTY',
+        url: '/telugu/resources/idt-47054a9b-b97c-4190-bed0-0416210e698b',
+      },
     ],
-    navigationSection: 'విభాగాలు',
   },
 };
 

@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
     atiAnalyticsAppName: 'news-uzbek',
     atiAnalyticsProducerId: '96',
+    chartbeatDomain: 'uzbek.bbc.co.uk',
     brandName: "BBC News O'zbek",
     product: 'BBC News',
     serviceLocalizedName: "O'zbek",
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/uzbek/institutional-50220995#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/uzbek/institutional-50220995',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Бош саҳифа',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
+      navMenuText: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',
         audioPlayer: 'Аудио плейер',
@@ -121,7 +126,7 @@ export const service = {
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
-              first: 'Биз ва бизнинг ҳамкорларимиз',
+              first: 'Биз ва бизнинг ҳамкорларимиз ',
               linkText: 'кукисга',
               last:
                 ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
@@ -136,6 +141,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Мултимедиа ўйнаш бу қурилмада дастакланмайди',
+        contentExpired: 'Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.',
         audio: 'Аудио',
         photogallery: 'Фото галерея',
         video: 'Видео',
@@ -151,6 +158,7 @@ export const service = {
         listen: 'Тингланг',
         watch: 'Кўринг',
         liveLabel: 'ЖОНЛИ ЭФИР',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Аввалги радио дастур',
         nextRadioShow: 'Кейинги радио дастур',
         duration: 'Давомийлиги',
@@ -159,7 +167,12 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Энг кўп ўқилган',
-      lastUpdated: 'Сўнгги янгиланиш: ',
+      lastUpdated: 'Сўнгги янгиланиш:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
@@ -187,6 +200,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/uzbek/institutional-36826360',
           text: 'Би-би-си билан боғланиш',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
@@ -231,7 +250,6 @@ export const service = {
         url: '/uzbek/media/video',
       },
     ],
-    navigationSection: 'Бўлимлар',
   },
 };
 

@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'yo',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Ìgbà tí a ṣe àfíkun gbẹ̀yìn',
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
+    chartbeatDomain: 'yoruba.bbc.co.uk',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
     serviceLocalizedName: 'Yorùbá',
@@ -33,13 +37,13 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
     },
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/yoruba/institutional-48528718#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/yoruba/institutional-48528718',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -51,6 +55,7 @@ export const service = {
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
+      navMenuText: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -138,6 +143,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Àwọn àmúyẹ fun gbígbọ́ orin ko le ṣiṣẹ lori ẹ̀rọ rẹ',
+        contentExpired: 'Nnkan yìí kò sí mọ́.',
         audio: 'Orin',
         photogallery: 'Àtẹ Àwòrán',
         video: 'Fídíò',
@@ -148,6 +155,7 @@ export const service = {
         listen: 'Gbọ́',
         watch: 'Wò',
         liveLabel: 'NÍ YÀJÓYÀJÓ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -156,11 +164,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Èyítí A Ń Kà Jùlọ',
-      lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní ',
+      lastUpdated: 'Tí a mú dójú ìwọ̀n gbẹ̀yìn ní:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/yoruba/institutional-48528718',
         text: 'Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC',
       },
       externalLink: {
@@ -188,6 +201,12 @@ export const service = {
           href: 'https://www.bbc.com/yoruba/institutional-43091540',
           text: 'Kàn sí BBC',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         'BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.',
@@ -212,7 +231,6 @@ export const service = {
         url: '/yoruba/popular/read',
       },
     ],
-    navigationSection: 'Àwọn abala',
   },
 };
 

@@ -1,28 +1,60 @@
 import React, { useContext } from 'react';
+import { bool, string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '../Toggle/useToggle';
 import Canonical from './Canonical';
 
-const getLocalMostReadEndpoint = (service, variant) => {
-  const localhostURL = 'http://localhost:7080';
-  const localServiceURL = `${localhostURL}/${service}`;
+const getMostReadEndpoint = ({ service, variant }) =>
+  variant
+    ? `/${service}/mostread/${variant}.json`
+    : `/${service}/mostread.json`;
 
-  return variant
-    ? `${localServiceURL}/most_read/${variant}.json`
-    : `${localServiceURL}/most_read.json`;
-};
-
-const MostReadContainer = () => {
-  const { variant } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+const MostReadContainer = ({
+  mostReadEndpointOverride,
+  maxTwoColumns,
+  constrainMaxWidth,
+  isOnFrontPage,
+}) => {
+  const { variant, isAmp } = useContext(RequestContext);
+  const {
+    service,
+    mostRead: { hasMostRead },
+  } = useContext(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
-  if (!enabled) {
+
+  const mostReadEnabled = !isAmp && enabled && hasMostRead;
+
+  if (!mostReadEnabled) {
     return null;
   }
 
-  return <Canonical endpoint={getLocalMostReadEndpoint(service, variant)} />;
+  const endpoint =
+    mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
+
+  return (
+    <Canonical
+      endpoint={endpoint}
+      constrainMaxWidth={constrainMaxWidth}
+      maxTwoColumns={maxTwoColumns}
+      isOnFrontPage={isOnFrontPage}
+    />
+  );
+};
+
+MostReadContainer.propTypes = {
+  mostReadEndpointOverride: string,
+  constrainMaxWidth: bool,
+  maxTwoColumns: bool,
+  isOnFrontPage: bool,
+};
+
+MostReadContainer.defaultProps = {
+  mostReadEndpointOverride: null,
+  constrainMaxWidth: false,
+  maxTwoColumns: false,
+  isOnFrontPage: false,
 };
 
 export default MostReadContainer;

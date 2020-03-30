@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gujarati/india-47512764",
+    "locators": {
+      "assetUri": "/gujarati/india-47512764",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-47512764",
+      "curie": "http://www.bbc.co.uk/asset/eb020ab6-74a8-4449-a21a-ab5b7c3fcf5f"
+    },
+    "type": "PGL",
+    "createdBy": "gujarati-v6",
+    "language": "gu",
+    "lastUpdated": 1552209600706,
+    "firstPublished": 1552204795,
+    "lastPublished": 1552209590,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "pgl",
+      "counterName": "gujarati.india.photo_gallery.47512764.page",
+      "cps_asset_id": "47512764"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Family",
+          "thingUri": "http://www.bbc.co.uk/things/184cb2f7-e305-4c46-ab4f-2e18f60b0293#id",
+          "thingId": "184cb2f7-e305-4c46-ab4f-2e18f60b0293",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Family",
+            "http://www.wikidata.org/entity/Q8436"
+          ]
+        },
+        {
+          "thingLabel": "Business",
+          "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+          "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Business",
+            "http://www.wikidata.org/entity/Q21857788"
+          ]
+        },
+        {
+          "thingLabel": "Bollywood",
+          "thingUri": "http://www.bbc.co.uk/things/89548490-9a9f-41e8-b98c-0f7474be2148#id",
+          "thingId": "89548490-9a9f-41e8-b98c-0f7474be2148",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Bollywood"]
+        },
+        {
+          "thingLabel": "Mukesh Ambani",
+          "thingUri": "http://www.bbc.co.uk/things/f155af66-46d4-4db8-b1c9-8678068c04ac#id",
+          "thingId": "f155af66-46d4-4db8-b1c9-8678068c04ac",
+          "thingType": ["Person", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Mukesh_Ambani"]
+        },
+        {
+          "thingLabel": "Marriage",
+          "thingUri": "http://www.bbc.co.uk/things/f7f69688-712a-4e57-94df-998ac40df82f#id",
+          "thingId": "f7f69688-712a-4e57-94df-998ac40df82f",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Marriage",
+            "http://www.wikidata.org/entity/Q8445"
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.0",
+    "blockTypes": ["image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "105963469",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/178B4/production/_105963469_ambani15.jpg",
+        "path": "/cpsprodpb/178B4/production/_105963469_ambani15.jpg",
+        "height": 1000,
+        "width": 976,
+        "altText": "નીતા અંબાણીએ ગુજરાતી પરંપરા પ્રમાણે આપ્યા આ રીતે આર્શિવાદ",
+        "caption": "રિલાયન્સ ઇન્ડસ્ટ્રીઝના ચેરમેન મુકેશ અંબાણીના પુત્ર આકાશ અંબાણી અને શ્લોકા મહેતા લગ્નનાં બંધને બંધાયાં છે.",
+        "copyrightHolder": "Reliance PR",
+        "type": "image"
+      },
+      {
+        "id": "105963479",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/17C9C/production/_105963479_ambani13.jpg",
+        "path": "/cpsprodpb/17C9C/production/_105963479_ambani13.jpg",
+        "height": 1000,
+        "width": 976,
+        "altText": "ઇશા અંબાણી, આકાશ અંબાણી અને શ્લોકા મહેતા",
+        "caption": "મુંબઈના બાન્દ્રા કુર્લામાં આવેલા જિયો વર્લ્ડ સેન્ટરમાં લગ્નનું આયોજન કરવામાં આવ્યું હતું.",
+        "copyrightHolder": "Reliance PR",
+        "type": "image"
+      },
+      {
+        "id": "105963473",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/923C/production/_105963473_9564f7bb-67d5-41c9-8090-12872bd0d57f.jpg",
+        "path": "/cpsprodpb/923C/production/_105963473_9564f7bb-67d5-41c9-8090-12872bd0d57f.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "આકાશ અંબાણી અને શ્લોકા મહેતાના શાસ્ત્રોક્ત વિધિ પ્રમાણે લગ્ન સંસ્કાર",
+        "caption": "હીરાના વેપારી રસેલ મહેતાનાં પુત્રી શ્લોકા અને આકાશ અંબાણી નાનપણનાં મિત્રો છે.",
+        "copyrightHolder": "Reliance PR",
+        "type": "image"
+      },
+      {
+        "id": "105963405",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/C504/production/_105963405_e8ccc420-df8b-4548-b15d-055e5c8eeff7.jpg",
+        "path": "/cpsprodpb/C504/production/_105963405_e8ccc420-df8b-4548-b15d-055e5c8eeff7.jpg",
+        "height": 1046,
+        "width": 944,
+        "altText": "ગયા વર્ષે આકાશ અને શ્લોકાની સગાઈ થઈ હતી, બંને મુંબઈમાં આવેલી ધીરુભાઈ અંબાણી ઇન્ટરનેશનલ સ્કૂલમાં ભણતી વખતે મિત્રો બન્યાં હતાં.",
+        "caption": "ગયા વર્ષે આકાશ અને શ્લોકાની સગાઈ થઈ હતી, બંને મુંબઈમાં આવેલી ધીરુભાઈ અંબાણી ઇન્ટરનેશનલ સ્કૂલમાં ભણતી વખતે મિત્રો બન્યાં હતાં.",
+        "copyrightHolder": "glittersandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963453",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/8A6C/production/_105963453_ambani9.jpg",
+        "path": "/cpsprodpb/8A6C/production/_105963453_ambani9.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પુત્રના લગ્નમાં મન મૂકીને નાચ્યાં નીતા અંબાણી",
+        "caption": "ત્રણ દિવસ ચાલનારાં આ લગ્નમાં બોલીવૂડ સ્ટાર્સ સાથે અનેક હસ્તીઓએ હાજરી આપી હતી.",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963475",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/E05C/production/_105963475_ambani11.jpg",
+        "path": "/cpsprodpb/E05C/production/_105963475_ambani11.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "વરરાજા આકાશ અંબાણીએ પણ મન મૂકીનો કર્યો ડાન્સ",
+        "caption": "વરરાજા આકાશ અંબાણીએ પણ મન મૂકીનો કર્યો ડાન્સ",
+        "copyrightHolder": "glittersandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963477",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/12E7C/production/_105963477_ambani10.jpg",
+        "path": "/cpsprodpb/12E7C/production/_105963477_ambani10.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પુત્રના લગ્નમાં મુકેશ અને નીતા અંબાણીએ આ રીતે ઝૂમ્યાં",
+        "caption": "પુત્રના લગ્નમાં માતાપિતા મુકેશ અને નીતા અંબાણીએ આ રીતે ઝૂમ્યાં",
+        "copyrightHolder": "Reliance PR",
+        "type": "image"
+      },
+      {
+        "id": "105963445",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/D4A4/production/_105963445_ambani4.jpg",
+        "path": "/cpsprodpb/D4A4/production/_105963445_ambani4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "શુભ પ્રસંગે પરિવારના મોવડી ધીરુભાઈ અંબાણીના આશિર્વાદ લેતા વરરાજા આકાશ અંબાણી",
+        "caption": "શુભ પ્રસંગે પરિવારના મોવડી ધીરુભાઈ અંબાણીના આશિર્વાદ લેતા વરરાજા આકાશ અંબાણી",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963407",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/11324/production/_105963407_mediaitem105963406.jpg",
+        "path": "/cpsprodpb/11324/production/_105963407_mediaitem105963406.jpg",
+        "height": 1000,
+        "width": 976,
+        "altText": "આમીર ખાન અને કિરણ રાવ",
+        "caption": "આમિર ખાન, શાહરૂખ ખાન, રણબીર કપૂર, ઐશ્વર્યા રાય બચ્ચન, રાજકુમાર હિરાણી, બ્રિટનના પૂર્વ વડા પ્રધાન ટોની બ્લેર, યૂએનના પૂર્વ સેક્રેટરી બાન કી મૂન, સચિન તેંડુલકર અને હાર્દિક પંડ્યા સહિતની સેલિબ્રિટીઓએ આ લગ્નમાં હાજરી આપી હતી.",
+        "copyrightHolder": "glittersandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963451",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/3C4C/production/_105963451_ambani7.jpg",
+        "path": "/cpsprodpb/3C4C/production/_105963451_ambani7.jpg",
+        "height": 1000,
+        "width": 976,
+        "altText": "સ્ટાર રજનીકાંતે પણ રાજનીતિમાં રજા રાખી લગ્નમાં હાજરી આપી",
+        "caption": "સાઉથની ફિલ્મોના સુપરસ્ટાર રજનીકાંતે લગ્નમાં હાજરી આપી હતી",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963447",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/122C4/production/_105963447_ambani5.jpg",
+        "path": "/cpsprodpb/122C4/production/_105963447_ambani5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "કૃણાલ અને હાર્દિક પંડ્યાએ માણ્યો ભવ્ય ગુજરાતી લગ્નનો જલસો",
+        "caption": "ગુજરાતી ક્રિકેટર કૃણાલ અને હાર્દિક પંડ્યા",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963413",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/7ACC/production/_105963413_ambani3.jpg",
+        "path": "/cpsprodpb/7ACC/production/_105963413_ambani3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "રણવીર કપૂર અને કરણ જૌહરની હાજરી",
+        "caption": "રણવીર કપૂર અને કરણ જોહર",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963449",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/170E4/production/_105963449_ambani6.jpg",
+        "path": "/cpsprodpb/170E4/production/_105963449_ambani6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ઉદ્યોગપતિ રતન તાતાએ અંબાણી પરિવારના લગ્નમાં હાજરી આપી હતી",
+        "caption": "ઉદ્યોગપતિ રતન તાતાએ અંબાણી પરિવારના લગ્નમાં હાજરી આપી હતી",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963465",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/DC74/production/_105963465_ambani8.jpg",
+        "path": "/cpsprodpb/DC74/production/_105963465_ambani8.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "પૂર્વ વડા પ્રધાન દૈવગૌડાએ આપી અંબાણી પરિવારના પ્રસંગમાં હાજરી",
+        "caption": "પૂર્વ વડા પ્રધાન દેવગૌડા પણ આ લગ્નમાં હાજર રહ્યા હતા",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963471",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/441C/production/_105963471_ambani12.jpg",
+        "path": "/cpsprodpb/441C/production/_105963471_ambani12.jpg",
+        "height": 1000,
+        "width": 976,
+        "altText": "ગુજરાતી ક્રિકેટર પાર્થિવ પટેલે આપી લગ્નમાં હાજરી",
+        "caption": "ગુજરાતી ક્રિકેટર પાર્થિવ પટેલે આપી લગ્નમાં હાજરી",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      },
+      {
+        "id": "105963409",
+        "subType": "photogallery",
+        "href": "http://c.files.bbci.co.uk/16144/production/_105963409_ambani1.jpg",
+        "path": "/cpsprodpb/16144/production/_105963409_ambani1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "સેલિબ્રિટીઝના આગમન માટે ભવ્ય મંચસજ્જા",
+        "caption": "સેલિબ્રિટીઝના આગમન માટે ભવ્ય મંચસજ્જા",
+        "copyrightHolder": "glitterandglamourindia",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "આકાશ અંબાણી અને શ્લોકા મહેતાનાં ભવ્ય લગ્ન, જુઓ તસવીરો",
+      "headline": "આકાશ અંબાણી અને શ્લોકા મહેતાનાં ભવ્ય લગ્ન, જુઓ તસવીરો"
+    },
+    "locators": {
+      "assetUri": "/gujarati/india-47512764",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/india-47512764",
+      "curie": "http://www.bbc.co.uk/asset/eb020ab6-74a8-4449-a21a-ab5b7c3fcf5f"
+    },
+    "summary": "અંબાણી પરિવારના પ્રસંગમાં દેશ-વિદેશના દિગ્ગજો અને સેલિબ્રિટીઝની હાજરી.",
+    "timestamp": 1552209600706,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "105963473",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/923C/production/_105963473_9564f7bb-67d5-41c9-8090-12872bd0d57f.jpg",
+      "path": "/cpsprodpb/923C/production/_105963473_9564f7bb-67d5-41c9-8090-12872bd0d57f.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "આકાશ અંબાણી અને શ્લોકા મહેતાના શાસ્ત્રોક્ત વિધિ પ્રમાણે લગ્ન સંસ્કાર",
+      "caption": "હીરાના વેપારી રસેલ મહેતાનાં પુત્રી શ્લોકા અને આકાશ અંબાણી નાનપણનાં મિત્રો છે.",
+      "copyrightHolder": "Reliance PR",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gujarati/india-47512764",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ભારત",
+      "uri": "/gujarati/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ગુજરાતી",
+      "uri": "/gujarati",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

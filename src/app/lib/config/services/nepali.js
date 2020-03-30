@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ne`,
     articleAuthor: `http://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अद्यावधिक गरिएको समय',
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
+    chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/nepali/institutional-50318130#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/nepali/institutional-50318130',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'मुख पृष्ठ',
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
+      navMenuText: 'सूची',
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -136,6 +141,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन',
+        contentExpired: 'यो सामग्री उपलब्ध छैन',
         audio: 'अडिओ',
         photogallery: 'तस्बिर सङ्ग्रह',
         video: 'भिडिओ',
@@ -144,9 +151,10 @@ export const service = {
           subtitle:
             'नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'सुन्नुहोस्',
+        watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -155,11 +163,16 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'धेरै पढिएको',
-      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति: ',
+      lastUpdated: 'अन्तिम चोटि अद्यावधिक गरिएको मिति:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/nepali/institutional-50318130',
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
@@ -187,6 +200,12 @@ export const service = {
           href: 'https://www.bbc.com/contact/',
           text: 'बीबीसीलाई सम्पर्क गर्नुहोस्',
         },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
+        },
       ],
       copyrightText:
         '२०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
@@ -199,23 +218,14 @@ export const service = {
         url: '/nepali',
       },
       {
-        title: 'समाचार',
-        url: '/nepali/news',
-      },
-      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/multimedia/radio_programmes',
-      },
-      {
-        title: 'तस्वीरहरु',
-        url: '/nepali/media/photogalleries',
       },
       {
         title: 'भिडियो',
         url: '/nepali/media/video',
       },
     ],
-    navigationSection: 'सूची',
   },
 };
 

@@ -3,7 +3,7 @@ import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import * as styledComponents from 'styled-components';
 import dotenv from 'dotenv';
-import getRouteProps from '../app/routes/getInitialData/utils/getRouteProps';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import Document from './Document/component';
 import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
@@ -48,7 +48,7 @@ jest.mock('@loadable/server', () => ({
   }),
 }));
 
-jest.mock('../app/routes/getInitialData/utils/getRouteProps');
+jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 
 const mockRouteProps = ({
   id,
@@ -328,7 +328,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
   });
 };
 
-const testCpsAssetPages = ({
+const testAssetPages = ({
   platform,
   service,
   assetUri,
@@ -553,19 +553,19 @@ describe('Server', () => {
 
   describe('Most Read json', () => {
     it('should serve a file for valid service paths with variants', async () => {
-      const { body } = await makeRequest('/zhongwen/most_read/trad.json');
+      const { body } = await makeRequest('/zhongwen/mostread/trad.json');
       expect(body).toEqual(
         expect.objectContaining({ records: expect.any(Object) }),
       );
     });
     it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest('/news/most_read.json');
+      const { body } = await makeRequest('/news/mostread.json');
       expect(body).toEqual(
         expect.objectContaining({ records: expect.any(Object) }),
       );
     });
     it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest('/some-service/most_read.json');
+      const { statusCode } = await makeRequest('/some-service/mostread.json');
       expect(statusCode).toEqual(500);
     });
   });
@@ -652,7 +652,7 @@ describe('Server', () => {
     describe('for radio schedules', () => {
       it('should respond with JSON for service with radio schedule', async () => {
         const { body } = await makeRequest(
-          '/arabic/bbc_arabic_radio/radioschedule.json',
+          '/arabic/bbc_arabic_radio/schedule.json',
         );
         expect(body).toEqual(
           expect.objectContaining({ schedules: expect.any(Object) }),
@@ -661,14 +661,14 @@ describe('Server', () => {
 
       it('should respond with 404 for service without radio schedule', async () => {
         const { statusCode } = await makeRequest(
-          '/pidgin/bbc_pidgin_radio/radioschedule.json',
+          '/pidgin/bbc_pidgin_radio/schedule.json',
         );
         expect(statusCode).toEqual(404);
       });
 
       it('should respond with 404 for invalid service paths', async () => {
         const { statusCode } = await makeRequest(
-          '/arabic/bbc_pidgin_radio/radioschedule.json',
+          '/arabic/bbc_pidgin_radio/schedule.json',
         );
         expect(statusCode).toEqual(404);
       });
@@ -685,6 +685,26 @@ describe('Server', () => {
         it('should respond with a 404', async () => {
           const { statusCode } = await makeRequest(
             '/pidgin/tori-00000000.json',
+          );
+          expect(statusCode).toEqual(404);
+        });
+      });
+    });
+
+    describe('for legacy asset pages', () => {
+      it('should respond with JSON', async () => {
+        const { body } = await makeRequest(
+          '/hausa/multimedia/2012/07/120712_click.json',
+        );
+        expect(body).toEqual(
+          expect.objectContaining({ content: expect.any(Object) }),
+        );
+      });
+
+      describe('with non-existent data', () => {
+        it('should respond with a 404', async () => {
+          const { statusCode } = await makeRequest(
+            '/hausa/multimedia/2012/07/120712_non-existent.json',
           );
           expect(statusCode).toEqual(404);
         });
@@ -773,39 +793,63 @@ describe('Server', () => {
     queryString: QUERY_STRING,
   });
 
-  testCpsAssetPages({
+  testAssetPages({
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
   });
-  testCpsAssetPages({
+  testAssetPages({
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
     queryString: QUERY_STRING,
   });
-  testCpsAssetPages({
+  testAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
   });
-  testCpsAssetPages({
+  testAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
     queryString: QUERY_STRING,
   });
-  testCpsAssetPages({
+  testAssetPages({
     platform: 'amp',
     service: 'serbian',
     assetUri: 'srbija-49427344',
     variant: 'cyr',
   });
-  testCpsAssetPages({
+  testAssetPages({
     platform: 'canonical',
     service: 'serbian',
     assetUri: 'srbija-49427344',
     variant: 'cyr',
+    queryString: QUERY_STRING,
+  });
+
+  // Legacy asset pages
+  testAssetPages({
+    platform: 'amp',
+    service: 'hausa',
+    assetUri: 'multimedia/2012/07/120712_click',
+  });
+  testAssetPages({
+    platform: 'amp',
+    service: 'hausa',
+    assetUri: 'multimedia/2012/07/120712_click',
+    queryString: QUERY_STRING,
+  });
+  testAssetPages({
+    platform: 'canonical',
+    service: 'hausa',
+    assetUri: 'multimedia/2012/07/120712_click',
+  });
+  testAssetPages({
+    platform: 'canonical',
+    service: 'hausa',
+    assetUri: 'multimedia/2012/07/120712_click',
     queryString: QUERY_STRING,
   });
 

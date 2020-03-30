@@ -1,42 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
-import RadioScheduleContainer from '.';
-import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/radioschedule.json';
-
-let container;
-
-const localRadioScheduleEndpoint = service => {
-  const localhostURL = 'http://localhost:7080';
-  const localServiceURL = `${localhostURL}/${service}`;
-  return `${localServiceURL}/bbc_${service}_radio/radioschedule.json`;
-};
-
-const renderRadioScheduleContainer = service =>
-  act(async () => {
-    ReactDOM.render(
-      <RadioScheduleContainer endpoint={localRadioScheduleEndpoint(service)} />,
-      container,
-    );
-  });
+import { render, wait } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import RadioSchedulesWithContext from './utilities/testHelpers';
+import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 
 describe('RadioScheduleData', () => {
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-  });
-
   afterEach(() => {
-    container = null;
     fetch.resetMocks();
   });
 
-  it(`returns expected data for a service with a radio schedule`, async () => {
-    const ulContent = arabicRadioScheduleData.schedules.length;
-
+  it('does not render when radio schedule toggle is disabled', async () => {
     fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
-    await renderRadioScheduleContainer('arabic');
-
-    expect(container.querySelectorAll('ul').length).toEqual(ulContent);
+    const { container } = render(
+      <RadioSchedulesWithContext service="arabic" />,
+    );
+    await wait(() => {
+      expect(container).toBeEmpty();
+    });
   });
 });

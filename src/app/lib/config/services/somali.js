@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
+    chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
     serviceLocalizedName: 'Somali',
@@ -19,10 +23,10 @@ export const service = {
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
     externalLinkText: ', bogag kale',
-    imageCaptionOffscreenText: 'Qoraalka sawirka ',
-    videoCaptionOffscreenText: 'Qoraalka Muuqaalka ',
-    audioCaptionOffscreenText: 'Qoralka Codka ',
-    defaultCaptionOffscreenText: 'Qoraal ',
+    imageCaptionOffscreenText: 'Qoraalka sawirka, ',
+    videoCaptionOffscreenText: 'Qoraalka Muuqaalka, ',
+    audioCaptionOffscreenText: 'Qoralka Codka, ',
+    defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
     datetimeLocale: `so`,
@@ -31,14 +35,14 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/somali/hayadeed-49283375#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/somali/hayadeed-49283375',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'Somali',
-    hasRadioSchedule: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -49,6 +53,7 @@ export const service = {
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
+      navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -138,6 +143,10 @@ export const service = {
         },
       },
       media: {
+        noJs:
+          'Qalabkan aad haysato kuma ciyaari kartid maqalkan iyo muuqaalkan',
+        contentExpired:
+          'Adeeggani hadda iyo wixii ka danbeeya ma jiro oo ma heli kartid',
         audio: 'Maqal',
         photogallery: 'Albamka sawirrada',
         video: 'Muuqaal',
@@ -154,6 +163,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'TOOS',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -162,11 +172,17 @@ export const service = {
     brandSVG,
     mostRead: {
       header: 'Ugu akhris badan',
-      lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay ',
+      lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
+      numberOfItems: 5,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: true,
+      header: 'Barnaamijyada Idaacadda',
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/somali/hayadeed-49283375',
         text: 'Sababta aada ku aamini kartid BBC News',
       },
       externalLink: {
@@ -193,6 +209,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/somali/hayadeed-37098613',
           text: 'La xiriir BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText:
@@ -222,10 +244,6 @@ export const service = {
         url: '/somali/aqoon_guud',
       },
       {
-        title: 'Maqal',
-        url: '/somali/media/audio',
-      },
-      {
         title: 'Muuqaal',
         url: '/somali/media/video',
       },
@@ -233,12 +251,7 @@ export const service = {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/ka_qayb_gal/programmes',
       },
-      {
-        title: 'Sawirro',
-        url: '/somali/media/photogalleries',
-      },
     ],
-    navigationSection: 'Qaybaha',
   },
 };
 

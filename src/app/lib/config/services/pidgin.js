@@ -7,11 +7,15 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: true,
+    },
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'New Informate',
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
+    chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
     serviceLocalizedName: 'Pidgin',
@@ -36,13 +40,13 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
     fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',
     isTrustProjectParticipant: true,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
     twitterSite: '@BBCNews', // to be updated
-    hasRadioSchedule: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -53,6 +57,7 @@ export const service = {
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
+      navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -139,6 +144,8 @@ export const service = {
         },
       },
       media: {
+        noJs: 'Dem no support media player for your device',
+        contentExpired: 'Dis thing no dey again',
         audio: 'Audio',
         photogallery: 'Image gallery',
         video: 'Video',
@@ -149,6 +156,7 @@ export const service = {
         listen: 'Make you listen',
         watch: 'Look',
         liveLabel: 'AS E DE HAPPEN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -156,7 +164,12 @@ export const service = {
     },
     mostRead: {
       header: 'De one we dem de read well well',
-      lastUpdated: 'De one we dem update for ',
+      lastUpdated: 'De one we dem update for:',
+      numberOfItems: 10,
+      hasMostRead: true,
+    },
+    radioSchedule: {
+      hasRadioSchedule: false,
     },
     navigation: [
       {
@@ -180,10 +193,6 @@ export const service = {
         url: '/pidgin/media/video',
       },
       {
-        title: 'Audio',
-        url: '/pidgin/media/audio',
-      },
-      {
         title: 'Sport',
         url: '/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
       },
@@ -196,10 +205,9 @@ export const service = {
         url: '/pidgin/popular/read',
       },
     ],
-    navigationSection: 'Plenti seshon',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/pidgin/institutional-48528766',
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
@@ -226,6 +234,12 @@ export const service = {
         {
           href: 'https://www.bbc.com/pidgin/institutional-42188215',
           text: 'Call BBC',
+        },
+        {
+          href:
+            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          text: 'AdChoices / Do Not Sell My Info',
+          lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. De external site no concern BBC.',

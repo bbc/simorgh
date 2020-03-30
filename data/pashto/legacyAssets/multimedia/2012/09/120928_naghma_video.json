@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:pashto/multimedia/2012/09/120928_naghma_video",
+    "locators": {
+      "assetUri": "/pashto/multimedia/2012/09/120928_naghma_video",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/multimedia/2012/09/120928_naghma_video",
+      "curie": "http://www.bbc.co.uk/asset/b1f9ed72-7c25-11e7-9ab9-d4aa3db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "pashto",
+    "language": "ps",
+    "lastUpdated": 1550681306635,
+    "firstPublished": 1348828655,
+    "lastPublished": 1348828691,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "previouslyArchived": null,
+      "allowAdvertising": false,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": { "cps_asset_type": "map", "cps_asset_id": "20195860" },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "20195860",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/pashto/meta/dps/2012/09/emp/120928_naghma_video.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "د پښتو ژبې مشهوره سندرغاړې نغمه د بي بي سي پښتو وېبپاڼې مېلمنه وه. له ایمل پسرلي سره په دې ويديويي مرکه کې نغمې پر خپل هنر او شخصي ژوند رڼا اچولې ده.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "نغمه: په غږ مشهوره يم نه په حسن",
+      "headline": "نغمه: په غږ مشهوره يم نه په حسن"
+    },
+    "locators": {
+      "assetUri": "/pashto/multimedia/2012/09/120928_naghma_video",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/multimedia/2012/09/120928_naghma_video",
+      "curie": "http://www.bbc.co.uk/asset/b1f9ed72-7c25-11e7-9ab9-d4aa3db9bd6e"
+    },
+    "summary": "د پښتو ژبې مشهوره سندرغاړې نغمه د بي بي سي پښتو وېبپاڼې مېلمنه وه. له ایمل پسرلي سره په دې ويديويي مرکه کې نغمې پر خپل هنر او شخصي ژوند رڼا اچولې ده.",
+    "timestamp": 1550681306635,
+    "passport": {},
+    "media": {
+      "id": "20195860",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/pashto/meta/dps/2012/09/emp/120928_naghma_video.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d7e200",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2012/09/26/120926160729_naghma_in_bbc_112x63_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2012/09/26/120926160729_naghma_in_bbc_112x63_bbc_nocredit.jpg",
+      "height": 63,
+      "width": 112,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:pashto/multimedia/2012/09/120928_naghma_video",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ملټي ميډيا",
+      "uri": "/pashto/multimedia",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCPashto.com",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

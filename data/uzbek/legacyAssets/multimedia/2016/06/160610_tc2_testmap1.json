@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/uzbek/meta/dps/junk/2016/06/emp/160610_tc2_testmap1.emp.xml",
+        "id": "17697486",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+          "id": "17697486",
+          "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Таиланддаги йўлбрасларга макон бўлган ибодатхона музлатгичидан 40 та йўлбрасбача қолдиқлари топилган.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17697486", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "uzbek",
+    "firstPublished": 1465573901000,
+    "id": "urn:bbc:ares::asset:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+    "includeComments": false,
+    "language": "uz-Cyrl",
+    "lastPublished": 1466442557000,
+    "lastUpdated": 1585065225970,
+    "locators": {
+      "assetId": "17697486",
+      "assetUri": "/uzbek/multimedia/2016/06/160610_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/f0c20df6-2f22-11e6-b1ca-8fb8adeda546"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1465573901000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Таиланддаги музлатгичда 40та йўлбарсбача",
+      "shortHeadline": "Таиланддаги музлатгичда 40та йўлбарсбача"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e212",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "uz-Cyrl",
+    "locators": {
+      "assetId": "17697486",
+      "assetUri": "/uzbek/multimedia/2016/06/160610_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/multimedia/2016/06/160610_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/f0c20df6-2f22-11e6-b1ca-8fb8adeda546"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/uzbek/meta/dps/junk/2016/06/emp/160610_tc2_testmap1.emp.xml",
+      "id": "17697486",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+        "id": "17697486",
+        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_640x360_getty.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/uzbek/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160610_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Таиланддаги йўлбрасларга макон бўлган ибодатхона музлатгичидан 40 та йўлбрасбача қолдиқлари топилган.",
+    "timestamp": 1465573901000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Multimedia",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/uzbek/multimedia"
+    },
+    "site": {
+      "name": "BBCUzbek.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/uzbek"
+    }
+  }
+}
