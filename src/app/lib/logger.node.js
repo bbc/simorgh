@@ -61,7 +61,7 @@ const logToFile = callingFile => {
   });
 };
 
-const processLogMessage = (event, message) => {
+const logEventMessage = (event, message) => {
   const logObject = {
     event,
     message,
@@ -73,16 +73,45 @@ const processLogMessage = (event, message) => {
 class Logger {
   constructor(callingFile) {
     const fileLogger = logToFile(callingFile);
-    this.error = (event, message) =>
-      fileLogger.error(processLogMessage(event, message));
-    this.warn = (event, message) =>
-      fileLogger.warn(processLogMessage(event, message));
-    this.info = (event, message) =>
-      fileLogger.info(processLogMessage(event, message));
-    this.debug = (event, message) =>
-      fileLogger.debug(processLogMessage(event, message));
-    this.verbose = (event, message) =>
-      fileLogger.log(processLogMessage(event, message));
+    this.error = (event, message) => {
+      if (message) {
+        fileLogger.error(logEventMessage(event, message));
+      } else {
+        fileLogger.error(event);
+      }
+    };
+
+    this.warn = (event, message) => {
+      if (message) {
+        fileLogger.warn(logEventMessage(event, message));
+      } else {
+        fileLogger.warn(event);
+      }
+    };
+
+    this.info = (event, message) => {
+      if (message) {
+        fileLogger.info(logEventMessage(event, message));
+      } else {
+        fileLogger.info(event);
+      }
+    };
+
+    this.debug = (event, message) => {
+      if (message) {
+        fileLogger.debug(logEventMessage(event, message));
+      } else {
+        fileLogger.debug(event);
+      }
+    };
+
+    this.verbose = (event, message) => {
+      if (message) {
+        fileLogger.log(logEventMessage(event, message));
+      } else {
+        fileLogger.log(event);
+      }
+    };
   }
 }
 
