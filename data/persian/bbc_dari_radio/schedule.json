@@ -4,20 +4,20 @@
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577946934000,
-      "publishedTimeStart": 1578897000000,
-      "publishedTimeEnd": 1578897180000,
+      "updateTime": 1583994339000,
+      "publishedTimeStart": 1584945000000,
+      "publishedTimeEnd": 1584945180000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578897000000,
-      "transmissionTimeEnd": 1578897180000,
+      "transmissionTimeStart": 1584945000000,
+      "transmissionTimeEnd": 1584945180000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvwfmm.imi:ws.bbc.co.uk/DARIA1578897000",
-        "pid": "p07zbtbf"
+        "bid": "w1msh67kz10nxq0.imi:ws.bbc.co.uk/DARIA1584945000",
+        "pid": "p086czrk"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -29,8 +29,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts59bnq",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1rwggb2tr3",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -38,31 +38,31 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvwfmm"
+        "pid": "w1msh67kz10nxq0"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577946933000,
-      "publishedTimeStart": 1578897180000,
-      "publishedTimeEnd": 1578898770000,
+      "updateTime": 1584865161000,
+      "publishedTimeStart": 1584945180000,
+      "publishedTimeEnd": 1584946770000,
       "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1578897180000,
-      "transmissionTimeEnd": 1578898770000,
+      "transmissionTimeStart": 1584945180000,
+      "transmissionTimeEnd": 1584946770000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtsgd.imi:ws.bbc.co.uk/DARIA1578897180",
-        "pid": "p07zbtbb"
+        "bid": "w4hqtrz2.imi:ws.bbc.co.uk/DARIA1584945180",
+        "pid": "p087bndm"
       },
       "brand": {
-        "pid": "w13xttm2",
-        "title": "چشم انداز بامدادی 2",
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -70,8 +70,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz82r",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w3csz7ld",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -79,27 +79,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtsgd"
+        "pid": "w4hqtrz2"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577950525000,
-      "publishedTimeStart": 1578900600000,
-      "publishedTimeEnd": 1578900780000,
+      "updateTime": 1583997930000,
+      "publishedTimeStart": 1584948600000,
+      "publishedTimeEnd": 1584948780000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578900600000,
-      "transmissionTimeEnd": 1578900780000,
+      "transmissionTimeStart": 1584948600000,
+      "transmissionTimeEnd": 1584948780000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvwkcr.imi:ws.bbc.co.uk/DARIA1578900600",
-        "pid": "p07zbwly"
+        "bid": "w1msh67kz10p1g4.imi:ws.bbc.co.uk/DARIA1584948600",
+        "pid": "p086d3md"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -111,8 +111,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts59gdv",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1rwggb2yh7",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -120,27 +120,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvwkcr"
+        "pid": "w1msh67kz10p1g4"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577954131000,
-      "publishedTimeStart": 1578904200000,
-      "publishedTimeEnd": 1578904380000,
+      "updateTime": 1584001535000,
+      "publishedTimeStart": 1584952200000,
+      "publishedTimeEnd": 1584952380000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578904200000,
-      "transmissionTimeEnd": 1578904380000,
+      "transmissionTimeStart": 1584952200000,
+      "transmissionTimeEnd": 1584952380000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvwp3w.imi:ws.bbc.co.uk/DARIA1578904200",
-        "pid": "p07zby99"
+        "bid": "w1msh67kz10p568.imi:ws.bbc.co.uk/DARIA1584952200",
+        "pid": "p086d744"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -152,8 +152,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts59l4z",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1rwggb327c",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -161,27 +161,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvwp3w"
+        "pid": "w1msh67kz10p568"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577958026000,
-      "publishedTimeStart": 1578907800000,
-      "publishedTimeEnd": 1578907980000,
+      "updateTime": 1584005248000,
+      "publishedTimeStart": 1584955800000,
+      "publishedTimeEnd": 1584955980000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578907800000,
-      "transmissionTimeEnd": 1578907980000,
+      "transmissionTimeStart": 1584955800000,
+      "transmissionTimeEnd": 1584955980000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvwsw0.imi:ws.bbc.co.uk/DARIA1578907800",
-        "pid": "p07zc16k"
+        "bid": "w1msh67kz10p8yd.imi:ws.bbc.co.uk/DARIA1584955800",
+        "pid": "p086dnfj"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -193,8 +193,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts59px3",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1rwggb35zh",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -202,27 +202,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvwsw0"
+        "pid": "w1msh67kz10p8yd"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577958025000,
-      "publishedTimeStart": 1578907980000,
-      "publishedTimeEnd": 1578909570000,
+      "updateTime": 1584005240000,
+      "publishedTimeStart": 1584955980000,
+      "publishedTimeEnd": 1584957570000,
       "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1578907980000,
-      "transmissionTimeEnd": 1578909570000,
+      "transmissionTimeStart": 1584955980000,
+      "transmissionTimeEnd": 1584957570000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtwcz.imi:ws.bbc.co.uk/DARIA1578907980",
-        "pid": "p07zc16g"
+        "bid": "w4hqtwd9.imi:ws.bbc.co.uk/DARIA1584955980",
+        "pid": "p086dndr"
       },
       "brand": {
         "pid": "p0340v0t",
@@ -234,8 +234,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszbpq",
-        "presentationTitle": "12/01/2020 GMT",
+        "pid": "w3cszbq1",
+        "presentationTitle": "22/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند.",
@@ -243,27 +243,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtwcz"
+        "pid": "w4hqtwd9"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577961328000,
-      "publishedTimeStart": 1578911400000,
-      "publishedTimeEnd": 1578911580000,
+      "updateTime": 1584008794000,
+      "publishedTimeStart": 1584959400000,
+      "publishedTimeEnd": 1584959580000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578911400000,
-      "transmissionTimeEnd": 1578911580000,
+      "transmissionTimeStart": 1584959400000,
+      "transmissionTimeEnd": 1584959580000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvwxm4.imi:ws.bbc.co.uk/DARIA1578911400",
-        "pid": "p07zc4rn"
+        "bid": "w1msh67kz10pdpj.imi:ws.bbc.co.uk/DARIA1584959400",
+        "pid": "p086f1nf"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -275,8 +275,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts59tn7",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1rwggb39qm",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -284,27 +284,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvwxm4"
+        "pid": "w1msh67kz10pdpj"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577964940000,
-      "publishedTimeStart": 1578915000000,
-      "publishedTimeEnd": 1578915180000,
+      "updateTime": 1584012369000,
+      "publishedTimeStart": 1584963000000,
+      "publishedTimeEnd": 1584963180000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578915000000,
-      "transmissionTimeEnd": 1578915180000,
+      "transmissionTimeStart": 1584963000000,
+      "transmissionTimeEnd": 1584963180000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvx1c8.imi:ws.bbc.co.uk/DARIA1578915000",
-        "pid": "p07zcf81"
+        "bid": "w1msh67kz10pjfn.imi:ws.bbc.co.uk/DARIA1584963000",
+        "pid": "p086fb5b"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -316,8 +316,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts59ydc",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1rwggb3fgr",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -325,27 +325,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvx1c8"
+        "pid": "w1msh67kz10pjfn"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577975753000,
-      "publishedTimeStart": 1578924000000,
-      "publishedTimeEnd": 1578925800000,
+      "updateTime": 1584023178000,
+      "publishedTimeStart": 1584972000000,
+      "publishedTimeEnd": 1584973800000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1578924000000,
-      "transmissionTimeEnd": 1578925770000,
+      "transmissionTimeStart": 1584972000000,
+      "transmissionTimeEnd": 1584973770000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtt5h.imi:ws.bbc.co.uk/DARIA1578924000",
-        "pid": "p07zcvl8"
+        "bid": "w4hqtt5t.imi:ws.bbc.co.uk/DARIA1584972000",
+        "pid": "p086fz2k"
       },
       "brand": {
         "pid": "p0340v11",
@@ -357,8 +357,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz8th",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w3csz8tt",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
@@ -366,27 +366,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtt5h"
+        "pid": "w4hqtt5t"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577975758000,
-      "publishedTimeStart": 1578925800000,
-      "publishedTimeEnd": 1578927570000,
+      "updateTime": 1584023155000,
+      "publishedTimeStart": 1584973800000,
+      "publishedTimeEnd": 1584975570000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1578925800000,
-      "transmissionTimeEnd": 1578927570000,
+      "transmissionTimeStart": 1584973800000,
+      "transmissionTimeEnd": 1584975570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtvt9.imi:ws.bbc.co.uk/DARIA1578925800",
-        "pid": "p07zcvld"
+        "bid": "w4hqtvtm.imi:ws.bbc.co.uk/DARIA1584973800",
+        "pid": "p086fyvy"
       },
       "brand": {
         "pid": "p0340v0k",
@@ -398,8 +398,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszb4q",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w3cszb51",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "برنامه نویسی از سرویس بی بی سی فارسی",
@@ -407,27 +407,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtvt9"
+        "pid": "w4hqtvtm"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577982932000,
-      "publishedTimeStart": 1578931200000,
-      "publishedTimeEnd": 1578932970000,
+      "updateTime": 1584030372000,
+      "publishedTimeStart": 1584979200000,
+      "publishedTimeEnd": 1584980970000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1578931200000,
-      "transmissionTimeEnd": 1578932970000,
+      "transmissionTimeStart": 1584979200000,
+      "transmissionTimeEnd": 1584980970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh66mwm878sk.imi:ws.bbc.co.uk/DARIA1578931200",
-        "pid": "p07zd49v"
+        "bid": "w1msh66rj9f0rvy.imi:ws.bbc.co.uk/DARIA1584979200",
+        "pid": "p086gdtz"
       },
       "brand": {
         "pid": "p0340v0d",
@@ -439,8 +439,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1qyd1kn5tn",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w172x1r20qqfnx1",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "برنامه نویسی از سرویس بی بی سی فارسی",
@@ -448,27 +448,27 @@
         }
       },
       "version": {
-        "pid": "w1msh66mwm878sk"
+        "pid": "w1msh66rj9f0rvy"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1577986531000,
-      "publishedTimeStart": 1578936600000,
-      "publishedTimeEnd": 1578938370000,
+      "updateTime": 1584033940000,
+      "publishedTimeStart": 1584984600000,
+      "publishedTimeEnd": 1584986370000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1578936600000,
-      "transmissionTimeEnd": 1578938370000,
+      "transmissionTimeStart": 1584984600000,
+      "transmissionTimeEnd": 1584986370000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtt5h.imi:ws.bbc.co.uk/DARIA1578936600",
-        "pid": "p07zd7bn"
+        "bid": "w4hqtt5t.imi:ws.bbc.co.uk/DARIA1584984600",
+        "pid": "p086glxw"
       },
       "brand": {
         "pid": "p0340v11",
@@ -480,8 +480,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz8th",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w3csz8tt",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
@@ -489,27 +489,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtt5h"
+        "pid": "w4hqtt5t"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578015332000,
-      "publishedTimeStart": 1578965400000,
-      "publishedTimeEnd": 1578967170000,
+      "updateTime": 1584062726000,
+      "publishedTimeStart": 1585013400000,
+      "publishedTimeEnd": 1585015170000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1578965400000,
-      "transmissionTimeEnd": 1578967170000,
+      "transmissionTimeStart": 1585013400000,
+      "transmissionTimeEnd": 1585015170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqts6h.imi:ws.bbc.co.uk/DARIA1578965400",
-        "pid": "p07zdxbh"
+        "bid": "w4hqts83.imi:ws.bbc.co.uk/DARIA1585013400",
+        "pid": "p086hm5y"
       },
       "brand": {
         "pid": "p04xz36l",
@@ -521,8 +521,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz7vg",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w3csz7x2",
+        "presentationTitle": "17/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -530,109 +530,27 @@
         }
       },
       "version": {
-        "pid": "w4hqts6h"
+        "pid": "w4hqts83"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578018932000,
-      "publishedTimeStart": 1578969000000,
-      "publishedTimeEnd": 1578970770000,
+      "updateTime": 1585014672000,
+      "publishedTimeStart": 1585017000000,
+      "publishedTimeEnd": 1585018770000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1578969000000,
-      "transmissionTimeEnd": 1578970770000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtstc.imi:ws.bbc.co.uk/DARIA1578969000",
-        "pid": "p07zdy2d"
-      },
-      "brand": {
-        "pid": "w13xttm2",
-        "title": "چشم انداز بامدادی 2",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "episode": {
-        "pid": "w3csz8gc",
-        "presentationTitle": "14/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "version": {
-        "pid": "w4hqtstc"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578029731000,
-      "publishedTimeStart": 1578979800000,
-      "publishedTimeEnd": 1578979980000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578979800000,
-      "transmissionTimeEnd": 1578979980000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbvz6sl.imi:ws.bbc.co.uk/DARIA1578979800",
-        "pid": "p07zf16d"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5d3tp",
-        "presentationTitle": "14/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbvz6sl"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578029732000,
-      "publishedTimeStart": 1578979980000,
-      "publishedTimeEnd": 1578981570000,
-      "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1578979980000,
-      "transmissionTimeEnd": 1578981570000,
+      "transmissionTimeStart": 1585017000000,
+      "transmissionTimeEnd": 1585018770000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqts6h.imi:ws.bbc.co.uk/DARIA1578979980",
-        "pid": "p07zf16f"
+        "bid": "w4hqts83.imi:ws.bbc.co.uk/DARIA1585017000",
+        "pid": "p087gzwl"
       },
       "brand": {
         "pid": "p04xz36l",
@@ -644,8 +562,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz7vg",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w3csz7x2",
+        "presentationTitle": "17/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -653,27 +571,27 @@
         }
       },
       "version": {
-        "pid": "w4hqts6h"
+        "pid": "w4hqts83"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578033335000,
-      "publishedTimeStart": 1578983400000,
-      "publishedTimeEnd": 1578983580000,
+      "updateTime": 1584077138000,
+      "publishedTimeStart": 1585027800000,
+      "publishedTimeEnd": 1585027980000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578983400000,
-      "transmissionTimeEnd": 1578983580000,
+      "transmissionTimeStart": 1585027800000,
+      "transmissionTimeEnd": 1585027980000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvzbjq.imi:ws.bbc.co.uk/DARIA1578983400",
-        "pid": "p07zf3w9"
+        "bid": "w1msh67kz10rpvz.imi:ws.bbc.co.uk/DARIA1585027800",
+        "pid": "p086hw49"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -685,8 +603,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts5d7kt",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w172x1rwggb5lx2",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -694,31 +612,31 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvzbjq"
+        "pid": "w1msh67kz10rpvz"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578033334000,
-      "publishedTimeStart": 1578983580000,
-      "publishedTimeEnd": 1578985170000,
+      "updateTime": 1584077137000,
+      "publishedTimeStart": 1585027980000,
+      "publishedTimeEnd": 1585029570000,
       "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1578983580000,
-      "transmissionTimeEnd": 1578985170000,
+      "transmissionTimeStart": 1585027980000,
+      "transmissionTimeEnd": 1585029570000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtstc.imi:ws.bbc.co.uk/DARIA1578983580",
-        "pid": "p07zf3w3"
+        "bid": "w4hqts83.imi:ws.bbc.co.uk/DARIA1585027980",
+        "pid": "p086hw47"
       },
       "brand": {
-        "pid": "w13xttm2",
-        "title": "چشم انداز بامدادی 2",
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -726,8 +644,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz8gc",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w3csz7x2",
+        "presentationTitle": "17/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -735,27 +653,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtstc"
+        "pid": "w4hqts83"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578036929000,
-      "publishedTimeStart": 1578987000000,
-      "publishedTimeEnd": 1578987180000,
+      "updateTime": 1584080739000,
+      "publishedTimeStart": 1585031400000,
+      "publishedTimeEnd": 1585031580000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578987000000,
-      "transmissionTimeEnd": 1578987180000,
+      "transmissionTimeStart": 1585031400000,
+      "transmissionTimeEnd": 1585031580000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvzg8v.imi:ws.bbc.co.uk/DARIA1578987000",
-        "pid": "p07zf6nk"
+        "bid": "w1msh67kz10rtm3.imi:ws.bbc.co.uk/DARIA1585031400",
+        "pid": "p086j015"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -767,8 +685,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts5dc9y",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w172x1rwggb5qn6",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -776,109 +694,191 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvzg8v"
+        "pid": "w1msh67kz10rtm3"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578040532000,
-      "publishedTimeStart": 1578990600000,
-      "publishedTimeEnd": 1578990780000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578990600000,
-      "transmissionTimeEnd": 1578990780000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbvzl0z.imi:ws.bbc.co.uk/DARIA1578990600",
-        "pid": "p07zfbwn"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5dh22",
-        "presentationTitle": "14/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbvzl0z"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578044135000,
-      "publishedTimeStart": 1578994200000,
-      "publishedTimeEnd": 1578994380000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578994200000,
-      "transmissionTimeEnd": 1578994380000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbvzps3.imi:ws.bbc.co.uk/DARIA1578994200",
-        "pid": "p07zfgv3"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5dlt6",
-        "presentationTitle": "14/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbvzps3"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578044120000,
-      "publishedTimeStart": 1578994380000,
-      "publishedTimeEnd": 1578995970000,
+      "updateTime": 1585029077000,
+      "publishedTimeStart": 1585031580000,
+      "publishedTimeEnd": 1585033170000,
       "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1578994380000,
-      "transmissionTimeEnd": 1578995970000,
+      "transmissionTimeStart": 1585031580000,
+      "transmissionTimeEnd": 1585033170000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtvt9.imi:ws.bbc.co.uk/DARIA1578994380",
-        "pid": "p07zfgtg"
+        "bid": "w4hqts83.imi:ws.bbc.co.uk/DARIA1585031580",
+        "pid": "p087h49z"
+      },
+      "brand": {
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "episode": {
+        "pid": "w3csz7x2",
+        "presentationTitle": "17/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "version": {
+        "pid": "w4hqts83"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584084326000,
+      "publishedTimeStart": 1585035000000,
+      "publishedTimeEnd": 1585035180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585035000000,
+      "transmissionTimeEnd": 1585035180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10ryc7.imi:ws.bbc.co.uk/DARIA1585035000",
+        "pid": "p086j3lc"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb5vdb",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10ryc7"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584087939000,
+      "publishedTimeStart": 1585038600000,
+      "publishedTimeEnd": 1585038780000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585038600000,
+      "transmissionTimeEnd": 1585038780000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10s23c.imi:ws.bbc.co.uk/DARIA1585038600",
+        "pid": "p086j7h9"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb5z4g",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10s23c"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584091540000,
+      "publishedTimeStart": 1585042200000,
+      "publishedTimeEnd": 1585042380000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585042200000,
+      "transmissionTimeEnd": 1585042380000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10s5vh.imi:ws.bbc.co.uk/DARIA1585042200",
+        "pid": "p086jd8t"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb62wl",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10s5vh"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584091523000,
+      "publishedTimeStart": 1585042380000,
+      "publishedTimeEnd": 1585043970000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1585042380000,
+      "transmissionTimeEnd": 1585043970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtvtm.imi:ws.bbc.co.uk/DARIA1585042380",
+        "pid": "p086jd7l"
       },
       "brand": {
         "pid": "p0340v0k",
@@ -890,8 +890,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszb4q",
-        "presentationTitle": "13/01/2020 GMT",
+        "pid": "w3cszb51",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "برنامه نویسی از سرویس بی بی سی فارسی",
@@ -899,27 +899,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtvt9"
+        "pid": "w4hqtvtm"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578047731000,
-      "publishedTimeStart": 1578997800000,
-      "publishedTimeEnd": 1578997980000,
+      "updateTime": 1584095140000,
+      "publishedTimeStart": 1585045800000,
+      "publishedTimeEnd": 1585045980000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1578997800000,
-      "transmissionTimeEnd": 1578997980000,
+      "transmissionTimeStart": 1585045800000,
+      "transmissionTimeEnd": 1585045980000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvztj7.imi:ws.bbc.co.uk/DARIA1578997800",
-        "pid": "p07zfmm0"
+        "bid": "w1msh67kz10s9lm.imi:ws.bbc.co.uk/DARIA1585045800",
+        "pid": "p086jl9g"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -931,8 +931,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts5dqkb",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w172x1rwggb66mq",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -940,27 +940,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvztj7"
+        "pid": "w1msh67kz10s9lm"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578051335000,
-      "publishedTimeStart": 1579001400000,
-      "publishedTimeEnd": 1579001580000,
+      "updateTime": 1584098767000,
+      "publishedTimeStart": 1585049400000,
+      "publishedTimeEnd": 1585049580000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579001400000,
-      "transmissionTimeEnd": 1579001580000,
+      "transmissionTimeStart": 1585049400000,
+      "transmissionTimeEnd": 1585049580000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbvzy8c.imi:ws.bbc.co.uk/DARIA1579001400",
-        "pid": "p07zfsm4"
+        "bid": "w1msh67kz10sfbr.imi:ws.bbc.co.uk/DARIA1585049400",
+        "pid": "p086jsw3"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -972,8 +972,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts5dv9g",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w172x1rwggb6bcv",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -981,27 +981,27 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbvzy8c"
+        "pid": "w1msh67kz10sfbr"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578062142000,
-      "publishedTimeStart": 1579010400000,
-      "publishedTimeEnd": 1579012200000,
+      "updateTime": 1584109594000,
+      "publishedTimeStart": 1585058400000,
+      "publishedTimeEnd": 1585060200000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1579010400000,
-      "transmissionTimeEnd": 1579012170000,
+      "transmissionTimeStart": 1585058400000,
+      "transmissionTimeEnd": 1585060170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqttb0.imi:ws.bbc.co.uk/DARIA1579010400",
-        "pid": "p07zg9rb"
+        "bid": "w4hqttbb.imi:ws.bbc.co.uk/DARIA1585058400",
+        "pid": "p086khq6"
       },
       "brand": {
         "pid": "p0340v11",
@@ -1013,8 +1013,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz8z0",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w3csz8zb",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
@@ -1022,27 +1022,27 @@
         }
       },
       "version": {
-        "pid": "w4hqttb0"
+        "pid": "w4hqttbb"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578062148000,
-      "publishedTimeStart": 1579012200000,
-      "publishedTimeEnd": 1579013970000,
+      "updateTime": 1584109578000,
+      "publishedTimeStart": 1585060200000,
+      "publishedTimeEnd": 1585061970000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579012200000,
-      "transmissionTimeEnd": 1579013970000,
+      "transmissionTimeStart": 1585060200000,
+      "transmissionTimeEnd": 1585061970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtwg8.imi:ws.bbc.co.uk/DARIA1579012200",
-        "pid": "p07zg9rj"
+        "bid": "w4hqtwgl.imi:ws.bbc.co.uk/DARIA1585060200",
+        "pid": "p086khp7"
       },
       "brand": {
         "pid": "p0340v0t",
@@ -1054,8 +1054,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszbs0",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w3cszbsb",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند.",
@@ -1063,540 +1063,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtwg8"
+        "pid": "w4hqtwgl"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578069337000,
-      "publishedTimeStart": 1579017600000,
-      "publishedTimeEnd": 1579019370000,
+      "updateTime": 1585038022000,
+      "publishedTimeStart": 1585065600000,
+      "publishedTimeEnd": 1585067370000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579017600000,
-      "transmissionTimeEnd": 1579019370000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh66mwm8b5pn.imi:ws.bbc.co.uk/DARIA1579017600",
-        "pid": "p07zglyr"
-      },
-      "brand": {
-        "pid": "p0340v0d",
-        "title": "خبر و نظر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
-          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
-        }
-      },
-      "episode": {
-        "pid": "w172x1qyd1kr2qr",
-        "presentationTitle": "14/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "برنامه نویسی از سرویس بی بی سی فارسی",
-          "medium": "برنامه نویسی از سرویس بی بی سی فارسی"
-        }
-      },
-      "version": {
-        "pid": "w1msh66mwm8b5pn"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578072930000,
-      "publishedTimeStart": 1579021200000,
-      "publishedTimeEnd": 1579023000000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1579021200000,
-      "transmissionTimeEnd": 1579022970000,
+      "transmissionTimeStart": 1585065600000,
+      "transmissionTimeEnd": 1585067370000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtm3d.imi:ws.bbc.co.uk/DARIA1579021200",
-        "pid": "p07zgqh6"
-      },
-      "brand": {
-        "pid": "p03n4htm",
-        "title": "غږیز کتاب"
-      },
-      "episode": {
-        "pid": "w3csz3lt",
-        "presentationTitle": "12/01/2020 GMT"
-      },
-      "version": {
-        "pid": "w4hqtm3d"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578072938000,
-      "publishedTimeStart": 1579023000000,
-      "publishedTimeEnd": 1579024770000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579023000000,
-      "transmissionTimeEnd": 1579024770000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqttb0.imi:ws.bbc.co.uk/DARIA1579023000",
-        "pid": "p07zgqhm"
-      },
-      "brand": {
-        "pid": "p0340v11",
-        "title": "مجله شامگاهی",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز."
-        }
-      },
-      "episode": {
-        "pid": "w3csz8z0",
-        "presentationTitle": "14/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز."
-        }
-      },
-      "version": {
-        "pid": "w4hqttb0"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578080134000,
-      "publishedTimeStart": 1579028400000,
-      "publishedTimeEnd": 1579030170000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579028400000,
-      "transmissionTimeEnd": 1579030170000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtm3d.imi:ws.bbc.co.uk/DARIA1579028400",
-        "pid": "p07zgzhq"
-      },
-      "brand": {
-        "pid": "p03n4htm",
-        "title": "غږیز کتاب"
-      },
-      "episode": {
-        "pid": "w3csz3lt",
-        "presentationTitle": "12/01/2020 GMT"
-      },
-      "version": {
-        "pid": "w4hqtm3d"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578101717000,
-      "publishedTimeStart": 1579051800000,
-      "publishedTimeEnd": 1579053570000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579051800000,
-      "transmissionTimeEnd": 1579053570000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtsbv.imi:ws.bbc.co.uk/DARIA1579051800",
-        "pid": "p07zhfsp"
-      },
-      "brand": {
-        "pid": "p04xz36l",
-        "title": "چشم انداز بامدادی 1",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "episode": {
-        "pid": "w3csz7zv",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "version": {
-        "pid": "w4hqtsbv"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578105329000,
-      "publishedTimeStart": 1579055400000,
-      "publishedTimeEnd": 1579057170000,
-      "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579055400000,
-      "transmissionTimeEnd": 1579057170000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtsvh.imi:ws.bbc.co.uk/DARIA1579055400",
-        "pid": "p07zhgmm"
-      },
-      "brand": {
-        "pid": "w13xttm2",
-        "title": "چشم انداز بامدادی 2",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "episode": {
-        "pid": "w3csz8hh",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "version": {
-        "pid": "w4hqtsvh"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578116132000,
-      "publishedTimeStart": 1579066200000,
-      "publishedTimeEnd": 1579066380000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579066200000,
-      "transmissionTimeEnd": 1579066380000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw23pp.imi:ws.bbc.co.uk/DARIA1579066200",
-        "pid": "p07zhlbj"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5h0qs",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw23pp"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578116132000,
-      "publishedTimeStart": 1579066380000,
-      "publishedTimeEnd": 1579067970000,
-      "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1579066380000,
-      "transmissionTimeEnd": 1579067970000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtsbv.imi:ws.bbc.co.uk/DARIA1579066380",
-        "pid": "p07zhlbh"
-      },
-      "brand": {
-        "pid": "p04xz36l",
-        "title": "چشم انداز بامدادی 1",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "episode": {
-        "pid": "w3csz7zv",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "version": {
-        "pid": "w4hqtsbv"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578119735000,
-      "publishedTimeStart": 1579069800000,
-      "publishedTimeEnd": 1579069980000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579069800000,
-      "transmissionTimeEnd": 1579069980000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw27ft.imi:ws.bbc.co.uk/DARIA1579069800",
-        "pid": "p07zhn9t"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5h4gx",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw27ft"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578119736000,
-      "publishedTimeStart": 1579069980000,
-      "publishedTimeEnd": 1579071570000,
-      "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1579069980000,
-      "transmissionTimeEnd": 1579071570000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtsvh.imi:ws.bbc.co.uk/DARIA1579069980",
-        "pid": "p07zhn9v"
-      },
-      "brand": {
-        "pid": "w13xttm2",
-        "title": "چشم انداز بامدادی 2",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "episode": {
-        "pid": "w3csz8hh",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
-          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
-        }
-      },
-      "version": {
-        "pid": "w4hqtsvh"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578123333000,
-      "publishedTimeStart": 1579073400000,
-      "publishedTimeEnd": 1579073580000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579073400000,
-      "transmissionTimeEnd": 1579073580000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw2c5y.imi:ws.bbc.co.uk/DARIA1579073400",
-        "pid": "p07zhq8w"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5h871",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw2c5y"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578126931000,
-      "publishedTimeStart": 1579077000000,
-      "publishedTimeEnd": 1579077180000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579077000000,
-      "transmissionTimeEnd": 1579077180000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw2gy2.imi:ws.bbc.co.uk/DARIA1579077000",
-        "pid": "p07zhrr2"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5hcz5",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw2gy2"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578130540000,
-      "publishedTimeStart": 1579080600000,
-      "publishedTimeEnd": 1579080780000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579080600000,
-      "transmissionTimeEnd": 1579080780000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw2lp6.imi:ws.bbc.co.uk/DARIA1579080600",
-        "pid": "p07zhvq2"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5hhq9",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw2lp6"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578130521000,
-      "publishedTimeStart": 1579080780000,
-      "publishedTimeEnd": 1579082370000,
-      "publishedTimeDuration": "PT26M30S",
-      "transmissionTimeStart": 1579080780000,
-      "transmissionTimeEnd": 1579082370000,
-      "isBlanked": false,
-      "isRepeat": true,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w4hqtwg8.imi:ws.bbc.co.uk/DARIA1579080780",
-        "pid": "p07zhvpm"
+        "bid": "w4hqtwgl.imi:ws.bbc.co.uk/DARIA1585065600",
+        "pid": "p087h9cj"
       },
       "brand": {
         "pid": "p0340v0t",
@@ -1608,8 +1095,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszbs0",
-        "presentationTitle": "14/01/2020 GMT",
+        "pid": "w3cszbsb",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند.",
@@ -1617,109 +1104,58 @@
         }
       },
       "version": {
-        "pid": "w4hqtwg8"
+        "pid": "w4hqtwgl"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578134126000,
-      "publishedTimeStart": 1579084200000,
-      "publishedTimeEnd": 1579084380000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579084200000,
-      "transmissionTimeEnd": 1579084380000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw2qfb.imi:ws.bbc.co.uk/DARIA1579084200",
-        "pid": "p07zhxjt"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5hmgf",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw2qfb"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578137731000,
-      "publishedTimeStart": 1579087800000,
-      "publishedTimeEnd": 1579087980000,
-      "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579087800000,
-      "transmissionTimeEnd": 1579087980000,
-      "isBlanked": false,
-      "isRepeat": false,
-      "isAudioDescribed": false,
-      "isCritical": false,
-      "isSimulcast": true,
-      "broadcast": {
-        "bid": "w1msh67gbbw2v5g.imi:ws.bbc.co.uk/DARIA1579087800",
-        "pid": "p07zj035"
-      },
-      "brand": {
-        "pid": "p0340v0s",
-        "title": "نبض خبر",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "episode": {
-        "pid": "w172x1rrts5hr6k",
-        "presentationTitle": "15/01/2020 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
-        "synopses": {
-          "short": "تازه ترین خبرهای جهان",
-          "medium": "تازه ترین خبرهای جهان"
-        }
-      },
-      "version": {
-        "pid": "w1msh67gbbw2v5g"
-      }
-    },
-    {
-      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
-      "serviceId": "bbc_dari_radio",
-      "partnerId": "s0000001",
-      "updateTime": 1578148541000,
-      "publishedTimeStart": 1579096800000,
-      "publishedTimeEnd": 1579098600000,
+      "updateTime": 1584120337000,
+      "publishedTimeStart": 1585069200000,
+      "publishedTimeEnd": 1585071000000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1579096800000,
-      "transmissionTimeEnd": 1579098570000,
+      "transmissionTimeStart": 1585069200000,
+      "transmissionTimeEnd": 1585070970000,
       "isBlanked": false,
-      "isRepeat": false,
+      "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqttc4.imi:ws.bbc.co.uk/DARIA1579096800",
-        "pid": "p07zj8qc"
+        "bid": "w4hqtm3q.imi:ws.bbc.co.uk/DARIA1585069200",
+        "pid": "p086l69m"
+      },
+      "brand": {
+        "pid": "p03n4htm",
+        "title": "غږیز کتاب"
+      },
+      "episode": {
+        "pid": "w3csz3m4",
+        "presentationTitle": "22/03/2020 GMT"
+      },
+      "version": {
+        "pid": "w4hqtm3q"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584120336000,
+      "publishedTimeStart": 1585071000000,
+      "publishedTimeEnd": 1585072770000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1585071000000,
+      "transmissionTimeEnd": 1585072770000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqttbb.imi:ws.bbc.co.uk/DARIA1585071000",
+        "pid": "p086l69j"
       },
       "brand": {
         "pid": "p0340v11",
@@ -1731,8 +1167,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz904",
-        "presentationTitle": "15/01/2020 GMT",
+        "pid": "w3csz8zb",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
@@ -1740,27 +1176,591 @@
         }
       },
       "version": {
-        "pid": "w4hqttc4"
+        "pid": "w4hqttbb"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578148546000,
-      "publishedTimeStart": 1579098600000,
-      "publishedTimeEnd": 1579100370000,
+      "updateTime": 1584127534000,
+      "publishedTimeStart": 1585076400000,
+      "publishedTimeEnd": 1585078170000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579098600000,
-      "transmissionTimeEnd": 1579100370000,
+      "transmissionTimeStart": 1585076400000,
+      "transmissionTimeEnd": 1585078170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtm3q.imi:ws.bbc.co.uk/DARIA1585076400",
+        "pid": "p086lnch"
+      },
+      "brand": {
+        "pid": "p03n4htm",
+        "title": "غږیز کتاب"
+      },
+      "episode": {
+        "pid": "w3csz3m4",
+        "presentationTitle": "22/03/2020 GMT"
+      },
+      "version": {
+        "pid": "w4hqtm3q"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584149123000,
+      "publishedTimeStart": 1585099800000,
+      "publishedTimeEnd": 1585101570000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1585099800000,
+      "transmissionTimeEnd": 1585101570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtwhd.imi:ws.bbc.co.uk/DARIA1579098600",
-        "pid": "p07zj8qj"
+        "bid": "w4hqtsc5.imi:ws.bbc.co.uk/DARIA1585099800",
+        "pid": "p086mfhl"
+      },
+      "brand": {
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "episode": {
+        "pid": "w3csz805",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "version": {
+        "pid": "w4hqtsc5"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1585038025000,
+      "publishedTimeStart": 1585103400000,
+      "publishedTimeEnd": 1585105170000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1585103400000,
+      "transmissionTimeEnd": 1585105170000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtsc5.imi:ws.bbc.co.uk/DARIA1585103400",
+        "pid": "p087h9ck"
+      },
+      "brand": {
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "episode": {
+        "pid": "w3csz805",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "version": {
+        "pid": "w4hqtsc5"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584163543000,
+      "publishedTimeStart": 1585114200000,
+      "publishedTimeEnd": 1585114380000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585114200000,
+      "transmissionTimeEnd": 1585114380000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10vls2.imi:ws.bbc.co.uk/DARIA1585114200",
+        "pid": "p086mpc6"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb8ht5",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10vls2"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584163538000,
+      "publishedTimeStart": 1585114380000,
+      "publishedTimeEnd": 1585115970000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1585114380000,
+      "transmissionTimeEnd": 1585115970000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtsc5.imi:ws.bbc.co.uk/DARIA1585114380",
+        "pid": "p086mpbd"
+      },
+      "brand": {
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "episode": {
+        "pid": "w3csz805",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "version": {
+        "pid": "w4hqtsc5"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584167137000,
+      "publishedTimeStart": 1585117800000,
+      "publishedTimeEnd": 1585117980000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585117800000,
+      "transmissionTimeEnd": 1585117980000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10vqj6.imi:ws.bbc.co.uk/DARIA1585117800",
+        "pid": "p086mrx9"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb8mk9",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10vqj6"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1585038022000,
+      "publishedTimeStart": 1585117980000,
+      "publishedTimeEnd": 1585119570000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1585117980000,
+      "transmissionTimeEnd": 1585119570000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtsc5.imi:ws.bbc.co.uk/DARIA1585117980",
+        "pid": "p087h9ch"
+      },
+      "brand": {
+        "pid": "p04xz36l",
+        "title": "چشم انداز بامدادی 1",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "episode": {
+        "pid": "w3csz805",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان."
+        }
+      },
+      "version": {
+        "pid": "w4hqtsc5"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584170736000,
+      "publishedTimeStart": 1585121400000,
+      "publishedTimeEnd": 1585121580000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585121400000,
+      "transmissionTimeEnd": 1585121580000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10vv8b.imi:ws.bbc.co.uk/DARIA1585121400",
+        "pid": "p086mvby"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb8r9f",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10vv8b"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584174336000,
+      "publishedTimeStart": 1585125000000,
+      "publishedTimeEnd": 1585125180000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585125000000,
+      "transmissionTimeEnd": 1585125180000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10vz0g.imi:ws.bbc.co.uk/DARIA1585125000",
+        "pid": "p086mxd0"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb8w1k",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10vz0g"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584177927000,
+      "publishedTimeStart": 1585128600000,
+      "publishedTimeEnd": 1585128780000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585128600000,
+      "transmissionTimeEnd": 1585128780000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10w2rl.imi:ws.bbc.co.uk/DARIA1585128600",
+        "pid": "p086n0w3"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb8zsp",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10w2rl"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584177926000,
+      "publishedTimeStart": 1585128780000,
+      "publishedTimeEnd": 1585130370000,
+      "publishedTimeDuration": "PT26M30S",
+      "transmissionTimeStart": 1585128780000,
+      "transmissionTimeEnd": 1585130370000,
+      "isBlanked": false,
+      "isRepeat": true,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtwgl.imi:ws.bbc.co.uk/DARIA1585128780",
+        "pid": "p086n0w2"
+      },
+      "brand": {
+        "pid": "p0340v0t",
+        "title": "صدای شما",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند.",
+          "medium": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند."
+        }
+      },
+      "episode": {
+        "pid": "w3cszbsb",
+        "presentationTitle": "24/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند.",
+          "medium": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند."
+        }
+      },
+      "version": {
+        "pid": "w4hqtwgl"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584181536000,
+      "publishedTimeStart": 1585132200000,
+      "publishedTimeEnd": 1585132380000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585132200000,
+      "transmissionTimeEnd": 1585132380000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10w6hq.imi:ws.bbc.co.uk/DARIA1585132200",
+        "pid": "p086n51c"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb93jt",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10w6hq"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584185132000,
+      "publishedTimeStart": 1585135800000,
+      "publishedTimeEnd": 1585135980000,
+      "publishedTimeDuration": "PT3M",
+      "transmissionTimeStart": 1585135800000,
+      "transmissionTimeEnd": 1585135980000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w1msh67kz10wb7v.imi:ws.bbc.co.uk/DARIA1585135800",
+        "pid": "p086n82t"
+      },
+      "brand": {
+        "pid": "p0340v0s",
+        "title": "نبض خبر",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "episode": {
+        "pid": "w172x1rwggb978y",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای جهان",
+          "medium": "تازه ترین خبرهای جهان"
+        }
+      },
+      "version": {
+        "pid": "w1msh67kz10wb7v"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584195938000,
+      "publishedTimeStart": 1585144800000,
+      "publishedTimeEnd": 1585146600000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585144800000,
+      "transmissionTimeEnd": 1585146570000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqttcg.imi:ws.bbc.co.uk/DARIA1585144800",
+        "pid": "p086nnns"
+      },
+      "brand": {
+        "pid": "p0340v11",
+        "title": "مجله شامگاهی",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز."
+        }
+      },
+      "episode": {
+        "pid": "w3csz90g",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
+        "synopses": {
+          "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
+          "medium": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز."
+        }
+      },
+      "version": {
+        "pid": "w4hqttcg"
+      }
+    },
+    {
+      "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
+      "serviceId": "bbc_dari_radio",
+      "partnerId": "s0000001",
+      "updateTime": 1584195937000,
+      "publishedTimeStart": 1585146600000,
+      "publishedTimeEnd": 1585148370000,
+      "publishedTimeDuration": "PT29M30S",
+      "transmissionTimeStart": 1585146600000,
+      "transmissionTimeEnd": 1585148370000,
+      "isBlanked": false,
+      "isRepeat": false,
+      "isAudioDescribed": false,
+      "isCritical": false,
+      "isSimulcast": true,
+      "broadcast": {
+        "bid": "w4hqtwhq.imi:ws.bbc.co.uk/DARIA1585146600",
+        "pid": "p086nnnl"
       },
       "brand": {
         "pid": "p04yc8v2",
@@ -1772,8 +1772,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszbt4",
-        "presentationTitle": "15/01/2020 GMT",
+        "pid": "w3cszbtg",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "در این برنامه، مهم ترین مسایل روز مرتبط به افغانستان وجهان با نگاه ژرف با حضور صاحب نظران و مقامات بررسی می شود.",
@@ -1781,27 +1781,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtwhd"
+        "pid": "w4hqtwhq"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578155736000,
-      "publishedTimeStart": 1579104000000,
-      "publishedTimeEnd": 1579105770000,
+      "updateTime": 1584203136000,
+      "publishedTimeStart": 1585152000000,
+      "publishedTimeEnd": 1585153770000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579104000000,
-      "transmissionTimeEnd": 1579105770000,
+      "transmissionTimeStart": 1585152000000,
+      "transmissionTimeEnd": 1585153770000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh66mwm8f2lr.imi:ws.bbc.co.uk/DARIA1579104000",
-        "pid": "p07zjfxy"
+        "bid": "w1msh66rj9f6kp4.imi:ws.bbc.co.uk/DARIA1585152000",
+        "pid": "p086ntf1"
       },
       "brand": {
         "pid": "p0340v0d",
@@ -1813,8 +1813,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1qyd1ktzmv",
-        "presentationTitle": "15/01/2020 GMT",
+        "pid": "w172x1r20qqmgq7",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "برنامه نویسی از سرویس بی بی سی فارسی",
@@ -1822,27 +1822,27 @@
         }
       },
       "version": {
-        "pid": "w1msh66mwm8f2lr"
+        "pid": "w1msh66rj9f6kp4"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578159336000,
-      "publishedTimeStart": 1579109400000,
-      "publishedTimeEnd": 1579111170000,
+      "updateTime": 1584206742000,
+      "publishedTimeStart": 1585157400000,
+      "publishedTimeEnd": 1585159170000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579109400000,
-      "transmissionTimeEnd": 1579111170000,
+      "transmissionTimeStart": 1585157400000,
+      "transmissionTimeEnd": 1585159170000,
       "isBlanked": false,
       "isRepeat": true,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqttc4.imi:ws.bbc.co.uk/DARIA1579109400",
-        "pid": "p07zjk1d"
+        "bid": "w4hqttcg.imi:ws.bbc.co.uk/DARIA1585157400",
+        "pid": "p086nwdq"
       },
       "brand": {
         "pid": "p0340v11",
@@ -1854,8 +1854,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz904",
-        "presentationTitle": "15/01/2020 GMT",
+        "pid": "w3csz90g",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها ونگاه موشکافانه به مهم ترین اتفاقات روز.",
@@ -1863,27 +1863,27 @@
         }
       },
       "version": {
-        "pid": "w4hqttc4"
+        "pid": "w4hqttcg"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578188131000,
-      "publishedTimeStart": 1579138200000,
-      "publishedTimeEnd": 1579139970000,
+      "updateTime": 1584235528000,
+      "publishedTimeStart": 1585186200000,
+      "publishedTimeEnd": 1585187970000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579138200000,
-      "transmissionTimeEnd": 1579139970000,
+      "transmissionTimeStart": 1585186200000,
+      "transmissionTimeEnd": 1585187970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqts5c.imi:ws.bbc.co.uk/DARIA1579138200",
-        "pid": "p07zk5sp"
+        "bid": "w4hqts5p.imi:ws.bbc.co.uk/DARIA1585186200",
+        "pid": "p086phc8"
       },
       "brand": {
         "pid": "p04xz36l",
@@ -1895,8 +1895,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz7sp",
-        "presentationTitle": "16/01/2020 GMT",
+        "pid": "w3csz7tn",
+        "presentationTitle": "26/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -1904,27 +1904,27 @@
         }
       },
       "version": {
-        "pid": "w4hqts5c"
+        "pid": "w4hqts5p"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578191726000,
-      "publishedTimeStart": 1579141800000,
-      "publishedTimeEnd": 1579143570000,
+      "updateTime": 1584239130000,
+      "publishedTimeStart": 1585189800000,
+      "publishedTimeEnd": 1585191570000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1579141800000,
-      "transmissionTimeEnd": 1579143570000,
+      "transmissionTimeStart": 1585189800000,
+      "transmissionTimeEnd": 1585191570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqtss7.imi:ws.bbc.co.uk/DARIA1579141800",
-        "pid": "p07zk6yd"
+        "bid": "w4hqtssk.imi:ws.bbc.co.uk/DARIA1585189800",
+        "pid": "p086pjpq"
       },
       "brand": {
         "pid": "w13xttm2",
@@ -1936,8 +1936,8 @@
         }
       },
       "episode": {
-        "pid": "w3csz8f7",
-        "presentationTitle": "16/01/2020 GMT",
+        "pid": "w3csz8fk",
+        "presentationTitle": "26/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.",
@@ -1945,27 +1945,27 @@
         }
       },
       "version": {
-        "pid": "w4hqtss7"
+        "pid": "w4hqtssk"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_dari_radio",
       "serviceId": "bbc_dari_radio",
       "partnerId": "s0000001",
-      "updateTime": 1578202529000,
-      "publishedTimeStart": 1579152600000,
-      "publishedTimeEnd": 1579152780000,
+      "updateTime": 1584249936000,
+      "publishedTimeStart": 1585200600000,
+      "publishedTimeEnd": 1585200780000,
       "publishedTimeDuration": "PT3M",
-      "transmissionTimeStart": 1579152600000,
-      "transmissionTimeEnd": 1579152780000,
+      "transmissionTimeStart": 1585200600000,
+      "transmissionTimeEnd": 1585200780000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh67gbbw50ls.imi:ws.bbc.co.uk/DARIA1579152600",
-        "pid": "p07zk9lj"
+        "bid": "w1msh67kz10yhp5.imi:ws.bbc.co.uk/DARIA1585200600",
+        "pid": "p086pms9"
       },
       "brand": {
         "pid": "p0340v0s",
@@ -1977,8 +1977,8 @@
         }
       },
       "episode": {
-        "pid": "w172x1rrts5kxmw",
-        "presentationTitle": "16/01/2020 GMT",
+        "pid": "w172x1rwggbcdq8",
+        "presentationTitle": "26/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
           "short": "تازه ترین خبرهای جهان",
@@ -1986,7 +1986,7 @@
         }
       },
       "version": {
-        "pid": "w1msh67gbbw50ls"
+        "pid": "w1msh67kz10yhp5"
       }
     },
     {
@@ -2005,8 +2005,8 @@
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqts5c.imi:ws.bbc.co.uk/DARIA1579152780",
-        "pid": "p07zk9lq"
+        "bid": "w4hqts5p.imi:ws.bbc.co.uk/DARIA1585200780",
+        "pid": "p086pmsf"
       },
       "brand": {
         "pid": "p04xz36l",
@@ -2018,7 +2018,7 @@
         }
       },
       "episode": {
-        "pid": "w3csz7sp",
+        "pid": "w3csz7tn",
         "presentationTitle": "01/01/2030 09:00 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02y4n1p.jpg",
         "synopses": {
@@ -2027,7 +2027,7 @@
         }
       },
       "version": {
-        "pid": "w4hqts5c"
+        "pid": "w4hqts5p"
       }
     }
   ]
