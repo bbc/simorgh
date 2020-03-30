@@ -49,7 +49,7 @@ const cspInjectFun =
     : injectCspHeader;
 
 logger.debug(
-  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
+  `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
@@ -272,7 +272,8 @@ server
       });
 
       logger.info(ROUTING_INFORMATION, {
-        urlPath,
+        url,
+        status,
         pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
       });
 
@@ -287,7 +288,7 @@ server
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status: status || 500,
         message,
-        urlPath,
+        url,
         headers,
       });
 
