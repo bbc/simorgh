@@ -107,7 +107,7 @@ The answer is probably, yes. The purpose of an integration test is to test that 
 
 A unit test only ensures that something works in isolation. Even if the units work well in isolation, you do not know if they work well together. For that we need integration tests.
 
-## Can I just write integration tests and forget about unit tests since integration tests tests
+## Can I just write integration tests and forget about unit tests since integration tests test the interaction between modules and the modules themselves
 
 You might then think it makes sense to only write integration tests but there are downsides to integration tests. One downside is that integration tests are brittle. Because integration tests test a lot of moving parts there are a lot of things that can go wrong and finding where the problem lies can be like finding a needle in a haystack. Unit tests can help signal where we need to make a fix. It's also very difficult to cover all possible test cases of an application using only integration tests. It's much faster and easier to writes tests for various states of a React component with unit testing than it is with integration testing.
 
