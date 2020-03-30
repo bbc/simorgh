@@ -244,20 +244,12 @@ export const service = {
         url: '/somali/aqoon_guud',
       },
       {
-        title: 'Maqal',
-        url: '/somali/media/audio',
-      },
-      {
         title: 'Muuqaal',
         url: '/somali/media/video',
       },
       {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/ka_qayb_gal/programmes',
-      },
-      {
-        title: 'Sawirro',
-        url: '/somali/media/photogalleries',
       },
     ],
   },
