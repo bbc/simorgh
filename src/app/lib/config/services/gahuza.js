@@ -167,7 +167,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -222,10 +222,6 @@ export const service = {
       {
         title: 'Imikino',
         url: '/gahuza/imikino',
-      },
-      {
-        title: 'Umviriza',
-        url: '/gahuza/media/audio',
       },
       {
         title: 'Video',
