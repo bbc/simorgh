@@ -214,7 +214,7 @@ export const service = {
           text: "Content is not available",
           linkText: 'View content on %provider_name%',
           linkTextSuffixVisuallyHidden: ', external',
-          warningText: "Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
+          warningText: 'Warning: Third party content may contain adverts',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
