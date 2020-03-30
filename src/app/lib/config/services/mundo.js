@@ -212,6 +212,22 @@ export const service = {
       ],
       copyrightText:
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Título del video:',
+          text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+        },
+        fallback: {
+          text: "Contenido no disponible",
+          linkText: 'Ver más en %provider_name%',
+          linkTextSuffixVisuallyHidden: ', externo',
+          warningText: "La BBC no se hace responsable del contenido de sitios externos.",
+        },
+        skipLink: {
+          text: 'Saltar contenido de %provider_name%',
+          endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
+        },
+      },
     },
     fonts: [
       F_REITH_SANS_BOLD,
