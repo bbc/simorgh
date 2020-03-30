@@ -54,8 +54,10 @@ export const service = {
     videoCaptionOffscreenText: '视频加注文字，',
     imageCaptionOffscreenText: '图像加注文字，',
     imageCopyrightOffscreenText: '图像来源，',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -125,14 +127,6 @@ export const service = {
       {
         title: '财经',
         url: '/zhongwen/simp/business',
-      },
-      {
-        title: '图辑',
-        url: '/zhongwen/simp/media/photogalleries',
-      },
-      {
-        title: '音频材料',
-        url: '/zhongwen/simp/media/audio',
       },
       {
         title: '视频材料',
@@ -263,8 +257,10 @@ export const service = {
     videoCaptionOffscreenText: '音頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
@@ -334,14 +330,6 @@ export const service = {
       {
         title: '財經',
         url: '/zhongwen/trad/business',
-      },
-      {
-        title: '圖輯',
-        url: '/zhongwen/trad/media/photogalleries',
-      },
-      {
-        title: '音頻材料',
-        url: '/zhongwen/trad/media/audio',
       },
       {
         title: '視頻材料',
