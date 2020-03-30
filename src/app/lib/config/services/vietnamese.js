@@ -147,6 +147,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

@@ -161,6 +161,7 @@ export const service = {
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',

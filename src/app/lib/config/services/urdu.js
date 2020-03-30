@@ -150,6 +150,7 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         liveLabel: 'لائیو',
+        nextLabel: 'NEXT',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
