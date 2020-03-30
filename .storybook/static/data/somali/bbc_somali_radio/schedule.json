@@ -4,20 +4,20 @@
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570789540000,
-      "publishedTimeStart": 1571741970000,
-      "publishedTimeEnd": 1571743800000,
+      "updateTime": 1584008790000,
+      "publishedTimeStart": 1584961170000,
+      "publishedTimeEnd": 1584963000000,
       "publishedTimeDuration": "PT30M30S",
-      "transmissionTimeStart": 1571741970000,
-      "transmissionTimeEnd": 1571743800000,
+      "transmissionTimeStart": 1584961170000,
+      "transmissionTimeEnd": 1584963000000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0k9xsyqr54.imi:ws.bbc.co.uk/SOMLA1571741970",
-        "pid": "p07qshw0"
+        "bid": "w1mshfs7k6myc5z.imi:ws.bbc.co.uk/SOMLA1584961170",
+        "pid": "p086f1ms"
       },
       "brand": {
         "pid": "p02n9xd2",
@@ -29,8 +29,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwm6094hr64",
-        "presentationTitle": "22/10/2019 GMT",
+        "pid": "w172x92kf5jdb9y",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
         "synopses": {
           "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
@@ -38,27 +38,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0k9xsyqr54"
+        "pid": "w1mshfs7k6myc5z"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570800418000,
-      "publishedTimeStart": 1571752770000,
-      "publishedTimeEnd": 1571756370000,
-      "publishedTimeDuration": "PT1H",
-      "transmissionTimeStart": 1571752770000,
-      "transmissionTimeEnd": 1571756370000,
+      "updateTime": 1584019555000,
+      "publishedTimeStart": 1584971970000,
+      "publishedTimeEnd": 1584974700000,
+      "publishedTimeDuration": "PT45M30S",
+      "transmissionTimeStart": 1584971970000,
+      "transmissionTimeEnd": 1584974700000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0jhh2c1sz7.imi:ws.bbc.co.uk/SOMLA1571752770",
-        "pid": "p07qt9wp"
+        "bid": "w1mshfrttvbm26q.imi:ws.bbc.co.uk/SOMLA1584971970",
+        "pid": "p086frc6"
       },
       "brand": {
         "pid": "p034117k",
@@ -70,8 +70,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwlckkjtt07",
-        "presentationTitle": "22/10/2019 GMT",
+        "pid": "w172x924pt721bp",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
@@ -79,27 +79,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0jhh2c1sz7"
+        "pid": "w1mshfrttvbm26q"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570814747000,
-      "publishedTimeStart": 1571767170000,
-      "publishedTimeEnd": 1571768970000,
-      "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571767170000,
-      "transmissionTimeEnd": 1571768970000,
+      "updateTime": 1584033945000,
+      "publishedTimeStart": 1584986370000,
+      "publishedTimeEnd": 1584987570000,
+      "publishedTimeDuration": "PT20M",
+      "transmissionTimeStart": 1584986370000,
+      "transmissionTimeEnd": 1584987570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0hp1brczjg.imi:ws.bbc.co.uk/SOMLA1571767170",
-        "pid": "p07qv4zk"
+        "bid": "w1mshfr0d3qy7ry.imi:ws.bbc.co.uk/SOMLA1584986370",
+        "pid": "p086gly3"
       },
       "brand": {
         "pid": "p034117l",
@@ -111,8 +111,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwkk3ty4zkg",
-        "presentationTitle": "22/10/2019 GMT",
+        "pid": "w172x91b82md6wx",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
@@ -120,27 +120,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0hp1brczjg"
+        "pid": "w1mshfr0d3qy7ry"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570854334000,
-      "publishedTimeStart": 1571803200000,
-      "publishedTimeEnd": 1571804940000,
+      "updateTime": 1584073524000,
+      "publishedTimeStart": 1585022400000,
+      "publishedTimeEnd": 1585024140000,
       "publishedTimeDuration": "PT29M",
-      "transmissionTimeStart": 1571803200000,
-      "transmissionTimeEnd": 1571804940000,
+      "transmissionTimeStart": 1585022400000,
+      "transmissionTimeEnd": 1585024140000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0kqn584g2y.imi:ws.bbc.co.uk/SOMLA1571803200",
-        "pid": "p07qw8b9"
+        "bid": "w1mshfsn8kyc23s.imi:ws.bbc.co.uk/SOMLA1585022400",
+        "pid": "p086hs3d"
       },
       "brand": {
         "pid": "p034117j",
@@ -152,8 +152,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwmlqnfxg3y",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x92z4jtt17r",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
@@ -161,27 +161,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0kqn584g2y"
+        "pid": "w1mshfsn8kyc23s"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570875940000,
-      "publishedTimeStart": 1571828370000,
-      "publishedTimeEnd": 1571830200000,
+      "updateTime": 1584095131000,
+      "publishedTimeStart": 1585047570000,
+      "publishedTimeEnd": 1585049400000,
       "publishedTimeDuration": "PT30M30S",
-      "transmissionTimeStart": 1571828370000,
-      "transmissionTimeEnd": 1571830200000,
+      "transmissionTimeStart": 1585047570000,
+      "transmissionTimeEnd": 1585049400000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0k9xsytn27.imi:ws.bbc.co.uk/SOMLA1571828370",
-        "pid": "p07qwsr9"
+        "bid": "w1mshfs7k6n1832.imi:ws.bbc.co.uk/SOMLA1585047570",
+        "pid": "p086jl8w"
       },
       "brand": {
         "pid": "p02n9xd2",
@@ -193,8 +193,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwm6094ln37",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x92kf5jh771",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
         "synopses": {
           "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
@@ -202,27 +202,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0k9xsytn27"
+        "pid": "w1mshfs7k6n1832"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570886750000,
-      "publishedTimeStart": 1571839170000,
-      "publishedTimeEnd": 1571842770000,
+      "updateTime": 1584106029000,
+      "publishedTimeStart": 1585058370000,
+      "publishedTimeEnd": 1585061970000,
       "publishedTimeDuration": "PT1H",
-      "transmissionTimeStart": 1571839170000,
-      "transmissionTimeEnd": 1571842770000,
+      "transmissionTimeStart": 1585058370000,
+      "transmissionTimeEnd": 1585061970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0jhh2c4pwb.imi:ws.bbc.co.uk/SOMLA1571839170",
-        "pid": "p07qx28p"
+        "bid": "w1mshfrf3h1c9x5.imi:ws.bbc.co.uk/SOMLA1585058370",
+        "pid": "p086k8s2"
       },
       "brand": {
         "pid": "p034117k",
@@ -234,8 +234,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwlckkjxpxb",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x91qzfxt914",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
@@ -243,27 +243,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0jhh2c4pwb"
+        "pid": "w1mshfrf3h1c9x5"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570901145000,
-      "publishedTimeStart": 1571853570000,
-      "publishedTimeEnd": 1571855370000,
+      "updateTime": 1584120335000,
+      "publishedTimeStart": 1585072770000,
+      "publishedTimeEnd": 1585074570000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1571853570000,
-      "transmissionTimeEnd": 1571855370000,
+      "transmissionTimeStart": 1585072770000,
+      "transmissionTimeEnd": 1585074570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0hp1brgwfk.imi:ws.bbc.co.uk/SOMLA1571853570",
-        "pid": "p07qxf58"
+        "bid": "w1mshfqlnrfphgd.imi:ws.bbc.co.uk/SOMLA1585072770",
+        "pid": "p086l69f"
       },
       "brand": {
         "pid": "p034117l",
@@ -275,8 +275,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwkk3ty7wgk",
-        "presentationTitle": "23/10/2019 GMT",
+        "pid": "w172x90xjqb4glc",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
@@ -284,27 +284,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0hp1brgwfk"
+        "pid": "w1mshfqlnrfphgd"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570940732000,
-      "publishedTimeStart": 1571889600000,
-      "publishedTimeEnd": 1571891340000,
+      "updateTime": 1584159927000,
+      "publishedTimeStart": 1585108800000,
+      "publishedTimeEnd": 1585110540000,
       "publishedTimeDuration": "PT29M",
-      "transmissionTimeStart": 1571889600000,
-      "transmissionTimeEnd": 1571891340000,
+      "transmissionTimeStart": 1585108800000,
+      "transmissionTimeEnd": 1585110540000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0kqn587c01.imi:ws.bbc.co.uk/SOMLA1571889600",
-        "pid": "p07qxxzq"
+        "bid": "w1mshfsn8kyfz0w.imi:ws.bbc.co.uk/SOMLA1585108800",
+        "pid": "p086mmqt"
       },
       "brand": {
         "pid": "p034117j",
@@ -316,8 +316,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwmlqng0c11",
-        "presentationTitle": "24/10/2019 GMT",
+        "pid": "w172x92z4jtwy4v",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Barnaamijka aroornimo ee soo bandhiga wararka gogoldhaca u ah maalinta iyo cayaaraha.",
@@ -325,27 +325,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0kqn587c01"
+        "pid": "w1mshfsn8kyfz0w"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570962338000,
-      "publishedTimeStart": 1571914770000,
-      "publishedTimeEnd": 1571916600000,
+      "updateTime": 1584181529000,
+      "publishedTimeStart": 1585133970000,
+      "publishedTimeEnd": 1585135800000,
       "publishedTimeDuration": "PT30M30S",
-      "transmissionTimeStart": 1571914770000,
-      "transmissionTimeEnd": 1571916600000,
+      "transmissionTimeStart": 1585133970000,
+      "transmissionTimeEnd": 1585135800000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0k9xsyxjzb.imi:ws.bbc.co.uk/SOMLA1571914770",
-        "pid": "p07qybrs"
+        "bid": "w1mshfs7k6n4505.imi:ws.bbc.co.uk/SOMLA1585133970",
+        "pid": "p086n515"
       },
       "brand": {
         "pid": "p02n9xd2",
@@ -357,8 +357,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwm6094pk0b",
-        "presentationTitle": "24/10/2019 GMT",
+        "pid": "w172x92kf5jl444",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
         "synopses": {
           "short": "Waa Idaacad aad kaga bogan karto wararka duhurnimo iyo welibo cayaaraha.",
@@ -366,27 +366,27 @@
         }
       },
       "version": {
-        "pid": "w1msh0k9xsyxjzb"
+        "pid": "w1mshfs7k6n4505"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570973153000,
-      "publishedTimeStart": 1571925570000,
-      "publishedTimeEnd": 1571929170000,
+      "updateTime": 1584192351000,
+      "publishedTimeStart": 1585144770000,
+      "publishedTimeEnd": 1585148370000,
       "publishedTimeDuration": "PT1H",
-      "transmissionTimeStart": 1571925570000,
-      "transmissionTimeEnd": 1571929170000,
+      "transmissionTimeStart": 1585144770000,
+      "transmissionTimeEnd": 1585148370000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0jhh2c7lsf.imi:ws.bbc.co.uk/SOMLA1571925570",
-        "pid": "p07qymcx"
+        "bid": "w1mshfrf3h1g6t8.imi:ws.bbc.co.uk/SOMLA1585144770",
+        "pid": "p086nhz1"
       },
       "brand": {
         "pid": "p034117k",
@@ -398,8 +398,8 @@
         }
       },
       "episode": {
-        "pid": "w172wwlckkk0ltf",
-        "presentationTitle": "24/10/2019 GMT",
+        "pid": "w172x91qzfxx5y7",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
           "short": "Barnaamij aan ku eegno wararkii ugu dambeeyay ee caalamka iyo Soomaalida.",
@@ -407,48 +407,48 @@
         }
       },
       "version": {
-        "pid": "w1msh0jhh2c7lsf"
+        "pid": "w1mshfrf3h1g6t8"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_somali_radio",
       "serviceId": "bbc_somali_radio",
       "partnerId": "s0000001",
-      "updateTime": 1570987543000,
-      "publishedTimeStart": 1571939970000,
-      "publishedTimeEnd": 1571940330000,
-      "publishedTimeDuration": "PT6M",
-      "transmissionTimeStart": 1571939970000,
-      "transmissionTimeEnd": 1571940330000,
+      "updateTime": 1584206736000,
+      "publishedTimeStart": 1585159170000,
+      "publishedTimeEnd": 1585160970000,
+      "publishedTimeDuration": "PT30M",
+      "transmissionTimeStart": 1585159170000,
+      "transmissionTimeEnd": 1585160970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0lk2wvzbv5.imi:ws.bbc.co.uk/SOMLA1571939970",
-        "pid": "p07qyy6c"
+        "bid": "w1mshfqlnrfsdch.imi:ws.bbc.co.uk/SOMLA1585159170",
+        "pid": "p086nwdg"
       },
       "brand": {
-        "pid": "p04bzf7b",
-        "title": "Wararka Caalamka",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "pid": "p034117l",
+        "title": "Caawa Iyo Caalamka",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
-          "short": "Qaybtan waxaad ku dhageysataan wararkii ugu dambeeyay ee caalamka iyo kuwa Soomaalida",
-          "medium": "Qaybtan waxaad ku dhageysataan wararkii ugu dambeeyay ee caalamka iyo kuwa Soomaalida"
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
         }
       },
       "episode": {
-        "pid": "w172wwnf5d1rbw5",
-        "presentationTitle": "24/10/2019 GMT",
-        "image": "ichef.bbci.co.uk/images/ic/$recipe/p02xxlvm.jpg",
+        "pid": "w172x90xjqb7chg",
+        "presentationTitle": "25/03/2020 GMT",
+        "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
-          "short": "Qaybtan waxaad ku dhageysataan wararkii ugu dambeeyay ee caalamka iyo kuwa Soomaalida",
-          "medium": "Qaybtan waxaad ku dhageysataan wararkii ugu dambeeyay ee caalamka iyo kuwa Soomaalida"
+          "short": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida.",
+          "medium": "Wararkii ugu dambeeyay ee fiidnimada iyo kuwii ugu muhiimsan dunida iyo Soomaalida."
         }
       },
       "version": {
-        "pid": "w1msh0lk2wvzbv5"
+        "pid": "w1mshfqlnrfsdch"
       }
     },
     {
@@ -467,8 +467,8 @@
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1msh0kqn58b7x4.imi:ws.bbc.co.uk/SOMLA1571976000",
-        "pid": "p07qzjk6"
+        "bid": "w1mshfsn8kyjvxz.imi:ws.bbc.co.uk/SOMLA1585195200",
+        "pid": "p086plpk"
       },
       "brand": {
         "pid": "p034117j",
@@ -480,7 +480,7 @@
         }
       },
       "episode": {
-        "pid": "w172wwmlqng37y4",
+        "pid": "w172x92z4jtzv1y",
         "presentationTitle": "01/01/2030 09:00 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dltz.jpg",
         "synopses": {
@@ -489,7 +489,7 @@
         }
       },
       "version": {
-        "pid": "w1msh0kqn58b7x4"
+        "pid": "w1mshfsn8kyjvxz"
       }
     }
   ]
