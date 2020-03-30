@@ -208,6 +208,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'વીડિયો કૅપ્શન',
+          text: 'થર્ડ પાર્ટી કન્ટેટમાં જાહેરખબર હોય શકે છે',
+        },
+        fallback: {
+          text: "આ કન્ટેન્ટ ઉપલબ્ધ નથી",
+          linkText: '%provider_name% પર વધુ મેળવો',
+          linkTextSuffixVisuallyHidden: 'બહારની સામગ્રી',
+          warningText: "બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.",
+        },
+        skipLink: {
+          text: 'બદલો %provider_name% કન્ટેન્ટ',
+          endTextVisuallyHidden: '%provider_name% કન્ટેન્ટ પૂર્ણ',
+        },
+      },
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
