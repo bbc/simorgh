@@ -222,10 +222,6 @@ export const service = {
         url: '/nepali/multimedia/radio_programmes',
       },
       {
-        title: 'तस्वीरहरु',
-        url: '/nepali/media/photogalleries',
-      },
-      {
         title: 'भिडियो',
         url: '/nepali/media/video',
       },
