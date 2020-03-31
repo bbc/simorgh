@@ -24,6 +24,7 @@ const SocialEmbedContainer = ({ blocks }) => {
   const fallback = {
     text: "Sorry but we're having trouble displaying this content",
     linkText: 'View content on %provider_name%',
+    linkTextSuffixVisuallyHidden: ', external',
     linkHref: href,
     warningText: 'Warning: BBC is not responsible for third party content',
   };
@@ -31,13 +32,13 @@ const SocialEmbedContainer = ({ blocks }) => {
   const skipLink = {
     text: 'Skip %provider_name% content',
     endTextId: 'skip-%provider%-content',
-    endText: 'End of %provider_name% content',
+    endTextVisuallyHidden: 'End of %provider_name% content',
   };
 
   const caption =
     provider === 'youtube'
       ? {
-          visuallyHiddenText: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         }
       : null;
