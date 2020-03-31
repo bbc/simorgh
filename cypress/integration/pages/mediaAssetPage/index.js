@@ -13,7 +13,7 @@ Object.keys(config)
     const paths = getPaths(service, pageType);
 
     paths.forEach(path => {
-      describe(`${pageType} User Tests for ${service} - ${path}`, () => {
+      describe(`${pageType} tests for ${service} - ${path}`, () => {
         describe('Canonical', () => {
           beforeEach(() => {
             Cypress.env('currentPath', path);
