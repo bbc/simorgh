@@ -8,7 +8,7 @@ export default ({ service, variant }) => {
     const language = appConfig[config[service].name][variant].lang;
     let embedUrl;
 
-    beforeEach(() => {
+    before(() => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         embedUrl = getEmbedUrl({ body, language });
       });
