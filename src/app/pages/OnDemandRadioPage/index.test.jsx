@@ -14,13 +14,13 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
-const createAssetPage = (pageData, service) => (
+const createAssetPage = ({ pageData, service, isAmp = false }) => (
   <StaticRouter>
     <ToggleContextProvider>
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
+          isAmp={isAmp}
           pageType="media"
           pathname="/pathname"
           service={service}
@@ -95,7 +95,10 @@ describe('OnDemand Radio Page ', () => {
       'some-ondemand-radio-path',
     );
     const { getByText } = render(
-      createAssetPage(pageDataWithWithoutVideo, 'pashto'),
+      createAssetPage({
+        pageData: pageDataWithWithoutVideo,
+        service: 'pashto',
+      }),
     );
 
     expect(getByText('وروستي خبرونه')).toBeInTheDocument();
@@ -107,7 +110,10 @@ describe('OnDemand Radio Page ', () => {
       'some-ondemand-radio-path',
     );
     const { getByText } = render(
-      createAssetPage(pageDataWithWithoutVideo, 'pashto'),
+      createAssetPage({
+        pageData: pageDataWithWithoutVideo,
+        service: 'pashto',
+      }),
     );
 
     expect(getByText('04/02/2020 GMT')).toBeInTheDocument();
@@ -119,7 +125,10 @@ describe('OnDemand Radio Page ', () => {
       'some-ondemand-radio-path',
     );
     const { getByText } = render(
-      createAssetPage(pageDataWithWithoutVideo, 'indonesia'),
+      createAssetPage({
+        pageData: pageDataWithWithoutVideo,
+        service: 'indonesia',
+      }),
     );
 
     expect(
@@ -129,16 +138,29 @@ describe('OnDemand Radio Page ', () => {
     ).toBeInTheDocument();
   });
 
-  it('should show the audio player', async () => {
+  it('should show the audio player on canonical', async () => {
     fetch.mockResponse(JSON.stringify(koreanPageData));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    render(createAssetPage(pageData, 'korean'));
+    render(createAssetPage({ pageData, service: 'korean' }));
     const audioPlayerIframeSrc = document
       .querySelector('iframe')
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
       'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/ko',
+    );
+  });
+
+  it('should show the audio playe on AMP', async () => {
+    fetch.mockResponse(JSON.stringify(koreanPageData));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    render(createAssetPage({ pageData, service: 'korean', isAmp: true }));
+    const audioPlayerIframeSrc = document
+      .querySelector('amp-iframe')
+      .getAttribute('src');
+
+    expect(audioPlayerIframeSrc).toEqual(
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/ko/amp',
     );
   });
 });
