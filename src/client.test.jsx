@@ -1,7 +1,7 @@
 import React from 'react';
 import * as reactDom from 'react-dom';
 import { resetWindowValue, setWindowValue } from '@bbc/psammead-test-helpers';
-import { ClientApp } from './app/containers/App';
+import ClientApp from './clientApp';
 import routes from './app/routes';
 import '#testHelpers/loggerMock';
 
@@ -54,7 +54,7 @@ describe('Client', () => {
         await import('./client');
 
         expect(reactDom.hydrate).toHaveBeenCalledWith(
-          <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
+          <ClientApp routes={routes} initialData={window.SIMORGH_DATA} />,
           mockRootElement,
         );
         resolve();
