@@ -217,6 +217,22 @@ export const service = {
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: '视频加注文字，',
+          text: '告知：第三方内容可能包含广告',
+        },
+        fallback: {
+          text: "无内容",
+          linkText: '继续浏览 %provider_name%',
+          linkTextSuffixVisuallyHidden: ', 外部链接',
+          warningText: "BBC对外部网站内容不负责任。",
+        },
+        skipLink: {
+          text: '"跳过 %provider_name% 帖子',
+          endTextVisuallyHidden: '结尾 %provider_name% 帖子 ',
+        },
+      },
     },
   },
   trad: {
@@ -395,6 +411,22 @@ export const service = {
         previousRadioShow: '上期廣播節目',
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: '視頻加註文字，',
+          text: '告知：協作方內容可能包含廣告',
+        },
+        fallback: {
+          text: "無內容",
+          linkText: '繼續瀏覽 %provider_name%',
+          linkTextSuffixVisuallyHidden: ', 外部鏈接',
+          warningText: "BBC對外部網站內容不負責任。",
+        },
+        skipLink: {
+          text: '跳過 %provider_name% 帖子',
+          endTextVisuallyHidden: '結尾 %provider_name% 帖子',
+        },
       },
     },
   },
