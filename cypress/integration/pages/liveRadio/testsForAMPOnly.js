@@ -25,7 +25,7 @@ export default ({ service, variant }) => {
         cy.hasAmpChartbeatConfigUid();
       });
     } else {
-      it('not enabled', () => {});
+      it('is not enabled', () => {});
     }
   });
 };
