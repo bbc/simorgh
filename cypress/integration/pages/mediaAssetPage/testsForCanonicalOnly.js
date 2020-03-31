@@ -87,8 +87,11 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           cy.get(
             'div.GridItemConstrainedMedium-sc-12lwanc-2:nth-child(4)',
           ).contains(latRegex);
+          // Clcicks script switcher
           cy.get('.kRCdQO > div:nth-child(1) > div:nth-child(3)').click();
+          // Checks cookie is correct
           cy.getCookie('ckps_serbian').should('have.property', 'value', 'cyr');
+          // Checks MAP is rendered in correct script
           cy.get(
             'div.GridItemConstrainedMedium-sc-12lwanc-2:nth-child(4)',
           ).contains(cyrRegex);
