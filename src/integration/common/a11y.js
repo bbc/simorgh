@@ -11,7 +11,6 @@ export default ({ skipToContentText, headlineText }) => {
         const mainContentEl = getByText(headlineText);
 
         expect(skipToContentEl.getAttribute('href')).toBe('#content');
-        expect(mainContentEl.getAttribute('id')).toBe('content');
         expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
       });
     });
