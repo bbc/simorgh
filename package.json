@@ -20,7 +20,7 @@
     "cypress:3rdParty": "npm run cypress -- --project ./3rdPartyCypress/.",
     "cucumber:ci": "./node_modules/.bin/cypress-tags run -e TAGS=\"@$CYPRESS_APP_ENV\"",
     "cucumber:smoke": "./node_modules/.bin/cypress-tags run -e TAGS=\"(@$CYPRESS_APP_ENV and @smoke)\"",
-    "cucumber": "./node_modules/.bin/cypress-tags run -e TAGS=$TAGS",
+    "cucumber": "./node_modules/.bin/cypress-tags --browser=chrome run -e TAGS=$TAGS ",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
