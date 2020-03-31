@@ -36,7 +36,7 @@ describe('serialiseForScript', () => {
 
   describe('unexpected input', () => {
     it('null', () => {
-      expect(serialiseForScript(undefined)).toBeUndefined();
+      expect(serialiseForScript(null)).toBeNull();
     });
 
     it('undefined', () => {
