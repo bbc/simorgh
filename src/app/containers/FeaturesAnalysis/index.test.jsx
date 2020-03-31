@@ -42,6 +42,24 @@ describe('CpsRelatedContent', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('should render Story Promo components without <ul> when given single item in collection', () => {
+    const topFeaturesOneItem = [features[0]];
+
+    expect(topFeaturesOneItem.filter(Boolean).length).toBe(1);
+
+    const { asFragment } = renderFeaturesAnalysis({
+      content: topFeaturesOneItem,
+    });
+
+    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+      0,
+    );
+
+    expect(document.querySelectorAll(`ul`).length).toBe(0);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', () => {
     renderFeaturesAnalysis();
     expect(
