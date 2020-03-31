@@ -131,10 +131,14 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player', async () => {
     fetch.mockResponse(JSON.stringify(koreanPageData));
-    const audioPlayerIframeEl = document.querySelector(
-      'iframe[src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/id"]',
-    );
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    render(createAssetPage(pageData, 'korean'));
+    const audioPlayerIframeSrc = document
+      .querySelector('iframe')
+      .getAttribute('src');
 
-    expect(audioPlayerIframeEl).toBeInTheDocument();
+    expect(audioPlayerIframeSrc).toEqual(
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/ko',
+    );
   });
 });
