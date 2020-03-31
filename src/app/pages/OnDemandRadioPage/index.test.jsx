@@ -151,7 +151,7 @@ describe('OnDemand Radio Page ', () => {
     );
   });
 
-  it('should show the audio playe on AMP', async () => {
+  it('should show the audio player on AMP', async () => {
     fetch.mockResponse(JSON.stringify(koreanPageData));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     render(createAssetPage({ pageData, service: 'korean', isAmp: true }));
