@@ -3,14 +3,8 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
-export const generateCspContext = (isAmp, isUK, isLive) => ({
-  isAmp,
-  isUK,
-  isLive,
-});
-
-export const generateScriptSrc = context => {
-  if (context.isAmp) {
+export const generateScriptSrc = ({ isAmp, isLive }) => {
+  if (isAmp) {
     return [
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
@@ -30,14 +24,14 @@ export const generateScriptSrc = context => {
     "'unsafe-inline'",
   ];
 
-  if (!context.isLive) {
+  if (!isLive) {
     scriptSrc.push('https://news.test.files.bbci.co.uk');
   }
 
   return scriptSrc;
 };
 
-export const generateImgSrc = context => {
+export const generateImgSrc = ({ isLive }) => {
   let imgSrc = [
     'https://ichef.bbci.co.uk',
     'https://ping.chartbeat.net',
@@ -47,7 +41,7 @@ export const generateImgSrc = context => {
     'https://r.bbci.co.uk',
   ];
 
-  if (!context.isLive) {
+  if (!isLive) {
     const testSrc = [
       'https://ichef.test.bbci.co.uk',
       'https://news.test.files.bbci.co.uk',
@@ -60,36 +54,38 @@ export const generateImgSrc = context => {
   return imgSrc;
 };
 
-const cookieOvenTld = context => {
-  if (!context.isUK) {
+const cookieOvenTld = ({ isUK }) => {
+  if (!isUK) {
     return '.com';
   }
   return '.co.uk';
 };
 
-const generateCookieOvenUrls = context => {
-  const cookieUrl = [`https://cookie-oven.api.bbc${cookieOvenTld(context)}`];
-  if (!context.isLive) {
-    cookieUrl.push(`https://cookie-oven.test.api.bbc${cookieOvenTld(context)}`);
+const generateCookieOvenUrls = ({ isLive, isUK }) => {
+  const cookieUrl = [`https://cookie-oven.api.bbc${cookieOvenTld({ isUK })}`];
+  if (!isLive) {
+    cookieUrl.push(
+      `https://cookie-oven.test.api.bbc${cookieOvenTld({ isUK })}`,
+    );
   }
 
   return cookieUrl;
 };
 
-export const generateConnectSrc = context => {
+export const generateConnectSrc = ({ isAmp, isLive, isUK }) => {
   const connectSrc = [
     'https://*.akstat.io',
     'https://*.akamaihd.net',
     'https://c.go-mpulse.net',
   ];
 
-  if (!context.isLive) {
+  if (!isLive) {
     connectSrc.push('https://logws1363.ati-host.net');
   } else {
     connectSrc.push('https://a1.api.bbc.co.uk/hit.xiti');
   }
 
-  if (context.isAmp) {
+  if (isAmp) {
     connectSrc.push(
       'https://cdn.ampproject.org',
       'https://amp-error-reporting.appspot.com',
@@ -99,10 +95,10 @@ export const generateConnectSrc = context => {
 
   connectSrc.push("'self'");
 
-  return connectSrc.concat(generateCookieOvenUrls(context));
+  return connectSrc.concat(generateCookieOvenUrls({ isLive, isUK }));
 };
 
-const constructCspHeader = context => ({
+export const constructCspHeader = ({ isAmp, isLive, isUK }) => ({
   directives: {
     'default-src': ["'self'"],
     'font-src': [
@@ -110,9 +106,9 @@ const constructCspHeader = context => ({
       'https://ws-downloads.files.bbci.co.uk',
     ],
     'style-src': ["'unsafe-inline'"],
-    'img-src': generateImgSrc(context),
-    'script-src': generateScriptSrc(context, context),
-    'connect-src': generateConnectSrc(context, context, context),
+    'img-src': generateImgSrc({ isLive }),
+    'script-src': generateScriptSrc({ isAmp, isLive }),
+    'connect-src': generateConnectSrc({ isAmp, isLive, isUK }),
     'frame-src': [
       "'self'",
       'https://emp.bbc.com',
@@ -120,8 +116,8 @@ const constructCspHeader = context => ({
       'https://chartbeat.com',
       'https://*.chartbeat.com',
     ],
-    'worker-src': context.isAmp ? ['blob:'] : ["'self'"],
-    'child-src': context.isAmp ? ['blob:'] : ["'self'"],
+    'worker-src': isAmp ? ['blob:'] : ["'self'"],
+    'child-src': isAmp ? ['blob:'] : ["'self'"],
   },
 });
 
@@ -136,9 +132,7 @@ const injectCspHeader = (req, res, next) => {
 
   const isLive = origin === 'https://bbc.co.uk' || origin === 'https://bbc.com';
 
-  const context = generateCspContext(isAmp, isUK, isLive);
-
-  const middleware = csp(constructCspHeader(context));
+  const middleware = csp(constructCspHeader({ isAmp, isLive, isUK }));
   middleware(req, res, next);
 };
 
