@@ -15,7 +15,10 @@ import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
 const createAssetPage = (pageData, service) => (
   <StaticRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider
+      service={service}
+      origin="https://www.test.bbc.co.uk"
+    >
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -46,7 +49,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
+      <ToggleContextProvider
+        service="pashto"
+        origin="https://www.test.bbc.co.uk"
+      >
         <ServiceContextProvider service="pashto">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
@@ -69,7 +75,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
+      <ToggleContextProvider
+        service="pashto"
+        origin="https://www.test.bbc.co.uk"
+      >
         <ServiceContextProvider service="pashto">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
