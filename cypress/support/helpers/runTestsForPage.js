@@ -18,18 +18,7 @@ import {
 
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
-
-const visitPage = (path, pageType) => {
-  const expectedContentType = 'text/html';
-  const isErrorPage = pageType.includes('error');
-  const expectedStatus = isErrorPage ? 404 : 200;
-  const failOnStatusCode = !isErrorPage;
-
-  cy.testResponseCodeAndType(path, expectedStatus, expectedContentType);
-  cy.visit(path, {
-    failOnStatusCode,
-  });
-};
+import visitPage from './visitPage';
 
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
