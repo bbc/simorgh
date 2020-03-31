@@ -240,6 +240,10 @@ export const service = {
         url: '/russian',
       },
       {
+        title: 'Коронавирус',
+        url: '/russian/in-depth-51962199',
+      },
+      {
         title: 'Истории',
         url: '/russian/features-50983593',
       },
