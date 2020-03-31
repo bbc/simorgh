@@ -11,27 +11,27 @@ Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(service => {
     const paths = getPaths(service, pageType);
+    const { variant } = config[service];
 
     paths.forEach(path => {
       describe(`${pageType} tests for ${service} - ${path}`, () => {
         describe('Canonical', () => {
-          beforeEach(() => {
+          before(() => {
             Cypress.env('currentPath', path);
             visitPage(path, pageType);
           });
 
-          runCanonicalUserTests({ service, pageType });
+          runCanonicalUserTests({ service, variant });
         });
 
         describe('AMP', () => {
           const ampPath = `${path}.amp`;
 
-          beforeEach(() => {
-            Cypress.env('currentPath', ampPath);
+          before(() => {
             visitPage(ampPath, pageType);
           });
 
-          runAmpUserTests({ service, pageType });
+          runAmpUserTests({ service, variant });
         });
       });
     });
