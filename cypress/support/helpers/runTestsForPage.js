@@ -19,7 +19,7 @@ import {
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
 
-const visitPage = (path, pageType) => {
+export const visitPage = (path, pageType) => {
   const expectedContentType = 'text/html';
   const isErrorPage = pageType.includes('error');
   const expectedStatus = isErrorPage ? 404 : 200;
