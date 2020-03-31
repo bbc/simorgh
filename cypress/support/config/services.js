@@ -3399,7 +3399,7 @@ const genServices = {
             enabled: true,
           },
           local: {
-            paths: ['/serbian/cyr/srbija-23278974'], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
+            paths: ['/serbian/cyr/srbija-23278974'],
             enabled: true,
           },
         },
@@ -3416,8 +3416,8 @@ const genServices = {
             enabled: false,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/serbian/cyr/srbija-46748932'],
+            enabled: true,
           },
         },
         smoke: false,
@@ -3527,7 +3527,7 @@ const genServices = {
             enabled: false,
           },
           local: {
-            paths: ['/serbian/srbija-46748932/lat'],
+            paths: ['/serbian/lat/srbija-46748932'],
             enabled: true,
           },
         },
