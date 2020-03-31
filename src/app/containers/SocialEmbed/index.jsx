@@ -6,7 +6,7 @@ import {
 } from '@bbc/psammead-social-embed';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 
