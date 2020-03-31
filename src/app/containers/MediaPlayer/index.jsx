@@ -18,7 +18,7 @@ import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import formatDuration from '#lib/utilities/formatDuration';
 import buildIChefURL from '#lib/utilities/ichefURL';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import {
