@@ -11,15 +11,15 @@ import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 const SKIP_LINK_ANCHOR_ID = 'content';
 const EPISODE_IS_AVAILABLE = 'is-available';
 const EPISODE_IS_EXPIRED = 'is-expired';
-const EPISODE_IS_NOT_AVAILABLE = 'is-not-yet-available';
+const EPISODE_IS_NOT_YET_AVAILABLE = 'is-not-yet-available';
 
 const getTimeTicks = () => new Date().getTime() * 10000;
 
 const getEpisodeAvailability = (from, until) => {
   const timeNow = getTimeTicks();
-  if (timeNow > until) return EPISODE_IS_AVAILABLE;
-  if (timeNow < from) return EPISODE_IS_EXPIRED;
-  return EPISODE_IS_NOT_AVAILABLE;
+  if (timeNow > until) return EPISODE_IS_EXPIRED;
+  if (timeNow < from) return EPISODE_IS_NOT_YET_AVAILABLE;
+  return EPISODE_IS_AVAILABLE;
 };
 
 const StyledGelPageGrid = styled(GelPageGrid)`
@@ -40,8 +40,10 @@ const renderEpisode = (
     case EPISODE_IS_AVAILABLE:
       return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
     case EPISODE_IS_EXPIRED:
-      return <AudioPlayerBlock isExpired />;
-    case EPISODE_IS_NOT_AVAILABLE:
+      return (
+        <AudioPlayerBlock isExpired externalId={masterBrand} id={episodeId} />
+      );
+    case EPISODE_IS_NOT_YET_AVAILABLE:
     default:
       return null;
   }

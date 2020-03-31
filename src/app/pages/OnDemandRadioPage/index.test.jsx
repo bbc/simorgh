@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import clone from 'ramda/src/clone';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { BrowserRouter, StaticRouter } from 'react-router-dom';
@@ -139,10 +140,15 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on canonical', async () => {
-    fetch.mockResponse(JSON.stringify(koreanPageData));
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999999999999999;
+    const koreanPageDataWithAvailableEpisiode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisiode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    render(createAssetPage({ pageData, service: 'korean' }));
-    const audioPlayerIframeSrc = document
+    const { container } = render(
+      createAssetPage({ pageData, service: 'korean' }),
+    );
+    const audioPlayerIframeSrc = container
       .querySelector('iframe')
       .getAttribute('src');
 
@@ -152,15 +158,50 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on AMP', async () => {
-    fetch.mockResponse(JSON.stringify(koreanPageData));
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999999999999999;
+    const koreanPageDataWithAvailableEpisiode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisiode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    render(createAssetPage({ pageData, service: 'korean', isAmp: true }));
-    const audioPlayerIframeSrc = document
+    const { container } = render(
+      createAssetPage({ pageData, service: 'korean', isAmp: true }),
+    );
+    const audioPlayerIframeSrc = container
       .querySelector('amp-iframe')
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
       'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/ko/amp',
     );
+  });
+
+  it('should show the expired content message if episode is expired', async () => {
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 15856595095250000;
+    const koreanPageDataWithExpiredEpisiode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisiode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container, getByText } = render(
+      createAssetPage({ pageData, service: 'korean' }),
+    );
+    const audioPlayerIframeEl = container.querySelector('iframe');
+    const expiredMessageEl = getByText('더 이상 이용할 수 없는 콘텐츠입니다.');
+
+    expect(audioPlayerIframeEl).not.toBeInTheDocument();
+    expect(expiredMessageEl).toBeInTheDocument();
+  });
+
+  it('should not show the audio player if it is not available yet', async () => {
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 9999999999999999999999999;
+    const koreanPageDataWithExpiredEpisiode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisiode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = render(
+      createAssetPage({ pageData, service: 'korean' }),
+    );
+    const audioPlayerIframeEl = container.querySelector('iframe');
+
+    expect(audioPlayerIframeEl).not.toBeInTheDocument();
   });
 });
