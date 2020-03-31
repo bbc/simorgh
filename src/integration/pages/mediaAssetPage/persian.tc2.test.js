@@ -5,6 +5,8 @@
 import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import runUserTests from './user';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
 
 import {
   runHeaderTests,
@@ -113,6 +115,12 @@ describe('Given I am on a Persian TC2 Media Asset Page', () => {
       skipToContentText: 'مشاهده محتوا',
       headlineText:
         "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
+    });
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Media player',
     });
   });
 

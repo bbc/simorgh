@@ -5,6 +5,8 @@
 import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import runUserTests from './user';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
 
 import {
   runHeaderTests,
@@ -105,6 +107,12 @@ describe('Given I am on a Persian Media Asset Page', () => {
     runCommonA11yTests({
       skipToContentText: 'مشاهده محتوا',
       headlineText: 'Trump long headline',
+    });
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Media player',
     });
   });
 
