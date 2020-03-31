@@ -155,6 +155,7 @@ export const service = {
         listen: 'వినండి',
         watch: 'చూడండి',
         liveLabel: 'లైవ్',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',

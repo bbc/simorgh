@@ -160,6 +160,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'مباشر',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -176,8 +177,8 @@ export const service = {
       hasRadioSchedule: true,
       frequenciesPageUrl:
         '/arabic/institutional/2011/01/000000_frequencies_radio',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'استقبال البث',
+      header: 'أحدث نشرة أخبار',
     },
     footer: {
       trustProjectLink: {
@@ -269,10 +270,6 @@ export const service = {
       {
         title: 'صحافة',
         url: '/arabic/inthepress',
-      },
-      {
-        title: 'صور',
-        url: '/arabic/media/photogalleries',
       },
       {
         title: 'برامجنا',

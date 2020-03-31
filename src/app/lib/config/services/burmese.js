@@ -161,6 +161,7 @@ export const service = {
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
         liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
@@ -174,7 +175,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -241,16 +242,8 @@ export const service = {
         url: '/burmese/economy',
       },
       {
-        title: 'အသံဖိုင်များ',
-        url: '/burmese/media/audio',
-      },
-      {
         title: 'ဗီဒီယိုများ',
         url: '/burmese/media/video',
-      },
-      {
-        title: 'ဓာတ်ပုံများ',
-        url: '/burmese/media/photogalleries',
       },
     ],
   },

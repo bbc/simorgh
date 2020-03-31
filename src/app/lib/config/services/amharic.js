@@ -146,6 +146,7 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         liveLabel: 'ቀጥታ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -159,7 +160,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {

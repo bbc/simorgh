@@ -163,6 +163,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Suivez',
         liveLabel: 'EN DIRECT',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -179,8 +180,8 @@ export const service = {
       hasRadioSchedule: true,
       frequenciesPageUrl:
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'Nos fréquences',
+      header: 'Journaux et Magazines',
     },
     footer: {
       trustProjectLink: {
@@ -264,10 +265,6 @@ export const service = {
       {
         title: 'Vidéos',
         url: '/afrique/media/video',
-      },
-      {
-        title: 'En images',
-        url: '/afrique/media/photogalleries',
       },
       {
         title: 'Nos émissions',

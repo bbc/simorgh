@@ -161,6 +161,7 @@ export const service = {
         listen: 'Listen',
         watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -176,8 +177,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'راديويي څپې',
+      header: 'تازه خبرونه واورئ',
     },
     footer: {
       trustProjectLink: {
@@ -248,10 +249,6 @@ export const service = {
       {
         title: 'ويډيوګانې',
         url: '/pashto/media/video',
-      },
-      {
-        title: 'انځورونه',
-        url: '/pashto/media/photogalleries',
       },
       {
         title: 'ځانګړې پاڼې',

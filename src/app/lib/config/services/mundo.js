@@ -21,7 +21,7 @@ export const service = {
     },
     lang: `es`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Actualización',
+    articleTimestampPrefix: 'Actualizado',
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     chartbeatDomain: 'mundo.bbc.co.uk',
@@ -44,8 +44,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/mundo/institucional-51359666#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -76,7 +77,7 @@ export const service = {
           solutions: [
             'Revisa la dirección URL',
             'Presiona el botón de actualizar en tu navegador',
-            'Buscando esta página a través de la barra de búsqueda de la BBC',
+            'Busca esta página a través de la barra de búsqueda de la BBC',
           ],
           callToActionFirst: 'Como alternativa, por favor visita la ',
           callToActionLinkText: 'portada de BBC News Mundo',
@@ -87,7 +88,7 @@ export const service = {
           statusCode: '500',
           title: 'Error interno del servidor',
           message:
-            'Lo sentimos, actualmente no somos capaces de llevarte a la página que buscas. Por favor, intenta:',
+            'Lo sentimos, actualmente no podemos llevarte a la página que buscas. Por favor, intenta:',
           solutions: [
             'Presiona el botón de actualizar en tu navegador',
             'Inténtalo más tarde',
@@ -100,18 +101,18 @@ export const service = {
       },
       consentBanner: {
         privacy: {
-          title: 'Hemos actualizado nuestra Política de Privacidad y Cookies',
+          title: 'Hemos actualizado nuestra política de privacidad y cookies',
           description: {
             uk: {
               first:
-                'Hemos realizado cambios importantes en nuestra Política de Privacidad y Cookies y queremos que sepas lo que esto significa para ti y tus datos.',
+                'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'Hemos realizado cambios importantes en nuestra Política de Privacidad y Cookies y queremos que sepas lo que esto significa para ti y tus datos.',
+                'Hemos realizado cambios importantes a nuestra política de privacidad y cookies y queremos que sepas lo que esto significa para ti y tus datos.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -142,24 +143,25 @@ export const service = {
             },
           },
           accept: 'Sí, estoy de acuerdo',
-          reject: 'No, llévame a los ajustes',
+          reject: 'No, llévame a la configuración',
           rejectUrl:
             'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         },
       },
       media: {
         noJs:
-          'To play this content, please enable JavaScript, or try a different browser',
+          'Para ver este contenido, favor activar JavaScript, o intentar con otro navegador',
         contentExpired: 'Este contenido ya no está disponible.',
         audio: 'Audio',
         photogallery: 'Galería de fotos',
         video: 'Video',
-        listen: 'Listen',
-        watch: 'Vea',
+        listen: 'Escuchar',
+        watch: 'Ver',
         liveLabel: 'EN VIVO',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NEXT',
+        previousRadioShow: 'Programa anterior',
+        nextRadioShow: 'Próximo programa',
+        duration: 'Duración',
       },
     },
     brandSVG,
@@ -174,7 +176,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/mundo/institucional-51359666',
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {

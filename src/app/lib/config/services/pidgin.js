@@ -156,6 +156,7 @@ export const service = {
         listen: 'Make you listen',
         watch: 'Look',
         liveLabel: 'AS E DE HAPPEN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -190,10 +191,6 @@ export const service = {
       {
         title: 'Video',
         url: '/pidgin/media/video',
-      },
-      {
-        title: 'Audio',
-        url: '/pidgin/media/audio',
       },
       {
         title: 'Sport',
