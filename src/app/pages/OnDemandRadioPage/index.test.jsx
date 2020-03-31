@@ -8,6 +8,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5';
+import koreanPageData from '#data/korean/bbc_korean_radio/w3cszwcg';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -126,5 +127,14 @@ describe('OnDemand Radio Page ', () => {
         'Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.',
       ),
     ).toBeInTheDocument();
+  });
+
+  it('should show the audio player', async () => {
+    fetch.mockResponse(JSON.stringify(koreanPageData));
+    const audioPlayerIframeEl = document.querySelector(
+      'iframe[src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/id"]',
+    );
+
+    expect(audioPlayerIframeEl).toBeInTheDocument();
   });
 });
