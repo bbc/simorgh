@@ -100,8 +100,8 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
-  const contentSecurityPolicyContent =
-    'default-src https://toggles.test.api.bbci.co.uk;';
+  const contentSecurityPolicyContent = `default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk https://news.test.files.bbci.co.uk https://toggles.test.api.bbci.co.uk 'self' 'unsafe-inline'; connect-src https://toggles.test.api.bbci.co.uk https://firebaseinstallations.googleapis.com https://firebaselogging.googleapis.com https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://cookie-oven.api.bbc.co.uk https://cookie-oven.test.api.bbc.co.uk https://logws1363.ati-host.net 'self'; frame-src https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com https://polling.bbc.co.uk https://polling.test.bbc.co.uk 'self'`;
+
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
