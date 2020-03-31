@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import clone from 'ramda/src/clone';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
@@ -15,9 +15,12 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
-const createAssetPage = ({ pageData, service, isAmp = false }) => (
+const Page = ({ pageData, service, isAmp = false }) => (
   <StaticRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider
+      service={service}
+      origin="https://www.test.bbc.co.uk"
+    >
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -34,6 +37,17 @@ const createAssetPage = ({ pageData, service, isAmp = false }) => (
   </StaticRouter>
 );
 
+const renderPage = async ({ pageData, service, isAmp = false }) => {
+  let result;
+  await act(async () => {
+    result = await render(
+      <Page pageData={pageData} service={service} isAmp={isAmp} />,
+    );
+  });
+
+  return result;
+};
+
 fetch.mockResponse(JSON.stringify(pashtoPageData));
 
 analyticsUtils.getAtUserId = jest.fn();
@@ -47,23 +61,14 @@ describe('OnDemand Radio Page ', () => {
   it('should match snapshot for Canonical', async () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
-    await matchSnapshotAsync(
-      createAssetPage({
-        pageData,
-        service: 'pashto',
-      }),
-    );
+    await matchSnapshotAsync(<Page pageData={pageData} service="pashto" />);
   });
 
   it('should match snapshot for AMP', async () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      createAssetPage({
-        pageData,
-        service: 'pashto',
-        isAmp: true,
-      }),
+      <Page pageData={pageData} service="pashto" isAmp />,
     );
   });
 
@@ -72,12 +77,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
-    const { getByText } = render(
-      createAssetPage({
-        pageData: pageDataWithWithoutVideo,
-        service: 'pashto',
-      }),
-    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'pashto',
+    });
 
     expect(getByText('وروستي خبرونه')).toBeInTheDocument();
   });
@@ -87,12 +90,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
-    const { getByText } = render(
-      createAssetPage({
-        pageData: pageDataWithWithoutVideo,
-        service: 'pashto',
-      }),
-    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'pashto',
+    });
 
     expect(getByText('04/02/2020 GMT')).toBeInTheDocument();
   });
@@ -102,12 +103,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
-    const { getByText } = render(
-      createAssetPage({
-        pageData: pageDataWithWithoutVideo,
-        service: 'indonesia',
-      }),
-    );
+    const { getByText } = await renderPage({
+      pageData: pageDataWithWithoutVideo,
+      service: 'indonesia',
+    });
 
     expect(
       getByText(
@@ -122,9 +121,7 @@ describe('OnDemand Radio Page ', () => {
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    const { container } = render(
-      createAssetPage({ pageData, service: 'korean' }),
-    );
+    const { container } = await renderPage({ pageData, service: 'korean' });
     const audioPlayerIframeSrc = container
       .querySelector('iframe')
       .getAttribute('src');
@@ -140,9 +137,11 @@ describe('OnDemand Radio Page ', () => {
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    const { container } = render(
-      createAssetPage({ pageData, service: 'korean', isAmp: true }),
-    );
+    const { container } = await renderPage({
+      pageData,
+      service: 'korean',
+      isAmp: true,
+    });
     const audioPlayerIframeSrc = container
       .querySelector('amp-iframe')
       .getAttribute('src');
@@ -158,9 +157,10 @@ describe('OnDemand Radio Page ', () => {
     const koreanPageDataWithExpiredEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    const { container, getByText } = render(
-      createAssetPage({ pageData, service: 'korean' }),
-    );
+    const { container, getByText } = await renderPage({
+      pageData,
+      service: 'korean',
+    });
     const audioPlayerIframeEl = container.querySelector('iframe');
     const expiredMessageEl = getByText('더 이상 이용할 수 없는 콘텐츠입니다.');
 
@@ -177,9 +177,7 @@ describe('OnDemand Radio Page ', () => {
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
     );
     const { pageData } = await getInitialData('some-ondemand-radio-path');
-    const { container } = render(
-      createAssetPage({ pageData, service: 'korean' }),
-    );
+    const { container } = await renderPage({ pageData, service: 'korean' });
     const audioPlayerIframeEl = container.querySelector('iframe');
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
