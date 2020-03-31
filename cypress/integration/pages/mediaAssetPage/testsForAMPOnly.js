@@ -1,12 +1,13 @@
 import envConfig from '../../../support/config/envs';
 
-export default () =>
-  it('should have correct chartbeat configuration', () => {
+export default () => {
+  describe('Chartbeat', () => {
     if (envConfig.chartbeatEnabled) {
-      it('should have chartbeat config UID', () => {
+      it('should have correct config UID', () => {
         cy.hasAmpChartbeatConfigUid();
       });
     } else {
-      cy.log('Chartbeat not enabled');
+      it('Chartbeat not enabled', () => {});
     }
   });
+};

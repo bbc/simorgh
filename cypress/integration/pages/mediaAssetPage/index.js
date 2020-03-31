@@ -13,24 +13,26 @@ Object.keys(config)
     const paths = getPaths(service, pageType);
 
     paths.forEach(path => {
-      describe(`Canonical ${pageType} User Tests for ${service} - ${path}`, () => {
-        beforeEach(() => {
-          Cypress.env('currentPath', path);
-          visitPage(path, pageType);
+      describe(`${pageType} User Tests for ${service} - ${path}`, () => {
+        describe('Canonical', () => {
+          beforeEach(() => {
+            Cypress.env('currentPath', path);
+            visitPage(path, pageType);
+          });
+
+          runCanonicalUserTests({ service, pageType });
         });
 
-        runCanonicalUserTests({ service, pageType });
-      });
+        describe('AMP', () => {
+          const ampPath = `${path}.amp`;
 
-      describe(`AMP ${pageType} User Tests for ${service} - ${path}`, () => {
-        const ampPath = `${path}.amp`;
+          beforeEach(() => {
+            Cypress.env('currentPath', ampPath);
+            visitPage(ampPath, pageType);
+          });
 
-        beforeEach(() => {
-          Cypress.env('currentPath', ampPath);
-          visitPage(ampPath, pageType);
+          runAmpUserTests({ service, pageType });
         });
-
-        runAmpUserTests({ service, pageType });
       });
     });
   });
