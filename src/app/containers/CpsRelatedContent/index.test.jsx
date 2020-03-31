@@ -54,7 +54,7 @@ describe('CpsRelatedContent', () => {
   it('should render Story Promo components without <ul> when given single item in collection', () => {
     const topRelatedContentsOneItem = [promos[0]];
 
-    expect(topRelatedContentsOneItem.filter(Boolean).length).toBe(1);
+    expect(promos[0]).toBeTruthy();
 
     const { asFragment } = renderRelatedContent({
       content: [promos[0]],
