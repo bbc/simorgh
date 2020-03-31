@@ -25,32 +25,28 @@ export default ({
         expect(timestampEl).toBeInTheDocument();
       });
 
-      if (bulletedListItem) {
-        it('I can see the bulleted list item', () => {
+      it('I can see the bulleted list item', () => {
+        if (bulletedListItem) {
           const { getAllByRole } = within(page.document.querySelector('main'));
           const bulletedLists = getAllByRole('list');
           const [bulletedList] = bulletedLists.filter(list =>
             list.innerHTML.includes(bulletedListItem),
           );
           const { getAllByText } = within(bulletedList);
+
           expect(getAllByText(bulletedListItem)[0]).toBeInTheDocument();
-        });
-      } else {
-        it.skip('I can see the bulleted list item - no bulleted list exists on this page', () => {});
-      }
+        }
+      });
 
-      if (relatedContentHeadline) {
-        it('I can see the related content', () => {
-          const { getByText } = within(
-            page.document.querySelector(`[class^="StoryPromoUl"]`),
-          );
-          const relatedContentItemEl = getByText(relatedContentHeadline);
+      it('I can see the related content', () => {
+        if (relatedContentHeadline) {
+          const { getByRole } = within(page.document.querySelector('section'));
+          const relatedContentList = getByRole('list');
+          const { getByText } = within(relatedContentList);
 
-          expect(relatedContentItemEl).toBeInTheDocument();
-        });
-      } else {
-        it.skip('I can see the related content - no related content exists on this page', () => {});
-      }
+          expect(getByText(relatedContentHeadline)).toBeInTheDocument();
+        }
+      });
     });
   });
 };
