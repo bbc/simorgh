@@ -25,8 +25,8 @@ export default ({
         expect(timestampEl).toBeInTheDocument();
       });
 
-      it('I can see the bulleted list item', () => {
-        if (bulletedListItem) {
+      if (bulletedListItem) {
+        it('I can see the bulleted list item', () => {
           const { getAllByRole } = within(page.document.querySelector('main'));
           const bulletedLists = getAllByRole('list');
           const [bulletedList] = bulletedLists.filter(list =>
@@ -35,18 +35,18 @@ export default ({
           const { getAllByText } = within(bulletedList);
 
           expect(getAllByText(bulletedListItem)[0]).toBeInTheDocument();
-        }
-      });
+        });
+      }
 
-      it('I can see the related content', () => {
-        if (relatedContentHeadline) {
+      if (relatedContentHeadline) {
+        it('I can see the related content', () => {
           const { getByRole } = within(page.document.querySelector('section'));
           const relatedContentList = getByRole('list');
           const { getByText } = within(relatedContentList);
 
           expect(getByText(relatedContentHeadline)).toBeInTheDocument();
-        }
-      });
+        });
+      }
     });
   });
 };
