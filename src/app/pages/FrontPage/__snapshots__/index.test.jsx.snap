@@ -120,10 +120,10 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 role="text"
                               >
                                 <span
-                                  class="LiveLabel-sc-1dvfmi3-6 halTGG"
+                                  class="StyledSpan-sc-5gbj69-0 jbxGSs"
                                   dir="ltr"
                                 >
-                                  AS E DE HAPPEN
+                                  AS E DE HAPPEN 
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>

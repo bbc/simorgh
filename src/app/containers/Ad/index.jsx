@@ -13,7 +13,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 import Amp from './Amp';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 
 const StyledAd = styled.div`
   /* To centre page layout for Group 4+ */
