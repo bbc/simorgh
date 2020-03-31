@@ -100,9 +100,15 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
+  const contentSecurityPolicyContent =
+    'default-src https://toggles.test.api.bbci.co.uk;';
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content={contentSecurityPolicyContent}
+      />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp,noydir" />
       <meta name="theme-color" content={themeColor} />
