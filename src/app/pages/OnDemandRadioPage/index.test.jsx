@@ -119,8 +119,8 @@ describe('OnDemand Radio Page ', () => {
   it('should show the audio player on canonical', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999999999999999;
-    const koreanPageDataWithAvailableEpisiode = clonedKoreanPageData;
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisiode));
+    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = render(
       createAssetPage({ pageData, service: 'korean' }),
@@ -137,8 +137,8 @@ describe('OnDemand Radio Page ', () => {
   it('should show the audio player on AMP', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999999999999999;
-    const koreanPageDataWithAvailableEpisiode = clonedKoreanPageData;
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisiode));
+    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = render(
       createAssetPage({ pageData, service: 'korean', isAmp: true }),
@@ -155,8 +155,8 @@ describe('OnDemand Radio Page ', () => {
   it('should show the expired content message if episode is expired', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 15856595095250000;
-    const koreanPageDataWithExpiredEpisiode = clonedKoreanPageData;
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisiode));
+    const koreanPageDataWithExpiredEpisode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container, getByText } = render(
       createAssetPage({ pageData, service: 'korean' }),
@@ -172,8 +172,10 @@ describe('OnDemand Radio Page ', () => {
   it('should not show the audio player if it is not available yet', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 9999999999999999999999999;
-    const koreanPageDataWithExpiredEpisiode = clonedKoreanPageData;
-    fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisiode));
+    const koreanPageDataWithNotYetAvailableEpisode = clonedKoreanPageData;
+    fetch.mockResponse(
+      JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
+    );
     const { pageData } = await getInitialData('some-ondemand-radio-path');
     const { container } = render(
       createAssetPage({ pageData, service: 'korean' }),
