@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
+  MediaMessage,
 } from '@bbc/psammead-media-player';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
@@ -35,9 +36,17 @@ const InnerWrapper = styled.div`
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
+  position: relative;
+  overflow: hidden;
+  height: 165px;
 `;
 
-const AudioPlayer = ({ externalId: _masterBrand, id: assetId, idAttr }) => {
+const AudioPlayer = ({
+  externalId: _masterBrand,
+  id: assetId,
+  idAttr,
+  isExpired,
+}) => {
   const { liveRadioOverrides, lang, translations, service } = useContext(
     ServiceContext,
   );
@@ -45,8 +54,25 @@ const AudioPlayer = ({ externalId: _masterBrand, id: assetId, idAttr }) => {
   const { isAmp, platform } = useContext(RequestContext);
   const location = useLocation();
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
+  const mediaInfo = getMediaInfo(assetId);
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const expiredContentMessage = pathOr(
+    'This content is no longer available',
+    ['media', 'contentExpired'],
+    translations,
+  );
 
   if (!isValidPlatform || !masterBrand || !assetId) return null;
+
+  if (isExpired) {
+    return (
+      <OuterWrapper>
+        <InnerWrapper>
+          <MediaMessage service={service} message={expiredContentMessage} />
+        </InnerWrapper>
+      </OuterWrapper>
+    );
+  }
 
   const embedUrl = getEmbedUrl({
     mediaId: `${masterBrand}/${assetId}/${lang}`,
@@ -60,10 +86,6 @@ const AudioPlayer = ({ externalId: _masterBrand, id: assetId, idAttr }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
-
-  const mediaInfo = getMediaInfo(assetId);
-
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
 
   return (
     <OuterWrapper>
@@ -100,10 +122,12 @@ AudioPlayer.propTypes = {
   externalId: string.isRequired,
   id: string.isRequired,
   idAttr: string,
+  isExpired: bool,
 };
 
 AudioPlayer.defaultProps = {
   idAttr: null,
+  isExpired: false,
 };
 
 export default AudioPlayer;

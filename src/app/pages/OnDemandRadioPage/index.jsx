@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { string, number, shape } from 'prop-types';
 import styled from 'styled-components';
 import MetadataContainer from '../../containers/Metadata';
@@ -32,7 +31,6 @@ const renderEpisode = (
   episodeAvailableUntil,
   masterBrand,
   episodeId,
-  expiredContentMessage,
 ) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
@@ -42,7 +40,7 @@ const renderEpisode = (
     case EPISODE_IS_AVAILABLE:
       return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
     case EPISODE_IS_EXPIRED:
-      return <p>{expiredContentMessage}</p>;
+      return <AudioPlayerBlock isExpired />;
     case EPISODE_IS_NOT_AVAILABLE:
     default:
       return null;
@@ -63,12 +61,7 @@ const OnDemandRadioPage = ({ pageData }) => {
     episodeAvailableFrom,
     episodeAvailableUntil,
   } = pageData;
-  const { dir, translations } = useContext(ServiceContext);
-  const expiredContentMessage = pathOr(
-    'This content is no longer available',
-    ['media', 'contentExpired'],
-    translations,
-  );
+  const { dir } = useContext(ServiceContext);
 
   return (
     <>
@@ -122,7 +115,6 @@ const OnDemandRadioPage = ({ pageData }) => {
             episodeAvailableUntil,
             masterBrand,
             episodeId,
-            expiredContentMessage,
           )}
         </Grid>
       </StyledGelPageGrid>
