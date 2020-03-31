@@ -609,8 +609,8 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
           <p class="Paragraph-k859h4-0 cnKvCl">
             ዝግጅቶቻችንን’
           </p>
-          <div class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd">
-            <div class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs">
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <amp-iframe sandbox="allow-scripts allow-same-origin"
                             layout="fill"
@@ -1241,8 +1241,8 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
           <p class="Paragraph-k859h4-0 cnKvCl">
             ዝግጅቶቻችንን’
           </p>
-          <div class="MediaPlayerOuterWrapper-sc-1hns5mj-0 hdCRkd">
-            <div class="MediaPlayerInnerWrapper-sc-1hns5mj-1 cfTqqs">
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                         title="Audio player"
