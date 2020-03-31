@@ -9,6 +9,22 @@ const getShortSynopsis = path(['promo', 'media', 'synopses', 'short']);
 const getSummary = path(['content', 'blocks', '0', 'synopses', 'short']);
 const getEpisodeId = path(['content', 'blocks', '0', 'id']);
 const getMasterBrand = path(['metadata', 'createdBy']);
+const getEpisodeAvailableFrom = path([
+  'content',
+  'blocks',
+  '0',
+  'versions',
+  '0',
+  'availableFrom',
+]);
+const getEpisodeAvailableUntil = path([
+  'content',
+  'blocks',
+  '0',
+  'versions',
+  '0',
+  'availableUntil',
+]);
 
 export default async pathname => {
   const { json, ...rest } = await fetchPageData(pathname);
@@ -25,6 +41,8 @@ export default async pathname => {
         summary: getSummary(json),
         episodeId: getEpisodeId(json),
         masterBrand: getMasterBrand(json),
+        episodeAvailableFrom: getEpisodeAvailableFrom(json),
+        episodeAvailableUntil: getEpisodeAvailableUntil(json),
       },
     }),
   };
