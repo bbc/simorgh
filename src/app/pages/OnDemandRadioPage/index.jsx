@@ -7,6 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/LiveRadio';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -19,6 +20,8 @@ const OnDemandRadioPage = ({ pageData }) => {
     headline,
     summary,
     shortSynopsis,
+    masterBrand,
+    episodeId,
   } = pageData;
 
   const { dir } = useContext(ServiceContext);
@@ -72,6 +75,7 @@ const OnDemandRadioPage = ({ pageData }) => {
           <HeadingBlock idAttr={idAttr} text={brandTitle} />
           <ParagraphBlock text={episodeTitle} />
           <ParagraphBlock text={summary} />
+          <AudioPlayerBlock externalId={masterBrand} id={episodeId} />
         </Grid>
       </StyledGelPageGrid>
     </>

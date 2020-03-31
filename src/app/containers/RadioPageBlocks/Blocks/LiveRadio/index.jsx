@@ -14,37 +14,42 @@ import getEmbedUrl from '#lib/utilities/getEmbedUrl';
 
 const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
 
-const liveRadioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
+const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const MediaPlayerOuterWrapper = styled.div`
+const mediaInfo = {
+  title: 'Live radio', // TODO
+  type: 'audio',
+};
+
+const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
+  pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
+
+const OuterWrapper = styled.div`
   @media (min-width: 63rem) {
     display: flex;
     justify-content: center;
   }
 `;
 
-const MediaPlayerInnerWrapper = styled.div`
+const InnerWrapper = styled.div`
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
 
-const LiveRadioContainer = ({ idAttr, externalId, id }) => {
+const AudioPlayer = ({ idAttr, externalId: _masterBrand, id: assetId }) => {
+  const { liveRadioOverrides, lang, translations, service } = useContext(
+    ServiceContext,
+  );
+  const masterBrand = getMasterBrand(_masterBrand, liveRadioOverrides);
   const { isAmp, platform } = useContext(RequestContext);
-  const { liveRadio, lang, translations, service } = useContext(ServiceContext);
   const location = useLocation();
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
 
-  if (!isValidPlatform || !externalId || !id) return null;
+  if (!isValidPlatform || !masterBrand || !assetId) return null;
 
-  const serviceId = pathOr(
-    externalId,
-    ['externalIdOverrides', externalId],
-    liveRadio,
-  );
-
-  const embedSource = getEmbedUrl({
-    mediaId: `${serviceId}/${id}/${lang}`,
+  const embedUrl = getEmbedUrl({
+    mediaId: `${masterBrand}/${assetId}/${lang}`,
     type: 'media',
     isAmp,
     queryString: location.search,
@@ -56,20 +61,15 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
     translations,
   );
 
-  const mediaInfo = {
-    title: 'Live radio',
-    type: 'audio',
-  };
-
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
 
   return (
-    <MediaPlayerOuterWrapper>
-      <MediaPlayerInnerWrapper>
+    <OuterWrapper>
+      <InnerWrapper>
         {isAmp ? (
           <AmpMediaPlayer
-            placeholderSrc={liveRadioPlaceholderImageSrc}
-            src={embedSource}
+            placeholderSrc={audioPlaceholderImageSrc}
+            src={embedUrl}
             title={iframeTitle}
             id={idAttr}
             skin="audio"
@@ -79,7 +79,7 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
         ) : (
           <CanonicalMediaPlayer
             showPlaceholder={false}
-            src={embedSource}
+            src={embedUrl}
             title={iframeTitle}
             id={idAttr}
             skin="audio"
@@ -89,19 +89,19 @@ const LiveRadioContainer = ({ idAttr, externalId, id }) => {
             noJsClassName="no-js"
           />
         )}
-      </MediaPlayerInnerWrapper>
-    </MediaPlayerOuterWrapper>
+      </InnerWrapper>
+    </OuterWrapper>
   );
 };
 
-LiveRadioContainer.propTypes = {
+AudioPlayer.propTypes = {
   idAttr: string,
   externalId: string.isRequired,
   id: string.isRequired,
 };
 
-LiveRadioContainer.defaultProps = {
+AudioPlayer.defaultProps = {
   idAttr: null,
 };
 
-export default LiveRadioContainer;
+export default AudioPlayer;
