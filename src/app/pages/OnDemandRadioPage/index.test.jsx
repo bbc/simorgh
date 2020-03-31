@@ -3,7 +3,7 @@ import React from 'react';
 import clone from 'ramda/src/clone';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { BrowserRouter, StaticRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -48,22 +48,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
-        <ServiceContextProvider service="pashto">
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            isAmp={false}
-            pageType="media"
-            pathname="/pathname"
-            service="pashto"
-            statusCode={200}
-          >
-            <BrowserRouter>
-              <OnDemandRadioPage service="pashto" pageData={pageData} />
-            </BrowserRouter>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>,
+      createAssetPage({
+        pageData,
+        service: 'pashto',
+      }),
     );
   });
 
@@ -71,22 +59,11 @@ describe('OnDemand Radio Page ', () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
-        <ServiceContextProvider service="pashto">
-          <RequestContextProvider
-            bbcOrigin="https://www.test.bbc.co.uk"
-            isAmp
-            pageType="media"
-            pathname="/pathname"
-            service="pashto"
-            statusCode={200}
-          >
-            <BrowserRouter>
-              <OnDemandRadioPage service="pashto" pageData={pageData} />
-            </BrowserRouter>
-          </RequestContextProvider>
-        </ServiceContextProvider>
-      </ToggleContextProvider>,
+      createAssetPage({
+        pageData,
+        service: 'pashto',
+        isAmp: true,
+      }),
     );
   });
 
@@ -189,6 +166,7 @@ describe('OnDemand Radio Page ', () => {
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(expiredMessageEl).toBeInTheDocument();
+    expect(expiredMessageEl).toMatchSnapshot();
   });
 
   it('should not show the audio player if it is not available yet', async () => {

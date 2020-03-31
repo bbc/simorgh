@@ -918,3 +918,32 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   </body>
 </html>
 `;
+
+exports[`OnDemand Radio Page  should show the expired content message if episode is expired 1`] = `
+.c0 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c0 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    padding: 1rem;
+  }
+}
+
+<strong
+  class="c0"
+>
+  더 이상 이용할 수 없는 콘텐츠입니다.
+</strong>
+`;
