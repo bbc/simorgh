@@ -12,16 +12,24 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
 // Currently, only these services have radio schedule data
-const validServices = [
-  'afrique',
-  'arabic',
-  'hausa',
-  'korean',
-  'pashto',
-  'persian',
-  'somali',
-  'swahili',
-];
+const radioServices = {
+  afaanoromoo: 'oromo',
+  afrique: 'afrique',
+  amharic: 'amharic',
+  arabic: 'arabic',
+  bengali: 'bangla',
+  burmese: 'burmese',
+  gahuza: 'gahuza',
+  hausa: 'hausa',
+  indonesia: 'indonesian',
+  korean: 'korean',
+  pashto: 'pashto',
+  persian: 'dari',
+  somali: 'somali',
+  swahili: 'swahili',
+  tigrinya: 'tigrinya',
+  urdu: 'urdu',
+};
 
 const renderRadioScheduleContainer = service => (
   <BrowserRouter>
@@ -36,6 +44,7 @@ const renderRadioScheduleContainer = service => (
           <RadioScheduleContainer
             radioScheduleEndpointOverride={getLocalRadioScheduleEndpoint({
               service,
+              radioService: radioServices[service],
             })}
           />
         </ServiceContextProvider>
@@ -58,7 +67,7 @@ const stories = storiesOf('Containers|RadioSchedule', module)
   .addDecorator(
     withServicesKnob({
       defaultService: 'korean',
-      services: validServices,
+      services: Object.keys(radioServices),
     }),
   )
   .addParameters({

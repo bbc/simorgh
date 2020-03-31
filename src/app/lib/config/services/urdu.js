@@ -164,7 +164,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -239,20 +239,12 @@ export const service = {
         url: '/urdu/science',
       },
       {
-        title: 'آڈیو',
-        url: '/urdu/media/audio',
-      },
-      {
         title: 'ویڈیو',
         url: '/urdu/media/video',
       },
       {
         title: 'پنجابی ويڈیو',
         url: '/urdu/punjabi_video',
-      },
-      {
-        title: 'تصاویر',
-        url: '/urdu/media/photogalleries',
       },
     ],
   },
