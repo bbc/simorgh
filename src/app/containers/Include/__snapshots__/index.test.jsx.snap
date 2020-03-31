@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IncludeContainer should not render any HTML for an unsupported include type 1`] = `<div />`;
+
+exports[`IncludeContainer should not render any HTML when html prop is null 1`] = `<div />`;
+
+exports[`IncludeContainer should not render any HTML when include toggle is disabled 1`] = `<div />`;
+
+exports[`IncludeContainer should render HTML when include toggle is enabled 1`] = `
+<div>
+  <div
+    class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
+  >
+    <div>
+      <div>
+        Visual Journalism Markup
+      </div>
+      <script
+        src="localhost/vj.js"
+        type="text/javascript"
+      />
+    </div>
+  </div>
+</div>
+`;
