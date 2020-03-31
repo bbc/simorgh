@@ -55,7 +55,7 @@ const AudioPlayer = ({
   const location = useLocation();
   const isValidPlatform = ['amp', 'canonical'].includes(platform);
   const mediaInfo = getMediaInfo(assetId);
-  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
+  const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
   if (!isValidPlatform || !masterBrand || !assetId) return null;
 
