@@ -18,7 +18,7 @@ export default ({ pageType, runAmpTests, runCanonicalTests }) => {
               visitPage(path, pageType);
             });
 
-            runAmpTests({ service, variant });
+            runCanonicalTests({ service, variant });
           });
 
           describe('AMP', () => {
@@ -28,7 +28,7 @@ export default ({ pageType, runAmpTests, runCanonicalTests }) => {
               visitPage(ampPath, pageType);
             });
 
-            runCanonicalTests({ service, variant });
+            runAmpTests({ service, variant });
           });
         });
       });
