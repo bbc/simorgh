@@ -2,7 +2,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 
 /* The Include html which we are getting would be encoded
    so that html characters are escaped when serializing the page data.

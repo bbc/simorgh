@@ -4,6 +4,18 @@ import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
+const defaultToggleState = {
+  include: {
+    enabled: true,
+  },
+};
+
+const toggleStateFalse = {
+  include: {
+    enabled: true,
+  },
+};
+
 const fakeMarkup = `&lt;div&gt;Visual Journalism Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/vj.js&quot;&gt;&lt;/script&gt;`;
 // eslint-disable-next-line react/prop-types
 const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
@@ -23,16 +35,9 @@ const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
 
 describe('IncludeContainer', () => {
   it('should render HTML when include toggle is enabled', async () => {
-    const mockToggles = {
-      test: {
-        include: {
-          enabled: true,
-        },
-      },
-    };
     const { container } = render(
       <IncludeContainerWithMockContext
-        toggleState={mockToggles}
+        toggleState={defaultToggleState}
         html={fakeMarkup}
         type="idt2"
       />,
@@ -41,16 +46,9 @@ describe('IncludeContainer', () => {
   });
 
   it('should not render any HTML when html prop is null', async () => {
-    const mockToggles = {
-      test: {
-        include: {
-          enabled: true,
-        },
-      },
-    };
     const { container } = render(
       <IncludeContainerWithMockContext
-        toggleState={mockToggles}
+        toggleState={defaultToggleState}
         type="idt2"
         html={null}
       />,
@@ -59,16 +57,9 @@ describe('IncludeContainer', () => {
   });
 
   it('should not render any HTML for an unsupported include type', async () => {
-    const mockToggles = {
-      test: {
-        include: {
-          enabled: true,
-        },
-      },
-    };
     const { container } = render(
       <IncludeContainerWithMockContext
-        toggleState={mockToggles}
+        toggleState={defaultToggleState}
         html={fakeMarkup}
         type="idt20"
       />,
@@ -77,16 +68,9 @@ describe('IncludeContainer', () => {
   });
 
   it('should not render any HTML when include toggle is disabled', async () => {
-    const mockToggles = {
-      test: {
-        include: {
-          enabled: false,
-        },
-      },
-    };
     const { container } = render(
       <IncludeContainerWithMockContext
-        toggleState={mockToggles}
+        toggleState={toggleStateFalse}
         html={fakeMarkup}
         type="idt2"
       />,
