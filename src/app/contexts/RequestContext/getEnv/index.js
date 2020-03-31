@@ -3,7 +3,7 @@ const getEnv = (origin) => {
     return 'local';
   }
 
-  if (origin.includes('test')) {
+  if (origin.includes('test') || origin.includes('stage')) {
     return 'test';
   }
 

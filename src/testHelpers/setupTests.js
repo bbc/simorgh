@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom/extend-expect';
 import chalk from 'chalk';
 
 const REACT_FAILED_PROP_TYPE = 'Failed prop type';

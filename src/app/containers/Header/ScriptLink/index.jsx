@@ -4,7 +4,7 @@ import { useRouteMatch } from 'react-router-dom';
 import ScriptLink from '@bbc/psammead-script-link';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 
 export const getVariantHref = ({ path, params, service, variant }) => {
   const fallback = `/${service}/${variant}`;

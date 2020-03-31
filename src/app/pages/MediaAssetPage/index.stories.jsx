@@ -9,10 +9,8 @@ import { MediaAssetPage } from '..';
 import pageData from './fixtureData';
 
 const defaultToggles = {
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
@@ -33,7 +31,11 @@ platforms.forEach((platform) => {
 
   mapStories.add('default', () => {
     return (
-      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+      <ToggleContextProvider
+        value={{ toggleState: defaultToggles }}
+        service="pidgin"
+        origin="https://www.test.bbc.com"
+      >
         <BrowserRouter>
           <MediaAssetPage
             pageType="MAP"

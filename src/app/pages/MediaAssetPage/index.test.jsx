@@ -16,20 +16,8 @@ import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 const toggleState = {
-  local: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  live: {
-    mediaPlayer: {
-      enabled: false,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 

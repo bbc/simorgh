@@ -16,20 +16,8 @@ import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 const toggleState = {
-  local: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  live: {
-    mediaPlayer: {
-      enabled: false,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
