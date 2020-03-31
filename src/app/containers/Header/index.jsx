@@ -6,7 +6,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
+import onClient from '#lib/utilities/onClient';
 
 const HeaderContainer = () => {
   const { pageType } = useContext(RequestContext);
@@ -22,7 +23,9 @@ const HeaderContainer = () => {
   // All other page types show the nav bar at all times
   const showNav = showNavOnArticles || pageType !== 'article';
 
-  const skipLink = (
+  const isOperaMini = onClient() && window.operamini;
+
+  const skipLink = !isOperaMini && (
     <SkipLink service={service} script={script} dir={dir} href="#content">
       {skipLinkText}
     </SkipLink>
