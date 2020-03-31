@@ -24,7 +24,7 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,
-} from './utilities/constructCspHeader';
+} from './utilities/cspHeader/middleware';
 
 const fs = require('fs');
 
