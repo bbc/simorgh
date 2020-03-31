@@ -1,15 +1,16 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import getEmbedUrl from './helper';
 
 export default ({ service, variant }) => {
   describe('Audio Player', () => {
-    const { lang } = appConfig[service][variant];
+    const language = appConfig[config[service].name][variant].lang;
     let embedUrl;
 
-    beforeEach(() => {
+    before(() => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        embedUrl = getEmbedUrl(body, lang);
+        embedUrl = getEmbedUrl({ body, language, isAmp: true });
       });
     });
 

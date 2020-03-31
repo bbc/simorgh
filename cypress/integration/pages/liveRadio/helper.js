@@ -4,7 +4,7 @@ import envConfig from '../../../support/config/envs';
 const getBrandId = externalId =>
   externalId === 'bbc_oromo_radio' ? 'bbc_afaanoromoo_radio' : externalId;
 
-export default (body, language) => {
+export default ({ body, language, isAmp = false }) => {
   const { externalId } = body.content.blocks[2];
   const brandId = getBrandId(externalId);
 
@@ -14,5 +14,6 @@ export default (body, language) => {
     brandId,
     'liveradio',
     language,
+    isAmp ? 'amp' : '',
   ].join('/');
 };

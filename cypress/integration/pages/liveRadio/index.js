@@ -28,7 +28,6 @@ Object.keys(config)
           const ampPath = `${path}.amp`;
 
           before(() => {
-            Cypress.env('currentPath', ampPath);
             visitPage(ampPath, pageType);
           });
 
