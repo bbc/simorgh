@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 
 const getMostReadEndpoint = ({ service, variant }) =>

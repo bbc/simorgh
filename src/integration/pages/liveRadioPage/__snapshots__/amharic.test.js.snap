@@ -593,6 +593,11 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
           {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[amp]&x3=[news-amharic]&x4=[am]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Amharic, Amharic - , Amharic - unknown, Amharic - unknown, Amharic - unknown","uid":50924,"title":"ያድምጡ","virtualReferrer":"\${documentReferrer}","contentType":"Live Radio"}}
+        </script>
+      </amp-analytics>
       <main role="main"
             dir="ltr"
             class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"

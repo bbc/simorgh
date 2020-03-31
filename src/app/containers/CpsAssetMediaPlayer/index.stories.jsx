@@ -11,10 +11,8 @@ import videoBlock from './fixtures';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const defaultToggles = {
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
@@ -38,7 +36,10 @@ platforms.forEach(platform => {
 
   mapMediaPlayerStories.add('default', () => {
     return (
-      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+      <ToggleContextProvider
+        value={{ toggleState: defaultToggles }}
+        origin="https://www.bbc.com"
+      >
         <ServiceContextProvider service="pidgin">
           <RequestContextProvider
             isAmp={isAmp(platform)}
