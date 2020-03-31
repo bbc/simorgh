@@ -10,8 +10,8 @@ jest.mock('react-router-dom', () => ({
 }));
 jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
-const renderClientApp = () =>
-  render(<ClientApp data="someData!" routes={['someRoute']} />);
+// const renderClientApp = () =>
+//   render(<ClientApp data="someData!" routes={['someRoute']} />);
 
 const renderServerApp = () =>
   render(
@@ -22,35 +22,35 @@ const renderServerApp = () =>
     />,
   );
 
-describe('ClientApp', () => {
-  it('App should be called with the correct props', () => {
-    renderClientApp();
-    expect(App).toHaveBeenCalledWith(
-      { initialData: 'someData!', routes: ['someRoute'] },
-      {},
-    );
-  });
+// describe('ClientApp', () => {
+//   it('App should be called with the correct props', () => {
+//     renderClientApp();
+//     expect(App).toHaveBeenCalledWith(
+//       { initialData: 'someData!', routes: ['someRoute'] },
+//       {},
+//     );
+//   });
 
-  it('BrowserRouter should be called with the correct props', () => {
-    const actualBrowserRouter = ReactRouter.BrowserRouter;
-    ReactRouter.BrowserRouter = jest.fn(() => <></>);
-    renderClientApp();
-    expect(ReactRouter.BrowserRouter).toHaveBeenCalledWith(
-      {
-        children: expect.anything(),
-        data: 'someData!',
-        routes: ['someRoute'],
-      },
-      {},
-    );
-    ReactRouter.BrowserRouter = actualBrowserRouter; //  restore the original (non-mocked) implementation
-  });
+//   it('BrowserRouter should be called with the correct props', () => {
+//     const actualBrowserRouter = ReactRouter.BrowserRouter;
+//     ReactRouter.BrowserRouter = jest.fn(() => <></>);
+//     renderClientApp();
+//     expect(ReactRouter.BrowserRouter).toHaveBeenCalledWith(
+//       {
+//         children: expect.anything(),
+//         data: 'someData!',
+//         routes: ['someRoute'],
+//       },
+//       {},
+//     );
+//     ReactRouter.BrowserRouter = actualBrowserRouter; //  restore the original (non-mocked) implementation
+//   });
 
-  it('should render App component', () => {
-    const { getByText } = renderClientApp();
-    expect(getByText('Mocked App component')).toBeInTheDocument();
-  });
-});
+//   it('should render App component', () => {
+//     const { getByText } = renderClientApp();
+//     expect(getByText('Mocked App component')).toBeInTheDocument();
+//   });
+// });
 
 describe('ServerApp', () => {
   it('App should be called with the correct props', () => {
