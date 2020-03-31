@@ -3400,7 +3400,7 @@ const genServices = {
           },
           local: {
             paths: ['/serbian/cyr/srbija-23278974'], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
