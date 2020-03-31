@@ -16,6 +16,15 @@ describe('serialiseForScript', () => {
       expect(serialiseForScript({ text: 'me < you' })).toBe(
         '{"text":"me \\u003c you"}',
       );
+
+      expect(
+        serialiseForScript({
+          html:
+            "<div>An include</div><script>console.log('An include');</script>",
+        }),
+      ).toBe(
+        '{"html":"\\u003cdiv>An include\\u003c/div>\\u003cscript>console.log(\'An include\');\\u003c/script>"}',
+      );
     });
 
     it('an object with a less-than symbol in a property name', () => {
