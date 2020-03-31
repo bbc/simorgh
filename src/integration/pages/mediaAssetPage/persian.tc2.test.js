@@ -32,6 +32,12 @@ describe('Given I am on a Persian TC2 AMP Media Asset Page', () => {
   describe('When the application starts', () => {
     runCoreAmpTests({ service: 'persian' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
+  });
 });
 
 describe('Given I am on a Persian TC2 Canonical Media Asset Page', () => {
@@ -48,6 +54,12 @@ describe('Given I am on a Persian TC2 Canonical Media Asset Page', () => {
 
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'persian' });
+  });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
   });
 });
 
@@ -115,12 +127,6 @@ describe('Given I am on a Persian TC2 Media Asset Page', () => {
       skipToContentText: 'مشاهده محتوا',
       headlineText:
         "جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد",
-    });
-    runCanonicalA11yTests({
-      mediaPlayerTitle: 'Media player',
-    });
-    runAmpA11yTests({
-      mediaPlayerTitle: 'Media player',
     });
   });
 

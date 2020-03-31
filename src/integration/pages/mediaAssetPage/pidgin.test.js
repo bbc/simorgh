@@ -32,6 +32,12 @@ describe('Given I am on a Pidgin AMP Media Asset Page', () => {
   describe('When the application starts', () => {
     runCoreAmpTests({ service: 'pidgin' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
+  });
 });
 
 describe('Given I am on a Pidgin Canonical Media Asset Page', () => {
@@ -48,6 +54,12 @@ describe('Given I am on a Pidgin Canonical Media Asset Page', () => {
 
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'pidgin' });
+  });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
   });
 });
 
@@ -117,12 +129,6 @@ describe('Given I am on a Pidgin Media Asset Page', () => {
       skipToContentText: 'Waka go wetin de inside',
       headlineText:
         'Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >',
-    });
-    runCanonicalA11yTests({
-      mediaPlayerTitle: 'Media player',
-    });
-    runAmpA11yTests({
-      mediaPlayerTitle: 'Media player',
     });
   });
 

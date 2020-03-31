@@ -32,6 +32,12 @@ describe('Given I am on a Persian AMP Media Asset Page', () => {
   describe('When the application starts', () => {
     runCoreAmpTests({ service: 'persian' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
+  });
 });
 
 describe('Given I am on a Persian Canonical Media Asset Page', () => {
@@ -48,6 +54,12 @@ describe('Given I am on a Persian Canonical Media Asset Page', () => {
 
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'persian' });
+  });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
   });
 });
 
@@ -107,12 +119,6 @@ describe('Given I am on a Persian Media Asset Page', () => {
     runCommonA11yTests({
       skipToContentText: 'مشاهده محتوا',
       headlineText: 'Trump long headline',
-    });
-    runCanonicalA11yTests({
-      mediaPlayerTitle: 'Media player',
-    });
-    runAmpA11yTests({
-      mediaPlayerTitle: 'Media player',
     });
   });
 
