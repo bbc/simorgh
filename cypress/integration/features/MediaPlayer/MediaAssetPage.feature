@@ -1,7 +1,7 @@
-Feature: Media Player
+Feature: Media Asset Page Player
 
     @smoke @test
-    Scenario Outline: Video clip plays on a Media Asset Page
+    Scenario Outline: Play video clip
         Given I navigate to <URL>
         When I click the play video button
         Then the video clip plays
@@ -13,7 +13,7 @@ Feature: Media Player
             | gahuza/amakuru/2016/02/160215_map_amakuru_test1.amp |
 
     @smoke @test
-    Scenario Outline: Audio clip plays on a Media Asset Page
+    Scenario Outline: Play audio clip
         Given I navigate to <URL>
         When I click the play audio button
         Then the audio clip plays
@@ -25,7 +25,7 @@ Feature: Media Player
             | hausa/multimedia/2016/07/160714_tc2_audiomap.amp |
 
     @test
-    Scenario Outline: Video clip plays on a Media Asset Page
+    Scenario Outline: Play video clip
         Given I navigate to <URL>
         When I click the play video button
         Then the video clip plays
@@ -37,7 +37,7 @@ Feature: Media Player
             | gahuza/amakuru/2016/02/160215_map_amakuru_test1.amp |
 
     @test
-    Scenario Outline: Audio clip plays on a Media Asset Page
+    Scenario Outline: Play audio clip
         Given I navigate to <URL>
         When I click the play audio button
         Then the audio clip plays
@@ -49,7 +49,7 @@ Feature: Media Player
             | hausa/multimedia/2016/07/160714_tc2_audiomap.amp |
 
     # @smoke @live
-    # Scenario Outline: Video clip plays on a Media Asset Page
+    # Scenario Outline: Play video clip
     #     Given I navigate to <URL>
     #     When I click the play video button
     #     Then the video clip plays
@@ -61,7 +61,7 @@ Feature: Media Player
     #         | https://www.bbc.com/bengali/multimedia/2016/08/160801_baghdad_rashid_street_100yrs_video.amp |
 
 #     @live
-#     Scenario Outline: Audio clip plays on a Media Asset Page
+#     Scenario Outline: Play audio clip
 #         Given I navigate to <URL>
 #         When I click the play audio button
 #         Then the audio clip plays

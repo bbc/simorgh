@@ -1,7 +1,7 @@
-Feature: Live Radio Player
+Feature: Live Radio Page
 
     @smoke @test
-    Scenario Outline: Verify media plays on Live Radio page
+    Scenario Outline: Play radio
         Given I navigate to <URL>
         When I click the play radio button
         Then the radio plays

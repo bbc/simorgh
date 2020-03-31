@@ -1,6 +1,6 @@
-Feature: On Demand Radio Player
+Feature: On Demand Radio Page
 
-    Scenario Outline: Verify media plays on an On Demand Radio page
+    Scenario Outline: Play episode
         Given I navigate to <URL>
         When I click the play episode button
         Then the episode plays
