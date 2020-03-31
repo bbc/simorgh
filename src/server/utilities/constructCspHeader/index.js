@@ -120,6 +120,12 @@ export const constructCspHeader = ({ isAmp, isLive, isUK }) => ({
     'child-src': isAmp ? ['blob:'] : ["'self'"],
   },
 });
+export const stringCspHeader = ({ isAmp, isLive, isUK }) => {
+  const { directives } = constructCspHeader({ isAmp, isLive, isUK });
+  return Object.keys(directives)
+    .map(directive => `${directive}: ${directives[directive].join(' ')}`)
+    .join('; ');
+};
 
 export const localInjectHostCspHeader = (_req, _res, next) => {
   next();

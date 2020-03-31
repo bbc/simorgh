@@ -2,6 +2,7 @@ import injectCspHeader, {
   generateScriptSrc,
   generateImgSrc,
   generateConnectSrc,
+  stringCspHeader,
 } from '.';
 
 const next = jest.fn();
@@ -341,4 +342,92 @@ describe('CSP Header Middleware', () => {
         "default-src 'self'; font-src https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src 'unsafe-inline'; img-src https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net https://cdn.ampproject.org https://amp-error-reporting.appspot.com; frame-src 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src blob:; child-src blob:",
     });
   });
+});
+
+describe('stringCspHeader', () => {
+  [
+    {
+      description:
+        'should return csp string for AMP when on Test and in the UK',
+      isAmp: true,
+      isLive: false,
+      isUK: true,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src: https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net https://cdn.ampproject.org https://amp-error-reporting.appspot.com; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: blob:; child-src: blob:`,
+    },
+    {
+      description:
+        'should return csp string for AMP when on Live and in the UK',
+      isAmp: true,
+      isLive: true,
+      isUK: true,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src: https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://a1.api.bbc.co.uk/hit.xiti https://cdn.ampproject.org https://amp-error-reporting.appspot.com; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: blob:; child-src: blob:`,
+    },
+    {
+      description:
+        'should return csp string for Canonical when on Test and in the UK',
+      isAmp: false,
+      isLive: false,
+      isUK: true,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src: https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline' https://news.test.files.bbci.co.uk; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net 'self' https://cookie-oven.api.bbc.co.uk https://cookie-oven.test.api.bbc.co.uk; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: 'self'; child-src: 'self'`,
+    },
+    {
+      description:
+        'should return csp string for Canonical when on Live and in the UK',
+      isAmp: false,
+      isLive: true,
+      isUK: true,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src: https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline'; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://a1.api.bbc.co.uk/hit.xiti 'self' https://cookie-oven.api.bbc.co.uk; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: 'self'; child-src: 'self'`,
+    },
+    {
+      description:
+        'should return csp string for AMP when on Test and outside the UK',
+      isAmp: true,
+      isLive: false,
+      isUK: false,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src: https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net https://cdn.ampproject.org https://amp-error-reporting.appspot.com; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: blob:; child-src: blob:`,
+    },
+    {
+      description:
+        'should return csp string for AMP when on Live and outside the UK',
+      isAmp: true,
+      isLive: true,
+      isUK: false,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src: https://cdn.ampproject.org https://*.chartbeat.com https://*.go-mpulse.net 'unsafe-inline'; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://a1.api.bbc.co.uk/hit.xiti https://cdn.ampproject.org https://amp-error-reporting.appspot.com; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: blob:; child-src: blob:`,
+    },
+    {
+      description:
+        'should return csp string for Canonical when on Test and outside the UK',
+      isAmp: false,
+      isLive: false,
+      isUK: false,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk https://ichef.test.bbci.co.uk https://news.test.files.bbci.co.uk https://logws1363.ati-host.net data: 'self'; script-src: https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline' https://news.test.files.bbci.co.uk; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://logws1363.ati-host.net 'self' https://cookie-oven.api.bbc.com https://cookie-oven.test.api.bbc.com; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: 'self'; child-src: 'self'`,
+    },
+    {
+      description:
+        'should return csp string for Canonical when on Live and outside the UK',
+      isAmp: false,
+      isLive: true,
+      isUK: false,
+      expectation: `default-src: 'self'; font-src: https://gel.files.bbci.co.uk https://ws-downloads.files.bbci.co.uk; style-src: 'unsafe-inline'; img-src: https://ichef.bbci.co.uk https://ping.chartbeat.net https://a1.api.bbc.co.uk/hit.xiti https://news.files.bbci.co.uk https://*.akstat.io https://r.bbci.co.uk data: 'self'; script-src: https://news.files.bbci.co.uk https://*.chartbeat.com https://*.go-mpulse.net https://mybbc-analytics.files.bbci.co.uk https://emp.bbci.co.uk https://static.bbci.co.uk 'self' 'unsafe-inline'; connect-src: https://*.akstat.io https://*.akamaihd.net https://c.go-mpulse.net https://a1.api.bbc.co.uk/hit.xiti 'self' https://cookie-oven.api.bbc.com; frame-src: 'self' https://emp.bbc.com https://emp.bbc.co.uk https://chartbeat.com https://*.chartbeat.com; worker-src: 'self'; child-src: 'self'`,
+    },
+  ].forEach(
+    ({
+      isAmp,
+      isLive,
+      isUK,
+      description,
+
+      expectation,
+    }) => {
+      it(description, () => {
+        const result = stringCspHeader({
+          isAmp,
+          isLive,
+          isUK,
+        });
+
+        expect(result).toEqual(expectation);
+      });
+    },
+  );
 });
