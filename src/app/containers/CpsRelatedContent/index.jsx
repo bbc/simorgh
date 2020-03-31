@@ -77,8 +77,8 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
     children: node.isRequired,
   };
   if (!content.length) return null;
-  const hasSingleRelatedContent = content.filter(Boolean).length === 1;
-  const [singleRelatedContent] = content.filter(Boolean);
+  const hasSingleRelatedContent = content.length === 1;
+  const [singleRelatedContent] = content;
 
   return (
     <RelatedContentWrapper>
