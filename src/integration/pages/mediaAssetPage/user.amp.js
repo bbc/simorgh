@@ -1,8 +1,6 @@
-const { amp: page } = global;
-
 export default ({ imageUrl, mediaEmbedUrl }) => {
   it('I can see a media player placeholder image', () => {
-    const placeholderImage = page.document.querySelector(
+    const placeholderImage = amp.document.querySelector(
       `amp-img[src="${imageUrl}"]`,
     );
 
@@ -10,7 +8,7 @@ export default ({ imageUrl, mediaEmbedUrl }) => {
   });
 
   it('I can see a media player embed', () => {
-    const mediaPlayer = page.document.querySelector(
+    const mediaPlayer = amp.document.querySelector(
       `amp-iframe[src="${mediaEmbedUrl}"]`,
     );
 
