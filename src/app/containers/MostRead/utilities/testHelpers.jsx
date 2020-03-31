@@ -34,8 +34,7 @@ export const setStaleLastRecordTimeStamp = mostReadData => {
 };
 
 const getToggleState = enabled => ({
-  local: { mostRead: { enabled } },
-  test: { mostRead: { enabled } },
+  mostRead: { enabled },
 });
 
 /* eslint-disable react/prop-types */

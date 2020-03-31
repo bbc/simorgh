@@ -22,8 +22,7 @@ import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
-import { Link } from '@bbc/psammead-story-promo';
-import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
@@ -76,9 +75,20 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const RadioFrequencyLink = styled(Link)`
+const RadioFrequencyLink = styled.a`
   ${({ script }) => script && getLongPrimer(script)};
   ${({ service }) => service && getSansRegular(service)};
+  color: ${C_EBON};
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: ${C_METAL};
+  }
 `;
 
 const CanonicalRadioSchedule = ({ endpoint }) => {
@@ -94,7 +104,6 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
-  const timeOnClient = parseInt(moment.utc().format('x'), 10);
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -113,7 +122,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   useEffect(() => {
     const handleResponse = async response => {
       const radioScheduleData = await response.json();
-
+      const timeOnClient = parseInt(moment.utc().format('x'), 10);
       const schedules = processRadioSchedule(
         radioScheduleData,
         service,
@@ -128,7 +137,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
         .catch(e => logger.error(`HTTP Error: "${e}"`));
 
     fetchRadioScheduleData(endpoint);
-  }, [endpoint, service, script, timezone, locale]);
+  }, [endpoint, locale, script, service, timeOnServer, timezone]);
 
   if (!schedule) {
     return null;

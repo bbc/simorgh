@@ -175,7 +175,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -242,16 +242,8 @@ export const service = {
         url: '/burmese/economy',
       },
       {
-        title: 'အသံဖိုင်များ',
-        url: '/burmese/media/audio',
-      },
-      {
         title: 'ဗီဒီယိုများ',
         url: '/burmese/media/video',
-      },
-      {
-        title: 'ဓာတ်ပုံများ',
-        url: '/burmese/media/photogalleries',
       },
     ],
   },
