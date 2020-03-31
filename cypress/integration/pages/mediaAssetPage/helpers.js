@@ -34,7 +34,7 @@ const getMediaId = body => {
   return versionId || externalId || id;
 };
 
-export const getEmbedUrl = (body, language) => {
+export const getEmbedUrl = ({ body, language, isAmp = false }) => {
   const prefix = body.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
 
   return [
@@ -43,5 +43,6 @@ export const getEmbedUrl = (body, language) => {
     `${prefix}${body.metadata.locators.assetUri}`,
     getMediaId(body),
     language,
+    isAmp ? 'amp' : '',
   ].join('/');
 };

@@ -10,7 +10,7 @@ export default ({ service, variant }) => {
 
     before(() => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        embedUrl = getEmbedUrl(body, language);
+        embedUrl = getEmbedUrl({ body, language });
       });
     });
 
