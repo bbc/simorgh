@@ -7,7 +7,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
-import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/LiveRadio';
+import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
