@@ -13,20 +13,8 @@ import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
 
 const defaultToggleState = {
-  local: {
-    chartbeatAnalytics: {
-      enabled: false,
-    },
-  },
-  test: {
-    chartbeatAnalytics: {
-      enabled: true,
-    },
-  },
-  live: {
-    chartbeatAnalytics: {
-      enabled: false,
-    },
+  chartbeatAnalytics: {
+    enabled: false,
   },
 };
 
@@ -75,6 +63,7 @@ ContextWrap.defaultProps = {
 
 describe('Charbeats Analytics Container', () => {
   it('should call AmpCharbeatsBeacon when platform is amp and toggle enabled for chartbeat on live', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     amp.default = mockAmp;
     const expectedConfig = {
@@ -93,10 +82,8 @@ describe('Charbeats Analytics Container', () => {
     testUtils.getConfig = mockGetConfig;
 
     const toggleState = {
-      live: {
-        chartbeatAnalytics: {
-          enabled: true,
-        },
+      chartbeatAnalytics: {
+        enabled: true,
       },
     };
 
@@ -123,8 +110,18 @@ describe('Charbeats Analytics Container', () => {
   });
 
   it('should return null when toggle is disbaled for live', () => {
+    const toggleState = {
+      chartbeatAnalytics: {
+        enabled: false,
+      },
+    };
     const { container } = render(
-      <ContextWrap platform="canonical" pageType="article" origin="bbc.com">
+      <ContextWrap
+        platform="canonical"
+        pageType="article"
+        origin="bbc.com"
+        toggleState={toggleState}
+      >
         <ChartbeatAnalytics data={frontPageData} />
       </ContextWrap>,
     );
@@ -133,6 +130,7 @@ describe('Charbeats Analytics Container', () => {
   });
 
   it('should return null when toggle is disbaled for localhost', () => {
+    process.env.SIMORGH_APP_ENV = 'local';
     const { container } = render(
       <ContextWrap
         platform="canonical"
@@ -147,6 +145,7 @@ describe('Charbeats Analytics Container', () => {
   });
 
   it('should call sendCanonicalChartbeatBeacon when platform is canonical, and toggle enabled for chartbeat on test', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
     const mockAmp = jest.fn().mockReturnValue('amp-return-value');
     amp.default = mockAmp;
 
@@ -164,6 +163,12 @@ describe('Charbeats Analytics Container', () => {
       virtualReferrer: '/some-path',
     };
 
+    const toggleState = {
+      chartbeatAnalytics: {
+        enabled: true,
+      },
+    };
+
     const mockGetConfig = jest.fn().mockReturnValue(expectedConfig);
     testUtils.getConfig = mockGetConfig;
     mount(
@@ -171,6 +176,7 @@ describe('Charbeats Analytics Container', () => {
         platform="canonical"
         pageType="article"
         origin="test.bbc.com"
+        toggleState={toggleState}
       >
         <ChartbeatAnalytics data={frontPageData} />
       </ContextWrap>,
