@@ -29,7 +29,7 @@ export default ({ service, variant }) => {
         cy.hasGlobalChartbeatConfig();
       });
     } else {
-      it('not enabled', () => {});
+      it('is not enabled', () => {});
     }
   });
 };
