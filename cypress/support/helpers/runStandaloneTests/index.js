@@ -3,7 +3,7 @@ import serviceHasPageType from '../serviceHasPageType';
 import getPaths from '../getPaths';
 import { visitPage } from '../runTestsForPage';
 
-export default ({ pageType, runAmpUserTests, runCanonicalUserTests }) => {
+export default ({ pageType, runAmpTests, runCanonicalTests }) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
@@ -18,7 +18,7 @@ export default ({ pageType, runAmpUserTests, runCanonicalUserTests }) => {
               visitPage(path, pageType);
             });
 
-            runCanonicalUserTests({ service, variant });
+            runAmpTests({ service, variant });
           });
 
           describe('AMP', () => {
@@ -28,7 +28,7 @@ export default ({ pageType, runAmpUserTests, runCanonicalUserTests }) => {
               visitPage(ampPath, pageType);
             });
 
-            runAmpUserTests({ service, variant });
+            runCanonicalTests({ service, variant });
           });
         });
       });
