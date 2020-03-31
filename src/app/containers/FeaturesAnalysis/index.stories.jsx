@@ -42,6 +42,20 @@ storiesOf('Containers|Features & Analysis/Canonical', module)
       dir: 'rtl',
       data: featuresRtl,
     }),
+  )
+  .add('igbo (ltr) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'igbo',
+      dir: 'ltr',
+      data: [features[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [featuresRtl[0]],
+    }),
   );
 
 storiesOf('Containers|Features & Analysis/AMP', module)
@@ -59,5 +73,19 @@ storiesOf('Containers|Features & Analysis/AMP', module)
       service: 'arabic',
       dir: 'rtl',
       data: featuresRtl,
+    }),
+  )
+  .add('igbo (ltr) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'igbo',
+      dir: 'ltr',
+      data: [features[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [featuresRtl[0]],
     }),
   );

@@ -3,7 +3,11 @@ import { arrayOf, shape, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -26,6 +30,16 @@ const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
 `;
 
+// Apply the right margin-top between the section label and the promos
+const SpacingDiv = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
+`;
+
 const FeaturesAnalysis = ({ content }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const a11yAttributes = {
@@ -39,7 +53,9 @@ const FeaturesAnalysis = ({ content }) => {
   FeaturesAnalysisWrapper.propTypes = {
     children: node.isRequired,
   };
-  if (!featuresAnalysis.length) return null;
+  if (!content.length) return null;
+  const hasSingleFeature = content.filter(Boolean).length === 1;
+  const [singleFeature] = content.filter(Boolean);
 
   return (
     <FeaturesAnalysisWrapper>
@@ -52,14 +68,19 @@ const FeaturesAnalysis = ({ content }) => {
         >
           Features &amp; Analysis
         </StyledSectionLabel>
-
-        <StoryPromoUl>
-          {content.map(item => (
-            <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo item={item} displayImage />
-            </StoryPromoLi>
-          ))}
-        </StoryPromoUl>
+        {hasSingleFeature ? (
+          <SpacingDiv>
+            <StoryPromo item={singleFeature} dir={dir} displayImage />
+          </SpacingDiv>
+        ) : (
+          <StoryPromoUl>
+            {content.map(item => (
+              <StoryPromoLi key={item.id || item.uri}>
+                <StoryPromo item={item} dir={dir} displayImage />
+              </StoryPromoLi>
+            ))}
+          </StoryPromoUl>
+        )}
       </Wrapper>
     </FeaturesAnalysisWrapper>
   );
