@@ -94,7 +94,7 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
 
         {hasSingleRelatedContent ? (
           <SpacingDiv>
-            <StoryPromo item={singleRelatedContent} dir={dir} />
+            <StoryPromo item={formatItem(singleRelatedContent, env)} dir={dir} />
           </SpacingDiv>
         ) : (
           <Grid
