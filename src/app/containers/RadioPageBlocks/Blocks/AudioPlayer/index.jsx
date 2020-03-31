@@ -16,10 +16,10 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const mediaInfo = {
-  title: 'Live radio', // TODO
+const getMediaInfo = assetId => ({
+  title: assetId === 'liveradio' ? 'Live radio' : 'On-demand radio',
   type: 'audio',
-};
+});
 
 const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
   pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
@@ -37,7 +37,7 @@ const InnerWrapper = styled.div`
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
 `;
 
-const AudioPlayer = ({ idAttr, externalId: _masterBrand, id: assetId }) => {
+const AudioPlayer = ({ externalId: _masterBrand, id: assetId, idAttr }) => {
   const { liveRadioOverrides, lang, translations, service } = useContext(
     ServiceContext,
   );
@@ -60,6 +60,8 @@ const AudioPlayer = ({ idAttr, externalId: _masterBrand, id: assetId }) => {
     ['mediaAssetPage', 'audioPlayer'],
     translations,
   );
+
+  const mediaInfo = getMediaInfo(assetId);
 
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable Javascript or try a different browser.`;
 
@@ -95,9 +97,9 @@ const AudioPlayer = ({ idAttr, externalId: _masterBrand, id: assetId }) => {
 };
 
 AudioPlayer.propTypes = {
-  idAttr: string,
   externalId: string.isRequired,
   id: string.isRequired,
+  idAttr: string,
 };
 
 AudioPlayer.defaultProps = {
