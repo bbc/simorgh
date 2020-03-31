@@ -77,7 +77,7 @@ Object.keys(config)
               // Checks correct cookie has persisted
               assertScriptCookie(product, otherVariant);
 
-              // Navigates back to the original MAP page, but for other variant
+              // Navigates back to the original page, but for other variant
               visitPage(
                 path.replace(`/${variant}`, `/${otherVariant}`),
                 pageType,
