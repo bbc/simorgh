@@ -216,11 +216,11 @@ export const service = {
           linkText: 'Lihat lebih banyak di %provider_name%',
           linkTextSuffixVisuallyHidden: ', eksternal',
           warningText:
-            'BBC tidak bertanggung jawab atas konten dari situs eksternal ',
+            'BBC tidak bertanggung jawab atas konten dari situs eksternal',
         },
         skipLink: {
           text: 'Hentikan %provider_name% pesan',
-          endTextVisuallyHidden: 'Lompati %provider_name% pesan ',
+          endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
     },

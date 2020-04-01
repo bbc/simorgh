@@ -229,7 +229,7 @@ export const service = {
             'A BBC não se responsabiliza pelo conteúdo de sites externos.',
         },
         skipLink: {
-          text: 'Pule %provider_name% post ',
+          text: 'Pule %provider_name% post',
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },

@@ -235,7 +235,7 @@ export const service = {
           text: 'محتوا در دسترس نیست',
           linkText: 'در %provider_name% بیشتر ببینید',
           linkTextSuffixVisuallyHidden: '، لینک خارجی',
-          warningText: ' بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. ',
+          warningText: ' بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
         },
         skipLink: {
           text: 'بگذر از پست %provider_name%',

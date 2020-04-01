@@ -227,7 +227,7 @@ export const service = {
             'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
         },
         skipLink: {
-          text: '%provider_name% баракчаны өткөрүп жиберүү, пост ',
+          text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
       },

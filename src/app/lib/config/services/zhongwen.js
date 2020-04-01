@@ -254,7 +254,7 @@ export const service = {
         },
         skipLink: {
           text: '跳过 %provider_name% 帖子',
-          endTextVisuallyHidden: '结尾 %provider_name% 帖子 ',
+          endTextVisuallyHidden: '结尾 %provider_name% 帖子',
         },
       },
     },
