@@ -173,6 +173,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
