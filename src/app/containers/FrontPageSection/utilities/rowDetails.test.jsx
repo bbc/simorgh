@@ -161,7 +161,7 @@ const rowValues = {
 
 describe('getRows for first section', () => {
   describe('assertions', () => {
-    Object.keys(rowValues).forEach(value =>
+    Object.keys(rowValues).forEach((value) =>
       it(`should return right splitting for ${value} rows`, () => {
         expect(getRowDetails(rowValues[value].input)).toStrictEqual(
           rowValues[value].expected,

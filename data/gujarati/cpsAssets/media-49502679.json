@@ -1,296 +1,272 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:gujarati/media-49502679",
-        "locators": {
-            "assetUri": "/gujarati/media-49502679",
-            "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
-            "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
-        },
-        "type": "MAP",
-        "createdBy": "gujarati-v6",
-        "language": "gu",
-        "lastUpdated": 1567086073340,
-        "firstPublished": 1567079155,
-        "lastPublished": 1567086065,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "gujarati.embedded_media.media_asset.49502679.page",
-            "cps_asset_id": "49502679"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e2139461b000e9dabf7",
-                    "campaignName": "WS - Inspire me"
-                },
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Nepal",
-                    "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
-                    "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/1282988/"
-                    ],
-                    "topicName": "નેપાળ",
-                    "topicId": "c404vn5789qt",
-                    "curationList": [
-                        {
-                            "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Children",
-                    "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
-                    "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Child",
-                        "http://www.wikidata.org/entity/Q7569"
-                    ],
-                    "topicName": "બાળક",
-                    "topicId": "cpzd4k9j2g9t",
-                    "curationList": [
-                        {
-                            "curationId": "555663be-6ff0-45c1-9527-abb6a9ff3c93",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Women",
-                    "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
-                    "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Woman",
-                        "http://www.wikidata.org/entity/Q467"
-                    ],
-                    "topicName": "મહિલા",
-                    "topicId": "c7zp5121jg8t",
-                    "curationList": [
-                        {
-                            "curationId": "cfddbe74-5eff-4106-8fa8-9da604322568",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Women's health",
-                    "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
-                    "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://www.wikidata.org/entity/Q8031191"
-                    ],
-                    "topicName": "મહિલા આરોગ્ય",
-                    "topicId": "c1gdq29gx40t",
-                    "curationList": [
-                        {
-                            "curationId": "18f11cbb-ccde-4895-baa1-45be5ebd3224",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:gujarati/media-49502679",
+    "locators": {
+      "assetUri": "/gujarati/media-49502679",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
+      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "gujarati-v6",
+    "language": "gu",
+    "lastUpdated": 1567086073340,
+    "firstPublished": 1567079155,
+    "lastPublished": 1567086065,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "gujarati.embedded_media.media_asset.49502679.page",
+      "cps_asset_id": "49502679"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2139461b000e9dabf7",
+          "campaignName": "WS - Inspire me"
+        },
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Nepal",
+          "thingUri": "http://www.bbc.co.uk/things/1de7eccb-d633-4e93-97c2-1771b7841345#id",
+          "thingId": "1de7eccb-d633-4e93-97c2-1771b7841345",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1282988/"],
+          "topicName": "નેપાળ",
+          "topicId": "c404vn5789qt",
+          "curationList": [
             {
-                "id": "p07ltlm1",
-                "subType": "clip",
-                "format": "video",
-                "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-                "synopses": {
-                    "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-                    "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
-                    "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-                "versions": [
-                    {
-                        "versionId": "p07ltlm4",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 140,
-                        "durationISO8601": "PT2M20S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567011153
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "નેપાળની રાજધાની કાઠમાંડુમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. ",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "અનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી, તેમના માટે પાંચ માતાઓ 'દેવદૂત' સમાન બની છે. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "પાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold><italic>તમે અમને </italic></bold><link><caption>ફેસબુક</caption><url href=\"https://www.facebook.com/BBCnewsGujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>ઇન્સ્ટાગ્રામ</caption><url href=\"https://www.instagram.com/bbcnewsgujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>યૂટ્યૂબ</caption><url href=\"https://www.youtube.com/channel/UCYUPBf8y9ggcnpBxCKZteHA\" platform=\"highweb\"/></link><bold><italic> અને </italic></bold><link><caption>ટ્વિટર</caption><url href=\"https://twitter.com/bbcnewsgujarati\" platform=\"highweb\"/></link><bold><italic> પર ફોલો કરી શકો છો</italic></bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
+              "curationId": "32bcce5b-99ed-48a0-99ed-ac2fe5cacefc",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        },
+        {
+          "thingLabel": "Children",
+          "thingUri": "http://www.bbc.co.uk/things/992e096e-28e6-412d-b6a1-652f78be63c7#id",
+          "thingId": "992e096e-28e6-412d-b6a1-652f78be63c7",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Child",
+            "http://www.wikidata.org/entity/Q7569"
+          ],
+          "topicName": "બાળક",
+          "topicId": "cpzd4k9j2g9t",
+          "curationList": [
+            {
+              "curationId": "555663be-6ff0-45c1-9527-abb6a9ff3c93",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Women",
+          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Woman",
+            "http://www.wikidata.org/entity/Q467"
+          ],
+          "topicName": "મહિલા",
+          "topicId": "c7zp5121jg8t",
+          "curationList": [
+            {
+              "curationId": "cfddbe74-5eff-4106-8fa8-9da604322568",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Women's health",
+          "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+          "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"],
+          "topicName": "મહિલા આરોગ્ય",
+          "topicId": "c1gdq29gx40t",
+          "curationList": [
+            {
+              "curationId": "18f11cbb-ccde-4895-baa1-45be5ebd3224",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ",
-            "headline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ"
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07ltlm1",
+        "subType": "clip",
+        "format": "video",
+        "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+        "synopses": {
+          "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+          "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
+          "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
         },
-        "locators": {
-            "assetUri": "/gujarati/media-49502679",
-            "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
-            "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
-        },
-        "summary": "માતાનાં દૂધથી વંચિત બાળકો માટે 'દેવદૂત' સમાન બની પાંચ મહિલાઓ.",
-        "timestamp": 1567086073340,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+        "versions": [
+          {
+            "versionId": "p07ltlm4",
+            "types": ["Original"],
+            "duration": 140,
+            "durationISO8601": "PT2M20S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e2139461b000e9dabf7",
-                    "campaignName": "WS - Inspire me"
-                },
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07ltlm1",
-            "subType": "clip",
-            "format": "video",
-            "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-            "synopses": {
-                "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-                "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
-                "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
-            "versions": [
-                {
-                    "versionId": "p07ltlm4",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 140,
-                    "durationISO8601": "PT2M20S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567011153
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108531939",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/16ED9/production/_108531939_p07lv5tj.jpg",
-            "path": "/cpsprodpb/16ED9/production/_108531939_p07lv5tj.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "બ્રેસ્ટફિડિંગ કરાવતી મહિલાઓ",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:gujarati/media-49502679",
-        "type": "cps"
+            "availableFrom": 1567011153
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "નેપાળની રાજધાની કાઠમાંડુમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "અનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી, તેમના માટે પાંચ માતાઓ 'દેવદૂત' સમાન બની છે. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "પાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>તમે અમને </italic></bold><link><caption>ફેસબુક</caption><url href=\"https://www.facebook.com/BBCnewsGujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>ઇન્સ્ટાગ્રામ</caption><url href=\"https://www.instagram.com/bbcnewsgujarati/\" platform=\"highweb\"/></link><bold><italic>, </italic></bold><link><caption>યૂટ્યૂબ</caption><url href=\"https://www.youtube.com/channel/UCYUPBf8y9ggcnpBxCKZteHA\" platform=\"highweb\"/></link><bold><italic> અને </italic></bold><link><caption>ટ્વિટર</caption><url href=\"https://twitter.com/bbcnewsgujarati\" platform=\"highweb\"/></link><bold><italic> પર ફોલો કરી શકો છો</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ",
+      "headline": "અનાથ બાળકોને માનું દૂધ પીવડાવતી વૉલન્ટિયર માતાઓ"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/gujarati/media",
-            "type": "simple"
+    "locators": {
+      "assetUri": "/gujarati/media-49502679",
+      "cpsUrn": "urn:bbc:content:assetUri:gujarati/media-49502679",
+      "curie": "http://www.bbc.co.uk/asset/b914f819-3a6c-324a-b3b0-f7d2d2613b9c"
+    },
+    "summary": "માતાનાં દૂધથી વંચિત બાળકો માટે 'દેવદૂત' સમાન બની પાંચ મહિલાઓ.",
+    "timestamp": 1567086073340,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2139461b000e9dabf7",
+          "campaignName": "WS - Inspire me"
         },
-        "site": {
-            "subType": "site",
-            "name": "BBC ગુજરાતી",
-            "uri": "/gujarati",
-            "type": "simple"
-        },
-        "groups": []
-    }
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07ltlm1",
+      "subType": "clip",
+      "format": "video",
+      "title": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+      "synopses": {
+        "short": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+        "long": "નેપાળની રાજધાની કાઠમાંડુંમાં એક બાળમંદિર અનાથ બાળકો માટે આશીર્વાદ સાબિત થયું છે. \nઅનાથ બાળકો કે જેમને પોષણયુક્ત માનું દૂધ નસીબ થતું નથી તેમના માટે પાંચ માતાઓ વરદાન સમાન બની છે કે જેઓ રોજ બાળમંદિરમાં આવીને બાળકોને પોતાનું દૂધ પીવડાવે છે. \nપાંચ મહિલાઓ બાળમંદિરમાં 15 બાળકોને પોતાનું દૂધ પીવડાવે છે કે જેથી બાળકો સ્વસ્થ બની શકે.",
+        "medium": "માતાના દૂધથી વંચિત બાળકો માટે આશીર્વાદ સમાન બની પાંચ મહિલાઓ."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07lv5tj.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "અનાથ બાળકોને માનું દૂધ પીવડાવતી મહિલાઓ",
+      "versions": [
+        {
+          "versionId": "p07ltlm4",
+          "types": ["Original"],
+          "duration": 140,
+          "durationISO8601": "PT2M20S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567011153
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108531939",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/16ED9/production/_108531939_p07lv5tj.jpg",
+      "path": "/cpsprodpb/16ED9/production/_108531939_p07lv5tj.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "બ્રેસ્ટફિડિંગ કરાવતી મહિલાઓ",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:gujarati/media-49502679",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/gujarati/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ગુજરાતી",
+      "uri": "/gujarati",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

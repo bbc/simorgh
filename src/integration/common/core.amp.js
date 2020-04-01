@@ -7,7 +7,7 @@ export default () => {
       'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
     ];
 
-    ampScripts.forEach(ampScript => {
+    ampScripts.forEach((ampScript) => {
       expect(
         amp.document.querySelector(`head script[src="${ampScript}"]`),
       ).toBeInTheDocument();

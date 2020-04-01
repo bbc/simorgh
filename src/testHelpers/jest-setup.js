@@ -12,7 +12,7 @@ global.Cypress = {
   env: jest.fn(),
 };
 
-window.matchMedia = jest.fn().mockImplementation(query => {
+window.matchMedia = jest.fn().mockImplementation((query) => {
   return {
     matches: true,
     media: query,
