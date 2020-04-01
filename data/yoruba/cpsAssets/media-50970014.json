@@ -53,10 +53,7 @@
           "thingLabel": "Society",
           "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
           "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Society",
             "http://www.wikidata.org/entity/Q8425"
@@ -66,13 +63,8 @@
           "thingLabel": "Politics",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "Eto Iselu",
           "topicId": "cyx5k5r3g5nt",
           "curationList": [
@@ -86,13 +78,8 @@
           "thingLabel": "Nigeria politics",
           "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
           "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics_of_Nigeria"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics_of_Nigeria"],
           "topicName": "Eto Iselu Naijiria",
           "topicId": "c404v45pnr8t",
           "curationList": [
@@ -106,11 +93,7 @@
           "thingLabel": "Kwara state",
           "thingUri": "http://www.bbc.co.uk/things/cece4fd8-a9a3-4b50-bbc7-406ba2bccccb#id",
           "thingId": "cece4fd8-a9a3-4b50-bbc7-406ba2bccccb",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Kwara_State",
             "http://sws.geonames.org/2332785/"
@@ -127,9 +110,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

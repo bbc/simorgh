@@ -1,330 +1,271 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
-        "locators": {
-            "assetUri": "/uzbek/uzbekistan-49192467",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
-            "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
+    "locators": {
+      "assetUri": "/uzbek/uzbekistan-49192467",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
+      "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36"
+    },
+    "type": "MAP",
+    "createdBy": "uzbek-v6",
+    "language": "uz-Cyrl",
+    "lastUpdated": 1564662588703,
+    "firstPublished": 1564662578,
+    "lastPublished": 1564662579,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "uzbek.uzbekistan.media_asset.49192467.page",
+      "cps_asset_id": "49192467"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Uzbekistan presidential elections 2016",
+          "thingUri": "http://www.bbc.co.uk/things/26d74b20-ab15-4097-9f38-b2a8570aa093#id",
+          "thingId": "26d74b20-ab15-4097-9f38-b2a8570aa093",
+          "thingType": ["Event", "Thing"],
+          "thingSameAs": []
         },
-        "type": "MAP",
-        "createdBy": "uzbek-v6",
-        "language": "uz-Cyrl",
-        "lastUpdated": 1564662588703,
-        "firstPublished": 1564662578,
-        "lastPublished": 1564662579,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "thingLabel": "Senate of Uzbekistan",
+          "thingUri": "http://www.bbc.co.uk/things/42fe3a50-18db-4614-9e43-4a40cce8a01c#id",
+          "thingId": "42fe3a50-18db-4614-9e43-4a40cce8a01c",
+          "thingType": ["Organisation", "Thing"],
+          "thingSameAs": []
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "uzbek.uzbekistan.media_asset.49192467.page",
-            "cps_asset_id": "49192467"
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"]
         },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
-                "categoryName": "Interactive"
+        {
+          "thingLabel": "100 Women",
+          "thingUri": "http://www.bbc.co.uk/things/875e94b8-021d-4411-93f4-a8d5e09d6adb#id",
+          "thingId": "875e94b8-021d-4411-93f4-a8d5e09d6adb",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/100_Women_(BBC)"]
+        },
+        {
+          "thingLabel": "Women's rights",
+          "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+          "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Women%27s_rights",
+            "http://www.wikidata.org/entity/Q223569"
+          ]
+        },
+        {
+          "thingLabel": "Human rights",
+          "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
+          "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Human_rights",
+            "http://www.wikidata.org/entity/Q8458"
+          ]
+        },
+        {
+          "thingLabel": "Uzbekistan",
+          "thingUri": "http://www.bbc.co.uk/things/a89521da-bd3a-4cf9-92b2-2921dbb2c76b#id",
+          "thingId": "a89521da-bd3a-4cf9-92b2-2921dbb2c76b",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1512440/"]
+        },
+        {
+          "thingLabel": "Crime",
+          "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+          "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Crime",
+            "http://www.wikidata.org/entity/Q83267"
+          ]
+        },
+        {
+          "thingLabel": "Law and order",
+          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Law"]
+        },
+        {
+          "thingLabel": "Women",
+          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Woman",
+            "http://www.wikidata.org/entity/Q467"
+          ]
+        },
+        {
+          "thingLabel": "Tashkent",
+          "thingUri": "http://www.bbc.co.uk/things/e5c4868b-9d4d-4c34-bd0f-58accd0e90e1#id",
+          "thingId": "e5c4868b-9d4d-4c34-bd0f-58accd0e90e1",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1512569/"]
+        },
+        {
+          "thingLabel": "Constitution of Uzbekistan",
+          "thingUri": "http://www.bbc.co.uk/things/e6f347d1-ed1b-4814-bca1-99718af3bb73#id",
+          "thingId": "e6f347d1-ed1b-4814-bca1-99718af3bb73",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Constitution_of_Uzbekistan"
+          ]
+        },
+        {
+          "thingLabel": "Women's health",
+          "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+          "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["media"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07jh6zj",
+        "subType": "clip",
+        "format": "video",
+        "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+        "synopses": {
+          "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+        "versions": [
+          {
+            "versionId": "p07jh6zq",
+            "types": ["Original"],
+            "duration": 77,
+            "durationISO8601": "PT1M17S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "WS - Update me"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Uzbekistan presidential elections 2016",
-                    "thingUri": "http://www.bbc.co.uk/things/26d74b20-ab15-4097-9f38-b2a8570aa093#id",
-                    "thingId": "26d74b20-ab15-4097-9f38-b2a8570aa093",
-                    "thingType": [
-                        "Event",
-                        "Thing"
-                    ],
-                    "thingSameAs": []
-                },
-                {
-                    "thingLabel": "Senate of Uzbekistan",
-                    "thingUri": "http://www.bbc.co.uk/things/42fe3a50-18db-4614-9e43-4a40cce8a01c#id",
-                    "thingId": "42fe3a50-18db-4614-9e43-4a40cce8a01c",
-                    "thingType": [
-                        "Organisation",
-                        "Thing"
-                    ],
-                    "thingSameAs": []
-                },
-                {
-                    "thingLabel": "Politics",
-                    "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                    "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Politics"
-                    ]
-                },
-                {
-                    "thingLabel": "100 Women",
-                    "thingUri": "http://www.bbc.co.uk/things/875e94b8-021d-4411-93f4-a8d5e09d6adb#id",
-                    "thingId": "875e94b8-021d-4411-93f4-a8d5e09d6adb",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/100_Women_(BBC)"
-                    ]
-                },
-                {
-                    "thingLabel": "Women's rights",
-                    "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
-                    "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Women%27s_rights",
-                        "http://www.wikidata.org/entity/Q223569"
-                    ]
-                },
-                {
-                    "thingLabel": "Human rights",
-                    "thingUri": "http://www.bbc.co.uk/things/8b04c2e8-5409-4e7d-9877-3ccaf04727af#id",
-                    "thingId": "8b04c2e8-5409-4e7d-9877-3ccaf04727af",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Human_rights",
-                        "http://www.wikidata.org/entity/Q8458"
-                    ]
-                },
-                {
-                    "thingLabel": "Uzbekistan",
-                    "thingUri": "http://www.bbc.co.uk/things/a89521da-bd3a-4cf9-92b2-2921dbb2c76b#id",
-                    "thingId": "a89521da-bd3a-4cf9-92b2-2921dbb2c76b",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/1512440/"
-                    ]
-                },
-                {
-                    "thingLabel": "Crime",
-                    "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
-                    "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Crime",
-                        "http://www.wikidata.org/entity/Q83267"
-                    ]
-                },
-                {
-                    "thingLabel": "Law and order",
-                    "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
-                    "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Law"
-                    ]
-                },
-                {
-                    "thingLabel": "Women",
-                    "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
-                    "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Woman",
-                        "http://www.wikidata.org/entity/Q467"
-                    ]
-                },
-                {
-                    "thingLabel": "Tashkent",
-                    "thingUri": "http://www.bbc.co.uk/things/e5c4868b-9d4d-4c34-bd0f-58accd0e90e1#id",
-                    "thingId": "e5c4868b-9d4d-4c34-bd0f-58accd0e90e1",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/1512569/"
-                    ]
-                },
-                {
-                    "thingLabel": "Constitution of Uzbekistan",
-                    "thingUri": "http://www.bbc.co.uk/things/e6f347d1-ed1b-4814-bca1-99718af3bb73#id",
-                    "thingId": "e6f347d1-ed1b-4814-bca1-99718af3bb73",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Constitution_of_Uzbekistan"
-                    ]
-                },
-                {
-                    "thingLabel": "Women's health",
-                    "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
-                    "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://www.wikidata.org/entity/Q8031191"
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media"
+            "availableFrom": 1564662306
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+      "headline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07jh6zj",
-                "subType": "clip",
-                "format": "video",
-                "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-                "synopses": {
-                    "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-                "versions": [
-                    {
-                        "versionId": "p07jh6zq",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 77,
-                        "durationISO8601": "PT1M17S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1564662306
-                    }
-                ],
-                "type": "media"
-            }
-        ]
+    "locators": {
+      "assetUri": "/uzbek/uzbekistan-49192467",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
+      "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36"
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-            "headline": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
-        },
-        "locators": {
-            "assetUri": "/uzbek/uzbekistan-49192467",
-            "cpsUrn": "urn:bbc:content:assetUri:uzbek/uzbekistan-49192467",
-            "curie": "http://www.bbc.co.uk/asset/b3bd2e90-c4e0-004f-9836-5165b31f8c36"
-        },
-        "summary": "Тошкент шаҳар Хотин-қизлар қўмитасидан айтишларича, оммавий ахборот воситалари ва социал тармоқларда тарқалган 23 гуруҳдан иборат рўйхат - муаммолари ҳал этилиши талаб қилинадиган ижтимоий ҳимояга муҳтож аёллар категорияларидир.",
-        "timestamp": 1564662588703,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
-                "categoryName": "Interactive"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e4739461b000e9dabfc",
-                    "campaignName": "WS - Update me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07jh6zj",
-            "subType": "clip",
-            "format": "video",
-            "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-            "synopses": {
-                "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
-            "versions": [
-                {
-                    "versionId": "p07jh6zq",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 77,
-                    "durationISO8601": "PT1M17S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1564662306
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108146510",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/061C/production/_108146510_p07jh743.jpg",
-            "path": "/cpsprodpb/061C/production/_108146510_p07jh743.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "Дилбар Нажмутдинова",
-            "copyrightHolder": "Tvr.by",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
-        "type": "cps"
+    "summary": "Тошкент шаҳар Хотин-қизлар қўмитасидан айтишларича, оммавий ахборот воситалари ва социал тармоқларда тарқалган 23 гуруҳдан иборат рўйхат - муаммолари ҳал этилиши талаб қилинадиган ижтимоий ҳимояга муҳтож аёллар категорияларидир.",
+    "timestamp": 1564662588703,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+        "categoryName": "Interactive"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ]
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Ўзбекистон",
-            "uri": "/uzbek/uzbekistan",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "Ўзбек тилидаги янгиликлар",
-            "uri": "/uzbek",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "media": {
+      "id": "p07jh6zj",
+      "subType": "clip",
+      "format": "video",
+      "title": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+      "synopses": {
+        "short": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07jh743.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Дилбар Нажмутдинова: 23 - ижтимоий ҳимояга муҳтож аёллар гуруҳи",
+      "versions": [
+        {
+          "versionId": "p07jh6zq",
+          "types": ["Original"],
+          "duration": 77,
+          "durationISO8601": "PT1M17S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1564662306
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108146510",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/061C/production/_108146510_p07jh743.jpg",
+      "path": "/cpsprodpb/061C/production/_108146510_p07jh743.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Дилбар Нажмутдинова",
+      "copyrightHolder": "Tvr.by",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/uzbekistan-49192467",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Ўзбекистон",
+      "uri": "/uzbek/uzbekistan",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Ўзбек тилидаги янгиликлар",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

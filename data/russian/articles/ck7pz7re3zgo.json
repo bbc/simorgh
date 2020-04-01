@@ -214,9 +214,7 @@
                             },
                             "duration": 45,
                             "durationISO8601": "PT45S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p019dx68",
                             "warnings": {}
                           }
@@ -384,14 +382,8 @@
         {
           "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
           "thingLabel": "Russia",
-          "thingSameAs": [
-            "http://sws.geonames.org/2017370/"
-          ],
-          "thingType": [
-            "nsl:Topic",
-            "Place",
-            "Thing"
-          ],
+          "thingSameAs": ["http://sws.geonames.org/2017370/"],
+          "thingType": ["nsl:Topic", "Place", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id"
         }
       ]

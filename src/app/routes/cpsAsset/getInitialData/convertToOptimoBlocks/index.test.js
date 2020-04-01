@@ -258,7 +258,7 @@ describe('convertToOptimoBlocks', () => {
     ).toEqual(['bold']);
   });
 
-  ['crosshead', 'heading', 'subheading'].forEach(type => {
+  ['crosshead', 'heading', 'subheading'].forEach((type) => {
     it(`should convert a plain_text ${type} to Optimo format`, async () => {
       const input = {
         content: {

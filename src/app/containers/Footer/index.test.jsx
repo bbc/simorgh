@@ -44,7 +44,7 @@ const contextStub = {
   },
 };
 
-const FooterWithContext = stub => (
+const FooterWithContext = (stub) => (
   <ServiceContext.Provider value={stub}>
     <FooterContainer />
   </ServiceContext.Provider>

@@ -7,7 +7,7 @@ const squashKeys = [
   'other-top-stories',
 ];
 
-const squashTopStories = jsonRaw => {
+const squashTopStories = (jsonRaw) => {
   const json = jsonRaw;
   let groups = pathOr(null, ['content', 'groups'], json);
   let collectedItems = [];
@@ -17,7 +17,7 @@ const squashTopStories = jsonRaw => {
     /*
      * Find and delete unwanted groups while collecting items
      */
-    groups = groups.filter(group => {
+    groups = groups.filter((group) => {
       if (squashKeys.includes(group.type)) {
         collectedItems = collectedItems.concat(group.items);
 

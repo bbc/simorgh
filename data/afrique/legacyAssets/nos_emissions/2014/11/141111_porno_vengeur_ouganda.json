@@ -22,7 +22,7 @@
     "analyticsLabels": { "cps_asset_id": "35793410", "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -121,7 +121,12 @@
       "uri": "/afrique/nos_emissions",
       "type": "simple"
     },
-    "site": { "subType": "site", "name": "BBCAfrique.com", "uri": "/afrique", "type": "simple" },
+    "site": {
+      "subType": "site",
+      "name": "BBCAfrique.com",
+      "uri": "/afrique",
+      "type": "simple"
+    },
     "groups": []
   }
 }

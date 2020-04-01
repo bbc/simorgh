@@ -12,7 +12,9 @@ const StyledHeading = styled.h1`
 const StyledDivUsingQuotes = styled.div`
   background-image: url('https://placehold.it/640x360');
 `;
-const expectedOutput = inlineAttribute => `<style ${inlineAttribute} data-reactroot="">
+const expectedOutput = (
+  inlineAttribute,
+) => `<style ${inlineAttribute} data-reactroot="">
 /* sc-component-id: StyledHeading-sc-1jg6qvn-0 */
 .ihxuKn{color:teal;}
 /* sc-component-id: StyledDivUsingQuotes-sc-1jg6qvn-1 */

@@ -21,7 +21,7 @@
     "analyticsLabels": { "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -100,7 +100,12 @@
       "uri": "/ukrainian/multimedia",
       "type": "simple"
     },
-    "site": { "subType": "site", "name": "BBCUkrainian.com", "uri": "/ukrainian", "type": "simple" },
+    "site": {
+      "subType": "site",
+      "name": "BBCUkrainian.com",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
     "groups": [
       {
         "type": "see-alsos",
