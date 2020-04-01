@@ -44,7 +44,7 @@ We strive for quality but we do not aim for perfection ('perfect' code does not 
 
 ## Reducing the effort needed in code review
 
-Pair programing and swarming/mobbing during the implementation phase are approaches that can reduce the time spent on lengthy in-depth code reviews later on, because more of the necessary communication has already happened. More people contributing to the solution may help to catch some types of issues before code review. Seeking alignment through early collaboration can therefore minimise the back-and-forth sometimes seen in code reviews.
+Pair programming and swarming/mobbing during the implementation phase are approaches that can reduce the time spent on lengthy in-depth code reviews later on, because more of the necessary communication has already happened. More people contributing to the solution may help to catch some types of issues before code review. Seeking alignment through early collaboration can therefore minimise the back-and-forth sometimes seen in code reviews.
 
 These collaboration techniques can be especially useful when there's a high degree of unfamiliarity - in the work, the tech or individuals in the team. 
 
