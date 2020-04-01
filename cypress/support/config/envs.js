@@ -5,7 +5,7 @@ const config = {
     assetUrl: 'https://news.files.bbci.co.uk/include/articles/public',
     assetOrigin: 'https://news.files.bbci.co.uk',
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
-    chartbeatEnabled: false,
+    chartbeatEnabled: true,
     avEmbedBaseUrl: 'https://polling.bbc.co.uk',
     standaloneErrorPages: false,
     alwaysCheckForFallback: true,
