@@ -3,31 +3,23 @@ import React from 'react';
 import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import App from '#containers/app/App';
+import { DataProvider, createDataClient } from 'react-isomorphic-data';
+import SimorghApp from '#containers/App/App';
 import routes from './app/routes';
 import { template, templateStyles } from '#lib/joinUsTemplate';
 import loggerNode from '#lib/logger.node';
-import { DataProvider, createDataClient } from 'react-isomorphic-data';
 
 const logger = loggerNode();
 
 const data = window.SIMORGH_DATA || {};
-const compoentData = window.__cache || {};
+const componentData = window.__cache || {};
 const root = document.getElementById('root');
 
 // Create a store for all component data fetches
 const dataClient = createDataClient({
-  initialCache: compoentData,
+  initialCache: componentData,
   ssr: false,
 });
-
-const ClientApp = ({ data, routes }) => (
-  <DataProvider client={dataClient}>
-    <BrowserRouter>
-      <App initialData={data} routes={routes} />
-    </BrowserRouter>
-  </DataProvider>
-);
 
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only
@@ -35,7 +27,14 @@ const ClientApp = ({ data, routes }) => (
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   loadableReady(() => {
-    hydrate(<ClientApp data={data} routes={routes} />, root);
+    hydrate(
+      <DataProvider client={dataClient}>
+        <BrowserRouter>
+          <SimorghApp initialData={data} routes={routes} />
+        </BrowserRouter>
+      </DataProvider>,
+      root,
+    );
   });
 } else {
   logger.warn(`

@@ -125,6 +125,8 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     return null;
   }
 
+  // maybe we'd still want to do this in a useEffect/otherwise that runs when
+  // the value of data changes, to avoid running this function on every render.
   const schedule = processRadioSchedule(
     data,
     service,
