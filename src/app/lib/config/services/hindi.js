@@ -160,7 +160,7 @@ export const service = {
         listen: 'सुनिए',
         watch: 'देखिए',
         liveLabel: 'लाइव',
-        nextLabel: 'NEXT',
+        nextLabel: 'अगला',
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
@@ -187,7 +187,7 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/hindi/institutional-37342293',
           text: 'इस्तेमाल की शर्तें',
         },
         {
@@ -195,7 +195,7 @@ export const service = {
           text: 'बीबीसी के बारे में',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/hindi/institutional-37342614',
           text: 'निजता की नीति',
         },
         {
@@ -203,7 +203,7 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/hindi/institutional-37342616',
           text: 'बीबीसी से संपर्क करें',
         },
         {
