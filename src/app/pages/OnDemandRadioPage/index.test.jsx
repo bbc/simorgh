@@ -117,7 +117,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on canonical', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999999999999999;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = Infinity;
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -133,7 +133,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on AMP', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999999999999999;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = Infinity;
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -171,7 +171,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should not show the audio player if it is not available yet', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 9999999999999999999999999;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = Infinity;
     const koreanPageDataWithNotYetAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
