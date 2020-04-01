@@ -145,7 +145,7 @@ Sometimes serious issues are found during code review that need to be addressed 
 **Take care with evaluations**
 It's important to remember that many labels given to code are subjective, or at least have no universally agreed meaning. Often they depend heavily on the context of the work as well as each developers’ background and stylistic preferences. Remember that no two developers will ever solve any non-trivial problem the same way.
 
-One person’s *explicit* may be too *verbose* for others. *Consistency* is often prized, but when does it become *repetitious?* A suggestion to make something more *concise* might come at the expensive of making it *less readable* for some. How *clean* is clean?
+One person’s *explicit* may be too *verbose* for others. *Consistency* is often prized, but when does it become *repetitious?* A suggestion to make something more *concise* might come at the expense of making it *less readable* for some. How *clean* is clean?
 
 Such evaluations have their uses, but we should recognise them for what they are, and when making them consider that other points of view may be possible. Often there is often no quick way to resolve these dilemmas other than to simply talk it through.
 
