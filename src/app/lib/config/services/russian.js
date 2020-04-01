@@ -44,9 +44,8 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
-    noBylinesPolicy:
-      'https://www.bbc.com/russian/institutional-50098149#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
+    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -187,7 +186,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/russian/institutional-50098149',
+        href: 'https://www.bbc.com/news/help-41670342',
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
