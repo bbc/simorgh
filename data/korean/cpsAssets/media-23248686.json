@@ -1,383 +1,379 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:korean/media-23248686",
-        "locators": {
-            "assetUri": "/korean/media-23248686",
-            "cpsUrn": "urn:bbc:content:assetUri:korean/media-23248686",
-            "curie": "http://www.bbc.co.uk/asset/dcf00cb4-a8a9-bb4a-844e-f58a4874906c"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:korean/media-23248686",
+    "locators": {
+      "assetUri": "/korean/media-23248686",
+      "cpsUrn": "urn:bbc:content:assetUri:korean/media-23248686",
+      "curie": "http://www.bbc.co.uk/asset/dcf00cb4-a8a9-bb4a-844e-f58a4874906c"
+    },
+    "type": "MAP",
+    "createdBy": "korean-v6",
+    "language": "ko",
+    "lastUpdated": 1568387482439,
+    "firstPublished": 1568387473000,
+    "lastPublished": 1568387474000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "korean.embedded_media.media_asset.23248686.page",
+      "cps_asset_id": "23248686"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "crosshead",
+      "list",
+      "image",
+      "social_embed"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01kx42s",
+        "subType": "clip",
+        "format": "video",
+        "title": "alt-text world service clip",
+        "synopses": {
+          "short": "short"
         },
-        "type": "MAP",
-        "createdBy": "korean-v6",
-        "language": "ko",
-        "lastUpdated": 1568387482439,
-        "firstPublished": 1568387473000,
-        "lastPublished": 1568387474000,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "korean.embedded_media.media_asset.23248686.page",
-            "cps_asset_id": "23248686"
-        },
-        "tags": {},
-        "version": "v1.1.0",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "crosshead",
-            "list",
-            "image",
-            "social_embed"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "short",
+        "versions": [
+          {
+            "versionId": "p01kx42v",
+            "types": ["Original"],
+            "duration": 5,
+            "durationISO8601": "PT5S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1545304011000
+          }
         ],
-        "includeComments": false
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "p01kx42s",
-                "subType": "clip",
-                "format": "video",
-                "title": "alt-text world service clip",
-                "synopses": {
-                    "short": "short"
+        "type": "media"
+      },
+      {
+        "text": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다 introduction ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다</bold><bold> Heading</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic> 인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다</italic></bold><bold><italic> subheading</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다</bold><bold> crosshead </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다. <italic>특히 가주 교육부에서 발급하는 이중언어구사 인증서가 눈길을 끈다</italic>. 가주 교육부가 지난 2012년부터 발급하고 있는 이중언어구사 인증서는 한국어를 비롯해 외국어를 꾸준히 공부하고 있는 학생들이 대입 지원서를 작성할 때 특기 항목을 돋보이게 할 수 있는 좋은 기회다.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "또",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "&quot;(법안과 관련한) 협상이 진행 중&quot;이라며 &quot;<link><caption>이것이 입법 절차이고</caption><altText>이것이 입법 절차이고</altText><url href=\"http://www.koreadaily.com/index.html?branch=HOME\" platform=\"highweb\"/><url href=\"http://www.koreadaily.com/index.html?branch=HOME\" platform=\"enhancedmobile\"/></link>, 이것은 가는 바늘에 실을 꿰는 것&quot;이라고 덧붙였다. ",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "트럼프 대통령은 공화당 안에서 법안을 반대하는 강경파들이 원하는 방향으로 약간은 법안을 수정할 가능성도 내비쳤다. ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": true,
+        "items": [
+          {
+            "text": "그는 공화당 내 일부 반대파들에 대해 &quot;그들은 일부 점수를 얻기를 원한다&quot;면서 &quot;나는 그들이 일부 점수를 얻을 것으로 생각한다&quot;고 말했다. ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "이 밖에 트럼프 대통령은 '트럼프 저격수'로 불릴 정도의 정적인 민주당 엘리자베스 워런(메사추세츠) 상원의원에 대해 &quot;너무 과대평가됐다&quot;면서 &quot;공개석상에서 분노와 적의를 꾸준히 표출하면서 신뢰를 잃었다&quot;고 비판했다. ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "<itemMeta>korean/media-23136266</itemMeta>",
+        "meta": [
+          {
+            "headlines": {
+              "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
+              "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
+              "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
+            },
+            "locators": {
+              "href": "http://www.bbc.com/korean/media-23136266"
+            },
+            "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
+            "timestamp": 1498579309000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "id": "urn:bbc:ares::asset:korean/media-23136266",
+            "type": "cps"
+          }
+        ],
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>korean/media-23136266</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
+                  "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
+                  "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
                 },
-                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "short",
-                "versions": [
-                    {
-                        "versionId": "p01kx42v",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 5,
-                        "durationISO8601": "PT5S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1545304011000
-                    }
-                ],
-                "type": "media"
-            },
-            {
-                "text": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다 introduction ",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다</bold><bold> Heading</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold><italic> 인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다</italic></bold><bold><italic> subheading</italic></bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다</bold><bold> crosshead </bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다. <italic>특히 가주 교육부에서 발급하는 이중언어구사 인증서가 눈길을 끈다</italic>. 가주 교육부가 지난 2012년부터 발급하고 있는 이중언어구사 인증서는 한국어를 비롯해 외국어를 꾸준히 공부하고 있는 학생들이 대입 지원서를 작성할 때 특기 항목을 돋보이게 할 수 있는 좋은 기회다.",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "또",
-                "markupType": "plain_text",
-                "type": "crosshead"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "&quot;(법안과 관련한) 협상이 진행 중&quot;이라며 &quot;<link><caption>이것이 입법 절차이고</caption><altText>이것이 입법 절차이고</altText><url href=\"http://www.koreadaily.com/index.html?branch=HOME\" platform=\"highweb\"/><url href=\"http://www.koreadaily.com/index.html?branch=HOME\" platform=\"enhancedmobile\"/></link>, 이것은 가는 바늘에 실을 꿰는 것&quot;이라고 덧붙였다. ",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "트럼프 대통령은 공화당 안에서 법안을 반대하는 강경파들이 원하는 방향으로 약간은 법안을 수정할 가능성도 내비쳤다. ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "numbered": true,
-                "items": [
-                    {
-                        "text": "그는 공화당 내 일부 반대파들에 대해 &quot;그들은 일부 점수를 얻기를 원한다&quot;면서 &quot;나는 그들이 일부 점수를 얻을 것으로 생각한다&quot;고 말했다. ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "이 밖에 트럼프 대통령은 '트럼프 저격수'로 불릴 정도의 정적인 민주당 엘리자베스 워런(메사추세츠) 상원의원에 대해 &quot;너무 과대평가됐다&quot;면서 &quot;공개석상에서 분노와 적의를 꾸준히 표출하면서 신뢰를 잃었다&quot;고 비판했다. ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "text": "<itemMeta>korean/media-23136266</itemMeta>",
-                "meta": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
-                            "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
-                            "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
-                        },
-                        "locators": {
-                            "href": "http://www.bbc.com/korean/media-23136266"
-                        },
-                        "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
-                        "timestamp": 1498579309000,
-                        "passport": {
-                            "category": {
-                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                "categoryName": "News"
-                            }
-                        },
-                        "id": "urn:bbc:ares::asset:korean/media-23136266",
-                        "type": "cps"
-                    }
-                ],
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>korean/media-23136266</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
-                                    "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
-                                    "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/korean/media-23136266"
-                                },
-                                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
-                                "timestamp": 1498579309000,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:korean/media-23136266",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>korean/media-23136266</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
-                                    "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
-                                    "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/korean/media-23136266"
-                                },
-                                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
-                                "timestamp": 1498579309000,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:korean/media-23136266",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>korean/media-23136266</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
-                                    "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
-                                    "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/korean/media-23136266"
-                                },
-                                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
-                                "timestamp": 1498579309000,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:korean/media-23136266",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>korean/media-23136266</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
-                                    "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
-                                    "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/korean/media-23136266"
-                                },
-                                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
-                                "timestamp": 1498579309000,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:korean/media-23136266",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "id": "63721679",
-                "subType": "body",
-                "href": "http://b.files.bbci.co.uk/17D4C/test/_63721679_testimage.jpg",
-                "path": "/cpsdevpb/17D4C/test/_63721679_testimage.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "test image",
-                "copyrightHolder": "BBC",
-                "positionHint": "full-width",
-                "type": "image"
-            },
-            {
-                "href": "https://twitter.com/tw1tt3r_t3st/status/870279178632998912",
-                "source": "twitter",
-                "type": "social_embed"
-            }
-        ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "WSMEDIA TEST -",
-            "headline": "협상이 진행 중\"이라며 \"이것이 입법 절차이고, 이것은 가는 바늘에 실을 꿰는 것\"이라고 덧붙였다"
-        },
-        "locators": {
-            "assetUri": "/korean/media-23248686",
-            "cpsUrn": "urn:bbc:content:assetUri:korean/media-23248686",
-            "curie": "http://www.bbc.co.uk/asset/dcf00cb4-a8a9-bb4a-844e-f58a4874906c"
-        },
-        "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
-        "timestamp": 1568387482439,
-        "passport": {},
-        "media": {
-            "id": "p01kx42s",
-            "subType": "clip",
-            "format": "video",
-            "title": "alt-text world service clip",
-            "synopses": {
-                "short": "short"
-            },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "short",
-            "versions": [
-                {
-                    "versionId": "p01kx42v",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 5,
-                    "durationISO8601": "PT5S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1545304011000
-                }
+                "locators": {
+                  "href": "http://www.bbc.com/korean/media-23136266"
+                },
+                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
+                "timestamp": 1498579309000,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:korean/media-23136266",
+                "type": "cps"
+              }
             ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "63721677",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/12F2C/test/_63721677_p01kx435.jpg",
-            "path": "/cpsdevpb/12F2C/test/_63721677_p01kx435.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "connectionAltText",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:korean/media-23248686",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>korean/media-23136266</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
+                  "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
+                  "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/korean/media-23136266"
+                },
+                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
+                "timestamp": 1498579309000,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:korean/media-23136266",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>korean/media-23136266</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
+                  "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
+                  "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/korean/media-23136266"
+                },
+                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
+                "timestamp": 1498579309000,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:korean/media-23136266",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>korean/media-23136266</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다",
+                  "headline": "두 가지 언어를 유창하게 쓸 수 있다는 캘리포니아 교육부에서 발급한 '이중언어구사 인증서((State Seal of Biliteracy)'다.",
+                  "overtyped": "그레이스 이(18)양은 이달 초 진행된 졸업식에서 황금색의 인증이 붙은 증서를 받았다"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/korean/media-23136266"
+                },
+                "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
+                "timestamp": 1498579309000,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:korean/media-23136266",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "63721679",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/17D4C/test/_63721679_testimage.jpg",
+        "path": "/cpsdevpb/17D4C/test/_63721679_testimage.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "test image",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "href": "https://twitter.com/tw1tt3r_t3st/status/870279178632998912",
+        "source": "twitter",
+        "type": "social_embed"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "WSMEDIA TEST -",
+      "headline": "협상이 진행 중\"이라며 \"이것이 입법 절차이고, 이것은 가는 바늘에 실을 꿰는 것\"이라고 덧붙였다"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/korean/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC 코리아",
-            "uri": "/korean",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/korean/media-23248686",
+      "cpsUrn": "urn:bbc:content:assetUri:korean/media-23248686",
+      "curie": "http://www.bbc.co.uk/asset/dcf00cb4-a8a9-bb4a-844e-f58a4874906c"
+    },
+    "summary": "인증서를 통해 이 양은 두 가지 언어를 유창하게 사용하는 능력을 갖췄음을 주 정부로부터 인정받은 셈이다. LA통합교육구(LAUSD)가 최근 고등학교 졸업 필수과목에 외국어 이중언어 교육을 포함하는 안을 추진하고 있는 가운데, 각 교육구에서 제공하는 이중언어 프로그램에 대한 관심이 늘어나고 있다.",
+    "timestamp": 1568387482439,
+    "passport": {},
+    "media": {
+      "id": "p01kx42s",
+      "subType": "clip",
+      "format": "video",
+      "title": "alt-text world service clip",
+      "synopses": {
+        "short": "short"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "short",
+      "versions": [
+        {
+          "versionId": "p01kx42v",
+          "types": ["Original"],
+          "duration": 5,
+          "durationISO8601": "PT5S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1545304011000
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63721677",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/12F2C/test/_63721677_p01kx435.jpg",
+      "path": "/cpsdevpb/12F2C/test/_63721677_p01kx435.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:korean/media-23248686",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/korean/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 코리아",
+      "uri": "/korean",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

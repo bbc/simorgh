@@ -5,9 +5,9 @@ module.exports.getClientEnvVars = (envConfig = { parsed: {} }) => {
   const envVars = Object.keys(parsed);
   const clientEnvVars = {};
 
-  const prefixedEnvVars = envVars.filter(key => SIMORGH.test(key));
+  const prefixedEnvVars = envVars.filter((key) => SIMORGH.test(key));
 
-  prefixedEnvVars.forEach(variable => {
+  prefixedEnvVars.forEach((variable) => {
     clientEnvVars[variable] = JSON.stringify(parsed[variable]);
   });
 

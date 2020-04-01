@@ -1,149 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": false,
-          "caption": "This is a test asset created for the articles project",
-          "embedding": false,
-          "format": "audio",
-          "id": "p01mbrvl",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
-          "subType": "episode",
-          "synopses": {
-            "short": "This is a test asset created for the articles project"
-          },
-          "title": "Test audio episode for articles, worldwide",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1556298963000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 127,
-              "durationISO8601": "PT2M7S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01mbrx4",
-              "warnings": {
-                "long": "Contains strong language.",
-                "short": "Contains strong language."
-              }
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "role": "introduction",
-          "text": "बुधवार मिर्गौला प्रत्यारोपण गराउनका निम्ति सोमवार साँझ काठमाण्डूस्थित त्रिभुवन विश्वविद्यालय शिक्षण अस्पतालमा भर्ना हुन जानु अगाडि प्रधानमन्त्री केपी ओलीले एक भिडिओ सन्देशमार्फत् आफू चाँडै निको भएर पूर्ववत् काममा फर्कने विश्वास दिलाउन खोजेका छन्।",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "आत्मविश्वासी देखिएका प्रधानमन्त्रीले विगतको निर्वाचन र त्यसले जगाएका 'सपना'को स्मरण गर्दै आफू बीचमै मैदान छाडेर नजाने दृढता प्रकट गरे।",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "&quot;जसरी खेलकोबीचमा 'राम्रो खेलाडी'ले मैदान छोड्दैन, त्यसैगरी हाम्रा भरखर जागृत हुँदै गरेका सपनालाई बीचमा अलपत्र पारेर म पनि अलप हुन्न। संसारमा कोही पनि अजम्मरी छैन। मेरो यो संकल्प पनि अजम्मरी बन्न होइन, हाम्रा जागृत हुँदै गरेका सपनालाई साकार पार्नका लागि हो भन्ने यहाँहरुले बुझ्नु नै भएको छ,&quot; उनले भने।",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "&quot;म पुनः एकपटक आग्रह गर्दछु, मेरो स्वास्थ्यलाई लिएर यहाँहरू ढुक्क रहनुहोस्।&quot; ",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<link><caption>मिर्गौला स्वस्थ राख्न जान्नुपर्ने सात महत्त्वपूर्ण कुरा</caption><altText>kidneys</altText><url href=\"https://www.bbc.com/nepali/news-47564957\" platform=\"highweb\"/></link>",
-          "type": "paragraph"
-        },
-        {
-          "altText": "face",
-          "caption": "smile",
-          "copyrightHolder": "AP",
-          "height": 1920,
-          "href": "http://b.files.bbci.co.uk/DEBF/test/_63732075_1920px-snice_svg.png",
-          "id": "63732075",
-          "path": "/cpsdevpb/DEBF/test/_63732075_1920px-snice_svg.png",
-          "positionHint": "full-width",
-          "subType": "body",
-          "type": "image",
-          "width": 1920
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "nepali.embedded_media.media_asset.23269034.page",
-        "cps_asset_id": "23269034",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph",
-        "image"
-      ],
-      "createdBy": "nepali-v6",
-      "firstPublished": 1583164953000,
-      "id": "urn:bbc:ares::asset:nepali/media-23269034",
-      "includeComments": false,
-      "language": "ne",
-      "lastPublished": 1583164953000,
-      "lastUpdated": 1583164965812,
-      "locators": {
-        "assetId": "23269034",
-        "assetUri": "/nepali/media-23269034",
-        "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
-        "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "timestamp": 1583164953000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "test nepali cps मिर्गौलाको महत्त्वबारे जनजागरण अभियान सञ्चालन गरेर बिहीवार मार्च १४ मा विश्व मिर्गौला दिवस मनाइँदैछ।",
-        "shortHeadline": "Test cps nepali"
-      },
-      "id": "urn:bbc:ares::asset:nepali/media-23269034",
-      "indexImage": {
-        "altText": "running",
-        "caption": "running",
-        "copyrightHolder": "Run",
-        "height": 576,
-        "href": "http://b.files.bbci.co.uk/105CF/test/_63732076_p01n2j2b.jpg",
-        "id": "63732076",
-        "path": "/cpsdevpb/105CF/test/_63732076_p01n2j2b.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 1024
-      },
-      "language": "ne",
-      "locators": {
-        "assetId": "23269034",
-        "assetUri": "/nepali/media-23269034",
-        "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
-        "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": false,
         "caption": "This is a test asset created for the articles project",
         "embedding": false,
@@ -166,9 +24,7 @@
             },
             "duration": 127,
             "durationISO8601": "PT2M7S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01mbrx4",
             "warnings": {
               "long": "Contains strong language.",
@@ -177,26 +33,162 @@
           }
         ]
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "बुधवार मिर्गौला प्रत्यारोपण गराउनका निम्ति सोमवार साँझ काठमाण्डूस्थित त्रिभुवन विश्वविद्यालय शिक्षण अस्पतालमा भर्ना हुन जानु अगाडि प्रधानमन्त्री केपी ओलीले एक भिडिओ सन्देशमार्फत् आफू चाँडै निको भएर पूर्ववत् काममा फर्कने विश्वास दिलाउन खोजेका छन्।",
+        "type": "paragraph"
       },
-      "summary": "test",
-      "timestamp": 1583164953000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/nepali/media"
+      {
+        "markupType": "plain_text",
+        "text": "आत्मविश्वासी देखिएका प्रधानमन्त्रीले विगतको निर्वाचन र त्यसले जगाएका 'सपना'को स्मरण गर्दै आफू बीचमै मैदान छाडेर नजाने दृढता प्रकट गरे।",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "नेपाली समाचार",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/nepali"
+      {
+        "markupType": "plain_text",
+        "text": "&quot;जसरी खेलकोबीचमा 'राम्रो खेलाडी'ले मैदान छोड्दैन, त्यसैगरी हाम्रा भरखर जागृत हुँदै गरेका सपनालाई बीचमा अलपत्र पारेर म पनि अलप हुन्न। संसारमा कोही पनि अजम्मरी छैन। मेरो यो संकल्प पनि अजम्मरी बन्न होइन, हाम्रा जागृत हुँदै गरेका सपनालाई साकार पार्नका लागि हो भन्ने यहाँहरुले बुझ्नु नै भएको छ,&quot; उनले भने।",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;म पुनः एकपटक आग्रह गर्दछु, मेरो स्वास्थ्यलाई लिएर यहाँहरू ढुक्क रहनुहोस्।&quot; ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>मिर्गौला स्वस्थ राख्न जान्नुपर्ने सात महत्त्वपूर्ण कुरा</caption><altText>kidneys</altText><url href=\"https://www.bbc.com/nepali/news-47564957\" platform=\"highweb\"/></link>",
+        "type": "paragraph"
+      },
+      {
+        "altText": "face",
+        "caption": "smile",
+        "copyrightHolder": "AP",
+        "height": 1920,
+        "href": "http://b.files.bbci.co.uk/DEBF/test/_63732075_1920px-snice_svg.png",
+        "id": "63732075",
+        "path": "/cpsdevpb/DEBF/test/_63732075_1920px-snice_svg.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 1920
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "nepali.embedded_media.media_asset.23269034.page",
+      "cps_asset_id": "23269034",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "image"],
+    "createdBy": "nepali-v6",
+    "firstPublished": 1583164953000,
+    "id": "urn:bbc:ares::asset:nepali/media-23269034",
+    "includeComments": false,
+    "language": "ne",
+    "lastPublished": 1583164953000,
+    "lastUpdated": 1583164965812,
+    "locators": {
+      "assetId": "23269034",
+      "assetUri": "/nepali/media-23269034",
+      "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
+      "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1583164953000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "test nepali cps मिर्गौलाको महत्त्वबारे जनजागरण अभियान सञ्चालन गरेर बिहीवार मार्च १४ मा विश्व मिर्गौला दिवस मनाइँदैछ।",
+      "shortHeadline": "Test cps nepali"
+    },
+    "id": "urn:bbc:ares::asset:nepali/media-23269034",
+    "indexImage": {
+      "altText": "running",
+      "caption": "running",
+      "copyrightHolder": "Run",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/105CF/test/_63732076_p01n2j2b.jpg",
+      "id": "63732076",
+      "path": "/cpsdevpb/105CF/test/_63732076_p01n2j2b.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "ne",
+    "locators": {
+      "assetId": "23269034",
+      "assetUri": "/nepali/media-23269034",
+      "cpsUrn": "urn:bbc:content:assetUri:nepali/media-23269034",
+      "curie": "http://www.bbc.co.uk/asset/3591b75f-7789-5f47-920a-965036840121"
+    },
+    "media": {
+      "advertising": false,
+      "caption": "This is a test asset created for the articles project",
+      "embedding": false,
+      "format": "audio",
+      "id": "p01mbrvl",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01n2j2b.jpg",
+      "subType": "episode",
+      "synopses": {
+        "short": "This is a test asset created for the articles project"
+      },
+      "title": "Test audio episode for articles, worldwide",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1556298963000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "types": ["Original"],
+          "versionId": "p01mbrx4",
+          "warnings": {
+            "long": "Contains strong language.",
+            "short": "Contains strong language."
+          }
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "test",
+    "timestamp": 1583164953000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/nepali/media"
+    },
+    "site": {
+      "name": "नेपाली समाचार",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/nepali"
     }
   }
+}

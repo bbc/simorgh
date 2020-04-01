@@ -22,7 +22,7 @@ describe('ErrorMain', () => {
   );
 
   const arabicServices = ['persian', 'arabic', 'pashto', 'urdu'];
-  arabicServices.forEach(service => {
+  arabicServices.forEach((service) => {
     shouldMatchSnapshot(
       `should correctly render for an error page for ${service}`,
       <ErrorMain {...messaging} dir="rtl" script={arabic} service={service} />,

@@ -2,7 +2,7 @@ import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 
-const generateVideoBlock = block => {
+const generateVideoBlock = (block) => {
   const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
@@ -33,7 +33,7 @@ const generateVideoBlock = block => {
   return generatedBlock;
 };
 
-const generateImageBlock = block => {
+const generateImageBlock = (block) => {
   if (!is(String, block.imageUrl)) return {};
 
   return {
@@ -53,7 +53,7 @@ const generateImageBlock = block => {
   };
 };
 
-const withValidationCheck = convertedBlock => {
+const withValidationCheck = (convertedBlock) => {
   const aresMediaMetadata = path(
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model'],
     convertedBlock,
@@ -78,7 +78,7 @@ const withValidationCheck = convertedBlock => {
   return checks.every(Boolean) && convertedBlock;
 };
 
-const convertMedia = block => {
+const convertMedia = (block) => {
   const convertedBlock = {
     type: 'video',
     model: {

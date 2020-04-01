@@ -55,10 +55,7 @@
           "thingLabel": "Entertainment",
           "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
           "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Entertainment",
             "http://www.wikidata.org/entity/Q173799"
@@ -76,10 +73,7 @@
           "thingLabel": "Food",
           "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
           "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Food",
             "http://www.wikidata.org/entity/Q2095"
@@ -97,14 +91,8 @@
           "thingLabel": "Port Harcourt",
           "thingUri": "http://www.bbc.co.uk/things/b6a72157-a248-45e0-b0c4-1beb91e1bbd1#id",
           "thingId": "b6a72157-a248-45e0-b0c4-1beb91e1bbd1",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/2324774/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2324774/"],
           "topicId": "c5qvpq9krr2t",
           "curationList": [
             {
@@ -116,9 +104,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {
