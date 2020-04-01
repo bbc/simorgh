@@ -176,6 +176,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
@@ -218,6 +219,23 @@ export const service = {
         },
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'د ویډیو تشریح ',
+          text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
+        },
+        fallback: {
+          text: 'منځپانګه نه شته',
+          linkText: 'په %provider_name% کې نور وګورئ',
+          linkTextSuffixVisuallyHidden: ' بهرنی',
+          warningText:
+            ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
     timezone: 'GMT',

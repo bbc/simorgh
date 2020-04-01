@@ -200,6 +200,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. BBCは外部サイトの内容に責任を負いません。',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'BBCは外部サイトの内容に責任を負いません。',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'Asia/Tokyo',
