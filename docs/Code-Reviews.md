@@ -6,7 +6,7 @@ It is not meant to be an exhaustive guide to carrying out reviews - there are al
 
 ## Why review code?
 
-Reviewing code can sometimes help to catch bugs earlier in the development life cycle when [they](http://thklein.com/cost-of-defect/) [*may*](http://thklein.com/cost-of-defect/) [be cheaper to fix](http://thklein.com/cost-of-defect/). Even then, it is not realistic to expect most defects to be caught this way. In large, distributed teams like ours, the main objective of code reviews is *communication*.
+Reviewing code can sometimes help to catch bugs earlier in the development life cycle when [they *may* be cheaper to fix](http://thklein.com/cost-of-defect/). Even then, it is not realistic to expect most defects to be caught this way. In large, distributed teams like ours, the main objective of code reviews is *communication*.
 
 Code reviews are an indispensible tool for spreading knowledge and ideas between teams. A [2013 study at Microsoft](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/) found that while ‘finding defects’ was the most commonly-given reason for doing code reviews, the most frequent actual outcomes were sharing understanding and introducing other types of code improvement. Communication in code review can take many forms: from an ‘FYI’, to sharing new approaches and best practices, to improving documentation and code readability (communicating to future developers).
 
