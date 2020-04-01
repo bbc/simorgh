@@ -186,6 +186,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'برنامه‌های رادیو',
     },
     footer: {
