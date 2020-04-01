@@ -31,7 +31,7 @@ const StyledSectionLabel = styled(SectionLabel)`
 `;
 
 // Apply the right margin-top between the section label and the promos
-const SpacingDiv = styled.div`
+const SingleContentWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-top: ${GEL_SPACING_DBL};
   }
@@ -69,9 +69,9 @@ const FeaturesAnalysis = ({ content }) => {
           Features &amp; Analysis
         </StyledSectionLabel>
         {hasSingleFeature ? (
-          <SpacingDiv>
+          <SingleContentWrapper>
             <StoryPromo item={singleFeature} dir={dir} displayImage />
-          </SpacingDiv>
+          </SingleContentWrapper>
         ) : (
           <StoryPromoUl>
             {content.map(item => (
