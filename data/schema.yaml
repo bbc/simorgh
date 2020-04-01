@@ -537,21 +537,21 @@ components:
           properties:
             blocks:
               $ref: '#/components/schemas/blocks'
-            uuid: 
+            uuid:
               type: string
-            href: 
+            href:
               type: string
-            width: 
+            width:
               type: number
-            height: 
+            height:
               type: number
-            altText: 
+            altText:
               type: string
-            caption: 
+            caption:
               type: string
-            copyrightHolder: 
+            copyrightHolder:
               type: string
-            published: 
+            published:
               type: number
           type: object
         type:

@@ -5,16 +5,17 @@ import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockByType, getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
-const serviceHasFigure = service =>
+const serviceHasFigure = (service) =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
-const serviceHasCaption = service => service === 'news';
+const serviceHasCaption = (service) => service === 'news';
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2962
-const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
+const serviceHasCorrectlyRenderedParagraphs = (service) =>
+  service !== 'sinhala';
 
-const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
+const serviceHasTimestamp = (service) => ['news', 'urdu'].includes(service);
 
 // TODO: Remove once we have inline link on article pages linking to another article page
-const serviceHasInlineLink = service => service === 'news';
+const serviceHasInlineLink = (service) => service === 'news';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -85,7 +86,7 @@ export const testsThatFollowSmokeTestConfig = ({
         it('should have a placeholder image', () => {
           cy.get('figure div div div')
             .eq(0)
-            .should(el => {
+            .should((el) => {
               expect(el).to.have.css(
                 'background-image',
                 `url("data:image/svg+xml;base64,${BBC_BLOCKS}")`,
@@ -144,11 +145,11 @@ export const testsThatFollowSmokeTestConfig = ({
           cy.get('[class^="InlineLink"]')
             .eq(1)
             .should('have.attr', 'href')
-            .then(href => {
+            .then((href) => {
               cy.request({
                 url: href,
                 failOnStatusCode: false,
-              }).then(resp => {
+              }).then((resp) => {
                 expect(resp.status).to.not.equal(404);
               });
             });

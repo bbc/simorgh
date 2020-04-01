@@ -3,8 +3,8 @@ import { string, number } from 'prop-types';
 import { pageDataPropType } from '#models/propTypes/data';
 import PageWrapper from '../../../Layouts/defaultPageWrapper';
 
-const WithPageWrapper = Component => {
-  const PageWrapperContainer = props => (
+const WithPageWrapper = (Component) => {
+  const PageWrapperContainer = (props) => (
     <PageWrapper {...props}>
       <Component {...props} />
     </PageWrapper>

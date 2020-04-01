@@ -33,19 +33,13 @@
           "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
           "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
           "thingLabel": "ایالات متحده آمریکا",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         },
         {
           "thingUri": "http://www.bbc.co.uk/things/590ec892-07c1-49d5-b7b7-1de0b05d0500#id",
           "thingId": "590ec892-07c1-49d5-b7b7-1de0b05d0500",
           "thingLabel": "کره شمالی",
-          "thingType": [
-            "Thing",
-            "Place"
-          ]
+          "thingType": ["Thing", "Place"]
         }
       ]
     }
