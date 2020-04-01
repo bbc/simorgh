@@ -1425,11 +1425,11 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
             crossorigin="anonymous"
             defer
     >
-      [2]
+      ["amharic-._n"]
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            src="http://localhost:1124/static/js/vendor-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1437,7 +1437,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            src="http://localhost:1124/static/js/vendor-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1445,7 +1445,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            src="http://localhost:1124/static/js/vendor-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1453,7 +1453,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            src="http://localhost:1124/static/js/vendor-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1461,7 +1461,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            src="http://localhost:1124/static/js/vendor-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1469,7 +1469,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            src="http://localhost:1124/static/js/vendor-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1477,7 +1477,23 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/main-f71cff67.js"
+            src="http://localhost:1124/static/js/vendor-.js-61bb2bf2.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:1124/static/js/main-.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:1124/static/js/main-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1485,7 +1501,7 @@ exports[`Given I am on the Amharic live radio AMP/Canonical page When I view the
     </script>
     <script async
             data-chunk="amharic"
-            src="http://localhost:7080/static/js/amharic-31ecd969.js"
+            src="http://localhost:1124/static/js/amharic-.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
