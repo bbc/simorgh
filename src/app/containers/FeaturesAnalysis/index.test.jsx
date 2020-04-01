@@ -45,17 +45,15 @@ describe('CpsRelatedContent', () => {
   it('should render Story Promo components without <ul> when given single item in collection', () => {
     const topFeaturesOneItem = [features[0]];
 
-    expect(topFeaturesOneItem.filter(Boolean).length).toBe(1);
+    expect(features[0]).toBeTruthy();
 
     const { asFragment } = renderFeaturesAnalysis({
       content: topFeaturesOneItem,
     });
 
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
-      0,
-    );
+    expect(document.querySelector(`li[class^='StoryPromoLi']`)).toBeNull();
 
-    expect(document.querySelectorAll(`ul`).length).toBe(0);
+    expect(document.querySelector(`ul`)).toBeNull();
 
     expect(asFragment()).toMatchSnapshot();
   });
