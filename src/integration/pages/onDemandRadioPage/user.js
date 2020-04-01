@@ -1,5 +1,5 @@
 export default ({ brandTitle, episodeTitle, episodeSummary }) => {
-  [amp, canonical].forEach(page => {
+  [amp, canonical].forEach((page) => {
     describe(`And using ${page.platform}`, () => {
       it('I can see the brand title', () => {
         const brandTitleEl = page.getByText(brandTitle);
