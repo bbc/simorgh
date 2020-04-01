@@ -9,16 +9,16 @@ import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
 import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
-const EPISODE_IS_AVAILABLE = 'is-available';
-const EPISODE_IS_EXPIRED = 'is-expired';
-const EPISODE_IS_NOT_YET_AVAILABLE = 'is-not-yet-available';
+const EPISODE_IS_AVAILABLE = 'available';
+const EPISODE_IS_EXPIRED = 'expired';
+const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
 
-const getTimeTicks = () => new Date().getTime() * 10000;
+const getEpisodeAvailability = (availableFrom, availableUntil) => {
+  const timeNow = Date.now();
 
-const getEpisodeAvailability = (from, until) => {
-  const timeNow = getTimeTicks();
-  if (timeNow > until) return EPISODE_IS_EXPIRED;
-  if (timeNow < from) return EPISODE_IS_NOT_YET_AVAILABLE;
+  if (timeNow > availableUntil) return EPISODE_IS_EXPIRED;
+  if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
+
   return EPISODE_IS_AVAILABLE;
 };
 
@@ -27,10 +27,10 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const renderEpisode = (
-  episodeAvailableFrom,
-  episodeAvailableUntil,
   masterBrand,
   episodeId,
+  episodeAvailableFrom,
+  episodeAvailableUntil,
 ) => {
   const episodeAvailability = getEpisodeAvailability(
     episodeAvailableFrom,
@@ -113,10 +113,10 @@ const OnDemandRadioPage = ({ pageData }) => {
           <ParagraphBlock text={episodeTitle} />
           <ParagraphBlock text={summary} />
           {renderEpisode(
-            episodeAvailableFrom,
-            episodeAvailableUntil,
             masterBrand,
             episodeId,
+            episodeAvailableFrom,
+            episodeAvailableUntil,
           )}
         </Grid>
       </StyledGelPageGrid>
