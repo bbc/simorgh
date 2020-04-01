@@ -33,7 +33,7 @@ const radioServices = {
 
 const renderRadioScheduleContainer = service => (
   <BrowserRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
       <RequestContextProvider
         isAmp={false}
         pageType="frontPage"
