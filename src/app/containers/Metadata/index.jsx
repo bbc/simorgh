@@ -3,7 +3,6 @@ import { string, node, shape, arrayOf } from 'prop-types';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { stringCspHeader } from '#server/utilities/cspHeader';
 import {
   getIconAssetUrl,
   getIconLinks,
@@ -46,7 +45,6 @@ const MetadataContainer = ({
   children,
 }) => {
   const {
-    env,
     isAmp,
     canonicalLink,
     ampLink,
@@ -54,7 +52,6 @@ const MetadataContainer = ({
     ampUkLink,
     canonicalNonUkLink,
     ampNonUkLink,
-    isUk,
   } = useContext(RequestContext);
 
   const {
@@ -103,16 +100,9 @@ const MetadataContainer = ({
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
 
-  const isLive = env === 'live';
-  const contentSecurityPolicy = stringCspHeader({ isAmp, isLive, isUk });
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta
-        httpEquiv="Content-Security-Policy"
-        content={contentSecurityPolicy}
-      />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp,noydir" />
       <meta name="theme-color" content={themeColor} />
