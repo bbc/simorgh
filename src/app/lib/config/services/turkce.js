@@ -157,6 +157,7 @@ export const service = {
         listen: 'Listen',
         watch: 'İzle',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -207,6 +208,24 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video altyazısı: ',
+          text:
+            'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
+        },
+        fallback: {
+          text: 'İçerik bulunamadı',
+          linkText: 'Daha fazlası için %provider_name%',
+          linkTextSuffixVisuallyHidden: ' Dış Link',
+          warningText:
+            'BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
+        },
+        skipLink: {
+          text: '%provider_name% paylaşımını geçin',
+          endTextVisuallyHidden: '%provider_name% paylaşımının sonu',
+        },
+      },
     },
     fonts: [
       F_REITH_SANS_BOLD,
@@ -226,10 +245,6 @@ export const service = {
       {
         title: 'Video',
         url: '/turkce/media/video',
-      },
-      {
-        title: 'Fotoğraf',
-        url: '/turkce/media/photogalleries',
       },
       {
         title: 'Dergi',

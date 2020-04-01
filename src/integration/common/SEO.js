@@ -1,5 +1,3 @@
-const { amp, canonical } = global;
-
 export default ({
   pageTitle,
   canonicalUrl,

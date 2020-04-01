@@ -158,6 +158,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -213,6 +214,23 @@ export const service = {
       ],
       copyrightText:
         'BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
+          text: 'Эскертүү: Жарнамалар болушу ыктымал',
+        },
+        fallback: {
+          text: 'Баракча ачылбайт',
+          linkText: '%provider_name% баракчадан көбүрөк пост окуу',
+          linkTextSuffixVisuallyHidden: ', Би-Би-Сиден тышкары баракча',
+          warningText:
+            'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+        },
+        skipLink: {
+          text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
+          endTextVisuallyHidden: '%provider_name% посттун аягы',
+        },
+      },
     },
     fonts: [],
     timezone: 'GMT',
@@ -244,10 +262,6 @@ export const service = {
       {
         title: 'Журнал',
         url: '/kyrgyz/magazine',
-      },
-      {
-        title: 'Аудио',
-        url: '/kyrgyz/media/audio',
       },
       {
         title: 'Блог',

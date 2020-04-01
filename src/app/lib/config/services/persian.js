@@ -171,6 +171,7 @@ export const service = {
         listen: 'Listen',
         watch: 'تماشا کنید',
         liveLabel: 'زنده',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -185,7 +186,8 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      onFrontPage: true,
+      header: 'برنامه‌های رادیو',
     },
     footer: {
       trustProjectLink: {
@@ -225,6 +227,22 @@ export const service = {
         },
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'توضیح ویدئو، ',
+          text: 'هشدار: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+        },
+        fallback: {
+          text: 'محتوا در دسترس نیست',
+          linkText: 'در %provider_name% بیشتر ببینید',
+          linkTextSuffixVisuallyHidden: '، لینک خارجی',
+          warningText: ' بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
+        },
+        skipLink: {
+          text: 'بگذر از پست %provider_name%',
+          endTextVisuallyHidden: 'پایان پست %provider_name%',
+        },
+      },
     },
     timezone: 'GMT',
     fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
@@ -280,10 +298,6 @@ export const service = {
       {
         title: 'شما',
         url: '/persian/interactivity',
-      },
-      {
-        title: 'عکس',
-        url: '/persian/media/photogalleries',
       },
       {
         title: 'ناظران می‌گویند...',

@@ -7,25 +7,8 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import AdContainer from './index';
 
 const defaultToggleState = {
-  local: {
-    ads: {
-      enabled: true,
-    },
-  },
-  test: {
-    ads: {
-      enabled: true,
-    },
-  },
-  stage: {
-    ads: {
-      enabled: false,
-    },
-  },
-  live: {
-    ads: {
-      enabled: false,
-    },
+  ads: {
+    enabled: true,
   },
 };
 

@@ -150,6 +150,7 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         liveLabel: 'لائیو',
+        nextLabel: 'NEXT',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
@@ -163,7 +164,8 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -205,6 +207,23 @@ export const service = {
       ],
       copyrightText:
         'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ویڈیو کیپشن, ',
+          text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
+        },
+        fallback: {
+          text: 'مواد دستیاب نہیں ہے',
+          linkText: '%provider_name% مزید دیکھنے کے لیے',
+          linkTextSuffixVisuallyHidden: ', بیرونی مواد',
+          warningText:
+            ' بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
     timezone: 'Asia/Karachi',
@@ -238,20 +257,12 @@ export const service = {
         url: '/urdu/science',
       },
       {
-        title: 'آڈیو',
-        url: '/urdu/media/audio',
-      },
-      {
         title: 'ویڈیو',
         url: '/urdu/media/video',
       },
       {
         title: 'پنجابی ويڈیو',
         url: '/urdu/punjabi_video',
-      },
-      {
-        title: 'تصاویر',
-        url: '/urdu/media/photogalleries',
       },
     ],
   },

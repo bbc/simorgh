@@ -16,12 +16,22 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) =>
   describe(`testsThatFollowSmokeTestConfigForAMPOnly for ${service} ${pageType}`, () => {
-    it('should render a media player', () => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        const language = appConfig[config[service].name][variant].lang;
-        const embedUrl = getEmbedUrl(body, language);
+    describe('Media Player', () => {
+      const language = appConfig[config[service].name][variant].lang;
+      let embedUrl;
 
+      beforeEach(() => {
+        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+          embedUrl = getEmbedUrl(body, language);
+        });
+      });
+
+      it('should be rendered', () => {
         cy.get(`amp-iframe[src*="${embedUrl}"]`).should('be.visible');
+      });
+
+      it('embed URL should be reachable', () => {
+        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
       });
     });
 

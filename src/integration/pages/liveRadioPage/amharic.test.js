@@ -14,6 +14,8 @@ import {
   runCoreCanonicalTests,
   runPerformaceTests,
   runCommonAmpAnalyticsTests,
+  runCommonCanonicalAnalyticsTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on the Amharic live radio AMP page', () => {
@@ -39,6 +41,10 @@ describe('Given I am on the Amharic live radio Canonical page', () => {
       audioEmbedUrl:
         'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am',
     });
+  });
+
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonCanonicalAnalyticsTests();
   });
 
   describe('When the application starts', () => {
@@ -102,5 +108,9 @@ describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
       skipToContentText: 'ወደ ዋናው ይዘት ይለፉ',
       headlineText: 'ያድምጡ',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });
