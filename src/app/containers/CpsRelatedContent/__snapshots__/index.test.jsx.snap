@@ -45,7 +45,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
             dir="ltr"
             role="listitem"
           >
@@ -111,7 +111,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
             dir="ltr"
             role="listitem"
           >
@@ -166,7 +166,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
             dir="ltr"
             role="listitem"
           >
@@ -272,7 +272,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           role="list"
         >
           <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
             dir="ltr"
             role="listitem"
           >
@@ -338,7 +338,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
             dir="ltr"
             role="listitem"
           >
@@ -393,7 +393,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
             </div>
           </li>
           <li
-            class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+            class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
             dir="ltr"
             role="listitem"
           >

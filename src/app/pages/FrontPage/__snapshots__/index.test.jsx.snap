@@ -226,7 +226,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       role="list"
                     >
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -276,7 +276,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -357,7 +357,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -407,7 +407,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -457,7 +457,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -507,7 +507,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -580,7 +580,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
@@ -630,7 +630,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                         </div>
                       </li>
                       <li
-                        class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 fxSOhP"
+                        class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
                         dir="ltr"
                         role="listitem"
                       >
