@@ -527,7 +527,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               >
                 <a
                   class="Link-sc-1dvfmi3-5 yQgSu"
-                  href="/pidgin/44508901"
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
                 >
                   <span
                     role="text"
