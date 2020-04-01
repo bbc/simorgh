@@ -60,7 +60,7 @@ describe('CpsRelatedContent', () => {
       content: [promos[0]],
     });
 
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelector('li[class^='StoryPromoLi')).toBeNull();
       0,
     );
 
