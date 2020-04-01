@@ -1,193 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": true,
-          "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-          "embedding": true,
-          "format": "video",
-          "id": "p01k6msm",
-          "imageCopyright": "BBC",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-          "subType": "clip",
-          "synopses": {
-            "short": "They may be tiny, but us humans could learn a thing or two from ants."
-          },
-          "title": "Five things ants can teach us about management",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1540218932000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 191,
-              "durationISO8601": "PT3M11S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01k6msp",
-              "warnings": {
-                "long": "Contains strong language and adult humour.",
-                "short": "Contains strong language and adult humour."
-              }
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "text": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<bold>သမ္မတဦးဝင်းမြင့်ဟာ</bold> အိန္ဒိယနိုင်ငံကို ၄ ရက်တာ ချစ်ကြည်ရေးခရီးစဉ်အဖြစ် ဒီနေ့ စတင်လိုက်ပါတယ်။ ဒီခရီးစဉ် မှာ ရင်းနှီးမြှပ်နှံမှု ကိစ္စရပ် တွေ အပါအဝင်၂ နိုင်ငံ နားလည်မှု စာချွန်လွှာ တချို့ လက်မှတ်ရေးထိုးဖို့ ရှိနေပါတယ်။ သမ္မတဦးဝင်းမြင့်ဟာ တစ်နှစ်အတွင်း ဒုတိယအကြိမ်မြောက် အိန္ဒိယကို သွားရောက်တာလည်း ဖြစ်ပါတယ်။ ပြီးခဲ့တဲ့လတုန်းကပဲ တရုတ်သမ္မတ ရှီကျင့်ဖျင်လည်း<link><caption> မြန်မာနိုင်ငံကို</caption><url href=\"https://bbc.com/burmese\" platform=\"highweb\"/></link> လာရောက်ခဲ့တဲ့အတွက် မြန်မာနိုင်ငံဟာ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခုကြားမှ အခွင့်အလမ်းတွေရော စိန်ခေါ်မှုတွေနဲ့ပါ ကြုံတွေ့နေရတယ်လို့ သုံးသပ်ကြပါတယ်။ ဒီအကြောင်း ရန်ကုန်အခြေစိုက် ငြိမ်းချမ်းရေးနဲ့ လုံခြုံရေးဆိုင်ရာမြန်မာအင်စတီကျူ့ (MIPS) ရဲ့ လုံခြုံရေးကဏ္ဍဆိုင်ရာ အကြီးတန်းသုတေသန မန်နေဂျာ <italic>ကိုအမရသီဟကို ကိုငြိမ်းချမ်းအေးက တွေ့ဆုံမေးမြန်းထားပါတယ်။</italic>",
-          "type": "paragraph"
-        },
-        {
-          "items": [
-            {
-              "markupType": "candy_xml",
-              "text": "<bold>ဆက်စပ် အကြောင်းအရာများ</bold>",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "ဆက်စပ် အကြောင်းအရာများ",
-              "type": "listItem"
-            },
-            {
-              "markupType": "candy_xml",
-              "text": "<italic>ဆက်စပ် အကြောင်းအရာများ</italic>",
-              "type": "listItem"
-            },
-            {
-              "markupType": "candy_xml",
-              "meta": [
-                {
-                  "headlines": {
-                    "headline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
-                    "overtyped": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
-                    "shortHeadline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး"
-                  },
-                  "id": "urn:bbc:ares::asset:burmese/media-23269024",
-                  "language": "my",
-                  "locators": {
-                    "href": "http://www.bbc.com/burmese/media-23269024"
-                  },
-                  "passport": {
-                    "category": {
-                      "categoryId": "",
-                      "categoryName": ""
-                    },
-                    "taggings": []
-                  },
-                  "summary": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
-                  "timestamp": 1583164400000,
-                  "type": "cps"
-                }
-              ],
-              "text": "<itemMeta>burmese/media-23269024</itemMeta>",
-              "type": "listItem"
-            }
-          ],
-          "numbered": false,
-          "type": "list"
-        },
-        {
-          "markupType": "candy_xml",
-          "meta": [
-            {
-              "headlines": {
-                "headline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
-                "overtyped": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
-                "shortHeadline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး"
-              },
-              "id": "urn:bbc:ares::asset:burmese/media-23269024",
-              "language": "my",
-              "locators": {
-                "href": "http://www.bbc.com/burmese/media-23269024"
-              },
-              "passport": {
-                "category": {
-                  "categoryId": "",
-                  "categoryName": ""
-                },
-                "taggings": []
-              },
-              "summary": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
-              "timestamp": 1583164400000,
-              "type": "cps"
-            }
-          ],
-          "text": "<itemMeta>burmese/media-23269024</itemMeta>",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "သမ္မတဦးဝင်းမြင့်ဟာ အိန္ဒိယနိုင်ငံကို ၄ ရက်တာ ချစ်ကြည်ရေးခရီးစဉ်အဖြစ် ဒီနေ့ စတင်လိုက်ပါတယ်။ ဒီခရီးစဉ် မှာ ရင်းနှီးမြှပ်နှံမှု ကိစ္စရပ် တွေ အပါအဝင်၂ နိုင်ငံ နားလည်မှု စာချွန်လွှာ တချို့ လက်မှတ်ရေးထိုးဖို့ ရှိနေပါတယ်။ သမ္မတဦးဝင်းမြင့်ဟာ တစ်နှစ်အတွင်း ဒုတိယအကြိမ်မြောက် အိန္ဒိယကို သွားရောက်တာလည်း ဖြစ်ပါတယ်။ ပြီးခဲ့တဲ့လတုန်းကပဲ တရုတ်သမ္မတ ရှီကျင့်ဖျင်လည်း<link><caption> မြန်မာနိုင်ငံကို</caption><url href=\"https://bbc.com/burmese\" platform=\"highweb\"/></link> လာရောက်ခဲ့တဲ့အတွက် မြန်မာနိုင်ငံဟာ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခုကြားမှ အခွင့်အလမ်းတွေရော စိန်ခေါ်မှုတွေနဲ့ပါ ကြုံတွေ့နေရတယ်လို့ သုံးသပ်ကြပါတယ်။ ဒီအကြောင်း ရန်ကုန်အခြေစိုက် ငြိမ်းချမ်းရေးနဲ့ လုံခြုံရေးဆိုင်ရာမြန်မာအင်စတီကျူ့ (MIPS) ရဲ့ လုံခြုံရေးကဏ္ဍဆိုင်ရာ အကြီးတန်းသုတေသန မန်နေဂျာ ကိုအမရသီဟကို ကိုငြိမ်းချမ်းအေးက တွေ့ဆုံမေးမြန်းထားပါတယ်။",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "burmese.embedded_media.media_asset.23269011.page",
-        "cps_asset_id": "23269011",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph",
-        "list"
-      ],
-      "createdBy": "burmese-v6",
-      "firstPublished": 1583164470000,
-      "id": "urn:bbc:ares::asset:burmese/media-23269011",
-      "includeComments": false,
-      "language": "my",
-      "lastPublished": 1583164470000,
-      "lastUpdated": 1583164480368,
-      "locators": {
-        "assetId": "23269011",
-        "assetUri": "/burmese/media-23269011",
-        "cpsUrn": "urn:bbc:content:assetUri:burmese/media-23269011",
-        "curie": "http://www.bbc.co.uk/asset/c9afa0ad-6498-ca4c-a102-5f185fa2d01f"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "timestamp": 1583164470000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်",
-        "shortHeadline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်"
-      },
-      "id": "urn:bbc:ares::asset:burmese/media-23269011",
-      "language": "my",
-      "locators": {
-        "assetId": "23269011",
-        "assetUri": "/burmese/media-23269011",
-        "cpsUrn": "urn:bbc:content:assetUri:burmese/media-23269011",
-        "curie": "http://www.bbc.co.uk/asset/c9afa0ad-6498-ca4c-a102-5f185fa2d01f"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": true,
         "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
         "embedding": true,
@@ -211,9 +25,7 @@
             },
             "duration": 191,
             "durationISO8601": "PT3M11S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01k6msp",
             "warnings": {
               "long": "Contains strong language and adult humour.",
@@ -222,26 +34,206 @@
           }
         ]
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "text": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်",
+        "type": "paragraph"
       },
-      "summary": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်",
-      "timestamp": 1583164470000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/burmese/media"
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>သမ္မတဦးဝင်းမြင့်ဟာ</bold> အိန္ဒိယနိုင်ငံကို ၄ ရက်တာ ချစ်ကြည်ရေးခရီးစဉ်အဖြစ် ဒီနေ့ စတင်လိုက်ပါတယ်။ ဒီခရီးစဉ် မှာ ရင်းနှီးမြှပ်နှံမှု ကိစ္စရပ် တွေ အပါအဝင်၂ နိုင်ငံ နားလည်မှု စာချွန်လွှာ တချို့ လက်မှတ်ရေးထိုးဖို့ ရှိနေပါတယ်။ သမ္မတဦးဝင်းမြင့်ဟာ တစ်နှစ်အတွင်း ဒုတိယအကြိမ်မြောက် အိန္ဒိယကို သွားရောက်တာလည်း ဖြစ်ပါတယ်။ ပြီးခဲ့တဲ့လတုန်းကပဲ တရုတ်သမ္မတ ရှီကျင့်ဖျင်လည်း<link><caption> မြန်မာနိုင်ငံကို</caption><url href=\"https://bbc.com/burmese\" platform=\"highweb\"/></link> လာရောက်ခဲ့တဲ့အတွက် မြန်မာနိုင်ငံဟာ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခုကြားမှ အခွင့်အလမ်းတွေရော စိန်ခေါ်မှုတွေနဲ့ပါ ကြုံတွေ့နေရတယ်လို့ သုံးသပ်ကြပါတယ်။ ဒီအကြောင်း ရန်ကုန်အခြေစိုက် ငြိမ်းချမ်းရေးနဲ့ လုံခြုံရေးဆိုင်ရာမြန်မာအင်စတီကျူ့ (MIPS) ရဲ့ လုံခြုံရေးကဏ္ဍဆိုင်ရာ အကြီးတန်းသုတေသန မန်နေဂျာ <italic>ကိုအမရသီဟကို ကိုငြိမ်းချမ်းအေးက တွေ့ဆုံမေးမြန်းထားပါတယ်။</italic>",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/burmese"
+      {
+        "items": [
+          {
+            "markupType": "candy_xml",
+            "text": "<bold>ဆက်စပ် အကြောင်းအရာများ</bold>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "ဆက်စပ် အကြောင်းအရာများ",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<italic>ဆက်စပ် အကြောင်းအရာများ</italic>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
+                  "overtyped": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
+                  "shortHeadline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး"
+                },
+                "id": "urn:bbc:ares::asset:burmese/media-23269024",
+                "language": "my",
+                "locators": {
+                  "href": "http://www.bbc.com/burmese/media-23269024"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "summary": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
+                "timestamp": 1583164400000,
+                "type": "cps"
+              }
+            ],
+            "text": "<itemMeta>burmese/media-23269024</itemMeta>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "candy_xml",
+        "meta": [
+          {
+            "headlines": {
+              "headline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
+              "overtyped": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
+              "shortHeadline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး"
+            },
+            "id": "urn:bbc:ares::asset:burmese/media-23269024",
+            "language": "my",
+            "locators": {
+              "href": "http://www.bbc.com/burmese/media-23269024"
+            },
+            "passport": {
+              "category": {
+                "categoryId": "",
+                "categoryName": ""
+              },
+              "taggings": []
+            },
+            "summary": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး",
+            "timestamp": 1583164400000,
+            "type": "cps"
+          }
+        ],
+        "text": "<itemMeta>burmese/media-23269024</itemMeta>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "သမ္မတဦးဝင်းမြင့်ဟာ အိန္ဒိယနိုင်ငံကို ၄ ရက်တာ ချစ်ကြည်ရေးခရီးစဉ်အဖြစ် ဒီနေ့ စတင်လိုက်ပါတယ်။ ဒီခရီးစဉ် မှာ ရင်းနှီးမြှပ်နှံမှု ကိစ္စရပ် တွေ အပါအဝင်၂ နိုင်ငံ နားလည်မှု စာချွန်လွှာ တချို့ လက်မှတ်ရေးထိုးဖို့ ရှိနေပါတယ်။ သမ္မတဦးဝင်းမြင့်ဟာ တစ်နှစ်အတွင်း ဒုတိယအကြိမ်မြောက် အိန္ဒိယကို သွားရောက်တာလည်း ဖြစ်ပါတယ်။ ပြီးခဲ့တဲ့လတုန်းကပဲ တရုတ်သမ္မတ ရှီကျင့်ဖျင်လည်း<link><caption> မြန်မာနိုင်ငံကို</caption><url href=\"https://bbc.com/burmese\" platform=\"highweb\"/></link> လာရောက်ခဲ့တဲ့အတွက် မြန်မာနိုင်ငံဟာ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခုကြားမှ အခွင့်အလမ်းတွေရော စိန်ခေါ်မှုတွေနဲ့ပါ ကြုံတွေ့နေရတယ်လို့ သုံးသပ်ကြပါတယ်။ ဒီအကြောင်း ရန်ကုန်အခြေစိုက် ငြိမ်းချမ်းရေးနဲ့ လုံခြုံရေးဆိုင်ရာမြန်မာအင်စတီကျူ့ (MIPS) ရဲ့ လုံခြုံရေးကဏ္ဍဆိုင်ရာ အကြီးတန်းသုတေသန မန်နေဂျာ ကိုအမရသီဟကို ကိုငြိမ်းချမ်းအေးက တွေ့ဆုံမေးမြန်းထားပါတယ်။",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "burmese.embedded_media.media_asset.23269011.page",
+      "cps_asset_id": "23269011",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "list"],
+    "createdBy": "burmese-v6",
+    "firstPublished": 1583164470000,
+    "id": "urn:bbc:ares::asset:burmese/media-23269011",
+    "includeComments": false,
+    "language": "my",
+    "lastPublished": 1583164470000,
+    "lastUpdated": 1583164480368,
+    "locators": {
+      "assetId": "23269011",
+      "assetUri": "/burmese/media-23269011",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/media-23269011",
+      "curie": "http://www.bbc.co.uk/asset/c9afa0ad-6498-ca4c-a102-5f185fa2d01f"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1583164470000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်",
+      "shortHeadline": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်"
+    },
+    "id": "urn:bbc:ares::asset:burmese/media-23269011",
+    "language": "my",
+    "locators": {
+      "assetId": "23269011",
+      "assetUri": "/burmese/media-23269011",
+      "cpsUrn": "urn:bbc:content:assetUri:burmese/media-23269011",
+      "curie": "http://www.bbc.co.uk/asset/c9afa0ad-6498-ca4c-a102-5f185fa2d01f"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+      "embedding": true,
+      "format": "video",
+      "id": "p01k6msm",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+      },
+      "title": "Five things ants can teach us about management",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1540218932000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 191,
+          "durationISO8601": "PT3M11S",
+          "types": ["Original"],
+          "versionId": "p01k6msp",
+          "warnings": {
+            "long": "Contains strong language and adult humour.",
+            "short": "Contains strong language and adult humour."
+          }
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "မြန်မာနဲ့ အိမ်နီးချင်း နိုင်ငံကြီး ၂ ခု ဆက်ဆံရေးအပေါ် သုံးသပ်ချက်",
+    "timestamp": 1583164470000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/burmese/media"
+    },
+    "site": {
+      "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/burmese"
     }
   }
+}

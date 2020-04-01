@@ -18,7 +18,7 @@ const expectedLayoutGridExports = {
 };
 
 const errorIfMissingKey = (keys, object, message) => {
-  keys.forEach(key => {
+  keys.forEach((key) => {
     if (!(key in object)) {
       throw new Error(`Missing value '${key}' in ${message}.`);
     }
@@ -35,7 +35,7 @@ const checkKeysExistInBothObjects = (object1, object2, message1, message2) => {
 
 const checkTypesOfExports = (cssExports, expectedCssExports) => {
   const cssExportsByName = Object.keys(cssExports);
-  cssExportsByName.forEach(actualExportName => {
+  cssExportsByName.forEach((actualExportName) => {
     const actualExportValue = cssExports[actualExportName];
     const expectedExport = expectedCssExports[actualExportName];
     const typeCheck = typeof actualExportValue === expectedExport; // eslint-disable-line valid-typeof

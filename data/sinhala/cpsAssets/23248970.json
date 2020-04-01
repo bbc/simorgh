@@ -1,271 +1,263 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:sinhala/23248970",
-        "locators": {
-            "assetUri": "/sinhala/23248970",
-            "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
-            "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:sinhala/23248970",
+    "locators": {
+      "assetUri": "/sinhala/23248970",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
+      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593"
+    },
+    "type": "MAP",
+    "createdBy": "sinhala-v6",
+    "language": "si",
+    "lastUpdated": 1568721398740,
+    "firstPublished": 1568721388000,
+    "lastPublished": 1568721390000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "sinhala.media_asset.23248970.page",
+      "cps_asset_id": "23248970"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": ["media", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01mr6r7",
+        "subType": "clip",
+        "format": "audio",
+        "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+        "synopses": {
+          "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
         },
-        "type": "MAP",
-        "createdBy": "sinhala-v6",
-        "language": "si",
-        "lastUpdated": 1568721398740,
-        "firstPublished": 1568721388000,
-        "lastPublished": 1568721390000,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "sinhala.media_asset.23248970.page",
-            "cps_asset_id": "23248970"
-        },
-        "tags": {},
-        "version": "v1.1.0",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "list"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
+        "versions": [
+          {
+            "versionId": "p01mr6r9",
+            "types": ["Original"],
+            "duration": 1961,
+            "durationISO8601": "PT32M41S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1559819809000
+          }
         ],
-        "includeComments": false
+        "imageCopyright": "Getty Images",
+        "type": "media"
+      },
+      {
+        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. introduction",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold>Heading</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </italic></bold><bold><italic>subheading</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold> crosshead </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට පැය දහයක කාලයක් තිස්සේ උත්සාහ කළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට <bold>කඩා වැඩුණු දිවියෙක් </bold>ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": true,
+        "items": [
+          {
+            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා footer ",
+        "role": "footer",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා transmission info ",
+        "role": "transmission-info",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
+      "headline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p01mr6r7",
-                "subType": "clip",
-                "format": "audio",
-                "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
-                "synopses": {
-                    "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
-                },
-                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
-                "versions": [
-                    {
-                        "versionId": "p01mr6r9",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 1961,
-                        "durationISO8601": "PT32M41S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1559819809000
-                    }
-                ],
-                "imageCopyright": "Getty Images",
-                "type": "media"
-            },
-            {
-                "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. introduction",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold>Heading</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold><italic>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </italic></bold><bold><italic>subheading</italic></bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ. </bold><bold> crosshead </bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට පැය දහයක කාලයක් තිස්සේ උත්සාහ කළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<link><caption>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</caption><altText>නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.</altText><url href=\"https://bbc.com/sinhala\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට <bold>කඩා වැඩුණු දිවියෙක් </bold>ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "numbered": true,
-                "items": [
-                    {
-                        "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "ඊයේ පාසලක් තුලට කඩා වැඩුණු මෙම දිවියා කොටු කර ගැනීමට<italic> පැය දහයක කාලයක් තිස්සේ උත්සාහ ක</italic>ළ විද්‍යාඥයෙකු සහ වන සංරක්ෂණ නිලධාරීන් කිහිප දෙනකුයි මෙලෙස සත්වයාගේ සපා කෑම් වලින් තුවාල ලබා තිබෙන්නේ.",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා footer ",
-                "role": "footer",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා transmission info ",
-                "role": "transmission-info",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            }
-        ]
+    "locators": {
+      "assetUri": "/sinhala/23248970",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
+      "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593"
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
-            "headline": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා"
-        },
-        "locators": {
-            "assetUri": "/sinhala/23248970",
-            "cpsUrn": "urn:bbc:content:assetUri:sinhala/23248970",
-            "curie": "http://www.bbc.co.uk/asset/96eaf247-c838-d849-9dd3-a513103c0593"
-        },
-        "summary": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
-        "timestamp": 1568721398740,
-        "passport": {},
-        "media": {
-            "id": "p01mr6r7",
-            "subType": "clip",
-            "format": "audio",
-            "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
-            "synopses": {
-                "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
-            },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
-            "versions": [
-                {
-                    "versionId": "p01mr6r9",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 1961,
-                    "durationISO8601": "PT32M41S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1559819809000
-                }
-            ],
-            "imageCopyright": "Getty Images",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "63721761",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/4148/test/_63721761_p01mr7dp.jpg",
-            "path": "/cpsdevpb/4148/test/_63721761_p01mr7dp.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "Crowds",
-            "copyrightHolder": "Getty Images",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:sinhala/23248970",
-        "type": "cps"
+    "summary": "නුවර පාසලකට කඩා වැඩුණු දිවියෙක් ඇල්ලීමට තැත් කළ පුද්ගලයන් හය දෙනෙකු තුවාල ලබා තිබේ.",
+    "timestamp": 1568721398740,
+    "passport": {},
+    "media": {
+      "id": "p01mr6r7",
+      "subType": "clip",
+      "format": "audio",
+      "title": "Подкаст \"Разговоры с арбитром\": чемпионский парад \"Ливерпуля\"",
+      "synopses": {
+        "short": "Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов."
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mr7dp.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "ඉන්දියාවේ බැංගලෝර් නුවර පාසලකට කඩා",
+      "versions": [
+        {
+          "versionId": "p01mr6r9",
+          "types": ["Original"],
+          "duration": 1961,
+          "durationISO8601": "PT32M41S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1559819809000
+        }
+      ],
+      "imageCopyright": "Getty Images",
+      "type": "media"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "පුවත්, ප්රවෘත්ති, විශ්ලේෂණ, වීඩියෝ",
-            "uri": "/sinhala/front_page",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "පුවත් - බීබීසී සිංහල",
-            "uri": "/sinhala",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "indexImage": {
+      "id": "63721761",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/4148/test/_63721761_p01mr7dp.jpg",
+      "path": "/cpsdevpb/4148/test/_63721761_p01mr7dp.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Crowds",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:sinhala/23248970",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "පුවත්, ප්රවෘත්ති, විශ්ලේෂණ, වීඩියෝ",
+      "uri": "/sinhala/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "පුවත් - බීබීසී සිංහල",
+      "uri": "/sinhala",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

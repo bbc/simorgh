@@ -24,9 +24,7 @@
             },
             "duration": 5,
             "durationISO8601": "PT5S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01kx42v",
             "warnings": {}
           }
@@ -616,9 +614,7 @@
           },
           "duration": 5,
           "durationISO8601": "PT5S",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "versionId": "p01kx42v",
           "warnings": {}
         }
@@ -770,9 +766,7 @@
                   },
                   "duration": 15,
                   "durationISO8601": "PT15S",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "versionId": "p01cqyct",
                   "warnings": {}
                 }

@@ -25,7 +25,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
           'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
         ];
 
-        ampScripts.forEach(script => {
+        ampScripts.forEach((script) => {
           cy.get(`head > script[src="${script}"]`);
         });
       });
@@ -54,10 +54,7 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
         });
       });
       it('should render at least one amp image', () => {
-        cy.get('figure')
-          .first()
-          .find('amp-img')
-          .should('be.visible');
+        cy.get('figure').first().find('amp-img').should('be.visible');
       });
     }
   });

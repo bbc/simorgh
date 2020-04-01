@@ -15,7 +15,7 @@ import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
-const getArticleMetadataProps = data => ({
+const getArticleMetadataProps = (data) => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
   description: data.promo.summary,
@@ -146,7 +146,7 @@ it('should render the alternate links', async () => {
   await renderMetadataToDocument();
   const actual = Array.from(
     document.querySelectorAll('head > link[rel="alternate"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     href: tag.getAttribute('href'),
     hreflang: tag.getAttribute('hreflang'),
   }));
@@ -172,7 +172,7 @@ it('should render the apple touch icons', async () => {
   await renderMetadataToDocument();
   const actual = Array.from(
     document.querySelectorAll('head > link[rel="apple-touch-icon"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     href: tag.getAttribute('href'),
     sizes: tag.getAttribute('sizes'),
   }));
@@ -230,7 +230,7 @@ it('should render the icons', async () => {
   await renderMetadataToDocument();
   const actual = Array.from(
     document.querySelectorAll('head > link[rel="icon"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     href: tag.getAttribute('href'),
     type: tag.getAttribute('type'),
     sizes: tag.getAttribute('sizes'),
@@ -386,7 +386,7 @@ it('should render the OG metatags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[property^="og:"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     property: tag.getAttribute('property'),
     content: tag.getAttribute('content'),
   }));
@@ -416,7 +416,7 @@ it('should render the twitter metatags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[name^="twitter"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     name: tag.getAttribute('name'),
     content: tag.getAttribute('content'),
   }));
@@ -442,7 +442,7 @@ it('should render the LDP tags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[name^="article:tag"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     name: tag.getAttribute('name'),
     content: tag.getAttribute('content'),
   }));
@@ -464,7 +464,7 @@ it('should render the default service image as open graph image', async () => {
     document.querySelectorAll(
       'head > meta[property*="image"], head > meta[name*="image"]',
     ),
-  ).map(tag =>
+  ).map((tag) =>
     tag.hasAttribute('property')
       ? {
           property: tag.getAttribute('property'),
@@ -497,7 +497,7 @@ it('should render the open graph image if provided', async () => {
     document.querySelectorAll(
       'head > meta[property*="image"], head > meta[name*="image"]',
     ),
-  ).map(tag =>
+  ).map((tag) =>
     tag.hasAttribute('property')
       ? {
           property: tag.getAttribute('property'),

@@ -13,7 +13,7 @@ const applyTimeDifference = (timestamp, timeDifference, isAdding) => {
 
   const keyNames = Object.keys(timeDifference);
 
-  keyNames.forEach(diff => {
+  keyNames.forEach((diff) => {
     if (isAdding) {
       acc += timeDifference[diff] * magnitudes[diff];
     } else {
@@ -30,7 +30,7 @@ const subtractTimeDifference = (timestamp, timeDifference) =>
 const addTimeDifference = (timestamp, timeDifference) =>
   applyTimeDifference(timestamp, timeDifference, true);
 
-export const timestampGenerator = timeDifference =>
+export const timestampGenerator = (timeDifference) =>
   subtractTimeDifference(Date.now(), timeDifference);
 
 export const sameDayTimestampsGenerator = ({ intervals, date }) => {
@@ -57,17 +57,15 @@ export const sameDayTimestampsGenerator = ({ intervals, date }) => {
     );
   }
 
-  const startOfDayTimestamp = moment(date)
-    .startOf('day')
-    .valueOf();
+  const startOfDayTimestamp = moment(date).startOf('day').valueOf();
   const mockCurrentTimestamp = addTimeDifference(
     startOfDayTimestamp,
     intervals[0],
   );
   return intervals
-    .map(interval => subtractTimeDifference(mockCurrentTimestamp, interval))
+    .map((interval) => subtractTimeDifference(mockCurrentTimestamp, interval))
     .concat(mockCurrentTimestamp);
 };
 
-export const isBritishSummerTime = timestamp =>
+export const isBritishSummerTime = (timestamp) =>
   moment.tz(timestamp, 'Europe/London').isDST();

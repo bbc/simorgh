@@ -1,150 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": false,
-          "caption": "Some audio from a supermarket checkout in Birmingham",
-          "embedding": false,
-          "format": "audio",
-          "id": "p01m7d07",
-          "imageCopyright": "Getty Images",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
-          "subType": "clip",
-          "synopses": {
-            "short": "Some audio from a supermarket checkout in Birmingham"
-          },
-          "title": "Birmingham checkout",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1555067395000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 127,
-              "durationISO8601": "PT2M7S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01m7d09",
-              "warnings": {
-                "long": "Contains some strong language.",
-                "short": "Contains some strong language."
-              }
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "role": "introduction",
-          "text": "Tiramisu candy icing candy canes halvah bear claw pie. Bonbon chocolate bar topping fruitcake oat cake candy canes caramels. ",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Heading Jelly beans biscuit jelly beans gummies jelly-o gingerbread topping.",
-          "type": "heading"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Cupcake ipsum dolor. Sit amet candy jelly-o pie jelly beans jelly beans chocolate bar cupcake. Pudding muffin fruitcake cotton candy tootsie roll liquorice gummies. Chupa chups topping pudding. Bear claw toffee candy canes tiramisu carrot cake. Sweet candy carrot cake cake tootsie roll candy. Gummies cheesecake gummies icing marzipan gummi bears. Chocolate cake sugar plum chocolate bar. Sugar plum fruitcake cheesecake powder gingerbread cake pie. Tiramisu pudding toffee sweet. Brownie dragée fruitcake cookie tiramisu cotton candy bear claw bear claw. Muffin jelly beans chocolate sugar plum. Tiramisu lollipop gingerbread tootsie roll cake jelly beans gingerbread jujubes.",
-          "type": "paragraph"
-        },
-        {
-          "altText": "stars",
-          "caption": "This is a picture of stars",
-          "copyrightHolder": "Wikipedia",
-          "height": 141,
-          "href": "http://b.files.bbci.co.uk/14837/test/_63732048_starsinthesky.jpg",
-          "id": "63732048",
-          "path": "/cpsdevpb/14837/test/_63732048_starsinthesky.jpg",
-          "subType": "body",
-          "type": "image",
-          "width": 220
-        },
-        {
-          "altText": "cake",
-          "copyrightHolder": "can stock",
-          "height": 195,
-          "href": "http://b.files.bbci.co.uk/A80F/test/_63732034_cake.jpg",
-          "id": "63732034",
-          "path": "/cpsdevpb/A80F/test/_63732034_cake.jpg",
-          "subType": "body",
-          "type": "image",
-          "width": 180
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "turkce.embedded_video.media_asset.23268997.page",
-        "cps_asset_id": "23268997",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph",
-        "heading",
-        "image"
-      ],
-      "createdBy": "turkish-v6",
-      "firstPublished": 1583162382000,
-      "id": "urn:bbc:ares::asset:turkce/media-23268997",
-      "includeComments": false,
-      "language": "tr",
-      "lastPublished": 1583162383000,
-      "lastUpdated": 1583162389083,
-      "locators": {
-        "assetId": "23268997",
-        "assetUri": "/turkce/media-23268997",
-        "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
-        "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "timestamp": 1583162382000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "Some audio from a supermarket checkout in Birmingham",
-        "shortHeadline": "Turkce CPS test"
-      },
-      "id": "urn:bbc:ares::asset:turkce/media-23268997",
-      "indexImage": {
-        "altText": "England star Fran Kirby",
-        "copyrightHolder": "Getty Images",
-        "height": 576,
-        "href": "http://b.files.bbci.co.uk/59EF/test/_63732032_p01mt2kt.jpg",
-        "id": "63732032",
-        "path": "/cpsdevpb/59EF/test/_63732032_p01mt2kt.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 1024
-      },
-      "language": "tr",
-      "locators": {
-        "assetId": "23268997",
-        "assetUri": "/turkce/media-23268997",
-        "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
-        "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": false,
         "caption": "Some audio from a supermarket checkout in Birmingham",
         "embedding": false,
@@ -168,9 +25,7 @@
             },
             "duration": 127,
             "durationISO8601": "PT2M7S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01m7d09",
             "warnings": {
               "long": "Contains some strong language.",
@@ -179,26 +34,162 @@
           }
         ]
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Tiramisu candy icing candy canes halvah bear claw pie. Bonbon chocolate bar topping fruitcake oat cake candy canes caramels. ",
+        "type": "paragraph"
       },
-      "summary": "audio.",
-      "timestamp": 1583162382000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/turkce/media"
+      {
+        "markupType": "plain_text",
+        "text": "Heading Jelly beans biscuit jelly beans gummies jelly-o gingerbread topping.",
+        "type": "heading"
       },
-      "site": {
-        "name": "Turkce",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/turkce"
+      {
+        "markupType": "plain_text",
+        "text": "Cupcake ipsum dolor. Sit amet candy jelly-o pie jelly beans jelly beans chocolate bar cupcake. Pudding muffin fruitcake cotton candy tootsie roll liquorice gummies. Chupa chups topping pudding. Bear claw toffee candy canes tiramisu carrot cake. Sweet candy carrot cake cake tootsie roll candy. Gummies cheesecake gummies icing marzipan gummi bears. Chocolate cake sugar plum chocolate bar. Sugar plum fruitcake cheesecake powder gingerbread cake pie. Tiramisu pudding toffee sweet. Brownie dragée fruitcake cookie tiramisu cotton candy bear claw bear claw. Muffin jelly beans chocolate sugar plum. Tiramisu lollipop gingerbread tootsie roll cake jelly beans gingerbread jujubes.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "stars",
+        "caption": "This is a picture of stars",
+        "copyrightHolder": "Wikipedia",
+        "height": 141,
+        "href": "http://b.files.bbci.co.uk/14837/test/_63732048_starsinthesky.jpg",
+        "id": "63732048",
+        "path": "/cpsdevpb/14837/test/_63732048_starsinthesky.jpg",
+        "subType": "body",
+        "type": "image",
+        "width": 220
+      },
+      {
+        "altText": "cake",
+        "copyrightHolder": "can stock",
+        "height": 195,
+        "href": "http://b.files.bbci.co.uk/A80F/test/_63732034_cake.jpg",
+        "id": "63732034",
+        "path": "/cpsdevpb/A80F/test/_63732034_cake.jpg",
+        "subType": "body",
+        "type": "image",
+        "width": 180
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "turkce.embedded_video.media_asset.23268997.page",
+      "cps_asset_id": "23268997",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "heading", "image"],
+    "createdBy": "turkish-v6",
+    "firstPublished": 1583162382000,
+    "id": "urn:bbc:ares::asset:turkce/media-23268997",
+    "includeComments": false,
+    "language": "tr",
+    "lastPublished": 1583162383000,
+    "lastUpdated": 1583162389083,
+    "locators": {
+      "assetId": "23268997",
+      "assetUri": "/turkce/media-23268997",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
+      "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1583162382000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Some audio from a supermarket checkout in Birmingham",
+      "shortHeadline": "Turkce CPS test"
+    },
+    "id": "urn:bbc:ares::asset:turkce/media-23268997",
+    "indexImage": {
+      "altText": "England star Fran Kirby",
+      "copyrightHolder": "Getty Images",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/59EF/test/_63732032_p01mt2kt.jpg",
+      "id": "63732032",
+      "path": "/cpsdevpb/59EF/test/_63732032_p01mt2kt.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "tr",
+    "locators": {
+      "assetId": "23268997",
+      "assetUri": "/turkce/media-23268997",
+      "cpsUrn": "urn:bbc:content:assetUri:turkce/media-23268997",
+      "curie": "http://www.bbc.co.uk/asset/ebbdb429-1837-b34e-a5ec-1351d577da4b"
+    },
+    "media": {
+      "advertising": false,
+      "caption": "Some audio from a supermarket checkout in Birmingham",
+      "embedding": false,
+      "format": "audio",
+      "id": "p01m7d07",
+      "imageCopyright": "Getty Images",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "Some audio from a supermarket checkout in Birmingham"
+      },
+      "title": "Birmingham checkout",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1555067395000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "types": ["Original"],
+          "versionId": "p01m7d09",
+          "warnings": {
+            "long": "Contains some strong language.",
+            "short": "Contains some strong language."
+          }
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "audio.",
+    "timestamp": 1583162382000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/turkce/media"
+    },
+    "site": {
+      "name": "Turkce",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/turkce"
     }
   }
+}

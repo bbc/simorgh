@@ -48,7 +48,7 @@ const liveRadioBulletinItem = {
   isLive: true,
 };
 
-const BulletinWithContext = item => (
+const BulletinWithContext = (item) => (
   <ServiceContextProvider service="igbo">
     <BulletinContainer item={item} />
   </ServiceContextProvider>

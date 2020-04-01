@@ -12,7 +12,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import BulletinContainer from '../Bulletin';
 import StoryPromoContainer from '../StoryPromo';
 
-const isBulletin = item =>
+const isBulletin = (item) =>
   item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
 
 const renderPromo = ({
@@ -146,7 +146,7 @@ export const RegularRow = ({
   parentEnableGelGutters,
 }) => (
   <>
-    {stories.map(story => (
+    {stories.map((story) => (
       <Grid
         item
         columns={displayImages ? regularStoryColumns : noImageStoryColumns}

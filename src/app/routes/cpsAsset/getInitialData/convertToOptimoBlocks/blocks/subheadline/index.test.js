@@ -3,7 +3,7 @@ import convertToSubheadline from '.';
 import { optimoSubheadline } from '../../utils/helpers';
 
 describe('convertToSubheadline', () => {
-  ['crosshead', 'heading', 'subheading'].forEach(type => {
+  ['crosshead', 'heading', 'subheading'].forEach((type) => {
     it(`should convert a plain_text ${type} to Optimo format`, async () => {
       const input = {
         text: 'A plain text block',
