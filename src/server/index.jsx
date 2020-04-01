@@ -22,9 +22,7 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader, {
-  localInjectHostCspHeader,
-} from './utilities/cspHeader/middleware';
+import injectCspHeader from './utilities/cspHeader/middleware';
 
 const fs = require('fs');
 
@@ -33,11 +31,6 @@ const morgan = require('morgan');
 const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
-
-const cspInjectFun =
-  process.env.SIMORGH_APP_ENV === 'local'
-    ? localInjectHostCspHeader
-    : injectCspHeader;
 
 logger.debug(
   `Application outputting logs to directory "${process.env.LOG_DIR}"`,
@@ -255,7 +248,7 @@ server
       });
     },
   )
-  .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
+  .get('/*', injectCspHeader, async ({ url, headers, path: urlPath }, res) => {
     logger.info(
       JSON.stringify(
         {
