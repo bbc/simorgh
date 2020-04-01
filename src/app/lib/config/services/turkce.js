@@ -217,7 +217,7 @@ export const service = {
         fallback: {
           text: 'İçerik bulunamadı',
           linkText: 'Daha fazlası için %provider_name%',
-          linkTextSuffixVisuallyHidden: 'Dış Link',
+          linkTextSuffixVisuallyHidden: ' Dış Link',
           warningText:
             'BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
         },

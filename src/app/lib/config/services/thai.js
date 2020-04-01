@@ -243,7 +243,7 @@ export const service = {
         fallback: {
           text: 'ไม่มีเนื้อหานี้',
           linkText: 'ดูเพิ่มเติมที่ %provider_name%',
-          linkTextSuffixVisuallyHidden: 'ลิงก์จากภายนอก',
+          linkTextSuffixVisuallyHidden: ' ลิงก์จากภายนอก',
           warningText:
             'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
         },

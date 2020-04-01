@@ -216,7 +216,7 @@ export const service = {
         fallback: {
           text: 'આ કન્ટેન્ટ ઉપલબ્ધ નથી',
           linkText: '%provider_name% પર વધુ મેળવો',
-          linkTextSuffixVisuallyHidden: 'બહારની સામગ્રી',
+          linkTextSuffixVisuallyHidden: ' બહારની સામગ્રી',
           warningText: 'બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
         },
         skipLink: {

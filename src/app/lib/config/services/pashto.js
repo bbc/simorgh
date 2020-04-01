@@ -226,7 +226,7 @@ export const service = {
         fallback: {
           text: 'منځپانګه نه شته',
           linkText: 'په %provider_name% کې نور وګورئ',
-          linkTextSuffixVisuallyHidden: 'بهرنی',
+          linkTextSuffixVisuallyHidden: ' بهرنی',
           warningText:
             ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
         },
