@@ -37,7 +37,7 @@ const StyledSectionLabel = styled(SectionLabel)`
 `;
 
 // Apply the right margin-top between the section label and the promos
-const SpacingDiv = styled.div`
+const SingleContentWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-top: ${GEL_SPACING_DBL};
   }
@@ -93,12 +93,12 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
         </StyledSectionLabel>
 
         {hasSingleRelatedContent ? (
-          <SpacingDiv>
+          <SingleContentWrapper>
             <StoryPromo
               item={formatItem(singleRelatedContent, env)}
               dir={dir}
             />
-          </SpacingDiv>
+          </SingleContentWrapper>
         ) : (
           <Grid
             columns={{
