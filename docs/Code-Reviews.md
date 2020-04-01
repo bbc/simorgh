@@ -30,7 +30,7 @@ GitHub supports the concept of 'approvals'. Our repos generally require **two** 
 
 Code reviews are not an exercise in scoring points or proving that the reviewer knows better than the author - they are about trying to help each other to make the best quality work we can. Ideally, both author and reviewer come away from a code review having both made a positive contribution to the result and learned something along the way.
 
-Software development is a collaborative process. We own the whole codebase collectively across our teams. Nobody has one special responsibility or authortity over any one part of it. Feedback on code should never feel personal but should always be directed at improving our solutions and how we work together.
+Software development is a collaborative process. We own the whole codebase collectively across our teams. Nobody has one special responsibility or authority over any one part of it. Feedback on code should never feel personal but should always be directed at improving our solutions and how we work together.
 
 Whatever problems we may find as we explore and discuss code, we assume that everyone is (and was) acting with best intentions, based on what they knew at the time and under circumstances that are often lost to us. Instead of complaining, we propose concrete steps we can take to make things better.
 
@@ -158,4 +158,3 @@ Not everyone knows (or agrees) what a ‘code smell’ or an ‘antipattern’ i
 ## Conclusion
 
 In brief, code reviews exist to support communication as we work together on the codebase. Remembering to see others’ perspectives when reviewing code creates a more positive environment for everyone. Remember to talk - back-and-forth PR comments are usually not the most effective way of having a conversation. And pairing and swarming can help to make the process easier - both during implementation and at the review stage.
-
