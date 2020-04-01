@@ -34,15 +34,16 @@ const getMediaId = body => {
   return versionId || externalId || id;
 };
 
-export const getEmbedUrl = ({ body, language, isAmp = false }) => {
-  const prefix = body.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
+export const getEmbedUrl = ({ jsonData, language, isAmp = false }) => {
+  const prefix = jsonData.promo.media.type === 'legacyMedia' ? 'legacy' : 'cps';
 
-  return [
+  const embedUrl = [
     envConfig.avEmbedBaseUrl,
     'ws/av-embeds',
-    `${prefix}${body.metadata.locators.assetUri}`,
-    getMediaId(body),
+    `${prefix}${jsonData.metadata.locators.assetUri}`,
+    getMediaId(jsonData),
     language,
-    isAmp ? 'amp' : '',
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
