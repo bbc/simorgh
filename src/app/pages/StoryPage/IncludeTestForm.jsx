@@ -10,7 +10,7 @@ const StyledForm = styled.form`
 
 const IncludeTestForm = ({ pathWithGetParameters }) => {
   const testUrl = decodeURIComponent(
-    pathWithGetParameters.search.replace('?testUrl=', ''),
+    pathWithGetParameters.replace('?testUrl=', ''),
   );
 
   return (
