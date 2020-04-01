@@ -28,10 +28,10 @@ const getFixedHtml = pipe(
   replaceStaticScriptSrc,
 );
 
-const getHtmlString = doc => doc.querySelector('html').outerHTML;
+const getHtmlString = (doc) => doc.querySelector('html').outerHTML;
 
 export default () => {
-  [canonical, amp].forEach(page => {
+  [canonical, amp].forEach((page) => {
     describe(`And using ${page.platform}`, () => {
       const htmlString = getHtmlString(page.document);
       const fixedHtml = getFixedHtml(htmlString);
