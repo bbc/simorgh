@@ -173,6 +173,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'Vipindi vya Redio',
     },
     footer: {
