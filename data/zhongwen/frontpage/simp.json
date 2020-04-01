@@ -1,2367 +1,2349 @@
 {
-   "metadata":{
-      "id":"urn:bbc:ares::index:zhongwen/simp/front_page/desktop/domestic",
-      "locators":{
-         "assetUri":"/zhongwen/simp/front_page",
-         "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/front_page",
-         "curie":"http://www.bbc.co.uk/asset/426d2030-e2dc-5202-e050-380a4e80578d/desktop/domestic"
+  "metadata": {
+    "id": "urn:bbc:ares::index:zhongwen/simp/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/zhongwen/simp/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/front_page",
+      "curie": "http://www.bbc.co.uk/asset/426d2030-e2dc-5202-e050-380a4e80578d/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "zhongwen-v6",
+    "language": "zh-Hans",
+    "lastUpdated": 1567967855457,
+    "firstPublished": 1480430064000,
+    "lastPublished": 1567967847000,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "zhongwensimp.page",
+      "cps_asset_id": "38142263",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.1.1",
+    "blockTypes": [
+      "top-story",
+      "secondary-top-story",
+      "other-top-stories",
+      "special-reports",
+      "also-in-news",
+      "section-digest",
+      "feature-main",
+      "podcast-promotion",
+      "featured-site-top-stories",
+      "useful-links",
+      "responsive-cluster"
+    ],
+    "title": "主页",
+    "summary": "BBC中文网是面向全球华人并每日更新的新闻资讯网站，提供客观及时和准确的内容以及对新闻故事的深入分析和评论。我们也提供繁体版脸书。"
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "top-story",
+        "title": "Top story",
+        "maxRelatedLinks": 4,
+        "items": [
+          {
+            "headlines": {
+              "headline": "SIMP - 香港示威者为何希望美国会通过人权民主法案",
+              "overtyped": "SIMP - 香港示威者为何希望美国会通过人权民主法案"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49626383",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49626383"
+            },
+            "summary": "香港示威者在美国驻香港总领事馆门外呼吁美国介入香港事务。多名美国议员表明将推动《香港人权与民主法案》，中国外交部促请美国勿干涉香港事务。",
+            "timestamp": 1567945188000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108658802",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5195/production/_108658802_hi056347143_01.jpg",
+              "path": "/cpsprodpb/5195/production/_108658802_hi056347143_01.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "示威者星期日下午开始在中环地铁站口纵火，地铁站两旁是中环名牌商业购物区。",
+              "caption": "示威者星期日下午开始在中环地铁站口纵火，地铁站两旁是中环名牌商业购物区。",
+              "copyrightHolder": "EPA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "relatedItems": [
+              {
+                "headlines": {
+                  "headline": "林郑月娥撤回《逃犯条例》修例：众口难调之举"
+                },
+                "locators": {
+                  "assetUri": "/zhongwen/simp/chinese-news-49591650",
+                  "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/simp/chinese-news-49591650"
+                },
+                "summary": "示威支持者认为焦点已经转移到警察被指滥权的问题，声言将继续抗争；另一方认为她不应向暴力示威浪潮低头。",
+                "timestamp": 1567670358000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49591650",
+                "type": "cps"
+              },
+              {
+                "headlines": {
+                  "headline": "香港抗议持续 盘点中国采取的五大应对办法"
+                },
+                "locators": {
+                  "assetUri": "/zhongwen/simp/chinese-news-49422502",
+                  "cpsUrn": "urn:bbc:content:assetUri:/zhongwen/simp/chinese-news-49422502"
+                },
+                "summary": "中国认定香港抗议行动是“颜色革命”，绝不允许，而且声称有足够多的办法平息动乱。现在梳理一下北京采取的对策。",
+                "timestamp": 1566510831000,
+                "cpsType": "STY",
+                "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49422502",
+                "type": "cps"
+              }
+            ],
+            "overtypedSummary": "香港示威者呼吁美国介入香港事务。多名美国议员表明将推动《香港人权与民主法案》，北京警告华盛顿勿干涉香港事务。",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49626383",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Top story - Zhongwen"
+        },
+        "semanticGroupName": "Top story"
       },
-      "type":"IDX",
-      "createdBy":"zhongwen-v6",
-      "language":"zh-Hans",
-      "lastUpdated":1567967855457,
-      "firstPublished":1480430064000,
-      "lastPublished":1567967847000,
-      "options":{
-         "allowAdvertising":true
+      {
+        "type": "secondary-top-story",
+        "title": "More top stories",
+        "maxRelatedLinks": 0,
+        "items": [
+          {
+            "headlines": {
+              "headline": "德国总理默克尔访华 ：世纪变局下中德大国互动",
+              "overtyped": "默克尔访华 ：世纪变局下中德大国互动"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49609127",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49609127"
+            },
+            "summary": "默克尔此行议程重点是国际大局变化下的中欧、中德经贸问题，但是她和中国总理李克强也分别就香港局势发表看法。",
+            "timestamp": 1567771483000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                "categoryName": "Fact Check"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108637644",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/AE81/production/_108637644_626ea5e7-c673-4301-83ba-6122a55f63a9.jpg",
+              "path": "/cpsprodpb/AE81/production/_108637644_626ea5e7-c673-4301-83ba-6122a55f63a9.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Angela Merkel and Li Keqiang",
+              "caption": "在香港问题上，默克尔呼吁对话，而李克强表示，要相信中国人有能力有智慧处理好自己的事。",
+              "copyrightHolder": "EPA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49609127",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "二战余波：士兵怎样被训练成\"杀人机器\" ？"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49563978",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49563978"
+            },
+            "summary": "二战，史上最血腥的战争结束后，美国军方一位研究人员认定，士兵过于仁慈不愿向敌人开枪。定论传到将军们那里，结果……",
+            "timestamp": 1567943223000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108538458",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14DEB/production/_108538458_gettyimages-515168880.jpg",
+              "path": "/cpsprodpb/14DEB/production/_108538458_gettyimages-515168880.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "来自阿拉巴马州的第167步兵团，正在训练用于肉搏战的一对一拼刺刀技巧。",
+              "copyrightHolder": "Getty Images"
+            },
+            "imageThumbnail": {
+              "id": "108544340",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/10F8/production/_108544340_gettyimages-515168880.jpg",
+              "path": "/cpsprodpb/10F8/production/_108544340_gettyimages-515168880.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "来自阿拉巴马州的第167步兵团，正在训练用于肉搏战的一对一拼刺刀技巧。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49563978",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "女性健康新知 孕期压力可能影响孩子终身"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/science-49607258",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/science-49607258"
+            },
+            "summary": "一项持续了40多年的研究得出结论，孩子成长过程中的精神健康可能与妇女孕期的精神压力有关联。",
+            "timestamp": 1567943208000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108642165",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DB3C/production/_108642165_66a57636-bc7c-4510-ad7a-7c4bafd8cf1a.jpg",
+              "path": "/cpsprodpb/DB3C/production/_108642165_66a57636-bc7c-4510-ad7a-7c4bafd8cf1a.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "孕妇",
+              "caption": "孕妇的身心健康，对胎儿发运和孩子的成长都有很多潜在的影线个。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/science-49607258",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英国脱欧剧情继续反转 商家未雨绸缪谋自保"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/uk-49596940",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/uk-49596940"
+            },
+            "summary": "英国脱欧大戏剧情不断反转，首相换了两个，官员易人无数，前景依旧不明，而商家早已自谋减损保全之道。",
+            "timestamp": 1567803898000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105826822",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/594E/production/_105826822_legogettyimages-1061367108.jpg",
+              "path": "/cpsprodpb/594E/production/_105826822_legogettyimages-1061367108.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Harry Potter Lego 'Minifigures' on display at a 'Dream Toys' event",
+              "caption": "Harry Potter was among Lego's best sellers in 2018",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "section": {
+              "subType": "IDX",
+              "name": "英国动态",
+              "uri": "/zhongwen/simp/uk",
+              "type": "simple"
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/uk-49596940",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美国电子烟肺病潮再添亡魂 成因仍众说纷纭"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/science-49619754",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/science-49619754"
+            },
+            "summary": "美国再有一人因严重肺病死亡，怀疑与电子烟有关， 但专家仍然不知道准确成因。",
+            "timestamp": 1567846919000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102954979",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17E99/production/_102954979_vaping_gettyimages-472391596.jpg",
+              "path": "/cpsprodpb/17E99/production/_102954979_vaping_gettyimages-472391596.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "专家就电子烟对健康的影响仍然没有结论。",
+              "caption": "专家就电子烟对健康的影响仍然没有结论。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/science-49619754",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "扔掉护照省掉盖章　出国旅游改刷脸？"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/science-49616381",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/science-49616381"
+            },
+            "summary": "旅游通关谁都想便利快捷，要是省掉护照，直接用你的脸来通关，您是否愿意一试？",
+            "timestamp": 1567935665000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mpqld",
+              "subType": "clip",
+              "format": "video",
+              "title": "扔掉护照省掉盖章　出国旅游改刷脸？",
+              "synopses": {
+                "short": "人脸识别通关：扔掉护照省掉盖章　出国旅游改刷脸？",
+                "long": "英国各大机场每年处理旅客数以千万计，预计到2050年还将翻一番，引进加快机场入出境通关查验之技术刻不容缓。\n\n那么，把手机结合“刷脸”技术怎么样？BBC商业记者西蒙·布朗宁（Simon Browning）去测试一下这套新系统。",
+                "medium": "旅游通关谁都想便利快捷，要是省掉护照，直接用你的脸来通关，您是否愿意一试？"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mslpz.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "英国或许不久将引进“刷脸”入境技术来改善通关时间。",
+              "versions": [
+                {
+                  "versionId": "p07msldb",
+                  "types": ["Editorial"],
+                  "duration": 136,
+                  "durationISO8601": "PT2M16S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567798303000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108648041",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3704/production/_108648041_p07mpr44.jpg",
+              "path": "/cpsprodpb/3704/production/_108648041_p07mpr44.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "英国内政部人脸识别通关测试登记机器",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "prominence": "standard",
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/science-49616381",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "More top stories"
       },
-      "analyticsLabels":{
-         "counterName":"zhongwensimp.page",
-         "cps_asset_id":"38142263",
-         "cps_asset_type":"idx"
+      {
+        "type": "other-top-stories",
+        "title": "Top stories overflow",
+        "items": [
+          {
+            "headlines": {
+              "headline": "百年老店厄运不断 马莎百货从辉煌走到落魄"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/business-49580280",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/business-49580280"
+            },
+            "summary": "英国老牌百货公司马莎不敌零售业惊涛骇浪，从伦敦蓝筹股指出局，一个时代落下帷幕。",
+            "timestamp": 1567859148000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "104202709",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16260/production/_104202709_m-s.lady.paint..jpg",
+              "path": "/cpsprodpb/16260/production/_104202709_m-s.lady.paint..jpg",
+              "height": 384,
+              "width": 683,
+              "altText": "M&S sign",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": "  ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/business-49580280",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "易北河名城汉堡"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/media-49611857",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/media-49611857"
+            },
+            "summary": "【BBC时事一周（粤语）——华人谈天下】：除了汉堡包，你还知道关于汉堡这个城市的什么呢？在德国的传媒人亚然谈谈汉堡这个城市。",
+            "timestamp": 1567901206000,
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mn7r6",
+              "subType": "clip",
+              "format": "audio",
+              "title": "易北河名城汉堡",
+              "synopses": {
+                "short": "易北河名城汉堡",
+                "long": "【BBC时事一周（粤语）——华人谈天下】：除了汉堡包，你还知道关于汉堡这个城市的什么呢？在德国的传媒人亚然谈谈汉堡这个城市。",
+                "medium": "【BBC时事一周（粤语）——华人谈天下】：除了汉堡包，你还知道关于汉堡这个城市的什么呢？在德国的传媒人亚然谈谈汉堡这个城市。"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mn893.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "易北河名城汉堡",
+              "versions": [
+                {
+                  "versionId": "p07mn7rc",
+                  "types": ["Original"],
+                  "duration": 409,
+                  "durationISO8601": "PT6M49S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567775157000
+                }
+              ],
+              "imageCopyright": "Getty Images"
+            },
+            "indexImage": {
+              "id": "108642860",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1AA8/production/_108642860_p07mn893.jpg",
+              "path": "/cpsprodpb/1AA8/production/_108642860_p07mn893.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "华人谈天下",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/media-49611857",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "新晶体提高激光性能 或促进中国定向能武器",
+              "overtyped": "中国合成新晶体 有望促进激光武器研发"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49597090",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49597090"
+            },
+            "summary": "中国研究人员合成了一种新晶体，有可能大幅提高民用和军用激光性能。",
+            "timestamp": 1567717799000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108628020",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/0822/production/_108628020_ecd72994-22ea-423c-9701-6f6ed44f47c2.jpg",
+              "path": "/cpsprodpb/0822/production/_108628020_ecd72994-22ea-423c-9701-6f6ed44f47c2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "laser",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49597090",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "林郑月娥撤回《逃犯条例》修例：众口难调之举"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49591650",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49591650"
+            },
+            "summary": "示威支持者认为焦点已经转移到警察被指滥权的问题，声言将继续抗争；另一方认为她不应向暴力示威浪潮低头。",
+            "timestamp": 1567670358000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108622122",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/566A/production/_108622122_hi056260001.jpg",
+              "path": "/cpsprodpb/566A/production/_108622122_hi056260001.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "林郑月娥多次强调，建议和撤回修订《逃犯条例》的决定都是由香港政府作出，与北京政府无关。",
+              "caption": "林郑月娥多次强调，建议和撤回修订《逃犯条例》的决定都是由香港政府作出，与北京政府无关。",
+              "copyrightHolder": "EPA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49591650",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "从民族解放英雄到独裁者 津巴布韦前总统穆加贝的一生",
+              "overtyped": "从民族解放英雄到独裁者 穆加贝的一生"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49611297",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49611297"
+            },
+            "summary": "穆加贝曾承诺为津巴布韦人民带来民主与和解，但伴随1980年实现独立，他的承诺逐渐变成了暴力，腐败和经济灾难。",
+            "timestamp": 1567804067000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108642742",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/6094/production/_108642742_gettyimages-874401288.jpg",
+              "path": "/cpsprodpb/6094/production/_108642742_gettyimages-874401288.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Robert Mugabe at the University of Harare being awarded Doctor Honoris Causa in July 1984",
+              "caption": "罗伯特·加布里尔·穆加贝是在一所教会学校接受教育，之后参加师范培训，在南非前总统尼尔逊·曼德拉的母校福特哈尔大学毕业；1958年，他前往加纳工作",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49611297",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美国纽约试验解决鼠患的新武器——酒精"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49613614",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49613614"
+            },
+            "summary": "美国纽约高楼林立，地下道无处不在，垃圾成患，是老鼠乐园。一种新机器给人们带来一线希望。",
+            "timestamp": 1567804293000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108638881",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/49C3/production/_108638881_gettyimages-51632741.jpg",
+              "path": "/cpsprodpb/49C3/production/_108638881_gettyimages-51632741.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Rat in tunnel",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49613614",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Top stories overflow"
       },
-      "tags":{
-
+      {
+        "type": "special-reports",
+        "title": "Special reports 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "林郑月娥撤回《逃犯条例》修订、黄之锋访台、英国无协议脱欧与本周更多好故事"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49611842",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49611842"
+            },
+            "summary": "刚刚过去的一周，BBC中文网以下新闻内容受到读者的关注。如果你错过了它们，BBC中文带你一一回顾。",
+            "timestamp": 1567839239000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "95320763",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8F5E/production/_95320763_hi038693191.jpg",
+              "path": "/cpsprodpb/8F5E/production/_95320763_hi038693191.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "林郑月娥与丈夫林兆波，长子林节思。",
+              "caption": "2017年林郑月娥胜选后与丈夫林兆波（图左）长子林节思（图右）。",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49611842",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "必看"
+        },
+        "semanticGroupName": "Special reports 1"
       },
-      "version":"v1.1.1",
-      "blockTypes":[
-         "top-story",
-         "secondary-top-story",
-         "other-top-stories",
-         "special-reports",
-         "also-in-news",
-         "section-digest",
-         "feature-main",
-         "podcast-promotion",
-         "featured-site-top-stories",
-         "useful-links",
-         "responsive-cluster"
-      ],
-      "title":"主页",
-      "summary":"BBC中文网是面向全球华人并每日更新的新闻资讯网站，提供客观及时和准确的内容以及对新闻故事的深入分析和评论。我们也提供繁体版脸书。"
-   },
-   "content":{
-      "groups":[
-         {
-            "type":"top-story",
-            "title":"Top story",
-            "maxRelatedLinks":4,
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"SIMP - 香港示威者为何希望美国会通过人权民主法案",
-                     "overtyped":"SIMP - 香港示威者为何希望美国会通过人权民主法案"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49626383",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49626383"
-                  },
-                  "summary":"香港示威者在美国驻香港总领事馆门外呼吁美国介入香港事务。多名美国议员表明将推动《香港人权与民主法案》，中国外交部促请美国勿干涉香港事务。",
-                  "timestamp":1567945188000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108658802",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/5195/production/_108658802_hi056347143_01.jpg",
-                     "path":"/cpsprodpb/5195/production/_108658802_hi056347143_01.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"示威者星期日下午开始在中环地铁站口纵火，地铁站两旁是中环名牌商业购物区。",
-                     "caption":"示威者星期日下午开始在中环地铁站口纵火，地铁站两旁是中环名牌商业购物区。",
-                     "copyrightHolder":"EPA"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "relatedItems":[
-                     {
-                        "headlines":{
-                           "headline":"林郑月娥撤回《逃犯条例》修例：众口难调之举"
-                        },
-                        "locators":{
-                           "assetUri":"/zhongwen/simp/chinese-news-49591650",
-                           "cpsUrn":"urn:bbc:content:assetUri:/zhongwen/simp/chinese-news-49591650"
-                        },
-                        "summary":"示威支持者认为焦点已经转移到警察被指滥权的问题，声言将继续抗争；另一方认为她不应向暴力示威浪潮低头。",
-                        "timestamp":1567670358000,
-                        "cpsType":"STY",
-                        "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49591650",
-                        "type":"cps"
-                     },
-                     {
-                        "headlines":{
-                           "headline":"香港抗议持续 盘点中国采取的五大应对办法"
-                        },
-                        "locators":{
-                           "assetUri":"/zhongwen/simp/chinese-news-49422502",
-                           "cpsUrn":"urn:bbc:content:assetUri:/zhongwen/simp/chinese-news-49422502"
-                        },
-                        "summary":"中国认定香港抗议行动是“颜色革命”，绝不允许，而且声称有足够多的办法平息动乱。现在梳理一下北京采取的对策。",
-                        "timestamp":1566510831000,
-                        "cpsType":"STY",
-                        "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49422502",
-                        "type":"cps"
-                     }
-                  ],
-                  "overtypedSummary":"香港示威者呼吁美国介入香港事务。多名美国议员表明将推动《香港人权与民主法案》，北京警告华盛顿勿干涉香港事务。",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49626383",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"Top story - Zhongwen"
+      {
+        "type": "also-in-news",
+        "title": "Also in the news",
+        "items": [
+          {
+            "headlines": {
+              "headline": "伊朗核协议又遇考验 美国贿赂油船案曝光"
             },
-            "semanticGroupName":"Top story"
-         },
-         {
-            "type":"secondary-top-story",
-            "title":"More top stories",
-            "maxRelatedLinks":0,
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"德国总理默克尔访华 ：世纪变局下中德大国互动",
-                     "overtyped":"默克尔访华 ：世纪变局下中德大国互动"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49609127",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49609127"
-                  },
-                  "summary":"默克尔此行议程重点是国际大局变化下的中欧、中德经贸问题，但是她和中国总理李克强也分别就香港局势发表看法。",
-                  "timestamp":1567771483000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
-                        "categoryName":"Fact Check"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108637644",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/AE81/production/_108637644_626ea5e7-c673-4301-83ba-6122a55f63a9.jpg",
-                     "path":"/cpsprodpb/AE81/production/_108637644_626ea5e7-c673-4301-83ba-6122a55f63a9.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Angela Merkel and Li Keqiang",
-                     "caption":"在香港问题上，默克尔呼吁对话，而李克强表示，要相信中国人有能力有智慧处理好自己的事。",
-                     "copyrightHolder":"EPA"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49609127",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"二战余波：士兵怎样被训练成\"杀人机器\" ？"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49563978",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49563978"
-                  },
-                  "summary":"二战，史上最血腥的战争结束后，美国军方一位研究人员认定，士兵过于仁慈不愿向敌人开枪。定论传到将军们那里，结果……",
-                  "timestamp":1567943223000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108538458",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/14DEB/production/_108538458_gettyimages-515168880.jpg",
-                     "path":"/cpsprodpb/14DEB/production/_108538458_gettyimages-515168880.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"来自阿拉巴马州的第167步兵团，正在训练用于肉搏战的一对一拼刺刀技巧。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "imageThumbnail":{
-                     "id":"108544340",
-                     "subType":"index-thumbnail",
-                     "href":"http://c.files.bbci.co.uk/10F8/production/_108544340_gettyimages-515168880.jpg",
-                     "path":"/cpsprodpb/10F8/production/_108544340_gettyimages-515168880.jpg",
-                     "height":180,
-                     "width":320,
-                     "altText":"来自阿拉巴马州的第167步兵团，正在训练用于肉搏战的一对一拼刺刀技巧。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49563978",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"女性健康新知 孕期压力可能影响孩子终身"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/science-49607258",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/science-49607258"
-                  },
-                  "summary":"一项持续了40多年的研究得出结论，孩子成长过程中的精神健康可能与妇女孕期的精神压力有关联。",
-                  "timestamp":1567943208000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108642165",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/DB3C/production/_108642165_66a57636-bc7c-4510-ad7a-7c4bafd8cf1a.jpg",
-                     "path":"/cpsprodpb/DB3C/production/_108642165_66a57636-bc7c-4510-ad7a-7c4bafd8cf1a.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"孕妇",
-                     "caption":"孕妇的身心健康，对胎儿发运和孩子的成长都有很多潜在的影线个。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/science-49607258",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"英国脱欧剧情继续反转 商家未雨绸缪谋自保"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/uk-49596940",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/uk-49596940"
-                  },
-                  "summary":"英国脱欧大戏剧情不断反转，首相换了两个，官员易人无数，前景依旧不明，而商家早已自谋减损保全之道。",
-                  "timestamp":1567803898000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"105826822",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/594E/production/_105826822_legogettyimages-1061367108.jpg",
-                     "path":"/cpsprodpb/594E/production/_105826822_legogettyimages-1061367108.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Harry Potter Lego 'Minifigures' on display at a 'Dream Toys' event",
-                     "caption":"Harry Potter was among Lego's best sellers in 2018",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "section":{
-                     "subType":"IDX",
-                     "name":"英国动态",
-                     "uri":"/zhongwen/simp/uk",
-                     "type":"simple"
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/uk-49596940",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"美国电子烟肺病潮再添亡魂 成因仍众说纷纭"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/science-49619754",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/science-49619754"
-                  },
-                  "summary":"美国再有一人因严重肺病死亡，怀疑与电子烟有关， 但专家仍然不知道准确成因。",
-                  "timestamp":1567846919000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"102954979",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/17E99/production/_102954979_vaping_gettyimages-472391596.jpg",
-                     "path":"/cpsprodpb/17E99/production/_102954979_vaping_gettyimages-472391596.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"专家就电子烟对健康的影响仍然没有结论。",
-                     "caption":"专家就电子烟对健康的影响仍然没有结论。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/science-49619754",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"扔掉护照省掉盖章　出国旅游改刷脸？"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/science-49616381",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/science-49616381"
-                  },
-                  "summary":"旅游通关谁都想便利快捷，要是省掉护照，直接用你的脸来通关，您是否愿意一试？",
-                  "timestamp":1567935665000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mpqld",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"扔掉护照省掉盖章　出国旅游改刷脸？",
-                     "synopses":{
-                        "short":"人脸识别通关：扔掉护照省掉盖章　出国旅游改刷脸？",
-                        "long":"英国各大机场每年处理旅客数以千万计，预计到2050年还将翻一番，引进加快机场入出境通关查验之技术刻不容缓。\n\n那么，把手机结合“刷脸”技术怎么样？BBC商业记者西蒙·布朗宁（Simon Browning）去测试一下这套新系统。",
-                        "medium":"旅游通关谁都想便利快捷，要是省掉护照，直接用你的脸来通关，您是否愿意一试？"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mslpz.jpg",
-                     "embedding":true,
-                     "advertising":true,
-                     "caption":"英国或许不久将引进“刷脸”入境技术来改善通关时间。",
-                     "versions":[
-                        {
-                           "versionId":"p07msldb",
-                           "types":[
-                              "Editorial"
-                           ],
-                           "duration":136,
-                           "durationISO8601":"PT2M16S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567798303000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108648041",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/3704/production/_108648041_p07mpr44.jpg",
-                     "path":"/cpsprodpb/3704/production/_108648041_p07mpr44.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"英国内政部人脸识别通关测试登记机器",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "prominence":"standard",
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/science-49616381",
-                  "type":"cps"
-               }
-            ],
-            "semanticGroupName":"More top stories"
-         },
-         {
-            "type":"other-top-stories",
-            "title":"Top stories overflow",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"百年老店厄运不断 马莎百货从辉煌走到落魄"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/business-49580280",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/business-49580280"
-                  },
-                  "summary":"英国老牌百货公司马莎不敌零售业惊涛骇浪，从伦敦蓝筹股指出局，一个时代落下帷幕。",
-                  "timestamp":1567859148000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        },
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"104202709",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/16260/production/_104202709_m-s.lady.paint..jpg",
-                     "path":"/cpsprodpb/16260/production/_104202709_m-s.lady.paint..jpg",
-                     "height":384,
-                     "width":683,
-                     "altText":"M&S sign",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":"  ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/business-49580280",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"易北河名城汉堡"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/media-49611857",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/media-49611857"
-                  },
-                  "summary":"【BBC时事一周（粤语）——华人谈天下】：除了汉堡包，你还知道关于汉堡这个城市的什么呢？在德国的传媒人亚然谈谈汉堡这个城市。",
-                  "timestamp":1567901206000,
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mn7r6",
-                     "subType":"clip",
-                     "format":"audio",
-                     "title":"易北河名城汉堡",
-                     "synopses":{
-                        "short":"易北河名城汉堡",
-                        "long":"【BBC时事一周（粤语）——华人谈天下】：除了汉堡包，你还知道关于汉堡这个城市的什么呢？在德国的传媒人亚然谈谈汉堡这个城市。",
-                        "medium":"【BBC时事一周（粤语）——华人谈天下】：除了汉堡包，你还知道关于汉堡这个城市的什么呢？在德国的传媒人亚然谈谈汉堡这个城市。"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mn893.jpg",
-                     "embedding":true,
-                     "advertising":true,
-                     "caption":"易北河名城汉堡",
-                     "versions":[
-                        {
-                           "versionId":"p07mn7rc",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":409,
-                           "durationISO8601":"PT6M49S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567775157000
-                        }
-                     ],
-                     "imageCopyright":"Getty Images"
-                  },
-                  "indexImage":{
-                     "id":"108642860",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/1AA8/production/_108642860_p07mn893.jpg",
-                     "path":"/cpsprodpb/1AA8/production/_108642860_p07mn893.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"华人谈天下",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/media-49611857",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"新晶体提高激光性能 或促进中国定向能武器",
-                     "overtyped":"中国合成新晶体 有望促进激光武器研发"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49597090",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49597090"
-                  },
-                  "summary":"中国研究人员合成了一种新晶体，有可能大幅提高民用和军用激光性能。",
-                  "timestamp":1567717799000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108628020",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/0822/production/_108628020_ecd72994-22ea-423c-9701-6f6ed44f47c2.jpg",
-                     "path":"/cpsprodpb/0822/production/_108628020_ecd72994-22ea-423c-9701-6f6ed44f47c2.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"laser",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49597090",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"林郑月娥撤回《逃犯条例》修例：众口难调之举"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49591650",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49591650"
-                  },
-                  "summary":"示威支持者认为焦点已经转移到警察被指滥权的问题，声言将继续抗争；另一方认为她不应向暴力示威浪潮低头。",
-                  "timestamp":1567670358000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108622122",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/566A/production/_108622122_hi056260001.jpg",
-                     "path":"/cpsprodpb/566A/production/_108622122_hi056260001.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"林郑月娥多次强调，建议和撤回修订《逃犯条例》的决定都是由香港政府作出，与北京政府无关。",
-                     "caption":"林郑月娥多次强调，建议和撤回修订《逃犯条例》的决定都是由香港政府作出，与北京政府无关。",
-                     "copyrightHolder":"EPA"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49591650",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"从民族解放英雄到独裁者 津巴布韦前总统穆加贝的一生",
-                     "overtyped":"从民族解放英雄到独裁者 穆加贝的一生"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49611297",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49611297"
-                  },
-                  "summary":"穆加贝曾承诺为津巴布韦人民带来民主与和解，但伴随1980年实现独立，他的承诺逐渐变成了暴力，腐败和经济灾难。",
-                  "timestamp":1567804067000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108642742",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/6094/production/_108642742_gettyimages-874401288.jpg",
-                     "path":"/cpsprodpb/6094/production/_108642742_gettyimages-874401288.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Robert Mugabe at the University of Harare being awarded Doctor Honoris Causa in July 1984",
-                     "caption":"罗伯特·加布里尔·穆加贝是在一所教会学校接受教育，之后参加师范培训，在南非前总统尼尔逊·曼德拉的母校福特哈尔大学毕业；1958年，他前往加纳工作",
-                     "copyrightHolder":"AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49611297",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"美国纽约试验解决鼠患的新武器——酒精"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49613614",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49613614"
-                  },
-                  "summary":"美国纽约高楼林立，地下道无处不在，垃圾成患，是老鼠乐园。一种新机器给人们带来一线希望。",
-                  "timestamp":1567804293000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2139461b000e9dabf7",
-                           "campaignName":"WS - Inspire me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108638881",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/49C3/production/_108638881_gettyimages-51632741.jpg",
-                     "path":"/cpsprodpb/49C3/production/_108638881_gettyimages-51632741.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Rat in tunnel",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49613614",
-                  "type":"cps"
-               }
-            ],
-            "semanticGroupName":"Top stories overflow"
-         },
-         {
-            "type":"special-reports",
-            "title":"Special reports 1",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"林郑月娥撤回《逃犯条例》修订、黄之锋访台、英国无协议脱欧与本周更多好故事"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49611842",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49611842"
-                  },
-                  "summary":"刚刚过去的一周，BBC中文网以下新闻内容受到读者的关注。如果你错过了它们，BBC中文带你一一回顾。",
-                  "timestamp":1567839239000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"95320763",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/8F5E/production/_95320763_hi038693191.jpg",
-                     "path":"/cpsprodpb/8F5E/production/_95320763_hi038693191.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"林郑月娥与丈夫林兆波，长子林节思。",
-                     "caption":"2017年林郑月娥胜选后与丈夫林兆波（图左）长子林节思（图右）。",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49611842",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"必看"
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49595300",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49595300"
             },
-            "semanticGroupName":"Special reports 1"
-         },
-         {
-            "type":"also-in-news",
-            "title":"Also in the news",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"伊朗核协议又遇考验 美国贿赂油船案曝光"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49595300",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49595300"
-                  },
-                  "summary":"美国与伊朗的对峙不断升温，伊朗威胁将取消对核研发所有限制。而德黑兰指责华盛顿试图重金贿赂其船长，显示两国的暗战不断。",
-                  "timestamp":1567717614000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        },
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        },
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108594829",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/16AB1/production/_108594829_mediaitem108594825.jpg",
-                     "path":"/cpsprodpb/16AB1/production/_108594829_mediaitem108594825.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Hassan Rouhani addresses the Iranian parliament in Tehran on 3 September 2019",
-                     "caption":"Hassan Rouhani has said he is ready for dialogue if the US first lifts its sanctions",
-                     "copyrightHolder":"EPA"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49595300",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"美国智库专家：俄中分裂即将到来 华盛顿不必担心",
-                     "overtyped":"美国智库：俄中分裂即将到来 华盛顿不必担心"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49568437",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49568437"
-                  },
-                  "summary":"中国军队派出1600人，30架先进战机参加在俄罗斯举行的多国军演，西方政界人士越来越担心莫斯科与北京关系加强，但也有分析认为俄中分裂即将到来。",
-                  "timestamp":1567544415000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108604516",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/F064/production/_108604516_mediaitem108407248.jpg",
-                     "path":"/cpsprodpb/F064/production/_108604516_mediaitem108407248.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"习近平和普京",
-                     "copyrightHolder":"AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49568437",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"黄之锋访台 台湾对政治庇护仍有所保留"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49576730",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49576730"
-                  },
-                  "summary":"黄之锋呼吁台湾出台《难民法》，但包括蔡英文在内，台湾各界对此反应谨慎。",
-                  "timestamp":1567584342000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108607855",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/DA3E/production/_108607855_huang_cna4.jpg",
-                     "path":"/cpsprodpb/DA3E/production/_108607855_huang_cna4.jpg",
-                     "height":1152,
-                     "width":2048,
-                     "altText":"黄之锋",
-                     "caption":"黄之锋赴台湾进行两天的会面及演讲行程",
-                     "copyrightHolder":"CNA"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49576730",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"Zara国泰航空卷入香港抗议 “在商无法言商”的香港企业",
-                     "overtyped":"Zara国泰航空卷入抗议  香港企业“在商无法言商”"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/business-49598467",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/business-49598467"
-                  },
-                  "summary":"香港很多企业，因在对待抗议问题上的不同立场，未来如何弥补与消费者之间产生的裂痕，成为一大难题。",
-                  "timestamp":1567717380000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108606456",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/FFB4/production/_108606456_gettyimages-1156688177.jpg",
-                     "path":"/cpsprodpb/FFB4/production/_108606456_gettyimages-1156688177.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"店铺",
-                     "caption":"Zara在香港有14家店铺",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/business-49598467",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"林郑月娥宣布撤回《逃犯条例》修订 “四项行动”回应“五大诉求”",
-                     "overtyped":"林郑撤回《逃犯条例》修订 “四项行动”回应“五大诉求”"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49576610",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49576610"
-                  },
-                  "summary":"香港特首发表电视讲话宣布政府会撤回《逃犯条例》修订，但对其它诉求仍然坚持之前的判断。",
-                  "timestamp":1567595768000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108607878",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/1573E/production/_108607878_hi055960472_01.jpg",
-                     "path":"/cpsprodpb/1573E/production/_108607878_hi055960472_01.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"香港特首林郑月娥",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49576610",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"观点：现代民主的缺陷——短视近利漠视未来"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49563251",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49563251"
-                  },
-                  "summary":"“下一场民主革命将是为后代争取权益、停止掠夺未来资源的革命，它很可能已经出现在政治地平线上。”",
-                  "timestamp":1567544532000,
-                  "byline":{
-                     "name":"罗曼·克兹纳里奇",
-                     "title":"（Roman Krznaric）",
-                     "persons":[
-                        {
-                           "name":"友义",
-                           "function":"BBC中文记者"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
-                        "categoryName":"Opinion"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"106511986",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/10D2F/production/_106511986_p073w9j0.jpg",
-                     "path":"/cpsprodpb/10D2F/production/_106511986_p073w9j0.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"抗议者",
-                     "caption":"2019年3月，一名参加国际罢工的抗议者要求更多关注气候变化（Credit: Getty Images）",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49563251",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"华为指责美国网络攻击和施压员工的大背景"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49581390",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49581390"
-                  },
-                  "summary":"中美贸易战持续一年，华为公司已经成为美中角力的一个标志。",
-                  "timestamp":1567631647000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108612097",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/134AD/production/_108612097_e2fc9a85-7218-49bb-8b04-a47147a5ccbf.jpg",
-                     "path":"/cpsprodpb/134AD/production/_108612097_e2fc9a85-7218-49bb-8b04-a47147a5ccbf.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"网络攻击",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49581390",
-                  "type":"cps"
-               },
-               {
-                  "name":"多媒体特辑：香港示威如何开出“第一枪”",
-                  "summary":"",
-                  "indexImage":{
-                     "id":"108589535",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/D15E/production/_108589535_mediaitem108582916.jpg",
-                     "path":"/cpsprodpb/D15E/production/_108589535_mediaitem108582916.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"香港示威",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "uri":"https://www.bbc.com/zhongwen/trad/extra/UK9yC4gIg9/hong-kong-protests-chinese",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1567425889000,
-                  "type":"link"
-               },
-               {
-                  "headlines":{
-                     "headline":"如何解读林郑月娥“辞职论”录音曝光"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49561247",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49561247"
-                  },
-                  "summary":"路透社早前取得林郑月娥闭门会面的录音，林郑月娥被指在录音中说，“如果可以，会选择辞职”。她没有否认录音的真确性，但指出自己从来没有向北京政府提出辞职。",
-                  "timestamp":1567502472000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        },
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108592260",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/1855/production/_108592260_hi056218292_01.jpg",
-                     "path":"/cpsprodpb/1855/production/_108592260_hi056218292_01.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"林郑月娥",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49561247",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"新闻时事 趋势动态"
+            "summary": "美国与伊朗的对峙不断升温，伊朗威胁将取消对核研发所有限制。而德黑兰指责华盛顿试图重金贿赂其船长，显示两国的暗战不断。",
+            "timestamp": 1567717614000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
             },
-            "semanticGroupName":"Also in the news"
-         },
-         {
-            "type":"section-digest",
-            "title":"Verticals",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"英国议会与政府斗法 脱欧乱局中的七大可能"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/uk-49583740",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/uk-49583740"
-                  },
-                  "summary":"历经3年、两个首相黯然离场后，英国仍不清楚脱欧的下一步会怎样？是无协议“硬脱”还是继续延迟？甚至不脱？",
-                  "timestamp":1567631537000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108615126",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/F2C7/production/_108615126_304f64be-d102-4698-94cd-8bd3e3901a9f.jpg",
-                     "path":"/cpsprodpb/F2C7/production/_108615126_304f64be-d102-4698-94cd-8bd3e3901a9f.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"英国议会大厦前的抗议人士",
-                     "caption":"脱欧问题，在英国社会造成很大的分歧，议会和政府也无法达成一致的意见。",
-                     "copyrightHolder":"AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "section":{
-                     "subType":"IDX",
-                     "name":"英国动态",
-                     "uri":"/zhongwen/simp/uk",
-                     "type":"simple"
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/uk-49583740",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"英国脱欧：首相威胁清党、大选背后的考量"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49554831",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49554831"
-                  },
-                  "summary":"英国议会将上演一出大戏。执政保守党的一些议员与反对党工党联手，准备通过法律迫使政府将脱欧推迟到2020年1月31日。",
-                  "timestamp":1567460040000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        },
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        },
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        },
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108577201",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/2825/production/_108577201_gettyimages-1169593839.jpg",
-                     "path":"/cpsprodpb/2825/production/_108577201_gettyimages-1169593839.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Prime Minister Boris Johnson",
-                     "caption":"BBC从内部渠道获悉，英国首相约翰逊准备在执政的保守党内实施清党。约翰逊是否准备要宣布大选？",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49554831",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"英媒：香港抗议危及习近平的国庆大派对"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/uk-49552033",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/uk-49552033"
-                  },
-                  "summary":"包括英国议员在内的观察人士，论及中国平息香港抗议浪潮的前景以及英国和国际社会该怎么应对。",
-                  "timestamp":1567460280000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108585978",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/15796/production/_108585978_7b3bf7fa-5294-4e39-b499-18967b2ae0f6.jpg",
-                     "path":"/cpsprodpb/15796/production/_108585978_7b3bf7fa-5294-4e39-b499-18967b2ae0f6.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"香港中文大学9月2日的学生集会",
-                     "caption":"香港部分学生罢课，要求政府回应诉求。",
-                     "copyrightHolder":"AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "section":{
-                     "subType":"IDX",
-                     "name":"英国动态",
-                     "uri":"/zhongwen/simp/uk",
-                     "type":"simple"
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/uk-49552033",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"意大利维苏威火山：灰烬下埋藏的古老豪宅"
-                  },
-                  "locators":{
-                     "assetUri":"/ukchina/simp/vert-cul-49582450",
-                     "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/vert-cul-49582450"
-                  },
-                  "summary":"维苏威火山爆发掩盖的不只是庞贝古城，还有一座城市也被深埋在火山灰之下长达千百年，地下到底藏有什么样的秘密？",
-                  "timestamp":1567610692000,
-                  "byline":{
-                     "name":"黛西·邓恩",
-                     "title":"（Daisy Dunn）",
-                     "persons":[
-                        {
-                           "name":"友义",
-                           "function":"BBC中文记者"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2139461b000e9dabf7",
-                           "campaignName":"WS - Inspire me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108613146",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/FA83/production/_108613146_c98efb21-0e62-4102-943b-7621917d5162.jpg",
-                     "path":"/cpsprodpb/FA83/production/_108613146_c98efb21-0e62-4102-943b-7621917d5162.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"重建后的帕皮里别墅（Credit: Museo Archeologico Virtuale di Ercolano）",
-                     "copyrightHolder":"Museo Archeologico Virtuale di Ercolano"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "site":{
-                     "subType":"site",
-                     "name":"BBC英伦网",
-                     "uri":"/ukchina/simp",
-                     "type":"simple"
-                  },
-                  "id":"urn:bbc:ares::asset:ukchina/simp/vert-cul-49582450",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"日本“杀海豚节”与恢复商业捕鲸的持久争议"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49567637",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49567637"
-                  },
-                  "summary":"日本又在沿海小镇太地町开始年度海豚狩猎。不久前，日本还不顾国际批评恢复商业捕鲸。",
-                  "timestamp":1567544617000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108578546",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/FC4B/production/_108578546_mediaitem83131618.jpg",
-                     "path":"/cpsprodpb/FC4B/production/_108578546_mediaitem83131618.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Dolphins are rounded up in Taiji, Japan (Jan 2014)",
-                     "caption":"每年从9 月1日开始的半年里，日本南部和歌山渔村太地町就会举行名为\"海豚节\"的活动，大规模猎杀海豚，受到国际批评。",
-                     "copyrightHolder":"AFP"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49567637",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"关于人类灭亡的几大末世猜想"
-                  },
-                  "locators":{
-                     "assetUri":"/ukchina/simp/vert-fut-49547559",
-                     "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/vert-fut-49547559"
-                  },
-                  "summary":"人类文明能否传之千秋万代？如果想要代代薪火相传数十亿年，那人类必须面对几个似乎束手无策的问题，包括太阳的死亡。",
-                  "timestamp":1567393859000,
-                  "byline":{
-                     "name":"安德斯·桑德伯格",
-                     "title":"Anders Sandberg",
-                     "persons":[
-                        {
-                           "name":"Dan Egan",
-                           "function":""
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108578500",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/024B/production/_108578500_3.jpg",
-                     "path":"/cpsprodpb/024B/production/_108578500_3.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"。",
-                     "caption":"太阳散发的光热越来越强，会给我们的后代造成严重的生存问题。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "site":{
-                     "subType":"site",
-                     "name":"BBC英伦网",
-                     "uri":"/ukchina/simp",
-                     "type":"simple"
-                  },
-                  "id":"urn:bbc:ares::asset:ukchina/simp/vert-fut-49547559",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"同性婚姻：美国1957年私秘婚礼影像",
-                     "overtyped":"美国同性婚礼之谜：私密影像主角今何在？"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49555346",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49555346"
-                  },
-                  "summary":"1957年，美国可能有一对同性伴侣在亲友面前举行秘密婚礼。如果这对伴侣被找到，将写下同志权利历史的新篇章。",
-                  "timestamp":1567481588000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                        "categoryName":"News"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108591735",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/D1D7/production/_108591735_gaywedding6.jpg",
-                     "path":"/cpsprodpb/D1D7/production/_108591735_gaywedding6.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"Two grooms at their wedding",
-                     "copyrightHolder":"ONE Archives at USC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49555346",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"为什么一些韩国女性选择不穿胸罩"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49591290",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49591290"
-                  },
-                  "summary":"有韩国女性开始在网上分享她们不穿内衣的照片。但背后的原因是什么？",
-                  "timestamp":1567677600000,
-                  "byline":{
-                     "name":"林琳（Lara Owen） 李允宁 （Julie Yoonnyung Lee ）",
-                     "title":"BBC记者",
-                     "persons":[
-                        {
-                           "name":"Lara Owen",
-                           "function":"Women's Affairs East Asia, BBC World Service"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108286292",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/7254/production/_108286292_bra_v2_976-nc.png",
-                     "path":"/cpsprodpb/7254/production/_108286292_bra_v2_976-nc.png",
-                     "height":549,
-                     "width":976,
-                     "altText":"Graphic of a Bra",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49591290",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"哪些地球物种能逃过气候变化而劫后余生"
-                  },
-                  "locators":{
-                     "assetUri":"/ukchina/simp/vert-fut-49603977",
-                     "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/vert-fut-49603977"
-                  },
-                  "summary":"地球上每四个物种中就有一个面临灭绝之灾。到底哪些物种因适应性较强能逃过气候变化这一大劫 ?",
-                  "timestamp":1567746087000,
-                  "byline":{
-                     "name":"克里斯婷•罗",
-                     "title":"Christine Ro",
-                     "persons":[
-                        {
-                           "name":"Dan Egan",
-                           "function":""
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108635846",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/FD55/production/_108635846_5.jpg",
-                     "path":"/cpsprodpb/FD55/production/_108635846_5.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"。",
-                     "caption":"气候变化增加了澳大利亚树熊遭受饥饿的风险。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "site":{
-                     "subType":"site",
-                     "name":"BBC英伦网",
-                     "uri":"/ukchina/simp",
-                     "type":"simple"
-                  },
-                  "id":"urn:bbc:ares::asset:ukchina/simp/vert-fut-49603977",
-                  "type":"cps"
-               }
-            ],
-            "strapline":{
-               "name":"知识资讯 观点角度"
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108594829",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16AB1/production/_108594829_mediaitem108594825.jpg",
+              "path": "/cpsprodpb/16AB1/production/_108594829_mediaitem108594825.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Hassan Rouhani addresses the Iranian parliament in Tehran on 3 September 2019",
+              "caption": "Hassan Rouhani has said he is ready for dialogue if the US first lifts its sanctions",
+              "copyrightHolder": "EPA"
             },
-            "semanticGroupName":"Verticals"
-         },
-         {
-            "type":"feature-main",
-            "title":"Features",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"我们是否准备好一场新的性解放运动？"
-                  },
-                  "locators":{
-                     "assetUri":"/ukchina/simp/vert-fut-49582454",
-                     "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/vert-fut-49582454"
-                  },
-                  "summary":"如果性行为的目的不再是繁衍后代，那么在不久的将来，我们对性的态度可能会出现快速的变化，性还有什么意义？",
-                  "timestamp":1567872346000,
-                  "byline":{
-                     "name":"布兰登·安布罗西诺",
-                     "title":"（Brandon Ambrosino）",
-                     "persons":[
-                        {
-                           "name":"友义",
-                           "function":"BBC中文记者"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2139461b000e9dabf7",
-                           "campaignName":"WS - Inspire me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108613301",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/285B/production/_108613301_04081a0f-56a4-4e18-8cfe-bf0880401f45.jpg",
-                     "path":"/cpsprodpb/285B/production/_108613301_04081a0f-56a4-4e18-8cfe-bf0880401f45.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"（Credit：Getty Images）",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "site":{
-                     "subType":"site",
-                     "name":"BBC英伦网",
-                     "uri":"/ukchina/simp",
-                     "type":"simple"
-                  },
-                  "id":"urn:bbc:ares::asset:ukchina/simp/vert-fut-49582454",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"中国换脸视频应用走红同时引发安全忧虑"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49589980",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49589980"
-                  },
-                  "summary":"名为“ZAO-逢脸造戏”的换脸APP让用户可以轻松将自己替换为影视作品当中的人物，风靡网络却也引起巨大争议。",
-                  "timestamp":1567766812000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108601684",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/BDE2/production/_108601684_0008.jpg",
-                     "path":"/cpsprodpb/BDE2/production/_108601684_0008.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"A still prom an online promotional video",
-                     "caption":"Could this app be a threat to China's national security?",
-                     "copyrightHolder":"MOMO"
-                  },
-                  "imageThumbnail":{
-                     "id":"108602186",
-                     "subType":"index-thumbnail",
-                     "href":"http://c.files.bbci.co.uk/10A18/production/_108602186_0008.jpg",
-                     "path":"/cpsprodpb/10A18/production/_108602186_0008.jpg",
-                     "height":180,
-                     "width":320,
-                     "altText":"A still prom an online promotional video",
-                     "caption":"Could this app be a threat to China's national security?",
-                     "copyrightHolder":"MOMO"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49589980",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"香港人心中的“光复香港，时代革命”"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/chinese-news-49608617",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49608617"
-                  },
-                  "summary":"“光复香港，时代革命”一句口号响遍香港各处的抗议现场，香港人到底如何理解这句口号？",
-                  "timestamp":1567837644000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mmjxz",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"香港人心中的“光复香港，时代革命”",
-                     "synopses":{
-                        "short":"香港抗议：港人心中的“光复香港，时代革命”",
-                        "long":"“光复香港，时代革命”最初是香港本土派政治人物梁天琦参选立法会新界东地方选区补选时的竞选口号，2016年首次出现。随着近三个月来香港反对修订《逃犯条例》运动不断升级，这句口号重新出现。香港人在各种示威场合中高喊这句口号，或在不同地方涂鸦，受到关注。\n\n“光复”是要光复到哪里？“革命”又意味着什么？BBC中文访问了不同背景的香港人，看他们如何理解这句口号。\n\n采访／制片：斯影、李翰文",
-                        "medium":"“光复香港，时代革命”一句口号响遍香港各处的抗议现场，香港人到底如何理解这句口号？"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mmrfg.jpg",
-                     "embedding":true,
-                     "advertising":true,
-                     "caption":"香港人到底如何理解“光复香港，时代革命”这句口号？",
-                     "versions":[
-                        {
-                           "versionId":"p07mmjy2",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":173,
-                           "durationISO8601":"PT2M53S",
-                           "warnings":{
-
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567768755000
-                        }
-                     ],
-                     "imageCopyright":"Getty Images"
-                  },
-                  "indexImage":{
-                     "id":"108640565",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/DCB8/production/_108640565_58e93d93-56a8-4883-973a-34ad26b4f03e.jpg",
-                     "path":"/cpsprodpb/DCB8/production/_108640565_58e93d93-56a8-4883-973a-34ad26b4f03e.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"身穿防护装备的香港“反送中”示威者在立法会大楼外与警察对峙（2/9/2019）",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/chinese-news-49608617",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"人类建筑的未来趋势：采用木质建材对抗气候暖化"
-                  },
-                  "locators":{
-                     "assetUri":"/ukchina/simp/vert-fut-49417697",
-                     "cpsUrn":"urn:bbc:content:assetUri:ukchina/simp/vert-fut-49417697"
-                  },
-                  "summary":"木质建筑会有助于人类回收大气中的碳排放，然后将碳储存于我们的住家和办公楼。木结构建筑这一功能让一些人深坚信这就是人类建筑的未来趋势。",
-                  "timestamp":1567930740000,
-                  "byline":{
-                     "name":"蒂姆·史沫德莱",
-                     "title":"（Tim Smedley）",
-                     "persons":[
-                        {
-                           "name":"서명진",
-                           "function":"BBC 코리아"
-                        }
-                     ]
-                  },
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e1739461b000e9dabf6",
-                           "campaignName":"WS - CS"
-                        },
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108387999",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/1868A/production/_108387999_gettyimages-857510092_01.jpg",
-                     "path":"/cpsprodpb/1868A/production/_108387999_gettyimages-857510092_01.jpg",
-                     "height":576,
-                     "width":1024,
-                     "altText":"木质建筑会有助于人类回收大气中的碳排放，然后将碳储存于我们的住家和办公楼",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "site":{
-                     "subType":"site",
-                     "name":"BBC英伦网",
-                     "uri":"/ukchina/simp",
-                     "type":"simple"
-                  },
-                  "id":"urn:bbc:ares::asset:ukchina/simp/vert-fut-49417697",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"尼斯湖水怪有新说法 科学家称可能是巨鳗"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/uk-49612367",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/uk-49612367"
-                  },
-                  "summary":"尼斯湖水怪是苏格兰最古老和经久不衰的神话传说之一。多少年来，人们对水怪曾有种种传说，看看你都知道哪些？",
-                  "timestamp":1567804154000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                        "categoryName":"Explainer"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3139461b000e9dabf9",
-                           "campaignName":"WS - Divert me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108643651",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/3D12/production/_108643651_f9f16222-05b7-4205-98d3-55af44b107cc.jpg",
-                     "path":"/cpsprodpb/3D12/production/_108643651_f9f16222-05b7-4205-98d3-55af44b107cc.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"尼斯湖水怪",
-                     "caption":"尼斯湖水怪在1930年代盛传一时。",
-                     "copyrightHolder":"Getty Images"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "section":{
-                     "subType":"IDX",
-                     "name":"英国动态",
-                     "uri":"/zhongwen/simp/uk",
-                     "type":"simple"
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/uk-49612367",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"巨型陨星擦肩而过 美欧研究如何防止地球被撞"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49610837",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49610837"
-                  },
-                  "summary":"埃菲尔铁塔大小的陨星今天掠过地球，如果撞击，将形成直径5千米的陨坑。如果大型陨星真的飞向地球，有什么防御办法呢？",
-                  "timestamp":1567775016000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108642342",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/5F04/production/_108642342_9f3f0a86-bead-4f65-97d1-dbac995bf2db.jpg",
-                     "path":"/cpsprodpb/5F04/production/_108642342_9f3f0a86-bead-4f65-97d1-dbac995bf2db.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"陨星",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49610837",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"美食与美颜 吃胶原蛋白能保青春抗皱纹吗？"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/science-49563979",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/science-49563979"
-                  },
-                  "summary":"既享受了美食，还有美容效果，这样两全其美的好东西，想吃吗？",
-                  "timestamp":1567766689000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
-                        "categoryName":"Fact Check"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108594924",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/A7C5/production/_108594924_4363ab74-fe82-454b-bf0b-be4fd8325936.jpg",
-                     "path":"/cpsprodpb/A7C5/production/_108594924_4363ab74-fe82-454b-bf0b-be4fd8325936.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"模特",
-                     "caption":"为了容颜不老青春永驻，人类一直在想方设法对抗岁月的痕迹。",
-                     "copyrightHolder":"Science Photo Library"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/science-49563979",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "headline":"商业捕鲸恢复：走进日本屠宰鲸鱼现场"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-49609167",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-49609167"
-                  },
-                  "summary":"沉寂33年，日本无视国际反对重启商业捕鲸。宰鲸鱼和吃鲸鱼的人都有什么想法？",
-                  "timestamp":1567767573000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                        "categoryName":"Feature"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e3739461b000e9dabfa",
-                           "campaignName":"WS - Give me perspective"
-                        }
-                     ]
-                  },
-                  "cpsType":"MAP",
-                  "media":{
-                     "id":"p07mmgw5",
-                     "subType":"clip",
-                     "format":"video",
-                     "title":"商业捕鲸恢复：走进日本屠宰鲸鱼现场",
-                     "synopses":{
-                        "short":"商业捕鲸恢复：走进日本屠宰鲸鱼现场",
-                        "long":"沉寂33年，日本无视国际反对重启商业捕鲸。有人声言这是延续传统，但吃鲸鱼的人在日本所剩无几。\n\n宰鲸鱼和吃鲸鱼的人都有什么想法？BBC记者到首都东京以南的千叶县和田浦了解。",
-                        "medium":"沉寂33年，日本无视国际反对重启商业捕鲸。宰鲸鱼和吃鲸鱼的人都有什么想法？"
-                     },
-                     "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07mpl4n.jpg",
-                     "embedding":true,
-                     "advertising":true,
-                     "caption":"位于东京以南的千叶县和田浦是其中一个捕鲸渔民集散地。",
-                     "versions":[
-                        {
-                           "versionId":"p07mmgw9",
-                           "types":[
-                              "Original"
-                           ],
-                           "duration":124,
-                           "durationISO8601":"PT2M4S",
-                           "warnings":{
-                              "short":"Contains some upsetting scenes.",
-                              "long":"Contains some scenes which some viewers may find upsetting."
-                           },
-                           "availableTerritories":{
-                              "uk":true,
-                              "nonUk":true
-                           },
-                           "availableFrom":1567766873000
-                        }
-                     ],
-                     "imageCopyright":"BBC"
-                  },
-                  "indexImage":{
-                     "id":"108640567",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/12AD8/production/_108640567_whale-processed.jpg",
-                     "path":"/cpsprodpb/12AD8/production/_108640567_whale-processed.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"日本千叶县和田浦一处鱼市场一条待宰鲸鱼",
-                     "copyrightHolder":"BBC"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-49609167",
-                  "type":"cps"
-               }
-            ],
-            "semanticGroupName":"Features"
-         },
-         {
-            "type":"podcast-promotion",
-            "title":"Podcasts",
-            "items":[
-               {
-                  "name":"“时事一周”（粤语）",
-                  "summary":"最新节目播客- 时事一周 2013-03--05",
-                  "uri":"http://www.bbc.com/zhongwen/simp/institutional-38228429",
-                  "contentType":"Podcast",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1481007686000,
-                  "type":"link"
-               }
-            ],
-            "strapline":{
-               "name":"播客精选",
-               "type":"LINK",
-               "links":{
-                  "highweb":"http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml",
-                  "desktop":"http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml",
-                  "mobile":"http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml",
-                  "enhancedmobile":"http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml"
-               }
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
             },
-            "semanticGroupName":"Podcasts"
-         },
-         {
-            "type":"featured-site-top-stories",
-            "title":"BBC Academy",
-            "items":[
-               {
-                  "name":"广播",
-                  "summary":"在当今的数码时代，广播仍然拥有庞大的听众群。但是，要继续吸引听众，我们需要哪些必备的技能呢？",
-                  "indexImage":{
-                     "id":"108222179",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/17B62/production/_108222179_capture.jpg",
-                     "path":"/cpsprodpb/17B62/production/_108222179_capture.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"广播",
-                     "copyrightHolder":"BBC"
-                  },
-                  "uri":"https://www.bbc.co.uk/academy/zh-hans/collections/radio-zh-hans",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1561787622000,
-                  "type":"link"
-               },
-               {
-                  "name":"数字新闻",
-                  "summary":"新闻的制作和消费日益数码化，您拥有足够的知识和工具来适应这一趋势吗？",
-                  "indexImage":{
-                     "id":"108204746",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/FCE4/production/_108204746_capture.jpg",
-                     "path":"/cpsprodpb/FCE4/production/_108204746_capture.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"数字新闻",
-                     "copyrightHolder":"BBC"
-                  },
-                  "uri":"https://www.bbc.co.uk/academy/zh-hans/collections/digital-journalism-zh-hans",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1565064106000,
-                  "type":"link"
-               },
-               {
-                  "name":"电视",
-                  "summary":"如果能够有效使用电视这种媒介，就可以用声音和图像传送大量的信息。",
-                  "indexImage":{
-                     "id":"108204749",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/17214/production/_108204749_capture2.jpg",
-                     "path":"/cpsprodpb/17214/production/_108204749_capture2.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"电视",
-                     "copyrightHolder":"BBC"
-                  },
-                  "uri":"https://www.bbc.co.uk/academy/zh-hans/collections/television-zh-hans",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1565064260000,
-                  "type":"link"
-               },
-               {
-                  "name":"英汉金融市场词汇",
-                  "summary":"有关金融市场的英文词汇繁多，而且中港台之间差异甚大。 BBC为你编撰详尽对照表，方便使用。",
-                  "indexImage":{
-                     "id":"107785438",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/14602/production/_107785438_capture.jpg",
-                     "path":"/cpsprodpb/14602/production/_107785438_capture.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"英汉金融市场词汇",
-                     "copyrightHolder":"BBC"
-                  },
-                  "uri":"https://www.bbc.co.uk/academy/zh-hans/collections/economic-vocabulary-zh-hans",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1562558808000,
-                  "type":"link"
-               },
-               {
-                  "name":"工作环境",
-                  "summary":"新闻工作需要健全的工作环境，同事间的关系以及对记者身心健康的关注，都很重要。",
-                  "indexImage":{
-                     "id":"107555919",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/16733/production/_107555919_capture.jpg",
-                     "path":"/cpsprodpb/16733/production/_107555919_capture.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"工作环境",
-                     "copyrightHolder":"BBC"
-                  },
-                  "uri":"https://www.bbc.co.uk/academy/zh-hans/collections/working-in-media-zh-hans",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1561604747000,
-                  "type":"link"
-               }
-            ],
-            "strapline":{
-               "name":"BBC学院",
-               "type":"LINK",
-               "links":{
-                  "highweb":"http://www.bbc.co.uk/academy/zh-hans",
-                  "desktop":"http://www.bbc.co.uk/academy/zh-hans",
-                  "mobile":"http://www.bbc.co.uk/academy/zh-hans",
-                  "enhancedmobile":"http://www.bbc.co.uk/academy/zh-hans"
-               }
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49595300",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美国智库专家：俄中分裂即将到来 华盛顿不必担心",
+              "overtyped": "美国智库：俄中分裂即将到来 华盛顿不必担心"
             },
-            "semanticGroupName":"College of journalism"
-         },
-         {
-            "type":"section-digest",
-            "title":"Showcase 5",
-            "items":[
-               {
-                  "name":"代理服务器和翻墙软件",
-                  "summary":"如你在登录BBC中文网时遭遇困难，请试用代理服务器。",
-                  "indexImage":{
-                     "id":"92846937",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/120EC/production/_92846937_b35e5cf4-b7ed-4c79-b556-7d4aaa020e63.jpg",
-                     "path":"/cpsprodpb/120EC/production/_92846937_b35e5cf4-b7ed-4c79-b556-7d4aaa020e63.jpg",
-                     "height":360,
-                     "width":640,
-                     "altText":"Screen",
-                     "copyrightHolder":"BBC"
-                  },
-                  "uri":"http://www.bbc.com/zhongwen/simp/institutional/2013/02/130215_proxy_notice.shtml",
-                  "contentType":"Text",
-                  "assetTypeCode":"PRO",
-                  "timestamp":1481007769000,
-                  "type":"link"
-               }
-            ],
-            "strapline":{
-               "name":"浏览协助"
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49568437",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49568437"
             },
-            "semanticGroupName":"Showcase 5"
-         },
-         {
-            "type":"useful-links",
-            "title":"Useful links",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"BBC中文合作伙伴"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/institutional-39504015",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/institutional-39504015"
-                  },
-                  "summary":"BBC中文希望世界各地伙伴合作，将BBC中文丰富的多媒体内容推广到合作伙伴相应平台，供更多网友享用。",
-                  "timestamp":1491392730000,
-                  "cpsType":"STY",
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/institutional-39504015",
-                  "type":"cps"
-               }
-            ],
-            "semanticGroupName":"Useful links"
-         },
-         {
-            "type":"responsive-cluster",
-            "title":"bottom slot",
-            "items":[
-               {
-                  "headlines":{
-                     "headline":"中资与英国最大旅行社谈判7.5亿英镑收购协议"
-                  },
-                  "locators":{
-                     "assetUri":"/zhongwen/simp/world-48965235",
-                     "cpsUrn":"urn:bbc:content:assetUri:zhongwen/simp/world-48965235"
-                  },
-                  "summary":"英国最大旅行社运营商托马斯·库克集团陷入财务困境，正与有关银行和其最大的股东中资复星国际谈判。",
-                  "timestamp":1562969523000,
-                  "passport":{
-                     "category":{
-                        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                        "categoryName":"Analysis"
-                     },
-                     "campaigns":[
-                        {
-                           "campaignId":"5a988e2939461b000e9dabf8",
-                           "campaignName":"WS - Educate me"
-                        },
-                        {
-                           "campaignId":"5a988e3e39461b000e9dabfb",
-                           "campaignName":"WS - Keep me on trend"
-                        },
-                        {
-                           "campaignId":"5a988e4739461b000e9dabfc",
-                           "campaignName":"WS - Update me"
-                        }
-                     ]
-                  },
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"107845863",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/8FF6/production/_107845863_da1pzzu4.jpg",
-                     "path":"/cpsprodpb/8FF6/production/_107845863_da1pzzu4.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"Thomas Cook plane",
-                     "caption":"目前的托马斯库克集团是伦敦上市公司，旗下业务广泛，涵盖酒店、航空、旅行社等，是全球最大组团及配套旅游公司。",
-                     "copyrightHolder":"Reuters"
-                  },
-                  "options":{
-                     "isBreakingNews":false,
-                     "isFactCheck":false
-                  },
-                  "overtypedSummary":" ",
-                  "id":"urn:bbc:ares::asset:zhongwen/simp/world-48965235",
-                  "type":"cps"
-               }
-            ],
-            "semanticGroupName":"Cluster 1"
-         }
-      ]
-   },
-   "promo":{
-      "subType":"IDX",
-      "name":"主页",
-      "uri":"/zhongwen/simp/front_page",
-      "id":"urn:bbc:ares::index:zhongwen/simp/front_page/desktop/domestic",
-      "type":"simple"
-   },
-   "relatedContent":{
-      "section":{
-         "subType":"index",
-         "name":"主页",
-         "uri":"/zhongwen/simp/front_page",
-         "type":"simple"
+            "summary": "中国军队派出1600人，30架先进战机参加在俄罗斯举行的多国军演，西方政界人士越来越担心莫斯科与北京关系加强，但也有分析认为俄中分裂即将到来。",
+            "timestamp": 1567544415000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108604516",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F064/production/_108604516_mediaitem108407248.jpg",
+              "path": "/cpsprodpb/F064/production/_108604516_mediaitem108407248.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "习近平和普京",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49568437",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "黄之锋访台 台湾对政治庇护仍有所保留"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49576730",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49576730"
+            },
+            "summary": "黄之锋呼吁台湾出台《难民法》，但包括蔡英文在内，台湾各界对此反应谨慎。",
+            "timestamp": 1567584342000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108607855",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DA3E/production/_108607855_huang_cna4.jpg",
+              "path": "/cpsprodpb/DA3E/production/_108607855_huang_cna4.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "黄之锋",
+              "caption": "黄之锋赴台湾进行两天的会面及演讲行程",
+              "copyrightHolder": "CNA"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49576730",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Zara国泰航空卷入香港抗议 “在商无法言商”的香港企业",
+              "overtyped": "Zara国泰航空卷入抗议  香港企业“在商无法言商”"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/business-49598467",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/business-49598467"
+            },
+            "summary": "香港很多企业，因在对待抗议问题上的不同立场，未来如何弥补与消费者之间产生的裂痕，成为一大难题。",
+            "timestamp": 1567717380000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108606456",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FFB4/production/_108606456_gettyimages-1156688177.jpg",
+              "path": "/cpsprodpb/FFB4/production/_108606456_gettyimages-1156688177.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "店铺",
+              "caption": "Zara在香港有14家店铺",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/business-49598467",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "林郑月娥宣布撤回《逃犯条例》修订 “四项行动”回应“五大诉求”",
+              "overtyped": "林郑撤回《逃犯条例》修订 “四项行动”回应“五大诉求”"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49576610",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49576610"
+            },
+            "summary": "香港特首发表电视讲话宣布政府会撤回《逃犯条例》修订，但对其它诉求仍然坚持之前的判断。",
+            "timestamp": 1567595768000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108607878",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1573E/production/_108607878_hi055960472_01.jpg",
+              "path": "/cpsprodpb/1573E/production/_108607878_hi055960472_01.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "香港特首林郑月娥",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49576610",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "观点：现代民主的缺陷——短视近利漠视未来"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49563251",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49563251"
+            },
+            "summary": "“下一场民主革命将是为后代争取权益、停止掠夺未来资源的革命，它很可能已经出现在政治地平线上。”",
+            "timestamp": 1567544532000,
+            "byline": {
+              "name": "罗曼·克兹纳里奇",
+              "title": "（Roman Krznaric）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+                "categoryName": "Opinion"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "106511986",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10D2F/production/_106511986_p073w9j0.jpg",
+              "path": "/cpsprodpb/10D2F/production/_106511986_p073w9j0.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "抗议者",
+              "caption": "2019年3月，一名参加国际罢工的抗议者要求更多关注气候变化（Credit: Getty Images）",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49563251",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "华为指责美国网络攻击和施压员工的大背景"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49581390",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49581390"
+            },
+            "summary": "中美贸易战持续一年，华为公司已经成为美中角力的一个标志。",
+            "timestamp": 1567631647000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108612097",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/134AD/production/_108612097_e2fc9a85-7218-49bb-8b04-a47147a5ccbf.jpg",
+              "path": "/cpsprodpb/134AD/production/_108612097_e2fc9a85-7218-49bb-8b04-a47147a5ccbf.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "网络攻击",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49581390",
+            "type": "cps"
+          },
+          {
+            "name": "多媒体特辑：香港示威如何开出“第一枪”",
+            "summary": "",
+            "indexImage": {
+              "id": "108589535",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D15E/production/_108589535_mediaitem108582916.jpg",
+              "path": "/cpsprodpb/D15E/production/_108589535_mediaitem108582916.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "香港示威",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "https://www.bbc.com/zhongwen/trad/extra/UK9yC4gIg9/hong-kong-protests-chinese",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1567425889000,
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "headline": "如何解读林郑月娥“辞职论”录音曝光"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49561247",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49561247"
+            },
+            "summary": "路透社早前取得林郑月娥闭门会面的录音，林郑月娥被指在录音中说，“如果可以，会选择辞职”。她没有否认录音的真确性，但指出自己从来没有向北京政府提出辞职。",
+            "timestamp": 1567502472000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108592260",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1855/production/_108592260_hi056218292_01.jpg",
+              "path": "/cpsprodpb/1855/production/_108592260_hi056218292_01.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "林郑月娥",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49561247",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "新闻时事 趋势动态"
+        },
+        "semanticGroupName": "Also in the news"
       },
-      "site":{
-         "subType":"site",
-         "name":"BBC 中文网",
-         "uri":"/zhongwen/simp",
-         "type":"simple"
+      {
+        "type": "section-digest",
+        "title": "Verticals",
+        "items": [
+          {
+            "headlines": {
+              "headline": "英国议会与政府斗法 脱欧乱局中的七大可能"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/uk-49583740",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/uk-49583740"
+            },
+            "summary": "历经3年、两个首相黯然离场后，英国仍不清楚脱欧的下一步会怎样？是无协议“硬脱”还是继续延迟？甚至不脱？",
+            "timestamp": 1567631537000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108615126",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/F2C7/production/_108615126_304f64be-d102-4698-94cd-8bd3e3901a9f.jpg",
+              "path": "/cpsprodpb/F2C7/production/_108615126_304f64be-d102-4698-94cd-8bd3e3901a9f.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "英国议会大厦前的抗议人士",
+              "caption": "脱欧问题，在英国社会造成很大的分歧，议会和政府也无法达成一致的意见。",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "英国动态",
+              "uri": "/zhongwen/simp/uk",
+              "type": "simple"
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/uk-49583740",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英国脱欧：首相威胁清党、大选背后的考量"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49554831",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49554831"
+            },
+            "summary": "英国议会将上演一出大戏。执政保守党的一些议员与反对党工党联手，准备通过法律迫使政府将脱欧推迟到2020年1月31日。",
+            "timestamp": 1567460040000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                },
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108577201",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/2825/production/_108577201_gettyimages-1169593839.jpg",
+              "path": "/cpsprodpb/2825/production/_108577201_gettyimages-1169593839.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Prime Minister Boris Johnson",
+              "caption": "BBC从内部渠道获悉，英国首相约翰逊准备在执政的保守党内实施清党。约翰逊是否准备要宣布大选？",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49554831",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "英媒：香港抗议危及习近平的国庆大派对"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/uk-49552033",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/uk-49552033"
+            },
+            "summary": "包括英国议员在内的观察人士，论及中国平息香港抗议浪潮的前景以及英国和国际社会该怎么应对。",
+            "timestamp": 1567460280000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108585978",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15796/production/_108585978_7b3bf7fa-5294-4e39-b499-18967b2ae0f6.jpg",
+              "path": "/cpsprodpb/15796/production/_108585978_7b3bf7fa-5294-4e39-b499-18967b2ae0f6.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "香港中文大学9月2日的学生集会",
+              "caption": "香港部分学生罢课，要求政府回应诉求。",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "英国动态",
+              "uri": "/zhongwen/simp/uk",
+              "type": "simple"
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/uk-49552033",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "意大利维苏威火山：灰烬下埋藏的古老豪宅"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-cul-49582450",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-cul-49582450"
+            },
+            "summary": "维苏威火山爆发掩盖的不只是庞贝古城，还有一座城市也被深埋在火山灰之下长达千百年，地下到底藏有什么样的秘密？",
+            "timestamp": 1567610692000,
+            "byline": {
+              "name": "黛西·邓恩",
+              "title": "（Daisy Dunn）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108613146",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FA83/production/_108613146_c98efb21-0e62-4102-943b-7621917d5162.jpg",
+              "path": "/cpsprodpb/FA83/production/_108613146_c98efb21-0e62-4102-943b-7621917d5162.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "重建后的帕皮里别墅（Credit: Museo Archeologico Virtuale di Ercolano）",
+              "copyrightHolder": "Museo Archeologico Virtuale di Ercolano"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "site": {
+              "subType": "site",
+              "name": "BBC英伦网",
+              "uri": "/ukchina/simp",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-cul-49582450",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "日本“杀海豚节”与恢复商业捕鲸的持久争议"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49567637",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49567637"
+            },
+            "summary": "日本又在沿海小镇太地町开始年度海豚狩猎。不久前，日本还不顾国际批评恢复商业捕鲸。",
+            "timestamp": 1567544617000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108578546",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FC4B/production/_108578546_mediaitem83131618.jpg",
+              "path": "/cpsprodpb/FC4B/production/_108578546_mediaitem83131618.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Dolphins are rounded up in Taiji, Japan (Jan 2014)",
+              "caption": "每年从9 月1日开始的半年里，日本南部和歌山渔村太地町就会举行名为\"海豚节\"的活动，大规模猎杀海豚，受到国际批评。",
+              "copyrightHolder": "AFP"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49567637",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "关于人类灭亡的几大末世猜想"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-49547559",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-49547559"
+            },
+            "summary": "人类文明能否传之千秋万代？如果想要代代薪火相传数十亿年，那人类必须面对几个似乎束手无策的问题，包括太阳的死亡。",
+            "timestamp": 1567393859000,
+            "byline": {
+              "name": "安德斯·桑德伯格",
+              "title": "Anders Sandberg",
+              "persons": [
+                {
+                  "name": "Dan Egan",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108578500",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/024B/production/_108578500_3.jpg",
+              "path": "/cpsprodpb/024B/production/_108578500_3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "。",
+              "caption": "太阳散发的光热越来越强，会给我们的后代造成严重的生存问题。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "site": {
+              "subType": "site",
+              "name": "BBC英伦网",
+              "uri": "/ukchina/simp",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-49547559",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "同性婚姻：美国1957年私秘婚礼影像",
+              "overtyped": "美国同性婚礼之谜：私密影像主角今何在？"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49555346",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49555346"
+            },
+            "summary": "1957年，美国可能有一对同性伴侣在亲友面前举行秘密婚礼。如果这对伴侣被找到，将写下同志权利历史的新篇章。",
+            "timestamp": 1567481588000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108591735",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D1D7/production/_108591735_gaywedding6.jpg",
+              "path": "/cpsprodpb/D1D7/production/_108591735_gaywedding6.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Two grooms at their wedding",
+              "copyrightHolder": "ONE Archives at USC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49555346",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "为什么一些韩国女性选择不穿胸罩"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49591290",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49591290"
+            },
+            "summary": "有韩国女性开始在网上分享她们不穿内衣的照片。但背后的原因是什么？",
+            "timestamp": 1567677600000,
+            "byline": {
+              "name": "林琳（Lara Owen） 李允宁 （Julie Yoonnyung Lee ）",
+              "title": "BBC记者",
+              "persons": [
+                {
+                  "name": "Lara Owen",
+                  "function": "Women's Affairs East Asia, BBC World Service"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108286292",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7254/production/_108286292_bra_v2_976-nc.png",
+              "path": "/cpsprodpb/7254/production/_108286292_bra_v2_976-nc.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Graphic of a Bra",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49591290",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "哪些地球物种能逃过气候变化而劫后余生"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-49603977",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-49603977"
+            },
+            "summary": "地球上每四个物种中就有一个面临灭绝之灾。到底哪些物种因适应性较强能逃过气候变化这一大劫 ?",
+            "timestamp": 1567746087000,
+            "byline": {
+              "name": "克里斯婷•罗",
+              "title": "Christine Ro",
+              "persons": [
+                {
+                  "name": "Dan Egan",
+                  "function": ""
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108635846",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FD55/production/_108635846_5.jpg",
+              "path": "/cpsprodpb/FD55/production/_108635846_5.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "。",
+              "caption": "气候变化增加了澳大利亚树熊遭受饥饿的风险。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "site": {
+              "subType": "site",
+              "name": "BBC英伦网",
+              "uri": "/ukchina/simp",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-49603977",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "知识资讯 观点角度"
+        },
+        "semanticGroupName": "Verticals"
       },
-      "groups":[
-
-      ]
-   }
+      {
+        "type": "feature-main",
+        "title": "Features",
+        "items": [
+          {
+            "headlines": {
+              "headline": "我们是否准备好一场新的性解放运动？"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-49582454",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-49582454"
+            },
+            "summary": "如果性行为的目的不再是繁衍后代，那么在不久的将来，我们对性的态度可能会出现快速的变化，性还有什么意义？",
+            "timestamp": 1567872346000,
+            "byline": {
+              "name": "布兰登·安布罗西诺",
+              "title": "（Brandon Ambrosino）",
+              "persons": [
+                {
+                  "name": "友义",
+                  "function": "BBC中文记者"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2139461b000e9dabf7",
+                  "campaignName": "WS - Inspire me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108613301",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/285B/production/_108613301_04081a0f-56a4-4e18-8cfe-bf0880401f45.jpg",
+              "path": "/cpsprodpb/285B/production/_108613301_04081a0f-56a4-4e18-8cfe-bf0880401f45.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "（Credit：Getty Images）",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "site": {
+              "subType": "site",
+              "name": "BBC英伦网",
+              "uri": "/ukchina/simp",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-49582454",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "中国换脸视频应用走红同时引发安全忧虑"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49589980",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49589980"
+            },
+            "summary": "名为“ZAO-逢脸造戏”的换脸APP让用户可以轻松将自己替换为影视作品当中的人物，风靡网络却也引起巨大争议。",
+            "timestamp": 1567766812000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108601684",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BDE2/production/_108601684_0008.jpg",
+              "path": "/cpsprodpb/BDE2/production/_108601684_0008.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A still prom an online promotional video",
+              "caption": "Could this app be a threat to China's national security?",
+              "copyrightHolder": "MOMO"
+            },
+            "imageThumbnail": {
+              "id": "108602186",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/10A18/production/_108602186_0008.jpg",
+              "path": "/cpsprodpb/10A18/production/_108602186_0008.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "A still prom an online promotional video",
+              "caption": "Could this app be a threat to China's national security?",
+              "copyrightHolder": "MOMO"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49589980",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "香港人心中的“光复香港，时代革命”"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/chinese-news-49608617",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/chinese-news-49608617"
+            },
+            "summary": "“光复香港，时代革命”一句口号响遍香港各处的抗议现场，香港人到底如何理解这句口号？",
+            "timestamp": 1567837644000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mmjxz",
+              "subType": "clip",
+              "format": "video",
+              "title": "香港人心中的“光复香港，时代革命”",
+              "synopses": {
+                "short": "香港抗议：港人心中的“光复香港，时代革命”",
+                "long": "“光复香港，时代革命”最初是香港本土派政治人物梁天琦参选立法会新界东地方选区补选时的竞选口号，2016年首次出现。随着近三个月来香港反对修订《逃犯条例》运动不断升级，这句口号重新出现。香港人在各种示威场合中高喊这句口号，或在不同地方涂鸦，受到关注。\n\n“光复”是要光复到哪里？“革命”又意味着什么？BBC中文访问了不同背景的香港人，看他们如何理解这句口号。\n\n采访／制片：斯影、李翰文",
+                "medium": "“光复香港，时代革命”一句口号响遍香港各处的抗议现场，香港人到底如何理解这句口号？"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mmrfg.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "香港人到底如何理解“光复香港，时代革命”这句口号？",
+              "versions": [
+                {
+                  "versionId": "p07mmjy2",
+                  "types": ["Original"],
+                  "duration": 173,
+                  "durationISO8601": "PT2M53S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567768755000
+                }
+              ],
+              "imageCopyright": "Getty Images"
+            },
+            "indexImage": {
+              "id": "108640565",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/DCB8/production/_108640565_58e93d93-56a8-4883-973a-34ad26b4f03e.jpg",
+              "path": "/cpsprodpb/DCB8/production/_108640565_58e93d93-56a8-4883-973a-34ad26b4f03e.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "身穿防护装备的香港“反送中”示威者在立法会大楼外与警察对峙（2/9/2019）",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/chinese-news-49608617",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "人类建筑的未来趋势：采用木质建材对抗气候暖化"
+            },
+            "locators": {
+              "assetUri": "/ukchina/simp/vert-fut-49417697",
+              "cpsUrn": "urn:bbc:content:assetUri:ukchina/simp/vert-fut-49417697"
+            },
+            "summary": "木质建筑会有助于人类回收大气中的碳排放，然后将碳储存于我们的住家和办公楼。木结构建筑这一功能让一些人深坚信这就是人类建筑的未来趋势。",
+            "timestamp": 1567930740000,
+            "byline": {
+              "name": "蒂姆·史沫德莱",
+              "title": "（Tim Smedley）",
+              "persons": [
+                {
+                  "name": "서명진",
+                  "function": "BBC 코리아"
+                }
+              ]
+            },
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e1739461b000e9dabf6",
+                  "campaignName": "WS - CS"
+                },
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108387999",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1868A/production/_108387999_gettyimages-857510092_01.jpg",
+              "path": "/cpsprodpb/1868A/production/_108387999_gettyimages-857510092_01.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "木质建筑会有助于人类回收大气中的碳排放，然后将碳储存于我们的住家和办公楼",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "site": {
+              "subType": "site",
+              "name": "BBC英伦网",
+              "uri": "/ukchina/simp",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:ukchina/simp/vert-fut-49417697",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "尼斯湖水怪有新说法 科学家称可能是巨鳗"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/uk-49612367",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/uk-49612367"
+            },
+            "summary": "尼斯湖水怪是苏格兰最古老和经久不衰的神话传说之一。多少年来，人们对水怪曾有种种传说，看看你都知道哪些？",
+            "timestamp": 1567804154000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                "categoryName": "Explainer"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3139461b000e9dabf9",
+                  "campaignName": "WS - Divert me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108643651",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3D12/production/_108643651_f9f16222-05b7-4205-98d3-55af44b107cc.jpg",
+              "path": "/cpsprodpb/3D12/production/_108643651_f9f16222-05b7-4205-98d3-55af44b107cc.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "尼斯湖水怪",
+              "caption": "尼斯湖水怪在1930年代盛传一时。",
+              "copyrightHolder": "Getty Images"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "section": {
+              "subType": "IDX",
+              "name": "英国动态",
+              "uri": "/zhongwen/simp/uk",
+              "type": "simple"
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/uk-49612367",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "巨型陨星擦肩而过 美欧研究如何防止地球被撞"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49610837",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49610837"
+            },
+            "summary": "埃菲尔铁塔大小的陨星今天掠过地球，如果撞击，将形成直径5千米的陨坑。如果大型陨星真的飞向地球，有什么防御办法呢？",
+            "timestamp": 1567775016000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108642342",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/5F04/production/_108642342_9f3f0a86-bead-4f65-97d1-dbac995bf2db.jpg",
+              "path": "/cpsprodpb/5F04/production/_108642342_9f3f0a86-bead-4f65-97d1-dbac995bf2db.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "陨星",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49610837",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "美食与美颜 吃胶原蛋白能保青春抗皱纹吗？"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/science-49563979",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/science-49563979"
+            },
+            "summary": "既享受了美食，还有美容效果，这样两全其美的好东西，想吃吗？",
+            "timestamp": 1567766689000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                "categoryName": "Fact Check"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108594924",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A7C5/production/_108594924_4363ab74-fe82-454b-bf0b-be4fd8325936.jpg",
+              "path": "/cpsprodpb/A7C5/production/_108594924_4363ab74-fe82-454b-bf0b-be4fd8325936.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "模特",
+              "caption": "为了容颜不老青春永驻，人类一直在想方设法对抗岁月的痕迹。",
+              "copyrightHolder": "Science Photo Library"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/science-49563979",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "商业捕鲸恢复：走进日本屠宰鲸鱼现场"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-49609167",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-49609167"
+            },
+            "summary": "沉寂33年，日本无视国际反对重启商业捕鲸。宰鲸鱼和吃鲸鱼的人都有什么想法？",
+            "timestamp": 1567767573000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                "categoryName": "Feature"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e3739461b000e9dabfa",
+                  "campaignName": "WS - Give me perspective"
+                }
+              ]
+            },
+            "cpsType": "MAP",
+            "media": {
+              "id": "p07mmgw5",
+              "subType": "clip",
+              "format": "video",
+              "title": "商业捕鲸恢复：走进日本屠宰鲸鱼现场",
+              "synopses": {
+                "short": "商业捕鲸恢复：走进日本屠宰鲸鱼现场",
+                "long": "沉寂33年，日本无视国际反对重启商业捕鲸。有人声言这是延续传统，但吃鲸鱼的人在日本所剩无几。\n\n宰鲸鱼和吃鲸鱼的人都有什么想法？BBC记者到首都东京以南的千叶县和田浦了解。",
+                "medium": "沉寂33年，日本无视国际反对重启商业捕鲸。宰鲸鱼和吃鲸鱼的人都有什么想法？"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mpl4n.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "位于东京以南的千叶县和田浦是其中一个捕鲸渔民集散地。",
+              "versions": [
+                {
+                  "versionId": "p07mmgw9",
+                  "types": ["Original"],
+                  "duration": 124,
+                  "durationISO8601": "PT2M4S",
+                  "warnings": {
+                    "short": "Contains some upsetting scenes.",
+                    "long": "Contains some scenes which some viewers may find upsetting."
+                  },
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true
+                  },
+                  "availableFrom": 1567766873000
+                }
+              ],
+              "imageCopyright": "BBC"
+            },
+            "indexImage": {
+              "id": "108640567",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12AD8/production/_108640567_whale-processed.jpg",
+              "path": "/cpsprodpb/12AD8/production/_108640567_whale-processed.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "日本千叶县和田浦一处鱼市场一条待宰鲸鱼",
+              "copyrightHolder": "BBC"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-49609167",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Features"
+      },
+      {
+        "type": "podcast-promotion",
+        "title": "Podcasts",
+        "items": [
+          {
+            "name": "“时事一周”（粤语）",
+            "summary": "最新节目播客- 时事一周 2013-03--05",
+            "uri": "http://www.bbc.com/zhongwen/simp/institutional-38228429",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1481007686000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "播客精选",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml",
+            "desktop": "http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml",
+            "mobile": "http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml",
+            "enhancedmobile": "http://www.bbc.co.uk/zhongwen/simp/indepth/cluster_podcasts.shtml"
+          }
+        },
+        "semanticGroupName": "Podcasts"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "BBC Academy",
+        "items": [
+          {
+            "name": "广播",
+            "summary": "在当今的数码时代，广播仍然拥有庞大的听众群。但是，要继续吸引听众，我们需要哪些必备的技能呢？",
+            "indexImage": {
+              "id": "108222179",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17B62/production/_108222179_capture.jpg",
+              "path": "/cpsprodpb/17B62/production/_108222179_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "广播",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/radio-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1561787622000,
+            "type": "link"
+          },
+          {
+            "name": "数字新闻",
+            "summary": "新闻的制作和消费日益数码化，您拥有足够的知识和工具来适应这一趋势吗？",
+            "indexImage": {
+              "id": "108204746",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/FCE4/production/_108204746_capture.jpg",
+              "path": "/cpsprodpb/FCE4/production/_108204746_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "数字新闻",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/digital-journalism-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1565064106000,
+            "type": "link"
+          },
+          {
+            "name": "电视",
+            "summary": "如果能够有效使用电视这种媒介，就可以用声音和图像传送大量的信息。",
+            "indexImage": {
+              "id": "108204749",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17214/production/_108204749_capture2.jpg",
+              "path": "/cpsprodpb/17214/production/_108204749_capture2.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "电视",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/television-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1565064260000,
+            "type": "link"
+          },
+          {
+            "name": "英汉金融市场词汇",
+            "summary": "有关金融市场的英文词汇繁多，而且中港台之间差异甚大。 BBC为你编撰详尽对照表，方便使用。",
+            "indexImage": {
+              "id": "107785438",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14602/production/_107785438_capture.jpg",
+              "path": "/cpsprodpb/14602/production/_107785438_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "英汉金融市场词汇",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/economic-vocabulary-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1562558808000,
+            "type": "link"
+          },
+          {
+            "name": "工作环境",
+            "summary": "新闻工作需要健全的工作环境，同事间的关系以及对记者身心健康的关注，都很重要。",
+            "indexImage": {
+              "id": "107555919",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16733/production/_107555919_capture.jpg",
+              "path": "/cpsprodpb/16733/production/_107555919_capture.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "工作环境",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "https://www.bbc.co.uk/academy/zh-hans/collections/working-in-media-zh-hans",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1561604747000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "BBC学院",
+          "type": "LINK",
+          "links": {
+            "highweb": "http://www.bbc.co.uk/academy/zh-hans",
+            "desktop": "http://www.bbc.co.uk/academy/zh-hans",
+            "mobile": "http://www.bbc.co.uk/academy/zh-hans",
+            "enhancedmobile": "http://www.bbc.co.uk/academy/zh-hans"
+          }
+        },
+        "semanticGroupName": "College of journalism"
+      },
+      {
+        "type": "section-digest",
+        "title": "Showcase 5",
+        "items": [
+          {
+            "name": "代理服务器和翻墙软件",
+            "summary": "如你在登录BBC中文网时遭遇困难，请试用代理服务器。",
+            "indexImage": {
+              "id": "92846937",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/120EC/production/_92846937_b35e5cf4-b7ed-4c79-b556-7d4aaa020e63.jpg",
+              "path": "/cpsprodpb/120EC/production/_92846937_b35e5cf4-b7ed-4c79-b556-7d4aaa020e63.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Screen",
+              "copyrightHolder": "BBC"
+            },
+            "uri": "http://www.bbc.com/zhongwen/simp/institutional/2013/02/130215_proxy_notice.shtml",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1481007769000,
+            "type": "link"
+          }
+        ],
+        "strapline": {
+          "name": "浏览协助"
+        },
+        "semanticGroupName": "Showcase 5"
+      },
+      {
+        "type": "useful-links",
+        "title": "Useful links",
+        "items": [
+          {
+            "headlines": {
+              "headline": "BBC中文合作伙伴"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/institutional-39504015",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/institutional-39504015"
+            },
+            "summary": "BBC中文希望世界各地伙伴合作，将BBC中文丰富的多媒体内容推广到合作伙伴相应平台，供更多网友享用。",
+            "timestamp": 1491392730000,
+            "cpsType": "STY",
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "id": "urn:bbc:ares::asset:zhongwen/simp/institutional-39504015",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Useful links"
+      },
+      {
+        "type": "responsive-cluster",
+        "title": "bottom slot",
+        "items": [
+          {
+            "headlines": {
+              "headline": "中资与英国最大旅行社谈判7.5亿英镑收购协议"
+            },
+            "locators": {
+              "assetUri": "/zhongwen/simp/world-48965235",
+              "cpsUrn": "urn:bbc:content:assetUri:zhongwen/simp/world-48965235"
+            },
+            "summary": "英国最大旅行社运营商托马斯·库克集团陷入财务困境，正与有关银行和其最大的股东中资复星国际谈判。",
+            "timestamp": 1562969523000,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              },
+              "campaigns": [
+                {
+                  "campaignId": "5a988e2939461b000e9dabf8",
+                  "campaignName": "WS - Educate me"
+                },
+                {
+                  "campaignId": "5a988e3e39461b000e9dabfb",
+                  "campaignName": "WS - Keep me on trend"
+                },
+                {
+                  "campaignId": "5a988e4739461b000e9dabfc",
+                  "campaignName": "WS - Update me"
+                }
+              ]
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107845863",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8FF6/production/_107845863_da1pzzu4.jpg",
+              "path": "/cpsprodpb/8FF6/production/_107845863_da1pzzu4.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Thomas Cook plane",
+              "caption": "目前的托马斯库克集团是伦敦上市公司，旗下业务广泛，涵盖酒店、航空、旅行社等，是全球最大组团及配套旅游公司。",
+              "copyrightHolder": "Reuters"
+            },
+            "options": {
+              "isBreakingNews": false,
+              "isFactCheck": false
+            },
+            "overtypedSummary": " ",
+            "id": "urn:bbc:ares::asset:zhongwen/simp/world-48965235",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Cluster 1"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "主页",
+    "uri": "/zhongwen/simp/front_page",
+    "id": "urn:bbc:ares::index:zhongwen/simp/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "主页",
+      "uri": "/zhongwen/simp/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 中文网",
+      "uri": "/zhongwen/simp",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

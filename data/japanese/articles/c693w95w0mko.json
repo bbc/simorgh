@@ -18,12 +18,7 @@
     },
     "tags": {},
     "version": "v1.1.0",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment"
-    ]
+    "blockTypes": ["headline", "text", "paragraph", "fragment"]
   },
   "content": {
     "model": {
@@ -70,9 +65,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "ユネスコ（国連教育科学文化機関）は毎年、人類にとって「顕著な普遍的価値」を持つ場所を世界遺産として発表している。",
-                        "attributes": [
-                          "bold"
-                        ]
+                        "attributes": ["bold"]
                       }
                     }
                   ]

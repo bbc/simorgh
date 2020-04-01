@@ -9,7 +9,7 @@ export const generateCspContext = (isAmp, isUK, isLive) => ({
   isLive,
 });
 
-export const generateScriptSrc = context => {
+export const generateScriptSrc = (context) => {
   if (context.isAmp) {
     return [
       'https://cdn.ampproject.org',
@@ -37,7 +37,7 @@ export const generateScriptSrc = context => {
   return scriptSrc;
 };
 
-export const generateImgSrc = context => {
+export const generateImgSrc = (context) => {
   let imgSrc = [
     'https://ichef.bbci.co.uk',
     'https://ping.chartbeat.net',
@@ -60,14 +60,14 @@ export const generateImgSrc = context => {
   return imgSrc;
 };
 
-const cookieOvenTld = context => {
+const cookieOvenTld = (context) => {
   if (!context.isUK) {
     return '.com';
   }
   return '.co.uk';
 };
 
-const generateCookieOvenUrls = context => {
+const generateCookieOvenUrls = (context) => {
   const cookieUrl = [`https://cookie-oven.api.bbc${cookieOvenTld(context)}`];
   if (!context.isLive) {
     cookieUrl.push(`https://cookie-oven.test.api.bbc${cookieOvenTld(context)}`);
@@ -76,7 +76,7 @@ const generateCookieOvenUrls = context => {
   return cookieUrl;
 };
 
-export const generateConnectSrc = context => {
+export const generateConnectSrc = (context) => {
   const connectSrc = [
     'https://*.akstat.io',
     'https://*.akamaihd.net',
@@ -102,7 +102,7 @@ export const generateConnectSrc = context => {
   return connectSrc.concat(generateCookieOvenUrls(context));
 };
 
-const constructCspHeader = context => ({
+const constructCspHeader = (context) => ({
   directives: {
     'default-src': ["'self'"],
     'font-src': [

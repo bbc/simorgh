@@ -150,9 +150,7 @@
                         "versions": [
                           {
                             "versionId": "p07ftj65",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 74,
                             "availableTerritories": {
                               "uk": true,

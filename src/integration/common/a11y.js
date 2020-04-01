@@ -1,5 +1,5 @@
 export default ({ skipToContentText, headlineText }) => {
-  [amp, canonical].forEach(page => {
+  [amp, canonical].forEach((page) => {
     describe(`And using ${page.platform}`, () => {
       it('I can see a skip to content link that links to the main content of the page', () => {
         const skipToContentEl = page.getByText(skipToContentText);

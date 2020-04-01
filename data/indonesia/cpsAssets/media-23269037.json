@@ -1,129 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": true,
-          "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
-          "embedding": true,
-          "format": "video",
-          "id": "p01k6msm",
-          "imageCopyright": "BBC",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
-          "subType": "clip",
-          "synopses": {
-            "short": "They may be tiny, but us humans could learn a thing or two from ants."
-          },
-          "title": "Five things ants can teach us about management",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1540218932000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 191,
-              "durationISO8601": "PT3M11S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01k6msp",
-              "warnings": {
-                "long": "Contains strong language and adult humour.",
-                "short": "Contains strong language and adult humour."
-              }
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "role": "introduction",
-          "text": "Introduction indonesian",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Foto George Harrison, Paul McCartney, Ringo Starr dan John Lennon menyeberang jalan di luar studio EMI di kawasan St John's Wood menjadi sampul album Abbey Road dan menjadi foto paling ikonik dari Fab Four ini.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Foto ini dibidik oleh mendiang fotografer asal Skotlandia Ian Macmillan yang menggunakan tangga di tengah jalan, sementara seorang polisi menutup jalan.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Keseluruhan proses hanya berlangsung 10 menit.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<italic>Italic</italic>",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<bold><italic>Bold</italic></bold>",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "indonesia.embedded_media.media_asset.23269037.page",
-        "cps_asset_id": "23269037",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph"
-      ],
-      "createdBy": "indonesia-v6",
-      "firstPublished": 1583166155000,
-      "id": "urn:bbc:ares::asset:indonesia/media-23269037",
-      "includeComments": false,
-      "language": "id",
-      "lastPublished": 1583166158000,
-      "lastUpdated": 1583166166929,
-      "locators": {
-        "assetId": "23269037",
-        "assetUri": "/indonesia/media-23269037",
-        "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-23269037",
-        "curie": "http://www.bbc.co.uk/asset/73fe5572-90dc-9244-b070-bbbb068e278e"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "timestamp": 1583166155000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "Indonesia CPS test Virus corona: Upaya menyelamatkan hewan terlantar saat wabah Covid-19 merebak",
-        "shortHeadline": "Five things ants can teach us about management"
-      },
-      "id": "urn:bbc:ares::asset:indonesia/media-23269037",
-      "language": "id",
-      "locators": {
-        "assetId": "23269037",
-        "assetUri": "/indonesia/media-23269037",
-        "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-23269037",
-        "curie": "http://www.bbc.co.uk/asset/73fe5572-90dc-9244-b070-bbbb068e278e"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": true,
         "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
         "embedding": true,
@@ -147,9 +25,7 @@
             },
             "duration": 191,
             "durationISO8601": "PT3M11S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01k6msp",
             "warnings": {
               "long": "Contains strong language and adult humour.",
@@ -158,26 +34,143 @@
           }
         ]
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Introduction indonesian",
+        "type": "paragraph"
       },
-      "summary": "indonesia",
-      "timestamp": 1583166155000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/indonesia/media"
+      {
+        "markupType": "plain_text",
+        "text": "Foto George Harrison, Paul McCartney, Ringo Starr dan John Lennon menyeberang jalan di luar studio EMI di kawasan St John's Wood menjadi sampul album Abbey Road dan menjadi foto paling ikonik dari Fab Four ini.",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "BBC Indonesia",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/indonesia"
+      {
+        "markupType": "plain_text",
+        "text": "Foto ini dibidik oleh mendiang fotografer asal Skotlandia Ian Macmillan yang menggunakan tangga di tengah jalan, sementara seorang polisi menutup jalan.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Keseluruhan proses hanya berlangsung 10 menit.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<italic>Italic</italic>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold><italic>Bold</italic></bold>",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "indonesia.embedded_media.media_asset.23269037.page",
+      "cps_asset_id": "23269037",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "indonesia-v6",
+    "firstPublished": 1583166155000,
+    "id": "urn:bbc:ares::asset:indonesia/media-23269037",
+    "includeComments": false,
+    "language": "id",
+    "lastPublished": 1583166158000,
+    "lastUpdated": 1583166166929,
+    "locators": {
+      "assetId": "23269037",
+      "assetUri": "/indonesia/media-23269037",
+      "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-23269037",
+      "curie": "http://www.bbc.co.uk/asset/73fe5572-90dc-9244-b070-bbbb068e278e"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1583166155000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Indonesia CPS test Virus corona: Upaya menyelamatkan hewan terlantar saat wabah Covid-19 merebak",
+      "shortHeadline": "Five things ants can teach us about management"
+    },
+    "id": "urn:bbc:ares::asset:indonesia/media-23269037",
+    "language": "id",
+    "locators": {
+      "assetId": "23269037",
+      "assetUri": "/indonesia/media-23269037",
+      "cpsUrn": "urn:bbc:content:assetUri:indonesia/media-23269037",
+      "curie": "http://www.bbc.co.uk/asset/73fe5572-90dc-9244-b070-bbbb068e278e"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+      "embedding": true,
+      "format": "video",
+      "id": "p01k6msm",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "They may be tiny, but us humans could learn a thing or two from ants."
+      },
+      "title": "Five things ants can teach us about management",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1540218932000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 191,
+          "durationISO8601": "PT3M11S",
+          "types": ["Original"],
+          "versionId": "p01k6msp",
+          "warnings": {
+            "long": "Contains strong language and adult humour.",
+            "short": "Contains strong language and adult humour."
+          }
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "indonesia",
+    "timestamp": 1583166155000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/indonesia/media"
+    },
+    "site": {
+      "name": "BBC Indonesia",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/indonesia"
     }
   }
+}
