@@ -247,6 +247,10 @@ export const service = {
         title: 'Liputan Mendalam',
         url: '/indonesia/laporan-khusus-51267199',
       },
+      {
+        title: 'Majalah',
+        url: '/indonesia/majalah-51456120',
+      },
     ],
     timezone: 'Asia/Jakarta',
   },
