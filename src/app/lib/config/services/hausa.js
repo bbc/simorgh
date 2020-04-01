@@ -219,10 +219,11 @@ export const service = {
           text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
         },
         fallback: {
-          text: "Babu karin bayanai",
+          text: 'Babu karin bayanai',
           linkText: 'Ci gaba da duba %provider_name%',
           linkTextSuffixVisuallyHidden: ', adireshin waje',
-          warningText: "BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.",
+          warningText:
+            'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

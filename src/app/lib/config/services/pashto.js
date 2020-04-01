@@ -224,10 +224,11 @@ export const service = {
           text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
         },
         fallback: {
-          text: "منځپانګه نه شته",
+          text: 'منځپانګه نه شته',
           linkText: 'په %provider_name% کې نور وګورئ',
           linkTextSuffixVisuallyHidden: 'بهرنی',
-          warningText: " بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.",
+          warningText:
+            ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

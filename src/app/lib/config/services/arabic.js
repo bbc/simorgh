@@ -225,10 +225,10 @@ export const service = {
           text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
         },
         fallback: {
-          text: "المحتوى غير متاح",
+          text: 'المحتوى غير متاح',
           linkText: '%provider_name% اطلع على المزيد في',
           linkTextSuffixVisuallyHidden: '، خارجي',
-          warningText: "بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.",
+          warningText: 'بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
         },
         skipLink: {
           text: 'أهمل %provider_name% مشاركة',

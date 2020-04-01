@@ -211,10 +211,11 @@ export const service = {
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
-          text: "Content is not available",
+          text: 'Content is not available',
           linkText: 'View content on %provider_name%',
           linkTextSuffixVisuallyHidden: ', external',
-          warningText: "बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.",
+          warningText:
+            'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

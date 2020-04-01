@@ -213,10 +213,10 @@ export const service = {
           text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
         },
         fallback: {
-          text: "Ibi ntibiboneka",
+          text: 'Ibi ntibiboneka',
           linkText: 'Raba ibindi kuri %provider_name%',
           linkTextSuffixVisuallyHidden: ', bivuye ahandi',
-          warningText: "BBC ntibazwa ibivuye ku zindi mbuga.",
+          warningText: 'BBC ntibazwa ibivuye ku zindi mbuga.',
         },
         skipLink: {
           text: 'Tambuka %provider_name% ubutumwa',

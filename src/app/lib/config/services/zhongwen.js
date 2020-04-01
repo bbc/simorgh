@@ -247,10 +247,10 @@ export const service = {
           text: '告知：第三方内容可能包含广告',
         },
         fallback: {
-          text: "无内容",
+          text: '无内容',
           linkText: '继续浏览 %provider_name%',
           linkTextSuffixVisuallyHidden: ', 外部链接',
-          warningText: "BBC对外部网站内容不负责任。",
+          warningText: 'BBC对外部网站内容不负责任。',
         },
         skipLink: {
           text: '跳过 %provider_name% 帖子',
@@ -466,10 +466,10 @@ export const service = {
           text: '告知：協作方內容可能包含廣告',
         },
         fallback: {
-          text: "無內容",
+          text: '無內容',
           linkText: '繼續瀏覽 %provider_name%',
           linkTextSuffixVisuallyHidden: ', 外部鏈接',
-          warningText: "BBC對外部網站內容不負責任。",
+          warningText: 'BBC對外部網站內容不負責任。',
         },
         skipLink: {
           text: '跳過 %provider_name% 帖子',

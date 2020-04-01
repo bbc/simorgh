@@ -220,10 +220,10 @@ export const service = {
           text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
         },
         fallback: {
-          text: "Haipatikani tena",
+          text: 'Haipatikani tena',
           linkText: 'Tazama zaidi katika %provider_name%',
           linkTextSuffixVisuallyHidden: ', ya nje',
-          warningText: "BBC haihusiki na taarifa za kutoka mitandao ya nje.",
+          warningText: 'BBC haihusiki na taarifa za kutoka mitandao ya nje.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

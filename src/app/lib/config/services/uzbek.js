@@ -215,10 +215,10 @@ export const service = {
           text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
         },
         fallback: {
-          text: "Бу материалга кириш имконсиз",
+          text: 'Бу материалга кириш имконсиз',
           linkText: 'Кўпроқ кўринг %provider_name%',
           linkTextSuffixVisuallyHidden: ', ташқи',
-          warningText: "Би-би-си ташқи сайтлар мазмуни учун масъул эмас.",
+          warningText: 'Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
         },
         skipLink: {
           text: 'Ўтказиб юборинг %provider_name% пост ',

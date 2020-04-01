@@ -216,13 +216,15 @@ export const service = {
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'Título del video:',
-          text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+          text:
+            'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
         },
         fallback: {
-          text: "Contenido no disponible",
+          text: 'Contenido no disponible',
           linkText: 'Ver más en %provider_name%',
           linkTextSuffixVisuallyHidden: ', externo',
-          warningText: "La BBC no se hace responsable del contenido de sitios externos.",
+          warningText:
+            'La BBC no se hace responsable del contenido de sitios externos.',
         },
         skipLink: {
           text: 'Saltar contenido de %provider_name%',

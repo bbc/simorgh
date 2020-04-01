@@ -212,10 +212,11 @@ export const service = {
           text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
         },
         fallback: {
-          text: "Konten tidak tersedia",
+          text: 'Konten tidak tersedia',
           linkText: 'Lihat lebih banyak di %provider_name%',
           linkTextSuffixVisuallyHidden: ', eksternal',
-          warningText: "BBC tidak bertanggung jawab atas konten dari situs eksternal ",
+          warningText:
+            'BBC tidak bertanggung jawab atas konten dari situs eksternal ',
         },
         skipLink: {
           text: 'Hentikan %provider_name% pesan',

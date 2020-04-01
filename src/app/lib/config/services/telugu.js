@@ -216,10 +216,10 @@ export const service = {
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
-          text: "Content is not available",
+          text: 'Content is not available',
           linkText: 'View content on %provider_name%',
           linkTextSuffixVisuallyHidden: ', external',
-          warningText: "ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.",
+          warningText: 'ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

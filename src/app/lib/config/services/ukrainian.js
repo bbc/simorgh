@@ -214,10 +214,10 @@ export const service = {
           text: 'Увага: інші сайти можуть містити рекламу',
         },
         fallback: {
-          text: "Контент недоступний",
+          text: 'Контент недоступний',
           linkText: 'Дивіться більше у %provider_name%',
           linkTextSuffixVisuallyHidden: ', зовнішнє посилання',
-          warningText: "ВВС не несе відповідальності за контент інших сайтів.",
+          warningText: 'ВВС не несе відповідальності за контент інших сайтів.',
         },
         skipLink: {
           text: 'Пропустити %provider_name% допис',

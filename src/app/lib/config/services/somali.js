@@ -222,13 +222,15 @@ export const service = {
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'Qoraalka Muuqaalka',
-          text: 'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
+          text:
+            'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
         },
         fallback: {
-          text: "Macluumaadkan lama heli karo",
+          text: 'Macluumaadkan lama heli karo',
           linkText: 'Faahfaahin ka eeg %provider_name%',
           linkTextSuffixVisuallyHidden: ', bogag kale',
-          warningText: "BBC masuul kama ahan macluumadka bogagga kale ee dibadda.",
+          warningText:
+            'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

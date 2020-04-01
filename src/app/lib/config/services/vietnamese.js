@@ -209,10 +209,10 @@ export const service = {
           text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
         },
         fallback: {
-          text: "Nội dung không có",
+          text: 'Nội dung không có',
           linkText: 'Xem thêm ở %provider_name%',
           linkTextSuffixVisuallyHidden: ', bên ngoài',
-          warningText: "BBC không chịu trách nhiệm nội dung các trang ngoài.",
+          warningText: 'BBC không chịu trách nhiệm nội dung các trang ngoài.',
         },
         skipLink: {
           text: 'Bỏ qua %provider_name% tin',

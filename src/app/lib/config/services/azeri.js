@@ -209,10 +209,10 @@ export const service = {
           text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
         },
         fallback: {
-          text: "Məzmun mövcud deyil",
+          text: 'Məzmun mövcud deyil',
           linkText: 'Daha çoxu üçün %provider_name%',
           linkTextSuffixVisuallyHidden: ', BBC-dən kənar',
-          warningText: "BBC kənar saytların məzmununa məsul deyil.",
+          warningText: 'BBC kənar saytların məzmununa məsul deyil.',
         },
         skipLink: {
           text: 'Paylaşımını ötürün %provider_name%',

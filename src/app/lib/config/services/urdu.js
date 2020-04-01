@@ -212,10 +212,11 @@ export const service = {
           text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
         },
         fallback: {
-          text: "مواد دستیاب نہیں ہے",
+          text: 'مواد دستیاب نہیں ہے',
           linkText: '%provider_name% مزید دیکھنے کے لیے',
           linkTextSuffixVisuallyHidden: ', بیرونی مواد',
-          warningText: " بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.",
+          warningText:
+            ' بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',

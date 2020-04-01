@@ -250,10 +250,10 @@ export const service = {
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
-          text: "Content is not available",
+          text: 'Content is not available',
           linkText: 'View content on %provider_name%',
           linkTextSuffixVisuallyHidden: ', external',
-          warningText: "BBC nije odgovoran za sadržaj drugih sajtova.",
+          warningText: 'BBC nije odgovoran za sadržaj drugih sajtova.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
@@ -475,10 +475,10 @@ export const service = {
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
-          text: "Content is not available",
+          text: 'Content is not available',
           linkText: 'View content on %provider_name%',
           linkTextSuffixVisuallyHidden: ', external',
-          warningText: "ББЦ није одговоран за садржај других сајтова.",
+          warningText: 'ББЦ није одговоран за садржај других сајтова.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
