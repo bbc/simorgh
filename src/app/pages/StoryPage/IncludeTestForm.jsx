@@ -1,22 +1,31 @@
 import React from 'react';
+import styled from 'styled-components';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { string } from 'prop-types';
 
-const IncludeTestForm = ({ getParameters }) => {
-  // const params = new URL(window.document.location).searchParams;
-  // const testUrl = params.get('testUrl');
+const StyledForm = styled.form`
+  margin-top: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING_DBL};
+`;
 
-  const testUrl = decodeURIComponent(getParameters.search.replace('?testUrl=', ''));
-
+const IncludeTestForm = ({ pathWithGetParameters }) => {
+  const testUrl = decodeURIComponent(
+    pathWithGetParameters.search.replace('?testUrl=', ''),
+  );
 
   return (
-    <form method="get">
+    <StyledForm method="get">
       <label htmlFor="includes">
-        test URL:
+        Include Test URL:
         <input type="text" name="testUrl" id="includes" placeholder={testUrl} />
       </label>
       <input type="submit" value="Submit" />
-    </form>
+    </StyledForm>
   );
 };
 
-export default IncludeTestForm;
+IncludeTestForm.propTypes = {
+  pathWithGetParameters: string.isRequired,
+};
 
+export default IncludeTestForm;

@@ -196,9 +196,8 @@ const StoryPage = ({ pageData, pathname, location }) => {
           as="main"
           role="main"
         >
-          {console.log(pathname)}
           {pathname === '/testInclude' ? (
-            <IncludeTestForm getParameters={location} />
+            <IncludeTestForm pathWithGetParameters={location.search} />
           ) : null}
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
