@@ -206,6 +206,23 @@ export const service = {
       ],
       copyrightText:
         'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ویڈیو کیپشن, ',
+          text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
+        },
+        fallback: {
+          text: 'مواد دستیاب نہیں ہے',
+          linkText: '%provider_name% مزید دیکھنے کے لیے',
+          linkTextSuffixVisuallyHidden: ', بیرونی مواد',
+          warningText:
+            ' بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
     timezone: 'Asia/Karachi',

@@ -213,6 +213,24 @@ export const service = {
       ],
       copyrightText:
         'BBC. ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ဗီဒီယို ပုံစာ - ',
+          text:
+            'သတိပေးချက်- ဘီဘီစီပြင်ပ ဝက်ဆိုက်များမှ ဖော်ပြချက်များတွင် ကြော်ငြာများပါနိုင်ပါသည်။',
+        },
+        fallback: {
+          text: 'ကြည့်ရန် မရနိုင်သေးပါ။',
+          linkText: '%provider_name% တွင် နောက်ထပ်ကြည့်နိုင်ပါသည်။',
+          linkTextSuffixVisuallyHidden: ' ပြင်ပစာမျက်နှာ',
+          warningText:
+            'ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_PADAUK_BOLD, F_PADAUK_REGULAR],
     timezone: 'GMT',
