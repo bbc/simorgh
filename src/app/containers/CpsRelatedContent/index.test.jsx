@@ -62,7 +62,7 @@ describe('CpsRelatedContent', () => {
 
     expect(document.querySelector("li[class^='StoryPromoLi']")).toBeNull();
 
-    expect(document.querySelectorAll(`ul`).length).toBe(0);
+    expect(document.querySelector('ul')).toBeNull();
 
     expect(asFragment()).toMatchSnapshot();
   });
