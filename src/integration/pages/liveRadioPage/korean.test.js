@@ -21,7 +21,7 @@ import {
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on the Korean live radio AMP page', () => {
+describe('Given I am on the Korean AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
@@ -44,7 +44,7 @@ describe('Given I am on the Korean live radio AMP page', () => {
   });
 });
 
-describe('Given I am on the Korean live radio Canonical page', () => {
+describe('Given I am on the Korean Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
@@ -67,7 +67,7 @@ describe('Given I am on the Korean live radio Canonical page', () => {
   });
 });
 
-describe('Given I am on the Korean live radio page AMP/Canonical', () => {
+describe('Given I am on the Korean Live Radio page', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
       skipToContentText: '내용으로 건너뛰기',

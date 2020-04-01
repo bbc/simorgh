@@ -21,7 +21,7 @@ import {
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on the Amharic live radio AMP page', () => {
+describe('Given I am on the Amharic AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
@@ -44,7 +44,7 @@ describe('Given I am on the Amharic live radio AMP page', () => {
   });
 });
 
-describe('Given I am on the Amharic live radio Canonical page', () => {
+describe('Given I am on the Amharic Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
@@ -67,7 +67,7 @@ describe('Given I am on the Amharic live radio Canonical page', () => {
   });
 });
 
-describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
+describe('Given I am on the Amharic Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'ያድምጡ',

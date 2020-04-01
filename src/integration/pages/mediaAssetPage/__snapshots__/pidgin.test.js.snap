@@ -669,6 +669,12 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
           </div>
         </nav>
       </header>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Pidgin, Pidgin - Domot, Pidgin - MAP, Pidgin - Domot - MAP, Pidgin - Opinion-category","uid":50924,"title":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &
+          < >","virtualReferrer":"\${documentReferrer}","contentType":"article-media-asset"}}
+        </script>
+      </amp-analytics>
       <amp-analytics>
         <script type="application/json">
           {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&+
