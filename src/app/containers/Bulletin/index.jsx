@@ -88,18 +88,18 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
 
   return (
     <Bulletin
-      image={Image}
-      mediaType={mediaType}
-      isLive={isLive}
       script={script}
       service={service}
+      dir={dir}
+      image={Image}
+      mediaType={mediaType}
       headlineText={headline}
       summaryText={summary}
       ctaLink={ctaLink}
       ctaText={ctaText}
+      isLive={isLive}
       liveText={liveText}
       offScreenText={offScreenText}
-      dir={dir}
     />
   );
 };
