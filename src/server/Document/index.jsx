@@ -1,10 +1,13 @@
 import React from 'react';
 import { ChunkExtractor } from '@loadable/server';
 import path from 'path';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { renderToStringWithData } from 'react-isomorphic-data/ssr';
+import { StaticRouter } from 'react-router-dom';
+import { DataProvider, createDataClient } from 'react-isomorphic-data';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { ServerApp } from '#app/containers/App';
+import SimorghApp from '#app/containers/App/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 
 import { getStyleTag } from '../styles';
@@ -18,6 +21,11 @@ const renderDocument = async ({
   service,
   url,
 }) => {
+  const dataClient = createDataClient({
+    initialCache: {},
+    ssr: true,
+  });
+
   const sheet = new ServerStyleSheet();
 
   const statsFile = path.resolve(
@@ -28,21 +36,33 @@ const renderDocument = async ({
 
   const context = {};
 
-  const app = renderToString(
-    extractor.collectChunks(
-      sheet.collectStyles(
-        <ServerApp
-          location={url}
-          routes={routes}
-          data={data}
-          bbcOrigin={bbcOrigin}
-          context={context}
-          service={service}
-          isAmp={isAmp}
-        />,
+  let app;
+
+  try {
+    app = await renderToStringWithData(
+      extractor.collectChunks(
+        sheet.collectStyles(
+          <DataProvider client={dataClient}>
+            <StaticRouter location={url}>
+              <SimorghApp
+                routes={routes}
+                initialData={data}
+                bbcOrigin={bbcOrigin}
+              />
+            </StaticRouter>
+          </DataProvider>,
+        ),
       ),
-    ),
-  );
+      dataClient,
+    );
+  } catch (err) {
+    // what do we do if one of these API calls fail?
+    // We could render the main content without most read, radio schedules etc.
+    // Or as we're heavily cached is it best to respond with an error so
+    // mozart doesn't cache that?
+    console.log(err);
+    throw err;
+  }
 
   if (context.url) {
     /**
@@ -66,6 +86,7 @@ const renderDocument = async ({
       scripts={scripts}
       app={app}
       data={data}
+      componentData={dataClient.cache}
       styleTags={getStyleTag(sheet, isAmp)}
       helmet={headHelmet}
       service={service}
