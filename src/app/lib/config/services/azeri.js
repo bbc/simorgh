@@ -148,6 +148,7 @@ export const service = {
         listen: 'Listen',
         watch: 'İzləyin',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -225,10 +226,6 @@ export const service = {
       {
         title: 'Dərgi',
         url: '/azeri/magazine',
-      },
-      {
-        title: 'Fotoqalereya',
-        url: '/azeri/media/photogalleries',
       },
       {
         title: 'Video',

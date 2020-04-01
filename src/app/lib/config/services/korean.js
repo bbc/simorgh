@@ -144,6 +144,7 @@ export const service = {
         listen: '청취',
         watch: '감상하기',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -158,7 +159,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'BBC 코리아 라디오',
     },
     footer: {
       trustProjectLink: {

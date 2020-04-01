@@ -11,10 +11,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
 const defaultToggles = {
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 

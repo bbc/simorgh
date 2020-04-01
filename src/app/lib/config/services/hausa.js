@@ -155,6 +155,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Kalla',
         liveLabel: 'KAI TSAYE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -170,8 +171,8 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
+      header: 'Shirye-shiryenmu',
     },
     footer: {
       trustProjectLink: {
@@ -243,10 +244,6 @@ export const service = {
       {
         title: 'Shirye-shiryen rediyo',
         url: '/hausa/media-43322903',
-      },
-      {
-        title: 'Hotuna',
-        url: '/hausa/media/photogalleries',
       },
     ],
   },
