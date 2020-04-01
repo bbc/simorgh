@@ -137,8 +137,7 @@ If you are proposing a specific code change, try to give enough information for 
 Failing this, adding a small psuedo-code fragment is often a great way to illustrate the idea.
 
 **Go beyond LGTM**
-When approving a simple PR, the classic *looks good to me* is sometimes enough, but the best reviews are more than a rubber stamp. For example, you can include a description of what you did to verify th
-at the change was correct (again, screenshots may save typing) that can be repeated by others. Or, you can applaud anything about the work you thought that was particularly good so the author knows it’s worth doing next time.
+When approving a simple PR, the classic *looks good to me* is sometimes enough, but the best reviews are more than a rubber stamp. For example, you can include a description of what you did to verify that the change was correct (again, screenshots may save typing) that can be repeated by others. Or, you can applaud anything about the work you thought that was particularly good so the author knows it’s worth doing next time.
 
 **Be flexible**
 Sometimes serious issues are found during code review that need be addressed before the change can be merged. But often this is not the case. Ask, could the code be merged without addressing these comments? If it can, create follow-up tasks that can be picked up afterwards and link them to the PR. It’s often quicker and more effective for reviewers to create these tasks.
