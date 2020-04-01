@@ -54,8 +54,8 @@ const FeaturesAnalysis = ({ content }) => {
     children: node.isRequired,
   };
   if (!content.length) return null;
-  const hasSingleFeature = content.filter(Boolean).length === 1;
-  const [singleFeature] = content.filter(Boolean);
+  const hasSingleFeature = content.length === 1;
+  const [singleFeature] = content;
 
   return (
     <FeaturesAnalysisWrapper>
