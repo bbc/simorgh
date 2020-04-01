@@ -134,7 +134,7 @@ When referring to an established idea or technique, link to a page that explains
 
 If you are proposing a specific code change, try to give enough information for the author to understand it and implement it if needed. Direct GitHub PR ‘suggestions’ are often welcomed by authors - but consider if it would still help to explain *why* you’re suggesting the change.
 
-Failing this, adding a small psuedo-code fragment is often a great way to illustrate the idea.
+Failing this, adding a small pseudo-code fragment is often a great way to illustrate the idea.
 
 **Go beyond LGTM**
 When approving a simple PR, the classic *looks good to me* is sometimes enough, but the best reviews are more than a rubber stamp. For example, you can include a description of what you did to verify that the change was correct (again, screenshots may save typing) that can be repeated by others. Or, you can applaud anything about the work you thought that was particularly good so the author knows it’s worth doing next time.
