@@ -85,7 +85,7 @@ If you're new to the codebase or looking at a new area of it, consider the follo
 **Understand the context**
 Check if there is a linked issue/ticket in the pull request that contains some acceptance criteria, a definition of done, or at least a description of what the output of the work should be. Then read through the summary of code changes to get a high-level understanding of the solution. If any of this information is missing then ask the author to provide it.
 
-**C****heck it out**
+**Check it out**
 Do check out the code and run it locally if possible. This can help to better understand what the change is doing. It can also help to find bugs early before any formal testing is carried out.
 
 **Seek clarification**
