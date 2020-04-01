@@ -32,8 +32,9 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
+import IncludeTestForm from './IncludeTestForm';
 
-const StoryPage = ({ pageData }) => {
+const StoryPage = ({ pageData, pathname, location }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
     ['promo', 'passport', 'category', 'categoryName'],
@@ -195,6 +196,10 @@ const StoryPage = ({ pageData }) => {
           as="main"
           role="main"
         >
+          {console.log(pathname)}
+          {pathname === '/testInclude' ? (
+            <IncludeTestForm getParameters={location} />
+          ) : null}
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           <CpsRelatedContent content={relatedContent} />
         </Grid>
