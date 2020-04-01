@@ -520,6 +520,15 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
                     Liputan Mendalam
                   </a>
                 </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/indonesia/majalah-51456120"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Majalah
+                  </a>
+                </li>
               </ul>
             </div>
             <div dir="ltr"
@@ -577,6 +586,16 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
                      class="StyledLink-sc-158x7z5-2 gLWckh"
                   >
                     Liputan Mendalam
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/indonesia/majalah-51456120"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Majalah
                   </a>
                 </li>
               </ul>
@@ -1118,6 +1137,16 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
                       Liputan Mendalam
                     </a>
                   </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/indonesia/majalah-51456120"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Majalah
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1170,6 +1199,15 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
                      class="StyledDropdownLink-ukxuly-4 ikLbnY"
                   >
                     Liputan Mendalam
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/indonesia/majalah-51456120"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Majalah
                   </a>
                 </li>
               </ul>
