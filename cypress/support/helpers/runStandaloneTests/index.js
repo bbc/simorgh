@@ -3,7 +3,12 @@ import serviceHasPageType from '../serviceHasPageType';
 import getPaths from '../getPaths';
 import { visitPage } from '../runTestsForPage';
 
-export default ({ pageType, runAmpTests, runCanonicalTests }) => {
+export default ({
+  pageType,
+  runTests = () => {},
+  runAmpTests = () => {},
+  runCanonicalTests = () => {},
+}) => {
   Object.keys(config)
     .filter(service => serviceHasPageType(service, pageType))
     .forEach(service => {
@@ -12,23 +17,30 @@ export default ({ pageType, runAmpTests, runCanonicalTests }) => {
 
       paths.forEach(path => {
         describe(`${pageType} tests for ${service} - ${path}`, () => {
+          const testArgs = {
+            canonicalPath: path,
+            service,
+            variant,
+          };
+
           describe('Canonical', () => {
-            before(() => {
-              Cypress.env('currentPath', path);
+            beforeEach(() => {
               visitPage(path, pageType);
             });
 
-            runCanonicalTests({ service, variant });
+            runTests(testArgs);
+            runCanonicalTests(testArgs);
           });
 
           describe('AMP', () => {
             const ampPath = `${path}.amp`;
 
-            before(() => {
+            beforeEach(() => {
               visitPage(ampPath, pageType);
             });
 
-            runAmpTests({ service, variant });
+            runTests(testArgs);
+            runAmpTests(testArgs);
           });
         });
       });
