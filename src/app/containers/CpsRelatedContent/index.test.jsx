@@ -57,12 +57,10 @@ describe('CpsRelatedContent', () => {
     expect(promos[0]).toBeTruthy();
 
     const { asFragment } = renderRelatedContent({
-      content: [promos[0]],
+      content: topRelatedContentsOneItem,
     });
 
-    expect(document.querySelector('li[class^='StoryPromoLi')).toBeNull();
-      0,
-    );
+    expect(document.querySelector("li[class^='StoryPromoLi']")).toBeNull();
 
     expect(document.querySelectorAll(`ul`).length).toBe(0);
 
