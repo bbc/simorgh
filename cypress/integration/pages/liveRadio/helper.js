@@ -4,16 +4,17 @@ import envConfig from '../../../support/config/envs';
 const getBrandId = externalId =>
   externalId === 'bbc_oromo_radio' ? 'bbc_afaanoromoo_radio' : externalId;
 
-export default ({ body, language, isAmp = false }) => {
-  const { externalId } = body.content.blocks[2];
+export default ({ jsonData, language, isAmp = false }) => {
+  const { externalId } = jsonData.content.blocks[2];
   const brandId = getBrandId(externalId);
 
-  return [
+  const embedUrl = [
     envConfig.avEmbedBaseUrl,
     'ws/av-embeds/media',
     brandId,
     'liveradio',
     language,
-    isAmp ? 'amp' : '',
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
 };

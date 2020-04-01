@@ -3,19 +3,17 @@ import config from '../../../support/config/services';
 import envConfig from '../../../support/config/envs';
 import getEmbedUrl from './helper';
 
-export default ({ service, variant }) => {
+export default ({ service, variant, canonicalPath }) => {
   describe('Audio Player', () => {
-    const language = appConfig[config[service].name][variant].lang;
-    let embedUrl;
-
-    before(() => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        embedUrl = getEmbedUrl({ body, language });
-      });
-    });
-
     it('embed URL should be reachable', () => {
-      cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+      cy.request(`${canonicalPath}.json`).then(({ body: jsonData }) => {
+        const language = appConfig[config[service].name][variant].lang;
+        const embedUrl = getEmbedUrl({ jsonData, language });
+
+        cy.get(`iframe[src="${embedUrl}"]`).then(() => {
+          cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+        });
+      });
     });
   });
 
