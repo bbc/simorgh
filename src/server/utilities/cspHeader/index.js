@@ -118,6 +118,6 @@ export const constructCspHeader = ({ isAmp, isLive, isUK }) => ({
 export const stringCspHeader = ({ isAmp, isLive, isUK }) => {
   const { directives } = constructCspHeader({ isAmp, isLive, isUK });
   return Object.keys(directives)
-    .map(directive => `${directive}: ${directives[directive].join(' ')}`)
+    .map(directive => `${directive} ${directives[directive].join(' ')}`)
     .join('; ');
 };
