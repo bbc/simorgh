@@ -6,7 +6,7 @@ export default ({
   bulletedListItem,
   relatedContentHeadline,
 }) => {
-  [amp, canonical].forEach(page => {
+  [amp, canonical].forEach((page) => {
     describe(`And using ${page.platform}`, () => {
       it('I can see the headline', () => {
         const { getByText } = within(
@@ -29,7 +29,7 @@ export default ({
         it('I can see the bulleted list item', () => {
           const { getAllByRole } = within(page.document.querySelector('main'));
           const bulletedLists = getAllByRole('list');
-          const [bulletedList] = bulletedLists.filter(list =>
+          const [bulletedList] = bulletedLists.filter((list) =>
             list.innerHTML.includes(bulletedListItem),
           );
           const { getAllByText } = within(bulletedList);

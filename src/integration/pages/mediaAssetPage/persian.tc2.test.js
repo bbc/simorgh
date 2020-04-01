@@ -5,6 +5,8 @@
 import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import runUserTests from './user';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
 
 import {
   runHeaderTests,
@@ -30,6 +32,12 @@ describe('Given I am on a Persian TC2 AMP Media Asset Page', () => {
   describe('When the application starts', () => {
     runCoreAmpTests({ service: 'persian' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
+  });
 });
 
 describe('Given I am on a Persian TC2 Canonical Media Asset Page', () => {
@@ -46,6 +54,12 @@ describe('Given I am on a Persian TC2 Canonical Media Asset Page', () => {
 
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'persian' });
+  });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Media player',
+    });
   });
 });
 

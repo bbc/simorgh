@@ -9,7 +9,7 @@ import VisuallyHiddenHeadlineContainer from '.';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const getId = enzymeWrapper => enzymeWrapper[0].attribs.id;
+const getId = (enzymeWrapper) => enzymeWrapper[0].attribs.id;
 
 describe('VisuallyHiddenHeadline', () => {
   describe('with no data', () => {

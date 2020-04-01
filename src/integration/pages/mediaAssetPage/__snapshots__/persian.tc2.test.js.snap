@@ -854,6 +854,11 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
           </div>
         </nav>
       </header>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Persian, Persian - ايران, Persian - MAP, Persian - ايران - MAP, Persian - undefined-category","uid":50924,"title":"جامعه بهایی خواستار رفع 'بی عدالتی های اقتصادی' علیه بهاییان ایران شد","virtualReferrer":"\${documentReferrer}","contentType":"article-media-asset"}}
+        </script>
+      </amp-analytics>
       <amp-analytics>
         <script type="application/json">
           {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=69&p=iran::persian.iran.2016.09.160907_tc2_testmap1.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:topcat:6c9d7b1a-74e0-11e6-a1c8-2acfb99d427b]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[جامعه+بهایی+خواستار+رفع+'بی+عدالتی+های+اقتصادی'+علیه+بهاییان+ایران+شد+-+BBC+News+فارسی]&x11=[2016-09-07T09:53:39.000Z]&x12=[2016-09-07T09:53:39.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}

@@ -13,7 +13,7 @@ const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
 
 const { error } = console;
 
-const didSuppressWarning = message => {
+const didSuppressWarning = (message) => {
   const { expectedWarnings } = window;
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
     for (let i = 0; i < expectedWarnings.length; i += 1) {

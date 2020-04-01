@@ -4,7 +4,7 @@ import { string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 

@@ -45,22 +45,14 @@
           "thingLabel": "Nature",
           "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
           "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Nature"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Nature"]
         },
         {
           "thingLabel": "Animals",
           "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
           "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Animal",
             "http://www.wikidata.org/entity/Q729"
@@ -70,20 +62,13 @@
           "thingLabel": "Photography",
           "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
           "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Photography"
-          ]
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Photography"]
         }
       ]
     },
     "version": "v1.0.0",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

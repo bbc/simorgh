@@ -1,5 +1,5 @@
 // Should be moved into integration/pages/index.js once all pages have ATI
-Cypress.Commands.add('hasNoscriptImgAtiUrl', atiUrl => {
+Cypress.Commands.add('hasNoscriptImgAtiUrl', (atiUrl) => {
   cy.get('noscript')
     .eq(0)
     .should(
@@ -9,7 +9,7 @@ Cypress.Commands.add('hasNoscriptImgAtiUrl', atiUrl => {
 });
 
 // Should be moved into integration/pages/index.js once all pages have ATI
-Cypress.Commands.add('hasAmpAnalyticsAtiUrl', atiUrl => {
+Cypress.Commands.add('hasAmpAnalyticsAtiUrl', (atiUrl) => {
   cy.get('amp-analytics script[type="application/json"]').should(
     'contain',
     `${atiUrl}`,
