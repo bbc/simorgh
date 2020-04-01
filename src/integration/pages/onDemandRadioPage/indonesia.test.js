@@ -5,6 +5,8 @@
 import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import runUserTests from './user';
+import runAmpA11yTests from './a11y.amp';
+import runCanonicalA11yTests from './a11y.canonical';
 
 import {
   runHeaderTests,
@@ -29,6 +31,12 @@ describe('Given I am on an Indonesian AMP On Demand Radio Page', () => {
   describe('When the application starts', () => {
     runCoreAmpTests({ service: 'indonesia' });
   });
+
+  describe.skip('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      audioPlayerTitle: 'Audio Player',
+    });
+  });
 });
 
 describe('Given I am on an Indonesian Canonical On Demand Radio Page', () => {
@@ -45,6 +53,12 @@ describe('Given I am on an Indonesian Canonical On Demand Radio Page', () => {
 
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'indonesia' });
+  });
+
+  describe.skip('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      audioPlayerTitle: 'Audio Player',
+    });
   });
 });
 
