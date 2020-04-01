@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType } from 'prop-types';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import styled from 'styled-components';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import BulletinCallToAction from './BulletinCallToAction';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -93,10 +96,12 @@ const StoryPromoContainer = ({
   // text to read 'Live' instead, which screenreaders pronounce correctly.
   const liveLabelIsEnglish = liveLabel === 'LIVE';
 
+  const contentType = pathOr(null, ['contentType'], item);
+  const isBulletin =
+    contentType === 'RadioBulletin' || contentType === 'TVBulletin';
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
-    isAssetTypeCode === 'PRO' &&
-    pathOr(null, ['contentType'], item) === 'Podcast';
+    isAssetTypeCode === 'PRO' && contentType === 'Podcast';
 
   const { headline, url, isLive } = getHeadlineUrlAndLive(
     item,
@@ -114,7 +119,20 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const Info = (
+  // Bulletin logic
+  const mediaType = contentType === 'TVBulletin' ? 'video' : 'audio';
+  const watchText = pathOr('Watch', ['media', 'watch'], translations);
+  const listenText = pathOr('Listen', ['media', 'listen'], translations);
+  const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
+
+  const BulletinBackground = styled.div`
+    background-color: ${C_LUNAR};
+  `;
+  const BulletinPaddingWrapper = styled.div`
+    padding: 0.5rem;
+  `;
+
+  const CommonInfo = () => (
     <>
       {headline && (
         <Headline
@@ -163,6 +181,28 @@ const StoryPromoContainer = ({
           isRelative={isTenHoursAgo(timestamp)}
         />
       )}
+    </>
+  );
+
+  const Info = (
+    <>
+      {isBulletin ? (
+        <BulletinPaddingWrapper>
+          <CommonInfo />
+        </BulletinPaddingWrapper>
+      ) : (
+        <CommonInfo />
+      )}
+      {isBulletin && (
+        <BulletinCallToAction
+          isLive={isLive}
+          service={service}
+          script={script}
+          dir={dir}
+          mediaType={mediaType}
+          ctaText={ctaText}
+        />
+      )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
           alsoItems={relatedItems}
@@ -193,7 +233,18 @@ const StoryPromoContainer = ({
     />
   );
 
-  return (
+  return isBulletin ? (
+    <BulletinBackground>
+      <StoryPromo
+        image={Image}
+        info={Info}
+        mediaIndicator={MediaIndicator}
+        promoType={promoType}
+        dir={dir}
+        displayImage={displayImage}
+      />
+    </BulletinBackground>
+  ) : (
     <StoryPromo
       image={Image}
       info={Info}

@@ -9,11 +9,7 @@ import {
   noImageStoryColumns,
 } from './storyColumns';
 import { storyItem } from '#models/propTypes/storyItem';
-import BulletinContainer from '../Bulletin';
 import StoryPromoContainer from '../StoryPromo';
-
-const isBulletin = (item) =>
-  item.contentType === 'TVBulletin' || item.contentType === 'RadioBulletin';
 
 const renderPromo = ({
   item,
@@ -23,9 +19,7 @@ const renderPromo = ({
   displayImage = true,
 }) => {
   const lazyLoadImage = !(promoType === 'top' && isFirstSection); // don't lazy load image if it is a top story
-  const renderedPromo = isBulletin(item) ? (
-    <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} dir={dir} />
-  ) : (
+  const renderedPromo = (
     <StoryPromoContainer
       item={item}
       promoType={promoType}

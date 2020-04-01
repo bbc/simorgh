@@ -22,8 +22,6 @@ import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import {
   getAllowedItems,
-  removeFirstSlotRadioBulletin,
-  removeTVBulletinsIfNotAVLiveStream,
   removeItemsWithoutUrlOrHeadline,
 } from './utilities/filterAllowedItems';
 import getRows from './utilities/storyRowsSplitter';
@@ -161,20 +159,10 @@ const FrontPageSection = ({ bar, group, sectionNumber }) => {
   const strapline = pathOr(null, ['strapline', 'name'], group);
   const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
   const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
-  const type = pathOr(null, ['type'], group);
   const seeAll = pathOr(null, ['seeAll'], translations);
   const isFirstSection = sectionNumber === 0;
 
-  const radioFilteredItems = removeFirstSlotRadioBulletin(
-    pathOr(null, ['items'], group),
-  );
-
-  const bulletinFilteredItems = removeTVBulletinsIfNotAVLiveStream({
-    items: radioFilteredItems,
-    type,
-  });
-
-  const items = removeItemsWithoutUrlOrHeadline(bulletinFilteredItems);
+  const items = removeItemsWithoutUrlOrHeadline(pathOr(null, ['items'], group));
 
   // We have a cap on the number of allowed items per section
   const allowedItems = getAllowedItems(items, isFirstSection);
