@@ -3,19 +3,17 @@ import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getEmbedUrl } from './helpers';
 
-export default ({ service, variant }) => {
+export default ({ service, variant, canonicalPath }) => {
   describe('Media Player', () => {
-    const language = appConfig[config[service].name][variant].lang;
-    let embedUrl;
-
-    before(() => {
-      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-        embedUrl = getEmbedUrl({ body, language, isAmp: true });
-      });
-    });
-
     it('embed URL should be reachable', () => {
-      cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+      cy.request(`${canonicalPath}.json`).then(({ body: jsonData }) => {
+        const language = appConfig[config[service].name][variant].lang;
+        const embedUrl = getEmbedUrl({ jsonData, language, isAmp: true });
+
+        cy.get(`amp-iframe[src="${embedUrl}"]`).then(() => {
+          cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
+        });
+      });
     });
   });
 
