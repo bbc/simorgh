@@ -23,6 +23,7 @@ const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
   const endpoint =
     radioScheduleEndpointOverride ||
     getRadioScheduleEndpoint({
+      baseUrl: process.env.SIMORGH_BASE_URL,
       service,
       env,
       queryString: location.search,

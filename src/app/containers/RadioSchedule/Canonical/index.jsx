@@ -25,6 +25,7 @@ import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 
 const RadioScheduleSection = styled.section.attrs(() => ({
@@ -98,6 +99,10 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     radioSchedule,
     translations,
   } = useContext(ServiceContext);
+
+  const { timeOnServer } = useContext(RequestContext);
+  const timeOnClient = parseInt(moment.utc().format('x'), 10);
+
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -110,23 +115,21 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     radioSchedule,
   );
 
-  const { data } = useData(
-    `http://localhost:7080${endpoint}`,
-    {},
-    {},
-    {
-      ssr: false,
-    },
-  );
-
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
+  const { data } = useData(endpoint);
+
   if (!data) {
-    return <div style={{ textAlign: 'center' }}>🤙 Loading 🤙</div>;
+    // for client journeys, would build loading/error handling
+    return null;
   }
 
-  const schedule = processRadioSchedule(data, service);
+  const schedule = processRadioSchedule(
+    data,
+    service,
+    timeOnServer || timeOnClient,
+  );
 
   if (!schedule) {
     return null;

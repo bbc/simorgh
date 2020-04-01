@@ -6,7 +6,7 @@ import squashTopStories from './squashTopStories';
 import addIdsToItems from './addIdsToItems';
 import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
 
-export const transformJson = pipe(
+const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
   addIdsToItems,

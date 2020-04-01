@@ -2,12 +2,10 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
-import helmet from 'helmet';
-
 // not part of react-helmet
+import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
-import renderDocument from './Document';
 import {
   articleDataPath,
   articleManifestPath,
@@ -21,6 +19,7 @@ import {
   legacyAssetPageDataPath,
 } from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
+import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
@@ -301,7 +300,6 @@ server
         JSON.stringify(
           {
             event: 'ssr_request_failed',
-            // ok. so status comes from getInitialData.
             status: status || 500,
             message,
             url,
