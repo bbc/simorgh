@@ -96,7 +96,7 @@ If information gained at this stage might be helpful for future maintainers of t
 **Ask questions**
 As already mentioned, code reviews are a great way to learn about the codebase and technology generally. **There are no stupid questions.** If you’re wondering about it, someone else probably is too.
 
-Another way reviewers can use questions it to ensure that we have considered the problem from all the angles. Code review is a good time to think again about performance, security, accessibility, testing and other [non-functional requirements](https://en.wikipedia.org/wiki/Non-functional_requirement) that might have been overlooked. For example:
+Another way reviewers can use questions is to ensure that we have considered the problem from all the angles. Code review is a good time to think again about performance, security, accessibility, testing and other [non-functional requirements](https://en.wikipedia.org/wiki/Non-functional_requirement) that might have been overlooked. For example:
 
 
 - Is this going to be accessible to all users?
