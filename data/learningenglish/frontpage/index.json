@@ -1,0 +1,544 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::index:learningenglish/front_page/desktop/domestic",
+    "locators": {
+      "assetUri": "/learningenglish/front_page",
+      "cpsUrn": "urn:bbc:content:assetUri:learningenglish/front_page",
+      "curie": "http://www.bbc.co.uk/asset/3a1d10ad-4f72-4ff6-e050-380a4e807657/desktop/domestic"
+    },
+    "type": "IDX",
+    "createdBy": "learningenglish-v6",
+    "language": "en-GB",
+    "lastUpdated": 1562926359108,
+    "firstPublished": 1471343120,
+    "lastPublished": 1562926351,
+    "options": {
+      "allowAdvertising": true
+    },
+    "analyticsLabels": {
+      "counterName": "learningenglish.page",
+      "cps_asset_id": "37087079",
+      "cps_asset_type": "idx"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": [
+      "top-story",
+      "av-stories-now",
+      "other-top-stories",
+      "special-reports",
+      "single-section-digest",
+      "feature-main",
+      "section-digest",
+      "programmes-standard",
+      "picture-gallery-stories",
+      "featured-site-top-stories",
+      "useful-links"
+    ],
+    "title": "BBC Learning English",
+    "summary": "Learn English with these free learning English videos and materials from BBC Learning English. This site will help you learn English and improve your pronunciation, grammar and vocabulary knowledge."
+  },
+  "content": {
+    "groups": [
+      {
+        "type": "top-story",
+        "title": "Top story",
+        "maxRelatedLinks": 3,
+        "items": [
+          {
+            "headlines": {
+              "headline": "Do you follow the sheeple?"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "What does sheeple... mean?",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p085fc8m.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "প্রধান খবর"
+        },
+        "semanticGroupName": "Top story"
+      },
+      {
+        "type": "more-content",
+        "title": "5 Great lessons you can't miss",
+        "maxRelatedLinks": 0,
+        "items": [
+          {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "5 Great lessons you can't miss"
+        },
+        "semanticGroupName": "More content"
+      },
+
+      {
+        "type": "more-content",
+        "title": "Programmes about your feelings",
+        "maxRelatedLinks": 0,
+        "items": [
+          
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Programmes about your feelings"
+        },
+        "semanticGroupName": "More content"
+      },
+
+      {
+        "type": "more-content",
+        "title": "Find your favourite series",
+        "maxRelatedLinks": 0,
+        "items": [
+          {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          },
+                    {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Find your favourite series"
+        },
+        "semanticGroupName": "More content"
+      },
+      {
+        "type": "more-content",
+        "title": "6 Minute English",
+        "maxRelatedLinks": 0,
+        "items": [
+          {
+            "headlines": {
+              "headline": "Tim's Pronunciation Workshop: Assimilation of /nd/"
+            },
+            "locators": {
+              "assetUri": "/bengali/news-48918962",
+              "cpsUrn": "urn:bbc:content:assetUri:bengali/news-48918962"
+            },
+            "summary": "",
+            "timestamp": 1562921554000,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "107832770",
+              "subType": "index",
+              "href": "https://ichef.bbci.co.uk/images/ic/1248xn/p044z6tj.jpg",
+              "path": "/cpsprodpb/1E2B/production/_107832770_67063064_1025243361015508_2176066586635403264_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ক্রিকেট, বিশ্বকাপ, সাকিব, স্টার্ক, ওয়ার্নার, রোহিত",
+              "caption": "ক্রিকেট বিশ্বকাপ ২০১৯ এর সেরা পারফর্মাররা",
+              "copyrightHolder": "Getty Images"
+            },
+            "id": "urn:bbc:ares::asset:bengali/news-48918962",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "6 Minute English"
+        },
+        "semanticGroupName": "More content"
+      },
+            {
+        "items": [
+          {
+            "assetTypeCode": "PRO",
+            "contentType": "Guide",
+            "name": "Download the BBC Learning English app",
+            "summary": "به گزارش خبرگزاری ایرنا سردار سرتیپ پاسدار مسعود جزایری گفت: \"رفتار جمهوری اسلامی ایران در دریاهای آزاد در چارچوب مقررات بین المللی است.",
+            "timestamp": 1572275840000,
+            "type": "link",
+            "uri": "http://www.bbc.com/persian/world/2016/09/160915_l43_wada_hack"
+          }
+        ],
+        "semanticGroupName": "Useful links",
+        "strapline": {
+          "name": "Useful links"
+        },
+        "title": "Useful links",
+        "type": "useful-links"
+      }
+    ]
+  },
+  "promo": {
+    "subType": "IDX",
+    "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
+    "uri": "/bengali/front_page",
+    "id": "urn:bbc:ares::index:bengali/front_page/desktop/domestic",
+    "type": "simple"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
+      "uri": "/bengali/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news",
+      "uri": "/bengali",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

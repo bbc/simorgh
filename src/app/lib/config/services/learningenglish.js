@@ -201,6 +201,40 @@ export const service = {
       F_REITH_SERIF_MEDIUM_ITALIC,
     ],
     timezone: 'Europe/London',
+    navigation: [
+      {
+        title: 'Home',
+        url: '/marathi',
+      },
+      {
+        title: 'Courses',
+        url: '/marathi',
+      },
+      {
+        title: 'Speaking & Listening',
+        url: '/marathi/topics/c5qvpxvv7y3t',
+      },
+      {
+        title: 'News',
+        url: '/marathi/topics/cxnyk3y49x6t',
+      },
+      {
+        title: 'Grammar',
+        url: '/marathi/international',
+      },
+      {
+        title: 'Vocabulary',
+        url: '/marathi/media/video',
+      },
+      {
+        title: 'For Teachers',
+        url: '/marathi/popular/read',
+      },
+      {
+        title: 'For Students',
+        url: '/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035',
+      },
+    ],
   },
 };
 
