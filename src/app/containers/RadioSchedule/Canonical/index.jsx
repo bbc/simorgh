@@ -118,6 +118,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
+  // we would want to wrap this in something that handles logging?
   const { data } = useData(endpoint);
 
   if (!data) {
