@@ -57,8 +57,6 @@ const AudioPlayer = ({
   const mediaInfo = getMediaInfo(assetId);
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
-  if (!isValidPlatform || !masterBrand || !assetId) return null;
-
   if (isExpired) {
     const expiredContentMessage = pathOr(
       'This content is no longer available',
@@ -74,6 +72,8 @@ const AudioPlayer = ({
       </OuterWrapper>
     );
   }
+
+  if (!isValidPlatform || !masterBrand || !assetId) return null; // potential for logging here
 
   const embedUrl = getEmbedUrl({
     mediaId: `${masterBrand}/${assetId}/${lang}`,
@@ -120,13 +120,15 @@ const AudioPlayer = ({
 };
 
 AudioPlayer.propTypes = {
-  externalId: string.isRequired,
-  id: string.isRequired,
+  externalId: string,
+  id: string,
   idAttr: string,
   isExpired: bool,
 };
 
 AudioPlayer.defaultProps = {
+  externalId: '',
+  id: '',
   idAttr: null,
   isExpired: false,
 };

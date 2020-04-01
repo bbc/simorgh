@@ -40,9 +40,7 @@ const renderEpisode = (
     case EPISODE_IS_AVAILABLE:
       return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
     case EPISODE_IS_EXPIRED:
-      return (
-        <AudioPlayerBlock isExpired externalId={masterBrand} id={episodeId} />
-      );
+      return <AudioPlayerBlock isExpired />;
     case EPISODE_IS_NOT_YET_AVAILABLE:
     default:
       return null;
