@@ -36,8 +36,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/vietnamese/institutional-49283563#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/vietnamese/institutional-49283563',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -145,6 +147,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -235,14 +238,6 @@ export const service = {
       {
         title: 'Học tiếng Anh',
         url: '/vietnamese/english',
-      },
-      {
-        title: 'Hình ảnh',
-        url: '/vietnamese/media/photogalleries',
-      },
-      {
-        title: 'Audio',
-        url: '/vietnamese/media/audio',
       },
       {
         title: 'Video',

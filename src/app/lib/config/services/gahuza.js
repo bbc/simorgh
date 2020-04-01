@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcgahuza',
     twitterSite: '@bbcgahuza',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/gahuza/institutional-49283343#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/gahuza/institutional-49283343',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -152,6 +153,7 @@ export const service = {
         listen: 'Umviriza',
         watch: 'Raba',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
@@ -165,7 +167,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -220,10 +222,6 @@ export const service = {
       {
         title: 'Imikino',
         url: '/gahuza/imikino',
-      },
-      {
-        title: 'Umviriza',
-        url: '/gahuza/media/audio',
       },
       {
         title: 'Video',

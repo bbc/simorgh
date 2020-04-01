@@ -23,8 +23,6 @@ const baseServiceConfig = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCChina',
   twitterSite: '@BBCChina',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
@@ -53,6 +51,10 @@ export const service = {
     videoCaptionOffscreenText: '视频加注文字, ',
     imageCaptionOffscreenText: '图像加注文字, ',
     imageCopyrightOffscreenText: '图像来源, ',
+    noBylinesPolicy:
+      'https://www.bbc.com/ukchina/simp/institutional-51359562#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/ukchina/simp/institutional-51359562',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/ukchina/simp/institutional-51359562',
@@ -113,7 +115,6 @@ export const service = {
     ],
     scriptLink: {
       text: '繁',
-      offscreenText: 'Traditional',
       variant: 'trad',
     },
     translations: {
@@ -211,6 +212,7 @@ export const service = {
         listen: '收听',
         watch: '观看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期广播节目',
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
@@ -231,6 +233,10 @@ export const service = {
     videoCaptionOffscreenText: '視頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
+    noBylinesPolicy:
+      'https://www.bbc.com/ukchina/trad/institutional-51359562#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/ukchina/trad/institutional-51359562',
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/ukchina/trad/institutional-51359562',
@@ -288,7 +294,6 @@ export const service = {
     ],
     scriptLink: {
       text: '简',
-      offscreenText: 'Simplified',
       variant: 'simp',
     },
     translations: {
@@ -386,6 +391,7 @@ export const service = {
         listen: '收聽',
         watch: '觀看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期廣播節目',
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',

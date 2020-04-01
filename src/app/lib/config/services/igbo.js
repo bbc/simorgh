@@ -40,8 +40,9 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Ogbako',
     fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/igbo/institutional-48529074#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/igbo/institutional-48529074',
     isTrustProjectParticipant: true,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
@@ -158,6 +159,7 @@ export const service = {
         listen: 'Gee ntị',
         watch: 'Lee',
         liveLabel: 'NA EME UGBU A',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

@@ -44,8 +44,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcturkce',
     twitterSite: '@bbcturkce',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/turkce/kurumsal-50221017#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/turkce/kurumsal-50221017',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -156,6 +157,7 @@ export const service = {
         listen: 'Listen',
         watch: 'İzle',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -225,10 +227,6 @@ export const service = {
       {
         title: 'Video',
         url: '/turkce/media/video',
-      },
-      {
-        title: 'Fotoğraf',
-        url: '/turkce/media/photogalleries',
       },
       {
         title: 'Dergi',

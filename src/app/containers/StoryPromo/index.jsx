@@ -1,14 +1,9 @@
 import React, { useContext } from 'react';
-import { shape, bool, string, element, oneOf, oneOfType } from 'prop-types';
-import StoryPromo, {
-  Headline,
-  Summary,
-  Link,
-  LiveLabel,
-} from '@bbc/psammead-story-promo';
+import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
@@ -77,32 +72,6 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
-const LiveComponent = ({ headline, service, liveLabel, dir }) => {
-  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
-  // text to read 'Live' instead, which screenreaders pronounce correctly.
-  const liveLabelIsEnglish = liveLabel === 'LIVE';
-
-  return (
-    // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
-      <LiveLabel service={service} dir={dir} ariaHidden={liveLabelIsEnglish}>
-        {liveLabel}
-      </LiveLabel>
-      {liveLabelIsEnglish && (
-        <VisuallyHiddenText lang="en-GB">{` Live, `}</VisuallyHiddenText>
-      )}
-      {headline}
-    </span>
-  );
-};
-
-LiveComponent.propTypes = {
-  service: string.isRequired,
-  dir: string.isRequired,
-  headline: element.isRequired,
-  liveLabel: string.isRequired,
-};
-
 const StoryPromoContainer = ({
   item,
   promoType,
@@ -119,6 +88,10 @@ const StoryPromoContainer = ({
   } = useContext(ServiceContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+
+  // As screenreaders mispronounce the word 'LIVE', we use visually hidden
+  // text to read 'Live' instead, which screenreaders pronounce correctly.
+  const liveLabelIsEnglish = liveLabel === 'LIVE';
 
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
@@ -152,12 +125,15 @@ const StoryPromoContainer = ({
         >
           <Link href={url}>
             {isLive ? (
-              <LiveComponent
+              <LiveLabel
                 service={service}
-                headline={linkcontents}
-                liveLabel={liveLabel}
                 dir={dir}
-              />
+                liveText={liveLabel}
+                ariaHidden={liveLabelIsEnglish}
+                offScreenText={liveLabelIsEnglish ? 'Live' : null}
+              >
+                {linkcontents}
+              </LiveLabel>
             ) : (
               linkcontents
             )}

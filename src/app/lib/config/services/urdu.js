@@ -39,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
     twitterSite: '@bbcurdu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/urdu/institutional-49282935#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/urdu/institutional-49282935',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
@@ -149,6 +150,7 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         liveLabel: 'لائیو',
+        nextLabel: 'NEXT',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
@@ -162,7 +164,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {
@@ -237,20 +239,12 @@ export const service = {
         url: '/urdu/science',
       },
       {
-        title: 'آڈیو',
-        url: '/urdu/media/audio',
-      },
-      {
         title: 'ویڈیو',
         url: '/urdu/media/video',
       },
       {
         title: 'پنجابی ويڈیو',
         url: '/urdu/punjabi_video',
-      },
-      {
-        title: 'تصاویر',
-        url: '/urdu/media/photogalleries',
       },
     ],
   },

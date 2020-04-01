@@ -39,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/tigrinya/institutional-49283259#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/tigrinya/institutional-49283259',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
@@ -145,6 +146,7 @@ export const service = {
         listen: 'ስምዑ',
         watch: 'ተዓዘቡ',
         liveLabel: 'ቀጥታ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',
         nextRadioShow: 'ዝቕጽል ፈነወ ራድዮ',
         duration: 'ዕምሪ ፈነወ',
@@ -158,7 +160,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {

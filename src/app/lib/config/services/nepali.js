@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnepali',
     twitterSite: '@bbcnepali',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/nepali/institutional-50318130#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/nepali/institutional-50318130',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
@@ -153,6 +154,7 @@ export const service = {
         listen: 'सुन्नुहोस्',
         watch: 'हेर्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -218,10 +220,6 @@ export const service = {
       {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/multimedia/radio_programmes',
-      },
-      {
-        title: 'तस्वीरहरु',
-        url: '/nepali/media/photogalleries',
       },
       {
         title: 'भिडियो',

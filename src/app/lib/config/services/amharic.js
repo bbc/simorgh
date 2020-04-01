@@ -39,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnews',
     twitterSite: '@bbcnews',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/amharic/institutional-49283133#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/amharic/institutional-49283133',
     isTrustProjectParticipant: true,
     script: noAscendersOrDescenders,
     manifestPath: '/manifest.json',
@@ -145,6 +146,7 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         liveLabel: 'ቀጥታ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -158,7 +160,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {

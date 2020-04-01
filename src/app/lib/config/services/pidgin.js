@@ -40,8 +40,9 @@ export const service = {
     swPath: '/sw.js',
     frontPageTitle: 'Domot',
     fonts: [],
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/pidgin/institutional-48528766#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/pidgin/institutional-48528766',
     isTrustProjectParticipant: true,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews', // to be updated
@@ -155,6 +156,7 @@ export const service = {
         listen: 'Make you listen',
         watch: 'Look',
         liveLabel: 'AS E DE HAPPEN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -189,10 +191,6 @@ export const service = {
       {
         title: 'Video',
         url: '/pidgin/media/video',
-      },
-      {
-        title: 'Audio',
-        url: '/pidgin/media/audio',
       },
       {
         title: 'Sport',

@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/swahili/taasisi-49283417#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -157,6 +158,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'Moja kwa moja',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -171,7 +173,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'Vipindi vya Redio',
     },
     footer: {
       trustProjectLink: {
@@ -229,16 +231,8 @@ export const service = {
         url: '/swahili/media/video',
       },
       {
-        title: 'Sauti',
-        url: '/swahili/media/audio',
-      },
-      {
         title: 'Vipindi vya Redio',
         url: '/swahili/kwa_kina/redio',
-      },
-      {
-        title: 'Picha',
-        url: '/swahili/media/photogalleries',
       },
     ],
   },

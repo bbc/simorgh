@@ -23,8 +23,6 @@ const baseServiceConfig = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcchinese',
   twitterSite: '@bbcchinese',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   isTrustProjectParticipant: true,
   script: noAscendersOrDescenders,
   manifestPath: '/manifest.json',
@@ -56,9 +54,13 @@ export const service = {
     videoCaptionOffscreenText: '视频加注文字，',
     imageCaptionOffscreenText: '图像加注文字，',
     imageCopyrightOffscreenText: '图像来源，',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/simp/institutional-51359584',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/zhongwen/simp/institutional-51359584',
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
@@ -67,11 +69,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38652837',
           text: '使用条款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38652843',
           text: '隐私政策',
         },
         {
@@ -79,7 +81,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/zhongwen/simp/institutional-38664417',
           text: '联络BBC',
         },
         {
@@ -127,14 +129,6 @@ export const service = {
         url: '/zhongwen/simp/business',
       },
       {
-        title: '图辑',
-        url: '/zhongwen/simp/media/photogalleries',
-      },
-      {
-        title: '音频材料',
-        url: '/zhongwen/simp/media/audio',
-      },
-      {
         title: '视频材料',
         url: '/zhongwen/simp/media/video',
       },
@@ -145,7 +139,6 @@ export const service = {
     ],
     scriptLink: {
       text: '繁',
-      offscreenText: 'Traditional',
       variant: 'trad',
     },
     translations: {
@@ -243,6 +236,7 @@ export const service = {
         listen: '收听',
         watch: '观看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期广播节目',
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
@@ -263,9 +257,13 @@ export const service = {
     videoCaptionOffscreenText: '音頻加註文字，',
     imageCaptionOffscreenText: '圖像加註文字，',
     imageCopyrightOffscreenText: '圖像來源，',
+    noBylinesPolicy:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/zhongwen/trad/institutional-51359584',
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/zhongwen/trad/institutional-51359584',
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
@@ -274,11 +272,11 @@ export const service = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38652837',
           text: '使用條款',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38652843',
           text: '隱私政策',
         },
         {
@@ -286,7 +284,7 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/zhongwen/trad/institutional-38664417',
           text: '聯絡BBC',
         },
         {
@@ -334,14 +332,6 @@ export const service = {
         url: '/zhongwen/trad/business',
       },
       {
-        title: '圖輯',
-        url: '/zhongwen/trad/media/photogalleries',
-      },
-      {
-        title: '音頻材料',
-        url: '/zhongwen/trad/media/audio',
-      },
-      {
         title: '視頻材料',
         url: '/zhongwen/trad/media/video',
       },
@@ -352,7 +342,6 @@ export const service = {
     ],
     scriptLink: {
       text: '简',
-      offscreenText: 'Simplified',
       variant: 'simp',
     },
     translations: {
@@ -450,6 +439,7 @@ export const service = {
         listen: '收聽',
         watch: '觀看',
         liveLabel: '直播',
+        nextLabel: 'NEXT',
         previousRadioShow: '上期廣播節目',
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',

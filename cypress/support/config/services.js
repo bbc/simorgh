@@ -592,7 +592,7 @@ const genServices = {
           local: {
             paths: [
               '/azeri/azerbaijan-23257464', // CPS MAP with video clip
-              // '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP with video clip
+              '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -727,8 +727,8 @@ const genServices = {
           },
           local: {
             paths: [
-              'bengali/media-23269006', // CPS MAP with video clip
-              // '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP with video clip
+              '/bengali/media-23269006', // CPS MAP with video clip
+              '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -864,7 +864,7 @@ const genServices = {
           local: {
             paths: [
               '/burmese/media-23269011', // CPS MAP with video clip
-              // '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP with video clip
+              '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -1033,21 +1033,21 @@ const genServices = {
           live: {
             paths: [
               '/gahuza/amakuru-51710168', // CPS MAP with audio clip
-              // '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP with video clip
+              '/gahuza/video/2015/12/151201_100womenburundi', // TC2 MAP with video clip
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/gahuza/amakuru-23257470', // CPS MAP with video clip
-              // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
+              '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/gahuza/amakuru-23257470', // CPS MAP with video clip
-              // '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
+              '/gahuza/amakuru/2016/02/160215_map_amakuru_test1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -1298,7 +1298,7 @@ const genServices = {
           local: {
             paths: [
               '/hausa/23269030', // CPS MAP with video clip
-              // '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
+              '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
@@ -1676,7 +1676,7 @@ const genServices = {
           local: {
             paths: [
               '/indonesia/media-23269037', // CPS MAP with video clip
-              // '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP with video clip
+              '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -2054,7 +2054,7 @@ const genServices = {
           local: {
             paths: [
               '/kyrgyz/media-23257484', // CPS MAP with video clip
-              // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
+              '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -2463,7 +2463,7 @@ const genServices = {
           local: {
             paths: [
               '/nepali/media-23269034', // CPS MAP with audio clip
-              // '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP with video clip
+              '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -2632,21 +2632,21 @@ const genServices = {
           live: {
             paths: [
               '/pashto/arts-and-literature-46787030', // CPS MAP with audio clip
-              // '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP with video clip
+              '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP with video clip
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/pashto/media-23257523', // CPS MAP with video clip
-              // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
+              '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/pashto/media-23257523', // CPS MAP with video clip
-              // '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
+              '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -2779,21 +2779,21 @@ const genServices = {
               '/persian/media-49522521', // CPS MAP with live stream
               '/persian/world-51497110', // CPS MAP with video clip
               '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
-              // '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP with video clip
+              '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP with video clip
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/persian/iran-23231114', // CPS MAP with audio clip
-              // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
+              '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/persian/iran-23231114', // CPS MAP with audio clip
-              // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
+              '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -2898,18 +2898,18 @@ const genServices = {
         environments: {
           live: {
             paths: ['/pidgin/tori-50974590'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -3645,7 +3645,7 @@ const genServices = {
           local: {
             paths: [
               '/sinhala/23248970', // CPS MAP with audio clip
-              // '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
+              '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
@@ -3780,7 +3780,7 @@ const genServices = {
           local: {
             paths: [
               '/somali/hayadeed-23269042', // CPS MAP with video clip
-              // '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP with video clip
+              '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -3922,15 +3922,15 @@ const genServices = {
           },
           test: {
             paths: [
-              // '/swahili/media-23268999', // CPS MAP with live stream
-              // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
+              '/swahili/media-23268999', // CPS MAP with live stream
+              '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
-              '/swahili/media-23268999', // CPS MAP with live stream
-              // '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
+              // '/swahili/media-23268999', // CPS MAP with live stream
+              '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
             ],
             enabled: true,
           },
@@ -4066,7 +4066,7 @@ const genServices = {
           local: {
             paths: [
               '/tamil/india-23268994', // CPS MAP with video clip
-              // '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP with video clip
+              '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -4547,7 +4547,7 @@ const genServices = {
           local: {
             paths: [
               '/turkce/media-23268997', // CPS MAP with video clip
-              // '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP with video clip
+              '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -4873,16 +4873,28 @@ const genServices = {
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/media-51975068', // Ukrainian CPS MAP
+              '/ukrainian/news-russian-38395917', // Russian CPS MAP
+              '/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag', // Ukrainian TC2
+            ],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/world-23087423', // Russian CPS
+              '/ukrainian/other-news-23279018', // Ukrainian CPS
+              '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/world-23087423', // Russian CPS
+              '/ukrainian/other-news-23279018', // Ukrainian CPS
+              '/ukrainian/entertainment/2016/10/161025_tc2_testmap1', // TC2 Ukrainian (no Russian TC2 MAP)
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5016,7 +5028,7 @@ const genServices = {
           local: {
             paths: [
               '/urdu/world-23268929', // CPS MAP with video clip
-              // '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
+              '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
             ],
             enabled: true,
           },
@@ -5136,15 +5148,28 @@ const genServices = {
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/media-50461363', // Cyrillic CPS MAP
+              '/uzbek/lotin-44512908', // Latin CPS MAP
+              '/uzbek/lotin/2016/02/160212_latin_gravity_video', // Latin TC2 MAP
+              '/uzbek/institutional/2016/03/160313_audio_zokirjon_mashrabov', // Cyrillic TC2 MAP Audio clip
+            ],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/world-23053613', // CPS MAP Cyrillic
+              '/uzbek/23279019', // CPS MAP Latin
+              '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
+            ],
+            enabled: true,
           },
           local: {
-            paths: ['/uzbek/sport-23248721'], // CPS MAP with video clip
+            paths: [
+              '/uzbek/world-23053613', // CPS MAP Cyrillic
+              '/uzbek/23279019', // CPS MAP Latin
+              '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
+            ],
             enabled: true,
           },
         },
@@ -5263,7 +5288,7 @@ const genServices = {
           local: {
             paths: [
               '/vietnamese/23222411', // CPS MAP with video clip
-              // '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
+              '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
             ],
             enabled: true,
           },

@@ -36,8 +36,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/afaanoromoo/institutional-49281861#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/afaanoromoo/institutional-49281861',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -148,6 +150,7 @@ export const service = {
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
         liveLabel: 'KALLATTIIN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -161,7 +164,7 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
     },
     footer: {
       trustProjectLink: {

@@ -35,8 +35,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBC_ua',
     twitterSite: '@BBC_ua',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/ukrainian/institutional-50170368#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/ukrainian/institutional-50170368',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -155,6 +157,7 @@ export const service = {
         listen: 'Прослухати',
         watch: 'Дивитися',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Попередня радіопрограма',
         nextRadioShow: 'Наступна радіопрограма',
         duration: 'Тривалість',

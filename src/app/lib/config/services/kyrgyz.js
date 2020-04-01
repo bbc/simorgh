@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -157,6 +158,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -243,10 +245,6 @@ export const service = {
       {
         title: 'Журнал',
         url: '/kyrgyz/magazine',
-      },
-      {
-        title: 'Аудио',
-        url: '/kyrgyz/media/audio',
       },
       {
         title: 'Блог',

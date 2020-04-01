@@ -29,7 +29,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     pageType,
     error,
     loading: false,
-    errorCode,
+    errorCode: errorCode || initialData.errorCode,
     timeOnServer,
   });
 

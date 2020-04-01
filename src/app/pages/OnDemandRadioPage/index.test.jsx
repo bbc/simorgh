@@ -8,13 +8,17 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandRadioPage from '.';
 import pashtoPageData from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5';
+import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandRadio/getInitialData';
 
 const createAssetPage = (pageData, service) => (
   <StaticRouter>
-    <ToggleContextProvider>
+    <ToggleContextProvider
+      service={service}
+      origin="https://www.test.bbc.co.uk"
+    >
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           bbcOrigin="https://www.test.bbc.co.uk"
@@ -45,7 +49,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
+      <ToggleContextProvider
+        service="pashto"
+        origin="https://www.test.bbc.co.uk"
+      >
         <ServiceContextProvider service="pashto">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
@@ -68,7 +75,10 @@ describe('OnDemand Radio Page ', () => {
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
-      <ToggleContextProvider>
+      <ToggleContextProvider
+        service="pashto"
+        origin="https://www.test.bbc.co.uk"
+      >
         <ServiceContextProvider service="pashto">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
@@ -87,7 +97,7 @@ describe('OnDemand Radio Page ', () => {
     );
   });
 
-  it('should show the content unavilable error for OnDemand Radio Pages', async () => {
+  it('should show the brand title for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
@@ -96,6 +106,34 @@ describe('OnDemand Radio Page ', () => {
       createAssetPage(pageDataWithWithoutVideo, 'pashto'),
     );
 
-    expect(getByText('دغه فایل نور د لاسرسي وړ نه دی.')).toBeInTheDocument();
+    expect(getByText('وروستي خبرونه')).toBeInTheDocument();
+  });
+
+  it('should show the episode title for OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
+      'some-ondemand-radio-path',
+    );
+    const { getByText } = render(
+      createAssetPage(pageDataWithWithoutVideo, 'pashto'),
+    );
+
+    expect(getByText('04/02/2020 GMT')).toBeInTheDocument();
+  });
+
+  it('should show the summary for OnDemand Radio Pages', async () => {
+    fetch.mockResponse(JSON.stringify(indonesiaPageData));
+    const { pageData: pageDataWithWithoutVideo } = await getInitialData(
+      'some-ondemand-radio-path',
+    );
+    const { getByText } = render(
+      createAssetPage(pageDataWithWithoutVideo, 'indonesia'),
+    );
+
+    expect(
+      getByText(
+        'Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.',
+      ),
+    ).toBeInTheDocument();
   });
 });

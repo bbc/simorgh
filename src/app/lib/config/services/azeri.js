@@ -35,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcazeri',
     twitterSite: '@bbcazeri',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/azeri/institutional-49283479#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/azeri/institutional-49283479',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -147,6 +148,7 @@ export const service = {
         listen: 'Listen',
         watch: 'İzləyin',
         liveLabel: 'CANLI',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -224,10 +226,6 @@ export const service = {
       {
         title: 'Dərgi',
         url: '/azeri/magazine',
-      },
-      {
-        title: 'Fotoqalereya',
-        url: '/azeri/media/photogalleries',
       },
       {
         title: 'Video',

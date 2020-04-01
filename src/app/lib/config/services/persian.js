@@ -41,8 +41,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
     twitterSite: '@bbcpersian',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
@@ -170,6 +171,7 @@ export const service = {
         listen: 'Listen',
         watch: 'تماشا کنید',
         liveLabel: 'زنده',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -184,7 +186,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      header: 'برنامه‌های رادیو',
     },
     footer: {
       trustProjectLink: {
@@ -279,10 +281,6 @@ export const service = {
       {
         title: 'شما',
         url: '/persian/interactivity',
-      },
-      {
-        title: 'عکس',
-        url: '/persian/media/photogalleries',
       },
       {
         title: 'ناظران می‌گویند...',

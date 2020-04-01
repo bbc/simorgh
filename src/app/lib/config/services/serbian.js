@@ -21,8 +21,6 @@ const baseServiceConfig = {
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@bbcnasrpskom',
   twitterSite: '@bbcnasrpskom',
-  noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-  publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
   isTrustProjectParticipant: true,
   manifestPath: '/manifest.json',
   swPath: '/sw.js',
@@ -51,14 +49,18 @@ export const service = {
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
+    noBylinesPolicy:
+      'https://www.bbc.com/serbian/lat/institutional-50173730#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/serbian/lat/institutional-50173730',
     script: latinDiacritics,
     serviceLocalizedName: 'na srpskom',
     serviceName: 'News na srpskom',
     defaultImageAltText: 'BBC News na srpskom',
-    defaultCaptionOffscreenText: 'Potpis ',
-    audioCaptionOffscreenText: 'Potpis ispod audio zapisa ',
-    videoCaptionOffscreenText: 'Potpis ispod videa ',
-    imageCaptionOffscreenText: 'Potpis ispod fotografije ',
+    defaultCaptionOffscreenText: 'Potpis, ',
+    audioCaptionOffscreenText: 'Potpis ispod audio zapisa, ',
+    videoCaptionOffscreenText: 'Potpis ispod videa, ',
+    imageCaptionOffscreenText: 'Potpis ispod fotografije, ',
     imageCopyrightOffscreenText: 'Autor fotografije, ',
     footer: {
       trustProjectLink: {
@@ -133,7 +135,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Ћир',
-      offscreenText: 'Cyrillic',
       variant: 'cyr',
     },
     translations: {
@@ -238,6 +239,7 @@ export const service = {
         listen: 'Slušajte',
         watch: 'Gledajte',
         liveLabel: 'UŽIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
@@ -256,6 +258,10 @@ export const service = {
     frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
+    noBylinesPolicy:
+      'https://www.bbc.com/serbian/cyr/institutional-50173730#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/serbian/cyr/institutional-50173730',
     script: cyrillicAndLatin,
     serviceLocalizedName: 'на српском',
     serviceName: 'News на српском',
@@ -338,7 +344,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Lat',
-      offscreenText: 'Latin',
       variant: 'lat',
     },
     translations: {
@@ -443,6 +448,7 @@ export const service = {
         listen: 'Слушајте',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',
