@@ -214,6 +214,23 @@ export const service = {
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
+          text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
+        },
+        fallback: {
+          text: 'ছবির কপিরাইট',
+          linkText: '%provider_name% -এ আরো দেখুন',
+          linkTextSuffixVisuallyHidden: ', বিবিসির বাইরের খবর',
+          warningText:
+            'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
     timezone: 'Asia/Dhaka',

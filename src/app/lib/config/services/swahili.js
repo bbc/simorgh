@@ -215,6 +215,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Maelezo ya video, ',
+          text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
+        },
+        fallback: {
+          text: 'Haipatikani tena',
+          linkText: 'Tazama zaidi katika %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ya nje',
+          warningText: 'BBC haihusiki na taarifa za kutoka mitandao ya nje.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'Africa/Nairobi',

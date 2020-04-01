@@ -201,6 +201,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_NOTO_SANS_ETHIOPIC_BOLD, F_NOTO_SANS_ETHIOPIC_REGULAR],
     navigation: [
