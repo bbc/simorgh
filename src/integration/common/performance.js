@@ -1,5 +1,5 @@
 export default ({ hasScriptFonts = false } = {}) => {
-  [amp, canonical].forEach(page => {
+  [amp, canonical].forEach((page) => {
     describe(`And using ${page.platform}`, () => {
       it('Resource hints tell the browser to load some things in advance', () => {
         const resources = [
@@ -13,7 +13,7 @@ export default ({ hasScriptFonts = false } = {}) => {
             : []),
         ];
 
-        resources.forEach(resource => {
+        resources.forEach((resource) => {
           const resourceEls = Array.from(
             page.document.querySelectorAll(`head link[href="${resource}"]`),
           );

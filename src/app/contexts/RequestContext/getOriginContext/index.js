@@ -2,7 +2,7 @@ import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
-const getOriginContext = bbcOrigin => {
+const getOriginContext = (bbcOrigin) => {
   let origin = 'https://www.bbc.co.uk';
   let isUK = true;
 
