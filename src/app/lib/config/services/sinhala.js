@@ -211,7 +211,7 @@ export const service = {
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය,',
+          textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය, ',
           text:
             'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
         },

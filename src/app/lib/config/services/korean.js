@@ -202,7 +202,7 @@ export const service = {
         'BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {

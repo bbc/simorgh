@@ -225,7 +225,7 @@ export const service = {
         'BBC. Би-би-си на несет ответственности за содержание других сайтов.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Подпись к видео,',
+          textPrefixVisuallyHidden: 'Подпись к видео, ',
           text: 'Внимание: Контент других сайтов может содержать рекламу.',
         },
         fallback: {

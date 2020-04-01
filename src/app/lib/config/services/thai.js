@@ -237,7 +237,7 @@ export const service = {
         'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ',
+          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ ',
           text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
         },
         fallback: {

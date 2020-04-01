@@ -228,7 +228,7 @@ export const service = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'توضیح ویدئو،',
+          textPrefixVisuallyHidden: 'توضیح ویدئو، ',
           text: 'هشدار: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
         },
         fallback: {

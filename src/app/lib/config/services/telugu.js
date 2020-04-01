@@ -212,7 +212,7 @@ export const service = {
         ' BBC. ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {

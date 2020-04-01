@@ -207,7 +207,7 @@ export const service = {
         "BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {

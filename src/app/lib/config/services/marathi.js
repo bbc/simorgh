@@ -207,7 +207,7 @@ export const service = {
         'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {

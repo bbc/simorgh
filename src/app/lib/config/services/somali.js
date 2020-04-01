@@ -221,7 +221,7 @@ export const service = {
         'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka',
+          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka ',
           text:
             'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
         },

@@ -216,7 +216,7 @@ export const service = {
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Maelezo ya video,',
+          textPrefixVisuallyHidden: 'Maelezo ya video, ',
           text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
         },
         fallback: {

@@ -216,7 +216,7 @@ export const service = {
         'BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү,',
+          textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
           text: 'Эскертүү: Жарнамалар болушу ыктымал',
         },
         fallback: {

@@ -208,7 +208,7 @@ export const service = {
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Keterangan video,',
+          textPrefixVisuallyHidden: 'Keterangan video, ',
           text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
         },
         fallback: {

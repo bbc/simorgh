@@ -215,7 +215,7 @@ export const service = {
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান:',
+          textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
           text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
         },
         fallback: {

@@ -210,7 +210,7 @@ export const service = {
       copyrightText: 'BBC. બહારની વેબસાઇટ્સની સામગ્રી માટે બીબીસી જવાબદાર નથી.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'વીડિયો કૅપ્શન',
+          textPrefixVisuallyHidden: 'વીડિયો કૅપ્શન ',
           text: 'થર્ડ પાર્ટી કન્ટેટમાં જાહેરખબર હોય શકે છે',
         },
         fallback: {

@@ -211,7 +211,7 @@ export const service = {
         '२०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ,',
+          textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
           text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
         },
         fallback: {

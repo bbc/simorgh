@@ -202,7 +202,7 @@ export const service = {
       copyrightText: 'BBC. BBCは外部サイトの内容に責任を負いません。',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {

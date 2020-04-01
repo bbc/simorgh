@@ -220,7 +220,7 @@ export const service = {
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'د ویډیو تشریح',
+          textPrefixVisuallyHidden: 'د ویډیو تشریح ',
           text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
         },
         fallback: {

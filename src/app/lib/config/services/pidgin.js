@@ -245,7 +245,7 @@ export const service = {
       copyrightText: 'BBC. De external site no concern BBC.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption,',
+          textPrefixVisuallyHidden: 'Video caption, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {

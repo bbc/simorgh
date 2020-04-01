@@ -205,7 +205,7 @@ export const service = {
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Videonun alt yazısı,',
+          textPrefixVisuallyHidden: 'Videonun alt yazısı, ',
           text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
         },
         fallback: {

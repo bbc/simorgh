@@ -205,7 +205,7 @@ export const service = {
         'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Chụp lại video,',
+          textPrefixVisuallyHidden: 'Chụp lại video, ',
           text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
         },
         fallback: {

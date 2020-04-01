@@ -210,7 +210,7 @@ export const service = {
         'BBC. ВВС не несе відповідальності за контент інших сайтів.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Підпис до відео,',
+          textPrefixVisuallyHidden: 'Підпис до відео, ',
           text: 'Увага: інші сайти можуть містити рекламу',
         },
         fallback: {

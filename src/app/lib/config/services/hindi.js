@@ -217,7 +217,7 @@ export const service = {
         'BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'वीडियो कैप्शन',
+          textPrefixVisuallyHidden: 'वीडियो कैप्शन ',
           text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
         },
         fallback: {

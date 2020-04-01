@@ -215,7 +215,7 @@ export const service = {
         'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Bayanan bidiyo',
+          textPrefixVisuallyHidden: 'Bayanan bidiyo ',
           text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
         },
         fallback: {

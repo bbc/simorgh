@@ -210,7 +210,7 @@ export const service = {
         'BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video altyazısı:',
+          textPrefixVisuallyHidden: 'Video altyazısı: ',
           text:
             'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
         },

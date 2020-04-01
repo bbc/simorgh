@@ -219,7 +219,7 @@ export const service = {
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'காணொளிக் குறிப்பு',
+          textPrefixVisuallyHidden: 'காணொளிக் குறிப்பு ',
           text: 'எச்சரிக்கை: வெளியார் தகவல்களில் விளம்பரங்கள் இருக்கலாம்',
         },
         fallback: {

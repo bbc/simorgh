@@ -209,7 +209,7 @@ export const service = {
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Insiguro ya video,',
+          textPrefixVisuallyHidden: 'Insiguro ya video, ',
           text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
         },
         fallback: {

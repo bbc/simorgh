@@ -221,7 +221,7 @@ export const service = {
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'التعليق على الفيديو،',
+          textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
           text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
         },
         fallback: {

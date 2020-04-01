@@ -211,7 +211,7 @@ export const service = {
       copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Видео тагсўзи,',
+          textPrefixVisuallyHidden: 'Видео тагсўзи, ',
           text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
         },
         fallback: {

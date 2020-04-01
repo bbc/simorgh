@@ -215,7 +215,7 @@ export const service = {
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Título del video:',
+          textPrefixVisuallyHidden: 'Título del video: ',
           text:
             'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
         },
