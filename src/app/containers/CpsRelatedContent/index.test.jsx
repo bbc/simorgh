@@ -64,7 +64,7 @@ describe('CpsRelatedContent', () => {
       0,
     );
 
-    expect(document.querySelectorAll(`ul`).length).toBe(0);
+    expect(document.querySelector('ul')).toBeNull();
 
     expect(asFragment()).toMatchSnapshot();
   });
