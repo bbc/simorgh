@@ -48,8 +48,6 @@ const renderPage = async ({ pageData, service, isAmp = false }) => {
   return result;
 };
 
-fetch.mockResponse(JSON.stringify(pashtoPageData));
-
 analyticsUtils.getAtUserId = jest.fn();
 
 jest.mock('../../containers/ChartbeatAnalytics', () => {
@@ -59,12 +57,16 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 describe('OnDemand Radio Page ', () => {
   it('should match snapshot for Canonical', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(<Page pageData={pageData} service="pashto" />);
   });
 
   it('should match snapshot for AMP', async () => {
+    fetch.mockResponse(JSON.stringify(pashtoPageData));
+
     const { pageData } = await getInitialData('some-ondemand-radio-path');
 
     await matchSnapshotAsync(
@@ -74,6 +76,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
+
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
@@ -87,6 +90,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the episode title for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
+
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
@@ -100,6 +104,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the summary for OnDemand Radio Pages', async () => {
     fetch.mockResponse(JSON.stringify(indonesiaPageData));
+
     const { pageData: pageDataWithWithoutVideo } = await getInitialData(
       'some-ondemand-radio-path',
     );
@@ -117,7 +122,8 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on canonical', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = Infinity;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 1585727821683;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999;
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -133,7 +139,8 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on AMP', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = Infinity;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 1585727821683;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999;
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -153,7 +160,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the expired content message if episode is expired', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 15856595095250000;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 1585727821683;
     const koreanPageDataWithExpiredEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -171,7 +178,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should not show the audio player if it is not available yet', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = Infinity;
+    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 9999999999999;
     const koreanPageDataWithNotYetAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
