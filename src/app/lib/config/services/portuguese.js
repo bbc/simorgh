@@ -16,6 +16,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Atualizado',
@@ -42,8 +45,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/portuguese/institutional-50054434#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/portuguese/institutional-50054434',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -110,7 +115,7 @@ export const service = {
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Nós fizemos importantes modificações nos termos de nossa Política de Privacidade e Cookies e gostaríamos que soubesse o que elas significam para você e para os dados pessoais que você nos forneceu.',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -156,6 +161,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Assista',
         liveLabel: 'AO VIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -173,7 +179,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/portuguese/institutional-50054434',
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
@@ -210,6 +216,23 @@ export const service = {
       ],
       copyrightText:
         'BBC. A BBC não se responsabiliza pelo conteúdo de sites externos.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Legenda do vídeo, ',
+          text: 'Alerta: Conteúdo de terceiros pode conter publicidade',
+        },
+        fallback: {
+          text: 'Conteúdo não disponível',
+          linkText: 'Veja mais em %provider_name%',
+          linkTextSuffixVisuallyHidden: ', externo',
+          warningText:
+            'A BBC não se responsabiliza pelo conteúdo de sites externos.',
+        },
+        skipLink: {
+          text: 'Pule %provider_name% post',
+          endTextVisuallyHidden: 'Final de %provider_name% post',
+        },
+      },
     },
     fonts: [
       F_REITH_SANS_BOLD,
@@ -257,10 +280,6 @@ export const service = {
       {
         title: '#SalaSocial',
         url: '/portuguese/salasocial',
-      },
-      {
-        title: 'Galeria de Fotos',
-        url: '/portuguese/media/photogalleries',
       },
       {
         title: 'Vídeos',

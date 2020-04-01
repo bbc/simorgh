@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
@@ -32,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/swahili/taasisi-49283417#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/swahili/taasisi-49283417',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -154,6 +158,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'Moja kwa moja',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -168,7 +173,8 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      onFrontPage: true,
+      header: 'Vipindi vya Redio',
     },
     footer: {
       trustProjectLink: {
@@ -209,6 +215,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Maelezo ya video, ',
+          text: 'Onyo: Imetoka kwingine na inaweza kuwa na matangazo',
+        },
+        fallback: {
+          text: 'Haipatikani tena',
+          linkText: 'Tazama zaidi katika %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ya nje',
+          warningText: 'BBC haihusiki na taarifa za kutoka mitandao ya nje.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'Africa/Nairobi',
@@ -226,16 +248,8 @@ export const service = {
         url: '/swahili/media/video',
       },
       {
-        title: 'Sauti',
-        url: '/swahili/media/audio',
-      },
-      {
         title: 'Vipindi vya Redio',
         url: '/swahili/kwa_kina/redio',
-      },
-      {
-        title: 'Picha',
-        url: '/swahili/media/photogalleries',
       },
     ],
   },

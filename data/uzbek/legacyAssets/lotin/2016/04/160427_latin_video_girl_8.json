@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/lotin/2016/04/160427_latin_video_girl_8",
+    "locators": {
+      "assetUri": "/uzbek/lotin/2016/04/160427_latin_video_girl_8",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin/2016/04/160427_latin_video_girl_8",
+      "curie": "http://www.bbc.co.uk/asset/aa7e781a-0c87-11e6-adbf-b9e43db9bd6e"
+    },
+    "type": "MAP",
+    "createdBy": "uzbek",
+    "language": "uz-Latn",
+    "lastUpdated": 1551033848186,
+    "firstPublished": 1461768902,
+    "lastPublished": 1461768902,
+    "options": {
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "allowDateStamp": true,
+      "suitableForSyndication": false,
+      "allowAdvertising": true,
+      "isBreakingNews": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "43602831"
+    },
+    "tags": {},
+    "version": "v1.0.0",
+    "blockTypes": ["legacyMedia", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "43602831",
+        "subType": "primary",
+        "format": "video",
+        "aspectRatio": "16:9",
+        "live": false,
+        "href": "http://www.bbc.co.uk/uzbek/meta/dps/2016/04/emp/160427_latin_video_girl_8.emp.xml",
+        "type": "legacyMedia"
+      },
+      {
+        "text": "Maariya Aslam Qur‘oni Karimni to‘liq yod olgan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "U 8 yoshda.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Musulmon ekanmiz, Qur‘on o‘qishni o‘rganishimiz kerak.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Menga bu oson tuyuldi va yod olishni boshladim.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Qur‘oni Karim suralari soni 114 ta",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "75 mingga yaqin so‘z bor",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Maariya Qur‘on o‘qishni 5 yoshidan boshlagan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "2 yilda uni to‘liq yod olgan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Maariya o‘z ona shahri Lutonda anchayin tanilib qolgan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Facebookda uning 6, 000 muxlisi bor.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "---------------------------------------------------------------------------------",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<bold>BBC O‘zbek xizmati bilan Whatsapp, Telegram va Viber orqali bog‘lanishni istasangiz, telefonimiz: +44 78-58-86-00-02.</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>TELEGRAMDA ESA kanalimiz - https://telegram.me/bbcuzbek</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Instagram - BBC UZBEK</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Twitter - BBC UZBEK</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Odnoklassniki - BBCUZBEK</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Facebook - BBC UZBEK</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Google+ - BBC UZBEK</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>YouTube - BBCUZBEK (https://www.youtube.com/user/bbcuzbek)</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Skype - uzbekbbclondon</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>bbcuzbek.comga to‘siq bo‘lsa, uzbekweb.netga kiring</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Qur‘oni Karimni yod olgan qizaloq",
+      "headline": "Qur‘oni Karimni yod olgan qizaloq"
+    },
+    "locators": {
+      "assetUri": "/uzbek/lotin/2016/04/160427_latin_video_girl_8",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/lotin/2016/04/160427_latin_video_girl_8",
+      "curie": "http://www.bbc.co.uk/asset/aa7e781a-0c87-11e6-adbf-b9e43db9bd6e"
+    },
+    "summary": "Videolavha - Maariya Aslam Qur‘oni Karimni to‘liq yod olgan. U 8 yoshda. Musulmon ekanmiz, Qur‘on o‘qishni o‘rganishimiz kerak. Menga bu oson tuyuldi va yod olishni boshladim, deydi Maariya. ",
+    "timestamp": 1551033848186,
+    "passport": {},
+    "media": {
+      "id": "43602831",
+      "subType": "primary",
+      "format": "video",
+      "aspectRatio": "16:9",
+      "live": false,
+      "href": "http://www.bbc.co.uk/uzbek/meta/dps/2016/04/emp/160427_latin_video_girl_8.emp.xml",
+      "type": "legacyMedia"
+    },
+    "indexImage": {
+      "id": "d5e241",
+      "subType": "index",
+      "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/04/27/160427115833_girl_with_koran_640x360_bbc_nocredit.jpg",
+      "path": "/amz/worldservice/live/assets/images/2016/04/27/160427115833_girl_with_koran_640x360_bbc_nocredit.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/lotin/2016/04/160427_latin_video_girl_8",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Lotinda",
+      "uri": "/uzbek/lotin",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCUzbek.com",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -20,12 +20,14 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
 import MetadataContainer from '#containers/Metadata';
 import MostReadContainer from '#containers/MostRead';
 import RadioScheduleContainer from '#containers/RadioSchedule';
+import AdContainer from '#containers/Ad';
 import LinkedData from '#containers/LinkedData';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -64,12 +66,14 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLocalizedName,
     translations,
     frontPageTitle,
+    radioSchedule,
   } = useContext(ServiceContext);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
+  const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -106,11 +110,14 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {offScreenText}
         </VisuallyHiddenText>
         <StyledFrontPageDiv>
+          <AdContainer />
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <RadioScheduleContainer />}
+              {onFrontPage && group.type === 'top-stories' && (
+                <RadioScheduleContainer />
+              )}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}

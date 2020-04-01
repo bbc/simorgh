@@ -5,7 +5,7 @@ import { RequestContext } from '../../contexts/RequestContext';
 import { pageDataPropType } from '../../models/propTypes/data';
 import AmpChartbeatBeacon from './amp';
 import { getConfig } from './utils';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 
 const ChartbeatAnalytics = ({ data }) => {
   const { service, brandName, chartbeatDomain } = useContext(ServiceContext);

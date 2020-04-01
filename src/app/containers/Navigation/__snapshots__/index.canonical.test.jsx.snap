@@ -43,6 +43,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -113,10 +114,10 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   .c6 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;

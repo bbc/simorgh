@@ -8,6 +8,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ta`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'புதுப்பிக்கப்பட்டது',
@@ -33,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbctamil',
     twitterSite: '@bbctamil',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/tamil/institutional-50288575#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/tamil/institutional-50288575',
     isTrustProjectParticipant: true,
     script: tamil,
     manifestPath: '/manifest.json',
@@ -157,6 +161,7 @@ export const service = {
         listen: 'கேட்க',
         watch: 'பார்க்க',
         liveLabel: 'நேரலை',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -212,6 +217,23 @@ export const service = {
       ],
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'காணொளிக் குறிப்பு ',
+          text: 'எச்சரிக்கை: வெளியார் தகவல்களில் விளம்பரங்கள் இருக்கலாம்',
+        },
+        fallback: {
+          text: 'தகவல் இல்லை',
+          linkText: 'மேலதிக விவரங்களைக் காண %provider_name%',
+          linkTextSuffixVisuallyHidden: ', வெளி இணைப்பு',
+          warningText:
+            'வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
     timezone: 'GMT',

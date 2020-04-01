@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
@@ -20,10 +23,10 @@ export const service = {
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
     externalLinkText: ', bogag kale',
-    imageCaptionOffscreenText: 'Qoraalka sawirka ',
-    videoCaptionOffscreenText: 'Qoraalka Muuqaalka ',
-    audioCaptionOffscreenText: 'Qoralka Codka ',
-    defaultCaptionOffscreenText: 'Qoraal ',
+    imageCaptionOffscreenText: 'Qoraalka sawirka, ',
+    videoCaptionOffscreenText: 'Qoraalka Muuqaalka, ',
+    audioCaptionOffscreenText: 'Qoralka Codka, ',
+    defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
     datetimeLocale: `so`,
@@ -32,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/somali/hayadeed-49283375#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/somali/hayadeed-49283375',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -159,6 +163,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'TOOS',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -173,7 +178,8 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      header: 'BBC News Radio',
+      onFrontPage: true,
+      header: 'Barnaamijyada Idaacadda',
     },
     footer: {
       trustProjectLink: {
@@ -214,6 +220,24 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka ',
+          text:
+            'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
+        },
+        fallback: {
+          text: 'Macluumaadkan lama heli karo',
+          linkText: 'Faahfaahin ka eeg %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bogag kale',
+          warningText:
+            'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'Africa/Mogadishu',
@@ -239,20 +263,12 @@ export const service = {
         url: '/somali/aqoon_guud',
       },
       {
-        title: 'Maqal',
-        url: '/somali/media/audio',
-      },
-      {
         title: 'Muuqaal',
         url: '/somali/media/video',
       },
       {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/ka_qayb_gal/programmes',
-      },
-      {
-        title: 'Sawirro',
-        url: '/somali/media/photogalleries',
       },
     ],
   },

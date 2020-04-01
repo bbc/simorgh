@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `vi`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Cập nhật',
@@ -33,8 +36,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcvietnamese',
     twitterSite: '@bbcvietnamese',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/vietnamese/institutional-49283563#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/vietnamese/institutional-49283563',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -142,6 +147,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Xem',
         liveLabel: 'TRỰC TIẾP',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -197,6 +203,22 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Chụp lại video, ',
+          text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
+        },
+        fallback: {
+          text: 'Nội dung không có',
+          linkText: 'Xem thêm ở %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bên ngoài',
+          warningText: 'BBC không chịu trách nhiệm nội dung các trang ngoài.',
+        },
+        skipLink: {
+          text: 'Bỏ qua %provider_name% tin',
+          endTextVisuallyHidden: 'Cuối %provider_name% tin',
+        },
+      },
     },
     fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',
@@ -232,14 +254,6 @@ export const service = {
       {
         title: 'Học tiếng Anh',
         url: '/vietnamese/english',
-      },
-      {
-        title: 'Hình ảnh',
-        url: '/vietnamese/media/photogalleries',
-      },
-      {
-        title: 'Audio',
-        url: '/vietnamese/media/audio',
       },
       {
         title: 'Video',

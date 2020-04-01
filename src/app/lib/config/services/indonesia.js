@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Diperbarui',
@@ -32,8 +35,10 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/indonesia/institutional-49283175#authorexpertise',
+    publishingPrinciples:
+      'https://www.bbc.com/indonesia/institutional-49283175',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -145,6 +150,7 @@ export const service = {
         listen: 'Dengar',
         watch: 'Tonton',
         liveLabel: 'LANGSUNG',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
@@ -158,7 +164,8 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -200,6 +207,23 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Keterangan video, ',
+          text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
+        },
+        fallback: {
+          text: 'Konten tidak tersedia',
+          linkText: 'Lihat lebih banyak di %provider_name%',
+          linkTextSuffixVisuallyHidden: ', eksternal',
+          warningText:
+            'BBC tidak bertanggung jawab atas konten dari situs eksternal',
+        },
+        skipLink: {
+          text: 'Hentikan %provider_name% pesan',
+          endTextVisuallyHidden: 'Lompati %provider_name% pesan',
+        },
+      },
     },
     fonts: [],
     navigation: [
@@ -222,6 +246,10 @@ export const service = {
       {
         title: 'Liputan Mendalam',
         url: '/indonesia/laporan-khusus-51267199',
+      },
+      {
+        title: 'Majalah',
+        url: '/indonesia/majalah-51456120',
       },
     ],
     timezone: 'Asia/Jakarta',
