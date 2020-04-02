@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import styled from 'styled-components';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -10,6 +11,22 @@ import useToggle from '#hooks/useToggle';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 
+const MAX_WIDTH = '31.25rem';
+
+const htmlUnescape = (htmlString) =>
+  htmlString
+    .replace(/&gt;/g, '>')
+    .replace(/&lt;/g, '<')
+    .replace(/&#0?39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&');
+
+const Wrapper = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  max-width: ${MAX_WIDTH};
+`;
+
 const SocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
   const { service } = useContext(ServiceContext);
@@ -19,7 +36,11 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   const { type: provider, model } = blocks[0];
   const { id, href } = model;
-  const oEmbed = path(['embed', 'oembed'], model);
+
+  const oEmbedHtmlEscaped = path(['embed', 'oembed'], model);
+  const oEmbed = oEmbedHtmlEscaped && {
+    ...(oEmbedHtmlEscaped && { html: htmlUnescape(oEmbedHtmlEscaped.html) }),
+  };
 
   const fallback = {
     text: "Sorry but we're having trouble displaying this content",
@@ -45,25 +66,27 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   return (
     <GridItemConstrainedMedium>
-      {isAmp ? (
-        <AmpSocialEmbed
-          provider={provider}
-          service={service}
-          id={id}
-          fallback={fallback}
-          skipLink={skipLink}
-          caption={caption}
-        />
-      ) : (
-        <CanonicalSocialEmbed
-          provider={provider}
-          service={service}
-          oEmbed={oEmbed}
-          fallback={fallback}
-          skipLink={skipLink}
-          caption={caption}
-        />
-      )}
+      <Wrapper provider={provider}>
+        {isAmp ? (
+          <AmpSocialEmbed
+            provider={provider}
+            service={service}
+            id={id}
+            fallback={fallback}
+            skipLink={skipLink}
+            caption={caption}
+          />
+        ) : (
+          <CanonicalSocialEmbed
+            provider={provider}
+            service={service}
+            oEmbed={oEmbed}
+            fallback={fallback}
+            skipLink={skipLink}
+            caption={caption}
+          />
+        )}
+      </Wrapper>
     </GridItemConstrainedMedium>
   );
 };
