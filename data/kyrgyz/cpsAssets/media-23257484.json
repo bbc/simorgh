@@ -1,153 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": true,
-          "caption": "Test_북한의",
-          "embedding": false,
-          "format": "video",
-          "id": "p01cxxyw",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxy07.jpg",
-          "subType": "clip",
-          "synopses": {
-            "long": "북한 위기 : 전쟁은 끔찍할 것입니다.\n\n조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.\n\n북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.\n트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에 직면 했다며 북한에 경고했다.\n그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.\n북한 위기 : 전쟁은 끔찍할 것입니다.\n\n조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.\n\n북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.\n트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에 직면 했다며 북한에 경고했다.\n그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.",
-            "medium": "북한 위기 : 전쟁은 끔찍할 것입니다.\n\n조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.\n\n북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.\n트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에",
-            "short": "대한 계획을 중단함에 따라 지난주의 예리한 수사법이"
-          },
-          "title": "대한 계획을 지난주의 예리한 수사법이",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1503400772000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 29,
-              "durationISO8601": "PT29S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01cxxyy",
-              "warnings": {}
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "text": "북한 위기 : 전쟁은 끔찍할 것입니다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 &quot;화재와 분노&quot;에 직면 했다며 북한에 경고했다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "북한 위기 : 전쟁은 끔찍할 것입니다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 &quot;화재와 분노&quot;에 직면 했다며 북한에 경고했다.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "kyrgyz.embedded_media.media_asset.23257484.page",
-        "cps_asset_id": "23257484",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph"
-      ],
-      "createdBy": "kyrgyz-v6",
-      "firstPublished": 1575370660000,
-      "id": "urn:bbc:ares::asset:kyrgyz/media-23257484",
-      "includeComments": false,
-      "language": "ky",
-      "lastPublished": 1575370661000,
-      "lastUpdated": 1575370669513,
-      "locators": {
-        "assetUri": "/kyrgyz/media-23257484",
-        "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-23257484",
-        "curie": "http://www.bbc.co.uk/asset/099db6d6-adeb-dc4b-9836-ee639eccc5b0"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "type": "MAP",
-      "version": "v1.1.3"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "대한 계획을 중단함에 따라 지난주의 예리한 수사법이",
-        "shortHeadline": "대한 계획을 지난주의 예리한 수사법이"
-      },
-      "id": "urn:bbc:ares::asset:kyrgyz/media-23257484",
-      "indexImage": {
-        "altText": "Buqqaafamtoota keessaa",
-        "copyrightHolder": "BBC",
-        "height": 549,
-        "href": "http://b.files.bbci.co.uk/831A/test/_63726533_p01fcplf.jpg",
-        "id": "63726533",
-        "path": "/cpsdevpb/831A/test/_63726533_p01fcplf.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 976
-      },
-      "locators": {
-        "assetUri": "/kyrgyz/media-23257484",
-        "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-23257484",
-        "curie": "http://www.bbc.co.uk/asset/099db6d6-adeb-dc4b-9836-ee639eccc5b0"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": true,
         "caption": "Test_북한의",
         "embedding": false,
@@ -172,34 +26,173 @@
             },
             "duration": 29,
             "durationISO8601": "PT29S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01cxxyy",
             "warnings": {}
           }
         ]
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "text": "북한 위기 : 전쟁은 끔찍할 것입니다.",
+        "type": "paragraph"
       },
-      "summary": "북한 위기 : 전쟁은 끔찍할 것입니다. 조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다. 북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다. 트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에",
-      "timestamp": 1575370669513,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/kyrgyz/media"
+      {
+        "markupType": "plain_text",
+        "text": "조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "BBC Кыргыз",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/kyrgyz"
+      {
+        "markupType": "plain_text",
+        "text": "북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 &quot;화재와 분노&quot;에 직면 했다며 북한에 경고했다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "북한 위기 : 전쟁은 끔찍할 것입니다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 &quot;화재와 분노&quot;에 직면 했다며 북한에 경고했다.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "kyrgyz.embedded_media.media_asset.23257484.page",
+      "cps_asset_id": "23257484",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "kyrgyz-v6",
+    "firstPublished": 1575370660000,
+    "id": "urn:bbc:ares::asset:kyrgyz/media-23257484",
+    "includeComments": false,
+    "language": "ky",
+    "lastPublished": 1575370661000,
+    "lastUpdated": 1575370669513,
+    "locators": {
+      "assetUri": "/kyrgyz/media-23257484",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-23257484",
+      "curie": "http://www.bbc.co.uk/asset/099db6d6-adeb-dc4b-9836-ee639eccc5b0"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "대한 계획을 중단함에 따라 지난주의 예리한 수사법이",
+      "shortHeadline": "대한 계획을 지난주의 예리한 수사법이"
+    },
+    "id": "urn:bbc:ares::asset:kyrgyz/media-23257484",
+    "indexImage": {
+      "altText": "Buqqaafamtoota keessaa",
+      "copyrightHolder": "BBC",
+      "height": 549,
+      "href": "http://b.files.bbci.co.uk/831A/test/_63726533_p01fcplf.jpg",
+      "id": "63726533",
+      "path": "/cpsdevpb/831A/test/_63726533_p01fcplf.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "locators": {
+      "assetUri": "/kyrgyz/media-23257484",
+      "cpsUrn": "urn:bbc:content:assetUri:kyrgyz/media-23257484",
+      "curie": "http://www.bbc.co.uk/asset/099db6d6-adeb-dc4b-9836-ee639eccc5b0"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "Test_북한의",
+      "embedding": false,
+      "format": "video",
+      "id": "p01cxxyw",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cxy07.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "북한 위기 : 전쟁은 끔찍할 것입니다.\n\n조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.\n\n북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.\n트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에 직면 했다며 북한에 경고했다.\n그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.\n북한 위기 : 전쟁은 끔찍할 것입니다.\n\n조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.\n\n북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.\n트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에 직면 했다며 북한에 경고했다.\n그러나 북한의 김정일 위원장이 괌에 대한 계획을 중단함에 따라 지난주의 예리한 수사법이 완화됐다.",
+        "medium": "북한 위기 : 전쟁은 끔찍할 것입니다.\n\n조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다.\n\n북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다.\n트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에",
+        "short": "대한 계획을 중단함에 따라 지난주의 예리한 수사법이"
+      },
+      "title": "대한 계획을 지난주의 예리한 수사법이",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1503400772000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 29,
+          "durationISO8601": "PT29S",
+          "types": ["Original"],
+          "versionId": "p01cxxyy",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "북한 위기 : 전쟁은 끔찍할 것입니다. 조셉 던포드 (Joseph Dunford) 테스트 합동 참모 총장은 중국 방문 중에 의견을 발표했다. 북한의 미사일 시험 발사 이후 미국과 북한 간의 긴장이 고조되고있다. 트럼프 대변인은 북한이 괌의 미국 영토를 공격하겠다고 위협하면서 \"화재와 분노\"에",
+    "timestamp": 1575370669513,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/kyrgyz/media"
+    },
+    "site": {
+      "name": "BBC Кыргыз",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/kyrgyz"
     }
   }
+}

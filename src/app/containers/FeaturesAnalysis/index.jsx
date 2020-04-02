@@ -54,7 +54,7 @@ const FeaturesAnalysis = ({ content }) => {
         </StyledSectionLabel>
 
         <StoryPromoUl>
-          {content.map(item => (
+          {content.map((item) => (
             <StoryPromoLi key={item.id || item.uri}>
               <StoryPromo item={item} displayImage />
             </StoryPromoLi>

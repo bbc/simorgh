@@ -1,4 +1,4 @@
-const getOriginContext = bbcOrigin => {
+const getOriginContext = (bbcOrigin) => {
   let origin = 'https://www.bbc.co.uk';
   let isUK = true;
 

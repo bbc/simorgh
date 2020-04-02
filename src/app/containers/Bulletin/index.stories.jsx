@@ -9,31 +9,31 @@ import BulletinContainer from '.';
 import fixture from '#data/igbo/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-const bulletinFixture = type =>
+const bulletinFixture = (type) =>
   pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
+    .flatMap((group) => pathOr(null, ['items'], group))
     .find(
-      item =>
+      (item) =>
         pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
         pathOr(null, ['contentType'], item) === type &&
         !pathOr(null, ['isLive'], item),
     );
 
-const noImageBulletinFixture = type =>
+const noImageBulletinFixture = (type) =>
   pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
+    .flatMap((group) => pathOr(null, ['items'], group))
     .find(
-      item =>
+      (item) =>
         pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
         pathOr(null, ['contentType'], item) === type &&
         !pathOr(null, ['indexImage'], item),
     );
 
-const liveBulletinFixture = type =>
+const liveBulletinFixture = (type) =>
   pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
+    .flatMap((group) => pathOr(null, ['items'], group))
     .find(
-      item =>
+      (item) =>
         pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
         pathOr(null, ['contentType'], item) === type &&
         pathOr(null, ['isLive'], item) === true,

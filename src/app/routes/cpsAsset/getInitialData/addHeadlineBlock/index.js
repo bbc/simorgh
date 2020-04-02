@@ -7,7 +7,7 @@ import {
   getHeadlineBlock,
 } from './models';
 
-const getHeadlineBlocks = json => {
+const getHeadlineBlocks = (json) => {
   const headlineText = pathOr(null, ['promo', 'headlines', 'headline'], json);
 
   if (!headlineText) {
@@ -21,12 +21,12 @@ const getHeadlineBlocks = json => {
   };
 };
 
-const firstBlockIsVideo = blocks =>
+const firstBlockIsVideo = (blocks) =>
   ['video', 'version', 'legacyMedia', 'unavailableMedia'].includes(
     path(['0', 'type'], blocks),
   );
 
-const insertHeadlineBlocks = originalJson => {
+const insertHeadlineBlocks = (originalJson) => {
   const json = deepClone(originalJson);
   const type = path(['metadata', 'type'], json);
   const {

@@ -33,13 +33,13 @@ const matchRoute = (route, pathValue) => {
 };
 
 const shouldMatchValidRoutes = (routes, pathValue) => {
-  it.each(routes)('should match valid route %s', route => {
+  it.each(routes)('should match valid route %s', (route) => {
     expect(matchRoute(route, pathValue)).toBe(true);
   });
 };
 
 const shouldNotMatchInvalidRoutes = (routes, pathValue) => {
-  it.each(routes)('should not match invalid route %s', route => {
+  it.each(routes)('should not match invalid route %s', (route) => {
     expect(matchRoute(route, pathValue)).toBe(false);
   });
 };

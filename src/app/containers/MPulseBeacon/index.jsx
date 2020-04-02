@@ -3,7 +3,7 @@ import nodeLogger from '#lib/logger.node';
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import onClient from '#lib/utilities/onClient';
 import boomr from './boomr';
 
