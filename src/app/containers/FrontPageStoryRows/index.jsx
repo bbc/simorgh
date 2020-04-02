@@ -146,23 +146,29 @@ export const RegularRow = ({
   parentEnableGelGutters,
 }) => (
   <>
-    {stories.map((story) => (
-      <Grid
-        item
-        columns={displayImages ? regularStoryColumns : noImageStoryColumns}
-        key={story.id}
-        as={StoryPromoLi}
-        dir={dir}
-        parentColumns={parentColumns}
-        parentEnableGelGutters={parentEnableGelGutters}
-      >
-        {renderPromo({
-          item: story,
-          dir,
-          displayImage: displayImages,
-        })}
-      </Grid>
-    ))}
+    {stories.map((story, i) => {
+      const penultimateItem = stories.length - 2 === i;
+      const border = displayImages ? true : !penultimateItem;
+
+      return (
+        <Grid
+          item
+          columns={displayImages ? regularStoryColumns : noImageStoryColumns}
+          key={story.id}
+          as={StoryPromoLi}
+          dir={dir}
+          parentColumns={parentColumns}
+          parentEnableGelGutters={parentEnableGelGutters}
+          border={border}
+        >
+          {renderPromo({
+            item: story,
+            dir,
+            displayImage: displayImages,
+          })}
+        </Grid>
+      );
+    })}
   </>
 );
 
