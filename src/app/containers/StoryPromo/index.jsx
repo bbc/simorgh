@@ -150,7 +150,7 @@ const StoryPromoContainer = ({
           {summary}
         </Summary>
       )}
-      {timestamp && !isStoryPromoPodcast && (
+      {timestamp && !isStoryPromoPodcast && !isLive && (
         <Timestamp
           locale={datetimeLocale}
           timestamp={timestamp}
