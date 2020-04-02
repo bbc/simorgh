@@ -163,6 +163,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
+          text: 'Эскертүү: Жарнамалар болушу ыктымал',
+        },
+        fallback: {
+          text: 'Баракча ачылбайт',
+          linkText: '%provider_name% баракчадан көбүрөк пост окуу',
+          linkTextSuffixVisuallyHidden: ', Би-Би-Сиден тышкары баракча',
+          warningText:
+            'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+        },
+        skipLink: {
+          text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
+          endTextVisuallyHidden: '%provider_name% посттун аягы',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -214,23 +231,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
-          text: 'Эскертүү: Жарнамалар болушу ыктымал',
-        },
-        fallback: {
-          text: 'Баракча ачылбайт',
-          linkText: '%provider_name% баракчадан көбүрөк пост окуу',
-          linkTextSuffixVisuallyHidden: ', Би-Би-Сиден тышкары баракча',
-          warningText:
-            'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
-        },
-        skipLink: {
-          text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
-          endTextVisuallyHidden: '%provider_name% посттун аягы',
-        },
-      },
     },
     fonts: [],
     timezone: 'GMT',
