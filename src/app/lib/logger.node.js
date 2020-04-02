@@ -73,6 +73,7 @@ const logEventMessage = (event, message) => {
 class Logger {
   constructor(callingFile) {
     const fileLogger = logToFile(callingFile);
+
     this.error = (event, message) => {
       if (message) {
         fileLogger.error(logEventMessage(event, message));
