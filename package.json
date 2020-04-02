@@ -92,7 +92,7 @@
     "@bbc/psammead-sitewide-links": "^4.0.10",
     "@bbc/psammead-social-embed": "0.1.0-alpha.4",
     "@bbc/psammead-story-promo": "^5.1.0",
-    "@bbc/psammead-story-promo-list": "^4.0.5",
+    "@bbc/psammead-story-promo-list": "^4.0.6",
     "@bbc/psammead-styles": "^4.3.0",
     "@bbc/psammead-timestamp-container": "^2.7.9",
     "@bbc/psammead-useful-links": "^1.0.16",
