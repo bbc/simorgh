@@ -38,7 +38,6 @@ const handleResponse = (url) => async (response) => {
   if (upstreamStatusCodesToPropagate.includes(status)) {
     if (status === STATUS_NOT_FOUND) {
       logger.error(DATA_NOT_FOUND, {
-        message: `Data not found when requesting ${url}`,
         url,
         status,
       });
