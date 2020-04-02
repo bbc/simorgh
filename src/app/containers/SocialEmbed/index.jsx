@@ -7,9 +7,10 @@ import {
 } from '@bbc/psammead-social-embed';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
+import createTranslations from './translations';
 
 const MAX_WIDTH = '31.25rem';
 
@@ -29,7 +30,7 @@ const Wrapper = styled.div`
 
 const SocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
-  const { service } = useContext(ServiceContext);
+  const { service, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('socialEmbed');
 
   if (!blocks || !enabled) return null;
@@ -42,27 +43,23 @@ const SocialEmbedContainer = ({ blocks }) => {
     ...(oEmbedHtmlEscaped && { html: htmlUnescape(oEmbedHtmlEscaped.html) }),
   };
 
+  const {
+    fallback: fallbackTranslations,
+    skipLink: skipLinkTranslations,
+    caption: captionTranslations,
+  } = createTranslations(translations);
+
   const fallback = {
-    text: "Sorry but we're having trouble displaying this content",
-    linkText: 'View content on %provider_name%',
-    linkTextSuffixVisuallyHidden: ', external',
+    ...fallbackTranslations,
     linkHref: href,
-    warningText: 'Warning: BBC is not responsible for third party content',
   };
 
   const skipLink = {
-    text: 'Skip %provider_name% content',
+    ...skipLinkTranslations,
     endTextId: 'skip-%provider%-content',
-    endTextVisuallyHidden: 'End of %provider_name% content',
   };
 
-  const caption =
-    provider === 'youtube'
-      ? {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
-        }
-      : null;
+  const caption = provider === 'youtube' ? captionTranslations : null;
 
   return (
     <GridItemConstrainedMedium>
