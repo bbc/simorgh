@@ -50,25 +50,8 @@ const transformJson = async json => {
   }
 };
 
-export default async (urlPath, includeUrl) => {
-  let data;
-  if (!includeUrl) {
-    data = await fetchPageData(urlPath);
-  } else {
-    data = await fetchPageData('/mundo/23268432');
-  }
-
-  console.log(JSON.stringify(data));
-
-  const { json, ...rest } = data;
-
-  json.content.blocks.push({
-    required: false,
-    tile: 'Fake Include',
-    href: includeUrl,
-    platform: 'highweb',
-    type: 'include',
-  });
+export default async urlPath => {
+  const { json, ...rest } = await fetchPageData(urlPath);
 
   return {
     ...rest,
