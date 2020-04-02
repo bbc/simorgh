@@ -114,8 +114,8 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
             dir={dir}
           >
             {content
-              .map(item => formatItem(item, env))
-              .map(item => (
+              .map((item) => formatItem(item, env))
+              .map((item) => (
                 <Grid
                   item
                   columns={{
