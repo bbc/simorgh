@@ -3,8 +3,6 @@ import { arrayOf, shape, bool, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import path from 'ramda/src/path';
-import assocPath from 'ramda/src/assocPath';
 
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -16,7 +14,6 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
-import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
@@ -46,20 +43,8 @@ const SingleContentWrapper = styled.div`
   }
 `;
 
-const formatItem = (item, env) => {
-  if (env === 'live') return item;
-
-  // In non-live environments, we need to pass this querystring to ensure
-  // the linked site retrieves its data from the TEST API location
-  const uriSuffix = '?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk';
-  const baseUri = path(['locators', 'assetUri'], item);
-
-  return assocPath(['locators', 'assetUri'], `${baseUri}${uriSuffix}`, item);
-};
-
 const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { script, service, dir, translations } = useContext(ServiceContext);
-  const { env } = useContext(RequestContext);
   const a11yAttributes = {
     as: 'section',
     role: 'region',
@@ -94,10 +79,7 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
 
         {hasSingleRelatedContent ? (
           <SingleContentWrapper>
-            <StoryPromo
-              item={formatItem(singleRelatedContent, env)}
-              dir={dir}
-            />
+            <StoryPromo item={singleRelatedContent} dir={dir} />
           </SingleContentWrapper>
         ) : (
           <Grid
@@ -113,26 +95,24 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
             enableGelGutters
             dir={dir}
           >
-            {content
-              .map((item) => formatItem(item, env))
-              .map((item) => (
-                <Grid
-                  item
-                  columns={{
-                    group0: 6,
-                    group1: 6,
-                    group2: 6,
-                    group3: 6,
-                    group4: 4,
-                    group5: 4,
-                  }}
-                  as={StoryPromoLi}
-                  key={item.id || item.uri}
-                  dir={dir}
-                >
-                  <StoryPromo item={item} dir={dir} />
-                </Grid>
-              ))}
+            {content.map((item) => (
+              <Grid
+                item
+                columns={{
+                  group0: 6,
+                  group1: 6,
+                  group2: 6,
+                  group3: 6,
+                  group4: 4,
+                  group5: 4,
+                }}
+                as={StoryPromoLi}
+                key={item.id || item.uri}
+                dir={dir}
+              >
+                <StoryPromo item={item} dir={dir} />
+              </Grid>
+            ))}
           </Grid>
         )}
       </Wrapper>
