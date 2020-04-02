@@ -908,7 +908,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   role="list"
               >
                 <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                     role="listitem"
                 >
                   <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
@@ -952,7 +952,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   </div>
                 </li>
                 <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                     role="listitem"
                 >
                   <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
@@ -1033,7 +1033,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                     class="StoryPromoUl-sc-171lqjd-1 isCYWc"
                 >
                   <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
                   >
                     <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
                       <div dir="ltr"
@@ -1076,7 +1076,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                     </div>
                   </li>
                   <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
                   >
                     <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
                       <div dir="ltr"
@@ -2031,7 +2031,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   role="list"
               >
                 <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                     role="listitem"
                 >
                   <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
@@ -2069,7 +2069,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   </div>
                 </li>
                 <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                     role="listitem"
                 >
                   <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
@@ -2144,7 +2144,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                     class="StoryPromoUl-sc-171lqjd-1 isCYWc"
                 >
                   <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
                   >
                     <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
                       <div dir="ltr"
@@ -2181,7 +2181,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                     </div>
                   </li>
                   <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
                   >
                     <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
                       <div dir="ltr"
