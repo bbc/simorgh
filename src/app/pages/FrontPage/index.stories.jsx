@@ -2,30 +2,18 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
-import newsData from '#data/news/frontpage';
+import arabicData from '#data/arabic/frontpage';
 import igboData from '#data/igbo/frontpage';
-import pidginData from '#data/pidgin/frontpage';
-import thaiData from '#data/thai/frontpage';
-import yorubaData from '#data/yoruba/frontpage';
-import punjabiData from '#data/punjabi/frontpage';
 import serbianCyrData from '#data/serbian/frontpage/cyr';
 import serbianLatData from '#data/serbian/frontpage/lat';
-import { service as newsConfig } from '#lib/config/services/news';
+import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
-import { service as pidginConfig } from '#lib/config/services/pidgin';
-import { service as thaiConfig } from '#lib/config/services/thai';
-import { service as yorubaConfig } from '#lib/config/services/yoruba';
-import { service as punjabiConfig } from '#lib/config/services/punjabi';
 import { service as serbianConfig } from '#lib/config/services/serbian';
 import { FrontPage } from '..';
 
 const serviceDataSets = {
-  news: { default: newsData },
+  arabic: { default: arabicData },
   igbo: { default: igboData },
-  yoruba: { default: yorubaData },
-  pidgin: { default: pidginData },
-  thai: { default: thaiData },
-  punjabi: { default: punjabiData },
   serbian: {
     cyr: serbianCyrData,
     lat: serbianLatData,
@@ -33,12 +21,8 @@ const serviceDataSets = {
 };
 
 const serviceConfigs = {
-  news: newsConfig,
+  arabic: arabicConfig,
   igbo: igboConfig,
-  pidgin: pidginConfig,
-  thai: thaiConfig,
-  yoruba: yorubaConfig,
-  punjabi: punjabiConfig,
   serbian: serbianConfig,
 };
 

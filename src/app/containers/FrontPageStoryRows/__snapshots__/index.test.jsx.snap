@@ -572,7 +572,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
                 class="c8"
                 lang="en-GB"
               >
-                Listen, 
+                استمع, 
               </span>
               <span>
                 radio ریو اولمپکس 2016
@@ -611,7 +611,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
               />
             </svg>
           </span>
-          Listen
+          استمع
         </div>
       </div>
     </div>
@@ -1823,7 +1823,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
                 class="c8"
                 lang="en-GB"
               >
-                Listen, 
+                استمع, 
               </span>
               <span>
                 radio ریو اولمپکس 2016
@@ -1862,7 +1862,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
               />
             </svg>
           </span>
-          Listen
+          استمع
         </div>
       </div>
     </div>
@@ -3087,7 +3087,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
                 class="c8"
                 lang="en-GB"
               >
-                Listen, 
+                استمع, 
               </span>
               <span>
                 radio ریو اولمپکس 2016
@@ -3126,7 +3126,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
               />
             </svg>
           </span>
-          Listen
+          استمع
         </div>
       </div>
     </div>
@@ -3962,7 +3962,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
               class="c8"
               lang="en-GB"
             >
-              Listen, 
+              استمع, 
             </span>
             <span>
               radio ریو اولمپکس 2016
@@ -4001,7 +4001,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
             />
           </svg>
         </span>
-        Listen
+        استمع
       </div>
     </div>
   </div>
