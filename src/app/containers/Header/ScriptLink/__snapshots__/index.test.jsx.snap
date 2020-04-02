@@ -69,20 +69,7 @@ exports[`Script Link should render correctly 1`] = `
   <span
     class="c2"
   >
-<<<<<<< HEAD
-    <span
-      aria-hidden="true"
-    >
-      Ћир
-    </span>
-    <span
-      class="c3"
-    >
-       Cyrillic
-    </span>
-=======
     Ћир
->>>>>>> 589109ad0c60b65704f4f495f611e4058c47c231
   </span>
 </a>
 `;
