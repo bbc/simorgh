@@ -42,7 +42,7 @@ export const generateImgSrc = ({ isLive }) => {
     'https://securepubads.g.doubleclick.net', // ads
     'https://tpc.googlesyndication.com', // ads
     'https://www.google.com', // ads
-    'https://via.placeholder.com/970x250', // ads
+    'https://via.placeholder.com', // ads
   ];
 
   if (!isLive) {
@@ -155,9 +155,3 @@ export const constructCspHeader = ({ isAmp, isLive, isUK }) => ({
     'child-src': isAmp ? ['blob:'] : ["'self'"],
   },
 });
-export const stringCspHeader = ({ isAmp, isLive, isUK }) => {
-  const { directives } = constructCspHeader({ isAmp, isLive, isUK });
-  return Object.keys(directives)
-    .map((directive) => `${directive} ${directives[directive].join(' ')}`)
-    .join('; ');
-};
