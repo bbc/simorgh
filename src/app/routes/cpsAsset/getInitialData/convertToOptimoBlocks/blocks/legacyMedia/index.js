@@ -1,4 +1,4 @@
-const generateVideoBlock = block => {
+const generateVideoBlock = (block) => {
   const generatedBlock = {
     type: 'aresMediaMetadata',
     blockId: `urn:bbc:ares::${block.subType}:${block.id}`,
@@ -30,7 +30,7 @@ const generateImageBlock = () => {
   };
 };
 
-const convertMedia = block => {
+const convertMedia = (block) => {
   const convertedBlock = {
     type: 'legacyMedia',
     model: {

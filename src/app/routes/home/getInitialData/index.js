@@ -14,7 +14,7 @@ const transformJson = pipe(
   filterGroupsWithoutStraplines,
 );
 
-export default async path => {
+export default async (path) => {
   const { json, ...rest } = await fetchPageData(path);
 
   return {

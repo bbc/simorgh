@@ -163,9 +163,7 @@
               "versions": [
                 {
                   "versionId": "p04v0lp0",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 200,
                   "durationISO8601": "PT3M20S",
                   "warnings": {},
@@ -623,9 +621,7 @@
               "versions": [
                 {
                   "versionId": "p04sd2cc",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 164,
                   "durationISO8601": "PT2M44S",
                   "warnings": {},

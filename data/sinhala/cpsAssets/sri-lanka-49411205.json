@@ -1,293 +1,285 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49411205",
-        "locators": {
-            "assetUri": "/sinhala/sri-lanka-49411205",
-            "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-49411205",
-            "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49411205",
+    "locators": {
+      "assetUri": "/sinhala/sri-lanka-49411205",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-49411205",
+      "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48"
+    },
+    "type": "MAP",
+    "createdBy": "sinhala-v6",
+    "language": "si",
+    "lastUpdated": 1566475850617,
+    "firstPublished": 1566475841,
+    "lastPublished": 1566475842,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "sinhala.sri_lanka.media_asset.49411205.page",
+      "cps_asset_id": "49411205"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07l41lf",
+        "subType": "clip",
+        "format": "video",
+        "title": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
+        "synopses": {
+          "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?"
         },
-        "type": "MAP",
-        "createdBy": "sinhala-v6",
-        "language": "si",
-        "lastUpdated": 1566475850617,
-        "firstPublished": 1566475841,
-        "lastPublished": 1566475842,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "sinhala.sri_lanka.media_asset.49411205.page",
-            "cps_asset_id": "49411205"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l43fm.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
+        "versions": [
+          {
+            "versionId": "p07l41lh",
+            "types": ["Original"],
+            "duration": 141,
+            "durationISO8601": "PT2M21S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "list"
+            "availableFrom": 1566305109
+          }
         ],
-        "includeComments": false
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07l41lf",
-                "subType": "clip",
-                "format": "video",
-                "title": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
-                "synopses": {
-                    "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?"
+        "type": "media"
+      },
+      {
+        "text": "හලාවත මුතුපංතිය දූපතෙන් ''අද්භූත කුරුල්ලෙකු'' හමු වී ඇති බවට පසුගිය දිනවල වාර්තා පළ විය.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඉහත කී කුරුල්ලා සම්බන්ධයෙන් විවිධ අදහස් පළ කරමින් සමාජ ජාල ඔස්සේ ද ඡයාරූප පළ වී තිබිණි. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;මින් පෙර දැක නොමැති සහ අසාමාන්‍ය චර්යා ලක්ෂණ සහිත&quot; එම පක්ෂියා හඳුනා ගැනීමට ඇතැමෙක් ෆේස්බුක් ඔස්සේ සහාය ඉල්ලා සිටියහ. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඇතැම් වෙබ් අඩවි වාර්තා කර තිබුණේ  ඉහත කී පක්ෂියා මිට පෙර ශ්‍රී ලංකාවෙන් වාර්තා වී නොමැති බවකි. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ඉහත වීඩියෝවේ දැක්වෙනේ මේ &quot;අද්භූත පක්ෂියා&quot; පිළිබඳ විද්‍යාත්මක පසුබිම සහ ඒ පිළිබඳ බීබීසී සිංහල සේවය කළ කෙටි විමසීමකි.     ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>කුරුල්ලන් ගැන තවත් පුවත්: </italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>sinhala/sri-lanka-49183271</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "කුමන කුරුලු පාරාදීසයේ සිට දෙහිවලට මාරුවක්",
+                  "headline": "දවල් කෑමට ජාඇළ සිට දෙහිවලට එන පැස්තුඩු හමුදාව \"සත්වෝද්‍යානයට ආකර්ෂණයක්\"",
+                  "overtyped": "කුමන කුරුලු පාරාදීසයේ සිට දෙහිවලට මාරුවක් "
                 },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l43fm.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
-                "versions": [
-                    {
-                        "versionId": "p07l41lh",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 141,
-                        "durationISO8601": "PT2M21S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1566305109
-                    }
-                ],
-                "type": "media"
-            },
-            {
-                "text": "හලාවත මුතුපංතිය දූපතෙන් ''අද්භූත කුරුල්ලෙකු'' හමු වී ඇති බවට පසුගිය දිනවල වාර්තා පළ විය.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ඉහත කී කුරුල්ලා සම්බන්ධයෙන් විවිධ අදහස් පළ කරමින් සමාජ ජාල ඔස්සේ ද ඡයාරූප පළ වී තිබිණි. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "&quot;මින් පෙර දැක නොමැති සහ අසාමාන්‍ය චර්යා ලක්ෂණ සහිත&quot; එම පක්ෂියා හඳුනා ගැනීමට ඇතැමෙක් ෆේස්බුක් ඔස්සේ සහාය ඉල්ලා සිටියහ. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ඇතැම් වෙබ් අඩවි වාර්තා කර තිබුණේ  ඉහත කී පක්ෂියා මිට පෙර ශ්‍රී ලංකාවෙන් වාර්තා වී නොමැති බවකි. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ඉහත වීඩියෝවේ දැක්වෙනේ මේ &quot;අද්භූත පක්ෂියා&quot; පිළිබඳ විද්‍යාත්මක පසුබිම සහ ඒ පිළිබඳ බීබීසී සිංහල සේවය කළ කෙටි විමසීමකි.     ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<italic>කුරුල්ලන් ගැන තවත් පුවත්: </italic>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>sinhala/sri-lanka-49183271</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "කුමන කුරුලු පාරාදීසයේ සිට දෙහිවලට මාරුවක්",
-                                    "headline": "දවල් කෑමට ජාඇළ සිට දෙහිවලට එන පැස්තුඩු හමුදාව \"සත්වෝද්‍යානයට ආකර්ෂණයක්\"",
-                                    "overtyped": "කුමන කුරුලු පාරාදීසයේ සිට දෙහිවලට මාරුවක් "
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/sinhala/sri-lanka-49183271"
-                                },
-                                "summary": "පැස්තුඩුවන් අත් ට්‍රැක්ටරය පසු පසින් ගමන් කරන්නේ හමුදා භට පිරිසක් උත්තමාචාර පෙළපාළියක ගමන් කරන ආකාරය සිහිපත් කරමිනි.",
-                                "timestamp": 1564634854,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49183271",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>sinhala/world-49275324</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙක්",
-                                    "headline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙකුගේ අස්ථි කොටස් නවසීලන්තයෙන් හමුවෙයි",
-                                    "overtyped": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙක්"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/sinhala/world-49275324"
-                                },
-                                "summary": "වසර මිලියන 19කට පෙර නවසීලන්තයේ වාසය කළ උසින් මීටර් එකක පමණ යුත් යෝධ ගිරවෙකු පිළිබඳව නවතම ගවේෂණයකින් අනාවරණය වී තිබේ.",
-                                "timestamp": 1565342278,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:sinhala/world-49275324",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            }
-        ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "\"අද්භූත කුරුල්ලා\" හලාවතට අවේ කොහෙන්ද?",
-            "headline": "\"අද්භූත කුරුල්ලා\" හලාවතට අවේ කොහෙන්ද?"
-        },
-        "locators": {
-            "assetUri": "/sinhala/sri-lanka-49411205",
-            "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-49411205",
-            "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48"
-        },
-        "summary": "හලාවත මුතුපංතිය දූපතෙන් ''අද්භූත කුරුල්ලෙකු'' හමු වී ඇති බවට පළ වන වාර්තා ගැන විමසුමක්.",
-        "timestamp": 1566475850617,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07l41lf",
-            "subType": "clip",
-            "format": "video",
-            "title": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
-            "synopses": {
-                "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l43fm.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
-            "versions": [
-                {
-                    "versionId": "p07l41lh",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 141,
-                    "durationISO8601": "PT2M21S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1566305109
-                }
+                "locators": {
+                  "href": "http://www.bbc.com/sinhala/sri-lanka-49183271"
+                },
+                "summary": "පැස්තුඩුවන් අත් ට්‍රැක්ටරය පසු පසින් ගමන් කරන්නේ හමුදා භට පිරිසක් උත්තමාචාර පෙළපාළියක ගමන් කරන ආකාරය සිහිපත් කරමිනි.",
+                "timestamp": 1564634854,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49183271",
+                "type": "cps"
+              }
             ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108405774",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/BA86/production/_108405774_p07l43fm.jpg",
-            "path": "/cpsprodpb/BA86/production/_108405774_p07l43fm.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "\"අද්භූත කුරුල්ලා\" හලාවතට අවේ කොහෙන්ද?",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49411205",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>sinhala/world-49275324</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙක්",
+                  "headline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙකුගේ අස්ථි කොටස් නවසීලන්තයෙන් හමුවෙයි",
+                  "overtyped": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙක්"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/sinhala/world-49275324"
+                },
+                "summary": "වසර මිලියන 19කට පෙර නවසීලන්තයේ වාසය කළ උසින් මීටර් එකක පමණ යුත් යෝධ ගිරවෙකු පිළිබඳව නවතම ගවේෂණයකින් අනාවරණය වී තිබේ.",
+                "timestamp": 1565342278,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:sinhala/world-49275324",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"අද්භූත කුරුල්ලා\" හලාවතට අවේ කොහෙන්ද?",
+      "headline": "\"අද්භූත කුරුල්ලා\" හලාවතට අවේ කොහෙන්ද?"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "ශ්‍රී ලංකා",
-            "uri": "/sinhala/sri_lanka",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "පුවත් - බීබීසී සිංහල",
-            "uri": "/sinhala",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙක්",
-                            "headline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙකුගේ අස්ථි කොටස් නවසීලන්තයෙන් හමුවෙයි"
-                        },
-                        "locators": {
-                            "assetUri": "/sinhala/world-49275324",
-                            "cpsUrn": "urn:bbc:content:assetUri:/sinhala/world-49275324"
-                        },
-                        "summary": "වසර මිලියන 19කට පෙර නවසීලන්තයේ වාසය කළ උසින් මීටර් එකක පමණ යුත් යෝධ ගිරවෙකු පිළිබඳව නවතම ගවේෂණයකින් අනාවරණය වී තිබේ.",
-                        "timestamp": 1565342278,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108241173",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/90FA/production/_108241173_3acd1381-5d96-456b-bda3-4a9134474e27.jpg",
-                            "path": "/cpsprodpb/90FA/production/_108241173_3acd1381-5d96-456b-bda3-4a9134474e27.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "මීටරයක් උස ඉපැරණි යෝධ ගිරවෙකුගේ අස්ථි කොටස් හමුවෙයි",
-                            "copyrightHolder": "PA Media",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:sinhala/world-49275324",
-                        "type": "cps"
-                    }
-                ]
-            }
+    "locators": {
+      "assetUri": "/sinhala/sri-lanka-49411205",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/sri-lanka-49411205",
+      "curie": "http://www.bbc.co.uk/asset/f9021464-4d93-6046-b082-3720cfde4e48"
+    },
+    "summary": "හලාවත මුතුපංතිය දූපතෙන් ''අද්භූත කුරුල්ලෙකු'' හමු වී ඇති බවට පළ වන වාර්තා ගැන විමසුමක්.",
+    "timestamp": 1566475850617,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07l41lf",
+      "subType": "clip",
+      "format": "video",
+      "title": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
+      "synopses": {
+        "short": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07l43fm.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "හලාවතින් හමු වූ ''අත්භූත කුරුල්ලා\" කවුද?",
+      "versions": [
+        {
+          "versionId": "p07l41lh",
+          "types": ["Original"],
+          "duration": 141,
+          "durationISO8601": "PT2M21S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1566305109
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108405774",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/BA86/production/_108405774_p07l43fm.jpg",
+      "path": "/cpsprodpb/BA86/production/_108405774_p07l43fm.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "\"අද්භූත කුරුල්ලා\" හලාවතට අවේ කොහෙන්ද?",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:sinhala/sri-lanka-49411205",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ශ්‍රී ලංකා",
+      "uri": "/sinhala/sri_lanka",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "පුවත් - බීබීසී සිංහල",
+      "uri": "/sinhala",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙක්",
+              "headline": "මීටරයක් උස වඳවී ගිය යෝධ ගිරවෙකුගේ අස්ථි කොටස් නවසීලන්තයෙන් හමුවෙයි"
+            },
+            "locators": {
+              "assetUri": "/sinhala/world-49275324",
+              "cpsUrn": "urn:bbc:content:assetUri:/sinhala/world-49275324"
+            },
+            "summary": "වසර මිලියන 19කට පෙර නවසීලන්තයේ වාසය කළ උසින් මීටර් එකක පමණ යුත් යෝධ ගිරවෙකු පිළිබඳව නවතම ගවේෂණයකින් අනාවරණය වී තිබේ.",
+            "timestamp": 1565342278,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108241173",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/90FA/production/_108241173_3acd1381-5d96-456b-bda3-4a9134474e27.jpg",
+              "path": "/cpsprodpb/90FA/production/_108241173_3acd1381-5d96-456b-bda3-4a9134474e27.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "මීටරයක් උස ඉපැරණි යෝධ ගිරවෙකුගේ අස්ථි කොටස් හමුවෙයි",
+              "copyrightHolder": "PA Media",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:sinhala/world-49275324",
+            "type": "cps"
+          }
         ]
-    }
+      }
+    ]
+  }
 }

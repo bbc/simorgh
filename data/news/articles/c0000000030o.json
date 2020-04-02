@@ -143,9 +143,7 @@
                             },
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p01k6msp",
                             "warnings": {
                               "long": "Contains strong language and adult humour.",

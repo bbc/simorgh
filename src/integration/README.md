@@ -21,7 +21,7 @@ An example of a test that would check a headline renders in the document on both
  * @pathname /mundo/articles/ce42wzqr2mko
  */
 
-[amp, canonical].forEach(page => {
+[amp, canonical].forEach((page) => {
   it('I can see the headline', () => {
     const headlineEl = page.getByText(headlineText);
 

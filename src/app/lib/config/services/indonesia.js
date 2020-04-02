@@ -165,6 +165,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -245,6 +246,10 @@ export const service = {
       {
         title: 'Liputan Mendalam',
         url: '/indonesia/laporan-khusus-51267199',
+      },
+      {
+        title: 'Majalah',
+        url: '/indonesia/majalah-51456120',
       },
     ],
     timezone: 'Asia/Jakarta',

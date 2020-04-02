@@ -235,6 +235,10 @@ export const service = {
         url: '/nepali',
       },
       {
+        title: 'कोरोनाभाइरसको',
+        url: '/nepali/news-51941128',
+      },
+      {
         title: 'पछिल्लो कार्यक्रम',
         url: '/nepali/multimedia/radio_programmes',
       },

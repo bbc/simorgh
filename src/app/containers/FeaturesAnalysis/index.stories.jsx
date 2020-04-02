@@ -7,7 +7,7 @@ import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const getFeaturesAnalysis = platform => ({ service, dir, data }) => (
+const getFeaturesAnalysis = (platform) => ({ service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
     <ServiceContextProvider service={service}>

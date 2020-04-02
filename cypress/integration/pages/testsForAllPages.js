@@ -30,12 +30,10 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           );
         }
 
-        resources.forEach(resource => {
+        resources.forEach((resource) => {
           const selector = `head link[href="${resource}"]`;
           cy.get(selector).should('have.attr', 'rel', 'preconnect');
-          cy.get(selector)
-            .eq(1)
-            .should('have.attr', 'rel', 'dns-prefetch');
+          cy.get(selector).eq(1).should('have.attr', 'rel', 'dns-prefetch');
         });
       });
 
@@ -180,12 +178,12 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
                 'content',
                 appConfig[config[service].name][variant].twitterSite,
               );
-              cy.get('link[rel="apple-touch-icon"]').each(link => {
+              cy.get('link[rel="apple-touch-icon"]').each((link) => {
                 const url = link.attr('href');
                 cy.request({
                   url,
                   failOnStatusCode: false,
-                }).then(resp => {
+                }).then((resp) => {
                   expect(resp.status).to.equal(200);
                 });
               });
