@@ -1,7 +1,7 @@
 import path from 'ramda/src/path';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
-const htmlEscape = string =>
+const htmlEscape = (string) =>
   string
     .replace(/&/g, '&amp;')
     .replace(/"/g, '&quot;')
@@ -9,7 +9,7 @@ const htmlEscape = string =>
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 
-const convertSocialEmbed = block => {
+const convertSocialEmbed = (block) => {
   const { type, source, embed, ...rest } = block;
   const html = path(['oembed', 'html'], embed);
 
