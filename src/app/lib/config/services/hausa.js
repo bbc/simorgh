@@ -160,6 +160,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Bayanan bidiyo ',
+          text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
+        },
+        fallback: {
+          text: 'Babu karin bayanai',
+          linkText: 'Ci gaba da duba %provider_name%',
+          linkTextSuffixVisuallyHidden: ', adireshin waje',
+          warningText:
+            'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -214,23 +231,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'Bayanan bidiyo ',
-          text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
-        },
-        fallback: {
-          text: 'Babu karin bayanai',
-          linkText: 'Ci gaba da duba %provider_name%',
-          linkTextSuffixVisuallyHidden: ', adireshin waje',
-          warningText:
-            'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
-        },
-        skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
-        },
-      },
     },
     fonts: [],
     timezone: 'GMT',
