@@ -10,7 +10,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const FauxHeadlineContainerWithContext = data => (
+const FauxHeadlineContainerWithContext = (data) => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <FauxHeadlineContainer {...data} />
   </ServiceContext.Provider>

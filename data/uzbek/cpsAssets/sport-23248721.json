@@ -1,218 +1,46 @@
 {
-    "metadata": {
-      "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
-      "locators": {
-        "assetUri": "/uzbek/sport-23248721",
-        "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
-        "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
-      },
-      "type": "MAP",
-      "createdBy": "uzbek-v6",
-      "language": "uz-Cyrl",
-      "lastUpdated": 1573487977500,
-      "firstPublished": 1568390606000,
-      "lastPublished": 1573059510000,
-      "options": {
-        "isIgorSeoTagsEnabled": false,
-        "includeComments": false,
-        "allowRightHandSide": true,
-        "isFactCheck": false,
-        "allowDateStamp": true,
-        "suitableForSyndication": true,
-        "hasNewsTracker": false,
-        "allowRelatedStoriesBox": true,
-        "isKeyContent": false,
-        "allowHeadline": true,
-        "allowAdvertising": true,
-        "hasContentWarning": false,
-        "isBreakingNews": false,
-        "allowPrintingSharingLinks": true
-      },
-      "analyticsLabels": {
-        "cps_asset_type": "map",
-        "counterName": "uzbek.sport.media_asset.23248721.page",
-        "cps_asset_id": "23248721"
-      },
-      "tags": {},
-      "version": "v1.1.2",
-      "blockTypes": [
-        "version",
-        "paragraph",
-        "list",
-        "image"
-      ],
-      "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
+    "locators": {
+      "assetUri": "/uzbek/sport-23248721",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
+      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
     },
-    "content": {
-      "blocks": [
-        {
-          "id": "63501300",
-          "subType": "primary",
-          "format": "audio",
-          "externalId": "bbc_world_service_west_africa",
-          "duration": "PT0S",
-          "caption": "",
-          "image": {
-            "id": "63501300",
-            "subType": "thumbnail",
-            "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
-            "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "test",
-            "copyrightHolder": "AFP",
-            "type": "image"
-          },
-          "embedding": false,
-          "available": true,
-          "live": true,
-          "type": "version"
-        },
-        {
-          "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-          "role": "introduction",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> heading</bold>",
-          "markupType": "candy_xml",
-          "type": "paragraph"
-        },
-        {
-          "text": "<bold><italic>Ўзбек деҳқонининг косаси нега оқармайди</italic></bold><bold><italic> heading</italic></bold>",
-          "markupType": "candy_xml",
-          "type": "paragraph"
-        },
-        {
-          "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> crosshead </bold>",
-          "markupType": "candy_xml",
-          "type": "paragraph"
-        },
-        {
-          "text": "Шу йил апрел ойида Ўзбекистон Президенти Ислом <link><caption>Каримов ўзининг</caption><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link> Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
-          "markupType": "candy_xml",
-          "type": "paragraph"
-        },
-        {
-          "text": "Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб <bold>чиқишда турли муаммоларга юз тутиб</bold> келишган, апрель ойида президент қарори билан &quot;Ўзагроэкспорт&quot; мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.",
-          "markupType": "candy_xml",
-          "type": "paragraph"
-        },
-        {
-          "text": "Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "text": "Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "text": "Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "text": "&quot;Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга ",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "numbered": false,
-          "items": [
-            {
-              "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-              "markupType": "plain_text",
-              "type": "listItem"
-            },
-            {
-              "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-              "markupType": "plain_text",
-              "type": "listItem"
-            },
-            {
-              "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            },
-            {
-              "text": "Ўзбек деҳқонининг косаси нега оқармайди",
-              "markupType": "plain_text",
-              "type": "listItem"
-            }
-          ],
-          "type": "list"
-        },
-        {
-          "numbered": false,
-          "items": [
-            {
-              "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            },
-            {
-              "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            },
-            {
-              "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            },
-            {
-              "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
-              "markupType": "candy_xml",
-              "type": "listItem"
-            }
-          ],
-          "type": "list"
-        },
-        {
-          "id": "63721704",
-          "subType": "body",
-          "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
-          "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
-          "height": 360,
-          "width": 640,
-          "altText": "test",
-          "copyrightHolder": "AFP",
-          "positionHint": "full-width",
-          "type": "image"
-        },
-        {
-          "text": "Ўзбек деҳқонининг косаси нега оқармайди transmission info ",
-          "role": "transmission-info",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        },
-        {
-          "text": "Ўзбек деҳқонининг косаси нега оқармайди footer ",
-          "role": "footer",
-          "markupType": "plain_text",
-          "type": "paragraph"
-        }
-      ]
+    "type": "MAP",
+    "createdBy": "uzbek-v6",
+    "language": "uz-Cyrl",
+    "lastUpdated": 1573487977500,
+    "firstPublished": 1568390606000,
+    "lastPublished": 1573059510000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
     },
-    "promo": {
-      "headlines": {
-        "shortHeadline": "WSMEDIA TEST - Ўзбек деҳқонининг косаси нега оқармайди",
-        "headline": "Ўзбек деҳқонининг косаси нега оқармайдиshort"
-      },
-      "locators": {
-        "assetUri": "/uzbek/sport-23248721",
-        "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
-        "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
-      },
-      "summary": "Ўзбек деҳқонининг косаси нега оқармайди",
-      "timestamp": 1573487977500,
-      "passport": {
-        "taggings": []
-      },
-      "media": {
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "uzbek.sport.media_asset.23248721.page",
+      "cps_asset_id": "23248721"
+    },
+    "tags": {},
+    "version": "v1.1.2",
+    "blockTypes": ["version", "paragraph", "list", "image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
         "id": "63501300",
         "subType": "primary",
         "format": "audio",
@@ -235,33 +63,200 @@
         "live": true,
         "type": "version"
       },
-      "indexImage": {
-        "id": "63721703",
-        "subType": "index",
-        "href": "http://b.files.bbci.co.uk/77F8/test/_63721703_p01kx435.jpg",
-        "path": "/cpsdevpb/77F8/test/_63721703_p01kx435.jpg",
-        "height": 576,
-        "width": 1024,
-        "altText": "connectionAltText",
-        "copyrightHolder": "BBC",
+      {
+        "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> heading</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>Ўзбек деҳқонининг косаси нега оқармайди</italic></bold><bold><italic> heading</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold><bold> crosshead </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Шу йил апрел ойида Ўзбекистон Президенти Ислом <link><caption>Каримов ўзининг</caption><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link> Москвага сафари мобайнида Россияга Туркия каби мамлакатлардан келмай қолган қишлоқ хўжалик маҳсулотлари ўрнини Ўзбекистон қоплаб беришга тайёр эканлигини айтганди.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Шу вақтгача ҳам ўзбекистонлик деҳқонлар ўз маҳсулотларини хорижга олиб <bold>чиқишда турли муаммоларга юз тутиб</bold> келишган, апрель ойида президент қарори билан &quot;Ўзагроэкспорт&quot; мева-сабзавот маҳсулотларини экспорт қилиш билан шуғулланадиган ташқи савдо компанияси ҳам ташкил қилинди.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ўз мева-сабзавотини Россияга олиб чиқишда бу компания ёрдамига умид қилган боғбонларнинг гилослари бузила бошлагани ҳақидаги хабарлар ҳам тарқалди..",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ҳозирда Ўзбекистонда айни пишиқчилик ва етиштирилган маҳсулот учун кенгроқ бозор топиш масаласи яна долзарб турар экан, мамлакат раҳбарининг сўзларидан сўнг вазият нақадар ўзгарган?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Би-би-си билан суҳбатда иқтисодий таҳлилчи Анвар Ҳусаиновнинг айтишича, юқори минбардан айтилган сўзларга қарамай, қишлоқ хўжалиги маҳсулотларини хорижга, жумладан Россия бозорига олиб чиқишда ҳануз кўплаб муаммолар мавжуд.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Албатта ўтган йилларга қараганда маҳсулотлар экспорти анча кўпайган. Россиядан юк машиналари келиб, тўғридан-тўғри деҳқонлардан нақд пулга ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>Ўзбек деҳқонининг косаси нега оқармайди</bold>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "Ўзбек деҳқонининг косаси нега оқармайди",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>Ўзбек деҳқонининг косаси нега оқармайди</caption><altText>Ўзбек деҳқонининг косаси нега оқармайди</altText><url href=\"https://bbc.com/uzbek\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "63721704",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
+        "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "test",
+        "copyrightHolder": "AFP",
+        "positionHint": "full-width",
         "type": "image"
       },
-      "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
-      "type": "cps"
+      {
+        "text": "Ўзбек деҳқонининг косаси нега оқармайди transmission info ",
+        "role": "transmission-info",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ўзбек деҳқонининг косаси нега оқармайди footer ",
+        "role": "footer",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "WSMEDIA TEST - Ўзбек деҳқонининг косаси нега оқармайди",
+      "headline": "Ўзбек деҳқонининг косаси нега оқармайдиshort"
     },
-    "relatedContent": {
-      "section": {
-        "subType": "index",
-        "name": "Спорт",
-        "uri": "/uzbek/sport",
-        "type": "simple"
+    "locators": {
+      "assetUri": "/uzbek/sport-23248721",
+      "cpsUrn": "urn:bbc:content:assetUri:uzbek/sport-23248721",
+      "curie": "http://www.bbc.co.uk/asset/3c6b649a-696c-ea42-8610-5cc80ecacae8"
+    },
+    "summary": "Ўзбек деҳқонининг косаси нега оқармайди",
+    "timestamp": 1573487977500,
+    "passport": {
+      "taggings": []
+    },
+    "media": {
+      "id": "63501300",
+      "subType": "primary",
+      "format": "audio",
+      "externalId": "bbc_world_service_west_africa",
+      "duration": "PT0S",
+      "caption": "",
+      "image": {
+        "id": "63501300",
+        "subType": "thumbnail",
+        "href": "http://b.files.bbci.co.uk/9F08/test/_63721704_testimage.jpg",
+        "path": "/cpsdevpb/9F08/test/_63721704_testimage.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "test",
+        "copyrightHolder": "AFP",
+        "type": "image"
       },
-      "site": {
-        "subType": "site",
-        "name": "Ўзбек тилидаги янгиликлар",
-        "uri": "/uzbek",
-        "type": "simple"
-      },
-      "groups": []
-    }
+      "embedding": false,
+      "available": true,
+      "live": true,
+      "type": "version"
+    },
+    "indexImage": {
+      "id": "63721703",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/77F8/test/_63721703_p01kx435.jpg",
+      "path": "/cpsdevpb/77F8/test/_63721703_p01kx435.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:uzbek/sport-23248721",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Спорт",
+      "uri": "/uzbek/sport",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Ўзбек тилидаги янгиликлар",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": []
   }
+}

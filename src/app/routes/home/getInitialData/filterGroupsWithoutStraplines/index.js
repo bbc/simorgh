@@ -1,6 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 
-const filterGroupsWithoutStraplines = data => {
+const filterGroupsWithoutStraplines = (data) => {
   const groups = pathOr(null, ['content', 'groups'], data);
 
   if (!groups) {
@@ -8,7 +8,7 @@ const filterGroupsWithoutStraplines = data => {
   }
 
   // filter out groups that do not have straplines
-  const newGroups = groups.filter(group =>
+  const newGroups = groups.filter((group) =>
     pathOr(null, ['strapline', 'name'], group),
   );
 

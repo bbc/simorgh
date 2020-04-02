@@ -1,95 +1,43 @@
 {
-    "metadata": {
-      "id": "urn:bbc:ares::asset:thai/23122810",
-      "locators": {
-        "assetUri": "/thai/23122810",
-        "cpsUrn": "urn:bbc:content:assetUri:thai/23122810",
-        "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878"
-      },
-      "type": "MAP",
-      "createdBy": "thai-v6",
-      "language": "th",
-      "lastUpdated": 1557824964144,
-      "firstPublished": 1493904083,
-      "lastPublished": 1493904083,
-      "options": {
-        "isIgorSeoTagsEnabled": false,
-        "includeComments": false,
-        "allowRightHandSide": true,
-        "isFactCheck": false,
-        "allowDateStamp": true,
-        "hasNewsTracker": false,
-        "allowRelatedStoriesBox": true,
-        "isKeyContent": false,
-        "allowHeadline": true,
-        "isBreakingNews": false,
-        "allowPrintingSharingLinks": true
-      },
-      "analyticsLabels": {
-        "cps_asset_type": "map",
-        "counterName": "thai.media_asset.23122810.page",
-        "cps_asset_id": "23122810"
-      },
-      "tags": {},
-      "version": "v1.0.7",
-      "blockTypes": [
-        "media",
-        "paragraph"
-      ],
-      "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:thai/23122810",
+    "locators": {
+      "assetUri": "/thai/23122810",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/23122810",
+      "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878"
     },
-    "content": {
-      "blocks": [
-        {
-          "id": "p019wcgc",
-          "subType": "clip",
-          "format": "audio",
-          "title": "short headline",
-          "synopses": {
-            "short": "long headline",
-            "medium": "summary text"
-          },
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019wch0.jpg",
-          "embedding": true,
-          "advertising": false,
-          "caption": "long headline",
-          "versions": [
-            {
-              "versionId": "p019wcgf",
-              "types": [
-                "Original"
-              ],
-              "duration": 26,
-              "warnings": {},
-              "availableTerritories": {
-                "uk": true,
-                "nonUk": true
-              }
-            }
-          ],
-          "type": "media"
-        },
-        {
-          "text": "Plain Text Paragraph",
-          "markupType": "plain_text",
-          "type": "paragraph"
-      }
-      ]
+    "type": "MAP",
+    "createdBy": "thai-v6",
+    "language": "th",
+    "lastUpdated": 1557824964144,
+    "firstPublished": 1493904083,
+    "lastPublished": 1493904083,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
     },
-    "promo": {
-      "headlines": {
-        "shortHeadline": "Interview with an American",
-        "headline": "We do not know the length of it"
-      },
-      "locators": {
-        "assetUri": "/thai/23122810",
-        "cpsUrn": "urn:bbc:content:assetUri:thai/23122810",
-        "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878"
-      },
-      "summary": "Summary text about our interview with an American",
-      "timestamp": 1557824964144,
-      "passport": {},
-      "media": {
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "thai.media_asset.23122810.page",
+      "cps_asset_id": "23122810"
+    },
+    "tags": {},
+    "version": "v1.0.7",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
         "id": "p019wcgc",
         "subType": "clip",
         "format": "audio",
@@ -105,9 +53,7 @@
         "versions": [
           {
             "versionId": "p019wcgf",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 26,
             "warnings": {},
             "availableTerritories": {
@@ -118,33 +64,80 @@
         ],
         "type": "media"
       },
-      "indexImage": {
-        "id": "63535426",
-        "subType": "index",
-        "href": "http://b.files.bbci.co.uk/F3F5/test/_63535426_p019wch0.jpg",
-        "path": "/cpsdevpb/F3F5/test/_63535426_p019wch0.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "summary text",
-        "copyrightHolder": "AFP",
-        "type": "image"
-      },
-      "id": "urn:bbc:ares::asset:thai/23122810",
-      "type": "cps"
+      {
+        "text": "Plain Text Paragraph",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Interview with an American",
+      "headline": "We do not know the length of it"
     },
-    "relatedContent": {
-      "section": {
-        "subType": "index",
-        "name": "หน้าแรก",
-        "uri": "/thai/front_page",
-        "type": "simple"
+    "locators": {
+      "assetUri": "/thai/23122810",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/23122810",
+      "curie": "http://www.bbc.co.uk/asset/98300274-552b-364d-863b-e123d2236878"
+    },
+    "summary": "Summary text about our interview with an American",
+    "timestamp": 1557824964144,
+    "passport": {},
+    "media": {
+      "id": "p019wcgc",
+      "subType": "clip",
+      "format": "audio",
+      "title": "short headline",
+      "synopses": {
+        "short": "long headline",
+        "medium": "summary text"
       },
-      "site": {
-        "subType": "site",
-        "name": "บีบีซีไทย",
-        "uri": "/thai",
-        "type": "simple"
-      },
-      "groups": []
-    }
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p019wch0.jpg",
+      "embedding": true,
+      "advertising": false,
+      "caption": "long headline",
+      "versions": [
+        {
+          "versionId": "p019wcgf",
+          "types": ["Original"],
+          "duration": 26,
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          }
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63535426",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/F3F5/test/_63535426_p019wch0.jpg",
+      "path": "/cpsdevpb/F3F5/test/_63535426_p019wch0.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "summary text",
+      "copyrightHolder": "AFP",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:thai/23122810",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "หน้าแรก",
+      "uri": "/thai/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "บีบีซีไทย",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": []
   }
+}

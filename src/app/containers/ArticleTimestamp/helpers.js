@@ -5,14 +5,14 @@ import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 export const isFirstRelative = (lastPublished, firstPublished) =>
   lastPublished === firstPublished && isTenHoursAgo(firstPublished);
 
-export const isLastRelative = lastPublished => isTenHoursAgo(lastPublished);
+export const isLastRelative = (lastPublished) => isTenHoursAgo(lastPublished);
 
 export const isSameDay = (dayToCompare, timestamp) => {
   const day = moment(dayToCompare);
   return day.isSame(timestamp, 'day');
 };
 
-export const isToday = timestamp => isSameDay(Date.now(), timestamp);
+export const isToday = (timestamp) => isSameDay(Date.now(), timestamp);
 
 export const formatType = ({ lastPublished = null, firstPublished }) => {
   if (isToday(lastPublished) || isToday(firstPublished)) {
@@ -28,7 +28,7 @@ export const formatType = ({ lastPublished = null, firstPublished }) => {
   return formatDate;
 };
 
-export const isValidDateTime = dateTime => {
+export const isValidDateTime = (dateTime) => {
   // eslint-disable-next-line no-restricted-globals
   if (isNaN(dateTime) || dateTime === null) {
     return false;

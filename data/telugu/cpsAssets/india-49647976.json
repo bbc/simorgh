@@ -1,435 +1,416 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:telugu/india-49647976",
-        "locators": {
-            "assetUri": "/telugu/india-49647976",
-            "cpsUrn": "urn:bbc:content:assetUri:telugu/india-49647976",
-            "curie": "http://www.bbc.co.uk/asset/46ce5386-1b51-b74f-ae22-024fb4a1635a"
-        },
-        "type": "MAP",
-        "createdBy": "telugu-v6",
-        "language": "te",
-        "lastUpdated": 1568196814234,
-        "firstPublished": 1568196778,
-        "lastPublished": 1568196804,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "telugu.india.media_asset.49647976.page",
-            "cps_asset_id": "49647976"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Andhra Pradesh",
-                    "thingUri": "http://www.bbc.co.uk/things/229b36e0-796b-4460-a857-e58414a76a63#id",
-                    "thingId": "229b36e0-796b-4460-a857-e58414a76a63",
-                    "thingType": [
-                        "Thing",
-                        "Place",
-                        "news:Place"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Andhra_Pradesh",
-                        "http://sws.geonames.org/1278629/"
-                    ],
-                    "topicName": "ఆంధ్రప్రదేశ్",
-                    "topicId": "c340qx78nj2t",
-                    "curationList": [
-                        {
-                            "curationId": "236f4813-e70a-4c97-bb18-67b7036b1833",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Water",
-                    "thingUri": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
-                    "thingId": "b214dc4c-d30e-4ef7-9da3-33858396aa2b",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Water",
-                        "http://www.wikidata.org/entity/Q283"
-                    ],
-                    "topicName": "నీరు",
-                    "topicId": "cg726yjv455t",
-                    "curationList": [
-                        {
-                            "curationId": "c36830ca-df52-4533-9cd3-09a12b095686",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Climate change",
-                    "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
-                    "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
-                    "thingType": [
-                        "Thing",
-                        "Event"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Climate_change",
-                        "http://www.wikidata.org/entity/Q125928"
-                    ],
-                    "topicName": "వాతావరణ మార్పులు",
-                    "topicId": "cwr9jr98ryyt",
-                    "curationList": [
-                        {
-                            "curationId": "a102e585-7696-4f56-9d6d-7bc66d69319a",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "crosshead",
-            "list"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:telugu/india-49647976",
+    "locators": {
+      "assetUri": "/telugu/india-49647976",
+      "cpsUrn": "urn:bbc:content:assetUri:telugu/india-49647976",
+      "curie": "http://www.bbc.co.uk/asset/46ce5386-1b51-b74f-ae22-024fb4a1635a"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "telugu-v6",
+    "language": "te",
+    "lastUpdated": 1568196814234,
+    "firstPublished": 1568196778,
+    "lastPublished": 1568196804,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "telugu.india.media_asset.49647976.page",
+      "cps_asset_id": "49647976"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Andhra Pradesh",
+          "thingUri": "http://www.bbc.co.uk/things/229b36e0-796b-4460-a857-e58414a76a63#id",
+          "thingId": "229b36e0-796b-4460-a857-e58414a76a63",
+          "thingType": ["Thing", "Place", "news:Place"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Andhra_Pradesh",
+            "http://sws.geonames.org/1278629/"
+          ],
+          "topicName": "ఆంధ్రప్రదేశ్",
+          "topicId": "c340qx78nj2t",
+          "curationList": [
             {
-                "id": "p07myh3c",
-                "subType": "clip",
-                "format": "video",
-                "title": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
-                "synopses": {
-                    "short": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07myh7x.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
-                "versions": [
-                    {
-                        "versionId": "p07myh3f",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 181,
-                        "durationISO8601": "PT3M1S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1568122012
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "విశాఖ ఏజెన్సీలో కురుస్తోన్న భారీ వర్షాలకు జనజీవనం అస్తవ్యస్తం అయింది. ఎగువ ప్రాంతాల నుంచి కురుస్తోన్న వర్షానికి ఏజెన్సీలోని వాగులు, గెడ్డలు (చిన్నపాటి ప్రవాహాలను స్థానికంగా ఇలా పిలుస్తారు) పొంగి పొర్లుతున్నాయి. గెడ్డలను దాటడానికి  ప్రజలు తీవ్ర ఇబ్బందులు పడుతున్నారు.",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "హుకుంపేట మండలం మత్స్యపురానికి చెందిన రాణి జ్వరంతో బాధపడుతున్న తన 11 నెలల బిడ్డను ఆసుపత్రికి తీసుకెళ్లడానికి పెద్ద సహాసమే చేయాల్సి వచ్చింది. గెడ్డ పొంగటంతో మత్స్యపురం పెద్ద గరువు మధ్య కల్వర్ట్ కొట్టుకుపోయింది. దీంతో తల్లి సహాయంతో అతికష్టం మీద ఆమె గెడ్డను దాటి ఆసుపత్రికి వెళ్లారు. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ఇదే గ్రామానికి చెందిన శివ తండ్రి జబ్బుపడటంతో ఆయనను డోలిలో ఆసుపత్రికి తీసుకెళ్లాల్సి వచ్చింది. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ఇవి కూడా చదవండి:",
-                "markupType": "plain_text",
-                "type": "crosshead"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>telugu/india-41753642</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "ఆంధ్రప్రదేశ్: కొల్లేరులో కొత్త అతిథులు.. కనువిందు చేస్తున్న వలస పక్షులు",
-                                    "headline": "ఆంధ్రప్రదేశ్: కొల్లేరులో కొత్త అతిథులు.. కనువిందు చేస్తున్న వలస పక్షులు",
-                                    "overtyped": "ఆంధ్రప్రదేశ్: కొల్లేరులో కొత్త అతిథులు.. కనువిందు చేస్తున్న వలస పక్షులు"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/telugu/india-41753642"
-                                },
-                                "summary": "ఆంధ్రప్రదేశ్‌లోని క‌ృష్ణా - గోదావరి జిల్లాల మధ్య పరచుకున్న కొల్లేరు సరస్సు అటు వలస పక్షులకూ, ఇటు ప్రక‌ృతి ప్రేమికులకూ స్వర్గధామమే.",
-                                "timestamp": 1509000050,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:telugu/india-41753642",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>telugu/india-49571057</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "కమలాత్తాళ్: \"ఒక్క రూపాయికే ఇడ్లీ.. నేను చనిపోయే దాకా అమ్ముతా.. ఎప్పటికీ ధర పెంచను\"",
-                                    "headline": "కమలాత్తాళ్: \"ఒక్క రూపాయికే ఇడ్లీ.. నేను చనిపోయే దాకా అమ్ముతా.. ఎప్పటికీ ధర పెంచను\"",
-                                    "overtyped": "కమలాతాల్: \"ఒక్క రూపాయికే ఇడ్లీ.. నేను చనిపోయే దాకా అమ్ముతా.. ఎప్పటికీ ధర పెంచను\""
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/telugu/india-49571057"
-                                },
-                                "summary": "\"ఉదయం 6 గంటలకల్లా పొయ్యి వెలిగిస్తా. మధ్యాహ్నం 12 దాకా ఇడ్లీలు అమ్ముతా. సామగ్రికి రూ.300 దాకా ఖర్చు అవుతుంది. ఆ ఖర్చులు పోను రోజూ రూ.200 మిగులుతాయి\"- బామ్మ",
-                                "timestamp": 1567559378,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                                        "categoryName": "Feature"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:telugu/india-49571057",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>telugu/india-43844483</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "పర్సును వెనక జేబులో పెట్టుకుంటే వెన్నుకు ఏమవుతుంది?",
-                                    "headline": "పర్సును వెనక జేబులో పెట్టుకుంటే వెన్నుకు ఏమవుతుంది?",
-                                    "overtyped": "పర్సును వెనక జేబులో పెట్టుకుంటే వెన్నుకు ఏమవుతుంది?"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/telugu/india-43844483"
-                                },
-                                "summary": "పర్సును వెనక జేబులో పెట్టుకుని రోజంతా లేదా ఎక్కువసేపు కూర్చుంటే నడుము కింది భాగంలో నొప్పి వచ్చే ఆస్కారముంది.",
-                                "timestamp": 1524464758,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
-                                        "categoryName": "Explainer"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:telugu/india-43844483",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>telugu/international-49469805</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "ఆర్‌ఎఫ్‌ఐడీ: రోజువారీ జీవితాల్లో భాగమైపోయిన ప్రచ్ఛన్న యుద్ధ కాలపు స్పై టెక్నాలజీ",
-                                    "headline": "ఆర్‌ఎఫ్‌ఐడీ: రోజువారీ జీవితాల్లో భాగమైపోయిన ప్రచ్ఛన్న యుద్ధ కాలపు స్పై టెక్నాలజీ",
-                                    "overtyped": "ఆర్‌ఎఫ్‌ఐడీ: రోజువారీ జీవితాల్లో భాగమైపోయిన ప్రచ్ఛన్న యుద్ధ కాలపు స్పై టెక్నాలజీ"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/telugu/international-49469805"
-                                },
-                                "summary": "చాలా సాంకేతిక పరికరాలు పనిచేయాలంటే బ్యాటరీ అవసరం. కానీ, థెరెమెన్ పరికరానికి తరంగాలు చాలు. అందుకే ఇది చాలా తక్కువ ధరకే దొరుకుతుంది.",
-                                "timestamp": 1567006044,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:telugu/international-49469805",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>telugu/international-49483015</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "‘మా నాన్న ఒక గ్యాంగ్‌స్టర్... నా మూలాలు దాచేందుకు నా ముక్కునే మార్చేశాడు’",
-                                    "headline": "‘మా నాన్న గ్యాంగ్‌స్టర్... ఎంత క్రూరుడంటే.. నా ముఖం గుర్తుపట్టకుండా ముక్కుకు సర్జరీ చేయించాడు’",
-                                    "overtyped": "‘మా నాన్న ఒక గ్యాంగ్‌స్టర్... నా మూలాలు దాచేందుకు నా ముక్కునే మార్చేశాడు’"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/telugu/international-49483015"
-                                },
-                                "summary": "తన తండ్రి గురించి పూర్తి సమాచారం ఇవ్వాలని ఆమె ఎఫ్‌బీఐని కోరింది. వారు ఆమెకు 100 పేజీల ఫైల్ ఇచ్చారు. అదంతా చదివి ఆమె షాకైంది. ఇంతకీ ఆమె తండ్రి గతం ఏమిటి?",
-                                "timestamp": 1566972815,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:telugu/international-49483015",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>telugu/india-42129496</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "ఆంధ్రప్రదేశ్: పర్యాటకుల్ని ఆకర్షిస్తున్న ‘సాగర సంగమం’ ఎర్ర పీతలు",
-                                    "headline": "ఆంధ్రప్రదేశ్: పర్యాటకుల్ని ఆకర్షిస్తున్న ‘సాగర సంగమం’ ఎర్ర పీతలు",
-                                    "overtyped": "ఆంధ్రప్రదేశ్: పర్యాటకుల్ని ఆకర్షిస్తున్న ‘సాగర సంగమం’ ఎర్ర పీతలు"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/telugu/india-42129496"
-                                },
-                                "summary": "కృష్ణానది బంగాళాఖాతంలో కలిసే ప్రదేశం సాగర సంగమం. కృష్ణాజిల్లా హంసలదీవి సమీపంలో ఉన్న ఈ ప్రదేశానికి మరో ప్రత్యేక ఆకర్షణగా నిలుస్తున్నాయి ఎర్రని సముద్ర పీతలు.",
-                                "timestamp": 1511780689,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:telugu/india-42129496",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "text": "(బీబీసీ తెలుగును <link><caption>ఫేస్‌బుక్</caption><url href=\"https://www.facebook.com/BBCnewsTelugu/\" platform=\"highweb\"/></link>, <link><caption>ఇన్‌స్టాగ్రామ్‌</caption><url href=\"https://www.instagram.com/bbcnewstelugu/\" platform=\"highweb\"/></link>, <link><caption>ట్విటర్</caption><url href=\"https://twitter.com/bbcnewstelugu\" platform=\"highweb\"/></link>‌లో ఫాలో అవ్వండి. <link><caption> యూట్యూబ్‌</caption><url href=\"https://www.youtube.com/channel/UCiTCB-B_weEmwHk7ifNobQw\" platform=\"highweb\"/></link>లో సబ్‌స్క్రైబ్ చేయండి)",
-                "markupType": "candy_xml",
-                "type": "paragraph"
+              "curationId": "236f4813-e70a-4c97-bb18-67b7036b1833",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        },
+        {
+          "thingLabel": "Water",
+          "thingUri": "http://www.bbc.co.uk/things/b214dc4c-d30e-4ef7-9da3-33858396aa2b#id",
+          "thingId": "b214dc4c-d30e-4ef7-9da3-33858396aa2b",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Water",
+            "http://www.wikidata.org/entity/Q283"
+          ],
+          "topicName": "నీరు",
+          "topicId": "cg726yjv455t",
+          "curationList": [
+            {
+              "curationId": "c36830ca-df52-4533-9cd3-09a12b095686",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Climate change",
+          "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+          "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+          "thingType": ["Thing", "Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Climate_change",
+            "http://www.wikidata.org/entity/Q125928"
+          ],
+          "topicName": "వాతావరణ మార్పులు",
+          "topicId": "cwr9jr98ryyt",
+          "curationList": [
+            {
+              "curationId": "a102e585-7696-4f56-9d6d-7bc66d69319a",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "వీడియో: పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
-            "headline": "వీడియో: పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు"
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph", "crosshead", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07myh3c",
+        "subType": "clip",
+        "format": "video",
+        "title": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
+        "synopses": {
+          "short": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు"
         },
-        "locators": {
-            "assetUri": "/telugu/india-49647976",
-            "cpsUrn": "urn:bbc:content:assetUri:telugu/india-49647976",
-            "curie": "http://www.bbc.co.uk/asset/46ce5386-1b51-b74f-ae22-024fb4a1635a"
-        },
-        "summary": "హుకుంపేట మండలం పెద్దగరువు కల్వర్టు కొట్టుకుపోయింది. దీంతో బొర్రిగరువు, సాలపు గొంది, చీడిపుట్టు, తడిగిరి, బరంగి బంద, ఎగమూలపాడు, దిగమూలపాడు, దురిపాడు, లోపాలం తదితర 25 గ్రామాలకు రాకపోకలు పూర్తిగా నిలిచిపోయాయి.",
-        "timestamp": 1568196814234,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07myh7x.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
+        "versions": [
+          {
+            "versionId": "p07myh3f",
+            "types": ["Original"],
+            "duration": 181,
+            "durationISO8601": "PT3M1S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07myh3c",
-            "subType": "clip",
-            "format": "video",
-            "title": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
-            "synopses": {
-                "short": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07myh7x.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
-            "versions": [
-                {
-                    "versionId": "p07myh3f",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 181,
-                    "durationISO8601": "PT3M1S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1568122012
-                }
+            "availableFrom": 1568122012
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "విశాఖ ఏజెన్సీలో కురుస్తోన్న భారీ వర్షాలకు జనజీవనం అస్తవ్యస్తం అయింది. ఎగువ ప్రాంతాల నుంచి కురుస్తోన్న వర్షానికి ఏజెన్సీలోని వాగులు, గెడ్డలు (చిన్నపాటి ప్రవాహాలను స్థానికంగా ఇలా పిలుస్తారు) పొంగి పొర్లుతున్నాయి. గెడ్డలను దాటడానికి  ప్రజలు తీవ్ర ఇబ్బందులు పడుతున్నారు.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "హుకుంపేట మండలం మత్స్యపురానికి చెందిన రాణి జ్వరంతో బాధపడుతున్న తన 11 నెలల బిడ్డను ఆసుపత్రికి తీసుకెళ్లడానికి పెద్ద సహాసమే చేయాల్సి వచ్చింది. గెడ్డ పొంగటంతో మత్స్యపురం పెద్ద గరువు మధ్య కల్వర్ట్ కొట్టుకుపోయింది. దీంతో తల్లి సహాయంతో అతికష్టం మీద ఆమె గెడ్డను దాటి ఆసుపత్రికి వెళ్లారు. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ఇదే గ్రామానికి చెందిన శివ తండ్రి జబ్బుపడటంతో ఆయనను డోలిలో ఆసుపత్రికి తీసుకెళ్లాల్సి వచ్చింది. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ఇవి కూడా చదవండి:",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>telugu/india-41753642</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ఆంధ్రప్రదేశ్: కొల్లేరులో కొత్త అతిథులు.. కనువిందు చేస్తున్న వలస పక్షులు",
+                  "headline": "ఆంధ్రప్రదేశ్: కొల్లేరులో కొత్త అతిథులు.. కనువిందు చేస్తున్న వలస పక్షులు",
+                  "overtyped": "ఆంధ్రప్రదేశ్: కొల్లేరులో కొత్త అతిథులు.. కనువిందు చేస్తున్న వలస పక్షులు"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/telugu/india-41753642"
+                },
+                "summary": "ఆంధ్రప్రదేశ్‌లోని క‌ృష్ణా - గోదావరి జిల్లాల మధ్య పరచుకున్న కొల్లేరు సరస్సు అటు వలస పక్షులకూ, ఇటు ప్రక‌ృతి ప్రేమికులకూ స్వర్గధామమే.",
+                "timestamp": 1509000050,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:telugu/india-41753642",
+                "type": "cps"
+              }
             ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108735043",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/8505/production/_108735043_p07myh7x.jpg",
-            "path": "/cpsprodpb/8505/production/_108735043_p07myh7x.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "visaka rains",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:telugu/india-49647976",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>telugu/india-49571057</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "కమలాత్తాళ్: \"ఒక్క రూపాయికే ఇడ్లీ.. నేను చనిపోయే దాకా అమ్ముతా.. ఎప్పటికీ ధర పెంచను\"",
+                  "headline": "కమలాత్తాళ్: \"ఒక్క రూపాయికే ఇడ్లీ.. నేను చనిపోయే దాకా అమ్ముతా.. ఎప్పటికీ ధర పెంచను\"",
+                  "overtyped": "కమలాతాల్: \"ఒక్క రూపాయికే ఇడ్లీ.. నేను చనిపోయే దాకా అమ్ముతా.. ఎప్పటికీ ధర పెంచను\""
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/telugu/india-49571057"
+                },
+                "summary": "\"ఉదయం 6 గంటలకల్లా పొయ్యి వెలిగిస్తా. మధ్యాహ్నం 12 దాకా ఇడ్లీలు అమ్ముతా. సామగ్రికి రూ.300 దాకా ఖర్చు అవుతుంది. ఆ ఖర్చులు పోను రోజూ రూ.200 మిగులుతాయి\"- బామ్మ",
+                "timestamp": 1567559378,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:telugu/india-49571057",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>telugu/india-43844483</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "పర్సును వెనక జేబులో పెట్టుకుంటే వెన్నుకు ఏమవుతుంది?",
+                  "headline": "పర్సును వెనక జేబులో పెట్టుకుంటే వెన్నుకు ఏమవుతుంది?",
+                  "overtyped": "పర్సును వెనక జేబులో పెట్టుకుంటే వెన్నుకు ఏమవుతుంది?"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/telugu/india-43844483"
+                },
+                "summary": "పర్సును వెనక జేబులో పెట్టుకుని రోజంతా లేదా ఎక్కువసేపు కూర్చుంటే నడుము కింది భాగంలో నొప్పి వచ్చే ఆస్కారముంది.",
+                "timestamp": 1524464758,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:telugu/india-43844483",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>telugu/international-49469805</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ఆర్‌ఎఫ్‌ఐడీ: రోజువారీ జీవితాల్లో భాగమైపోయిన ప్రచ్ఛన్న యుద్ధ కాలపు స్పై టెక్నాలజీ",
+                  "headline": "ఆర్‌ఎఫ్‌ఐడీ: రోజువారీ జీవితాల్లో భాగమైపోయిన ప్రచ్ఛన్న యుద్ధ కాలపు స్పై టెక్నాలజీ",
+                  "overtyped": "ఆర్‌ఎఫ్‌ఐడీ: రోజువారీ జీవితాల్లో భాగమైపోయిన ప్రచ్ఛన్న యుద్ధ కాలపు స్పై టెక్నాలజీ"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/telugu/international-49469805"
+                },
+                "summary": "చాలా సాంకేతిక పరికరాలు పనిచేయాలంటే బ్యాటరీ అవసరం. కానీ, థెరెమెన్ పరికరానికి తరంగాలు చాలు. అందుకే ఇది చాలా తక్కువ ధరకే దొరుకుతుంది.",
+                "timestamp": 1567006044,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:telugu/international-49469805",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>telugu/international-49483015</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "‘మా నాన్న ఒక గ్యాంగ్‌స్టర్... నా మూలాలు దాచేందుకు నా ముక్కునే మార్చేశాడు’",
+                  "headline": "‘మా నాన్న గ్యాంగ్‌స్టర్... ఎంత క్రూరుడంటే.. నా ముఖం గుర్తుపట్టకుండా ముక్కుకు సర్జరీ చేయించాడు’",
+                  "overtyped": "‘మా నాన్న ఒక గ్యాంగ్‌స్టర్... నా మూలాలు దాచేందుకు నా ముక్కునే మార్చేశాడు’"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/telugu/international-49483015"
+                },
+                "summary": "తన తండ్రి గురించి పూర్తి సమాచారం ఇవ్వాలని ఆమె ఎఫ్‌బీఐని కోరింది. వారు ఆమెకు 100 పేజీల ఫైల్ ఇచ్చారు. అదంతా చదివి ఆమె షాకైంది. ఇంతకీ ఆమె తండ్రి గతం ఏమిటి?",
+                "timestamp": 1566972815,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:telugu/international-49483015",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>telugu/india-42129496</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ఆంధ్రప్రదేశ్: పర్యాటకుల్ని ఆకర్షిస్తున్న ‘సాగర సంగమం’ ఎర్ర పీతలు",
+                  "headline": "ఆంధ్రప్రదేశ్: పర్యాటకుల్ని ఆకర్షిస్తున్న ‘సాగర సంగమం’ ఎర్ర పీతలు",
+                  "overtyped": "ఆంధ్రప్రదేశ్: పర్యాటకుల్ని ఆకర్షిస్తున్న ‘సాగర సంగమం’ ఎర్ర పీతలు"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/telugu/india-42129496"
+                },
+                "summary": "కృష్ణానది బంగాళాఖాతంలో కలిసే ప్రదేశం సాగర సంగమం. కృష్ణాజిల్లా హంసలదీవి సమీపంలో ఉన్న ఈ ప్రదేశానికి మరో ప్రత్యేక ఆకర్షణగా నిలుస్తున్నాయి ఎర్రని సముద్ర పీతలు.",
+                "timestamp": 1511780689,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:telugu/india-42129496",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "(బీబీసీ తెలుగును <link><caption>ఫేస్‌బుక్</caption><url href=\"https://www.facebook.com/BBCnewsTelugu/\" platform=\"highweb\"/></link>, <link><caption>ఇన్‌స్టాగ్రామ్‌</caption><url href=\"https://www.instagram.com/bbcnewstelugu/\" platform=\"highweb\"/></link>, <link><caption>ట్విటర్</caption><url href=\"https://twitter.com/bbcnewstelugu\" platform=\"highweb\"/></link>‌లో ఫాలో అవ్వండి. <link><caption> యూట్యూబ్‌</caption><url href=\"https://www.youtube.com/channel/UCiTCB-B_weEmwHk7ifNobQw\" platform=\"highweb\"/></link>లో సబ్‌స్క్రైబ్ చేయండి)",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "వీడియో: పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
+      "headline": "వీడియో: పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "జాతీయం",
-            "uri": "/telugu/india",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC తెలుగు",
-            "uri": "/telugu",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/telugu/india-49647976",
+      "cpsUrn": "urn:bbc:content:assetUri:telugu/india-49647976",
+      "curie": "http://www.bbc.co.uk/asset/46ce5386-1b51-b74f-ae22-024fb4a1635a"
+    },
+    "summary": "హుకుంపేట మండలం పెద్దగరువు కల్వర్టు కొట్టుకుపోయింది. దీంతో బొర్రిగరువు, సాలపు గొంది, చీడిపుట్టు, తడిగిరి, బరంగి బంద, ఎగమూలపాడు, దిగమూలపాడు, దురిపాడు, లోపాలం తదితర 25 గ్రామాలకు రాకపోకలు పూర్తిగా నిలిచిపోయాయి.",
+    "timestamp": 1568196814234,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07myh3c",
+      "subType": "clip",
+      "format": "video",
+      "title": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
+      "synopses": {
+        "short": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07myh7x.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "పొంగుతున్న వాగులు... ఇబ్బందుల్లో విశాఖ ఏజెన్సీ ప్రజలు",
+      "versions": [
+        {
+          "versionId": "p07myh3f",
+          "types": ["Original"],
+          "duration": 181,
+          "durationISO8601": "PT3M1S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1568122012
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108735043",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/8505/production/_108735043_p07myh7x.jpg",
+      "path": "/cpsprodpb/8505/production/_108735043_p07myh7x.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "visaka rains",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:telugu/india-49647976",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "జాతీయం",
+      "uri": "/telugu/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC తెలుగు",
+      "uri": "/telugu",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }
