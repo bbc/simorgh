@@ -31,7 +31,7 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
       id="amp-access"
       type="application/json"
     >
-      {"authorization":"https://toggles.test.api.bbci.co.uk/toggles?application=simorgh&service=pidgin&geoiplookup=true","noPingback":true}
+      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin&geoiplookup=true","noPingback":true}
     </script>
   </head>
   <body>
