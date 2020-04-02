@@ -3,19 +3,16 @@ import pathOr from 'ramda/src/pathOr';
 
 const DEFAULT_IMAGE_RES = '1024x576';
 
-export const getThumbnailUri = aresMetadataBlock => {
+export const getThumbnailUri = (aresMetadataBlock) => {
   let imageUrl = pathOr('', ['model', 'imageUrl'], aresMetadataBlock);
 
   if (imageUrl.startsWith('http')) {
-    imageUrl = imageUrl
-      .split('/')
-      .slice(2)
-      .join('/');
+    imageUrl = imageUrl.split('/').slice(2).join('/');
   }
 
   return `https://${imageUrl.replace('$recipe', DEFAULT_IMAGE_RES)}`;
 };
-export const getUploadDate = aresMetadataBlock => {
+export const getUploadDate = (aresMetadataBlock) => {
   const uploadDate = pathOr(
     null,
     ['model', 'versions', [0], 'availableFrom'],
@@ -24,12 +21,12 @@ export const getUploadDate = aresMetadataBlock => {
   return new Date(uploadDate).toISOString();
 };
 
-export const getType = aresMetadataBlock => {
+export const getType = (aresMetadataBlock) => {
   const format = path(['model', 'format'], aresMetadataBlock);
   return format === 'audio' ? 'AudioObject' : 'VideoObject';
 };
 
-export const getMetadata = aresMetadataBlock => {
+export const getMetadata = (aresMetadataBlock) => {
   return {
     '@context': 'http://schema.org',
     '@type': getType(aresMetadataBlock),
@@ -46,9 +43,9 @@ export const getMetadata = aresMetadataBlock => {
   };
 };
 
-export const getMetadataBlock = aresMediaBlocks => {
+export const getMetadataBlock = (aresMediaBlocks) => {
   const aresMetadataBlock = aresMediaBlocks.filter(
-    block => block.type === 'aresMediaMetadata',
+    (block) => block.type === 'aresMediaMetadata',
   );
 
   return aresMetadataBlock[0];

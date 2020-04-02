@@ -51,14 +51,8 @@
           "thingLabel": "India",
           "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
           "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1269750/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1269750/"],
           "topicName": "هند",
           "topicId": "cdr56rxq1nxt",
           "curationList": [
@@ -72,10 +66,7 @@
           "thingLabel": "Religion",
           "thingUri": "http://www.bbc.co.uk/things/fbcd47f3-d67a-4b69-b15c-d4b6c270adbf#id",
           "thingId": "fbcd47f3-d67a-4b69-b15c-d4b6c270adbf",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Religion",
             "http://www.wikidata.org/entity/Q9174"
@@ -92,9 +83,7 @@
       ]
     },
     "version": "v1.1.2",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

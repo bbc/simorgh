@@ -1,353 +1,346 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:afrique/monde-49500638",
-        "locators": {
-            "assetUri": "/afrique/monde-49500638",
-            "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
-            "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afrique/monde-49500638",
+    "locators": {
+      "assetUri": "/afrique/monde-49500638",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
+      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3"
+    },
+    "type": "MAP",
+    "createdBy": "afrique-v6",
+    "language": "fr",
+    "lastUpdated": 1567779779290,
+    "firstPublished": 1567684700,
+    "lastPublished": 1567779771,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "afrique.sport.media_asset.49500638.page",
+      "cps_asset_id": "49500638"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2139461b000e9dabf7",
+          "campaignName": "WS - Inspire me"
         },
-        "type": "MAP",
-        "createdBy": "afrique-v6",
-        "language": "fr",
-        "lastUpdated": 1567779779290,
-        "firstPublished": 1567684700,
-        "lastPublished": 1567779771,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "afrique.sport.media_asset.49500638.page",
-            "cps_asset_id": "49500638"
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07m7zw4",
+        "subType": "clip",
+        "format": "video",
+        "title": "Tennis: 'Les soeurs Williams' du Cameroun",
+        "synopses": {
+          "short": "Tennis: 'Les soeurs Williams' du Cameroun",
+          "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
         },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+        "versions": [
+          {
+            "versionId": "p07m7zw7",
+            "types": ["Original"],
+            "duration": 143,
+            "durationISO8601": "PT2M23S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e2139461b000e9dabf7",
-                    "campaignName": "WS - Inspire me"
-                },
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                },
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+            "availableFrom": 1567437159
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      },
+      {
+        "text": "Linda et Manuella Eloundou ont 16 ans.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Elles se font appeler les Soeurs Williams. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "D'origine camerounaise, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Un reportage d'Arwa Barkallah pour l'émission BBC Actu Jeunes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Lire aussi",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<itemMeta>afrique/monde-47950831</itemMeta>",
+        "meta": [
+          {
+            "headlines": {
+              "shortHeadline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
+              "headline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
+              "overtyped": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?"
+            },
+            "locators": {
+              "href": "http://www.bbc.com/afrique/monde-47950831"
+            },
+            "summary": "Au Royaume-Uni, les femmes noires ont beaucoup plus de risques de mourir de complications liées à la grossesse et à l'accouchement que les femmes blanches.",
+            "timestamp": 1555604396,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                "categoryName": "Analysis"
+              }
+            },
+            "id": "urn:bbc:ares::asset:afrique/monde-47950831",
+            "type": "cps"
+          }
+        ],
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<itemMeta>afrique/sports-46838699</itemMeta>",
+        "meta": [
+          {
+            "headlines": {
+              "shortHeadline": "Tennis: Andy Murray envisage d'arrêter cette année",
+              "headline": "Tennis: Andy Murray envisage d'arrêter cette année",
+              "overtyped": "Tennis: Andy Murray envisage d'arrêter cette année"
+            },
+            "locators": {
+              "href": "http://www.bbc.com/afrique/sports-46838699"
+            },
+            "summary": "Le joueur de tennis britannique déclare qu'il prévoit de mettre fin à sa carrière après le Grand Chelem de Melbourne.",
+            "timestamp": 1547214809,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "id": "urn:bbc:ares::asset:afrique/sports-46838699",
+            "type": "cps"
+          }
+        ],
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<itemMeta>afrique/monde-45900949</itemMeta>",
+        "meta": [
+          {
+            "headlines": {
+              "shortHeadline": "La taille des doigts détermine l'orientation sexuelle",
+              "headline": "La taille des doigts détermine l'orientation sexuelle chez les femmes",
+              "overtyped": "La taille des doigts détermine l'orientation sexuelle"
+            },
+            "locators": {
+              "href": "http://www.bbc.com/afrique/monde-45900949"
+            },
+            "summary": "Les femmes dont l'index gauche et l'annulaire sont de longueurs différentes sont plus susceptibles d'être lesbiennes.",
+            "timestamp": 1539875197,
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              }
+            },
+            "id": "urn:bbc:ares::asset:afrique/monde-45900949",
+            "type": "cps"
+          }
+        ],
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Tennis: 'Les soeurs Williams' du Cameroun",
+      "headline": "Tennis: 'Les soeurs Williams' du Cameroun"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07m7zw4",
-                "subType": "clip",
-                "format": "video",
-                "title": "Tennis: 'Les soeurs Williams' du Cameroun",
-                "synopses": {
-                    "short": "Tennis: 'Les soeurs Williams' du Cameroun",
-                    "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
-                "versions": [
-                    {
-                        "versionId": "p07m7zw7",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 143,
-                        "durationISO8601": "PT2M23S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567437159
-                    }
-                ],
-                "type": "media"
+    "locators": {
+      "assetUri": "/afrique/monde-49500638",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
+      "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3"
+    },
+    "summary": "Linda et Manuella Eloundou sont des jumelles camerounaise de 16 ans, elles parcourent leur pays et la sous-régions pour agrandir leurs collections de trophées de Tennis.",
+    "timestamp": 1567779779290,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2139461b000e9dabf7",
+          "campaignName": "WS - Inspire me"
+        },
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07m7zw4",
+      "subType": "clip",
+      "format": "video",
+      "title": "Tennis: 'Les soeurs Williams' du Cameroun",
+      "synopses": {
+        "short": "Tennis: 'Les soeurs Williams' du Cameroun",
+        "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+      "versions": [
+        {
+          "versionId": "p07m7zw7",
+          "types": ["Original"],
+          "duration": 143,
+          "durationISO8601": "PT2M23S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567437159
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108627113",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/79C4/production/_108627113_mediaitem108627110.jpg",
+      "path": "/cpsprodpb/79C4/production/_108627113_mediaitem108627110.jpg",
+      "height": 261,
+      "width": 464,
+      "altText": "Tennis: 'Les soeurs Williams' du Cameroun",
+      "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afrique/monde-49500638",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Sports",
+      "uri": "/afrique/sports",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Une finale de l’US Open mémorable",
+              "headline": "Serena Williams : Une finale de l'US Open qui fera date"
             },
-            {
-                "text": "Linda et Manuella Eloundou ont 16 ans.",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "locators": {
+              "assetUri": "/afrique/45504155",
+              "cpsUrn": "urn:bbc:content:assetUri:/afrique/45504155"
             },
-            {
-                "text": "Elles se font appeler les Soeurs Williams. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
+            "timestamp": 1536778453,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "103401879",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17E12/production/_103401879_serena.jpg",
+              "path": "/cpsprodpb/17E12/production/_103401879_serena.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Serena Williams et Naomi Osaka à l'US Open",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            {
-                "text": "D'origine camerounaise, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "id": "urn:bbc:ares::asset:afrique/45504155",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Tennis: retour sur un US Open mémorable",
+              "headline": "Une finale de l’US Open qui restera gravée dans les mémoires…"
             },
-            {
-                "text": "Un reportage d'Arwa Barkallah pour l'émission BBC Actu Jeunes.",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "locators": {
+              "assetUri": "/afrique/45491927",
+              "cpsUrn": "urn:bbc:content:assetUri:/afrique/45491927"
             },
-            {
-                "text": "Lire aussi",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
+            "timestamp": 1536694750,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "103387562",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/67D2/production/_103387562_p06kxf9k.jpg",
+              "path": "/cpsprodpb/67D2/production/_103387562_p06kxf9k.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "Keyframe #4",
+              "copyrightHolder": "BBC",
+              "type": "image"
             },
-            {
-                "text": "<itemMeta>afrique/monde-47950831</itemMeta>",
-                "meta": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
-                            "headline": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?",
-                            "overtyped": "Pourquoi les mères noires ont-elles plus de risques de mourir en couche ?"
-                        },
-                        "locators": {
-                            "href": "http://www.bbc.com/afrique/monde-47950831"
-                        },
-                        "summary": "Au Royaume-Uni, les femmes noires ont beaucoup plus de risques de mourir de complications liées à la grossesse et à l'accouchement que les femmes blanches.",
-                        "timestamp": 1555604396,
-                        "passport": {
-                            "category": {
-                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                                "categoryName": "Analysis"
-                            }
-                        },
-                        "id": "urn:bbc:ares::asset:afrique/monde-47950831",
-                        "type": "cps"
-                    }
-                ],
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<itemMeta>afrique/sports-46838699</itemMeta>",
-                "meta": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "Tennis: Andy Murray envisage d'arrêter cette année",
-                            "headline": "Tennis: Andy Murray envisage d'arrêter cette année",
-                            "overtyped": "Tennis: Andy Murray envisage d'arrêter cette année"
-                        },
-                        "locators": {
-                            "href": "http://www.bbc.com/afrique/sports-46838699"
-                        },
-                        "summary": "Le joueur de tennis britannique déclare qu'il prévoit de mettre fin à sa carrière après le Grand Chelem de Melbourne.",
-                        "timestamp": 1547214809,
-                        "passport": {
-                            "category": {
-                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                "categoryName": "News"
-                            }
-                        },
-                        "id": "urn:bbc:ares::asset:afrique/sports-46838699",
-                        "type": "cps"
-                    }
-                ],
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<itemMeta>afrique/monde-45900949</itemMeta>",
-                "meta": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "La taille des doigts détermine l'orientation sexuelle",
-                            "headline": "La taille des doigts détermine l'orientation sexuelle chez les femmes",
-                            "overtyped": "La taille des doigts détermine l'orientation sexuelle"
-                        },
-                        "locators": {
-                            "href": "http://www.bbc.com/afrique/monde-45900949"
-                        },
-                        "summary": "Les femmes dont l'index gauche et l'annulaire sont de longueurs différentes sont plus susceptibles d'être lesbiennes.",
-                        "timestamp": 1539875197,
-                        "passport": {
-                            "category": {
-                                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                "categoryName": "News"
-                            }
-                        },
-                        "id": "urn:bbc:ares::asset:afrique/monde-45900949",
-                        "type": "cps"
-                    }
-                ],
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            }
+            "id": "urn:bbc:ares::asset:afrique/45491927",
+            "type": "cps"
+          }
         ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "Tennis: 'Les soeurs Williams' du Cameroun",
-            "headline": "Tennis: 'Les soeurs Williams' du Cameroun"
-        },
-        "locators": {
-            "assetUri": "/afrique/monde-49500638",
-            "cpsUrn": "urn:bbc:content:assetUri:afrique/monde-49500638",
-            "curie": "http://www.bbc.co.uk/asset/bd174bc3-4065-cb43-a224-6eff60d2a6d3"
-        },
-        "summary": "Linda et Manuella Eloundou sont des jumelles camerounaise de 16 ans, elles parcourent leur pays et la sous-régions pour agrandir leurs collections de trophées de Tennis.",
-        "timestamp": 1567779779290,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e2139461b000e9dabf7",
-                    "campaignName": "WS - Inspire me"
-                },
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                },
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07m7zw4",
-            "subType": "clip",
-            "format": "video",
-            "title": "Tennis: 'Les soeurs Williams' du Cameroun",
-            "synopses": {
-                "short": "Tennis: 'Les soeurs Williams' du Cameroun",
-                "long": "Linda et Manuella Eloundou ont 16 ans.\nElles se font appeler les Soeurs Williams. \nD'origine camerounaises, elles parcourent le pays et la sous-régions pour agrandir leurs collections de trophées de Tennis. \n\nUn reportage pour l'émission BBC Actu Jeunes https://www.youtube.com/watch?v=CZPSUhWkPoE"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m881h.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
-            "versions": [
-                {
-                    "versionId": "p07m7zw7",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 143,
-                    "durationISO8601": "PT2M23S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567437159
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108627113",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/79C4/production/_108627113_mediaitem108627110.jpg",
-            "path": "/cpsprodpb/79C4/production/_108627113_mediaitem108627110.jpg",
-            "height": 261,
-            "width": 464,
-            "altText": "Tennis: 'Les soeurs Williams' du Cameroun",
-            "caption": "Tennis: 'Les soeurs Williams' du Cameroun",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:afrique/monde-49500638",
-        "type": "cps"
-    },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Sports",
-            "uri": "/afrique/sports",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "Afrique",
-            "uri": "/afrique",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "Une finale de l’US Open mémorable",
-                            "headline": "Serena Williams : Une finale de l'US Open qui fera date"
-                        },
-                        "locators": {
-                            "assetUri": "/afrique/45504155",
-                            "cpsUrn": "urn:bbc:content:assetUri:/afrique/45504155"
-                        },
-                        "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
-                        "timestamp": 1536778453,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "103401879",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/17E12/production/_103401879_serena.jpg",
-                            "path": "/cpsprodpb/17E12/production/_103401879_serena.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "Serena Williams et Naomi Osaka à l'US Open",
-                            "copyrightHolder": "Getty Images",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:afrique/45504155",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "Tennis: retour sur un US Open mémorable",
-                            "headline": "Une finale de l’US Open qui restera gravée dans les mémoires…"
-                        },
-                        "locators": {
-                            "assetUri": "/afrique/45491927",
-                            "cpsUrn": "urn:bbc:content:assetUri:/afrique/45491927"
-                        },
-                        "summary": "Le match qui pose la question de l'égalité des sexes dans le tennis",
-                        "timestamp": 1536694750,
-                        "cpsType": "MAP",
-                        "indexImage": {
-                            "id": "103387562",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/67D2/production/_103387562_p06kxf9k.jpg",
-                            "path": "/cpsprodpb/67D2/production/_103387562_p06kxf9k.jpg",
-                            "height": 576,
-                            "width": 1024,
-                            "altText": "Keyframe #4",
-                            "copyrightHolder": "BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:afrique/45491927",
-                        "type": "cps"
-                    }
-                ]
-            }
-        ]
-    }
+      }
+    ]
+  }
 }

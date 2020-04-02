@@ -7,7 +7,7 @@ import injectCspHeader, {
 
 const next = jest.fn();
 
-const testAmpScript = context => {
+const testAmpScript = (context) => {
   const expected = [
     'https://cdn.ampproject.org',
     'https://*.chartbeat.com',

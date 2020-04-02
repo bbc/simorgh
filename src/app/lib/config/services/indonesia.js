@@ -165,6 +165,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -206,6 +207,23 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Keterangan video, ',
+          text: 'Peringatan: Konten pihak ketiga mungkin berisi iklan',
+        },
+        fallback: {
+          text: 'Konten tidak tersedia',
+          linkText: 'Lihat lebih banyak di %provider_name%',
+          linkTextSuffixVisuallyHidden: ', eksternal',
+          warningText:
+            'BBC tidak bertanggung jawab atas konten dari situs eksternal',
+        },
+        skipLink: {
+          text: 'Hentikan %provider_name% pesan',
+          endTextVisuallyHidden: 'Lompati %provider_name% pesan',
+        },
+      },
     },
     fonts: [],
     navigation: [
@@ -228,6 +246,10 @@ export const service = {
       {
         title: 'Liputan Mendalam',
         url: '/indonesia/laporan-khusus-51267199',
+      },
+      {
+        title: 'Majalah',
+        url: '/indonesia/majalah-51456120',
       },
     ],
     timezone: 'Asia/Jakarta',

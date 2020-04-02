@@ -847,9 +847,7 @@
               "versions": [
                 {
                   "versionId": "p07fkd1d",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 63,
                   "durationISO8601": "PT1M3S",
                   "warnings": {},

@@ -1,91 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "format": "audio",
-          "href": "http://a.files.bbci.co.uk/worldservice/test/sinhala/meta/dps/junk/2016/03/emp/160323_si_test_audio_map.emp.xml",
-          "id": "17696856",
-          "live": false,
-          "subType": "primary",
-          "type": "legacyMedia"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "පොදු ව්‍යාපාර කාරක සභාව විසින් අනුමැතිය පළකරනු ලැබීමෙන් අනතුරුව, ලඟදී පැවැත්වීමට නියමිත ශ්‍රී ලංකා ප්‍රීමියර් ලීග තරඟාවලිය සංවිධානය කිරීම සිංගප්පූරුවේ සමර්සෙට් එන්ටර්ටේන්මන්ට් වෙන්චර්ස් සමාගමට පවරන ලද බව ක්‍රීඩා අමාත්‍ය මහින්දානන්ද අලුත්ගමගේ පවසයි.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "ඒ සඳහා කාරක සභාවේ සියලු විපක්ෂ මන්ත්‍රීවරුන්ගේ අනුමැතිය පළවූ බව ඇමතිවරයා පවසන නමුත් එහි සාමාජිකයන් වන අර්ජුන රණතුංග සහ දයාසිරි ජයසේකර මන්ත්‍රීවරුන් බීබීසී සංදේශයට කියාසිටියේ ඔවුන් එම රැස්වීමට සහභාගි නොවූ බවයි.",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "plain_text",
-          "text": "ශ්‍රී ලංකා ක්‍රිකට් ආයතනයේ ලේකම් පදවිය දරමින්ම නිශාන්ත රණතුංග කාල්ටන් ස්පොර්ට්ස් නෙට්වර්ක් රූපවාහිනියේද ප්‍රධාන විධායක පදවිය දැරීම ගැන පොදු ව්‍යාපාර කාරක සභාව දැඩි අවධානය පළකොට තිබූ නමුත්, අමාත්‍ය මහින්දානන්ද අලුත්ගමගේ පවසන්නේ එය ගැටලුවක් නොවන බවයි.",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "cps_asset_id": "17696856",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "legacyMedia",
-        "paragraph"
-      ],
-      "createdBy": "sinhala",
-      "firstPublished": 1458736621000,
-      "id": "urn:bbc:ares::asset:sinhala/multimedia/2016/03/160323_si_test_audio_map",
-      "includeComments": false,
-      "language": "si",
-      "lastPublished": 1458736621000,
-      "lastUpdated": 1583269761334,
-      "locators": {
-        "assetId": "17696856",
-        "assetUri": "/sinhala/multimedia/2016/03/160323_si_test_audio_map",
-        "cpsUrn": "urn:bbc:content:assetUri:sinhala/multimedia/2016/03/160323_si_test_audio_map",
-        "curie": "http://www.bbc.co.uk/asset/89873264-f0f3-11e5-bf96-52659226aae3"
-      },
-      "options": {
-        "allowAdvertising": true,
-        "allowDateStamp": true,
-        "allowRightHandSide": true,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "suitableForSyndication": false
-      },
-      "tags": {},
-      "timestamp": 1458736621000,
-      "type": "MAP",
-      "version": "v1.1.6"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "ශ්‍රී ලංකා ප්‍රීමියර් ලීගය සංවිධානය යලිත් සිංගප්පූරු සමාගමට tc2",
-        "shortHeadline": "ශ්‍රී ලංකා ප්‍රීමියර් ලීගය සංවිධානය යලිත් සිංගප්පූරු සමාගමට tc2"
-      },
-      "id": "urn:bbc:ares::asset:sinhala/multimedia/2016/03/160323_si_test_audio_map",
-      "indexImage": {
-        "altText": "IPL හා සමාන තරගාවලියක් සංවිධානය කිරීමට ශ්‍රී ලංකාව සැරසේ",
-        "copyrightHolder": "Getty",
-        "height": 81,
-        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
-        "id": "d5e244",
-        "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 144
-      },
-      "language": "si",
-      "locators": {
-        "assetId": "17696856",
-        "assetUri": "/sinhala/multimedia/2016/03/160323_si_test_audio_map",
-        "cpsUrn": "urn:bbc:content:assetUri:sinhala/multimedia/2016/03/160323_si_test_audio_map",
-        "curie": "http://www.bbc.co.uk/asset/89873264-f0f3-11e5-bf96-52659226aae3"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "format": "audio",
         "href": "http://a.files.bbci.co.uk/worldservice/test/sinhala/meta/dps/junk/2016/03/emp/160323_si_test_audio_map.emp.xml",
         "id": "17696856",
@@ -93,42 +9,123 @@
         "subType": "primary",
         "type": "legacyMedia"
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "text": "පොදු ව්‍යාපාර කාරක සභාව විසින් අනුමැතිය පළකරනු ලැබීමෙන් අනතුරුව, ලඟදී පැවැත්වීමට නියමිත ශ්‍රී ලංකා ප්‍රීමියර් ලීග තරඟාවලිය සංවිධානය කිරීම සිංගප්පූරුවේ සමර්සෙට් එන්ටර්ටේන්මන්ට් වෙන්චර්ස් සමාගමට පවරන ලද බව ක්‍රීඩා අමාත්‍ය මහින්දානන්ද අලුත්ගමගේ පවසයි.",
+        "type": "paragraph"
       },
-      "summary": "ලඟදී පැවැත්වීමට නියමිත ශ්‍රී ලංකා ප්‍රීමියර් ලීග තරඟාවලිය සංවිධානය කිරීම සිංගප්පූරුවේ සමර්සෙට් එන්ටර්ටේන්මන්ට් වෙන්චර්ස් සමාගමට පවරන ලද බව ක්‍රීඩා අමාත්‍ය මහින්දානන්ද අලුත්ගමගේ පවසයි.",
-      "timestamp": 1458736621000,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [
-        {
-          "promos": [
-            {
-              "name": "'රටට ද්‍රෝහි වෙනවා නම් විනය පියවර ගන්නවා'",
-              "type": "link",
-              "uri": "http://www.test.bbc.co.uk/sinhala/multimedia/2012/05/120509_minister_yoshitha"
-            },
-            {
-              "name": "රග්බි කණ්ඩායමේ නායකත්ව අර්බුදය",
-              "type": "link",
-              "uri": "http://www.test.bbc.co.uk/sinhala/multimedia/2012/05/120504_youth_rugby"
-            }
-          ],
-          "type": "see-alsos"
-        }
-      ],
-      "section": {
-        "name": "Multimedia",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/sinhala/multimedia"
+      {
+        "markupType": "plain_text",
+        "text": "ඒ සඳහා කාරක සභාවේ සියලු විපක්ෂ මන්ත්‍රීවරුන්ගේ අනුමැතිය පළවූ බව ඇමතිවරයා පවසන නමුත් එහි සාමාජිකයන් වන අර්ජුන රණතුංග සහ දයාසිරි ජයසේකර මන්ත්‍රීවරුන් බීබීසී සංදේශයට කියාසිටියේ ඔවුන් එම රැස්වීමට සහභාගි නොවූ බවයි.",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "BBCSinhala.com",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/sinhala"
+      {
+        "markupType": "plain_text",
+        "text": "ශ්‍රී ලංකා ක්‍රිකට් ආයතනයේ ලේකම් පදවිය දරමින්ම නිශාන්ත රණතුංග කාල්ටන් ස්පොර්ට්ස් නෙට්වර්ක් රූපවාහිනියේද ප්‍රධාන විධායක පදවිය දැරීම ගැන පොදු ව්‍යාපාර කාරක සභාව දැඩි අවධානය පළකොට තිබූ නමුත්, අමාත්‍ය මහින්දානන්ද අලුත්ගමගේ පවසන්නේ එය ගැටලුවක් නොවන බවයි.",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "cps_asset_id": "17696856",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "sinhala",
+    "firstPublished": 1458736621000,
+    "id": "urn:bbc:ares::asset:sinhala/multimedia/2016/03/160323_si_test_audio_map",
+    "includeComments": false,
+    "language": "si",
+    "lastPublished": 1458736621000,
+    "lastUpdated": 1583269761334,
+    "locators": {
+      "assetId": "17696856",
+      "assetUri": "/sinhala/multimedia/2016/03/160323_si_test_audio_map",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/multimedia/2016/03/160323_si_test_audio_map",
+      "curie": "http://www.bbc.co.uk/asset/89873264-f0f3-11e5-bf96-52659226aae3"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1458736621000,
+    "type": "MAP",
+    "version": "v1.1.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "ශ්‍රී ලංකා ප්‍රීමියර් ලීගය සංවිධානය යලිත් සිංගප්පූරු සමාගමට tc2",
+      "shortHeadline": "ශ්‍රී ලංකා ප්‍රීමියර් ලීගය සංවිධානය යලිත් සිංගප්පූරු සමාගමට tc2"
+    },
+    "id": "urn:bbc:ares::asset:sinhala/multimedia/2016/03/160323_si_test_audio_map",
+    "indexImage": {
+      "altText": "IPL හා සමාන තරගාවලියක් සංවිධානය කිරීමට ශ්‍රී ලංකාව සැරසේ",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+      "id": "d5e244",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145544_philip_hughes_144x81_getty_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "si",
+    "locators": {
+      "assetId": "17696856",
+      "assetUri": "/sinhala/multimedia/2016/03/160323_si_test_audio_map",
+      "cpsUrn": "urn:bbc:content:assetUri:sinhala/multimedia/2016/03/160323_si_test_audio_map",
+      "curie": "http://www.bbc.co.uk/asset/89873264-f0f3-11e5-bf96-52659226aae3"
+    },
+    "media": {
+      "format": "audio",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/sinhala/meta/dps/junk/2016/03/emp/160323_si_test_audio_map.emp.xml",
+      "id": "17696856",
+      "live": false,
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "ලඟදී පැවැත්වීමට නියමිත ශ්‍රී ලංකා ප්‍රීමියර් ලීග තරඟාවලිය සංවිධානය කිරීම සිංගප්පූරුවේ සමර්සෙට් එන්ටර්ටේන්මන්ට් වෙන්චර්ස් සමාගමට පවරන ලද බව ක්‍රීඩා අමාත්‍ය මහින්දානන්ද අලුත්ගමගේ පවසයි.",
+    "timestamp": 1458736621000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "name": "'රටට ද්‍රෝහි වෙනවා නම් විනය පියවර ගන්නවා'",
+            "type": "link",
+            "uri": "http://www.test.bbc.co.uk/sinhala/multimedia/2012/05/120509_minister_yoshitha"
+          },
+          {
+            "name": "රග්බි කණ්ඩායමේ නායකත්ව අර්බුදය",
+            "type": "link",
+            "uri": "http://www.test.bbc.co.uk/sinhala/multimedia/2012/05/120504_youth_rugby"
+          }
+        ],
+        "type": "see-alsos"
+      }
+    ],
+    "section": {
+      "name": "Multimedia",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/sinhala/multimedia"
+    },
+    "site": {
+      "name": "BBCSinhala.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/sinhala"
     }
   }
+}

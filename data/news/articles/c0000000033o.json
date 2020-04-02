@@ -143,9 +143,7 @@
                             },
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p01k6msp",
                             "warnings": {
                               "long": "Contains strong language and adult humour.",
@@ -304,9 +302,7 @@
                             },
                             "duration": 162,
                             "durationISO8601": "PT2M42S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p01kdbnv",
                             "warnings": {
                               "long": "Contains some strong language.",
@@ -465,9 +461,7 @@
                             },
                             "duration": 162,
                             "durationISO8601": "PT2M42S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p01kdbwt",
                             "warnings": {
                               "long": "Contains some violent scenes.",
@@ -597,9 +591,7 @@
                             },
                             "duration": 122,
                             "durationISO8601": "PT2M2S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p01kdbq2",
                             "warnings": {}
                           }

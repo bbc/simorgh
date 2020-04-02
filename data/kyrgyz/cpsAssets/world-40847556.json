@@ -51,10 +51,7 @@
           "thingLabel": "Nuclear weapons",
           "thingUri": "http://www.bbc.co.uk/things/16161b86-757f-4539-80a4-05e76681bcc0#id",
           "thingId": "16161b86-757f-4539-80a4-05e76681bcc0",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
+          "thingType": ["Theme", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Nuclear_weapon",
             "http://www.wikidata.org/entity/Q12802"
@@ -64,11 +61,7 @@
           "thingLabel": "Japan",
           "thingUri": "http://www.bbc.co.uk/things/3f53c272-5b8f-4a4f-99de-a857d6726c5b#id",
           "thingId": "3f53c272-5b8f-4a4f-99de-a857d6726c5b",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Japan",
             "http://sws.geonames.org/1861060/",
@@ -87,13 +80,8 @@
           "thingLabel": "Photography",
           "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
           "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
-          "thingType": [
-            "Theme",
-            "Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Photography"
-          ],
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Photography"],
           "topicName": "Фотосүрөт",
           "topicId": "cyx5k25n22gt",
           "curationList": [
@@ -106,9 +94,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {
