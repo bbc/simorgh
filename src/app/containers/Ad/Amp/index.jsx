@@ -69,7 +69,7 @@ const AMP_ACCESS_DATA = (endpoint) => ({
 });
 
 const AMP_ACCESS_FETCH = (service) => {
-  const togglesEndpoint = `https://toggles.test.api.bbci.co.uk/toggles?application=simorgh&service=${service}&geoiplookup=true`;
+  const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
 
   return (
     <script id="amp-access" type="application/json">
