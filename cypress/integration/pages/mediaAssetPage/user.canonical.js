@@ -17,8 +17,8 @@ export default ({ service, variant, canonicalPath }) => {
     });
   });
 
-  describe('Chartbeat', () => {
-    if (envConfig.chartbeatEnabled) {
+  if (envConfig.chartbeatEnabled) {
+    describe('Chartbeat', () => {
       it('should have a script with src value set to chartbeat source', () => {
         cy.hasScriptWithChartbeatSrc();
       });
@@ -26,8 +26,6 @@ export default ({ service, variant, canonicalPath }) => {
       it('should have chartbeat config set to window object', () => {
         cy.hasGlobalChartbeatConfig();
       });
-    } else {
-      it('is not enabled', () => {});
-    }
-  });
+    });
+  }
 };
