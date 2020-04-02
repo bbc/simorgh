@@ -1,7 +1,7 @@
 /**
  * @pathname /arabic
  */
-import runComponentRenderTest from './user.canonical';
+// import runComponentRenderTest from './user.canonical';
 import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
@@ -9,6 +9,7 @@ import {
   runCommonSeoTests,
   runCommonCanonicalAnalyticsTests,
   runCommonAmpAnalyticsTests,
+  runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformaceTests,
@@ -47,9 +48,10 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     });
   });
 
-  describe('When I am looking for radio schedule component', () => {
-    runComponentRenderTest();
-  });
+  // To be enabled when the radio schedule is rendered server side
+  // describe('When I am looking for radio schedule component', () => {
+  //   runComponentRenderTest();
+  // });
 
   describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
@@ -86,10 +88,9 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     });
   });
 
-  // describe('When I am using assistive technology', () => {
-  //   runCommonA11yTests({
-  //     skipToContentText: 'إذهب الى المحتوى',
-  //     headlineText: 'الرئيسية - BBC News عربي',
-  //   });
-  // });
+  describe('When I am using assistive technology', () => {
+    runCommonA11yTests({
+      skipToContentText: 'إذهب الى المحتوى',
+    });
+  });
 });
