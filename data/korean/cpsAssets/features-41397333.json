@@ -47,13 +47,8 @@
           "thingLabel": "Nature",
           "thingUri": "http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id",
           "thingId": "12e69b92-a7ba-4463-84e0-be107b9805d0",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Nature"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Nature"],
           "topicName": "자연",
           "topicId": "c5qvpx19pw2t",
           "curationList": [
@@ -67,13 +62,8 @@
           "thingLabel": "Photography",
           "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
           "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Photography"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Photography"],
           "topicName": "사진",
           "topicId": "c1gdq2rq7rxt",
           "curationList": [
@@ -86,9 +76,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

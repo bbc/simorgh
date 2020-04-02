@@ -4,11 +4,11 @@ import pathOr from 'ramda/src/pathOr';
 
 let mapIdsToBlocks;
 
-const getJsonContent = jsonRaw => pathOr(null, ['content'], jsonRaw);
+const getJsonContent = (jsonRaw) => pathOr(null, ['content'], jsonRaw);
 
-const getBlocks = block => pathOr(null, ['model', 'blocks'], block);
+const getBlocks = (block) => pathOr(null, ['model', 'blocks'], block);
 
-const addIdsToBlock = block => {
+const addIdsToBlock = (block) => {
   const blockWithId = { ...block, id: uuid() };
   const nestedBlocks = getBlocks(blockWithId);
 
@@ -25,9 +25,9 @@ const addIdsToBlock = block => {
   };
 };
 
-mapIdsToBlocks = blocks => blocks.map(addIdsToBlock);
+mapIdsToBlocks = (blocks) => blocks.map(addIdsToBlock);
 
-const mergeJsonRawWithBlocks = blocksWithIds => jsonRaw => ({
+const mergeJsonRawWithBlocks = (blocksWithIds) => (jsonRaw) => ({
   ...jsonRaw,
   content: {
     ...jsonRaw.content,
@@ -38,7 +38,7 @@ const mergeJsonRawWithBlocks = blocksWithIds => jsonRaw => ({
   },
 });
 
-export default jsonRaw => {
+export default (jsonRaw) => {
   const addIdsToBlocks = pipe(
     getJsonContent,
     getBlocks,

@@ -25,7 +25,7 @@ const WrappedArticleTimestamp = ({ service, ...rest }) => (
 );
 
 const stories = storiesOf('Containers|Article/Article Timestamp', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addParameters({ chromatic: { disable: true } });
 
 stories.add('default', () => (
@@ -36,8 +36,8 @@ stories.add('default', () => (
 ));
 
 Object.keys(services)
-  .filter(service => service !== 'default')
-  .forEach(service => {
+  .filter((service) => service !== 'default')
+  .forEach((service) => {
     stories.add(service, () => (
       <WrappedArticleTimestamp
         firstPublished={1530947227000}

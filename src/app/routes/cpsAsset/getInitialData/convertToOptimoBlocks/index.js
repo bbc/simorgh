@@ -10,7 +10,7 @@ import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import include from './blocks/include';
 
-const handleMissingType = block =>
+const handleMissingType = (block) =>
   console.log(`Missing type field on block ${block.type}`); // eslint-disable-line no-console
 
 const typesToConvert = {
@@ -40,13 +40,13 @@ const parseBlockByType = (block, json) => {
   return parsedBlock;
 };
 
-const convertToOptimoBlocks = async jsonRaw => {
+const convertToOptimoBlocks = async (jsonRaw) => {
   const json = clone(jsonRaw);
 
   const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = await Promise.all(
-    blocks.map(block => parseBlockByType(block, json)),
+    blocks.map((block) => parseBlockByType(block, json)),
   );
 
   return {

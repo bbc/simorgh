@@ -128,7 +128,7 @@ test('readReport reads a file and parses it to Json', () => {
 test('exitResult', () => {
   const mockExit = jest
     .spyOn(process, 'exit')
-    .mockImplementation(number => number);
+    .mockImplementation((number) => number);
 
   exitResult(false);
 

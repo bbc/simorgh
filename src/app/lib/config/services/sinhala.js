@@ -209,6 +209,23 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය, ',
+          text:
+            'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
+        },
+        fallback: {
+          text: 'මෙහි අන්තර්ගතය නැත',
+          linkText: 'වැඩිදුරටත් %provider_name% බලන්න',
+          linkTextSuffixVisuallyHidden: ', බාහිර',
+          warningText: 'බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
     timezone: 'GMT',
