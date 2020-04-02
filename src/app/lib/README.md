@@ -8,7 +8,7 @@ NB This is not a global styles directory. Global styles should be avoided in all
 
 ## Logging
 
-Simorgh uses a library - winston - for logging. 
+Simorgh uses the [winston](https://github.com/winstonjs/winston) library for logging. 
 
 The logger requires `filename` as a parameter - which is written to the server log along with the timestamp e.g. `2020-01-01 12:00:00.000 info [server/index.jsx] ...`
 
