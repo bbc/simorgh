@@ -1,11 +1,11 @@
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
 import fetchPageData, { getUrl } from '.';
+import { DATA_FETCH_ERROR } from '#lib/logger.const';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';
 const expectedUrl = `${expectedBaseUrl}${requestedPathname}.json`;
-const DATA_FETCH_ERROR = 'data_fetch_error';
 
 afterEach(() => {
   jest.clearAllMocks();
