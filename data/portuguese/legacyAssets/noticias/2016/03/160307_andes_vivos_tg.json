@@ -23,7 +23,7 @@
     "analyticsLabels": { "cps_asset_id": "42893847", "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph", "image" ],
+    "blockTypes": ["legacyMedia", "paragraph", "image"],
     "includeComments": false
   },
   "content": {
@@ -169,8 +169,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "Notícias", "uri": "/portuguese/noticias", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCBrasil.com", "uri": "/portuguese", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "Notícias",
+      "uri": "/portuguese/noticias",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCBrasil.com",
+      "uri": "/portuguese",
+      "type": "simple"
+    },
     "groups": []
   }
 }

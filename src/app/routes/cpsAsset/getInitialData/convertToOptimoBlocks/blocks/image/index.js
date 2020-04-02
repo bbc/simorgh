@@ -27,7 +27,7 @@ const rawImage = ({ copyrightHolder, height, path, width }) => {
   });
 };
 
-const convertImage = block =>
+const convertImage = (block) =>
   imageBlocks(
     [captionBlock(block), altTextBlock(block), rawImage(block)].filter(Boolean),
   );

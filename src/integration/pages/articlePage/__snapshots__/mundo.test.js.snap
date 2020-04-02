@@ -259,7 +259,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     <script data-react-helmet="true"
             type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/mundo/articles/ce42wzqr2mko","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/mundo/articles/ce42wzqr2mko","name":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"},"headline":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas","datePublished":"2019-10-04T10:58:46.977Z","dateModified":"2019-10-04T10:58:46.977Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/mundo/articles/ce42wzqr2mko","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","publishingPrinciples":"https://www.bbc.com/mundo/institucional-51359666","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/mundo/articles/ce42wzqr2mko","name":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"},"headline":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas","datePublished":"2019-10-04T10:58:46.977Z","dateModified":"2019-10-04T10:58:46.977Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"noBylinesPolicy":"https://www.bbc.com/mundo/institucional-51359666#authorexpertise"}}
     </script>
     <script data-react-helmet="true"
             type="application/ld+json"
@@ -974,7 +974,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.com/news/help-41670342"
+                <a href="https://www.bbc.com/mundo/institucional-51359666"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
@@ -1332,7 +1332,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
     <script data-react-helmet="true"
             type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/mundo/articles/ce42wzqr2mko","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/mundo/articles/ce42wzqr2mko","name":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"},"headline":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas","datePublished":"2019-10-04T10:58:46.977Z","dateModified":"2019-10-04T10:58:46.977Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/mundo/articles/ce42wzqr2mko","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","publishingPrinciples":"https://www.bbc.com/mundo/institucional-51359666","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/mundo/articles/ce42wzqr2mko","name":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"},"headline":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas","datePublished":"2019-10-04T10:58:46.977Z","dateModified":"2019-10-04T10:58:46.977Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"noBylinesPolicy":"https://www.bbc.com/mundo/institucional-51359666#authorexpertise"}}
     </script>
     <script data-react-helmet="true"
             type="application/ld+json"
@@ -1885,7 +1885,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.com/news/help-41670342"
+                <a href="https://www.bbc.com/mundo/institucional-51359666"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">

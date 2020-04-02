@@ -9,7 +9,7 @@ const contextStub = {
   service: 'news',
 };
 
-const mountManifest = context =>
+const mountManifest = (context) =>
   mount(
     <ServiceContext.Provider value={context}>
       <ManifestContainer />

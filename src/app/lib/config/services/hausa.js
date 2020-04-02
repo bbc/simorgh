@@ -170,6 +170,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
@@ -213,6 +214,23 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba. ',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Bayanan bidiyo ',
+          text: 'Gargadi: Ana iya samun talla wanda ba na BBC ba ne',
+        },
+        fallback: {
+          text: 'Babu karin bayanai',
+          linkText: 'Ci gaba da duba %provider_name%',
+          linkTextSuffixVisuallyHidden: ', adireshin waje',
+          warningText:
+            'BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'GMT',

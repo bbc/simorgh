@@ -47,14 +47,8 @@
           "thingLabel": "Indonesia",
           "thingUri": "http://www.bbc.co.uk/things/4aa966f9-091e-4dd1-8f10-a44ca20aec5d#id",
           "thingId": "4aa966f9-091e-4dd1-8f10-a44ca20aec5d",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1643084/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1643084/"],
           "topicId": "cjgn7k8yx4gt",
           "curationList": [
             {
@@ -66,9 +60,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

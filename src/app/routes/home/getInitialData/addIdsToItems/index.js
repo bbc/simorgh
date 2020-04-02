@@ -11,9 +11,9 @@ const addIdsToGroupItems = ({ items, ...group }) => ({
   items: items && items.map(addIdToItem),
 });
 
-const mapGroups = groups => groups.map(addIdsToGroupItems);
+const mapGroups = (groups) => groups.map(addIdsToGroupItems);
 
-const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
+const mergeContentWithAddedIdItems = (itemsWithIds) => (jsonRaw) => ({
   ...jsonRaw,
   content: {
     ...path(['content'], jsonRaw),
@@ -21,7 +21,7 @@ const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
   },
 });
 
-export default jsonRaw => {
+export default (jsonRaw) => {
   const addIdsToItems = pipe(
     getGroups,
     mapGroups,

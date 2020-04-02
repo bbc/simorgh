@@ -1,4 +1,4 @@
-const getOriginCode = path => {
+const getOriginCode = (path) => {
   if (!path || path.indexOf('/') === -1) {
     return null;
   }
