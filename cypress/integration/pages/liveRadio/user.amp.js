@@ -17,13 +17,11 @@ export default ({ service, variant, canonicalPath }) => {
     });
   });
 
-  describe('Chartbeat', () => {
-    if (envConfig.chartbeatEnabled) {
+  if (envConfig.chartbeatEnabled) {
+    describe('Chartbeat', () => {
       it('should have chartbeat config UID', () => {
         cy.hasAmpChartbeatConfigUid();
       });
-    } else {
-      it('is not enabled', () => {});
-    }
-  });
+    });
+  }
 };
