@@ -1,4 +1,4 @@
-const categoryType = category => {
+const categoryType = (category) => {
   const dictonary = {
     News: 'ReportageNewsArticle',
     Feature: 'ReportageNewsArticle',

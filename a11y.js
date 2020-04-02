@@ -9,20 +9,21 @@ const services = require('./cypress/support/config/services');
 const pageWidths = [360];
 const baseUrl = 'http://localhost:7080';
 
-const getPageTypes = service => pathOr(null, [service, 'pageTypes'], services);
+const getPageTypes = (service) =>
+  pathOr(null, [service, 'pageTypes'], services);
 
-const getSmokePaths = config => {
+const getSmokePaths = (config) => {
   const { environments, smoke } = config;
   return smoke && environments ? environments.local.paths : null;
 };
 
-const getUrls = pageType =>
+const getUrls = (pageType) =>
   Object.keys(services)
     .map(getPageTypes)
-    .map(pageTypes => pathOr(null, [pageType], pageTypes))
+    .map((pageTypes) => pathOr(null, [pageType], pageTypes))
     .map(getSmokePaths)
-    .filter(page => !!page)
-    .map(url => `${baseUrl}${url}`);
+    .filter((page) => !!page)
+    .map((url) => `${baseUrl}${url}`);
 
 // '/html/head/iframe' Added to prevent false negatives from mPulse beacon
 // which creates iframe in document head
@@ -54,9 +55,9 @@ const pageTypes = {
   ],
 };
 
-Object.keys(pageTypes).forEach(pageType => {
-  getUrls(pageType).forEach(url =>
-    pageWidths.forEach(width =>
+Object.keys(pageTypes).forEach((pageType) => {
+  getUrls(pageType).forEach((url) =>
+    pageWidths.forEach((width) =>
       // eslint-disable-next-line no-undef
       page(url, { width, hide: pageTypes[pageType] }),
     ),

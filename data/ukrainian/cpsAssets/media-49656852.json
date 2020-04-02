@@ -1,255 +1,233 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:ukrainian/media-49656852",
-        "locators": {
-            "assetUri": "/ukrainian/media-49656852",
-            "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-49656852",
-            "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891"
-        },
-        "type": "MAP",
-        "createdBy": "ukrainian-v6",
-        "language": "uk",
-        "lastUpdated": 1568139632187,
-        "firstPublished": 1568139622,
-        "lastPublished": 1568139623,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "ukrainian.embedded_media.media_asset.49656852.page",
-            "cps_asset_id": "49656852"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3e39461b000e9dabfb",
-                    "campaignName": "WS - Keep me on trend"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Russia",
-                    "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
-                    "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
-                    "thingType": [
-                        "Thing",
-                        "Place",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/2017370/"
-                    ],
-                    "topicName": "Росія",
-                    "topicId": "cvjp20qwz33t",
-                    "curationList": [
-                        {
-                            "curationId": "c4649734-7ab0-40ec-8e14-1c527e156c43",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Politics",
-                    "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                    "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Politics"
-                    ],
-                    "topicName": "Політика",
-                    "topicId": "cyx5kzy2wdrt",
-                    "curationList": [
-                        {
-                            "curationId": "47e87e83-8857-4738-917b-300d0ae68396",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Ukraine",
-                    "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
-                    "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
-                    "thingType": [
-                        "Thing",
-                        "Place",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Ukraine",
-                        "http://sws.geonames.org/690791/",
-                        "http://www.wikidata.org/entity/Q212"
-                    ],
-                    "topicName": "Україна",
-                    "topicId": "c1gdqr12p11t",
-                    "curationList": [
-                        {
-                            "curationId": "66aab782-10e3-47f5-a9cb-7432f6b24c83",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:ukrainian/media-49656852",
+    "locators": {
+      "assetUri": "/ukrainian/media-49656852",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-49656852",
+      "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "ukrainian-v6",
+    "language": "uk",
+    "lastUpdated": 1568139632187,
+    "firstPublished": 1568139622,
+    "lastPublished": 1568139623,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "ukrainian.embedded_media.media_asset.49656852.page",
+      "cps_asset_id": "49656852"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Russia",
+          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2017370/"],
+          "topicName": "Росія",
+          "topicId": "cvjp20qwz33t",
+          "curationList": [
             {
-                "id": "p07mz53p",
-                "subType": "clip",
-                "format": "video",
-                "title": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
-                "synopses": {
-                    "short": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mz5c1.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
-                "versions": [
-                    {
-                        "versionId": "p07mz53r",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 197,
-                        "durationISO8601": "PT3M17S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1568138022
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "Олег Сенцов та Олександр Кольченко розповіли про неволю, повернення і Крим на першій прес-конференції.",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "&quot;Поки не обійнявся з донькою, я був дуже спокійний&quot;. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<italic>В</italic><italic>ідео BBC News Україна в будь-який час </italic>- <link><caption>підписуйтеся на наш канал у YouTube.</caption><url href=\"https://www.youtube.com/user/UkrainianBBC\" platform=\"highweb\"/></link>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
+              "curationId": "c4649734-7ab0-40ec-8e14-1c527e156c43",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        },
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+          "topicName": "Політика",
+          "topicId": "cyx5kzy2wdrt",
+          "curationList": [
+            {
+              "curationId": "47e87e83-8857-4738-917b-300d0ae68396",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Ukraine",
+          "thingUri": "http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "thingId": "ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Ukraine",
+            "http://sws.geonames.org/690791/",
+            "http://www.wikidata.org/entity/Q212"
+          ],
+          "topicName": "Україна",
+          "topicId": "c1gdqr12p11t",
+          "curationList": [
+            {
+              "curationId": "66aab782-10e3-47f5-a9cb-7432f6b24c83",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
-            "headline": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну"
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mz53p",
+        "subType": "clip",
+        "format": "video",
+        "title": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
+        "synopses": {
+          "short": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну"
         },
-        "locators": {
-            "assetUri": "/ukrainian/media-49656852",
-            "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-49656852",
-            "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891"
-        },
-        "summary": "Звільнені політв'язні дали свою першу прес-конференцію.",
-        "timestamp": 1568139632187,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mz5c1.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
+        "versions": [
+          {
+            "versionId": "p07mz53r",
+            "types": ["Original"],
+            "duration": 197,
+            "durationISO8601": "PT3M17S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3e39461b000e9dabfb",
-                    "campaignName": "WS - Keep me on trend"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mz53p",
-            "subType": "clip",
-            "format": "video",
-            "title": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
-            "synopses": {
-                "short": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mz5c1.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
-            "versions": [
-                {
-                    "versionId": "p07mz53r",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 197,
-                    "durationISO8601": "PT3M17S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1568138022
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108743074",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/B7BA/production/_108743074_p07mz5c1.jpg",
-            "path": "/cpsprodpb/B7BA/production/_108743074_p07mz5c1.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "Олег Сенцов дав першу прес-конференцію",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:ukrainian/media-49656852",
-        "type": "cps"
+            "availableFrom": 1568138022
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Олег Сенцов та Олександр Кольченко розповіли про неволю, повернення і Крим на першій прес-конференції.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Поки не обійнявся з донькою, я був дуже спокійний&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>В</italic><italic>ідео BBC News Україна в будь-який час </italic>- <link><caption>підписуйтеся на наш канал у YouTube.</caption><url href=\"https://www.youtube.com/user/UkrainianBBC\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
+      "headline": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/ukrainian/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC Україна",
-            "uri": "/ukrainian",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/ukrainian/media-49656852",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/media-49656852",
+      "curie": "http://www.bbc.co.uk/asset/0b2b6080-932d-de49-aa0b-7a8e5fe18891"
+    },
+    "summary": "Звільнені політв'язні дали свою першу прес-конференцію.",
+    "timestamp": 1568139632187,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mz53p",
+      "subType": "clip",
+      "format": "video",
+      "title": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
+      "synopses": {
+        "short": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mz5c1.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "\"День, заради якого варто жити\". Сенцов і Кольченко про майбутнє, неволю, Росію та Україну",
+      "versions": [
+        {
+          "versionId": "p07mz53r",
+          "types": ["Original"],
+          "duration": 197,
+          "durationISO8601": "PT3M17S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1568138022
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108743074",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/B7BA/production/_108743074_p07mz5c1.jpg",
+      "path": "/cpsprodpb/B7BA/production/_108743074_p07mz5c1.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Олег Сенцов дав першу прес-конференцію",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/media-49656852",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/ukrainian/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Україна",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

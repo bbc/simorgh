@@ -203,6 +203,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. BBC kənar saytların məzmununa məsul deyil.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Videonun alt yazısı, ',
+          text: 'Xəbərdarlıq : Üçüncü tərəfin məzmununda reklam ola bilər',
+        },
+        fallback: {
+          text: 'Məzmun mövcud deyil',
+          linkText: 'Daha çoxu üçün %provider_name%',
+          linkTextSuffixVisuallyHidden: ', BBC-dən kənar',
+          warningText: 'BBC kənar saytların məzmununa məsul deyil.',
+        },
+        skipLink: {
+          text: 'Paylaşımını ötürün %provider_name%',
+          endTextVisuallyHidden: 'Paylaşımın sonu %provider_name%',
+        },
+      },
     },
     fonts: [],
     timezone: 'Asia/baku',

@@ -7,20 +7,20 @@ import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-const mediaFixture = type =>
+const mediaFixture = (type) =>
   pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
+    .flatMap((group) => pathOr(null, ['items'], group))
     .find(
-      item =>
+      (item) =>
         pathOr(null, ['cpsType'], item) === 'MAP' &&
         pathOr(null, ['media', 'format'], item) === type,
     );
 
-const promoFixture = type =>
+const promoFixture = (type) =>
   pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
+    .flatMap((group) => pathOr(null, ['items'], group))
     .find(
-      item =>
+      (item) =>
         pathOr(null, ['assetTypeCode'], item) === 'PRO' &&
         pathOr(null, ['contentType'], item) === type,
     );
