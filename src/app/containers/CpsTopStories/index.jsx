@@ -79,7 +79,7 @@ const TopStories = ({ content }) => {
           </SpacingDiv>
         ) : (
           <StoryPromoUl>
-            {content.map(item => (
+            {content.map((item) => (
               <StoryPromoLi key={item.id || item.uri}>
                 <StoryPromo item={item} dir={dir} displayImage={false} />
               </StoryPromoLi>
