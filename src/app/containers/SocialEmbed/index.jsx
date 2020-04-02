@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -25,7 +27,14 @@ const htmlUnescape = (htmlString) =>
 const Wrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
+
+  .twitter-tweet,
+  .instagram-media {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 `;
 
 const SocialEmbedContainer = ({ blocks }) => {
