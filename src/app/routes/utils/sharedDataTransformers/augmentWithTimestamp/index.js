@@ -2,7 +2,7 @@
 import deepClone from 'ramda/src/clone';
 import pathOr from 'ramda/src/pathOr';
 
-const augmentWithTimestamp = jsonRaw => {
+const augmentWithTimestamp = (jsonRaw) => {
   // safely get deeply nested JSON values
   const firstPublished = pathOr(null, ['metadata', 'firstPublished'], jsonRaw);
   const lastPublished = pathOr(null, ['metadata', 'lastPublished'], jsonRaw);
@@ -60,7 +60,7 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
   return json;
 };
 
-const splitBlocksByHeadline = blocks => {
+const splitBlocksByHeadline = (blocks) => {
   const headlineIndexPlusOne =
     blocks.findIndex(({ type }) =>
       ['headline', 'fauxHeadline'].includes(type),
@@ -72,6 +72,6 @@ const splitBlocksByHeadline = blocks => {
   return { headlineBlocks, mainBlocks };
 };
 
-const imageOrAresMediaFirst = blocks =>
+const imageOrAresMediaFirst = (blocks) =>
   blocks.length > 0 &&
   (blocks[0].type === 'image' || blocks[0].type === 'aresMedia');

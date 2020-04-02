@@ -1,16 +1,13 @@
 import pathOr from 'ramda/src/pathOr';
 
-export const getPassportHome = pageData => {
+export const getPassportHome = (pageData) => {
   const homeServiceUrl = pathOr(
     null,
     ['metadata', 'passport', 'home'],
     pageData,
   );
   return pageData && homeServiceUrl
-    ? homeServiceUrl
-        .split('/')
-        .pop()
-        .toLowerCase()
+    ? homeServiceUrl.split('/').pop().toLowerCase()
     : null;
 };
 
@@ -22,7 +19,7 @@ export const isValidPassportHome = (
   const isMissingRequiredArgs = !passportHome;
   if (isMissingRequiredArgs) return true;
 
-  const matchesPassportHome = home =>
+  const matchesPassportHome = (home) =>
     (home || '').toLowerCase() === passportHome.toLowerCase();
 
   if (matchesPassportHome(service)) return true;

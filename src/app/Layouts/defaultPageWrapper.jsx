@@ -11,7 +11,7 @@ import { ServiceContext } from '../contexts/ServiceContext';
 const PageWrapper = ({ children }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
 
-  const fonts = fontFunctions.map(getFonts => getFonts());
+  const fonts = fontFunctions.map((getFonts) => getFonts());
 
   return (
     <>

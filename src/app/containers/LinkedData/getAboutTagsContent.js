@@ -1,4 +1,4 @@
-const checkType = types => {
+const checkType = (types) => {
   const acceptableTypes = ['Person', 'Event', 'Organization', 'Place'];
   if (types.length === 0 || types.length > 1) {
     return 'Thing';
@@ -6,15 +6,15 @@ const checkType = types => {
   return acceptableTypes.includes(types[0]) ? types[0] : 'Thing';
 };
 
-const checkSameAs = uris => {
-  const sameAs = uris.filter(uri => uri.includes('http://dbpedia.org'));
+const checkSameAs = (uris) => {
+  const sameAs = uris.filter((uri) => uri.includes('http://dbpedia.org'));
   return sameAs.length ? sameAs : undefined;
 };
 
-export default aboutTags => {
+export default (aboutTags) => {
   if (aboutTags && aboutTags.length > 0) {
     const content = [];
-    aboutTags.forEach(tag => {
+    aboutTags.forEach((tag) => {
       const about = {
         '@type': checkType(tag.thingType),
         name: tag.thingLabel,

@@ -35,7 +35,7 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 
-const isLegacyMediaAssetPage = url => url.split('/').length > 7;
+const isLegacyMediaAssetPage = (url) => url.split('/').length > 7;
 
 const MediaAssetPage = ({ pageData }) => {
   const requestContext = useContext(RequestContext);
@@ -66,7 +66,7 @@ const MediaAssetPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: props =>
+    timestamp: (props) =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
@@ -75,14 +75,14 @@ const MediaAssetPage = ({ pageData }) => {
     // This is not something we currently support, so we return an error message
     video: isLegacyMediaAssetPage(requestContext.canonicalLink)
       ? MediaMessage
-      : props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+      : (props) => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
 
-    legacyMedia: props => (
+    legacyMedia: (props) => (
       <CpsAssetMediaPlayer {...props} assetUri={assetUri} isLegacyMedia />
     ),
 
     // "Versions" are live streams
-    version: props => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
+    version: (props) => <CpsAssetMediaPlayer {...props} assetUri={assetUri} />,
     unavailableMedia: MediaMessage,
   };
 

@@ -13,16 +13,16 @@ export const getAllowedItems = (items, isFirstSection) =>
     : items.slice(0, MAX_ALLOWED_ITEMS);
 
 export const removeFirstSlotRadioBulletin = dropWhile(
-  item => item.contentType === 'RadioBulletin',
+  (item) => item.contentType === 'RadioBulletin',
 );
 
-const isNotTVBulletin = item => item.contentType !== 'TVBulletin';
+const isNotTVBulletin = (item) => item.contentType !== 'TVBulletin';
 
 export const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
   type === 'av-live-streams' ? items : items.filter(isNotTVBulletin);
 
-export const removeItemsWithoutUrlOrHeadline = items =>
-  items.filter(item => {
+export const removeItemsWithoutUrlOrHeadline = (items) =>
+  items.filter((item) => {
     const { headline, url } = getHeadlineUrlAndLive(
       item,
       getAssetTypeCode(item),

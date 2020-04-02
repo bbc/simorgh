@@ -4,7 +4,7 @@ plugins:
     enabled: true
     config:
       languages:
-      - javascript
+        - javascript
     exclude_patterns:
       - 'cypress/{integration,support}/**/*.js'
       # The line below should work but doesn't it removes all js and jsx quality checking

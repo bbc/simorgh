@@ -18,12 +18,7 @@
     },
     "tags": {},
     "version": "v1.1.0",
-    "blockTypes": [
-      "headline",
-      "text",
-      "paragraph",
-      "fragment"
-    ]
+    "blockTypes": ["headline", "text", "paragraph", "fragment"]
   },
   "content": {
     "model": {
@@ -92,9 +87,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "Ратови звезда",
-                        "attributes": [
-                          "italic"
-                        ]
+                        "attributes": ["italic"]
                       }
                     },
                     {
@@ -138,9 +131,7 @@
                       "type": "fragment",
                       "model": {
                         "text": "Ратова звезда",
-                        "attributes": [
-                          "italic"
-                        ]
+                        "attributes": ["italic"]
                       }
                     },
                     {

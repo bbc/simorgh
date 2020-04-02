@@ -235,6 +235,23 @@ export const service = {
       ],
       copyrightText:
         'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ ',
+          text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+        },
+        fallback: {
+          text: 'ไม่มีเนื้อหานี้',
+          linkText: 'ดูเพิ่มเติมที่ %provider_name%',
+          linkTextSuffixVisuallyHidden: ' ลิงก์จากภายนอก',
+          warningText:
+            'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
+        },
+        skipLink: {
+          text: 'ข้าม %provider_name% โพสต์ ',
+          endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
+        },
+      },
     },
     fonts: [],
     timezone: 'Asia/Bangkok',

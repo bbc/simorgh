@@ -1,342 +1,314 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:japanese/video-49589128",
-        "locators": {
-            "assetUri": "/japanese/video-49589128",
-            "cpsUrn": "urn:bbc:content:assetUri:japanese/video-49589128",
-            "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:japanese/video-49589128",
+    "locators": {
+      "assetUri": "/japanese/video-49589128",
+      "cpsUrn": "urn:bbc:content:assetUri:japanese/video-49589128",
+      "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7"
+    },
+    "type": "MAP",
+    "createdBy": "japanese",
+    "language": "ja",
+    "lastUpdated": 1567665709024,
+    "firstPublished": 1567665697,
+    "lastPublished": 1567665698,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "japanese.video.media_asset.49589128.page",
+      "cps_asset_id": "49589128"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "China",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["geoname:GeoTagConcept", "Place", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/China",
+            "http://sws.geonames.org/1814991/",
+            "http://www.wikidata.org/entity/Q148"
+          ]
         },
-        "type": "MAP",
-        "createdBy": "japanese",
-        "language": "ja",
-        "lastUpdated": 1567665709024,
-        "firstPublished": 1567665697,
-        "lastPublished": 1567665698,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "japanese.video.media_asset.49589128.page",
-            "cps_asset_id": "49589128"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        {
+          "thingLabel": "Policing",
+          "thingUri": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
+          "thingId": "8470b75a-3b8c-42cb-9921-5953515d07cc",
+          "thingType": ["nsl:Topic", "Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Police"],
+          "topicName": "警察",
+          "topicId": "cyx5k20qg2gt",
+          "curationList": [
+            {
+              "curationId": "93f8443d-23ae-4eb3-b162-a2f29a15b9fb",
+              "curationType": "vivo-stream"
             }
+          ]
         },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "China",
-                    "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-                    "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-                    "thingType": [
-                        "geoname:GeoTagConcept",
-                        "Place",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/China",
-                        "http://sws.geonames.org/1814991/",
-                        "http://www.wikidata.org/entity/Q148"
-                    ]
-                },
-                {
-                    "thingLabel": "Policing",
-                    "thingUri": "http://www.bbc.co.uk/things/8470b75a-3b8c-42cb-9921-5953515d07cc#id",
-                    "thingId": "8470b75a-3b8c-42cb-9921-5953515d07cc",
-                    "thingType": [
-                        "nsl:Topic",
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Police"
-                    ],
-                    "topicName": "警察",
-                    "topicId": "cyx5k20qg2gt",
-                    "curationList": [
-                        {
-                            "curationId": "93f8443d-23ae-4eb3-b162-a2f29a15b9fb",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Hong Kong",
-                    "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
-                    "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
-                    "thingType": [
-                        "Thing",
-                        "Place",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/1819729/"
-                    ],
-                    "topicName": "香港",
-                    "topicId": "c404vnxy867t",
-                    "curationList": [
-                        {
-                            "curationId": "b8e24220-a845-4d45-a2bc-e7724e2ec7bb",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Law and order",
-                    "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
-                    "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Law"
-                    ]
-                }
-            ]
+        {
+          "thingLabel": "Hong Kong",
+          "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
+          "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1819729/"],
+          "topicName": "香港",
+          "topicId": "c404vnxy867t",
+          "curationList": [
+            {
+              "curationId": "b8e24220-a845-4d45-a2bc-e7724e2ec7bb",
+              "curationType": "vivo-stream"
+            }
+          ]
         },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+        {
+          "thingLabel": "Law and order",
+          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Law"]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mhkm2",
+        "subType": "clip",
+        "format": "video",
+        "title": "香港長官、政情不安を鎮める「4つの方策」とは",
+        "synopses": {
+          "short": "香港長官、政情不安を鎮める「4つの方策」とは"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhkyl.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "香港長官、政情不安を鎮める「4つの方策」とは",
+        "versions": [
+          {
+            "versionId": "p07mhkm4",
+            "types": ["Original"],
+            "duration": 90,
+            "durationISO8601": "PT1M30S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1567665589
+          }
         ],
-        "includeComments": false
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、政情不安を鎮めるための4つの方策を明らかにした。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "この中で、3カ月に及ぶ反政府デモの発端となった「逃亡犯条例」の改定案を撤回する意向を示した。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "今年4月に提出されたこの改定案は、犯罪容疑者の中国本土への引き渡しを可能にするもので、改定案の完全撤回は、デモ参加者が政府に提示している5つの要求のうちの1つだった。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "デモ参加者は、普通選挙の実施など残りの4つの要求も飲むよう訴え、抗議を続けるとしている。",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<italic>動画提供：</italic><italic>ICABLE NEWS</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "香港長官、政情不安を鎮める「4つの方策」とは",
+      "headline": "香港長官、政情不安を鎮める「4つの方策」とは"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07mhkm2",
-                "subType": "clip",
-                "format": "video",
-                "title": "香港長官、政情不安を鎮める「4つの方策」とは",
-                "synopses": {
-                    "short": "香港長官、政情不安を鎮める「4つの方策」とは"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhkyl.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "香港長官、政情不安を鎮める「4つの方策」とは",
-                "versions": [
-                    {
-                        "versionId": "p07mhkm4",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 90,
-                        "durationISO8601": "PT1M30S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567665589
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
+    "locators": {
+      "assetUri": "/japanese/video-49589128",
+      "cpsUrn": "urn:bbc:content:assetUri:japanese/video-49589128",
+      "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7"
+    },
+    "summary": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、政情不安を鎮めるための4つの方策を明らかにした。",
+    "timestamp": 1567665709024,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "media": {
+      "id": "p07mhkm2",
+      "subType": "clip",
+      "format": "video",
+      "title": "香港長官、政情不安を鎮める「4つの方策」とは",
+      "synopses": {
+        "short": "香港長官、政情不安を鎮める「4つの方策」とは"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhkyl.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "香港長官、政情不安を鎮める「4つの方策」とは",
+      "versions": [
+        {
+          "versionId": "p07mhkm4",
+          "types": ["Original"],
+          "duration": 90,
+          "durationISO8601": "PT1M30S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567665589
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108619796",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/1109F/production/_108619796_p07mhkyl.jpg",
+      "path": "/cpsprodpb/1109F/production/_108619796_p07mhkyl.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Keyframe #2",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:japanese/video-49589128",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "動画",
+      "uri": "/japanese/video",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Japanese",
+      "uri": "/japanese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "香港長官、改定案撤回を表明　政情不安の沈静化に向け",
+              "headline": "香港長官、改定案撤回を表明　政情不安の沈静化に向け"
             },
-            {
-                "text": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、政情不安を鎮めるための4つの方策を明らかにした。",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "locators": {
+              "assetUri": "/japanese/49589101",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/49589101"
             },
-            {
-                "text": "この中で、3カ月に及ぶ反政府デモの発端となった「逃亡犯条例」の改定案を撤回する意向を示した。",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "summary": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、3カ月に及ぶ反政府デモの発端となった「逃亡犯条例」の改定案を撤回する意向を示した。一方、デモ指導者は、今後も抗議を続けるとしている。",
+            "timestamp": 1567648671,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108611578",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/155D7/production/_108611578_056242613.jpg",
+              "path": "/cpsprodpb/155D7/production/_108611578_056242613.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Carrie Lam broadcast seen on the streets of Hong Kong. 4 Sept 2019",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            {
-                "text": "今年4月に提出されたこの改定案は、犯罪容疑者の中国本土への引き渡しを可能にするもので、改定案の完全撤回は、デモ参加者が政府に提示している5つの要求のうちの1つだった。",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "id": "urn:bbc:ares::asset:japanese/49589101",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "香港長官「辞任したい」　会合の録音が流出、本人は辞意否定",
+              "headline": "香港長官「辞任したい」　会合の録音が流出、本人は辞意否定"
             },
-            {
-                "text": "デモ参加者は、普通選挙の実施など残りの4つの要求も飲むよう訴え、抗議を続けるとしている。",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "locators": {
+              "assetUri": "/japanese/49560679",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/49560679"
             },
-            {
-                "text": "<italic>動画提供：</italic><italic>ICABLE NEWS</italic>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            }
+            "summary": "反政府デモが続く香港で、林鄭月娥（キャリー･ラム）行政長官が「辞任したい」と述べた音声がメディアに流出した。林鄭氏は3日、記者会見を開き、辞任を申し出たことはないと説明して火消しにつとめた。",
+            "timestamp": 1567491475,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108591486",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/10B43/production/_108591486_e77d896f-bd89-442f-a647-fea5870c8766.jpg",
+              "path": "/cpsprodpb/10B43/production/_108591486_e77d896f-bd89-442f-a647-fea5870c8766.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Carrie Lam",
+              "caption": "Ms Lam 'never contemplated' to ask to resign",
+              "copyrightHolder": "AFP",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/49560679",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "香港で大規模な「授業ボイコット」　 ゼネストの呼びかけも",
+              "headline": "香港で大規模な「授業ボイコット」　 ゼネストの呼びかけも"
+            },
+            "locators": {
+              "assetUri": "/japanese/49547518",
+              "cpsUrn": "urn:bbc:content:assetUri:/japanese/49547518"
+            },
+            "summary": "反政府デモが続く香港で、学校の新年度が始まった2日、何千人もの中高生と大学生が授業をボイコットした。",
+            "timestamp": 1567415524,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108578550",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/15D3/production/_108578550_epa056199879.jpg",
+              "path": "/cpsprodpb/15D3/production/_108578550_epa056199879.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Student protesters",
+              "copyrightHolder": "EPA",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:japanese/49547518",
+            "type": "cps"
+          }
         ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "香港長官、政情不安を鎮める「4つの方策」とは",
-            "headline": "香港長官、政情不安を鎮める「4つの方策」とは"
-        },
-        "locators": {
-            "assetUri": "/japanese/video-49589128",
-            "cpsUrn": "urn:bbc:content:assetUri:japanese/video-49589128",
-            "curie": "http://www.bbc.co.uk/asset/2d677828-84a8-bb4d-88a9-6d0226b445d7"
-        },
-        "summary": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、政情不安を鎮めるための4つの方策を明らかにした。",
-        "timestamp": 1567665709024,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            }
-        },
-        "media": {
-            "id": "p07mhkm2",
-            "subType": "clip",
-            "format": "video",
-            "title": "香港長官、政情不安を鎮める「4つの方策」とは",
-            "synopses": {
-                "short": "香港長官、政情不安を鎮める「4つの方策」とは"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhkyl.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "香港長官、政情不安を鎮める「4つの方策」とは",
-            "versions": [
-                {
-                    "versionId": "p07mhkm4",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 90,
-                    "durationISO8601": "PT1M30S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567665589
-                }
-            ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108619796",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/1109F/production/_108619796_p07mhkyl.jpg",
-            "path": "/cpsprodpb/1109F/production/_108619796_p07mhkyl.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "Keyframe #2",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:japanese/video-49589128",
-        "type": "cps"
-    },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "動画",
-            "uri": "/japanese/video",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "Japanese",
-            "uri": "/japanese",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "香港長官、改定案撤回を表明　政情不安の沈静化に向け",
-                            "headline": "香港長官、改定案撤回を表明　政情不安の沈静化に向け"
-                        },
-                        "locators": {
-                            "assetUri": "/japanese/49589101",
-                            "cpsUrn": "urn:bbc:content:assetUri:/japanese/49589101"
-                        },
-                        "summary": "香港の林鄭月娥（キャリー･ラム）行政長官は4日、3カ月に及ぶ反政府デモの発端となった「逃亡犯条例」の改定案を撤回する意向を示した。一方、デモ指導者は、今後も抗議を続けるとしている。",
-                        "timestamp": 1567648671,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108611578",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/155D7/production/_108611578_056242613.jpg",
-                            "path": "/cpsprodpb/155D7/production/_108611578_056242613.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "Carrie Lam broadcast seen on the streets of Hong Kong. 4 Sept 2019",
-                            "copyrightHolder": "Getty Images",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:japanese/49589101",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "香港長官「辞任したい」　会合の録音が流出、本人は辞意否定",
-                            "headline": "香港長官「辞任したい」　会合の録音が流出、本人は辞意否定"
-                        },
-                        "locators": {
-                            "assetUri": "/japanese/49560679",
-                            "cpsUrn": "urn:bbc:content:assetUri:/japanese/49560679"
-                        },
-                        "summary": "反政府デモが続く香港で、林鄭月娥（キャリー･ラム）行政長官が「辞任したい」と述べた音声がメディアに流出した。林鄭氏は3日、記者会見を開き、辞任を申し出たことはないと説明して火消しにつとめた。",
-                        "timestamp": 1567491475,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108591486",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/10B43/production/_108591486_e77d896f-bd89-442f-a647-fea5870c8766.jpg",
-                            "path": "/cpsprodpb/10B43/production/_108591486_e77d896f-bd89-442f-a647-fea5870c8766.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "Carrie Lam",
-                            "caption": "Ms Lam 'never contemplated' to ask to resign",
-                            "copyrightHolder": "AFP",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:japanese/49560679",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "香港で大規模な「授業ボイコット」　 ゼネストの呼びかけも",
-                            "headline": "香港で大規模な「授業ボイコット」　 ゼネストの呼びかけも"
-                        },
-                        "locators": {
-                            "assetUri": "/japanese/49547518",
-                            "cpsUrn": "urn:bbc:content:assetUri:/japanese/49547518"
-                        },
-                        "summary": "反政府デモが続く香港で、学校の新年度が始まった2日、何千人もの中高生と大学生が授業をボイコットした。",
-                        "timestamp": 1567415524,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108578550",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/15D3/production/_108578550_epa056199879.jpg",
-                            "path": "/cpsprodpb/15D3/production/_108578550_epa056199879.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "Student protesters",
-                            "copyrightHolder": "EPA",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:japanese/49547518",
-                        "type": "cps"
-                    }
-                ]
-            }
-        ]
-    }
+      }
+    ]
+  }
 }

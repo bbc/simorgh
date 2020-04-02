@@ -1,638 +1,606 @@
 {
-   "metadata":{
-      "id":"urn:bbc:ares::asset:thai/thailand-49659092",
-      "locators":{
-         "assetUri":"/thai/thailand-49659092",
-         "cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49659092",
-         "curie":"http://www.bbc.co.uk/asset/9108e9b7-4b26-1d4b-b445-e56c5696a8a8"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:thai/thailand-49659092",
+    "locators": {
+      "assetUri": "/thai/thailand-49659092",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49659092",
+      "curie": "http://www.bbc.co.uk/asset/9108e9b7-4b26-1d4b-b445-e56c5696a8a8"
+    },
+    "type": "STY",
+    "createdBy": "thai-v6",
+    "language": "th",
+    "lastUpdated": 1568292871139,
+    "firstPublished": 1568291507,
+    "lastPublished": 1568292863,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "thai.thailand.story.49659092.page",
+      "cps_asset_id": "49659092"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
       },
-      "type":"STY",
-      "createdBy":"thai-v6",
-      "language":"th",
-      "lastUpdated":1568292871139,
-      "firstPublished":1568291507,
-      "lastPublished":1568292863,
-      "options":{
-         "isIgorSeoTagsEnabled":false,
-         "includeComments":false,
-         "allowRightHandSide":true,
-         "isFactCheck":false,
-         "allowDateStamp":true,
-         "suitableForSyndication":true,
-         "hasNewsTracker":false,
-         "allowRelatedStoriesBox":true,
-         "isKeyContent":false,
-         "allowHeadline":true,
-         "allowAdvertising":true,
-         "hasContentWarning":false,
-         "isBreakingNews":false,
-         "allowPrintingSharingLinks":true
-      },
-      "analyticsLabels":{
-         "cps_asset_type":"sty",
-         "counterName":"thai.thailand.story.49659092.page",
-         "cps_asset_id":"49659092"
-      },
-      "passport":{
-         "category":{
-            "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName":"News"
-         },
-         "campaigns":[
-            {
-               "campaignId":"5a988e2939461b000e9dabf8",
-               "campaignName":"WS - Educate me"
-            }
-         ]
-      },
-      "tags":{
-         "about":[
-            {
-               "thingLabel":"Thailand",
-               "thingUri":"http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
-               "thingId":"1ed75fd4-f992-46db-9859-fb5a7c95da91",
-               "thingType":[
-                  "Thing",
-                  "Place",
-                  "geoname:GeoTagConcept"
-               ],
-               "thingSameAs":[
-                  "http://sws.geonames.org/1605651/"
-               ],
-               "topicName":"ประเทศไทย",
-               "topicId":"cjgn73g98rqt",
-               "curationList":[
-                  {
-                     "curationId":"81f2e8f7-89c1-4c7c-a720-2a22d6437226",
-                     "curationType":"vivo-stream"
-                  }
-               ]
-            },
-            {
-               "thingLabel":"Drugs trade",
-               "thingUri":"http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
-               "thingId":"4b4cca1c-d458-4310-819e-dd48572b12c4",
-               "thingType":[
-                  "Thing",
-                  "Theme"
-               ],
-               "thingSameAs":[
-                  "http://dbpedia.org/resource/Illegal_drug_trade"
-               ],
-               "topicName":"การค้ายาเสพติด",
-               "topicId":"c2dwqndq2npt",
-               "curationList":[
-                  {
-                     "curationId":"5caa31c0-3c5b-4801-8e2b-69a2a93c5b0c",
-                     "curationType":"vivo-stream"
-                  }
-               ]
-            },
-            {
-               "thingLabel":"Politics",
-               "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-               "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
-               "thingType":[
-                  "Thing",
-                  "Theme"
-               ],
-               "thingSameAs":[
-                  "http://dbpedia.org/resource/Politics"
-               ],
-               "topicName":"การเมือง",
-               "topicId":"cz74kp7vjzpt",
-               "curationList":[
-                  {
-                     "curationId":"384d96bb-5602-4787-979f-dca814554de3",
-                     "curationType":"vivo-stream"
-                  }
-               ]
-            },
-            {
-               "thingLabel":"Military",
-               "thingUri":"http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
-               "thingId":"ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
-               "thingType":[
-                  "Thing",
-                  "Theme"
-               ],
-               "thingSameAs":[
-                  "http://dbpedia.org/resource/Military"
-               ],
-               "topicName":"ทหาร",
-               "topicId":"cpzd47k20j5t",
-               "curationList":[
-                  {
-                     "curationId":"79a0bf12-8025-463c-9396-9c315f243413",
-                     "curationType":"vivo-stream"
-                  }
-               ]
-            },
-            {
-               "thingLabel":"Law and order",
-               "thingUri":"http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
-               "thingId":"d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
-               "thingType":[
-                  "Thing",
-                  "Theme"
-               ],
-               "thingSameAs":[
-                  "http://dbpedia.org/resource/Law"
-               ]
-            }
-         ]
-      },
-      "version":"v1.0.10",
-      "blockTypes":[
-         "image",
-         "paragraph",
-         "social_embed",
-         "list",
-         "crosshead"
-      ],
-      "includeComments":false
-   },
-   "content":{
-      "blocks":[
-         {
-            "id":"108764519",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/1659A/production/_108764519_thammanatparliament1.jpg",
-            "path":"/cpsprodpb/1659A/production/_108764519_thammanatparliament1.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ธรรมนัส",
-            "copyrightHolder":"BBC Thai stringer",
-            "caption": "เขากล่าวว่า มหาวิทยาลัยแห่งนี้ เป็นสถาบันที่กระทรวงศึกษาธิการของรัฐแคลิฟอร์เนียให้การรับรอง และมีมหาวิทยาลัยเครือข่ายอยู่ทั่วโลก",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"ธรรมนัส ชี้ ตกเป็นเป้าของขบวนการ &quot;ทำลายความน่าเชื่อถือ&quot; ซึ่งมีเป้าหมายสูงสุด คือ ลดความน่าเชื่อถือของรัฐบาล หลังเพจดัง CSI LA กล่าวหาว่า ประกาศนียบัตร ดุษฎีบัณฑิตจาก California University ของเขา เป็นของปลอม",
-            "role":"introduction",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"เมื่อบ่ายของ 12 ก.ย. นี้ ร.อ. ธรรมนัส พรหมเผ่า รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ ลงมา &quot;คุย&quot; กับนักข่าว ที่รัฐสภา หลังเพจ CSI LA รายงานเมื่อวันที่ 11 ก.ย. ว่า  &quot;ผมอยู่ LA มา 20 กว่าปีไม่เคยได้ยินชื่อมหาลัยชื่อ California University เลยครับ ที่ LA จะมี California State University Los Angeles (Cal State LA) และ University of California Los Angeles (UCLA) หลังจากทำการสอบสวนได้พบว่า ประกาศนียบัตรจาก California University เป็นของปลอมจากแก๊งรับทำประกาศนียบัตรปลอมจากประเทศฟิลิปปินส์ ซึ่งถูกแจ้งเตือนโดยเว็บไซต์ของ California University FCE ซึ่งเป็นหน่วยงานจัดหาสถานที่เลี้ยงเด็กให้กับคนที่ไม่มีเงิน แต่ไม่ได้เป็นมหาวิทยาลัยอย่างที่แก๊งรับทำประกาศนียบัตรเอาไปทำหลอกคน&quot;",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "href":"https://twitter.com/NoelGallagher/status/1172072541202112513",
-            "source":"twitter",
-            "type":"social_embed"
-         },
-         {
-            "text":"ในการชี้แจงกับสื่อมวลชนที่รัฐสภา ร.อ. ดร. ธรรมนัส นำใบปริญญาเอกพร้อมงานวิจัยและทรานสคริปต์โชว์สื่อ ยันจบด็อกเตอร์จากมหาวิทยาลัยแคลิฟอร์เนีย สหรัฐอเมริกา จริง แต่ยอมรับเรียนผ่านออนไลน์เหมือนมหาวิทยาลัยสุโขทัยธรรมาธิราช แล้วทำงานวิจัยส่ง",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "numbered":false,
-            "items":[
-               {
-                  "text":"<link><caption>ธรรมนัส แจงกลางสภา ศาลออสเตรเลีย &quot;ยกฟ้อง&quot; คดียาเสพติดเมื่อปี 2556</caption><url href=\"https://www.bbc.com/thai/thailand-49664369\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<link><caption>ค้นราชกิจจาฯ เฟ้นหาแฟ้มข่าว สาวเส้นทาง ขึ้น-ลง แกนนำสำคัญของพรรคพลังประชารัฐ</caption><url href=\"https://www.bbc.com/thai/thailand-49650016\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               }
-            ],
-            "type":"list"
-         },
-         {
-            "text":"เขากล่าวว่า มหาวิทยาลัยแห่งนี้ <italic>example of some italic text</italic> เป็นสถาบันที่กระทรวงศึกษาธิการของรัฐแคลิฟอร์เนียให้การรับรอง และมีมหาวิทยาลัยเครือข่ายอยู่ทั่วโลก เป็นคนละที่กับที่มีการกล่าวหาคือมหาวิทยาลัยแคลิฟอร์เนียของประเทศฟิลิปปินส์ และได้มีการทำงานวิจัยตีพิมพ์ในนิตยสารยูโรเปียน ซึ่งเผยแพร่ไปทั่วสหรัฐอเมริกา และในผลงานวิจัยมีแหล่งรายชื่อผู้ให้ข้อมูลหลักชัดเจนหนึ่งในนั้นคือนายบุญสิงห์ วรินทร์รักษ์ ส.ส.บัญชีรายชื่อ พรรคพลังประชารัฐ สมัยที่เป็นนายกองค์การบริหารส่วนจังหวัดพะเยา และขณะนี้ทราบว่า อาจารย์ที่มหาวิทยาลัยแคลิฟอร์เนีย เตรียมที่จะฟ้องร้องผู้ที่ให้ข่าวแล้วทำให้สถาบันเสียหาย",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"สำหรับวุฒิการศึกษาที่ ร.อ.ธรรมนัส นำมาแสดงต่อสื่อมวลชนเป็นวุฒิการศึกษาที่ระบุถึงชื่อมหาวิทยาลัย สถานที่ตั้ง และเกรดเฉลี่ย 3.79 โดย ร.อ.ธรรมนัส ยังบอกว่า ขณะนี้ตนเองยังได้ศึกษาระดับปริญญาเอกอยู่ที่มหาวิทยาลัยสวนสุนันทาอีกด้วย",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "id":"108766177",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/12D6E/production/_108766177_7b58a672-c65a-42a0-a51a-70b0da5cad3a.jpg",
-            "path":"/cpsprodpb/12D6E/production/_108766177_7b58a672-c65a-42a0-a51a-70b0da5cad3a.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ธรรมนัส",
-            "copyrightHolder":"Thai News Pix",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"\"โค่นผมได้ เท่ากับล้มรัฐบาลได้\" ",
-            "markupType":"plain_text",
-            "type":"crosshead"
-         },
-         {
-            "text":"ร.อ. ธรรมนัส กล่าวว่า กรณีที่เกิดขึ้นกับเขาทั้งรายงานข่าวของสื่อออสเตรเลียและข้อกล่าวหาจากเพจ CSI LA น่าจะเป็น ขบวนการต้องการทำลายความน่าเชื่อถือที่มีคนอยู่เบื้องหลัง โดยมีเป้าหมายลดความน่าเชื่อถือของรัฐบาล และสาเหตุที่ตกเป็นเป้าโจมตี เนื่องจากเป็นมือประสานคนสำคัญของรัฐบาล ที่สามารถรวบรวมเสียงข้างมาก ซึ่งถือเป็นกุญแจดอกสำคัญ ในการทำให้รัฐบาลมีเสถียรภาพ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"&quot;โค่นผมได้ ก็เท่ากับล้มรัฐบาลได้&quot; ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"นายไมเคิล รัฟเฟิลส์ ผู้สื่อข่าวหนังสือพิมพ์ซิดนีย์มอร์นิงเฮรัลด์ ซึ่งเป็นผู้ขุดคุ้ยและรายงานข่าวคดียาเสพติดที่มี ร.อ. ธรรมนัส เป็นจำเลย ยืนยันกับบีบีซีไทยเมื่อ 10 ก.ย. ว่า สาเหตุที่กองบรรณาธิการเลือกนำเสนอข่าวนี้ เพราะเหตุการณ์เกิดขึ้นที่ออสเตรเลีย อีกทั้ง ร.อ. ธรรมนัส ยังมีตำแหน่งเป็นรัฐมนตรีและเป็นบุคคลสาธารณะที่มี &quot;ประวัติน่าสนใจ&quot;",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"เขาอธิบายต่อว่า วัตถุประสงค์ของรายงานชิ้นนี้ก็เพื่อตรวจสอบสิ่งที่ ร.อ. ธรรมนัส เคยชี้แจงเกี่ยวกับคดีนี้ ซึ่งเมื่อตรวจสอบกับเอกสารของตำรวจและศาลออสเตรเลีย พบว่า มีบางส่วนที่ไม่ตรงกับข้อเท็จจริง และย้ำว่า ไม่มีใครอยู่เบื้องหลังการขุดคุ้ยเรื่องนี้ และไม่ได้มีเจตนาทำลายชื่อเสียงของ ร.อ. ธรรมนัส ตามที่เขากล่าวหา",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"&quot;เมื่อนำคำให้สัมภาษณ์ของ ร.อ. ธรรมนัส ในช่วงที่ผ่านมาเทียบกับข้อมูลที่เราได้จากเอกสารของตำรวจและศาล เราพบว่า มีบางส่วนไม่ตรงกัน และในฐานะที่เป็นบุคคลสาธารณะ ผมว่า สื่อมวลชนสามารถทำหน้าที่ตรวจสอบเขาได้&quot; นายรัฟเฟิลส์กล่าว",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"ด้านผู้ดำเนินการเพจ CSL LA ชี้แจงกับบีบีซีไทย ว่า การตรวจสอบครั้งนี้มีขึ้น เพราะ มีผู้อ่านจากพะเยาส่งมาให้ตรวจสอบมหาวิทยาลัยแห่งนี้ เพราะมีคนสงสัยมานาน และปฏิเสธว่า ไม่ได้มีเป้าหมายโค่นล้มรัฐบาล ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"&quot;ผมทำเพราะผมรักความถูกต้องและอยากเห็นคนที่ qualified (มีคุณสมบัติเหมาะสม) มาบริหารบ้านเมือง ผมขอรับรองได้ว่า ผมไม่ได้ถูกใครจ้างหรือมีใครอยู่เบื้องหลัง ผมทำเพราะรักความถูกต้อง&quot; ผู้ดำเนินการเพจ CSL LA กล่าวกับ บีบีซีไทย",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "numbered":false,
-            "items":[
-               {
-                  "text":"<link><caption>ธรรมนัส ย้ำความบริสุทธิ์ เตรียมฟ้องสื่อออสเตรเลียหลังรายงานว่าติดคุก 4 ปี เพราะลักลอบนำเฮโรอีนเข้าซิดนีย์</caption><url href=\"https://www.bbc.com/thai/thailand-49632539\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<link><caption>ธรรมนัส พรหมเผ่า : เพื่อนร่วม ครม. โยน ธรรมนัส แจงเองคดียาเสพติด มั่นใจไม่กระทบภาพรัฐบาล</caption><url href=\"https://www.bbc.com/thai/thailand-49644827\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               }
-            ],
-            "type":"list"
-         },
-         {
-            "id":"108764521",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/3102/production/_108764521_certificate.jpg",
-            "path":"/cpsprodpb/3102/production/_108764521_certificate.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ธรรมนัส",
-            "copyrightHolder":"BBC Thai stringer ",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"\"ผมจบแล้ว\"",
-            "markupType":"plain_text",
-            "type":"crosshead"
-         },
-         {
-            "text":"ก่อนหน้านี้ ในช่วงเช้าวันที่ 12 ก.ย. พล.อ. ประยุทธ์ จันทร์โอชา นายกรัฐมนตรี และรัฐมนตรีว่าการกระทรวงกลาโหม กล่าวถึงกรณีการชี้แจงของ ร.อ. ธรรมนัส ต่อสภาผู้แทนราษฎร เมื่อ 11 ก.ย. ว่า จากการฟังคำชี้แจงแล้วก็พบว่า เป็นเหตุเป็นผล โดยเป็นเรื่องของฝ่ายกฎหมายเขา และทุกอย่างไม่ใช่ว่า นายกฯไม่ได้ตรวจสอบ เพราะนายกฯ ตรวจสอบด้วยระบบการตรวจสอบของรัฐบาล เท่าที่มีมา ก็มีคณะทำงานในการตรวจสอบคุณสมบัติของคณะรัฐมนตรีทุกคน และสอบถามไปยังหน่วยงานที่เกี่ยวข้อง ไม่ว่าจะเป็นตำรวจ ศาล อัยการ ซึ่งทุกคนก็ผ่านมาทั้งหมด ถึงจะแต่งตั้งขึ้นมาได้",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"&quot;ผมก็เป็นคนคัดคนเข้ามา เพราะมีคนเสนอเข้ามา แต่ทั้งหมดได้ผ่านกลไกการตรวจสอบคุณสมบัติ ก็จบลงแค่นั้น ผมจบแล้ว&quot; พล.อ.  ประยุทธ์ ชี้แจงต่อคำถามว่า ทั้งหมดเป็นภาพลักษณ์ของนายกฯ และรัฐบาลที่ตั้งคนเข้ามาเป็น ครม. ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "id":"108764517",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/1177A/production/_108764517_1ee515e4-9a75-45c4-a1af-e3d52999fb74.jpg",
-            "path":"/cpsprodpb/1177A/production/_108764517_1ee515e4-9a75-45c4-a1af-e3d52999fb74.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ประยุทธ์",
-            "copyrightHolder":"BBC Thai",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"สามเดือนแห่งการขุดคุ้ย",
-            "markupType":"plain_text",
-            "type":"crosshead"
-         },
-         {
-            "text":"การขุดคุ้ยยกแรกเกิดขึ้นช่วงการตั้งคณะรัฐมนตรี เมื่อมีกระแสข่าวว่า ร.อ. ธรรมนัส ส.ส. พรรคพลังประชารัฐ เขต 1 จ.พะเยา จะเข้ามาเป็นรัฐมนตรีใน ครม. ประยุทธ์ 2 ยกนั้น ร.อ. ธรรมนัส ผ่านมาได้ไม่ยากเย็นนัก ด้วยการออกมารับรองของนายวิษณุ เครืองาม รองนายกรัฐมนตรี ฝ่ายกฎหมาย ที่กล่าวกับสื่อมวลชนเมื่อวันที่ 11 ก.ค. ว่า คุณสมบัติของ ร.อ. ธรรมนัส นั้นไม่ขัดต่อ มาตรา 160 ของรัฐธรรมนูญที่ว่าด้วยคุณสมบัติของรัฐมนตรี แต่นายวิษณุก็ทิ้งท้ายไว้ด้วยว่า &quot;ข้อกฎหมายเรื่องหนึ่ง ความเหมาะสมหรือความควรเป็นอีกเรื่องหนึ่ง&quot; ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"หนึ่งวันต่อมา ร.อ. ธรรมนัส จัดแถลงข่าวที่รัฐสภาชั่วคราว หอประชุมทีโอที ถ.แจ้งวัฒนะ โดยประเด็นสำคัญที่เขาพูดเกี่ยวกับคดียาเสพติดที่เขาเกี่ยวข้องในนครซิดนีย์ ประเทศออสเตรเลียเมื่อปี 2536 คือ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "numbered":false,
-            "items":[
-               {
-                  "text":"ไม่ได้เป็นผู้ที่นำเฮโรอีนเข้าไปประเทศออสเตรเลีย ไม่ได้เป็นผู้ผลิตและจำหน่าย",
-                  "markupType":"plain_text",
-                  "type":"listItem"
-               },
-               {
-                  "text":"ถูกจับกุมเพราะอยู่ในสถานที่และเวลาเดียวกับผู้กระทำผิดที่ถูกจับกุม",
-                  "markupType":"plain_text",
-                  "type":"listItem"
-               },
-               {
-                  "text":"ข้อหาที่เขาและคนไทยอีกหนึ่งคนรับทราบคือ &quot;รู้ว่ามีการค้ายาเสพติดแต่ไม่แจ้งให้เจ้าหน้าที่ตำรวจทราบ&quot; ซึ่งเป็นความผิดลหุโทษ ไม่ใช่ข้อหาค้า ผลิตหรือนำเข้ายาเสพติด",
-                  "markupType":"plain_text",
-                  "type":"listItem"
-               },
-               {
-                  "text":"เขาเป็นคนไทยคนเดียวที่ปฏิเสธทุกข้อกล่าวหา แต่สุดท้ายก็ถูกจำคุกนานประมาณ 8 เดือน เมื่อถูกปล่อยตัวออกมาแล้วก็ใช้ชีวิตปกติอยู่ในซิดนีย์ 4 ปีเต็ม ๆ ก่อนจะถูกส่งตัวกลับมาในไทยเพราะนโยบายของ นายกเทศมนตรีนครซิดนีย์ไม่ต้องการให้คนเอเชียรวมตัวอาศัยอยู่ในเมือง ไม่ใช่ถูกส่งกลับมารับโทษ",
-                  "markupType":"plain_text",
-                  "type":"listItem"
-               }
-            ],
-            "type":"list"
-         },
-         {
-            "id":"108750778",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/15699/production/_108750778_fc70bc0b-4e54-4b8e-afd4-b92f1e520888.jpg",
-            "path":"/cpsprodpb/15699/production/_108750778_fc70bc0b-4e54-4b8e-afd4-b92f1e520888.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ธรรมนัส",
-            "copyrightHolder":"พรรคพลังประราชรัฐ",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"4 วันหลังจากการแถลงข่าว  16 ก.ค. พล.อ. ประยุทธ์ ก็นำคณะรัฐมนตรีเข้าถวายสัตย์ปฏิญาณตนเพื่อเข้ารับตำแหน่ง หนึ่งในนั้น คือ ร.อ. ธรรมนัส รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ที่สวมชุดขาวถ่ายรูปด้วยใบหน้ายิ้มแย้ม",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"ร.อ. ธรรมนัส โชว์ผลงานลงพื้นที่พบปะเกษตรกรและเป็นมือประสานสิบทิศของพรรคร่วมรัฐบาลได้ไม่นาน การขุดคุ้ยยกสองเกิดขึ้น โดยสื่อยักษ์ใหญ่ของออสเตรเลีย คือ ซิดนีย์มอร์นิงเฮรัลด์และดิเอจ ที่รายงานข่าวเมื่อวันที่ 9 ก.ย. โดยเอกสารของศาลแขวงรัฐนิวเซาท์เวลส์ ที่ระบุชัดว่า ร.อ. ธรรมนัสเป็น &quot;ผู้บงการคนสำคัญในการลักลอบขนยาเสพติด&quot;  ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"นายรัฟเฟิลส์ หนึ่งในทีมข่าวสืบสวนสอบสวนของซิดนีย์มอร์นิงเฮรัลด์ บอกกับบีบีซีไทยด้วยว่า เขามีเอกสารทางการที่ยืนยันได้ว่า ร.อ. ธรรมนัส ถูกจำคุกนาน 4 ปีและถูกเนรเทศกลับประเทศหลังจากถูกปล่อยตัว ไม่ใช่จำคุกแค่ 8 เดือน อย่างที่ ร.อ. ธรรมนัส กล่าวในการแถลงข่าว เมื่อ 12 ก.ค.",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "id":"108766176",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/1065E/production/_108766176_5764822e-255f-4657-bbba-afcb83046ab0.jpg",
-            "path":"/cpsprodpb/1065E/production/_108766176_5764822e-255f-4657-bbba-afcb83046ab0.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ธรรมนัส",
-            "copyrightHolder":"AFP",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"การขุดคุ้ยรอบล่าสุดนี้ทำให้เกิดคำถามเรื่องคุณสมบัติของการเป็นรัฐมนตรีของ ร.อ. ธรรมนัส ขึ้นมาอีกครั้ง เพราะเอกสารของศาลที่สื่อออสเตรเลียนำมาเปิดเผยทำให้เชื่อได้ว่า เขาไม่ได้เป็นเพียงคนที่ &quot;อยู่ผิดที่ผิดเวลา&quot; &quot;โชคร้าย&quot; หรือถูกจำคุกในความผิด &quot;ลหุโทษ&quot; อย่างที่ยืนยันมาตลอด ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"รัฐธรรมนูญว่าอย่างไร",
-            "markupType":"plain_text",
-            "type":"crosshead"
-         },
-         {
-            "text":"นายวิษณุเคยให้สัมภาษณ์เองว่า หากไล่ดูตามมาตรา 98, 101 และ 160 ของรัฐธรรมนูญ ก็จะพบเองว่า ร.อ.ธรรมนัส มีคุณสมบัติที่ขัดกับกฎหมายหรือไม่  ซึ่งบีบีซีไทยได้ตรวจสอบและพบว่า มาตราเหล่านี้มีเนื้อหาที่เกี่ยวข้องกับคดียาเสพติดของ ร.อ.ธรรมนัส คือ  ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"<bold>มาตรา 98</bold> ว่าด้วยคุณสมบัติต้องห้ามของบุคคลที่จะสมัครรับเลือกตั้งเป็นสมาชิกสภาผู้แทนราษฎร ซึ่งหนึ่งในคุณสมบัติต้องห้ามคือ เคยต้องคำพิพากษาอันถึงที่สุดว่า &quot;กระทำความผิดตามกฎหมายว่าด้วยยาเสพติดในความผิดฐานเป็นผู้ผลิต นำเข้า ส่งออกหรือผู้ค้า&quot;  ",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"<bold>มาตรา 101</bold> ว่าด้วยการสิ้นสุดสมาชิกภาพของสมาชิกสภาผู้แทนราษฎร ซึ่ง (6) ระบุว่า จะพ้นสมาชิกภาพเมื่อพบว่า มีลักษณะต้องห้ามตามมาตรา 98 ที่อ้างถึงข้างต้น",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "text":"ส่วน<bold>มาตรา 160</bold> ที่ว่าด้วยคุณสมบัติของรัฐมนตรีนั้น ใน (7) ระบุว่า &quot;ไม่เป็นผู้ต้องคำพิพากษาให้จำคุก แม้คดีนั้นจะยังไม่ถึงที่สุด หรือมีการรอการลงโทษเว้นแต่ในความผิดอันได้กระทำโดยประมาท ความผิดลหุโทษ หรือความผิดฐานหมิ่นประมาท&quot;",
-            "markupType":"candy_xml",
-            "type":"paragraph"
-         },
-         {
-            "id":"108750779",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/17DA9/production/_108750779_cef483d1-0734-436f-9808-01701391f01a.jpg",
-            "path":"/cpsprodpb/17DA9/production/_108750779_cef483d1-0734-436f-9808-01701391f01a.jpg",
-            "height":415,
-            "width":624,
-            "altText":"ธรรมนัส",
-            "copyrightHolder":"Thai News Pix",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"นอกจากนี้ บีบีซีไทยยังพบว่า ยังมี &quot;มาตรฐานทางจริยธรรมของตุลาการศาลรัฐธรรมนูญ และผู้ดำรงตำแหน่งในองค์กรอิสระ รวมทั้งผู้ว่าการตรวจเงินแผ่นดินและหัวหน้าหน่วยงานธุรการของศาลรัฐธรรมนูญและองค์กรอิสระ พ.ศ. 2561&quot;  ซึ่งใช้บังคับแก่สมาชิกสภาผู้แทนราษฎร สมาชิกวุฒิสภา และคณะรัฐมนตรีที่จะต้องนำมาพิจารณาด้วย คือ ข้อ 17 &quot;ไม่กระทำการใดที่ก่อให้เกิดความเสื่อมเสียต่อเกียรติศักดิ์ของการดำรงตำแหน่ง&quot; และข้อ 19 &quot;ไม่คบหาสมาคมกับคู่กรณี ผู้ประพฤติผิดกฎหมาย ผู้มีอิทธิพล หรือผู้มีความประพฤติหรือผู้มีชื่อเสียงในทางเสื่อมเสีย อันอาจกระทบกระเทือนต่อความเชื่อถือศรัทธาของประชาชนในการปฏิบัติหน้าที่&quot;",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "numbered":false,
-            "items":[
-               {
-                  "text":"<link><caption>ธรรมนัส เมีย 2 ลูก 7 รวยทะลุ 929 ล้าน และสมบัติอื่น ๆ ของ 21 รมต.</caption><url href=\"https://www.bbc.com/thai/thailand-49422953\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               },
-               {
-                  "text":"<link><caption>ธรรมนัส : การกลับมาของตระกูลการเมือง &quot;ผู้มีอิทธิพล&quot; และ &quot;เจ้าพ่อ&quot; ใน ครม.ประยุทธ์ 2</caption><url href=\"https://www.bbc.com/thai/48964952\" platform=\"highweb\"/></link>",
-                  "markupType":"candy_xml",
-                  "type":"listItem"
-               }
-            ],
-            "type":"list"
-         },
-         {
-            "text":"ไม่มีปัญหาทางกฎหมาย แต่อาจไม่เหมาะสม",
-            "markupType":"plain_text",
-            "type":"crosshead"
-         },
-         {
-            "text":"รศ. อานนท์ มาเม้า อาจารย์ประจำศูนย์กฎหมายแพ่งและศูนย์กฎหมายมหาชน คณะนิติศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ได้เขียนบทความแสดงความคิดเห็นลงในสำนักข่าวอิศรา ลงวันที่ 10 กันายายนที่ผ่านมาในกรณีเกี่ยวกับ ร.อ. ธรรมนัส พรหมเผ่า เอาไว้ดังนี้",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"&quot;ความเห็นผม คือ ไม่มีปัญหาทางกฎหมายเกี่ยวกับลักษณะต้องห้าม จึงไม่ใช่ปัญหาข้อกฎหมาย (legal issue) แต่มีปัญหาเรื่องความไม่เหมาะสมหรือเหมาะสม ซึ่งเป็นปัญหาการเมือง (political issue)&quot; ",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"เหตุผล คือ คำว่าถูกศาลพิพากษาหรือกระทำผิดตามกฎหมายว่าด้วยยาเสพติด หมายถึง คำพิพากษาศาลไทยและการทำผิดกฎหมายไทย",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"ที่ตีความเช่นนี้ เพราะเป็นไปตามหลักอธิปไตยของรัฐ ที่จะไม่รับรู้หรือยอมรับผลทางกฎหมายของอำนาจรัฐอื่นโดยอัตโนมัติ เว้นแต่จะเปิดช่องเอง เช่น เขียนโดยตรงถึงคำว่า คำพิพากษาของศาลในต่างประเทศ อาทิ ป.อ. มาตรา 10",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"&quot;แต่ปัญหาเรื่องไม่เหมาะสมหรือเหมาะสม ซึ่งเป็นเรื่องทางการเมือง แม้จะเป็นประเด็นที่ถกเถียงได้ไม่รู้จบก็จริง และแม้ไม่ทำให้ รมต. ธรรมมนัส หลุดจากตำแหน่งถ้ามีผู้ร้องต่อศาลรัฐธรรมนูญก็ตาม แต่ก็จะเป็นประเด็นที่รัฐบาลอาจถูกวิพากษ์วิจารณ์อยู่ร่ำไป ซึ่งส่งผลต่อความน่าเชื่อถือของตัวรัฐบาลเอง&quot;",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"คนฟากหนึ่ง อาจจะบอกว่า เรื่องนี้ เมื่อไม่ใช่เรื่องผิดกฎหมาย และทุกคนควรได้รับการพิสูจน์ฝีมือจากปัจจุบัน ขอให้ลืมข้อกล่าวหาในอดีต ดังนั้น รมต.ธรรมนัส จึงไม่จำเป็นต้องลาออก",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "text":"แต่อีกฟากหนึ่ง ก็อาจจะบอกว่า ครม. ควรรักษาเกียรติภูมิของประเทศและตัวรัฐบาลเอง เช่น พิสูจน์ความจริง ว่า ถ้าคดีเกิดขึ้นในไทย รมต.ธรรมนัส จะผิดตาม พรบ.ยาเสพติด หรือไม่",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         },
-         {
-            "id":"108750781",
-            "subType":"body",
-            "href":"http://c.files.bbci.co.uk/4911/production/_108750781_0d479256-42c6-4f0b-98f6-749449b13f9f.jpg",
-            "path":"/cpsprodpb/4911/production/_108750781_0d479256-42c6-4f0b-98f6-749449b13f9f.jpg",
-            "height":549,
-            "width":976,
-            "altText":"ธรรมนัส",
-            "caption":"ข่าวที่ปรากฏในหนังสือพิมพ์ The Sydney Morning Herald",
-            "copyrightHolder":"Michael Ruffles",
-            "positionHint":"full-width",
-            "type":"image"
-         },
-         {
-            "text":"บีบีซีไทย สอบถามไปที่ องค์กรต่อต้านคอร์รัปชัน (ประเทศไทย) หรือ ACT เพื่อขอสัมภาษณ์ดร.มานะ นิมิตรมงคล เลขาธิการ ถึงกรณีของ ร.อ.ธรรมนัส กับธรรมาภิบาลของคณะรัฐมนตรี คำชี้แจงที่ได้กลับมาคือ &quot;ไม่ใช่บทบาทองค์กร&quot;",
-            "markupType":"plain_text",
-            "type":"paragraph"
-         }
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        }
       ]
-   },
-   "promo":{
-      "headlines":{
-         "shortHeadline":"ธรรมนัส ประกาศ \"โค่นผมได้ เท่ากับล้มรัฐบาลได้\"",
-         "headline":"ธรรมนัส หอบหลักฐานชี้แจงวุฒิดอกเตอร์ หลังประยุทธ์ ย้ำ การตรวจคุณสมบัติ \"จบแล้ว\""
-      },
-      "locators":{
-         "assetUri":"/thai/thailand-49659092",
-         "cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49659092",
-         "curie":"http://www.bbc.co.uk/asset/9108e9b7-4b26-1d4b-b445-e56c5696a8a8"
-      },
-      "summary":"เปิดรัฐธรรมนูญดูข้อห้ามการเป็นรัฐมนตรี หลัง ร.อ. ดร. ธรรมนัส พรพมเผ่า ชี้แจง",
-      "timestamp":1568292871139,
-      "passport":{
-         "category":{
-            "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-            "categoryName":"News"
-         },
-         "campaigns":[
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Thailand",
+          "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+          "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1605651/"],
+          "topicName": "ประเทศไทย",
+          "topicId": "cjgn73g98rqt",
+          "curationList": [
             {
-               "campaignId":"5a988e2939461b000e9dabf8",
-               "campaignName":"WS - Educate me"
+              "curationId": "81f2e8f7-89c1-4c7c-a720-2a22d6437226",
+              "curationType": "vivo-stream"
             }
-         ]
-      },
-      "indexImage":{
-         "id":"108749785",
-         "subType":"index",
-         "href":"http://c.files.bbci.co.uk/E5AA/production/_108749785_48297451737_19c1830991_z.jpg",
-         "path":"/cpsprodpb/E5AA/production/_108749785_48297451737_19c1830991_z.jpg",
-         "height":549,
-         "width":976,
-         "altText":"ธรรมนัส",
-         "copyrightHolder":"BBC Thai",
-         "type":"image"
-      },
-      "id":"urn:bbc:ares::asset:thai/thailand-49659092",
-      "type":"cps"
-   },
-   "relatedContent":{
-      "section":{
-         "subType":"index",
-         "name":"ไทย",
-         "uri":"/thai/thailand",
-         "type":"simple"
-      },
-      "site":{
-         "subType":"site",
-         "name":"บีบีซีไทย",
-         "uri":"/thai",
-         "type":"simple"
-      },
-      "groups":[
-         {
-            "type":"see-alsos",
-            "promos":[
-               {
-                  "headlines":{
-                     "shortHeadline":"ธรรมนัส แจงกลางสภา ศาลออสเตรเลีย “ยกฟ้อง” คดียาเสพติดเมื่อปี 2556",
-                     "headline":"ธรรมนัส แจงกลางสภา ศาลออสเตรเลีย “ยกฟ้อง” คดียาเสพติดเมื่อปี 2556"
-                  },
-                  "locators":{
-                     "assetUri":"/thai/thailand-49664369",
-                     "cpsUrn":"urn:bbc:content:assetUri:/thai/thailand-49664369"
-                  },
-                  "summary":"ร.อ. ธรรมนัส พรหมเผ่า เปิดข้อมูลกลางสภา ศาลออสเตรเลียยกฟ้องคดียาเสพติดไปเมื่อปี 2556",
-                  "timestamp":1568201118,
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108750285",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/E35D/production/_108750285_70000853_510118613101501_2320161420861243392_n.jpg",
-                     "path":"/cpsprodpb/E35D/production/_108750285_70000853_510118613101501_2320161420861243392_n.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"ธรรมนัส",
-                     "copyrightHolder":"Thai News Pix",
-                     "type":"image"
-                  },
-                  "id":"urn:bbc:ares::asset:thai/thailand-49664369",
-                  "type":"cps"
-               },
-               {
-                  "headlines":{
-                     "shortHeadline":"พลิกแฟ้มข่าว ใครไล่-ใครรับ ธรรมนัส พรหมเผ่า เข้า-ออก กองทัพ",
-                     "headline":"ธรรมนัส : ค้นราชกิจจาฯ เฟ้นหาแฟ้มข่าว สาวเส้นทาง ขึ้น-ลง แกนนำสำคัญของพรรคพลังประชารัฐ"
-                  },
-                  "locators":{
-                     "assetUri":"/thai/thailand-49650016",
-                     "cpsUrn":"urn:bbc:content:assetUri:/thai/thailand-49650016"
-                  },
-                  "summary":"ชวน หลีกภัย คือ นายกรัฐมนตรี ผู้รับสนองพระบรมราชโองการถอดยศ ร.ท. พชร พรหมเผ่า เมื่อ 24 ต.ค. 2541",
-                  "timestamp":1568164119,
-                  "cpsType":"STY",
-                  "indexImage":{
-                     "id":"108735735",
-                     "subType":"index",
-                     "href":"http://c.files.bbci.co.uk/D1F9/production/_108735735_1aa919bf-4110-4179-949b-ecd61969dbd8.jpg",
-                     "path":"/cpsprodpb/D1F9/production/_108735735_1aa919bf-4110-4179-949b-ecd61969dbd8.jpg",
-                     "height":549,
-                     "width":976,
-                     "altText":"ธรรมนัส",
-                     "copyrightHolder":"Thai News Pix",
-                     "type":"image"
-                  },
-                  "id":"urn:bbc:ares::asset:thai/thailand-49650016",
-                  "type":"cps"
-               }
-            ]
-         }
+          ]
+        },
+        {
+          "thingLabel": "Drugs trade",
+          "thingUri": "http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
+          "thingId": "4b4cca1c-d458-4310-819e-dd48572b12c4",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Illegal_drug_trade"],
+          "topicName": "การค้ายาเสพติด",
+          "topicId": "c2dwqndq2npt",
+          "curationList": [
+            {
+              "curationId": "5caa31c0-3c5b-4801-8e2b-69a2a93c5b0c",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+          "topicName": "การเมือง",
+          "topicId": "cz74kp7vjzpt",
+          "curationList": [
+            {
+              "curationId": "384d96bb-5602-4787-979f-dca814554de3",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Military",
+          "thingUri": "http://www.bbc.co.uk/things/ce5c43ee-8982-4f88-9472-9aa79aeb09cc#id",
+          "thingId": "ce5c43ee-8982-4f88-9472-9aa79aeb09cc",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Military"],
+          "topicName": "ทหาร",
+          "topicId": "cpzd47k20j5t",
+          "curationList": [
+            {
+              "curationId": "79a0bf12-8025-463c-9396-9c315f243413",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Law and order",
+          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Law"]
+        }
       ]
-   }
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["image", "paragraph", "social_embed", "list", "crosshead"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "108764519",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1659A/production/_108764519_thammanatparliament1.jpg",
+        "path": "/cpsprodpb/1659A/production/_108764519_thammanatparliament1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ธรรมนัส",
+        "copyrightHolder": "BBC Thai stringer",
+        "caption": "เขากล่าวว่า มหาวิทยาลัยแห่งนี้ เป็นสถาบันที่กระทรวงศึกษาธิการของรัฐแคลิฟอร์เนียให้การรับรอง และมีมหาวิทยาลัยเครือข่ายอยู่ทั่วโลก",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "ธรรมนัส ชี้ ตกเป็นเป้าของขบวนการ &quot;ทำลายความน่าเชื่อถือ&quot; ซึ่งมีเป้าหมายสูงสุด คือ ลดความน่าเชื่อถือของรัฐบาล หลังเพจดัง CSI LA กล่าวหาว่า ประกาศนียบัตร ดุษฎีบัณฑิตจาก California University ของเขา เป็นของปลอม",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "เมื่อบ่ายของ 12 ก.ย. นี้ ร.อ. ธรรมนัส พรหมเผ่า รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ ลงมา &quot;คุย&quot; กับนักข่าว ที่รัฐสภา หลังเพจ CSI LA รายงานเมื่อวันที่ 11 ก.ย. ว่า  &quot;ผมอยู่ LA มา 20 กว่าปีไม่เคยได้ยินชื่อมหาลัยชื่อ California University เลยครับ ที่ LA จะมี California State University Los Angeles (Cal State LA) และ University of California Los Angeles (UCLA) หลังจากทำการสอบสวนได้พบว่า ประกาศนียบัตรจาก California University เป็นของปลอมจากแก๊งรับทำประกาศนียบัตรปลอมจากประเทศฟิลิปปินส์ ซึ่งถูกแจ้งเตือนโดยเว็บไซต์ของ California University FCE ซึ่งเป็นหน่วยงานจัดหาสถานที่เลี้ยงเด็กให้กับคนที่ไม่มีเงิน แต่ไม่ได้เป็นมหาวิทยาลัยอย่างที่แก๊งรับทำประกาศนียบัตรเอาไปทำหลอกคน&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/NoelGallagher/status/1172072541202112513",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "text": "ในการชี้แจงกับสื่อมวลชนที่รัฐสภา ร.อ. ดร. ธรรมนัส นำใบปริญญาเอกพร้อมงานวิจัยและทรานสคริปต์โชว์สื่อ ยันจบด็อกเตอร์จากมหาวิทยาลัยแคลิฟอร์เนีย สหรัฐอเมริกา จริง แต่ยอมรับเรียนผ่านออนไลน์เหมือนมหาวิทยาลัยสุโขทัยธรรมาธิราช แล้วทำงานวิจัยส่ง",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>ธรรมนัส แจงกลางสภา ศาลออสเตรเลีย &quot;ยกฟ้อง&quot; คดียาเสพติดเมื่อปี 2556</caption><url href=\"https://www.bbc.com/thai/thailand-49664369\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ค้นราชกิจจาฯ เฟ้นหาแฟ้มข่าว สาวเส้นทาง ขึ้น-ลง แกนนำสำคัญของพรรคพลังประชารัฐ</caption><url href=\"https://www.bbc.com/thai/thailand-49650016\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "เขากล่าวว่า มหาวิทยาลัยแห่งนี้ <italic>example of some italic text</italic> เป็นสถาบันที่กระทรวงศึกษาธิการของรัฐแคลิฟอร์เนียให้การรับรอง และมีมหาวิทยาลัยเครือข่ายอยู่ทั่วโลก เป็นคนละที่กับที่มีการกล่าวหาคือมหาวิทยาลัยแคลิฟอร์เนียของประเทศฟิลิปปินส์ และได้มีการทำงานวิจัยตีพิมพ์ในนิตยสารยูโรเปียน ซึ่งเผยแพร่ไปทั่วสหรัฐอเมริกา และในผลงานวิจัยมีแหล่งรายชื่อผู้ให้ข้อมูลหลักชัดเจนหนึ่งในนั้นคือนายบุญสิงห์ วรินทร์รักษ์ ส.ส.บัญชีรายชื่อ พรรคพลังประชารัฐ สมัยที่เป็นนายกองค์การบริหารส่วนจังหวัดพะเยา และขณะนี้ทราบว่า อาจารย์ที่มหาวิทยาลัยแคลิฟอร์เนีย เตรียมที่จะฟ้องร้องผู้ที่ให้ข่าวแล้วทำให้สถาบันเสียหาย",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "สำหรับวุฒิการศึกษาที่ ร.อ.ธรรมนัส นำมาแสดงต่อสื่อมวลชนเป็นวุฒิการศึกษาที่ระบุถึงชื่อมหาวิทยาลัย สถานที่ตั้ง และเกรดเฉลี่ย 3.79 โดย ร.อ.ธรรมนัส ยังบอกว่า ขณะนี้ตนเองยังได้ศึกษาระดับปริญญาเอกอยู่ที่มหาวิทยาลัยสวนสุนันทาอีกด้วย",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "108766177",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/12D6E/production/_108766177_7b58a672-c65a-42a0-a51a-70b0da5cad3a.jpg",
+        "path": "/cpsprodpb/12D6E/production/_108766177_7b58a672-c65a-42a0-a51a-70b0da5cad3a.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ธรรมนัส",
+        "copyrightHolder": "Thai News Pix",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "\"โค่นผมได้ เท่ากับล้มรัฐบาลได้\" ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "ร.อ. ธรรมนัส กล่าวว่า กรณีที่เกิดขึ้นกับเขาทั้งรายงานข่าวของสื่อออสเตรเลียและข้อกล่าวหาจากเพจ CSI LA น่าจะเป็น ขบวนการต้องการทำลายความน่าเชื่อถือที่มีคนอยู่เบื้องหลัง โดยมีเป้าหมายลดความน่าเชื่อถือของรัฐบาล และสาเหตุที่ตกเป็นเป้าโจมตี เนื่องจากเป็นมือประสานคนสำคัญของรัฐบาล ที่สามารถรวบรวมเสียงข้างมาก ซึ่งถือเป็นกุญแจดอกสำคัญ ในการทำให้รัฐบาลมีเสถียรภาพ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;โค่นผมได้ ก็เท่ากับล้มรัฐบาลได้&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นายไมเคิล รัฟเฟิลส์ ผู้สื่อข่าวหนังสือพิมพ์ซิดนีย์มอร์นิงเฮรัลด์ ซึ่งเป็นผู้ขุดคุ้ยและรายงานข่าวคดียาเสพติดที่มี ร.อ. ธรรมนัส เป็นจำเลย ยืนยันกับบีบีซีไทยเมื่อ 10 ก.ย. ว่า สาเหตุที่กองบรรณาธิการเลือกนำเสนอข่าวนี้ เพราะเหตุการณ์เกิดขึ้นที่ออสเตรเลีย อีกทั้ง ร.อ. ธรรมนัส ยังมีตำแหน่งเป็นรัฐมนตรีและเป็นบุคคลสาธารณะที่มี &quot;ประวัติน่าสนใจ&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "เขาอธิบายต่อว่า วัตถุประสงค์ของรายงานชิ้นนี้ก็เพื่อตรวจสอบสิ่งที่ ร.อ. ธรรมนัส เคยชี้แจงเกี่ยวกับคดีนี้ ซึ่งเมื่อตรวจสอบกับเอกสารของตำรวจและศาลออสเตรเลีย พบว่า มีบางส่วนที่ไม่ตรงกับข้อเท็จจริง และย้ำว่า ไม่มีใครอยู่เบื้องหลังการขุดคุ้ยเรื่องนี้ และไม่ได้มีเจตนาทำลายชื่อเสียงของ ร.อ. ธรรมนัส ตามที่เขากล่าวหา",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;เมื่อนำคำให้สัมภาษณ์ของ ร.อ. ธรรมนัส ในช่วงที่ผ่านมาเทียบกับข้อมูลที่เราได้จากเอกสารของตำรวจและศาล เราพบว่า มีบางส่วนไม่ตรงกัน และในฐานะที่เป็นบุคคลสาธารณะ ผมว่า สื่อมวลชนสามารถทำหน้าที่ตรวจสอบเขาได้&quot; นายรัฟเฟิลส์กล่าว",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ด้านผู้ดำเนินการเพจ CSL LA ชี้แจงกับบีบีซีไทย ว่า การตรวจสอบครั้งนี้มีขึ้น เพราะ มีผู้อ่านจากพะเยาส่งมาให้ตรวจสอบมหาวิทยาลัยแห่งนี้ เพราะมีคนสงสัยมานาน และปฏิเสธว่า ไม่ได้มีเป้าหมายโค่นล้มรัฐบาล ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;ผมทำเพราะผมรักความถูกต้องและอยากเห็นคนที่ qualified (มีคุณสมบัติเหมาะสม) มาบริหารบ้านเมือง ผมขอรับรองได้ว่า ผมไม่ได้ถูกใครจ้างหรือมีใครอยู่เบื้องหลัง ผมทำเพราะรักความถูกต้อง&quot; ผู้ดำเนินการเพจ CSL LA กล่าวกับ บีบีซีไทย",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>ธรรมนัส ย้ำความบริสุทธิ์ เตรียมฟ้องสื่อออสเตรเลียหลังรายงานว่าติดคุก 4 ปี เพราะลักลอบนำเฮโรอีนเข้าซิดนีย์</caption><url href=\"https://www.bbc.com/thai/thailand-49632539\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ธรรมนัส พรหมเผ่า : เพื่อนร่วม ครม. โยน ธรรมนัส แจงเองคดียาเสพติด มั่นใจไม่กระทบภาพรัฐบาล</caption><url href=\"https://www.bbc.com/thai/thailand-49644827\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "108764521",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/3102/production/_108764521_certificate.jpg",
+        "path": "/cpsprodpb/3102/production/_108764521_certificate.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ธรรมนัส",
+        "copyrightHolder": "BBC Thai stringer ",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "\"ผมจบแล้ว\"",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "ก่อนหน้านี้ ในช่วงเช้าวันที่ 12 ก.ย. พล.อ. ประยุทธ์ จันทร์โอชา นายกรัฐมนตรี และรัฐมนตรีว่าการกระทรวงกลาโหม กล่าวถึงกรณีการชี้แจงของ ร.อ. ธรรมนัส ต่อสภาผู้แทนราษฎร เมื่อ 11 ก.ย. ว่า จากการฟังคำชี้แจงแล้วก็พบว่า เป็นเหตุเป็นผล โดยเป็นเรื่องของฝ่ายกฎหมายเขา และทุกอย่างไม่ใช่ว่า นายกฯไม่ได้ตรวจสอบ เพราะนายกฯ ตรวจสอบด้วยระบบการตรวจสอบของรัฐบาล เท่าที่มีมา ก็มีคณะทำงานในการตรวจสอบคุณสมบัติของคณะรัฐมนตรีทุกคน และสอบถามไปยังหน่วยงานที่เกี่ยวข้อง ไม่ว่าจะเป็นตำรวจ ศาล อัยการ ซึ่งทุกคนก็ผ่านมาทั้งหมด ถึงจะแต่งตั้งขึ้นมาได้",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;ผมก็เป็นคนคัดคนเข้ามา เพราะมีคนเสนอเข้ามา แต่ทั้งหมดได้ผ่านกลไกการตรวจสอบคุณสมบัติ ก็จบลงแค่นั้น ผมจบแล้ว&quot; พล.อ.  ประยุทธ์ ชี้แจงต่อคำถามว่า ทั้งหมดเป็นภาพลักษณ์ของนายกฯ และรัฐบาลที่ตั้งคนเข้ามาเป็น ครม. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "108764517",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1177A/production/_108764517_1ee515e4-9a75-45c4-a1af-e3d52999fb74.jpg",
+        "path": "/cpsprodpb/1177A/production/_108764517_1ee515e4-9a75-45c4-a1af-e3d52999fb74.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ประยุทธ์",
+        "copyrightHolder": "BBC Thai",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "สามเดือนแห่งการขุดคุ้ย",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "การขุดคุ้ยยกแรกเกิดขึ้นช่วงการตั้งคณะรัฐมนตรี เมื่อมีกระแสข่าวว่า ร.อ. ธรรมนัส ส.ส. พรรคพลังประชารัฐ เขต 1 จ.พะเยา จะเข้ามาเป็นรัฐมนตรีใน ครม. ประยุทธ์ 2 ยกนั้น ร.อ. ธรรมนัส ผ่านมาได้ไม่ยากเย็นนัก ด้วยการออกมารับรองของนายวิษณุ เครืองาม รองนายกรัฐมนตรี ฝ่ายกฎหมาย ที่กล่าวกับสื่อมวลชนเมื่อวันที่ 11 ก.ค. ว่า คุณสมบัติของ ร.อ. ธรรมนัส นั้นไม่ขัดต่อ มาตรา 160 ของรัฐธรรมนูญที่ว่าด้วยคุณสมบัติของรัฐมนตรี แต่นายวิษณุก็ทิ้งท้ายไว้ด้วยว่า &quot;ข้อกฎหมายเรื่องหนึ่ง ความเหมาะสมหรือความควรเป็นอีกเรื่องหนึ่ง&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "หนึ่งวันต่อมา ร.อ. ธรรมนัส จัดแถลงข่าวที่รัฐสภาชั่วคราว หอประชุมทีโอที ถ.แจ้งวัฒนะ โดยประเด็นสำคัญที่เขาพูดเกี่ยวกับคดียาเสพติดที่เขาเกี่ยวข้องในนครซิดนีย์ ประเทศออสเตรเลียเมื่อปี 2536 คือ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "ไม่ได้เป็นผู้ที่นำเฮโรอีนเข้าไปประเทศออสเตรเลีย ไม่ได้เป็นผู้ผลิตและจำหน่าย",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "ถูกจับกุมเพราะอยู่ในสถานที่และเวลาเดียวกับผู้กระทำผิดที่ถูกจับกุม",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "ข้อหาที่เขาและคนไทยอีกหนึ่งคนรับทราบคือ &quot;รู้ว่ามีการค้ายาเสพติดแต่ไม่แจ้งให้เจ้าหน้าที่ตำรวจทราบ&quot; ซึ่งเป็นความผิดลหุโทษ ไม่ใช่ข้อหาค้า ผลิตหรือนำเข้ายาเสพติด",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "เขาเป็นคนไทยคนเดียวที่ปฏิเสธทุกข้อกล่าวหา แต่สุดท้ายก็ถูกจำคุกนานประมาณ 8 เดือน เมื่อถูกปล่อยตัวออกมาแล้วก็ใช้ชีวิตปกติอยู่ในซิดนีย์ 4 ปีเต็ม ๆ ก่อนจะถูกส่งตัวกลับมาในไทยเพราะนโยบายของ นายกเทศมนตรีนครซิดนีย์ไม่ต้องการให้คนเอเชียรวมตัวอาศัยอยู่ในเมือง ไม่ใช่ถูกส่งกลับมารับโทษ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "108750778",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/15699/production/_108750778_fc70bc0b-4e54-4b8e-afd4-b92f1e520888.jpg",
+        "path": "/cpsprodpb/15699/production/_108750778_fc70bc0b-4e54-4b8e-afd4-b92f1e520888.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ธรรมนัส",
+        "copyrightHolder": "พรรคพลังประราชรัฐ",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "4 วันหลังจากการแถลงข่าว  16 ก.ค. พล.อ. ประยุทธ์ ก็นำคณะรัฐมนตรีเข้าถวายสัตย์ปฏิญาณตนเพื่อเข้ารับตำแหน่ง หนึ่งในนั้น คือ ร.อ. ธรรมนัส รัฐมนตรีช่วยว่าการกระทรวงเกษตรและสหกรณ์ที่สวมชุดขาวถ่ายรูปด้วยใบหน้ายิ้มแย้ม",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ร.อ. ธรรมนัส โชว์ผลงานลงพื้นที่พบปะเกษตรกรและเป็นมือประสานสิบทิศของพรรคร่วมรัฐบาลได้ไม่นาน การขุดคุ้ยยกสองเกิดขึ้น โดยสื่อยักษ์ใหญ่ของออสเตรเลีย คือ ซิดนีย์มอร์นิงเฮรัลด์และดิเอจ ที่รายงานข่าวเมื่อวันที่ 9 ก.ย. โดยเอกสารของศาลแขวงรัฐนิวเซาท์เวลส์ ที่ระบุชัดว่า ร.อ. ธรรมนัสเป็น &quot;ผู้บงการคนสำคัญในการลักลอบขนยาเสพติด&quot;  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นายรัฟเฟิลส์ หนึ่งในทีมข่าวสืบสวนสอบสวนของซิดนีย์มอร์นิงเฮรัลด์ บอกกับบีบีซีไทยด้วยว่า เขามีเอกสารทางการที่ยืนยันได้ว่า ร.อ. ธรรมนัส ถูกจำคุกนาน 4 ปีและถูกเนรเทศกลับประเทศหลังจากถูกปล่อยตัว ไม่ใช่จำคุกแค่ 8 เดือน อย่างที่ ร.อ. ธรรมนัส กล่าวในการแถลงข่าว เมื่อ 12 ก.ค.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "108766176",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1065E/production/_108766176_5764822e-255f-4657-bbba-afcb83046ab0.jpg",
+        "path": "/cpsprodpb/1065E/production/_108766176_5764822e-255f-4657-bbba-afcb83046ab0.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ธรรมนัส",
+        "copyrightHolder": "AFP",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "การขุดคุ้ยรอบล่าสุดนี้ทำให้เกิดคำถามเรื่องคุณสมบัติของการเป็นรัฐมนตรีของ ร.อ. ธรรมนัส ขึ้นมาอีกครั้ง เพราะเอกสารของศาลที่สื่อออสเตรเลียนำมาเปิดเผยทำให้เชื่อได้ว่า เขาไม่ได้เป็นเพียงคนที่ &quot;อยู่ผิดที่ผิดเวลา&quot; &quot;โชคร้าย&quot; หรือถูกจำคุกในความผิด &quot;ลหุโทษ&quot; อย่างที่ยืนยันมาตลอด ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "รัฐธรรมนูญว่าอย่างไร",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "นายวิษณุเคยให้สัมภาษณ์เองว่า หากไล่ดูตามมาตรา 98, 101 และ 160 ของรัฐธรรมนูญ ก็จะพบเองว่า ร.อ.ธรรมนัส มีคุณสมบัติที่ขัดกับกฎหมายหรือไม่  ซึ่งบีบีซีไทยได้ตรวจสอบและพบว่า มาตราเหล่านี้มีเนื้อหาที่เกี่ยวข้องกับคดียาเสพติดของ ร.อ.ธรรมนัส คือ  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>มาตรา 98</bold> ว่าด้วยคุณสมบัติต้องห้ามของบุคคลที่จะสมัครรับเลือกตั้งเป็นสมาชิกสภาผู้แทนราษฎร ซึ่งหนึ่งในคุณสมบัติต้องห้ามคือ เคยต้องคำพิพากษาอันถึงที่สุดว่า &quot;กระทำความผิดตามกฎหมายว่าด้วยยาเสพติดในความผิดฐานเป็นผู้ผลิต นำเข้า ส่งออกหรือผู้ค้า&quot;  ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>มาตรา 101</bold> ว่าด้วยการสิ้นสุดสมาชิกภาพของสมาชิกสภาผู้แทนราษฎร ซึ่ง (6) ระบุว่า จะพ้นสมาชิกภาพเมื่อพบว่า มีลักษณะต้องห้ามตามมาตรา 98 ที่อ้างถึงข้างต้น",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "ส่วน<bold>มาตรา 160</bold> ที่ว่าด้วยคุณสมบัติของรัฐมนตรีนั้น ใน (7) ระบุว่า &quot;ไม่เป็นผู้ต้องคำพิพากษาให้จำคุก แม้คดีนั้นจะยังไม่ถึงที่สุด หรือมีการรอการลงโทษเว้นแต่ในความผิดอันได้กระทำโดยประมาท ความผิดลหุโทษ หรือความผิดฐานหมิ่นประมาท&quot;",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "108750779",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/17DA9/production/_108750779_cef483d1-0734-436f-9808-01701391f01a.jpg",
+        "path": "/cpsprodpb/17DA9/production/_108750779_cef483d1-0734-436f-9808-01701391f01a.jpg",
+        "height": 415,
+        "width": 624,
+        "altText": "ธรรมนัส",
+        "copyrightHolder": "Thai News Pix",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "นอกจากนี้ บีบีซีไทยยังพบว่า ยังมี &quot;มาตรฐานทางจริยธรรมของตุลาการศาลรัฐธรรมนูญ และผู้ดำรงตำแหน่งในองค์กรอิสระ รวมทั้งผู้ว่าการตรวจเงินแผ่นดินและหัวหน้าหน่วยงานธุรการของศาลรัฐธรรมนูญและองค์กรอิสระ พ.ศ. 2561&quot;  ซึ่งใช้บังคับแก่สมาชิกสภาผู้แทนราษฎร สมาชิกวุฒิสภา และคณะรัฐมนตรีที่จะต้องนำมาพิจารณาด้วย คือ ข้อ 17 &quot;ไม่กระทำการใดที่ก่อให้เกิดความเสื่อมเสียต่อเกียรติศักดิ์ของการดำรงตำแหน่ง&quot; และข้อ 19 &quot;ไม่คบหาสมาคมกับคู่กรณี ผู้ประพฤติผิดกฎหมาย ผู้มีอิทธิพล หรือผู้มีความประพฤติหรือผู้มีชื่อเสียงในทางเสื่อมเสีย อันอาจกระทบกระเทือนต่อความเชื่อถือศรัทธาของประชาชนในการปฏิบัติหน้าที่&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>ธรรมนัส เมีย 2 ลูก 7 รวยทะลุ 929 ล้าน และสมบัติอื่น ๆ ของ 21 รมต.</caption><url href=\"https://www.bbc.com/thai/thailand-49422953\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ธรรมนัส : การกลับมาของตระกูลการเมือง &quot;ผู้มีอิทธิพล&quot; และ &quot;เจ้าพ่อ&quot; ใน ครม.ประยุทธ์ 2</caption><url href=\"https://www.bbc.com/thai/48964952\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "ไม่มีปัญหาทางกฎหมาย แต่อาจไม่เหมาะสม",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "รศ. อานนท์ มาเม้า อาจารย์ประจำศูนย์กฎหมายแพ่งและศูนย์กฎหมายมหาชน คณะนิติศาสตร์ มหาวิทยาลัยธรรมศาสตร์ ได้เขียนบทความแสดงความคิดเห็นลงในสำนักข่าวอิศรา ลงวันที่ 10 กันายายนที่ผ่านมาในกรณีเกี่ยวกับ ร.อ. ธรรมนัส พรหมเผ่า เอาไว้ดังนี้",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;ความเห็นผม คือ ไม่มีปัญหาทางกฎหมายเกี่ยวกับลักษณะต้องห้าม จึงไม่ใช่ปัญหาข้อกฎหมาย (legal issue) แต่มีปัญหาเรื่องความไม่เหมาะสมหรือเหมาะสม ซึ่งเป็นปัญหาการเมือง (political issue)&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "เหตุผล คือ คำว่าถูกศาลพิพากษาหรือกระทำผิดตามกฎหมายว่าด้วยยาเสพติด หมายถึง คำพิพากษาศาลไทยและการทำผิดกฎหมายไทย",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ที่ตีความเช่นนี้ เพราะเป็นไปตามหลักอธิปไตยของรัฐ ที่จะไม่รับรู้หรือยอมรับผลทางกฎหมายของอำนาจรัฐอื่นโดยอัตโนมัติ เว้นแต่จะเปิดช่องเอง เช่น เขียนโดยตรงถึงคำว่า คำพิพากษาของศาลในต่างประเทศ อาทิ ป.อ. มาตรา 10",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;แต่ปัญหาเรื่องไม่เหมาะสมหรือเหมาะสม ซึ่งเป็นเรื่องทางการเมือง แม้จะเป็นประเด็นที่ถกเถียงได้ไม่รู้จบก็จริง และแม้ไม่ทำให้ รมต. ธรรมมนัส หลุดจากตำแหน่งถ้ามีผู้ร้องต่อศาลรัฐธรรมนูญก็ตาม แต่ก็จะเป็นประเด็นที่รัฐบาลอาจถูกวิพากษ์วิจารณ์อยู่ร่ำไป ซึ่งส่งผลต่อความน่าเชื่อถือของตัวรัฐบาลเอง&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "คนฟากหนึ่ง อาจจะบอกว่า เรื่องนี้ เมื่อไม่ใช่เรื่องผิดกฎหมาย และทุกคนควรได้รับการพิสูจน์ฝีมือจากปัจจุบัน ขอให้ลืมข้อกล่าวหาในอดีต ดังนั้น รมต.ธรรมนัส จึงไม่จำเป็นต้องลาออก",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "แต่อีกฟากหนึ่ง ก็อาจจะบอกว่า ครม. ควรรักษาเกียรติภูมิของประเทศและตัวรัฐบาลเอง เช่น พิสูจน์ความจริง ว่า ถ้าคดีเกิดขึ้นในไทย รมต.ธรรมนัส จะผิดตาม พรบ.ยาเสพติด หรือไม่",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "108750781",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/4911/production/_108750781_0d479256-42c6-4f0b-98f6-749449b13f9f.jpg",
+        "path": "/cpsprodpb/4911/production/_108750781_0d479256-42c6-4f0b-98f6-749449b13f9f.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ธรรมนัส",
+        "caption": "ข่าวที่ปรากฏในหนังสือพิมพ์ The Sydney Morning Herald",
+        "copyrightHolder": "Michael Ruffles",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "บีบีซีไทย สอบถามไปที่ องค์กรต่อต้านคอร์รัปชัน (ประเทศไทย) หรือ ACT เพื่อขอสัมภาษณ์ดร.มานะ นิมิตรมงคล เลขาธิการ ถึงกรณีของ ร.อ.ธรรมนัส กับธรรมาภิบาลของคณะรัฐมนตรี คำชี้แจงที่ได้กลับมาคือ &quot;ไม่ใช่บทบาทองค์กร&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ธรรมนัส ประกาศ \"โค่นผมได้ เท่ากับล้มรัฐบาลได้\"",
+      "headline": "ธรรมนัส หอบหลักฐานชี้แจงวุฒิดอกเตอร์ หลังประยุทธ์ ย้ำ การตรวจคุณสมบัติ \"จบแล้ว\""
+    },
+    "locators": {
+      "assetUri": "/thai/thailand-49659092",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/thailand-49659092",
+      "curie": "http://www.bbc.co.uk/asset/9108e9b7-4b26-1d4b-b445-e56c5696a8a8"
+    },
+    "summary": "เปิดรัฐธรรมนูญดูข้อห้ามการเป็นรัฐมนตรี หลัง ร.อ. ดร. ธรรมนัส พรพมเผ่า ชี้แจง",
+    "timestamp": 1568292871139,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        }
+      ]
+    },
+    "indexImage": {
+      "id": "108749785",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/E5AA/production/_108749785_48297451737_19c1830991_z.jpg",
+      "path": "/cpsprodpb/E5AA/production/_108749785_48297451737_19c1830991_z.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ธรรมนัส",
+      "copyrightHolder": "BBC Thai",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:thai/thailand-49659092",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ไทย",
+      "uri": "/thai/thailand",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "บีบีซีไทย",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "ธรรมนัส แจงกลางสภา ศาลออสเตรเลีย “ยกฟ้อง” คดียาเสพติดเมื่อปี 2556",
+              "headline": "ธรรมนัส แจงกลางสภา ศาลออสเตรเลีย “ยกฟ้อง” คดียาเสพติดเมื่อปี 2556"
+            },
+            "locators": {
+              "assetUri": "/thai/thailand-49664369",
+              "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-49664369"
+            },
+            "summary": "ร.อ. ธรรมนัส พรหมเผ่า เปิดข้อมูลกลางสภา ศาลออสเตรเลียยกฟ้องคดียาเสพติดไปเมื่อปี 2556",
+            "timestamp": 1568201118,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108750285",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E35D/production/_108750285_70000853_510118613101501_2320161420861243392_n.jpg",
+              "path": "/cpsprodpb/E35D/production/_108750285_70000853_510118613101501_2320161420861243392_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ธรรมนัส",
+              "copyrightHolder": "Thai News Pix",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:thai/thailand-49664369",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "พลิกแฟ้มข่าว ใครไล่-ใครรับ ธรรมนัส พรหมเผ่า เข้า-ออก กองทัพ",
+              "headline": "ธรรมนัส : ค้นราชกิจจาฯ เฟ้นหาแฟ้มข่าว สาวเส้นทาง ขึ้น-ลง แกนนำสำคัญของพรรคพลังประชารัฐ"
+            },
+            "locators": {
+              "assetUri": "/thai/thailand-49650016",
+              "cpsUrn": "urn:bbc:content:assetUri:/thai/thailand-49650016"
+            },
+            "summary": "ชวน หลีกภัย คือ นายกรัฐมนตรี ผู้รับสนองพระบรมราชโองการถอดยศ ร.ท. พชร พรหมเผ่า เมื่อ 24 ต.ค. 2541",
+            "timestamp": 1568164119,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108735735",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D1F9/production/_108735735_1aa919bf-4110-4179-949b-ecd61969dbd8.jpg",
+              "path": "/cpsprodpb/D1F9/production/_108735735_1aa919bf-4110-4179-949b-ecd61969dbd8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ธรรมนัส",
+              "copyrightHolder": "Thai News Pix",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:thai/thailand-49650016",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
 }
