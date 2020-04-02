@@ -17,8 +17,8 @@ const logger = nodeLogger(__filename);
 
 const handleMissingType = (block, json) =>
   logger.info(UNSUPPORTED_BLOCK_TYPE, {
-    assetUri: json.metadata.locators.assetUri,
-    blockType: block.type,
+    url: json.metadata.locators.assetUri,
+    type: block.type,
   });
 
 const typesToConvert = {
