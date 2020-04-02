@@ -235,20 +235,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding: 0;
 }
 
-.c41 {
+.c47 {
   padding: 0.5rem 0 1rem;
 }
 
-.c41:first-child {
+.c47:first-child {
   padding-top: 0;
 }
 
-.c41:last-child {
+.c47:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c39 {
+.c46 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -824,75 +824,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-@supports (display:grid) {
+@media (max-width:14.9375rem) {
   .c40 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c42 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c42 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c42 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c42 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c43 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -900,7 +833,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c43 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -908,7 +841,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c43 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -916,7 +849,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c43 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -924,7 +857,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c43 {
+  .c40 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -932,7 +865,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:80rem) {
-  .c43 {
+  .c40 {
     width: calc(25%);
     display: inline-block;
     vertical-align: top;
@@ -940,7 +873,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display:grid) {
-  .c43 {
+  .c40 {
     display: block;
   }
 }
@@ -1008,25 +941,25 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:62.9375rem) {
-  .c41 {
+  .c47 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c41 {
+  .c47 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c41 {
+  .c47 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c41:first-child {
+  .c47:first-child {
     padding-top: 1rem;
   }
 }
@@ -1291,6 +1224,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c39 {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c39 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:63rem) {
   .c46 {
     grid-column: 1 / span 6;
@@ -1376,7 +1321,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) {
-  .c44 {
+  .c41 {
     margin-top: 2rem;
   }
 }
@@ -1896,26 +1841,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </h2>
                     </div>
-                    <ul
-                      class="c39 c40"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="c41 c42"
-                        dir="ltr"
-                        role="listitem"
-                      />
-                    </ul>
+                    <div
+                      class="c39"
+                    />
                   </div>
                 </section>
               </main>
               <div
-                class="c43 c44"
+                class="c40 c41"
                 dir="ltr"
               >
                 <div
-                  class="c45"
+                  class="c42"
                 >
                   <section
                     aria-labelledby="top-stories-heading"
@@ -2067,11 +2004,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </h2>
                       </div>
                       <ul
-                        class="c39"
+                        class="c46"
                         role="list"
                       >
                         <li
-                          class="c41"
+                          class="c47"
                           role="listitem"
                         >
                           <div
@@ -2125,7 +2062,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           </div>
                         </li>
                         <li
-                          class="c41"
+                          class="c47"
                           role="listitem"
                         >
                           <div
@@ -2455,20 +2392,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding: 0;
 }
 
-.c43 {
+.c49 {
   padding: 0.5rem 0 1rem;
 }
 
-.c43:first-child {
+.c49:first-child {
   padding-top: 0;
 }
 
-.c43:last-child {
+.c49:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c41 {
+.c48 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -3062,75 +2999,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-@supports (display:grid) {
+@media (max-width:14.9375rem) {
   .c42 {
-    display: grid;
-    position: initial;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
-    margin: 0 0.25rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c44 {
-    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c44 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c44 {
-    width: calc(4/8*(100% - 8 * 1rem) + 3 * 1rem );
-    margin: 0 0.5rem;
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@supports (display:grid) {
-  .c44 {
-    display: block;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c45 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3138,7 +3008,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c45 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3146,7 +3016,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c45 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3154,7 +3024,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c45 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -3162,7 +3032,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c45 {
+  .c42 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -3170,7 +3040,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c45 {
+  .c42 {
     width: calc(25%);
     display: inline-block;
     vertical-align: top;
@@ -3178,7 +3048,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display:grid) {
-  .c45 {
+  .c42 {
     display: block;
   }
 }
@@ -3246,25 +3116,25 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:62.9375rem) {
-  .c43 {
+  .c49 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c43 {
+  .c49 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c43 {
+  .c49 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c43:first-child {
+  .c49:first-child {
     padding-top: 1rem;
   }
 }
@@ -3529,6 +3399,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c41 {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c41 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media (max-width:63rem) {
   .c48 {
     grid-column: 1 / span 6;
@@ -3620,7 +3502,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c46 {
+  .c43 {
     margin-top: 2rem;
   }
 }
@@ -4362,26 +4244,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </h2>
                         </div>
-                        <ul
-                          class="c41 c42"
-                          dir="ltr"
-                          role="list"
-                        >
-                          <li
-                            class="c43 c44"
-                            dir="ltr"
-                            role="listitem"
-                          />
-                        </ul>
+                        <div
+                          class="c41"
+                        />
                       </div>
                     </section>
                   </main>
                   <div
-                    class="c45 c46"
+                    class="c42 c43"
                     dir="ltr"
                   >
                     <div
-                      class="c47"
+                      class="c44"
                     >
                       <section
                         aria-labelledby="top-stories-heading"
@@ -4533,11 +4407,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </h2>
                           </div>
                           <ul
-                            class="c41"
+                            class="c48"
                             role="list"
                           >
                             <li
-                              class="c43"
+                              class="c49"
                               role="listitem"
                             >
                               <div
@@ -4591,7 +4465,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </div>
                             </li>
                             <li
-                              class="c43"
+                              class="c49"
                               role="listitem"
                             >
                               <div
