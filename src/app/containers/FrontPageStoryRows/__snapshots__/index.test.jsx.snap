@@ -2613,6 +2613,19 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
   border: none;
 }
 
+.c20 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c20:first-child {
+  padding-top: 0;
+}
+
+.c20:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
 .c17 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -2870,6 +2883,36 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c20 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20 {
+    border-bottom: none;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c20 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c20:first-child {
     padding-top: 1rem;
   }
 }
@@ -3185,7 +3228,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
     </div>
   </li>
   <li
-    class="c0 c1"
+    class="c20 c1"
     dir="rtl"
     role="listitem"
   >
@@ -3259,6 +3302,19 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 }
 
 .c0:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.c10 {
+  padding: 0.5rem 0 1rem;
+}
+
+.c10:first-child {
+  padding-top: 0;
+}
+
+.c10:last-child {
   padding-bottom: 0;
   border: none;
 }
@@ -3399,6 +3455,36 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
   .c0:first-child {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width:62.9375rem) {
+  .c10 {
+    border-bottom: 0.0625rem solid #F2F2F2;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10 {
+    border-bottom: none;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c10 {
+    padding: 1rem 0 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c10 {
+    padding: 0 0 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c10:first-child {
     padding-top: 1rem;
   }
 }
@@ -3566,7 +3652,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
     </div>
   </li>
   <li
-    class="c0 c1"
+    class="c10 c1"
     dir="ltr"
     role="listitem"
   >

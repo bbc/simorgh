@@ -163,6 +163,22 @@ export const service = {
         nextRadioShow: 'Кейинги радио дастур',
         duration: 'Давомийлиги',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Видео тагсўзи, ',
+          text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
+        },
+        fallback: {
+          text: 'Бу материалга кириш имконсиз',
+          linkText: 'Кўпроқ кўринг %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ташқи',
+          warningText: 'Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
+        },
+        skipLink: {
+          text: 'Ўтказиб юборинг %provider_name% пост ',
+          endTextVisuallyHidden: 'Охири %provider_name% пост',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -209,22 +225,6 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'Видео тагсўзи, ',
-          text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
-        },
-        fallback: {
-          text: 'Бу материалга кириш имконсиз',
-          linkText: 'Кўпроқ кўринг %provider_name%',
-          linkTextSuffixVisuallyHidden: ', ташқи',
-          warningText: 'Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
-        },
-        skipLink: {
-          text: 'Ўтказиб юборинг %provider_name% пост ',
-          endTextVisuallyHidden: 'Охири %provider_name% пост',
-        },
-      },
     },
     fonts: [],
     timezone: 'GMT',

@@ -41,7 +41,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
           role="listitem"
         >
           <div
@@ -95,7 +95,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
           role="listitem"
         >
           <div
@@ -149,6 +149,100 @@ exports[`CpsRelatedContent should render Story Feature components when given app
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`CpsRelatedContent should render Story Promo components without <ul> when given single item in collection 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="features-analysis-heading"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
+    role="region"
+  >
+    <div
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
+    >
+      <div
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-r0jyv5-1 dRpDSS"
+      >
+        <div
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
+        >
+          <div
+            class="FlexColumn-wx5kdp-0 dgpsiS"
+          >
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
+            >
+              <span
+                class="Title-wx5kdp-4 BeqZV"
+                dir="ltr"
+                id="features-analysis-heading"
+              >
+                Features & Analysis
+              </span>
+            </span>
+          </div>
+        </h2>
+      </div>
+      <div
+        class="SingleContentWrapper-r0jyv5-2 dtTrCE"
+      >
+        <div
+          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+        >
+          <div
+            class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+            dir="ltr"
+          >
+            <div
+              class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+            >
+              <div
+                class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <div
+                class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+              />
+            </div>
+          </div>
+          <div
+            class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+            dir="ltr"
+          >
+            <h3
+              class="Headline-sc-1dvfmi3-3 hSJrur"
+            >
+              <a
+                class="Link-sc-1dvfmi3-5 yQgSu"
+                href="/igbo/afirika-23252735"
+              >
+                STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+              </a>
+            </h3>
+            <p
+              class="Summary-sc-1dvfmi3-4 eaCWBB"
+            >
+              This is a test asset used in Simorgh, please do not edit it without asking.
+            </p>
+            <time
+              class="StyledTimestamp-um718p-0 kVWTyt"
+              datetime="2020-02-03"
+            >
+              3rd February 2020
+            </time>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </DocumentFragment>
