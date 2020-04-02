@@ -156,6 +156,7 @@ export const service = {
         listen: 'Make you listen',
         watch: 'Look',
         liveLabel: 'AS E DE HAPPEN',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -190,10 +191,6 @@ export const service = {
       {
         title: 'Video',
         url: '/pidgin/media/video',
-      },
-      {
-        title: 'Audio',
-        url: '/pidgin/media/audio',
       },
       {
         title: 'Sport',
@@ -246,6 +243,22 @@ export const service = {
         },
       ],
       copyrightText: 'BBC. De external site no concern BBC.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'De external site no concern BBC.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     timezone: 'Africa/Lagos',
   },

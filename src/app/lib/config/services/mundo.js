@@ -44,8 +44,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcmundo',
     twitterSite: '@bbcmundo',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/mundo/institucional-51359666#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/mundo/institucional-51359666',
     isTrustProjectParticipant: true,
     script: latinDiacritics,
     manifestPath: '/manifest.json',
@@ -87,7 +88,7 @@ export const service = {
           statusCode: '500',
           title: 'Error interno del servidor',
           message:
-            'Lo sentimos, actualmente no podemos llevarte a la página que buscas. Por favor, intenta::',
+            'Lo sentimos, actualmente no podemos llevarte a la página que buscas. Por favor, intenta:',
           solutions: [
             'Presiona el botón de actualizar en tu navegador',
             'Inténtalo más tarde',
@@ -157,6 +158,7 @@ export const service = {
         listen: 'Escuchar',
         watch: 'Ver',
         liveLabel: 'EN VIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Programa anterior',
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
@@ -174,7 +176,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/mundo/institucional-51359666',
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {
@@ -211,6 +213,24 @@ export const service = {
       ],
       copyrightText:
         'BBC. La BBC no se hace responsable del contenido de sitios externos.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Título del video: ',
+          text:
+            'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+        },
+        fallback: {
+          text: 'Contenido no disponible',
+          linkText: 'Ver más en %provider_name%',
+          linkTextSuffixVisuallyHidden: ', externo',
+          warningText:
+            'La BBC no se hace responsable del contenido de sitios externos.',
+        },
+        skipLink: {
+          text: 'Saltar contenido de %provider_name%',
+          endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
+        },
+      },
     },
     fonts: [
       F_REITH_SANS_BOLD,

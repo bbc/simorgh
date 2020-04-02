@@ -31,6 +31,7 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
+import Include from '#containers/Include';
 
 const StoryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -64,13 +65,14 @@ const StoryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: props =>
+    timestamp: (props) =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    byline: props => <StyledByline {...props} />,
+    video: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
+    version: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
+    byline: (props) => <StyledByline {...props} />,
+    include: (props) => <Include {...props} />,
   };
 
   const StyledTimestamp = styled(Timestamp)`

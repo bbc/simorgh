@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   webpackDirAlias: {
@@ -10,6 +10,7 @@ module.exports = {
     '#contexts': resolvePath('src/app/contexts'),
     '#containers': resolvePath('src/app/containers'),
     '#data': resolvePath('data/'),
+    '#hooks': resolvePath('src/app/hooks'),
     '#lib': resolvePath('src/app/lib/'),
     '#models': resolvePath('src/app/models/'),
     '#pages': resolvePath('src/app/pages/'),
@@ -21,6 +22,7 @@ module.exports = {
     '^#contexts(.*)$': '<rootDir>/src/app/contexts$1',
     '^#containers(.*)$': '<rootDir>/src/app/containers$1',
     '^#data(.*)$': '<rootDir>/data$1',
+    '^#hooks(.*)$': '<rootDir>/src/app/hooks$1',
     '^#lib(.*)$': '<rootDir>/src/app/lib$1',
     '^#models(.*)$': '<rootDir>/src/app/models$1',
     '^#pages(.*)$': '<rootDir>/src/app/pages$1',
@@ -33,6 +35,7 @@ module.exports = {
       ['#contexts', './src/app/contexts'],
       ['#containers', './src/app/containers'],
       ['#data', './data'],
+      ['#hooks', './src/app/hooks'],
       ['#lib', './src/app/lib'],
       ['#models', './src/app/models'],
       ['#pages', './src/app/pages'],

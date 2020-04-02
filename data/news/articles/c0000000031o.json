@@ -142,9 +142,7 @@
                             },
                             "duration": 11,
                             "durationISO8601": "PT11S",
-                            "types": [
-                              "Portrait"
-                            ],
+                            "types": ["Portrait"],
                             "versionId": "p01m7hmf",
                             "warnings": {}
                           }

@@ -168,6 +168,7 @@ export const service = {
         listen: 'Слушать',
         watch: 'Смотреть',
         liveLabel: 'Прямой эфир',
+        nextLabel: 'Дальше',
         previousRadioShow: 'Предыдущая передача',
         nextRadioShow: 'Следующая передача',
         duration: 'Продолжительность',
@@ -222,6 +223,23 @@ export const service = {
       ],
       copyrightText:
         'BBC. Би-би-си на несет ответственности за содержание других сайтов.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Подпись к видео, ',
+          text: 'Внимание: Контент других сайтов может содержать рекламу.',
+        },
+        fallback: {
+          text: 'Контент недоступен',
+          linkText: 'Смотреть еще в %provider_name%',
+          linkTextSuffixVisuallyHidden: ', внешняя ссылка',
+          warningText:
+            'Би-би-си на несет ответственности за содержание других сайтов.',
+        },
+        skipLink: {
+          text: 'Пропустить контент из %provider_name%',
+          endTextVisuallyHidden: 'Контент из %provider_name% окончен',
+        },
+      },
     },
     fonts: [
       F_REITH_SANS_BOLD,
@@ -237,6 +255,10 @@ export const service = {
       {
         title: 'Главная',
         url: '/russian',
+      },
+      {
+        title: 'Коронавирус',
+        url: '/russian/in-depth-51962199',
       },
       {
         title: 'Истории',

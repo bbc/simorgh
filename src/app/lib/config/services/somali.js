@@ -163,6 +163,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'TOOS',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -177,6 +178,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'Barnaamijyada Idaacadda',
     },
     footer: {
@@ -218,6 +220,24 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka ',
+          text:
+            'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
+        },
+        fallback: {
+          text: 'Macluumaadkan lama heli karo',
+          linkText: 'Faahfaahin ka eeg %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bogag kale',
+          warningText:
+            'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [],
     timezone: 'Africa/Mogadishu',
@@ -243,20 +263,12 @@ export const service = {
         url: '/somali/aqoon_guud',
       },
       {
-        title: 'Maqal',
-        url: '/somali/media/audio',
-      },
-      {
         title: 'Muuqaal',
         url: '/somali/media/video',
       },
       {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/ka_qayb_gal/programmes',
-      },
-      {
-        title: 'Sawirro',
-        url: '/somali/media/photogalleries',
       },
     ],
   },

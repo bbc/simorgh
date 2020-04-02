@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ToggleContext should provide a toggles object 1`] = `
-<span>
-  {"toggleState":{"local":{"foobarFeature":{"enabled":true}},"test":{"foobarFeature":{"enabled":true}},"live":{"foobarFeature":{"enabled":false}}},"toggleDispatch":"*function - bound dispatchAction*"}
-</span>
-`;

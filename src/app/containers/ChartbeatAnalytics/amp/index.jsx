@@ -1,11 +1,11 @@
 import React from 'react';
 import { ampChartbeatPropTypes } from '../../../models/propTypes/chartbeatAnalytics';
 
-const chartbeatAmpConfigOptions = options => ({
+const chartbeatAmpConfigOptions = (options) => ({
   vars: options,
 });
 
-const JsonInlinedScript = data => (
+const JsonInlinedScript = (data) => (
   <script
     type="application/json"
     /* eslint-disable-next-line react/no-danger */

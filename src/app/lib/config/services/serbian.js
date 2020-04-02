@@ -135,7 +135,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Ћир',
-      offscreenText: 'Cyrillic',
       variant: 'cyr',
     },
     translations: {
@@ -240,9 +239,26 @@ export const service = {
         listen: 'Slušajte',
         watch: 'Gledajte',
         liveLabel: 'UŽIVO',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'BBC nije odgovoran za sadržaj drugih sajtova.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
       },
     },
   },
@@ -344,7 +360,6 @@ export const service = {
     ],
     scriptLink: {
       text: 'Lat',
-      offscreenText: 'Latin',
       variant: 'lat',
     },
     translations: {
@@ -449,9 +464,26 @@ export const service = {
         listen: 'Слушајте',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Претходна радио емисија',
         nextRadioShow: 'Следећа радио емисија',
         duration: 'Трајање',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'ББЦ није одговоран за садржај других сајтова.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
       },
     },
   },

@@ -158,6 +158,7 @@ export const service = {
         listen: 'শুনুন',
         watch: 'দেখুন',
         liveLabel: 'লাইভ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
@@ -171,7 +172,8 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -212,6 +214,23 @@ export const service = {
       ],
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ভিডিওর ক্যাপশান: ',
+          text: 'সতর্কবাণী: তৃতীয়পক্ষের কন্টেন্টে বিজ্ঞাপন থাকতে পারে',
+        },
+        fallback: {
+          text: 'ছবির কপিরাইট',
+          linkText: '%provider_name% -এ আরো দেখুন',
+          linkTextSuffixVisuallyHidden: ', বিবিসির বাইরের খবর',
+          warningText:
+            'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
     timezone: 'Asia/Dhaka',
@@ -221,16 +240,8 @@ export const service = {
         url: '/bengali',
       },
       {
-        title: 'অডিও',
-        url: '/bengali/media/audio',
-      },
-      {
         title: 'ভিডিও',
         url: '/bengali/media/video',
-      },
-      {
-        title: 'ফটো গ্যালারি',
-        url: '/bengali/media/photogalleries',
       },
     ],
   },

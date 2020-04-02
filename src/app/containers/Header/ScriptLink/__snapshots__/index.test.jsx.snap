@@ -29,18 +29,6 @@ exports[`Script Link should render correctly 1`] = `
   border: 0.1875rem solid #FFFFFF;
 }
 
-.c3 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
     font-size: 1rem;
@@ -81,6 +69,7 @@ exports[`Script Link should render correctly 1`] = `
   <span
     class="c2"
   >
+<<<<<<< HEAD
     <span
       aria-hidden="true"
     >
@@ -91,6 +80,9 @@ exports[`Script Link should render correctly 1`] = `
     >
        Cyrillic
     </span>
+=======
+    Ћир
+>>>>>>> 589109ad0c60b65704f4f495f611e4058c47c231
   </span>
 </a>
 `;

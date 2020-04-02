@@ -4873,8 +4873,12 @@ const genServices = {
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/media-51975068', // Ukrainian CPS MAP
+              '/ukrainian/news-russian-38395917', // Russian CPS MAP
+              '/ukrainian/multimedia/2014/05/140508_biggest_dinosaur_found_ag', // Ukrainian TC2
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -5144,8 +5148,13 @@ const genServices = {
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/media-50461363', // Cyrillic CPS MAP
+              '/uzbek/lotin-44512908', // Latin CPS MAP
+              '/uzbek/lotin/2016/02/160212_latin_gravity_video', // Latin TC2 MAP
+              '/uzbek/institutional/2016/03/160313_audio_zokirjon_mashrabov', // Cyrillic TC2 MAP Audio clip
+            ],
+            enabled: true,
           },
           test: {
             paths: [

@@ -51,14 +51,8 @@
           "thingLabel": "Hong Kong",
           "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
           "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1819729/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1819729/"],
           "topicName": "Hong Kong",
           "topicId": "c8y9491y26nt",
           "curationList": [
@@ -71,9 +65,7 @@
       ]
     },
     "version": "v1.0.0",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

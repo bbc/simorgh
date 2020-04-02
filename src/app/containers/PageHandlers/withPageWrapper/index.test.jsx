@@ -19,15 +19,8 @@ jest.mock('../../../Layouts/defaultPageWrapper', () => ({ children }) => (
 ));
 
 const defaultToggleState = {
-  test: {
-    navOnArticles: {
-      enabled: true,
-    },
-  },
-  live: {
-    navOnArticles: {
-      enabled: false,
-    },
+  navOnArticles: {
+    enabled: true,
   },
 };
 

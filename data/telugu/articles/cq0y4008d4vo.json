@@ -243,9 +243,7 @@
                         "versions": [
                           {
                             "versionId": "p01djw2p",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 28,
                             "durationISO8601": "PT28S",
                             "warnings": {},
