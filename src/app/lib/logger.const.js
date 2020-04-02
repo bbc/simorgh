@@ -1,3 +1,7 @@
+/**
+ * When adding or updating values, please ensure that the relevant dashboards (e.g. Sumologic) are updated accordingly.
+ */
+
 const logCodes = {
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',
