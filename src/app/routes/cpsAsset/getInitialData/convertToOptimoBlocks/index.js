@@ -9,13 +9,17 @@ import list from './blocks/list';
 import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import include from './blocks/include';
+import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 const nodeLogger = require('#lib/logger.node');
 
 const logger = nodeLogger(__filename);
 
-const handleMissingType = (block) =>
-  logger.info(`Unsupported block type: ${block.type}`);
+const handleMissingType = (block, json) =>
+  logger.info(UNSUPPORTED_BLOCK_TYPE, {
+    assetUri: json.metadata.locators.assetUri,
+    blockType: block.type,
+  });
 
 const typesToConvert = {
   crosshead: subheadline,
