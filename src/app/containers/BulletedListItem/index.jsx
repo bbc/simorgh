@@ -9,7 +9,7 @@ import inline from '../InlineContainer';
 const componentsToRender = { fragment, urlLink: InlineLink, inline };
 
 const BulletedListItemContainer = ({ blocks }) => {
-  const contentBlocks = blocks.map(block => block.model.blocks).flat();
+  const contentBlocks = blocks.map((block) => block.model.blocks).flat();
   return (
     <BulletedListItem>
       <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />

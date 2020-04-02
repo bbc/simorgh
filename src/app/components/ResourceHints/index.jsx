@@ -3,7 +3,7 @@ import { arrayOf, string } from 'prop-types';
 
 const ResourceHints = ({ assetOrigins }) => (
   <>
-    {assetOrigins.map(origin => (
+    {assetOrigins.map((origin) => (
       <Fragment key={origin}>
         <link rel="preconnect" href={origin} crossOrigin="anonymous" />
         <link rel="dns-prefetch" href={origin} />

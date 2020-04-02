@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { string } from 'prop-types';
 import sendBeacon from '#lib/analyticsUtils/sendBeacon';
 
-const getNoJsATIPageViewUrl = atiPageViewUrl =>
+const getNoJsATIPageViewUrl = (atiPageViewUrl) =>
   atiPageViewUrl.includes('x8=[simorgh]')
     ? atiPageViewUrl.replace('x8=[simorgh]', 'x8=[simorgh-nojs]')
     : `${atiPageViewUrl}&x8=[simorgh-nojs]`;
 
-const renderNoScriptTrackingPixel = atiPageViewUrl => (
+const renderNoScriptTrackingPixel = (atiPageViewUrl) => (
   <noscript>
     <img
       height="1px"

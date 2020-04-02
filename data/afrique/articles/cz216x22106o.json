@@ -241,9 +241,7 @@
                         "versions": [
                           {
                             "versionId": "p01k6msp",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 191,
                             "durationISO8601": "PT3M11S",
                             "warnings": {

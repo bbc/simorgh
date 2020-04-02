@@ -4,7 +4,7 @@ import envConfig from '../../../support/config/envs';
 export const getBlockByType = (blocks, blockType) => {
   let blockData;
 
-  blocks.forEach(block => {
+  blocks.forEach((block) => {
     if (!blockData && block.type === blockType) {
       blockData = block;
     }
@@ -18,12 +18,12 @@ export const getBlockData = (blockType, body) => {
   return getBlockByType(blocks, blockType);
 };
 
-export const hasMedia = body => {
+export const hasMedia = (body) => {
   const mediaTypes = ['video', 'version', 'media', 'legacyMedia'];
-  return mediaTypes.some(type => body.metadata.blockTypes.includes(type));
+  return mediaTypes.some((type) => body.metadata.blockTypes.includes(type));
 };
 
-const getMediaId = body => {
+const getMediaId = (body) => {
   const mediaBlock = body.promo.media;
 
   const [versionId, externalId, id] = paths(

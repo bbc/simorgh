@@ -1,7 +1,9 @@
 # Code Standards
 
 ## Documentation index
+
 Please familiarise yourself with our:
+
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md) (you are here)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)
@@ -12,6 +14,7 @@ Please familiarise yourself with our:
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
 ## Overarching principles
+
 - We are following an [AMP](https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/)-first approach therefore all page components must be AMP compatible. [Example of component with AMP Compatibility](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-image) – the component is included in an AMP page and passes AMP validation.
 
 - We never reflow page layout, i.e. we always reserve vertical space and never change the height of elements during the render of the page. This means users never have their reading experience ruined by jumping content. NB interactive elements can still expand, but should not where they'd not be expected to expand e.g. on clicking a play icon on an audio or video player.
@@ -50,14 +53,19 @@ NB there is further documentation colocated with relevant code. The above list i
 ### Before Merge
 
 #### Unit Testing:
+
 - Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
 - We push automated testing as far down the testing pyramid as possible. This means that if something can be tested via unit tests, to ensure we have a test coverage of > 80% on this repo.
 - For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable. Such types of components should be created in our [component library](https://github.com/bbc/psammead) not in the Simorgh repo.
 - For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.
 - A11y tests/swarms (this would be ideal but not required at this stage)
+
 #### Documentation:
+
 - Any documentation updates and new documentation for a given page type or feature should be added in the PR that makes the changes.
+
 #### E2E Testing:
+
 - E2E tests are mandatory for all routes.
 - E2E service configuration must added for a new service/updated for an existing service
   - If for a new route that isn't promoted to other environments (see headings below) E2Es must run against localhost only, so you need to disable the testing in the test and live environments.
@@ -66,28 +74,34 @@ NB there is further documentation colocated with relevant code. The above list i
 ### Only applicable to BBC staff
 
 #### Promoting to test (www.test.bbc.com):
+
 - Manually check all requirements for merge have been met.
 - Ensure any new page type is being tested by a11y and lighthouse.
 - Any new data endpoints need to be available on test (speak to core pod about enabling these).
-- Raise an issue to request the traffic manager (STM) change for going to test in the [simorgh-infrastructure repo](https://github.com/bbc/simorgh-infrastructure/). Note, this is a private repo only accessible to BBC staff. 
+- Raise an issue to request the traffic manager (STM) change for going to test in the [simorgh-infrastructure repo](https://github.com/bbc/simorgh-infrastructure/). Note, this is a private repo only accessible to BBC staff.
 
 ##### Once on test:
+
 - E2E config must be updated immediately to ensure the e2e’s are running against the test environment.
 - Update these wiki pages: [Simorgh Pages](https://github.com/bbc/simorgh/wiki/Simorgh-Pages) and [Simorgh Routing](https://github.com/bbc/simorgh/wiki/Simorgh-Routing).
 
 #### Promoting to Stage:
+
 - Manually check all requirements for merge have been met.
 - Raise an issue in the is-infra repo requesting the STM change for going to stage.
 
 ##### Once on Stage:
+
 - Update these wiki pages: [Simorgh Pages](https://github.com/bbc/simorgh/wiki/Simorgh-Pages) and [Simorgh Routing](https://github.com/bbc/simorgh/wiki/Simorgh-Routing).
 
 #### Promoting to Live:
+
 - Manually check all requirements for merge have been met.
 - No outstanding a11y issues/swarms/tests (these will block going live).
 - Ensure the page's lighthouse tests pass on test.bbc.com.
 - Raise an issue in the is-infra repo requesting the STM change for going to live.
 
 ##### Once on Live:
+
 - E2E config must be updated immediately to ensure the e2e’s are running against the test environment.
 - Update these wiki pages: [Simorgh Pages](https://github.com/bbc/simorgh/wiki/Simorgh-Pages) and [Simorgh Routing](https://github.com/bbc/simorgh/wiki/Simorgh-Routing).

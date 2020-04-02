@@ -17,7 +17,7 @@ const services = {
   },
 };
 
-const expectEmptyContainer = container => {
+const expectEmptyContainer = (container) => {
   expect(container.querySelectorAll('li').length).toEqual(0);
   expect(container.innerHTML).toEqual('');
 };
@@ -27,7 +27,7 @@ describe('MostReadContainerCanonical Assertion', () => {
     fetch.resetMocks();
   });
 
-  Object.keys(services).forEach(service => {
+  Object.keys(services).forEach((service) => {
     it(`should render most read correctly for ${service}`, async () => {
       const { variant, data: mostReadData } = services[service];
       fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));

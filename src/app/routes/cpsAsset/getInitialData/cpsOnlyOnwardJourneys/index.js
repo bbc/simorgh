@@ -1,6 +1,6 @@
 import path from 'ramda/src/path';
 
-const cpsOnlyOnwardJourneys = json => {
+const cpsOnlyOnwardJourneys = (json) => {
   const groups = path(['relatedContent', 'groups'], json);
 
   const processedGroups = groups.reduce((acc, group) => {
