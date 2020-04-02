@@ -509,6 +509,12 @@ describe('StoryPromo Container', () => {
         expect(label).toBeInTheDocument();
         expect(label).toHaveAttribute('aria-hidden', 'true');
       });
+
+      it('should render a live story promo without a timestamp', () => {
+        const { container } = render(<WrappedStoryPromo item={liveItem} />);
+        const time = container.querySelector('time');
+        expect(time).toEqual(null);
+      });
     });
   });
 });
