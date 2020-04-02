@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
 import insertBlockAfterHeadline from '../helpers';
 
-const getBylineBlock = json => {
+const getBylineBlock = (json) => {
   const byline = pathOr(null, ['promo', 'byline'], json);
 
   if (!byline) {
@@ -29,7 +29,7 @@ const getBylineBlock = json => {
   return bylineBlock;
 };
 
-const addBylineBlock = originalJson => {
+const addBylineBlock = (originalJson) => {
   const json = deepClone(originalJson);
   const pageType = pathOr(null, ['metadata', 'type'], json);
 

@@ -3,7 +3,7 @@ import transformer from '.';
 import inputFixture from './inputFixture';
 import outputFixture from './outputFixture';
 
-const wrapBlock = settings => ({
+const wrapBlock = (settings) => ({
   content: {
     blocks: [
       {
@@ -155,7 +155,7 @@ const scenarios = [
 ];
 
 describe('convert internal link transformer', () => {
-  scenarios.forEach(scenario => {
+  scenarios.forEach((scenario) => {
     it(`should work for scenario: ${scenario.name}`, () => {
       expect(transformer(scenario.input)).toEqual(scenario.expectation);
     });

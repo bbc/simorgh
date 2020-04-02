@@ -1,306 +1,290 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:arabic/media-49580542",
-        "locators": {
-            "assetUri": "/arabic/media-49580542",
-            "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
-            "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:arabic/media-49580542",
+    "locators": {
+      "assetUri": "/arabic/media-49580542",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
+      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
+    },
+    "type": "MAP",
+    "createdBy": "arabic-v6",
+    "language": "ar",
+    "lastUpdated": 1567610668457,
+    "firstPublished": 1567610659,
+    "lastPublished": 1567610659,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "arabic.embedded_media.media_asset.49580542.page",
+      "cps_asset_id": "49580542"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "United Kingdom",
+          "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+          "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"]
         },
-        "type": "MAP",
-        "createdBy": "arabic-v6",
-        "language": "ar",
-        "lastUpdated": 1567610668457,
-        "firstPublished": 1567610659,
-        "lastPublished": 1567610659,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "thingLabel": "Brexit",
+          "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
+          "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
+          "thingType": ["Thing", "Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Brexit",
+            "http://www.wikidata.org/entity/Q7888194"
+          ],
+          "topicName": "بريطانيا والاتحاد الأوروبي",
+          "topicId": "c2dwq2kzzx8t",
+          "curationList": [
+            {
+              "curationId": "7bb5ddbd-c1db-43c3-ad60-1ac3c6d6cede",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mf8wy",
+        "subType": "clip",
+        "format": "video",
+        "title": "\"اعتدل في جلستك يا رجل\"",
+        "synopses": {
+          "short": "\"اعتدل في جلستك يا رجل\"",
+          "long": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.\n \nصوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
+          "medium": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان."
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "arabic.embedded_media.media_asset.49580542.page",
-            "cps_asset_id": "49580542"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mfb6b.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "\"اعتدل في جلستك يا رجل\"",
+        "versions": [
+          {
+            "versionId": "p07mf8x2",
+            "types": ["Original"],
+            "duration": 36,
+            "durationISO8601": "PT36S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3e39461b000e9dabfb",
-                    "campaignName": "WS - Keep me on trend"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "United Kingdom",
-                    "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
-                    "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-                    "thingType": [
-                        "Thing",
-                        "Place",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/2635167/"
-                    ]
-                },
-                {
-                    "thingLabel": "Brexit",
-                    "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
-                    "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
-                    "thingType": [
-                        "Thing",
-                        "Event"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Brexit",
-                        "http://www.wikidata.org/entity/Q7888194"
-                    ],
-                    "topicName": "بريطانيا والاتحاد الأوروبي",
-                    "topicId": "c2dwq2kzzx8t",
-                    "curationList": [
-                        {
-                            "curationId": "7bb5ddbd-c1db-43c3-ad60-1ac3c6d6cede",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+            "availableFrom": 1567610367
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      },
+      {
+        "text": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": " صوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"اعتدل في جلستك يا رجل\"",
+      "headline": "\"اعتدل في جلستك يا رجل\""
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07mf8wy",
-                "subType": "clip",
-                "format": "video",
-                "title": "\"اعتدل في جلستك يا رجل\"",
-                "synopses": {
-                    "short": "\"اعتدل في جلستك يا رجل\"",
-                    "long": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.\n \nصوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
-                    "medium": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان."
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mfb6b.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "\"اعتدل في جلستك يا رجل\"",
-                "versions": [
-                    {
-                        "versionId": "p07mf8x2",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 36,
-                        "durationISO8601": "PT36S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567610367
-                    }
-                ],
-                "type": "media"
+    "locators": {
+      "assetUri": "/arabic/media-49580542",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
+      "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
+    },
+    "summary": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
+    "timestamp": 1567610668457,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mf8wy",
+      "subType": "clip",
+      "format": "video",
+      "title": "\"اعتدل في جلستك يا رجل\"",
+      "synopses": {
+        "short": "\"اعتدل في جلستك يا رجل\"",
+        "long": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.\n \nصوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
+        "medium": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mfb6b.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "\"اعتدل في جلستك يا رجل\"",
+      "versions": [
+        {
+          "versionId": "p07mf8x2",
+          "types": ["Original"],
+          "duration": 36,
+          "durationISO8601": "PT36S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567610367
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108611199",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/18327/production/_108611199_p07mfb6b.jpg",
+      "path": "/cpsprodpb/18327/production/_108611199_p07mfb6b.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "\"اعتدل في جلستك يا رجل\"",
+      "caption": "\"اعتدل في جلستك يا رجل\"",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/media-49580542",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "فيديو",
+      "uri": "/arabic/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "بريكست: لماذا يصعب الاتفاق؟",
+              "headline": "بريكست: لماذا يصعب الاتفاق؟"
             },
-            {
-                "text": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "locators": {
+              "assetUri": "/arabic/media-49558493",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-49558493"
             },
-            {
-                "text": " صوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            }
+            "summary": "تقرر تعليق عمل البرلمان البريطاني بعد أيام فقط من عودته للاتعقاد في أيلول/ سبتمبر، وقبل أسابيع فقط من موعد خروج بريطانيا من الاتحاد الأوروبي.",
+            "timestamp": 1567443090,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "108589216",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/EF72/production/_108589216_p07m8gr2.jpg",
+              "path": "/cpsprodpb/EF72/production/_108589216_p07m8gr2.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "UK",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:arabic/media-49558493",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "بريكست: 7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي",
+              "headline": "بريكست: 7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي"
+            },
+            "locators": {
+              "assetUri": "/arabic/media-46509005",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-46509005"
+            },
+            "summary": "رئيسة الوزراء البريطانية تيريزا ماي تواجه تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي.",
+            "timestamp": 1544441254,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "104716545",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D521/production/_104716545_p06v4ykq.jpg",
+              "path": "/cpsprodpb/D521/production/_104716545_p06v4ykq.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "رئيسة الوزراء البريطانية تيريزا ماي تواجه تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي.",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:arabic/media-46509005",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "عراة يقاطعون جلسة البرلمان البريطاني",
+              "headline": "ناشطون شبه عراة يقاطعون جلسة البرلمان البريطاني حول أزمة بريكست"
+            },
+            "locators": {
+              "assetUri": "/arabic/media-47793693",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-47793693"
+            },
+            "summary": "قاطع ناشطون في مجال التغير المناخي جلسة كان يناقش خلالها نواب البرلمان البريطاني الخروج من الاتحاد الأوروبي (البريكست) يوم الاثنين 1 نيسان / أبريل.",
+            "timestamp": 1554222549,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "106275171",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4305/production/_106275171_p0759tsx.jpg",
+              "path": "/cpsprodpb/4305/production/_106275171_p0759tsx.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "ناشطون ضد التغير المناخي يقاطعون جلسة للبرلمان البريطاني",
+              "copyrightHolder": "extinction rebellion",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:arabic/media-47793693",
+            "type": "cps"
+          }
         ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "\"اعتدل في جلستك يا رجل\"",
-            "headline": "\"اعتدل في جلستك يا رجل\""
-        },
-        "locators": {
-            "assetUri": "/arabic/media-49580542",
-            "cpsUrn": "urn:bbc:content:assetUri:arabic/media-49580542",
-            "curie": "http://www.bbc.co.uk/asset/16dcfb1b-f237-104a-b885-69e758171253"
-        },
-        "summary": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.",
-        "timestamp": 1567610668457,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3e39461b000e9dabfb",
-                    "campaignName": "WS - Keep me on trend"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mf8wy",
-            "subType": "clip",
-            "format": "video",
-            "title": "\"اعتدل في جلستك يا رجل\"",
-            "synopses": {
-                "short": "\"اعتدل في جلستك يا رجل\"",
-                "long": "استلقى زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان.\n \nصوت النواب البريطانيون بواقع 328 صوتا مقابل 301 لصالح فرض سيطرتهم على جدول أعمال مجلس العموم، وهو ما يتيح لهم سن قانون بتأجيل تاريخ خروج بريطانيا من الاتحاد الأوروبي (بريكست). ورد رئيس الوزراء، بوريس جونسون، بأنه سيدعو لإجراء انتخابات عامة مبكرة إذا أقر النواب مقترح التأجيل.",
-                "medium": "زعيم مجلس العموم والعضو البارز في حزب المحافظين جاكوب ريس موغ يستلقي خلال جلسة بالبرلمان البريطاني أثناء كلمات لنواب معارضين لقرار رئيس الوزراء تعليق البرلمان."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mfb6b.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "\"اعتدل في جلستك يا رجل\"",
-            "versions": [
-                {
-                    "versionId": "p07mf8x2",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 36,
-                    "durationISO8601": "PT36S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567610367
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108611199",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/18327/production/_108611199_p07mfb6b.jpg",
-            "path": "/cpsprodpb/18327/production/_108611199_p07mfb6b.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "\"اعتدل في جلستك يا رجل\"",
-            "caption": "\"اعتدل في جلستك يا رجل\"",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:arabic/media-49580542",
-        "type": "cps"
-    },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "فيديو",
-            "uri": "/arabic/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC Arabic",
-            "uri": "/arabic",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "بريكست: لماذا يصعب الاتفاق؟",
-                            "headline": "بريكست: لماذا يصعب الاتفاق؟"
-                        },
-                        "locators": {
-                            "assetUri": "/arabic/media-49558493",
-                            "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-49558493"
-                        },
-                        "summary": "تقرر تعليق عمل البرلمان البريطاني بعد أيام فقط من عودته للاتعقاد في أيلول/ سبتمبر، وقبل أسابيع فقط من موعد خروج بريطانيا من الاتحاد الأوروبي.",
-                        "timestamp": 1567443090,
-                        "cpsType": "MAP",
-                        "indexImage": {
-                            "id": "108589216",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/EF72/production/_108589216_p07m8gr2.jpg",
-                            "path": "/cpsprodpb/EF72/production/_108589216_p07m8gr2.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "UK",
-                            "copyrightHolder": "BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:arabic/media-49558493",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "بريكست: 7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي",
-                            "headline": "بريكست: 7 سيناريوهات لخروج بريطانيا من الاتحاد الأوروبي"
-                        },
-                        "locators": {
-                            "assetUri": "/arabic/media-46509005",
-                            "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-46509005"
-                        },
-                        "summary": "رئيسة الوزراء البريطانية تيريزا ماي تواجه تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي.",
-                        "timestamp": 1544441254,
-                        "cpsType": "MAP",
-                        "indexImage": {
-                            "id": "104716545",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/D521/production/_104716545_p06v4ykq.jpg",
-                            "path": "/cpsprodpb/D521/production/_104716545_p06v4ykq.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "رئيسة الوزراء البريطانية تيريزا ماي تواجه تحديا صعبا يوم الثلاثاء، حين يصوت الأعضاء في مجلس العموم البريطاني على الاتفاق الخاص بالانسحاب من الاتحاد الأوروبي.",
-                            "copyrightHolder": "BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:arabic/media-46509005",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "عراة يقاطعون جلسة البرلمان البريطاني",
-                            "headline": "ناشطون شبه عراة يقاطعون جلسة البرلمان البريطاني حول أزمة بريكست"
-                        },
-                        "locators": {
-                            "assetUri": "/arabic/media-47793693",
-                            "cpsUrn": "urn:bbc:content:assetUri:/arabic/media-47793693"
-                        },
-                        "summary": "قاطع ناشطون في مجال التغير المناخي جلسة كان يناقش خلالها نواب البرلمان البريطاني الخروج من الاتحاد الأوروبي (البريكست) يوم الاثنين 1 نيسان / أبريل.",
-                        "timestamp": 1554222549,
-                        "cpsType": "MAP",
-                        "indexImage": {
-                            "id": "106275171",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/4305/production/_106275171_p0759tsx.jpg",
-                            "path": "/cpsprodpb/4305/production/_106275171_p0759tsx.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "ناشطون ضد التغير المناخي يقاطعون جلسة للبرلمان البريطاني",
-                            "copyrightHolder": "extinction rebellion",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:arabic/media-47793693",
-                        "type": "cps"
-                    }
-                ]
-            }
-        ]
-    }
+      }
+    ]
+  }
 }

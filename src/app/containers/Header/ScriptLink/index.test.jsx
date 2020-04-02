@@ -132,7 +132,7 @@ describe(`Script Link`, () => {
     };
 
     describe('canonical', () => {
-      Object.keys(testCases).forEach(testCase => {
+      Object.keys(testCases).forEach((testCase) => {
         it(`Script Link should contain link to other variant when on ${testCase}`, () => {
           const {
             matchPath,
@@ -165,7 +165,7 @@ describe(`Script Link`, () => {
 
     describe('amp', () => {
       const { errorPage, ...ampTestCases } = testCases;
-      Object.keys(ampTestCases).forEach(testCase => {
+      Object.keys(ampTestCases).forEach((testCase) => {
         it(`Script Link should contain link to other variant when on ${testCase}`, () => {
           const {
             matchPath,

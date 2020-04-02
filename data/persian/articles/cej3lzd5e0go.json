@@ -235,9 +235,7 @@
                         "versions": [
                           {
                             "versionId": "p01kf9q6",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 16,
                             "durationISO8601": "PT16S",
                             "warnings": {},

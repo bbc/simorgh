@@ -6,12 +6,12 @@ const servicesUsingArticlePaths = ['news', 'scotland'];
 
 describe('Application', () => {
   Object.keys(config)
-    .filter(service =>
-      Object.keys(config[service].pageTypes).some(pageType =>
+    .filter((service) =>
+      Object.keys(config[service].pageTypes).some((pageType) =>
         serviceHasPageType(service, pageType),
       ),
     )
-    .forEach(service => {
+    .forEach((service) => {
       const usesArticlePath = servicesUsingArticlePaths.includes(service);
 
       it(`should return a 200 status code for ${service}'s service worker`, () => {
@@ -44,7 +44,7 @@ describe('Application unknown route error pages', () => {
       '/igbo/foobar',
       'igbo/foobar.amp',
     ];
-    unknownRoutes.forEach(url => {
+    unknownRoutes.forEach((url) => {
       it('should display a news canonical error page', () => {
         cy.testResponseCodeAndType(url, 404, 'text/html');
         cy.visit(url, { failOnStatusCode: false });

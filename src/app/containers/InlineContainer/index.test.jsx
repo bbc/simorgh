@@ -33,7 +33,7 @@ const persianLink = inlineLinkBlock(
 );
 
 // text is passed here just to satisfy the prop type warnings but the top level text prop is currently not used
-const InlineContainerWithContext = blocks => (
+const InlineContainerWithContext = (blocks) => (
   <ServiceContext.Provider value={{ script: latin, externalLinkText: '' }}>
     <InlineContainer blocks={blocks} language="fa" text="text" />
   </ServiceContext.Provider>

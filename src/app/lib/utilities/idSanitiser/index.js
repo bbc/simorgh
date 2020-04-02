@@ -2,7 +2,7 @@
 const regexPunctuationSymbols = /[\[\]\.,\/#?¿!$'"%^&*;:{}=\-_`~()؟؛٬«»！，。？、@#￥……（）：；《）《》“”〔〕’|]/gi;
 const regexSpaces = /\s+/g;
 
-const idSanitiser = text =>
+const idSanitiser = (text) =>
   text.replace(regexPunctuationSymbols, '').replace(regexSpaces, '-');
 
 export default idSanitiser;
