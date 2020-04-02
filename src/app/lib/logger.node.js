@@ -75,43 +75,23 @@ class Logger {
     const fileLogger = logToFile(callingFile);
 
     this.error = (event, message) => {
-      if (message) {
-        fileLogger.error(logEventMessage(event, message));
-      } else {
-        fileLogger.error(event);
-      }
+      fileLogger.error(logEventMessage(event, message));
     };
 
     this.warn = (event, message) => {
-      if (message) {
-        fileLogger.warn(logEventMessage(event, message));
-      } else {
-        fileLogger.warn(event);
-      }
+      fileLogger.warn(logEventMessage(event, message));
     };
 
     this.info = (event, message) => {
-      if (message) {
-        fileLogger.info(logEventMessage(event, message));
-      } else {
-        fileLogger.info(event);
-      }
+      fileLogger.info(logEventMessage(event, message));
     };
 
     this.debug = (event, message) => {
-      if (message) {
-        fileLogger.debug(logEventMessage(event, message));
-      } else {
-        fileLogger.debug(event);
-      }
+      fileLogger.debug(logEventMessage(event, message));
     };
 
     this.verbose = (event, message) => {
-      if (message) {
-        fileLogger.log(logEventMessage(event, message));
-      } else {
-        fileLogger.log(event);
-      }
+      fileLogger.log(logEventMessage(event, message));
     };
   }
 }
