@@ -1,13 +1,6 @@
 import path from 'ramda/src/path';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-
-const htmlEscape = (string) =>
-  string
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
+import { htmlEscape } from 'escape-goat';
 
 const convertSocialEmbed = (block) => {
   const { type, source, embed, ...rest } = block;

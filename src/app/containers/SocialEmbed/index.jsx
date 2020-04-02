@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-
+import { htmlUnescape } from 'escape-goat';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
 } from '@bbc/psammead-social-embed';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
@@ -15,14 +15,6 @@ import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
 
 const MAX_WIDTH = '31.25rem';
-
-const htmlUnescape = (htmlString) =>
-  htmlString
-    .replace(/&gt;/g, '>')
-    .replace(/&lt;/g, '<')
-    .replace(/&#0?39;/g, "'")
-    .replace(/&quot;/g, '"')
-    .replace(/&amp;/g, '&');
 
 const Wrapper = styled.div`
   margin-right: auto;
