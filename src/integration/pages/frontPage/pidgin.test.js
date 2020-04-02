@@ -1,7 +1,7 @@
 /**
  * @pathname /pidgin
  */
-// import runComponentRenderTest from './user.canonical';
+import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
@@ -40,7 +40,7 @@ describe('Given I am on a Pidgin Frontpage AMP/Canonical page', () => {
     runHeaderTests({
       skipToContentText: 'Waka go wetin de inside',
     });
-
+    runCanonicalUserTests();
     runFooterTests({
       copyrightText:
         '© 2020 BBC. De external site no concern BBC. De way wey we de take go external link.',

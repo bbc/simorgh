@@ -1,7 +1,7 @@
 /**
  * @pathname /arabic
  */
-// import runComponentRenderTest from './user.canonical';
+import runCanonicalUserTests from './user.canonical';
 import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
@@ -40,7 +40,7 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     runHeaderTests({
       skipToContentText: 'إذهب الى المحتوى',
     });
-
+    runCanonicalUserTests();
     runFooterTests({
       copyrightText:
         '© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية.',
