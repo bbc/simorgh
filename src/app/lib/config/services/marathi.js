@@ -159,6 +159,23 @@ export const service = {
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText:
+            'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -205,23 +222,6 @@ export const service = {
       ],
       copyrightText:
         'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
-        },
-        fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
-          warningText:
-            'बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही. बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
-        },
-        skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
-        },
-      },
     },
     fonts: [],
     timezone: 'Asia/Kolkata',
