@@ -10,7 +10,7 @@ NB This is not a global styles directory. Global styles should be avoided in all
 
 Simorgh uses a library - winston - for logging. 
 
-The logger requires `filename` as a parameter - which is written to the server log along with the timestamp e.g. `2020-04-02 18:07:09 info [server/index.jsx] ...`
+The logger requires `filename` as a parameter - which is written to the server log along with the timestamp e.g. `2020-01-01 12:00:00.000 info [server/index.jsx] ...`
 
 To initialise the logger:
 
