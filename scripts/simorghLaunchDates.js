@@ -64,7 +64,7 @@ const simorghLaunchDates = {
   },
   hindi: {
     articles: '',
-    frontPage: '',
+    frontPage: '2nd April 2020',
     liveRadio: '4th Feb 2020',
     mediaAssetPage: '',
   },
@@ -103,7 +103,7 @@ const simorghLaunchDates = {
   },
   mundo: {
     articles: '',
-    frontPage: '',
+    frontPage: '2nd April 2020',
     mediaAssetPage: '',
   },
   naidheachdan: {
@@ -149,7 +149,7 @@ const simorghLaunchDates = {
   },
   russian: {
     articles: '',
-    frontPage: '',
+    frontPage: '2nd April 2020',
     mediaAssetPage: '',
   },
   scotland: {
