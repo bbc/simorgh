@@ -51,11 +51,7 @@
           "thingLabel": "China",
           "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
           "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
           "thingSameAs": [
             "http://dbpedia.org/resource/China",
             "http://sws.geonames.org/1814991/",
@@ -66,14 +62,8 @@
           "thingLabel": "Hong Kong",
           "thingUri": "http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id",
           "thingId": "a3b15769-775e-471d-a511-a7b78f346859",
-          "thingType": [
-            "Place",
-            "Thing",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1819729/"
-          ],
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1819729/"],
           "topicName": "Hong Kong",
           "topicId": "cvjp2j5rr1vt",
           "curationList": [
@@ -87,11 +77,7 @@
           "thingLabel": "Asia",
           "thingUri": "http://www.bbc.co.uk/things/ba90754a-9033-4e9c-990b-d1139e5070a3#id",
           "thingId": "ba90754a-9033-4e9c-990b-d1139e5070a3",
-          "thingType": [
-            "Place",
-            "Thing",
-            "news:Place"
-          ],
+          "thingType": ["Place", "Thing", "news:Place"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Asia",
             "http://www.wikidata.org/entity/Q48"
@@ -108,9 +94,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

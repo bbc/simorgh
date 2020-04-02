@@ -1,353 +1,329 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:marathi/india-48062804",
-        "locators": {
-            "assetUri": "/marathi/india-48062804",
-            "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48062804",
-            "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d"
-        },
-        "type": "MAP",
-        "createdBy": "marathi-v6",
-        "language": "mr",
-        "lastUpdated": 1567140407240,
-        "firstPublished": 1556267989,
-        "lastPublished": 1567140400,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "marathi.india.media_asset.48062804.page",
-            "cps_asset_id": "48062804"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Mumbai",
-                    "thingUri": "http://www.bbc.co.uk/things/63e7a026-c846-4223-a447-9a64f890e355#id",
-                    "thingId": "63e7a026-c846-4223-a447-9a64f890e355",
-                    "thingType": [
-                        "Place",
-                        "Thing",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/1275339/"
-                    ]
-                },
-                {
-                    "thingLabel": "Politics",
-                    "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
-                    "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Politics"
-                    ],
-                    "topicName": "राजकारण",
-                    "topicId": "cpzd4kdx4rgt",
-                    "curationList": [
-                        {
-                            "curationId": "cff13a43-85e3-4fd0-ad1b-0aee5db9fc31",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "India elections 2019",
-                    "thingUri": "http://www.bbc.co.uk/things/d570283c-0815-4ac7-859d-60ce334f2e57#id",
-                    "thingId": "d570283c-0815-4ac7-859d-60ce334f2e57",
-                    "thingType": [
-                        "Event",
-                        "Thing"
-                    ],
-                    "thingSameAs": []
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "heading",
-            "list",
-            "social_embed"
-        ],
-        "includeComments": false
+  "metadata": {
+    "id": "urn:bbc:ares::asset:marathi/india-48062804",
+    "locators": {
+      "assetUri": "/marathi/india-48062804",
+      "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48062804",
+      "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d"
     },
-    "content": {
-        "blocks": [
+    "type": "MAP",
+    "createdBy": "marathi-v6",
+    "language": "mr",
+    "lastUpdated": 1567140407240,
+    "firstPublished": 1556267989,
+    "lastPublished": 1567140400,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "marathi.india.media_asset.48062804.page",
+      "cps_asset_id": "48062804"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Mumbai",
+          "thingUri": "http://www.bbc.co.uk/things/63e7a026-c846-4223-a447-9a64f890e355#id",
+          "thingId": "63e7a026-c846-4223-a447-9a64f890e355",
+          "thingType": ["Place", "Thing", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1275339/"]
+        },
+        {
+          "thingLabel": "Politics",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
+          "topicName": "राजकारण",
+          "topicId": "cpzd4kdx4rgt",
+          "curationList": [
             {
-                "id": "p077hz5t",
-                "subType": "clip",
-                "format": "video",
-                "title": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-                "synopses": {
-                    "short": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-                    "long": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय.",
-                    "medium": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय."
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p077hzdn.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-                "versions": [
-                    {
-                        "versionId": "p077hz62",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 491,
-                        "durationISO8601": "PT8M11S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1556266830
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड मिळाला आहे.  ",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "'बेस्ट इनोव्हेशन इन पब्लिशिंग,' या कॅटेगरी मध्ये हा अवॉर्ड मिळाला आहे.  ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "वाढत्या शहरीकरणाने आदिवासी समाजाच्या संस्कृती आणि अस्तित्वावरच प्रश्नचिन्ह उपस्थित केलं आहे. वर्षानुवर्ष त्यांच्या हक्काची असलेली जमीन आणि  जंगल नष्ट होत आहे. महाराष्ट्र आणि गुजरातमध्ये वास्तव्य असलेल्या वारली समाजासमोरही नेमकी हीच अडचण आहे. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "त्यामुळे बीबीसीकडे त्यांनी त्यांच्या समस्या, अडचणी मांडल्या. त्यासुद्धा वारली कलेच्या माध्यमातून. ज्यासाठी हा समाज शेकडो वर्ष ओळखला जातो.  ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "पण यावेळी त्यांची गोष्ट व्हर्च्यअल रिअॅलिटीच्या माध्यमातून लोकांसमोर मांडली जात आहे. वारली कलाकार राजेश वनगड यांनी VR हेडसेट वापरून 3D पेंटिंगच्या माध्यमातून त्यांची गोष्ट साकारली. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "हेही वाचलंत का?",
-                "markupType": "plain_text",
-                "type": "heading"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>marathi/india-48061877</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "स्त्रियांच्या वक्षातील दुग्धनलिकांचा फोटो जगभर व्हायरल",
-                                    "headline": "स्त्रियांच्या वक्षातल्या दुग्धनलिकांचा (मिल्क डक्ट) फोटो जगभरात व्हायरल",
-                                    "overtyped": "स्त्रियांच्या वक्षातील दुग्धनलिकांचा फोटो जगभर व्हायरल"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/marathi/india-48061877"
-                                },
-                                "summary": "वक्षामधून दूध बाहेर येण्याची ही रचना नेमकी कशी आहे, हे खूप कमी जणांना माहिती आहे आणि त्यामुळेच इंटरनेटवर व्हायरल झालेल्या फोटोवर आलेल्या प्रतिक्रियांपैकी बऱ्याच नकारार्थी आहेत.",
-                                "timestamp": 1556257336,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:marathi/india-48061877",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>marathi/india-48021000</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "लोकसभा निवडणुकीवर बहिष्कार घालणारी गूढ आदिवासी जमात",
-                                    "headline": "लोकसभा निवडणुकीवर बहिष्कार घालून समांतर सरकारचा दावा करणारी गूढ आदिवासी जमात",
-                                    "overtyped": "लोकसभा निवडणुकीवर बहिष्कार घालणारी गूढ आदिवासी जमात"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/marathi/india-48021000"
-                                },
-                                "summary": "'A/C भारत सरकार' हा आदिवासींचा असा समुदाय आहे जो स्वतःला भारताचा खरा शासनकर्ता मानतो. तसंच केंद्रात आणि राज्यात असलेल्या सरकारला फक्त संस्था म्हणून मानतो.",
-                                "timestamp": 1556210296,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                                        "categoryName": "Feature"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:marathi/india-48021000",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>marathi/india-48038829</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "शेकूबाईंचे पाय रक्ताळले, पण त्यांना जमीन मिळाली का?",
-                                    "headline": "लोकसभा निवडणूक : रक्तबंबाळ पायांनी मुंबईपर्यंत गेलेल्या शेकूबाईंना जमीन मिळाली का?",
-                                    "overtyped": "शेकूबाईंचे पाय रक्ताळले, पण त्यांना जमीन मिळाली का?"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/marathi/india-48038829"
-                                },
-                                "summary": "आपण कसत असलेला वनजमिनीचा पट्टा आपल्या नावावर होईल, या आशेने शेकूबाई मुंबईत आल्या. पण वर्ष उलटल्यानंतरही त्यांना जमीन मिळाली नाही.",
-                                "timestamp": 1556163404,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:marathi/india-48038829",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "href": "https://www.youtube.com/watch?v=Ydos7-8zUAg",
-                "source": "youtube",
-                "type": "social_embed"
-            },
-            {
-                "text": "<bold>(बीबीसी मराठीचे सर्व अपडेट्स मिळवण्यासाठी तुम्ही आम्हाला </bold><link><caption>फेसबुक</caption><altText>फेसबुक</altText><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>इन्स्टाग्राम</caption><altText>इन्स्टाग्राम</altText><url href=\"https://www.instagram.com/bbcnewsmarathi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption> यूट्यूब</caption><url href=\"https://www.youtube.com/channel/UC7pluR6rB5KZIbN2IxamzxQ\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>ट्विटर </caption><altText>ट्विटर </altText><url href=\"https://twitter.com/bbcnewsmarathi\" platform=\"highweb\"/><url href=\"https://twitter.com/bbcnewsmarathi\" platform=\"enhancedmobile\"/></link><bold>वर फॉलो करू शकता.</bold><bold>'</bold><link><caption>बीबीसी विश्व</caption><url href=\"https://www.youtube.com/watch?v=H8buMGXclwI&amp;list=PLzujGEmnrcSR_MJCrzgIRSkVFn381NDGL\" platform=\"highweb\"/></link><bold>' </bold><bold>रोज संध्याकाळी 7 वाजता </bold><bold>JioTV </bold><bold>अॅप आणि यूट्यूबवर नक्की पाहा.</bold><bold>)</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
+              "curationId": "cff13a43-85e3-4fd0-ad1b-0aee5db9fc31",
+              "curationType": "vivo-stream"
             }
-        ]
+          ]
+        },
+        {
+          "thingLabel": "India elections 2019",
+          "thingUri": "http://www.bbc.co.uk/things/d570283c-0815-4ac7-859d-60ce334f2e57#id",
+          "thingId": "d570283c-0815-4ac7-859d-60ce334f2e57",
+          "thingType": ["Event", "Thing"],
+          "thingSameAs": []
+        }
+      ]
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड",
-            "headline": "मराठीत पहिल्यांदाच वारली आदिवासींची गोष्ट व्हर्च्युअल रिअॅलिटीमधून"
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph", "heading", "list", "social_embed"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p077hz5t",
+        "subType": "clip",
+        "format": "video",
+        "title": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+        "synopses": {
+          "short": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+          "long": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय.",
+          "medium": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय."
         },
-        "locators": {
-            "assetUri": "/marathi/india-48062804",
-            "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48062804",
-            "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d"
-        },
-        "summary": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड मिळाला आहे.",
-        "timestamp": 1567140407240,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p077hzdn.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+        "versions": [
+          {
+            "versionId": "p077hz62",
+            "types": ["Original"],
+            "duration": 491,
+            "durationISO8601": "PT8M11S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "media": {
-            "id": "p077hz5t",
-            "subType": "clip",
-            "format": "video",
-            "title": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-            "synopses": {
-                "short": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-                "long": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय.",
-                "medium": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p077hzdn.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-            "versions": [
-                {
-                    "versionId": "p077hz62",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 491,
-                    "durationISO8601": "PT8M11S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1556266830
-                }
+            "availableFrom": 1556266830
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड मिळाला आहे.  ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "'बेस्ट इनोव्हेशन इन पब्लिशिंग,' या कॅटेगरी मध्ये हा अवॉर्ड मिळाला आहे.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "वाढत्या शहरीकरणाने आदिवासी समाजाच्या संस्कृती आणि अस्तित्वावरच प्रश्नचिन्ह उपस्थित केलं आहे. वर्षानुवर्ष त्यांच्या हक्काची असलेली जमीन आणि  जंगल नष्ट होत आहे. महाराष्ट्र आणि गुजरातमध्ये वास्तव्य असलेल्या वारली समाजासमोरही नेमकी हीच अडचण आहे. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "त्यामुळे बीबीसीकडे त्यांनी त्यांच्या समस्या, अडचणी मांडल्या. त्यासुद्धा वारली कलेच्या माध्यमातून. ज्यासाठी हा समाज शेकडो वर्ष ओळखला जातो.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "पण यावेळी त्यांची गोष्ट व्हर्च्यअल रिअॅलिटीच्या माध्यमातून लोकांसमोर मांडली जात आहे. वारली कलाकार राजेश वनगड यांनी VR हेडसेट वापरून 3D पेंटिंगच्या माध्यमातून त्यांची गोष्ट साकारली. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "हेही वाचलंत का?",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>marathi/india-48061877</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "स्त्रियांच्या वक्षातील दुग्धनलिकांचा फोटो जगभर व्हायरल",
+                  "headline": "स्त्रियांच्या वक्षातल्या दुग्धनलिकांचा (मिल्क डक्ट) फोटो जगभरात व्हायरल",
+                  "overtyped": "स्त्रियांच्या वक्षातील दुग्धनलिकांचा फोटो जगभर व्हायरल"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/marathi/india-48061877"
+                },
+                "summary": "वक्षामधून दूध बाहेर येण्याची ही रचना नेमकी कशी आहे, हे खूप कमी जणांना माहिती आहे आणि त्यामुळेच इंटरनेटवर व्हायरल झालेल्या फोटोवर आलेल्या प्रतिक्रियांपैकी बऱ्याच नकारार्थी आहेत.",
+                "timestamp": 1556257336,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:marathi/india-48061877",
+                "type": "cps"
+              }
             ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "106599760",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/1A8F/production/_106599760_p077hzdn.jpg",
-            "path": "/cpsprodpb/1A8F/production/_106599760_p077hzdn.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:marathi/india-48062804",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>marathi/india-48021000</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "लोकसभा निवडणुकीवर बहिष्कार घालणारी गूढ आदिवासी जमात",
+                  "headline": "लोकसभा निवडणुकीवर बहिष्कार घालून समांतर सरकारचा दावा करणारी गूढ आदिवासी जमात",
+                  "overtyped": "लोकसभा निवडणुकीवर बहिष्कार घालणारी गूढ आदिवासी जमात"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/marathi/india-48021000"
+                },
+                "summary": "'A/C भारत सरकार' हा आदिवासींचा असा समुदाय आहे जो स्वतःला भारताचा खरा शासनकर्ता मानतो. तसंच केंद्रात आणि राज्यात असलेल्या सरकारला फक्त संस्था म्हणून मानतो.",
+                "timestamp": 1556210296,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:marathi/india-48021000",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>marathi/india-48038829</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "शेकूबाईंचे पाय रक्ताळले, पण त्यांना जमीन मिळाली का?",
+                  "headline": "लोकसभा निवडणूक : रक्तबंबाळ पायांनी मुंबईपर्यंत गेलेल्या शेकूबाईंना जमीन मिळाली का?",
+                  "overtyped": "शेकूबाईंचे पाय रक्ताळले, पण त्यांना जमीन मिळाली का?"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/marathi/india-48038829"
+                },
+                "summary": "आपण कसत असलेला वनजमिनीचा पट्टा आपल्या नावावर होईल, या आशेने शेकूबाई मुंबईत आल्या. पण वर्ष उलटल्यानंतरही त्यांना जमीन मिळाली नाही.",
+                "timestamp": 1556163404,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:marathi/india-48038829",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=Ydos7-8zUAg",
+        "source": "youtube",
+        "type": "social_embed"
+      },
+      {
+        "text": "<bold>(बीबीसी मराठीचे सर्व अपडेट्स मिळवण्यासाठी तुम्ही आम्हाला </bold><link><caption>फेसबुक</caption><altText>फेसबुक</altText><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>इन्स्टाग्राम</caption><altText>इन्स्टाग्राम</altText><url href=\"https://www.instagram.com/bbcnewsmarathi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption> यूट्यूब</caption><url href=\"https://www.youtube.com/channel/UC7pluR6rB5KZIbN2IxamzxQ\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>ट्विटर </caption><altText>ट्विटर </altText><url href=\"https://twitter.com/bbcnewsmarathi\" platform=\"highweb\"/><url href=\"https://twitter.com/bbcnewsmarathi\" platform=\"enhancedmobile\"/></link><bold>वर फॉलो करू शकता.</bold><bold>'</bold><link><caption>बीबीसी विश्व</caption><url href=\"https://www.youtube.com/watch?v=H8buMGXclwI&amp;list=PLzujGEmnrcSR_MJCrzgIRSkVFn381NDGL\" platform=\"highweb\"/></link><bold>' </bold><bold>रोज संध्याकाळी 7 वाजता </bold><bold>JioTV </bold><bold>अॅप आणि यूट्यूबवर नक्की पाहा.</bold><bold>)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड",
+      "headline": "मराठीत पहिल्यांदाच वारली आदिवासींची गोष्ट व्हर्च्युअल रिअॅलिटीमधून"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "भारत",
-            "uri": "/marathi/india",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC मराठी",
-            "uri": "/marathi",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/marathi/india-48062804",
+      "cpsUrn": "urn:bbc:content:assetUri:marathi/india-48062804",
+      "curie": "http://www.bbc.co.uk/asset/1eee2a26-cc27-7b46-b3ef-6c11f3b9b75d"
+    },
+    "summary": "बीबीसी मराठीच्या वारली आदिवासींच्या व्हर्च्युअल रिअॅलिटी फिल्मला मानाचा डिजिपब वर्ल्ड अवॉर्ड मिळाला आहे.",
+    "timestamp": 1567140407240,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "media": {
+      "id": "p077hz5t",
+      "subType": "clip",
+      "format": "video",
+      "title": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+      "synopses": {
+        "short": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+        "long": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय.",
+        "medium": "मुंबईजवळचे आदिवासी या निवडणुकीकडे कसं बघतात? अत्याधुनिक तंत्रज्ञान वापरून गोष्ट सांगण्याचा हा प्रयोग मराठीत पहिल्यांदाच केलाय."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p077hzdn.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+      "versions": [
+        {
+          "versionId": "p077hz62",
+          "types": ["Original"],
+          "duration": 491,
+          "durationISO8601": "PT8M11S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1556266830
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "106599760",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/1A8F/production/_106599760_p077hzdn.jpg",
+      "path": "/cpsprodpb/1A8F/production/_106599760_p077hzdn.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "लोकसभा निवडणूक: मुंबईजवळचे वारली आदिवासी",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:marathi/india-48062804",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "भारत",
+      "uri": "/marathi/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC मराठी",
+      "uri": "/marathi",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

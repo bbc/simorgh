@@ -6,7 +6,7 @@ const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
 const { webpackDirAlias } = require('./dirAlias');
 
 const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+const resolvePath = (relativePath) => path.resolve(appDirectory, relativePath);
 
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
@@ -115,7 +115,7 @@ module.exports = (shell = {}) => {
     },
   };
 
-  const mergeIntoBaseConfig = app => {
+  const mergeIntoBaseConfig = (app) => {
     const specialisedConfig = require(`./webpack.config.${app}.js`)({
       resolvePath,
       IS_PROD,

@@ -16,7 +16,7 @@ describe('getVariantRedirectUrl', () => {
 
   describe('frontPage', () => {
     describe('empty cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}`, () => {
           it(`should redirect to /${service}/${defaultVariant}`, () => {
@@ -41,7 +41,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('empty cookie, and with variant specified in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const variants = servicesWithVariants[service];
         const [, secondaryVariant] = variants;
         describe(`visit /${service}/${secondaryVariant}`, () => {
@@ -67,7 +67,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('variant in cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const variants = servicesWithVariants[service];
         const [, secondaryVariant] = variants;
         describe(`visit /${service}`, () => {
@@ -97,7 +97,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('variant in cookie, and variant in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const variants = servicesWithVariants[service];
         const [, secondaryVariant] = variants;
         const defaultVariant = getVariant({ service });
@@ -128,7 +128,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('invalid variant in cookie', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const invalidSecondaryVariant = 'xyz';
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}`, () => {
@@ -162,7 +162,7 @@ describe('getVariantRedirectUrl', () => {
     const id = 'c3xd4x9prgyo';
     const local = 'articles';
     describe('empty cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${local}/${id}`, () => {
           it(`should redirect to /${service}/${local}/${id}/${defaultVariant}`, () => {
@@ -191,7 +191,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('empty cookie, and with variant specified in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const variants = servicesWithVariants[service];
         const [, secondaryVariant] = variants;
         describe(`visit /${service}/${local}/${id}/${secondaryVariant}`, () => {
@@ -219,7 +219,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('variant in cookie, and no variant in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const variants = servicesWithVariants[service];
         const [, secondaryVariant] = variants;
         describe(`visit /${service}/${local}/${id}`, () => {
@@ -253,7 +253,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('variant in cookie, and variant in url', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const variants = servicesWithVariants[service];
         const [, secondaryVariant] = variants;
         const defaultVariant = getVariant({ service });
@@ -288,7 +288,7 @@ describe('getVariantRedirectUrl', () => {
     });
 
     describe('invalid variant in cookie', () => {
-      serviceNames.forEach(service => {
+      serviceNames.forEach((service) => {
         const invalidSecondaryVariant = 'xyz';
         const defaultVariant = getVariant({ service });
         describe(`visit /${service}/${local}/${id}`, () => {

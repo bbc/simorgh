@@ -57,12 +57,12 @@ const PhotoGalleryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: props =>
+    timestamp: (props) =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    video: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
+    version: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
   const StyledGrid = styled(GridWrapper)`

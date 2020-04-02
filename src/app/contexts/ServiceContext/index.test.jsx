@@ -47,8 +47,8 @@ describe('ServiceContextProvider', () => {
       });
     };
 
-    Object.keys(services).forEach(service => {
-      Object.keys(services[service]).forEach(variant =>
+    Object.keys(services).forEach((service) => {
+      Object.keys(services[service]).forEach((variant) =>
         testForServiceAndVariant(service, variant),
       );
     });

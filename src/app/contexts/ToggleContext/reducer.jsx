@@ -1,4 +1,4 @@
-export const updateToggles = data => ({
+export const updateToggles = (data) => ({
   type: 'UPDATE_TOGGLE_STATE',
   data,
 });

@@ -9,7 +9,7 @@ import {
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 
-const getISOStringDate = date => new Date(date).toISOString();
+const getISOStringDate = (date) => new Date(date).toISOString();
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
@@ -41,7 +41,7 @@ const propsForNewsInternational = {
   description: articleDataNews.promo.headlines.seoHeadline,
 };
 
-const renderMetadataToDocument = async Component => {
+const renderMetadataToDocument = async (Component) => {
   render(Component);
 
   await waitForDomChange({
@@ -58,7 +58,7 @@ it('should render the article tags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[name^="article:"]'),
-  ).map(tag => ({
+  ).map((tag) => ({
     name: tag.getAttribute('name'),
     content: tag.getAttribute('content'),
   }));

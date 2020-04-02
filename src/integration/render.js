@@ -1,18 +1,18 @@
 const { JSDOM } = require('jsdom');
 const { within } = require('@testing-library/dom');
 
-const enhanceGetByText = getByText => text =>
+const enhanceGetByText = (getByText) => (text) =>
   getByText((content, node) => {
     const hasText = ({ textContent }) => textContent === text;
     const nodeHasText = hasText(node);
     const childrenDontHaveText = Array.from(node.children).every(
-      child => !hasText(child),
+      (child) => !hasText(child),
     );
 
     return nodeHasText && childrenDontHaveText;
   });
 
-module.exports = async path => {
+module.exports = async (path) => {
   const dom = await JSDOM.fromURL(`http://localhost:7080${path}`);
 
   const queries = within(dom.window.document.body);

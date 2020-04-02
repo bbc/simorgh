@@ -1,321 +1,313 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:korean/media-49590387",
-        "locators": {
-            "assetUri": "/korean/media-49590387",
-            "cpsUrn": "urn:bbc:content:assetUri:korean/media-49590387",
-            "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:korean/media-49590387",
+    "locators": {
+      "assetUri": "/korean/media-49590387",
+      "cpsUrn": "urn:bbc:content:assetUri:korean/media-49590387",
+      "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d"
+    },
+    "type": "MAP",
+    "createdBy": "korean-v6",
+    "language": "ko",
+    "lastUpdated": 1567662045636,
+    "firstPublished": 1567662036,
+    "lastPublished": 1567662037,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "korean.embedded_media.media_asset.49590387.page",
+      "cps_asset_id": "49590387"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e1739461b000e9dabf6",
+          "campaignName": "WS - CS"
         },
-        "type": "MAP",
-        "createdBy": "korean-v6",
-        "language": "ko",
-        "lastUpdated": 1567662045636,
-        "firstPublished": 1567662036,
-        "lastPublished": 1567662037,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mhc39",
+        "subType": "clip",
+        "format": "video",
+        "title": "이것은 달을 걷는 우주인이 아니다",
+        "synopses": {
+          "short": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다."
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "korean.embedded_media.media_asset.49590387.page",
-            "cps_asset_id": "49590387"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhdmf.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
+        "versions": [
+          {
+            "versionId": "p07mhc3g",
+            "types": ["Original"],
+            "duration": 58,
+            "durationISO8601": "PT58S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e1739461b000e9dabf6",
-                    "campaignName": "WS - CS"
-                },
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "list"
+            "availableFrom": 1567660271
+          }
         ],
-        "includeComments": false
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07mhc39",
-                "subType": "clip",
-                "format": "video",
-                "title": "이것은 달을 걷는 우주인이 아니다",
-                "synopses": {
-                    "short": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다."
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "예술을 사용해 도시의 문제들을 드러내는 인도의 예술가의 작품을 영상에 담아봤다.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>기사 더 보기:</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>korean/international-49330977</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "해변 모래로 작품을 만드는 예술가",
+                  "headline": "니콜라 팔러: 해변 모래로 작품을 만드는 예술가",
+                  "overtyped": "해변 모래로 작품을 만드는 예술가"
                 },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhdmf.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
-                "versions": [
-                    {
-                        "versionId": "p07mhc3g",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 58,
-                        "durationISO8601": "PT58S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567660271
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "예술을 사용해 도시의 문제들을 드러내는 인도의 예술가의 작품을 영상에 담아봤다.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>기사 더 보기:</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>korean/international-49330977</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "해변 모래로 작품을 만드는 예술가",
-                                    "headline": "니콜라 팔러: 해변 모래로 작품을 만드는 예술가",
-                                    "overtyped": "해변 모래로 작품을 만드는 예술가"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/korean/international-49330977"
-                                },
-                                "summary": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.",
-                                "timestamp": 1566279408,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:korean/international-49330977",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>korean/international-47597527</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "조각가를 서서히 죽인 범인은 과연 누구였을까",
-                                    "headline": "침묵의 살인자: 조각가를 서서히 죽인 범인은 과연 누구였을까",
-                                    "overtyped": "조각가를 서서히 죽인 범인은 과연 누구였을까"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/korean/international-47597527"
-                                },
-                                "summary": "조개껍질 등 천연재료로 조각상을 만들던 캐나다의 한 여성이 중증 중금속 중독 진단을 받았다. 그녀를 죽음으로 몰고 간 침묵의 살인자는 과연 누구였을까",
-                                "timestamp": 1553560976,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                                        "categoryName": "Feature"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:korean/international-47597527",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            }
-        ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "이것은 달을 걷는 우주인이 아니다",
-            "headline": "이것은 달을 걷는 우주인이 아니다"
-        },
-        "locators": {
-            "assetUri": "/korean/media-49590387",
-            "cpsUrn": "urn:bbc:content:assetUri:korean/media-49590387",
-            "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d"
-        },
-        "summary": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
-        "timestamp": 1567662045636,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e1739461b000e9dabf6",
-                    "campaignName": "WS - CS"
+                "locators": {
+                  "href": "http://www.bbc.com/korean/international-49330977"
                 },
-                {
-                    "campaignId": "5a988e3139461b000e9dabf9",
-                    "campaignName": "WS - Divert me"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mhc39",
-            "subType": "clip",
-            "format": "video",
-            "title": "이것은 달을 걷는 우주인이 아니다",
-            "synopses": {
-                "short": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhdmf.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
-            "versions": [
-                {
-                    "versionId": "p07mhc3g",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 58,
-                    "durationISO8601": "PT58S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567660271
-                }
+                "summary": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.",
+                "timestamp": 1566279408,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:korean/international-49330977",
+                "type": "cps"
+              }
             ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108620202",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/4EEA/production/_108620202_p07mhdmf.jpg",
-            "path": "/cpsprodpb/4EEA/production/_108620202_p07mhdmf.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "Keyframe #1",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:korean/media-49590387",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>korean/international-47597527</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "조각가를 서서히 죽인 범인은 과연 누구였을까",
+                  "headline": "침묵의 살인자: 조각가를 서서히 죽인 범인은 과연 누구였을까",
+                  "overtyped": "조각가를 서서히 죽인 범인은 과연 누구였을까"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/korean/international-47597527"
+                },
+                "summary": "조개껍질 등 천연재료로 조각상을 만들던 캐나다의 한 여성이 중증 중금속 중독 진단을 받았다. 그녀를 죽음으로 몰고 간 침묵의 살인자는 과연 누구였을까",
+                "timestamp": 1553560976,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:korean/international-47597527",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "이것은 달을 걷는 우주인이 아니다",
+      "headline": "이것은 달을 걷는 우주인이 아니다"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/korean/media",
-            "type": "simple"
+    "locators": {
+      "assetUri": "/korean/media-49590387",
+      "cpsUrn": "urn:bbc:content:assetUri:korean/media-49590387",
+      "curie": "http://www.bbc.co.uk/asset/b20bff64-6037-6a43-a2a5-83a361e9123d"
+    },
+    "summary": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
+    "timestamp": 1567662045636,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e1739461b000e9dabf6",
+          "campaignName": "WS - CS"
         },
-        "site": {
-            "subType": "site",
-            "name": "BBC 코리아",
-            "uri": "/korean",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "해변 모래로 작품을 만드는 예술가",
-                            "headline": "니콜라 팔러: 해변 모래로 작품을 만드는 예술가"
-                        },
-                        "locators": {
-                            "assetUri": "/korean/international-49330977",
-                            "cpsUrn": "urn:bbc:content:assetUri:/korean/international-49330977"
-                        },
-                        "summary": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.",
-                        "timestamp": 1566279408,
-                        "cpsType": "MAP",
-                        "indexImage": {
-                            "id": "108334964",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/B75F/production/_108334964_p07l34dq.jpg",
-                            "path": "/cpsprodpb/B75F/production/_108334964_p07l34dq.jpg",
-                            "height": 576,
-                            "width": 1024,
-                            "altText": "Keyframe #1",
-                            "copyrightHolder": "BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:korean/international-49330977",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "조각가를 서서히 죽인 범인은 과연 누구였을까",
-                            "headline": "침묵의 살인자: 조각가를 서서히 죽인 범인은 과연 누구였을까"
-                        },
-                        "locators": {
-                            "assetUri": "/korean/international-47597527",
-                            "cpsUrn": "urn:bbc:content:assetUri:/korean/international-47597527"
-                        },
-                        "summary": "조개껍질 등 천연재료로 조각상을 만들던 캐나다의 한 여성이 중증 중금속 중독 진단을 받았다. 그녀를 죽음으로 몰고 간 침묵의 살인자는 과연 누구였을까",
-                        "timestamp": 1553560976,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "105165517",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/11784/production/_105165517_capture.jpg",
-                            "path": "/cpsprodpb/11784/production/_105165517_capture.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "La escultura \"Adán\" y Gillian Gensen",
-                            "copyrightHolder": "Gillian Gensen / BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:korean/international-47597527",
-                        "type": "cps"
-                    }
-                ]
-            }
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mhc39",
+      "subType": "clip",
+      "format": "video",
+      "title": "이것은 달을 걷는 우주인이 아니다",
+      "synopses": {
+        "short": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mhdmf.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "이것은 달을 걷는 우주인이 아니다. 움푹 패인 채 방치된 인도의 도로다.",
+      "versions": [
+        {
+          "versionId": "p07mhc3g",
+          "types": ["Original"],
+          "duration": 58,
+          "durationISO8601": "PT58S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567660271
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108620202",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/4EEA/production/_108620202_p07mhdmf.jpg",
+      "path": "/cpsprodpb/4EEA/production/_108620202_p07mhdmf.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Keyframe #1",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:korean/media-49590387",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/korean/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC 코리아",
+      "uri": "/korean",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "해변 모래로 작품을 만드는 예술가",
+              "headline": "니콜라 팔러: 해변 모래로 작품을 만드는 예술가"
+            },
+            "locators": {
+              "assetUri": "/korean/international-49330977",
+              "cpsUrn": "urn:bbc:content:assetUri:/korean/international-49330977"
+            },
+            "summary": "크로아티아의 네레트바 강 삼각주 모래는 해변 아트에 자주 쓰인다.",
+            "timestamp": 1566279408,
+            "cpsType": "MAP",
+            "indexImage": {
+              "id": "108334964",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B75F/production/_108334964_p07l34dq.jpg",
+              "path": "/cpsprodpb/B75F/production/_108334964_p07l34dq.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "Keyframe #1",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:korean/international-49330977",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "조각가를 서서히 죽인 범인은 과연 누구였을까",
+              "headline": "침묵의 살인자: 조각가를 서서히 죽인 범인은 과연 누구였을까"
+            },
+            "locators": {
+              "assetUri": "/korean/international-47597527",
+              "cpsUrn": "urn:bbc:content:assetUri:/korean/international-47597527"
+            },
+            "summary": "조개껍질 등 천연재료로 조각상을 만들던 캐나다의 한 여성이 중증 중금속 중독 진단을 받았다. 그녀를 죽음으로 몰고 간 침묵의 살인자는 과연 누구였을까",
+            "timestamp": 1553560976,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105165517",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11784/production/_105165517_capture.jpg",
+              "path": "/cpsprodpb/11784/production/_105165517_capture.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "La escultura \"Adán\" y Gillian Gensen",
+              "copyrightHolder": "Gillian Gensen / BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:korean/international-47597527",
+            "type": "cps"
+          }
         ]
-    }
+      }
+    ]
+  }
 }

@@ -37,12 +37,7 @@
     },
     "tags": {},
     "version": "v1.1.6",
-    "blockTypes": [
-      "paragraph",
-      "crosshead",
-      "media",
-      "list"
-    ],
+    "blockTypes": ["paragraph", "crosshead", "media", "list"],
     "includeComments": false
   },
   "content": {
@@ -78,9 +73,7 @@
         "versions": [
           {
             "versionId": "p01k6msp",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 191,
             "durationISO8601": "PT3M11S",
             "warnings": {
@@ -120,9 +113,7 @@
         "versions": [
           {
             "versionId": "p01kdbnv",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 162,
             "durationISO8601": "PT2M42S",
             "warnings": {
@@ -167,9 +158,7 @@
         "versions": [
           {
             "versionId": "p01kdbwt",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 162,
             "durationISO8601": "PT2M42S",
             "warnings": {
@@ -214,9 +203,7 @@
         "versions": [
           {
             "versionId": "p01kdbq2",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 122,
             "durationISO8601": "PT2M2S",
             "warnings": {},
@@ -256,9 +243,7 @@
         "versions": [
           {
             "versionId": "p01m7d09",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 127,
             "durationISO8601": "PT2M7S",
             "warnings": {
@@ -296,9 +281,7 @@
         "versions": [
           {
             "versionId": "p01m7d3h",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 127,
             "durationISO8601": "PT2M7S",
             "warnings": {},
@@ -333,9 +316,7 @@
         "versions": [
           {
             "versionId": "p01m7d4p",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 127,
             "durationISO8601": "PT2M7S",
             "warnings": {},
@@ -370,9 +351,7 @@
         "versions": [
           {
             "versionId": "p01n40vq",
-            "types": [
-              "Portrait"
-            ],
+            "types": ["Portrait"],
             "duration": 11,
             "durationISO8601": "PT11S",
             "warnings": {},
@@ -407,9 +386,7 @@
         "versions": [
           {
             "versionId": "p01n6yb1",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 343,
             "durationISO8601": "PT5M43S",
             "warnings": {
@@ -446,9 +423,7 @@
         "versions": [
           {
             "versionId": "p01n6ygf",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 1652,
             "durationISO8601": "PT27M32S",
             "warnings": {
@@ -485,9 +460,7 @@
         "versions": [
           {
             "versionId": "p01mbrx4",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 127,
             "durationISO8601": "PT2M7S",
             "warnings": {
@@ -524,9 +497,7 @@
         "versions": [
           {
             "versionId": "p01nl60p",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 191,
             "durationISO8601": "PT3M11S",
             "warnings": {},
@@ -562,9 +533,7 @@
         "versions": [
           {
             "versionId": "p01nl5yb",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 191,
             "durationISO8601": "PT3M11S",
             "warnings": {},

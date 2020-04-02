@@ -7,7 +7,7 @@ import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const getFeaturesAnalysis = platform => ({ service, dir, data }) => (
+const getFeaturesAnalysis = (platform) => ({ service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
     <ServiceContextProvider service={service}>
@@ -42,6 +42,20 @@ storiesOf('Containers|Features & Analysis/Canonical', module)
       dir: 'rtl',
       data: featuresRtl,
     }),
+  )
+  .add('igbo (ltr) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'igbo',
+      dir: 'ltr',
+      data: [features[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [featuresRtl[0]],
+    }),
   );
 
 storiesOf('Containers|Features & Analysis/AMP', module)
@@ -59,5 +73,19 @@ storiesOf('Containers|Features & Analysis/AMP', module)
       service: 'arabic',
       dir: 'rtl',
       data: featuresRtl,
+    }),
+  )
+  .add('igbo (ltr) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'igbo',
+      dir: 'ltr',
+      data: [features[0]],
+    }),
+  )
+  .add('arabic (rtl) with one item', () =>
+    canonicalFeaturesAnalysis({
+      service: 'arabic',
+      dir: 'rtl',
+      data: [featuresRtl[0]],
     }),
   );

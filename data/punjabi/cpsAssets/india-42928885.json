@@ -47,14 +47,8 @@
           "thingLabel": "Punjab",
           "thingUri": "http://www.bbc.co.uk/things/23b55a8e-f58c-404a-92ba-426dc5d00fee#id",
           "thingId": "23b55a8e-f58c-404a-92ba-426dc5d00fee",
-          "thingType": [
-            "Thing",
-            "Place",
-            "news:Place"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/_region"
-          ],
+          "thingType": ["Thing", "Place", "news:Place"],
+          "thingSameAs": ["http://dbpedia.org/resource/_region"],
           "topicName": "ਪੰਜਾਬ",
           "topicId": "c8y94yqdnxrt",
           "curationList": [
@@ -68,14 +62,8 @@
           "thingLabel": "Gujarat",
           "thingUri": "http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id",
           "thingId": "4317a084-9a75-42ad-bf1c-2f13ed498cc1",
-          "thingType": [
-            "Thing",
-            "Place",
-            "news:Place"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Gujarat"
-          ],
+          "thingType": ["Thing", "Place", "news:Place"],
+          "thingSameAs": ["http://dbpedia.org/resource/Gujarat"],
           "topicName": "ਗੁਜਰਾਤ",
           "topicId": "cpzd4z5z7g0t",
           "curationList": [
@@ -89,13 +77,8 @@
           "thingLabel": "Deepika Padukone",
           "thingUri": "http://www.bbc.co.uk/things/8b977a7c-a1cf-48b2-94b2-02769fec97ea#id",
           "thingId": "8b977a7c-a1cf-48b2-94b2-02769fec97ea",
-          "thingType": [
-            "Thing",
-            "Person"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Deepika_Padukone"
-          ],
+          "thingType": ["Thing", "Person"],
+          "thingSameAs": ["http://dbpedia.org/resource/Deepika_Padukone"],
           "topicName": "ਦੀਪਿਕਾ ਪਾਦੁਕੋਨ",
           "topicId": "c5qvpq4d207t",
           "curationList": [
@@ -109,13 +92,8 @@
           "thingLabel": "Photography",
           "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
           "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Photography"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Photography"],
           "topicName": "ਫ਼ੋਟੋਗ੍ਰਾਫ਼ੀ",
           "topicId": "cpzd4z5qxqjt",
           "curationList": [
@@ -129,14 +107,8 @@
           "thingLabel": "Maharashtra",
           "thingUri": "http://www.bbc.co.uk/things/b805724b-b4b1-41db-9c16-de0dd571b599#id",
           "thingId": "b805724b-b4b1-41db-9c16-de0dd571b599",
-          "thingType": [
-            "Thing",
-            "Place",
-            "news:Place"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Maharashtra"
-          ],
+          "thingType": ["Thing", "Place", "news:Place"],
+          "thingSameAs": ["http://dbpedia.org/resource/Maharashtra"],
           "topicName": "ਮਹਾਰਾਸ਼ਟਰ",
           "topicId": "c1gdqgzgdgnt",
           "curationList": [
@@ -149,9 +121,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {
