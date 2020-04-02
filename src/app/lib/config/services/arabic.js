@@ -164,6 +164,22 @@ export const service = {
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
+          text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
+        },
+        fallback: {
+          text: 'المحتوى غير متاح',
+          linkText: '%provider_name% اطلع على المزيد في',
+          linkTextSuffixVisuallyHidden: '، خارجي',
+          warningText: 'بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
+        },
+        skipLink: {
+          text: 'أهمل %provider_name% مشاركة',
+          endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -219,22 +235,6 @@ export const service = {
       ],
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
-          text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
-        },
-        fallback: {
-          text: 'المحتوى غير متاح',
-          linkText: '%provider_name% اطلع على المزيد في',
-          linkTextSuffixVisuallyHidden: '، خارجي',
-          warningText: 'بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
-        },
-        skipLink: {
-          text: 'أهمل %provider_name% مشاركة',
-          endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
-        },
-      },
     },
     fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
     timezone: 'GMT',
