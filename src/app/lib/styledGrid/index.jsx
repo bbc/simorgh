@@ -101,12 +101,12 @@ const PopOutAtGroup5 = styled.div`
     }
   }
 `;
-export const PopOutGridItemMedium = props => {
+export const PopOutGridItemMedium = (props) => {
   const { children } = props;
   return <PopOutAtGroup5 {...props}>{children}</PopOutAtGroup5>;
 };
 
-export const NestedGridItemLarge = props => {
+export const NestedGridItemLarge = (props) => {
   const { children } = props;
   return (
     <NestedGridParentLarge>
@@ -114,7 +114,7 @@ export const NestedGridItemLarge = props => {
     </NestedGridParentLarge>
   );
 };
-export const NestedGridItemMedium = props => {
+export const NestedGridItemMedium = (props) => {
   const { children } = props;
   return (
     <NestedGridParentMedium>
@@ -124,7 +124,7 @@ export const NestedGridItemMedium = props => {
     </NestedGridParentMedium>
   );
 };
-export const NestedGridItemSmall = props => {
+export const NestedGridItemSmall = (props) => {
   const { children } = props;
   return (
     <NestedGridParentSmall>

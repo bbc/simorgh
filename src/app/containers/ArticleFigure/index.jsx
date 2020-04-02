@@ -13,7 +13,7 @@ import {
   NestedGridItemChildLarge,
 } from '#lib/styledGrid';
 
-const renderCopyright = copyright =>
+const renderCopyright = (copyright) =>
   copyright && <Copyright>{copyright}</Copyright>;
 
 const renderCaption = (block, type, service) =>

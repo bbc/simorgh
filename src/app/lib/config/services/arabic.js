@@ -26,12 +26,12 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
     defaultImageAltText: 'BBC News عربي',
     dir: 'rtl',
-    externalLinkText: ' ،خارجي',
-    imageCaptionOffscreenText: ' ،التعليق على الصورة',
-    videoCaptionOffscreenText: ' ،التعليق على الفيديو',
-    audioCaptionOffscreenText: ' ،التعليق على التسجيل السماعي',
-    defaultCaptionOffscreenText: '،التعليق',
-    imageCopyrightOffscreenText: ' ،مصدر الصورة',
+    externalLinkText: 'خارجي، ',
+    imageCaptionOffscreenText: 'التعليق على الصورة، ',
+    videoCaptionOffscreenText: 'التعليق على الفيديو، ',
+    audioCaptionOffscreenText: 'التعليق على التسجيل الصوتي، ',
+    defaultCaptionOffscreenText: 'التعليق، ',
+    imageCopyrightOffscreenText: 'صدر الصورة، ',
     locale: 'ar',
     datetimeLocale: 'ar',
     service: 'arabic',
@@ -52,31 +52,30 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'See all',
-      home: 'رئيسية',
+      seeAll: 'إظهر الكل',
+      home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
       navMenuText: 'أقسام',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'مشغل وسائط',
+        audioPlayer: 'مشغل ملف صوتي',
+        videoPlayer: 'مشغل فيديو',
       },
       error: {
         404: {
           statusCode: '404',
           title: 'لم يتسن العثور على الصفحة',
           message:
-            'آسفون، لم نتمكن من العثور على الصفحة التي تطلبها. الرجاء حاول:',
+            'للأسف، لم نتمكن من العثور على الصفحة التي تطلبها. الرجاء حاول:',
           solutions: [
-            'أن تتأكد من عنوان الصفحة (url)',
-            'أن تنقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
-            'أن تبحث عن هذه الصفحة باستخدام خانة البحث الخاصة ببي بي سي',
+            'التأكد من عنوان الصفحة (url)',
+            'نقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
+            'البحث عن هذه الصفحة باستخدام خانة البحث الخاصة ببي بي سي',
           ],
-          callToActionFirst:
-            'كبديل، يرجى زيارة الصفحة الرئيسية لأخبار بي بي سي ',
-          callToActionLinkText: 'Arabic',
+          callToActionFirst: 'كبديل، يرجى زيارة الصفحة الرئيسية لأخبار ',
+          callToActionLinkText: 'BBC News عربي',
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/arabic',
         },
@@ -84,10 +83,10 @@ export const service = {
           statusCode: '500',
           title: 'خلل داخلي في الخادم',
           message:
-            'آسفون، لم نتمكن من العثور على الصفحة التي تطلبها. الرجاء حاول:',
+            'للأسف، لم نتمكن من العثور على الصفحة التي تطلبها. الرجاء حاول:',
           solutions: [
-            'أن تنقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
-            'أن تكرر الطلب بعد فترة',
+            'نقر زر التجديد (refresh) في برنامج التصفح الذي تستخدمه',
+            'تكرار الطلب بعد فترة',
           ],
           callToActionFirst:
             'كبديل، يرجى زيارة الصفحة الرئيسية لأخبار بي بي سي ',
@@ -99,18 +98,18 @@ export const service = {
       consentBanner: {
         privacy: {
           title:
-            'لقد حدّثنا تعليماتنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الإرتباط (الكوكيز)',
+            'لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط (الكوكيز)',
           description: {
             uk: {
               first:
-                'لقد أدخلنا تغييرات مهمة لتعليماتنا المتعلقة بالخصوصية وللشروط الخاصة بملفات الإرتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
+                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                'لقد أدخلنا تغييرات مهمة لتعليماتنا المتعلقة بالخصوصية وللشروط الخاصة بملفات الإرتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
+                'لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم',
               linkText: null,
               last: null,
               linkUrl: null,
@@ -150,20 +149,36 @@ export const service = {
         noJs: 'جهازك لا يدعم تشغيل الفيديو',
         contentExpired: 'هذا المحتوى لم يعد متوفراً',
         audio: 'تسجيل صوتي',
-        photogallery: 'معرض الصور',
+        photogallery: 'ملف صور',
         video: 'فيديو',
         bbc_arabic_radio: {
           title: 'إذاعة بي بي سي العربية',
           subtitle:
             'خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي',
         },
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'استمع',
+        watch: 'شاهد',
         liveLabel: 'مباشر',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'لاحق',
+        previousRadioShow: 'البرنامج الإذاعي السابق',
+        nextRadioShow: 'البرنامج الإذاعي اللاحق',
+        duration: 'المدة',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
+          text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
+        },
+        fallback: {
+          text: 'المحتوى غير متاح',
+          linkText: '%provider_name% اطلع على المزيد في',
+          linkTextSuffixVisuallyHidden: '، خارجي',
+          warningText: 'بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
+        },
+        skipLink: {
+          text: 'أهمل %provider_name% مشاركة',
+          endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
+        },
       },
     },
     brandSVG,
@@ -205,7 +220,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'ملفات الارتباط Cookies',
         },
         {
           href: 'https://www.bbc.com/arabic/institutional-37731355',
@@ -220,22 +235,6 @@ export const service = {
       ],
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'التعليق على الفيديو، ',
-          text: 'تحذير: المحتوى من طرف ثالث قد يتضمن إعلانات',
-        },
-        fallback: {
-          text: 'المحتوى غير متاح',
-          linkText: '%provider_name% اطلع على المزيد في',
-          linkTextSuffixVisuallyHidden: '، خارجي',
-          warningText: 'بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
-        },
-        skipLink: {
-          text: 'أهمل %provider_name% مشاركة',
-          endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
-        },
-      },
     },
     fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
     timezone: 'GMT',

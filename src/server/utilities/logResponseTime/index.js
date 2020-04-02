@@ -12,8 +12,9 @@ const logResponseTime = (req, res, next) => {
   res.on('finish', () => {
     const elapsedHrTime = process.hrtime(startHrTime);
     logger.info(
-      `ResponseTime: ${elapsedHrTime[0] * NS_PER_SEC +
-        elapsedHrTime[1]}, Path: ${req.path}`,
+      `ResponseTime: ${
+        elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1]
+      }, Path: ${req.path}`,
     );
   });
 

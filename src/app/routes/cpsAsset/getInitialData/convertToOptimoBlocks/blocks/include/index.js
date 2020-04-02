@@ -15,7 +15,7 @@ const includeUrls = {
    in the page data because serializing window.SIMORGH_DATA with an html string
     as part of the JSON will result in having some characters unescaped.
 */
-const encodeHTML = str =>
+const encodeHTML = (str) =>
   String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -23,7 +23,7 @@ const encodeHTML = str =>
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 
-const fetchMarkup = async url => {
+const fetchMarkup = async (url) => {
   try {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
       Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
@@ -61,7 +61,7 @@ const convertInclude = async ({ href, type, ...rest }) => {
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => supportedType =>
+  const hrefIsSupported = () => (supportedType) =>
     href && href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href

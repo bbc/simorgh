@@ -84,7 +84,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
-    findIndex(group => group.type === 'useful-links')(groups) > -1;
+    findIndex((group) => group.type === 'useful-links')(groups) > -1;
 
   const renderMostRead = () => (
     <MostReadContainer

@@ -45,10 +45,7 @@
           "thingLabel": "BBC",
           "thingUri": "http://www.bbc.co.uk/things/25844b6e-80b0-4de9-8ea0-7a35e7d4086f#id",
           "thingId": "25844b6e-80b0-4de9-8ea0-7a35e7d4086f",
-          "thingType": [
-            "Organisation",
-            "Thing"
-          ],
+          "thingType": ["Organisation", "Thing"],
           "thingSameAs": [
             "http://dbpedia.org/resource/BBC",
             "http://www.wikidata.org/entity/Q9531"
@@ -65,9 +62,7 @@
       ]
     },
     "version": "v1.0.10",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

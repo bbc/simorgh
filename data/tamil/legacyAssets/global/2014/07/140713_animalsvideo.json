@@ -21,7 +21,7 @@
     "analyticsLabels": { "cps_asset_type": "map" },
     "tags": {},
     "version": "v1.0.0",
-    "blockTypes": [ "legacyMedia", "paragraph" ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "includeComments": false
   },
   "content": {
@@ -94,8 +94,18 @@
     "type": "cps"
   },
   "relatedContent": {
-    "section": { "subType": "index", "name": "உலகம்", "uri": "/tamil/global", "type": "simple" },
-    "site": { "subType": "site", "name": "BBCTamil.com", "uri": "/tamil", "type": "simple" },
+    "section": {
+      "subType": "index",
+      "name": "உலகம்",
+      "uri": "/tamil/global",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBCTamil.com",
+      "uri": "/tamil",
+      "type": "simple"
+    },
     "groups": []
   }
 }
