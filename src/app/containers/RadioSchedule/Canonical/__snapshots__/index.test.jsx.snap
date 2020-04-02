@@ -352,27 +352,14 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 }
 
 .c34 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   font-size: 1.0625rem;
   line-height: 1.5rem;
   font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-}
-
-.c34:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c34:hover,
@@ -1211,7 +1198,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
                   class="c30"
                   dir="rtl"
                 >
-                  NEXT 
+                  لاحق 
                 </span>
                 العالم هذا الصباح
                 <span

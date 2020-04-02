@@ -93,7 +93,7 @@ describe('App', () => {
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
           route.getInitialData.mockImplementation(() => {
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
               setTimeout(
                 () =>
                   resolve({
@@ -169,7 +169,7 @@ describe('App', () => {
           };
 
           route.getInitialData.mockImplementation(() => {
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
               setTimeout(() => resolve(data), 600);
             });
           });

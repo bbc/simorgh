@@ -24,9 +24,7 @@
             },
             "duration": 5,
             "durationISO8601": "PT5S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01kx42v",
             "warnings": {}
           }
@@ -130,13 +128,7 @@
       "cps_asset_id": "23256797",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "media",
-      "paragraph",
-      "heading",
-      "list",
-      "image"
-    ],
+    "blockTypes": ["media", "paragraph", "heading", "list", "image"],
     "createdBy": "yoruba-v6",
     "firstPublished": 1574857137000,
     "id": "urn:bbc:ares::asset:yoruba/media-23256797",
@@ -211,9 +203,7 @@
           },
           "duration": 5,
           "durationISO8601": "PT5S",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "versionId": "p01kx42v",
           "warnings": {}
         }
@@ -291,9 +281,7 @@
                   },
                   "duration": 152,
                   "durationISO8601": "PT2M32S",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "versionId": "p01g40g8",
                   "warnings": {}
                 }

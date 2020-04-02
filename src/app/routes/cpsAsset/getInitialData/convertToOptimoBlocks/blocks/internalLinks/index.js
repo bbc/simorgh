@@ -27,12 +27,12 @@ const getUrl = path(['locators', 'href']);
 
 const getLinkText = path(['headlines', 'overtyped']);
 
-const itemIdEndsWith = string => ({ id }) => id.endsWith(string);
+const itemIdEndsWith = (string) => ({ id }) => id.endsWith(string);
 
 const getItemMetadata = (id, metadata) => metadata.find(itemIdEndsWith(id));
 
 // Given a block that has text, gather up any <itemMeta> tags within that text
-const getItemMetaMatches = text =>
+const getItemMetaMatches = (text) =>
   Array.from(text.matchAll(/<itemMeta>(.*?)<\/itemMeta>/g));
 
 const whiteSpaceRegex = /(\r?\n|\r)\s*/g;
@@ -50,7 +50,7 @@ const getLinkXML = (url, text) =>
 </link>
 `.replace(whiteSpaceRegex, '');
 
-const replaceChevrons = text =>
+const replaceChevrons = (text) =>
   text
     .replace('<', '&lt;')
     .replace('>', '&gt;')
@@ -83,7 +83,7 @@ const transformBlock = ({ text, items, ...block }) => ({
   }),
 });
 
-export default inputData => {
+export default (inputData) => {
   const blocks = getBlocks(inputData);
 
   if (blocks && blocks.length) {

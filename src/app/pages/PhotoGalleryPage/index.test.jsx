@@ -16,20 +16,8 @@ import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 const toggleState = {
-  local: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  live: {
-    mediaPlayer: {
-      enabled: false,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
@@ -52,8 +40,8 @@ const createAssetPage = ({ pageData }, service) => (
   </StaticRouter>
 );
 
-jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
-  const PageWrapperContainer = props => (
+jest.mock('#containers/PageHandlers/withPageWrapper', () => (Component) => {
+  const PageWrapperContainer = (props) => (
     <div id="PageWrapperContainer">
       <Component {...props} />
     </div>
@@ -62,8 +50,8 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
+jest.mock('#containers/PageHandlers/withLoading', () => (Component) => {
+  const LoadingContainer = (props) => (
     <div id="LoadingContainer">
       <Component {...props} />
     </div>
@@ -72,8 +60,8 @@ jest.mock('#containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('#containers/PageHandlers/withError', () => Component => {
-  const ErrorContainer = props => (
+jest.mock('#containers/PageHandlers/withError', () => (Component) => {
+  const ErrorContainer = (props) => (
     <div id="ErrorContainer">
       <Component {...props} />
     </div>
@@ -82,8 +70,8 @@ jest.mock('#containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('#containers/PageHandlers/withData', () => Component => {
-  const DataContainer = props => (
+jest.mock('#containers/PageHandlers/withData', () => (Component) => {
+  const DataContainer = (props) => (
     <div id="DataContainer">
       <Component {...props} />
     </div>
@@ -92,8 +80,8 @@ jest.mock('#containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  const ContextsContainer = props => (
+jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
+  const ContextsContainer = (props) => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>

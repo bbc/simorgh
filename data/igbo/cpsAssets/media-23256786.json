@@ -1,212 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": true,
-          "caption": "short",
-          "embedding": true,
-          "format": "video",
-          "id": "p01kx42s",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-          "subType": "clip",
-          "synopses": {
-            "short": "short"
-          },
-          "title": "alt-text world service clip",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1545304011000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 5,
-              "durationISO8601": "PT5S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01kx42v",
-              "warnings": {}
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "role": "introduction",
-          "text": "Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa. (introduction)",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<bold>Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya.</bold><bold> (heading) </bold>",
-          "type": "paragraph"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<bold><italic>Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (</italic></bold><bold><italic>sub</italic></bold><bold><italic>heading) </italic></bold>",
-          "type": "paragraph"
-        },
-        {
-          "items": [
-            {
-              "markupType": "plain_text",
-              "text": "Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list) ",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Lee nri ogbenye 10 ọgaranya na-erizi",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.",
-              "type": "listItem"
-            }
-          ],
-          "numbered": true,
-          "type": "list"
-        },
-        {
-          "altText": "test image",
-          "caption": "This is a test",
-          "copyrightHolder": "Getty Images",
-          "height": 549,
-          "href": "http://b.files.bbci.co.uk/79BA/test/_63726113_test66.jpg",
-          "id": "63726113",
-          "path": "/cpsdevpb/79BA/test/_63726113_test66.jpg",
-          "positionHint": "full-width",
-          "subType": "body",
-          "type": "image",
-          "width": 976
-        },
-        {
-          "items": [
-            {
-              "markupType": "plain_text",
-              "text": "Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Akụkọ ndị ga-amasị gị (bulleted list)",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Ị na-anụ maka Dan Anyiam, gịnị ka ị ma maka ya?",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Ihe ise ị ga-eme ma ọ bụrụ na esemokwu ezinụlọ na-emekpa gị",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Allen Onyema tụkwasịrị m asị - Nnamdi Kanu",
-              "type": "listItem"
-            },
-            {
-              "markupType": "plain_text",
-              "text": "Ndị hụrụ ka e si gbuo ndị ọrụ koolu n'Enugwu",
-              "type": "listItem"
-            }
-          ],
-          "numbered": false,
-          "type": "list"
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<bold>Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.</bold><bold> (bold)</bold>",
-          "type": "paragraph"
-        },
-        {
-          "altText": "test image",
-          "caption": "syndication has been restricted",
-          "copyrightHolder": "BBC",
-          "height": 360,
-          "href": "http://b.files.bbci.co.uk/115FA/test/_63726117_test66.jpg",
-          "id": "63726117",
-          "path": "/cpsdevpb/115FA/test/_63726117_test66.jpg",
-          "positionHint": "full-width",
-          "subType": "body",
-          "type": "image",
-          "width": 640
-        },
-        {
-          "markupType": "candy_xml",
-          "text": "<italic>Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.</italic>",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "igbo.embedded_media.media_asset.23256786.page",
-        "cps_asset_id": "23256786",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph",
-        "list",
-        "image"
-      ],
-      "createdBy": "igbo-v6",
-      "firstPublished": 1574856014000,
-      "id": "urn:bbc:ares::asset:igbo/media-23256786",
-      "includeComments": false,
-      "language": "ig",
-      "lastPublished": 1574856357000,
-      "lastUpdated": 1574856371581,
-      "locators": {
-        "assetUri": "/igbo/media-23256786",
-        "cpsUrn": "urn:bbc:content:assetUri:igbo/media-23256786",
-        "curie": "http://www.bbc.co.uk/asset/81811624-5245-4c4a-9c52-df2cdeef356c"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "type": "MAP",
-      "version": "v1.1.3"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "Ọgba mbọ: Onye ọkaiwu na-ere ọkpa",
-        "shortHeadline": "Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"
-      },
-      "id": "urn:bbc:ares::asset:igbo/media-23256786",
-      "indexImage": {
-        "altText": "connectionAltText",
-        "copyrightHolder": "BBC",
-        "height": 576,
-        "href": "http://b.files.bbci.co.uk/13D0A/test/_63726118_p01kx435.jpg",
-        "id": "63726118",
-        "path": "/cpsdevpb/13D0A/test/_63726118_p01kx435.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 1024
-      },
-      "locators": {
-        "assetUri": "/igbo/media-23256786",
-        "cpsUrn": "urn:bbc:content:assetUri:igbo/media-23256786",
-        "curie": "http://www.bbc.co.uk/asset/81811624-5245-4c4a-9c52-df2cdeef356c"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": true,
         "caption": "short",
         "embedding": true,
@@ -229,116 +24,310 @@
             },
             "duration": 5,
             "durationISO8601": "PT5S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01kx42v",
             "warnings": {}
           }
         ]
       },
-      "passport": {
-        "taggings": []
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa. (introduction)",
+        "type": "paragraph"
       },
-      "summary": "Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa.",
-      "timestamp": 1574856371581,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [
-        {
-          "promos": [
-            {
-              "cpsType": "PGL",
-              "headlines": {
-                "headline": "A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d",
-                "shortHeadline": "A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d"
-              },
-              "id": "urn:bbc:ares::asset:igbo/institutional-23159681",
-              "locators": {
-                "assetUri": "/igbo/institutional-23159681",
-                "cpsUrn": "urn:bbc:content:assetUri:/igbo/institutional-23159681"
-              },
-              "summary": "Sụ́m̀m̄ary fọ̀r t€st ass€t. Pl€ase ị̄gn̄ọ̄r€.",
-              "timestamp": 1508840394000,
-              "type": "cps"
-            },
-            {
-              "cpsType": "MAP",
-              "headlines": {
-                "headline": "teṅst da¶ta fm̀or thm̄e vin̄deo1",
-                "shortHeadline": "Teọ́st datọ̀a fọ̄or tụ́he vụ̀ideo ụ̄pgfcvgv"
-              },
-              "id": "urn:bbc:ares::asset:igbo/media-23159529",
-              "indexImage": {
-                "altText": "Keyframe #7",
-                "caption": "te¶st_cụ́aptị̀ọ̀n",
-                "copyrightHolder": "BBC",
-                "height": 576,
-                "href": "http://b.files.bbci.co.uk/8CEF/test/_63597063_p01ds669.jpg",
-                "id": "63597063",
-                "path": "/cpsdevpb/8CEF/test/_63597063_p01ds669.jpg",
-                "subType": "index",
-                "type": "image",
-                "width": 1024
-              },
-              "locators": {
-                "assetUri": "/igbo/media-23159529",
-                "cpsUrn": "urn:bbc:content:assetUri:/igbo/media-23159529"
-              },
-              "media": {
-                "advertising": true,
-                "caption": "teị̀st_captịọn",
-                "embedding": false,
-                "format": "video",
-                "id": "p01ds65c",
-                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ds669.jpg",
-                "subType": "clip",
-                "synopses": {
-                  "long": "test data for the video123",
-                  "medium": "test data for the video12",
-                  "short": "test data for the video1"
-                },
-                "title": "Test data for the video",
-                "type": "media",
-                "versions": [
-                  {
-                    "availableFrom": 1508759722000,
-                    "availableTerritories": {
-                      "nonUk": true,
-                      "uk": true,
-                      "world": false
-                    },
-                    "duration": 16,
-                    "durationISO8601": "PT16S",
-                    "types": [
-                      "Original"
-                    ],
-                    "versionId": "p01ds65f",
-                    "warnings": {}
-                  }
-                ]
-              },
-              "mediaType": "Video",
-              "summary": "tes€t datụa fo¶r thọ̄e videụụ̀12",
-              "timestamp": 1508925023000,
-              "type": "cps"
-            }
-          ],
-          "type": "see-alsos"
-        }
-      ],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/igbo/media"
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya.</bold><bold> (heading) </bold>",
+        "type": "paragraph"
       },
-      "site": {
-        "name": "BBC News Ìgbò",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/igbo"
+      {
+        "markupType": "candy_xml",
+        "text": "<bold><italic>Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (</italic></bold><bold><italic>sub</italic></bold><bold><italic>heading) </italic></bold>",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list) ",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Lee nri ogbenye 10 ọgaranya na-erizi",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.",
+            "type": "listItem"
+          }
+        ],
+        "numbered": true,
+        "type": "list"
+      },
+      {
+        "altText": "test image",
+        "caption": "This is a test",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/79BA/test/_63726113_test66.jpg",
+        "id": "63726113",
+        "path": "/cpsdevpb/79BA/test/_63726113_test66.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Akụkọ ndị ga-amasị gị (bulleted list)",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Ị na-anụ maka Dan Anyiam, gịnị ka ị ma maka ya?",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Ihe ise ị ga-eme ma ọ bụrụ na esemokwu ezinụlọ na-emekpa gị",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Allen Onyema tụkwasịrị m asị - Nnamdi Kanu",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Ndị hụrụ ka e si gbuo ndị ọrụ koolu n'Enugwu",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.</bold><bold> (bold)</bold>",
+        "type": "paragraph"
+      },
+      {
+        "altText": "test image",
+        "caption": "syndication has been restricted",
+        "copyrightHolder": "BBC",
+        "height": 360,
+        "href": "http://b.files.bbci.co.uk/115FA/test/_63726117_test66.jpg",
+        "id": "63726117",
+        "path": "/cpsdevpb/115FA/test/_63726117_test66.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 640
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<italic>Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.</italic>",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "igbo.embedded_media.media_asset.23256786.page",
+      "cps_asset_id": "23256786",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "list", "image"],
+    "createdBy": "igbo-v6",
+    "firstPublished": 1574856014000,
+    "id": "urn:bbc:ares::asset:igbo/media-23256786",
+    "includeComments": false,
+    "language": "ig",
+    "lastPublished": 1574856357000,
+    "lastUpdated": 1574856371581,
+    "locators": {
+      "assetUri": "/igbo/media-23256786",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/media-23256786",
+      "curie": "http://www.bbc.co.uk/asset/81811624-5245-4c4a-9c52-df2cdeef356c"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Ọgba mbọ: Onye ọkaiwu na-ere ọkpa",
+      "shortHeadline": "Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"
+    },
+    "id": "urn:bbc:ares::asset:igbo/media-23256786",
+    "indexImage": {
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/13D0A/test/_63726118_p01kx435.jpg",
+      "id": "63726118",
+      "path": "/cpsdevpb/13D0A/test/_63726118_p01kx435.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "locators": {
+      "assetUri": "/igbo/media-23256786",
+      "cpsUrn": "urn:bbc:content:assetUri:igbo/media-23256786",
+      "curie": "http://www.bbc.co.uk/asset/81811624-5245-4c4a-9c52-df2cdeef356c"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "short",
+      "embedding": true,
+      "format": "video",
+      "id": "p01kx42s",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "short"
+      },
+      "title": "alt-text world service clip",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1545304011000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 5,
+          "durationISO8601": "PT5S",
+          "types": ["Original"],
+          "versionId": "p01kx42v",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa.",
+    "timestamp": 1574856371581,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "PGL",
+            "headlines": {
+              "headline": "A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d",
+              "shortHeadline": "A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d"
+            },
+            "id": "urn:bbc:ares::asset:igbo/institutional-23159681",
+            "locators": {
+              "assetUri": "/igbo/institutional-23159681",
+              "cpsUrn": "urn:bbc:content:assetUri:/igbo/institutional-23159681"
+            },
+            "summary": "Sụ́m̀m̄ary fọ̀r t€st ass€t. Pl€ase ị̄gn̄ọ̄r€.",
+            "timestamp": 1508840394000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "MAP",
+            "headlines": {
+              "headline": "teṅst da¶ta fm̀or thm̄e vin̄deo1",
+              "shortHeadline": "Teọ́st datọ̀a fọ̄or tụ́he vụ̀ideo ụ̄pgfcvgv"
+            },
+            "id": "urn:bbc:ares::asset:igbo/media-23159529",
+            "indexImage": {
+              "altText": "Keyframe #7",
+              "caption": "te¶st_cụ́aptị̀ọ̀n",
+              "copyrightHolder": "BBC",
+              "height": 576,
+              "href": "http://b.files.bbci.co.uk/8CEF/test/_63597063_p01ds669.jpg",
+              "id": "63597063",
+              "path": "/cpsdevpb/8CEF/test/_63597063_p01ds669.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 1024
+            },
+            "locators": {
+              "assetUri": "/igbo/media-23159529",
+              "cpsUrn": "urn:bbc:content:assetUri:/igbo/media-23159529"
+            },
+            "media": {
+              "advertising": true,
+              "caption": "teị̀st_captịọn",
+              "embedding": false,
+              "format": "video",
+              "id": "p01ds65c",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01ds669.jpg",
+              "subType": "clip",
+              "synopses": {
+                "long": "test data for the video123",
+                "medium": "test data for the video12",
+                "short": "test data for the video1"
+              },
+              "title": "Test data for the video",
+              "type": "media",
+              "versions": [
+                {
+                  "availableFrom": 1508759722000,
+                  "availableTerritories": {
+                    "nonUk": true,
+                    "uk": true,
+                    "world": false
+                  },
+                  "duration": 16,
+                  "durationISO8601": "PT16S",
+                  "types": ["Original"],
+                  "versionId": "p01ds65f",
+                  "warnings": {}
+                }
+              ]
+            },
+            "mediaType": "Video",
+            "summary": "tes€t datụa fo¶r thọ̄e videụụ̀12",
+            "timestamp": 1508925023000,
+            "type": "cps"
+          }
+        ],
+        "type": "see-alsos"
+      }
+    ],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/igbo/media"
+    },
+    "site": {
+      "name": "BBC News Ìgbò",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/igbo"
     }
   }
+}

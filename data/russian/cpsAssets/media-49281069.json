@@ -1,312 +1,299 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:russian/media-49281069",
-        "locators": {
-            "assetUri": "/russian/media-49281069",
-            "cpsUrn": "urn:bbc:content:assetUri:russian/media-49281069",
-            "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/media-49281069",
+    "locators": {
+      "assetUri": "/russian/media-49281069",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/media-49281069",
+      "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c"
+    },
+    "type": "MAP",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1565286287488,
+    "firstPublished": 1565279939,
+    "lastPublished": 1565286277,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "russian.media.media_asset.49281069.page",
+      "cps_asset_id": "49281069"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Animals",
+          "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
+          "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Animal",
+            "http://www.wikidata.org/entity/Q729"
+          ]
         },
-        "type": "MAP",
-        "createdBy": "russian-v6",
-        "language": "ru",
-        "lastUpdated": 1565286287488,
-        "firstPublished": 1565279939,
-        "lastPublished": 1565286277,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "thingLabel": "Earthquakes",
+          "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
+          "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
+          "thingType": ["Theme", "Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Earthquake",
+            "http://www.wikidata.org/entity/Q7944"
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07k34pg",
+        "subType": "clip",
+        "format": "video",
+        "title": "Землетрясение в Тайване всполошило котов",
+        "synopses": {
+          "short": "Землетрясение в Тайване всполошило котов",
+          "long": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.\n\nИз-за разгула стихии электричества лишились около 2000 домов. О жертвах и разрушениях не сообщается.",
+          "medium": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные."
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "russian.media.media_asset.49281069.page",
-            "cps_asset_id": "49281069"
-        },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            }
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Animals",
-                    "thingUri": "http://www.bbc.co.uk/things/14745d1f-885d-4b9f-b28a-24540e7beb15#id",
-                    "thingId": "14745d1f-885d-4b9f-b28a-24540e7beb15",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Animal",
-                        "http://www.wikidata.org/entity/Q729"
-                    ]
-                },
-                {
-                    "thingLabel": "Earthquakes",
-                    "thingUri": "http://www.bbc.co.uk/things/8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8#id",
-                    "thingId": "8a4af51f-02ed-4473-a7cd-4fabfb8c5ad8",
-                    "thingType": [
-                        "Theme",
-                        "Thing"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Earthquake",
-                        "http://www.wikidata.org/entity/Q7944"
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07k35ds.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Землетрясение в Тайване всполошило котов",
+        "versions": [
+          {
+            "versionId": "p07k34pk",
+            "types": ["Original"],
+            "duration": 39,
+            "durationISO8601": "PT39S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1565264403
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      },
+      {
+        "text": "На северо-восточном побережье Тайваня произошло землетрясение магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Из-за разгула стихии электричества лишились около 2000 домов. О жертвах и разрушениях не сообщается.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Землетрясение на Тайване всполошило котов",
+      "headline": "Землетрясение на Тайване всполошило котов"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07k34pg",
-                "subType": "clip",
-                "format": "video",
-                "title": "Землетрясение в Тайване всполошило котов",
-                "synopses": {
-                    "short": "Землетрясение в Тайване всполошило котов",
-                    "long": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.\n\nИз-за разгула стихии электричества лишились около 2000 домов. О жертвах и разрушениях не сообщается.",
-                    "medium": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные."
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07k35ds.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "Землетрясение в Тайване всполошило котов",
-                "versions": [
-                    {
-                        "versionId": "p07k34pk",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 39,
-                        "durationISO8601": "PT39S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1565264403
-                    }
-                ],
-                "type": "media"
+    "locators": {
+      "assetUri": "/russian/media-49281069",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/media-49281069",
+      "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c"
+    },
+    "summary": "На северо-восточном побережье Тайваня произошло землетрясение магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.",
+    "timestamp": 1565286287488,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      }
+    },
+    "media": {
+      "id": "p07k34pg",
+      "subType": "clip",
+      "format": "video",
+      "title": "Землетрясение в Тайване всполошило котов",
+      "synopses": {
+        "short": "Землетрясение в Тайване всполошило котов",
+        "long": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.\n\nИз-за разгула стихии электричества лишились около 2000 домов. О жертвах и разрушениях не сообщается.",
+        "medium": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07k35ds.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Землетрясение в Тайване всполошило котов",
+      "versions": [
+        {
+          "versionId": "p07k34pk",
+          "types": ["Original"],
+          "duration": 39,
+          "durationISO8601": "PT39S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1565264403
+        }
+      ],
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108243268",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/150DA/production/_108243268_p07k35ds.jpg",
+      "path": "/cpsprodpb/150DA/production/_108243268_p07k35ds.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Коты до начала землетрясения.",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/media-49281069",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/russian/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Почему нам важно знать всю правду о мурчании кошек",
+              "headline": "Почему нам важно знать всю правду о мурчании кошек"
             },
-            {
-                "text": "На северо-восточном побережье Тайваня произошло землетрясение магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
+            "locators": {
+              "assetUri": "/russian/vert-fut-44971072",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/vert-fut-44971072"
             },
-            {
-                "text": "Из-за разгула стихии электричества лишились около 2000 домов. О жертвах и разрушениях не сообщается.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            }
+            "summary": "Да, наши коты и кошки мурлычат, когда мы их гладим, но этот специфический вид общения кошки с человеком совсем не обязательно говорит о том, что ваш питомец испытывает удовольствие. Все гораздо сложнее.",
+            "timestamp": 1532778112,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102703741",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/398A/production/_102703741_cats5istock.jpg",
+              "path": "/cpsprodpb/398A/production/_102703741_cats5istock.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "Довольный кот",
+              "copyrightHolder": "iStock",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/vert-fut-44971072",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Дневник кота: мир кошачьими глазами",
+              "headline": "Дневник кота: мир кошачьими глазами"
+            },
+            "locators": {
+              "assetUri": "/russian/features-46063733",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-46063733"
+            },
+            "summary": "Коты гуляют сами по себе. Но где они гуляют и чем занимаются, когда не лежат на коленях своих хозяев томно мурлыкая? Это можно узнать, если повесить на котов небольшие камеры. Смотрите, что получилось.",
+            "timestamp": 1542366690,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "104233153",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/893D/production/_104233153_cat8.png",
+              "path": "/cpsprodpb/893D/production/_104233153_cat8.png",
+              "height": 999,
+              "width": 1776,
+              "altText": "Кот",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-46063733",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Британские коты на службе: коты-трудяги и коты-герои",
+              "headline": "Британские коты на службе: коты-трудяги и коты-герои"
+            },
+            "locators": {
+              "assetUri": "/russian/features-42851044",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-42851044"
+            },
+            "summary": "В нашем представлении кошачья жизнь - это сон с перерывами на обед и безудержные приступы игривости, за которыми неизменно следует очередной \"тихий час\". Но некоторые кошки и коты не спят, а работают, чтобы прокормить себя. Нередко они занимают довольно уважаемые должности.",
+            "timestamp": 1517192039,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "99782895",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E9B4/production/_99782895__99762742_cwj.jpg",
+              "path": "/cpsprodpb/E9B4/production/_99782895__99762742_cwj.jpg",
+              "height": 634,
+              "width": 1127,
+              "altText": "кот в форме",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-42851044",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Деревня, в которой коты оказались вне закона",
+              "headline": "Деревня в Новой Зеландии решила избавиться от котов. За что?"
+            },
+            "locators": {
+              "assetUri": "/russian/other-news-45356588",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/other-news-45356588"
+            },
+            "summary": "Чиновники утверждают, что их план позволит защитить местную экосистему. Однако у многих эти замыслы вызвали непонимание.",
+            "timestamp": 1535642574,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "103218319",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/164F5/production/_103218319_gettyimages-134815902.jpg",
+              "path": "/cpsprodpb/164F5/production/_103218319_gettyimages-134815902.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "Кошка",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/other-news-45356588",
+            "type": "cps"
+          }
         ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "Землетрясение на Тайване всполошило котов",
-            "headline": "Землетрясение на Тайване всполошило котов"
-        },
-        "locators": {
-            "assetUri": "/russian/media-49281069",
-            "cpsUrn": "urn:bbc:content:assetUri:russian/media-49281069",
-            "curie": "http://www.bbc.co.uk/asset/e84cdf93-4651-994c-b0e4-257a782f944c"
-        },
-        "summary": "На северо-восточном побережье Тайваня произошло землетрясение магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.",
-        "timestamp": 1565286287488,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            }
-        },
-        "media": {
-            "id": "p07k34pg",
-            "subType": "clip",
-            "format": "video",
-            "title": "Землетрясение в Тайване всполошило котов",
-            "synopses": {
-                "short": "Землетрясение в Тайване всполошило котов",
-                "long": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные.\n\nИз-за разгула стихии электричества лишились около 2000 домов. О жертвах и разрушениях не сообщается.",
-                "medium": "На северо-восточном побережье Тайване произошло землетрясение с магнитудой 6 баллов. Толчки почувствовали не только люди, но и домашние животные."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07k35ds.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "Землетрясение в Тайване всполошило котов",
-            "versions": [
-                {
-                    "versionId": "p07k34pk",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 39,
-                    "durationISO8601": "PT39S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1565264403
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108243268",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/150DA/production/_108243268_p07k35ds.jpg",
-            "path": "/cpsprodpb/150DA/production/_108243268_p07k35ds.jpg",
-            "height": 576,
-            "width": 1024,
-            "altText": "Коты до начала землетрясения.",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:russian/media-49281069",
-        "type": "cps"
-    },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/russian/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "Новости на русском языке",
-            "uri": "/russian",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "Почему нам важно знать всю правду о мурчании кошек",
-                            "headline": "Почему нам важно знать всю правду о мурчании кошек"
-                        },
-                        "locators": {
-                            "assetUri": "/russian/vert-fut-44971072",
-                            "cpsUrn": "urn:bbc:content:assetUri:/russian/vert-fut-44971072"
-                        },
-                        "summary": "Да, наши коты и кошки мурлычат, когда мы их гладим, но этот специфический вид общения кошки с человеком совсем не обязательно говорит о том, что ваш питомец испытывает удовольствие. Все гораздо сложнее.",
-                        "timestamp": 1532778112,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "102703741",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/398A/production/_102703741_cats5istock.jpg",
-                            "path": "/cpsprodpb/398A/production/_102703741_cats5istock.jpg",
-                            "height": 1152,
-                            "width": 2048,
-                            "altText": "Довольный кот",
-                            "copyrightHolder": "iStock",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:russian/vert-fut-44971072",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "Дневник кота: мир кошачьими глазами",
-                            "headline": "Дневник кота: мир кошачьими глазами"
-                        },
-                        "locators": {
-                            "assetUri": "/russian/features-46063733",
-                            "cpsUrn": "urn:bbc:content:assetUri:/russian/features-46063733"
-                        },
-                        "summary": "Коты гуляют сами по себе. Но где они гуляют и чем занимаются, когда не лежат на коленях своих хозяев томно мурлыкая? Это можно узнать, если повесить на котов небольшие камеры. Смотрите, что получилось.",
-                        "timestamp": 1542366690,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "104233153",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/893D/production/_104233153_cat8.png",
-                            "path": "/cpsprodpb/893D/production/_104233153_cat8.png",
-                            "height": 999,
-                            "width": 1776,
-                            "altText": "Кот",
-                            "copyrightHolder": "BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:russian/features-46063733",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "Британские коты на службе: коты-трудяги и коты-герои",
-                            "headline": "Британские коты на службе: коты-трудяги и коты-герои"
-                        },
-                        "locators": {
-                            "assetUri": "/russian/features-42851044",
-                            "cpsUrn": "urn:bbc:content:assetUri:/russian/features-42851044"
-                        },
-                        "summary": "В нашем представлении кошачья жизнь - это сон с перерывами на обед и безудержные приступы игривости, за которыми неизменно следует очередной \"тихий час\". Но некоторые кошки и коты не спят, а работают, чтобы прокормить себя. Нередко они занимают довольно уважаемые должности.",
-                        "timestamp": 1517192039,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "99782895",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/E9B4/production/_99782895__99762742_cwj.jpg",
-                            "path": "/cpsprodpb/E9B4/production/_99782895__99762742_cwj.jpg",
-                            "height": 634,
-                            "width": 1127,
-                            "altText": "кот в форме",
-                            "copyrightHolder": "Getty Images",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:russian/features-42851044",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "Деревня, в которой коты оказались вне закона",
-                            "headline": "Деревня в Новой Зеландии решила избавиться от котов. За что?"
-                        },
-                        "locators": {
-                            "assetUri": "/russian/other-news-45356588",
-                            "cpsUrn": "urn:bbc:content:assetUri:/russian/other-news-45356588"
-                        },
-                        "summary": "Чиновники утверждают, что их план позволит защитить местную экосистему. Однако у многих эти замыслы вызвали непонимание.",
-                        "timestamp": 1535642574,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "103218319",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/164F5/production/_103218319_gettyimages-134815902.jpg",
-                            "path": "/cpsprodpb/164F5/production/_103218319_gettyimages-134815902.jpg",
-                            "height": 1152,
-                            "width": 2048,
-                            "altText": "Кошка",
-                            "copyrightHolder": "Getty Images",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:russian/other-news-45356588",
-                        "type": "cps"
-                    }
-                ]
-            }
-        ]
-    }
+      }
+    ]
+  }
 }

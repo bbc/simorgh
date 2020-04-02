@@ -120,10 +120,10 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 role="text"
                               >
                                 <span
-                                  class="LiveLabel-sc-1dvfmi3-6 halTGG"
+                                  class="StyledSpan-sc-5gbj69-0 jbxGSs"
                                   dir="ltr"
                                 >
-                                  AS E DE HAPPEN
+                                  AS E DE HAPPEN 
                                 </span>
                                 Senators don begin vote for Senate President
                               </span>
@@ -134,12 +134,6 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           >
                             Nigeria dey do inauguration to welcome im tear rubber lawmakers into di Ninth National Assembly.
                           </p>
-                          <time
-                            class="StyledTimestamp-um718p-0 kVWTyt"
-                            datetime="2019-06-11"
-                          >
-                            11th June 2019
-                          </time>
                           <div
                             class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
                             data-e2e="index-alsos"

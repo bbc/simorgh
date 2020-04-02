@@ -214,9 +214,7 @@
                             },
                             "duration": 45,
                             "durationISO8601": "PT45S",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "versionId": "p019dx68",
                             "warnings": {}
                           }

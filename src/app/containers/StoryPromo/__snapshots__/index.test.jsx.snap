@@ -5209,16 +5209,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   margin-right: 0.5rem;
 }
 
-.c10 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .c3 {
   position: relative;
   height: 0;
@@ -5333,20 +5323,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
 <div
   class="c0"
 >
@@ -5392,7 +5368,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             class="c8"
             dir="ltr"
           >
-            NA EME UGBU A
+            NA EME UGBU A 
           </span>
           A live item
         </span>
@@ -5403,12 +5379,6 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
     >
       Summary text
     </p>
-    <time
-      class="c10"
-      datetime="2019-05-02"
-    >
-      2 Mee 2019
-    </time>
   </div>
 </div>
 `;
@@ -5501,16 +5471,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   margin-right: 0.5rem;
 }
 
-.c10 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .c3 {
   position: relative;
   height: 0;
@@ -5625,20 +5585,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
 <div
   class="c0"
 >
@@ -5679,7 +5625,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             class="c8"
             dir="ltr"
           >
-            NA EME UGBU A
+            NA EME UGBU A 
           </span>
           A live item
         </span>
@@ -5690,18 +5636,12 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
     >
       Summary text
     </p>
-    <time
-      class="c10"
-      datetime="2019-05-02"
-    >
-      2 Mee 2019
-    </time>
   </div>
 </div>
 `;
 
 exports[`StoryPromo Container should render live promoType leading on amp 1`] = `
-.c7 {
+.c6 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -5718,16 +5658,16 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   position: relative;
 }
 
-.c8 {
+.c7 {
   position: relative;
 }
 
-.c10 {
+.c9 {
   position: absolute;
   bottom: 0;
 }
 
-.c10 > * {
+.c9 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
@@ -5792,17 +5732,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   margin-right: 0.5rem;
 }
 
-.c6 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.c9 {
+.c8 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -5816,20 +5746,20 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
 }
 
 @media (min-width:37.5rem) {
-  .c7 {
+  .c6 {
     padding-left: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width:63rem) {
-  .c7 {
+  .c6 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c7 {
+  .c6 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6,1fr);
@@ -5918,20 +5848,6 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c6 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c6 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
 <div
   class="c0"
 >
@@ -5953,7 +5869,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             class="c4"
             dir="ltr"
           >
-            NA EME UGBU A
+            NA EME UGBU A 
           </span>
           A live item
         </span>
@@ -5964,22 +5880,16 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
     >
       Summary text
     </p>
-    <time
-      class="c6"
-      datetime="2019-05-02"
-    >
-      2 Mee 2019
-    </time>
   </div>
   <div
-    class="c7"
+    class="c6"
     dir="ltr"
   >
     <div
-      class="c8"
+      class="c7"
     >
       <div
-        class="c9"
+        class="c8"
       >
         <amp-img
           alt="Image Alt text"
@@ -5991,7 +5901,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
         />
       </div>
       <div
-        class="c10"
+        class="c9"
       />
     </div>
   </div>
@@ -6088,16 +5998,6 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   color: #B80000;
   display: inline-block;
   margin-right: 0.5rem;
-}
-
-.c10 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .c3 {
@@ -6198,20 +6098,6 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   }
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c10 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
 <div
   class="c0"
 >
@@ -6257,7 +6143,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             class="c8"
             dir="ltr"
           >
-            NA EME UGBU A
+            NA EME UGBU A 
           </span>
           A live item
         </span>
@@ -6268,12 +6154,6 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
     >
       Summary text
     </p>
-    <time
-      class="c10"
-      datetime="2019-05-02"
-    >
-      2 Mee 2019
-    </time>
   </div>
 </div>
 `;

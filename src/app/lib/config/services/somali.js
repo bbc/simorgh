@@ -168,6 +168,24 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Qoraalka Muuqaalka ',
+          text:
+            'Digniin: Macluumaadka dad kale waxaa laga yaabaa inay ku jiraan xayaysiin',
+        },
+        fallback: {
+          text: 'Macluumaadkan lama heli karo',
+          linkText: 'Faahfaahin ka eeg %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bogag kale',
+          warningText:
+            'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -178,6 +196,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'Barnaamijyada Idaacadda',
     },
     footer: {

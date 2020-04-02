@@ -13,9 +13,9 @@ export const unavailableMediaBlock = {
   id: UNAVAILABLE_MEDIA_TEXT,
 };
 
-export const addUnavailableMediaBlock = pageData => {
+export const addUnavailableMediaBlock = (pageData) => {
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const filteredBlocks = blocks.filter(block => block.type !== REVOKED_MEDIA);
+  const filteredBlocks = blocks.filter((block) => block.type !== REVOKED_MEDIA);
   return assocPath(
     ['content', 'model', 'blocks'],
     [unavailableMediaBlock, ...filteredBlocks],
@@ -23,7 +23,7 @@ export const addUnavailableMediaBlock = pageData => {
   );
 };
 
-const logIfNoMedia = blockTypes => {
+const logIfNoMedia = (blockTypes) => {
   if (!blockTypes.includes(REVOKED_MEDIA)) {
     logger.warn(
       JSON.stringify(
@@ -38,9 +38,9 @@ const logIfNoMedia = blockTypes => {
   }
 };
 
-const transformer = pageData => {
+const transformer = (pageData) => {
   const blockTypes = pathOr([], ['metadata', 'blockTypes'], pageData);
-  const hasPlayableMedia = blockTypes.some(blockType =>
+  const hasPlayableMedia = blockTypes.some((blockType) =>
     ['media', 'legacyMedia', 'version'].includes(blockType),
   );
   if (!hasPlayableMedia) {

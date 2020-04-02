@@ -159,6 +159,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
+          text: 'चेतावनी: तीसरे पक्ष की सामग्री में विज्ञापन हो सकते हैं.',
+        },
+        fallback: {
+          text: 'सामग्री उपलब्ध नहीं है',
+          linkText: '%provider_name% पर और देखिए',
+          linkTextSuffixVisuallyHidden: ', बाह्य सामग्री',
+          warningText:
+            'बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।',
+        },
+        skipLink: {
+          text: 'छोड़िए %provider_name% पोस्ट',
+          endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -216,6 +233,10 @@ export const service = {
       {
         title: 'मुख पृष्ठ',
         url: '/nepali',
+      },
+      {
+        title: 'कोरोनाभाइरसको',
+        url: '/nepali/news-51941128',
       },
       {
         title: 'पछिल्लो कार्यक्रम',

@@ -22,10 +22,7 @@
       "cps_asset_id": "17697967",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "legacyMedia",
-      "paragraph"
-    ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "createdBy": "nepali",
     "firstPublished": 1469461574000,
     "id": "urn:bbc:ares::asset:nepali/multimedia/2016/07/160725_tc2_testmap1",

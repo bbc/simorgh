@@ -168,6 +168,24 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Légende vidéo, ',
+          text:
+            'Attention: le contenu externe peut contenir des messages publicitaires',
+        },
+        fallback: {
+          text: "Ce contenu n'est pas disponible",
+          linkText: 'Voir plus sur %provider_name%',
+          linkTextSuffixVisuallyHidden: ', lien externe',
+          warningText:
+            "La BBC n'est pas responsable du contenu des sites externes.",
+        },
+        skipLink: {
+          text: 'Ignorer %provider_name% publication',
+          endTextVisuallyHidden: 'Fin de %provider_name% publication',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -178,6 +196,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       frequenciesPageUrl:
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
       frequenciesPageLabel: 'Nos fréquences',

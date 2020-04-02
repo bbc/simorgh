@@ -48,11 +48,11 @@ const runTestsForPage = ({
 }) => {
   // For each Service and Page Type in the config file it visits the path and it writes a describe saying this.
   Object.keys(config)
-    .filter(service => serviceHasPageType(service, pageType))
-    .forEach(service => {
+    .filter((service) => serviceHasPageType(service, pageType))
+    .forEach((service) => {
       const paths = getPaths(service, pageType);
 
-      paths.forEach(currentPath => {
+      paths.forEach((currentPath) => {
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);

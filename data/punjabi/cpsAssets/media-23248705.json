@@ -1,252 +1,243 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:punjabi/media-23248705",
-        "locators": {
-            "assetUri": "/punjabi/media-23248705",
-            "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
-            "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:punjabi/media-23248705",
+    "locators": {
+      "assetUri": "/punjabi/media-23248705",
+      "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
+      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
+    },
+    "type": "MAP",
+    "createdBy": "punjabi-v6",
+    "language": "pa",
+    "lastUpdated": 1568389321573,
+    "firstPublished": 1568389310000,
+    "lastPublished": 1568389311000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "punjabi.embedded_media.media_asset.23248705.page",
+      "cps_asset_id": "23248705"
+    },
+    "tags": {},
+    "version": "v1.1.0",
+    "blockTypes": ["media", "paragraph", "list", "image"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01kx42s",
+        "subType": "clip",
+        "format": "video",
+        "title": "alt-text world service clip",
+        "synopses": {
+          "short": "short"
         },
-        "type": "MAP",
-        "createdBy": "punjabi-v6",
-        "language": "pa",
-        "lastUpdated": 1568389321573,
-        "firstPublished": 1568389310000,
-        "lastPublished": 1568389311000,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "punjabi.embedded_media.media_asset.23248705.page",
-            "cps_asset_id": "23248705"
-        },
-        "tags": {},
-        "version": "v1.1.0",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "list",
-            "image"
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "short",
+        "versions": [
+          {
+            "versionId": "p01kx42v",
+            "types": ["Original"],
+            "duration": 5,
+            "durationISO8601": "PT5S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1545304011000
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      },
+      {
+        "text": "ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।</bold><bold> heading </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold><italic>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।</italic></bold><bold><italic> subheading</italic></bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। </bold><bold>crosshead </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ <bold>ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅ</bold>ਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ  ਦੂਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ<link><caption> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</caption><altText> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>ਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ<bold> ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          },
+          {
+            "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "63721690",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/258C/test/_63721690_testimage.jpg",
+        "path": "/cpsdevpb/258C/test/_63721690_testimage.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
+        "caption": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info",
+        "role": "transmission-info",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": " ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info ",
+        "role": "footer",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
+      "headline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p01kx42s",
-                "subType": "clip",
-                "format": "video",
-                "title": "alt-text world service clip",
-                "synopses": {
-                    "short": "short"
-                },
-                "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "short",
-                "versions": [
-                    {
-                        "versionId": "p01kx42v",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 5,
-                        "durationISO8601": "PT5S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1545304011000
-                    }
-                ],
-                "type": "media"
-            },
-            {
-                "text": "ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।</bold><bold> heading </bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold><italic>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।</italic></bold><bold><italic> subheading</italic></bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "<bold>ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। </bold><bold>crosshead </bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ <bold>ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅ</bold>ਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ  ਦੂਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।ਅੰਮ੍ਰਿਤਸਰ, (ਇੰਦਰਜੀਤ) - ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ਦੇ ਪ੍ਰਧਾਨ ਪਿਆਰਾ ਲਾਲ ਸੇਠ ਨੇ ਕਿਹਾ ਕਿ ਦੇਸ਼ 'ਚ ਖੇਤੀਬਾੜੀ ਤੋਂ ਬਾਅਦ ਕੱਪੜਾ ਉਦਯੋਗ ਦੂਜਾ ਅਜਿਹਾ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਮੂਹ ਹੈ, ਜੋ ਵੱਧਦੀ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਰੋਕਣ ਲਈ ਪੂਰੇ ਦੇਸ਼ ਲਈ ਸਹਾਇਕ ਸਿੱਧ<link><caption> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</caption><altText> ਹੋ ਰਿਹਾ ਹੈ ਅਤੇ ਬੇਰੁਜ਼ਗਾਰੀ ਨੂੰ ਦੂ</altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>ਰ ਕਰਨ ਦੇ ਨਾਲ ਇਸ ਉਦਯੋਗ ਦਾ<bold> ਇਨਕਮ ਟੈਕਸ ਦੇਣ ਵਿਚ ਵੀ ਵੱਡਾ ਹੱਥ ਹੈ।</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ ",
-                        "markupType": "plain_text",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<link><caption>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </caption><altText>ਕੱਪੜਾ ਵਪਾਰ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠਕ 'ਚ ਪੰਜਾਬ ਪ੍ਰਦੇਸ਼ ਵਪਾਰ ਮੰਡਲ </altText><url href=\"https://bbc.com/punjabi\" platform=\"highweb\"/></link>",
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "id": "63721690",
-                "subType": "body",
-                "href": "http://b.files.bbci.co.uk/258C/test/_63721690_testimage.jpg",
-                "path": "/cpsdevpb/258C/test/_63721690_testimage.jpg",
-                "height": 360,
-                "width": 640,
-                "altText": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
-                "caption": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ",
-                "copyrightHolder": "BBC",
-                "positionHint": "full-width",
-                "type": "image"
-            },
-            {
-                "text": "ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info",
-                "role": "transmission-info",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": " ਪ੍ਰਮੁੱਖ ਹਸਤੀਆਂ 'ਚ ਹੋਈ ਬੈਠ transmission info ",
-                "role": "footer",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            }
-        ]
+    "locators": {
+      "assetUri": "/punjabi/media-23248705",
+      "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
+      "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-            "headline": "WSMEDIA - ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।"
-        },
-        "locators": {
-            "assetUri": "/punjabi/media-23248705",
-            "cpsUrn": "urn:bbc:content:assetUri:punjabi/media-23248705",
-            "curie": "http://www.bbc.co.uk/asset/bf82d577-f00b-494f-b100-9bac79a82594"
-        },
-        "summary": "ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
-        "timestamp": 1568389321573,
-        "passport": {},
-        "media": {
-            "id": "p01kx42s",
-            "subType": "clip",
-            "format": "video",
-            "title": "alt-text world service clip",
-            "synopses": {
-                "short": "short"
-            },
-            "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "short",
-            "versions": [
-                {
-                    "versionId": "p01kx42v",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 5,
-                    "durationISO8601": "PT5S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1545304011000
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "63721693",
-            "subType": "index",
-            "href": "http://b.files.bbci.co.uk/9ABC/test/_63721693_p01kx435.jpg",
-            "path": "/cpsdevpb/9ABC/test/_63721693_p01kx435.jpg",
-            "height": 360,
-            "width": 640,
-            "altText": "connectionAltText",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:punjabi/media-23248705",
-        "type": "cps"
+    "summary": "ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ। ਕੱਪੜਾ ਵਪਾਰੀਆਂ ਵੱਲੋਂ ਜੀ. ਐੱਸ. ਟੀ. ਦੇ ਮਾਮਲੇ 'ਚ ਹੋਈ ਇਕ ਹੰਗਾਮੀ ਮੀਟਿੰਗ 'ਚ ਸਖਤ ਫੈਸਲਾ ਲੈਂਦੇ ਹੋਏ ਹੱਥ ਚੁੱਕ ਕੇ ਦੋ ਟੁੱਕ ਕਿਹਾ ਗਿਆ ਕਿ ਟੈਕਸਟਾਈਲ ਉਦਯੋਗ ਅਤੇ ਵਪਾਰ 'ਤੇ ਜੀ. ਐੱਸ. ਟੀ. ਕਿਸੇ ਵੀ ਹਾਲਤ ਵਿਚ ਮਨਜ਼ੂਰ ਨਹੀਂ ਹੈ।",
+    "timestamp": 1568389321573,
+    "passport": {},
+    "media": {
+      "id": "p01kx42s",
+      "subType": "clip",
+      "format": "video",
+      "title": "alt-text world service clip",
+      "synopses": {
+        "short": "short"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "short",
+      "versions": [
+        {
+          "versionId": "p01kx42v",
+          "types": ["Original"],
+          "duration": 5,
+          "durationISO8601": "PT5S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1545304011000
+        }
+      ],
+      "type": "media"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Media",
-            "uri": "/punjabi/media",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC ਪੰਜਾਬੀ",
-            "uri": "/punjabi",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "indexImage": {
+      "id": "63721693",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/9ABC/test/_63721693_p01kx435.jpg",
+      "path": "/cpsdevpb/9ABC/test/_63721693_p01kx435.jpg",
+      "height": 360,
+      "width": 640,
+      "altText": "connectionAltText",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:punjabi/media-23248705",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Media",
+      "uri": "/punjabi/media",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC ਪੰਜਾਬੀ",
+      "uri": "/punjabi",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

@@ -5,7 +5,13 @@ const depcheck = require('depcheck');
 const options = {
   specials: ['bin', 'eslint', 'jest', 'babel', 'webpack'],
   ignoreDirs: ['build'],
-  ignoreMatches: ['puppeteer', 'styled-normalize', 'isarray'],
+  ignoreMatches: [
+    'puppeteer',
+    'styled-normalize',
+    'isarray',
+    'jest-environment-jsdom',
+    '@testing-library/dom',
+  ],
 };
 
 depcheck(
@@ -28,7 +34,7 @@ depcheck(
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
-    Object.keys(missingFiltered).forEach(key => {
+    Object.keys(missingFiltered).forEach((key) => {
       console.log(key);
       console.log(`  ${missingFiltered[key].join('\n  ')}`);
     });
