@@ -51,10 +51,7 @@
           "thingLabel": "History",
           "thingUri": "http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id",
           "thingId": "03eb3674-6190-4cd7-8104-1a00991d67a3",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/History",
             "http://www.wikidata.org/entity/Q309"
@@ -72,14 +69,8 @@
           "thingLabel": "Thailand",
           "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
           "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1605651/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/1605651/"],
           "topicName": "ประเทศไทย",
           "topicId": "cjgn73g98rqt",
           "curationList": [
@@ -93,13 +84,8 @@
           "thingLabel": "Politics",
           "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
           "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Politics"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Politics"],
           "topicName": "การเมือง",
           "topicId": "cz74kp7vjzpt",
           "curationList": [
@@ -112,9 +98,7 @@
       ]
     },
     "version": "v1.1.2",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

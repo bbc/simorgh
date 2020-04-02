@@ -166,6 +166,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Legenda do vídeo, ',
+          text: 'Alerta: Conteúdo de terceiros pode conter publicidade',
+        },
+        fallback: {
+          text: 'Conteúdo não disponível',
+          linkText: 'Veja mais em %provider_name%',
+          linkTextSuffixVisuallyHidden: ', externo',
+          warningText:
+            'A BBC não se responsabiliza pelo conteúdo de sites externos.',
+        },
+        skipLink: {
+          text: 'Pule %provider_name% post',
+          endTextVisuallyHidden: 'Final de %provider_name% post',
+        },
+      },
     },
     brandSVG,
     mostRead: {

@@ -164,6 +164,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText:
+            'BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.s',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     mostRead: {
       header: 'Akachasị Gụọ',

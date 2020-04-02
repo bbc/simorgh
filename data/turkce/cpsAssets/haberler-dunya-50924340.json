@@ -53,10 +53,7 @@
           "thingLabel": "Art",
           "thingUri": "http://www.bbc.co.uk/things/37dcc888-51a7-4470-82d8-8ef2b811d482#id",
           "thingId": "37dcc888-51a7-4470-82d8-8ef2b811d482",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Art",
             "http://www.wikidata.org/entity/Q735"
@@ -74,13 +71,8 @@
           "thingLabel": "Photography",
           "thingUri": "http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id",
           "thingId": "ae0d5073-dfeb-4251-b555-0a9c74f3d4e0",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Photography"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Photography"],
           "topicName": "Fotoğrafçılık",
           "topicId": "cxnykv9kpqkt",
           "curationList": [
@@ -93,9 +85,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image"
-    ],
+    "blockTypes": ["image"],
     "includeComments": false
   },
   "content": {

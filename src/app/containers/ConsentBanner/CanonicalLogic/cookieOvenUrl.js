@@ -1,4 +1,4 @@
-const cookieOvenDomainBase = origin => {
+const cookieOvenDomainBase = (origin) => {
   if (origin.includes('localhost')) {
     return origin;
   }
@@ -10,7 +10,7 @@ const cookieOvenDomainBase = origin => {
   return 'https://cookie-oven.api.bbc';
 };
 
-const domainExtension = origin => {
+const domainExtension = (origin) => {
   if (origin.includes('localhost')) {
     return '';
   }
@@ -22,7 +22,7 @@ const domainExtension = origin => {
   return '.com';
 };
 
-const cookieOvenUrl = origin =>
+const cookieOvenUrl = (origin) =>
   cookieOvenDomainBase(origin) + domainExtension(origin);
 
 export default cookieOvenUrl;

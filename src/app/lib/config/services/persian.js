@@ -176,6 +176,22 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'توضیح ویدئو، ',
+          text: 'هشدار: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+        },
+        fallback: {
+          text: 'محتوا در دسترس نیست',
+          linkText: 'در %provider_name% بیشتر ببینید',
+          linkTextSuffixVisuallyHidden: '، لینک خارجی',
+          warningText: ' بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
+        },
+        skipLink: {
+          text: 'بگذر از پست %provider_name%',
+          endTextVisuallyHidden: 'پایان پست %provider_name%',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -186,6 +202,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       header: 'برنامه‌های رادیو',
     },
     footer: {
