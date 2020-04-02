@@ -8,6 +8,7 @@ const logCodes = {
   NO_TRANSLATION_FOUND: 'no_translation_found',
   ROUTING_INFORMATION: 'routing_info',
   SERVER_LISTEN_ERROR: 'server_listen_error',
+  SERVER_RESPONSE_TIME: 'server_response_time',
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
