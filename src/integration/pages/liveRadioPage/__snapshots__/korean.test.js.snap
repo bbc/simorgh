@@ -631,7 +631,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                       >
                       <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
                         <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                          This audio cannot play in your browser. Please enable Javascript or try a different browser.
+                          This audio cannot play in your browser. Please enable JavaScript or try a different browser.
                         </strong>
                       </div>
                     </div>
@@ -1239,7 +1239,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                   <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
                     <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        This audio cannot play in your browser. Please enable Javascript or try a different browser.
+                        This audio cannot play in your browser. Please enable JavaScript or try a different browser.
                       </strong>
                     </div>
                   </div>
