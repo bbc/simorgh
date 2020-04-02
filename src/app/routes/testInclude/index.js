@@ -6,5 +6,5 @@ export default {
   exact: true,
   component: StoryPage,
   getInitialData,
-  pageType: 'cpsAsset',
+  pageType: 'STY',
 };
