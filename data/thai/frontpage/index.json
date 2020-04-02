@@ -415,9 +415,7 @@
               "versions": [
                 {
                   "versionId": "p07kvcdn",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 59,
                   "durationISO8601": "PT59S",
                   "warnings": {},

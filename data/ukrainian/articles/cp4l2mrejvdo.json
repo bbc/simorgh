@@ -252,9 +252,7 @@
                         "versions": [
                           {
                             "versionId": "p01plq00",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 29,
                             "durationISO8601": "PT29S",
                             "warnings": {},

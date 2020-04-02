@@ -66,7 +66,7 @@ const StoryPage = ({ pageData }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: props =>
+    timestamp: (props) =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,

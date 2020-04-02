@@ -1,108 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": true,
-          "caption": "This is the caption of the video/audio when embedded in a story page",
-          "embedding": false,
-          "format": "video",
-          "id": "p0182w5q",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p0182w7g.jpg",
-          "subType": "clip",
-          "synopses": {
-            "long": "This is the description under the video or audio (inside the media asset page)",
-            "medium": "This is the summary",
-            "short": "This is the full headline which appears inside the media asset page"
-          },
-          "title": "This is the headline of the media asset page",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1485873803000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 53,
-              "durationISO8601": "PT53S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p0182w5s",
-              "warnings": {}
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "text": "This is the description under the video or audio (inside the media asset page)",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "gahuza.news.media_asset.23257470.page",
-        "cps_asset_id": "23257470",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph"
-      ],
-      "createdBy": "gahuza-v6",
-      "firstPublished": 1575370165000,
-      "id": "urn:bbc:ares::asset:gahuza/amakuru-23257470",
-      "includeComments": false,
-      "language": "rw",
-      "lastPublished": 1575370166000,
-      "lastUpdated": 1575370178252,
-      "locators": {
-        "assetUri": "/gahuza/amakuru-23257470",
-        "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23257470",
-        "curie": "http://www.bbc.co.uk/asset/1f5779c5-0439-3043-be6c-5d76c5e6041b"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "type": "MAP",
-      "version": "v1.1.3"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "This is the full headline which appears inside the media asset page",
-        "shortHeadline": "This is the headline of the media asset page"
-      },
-      "id": "urn:bbc:ares::asset:gahuza/amakuru-23257470",
-      "indexImage": {
-        "altText": "Buqqaafamtoota keessaa",
-        "copyrightHolder": "BBC",
-        "height": 549,
-        "href": "http://b.files.bbci.co.uk/831A/test/_63726533_p01fcplf.jpg",
-        "id": "63726533",
-        "path": "/cpsdevpb/831A/test/_63726533_p01fcplf.jpg",
-        "subType": "index",
-        "type": "image",
-        "width": 976
-      },
-      "locators": {
-        "assetUri": "/gahuza/amakuru-23257470",
-        "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23257470",
-        "curie": "http://www.bbc.co.uk/asset/1f5779c5-0439-3043-be6c-5d76c5e6041b"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": true,
         "caption": "This is the caption of the video/audio when embedded in a story page",
         "embedding": false,
@@ -127,34 +26,128 @@
             },
             "duration": 53,
             "durationISO8601": "PT53S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p0182w5s",
             "warnings": {}
           }
         ]
       },
-      "passport": {
-        "taggings": []
-      },
-      "summary": "This is the summary",
-      "timestamp": 1575370178252,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Amakuru",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/gahuza/amakuru"
-      },
-      "site": {
-        "name": "BBC Gahuza",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/gahuza"
+      {
+        "markupType": "plain_text",
+        "text": "This is the description under the video or audio (inside the media asset page)",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "gahuza.news.media_asset.23257470.page",
+      "cps_asset_id": "23257470",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "gahuza-v6",
+    "firstPublished": 1575370165000,
+    "id": "urn:bbc:ares::asset:gahuza/amakuru-23257470",
+    "includeComments": false,
+    "language": "rw",
+    "lastPublished": 1575370166000,
+    "lastUpdated": 1575370178252,
+    "locators": {
+      "assetUri": "/gahuza/amakuru-23257470",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23257470",
+      "curie": "http://www.bbc.co.uk/asset/1f5779c5-0439-3043-be6c-5d76c5e6041b"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "This is the full headline which appears inside the media asset page",
+      "shortHeadline": "This is the headline of the media asset page"
+    },
+    "id": "urn:bbc:ares::asset:gahuza/amakuru-23257470",
+    "indexImage": {
+      "altText": "Buqqaafamtoota keessaa",
+      "copyrightHolder": "BBC",
+      "height": 549,
+      "href": "http://b.files.bbci.co.uk/831A/test/_63726533_p01fcplf.jpg",
+      "id": "63726533",
+      "path": "/cpsdevpb/831A/test/_63726533_p01fcplf.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "locators": {
+      "assetUri": "/gahuza/amakuru-23257470",
+      "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-23257470",
+      "curie": "http://www.bbc.co.uk/asset/1f5779c5-0439-3043-be6c-5d76c5e6041b"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "This is the caption of the video/audio when embedded in a story page",
+      "embedding": false,
+      "format": "video",
+      "id": "p0182w5q",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p0182w7g.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "This is the description under the video or audio (inside the media asset page)",
+        "medium": "This is the summary",
+        "short": "This is the full headline which appears inside the media asset page"
+      },
+      "title": "This is the headline of the media asset page",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1485873803000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 53,
+          "durationISO8601": "PT53S",
+          "types": ["Original"],
+          "versionId": "p0182w5s",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "This is the summary",
+    "timestamp": 1575370178252,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Amakuru",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/gahuza/amakuru"
+    },
+    "site": {
+      "name": "BBC Gahuza",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/gahuza"
     }
   }
+}

@@ -4,7 +4,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import BrandContainer from '../Brand';
 
 const currentYear = () => new Date().getFullYear();
-const getCopyrightText = text => (
+const getCopyrightText = (text) => (
   <>
     <span lang="en-GB">{`\u00A9`} </span>
     {`${currentYear()} ${text}`}

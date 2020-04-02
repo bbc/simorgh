@@ -187,9 +187,7 @@
         "versions": [
           {
             "versionId": "p01mr6r9",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "duration": 1961,
             "durationISO8601": "PT32M41S",
             "warnings": {},

@@ -242,9 +242,7 @@
                         "versions": [
                           {
                             "versionId": "p01jv300",
-                            "types": [
-                              "Original"
-                            ],
+                            "types": ["Original"],
                             "duration": 119,
                             "durationISO8601": "PT1M59S",
                             "warnings": {},

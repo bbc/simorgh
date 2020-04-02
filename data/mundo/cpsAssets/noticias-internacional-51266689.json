@@ -53,11 +53,7 @@
           "thingLabel": "Europe",
           "thingUri": "http://www.bbc.co.uk/things/0b0bfd5a-81b8-43fa-91fc-57f1fcd24487#id",
           "thingId": "0b0bfd5a-81b8-43fa-91fc-57f1fcd24487",
-          "thingType": [
-            "Thing",
-            "Place",
-            "news:Place"
-          ],
+          "thingType": ["Thing", "Place", "news:Place"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Europe",
             "http://www.wikidata.org/entity/Q46"
@@ -75,14 +71,8 @@
           "thingLabel": "United Kingdom",
           "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
           "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
-          "thingType": [
-            "Thing",
-            "Place",
-            "geoname:GeoTagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/2635167/"
-          ],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"],
           "topicName": "Reino Unido",
           "topicId": "cdr56g852wkt",
           "curationList": [
@@ -96,10 +86,7 @@
           "thingLabel": "Culture",
           "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
           "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
+          "thingType": ["Thing", "Theme"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Culture",
             "http://www.wikidata.org/entity/Q11042"
@@ -117,10 +104,7 @@
           "thingLabel": "European Union",
           "thingUri": "http://www.bbc.co.uk/things/9a18805c-fb88-40ba-9763-bcc121d5d55c#id",
           "thingId": "9a18805c-fb88-40ba-9763-bcc121d5d55c",
-          "thingType": [
-            "Thing",
-            "Organisation"
-          ],
+          "thingType": ["Thing", "Organisation"],
           "thingSameAs": [
             "http://dbpedia.org/resource/European_Union",
             "http://www.wikidata.org/entity/Q458"
@@ -138,13 +122,8 @@
           "thingLabel": "Economics",
           "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
           "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
-          "thingType": [
-            "Thing",
-            "Theme"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Economy"
-          ],
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Economy"],
           "topicName": "Economía",
           "topicId": "c06gq9v4xp3t",
           "curationList": [
@@ -158,10 +137,7 @@
           "thingLabel": "Brexit",
           "thingUri": "http://www.bbc.co.uk/things/f94293fd-ff83-400e-8bc0-89ec01930fce#id",
           "thingId": "f94293fd-ff83-400e-8bc0-89ec01930fce",
-          "thingType": [
-            "Thing",
-            "Event"
-          ],
+          "thingType": ["Thing", "Event"],
           "thingSameAs": [
             "http://dbpedia.org/resource/Brexit",
             "http://www.wikidata.org/entity/Q7888194"
@@ -178,13 +154,7 @@
       ]
     },
     "version": "v1.1.4",
-    "blockTypes": [
-      "image",
-      "paragraph",
-      "social_embed",
-      "list",
-      "crosshead"
-    ],
+    "blockTypes": ["image", "paragraph", "social_embed", "list", "crosshead"],
     "includeComments": false
   },
   "content": {

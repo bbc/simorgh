@@ -5,7 +5,9 @@ Overview of a Github Project: https://help.github.com/en/articles/about-project-
 BBC's Simorgh Project board: https://github.com/orgs/bbc/projects/20
 
 ## Documentation index
+
 Please familiarise yourself with our:
+
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md)

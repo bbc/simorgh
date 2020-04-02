@@ -4,20 +4,20 @@ import pipe from 'ramda/src/pipe';
 const { canonical, amp } = global;
 
 // replace things in the HTML that change every render such as random IDs and timeOnServer
-const replaceTimeOnServer = html =>
+const replaceTimeOnServer = (html) =>
   html.replace(/"timeOnServer":\d+/gm, '"timeOnServer": "mock-time"');
 
-const replaceIds = html => html.replace(/"id":".+?"/gm, '"id":"mock-id"');
+const replaceIds = (html) => html.replace(/"id":".+?"/gm, '"id":"mock-id"');
 
-const replaceUUIDs = html =>
+const replaceUUIDs = (html) =>
   html.replace(/"uuid":".+?"/gm, '"uuid":"mock-uuid"');
 
-const removeElements = elements => {
-  Array.from(elements).forEach(element => element.remove());
+const removeElements = (elements) => {
+  Array.from(elements).forEach((element) => element.remove());
 };
 
-const replaceStaticScriptSrc = html =>
-  html.replace(/static\/js\/.+?\.js/gm, replacement => {
+const replaceStaticScriptSrc = (html) =>
+  html.replace(/static\/js\/.+?\.js/gm, (replacement) => {
     return `${replacement.split('.')[0]}.js`;
   });
 
@@ -28,10 +28,10 @@ const getFixedHtml = pipe(
   replaceStaticScriptSrc,
 );
 
-const getHtmlString = doc => doc.querySelector('html').outerHTML;
+const getHtmlString = (doc) => doc.querySelector('html').outerHTML;
 
 export default () => {
-  [canonical, amp].forEach(page => {
+  [canonical, amp].forEach((page) => {
     describe(`For the ${page.platform} platform`, () => {
       const htmlString = getHtmlString(page.document);
       const fixedHtml = getFixedHtml(htmlString);

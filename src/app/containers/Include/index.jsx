@@ -8,7 +8,7 @@ import useToggle from '#hooks/useToggle';
    so that html characters are escaped when serializing the page data.
    This function ensures that it gets decoded back to an html string.
  */
-const decodeHTML = str => {
+const decodeHTML = (str) => {
   const replacedParts = {
     '&quot;': '"',
     '&#39;': "'",
@@ -20,7 +20,7 @@ const decodeHTML = str => {
     Object.keys(replacedParts).join('|'),
     'gi',
   );
-  return str.replace(replacementsRegex, match => replacedParts[match]);
+  return str.replace(replacementsRegex, (match) => replacedParts[match]);
 };
 
 const IncludeContainer = ({ html, type }) => {
