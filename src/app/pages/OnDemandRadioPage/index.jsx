@@ -16,7 +16,7 @@ const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
 const getEpisodeAvailability = (availableFrom, availableUntil) => {
   const timeNow = Date.now();
 
-  if (timeNow > availableUntil) return EPISODE_IS_EXPIRED;
+  if (!availableUntil) return EPISODE_IS_EXPIRED;
   if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
 
   return EPISODE_IS_AVAILABLE;

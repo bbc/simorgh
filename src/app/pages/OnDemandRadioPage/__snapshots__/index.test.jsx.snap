@@ -196,11 +196,6 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
       content="وروستي خبرونه - BBC News پښتو"
       name="twitter:title"
     />
-    <script
-      async="true"
-      custom-element="amp-iframe"
-      src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
-    />
   </head>
   <body>
     .c3 {
@@ -227,10 +222,36 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 }
 
 .c7 {
-  height: 165px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c9 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c6 {
@@ -362,9 +383,27 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   }
 }
 
-@media (min-width:63rem) {
-  .c7 {
-    margin-bottom: 2rem;
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c9 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c9 {
+    padding: 1rem;
   }
 }
 
@@ -431,26 +470,15 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               <div
                 class="c7"
               >
-                <amp-iframe
-                  allowfullscreen="allowfullscreen"
-                  frameborder="0"
-                  layout="fill"
-                  sandbox="allow-scripts allow-same-origin"
-                  scrolling="no"
-                  src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_pashto_radio/w172x8nvf4bchz5/ps/amp"
-                  title="Audio player"
+                <div
+                  class="c8"
                 >
-                  <amp-img
-                    alt=""
-                    attribution=""
-                    height="16"
-                    layout="fill"
-                    placeholder="true"
-                    src="http://localhost:7080/images/amp_audio_placeholder.png"
-                    width="9"
-                  />
-                  <noscript />
-                </amp-iframe>
+                  <strong
+                    class="c9"
+                  >
+                    دغه فایل نور د لاسرسي وړ نه دی.
+                  </strong>
+                </div>
               </div>
             </div>
           </div>
@@ -486,10 +514,36 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 }
 
 .c7 {
-  height: 165px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  font-family: "BBC Nassim Pashto",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c9 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .c6 {
@@ -508,16 +562,6 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-
-.c8 {
-  border: 0;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
 }
 
 @supports (display:grid) {
@@ -631,9 +675,27 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:63rem) {
-  .c7 {
-    margin-bottom: 2rem;
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c9 {
+    background-color: window;
+  }
+}
+
+@media (min-width:25rem) {
+  .c9 {
+    padding: 1rem;
   }
 }
 
@@ -900,15 +962,15 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               <div
                 class="c7"
               >
-                <iframe
-                  allow="autoplay; fullscreen"
-                  allowfullscreen=""
+                <div
                   class="c8"
-                  scrolling="no"
-                  src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_pashto_radio/w172x8nvf4bchz5/ps"
-                  title="Audio player"
-                />
-                <noscript />
+                >
+                  <strong
+                    class="c9"
+                  >
+                    دغه فایل نور د لاسرسي وړ نه دی.
+                  </strong>
+                </div>
               </div>
             </div>
           </div>
@@ -919,8 +981,243 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 </html>
 `;
 
+exports[`OnDemand Radio Page  should not show the audio player if it is not available yet 1`] = `
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@supports (display:grid) {
+  .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<div>
+  <main
+    class="c0 c1"
+    dir="ltr"
+    role="main"
+  >
+    <div
+      class="c2"
+      dir="ltr"
+    >
+      <h1
+        class="c3"
+        id="content"
+        tabindex="-1"
+      >
+        BBC 코리아 라디오
+      </h1>
+      <p
+        class="c4"
+      >
+        2020/03/06 GMT
+      </p>
+      <p
+        class="c4"
+      >
+        한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.
+      </p>
+    </div>
+  </main>
+</div>
+`;
+
 exports[`OnDemand Radio Page  should show the expired content message if episode is expired 1`] = `
-.c0 {
+.c3 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.c8 {
+  font-family: "Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34,34,34,0.75);
+}
+
+.c9 {
   display: block;
   font-weight: normal;
   bottom: 0;
@@ -929,21 +1226,235 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   border-bottom: 0.0625rem solid transparent;
 }
 
-@media screen and (-ms-high-contrast:active) {
+.c6 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 50rem;
+  max-width: calc(100vw - 2rem);
+  position: relative;
+  overflow: hidden;
+  height: 165px;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+@supports (display:grid) {
   .c0 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c2 {
+    padding: 0 0.5rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem - 0%);
+    margin: 0 0.25rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c2 {
+    padding: 0 1rem;
+    width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem - 0%);
+    margin: 0 0.5rem;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c2 {
+    width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 12.5%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c2 {
+    width: calc(12/20*(100% - 20 * 1rem) + 11 * 1rem );
+    margin: 0 0.5rem;
+    margin-left: 20%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c2 {
+    display: block;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 2.75rem;
+    line-height: 3.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c8 {
+    background-color: transparent;
+  }
+}
+
+@media screen and (-ms-high-contrast:active) {
+  .c9 {
     background-color: window;
   }
 }
 
 @media (min-width:25rem) {
-  .c0 {
+  .c9 {
     padding: 1rem;
   }
 }
 
-<strong
-  class="c0"
->
-  더 이상 이용할 수 없는 콘텐츠입니다.
-</strong>
+@media (min-width:63rem) {
+  .c5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c1 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+<div>
+  <main
+    class="c0 c1"
+    dir="ltr"
+    role="main"
+  >
+    <div
+      class="c2"
+      dir="ltr"
+    >
+      <h1
+        class="c3"
+        id="content"
+        tabindex="-1"
+      >
+        BBC 코리아 라디오
+      </h1>
+      <p
+        class="c4"
+      >
+        2020/03/06 GMT
+      </p>
+      <p
+        class="c4"
+      >
+        한반도와 세계 곳곳의 다양한 소식을 공정하고 객관적으로 전달해 드립니다.
+      </p>
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <div
+            class="c7"
+          >
+            <div
+              class="c8"
+            >
+              <strong
+                class="c9"
+              >
+                더 이상 이용할 수 없는 콘텐츠입니다.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
 `;

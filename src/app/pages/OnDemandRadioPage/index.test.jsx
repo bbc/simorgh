@@ -57,6 +57,13 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
 
 describe('OnDemand Radio Page ', () => {
   it('should match snapshot for Canonical', async () => {
+    const clonedPashtoPageData = clone(pashtoPageData);
+    clonedPashtoPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1583496180000,
+      availableUntil: 9999999999999,
+    };
+    const pashtoPageDataWithAvailableEpisode = clonedPashtoPageData;
+    fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -65,6 +72,13 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot for AMP', async () => {
+    const clonedPashtoPageData = clone(pashtoPageData);
+    clonedPashtoPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1583496180000,
+      availableUntil: 9999999999999,
+    };
+    const pashtoPageDataWithAvailableEpisode = clonedPashtoPageData;
+    fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -122,8 +136,10 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on canonical', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 1585727821683;
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999;
+    clonedKoreanPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1583496180000,
+      availableUntil: 9999999999999,
+    };
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -139,8 +155,10 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on AMP', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 1585727821683;
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 9999999999999;
+    clonedKoreanPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1585727821683,
+      availableUntil: 9999999999999,
+    };
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -160,7 +178,7 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the expired content message if episode is expired', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableUntil = 1585727821683;
+    clonedKoreanPageData.content.blocks[0].versions = [];
     const koreanPageDataWithExpiredEpisode = clonedKoreanPageData;
     fetch.mockResponse(JSON.stringify(koreanPageDataWithExpiredEpisode));
     const { pageData } = await getInitialData('some-ondemand-radio-path');
@@ -173,12 +191,15 @@ describe('OnDemand Radio Page ', () => {
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
     expect(expiredMessageEl).toBeInTheDocument();
-    expect(expiredMessageEl).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('should not show the audio player if it is not available yet', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
-    clonedKoreanPageData.content.blocks[0].versions[0].availableFrom = 9999999999999;
+    clonedKoreanPageData.content.blocks[0].versions[0] = {
+      availableFrom: 9999999999999,
+      availableUntil: 9999999999999,
+    };
     const koreanPageDataWithNotYetAvailableEpisode = clonedKoreanPageData;
     fetch.mockResponse(
       JSON.stringify(koreanPageDataWithNotYetAvailableEpisode),
@@ -188,5 +209,6 @@ describe('OnDemand Radio Page ', () => {
     const audioPlayerIframeEl = container.querySelector('iframe');
 
     expect(audioPlayerIframeEl).not.toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 });
