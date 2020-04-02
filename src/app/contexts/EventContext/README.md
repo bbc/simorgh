@@ -7,11 +7,11 @@ This directory contains code meant for working with event listeners on DOM eleme
 For this, you will need the `useClickTracker` like:
 
 ```js
-  const { useClickTracker } = useContext(EventContext);
+const { useClickTracker } = useContext(EventContext);
 
-  useClickTracker('[data-consent-banner]', e => {
-    // handle the event
-  });
+useClickTracker('[data-consent-banner]', (e) => {
+  // handle the event
+});
 ```
 
 The `useClickTracker` function accepts two arguements,

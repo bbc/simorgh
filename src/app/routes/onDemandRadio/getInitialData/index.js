@@ -26,7 +26,7 @@ const getEpisodeAvailableUntil = path([
   'availableUntil',
 ]);
 
-export default async pathname => {
+export default async (pathname) => {
   const { json, ...rest } = await fetchPageData(pathname);
 
   return {

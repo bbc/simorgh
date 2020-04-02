@@ -1,349 +1,330 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
-        "locators": {
-            "assetUri": "/portuguese/geral-49602758",
-            "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
-            "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
+    "locators": {
+      "assetUri": "/portuguese/geral-49602758",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
+      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd"
+    },
+    "type": "MAP",
+    "createdBy": "brasil-v6",
+    "language": "pt-BR",
+    "lastUpdated": 1567799288203,
+    "firstPublished": 1567799208,
+    "lastPublished": 1567799209,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "portuguese.also_in_the_news.media_asset.49602758.page",
+      "cps_asset_id": "49602758"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Cancer",
+          "thingUri": "http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id",
+          "thingId": "583f320b-e25a-433c-ad39-b637a4f27866",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Cancer",
+            "http://www.wikidata.org/entity/Q12078"
+          ]
         },
-        "type": "MAP",
-        "createdBy": "brasil-v6",
-        "language": "pt-BR",
-        "lastUpdated": 1567799288203,
-        "firstPublished": 1567799208,
-        "lastPublished": 1567799209,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "thingLabel": "Stem cells",
+          "thingUri": "http://www.bbc.co.uk/things/58e41e89-4d5e-4af6-b707-8e012bf861b6#id",
+          "thingId": "58e41e89-4d5e-4af6-b707-8e012bf861b6",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Stem_cell",
+            "http://www.wikidata.org/entity/Q48196"
+          ]
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "portuguese.also_in_the_news.media_asset.49602758.page",
-            "cps_asset_id": "49602758"
+        {
+          "thingLabel": "Health",
+          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Health",
+            "http://www.wikidata.org/entity/Q12147"
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph", "list", "image", "social_embed"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07mnyz5",
+        "subType": "clip",
+        "format": "video",
+        "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
+        "synopses": {
+          "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
+          "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
+          "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
         },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
+        "versions": [
+          {
+            "versionId": "p07mnyzb",
+            "types": ["Original"],
+            "duration": 213,
+            "durationISO8601": "PT3M33S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Cancer",
-                    "thingUri": "http://www.bbc.co.uk/things/583f320b-e25a-433c-ad39-b637a4f27866#id",
-                    "thingId": "583f320b-e25a-433c-ad39-b637a4f27866",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Cancer",
-                        "http://www.wikidata.org/entity/Q12078"
-                    ]
-                },
-                {
-                    "thingLabel": "Stem cells",
-                    "thingUri": "http://www.bbc.co.uk/things/58e41e89-4d5e-4af6-b707-8e012bf861b6#id",
-                    "thingId": "58e41e89-4d5e-4af6-b707-8e012bf861b6",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Stem_cell",
-                        "http://www.wikidata.org/entity/Q48196"
-                    ]
-                },
-                {
-                    "thingLabel": "Health",
-                    "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
-                    "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Health",
-                        "http://www.wikidata.org/entity/Q12147"
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "list",
-            "image",
-            "social_embed"
+            "availableFrom": 1567798828
+          }
         ],
-        "includeComments": false
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07mnyz5",
-                "subType": "clip",
-                "format": "video",
-                "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
-                "synopses": {
-                    "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
-                    "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
-                    "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Astrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>portuguese/internacional-49600608</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "O que torna o infarto mais letal em pessoas jovens",
+                  "headline": "O que torna o infarto mais letal em pessoas jovens",
+                  "overtyped": "O que torna o infarto mais letal em pessoas jovens"
                 },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
-                "versions": [
-                    {
-                        "versionId": "p07mnyzb",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 213,
-                        "durationISO8601": "PT3M33S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567798828
-                    }
-                ],
-                "imageCopyright": "BBC",
-                "type": "media"
-            },
-            {
-                "text": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "Astrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>portuguese/internacional-49600608</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "O que torna o infarto mais letal em pessoas jovens",
-                                    "headline": "O que torna o infarto mais letal em pessoas jovens",
-                                    "overtyped": "O que torna o infarto mais letal em pessoas jovens"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/portuguese/internacional-49600608"
-                                },
-                                "summary": "Segundo cardiologista, jovens não têm proteção extra no coração como mais velhos; Danilo Feliciano de Moraes, filho mais velho do ex-jogador Cafu, morreu após sofrer infarto enquanto jogava futebol.",
-                                "timestamp": 1567706265,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
-                                        "categoryName": "Analysis"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:portuguese/internacional-49600608",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>portuguese/geral-49569915</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "Zika causa danos neurológicos também em adultos, aponta estudo",
-                                    "headline": "Zika causa danos neurológicos também em adultos, aponta estudo",
-                                    "overtyped": "Zika causa danos neurológicos também em adultos, aponta estudo"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/portuguese/geral-49569915"
-                                },
-                                "summary": "Além de provocar microcefalia em bebês, vírus tem efeito em células neurais maduras, provocando, em alguns casos, perda de memória e outros prejuízos neurológico, segundo pesquisa realizada na UFRJ.",
-                                "timestamp": 1567678027,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:portuguese/geral-49569915",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            },
-            {
-                "text": "Mas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "Embora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "Ela corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "&quot;Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte&quot;, desabafa.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "O vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "id": "104602229",
-                "subType": "body",
-                "href": "http://c.files.bbci.co.uk/1683C/production/_104602229_line976.jpg",
-                "path": "/cpsprodpb/1683C/production/_104602229_line976.jpg",
-                "height": 2,
-                "width": 464,
-                "altText": "Línea",
-                "copyrightHolder": "BBC",
-                "positionHint": "body-width",
-                "type": "image"
-            },
-            {
-                "text": "<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "href": "https://www.youtube.com/watch?v=uflBBRUJCfk",
-                "source": "youtube",
-                "type": "social_embed"
-            },
-            {
-                "href": "https://www.youtube.com/watch?v=t0WiAn_TIkI",
-                "source": "youtube",
-                "type": "social_embed"
-            },
-            {
-                "href": "https://www.youtube.com/watch?v=8w-M0y8CmuU",
-                "source": "youtube",
-                "type": "social_embed"
-            }
-        ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "O drama da mulher em uma busca mundial por doador de células-tronco",
-            "headline": "O drama da mulher em uma busca mundial por doador de células-tronco"
-        },
-        "locators": {
-            "assetUri": "/portuguese/geral-49602758",
-            "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
-            "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd"
-        },
-        "summary": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador.",
-        "timestamp": 1567799288203,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07mnyz5",
-            "subType": "clip",
-            "format": "video",
-            "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
-            "synopses": {
-                "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
-                "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
-                "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
-            "versions": [
-                {
-                    "versionId": "p07mnyzb",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 213,
-                    "durationISO8601": "PT3M33S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567798828
-                }
+                "locators": {
+                  "href": "http://www.bbc.com/portuguese/internacional-49600608"
+                },
+                "summary": "Segundo cardiologista, jovens não têm proteção extra no coração como mais velhos; Danilo Feliciano de Moraes, filho mais velho do ex-jogador Cafu, morreu após sofrer infarto enquanto jogava futebol.",
+                "timestamp": 1567706265,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:portuguese/internacional-49600608",
+                "type": "cps"
+              }
             ],
-            "imageCopyright": "BBC",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108634506",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/EC7F/production/_108634506_p07mprgb.jpg",
-            "path": "/cpsprodpb/EC7F/production/_108634506_p07mprgb.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "Astrid, que tem leucemia",
-            "copyrightHolder": "BBC",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>portuguese/geral-49569915</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Zika causa danos neurológicos também em adultos, aponta estudo",
+                  "headline": "Zika causa danos neurológicos também em adultos, aponta estudo",
+                  "overtyped": "Zika causa danos neurológicos também em adultos, aponta estudo"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/portuguese/geral-49569915"
+                },
+                "summary": "Além de provocar microcefalia em bebês, vírus tem efeito em células neurais maduras, provocando, em alguns casos, perda de memória e outros prejuízos neurológico, segundo pesquisa realizada na UFRJ.",
+                "timestamp": 1567678027,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:portuguese/geral-49569915",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Mas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Embora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ela corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte&quot;, desabafa.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "O vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "104602229",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1683C/production/_104602229_line976.jpg",
+        "path": "/cpsprodpb/1683C/production/_104602229_line976.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "Línea",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "type": "image"
+      },
+      {
+        "text": "<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=uflBBRUJCfk",
+        "source": "youtube",
+        "type": "social_embed"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=t0WiAn_TIkI",
+        "source": "youtube",
+        "type": "social_embed"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=8w-M0y8CmuU",
+        "source": "youtube",
+        "type": "social_embed"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "O drama da mulher em uma busca mundial por doador de células-tronco",
+      "headline": "O drama da mulher em uma busca mundial por doador de células-tronco"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Geral",
-            "uri": "/portuguese/geral",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC Brasil",
-            "uri": "/portuguese",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "locators": {
+      "assetUri": "/portuguese/geral-49602758",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-49602758",
+      "curie": "http://www.bbc.co.uk/asset/0bff94de-2253-a145-be0f-926c848991fd"
+    },
+    "summary": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador.",
+    "timestamp": 1567799288203,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07mnyz5",
+      "subType": "clip",
+      "format": "video",
+      "title": "O drama da mulher em uma busca mundial por doador de células-tronco",
+      "synopses": {
+        "short": "O drama de mulher em uma busca mundial por doador de células-tronco",
+        "long": "Uma mulher mestiça, de 42 anos, procura desesperadamente, na Alemanha, um doador de células-tronco ao redor do mundo.\n\nAstrid tem leucemia, tipo de câncer que atinge os glóbulos brancos do sangue, comprometendo o sistema de defesa do organismo.\n\nMas por ser mestiça, filha de pai nigeriano e mãe alemã, ela está procurando uma agulha em um palheiro. \n\nEmbora haja cerca de 30 milhões de doadores de células-tronco registrados em todo o mundo, a maioria é branca - apenas 3% são mestiços.\n\nEla corre contra o tempo em busca de um doador. Para isso, começou uma campanha no Facebook.\n\n\"Não ser capaz de ver meus filhos crescerem, é insuportável para mim. Quero preparar meus filhos para a vida, não pela morte\", desabafa.\n\nO vídeo mostra a jornada emocionante de Astrid, que simboliza a luta de milhares de outras pessoas representantes de minorias étnicas em busca de doadores ao redor do mundo.",
+        "medium": "Astrid, de 42 anos, tem leucemia e corre contra o tempo para encontrar um doador."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07mprx8.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "O drama de mulher em uma busca mundial por doador de células-tronco",
+      "versions": [
+        {
+          "versionId": "p07mnyzb",
+          "types": ["Original"],
+          "duration": 213,
+          "durationISO8601": "PT3M33S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567798828
+        }
+      ],
+      "imageCopyright": "BBC",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108634506",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/EC7F/production/_108634506_p07mprgb.jpg",
+      "path": "/cpsprodpb/EC7F/production/_108634506_p07mprgb.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Astrid, que tem leucemia",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/geral-49602758",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Geral",
+      "uri": "/portuguese/geral",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Brasil",
+      "uri": "/portuguese",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

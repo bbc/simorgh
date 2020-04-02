@@ -40,9 +40,7 @@
       "versions": [
         {
           "versionId": "p07mf8x2",
-          "types": [
-            "Original"
-          ],
+          "types": ["Original"],
           "duration": 36,
           "durationISO8601": "PT36S",
           "warnings": {},

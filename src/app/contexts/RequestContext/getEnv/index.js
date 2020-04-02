@@ -1,9 +1,9 @@
-const getEnv = origin => {
+const getEnv = (origin) => {
   if (origin.includes('local')) {
     return 'local';
   }
 
-  if (origin.includes('test')) {
+  if (origin.includes('test') || origin.includes('stage')) {
     return 'test';
   }
 
