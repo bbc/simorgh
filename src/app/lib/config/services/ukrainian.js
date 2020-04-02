@@ -162,6 +162,22 @@ export const service = {
         nextRadioShow: 'Наступна радіопрограма',
         duration: 'Тривалість',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Підпис до відео, ',
+          text: 'Увага: інші сайти можуть містити рекламу',
+        },
+        fallback: {
+          text: 'Контент недоступний',
+          linkText: 'Дивіться більше у %provider_name%',
+          linkTextSuffixVisuallyHidden: ', зовнішнє посилання',
+          warningText: 'ВВС не несе відповідальності за контент інших сайтів.',
+        },
+        skipLink: {
+          text: 'Пропустити %provider_name% допис',
+          endTextVisuallyHidden: 'Кінець %provider_name% допису',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -208,22 +224,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. ВВС не несе відповідальності за контент інших сайтів.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'Підпис до відео, ',
-          text: 'Увага: інші сайти можуть містити рекламу',
-        },
-        fallback: {
-          text: 'Контент недоступний',
-          linkText: 'Дивіться більше у %provider_name%',
-          linkTextSuffixVisuallyHidden: ', зовнішнє посилання',
-          warningText: 'ВВС не несе відповідальності за контент інших сайтів.',
-        },
-        skipLink: {
-          text: 'Пропустити %provider_name% допис',
-          endTextVisuallyHidden: 'Кінець %provider_name% допису',
-        },
-      },
     },
     fonts: [],
     timezone: 'GMT',

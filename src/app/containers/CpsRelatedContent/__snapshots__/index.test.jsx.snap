@@ -453,3 +453,112 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   </section>
 </DocumentFragment>
 `;
+
+exports[`CpsRelatedContent should render Story Promo components without <ul> when given single item in collection 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="related-content-heading"
+    class="GridWrapper-sc-12lwanc-0 hgpaqH"
+    role="region"
+  >
+    <div
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+    >
+      <div
+        class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+      >
+        <div
+          class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+        >
+          <div
+            class="Bar-sc-1x4gwjz-0 jsgdXU"
+          />
+          <h2
+            class="Heading-sc-1x4gwjz-2 eZofTG"
+          >
+            <div
+              class="FlexColumn-wx5kdp-0 dgpsiS"
+            >
+              <span
+                class="FlexRow-wx5kdp-2 dVBNyZ"
+              >
+                <span
+                  class="Title-wx5kdp-4 BeqZV"
+                  dir="ltr"
+                  id="related-content-heading"
+                >
+                  Another thing we de for inside dis tori
+                </span>
+              </span>
+            </div>
+          </h2>
+        </div>
+        <div
+          class="SingleContentWrapper-sc-1itct8j-2 upQSg"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+              dir="ltr"
+            >
+              <div
+                class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl"
+              >
+                <div
+                  class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
+                >
+                  <div
+                    class="lazyload-placeholder"
+                  />
+                </div>
+                <div
+                  class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx"
+                />
+              </div>
+            </div>
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+              dir="ltr"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-3 hSJrur"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/pidgin/44508901?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span
+                      class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+                    >
+                      , 
+                    </span>
+                    <span>
+                      Meet boys who dey convert cassava to electricity
+                    </span>
+                  </span>
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 eaCWBB"
+              >
+                James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="1970-01-18"
+              >
+                18th January 1970
+              </time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
