@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
-import { htmlUnescape } from 'escape-goat';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -39,10 +38,7 @@ const SocialEmbedContainer = ({ blocks }) => {
   const { type: provider, model } = blocks[0];
   const { id, href } = model;
 
-  const oEmbedHtmlEscaped = path(['embed', 'oembed'], model);
-  const oEmbed = oEmbedHtmlEscaped && {
-    ...(oEmbedHtmlEscaped && { html: htmlUnescape(oEmbedHtmlEscaped.html) }),
-  };
+  const oEmbed = path(['embed', 'oembed'], model);
 
   const {
     fallback: fallbackTranslations,
