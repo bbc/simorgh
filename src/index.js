@@ -1,3 +1,5 @@
+import { SERVER_LISTEN_ERROR } from '#lib/logger.const';
+
 // dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 const dotenv = require('dotenv');
 
@@ -18,16 +20,9 @@ let currentApp = app;
 
 server.listen(port, (error) => {
   if (error) {
-    logger.error(
-      JSON.stringify(
-        {
-          event: 'server_listen_error',
-          message: error,
-        },
-        null,
-        2,
-      ),
-    );
+    logger.error(SERVER_LISTEN_ERROR, {
+      error,
+    });
   }
 });
 
