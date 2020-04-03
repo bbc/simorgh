@@ -285,7 +285,7 @@ describe('cspHeader', () => {
       styleSrcExpectation,
       workerSrcExpectation,
     }) => {
-      describe(`Given isAmp ${isAmp} isLive ${isLive}`, () => {
+      describe(`Given isAmp ${isAmp} & isLive ${isLive}`, () => {
         it(`Then it has this childSrc`, () => {
           expect(generateChildSrc({ isAmp, isLive })).toEqual(
             childSrcExpectation,
@@ -330,7 +330,7 @@ describe('cspHeader', () => {
           expect(generateWorkerSrc({ isAmp })).toEqual(workerSrcExpectation);
         });
 
-        it(`Then it has this middleware setting the expected header string`, () => {
+        it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           const req = {
             url: urlExample,
             headers: {
