@@ -6,7 +6,11 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import path from 'ramda/src/path';
 import assocPath from 'ramda/src/assocPath';
 
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -30,6 +34,16 @@ const Wrapper = styled(GridItemConstrainedLarge)`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+`;
+
+// Apply the right margin-top between the section label and the promos
+const SingleContentWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    padding-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING_TRPL};
+  }
 `;
 
 const formatItem = (item, env) => {
@@ -63,6 +77,8 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
     children: node.isRequired,
   };
   if (!content.length) return null;
+  const hasSingleRelatedContent = content.length === 1;
+  const [singleRelatedContent] = content;
 
   return (
     <RelatedContentWrapper>
@@ -75,40 +91,50 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
         >
           {translations.relatedContent}
         </StyledSectionLabel>
-        <Grid
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 8,
-            group5: 8,
-          }}
-          as={StoryPromoUl}
-          enableGelGutters
-          dir={dir}
-        >
-          {content
-            .map((item) => formatItem(item, env))
-            .map((item) => (
-              <Grid
-                item
-                columns={{
-                  group0: 6,
-                  group1: 6,
-                  group2: 6,
-                  group3: 6,
-                  group4: 4,
-                  group5: 4,
-                }}
-                as={StoryPromoLi}
-                key={item.id || item.uri}
-                dir={dir}
-              >
-                <StoryPromo item={item} dir={dir} />
-              </Grid>
-            ))}
-        </Grid>
+
+        {hasSingleRelatedContent ? (
+          <SingleContentWrapper>
+            <StoryPromo
+              item={formatItem(singleRelatedContent, env)}
+              dir={dir}
+            />
+          </SingleContentWrapper>
+        ) : (
+          <Grid
+            columns={{
+              group0: 6,
+              group1: 6,
+              group2: 6,
+              group3: 6,
+              group4: 8,
+              group5: 8,
+            }}
+            as={StoryPromoUl}
+            enableGelGutters
+            dir={dir}
+          >
+            {content
+              .map((item) => formatItem(item, env))
+              .map((item) => (
+                <Grid
+                  item
+                  columns={{
+                    group0: 6,
+                    group1: 6,
+                    group2: 6,
+                    group3: 6,
+                    group4: 4,
+                    group5: 4,
+                  }}
+                  as={StoryPromoLi}
+                  key={item.id || item.uri}
+                  dir={dir}
+                >
+                  <StoryPromo item={item} dir={dir} />
+                </Grid>
+              ))}
+          </Grid>
+        )}
       </Wrapper>
     </RelatedContentWrapper>
   );

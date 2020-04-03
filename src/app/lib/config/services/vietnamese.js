@@ -152,6 +152,22 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Chụp lại video, ',
+          text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
+        },
+        fallback: {
+          text: 'Nội dung không có',
+          linkText: 'Xem thêm ở %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bên ngoài',
+          warningText: 'BBC không chịu trách nhiệm nội dung các trang ngoài.',
+        },
+        skipLink: {
+          text: 'Bỏ qua %provider_name% tin',
+          endTextVisuallyHidden: 'Cuối %provider_name% tin',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -203,22 +219,6 @@ export const service = {
       ],
       copyrightText:
         'BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.',
-      socialEmbed: {
-        caption: {
-          textPrefixVisuallyHidden: 'Chụp lại video, ',
-          text: 'Cảnh báo: Nội dung bên thứ ba có thể có quảng cáo',
-        },
-        fallback: {
-          text: 'Nội dung không có',
-          linkText: 'Xem thêm ở %provider_name%',
-          linkTextSuffixVisuallyHidden: ', bên ngoài',
-          warningText: 'BBC không chịu trách nhiệm nội dung các trang ngoài.',
-        },
-        skipLink: {
-          text: 'Bỏ qua %provider_name% tin',
-          endTextVisuallyHidden: 'Cuối %provider_name% tin',
-        },
-      },
     },
     fonts: [],
     timezone: 'Asia/Ho_Chi_Minh',

@@ -51,6 +51,22 @@ describe('CpsRelatedContent', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('should render Story Promo components without <ul> when given single item in collection', () => {
+    const topRelatedContentsOneItem = [promos[0]];
+
+    expect(promos[0]).toBeTruthy();
+
+    const { asFragment } = renderRelatedContent({
+      content: topRelatedContentsOneItem,
+    });
+
+    expect(document.querySelector("li[class^='StoryPromoLi']")).toBeNull();
+
+    expect(document.querySelector('ul')).toBeNull();
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('should render Story Promo components in Live environment', () => {
     const { asFragment } = renderRelatedContent({
       bbcOrigin: 'https://www.bbc.co.uk',
