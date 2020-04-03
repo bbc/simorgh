@@ -1,3 +1,8 @@
+import csp from 'helmet-csp';
+import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
+import routes from '#app/routes';
+import getOriginContext from '#contexts/RequestContext/getOriginContext';
+
 const directives = {
   connectSrc: {
     ampLive: [
@@ -24,6 +29,8 @@ const directives = {
       'https://tpc.googlesyndication.com', // ads
       'https://a1.api.bbc.co.uk/hit.xiti', // ATI
       'https://toggles.api.bbci.co.uk', // Toggles service
+      'https://cookie-oven.api.bbc.com', // Cookie banner
+      'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       "'self'",
     ],
     ampNonLive: [
@@ -50,18 +57,21 @@ const directives = {
       'https://tpc.googlesyndication.com', // ads
       'https://logws1363.ati-host.net', // ATI
       'https://toggles.test.api.bbci.co.uk', // Toggles service
+      'https://cookie-oven.api.bbc.com', // Cookie banner
+      'https://cookie-oven.api.bbc.co.uk', // Cookie banner
+      'https://cookie-oven.test.api.bbc.com', // Cookie banner
+      'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
       "'self'",
     ],
   },
   frameSrc: {
     ampLive: [
-      "'self'",
       'https://polling.bbc.co.uk', // Media page
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
+      "'self'",
     ],
     canonicalLive: [
-      "'self'",
       'https://polling.bbc.co.uk', // Media page
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
@@ -69,24 +79,25 @@ const directives = {
       'https://emp.bbc.co.uk',
       'https://chartbeat.com',
       'https://*.chartbeat.com',
+      "'self'",
     ],
     ampNonLive: [
-      "'self'",
       'https://polling.bbc.co.uk', // Media page
+      'https://polling.test.bbc.co.uk', // Media page
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
-      'https://polling.test.bbc.co.uk', // Media page
+      "'self'",
     ],
     canonicalNonLive: [
-      "'self'",
       'https://polling.bbc.co.uk', // Media page
+      'https://polling.test.bbc.co.uk', // Media page
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://emp.bbc.com',
       'https://emp.bbc.co.uk',
       'https://chartbeat.com',
       'https://*.chartbeat.com',
-      'https://polling.test.bbc.co.uk', // Media page
+      "'self'",
     ],
   },
   imgSrc: {
@@ -111,20 +122,20 @@ const directives = {
       // not currently used since is identical to canonical
     ],
     canonicalNonLive: [
-      'https://ichef.bbci.co.uk',
-      'https://ping.chartbeat.net',
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://news.files.bbci.co.uk',
-      'https://*.akstat.io',
-      'https://r.bbci.co.uk',
+      'https://ichef.bbci.co.uk', // Images
+      'https://ichef.test.bbci.co.uk', // Images
+      'https://ping.chartbeat.net', // Chartbeat
+      'https://a1.api.bbc.co.uk/hit.xiti', // ATI analytics
+      'https://logws1363.ati-host.net', // ATI analytics
+      'https://news.files.bbci.co.uk', // Static Assets
+      'https://news.test.files.bbci.co.uk', // Static Assets
+      'https://*.akstat.io', //
+      'https://r.bbci.co.uk', //
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
       'https://www.google.com', // ads
       'https://via.placeholder.com', // ads
-      'https://ichef.test.bbci.co.uk',
-      'https://news.test.files.bbci.co.uk',
-      'https://logws1363.ati-host.net',
       'http://b.files.bbci.co.uk', // localhost http connection for image
       'http://ping.chartbeat.net', // localhost prod build
       "data: 'self'", // needed at the end to maintain proper order
@@ -135,6 +146,7 @@ const directives = {
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
       'https://*.go-mpulse.net',
+      "'self'",
       "'unsafe-inline'",
     ],
     canonicalLive: [
@@ -151,20 +163,21 @@ const directives = {
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
       'https://*.go-mpulse.net',
+      "'self'",
       "'unsafe-inline'",
     ],
     canonicalNonLive: [
       'https://news.files.bbci.co.uk',
+      'https://news.test.files.bbci.co.uk',
       'https://*.chartbeat.com',
       'https://*.go-mpulse.net',
       'https://mybbc-analytics.files.bbci.co.uk',
       'https://emp.bbci.co.uk',
       'https://static.bbci.co.uk',
-      "'self'",
-      "'unsafe-inline'",
-      'https://news.test.files.bbci.co.uk',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
+      "'self'",
+      "'unsafe-inline'",
     ],
   },
 };
@@ -181,79 +194,58 @@ export const generateImgSrc = ({ isLive }) => {
   return directives.imgSrc.canonicalLive;
 };
 
-const cookieOvenTld = ({ isUK }) => {
-  if (!isUK) {
-    return '.com';
-  }
-  return '.co.uk';
+export const generateConnectSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.connectSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.connectSrc.ampLive;
+  return directives.connectSrc.canonicalLive;
 };
 
-const generateCookieOvenUrls = ({ isLive, isUK }) => {
-  const cookieUrl = [`https://cookie-oven.api.bbc${cookieOvenTld({ isUK })}`];
-  if (!isLive) {
-    cookieUrl.push(
-      `https://cookie-oven.test.api.bbc${cookieOvenTld({ isUK })}`,
-    );
-  }
-
-  return cookieUrl;
-};
-
-export const generateConnectSrc = ({ isAmp, isLive, isUK }) => {
-  const connectSrc = [
-    'https://*.akstat.io',
-    'https://*.akamaihd.net',
-    'https://c.go-mpulse.net',
-    'https://adservice.google.com', // ads,
-    'https://securepubads.g.doubleclick.net', // ads
-    'https://pagead2.googlesyndication.com', // ads
-    'https://tpc.googlesyndication.com', // ads
-  ];
-
-  if (!isLive) {
-    connectSrc.push(
-      'https://logws1363.ati-host.net',
-      'https://toggles.test.api.bbci.co.uk',
-    );
-  } else {
-    connectSrc.push(
-      'https://a1.api.bbc.co.uk/hit.xiti',
-      'https://toggles.api.bbci.co.uk',
-    );
-  }
-
-  if (isAmp) {
-    connectSrc.push(
-      'https://cdn.ampproject.org',
-      'https://amp-error-reporting.appspot.com',
-    );
-    return connectSrc;
-  }
-
-  connectSrc.push("'self'");
-  return connectSrc.concat(generateCookieOvenUrls({ isLive, isUK }));
-};
-
-const generateFrameSrc = ({ isAmp, isLive }) => {
+export const generateFrameSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.frameSrc.ampLive;
   return directives.frameSrc.canonicalLive;
 };
 
-export const constructCspHeader = ({ isAmp, isLive, isUK }) => ({
+export const generateDefaultSrc = () => ["'self'"];
+
+export const generateFontSrc = () => [
+  'https://gel.files.bbci.co.uk',
+  'https://ws-downloads.files.bbci.co.uk',
+];
+
+export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
+
+export const generateStyleSrc = () => ["'unsafe-inline'"];
+
+export const generateWorkerSrc = ({ isAmp }) =>
+  isAmp ? ['blob:'] : ["'self'"];
+
+const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
-    'default-src': ["'self'"],
-    'font-src': [
-      'https://gel.files.bbci.co.uk',
-      'https://ws-downloads.files.bbci.co.uk',
-    ],
-    'style-src': ["'unsafe-inline'"],
+    'default-src': generateDefaultSrc(),
+    'child-src': generateChildSrc({ isAmp }),
+    'connect-src': generateConnectSrc({ isAmp, isLive }),
+    'font-src': generateFontSrc(),
+    'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
-    'connect-src': generateConnectSrc({ isAmp, isLive, isUK }),
-    'frame-src': generateFrameSrc({ isAmp, isLive }),
-    'worker-src': isAmp ? ['blob:'] : ["'self'"],
-    'child-src': isAmp ? ['blob:'] : ["'self'"],
+    'style-src': generateStyleSrc(),
+    'worker-src': generateWorkerSrc({ isAmp }),
   },
 });
+
+const injectCspHeader = (req, res, next) => {
+  const { isAmp } = getRouteProps(routes, req.url);
+  const originHeader = req.headers['bbc-origin'];
+  const { origin } = getOriginContext(originHeader);
+
+  const isLive =
+    origin === 'https://www.bbc.co.uk' || origin === 'https://www.bbc.com';
+
+  const middleware = csp(helmetCsp({ isAmp, isLive }));
+  middleware(req, res, next);
+};
+
+export default injectCspHeader;

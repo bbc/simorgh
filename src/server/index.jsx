@@ -22,7 +22,7 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader from './utilities/cspHeader/middleware';
+import injectCspHeader from './utilities/cspHeader';
 
 const fs = require('fs');
 
