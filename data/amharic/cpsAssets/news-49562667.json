@@ -1,165 +1,158 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:amharic/news-49562667",
-        "locators": {
-            "assetUri": "/amharic/news-49562667",
-            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
-            "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:amharic/news-49562667",
+    "locators": {
+      "assetUri": "/amharic/news-49562667",
+      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
+      "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0"
+    },
+    "type": "MAP",
+    "createdBy": "amharic-v6",
+    "language": "am",
+    "lastUpdated": 1567503157439,
+    "firstPublished": 1567503148,
+    "lastPublished": 1567503149,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "amharic.news.media_asset.49562667.page",
+      "cps_asset_id": "49562667"
+    },
+    "tags": {},
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07m9gb5",
+        "subType": "clip",
+        "format": "video",
+        "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
+        "synopses": {
+          "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+          "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል    \nለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
         },
-        "type": "MAP",
-        "createdBy": "amharic-v6",
-        "language": "am",
-        "lastUpdated": 1567503157439,
-        "firstPublished": 1567503148,
-        "lastPublished": 1567503149,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
-        },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "amharic.news.media_asset.49562667.page",
-            "cps_asset_id": "49562667"
-        },
-        "tags": {},
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph"
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+        "versions": [
+          {
+            "versionId": "p07m9gb7",
+            "types": ["Original"],
+            "duration": 178,
+            "durationISO8601": "PT2M58S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1567495074
+          }
         ],
-        "includeComments": false
+        "type": "media"
+      },
+      {
+        "text": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ከአንድ ወር በፊት ስለተከናወነው ዘመቻ ይፋዊ ዝርዝር መረጃዎች ባይሰጡም፤ ሰዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች ምላሽ ይሰጣል ያልነውን ማብራሪያ እንደሚከተለው በሥዕላዊ መግለጫ ይዘንናለችሁ ቀርበናል። ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ጥያቄዎቻችሁንና ሃሳባችሁን በፌስቡክ የመልዕክት ሳጥናችን ወይም በbbcamharic@bbc.co.uk ይላኩልን። ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
+      "headline": "ሲያነጋግሩ ለነበሩ የችግኝ ተከላ ጥያቄዎች የቀረበ ሥዕላዊ መግለጫ"
     },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07m9gb5",
-                "subType": "clip",
-                "format": "video",
-                "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
-                "synopses": {
-                    "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-                    "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል    \nለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
-                },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-                "versions": [
-                    {
-                        "versionId": "p07m9gb7",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 178,
-                        "durationISO8601": "PT2M58S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567495074
-                    }
-                ],
-                "type": "media"
-            },
-            {
-                "text": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ",
-                "role": "introduction",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ከአንድ ወር በፊት ስለተከናወነው ዘመቻ ይፋዊ ዝርዝር መረጃዎች ባይሰጡም፤ ሰዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች ምላሽ ይሰጣል ያልነውን ማብራሪያ እንደሚከተለው በሥዕላዊ መግለጫ ይዘንናለችሁ ቀርበናል። ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "ጥያቄዎቻችሁንና ሃሳባችሁን በፌስቡክ የመልዕክት ሳጥናችን ወይም በbbcamharic@bbc.co.uk ይላኩልን። ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            }
-        ]
+    "locators": {
+      "assetUri": "/amharic/news-49562667",
+      "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
+      "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0"
     },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
-            "headline": "ሲያነጋግሩ ለነበሩ የችግኝ ተከላ ጥያቄዎች የቀረበ ሥዕላዊ መግለጫ"
-        },
-        "locators": {
-            "assetUri": "/amharic/news-49562667",
-            "cpsUrn": "urn:bbc:content:assetUri:amharic/news-49562667",
-            "curie": "http://www.bbc.co.uk/asset/3d1552a3-9e53-1a4e-853d-9c518af58ff0"
-        },
-        "summary": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ብዙዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች የሚከተለው ሥዕላዊ መግለጫ ቀርቧል።",
-        "timestamp": 1567503157439,
-        "passport": {},
-        "media": {
-            "id": "p07m9gb5",
-            "subType": "clip",
-            "format": "video",
-            "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
-            "synopses": {
-                "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-                "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል    \nለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
-            "versions": [
-                {
-                    "versionId": "p07m9gb7",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 178,
-                    "durationISO8601": "PT2M58S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567495074
-                }
-            ],
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108085442",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
-            "path": "/cpsprodpb/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "ጠቅላይ ሚኒስትር ዐቢይ አህመድ ችግኝ ሲተክሉ",
-            "copyrightHolder": "PM Office Facebook Page",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:amharic/news-49562667",
-        "type": "cps"
+    "summary": "በጠቅላይ ሚኒስትር ዐብይ አህመድ አነሳሽነት ሐምሌ 22 ቀን 2011 ዓ.ም 'አረንጓዴ አሻራ' በሚል መሪ ቃል በሃገር አቀፍ ደረጃ በተደረገው የችግኝ ተከላ ዘመቻ ከ300 ሚሊዮን በላይ ችግኞች መተከላቸው ተነግሯል። ብዙዎችን ሲያነጋግሩ ለነበሩ ጥያቄዎች የሚከተለው ሥዕላዊ መግለጫ ቀርቧል።",
+    "timestamp": 1567503157439,
+    "passport": {},
+    "media": {
+      "id": "p07m9gb5",
+      "subType": "clip",
+      "format": "video",
+      "title": "የኢትዮጵያ ችግኝ ተከላ በቁጥር",
+      "synopses": {
+        "short": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+        "medium": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል    \nለጊዜው ብዙ የተረጋገጡ ነገሮች ለማግኘት ባይቻልም፤ ሲያጠያይቁ የነበሩትን ነገሮች ምላሽ ለማብራራት ብለን በሥዕላዊ መግለጫ ይዘንላችሁ ቀርበናል።"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m9hdb.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "በጠቅላይ ሚኒስትር ዐብይ አህመድ የተቀናበረው የግሪን ሌጋሲ የችግኝ ተከላ ሳምንት አልፎታል።",
+      "versions": [
+        {
+          "versionId": "p07m9gb7",
+          "types": ["Original"],
+          "duration": 178,
+          "durationISO8601": "PT2M58S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567495074
+        }
+      ],
+      "type": "media"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "ዜና",
-            "uri": "/amharic/news",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC አማርኛ",
-            "uri": "/amharic",
-            "type": "simple"
-        },
-        "groups": []
-    }
+    "indexImage": {
+      "id": "108085442",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
+      "path": "/cpsprodpb/5F8A/production/_108085442_65213069_612592232565297_3763400458157162496_n.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ጠቅላይ ሚኒስትር ዐቢይ አህመድ ችግኝ ሲተክሉ",
+      "copyrightHolder": "PM Office Facebook Page",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:amharic/news-49562667",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ዜና",
+      "uri": "/amharic/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC አማርኛ",
+      "uri": "/amharic",
+      "type": "simple"
+    },
+    "groups": []
+  }
 }

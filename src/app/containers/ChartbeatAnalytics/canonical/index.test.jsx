@@ -65,12 +65,7 @@ describe('CanonicalChartbeatAnalytics', () => {
 
     wrapper.setProps(pageBConfig);
 
-    expect(
-      wrapper
-        .find('script')
-        .first()
-        .text(),
-    ).toMatch(/"title":"Page A"/);
+    expect(wrapper.find('script').first().text()).toMatch(/"title":"Page A"/);
   });
 
   it('should call the global virtualPage function when props change', () => {

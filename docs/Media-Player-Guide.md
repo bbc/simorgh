@@ -23,7 +23,7 @@ To render a media player we have built endpoints outside of Simorgh that take in
 For example:
 
 ```
-<iframe 
+<iframe
   src="https://some-embed-endpoint.bbc.com/ws/av-embeds/articles/cd4117egk3go/p07ftj65/en-GB"
   title="My Video Title">
 </iframe>
@@ -31,18 +31,18 @@ For example:
 
 We need to support different types of media, most of which have varied settings. To ease and simplify the configurations of each differing media type, we have configured separate endpoints per type of media, so that we can send as little as possible in the request:
 
-| Type | AMP | Example path |
-|------|-----|-------------|
-|Optimo|No| `/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}` |
-|Optimo|Yes| `/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}/amp` |
-|CPS|No| `/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}` |
-|CPS|Yes| `/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}/amp` |
-|Live Radio|No| `/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}` |
-|Live Radio|Yes| `/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}/amp` |
+| Type       | AMP | Example path                                                       |
+| ---------- | --- | ------------------------------------------------------------------ |
+| Optimo     | No  | `/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}`            |
+| Optimo     | Yes | `/ws/av-embeds/articles/{{asset_id}}/{{vpid}}/{{lang}}/amp`        |
+| CPS        | No  | `/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}`     |
+| CPS        | Yes | `/ws/av-embeds/cps/{{service}}/{{asset_id}}/{{vpid}}/{{lang}}/amp` |
+| Live Radio | No  | `/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}`            |
+| Live Radio | Yes | `/ws/av-embeds/media/{{service_id}}/liveradio/{{lang}}/amp`        |
 
 ## Media Player Component
 
-In Simorgh, we have a container called `MediaPlayer` that imports the [`@bbc/psammead-media-player`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-media-player) component. 
+In Simorgh, we have a container called `MediaPlayer` that imports the [`@bbc/psammead-media-player`](https://github.com/bbc/psammead/tree/latest/packages/components/psammead-media-player) component.
 
 In the Simorgh container, we construct various properties that we will send to the above component. This includes things like the actual embed source URL, the placeholder image, and data relating to guidance. We are able to construct this data from the media block that is passed to the container.
 

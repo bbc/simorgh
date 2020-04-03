@@ -814,20 +814,14 @@
             "http://rdf.freebase.com/ns/m.0cw10",
             "http://www.wikidata.org/entity/Q9439"
           ],
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
+          "thingType": ["Person", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/18fe6fd7-1aa4-4a35-961f-d037c667eb61#id"
         },
         {
           "thingId": "2351f2b2-ce36-4f44-996d-c3c4f7f90eaa",
           "thingLabel": "Wedding of Prince Harry and Meghan Markle",
           "thingSameAs": [],
-          "thingType": [
-            "Event",
-            "Thing"
-          ],
+          "thingType": ["Event", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id"
         },
         {
@@ -838,10 +832,7 @@
             "http://rdf.freebase.com/ns/m.05mnc3",
             "http://www.wikidata.org/entity/Q10479"
           ],
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
+          "thingType": ["Person", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/6ef8f9fc-237c-4b1f-843b-908a89d34a0e#id"
         },
         {
@@ -853,13 +844,8 @@
           ],
           "thingId": "803eaeb9-c0c3-4f1b-9a66-90efac3df2dc",
           "thingLabel": "Duchess of Sussex",
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Meghan_Markle"
-          ],
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Meghan_Markle"],
+          "thingType": ["Person", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id",
           "topicId": "cg3mq45zq4xt",
           "topicName": "Duchess of Sussex"
@@ -873,10 +859,7 @@
             "http://www.imdb.com/name/nm0697740/",
             "http://www.wikidata.org/entity/Q9685"
           ],
-          "thingType": [
-            "Person",
-            "Thing"
-          ],
+          "thingType": ["Person", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/b2412496-55d2-43ab-9a76-d205428090e2#id"
         },
         {
@@ -887,10 +870,7 @@
             "http://sws.geonames.org/6618996/",
             "http://www.wikidata.org/entity/Q5933"
           ],
-          "thingType": [
-            "Place",
-            "Thing"
-          ],
+          "thingType": ["Place", "Thing"],
           "thingUri": "http://www.bbc.co.uk/things/e248c597-4f16-40f9-8313-678e7e911891#id"
         }
       ]

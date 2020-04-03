@@ -5,7 +5,7 @@ const AV_ROUTE = 'ws/av-embeds';
 const LIVE_URL = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
-const shouldRenderLiveData = queryString => {
+const shouldRenderLiveData = (queryString) => {
   if (isLive()) {
     return true;
   }
@@ -13,7 +13,7 @@ const shouldRenderLiveData = queryString => {
   return Boolean(queryString) && queryString.includes('renderer_env=live');
 };
 
-const getBaseUrl = queryString => {
+const getBaseUrl = (queryString) => {
   if (shouldRenderLiveData(queryString)) {
     return LIVE_URL;
   }

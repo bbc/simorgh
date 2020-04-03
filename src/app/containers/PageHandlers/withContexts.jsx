@@ -10,8 +10,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { EventContextProvider } from '#contexts/EventContext';
 
-const WithContexts = Component => {
-  const WithContextsContainer = props => {
+const WithContexts = (Component) => {
+  const WithContextsContainer = (props) => {
     const {
       bbcOrigin,
       status,

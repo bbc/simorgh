@@ -10,7 +10,7 @@ import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import formatDuration from '#lib/utilities/formatDuration';
 
-const getAssetContentTypes = item => {
+const getAssetContentTypes = (item) => {
   const type = pathOr('', ['contentType'], item);
   const mediaContentTypesMapping = {
     Audio: 'audio',
@@ -25,7 +25,7 @@ const getAssetContentTypes = item => {
   return null;
 };
 
-const getCpsMediaTypes = item => {
+const getCpsMediaTypes = (item) => {
   const isPGL = path(['cpsType'], item) === 'PGL';
   const isCpsMedia = path(['cpsType'], item) === 'MAP';
   const hasMediaInfo = path(['media'], item);
@@ -38,7 +38,7 @@ const getCpsMediaTypes = item => {
   return type || null;
 };
 
-const getMediaType = item => {
+const getMediaType = (item) => {
   const isAssetTypeMedia = path(['assetTypeCode'], item);
   return isAssetTypeMedia ? getAssetContentTypes(item) : getCpsMediaTypes(item);
 };

@@ -92,7 +92,7 @@ const CanonicalMostRead = ({
   } = useContext(ServiceContext);
 
   useEffect(() => {
-    const handleResponse = async response => {
+    const handleResponse = async (response) => {
       const mostReadData = await response.json();
 
       // The ARES test endpoint for most read renders fixture data, so the data is stale
@@ -121,10 +121,10 @@ const CanonicalMostRead = ({
         setItems(mostReadItems);
       }
     };
-    const fetchMostReadData = pathname =>
+    const fetchMostReadData = (pathname) =>
       fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
+        .catch((e) => logger.error(`HTTP Error: "${e}"`));
     fetchMostReadData(endpoint);
   }, [
     endpoint,

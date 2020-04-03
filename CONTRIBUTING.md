@@ -5,7 +5,9 @@ We welcome feedback and help on this work. By participating in this project, you
 We are particularly looking for help with our [open issues](https://github.com/bbc/simorgh/issues). We appreciate all forms of contribution - not just code - that can include documentation, clarifications, typo corrections and much more.
 
 ## Documentation index
+
 Please familiarise yourself with our:
+
 - [Code of conduct](https://github.com/bbc/simorgh/blob/latest/.github/CODE_OF_CONDUCT.md)
 - [Code Standards](https://github.com/bbc/simorgh/blob/latest/docs/Code-Standards.md)
 - [Contributing guidelines](https://github.com/bbc/simorgh/blob/latest/CONTRIBUTING.md) (you are here)
@@ -56,6 +58,7 @@ git pull upstream latest
 ```
 
 ### Your work
+
 > Make sure you have a valid GPG key set up in GitHub. **All commits must be GPG signed** We do have a very small [guide](docs/GPG-Signing-Guide.md) for setting up GPG signing on MacOS.
 
 Create a new topic branch (off the main project `latest` branch) that will contain your feature, change, or fix:
@@ -111,14 +114,16 @@ To run these on your forked version follow these steps.
 We have a lot of [sample data feeds](https://github.com/bbc/simorgh/tree/49a74f2c3b1df0fb1adb6b8bb7fff51ddce55dda/data). These are categorised in directories under this primary directory. Finding useful examples within these folder can be done by searching for the asset (page type) and block types (e.g. paragraph, media etc.) you're looking for.
 
 #### Update local fixture data
+
 Pick a JSON file under `data/news/articles/[id].json`, and:
 
-1) add an example of your block somewhere in the `content.model.blocks` array.
-2) add your new component to the `blockTypes` array.
+1. add an example of your block somewhere in the `content.model.blocks` array.
+2. add your new component to the `blockTypes` array.
 
 Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
 
 #### Update the schema
+
 data/schema.yaml describes the Article API definition for web. We need to make it aware of our new component.
 
 Your component is more than likely a new 'block' in the data feed, so you'll need to add it to the array of which blocks the application should validate:
@@ -137,32 +142,33 @@ Your component is more than likely a new 'block' in the data feed, so you'll nee
 You'll also need to define the block subtype itself:
 
 ```yaml
-    blockquote:
-      type: object
-      required:
-        - model
-        - type
+blockquote:
+  type: object
+  required:
+    - model
+    - type
+  properties:
+    model:
       properties:
-        model:
-          properties:
-            blocks:
-              $ref: '#/components/schemas/blocks'
-          type: object
-        type:
-          enum:
-            - blockquote
-          type: string
+        blocks:
+          $ref: '#/components/schemas/blocks'
+      type: object
+    type:
+      enum:
+        - blockquote
+      type: string
 ```
 
 The schema check currently only happens on local data.
 
 ### Create the container
+
 We've added our _component_, which should be kept as simple as possible. Now we need to create our _container_, which contains the business logic for mapping Optimo block data to the React parameters our component needs.
 
 Add a new folder under `src/app/containers/[Component Name]/`. You will need:
 
-* index.jsx - describes the mapping of Optimo block data to React parameters
-* index.test.jsx - creates "snapshots" of the component with the various different rendered outputs for the business logic in the container
+- index.jsx - describes the mapping of Optimo block data to React parameters
+- index.test.jsx - creates "snapshots" of the component with the various different rendered outputs for the business logic in the container
 
 This step is quite complicated, so copy and paste from a similar example and tweak the code to your requirements.
 
@@ -178,8 +184,10 @@ If on the other hand you are adding new files to the root directory of simorgh, 
 
 ### `.env` is showing in my `git status`
 
-The `.env` file should not be commited as it is often overwritten by the values in `envConfig/` at build time. There is a `postshrinkwrap` command which runs after an `npm install` so should be run during setup of the application. 
+The `.env` file should not be commited as it is often overwritten by the values in `envConfig/` at build time. There is a `postshrinkwrap` command which runs after an `npm install` so should be run during setup of the application.
 
 If the `.env` file is appearing in your `git status` it means it is now longer being assumed as unchanged, to fix this run:
+
 ```
 git update-index --assume-unchanged .env
+```

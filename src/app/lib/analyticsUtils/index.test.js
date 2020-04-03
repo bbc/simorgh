@@ -28,7 +28,7 @@ const {
 
 let locServeCookieValue;
 
-const returnsNullWhenOffClient = func => {
+const returnsNullWhenOffClient = (func) => {
   describe('returns null when not on client', () => {
     beforeEach(() => {
       isOnClient = false;
