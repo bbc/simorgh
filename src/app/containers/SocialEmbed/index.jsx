@@ -26,6 +26,9 @@ const Wrapper = styled.div`
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
+  .instagram-media {
+    min-width: auto !important;
+  }
 `;
 
 const SocialEmbedContainer = ({ blocks }) => {
