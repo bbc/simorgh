@@ -23,12 +23,13 @@ describe('logResponseTime', () => {
       .mockImplementationOnce(() => [1, 12345]);
   });
 
-  it('should log respons time in nanoseconds with path', () => {
+  it('should log response time in nanoseconds with path', () => {
     logResponseTime(req, res, next);
 
-    expect(loggerMock.info).toBeCalledWith(
-      'ResponseTime: 1000012345, Path: /path',
-    );
+    expect(loggerMock.info).toBeCalledWith('server_response_time', {
+      nanoseconds: 1000012345,
+      path: '/path',
+    });
 
     expect(process.hrtime).toHaveBeenCalledWith('startTime');
 
