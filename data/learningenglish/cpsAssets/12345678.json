@@ -81,17 +81,17 @@
           "numbered": false,
           "items": [
             {
-              "text": "<link><caption>Activity 1: Welcome to BBC Learning English</caption><url href=\"http://news.bbc.co.uk/1/hi/magazine/8674265.stm\" platform=\"highweb\"/></link>",
+              "text": "<link><caption>Activity 1: Welcome to BBC Learning English</caption><url href=\"#Activity-1-Welcome-to-BBC-Learning-English\" platform=\"highweb\"/></link>",
               "markupType": "candy_xml",
               "type": "listItem"
             },
             {
-              "text": "<link><caption>Activity 2: Welcome to 6 Minute Vocabulary</caption><url href=\"http://news.bbc.co.uk/1/hi/magazine/8674265.stm\" platform=\"highweb\"/></link>",
+              "text": "<link><caption>Activity 2: Welcome to 6 Minute Vocabulary</caption><url href=\"#Activity-2-Welcome-to-6-Minute-Vocabulary\" platform=\"highweb\"/></link>",
               "markupType": "candy_xml",
               "type": "listItem"
             },
             {
-              "text": "<link><caption>Activity 3: 6 Minute Vocabulary</caption><url href=\"http://news.bbc.co.uk/1/hi/magazine/8674265.stm\" platform=\"highweb\"/></link>",
+              "text": "<link><caption>Activity 3: 6 Minute Vocabulary</caption><url href=\"#Activity-3-6-Minute-Vocabulary\" platform=\"highweb\"/></link>",
               "markupType": "candy_xml",
               "type": "listItem"
             }
@@ -135,6 +135,133 @@
            ],
            "imageCopyright":"BBC",
            "type":"media"
+        },
+        {
+           "text":"Now you've met some of our presenters. But can you remember who's who? Try this quiz to find out and learn some informal ways of saying 'hello'.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+          "required": false,
+          "tile": "Quiz parónimo",
+          "href": "/indepthtoolkit/quizzes/quiz_palabras_paronima_mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
+          "platform": "highweb",
+          "type": "include"
+        },
+        {
+           "text":"Well done! Did you get them all right? Easy eh? Well, it will get more difficult as you work through this new course with the team at BBC Learning English.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Activity 2: Welcome to 6 Minute Vocabulary",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "id":"p0278sng",
+           "subType":"clip",
+           "format":"video",
+           "title":"Welcome to London - Unit 1 introductory video",
+           "synopses":{
+              "short":"Watch the video"
+           },
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p0278sh9.jpg",
+           "embedding":true,
+           "advertising":true,
+           "caption":"Watch the video",
+           "versions":[
+              {
+                 "versionId":"p0278snp",
+                 "types":[
+                    "Original"
+                 ],
+                 "duration":100,
+                 "durationISO8601":"PT1M40S",
+                 "warnings":{
+                 },
+                 "availableTerritories":{
+                    "uk":true,
+                    "nonUk":true,
+                    "world":false
+                 },
+                 "availableFrom":1540218932000
+              }
+           ],
+           "imageCopyright":"BBC",
+           "type":"media"
+        },
+        {
+           "text":"Now you've met some of our presenters. But can you remember who's who? Try this quiz to find out and learn some informal ways of saying 'hello'.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+          "required": false,
+          "tile": "Quiz parónimo",
+          "href": "/indepthtoolkit/quizzes/quiz_palabras_paronima_mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
+          "platform": "highweb",
+          "type": "include"
+        },
+        {
+           "text":"Well done! Did you get them all right? Easy eh? Well, it will get more difficult as you work through this new course with the team at BBC Learning English.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Activity 3: 6 Minute Vocabulary",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "id":"p0278sng",
+           "subType":"clip",
+           "format":"video",
+           "title":"Welcome to London - Unit 1 introductory video",
+           "synopses":{
+              "short":"Watch the video"
+           },
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p0278sh9.jpg",
+           "embedding":true,
+           "advertising":true,
+           "caption":"Watch the video",
+           "versions":[
+              {
+                 "versionId":"p0278snp",
+                 "types":[
+                    "Original"
+                 ],
+                 "duration":100,
+                 "durationISO8601":"PT1M40S",
+                 "warnings":{
+                 },
+                 "availableTerritories":{
+                    "uk":true,
+                    "nonUk":true,
+                    "world":false
+                 },
+                 "availableFrom":1540218932000
+              }
+           ],
+           "imageCopyright":"BBC",
+           "type":"media"
+        },
+        {
+           "text":"Now you've met some of our presenters. But can you remember who's who? Try this quiz to find out and learn some informal ways of saying 'hello'.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+          "required": false,
+          "tile": "Quiz parónimo",
+          "href": "/indepthtoolkit/quizzes/quiz_palabras_paronima_mundo/syndicated?app-clickable=true&app-image=http%3A%2F%2Fnews.files.bbci.co.uk%2Fvj%2Flive%2Fidt-images%2Fquizzes-quiz_cta%2Fstart_geh2q.png",
+          "platform": "highweb",
+          "type": "include"
+        },
+        {
+           "text":"Well done! Did you get them all right? Easy eh? Well, it will get more difficult as you work through this new course with the team at BBC Learning English.",
+           "markupType":"plain_text",
+           "type":"paragraph"
         }
      ]
   },
