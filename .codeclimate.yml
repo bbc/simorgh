@@ -17,3 +17,5 @@ exclude_patterns:
   - 'scripts/lighthouseBudget.test.js'
   - 'scripts/lighthouseBudget.js'
   - 'scripts/dependencyCheck.js'
+  - 'scripts/simorghPages.js'
+  - 'scripts/simorghLaunchDates.js'
