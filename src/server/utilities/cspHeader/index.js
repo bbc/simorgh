@@ -17,6 +17,7 @@ const directives = {
       'https://toggles.api.bbci.co.uk', // Toggles service
       'https://cdn.ampproject.org', // AMP
       'https://amp-error-reporting.appspot.com', // AMP
+      'https://www.bbc.co.uk', // STY include indepthtoolkit
       "'self'",
     ],
     canonicalLive: [
@@ -31,6 +32,7 @@ const directives = {
       'https://toggles.api.bbci.co.uk', // Toggles service
       'https://cookie-oven.api.bbc.com', // Cookie banner
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
+      'https://www.bbc.co.uk', // STY include indepthtoolkit
       "'self'",
     ],
     ampNonLive: [
@@ -45,6 +47,7 @@ const directives = {
       'https://amp-error-reporting.appspot.com',
       'https://logws1363.ati-host.net',
       'https://toggles.test.api.bbci.co.uk',
+      'https://www.bbc.co.uk', // STY include indepthtoolkit
       "'self'",
     ],
     canonicalNonLive: [
@@ -61,6 +64,7 @@ const directives = {
       'https://cookie-oven.api.bbc.co.uk', // Cookie banner
       'https://cookie-oven.test.api.bbc.com', // Cookie banner
       'https://cookie-oven.test.api.bbc.co.uk', // Cookie banner
+      'https://www.bbc.co.uk', // STY include indepthtoolkit
       "'self'",
     ],
   },
@@ -143,6 +147,7 @@ const directives = {
   },
   scriptSrc: {
     ampLive: [
+      'https://news.files.bbci.co.uk', // STY include
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
       'https://*.go-mpulse.net',
@@ -160,6 +165,8 @@ const directives = {
       "'unsafe-inline'",
     ],
     ampNonLive: [
+      'https://news.files.bbci.co.uk', // STY include
+      'https://news.test.files.bbci.co.uk', // STY include
       'https://cdn.ampproject.org',
       'https://*.chartbeat.com',
       'https://*.go-mpulse.net',
@@ -218,7 +225,10 @@ export const generateScriptSrc = ({ isAmp, isLive }) => {
   return directives.scriptSrc.canonicalLive;
 };
 
-export const generateStyleSrc = () => ["'unsafe-inline'"];
+export const generateStyleSrc = () => [
+  'https://news.files.bbci.co.uk', // STY include styles
+  "'unsafe-inline'",
+];
 
 export const generateWorkerSrc = ({ isAmp }) =>
   isAmp ? ['blob:'] : ["'self'"];
