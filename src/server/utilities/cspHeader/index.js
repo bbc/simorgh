@@ -182,30 +182,13 @@ const directives = {
   },
 };
 
-export const generateScriptSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.scriptSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.scriptSrc.ampLive;
-  return directives.scriptSrc.canonicalLive;
-};
-
-export const generateImgSrc = ({ isLive }) => {
-  if (!isLive) return directives.imgSrc.canonicalNonLive;
-  return directives.imgSrc.canonicalLive;
-};
+export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
 
 export const generateConnectSrc = ({ isAmp, isLive }) => {
   if (!isLive && isAmp) return directives.connectSrc.ampNonLive;
   if (!isLive && !isAmp) return directives.connectSrc.canonicalNonLive;
   if (isLive && isAmp) return directives.connectSrc.ampLive;
   return directives.connectSrc.canonicalLive;
-};
-
-export const generateFrameSrc = ({ isAmp, isLive }) => {
-  if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
-  if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive;
-  if (isLive && isAmp) return directives.frameSrc.ampLive;
-  return directives.frameSrc.canonicalLive;
 };
 
 export const generateDefaultSrc = () => ["'self'"];
@@ -215,7 +198,25 @@ export const generateFontSrc = () => [
   'https://ws-downloads.files.bbci.co.uk',
 ];
 
-export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
+export const generateFrameSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.frameSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.frameSrc.ampLive;
+  return directives.frameSrc.canonicalLive;
+};
+
+// img-src currently doesn't vary between Amp and Canonical
+export const generateImgSrc = ({ isLive }) => {
+  if (!isLive) return directives.imgSrc.canonicalNonLive;
+  return directives.imgSrc.canonicalLive;
+};
+
+export const generateScriptSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.scriptSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.scriptSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.scriptSrc.ampLive;
+  return directives.scriptSrc.canonicalLive;
+};
 
 export const generateStyleSrc = () => ["'unsafe-inline'"];
 
