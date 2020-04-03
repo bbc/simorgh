@@ -41,7 +41,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
           role="listitem"
         >
           <div
@@ -95,7 +95,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
           role="listitem"
         >
           <div
