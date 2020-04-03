@@ -6,6 +6,60 @@ The `./utilities` directory is where helpers and utiltiies used in production sh
 
 NB This is not a global styles directory. Global styles should be avoided in all cases, because of the use of Styled Components.
 
+## Logging
+
+Simorgh uses the [winston](https://github.com/winstonjs/winston) library for logging. 
+
+The logger requires `filename` as a parameter, which is written to the server log along with the timestamp e.g. `2020-01-01 12:00:00.000 info [server/index.jsx] ...`
+
+To initialise the logger:
+
+```
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
+```
+
+There are 5 different log levels available - `error`, `warn`, `info`, `debug`, `verbose`.
+
+The logger requires 2 parameters: `event` (string) and `message` (object). 
+
+The event should be a constant, added to [logger.const.js](logger.const.js). When adding or updating values in this file, ensure that any relevant dashboards are also updated, as this information may be useful when investigating application issues.
+
+The message should include detailed information, where possible, to assist engineers with investigations.
+
+Refer to [src/server/index.jsx](../../server/index.jsx) for implementation examples.
+
+To log an error:
+```
+import { DATA_FETCH_ERROR } from '#lib/logger.const';
+
+logger.error(DATA_FETCH_ERROR, {
+  url: '/path/to/page',
+  error: 'an error occurred fetching data from remote endpoint',
+  status: 404,
+});
+```
+
+The same format applies for the other log levels:
+```
+const message = {
+  details: 'some additional information'
+  status: 200,
+};
+
+logger.warn(EVENT_NAME, message);
+```
+```
+logger.info(EVENT_NAME, message);
+```
+```
+logger.debug(EVENT_NAME, message);
+```
+```
+logger.verbose(EVENT_NAME, message);
+```
+
 ## Typography
 
 BBC products use the GEL guidelines for typography. See here: [http://www.bbc.co.uk/gel/guidelines/typography#type-sizes](http://www.bbc.co.uk/gel/guidelines/typography#type-sizes).
