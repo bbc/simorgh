@@ -78,6 +78,7 @@ const StoryPromoContainer = ({
   lazyLoadImage,
   dir,
   displayImage,
+  displaySummary,
 }) => {
   const {
     script,
@@ -140,7 +141,7 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {summary && displayImage && (
+      {summary && displaySummary && (
         <Summary
           script={script}
           service={service}
@@ -211,6 +212,7 @@ StoryPromoContainer.propTypes = {
   lazyLoadImage: bool,
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
+  displaySummary: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -218,6 +220,7 @@ StoryPromoContainer.defaultProps = {
   lazyLoadImage: true,
   dir: 'ltr',
   displayImage: true,
+  displaySummary: true,
 };
 
 export default StoryPromoContainer;
