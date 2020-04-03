@@ -79,7 +79,7 @@ const convertInclude = async ({ href, type, ...rest }) => {
   return {
     type,
     model: {
-      href,
+      href: includeUrls[includeType],
       // `includeUrls[includeType]` here should be replaced with `href` once mozart routes have been created.
       html: await fetchMarkup(includeUrls[includeType]),
       type: includeType,

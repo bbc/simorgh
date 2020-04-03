@@ -3,15 +3,28 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import Include from '.';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
+const defaultToggles = {
+  include: {
+    enabled: true,
+  },
+};
 
 storiesOf('Containers|Include', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .add('default', () => {
     return (
-      <Include
-        html="https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html"
-        type="idt2"
-      />
+      <ToggleContextProvider
+        value={{ toggleState: defaultToggles }}
+        service="mundo"
+        origin="https://www.test.bbc.com"
+      >
+        <Include
+          href="https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html"
+          type="idt2"
+        />
+      </ToggleContextProvider>
     );
   });
