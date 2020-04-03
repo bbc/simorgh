@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/portuguese/meta/dps/junk/2016/05/emp/160506_tc2_map_0605.emp.xml",
+        "id": "17697275",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+          "id": "17697275",
+          "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A primeira mensagem chegou por e-mail, de forma anônima, há mais de um ano: &quot;Olá, aqui é o fulano. Interessam alguns dados?&quot; &quot;Estamos muito interessados&quot;, respondeu Bastian Obermayer, repórter do jornal alemão Suddeutsche Zeitung. &quot;Há algumas precondições. Minha vida corre perigo&quot;, alertou a fonte, segundo confirmou à BBC Frederik Obermaier, outro repórter do jornal alemão. Leia também: Panama Papers: em seis pontos, como offshores podem esconder bilhões de origem ilegal Siga a BBC Brasil no Facebook e no Twitter &quot;A única coisa que não podemos revelar é o idioma em que se deu o diálogo original&quot;, desculpou-se Obermaier, um dos integrantes da equipe de investigação que recebeu os chamados Panama Papers, o maior vazamento de documentos confidenciais da história.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17697275", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "portuguese",
+    "firstPublished": 1462537207000,
+    "id": "urn:bbc:ares::asset:portuguese/revista/2016/05/160506_tc2_map_0605",
+    "includeComments": false,
+    "language": "pt-BR",
+    "lastPublished": 1462537207000,
+    "lastUpdated": 1585590833664,
+    "locators": {
+      "assetId": "17697275",
+      "assetUri": "/portuguese/revista/2016/05/160506_tc2_map_0605",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/revista/2016/05/160506_tc2_map_0605",
+      "curie": "http://www.bbc.co.uk/asset/8ed065a2-1384-11e6-9f7e-020733e45519"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1462537207000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers",
+      "shortHeadline": "map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/revista/2016/05/160506_tc2_map_0605",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+      "id": "d5e212",
+      "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_144x81_bbc.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "pt-BR",
+    "locators": {
+      "assetId": "17697275",
+      "assetUri": "/portuguese/revista/2016/05/160506_tc2_map_0605",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/revista/2016/05/160506_tc2_map_0605",
+      "curie": "http://www.bbc.co.uk/asset/8ed065a2-1384-11e6-9f7e-020733e45519"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/portuguese/meta/dps/junk/2016/05/emp/160506_tc2_map_0605.emp.xml",
+      "id": "17697275",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+        "id": "17697275",
+        "path": "/amz/worldservice/test/assets/images/2015/01/26/150126145000_house_of_parliament_640x360_bbc_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/portuguese/dps/junk/2016/05/hd_audio_r4_pips_only_1241_15_3_105_5349369_toprores_160506_tc2_map_0605_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Fonte que revelou escândalo global de suspeitas de lavagem de dinheiro e evasão fiscal exigiu apenas medidas de segurança para ceder material sigiloso.",
+    "timestamp": 1462537207000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Revista",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/portuguese/revista"
+    },
+    "site": {
+      "name": "BBCBrasil.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/portuguese"
+    }
+  }
+}
