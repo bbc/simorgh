@@ -72,7 +72,6 @@ const expectedOutput = {
   ampUkLink: 'ampUkLink',
   canonicalNonUkLink: 'canonicalNonUkLink',
   ampNonUkLink: 'ampNonUkLink',
-  ssrData: null,
 };
 
 describe('RequestContext', () => {

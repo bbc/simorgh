@@ -1,12 +1,9 @@
-import { useState, useEffect, useContext } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
+import { useState, useEffect } from 'react';
 import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
 
-const useData = endpoint => {
-  const { ssrData } = useContext(RequestContext);
-  const initialData = ssrData && ssrData[endpoint];
+const useData = (endpoint, initialData) => {
   const [data, setData] = useState(initialData);
 
   useEffect(() => {
@@ -26,11 +23,7 @@ const useData = endpoint => {
     if (!data) {
       fetchData(endpoint);
     }
-
-    // return () => {
-    // for onward journeys, we should remove the initial data from context at this point
-    // };
-  }, [endpoint, ssrData, data]);
+  }, [endpoint, data]);
 
   return data;
 };

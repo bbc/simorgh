@@ -54,9 +54,9 @@ export default async (path, service) => {
   return {
     ...rest,
     ...(json && {
-      pageData: transformJson(json),
-      ssrData: {
-        [radioSchedulesUrl]: radioSchedulesData && radioSchedulesData.json,
+      pageData: {
+        ...transformJson(json),
+        radioSchedules: radioSchedulesData && radioSchedulesData.json,
       },
     }),
   };

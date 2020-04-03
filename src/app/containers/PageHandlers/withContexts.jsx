@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool, element, string, number, object } from 'prop-types';
+import { bool, element, string, number } from 'prop-types';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -14,7 +14,6 @@ const WithContexts = Component => {
   const WithContextsContainer = props => {
     const {
       bbcOrigin,
-      ssrData,
       status,
       id,
       service,
@@ -40,7 +39,6 @@ const WithContexts = Component => {
             previousPath={previousPath}
             variant={variant}
             timeOnServer={timeOnServer}
-            ssrData={ssrData}
           >
             <EventContextProvider>
               <UserContextProvider>
@@ -64,8 +62,6 @@ const WithContexts = Component => {
     previousPath: string,
     service: string.isRequired,
     variant: variantPropType,
-    // eslint-disable-next-line react/forbid-prop-types
-    ssrData: object,
     timeOnServer: number,
   };
 
@@ -77,7 +73,6 @@ const WithContexts = Component => {
     previousPath: null,
     variant: null,
     timeOnServer: null,
-    ssrData: null,
   };
 
   return WithContextsContainer;
@@ -88,23 +83,3 @@ WithContexts.propTypes = {
 };
 
 export default WithContexts;
-
-// const radioSchedulesShape = shape({
-//   schedules: arrayOf(
-//     shape({
-//       publishedTimeStart: number,
-//       publishedTimeEnd: number,
-//       publishedTimeDuration: string,
-//       serviceId: string,
-//       episode: shape({
-//         pid: string,
-//         presentationTitle: string,
-//         synopses: shape({
-//           short: string,
-//         }),
-//       }),
-//       broadcast: shape({ pid: string }),
-//       brand: shape({ title: string }),
-//     }),
-//   ),
-// });

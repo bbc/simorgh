@@ -28,6 +28,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import useData from './useData';
+import radioSchedulesShape from '../radioSchedulesShape';
 
 const RadioScheduleSection = styled.section.attrs(() => ({
   role: 'region',
@@ -79,8 +80,8 @@ const RadioFrequencyLink = styled(Link)`
   ${({ service }) => service && getSansRegular(service)};
 `;
 
-const CanonicalRadioSchedule = ({ endpoint }) => {
-  const radioScheduleData = useData(endpoint);
+const CanonicalRadioSchedule = ({ endpoint, initialData }) => {
+  const radioScheduleData = useData(endpoint, initialData);
 
   const {
     service,
@@ -117,6 +118,10 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
     service,
     timeOnServer || timeOnClient,
   );
+
+  if (!schedule) {
+    return null;
+  }
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
@@ -160,6 +165,11 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
 
 CanonicalRadioSchedule.propTypes = {
   endpoint: string.isRequired,
+  initialData: radioSchedulesShape,
+};
+
+CanonicalRadioSchedule.defaultProps = {
+  initialData: null,
 };
 
 export default CanonicalRadioSchedule;

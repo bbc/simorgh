@@ -16,11 +16,10 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
     route: { pageType },
   } = getRouteProps(routes, location.pathname);
 
-  const { pageData, ssrData, status, error, timeOnServer } = initialData;
+  const { pageData, status, error, timeOnServer } = initialData;
 
   const [state, setState] = useState({
     pageData,
-    ssrData,
     status,
     service,
     variant,
@@ -83,7 +82,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      route.getInitialData(location.pathname).then(data => {
+      route.getInitialData(location.pathname, nextService).then(data => {
         clearTimeout(loaderTimeout);
         shouldSetFocus.current = true;
         setState({
