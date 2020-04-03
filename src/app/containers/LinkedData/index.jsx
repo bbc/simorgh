@@ -4,6 +4,7 @@ import { string, shape, arrayOf, bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
+import serialiseForScript from '#lib/utilities/serialiseForScript';
 
 const LinkedData = ({
   showAuthor,
@@ -87,7 +88,7 @@ const LinkedData = ({
   return (
     <Helmet>
       <script type="application/ld+json">
-        {JSON.stringify({
+        {serialiseForScript({
           // spread to a new object to remove undefined properties
           ...linkedData,
         })}
