@@ -76,17 +76,16 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const numRelatedContentGroups = body.relatedContent.groups.length;
 
-        if (numRelatedContentGroups <= 0) {
-          return cy.log('Test skipped because no related content');
-        }
-        const assetURI =
-          body.relatedContent.groups[0].promos[0].locators.assetUri;
+        if (numRelatedContentGroups > 0) {
+          const assetURI =
+            body.relatedContent.groups[0].promos[0].locators.assetUri;
 
-        cy.get('div[class^="StoryPromoWrapper"]')
-          .find('h3')
-          .within(() => {
-            cy.get('a').should('have.attr', 'href').and('include', assetURI);
-          });
+          cy.get('div[class^="StoryPromoWrapper"]')
+            .find('h3')
+            .within(() => {
+              cy.get('a').should('have.attr', 'href').and('include', assetURI);
+            });
+        }
       });
     });
   });
