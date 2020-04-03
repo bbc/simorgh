@@ -2,6 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
+import pathOr from 'ramda/src/pathOr';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -25,6 +26,14 @@ import logResponseTime from './utilities/logResponseTime';
 import injectCspHeader, {
   localInjectHostCspHeader,
 } from './utilities/constructCspHeader';
+import {
+  SERVICE_WORKER_SENDFILE_ERROR,
+  MANIFEST_SENDFILE_ERROR,
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+  LOCAL_SENDFILE_ERROR,
+  ROUTING_INFORMATION,
+} from '#lib/logger.const';
 
 const fs = require('fs');
 
@@ -40,7 +49,7 @@ const cspInjectFun =
     : injectCspHeader;
 
 logger.debug(
-  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
+  `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
@@ -114,16 +123,7 @@ if (process.env.SIMORGH_APP_ENV !== 'local') {
 const sendDataFile = (res, dataFilePath, next) => {
   res.sendFile(dataFilePath, {}, (sendErr) => {
     if (sendErr) {
-      logger.error(
-        JSON.stringify(
-          {
-            event: 'local_sendfile_error',
-            message: sendErr,
-          },
-          null,
-          2,
-        ),
-      );
+      logger.error(LOCAL_SENDFILE_ERROR, { error: sendErr });
       next(sendErr);
     }
   });
@@ -228,16 +228,7 @@ server
     const swPath = `${__dirname}/public/sw.js`;
     res.sendFile(swPath, {}, (error) => {
       if (error) {
-        logger.error(
-          JSON.stringify(
-            {
-              event: 'server_sendfile_error_sw',
-              message: error,
-            },
-            null,
-            2,
-          ),
-        );
+        logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
         res.status(500).send('Unable to find service worker.');
       }
     });
@@ -249,25 +240,17 @@ server
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
       res.sendFile(manifestPath, {}, (error) => {
         if (error) {
-          console.log(error); // eslint-disable-line no-console
+          logger.error(MANIFEST_SENDFILE_ERROR, { error });
           res.status(500).send('Unable to find manifest.');
         }
       });
     },
   )
   .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(
-      JSON.stringify(
-        {
-          event: 'ssr_request_received',
-          url,
-          urlPath,
-          headers,
-        },
-        null,
-        2,
-      ),
-    );
+    logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
+      url,
+      headers,
+    });
 
     try {
       const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
@@ -288,6 +271,12 @@ server
         variant,
       });
 
+      logger.info(ROUTING_INFORMATION, {
+        url,
+        status,
+        pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
+      });
+
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
       } else if (result.html) {
@@ -296,20 +285,12 @@ server
         throw new Error('unknown result');
       }
     } catch ({ message, status }) {
-      logger.error(
-        JSON.stringify(
-          {
-            event: 'ssr_request_failed',
-            status: status || 500,
-            message,
-            url,
-            urlPath,
-            headers,
-          },
-          null,
-          2,
-        ),
-      );
+      logger.error(SERVER_SIDE_REQUEST_FAILED, {
+        status: status || 500,
+        message,
+        url,
+        headers,
+      });
 
       // Return an internal server error for any uncaught errors
       res.status(500).send(message);
