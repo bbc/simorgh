@@ -41,7 +41,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         role="list"
       >
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
           role="listitem"
         >
           <div
@@ -76,7 +76,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="StoryPromoLi-sc-171lqjd-0 dqJaJG"
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
           role="listitem"
         >
           <div
