@@ -35,7 +35,7 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   if (!blocks || !enabled) return null;
 
-  const { type: provider, model } = blocks[0];
+  const { type: provider, model, id: uuid } = blocks[0];
   const { id, href } = model;
 
   const oEmbed = path(['embed', 'oembed'], model);
@@ -53,7 +53,7 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `skip-%provider%-content-${id}`,
+    endTextId: `skip-%provider%-content-${uuid.split('-')[0]}`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;
