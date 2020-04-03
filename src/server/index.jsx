@@ -79,6 +79,13 @@ const getBuildMetadata = () => {
   return buildMetadata;
 };
 
+const skipMiddleware = (_req, _res, next) => {
+  next();
+};
+
+const injectCspHeaderProdBuild =
+  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+
 server
   .disable('x-powered-by')
   .use(
@@ -248,53 +255,14 @@ server
       });
     },
   )
-  .get('/*', injectCspHeader, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(
-      JSON.stringify(
-        {
-          event: 'ssr_request_received',
-          url,
-          urlPath,
-          headers,
-        },
-        null,
-        2,
-      ),
-    );
-
-    try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
-      const data = await route.getInitialData(url);
-      const { status } = data;
-      const bbcOrigin = headers['bbc-origin'];
-
-      data.path = urlPath;
-      data.timeOnServer = Date.now();
-
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
-        url,
-        variant,
-      });
-
-      if (result.redirectUrl) {
-        res.redirect(301, result.redirectUrl);
-      } else if (result.html) {
-        res.status(status).send(result.html);
-      } else {
-        throw new Error('unknown result');
-      }
-    } catch ({ message, status }) {
-      logger.error(
+  .get(
+    '/*',
+    injectCspHeaderProdBuild,
+    async ({ url, headers, path: urlPath }, res) => {
+      logger.info(
         JSON.stringify(
           {
-            event: 'ssr_request_failed',
-            status: status || 500,
-            message,
+            event: 'ssr_request_received',
             url,
             urlPath,
             headers,
@@ -304,9 +272,55 @@ server
         ),
       );
 
-      // Return an internal server error for any uncaught errors
-      res.status(500).send(message);
-    }
-  });
+      try {
+        const { service, isAmp, route, variant } = getRouteProps(
+          routes,
+          urlPath,
+        );
+        const data = await route.getInitialData(url);
+        const { status } = data;
+        const bbcOrigin = headers['bbc-origin'];
+
+        data.path = urlPath;
+        data.timeOnServer = Date.now();
+
+        const result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+
+        if (result.redirectUrl) {
+          res.redirect(301, result.redirectUrl);
+        } else if (result.html) {
+          res.status(status).send(result.html);
+        } else {
+          throw new Error('unknown result');
+        }
+      } catch ({ message, status }) {
+        logger.error(
+          JSON.stringify(
+            {
+              event: 'ssr_request_failed',
+              status: status || 500,
+              message,
+              url,
+              urlPath,
+              headers,
+            },
+            null,
+            2,
+          ),
+        );
+
+        // Return an internal server error for any uncaught errors
+        res.status(500).send(message);
+      }
+    },
+  );
 
 export default server;
