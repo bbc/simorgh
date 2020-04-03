@@ -1,0 +1,207 @@
+{
+  "metadata":{
+     "id":"urn:bbc:ares::asset:learningenglish/12345678",
+     "locators":{
+        "assetUri":"/learningenglish/12345678",
+        "cpsUrn":"urn:bbc:content:assetUri:learningenglish/12345678",
+        "curie":"http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+        "assetId":"12345678"
+     },
+     "type":"STY",
+     "createdBy":"learning-english-v6",
+     "language":"en-GB",
+     "lastUpdated":1582806264492,
+     "firstPublished":1580745507000,
+     "lastPublished":1582806255000,
+     "timestamp":1582540624000,
+     "options":{
+        "isIgorSeoTagsEnabled":false,
+        "includeComments":false,
+        "allowRightHandSide":true,
+        "isFactCheck":false,
+        "allowDateStamp":true,
+        "suitableForSyndication":true,
+        "hasNewsTracker":false,
+        "allowRelatedStoriesBox":true,
+        "isKeyContent":false,
+        "allowHeadline":true,
+        "allowAdvertising":true,
+        "hasContentWarning":false,
+        "isBreakingNews":false,
+        "allowPrintingSharingLinks":true
+     },
+     "analyticsLabels":{
+        "cps_asset_type":"sty",
+        "counterName":"learningenglish.story.12345678.page",
+        "cps_asset_id":"12345678"
+     },
+     "passport":{
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+           "categoryName":"Feature"
+        },
+        "language":"en-GB",
+        "home":"http://www.bbc.co.uk/ontologies/passport/home/LearningEnglish",
+        "passportId":"d7d7cd86-30b1-412f-8c9e-712f806c7357",
+        "locator":"urn:bbc:cps:asset:12345678",
+        "availability":"AVAILABLE",
+        "taggings":[
+        ]
+     },
+     "tags":{
+        "about":[]
+     },
+     "version":"v1.1.6",
+     "blockTypes":[
+        "image",
+        "paragraph",
+        "crosshead",
+        "list",
+        "heading",
+        "subheading",
+        "social_embed",
+        "media",
+        "include"
+     ],
+     "includeComments":false
+  },
+  "content":{
+     "blocks":[
+        {
+           "text":"Saying hello",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "text":"This is the first unit of our lower-intermediate course - so we'll go easy on you. Over the next few sessions, you'll meet some of our presenters, learn some informal ways of saying 'hello' and practise question forms. In session 5, you can join our new 10-part drama, 'The Race'. Afterwards, you can see how much you remember from the unit with our Weekly Quiz.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>Activity 1: Welcome to BBC Learning English</caption><url href=\"http://news.bbc.co.uk/1/hi/magazine/8674265.stm\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>Activity 2: Welcome to 6 Minute Vocabulary</caption><url href=\"http://news.bbc.co.uk/1/hi/magazine/8674265.stm\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>Activity 3: 6 Minute Vocabulary</caption><url href=\"http://news.bbc.co.uk/1/hi/magazine/8674265.stm\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+           "text":"Activity 1: Welcome to BBC Learning English",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "id":"p0278sng",
+           "subType":"clip",
+           "format":"video",
+           "title":"Welcome to London - Unit 1 introductory video",
+           "synopses":{
+              "short":"Watch the video"
+           },
+           "imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p0278sh9.jpg",
+           "embedding":true,
+           "advertising":true,
+           "caption":"Watch the video",
+           "versions":[
+              {
+                 "versionId":"p0278snp",
+                 "types":[
+                    "Original"
+                 ],
+                 "duration":100,
+                 "durationISO8601":"PT1M40S",
+                 "warnings":{
+                 },
+                 "availableTerritories":{
+                    "uk":true,
+                    "nonUk":true,
+                    "world":false
+                 },
+                 "availableFrom":1540218932000
+              }
+           ],
+           "imageCopyright":"BBC",
+           "type":"media"
+        }
+     ]
+  },
+  "promo":{
+     "headlines":{
+        "shortHeadline":"Session 1 - Nice to meet you",
+        "headline":"Session 1 - Nice to meet you"
+     },
+     "locators":{
+        "assetUri":"/learningenglish/12345678",
+        "cpsUrn":"urn:bbc:content:assetUri:learningenglish/12345678",
+        "curie":"http://www.bbc.co.uk/asset/f776ad93-e486-b14a-b5ea-55955dd0644f",
+        "assetId":"12345678"
+     },
+     "summary":"This is the summary",
+     "timestamp":1582540624000,
+     "language":"en-GB",
+     "byline":{
+     },
+     "passport":{
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+           "categoryName":"Feature"
+        },
+        "taggings":[
+
+        ]
+     },
+     "indexImage":{
+        "id":"63730607",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "path":"/cpsdevpb/113CB/test/_63730607_dogs2-kayleegarrick.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Index image large",
+        "caption":"Index Image Large",
+        "copyrightHolder":"Kaylee Garrick",
+        "type":"image"
+     },
+     "id":"urn:bbc:ares::asset:learningenglish/12345678",
+     "type":"cps"
+  },
+  "relatedContent":{
+     "section":{
+        "subType":"index",
+        "name":"Home",
+        "uri":"/learningenglish/home",
+        "type":"simple"
+     },
+     "site":{
+        "subType":"site",
+        "name":"BBC Learning English",
+        "uri":"/learningenglish",
+        "type":"simple"
+     },
+     "groups":[
+        {
+           "type":"see-alsos",
+           "promos":[
+              
+           ]
+        },
+        {
+           "type":"related-urls",
+           "promos":[]
+        }
+     ]
+  }
+}
