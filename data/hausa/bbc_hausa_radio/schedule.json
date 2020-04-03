@@ -4,20 +4,20 @@
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582784739000,
-      "publishedTimeStart": 1583735400000,
-      "publishedTimeEnd": 1583737170000,
+      "updateTime": 1583994347000,
+      "publishedTimeStart": 1584945000000,
+      "publishedTimeEnd": 1584946770000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1583735400000,
-      "transmissionTimeEnd": 1583737170000,
+      "transmissionTimeStart": 1584945000000,
+      "transmissionTimeEnd": 1584946770000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc4sjgxgprj.imi:ws.bbc.co.uk/HAUSA1583735400",
-        "pid": "p084x76g"
+        "bid": "w1mshc4t80k0zz6.imi:ws.bbc.co.uk/HAUSA1584945000",
+        "pid": "p086czrv"
       },
       "brand": {
         "pid": "p030s4mh",
@@ -29,8 +29,8 @@
         }
       },
       "episode": {
-        "pid": "w172x6g4h7p96nz",
-        "presentationTitle": "09/03/2020 GMT",
+        "pid": "w172x6g56s9vhwn",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -38,27 +38,27 @@
         }
       },
       "version": {
-        "pid": "w1mshc4sjgxgprj"
+        "pid": "w1mshc4t80k0zz6"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582810006000,
-      "publishedTimeStart": 1583762370000,
-      "publishedTimeEnd": 1583764170000,
+      "updateTime": 1584019572000,
+      "publishedTimeStart": 1584971970000,
+      "publishedTimeEnd": 1584973770000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583762370000,
-      "transmissionTimeEnd": 1583764170000,
+      "transmissionTimeStart": 1584971970000,
+      "transmissionTimeEnd": 1584973770000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqv9nk.imi:ws.bbc.co.uk/HAUSA1583762370",
-        "pid": "p084z33g"
+        "bid": "w4hqv9nm.imi:ws.bbc.co.uk/HAUSA1584971970",
+        "pid": "p086frdc"
       },
       "brand": {
         "pid": "p030s4mp",
@@ -70,8 +70,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrcv",
-        "presentationTitle": "09/03/2020 GMT",
+        "pid": "w3cszrcx",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -79,27 +79,27 @@
         }
       },
       "version": {
-        "pid": "w4hqv9nk"
+        "pid": "w4hqv9nm"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582831532000,
-      "publishedTimeStart": 1583782170000,
-      "publishedTimeEnd": 1583783970000,
+      "updateTime": 1584041147000,
+      "publishedTimeStart": 1584991770000,
+      "publishedTimeEnd": 1584993570000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583782170000,
-      "transmissionTimeEnd": 1583783970000,
+      "transmissionTimeStart": 1584991770000,
+      "transmissionTimeEnd": 1584993570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqvb1z.imi:ws.bbc.co.uk/HAUSA1583782170",
-        "pid": "p0850dng"
+        "bid": "w4hqvb21.imi:ws.bbc.co.uk/HAUSA1584991770",
+        "pid": "p086gzh1"
       },
       "brand": {
         "pid": "p030s4mx",
@@ -111,8 +111,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrs8",
-        "presentationTitle": "09/03/2020 GMT",
+        "pid": "w3cszrsb",
+        "presentationTitle": "23/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -120,27 +120,27 @@
         }
       },
       "version": {
-        "pid": "w4hqvb1z"
+        "pid": "w4hqvb21"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582867543000,
-      "publishedTimeStart": 1583818170000,
-      "publishedTimeEnd": 1583819970000,
+      "updateTime": 1584077146000,
+      "publishedTimeStart": 1585027770000,
+      "publishedTimeEnd": 1585029570000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583818170000,
-      "transmissionTimeEnd": 1583819970000,
+      "transmissionTimeStart": 1585027770000,
+      "transmissionTimeEnd": 1585029570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqv9zq.imi:ws.bbc.co.uk/HAUSA1583818170",
-        "pid": "p0851lr0"
+        "bid": "w4hqv9zs.imi:ws.bbc.co.uk/HAUSA1585027770",
+        "pid": "p086hw4t"
       },
       "brand": {
         "pid": "p030s4n1",
@@ -152,8 +152,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrq0",
-        "presentationTitle": "10/03/2020 GMT",
+        "pid": "w3cszrq2",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -161,27 +161,27 @@
         }
       },
       "version": {
-        "pid": "w4hqv9zq"
+        "pid": "w4hqv9zs"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582871147000,
-      "publishedTimeStart": 1583821800000,
-      "publishedTimeEnd": 1583823570000,
+      "updateTime": 1584080749000,
+      "publishedTimeStart": 1585031400000,
+      "publishedTimeEnd": 1585033170000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1583821800000,
-      "transmissionTimeEnd": 1583823570000,
+      "transmissionTimeStart": 1585031400000,
+      "transmissionTimeEnd": 1585033170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc4sjgxklnm.imi:ws.bbc.co.uk/HAUSA1583821800",
-        "pid": "p0851r51"
+        "bid": "w1mshc4t80k3ww9.imi:ws.bbc.co.uk/HAUSA1585031400",
+        "pid": "p086j01n"
       },
       "brand": {
         "pid": "p030s4mh",
@@ -193,8 +193,8 @@
         }
       },
       "episode": {
-        "pid": "w172x6g4h7pd3l2",
-        "presentationTitle": "10/03/2020 GMT",
+        "pid": "w172x6g56s9ydsr",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -202,27 +202,27 @@
         }
       },
       "version": {
-        "pid": "w1mshc4sjgxklnm"
+        "pid": "w1mshc4t80k3ww9"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582896388000,
-      "publishedTimeStart": 1583848770000,
-      "publishedTimeEnd": 1583850570000,
+      "updateTime": 1584106061000,
+      "publishedTimeStart": 1585058370000,
+      "publishedTimeEnd": 1585060170000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583848770000,
-      "transmissionTimeEnd": 1583850570000,
+      "transmissionTimeStart": 1585058370000,
+      "transmissionTimeEnd": 1585060170000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqv9qt.imi:ws.bbc.co.uk/HAUSA1583848770",
-        "pid": "p085386b"
+        "bid": "w4hqv9qw.imi:ws.bbc.co.uk/HAUSA1585058370",
+        "pid": "p086k8vb"
       },
       "brand": {
         "pid": "p030s4mp",
@@ -234,8 +234,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrg3",
-        "presentationTitle": "10/03/2020 GMT",
+        "pid": "w3cszrg5",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -243,27 +243,27 @@
         }
       },
       "version": {
-        "pid": "w4hqv9qt"
+        "pid": "w4hqv9qw"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582917940000,
-      "publishedTimeStart": 1583868570000,
-      "publishedTimeEnd": 1583870370000,
+      "updateTime": 1584127543000,
+      "publishedTimeStart": 1585078170000,
+      "publishedTimeEnd": 1585079970000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583868570000,
-      "transmissionTimeEnd": 1583870370000,
+      "transmissionTimeStart": 1585078170000,
+      "transmissionTimeEnd": 1585079970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqvb6h.imi:ws.bbc.co.uk/HAUSA1583868570",
-        "pid": "p0854p27"
+        "bid": "w4hqvb6k.imi:ws.bbc.co.uk/HAUSA1585078170",
+        "pid": "p086lnd6"
       },
       "brand": {
         "pid": "p030s4mx",
@@ -275,8 +275,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrxs",
-        "presentationTitle": "10/03/2020 GMT",
+        "pid": "w3cszrxv",
+        "presentationTitle": "24/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -284,27 +284,27 @@
         }
       },
       "version": {
-        "pid": "w4hqvb6h"
+        "pid": "w4hqvb6k"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582953950000,
-      "publishedTimeStart": 1583904570000,
-      "publishedTimeEnd": 1583906370000,
+      "updateTime": 1584163546000,
+      "publishedTimeStart": 1585114170000,
+      "publishedTimeEnd": 1585115970000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583904570000,
-      "transmissionTimeEnd": 1583906370000,
+      "transmissionTimeStart": 1585114170000,
+      "transmissionTimeEnd": 1585115970000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqvb0v.imi:ws.bbc.co.uk/HAUSA1583904570",
-        "pid": "p0855vx6"
+        "bid": "w4hqvb0x.imi:ws.bbc.co.uk/HAUSA1585114170",
+        "pid": "p086mpcm"
       },
       "brand": {
         "pid": "p030s4n1",
@@ -316,8 +316,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrr4",
-        "presentationTitle": "11/03/2020 GMT",
+        "pid": "w3cszrr6",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -325,27 +325,27 @@
         }
       },
       "version": {
-        "pid": "w4hqvb0v"
+        "pid": "w4hqvb0x"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582957552000,
-      "publishedTimeStart": 1583908200000,
-      "publishedTimeEnd": 1583909970000,
+      "updateTime": 1584167145000,
+      "publishedTimeStart": 1585117800000,
+      "publishedTimeEnd": 1585119570000,
       "publishedTimeDuration": "PT29M30S",
-      "transmissionTimeStart": 1583908200000,
-      "transmissionTimeEnd": 1583909970000,
+      "transmissionTimeStart": 1585117800000,
+      "transmissionTimeEnd": 1585119570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w1mshc4sjgxnhkq.imi:ws.bbc.co.uk/HAUSA1583908200",
-        "pid": "p0855zzc"
+        "bid": "w1mshc4t80k6ssd.imi:ws.bbc.co.uk/HAUSA1585117800",
+        "pid": "p086mrxm"
       },
       "brand": {
         "pid": "p030s4mh",
@@ -357,8 +357,8 @@
         }
       },
       "episode": {
-        "pid": "w172x6g4h7ph0h5",
-        "presentationTitle": "11/03/2020 GMT",
+        "pid": "w172x6g56sb19pv",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -366,27 +366,27 @@
         }
       },
       "version": {
-        "pid": "w1mshc4sjgxnhkq"
+        "pid": "w1mshc4t80k6ssd"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1582982757000,
-      "publishedTimeStart": 1583935170000,
-      "publishedTimeEnd": 1583936970000,
+      "updateTime": 1584192361000,
+      "publishedTimeStart": 1585144770000,
+      "publishedTimeEnd": 1585146570000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583935170000,
-      "transmissionTimeEnd": 1583936970000,
+      "transmissionTimeStart": 1585144770000,
+      "transmissionTimeEnd": 1585146570000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqv9ry.imi:ws.bbc.co.uk/HAUSA1583935170",
-        "pid": "p0856xvd"
+        "bid": "w4hqv9s0.imi:ws.bbc.co.uk/HAUSA1585144770",
+        "pid": "p086nhzb"
       },
       "brand": {
         "pid": "p030s4mp",
@@ -398,8 +398,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrh7",
-        "presentationTitle": "11/03/2020 GMT",
+        "pid": "w3cszrh9",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -407,27 +407,27 @@
         }
       },
       "version": {
-        "pid": "w4hqv9ry"
+        "pid": "w4hqv9s0"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583004346000,
-      "publishedTimeStart": 1583954970000,
-      "publishedTimeEnd": 1583956770000,
+      "updateTime": 1584213947000,
+      "publishedTimeStart": 1585164570000,
+      "publishedTimeEnd": 1585166370000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583954970000,
-      "transmissionTimeEnd": 1583956770000,
+      "transmissionTimeStart": 1585164570000,
+      "transmissionTimeEnd": 1585166370000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqvb7m.imi:ws.bbc.co.uk/HAUSA1583954970",
-        "pid": "p0857r4p"
+        "bid": "w4hqvb7p.imi:ws.bbc.co.uk/HAUSA1585164570",
+        "pid": "p086p3fz"
       },
       "brand": {
         "pid": "p030s4mx",
@@ -439,8 +439,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszryx",
-        "presentationTitle": "11/03/2020 GMT",
+        "pid": "w3cszryz",
+        "presentationTitle": "25/03/2020 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -448,27 +448,27 @@
         }
       },
       "version": {
-        "pid": "w4hqvb7m"
+        "pid": "w4hqvb7p"
       }
     },
     {
       "urn": "urn:bbc:ares:ws_media:schedule:bbc_hausa_radio",
       "serviceId": "bbc_hausa_radio",
       "partnerId": "s0000001",
-      "updateTime": 1583040346000,
-      "publishedTimeStart": 1583990970000,
-      "publishedTimeEnd": 1583992770000,
+      "updateTime": 1893488400000,
+      "publishedTimeStart": 1893488400000,
+      "publishedTimeEnd": 1893490200000,
       "publishedTimeDuration": "PT30M",
-      "transmissionTimeStart": 1583990970000,
-      "transmissionTimeEnd": 1583992770000,
+      "transmissionTimeStart": 1893488400000,
+      "transmissionTimeEnd": 1893490200000,
       "isBlanked": false,
       "isRepeat": false,
       "isAudioDescribed": false,
       "isCritical": false,
       "isSimulcast": true,
       "broadcast": {
-        "bid": "w4hqv9yl.imi:ws.bbc.co.uk/HAUSA1583990970",
-        "pid": "p0858lg6"
+        "bid": "w4hqv9yn.imi:ws.bbc.co.uk/HAUSA1585200570",
+        "pid": "p086pmsx"
       },
       "brand": {
         "pid": "p030s4n1",
@@ -480,8 +480,8 @@
         }
       },
       "episode": {
-        "pid": "w3cszrnw",
-        "presentationTitle": "12/03/2020 GMT",
+        "pid": "w3cszrny",
+        "presentationTitle": "01/01/2030 09:00 GMT",
         "image": "ichef.bbci.co.uk/images/ic/$recipe/p035dknl.jpg",
         "synopses": {
           "short": "Shiri ne na minti 30 wanda ya kunshi labaru da rahotanni daga sassa daban na duniya.",
@@ -489,7 +489,7 @@
         }
       },
       "version": {
-        "pid": "w4hqv9yl"
+        "pid": "w4hqv9yn"
       }
     }
   ]

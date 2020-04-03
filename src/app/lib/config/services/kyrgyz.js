@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
@@ -32,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/kyrgyz/institutional-49677275#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/kyrgyz/institutional-49677275',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -154,9 +158,27 @@ export const service = {
         listen: 'Listen',
         watch: 'Watch',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Видеонун түшүндүрмөсү, ',
+          text: 'Эскертүү: Жарнамалар болушу ыктымал',
+        },
+        fallback: {
+          text: 'Баракча ачылбайт',
+          linkText: '%provider_name% баракчадан көбүрөк пост окуу',
+          linkTextSuffixVisuallyHidden: ', Би-Би-Сиден тышкары баракча',
+          warningText:
+            'Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес.',
+        },
+        skipLink: {
+          text: '%provider_name% баракчаны өткөрүп жиберүү, пост',
+          endTextVisuallyHidden: '%provider_name% посттун аягы',
+        },
       },
     },
     brandSVG,
@@ -240,10 +262,6 @@ export const service = {
       {
         title: 'Журнал',
         url: '/kyrgyz/magazine',
-      },
-      {
-        title: 'Аудио',
-        url: '/kyrgyz/media/audio',
       },
       {
         title: 'Блог',

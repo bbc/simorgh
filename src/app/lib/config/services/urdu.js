@@ -11,6 +11,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ur',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -36,8 +39,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcurdu',
     twitterSite: '@bbcurdu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/urdu/institutional-49282935#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/urdu/institutional-49282935',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
@@ -146,9 +150,27 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         liveLabel: 'لائیو',
+        nextLabel: 'NEXT',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ویڈیو کیپشن, ',
+          text: 'تنبیہ: دیگر مواد میں اشتہار موجود ہو سکتے ہیں',
+        },
+        fallback: {
+          text: 'مواد دستیاب نہیں ہے',
+          linkText: '%provider_name% مزید دیکھنے کے لیے',
+          linkTextSuffixVisuallyHidden: ', بیرونی مواد',
+          warningText:
+            ' بی بی سی. بی بی سی بیرونی سائٹس پر شائع شدہ مواد کی ذمہ دار نہیں ہے.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
       },
     },
     brandSVG,
@@ -159,7 +181,8 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -234,20 +257,12 @@ export const service = {
         url: '/urdu/science',
       },
       {
-        title: 'آڈیو',
-        url: '/urdu/media/audio',
-      },
-      {
         title: 'ویڈیو',
         url: '/urdu/media/video',
       },
       {
         title: 'پنجابی ويڈیو',
         url: '/urdu/punjabi_video',
-      },
-      {
-        title: 'تصاویر',
-        url: '/urdu/media/photogalleries',
       },
     ],
   },

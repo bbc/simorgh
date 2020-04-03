@@ -1,108 +1,7 @@
 {
-    "content": {
-      "blocks": [
-        {
-          "advertising": true,
-          "caption": "Test Pashto",
-          "embedding": true,
-          "format": "video",
-          "id": "p01plp4n",
-          "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
-          "subType": "clip",
-          "synopses": {
-            "long": "Test Pashto",
-            "medium": "Test Pashto",
-            "short": "Test Pashto"
-          },
-          "title": "Test Pashto",
-          "type": "media",
-          "versions": [
-            {
-              "availableFrom": 1575384631000,
-              "availableTerritories": {
-                "nonUk": true,
-                "uk": true,
-                "world": false
-              },
-              "duration": 29,
-              "durationISO8601": "PT29S",
-              "types": [
-                "Original"
-              ],
-              "versionId": "p01plp4q",
-              "warnings": {}
-            }
-          ]
-        },
-        {
-          "markupType": "plain_text",
-          "text": "Test Pashto",
-          "type": "paragraph"
-        }
-      ]
-    },
-    "metadata": {
-      "analyticsLabels": {
-        "counterName": "pashto.embedded_media.media_asset.23257523.page",
-        "cps_asset_id": "23257523",
-        "cps_asset_type": "map"
-      },
-      "blockTypes": [
-        "media",
-        "paragraph"
-      ],
-      "createdBy": "pashto-v6",
-      "firstPublished": 1575384805000,
-      "id": "urn:bbc:ares::asset:pashto/media-23257523",
-      "includeComments": false,
-      "language": "ps",
-      "lastPublished": 1575384808000,
-      "lastUpdated": 1575385030492,
-      "locators": {
-        "assetUri": "/pashto/media-23257523",
-        "cpsUrn": "urn:bbc:content:assetUri:pashto/media-23257523",
-        "curie": "http://www.bbc.co.uk/asset/33af4333-fbb2-854d-ae2c-6cf747f8cb11"
-      },
-      "options": {
-        "allowDateStamp": true,
-        "allowHeadline": true,
-        "allowPrintingSharingLinks": true,
-        "allowRelatedStoriesBox": true,
-        "allowRightHandSide": true,
-        "hasNewsTracker": false,
-        "includeComments": false,
-        "isBreakingNews": false,
-        "isFactCheck": false,
-        "isIgorSeoTagsEnabled": false,
-        "isKeyContent": false
-      },
-      "tags": {},
-      "type": "MAP",
-      "version": "v1.1.3"
-    },
-    "promo": {
-      "headlines": {
-        "headline": "Test Pashto",
-        "shortHeadline": "Test Pashto"
-      },
-      "id": "urn:bbc:ares::asset:pashto/media-23257523",
-      "indexImage": {
-        "altText": "bbc",
-        "copyrightHolder": "BBC",
-        "height": 549,
-        "href": "http://b.files.bbci.co.uk/E8AA/test/_63726595_chrome.png",
-        "id": "63726595",
-        "path": "/cpsdevpb/E8AA/test/_63726595_chrome.png",
-        "subType": "index",
-        "type": "image",
-        "width": 976
-      },
-      "locators": {
-        "assetUri": "/pashto/media-23257523",
-        "cpsUrn": "urn:bbc:content:assetUri:pashto/media-23257523",
-        "curie": "http://www.bbc.co.uk/asset/33af4333-fbb2-854d-ae2c-6cf747f8cb11"
-      },
-      "media": {
+  "content": {
+    "blocks": [
+      {
         "advertising": true,
         "caption": "Test Pashto",
         "embedding": true,
@@ -127,34 +26,128 @@
             },
             "duration": 29,
             "durationISO8601": "PT29S",
-            "types": [
-              "Original"
-            ],
+            "types": ["Original"],
             "versionId": "p01plp4q",
             "warnings": {}
           }
         ]
       },
-      "passport": {
-        "taggings": []
-      },
-      "summary": "Test Pashto",
-      "timestamp": 1575385030492,
-      "type": "cps"
-    },
-    "relatedContent": {
-      "groups": [],
-      "section": {
-        "name": "Media",
-        "subType": "index",
-        "type": "simple",
-        "uri": "/pashto/media"
-      },
-      "site": {
-        "name": "BBC Pashto",
-        "subType": "site",
-        "type": "simple",
-        "uri": "/pashto"
+      {
+        "markupType": "plain_text",
+        "text": "Test Pashto",
+        "type": "paragraph"
       }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "pashto.embedded_media.media_asset.23257523.page",
+      "cps_asset_id": "23257523",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "pashto-v6",
+    "firstPublished": 1575384805000,
+    "id": "urn:bbc:ares::asset:pashto/media-23257523",
+    "includeComments": false,
+    "language": "ps",
+    "lastPublished": 1575384808000,
+    "lastUpdated": 1575385030492,
+    "locators": {
+      "assetUri": "/pashto/media-23257523",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/media-23257523",
+      "curie": "http://www.bbc.co.uk/asset/33af4333-fbb2-854d-ae2c-6cf747f8cb11"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "type": "MAP",
+    "version": "v1.1.3"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Test Pashto",
+      "shortHeadline": "Test Pashto"
+    },
+    "id": "urn:bbc:ares::asset:pashto/media-23257523",
+    "indexImage": {
+      "altText": "bbc",
+      "copyrightHolder": "BBC",
+      "height": 549,
+      "href": "http://b.files.bbci.co.uk/E8AA/test/_63726595_chrome.png",
+      "id": "63726595",
+      "path": "/cpsdevpb/E8AA/test/_63726595_chrome.png",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "locators": {
+      "assetUri": "/pashto/media-23257523",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/media-23257523",
+      "curie": "http://www.bbc.co.uk/asset/33af4333-fbb2-854d-ae2c-6cf747f8cb11"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "Test Pashto",
+      "embedding": true,
+      "format": "video",
+      "id": "p01plp4n",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "Test Pashto",
+        "medium": "Test Pashto",
+        "short": "Test Pashto"
+      },
+      "title": "Test Pashto",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1575384631000,
+          "availableTerritories": {
+            "nonUk": true,
+            "uk": true,
+            "world": false
+          },
+          "duration": 29,
+          "durationISO8601": "PT29S",
+          "types": ["Original"],
+          "versionId": "p01plp4q",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "taggings": []
+    },
+    "summary": "Test Pashto",
+    "timestamp": 1575385030492,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/pashto/media"
+    },
+    "site": {
+      "name": "BBC Pashto",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/pashto"
     }
   }
+}

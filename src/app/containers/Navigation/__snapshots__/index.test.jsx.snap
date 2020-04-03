@@ -75,6 +75,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 
 .c2:hover,
 .c2:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -308,10 +309,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   .c10 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
@@ -826,6 +827,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 
 .c2:hover,
 .c2:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -999,10 +1001,10 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   .c9 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
@@ -1485,6 +1487,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 
 .c2:hover,
 .c2:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -1658,10 +1661,10 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   .c9 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
@@ -2147,6 +2150,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -2389,10 +2393,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   .c6 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
@@ -2855,6 +2859,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -3033,10 +3038,10 @@ exports[`Navigation Container should correctly render canonical navigation on no
   .c6 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;
@@ -3476,6 +3481,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 .c3:hover,
 .c3:focus {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
@@ -3654,10 +3660,10 @@ exports[`Navigation Container should correctly render canonical navigation on no
   .c6 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: smooth;
-    -moz-scroll-behavior: smooth;
-    -ms-scroll-behavior: smooth;
-    scroll-behavior: smooth;
+    -webkit-scroll-behavior: auto;
+    -moz-scroll-behavior: auto;
+    -ms-scroll-behavior: auto;
+    scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-scrollbar-width: none;
     -moz-scrollbar-width: none;

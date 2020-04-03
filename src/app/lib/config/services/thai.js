@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: `th`,
@@ -34,8 +37,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbc_thailand',
     twitterSite: '@bbc_thailand',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/thai/institutional-49281839#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/thai/institutional-49281839',
     isTrustProjectParticipant: true,
     script: thai,
     manifestPath: '/manifest.json',
@@ -146,9 +150,27 @@ export const service = {
         listen: 'ฟัง',
         watch: 'ดูู',
         liveLabel: 'สด',
+        nextLabel: 'NEXT',
         previousRadioShow: 'รายการวิทยุก่อนหน้า',
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'คำบรรยายวิดีโอ ',
+          text: 'คำเตือน:เนื้อหาภายนอกอาจมีโฆษณา',
+        },
+        fallback: {
+          text: 'ไม่มีเนื้อหานี้',
+          linkText: 'ดูเพิ่มเติมที่ %provider_name%',
+          linkTextSuffixVisuallyHidden: ' ลิงก์จากภายนอก',
+          warningText:
+            'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
+        },
+        skipLink: {
+          text: 'ข้าม %provider_name% โพสต์ ',
+          endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
+        },
       },
     },
     brandSVG,

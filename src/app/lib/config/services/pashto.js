@@ -12,6 +12,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: 'ps',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -38,8 +41,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpashto',
     twitterSite: '@bbcpashto',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/pashto/institutional-49283007#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/pashto/institutional-49283007',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/manifest.json',
@@ -157,9 +161,27 @@ export const service = {
         listen: 'Listen',
         watch: 'و یې ګورئ',
         liveLabel: 'ژوندۍ',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'د ویډیو تشریح ',
+          text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
+        },
+        fallback: {
+          text: 'منځپانګه نه شته',
+          linkText: 'په %provider_name% کې نور وګورئ',
+          linkTextSuffixVisuallyHidden: ' بهرنی',
+          warningText:
+            ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
       },
     },
     brandSVG,
@@ -171,9 +193,10 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
-      frequenciesPageLabel: 'Radio Frequencies Link Label',
-      header: 'BBC News Radio',
+      frequenciesPageLabel: 'راديويي څپې',
+      header: 'تازه خبرونه واورئ',
     },
     footer: {
       trustProjectLink: {
@@ -244,10 +267,6 @@ export const service = {
       {
         title: 'ويډيوګانې',
         url: '/pashto/media/video',
-      },
-      {
-        title: 'انځورونه',
-        url: '/pashto/media/photogalleries',
       },
       {
         title: 'ځانګړې پاڼې',

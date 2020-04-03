@@ -39,7 +39,7 @@ const generateVideoBlock = (block, json) => {
   return generatedBlock;
 };
 
-const generateImageBlock = block => {
+const generateImageBlock = (block) => {
   return {
     type: 'image',
     model: {
@@ -57,7 +57,7 @@ const generateImageBlock = block => {
   };
 };
 
-const withValidationCheck = convertedBlock => {
+const withValidationCheck = (convertedBlock) => {
   const aresMediaMetadata = path(
     ['model', 'blocks', 0, 'model', 'blocks', 0, 'model'],
     convertedBlock,

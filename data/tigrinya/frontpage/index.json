@@ -1652,9 +1652,7 @@
               "versions": [
                 {
                   "versionId": "p07glvxj",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 368,
                   "durationISO8601": "PT6M8S",
                   "warnings": {},

@@ -51,29 +51,11 @@ const withRouter = (component, matchPath, path) => {
 };
 
 const defaultToggleState = {
-  local: {
-    scriptLink: {
-      enabled: true,
-    },
-    variantCookie: {
-      enabled: true,
-    },
+  scriptLink: {
+    enabled: true,
   },
-  test: {
-    scriptLink: {
-      enabled: true,
-    },
-    variantCookie: {
-      enabled: true,
-    },
-  },
-  live: {
-    scriptLink: {
-      enabled: true,
-    },
-    variantCookie: {
-      enabled: true,
-    },
+  variantCookie: {
+    enabled: true,
   },
 };
 
@@ -150,7 +132,7 @@ describe(`Script Link`, () => {
     };
 
     describe('canonical', () => {
-      Object.keys(testCases).forEach(testCase => {
+      Object.keys(testCases).forEach((testCase) => {
         it(`Script Link should contain link to other variant when on ${testCase}`, () => {
           const {
             matchPath,
@@ -183,7 +165,7 @@ describe(`Script Link`, () => {
 
     describe('amp', () => {
       const { errorPage, ...ampTestCases } = testCases;
-      Object.keys(ampTestCases).forEach(testCase => {
+      Object.keys(ampTestCases).forEach((testCase) => {
         it(`Script Link should contain link to other variant when on ${testCase}`, () => {
           const {
             matchPath,
@@ -227,13 +209,11 @@ describe(`Script Link`, () => {
 
     it('should not set preferred variant cookie when variantCookie toggle is disabled', () => {
       const testToggles = {
-        test: {
-          scriptLink: {
-            enabled: true,
-          },
-          variantCookie: {
-            enabled: false,
-          },
+        scriptLink: {
+          enabled: true,
+        },
+        variantCookie: {
+          enabled: false,
         },
       };
       const { container } = withRouter(
@@ -324,13 +304,11 @@ describe(`Script Link`, () => {
 
   it('should not render when scriptLink toggle is off', () => {
     const testToggles = {
-      test: {
-        scriptLink: {
-          enabled: false,
-        },
-        variantCookie: {
-          enabled: false,
-        },
+      scriptLink: {
+        enabled: false,
+      },
+      variantCookie: {
+        enabled: false,
       },
     };
     const { container } = withRouter(

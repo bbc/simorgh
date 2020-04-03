@@ -19,6 +19,7 @@ import image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import FeaturesAnalysis from '#containers/FeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
@@ -31,6 +32,7 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
+import Include from '#containers/Include';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -64,13 +66,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     subheadline: headings,
     text,
     image,
-    timestamp: props =>
+    timestamp: (props) =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
       ) : null,
-    video: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    version: props => <MediaPlayer {...props} assetUri={assetUri} />,
-    byline: props => <StyledByline {...props} />,
+    video: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
+    version: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
+    byline: (props) => <StyledByline {...props} />,
+    include: (props) => <Include {...props} />,
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -102,6 +105,18 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const ComponentWrapper = styled.div`
     margin-bottom: ${GEL_SPACING_TRPL};
     padding: ${GEL_SPACING_DBL};
+  `;
+
+  /**
+   * this should be the defacto wrapper for OJs
+   * as it displays a conditional padding, which
+   * works well for mobile view.
+   */
+  const ResponsiveComponentWrapper = styled.div`
+    margin-bottom: ${GEL_SPACING_TRPL};
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      padding: ${GEL_SPACING_DBL};
+    }
   `;
 
   const gridColumns = {
@@ -192,6 +207,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>
+          <ResponsiveComponentWrapper>
+            <FeaturesAnalysis />
+          </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <h2>This is a component in the second column</h2>
           </ComponentWrapper>

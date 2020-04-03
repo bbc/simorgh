@@ -16,6 +16,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Обновлено',
@@ -31,18 +34,19 @@ export const service = {
     externalLinkText: ', внешняя ссылка',
     imageCaptionOffscreenText: 'Подпись к фото, ',
     videoCaptionOffscreenText: 'Подпись к видео, ',
-    audioCaptionOffscreenText: 'Подпись к аудио',
+    audioCaptionOffscreenText: 'Подпись к аудио, ',
     defaultCaptionOffscreenText: 'Подпись, ',
     imageCopyrightOffscreenText: 'Автор фото, ',
     locale: `ru-RU`,
     datetimeLocale: `ru`,
     service: 'russian',
-    serviceName: 'News Русская служба',
+    serviceName: 'Russian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/russian/institutional-50098149#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -147,7 +151,7 @@ export const service = {
       },
       media: {
         noJs:
-          'To play this content, please enable JavaScript, or try a different browser',
+          'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
         contentExpired: 'Контент больше не доступен.',
         audio: 'Аудио',
         photogallery: 'Фотогалерея',
@@ -162,12 +166,30 @@ export const service = {
           subtitle:
             'Смотрите лучшие репортажи Би-би-си из России и со всего мира. Каждый день - с понедельника по пятницу – в выпуске теленовостей Би-би-си наши корреспонденты помогут вам понять, что происходит и почему это важно для вас.',
         },
-        listen: 'Listen',
+        listen: 'Слушать',
         watch: 'Смотреть',
         liveLabel: 'LIVE',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'Дальше',
+        previousRadioShow: 'Предыдущая передача',
+        nextRadioShow: 'Следующая передача',
+        duration: 'Продолжительность',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Подпись к видео, ',
+          text: 'Внимание: Контент других сайтов может содержать рекламу.',
+        },
+        fallback: {
+          text: 'Контент недоступен',
+          linkText: 'Смотреть еще в %provider_name%',
+          linkTextSuffixVisuallyHidden: ', внешняя ссылка',
+          warningText:
+            'Би-би-си на несет ответственности за содержание других сайтов.',
+        },
+        skipLink: {
+          text: 'Пропустить контент из %provider_name%',
+          endTextVisuallyHidden: 'Контент из %provider_name% окончен',
+        },
       },
     },
     brandSVG,
@@ -182,7 +204,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/russian/institutional-50098149',
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
@@ -204,7 +226,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Кукис',
+          text: 'Куки',
         },
         {
           href: 'https://www.bbc.com/russian/institutional-36517237',
@@ -234,6 +256,10 @@ export const service = {
       {
         title: 'Главная',
         url: '/russian',
+      },
+      {
+        title: 'Коронавирус',
+        url: '/russian/in-depth-51962199',
       },
       {
         title: 'Истории',

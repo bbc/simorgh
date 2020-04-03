@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import { isNull } from '@bbc/psammead-test-helpers';
-import useToggle from '../Toggle/useToggle';
+import useToggle from '#hooks/useToggle';
 import loggerMock from '#testHelpers/loggerMock';
 import MPulseBeaconContainer from './index';
 import onClient from '#lib/utilities/onClient';
@@ -12,10 +12,10 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 let container;
-const useToggleMock = enabled => ({ enabled });
+const useToggleMock = (enabled) => ({ enabled });
 
 jest.mock('./boomr', () => jest.fn());
-jest.mock('../Toggle/useToggle', () => jest.fn());
+jest.mock('#hooks/useToggle', () => jest.fn());
 jest.mock('#lib/utilities/onClient', () => jest.fn());
 
 let serviceContextMock;

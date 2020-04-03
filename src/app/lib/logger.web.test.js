@@ -10,7 +10,7 @@ global.console = {
 };
 
 const expectNotCalled = (object, keys) => {
-  keys.forEach(key => {
+  keys.forEach((key) => {
     expect(object[key]).not.toHaveBeenCalled();
   });
 };

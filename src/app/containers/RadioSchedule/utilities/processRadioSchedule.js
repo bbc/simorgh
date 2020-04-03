@@ -1,9 +1,8 @@
-import moment from 'moment';
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
 import pathOr from 'ramda/src/pathOr';
 
-const getProgramState = (currentTime, startTime, endTime) => {
+export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
   if (isLive) {
     return 'live';
@@ -15,20 +14,18 @@ const getProgramState = (currentTime, startTime, endTime) => {
   return 'next';
 };
 
-const getLink = (state, program, service) => {
+export const getLink = (state, program, service) => {
   const url = `/${service}/${program.serviceId}`;
   return state === 'live'
     ? `${url}/liveradio`
-    : `${url}/${program.broadcast.pid}`;
+    : `${url}/${program.episode.pid}`;
 };
 
-export default (radioScheduleData, service) => {
-  const currentTime = parseInt(moment.utc().format('x'), 10);
-
+export default (radioScheduleData, service, currentTime) => {
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
   const latestProgramIndex = findLastIndex(
-    propSatisfies(time => time < currentTime, 'publishedTimeStart'),
+    propSatisfies((time) => time < currentTime, 'publishedTimeStart'),
   )(radioScheduleData.schedules);
 
   const radioSchedules = radioScheduleData.schedules;
@@ -45,7 +42,7 @@ export default (radioScheduleData, service) => {
 
   const schedules =
     schedulesToShow &&
-    schedulesToShow.map(program => {
+    schedulesToShow.map((program) => {
       const currentState = getProgramState(
         currentTime,
         program.publishedTimeStart,
@@ -55,7 +52,6 @@ export default (radioScheduleData, service) => {
       return {
         id: pathOr(null, ['broadcast', 'pid'], program),
         state: currentState,
-        stateLabel: currentState,
         startTime: pathOr(null, ['publishedTimeStart'], program),
         link: getLink(currentState, program, service),
         brandTitle: pathOr(null, ['brand', 'title'], program),

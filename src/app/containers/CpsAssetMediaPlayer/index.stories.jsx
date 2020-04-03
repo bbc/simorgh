@@ -11,25 +11,23 @@ import videoBlock from './fixtures';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const defaultToggles = {
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
-const isAmp = platform => platform === 'AMP';
+const isAmp = (platform) => platform === 'AMP';
 
 const platforms = ['Canonical', 'AMP'];
 
-platforms.forEach(platform => {
+platforms.forEach((platform) => {
   const mapMediaPlayerStories = storiesOf(
     `Containers|MAP Media Player/${platform}`,
     module,
   );
 
   mapMediaPlayerStories
-    .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
+    .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>)
     .addDecorator(withKnobs);
 
   if (isAmp(platform)) {
@@ -38,7 +36,10 @@ platforms.forEach(platform => {
 
   mapMediaPlayerStories.add('default', () => {
     return (
-      <ToggleContextProvider value={{ toggleState: defaultToggles }}>
+      <ToggleContextProvider
+        value={{ toggleState: defaultToggles }}
+        origin="https://www.bbc.com"
+      >
         <ServiceContextProvider service="pidgin">
           <RequestContextProvider
             isAmp={isAmp(platform)}

@@ -4,6 +4,7 @@ import { render, waitForDomChange } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { StaticRouter } from 'react-router-dom';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import assocPath from 'ramda/src/assocPath';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -15,20 +16,8 @@ import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 const toggleState = {
-  local: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  test: {
-    mediaPlayer: {
-      enabled: true,
-    },
-  },
-  live: {
-    mediaPlayer: {
-      enabled: false,
-    },
+  mediaPlayer: {
+    enabled: true,
   },
 };
 
@@ -51,8 +40,8 @@ const createAssetPage = ({ pageData }, service) => (
   </StaticRouter>
 );
 
-jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
-  const PageWrapperContainer = props => (
+jest.mock('#containers/PageHandlers/withPageWrapper', () => (Component) => {
+  const PageWrapperContainer = (props) => (
     <div id="PageWrapperContainer">
       <Component {...props} />
     </div>
@@ -61,8 +50,8 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
   return PageWrapperContainer;
 });
 
-jest.mock('#containers/PageHandlers/withLoading', () => Component => {
-  const LoadingContainer = props => (
+jest.mock('#containers/PageHandlers/withLoading', () => (Component) => {
+  const LoadingContainer = (props) => (
     <div id="LoadingContainer">
       <Component {...props} />
     </div>
@@ -71,8 +60,8 @@ jest.mock('#containers/PageHandlers/withLoading', () => Component => {
   return LoadingContainer;
 });
 
-jest.mock('#containers/PageHandlers/withError', () => Component => {
-  const ErrorContainer = props => (
+jest.mock('#containers/PageHandlers/withError', () => (Component) => {
+  const ErrorContainer = (props) => (
     <div id="ErrorContainer">
       <Component {...props} />
     </div>
@@ -81,8 +70,8 @@ jest.mock('#containers/PageHandlers/withError', () => Component => {
   return ErrorContainer;
 });
 
-jest.mock('#containers/PageHandlers/withData', () => Component => {
-  const DataContainer = props => (
+jest.mock('#containers/PageHandlers/withData', () => (Component) => {
+  const DataContainer = (props) => (
     <div id="DataContainer">
       <Component {...props} />
     </div>
@@ -91,8 +80,8 @@ jest.mock('#containers/PageHandlers/withData', () => Component => {
   return DataContainer;
 });
 
-jest.mock('#containers/PageHandlers/withContexts', () => Component => {
-  const ContextsContainer = props => (
+jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
+  const ContextsContainer = (props) => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>
@@ -101,7 +90,7 @@ jest.mock('#containers/PageHandlers/withContexts', () => Component => {
   return ContextsContainer;
 });
 
-const escapedText = text => {
+const escapedText = (text) => {
   const textReplacements = {
     '&quot;': '"',
     '&amp;': '&',
@@ -114,7 +103,7 @@ const escapedText = text => {
     'gi',
   );
 
-  return text.replace(replacementsRegex, match => textReplacements[match]);
+  return text.replace(replacementsRegex, (match) => textReplacements[match]);
 };
 
 const getBlockTextAtIndex = (index, originalPageData) => {
@@ -148,7 +137,7 @@ describe('Media Asset Page', () => {
       document.querySelectorAll(
         'head > meta[property*="image"], head > meta[name*="image"]',
       ),
-    ).map(tag =>
+    ).map((tag) =>
       tag.hasAttribute('property')
         ? {
             property: tag.getAttribute('property'),
@@ -198,11 +187,11 @@ describe('Media Asset Page', () => {
   describe('AV player', () => {
     let liveStreamSource;
 
-    const getLiveStreamBlock = processedPageData => {
+    const getLiveStreamBlock = (processedPageData) => {
       return path(['content', 'model', 'blocks', 1], processedPageData);
     };
 
-    const getLiveStreamSource = liveStreamBlock => {
+    const getLiveStreamSource = (liveStreamBlock) => {
       return path(
         [
           'model',
@@ -340,6 +329,33 @@ it('should show the media message when available is false', async () => {
   );
 
   fetch.mockResponse(JSON.stringify(uzbekDataExpiredLivestream));
+  const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
+    'some-map-path',
+  );
+  const { getByText } = render(
+    createAssetPage({ pageData: pageDataWithExpiredLiveStream }, 'uzbek'),
+  );
+
+  expect(
+    getByText('Бу контентни ортиқ тинглаб/томоша қилиб бўлмайди.'),
+  ).toBeInTheDocument();
+});
+
+it('should show the media message when there is no media block', async () => {
+  const blocks = pathOr([], ['content', 'blocks'], uzbekPageData);
+  const blockTypes = pathOr([], ['metadata', 'blockTypes'], uzbekPageData);
+  const uzbekDataWithNoMediaBlock = assocPath(
+    ['content', 'blocks'],
+    blocks.filter((block) => block.type !== 'version'),
+    uzbekPageData,
+  );
+  const uzbekDataWithNoMediaType = assocPath(
+    ['metadata', 'blockTypes'],
+    blockTypes.filter((type) => type !== 'version'),
+    uzbekDataWithNoMediaBlock,
+  );
+
+  fetch.mockResponse(JSON.stringify(uzbekDataWithNoMediaType));
   const { pageData: pageDataWithExpiredLiveStream } = await getInitialData(
     'some-map-path',
   );

@@ -1,4 +1,5 @@
 import pipe from 'ramda/src/pipe';
+import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -13,13 +14,22 @@ import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
+import processUnavailableMedia from './processUnavailableMedia';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
 );
+
+export const only = (pageType, transformer) => (pageData, ...args) => {
+  const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
+  return isCorrectPageType ? transformer(pageData, ...args) : pageData;
+};
+
 const processOptimoBlocks = pipe(
+  only(MEDIA_ASSET_PAGE, processUnavailableMedia),
   addHeadlineBlock,
   addSummaryBlock,
   augmentWithTimestamp,
@@ -28,7 +38,7 @@ const processOptimoBlocks = pipe(
   applyBlockPositioning,
   cpsOnlyOnwardJourneys,
 );
-const transformJson = async json => {
+const transformJson = async (json) => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(formattedPageData);
@@ -40,8 +50,8 @@ const transformJson = async json => {
   }
 };
 
-export default async path => {
-  const { json, ...rest } = await fetchPageData(path);
+export default async (urlPath) => {
+  const { json, ...rest } = await fetchPageData(urlPath);
 
   return {
     ...rest,

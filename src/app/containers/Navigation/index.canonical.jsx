@@ -25,7 +25,7 @@ const CanonicalNavigationContainer = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
+  useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, (event) => {
     if (!event.matches) {
       setIsOpen(false);
     }

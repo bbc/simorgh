@@ -8,6 +8,9 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
@@ -33,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/telugu/institutional-50420343#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/telugu/institutional-50420343',
     isTrustProjectParticipant: true,
     script: devanagariAndGurmukhi,
     manifestPath: '/manifest.json',
@@ -151,9 +155,26 @@ export const service = {
         listen: 'వినండి',
         watch: 'చూడండి',
         liveLabel: 'లైవ్',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
       },
     },
     brandSVG,

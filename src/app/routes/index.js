@@ -3,8 +3,8 @@ import cpsAsset from './cpsAsset';
 import home from './home';
 import liveRadio from './radio';
 import onDemandRadio from './onDemandRadio';
-import error200 from './error200';
-import error404 from './error404';
+import error from './error';
+import errorNoRouteMatch from './errorNoRouteMatch';
 
 export default [
   article,
@@ -12,6 +12,6 @@ export default [
   home,
   liveRadio,
   onDemandRadio,
-  error200,
-  error404,
+  error,
+  errorNoRouteMatch,
 ];

@@ -8,6 +8,9 @@ import 'moment/locale/my';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `my`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'အသစ်တင်ချိန်',
@@ -33,8 +36,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcburmese',
     twitterSite: '@bbcburmese',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/burmese/institutional-51387206#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/burmese/institutional-51387206',
     isTrustProjectParticipant: true,
     script: burmese,
     manifestPath: '/manifest.json',
@@ -156,10 +160,29 @@ export const service = {
         },
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
-        liveLabel: 'တိုကျရိုကျထုတျလှှငျ့မှု',
+        liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
+        nextLabel: 'NEXT',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'ဗီဒီယို ပုံစာ - ',
+          text:
+            'သတိပေးချက်- ဘီဘီစီပြင်ပ ဝက်ဆိုက်များမှ ဖော်ပြချက်များတွင် ကြော်ငြာများပါနိုင်ပါသည်။',
+        },
+        fallback: {
+          text: 'ကြည့်ရန် မရနိုင်သေးပါ။',
+          linkText: '%provider_name% တွင် နောက်ထပ်ကြည့်နိုင်ပါသည်။',
+          linkTextSuffixVisuallyHidden: ' ပြင်ပစာမျက်နှာ',
+          warningText:
+            'ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
       },
     },
     brandSVG,
@@ -170,7 +193,8 @@ export const service = {
       hasMostRead: true,
     },
     radioSchedule: {
-      hasRadioSchedule: false,
+      hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {
@@ -237,16 +261,8 @@ export const service = {
         url: '/burmese/economy',
       },
       {
-        title: 'အသံဖိုင်များ',
-        url: '/burmese/media/audio',
-      },
-      {
         title: 'ဗီဒီယိုများ',
         url: '/burmese/media/video',
-      },
-      {
-        title: 'ဓာတ်ပုံများ',
-        url: '/burmese/media/photogalleries',
       },
     ],
   },

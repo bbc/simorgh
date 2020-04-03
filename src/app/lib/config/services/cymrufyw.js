@@ -15,6 +15,9 @@ import 'moment/locale/cy';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `cy`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Wedi ei ddiweddaru',
@@ -154,6 +157,7 @@ export const service = {
         listen: 'Listen',
         watch: 'Gwylio',
         liveLabel: 'LIVE',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',

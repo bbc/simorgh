@@ -8,7 +8,9 @@ import pageData from './fixtureData';
 
 const styStories = storiesOf('Pages|Story Page', module);
 
-styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
+styStories.addDecorator((story) => (
+  <WithTimeMachine>{story()}</WithTimeMachine>
+));
 
 styStories.add('Mundo', () => {
   return (

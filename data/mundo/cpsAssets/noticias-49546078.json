@@ -1,444 +1,415 @@
 {
-    "metadata": {
-        "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
-        "locators": {
-            "assetUri": "/mundo/noticias-49546078",
-            "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
-            "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
+  "metadata": {
+    "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
+    "locators": {
+      "assetUri": "/mundo/noticias-49546078",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
+      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
+    },
+    "type": "MAP",
+    "createdBy": "mundo-v6",
+    "language": "es",
+    "lastUpdated": 1567754881195,
+    "firstPublished": 1567369729,
+    "lastPublished": 1567754873,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "mundo.also_in_the_news.media_asset.49546078.page",
+      "cps_asset_id": "49546078"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Science",
+          "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+          "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Science",
+            "http://www.wikidata.org/entity/Q336"
+          ],
+          "topicName": "Ciencia",
+          "topicId": "ckdxnw959n7t",
+          "curationList": [
+            {
+              "curationId": "36f98027-2c01-416c-8e10-9e8d125c39e7",
+              "curationType": "vivo-stream"
+            }
+          ]
         },
-        "type": "MAP",
-        "createdBy": "mundo-v6",
-        "language": "es",
-        "lastUpdated": 1567754881195,
-        "firstPublished": 1567369729,
-        "lastPublished": 1567754873,
-        "options": {
-            "isIgorSeoTagsEnabled": false,
-            "includeComments": false,
-            "allowRightHandSide": true,
-            "isFactCheck": false,
-            "allowDateStamp": true,
-            "hasNewsTracker": false,
-            "allowRelatedStoriesBox": true,
-            "isKeyContent": false,
-            "allowHeadline": true,
-            "isBreakingNews": false,
-            "allowPrintingSharingLinks": true
+        {
+          "thingLabel": "Hurricane Dorian",
+          "thingUri": "http://www.bbc.co.uk/things/67202fae-2bc2-43b5-9f07-9b9268e541ea#id",
+          "thingId": "67202fae-2bc2-43b5-9f07-9b9268e541ea",
+          "thingType": ["Thing", "Event"],
+          "thingSameAs": [],
+          "topicName": "Huracán Dorian",
+          "topicId": "cgxjr8vz7vgt",
+          "curationList": [
+            {
+              "curationId": "6083fc56-6453-4d39-a90e-e4a2d424e2a6",
+              "curationType": "vivo-stream"
+            }
+          ]
         },
-        "analyticsLabels": {
-            "cps_asset_type": "map",
-            "counterName": "mundo.also_in_the_news.media_asset.49546078.page",
-            "cps_asset_id": "49546078"
+        {
+          "thingLabel": "United States",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": ["nsl:Topic", "Thing", "Place", "geoname:GeoTagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/6252001/"],
+          "topicName": "Estados Unidos",
+          "topicId": "cdr5613yzwqt",
+          "curationList": [
+            {
+              "curationId": "5c2bf4db-926e-4a03-941f-8ef9ad70855a",
+              "curationType": "vivo-stream"
+            }
+          ]
         },
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
+        {
+          "thingLabel": "Space exploration",
+          "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+          "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Space_exploration",
+            "http://www.wikidata.org/entity/Q180046"
+          ],
+          "topicName": "Espacio",
+          "topicId": "c06gq9v00w1t",
+          "curationList": [
+            {
+              "curationId": "e815778d-f6df-492a-afd6-830cc91c4478",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Hurricanes",
+          "thingUri": "http://www.bbc.co.uk/things/cc90f0c6-deaa-4bf7-9629-187471e7d115#id",
+          "thingId": "cc90f0c6-deaa-4bf7-9629-187471e7d115",
+          "thingType": ["Thing", "Theme"],
+          "thingSameAs": ["http://en.wikipedia.org/entity/Tropical_cyclone"],
+          "topicName": "Huracán",
+          "topicId": "c7zp524p982t",
+          "curationList": [
+            {
+              "curationId": "5e5a867c-c54f-4db6-a6f3-d77b0be379f4",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.0.10",
+    "blockTypes": ["media", "paragraph", "list"],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p07m6bn3",
+        "subType": "clip",
+        "format": "video",
+        "title": "Dorian seen from space",
+        "synopses": {
+          "short": "Hurricane Dorian seen from International Space Station",
+          "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
+          "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
+        "versions": [
+          {
+            "versionId": "p07m6bn8",
+            "types": ["Original"],
+            "duration": 39,
+            "durationISO8601": "PT39S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
             },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "tags": {
-            "about": [
-                {
-                    "thingLabel": "Science",
-                    "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
-                    "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Science",
-                        "http://www.wikidata.org/entity/Q336"
-                    ],
-                    "topicName": "Ciencia",
-                    "topicId": "ckdxnw959n7t",
-                    "curationList": [
-                        {
-                            "curationId": "36f98027-2c01-416c-8e10-9e8d125c39e7",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Hurricane Dorian",
-                    "thingUri": "http://www.bbc.co.uk/things/67202fae-2bc2-43b5-9f07-9b9268e541ea#id",
-                    "thingId": "67202fae-2bc2-43b5-9f07-9b9268e541ea",
-                    "thingType": [
-                        "Thing",
-                        "Event"
-                    ],
-                    "thingSameAs": [],
-                    "topicName": "Huracán Dorian",
-                    "topicId": "cgxjr8vz7vgt",
-                    "curationList": [
-                        {
-                            "curationId": "6083fc56-6453-4d39-a90e-e4a2d424e2a6",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "United States",
-                    "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
-                    "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
-                    "thingType": [
-                        "nsl:Topic",
-                        "Thing",
-                        "Place",
-                        "geoname:GeoTagConcept"
-                    ],
-                    "thingSameAs": [
-                        "http://sws.geonames.org/6252001/"
-                    ],
-                    "topicName": "Estados Unidos",
-                    "topicId": "cdr5613yzwqt",
-                    "curationList": [
-                        {
-                            "curationId": "5c2bf4db-926e-4a03-941f-8ef9ad70855a",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Space exploration",
-                    "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
-                    "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://dbpedia.org/resource/Space_exploration",
-                        "http://www.wikidata.org/entity/Q180046"
-                    ],
-                    "topicName": "Espacio",
-                    "topicId": "c06gq9v00w1t",
-                    "curationList": [
-                        {
-                            "curationId": "e815778d-f6df-492a-afd6-830cc91c4478",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                },
-                {
-                    "thingLabel": "Hurricanes",
-                    "thingUri": "http://www.bbc.co.uk/things/cc90f0c6-deaa-4bf7-9629-187471e7d115#id",
-                    "thingId": "cc90f0c6-deaa-4bf7-9629-187471e7d115",
-                    "thingType": [
-                        "Thing",
-                        "Theme"
-                    ],
-                    "thingSameAs": [
-                        "http://en.wikipedia.org/entity/Tropical_cyclone"
-                    ],
-                    "topicName": "Huracán",
-                    "topicId": "c7zp524p982t",
-                    "curationList": [
-                        {
-                            "curationId": "5e5a867c-c54f-4db6-a6f3-d77b0be379f4",
-                            "curationType": "vivo-stream"
-                        }
-                    ]
-                }
-            ]
-        },
-        "version": "v1.0.10",
-        "blockTypes": [
-            "media",
-            "paragraph",
-            "list"
+            "availableFrom": 1567365024
+          }
         ],
-        "includeComments": false
-    },
-    "content": {
-        "blocks": [
-            {
-                "id": "p07m6bn3",
-                "subType": "clip",
-                "format": "video",
-                "title": "Dorian seen from space",
-                "synopses": {
-                    "short": "Hurricane Dorian seen from International Space Station",
-                    "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
-                    "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
+        "imageCopyright": "NASA",
+        "type": "media"
+      },
+      {
+        "text": "<bold>La </bold><bold>Estación Espacial Internacional </bold><bold>(EEI) </bold><bold>captur</bold><bold>ó</bold><bold>este domingo </bold><bold>imágenes del huracán Dorian </bold><bold>de categoría 5 </bold><bold>mientras azotaba las Bahamas</bold><bold>.</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Las imágenes, tomadas a 418 km de altitud a las 12:16 pm (16:16 GMT), fueron registradas por cámaras instaladas en el exterior de la EEI, publicó la Administración Nacional de la Aeronáutica y del Espacio (NASA) en su cuenta de Youtube. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "El huracán se mueve en dirección oeste con vientos sostenidos de casi 300 km/h, que los convierte en los más fuertes en la historia para el noroeste de Bahamas desde que se tiene registros. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>mundo/49519843</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
+                  "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
+                  "overtyped": "Huracán Dorian: la tormenta de categoría 5 toca tierra y es la más devastadora para el norte de las Bahamas desde que se tienen registros"
                 },
-                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
-                "embedding": true,
-                "advertising": true,
-                "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
-                "versions": [
-                    {
-                        "versionId": "p07m6bn8",
-                        "types": [
-                            "Original"
-                        ],
-                        "duration": 39,
-                        "durationISO8601": "PT39S",
-                        "warnings": {},
-                        "availableTerritories": {
-                            "uk": true,
-                            "nonUk": true
-                        },
-                        "availableFrom": 1567365024
-                    }
-                ],
-                "imageCopyright": "NASA",
-                "type": "media"
-            },
-            {
-                "text": "<bold>La </bold><bold>Estación Espacial Internacional </bold><bold>(EEI) </bold><bold>captur</bold><bold>ó</bold><bold>este domingo </bold><bold>imágenes del huracán Dorian </bold><bold>de categoría 5 </bold><bold>mientras azotaba las Bahamas</bold><bold>.</bold>",
-                "markupType": "candy_xml",
-                "type": "paragraph"
-            },
-            {
-                "text": "Las imágenes, tomadas a 418 km de altitud a las 12:16 pm (16:16 GMT), fueron registradas por cámaras instaladas en el exterior de la EEI, publicó la Administración Nacional de la Aeronáutica y del Espacio (NASA) en su cuenta de Youtube. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "text": "El huracán se mueve en dirección oeste con vientos sostenidos de casi 300 km/h, que los convierte en los más fuertes en la historia para el noroeste de Bahamas desde que se tiene registros. ",
-                "markupType": "plain_text",
-                "type": "paragraph"
-            },
-            {
-                "numbered": false,
-                "items": [
-                    {
-                        "text": "<itemMeta>mundo/49519843</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
-                                    "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
-                                    "overtyped": "Huracán Dorian: la tormenta de categoría 5 toca tierra y es la más devastadora para el norte de las Bahamas desde que se tienen registros"
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/mundo/49519843"
-                                },
-                                "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
-                                "timestamp": 1567754872,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:mundo/49519843",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    },
-                    {
-                        "text": "<itemMeta>mundo/media-49546075</itemMeta>",
-                        "meta": [
-                            {
-                                "headlines": {
-                                    "shortHeadline": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas",
-                                    "headline": "Huracán Dorian: el \"catastrófico\" ciclón de categoría 5 toca tierra en Bahamas",
-                                    "overtyped": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas "
-                                },
-                                "locators": {
-                                    "href": "http://www.bbc.com/mundo/media-49546075"
-                                },
-                                "summary": "El Centro Nacional de Huracanes de Estados Unidos describe al huracán Dorian como \"extremadamente peligroso\" y se esperan vientos devastadores y fuertes lluvias.",
-                                "timestamp": 1567360558,
-                                "passport": {
-                                    "category": {
-                                        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                                        "categoryName": "News"
-                                    }
-                                },
-                                "id": "urn:bbc:ares::asset:mundo/media-49546075",
-                                "type": "cps"
-                            }
-                        ],
-                        "markupType": "candy_xml",
-                        "type": "listItem"
-                    }
-                ],
-                "type": "list"
-            }
-        ]
-    },
-    "promo": {
-        "headlines": {
-            "shortHeadline": "Así se ve el huracán Dorian desde el espacio",
-            "headline": "Huracán Dorian: así se ve el poderoso ciclón desde la Estación Espacial Internacional"
-        },
-        "locators": {
-            "assetUri": "/mundo/noticias-49546078",
-            "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
-            "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
-        },
-        "summary": "La Estación Espacial Internacional capturó imágenes del huracán Dorian mientras azotaba las Bahamas este domingo.",
-        "timestamp": 1567754881195,
-        "passport": {
-            "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-            },
-            "campaigns": [
-                {
-                    "campaignId": "5a988e3739461b000e9dabfa",
-                    "campaignName": "WS - Give me perspective"
-                }
-            ]
-        },
-        "media": {
-            "id": "p07m6bn3",
-            "subType": "clip",
-            "format": "video",
-            "title": "Dorian seen from space",
-            "synopses": {
-                "short": "Hurricane Dorian seen from International Space Station",
-                "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
-                "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
-            },
-            "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
-            "embedding": true,
-            "advertising": true,
-            "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
-            "versions": [
-                {
-                    "versionId": "p07m6bn8",
-                    "types": [
-                        "Original"
-                    ],
-                    "duration": 39,
-                    "durationISO8601": "PT39S",
-                    "warnings": {},
-                    "availableTerritories": {
-                        "uk": true,
-                        "nonUk": true
-                    },
-                    "availableFrom": 1567365024
-                }
+                "locators": {
+                  "href": "http://www.bbc.com/mundo/49519843"
+                },
+                "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
+                "timestamp": 1567754872,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:mundo/49519843",
+                "type": "cps"
+              }
             ],
-            "imageCopyright": "NASA",
-            "type": "media"
-        },
-        "indexImage": {
-            "id": "108576672",
-            "subType": "index",
-            "href": "http://c.files.bbci.co.uk/6C13/production/_108576672_p07m6c1s.jpg",
-            "path": "/cpsprodpb/6C13/production/_108576672_p07m6c1s.jpg",
-            "height": 549,
-            "width": 976,
-            "altText": "El huracán Dorian visto desde el espacio.",
-            "caption": "El huracán Dorian visto desde el espacio.",
-            "copyrightHolder": "NASA",
-            "type": "image"
-        },
-        "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
-        "type": "cps"
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>mundo/media-49546075</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas",
+                  "headline": "Huracán Dorian: el \"catastrófico\" ciclón de categoría 5 toca tierra en Bahamas",
+                  "overtyped": "El \"catastrófico\" huracán Dorian de categoría 5 toca tierra en Bahamas "
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/mundo/media-49546075"
+                },
+                "summary": "El Centro Nacional de Huracanes de Estados Unidos describe al huracán Dorian como \"extremadamente peligroso\" y se esperan vientos devastadores y fuertes lluvias.",
+                "timestamp": 1567360558,
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  }
+                },
+                "id": "urn:bbc:ares::asset:mundo/media-49546075",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Así se ve el huracán Dorian desde el espacio",
+      "headline": "Huracán Dorian: así se ve el poderoso ciclón desde la Estación Espacial Internacional"
     },
-    "relatedContent": {
-        "section": {
-            "subType": "index",
-            "name": "Otras noticias",
-            "uri": "/mundo/otras_noticias",
-            "type": "simple"
-        },
-        "site": {
-            "subType": "site",
-            "name": "BBC Mundo",
-            "uri": "/mundo",
-            "type": "simple"
-        },
-        "groups": [
-            {
-                "type": "see-alsos",
-                "promos": [
-                    {
-                        "headlines": {
-                            "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
-                            "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU."
-                        },
-                        "locators": {
-                            "assetUri": "/mundo/49519843",
-                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/49519843"
-                        },
-                        "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
-                        "timestamp": 1567754872,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108636927",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/11D03/production/_108636927_gettyimages-1166104148.jpg",
-                            "path": "/cpsprodpb/11D03/production/_108636927_gettyimages-1166104148.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "Calle inundada en Carolina del Sur.",
-                            "caption": "El huracán está ahora azotando las Carolinas.",
-                            "copyrightHolder": "Getty Images",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:mundo/49519843",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "Por qué el huracán Dorian ha sido particularmente impredecible",
-                            "headline": "Dorian: por qué la trayectoria del huracán que amenaza Florida resulta particularmente impredecible"
-                        },
-                        "locators": {
-                            "assetUri": "/mundo/noticias-49530894",
-                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49530894"
-                        },
-                        "summary": "El mismo Centro Nacional de Huracanes de Estados Unidos, una de las máximas autoridades a nivel mundial en el tema, ha estado reconociendo \"la incertidumbre en el pronóstico de la trayectoria\" de Dorian, que amenaza Florida.",
-                        "timestamp": 1567390439,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108560669",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/1795E/production/_108560669_dorian.jpg",
-                            "path": "/cpsprodpb/1795E/production/_108560669_dorian.jpg",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "El huracán Dorian",
-                            "caption": "El huracán Dorian se ha intensificado y ya comienza a ser visible un \"ojo\" en el centro de la tormenta.",
-                            "copyrightHolder": "NOAA",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:mundo/noticias-49530894",
-                        "type": "cps"
-                    },
-                    {
-                        "headlines": {
-                            "shortHeadline": "¿Qué nos dice exactamente el cono que predice el paso de un huracán y por qué tanta gente lo malinterpreta?",
-                            "headline": "Huracán Dorian: ¿qué nos dice exactamente el cono que predice el paso de un ciclón y por qué tanta gente lo malinterpreta?"
-                        },
-                        "locators": {
-                            "assetUri": "/mundo/noticias-49532705",
-                            "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49532705"
-                        },
-                        "summary": "El \"cono de incertidumbre\" que elabora el Centro de Huracanes de Estados Unidos muestra diferentes datos sobre una tormenta. Pero ¿sabes realmente lo que predice?",
-                        "timestamp": 1567209982,
-                        "cpsType": "STY",
-                        "indexImage": {
-                            "id": "108562918",
-                            "subType": "index",
-                            "href": "http://c.files.bbci.co.uk/14006/production/_108562918_dorian-promo.png",
-                            "path": "/cpsprodpb/14006/production/_108562918_dorian-promo.png",
-                            "height": 549,
-                            "width": 976,
-                            "altText": "Gráfico Dorian",
-                            "copyrightHolder": "BBC",
-                            "type": "image"
-                        },
-                        "id": "urn:bbc:ares::asset:mundo/noticias-49532705",
-                        "type": "cps"
-                    }
-                ]
-            }
+    "locators": {
+      "assetUri": "/mundo/noticias-49546078",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-49546078",
+      "curie": "http://www.bbc.co.uk/asset/86a2be8b-f0e4-5847-ba80-3e9b24bed2e2"
+    },
+    "summary": "La Estación Espacial Internacional capturó imágenes del huracán Dorian mientras azotaba las Bahamas este domingo.",
+    "timestamp": 1567754881195,
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ]
+    },
+    "media": {
+      "id": "p07m6bn3",
+      "subType": "clip",
+      "format": "video",
+      "title": "Dorian seen from space",
+      "synopses": {
+        "short": "Hurricane Dorian seen from International Space Station",
+        "long": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas.\nThe images, taken from 260 miles (418 km) away by cameras outside the orbiting outpost, show the category five storm system over the Bahamas.",
+        "medium": "The International Space Station has captured images of Hurricane Dorian as it battered the Bahamas."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07m6c1s.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "El huracán Dorian visto desde la Estación Espacial Internacional.",
+      "versions": [
+        {
+          "versionId": "p07m6bn8",
+          "types": ["Original"],
+          "duration": 39,
+          "durationISO8601": "PT39S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1567365024
+        }
+      ],
+      "imageCopyright": "NASA",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "108576672",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/6C13/production/_108576672_p07m6c1s.jpg",
+      "path": "/cpsprodpb/6C13/production/_108576672_p07m6c1s.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "El huracán Dorian visto desde el espacio.",
+      "caption": "El huracán Dorian visto desde el espacio.",
+      "copyrightHolder": "NASA",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:mundo/noticias-49546078",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Otras noticias",
+      "uri": "/mundo/otras_noticias",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Mundo",
+      "uri": "/mundo",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU.",
+              "headline": "Huracán Dorian: la tormenta se debilita frente a la costa sureste de EE.UU."
+            },
+            "locators": {
+              "assetUri": "/mundo/49519843",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/49519843"
+            },
+            "summary": "Dorian se debilitó este viernes a categoría de intensidad 1 frente a la costa de Carolina del Norte, donde se prevé que toque tierra en las próximas horas.",
+            "timestamp": 1567754872,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108636927",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11D03/production/_108636927_gettyimages-1166104148.jpg",
+              "path": "/cpsprodpb/11D03/production/_108636927_gettyimages-1166104148.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Calle inundada en Carolina del Sur.",
+              "caption": "El huracán está ahora azotando las Carolinas.",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/49519843",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Por qué el huracán Dorian ha sido particularmente impredecible",
+              "headline": "Dorian: por qué la trayectoria del huracán que amenaza Florida resulta particularmente impredecible"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-49530894",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49530894"
+            },
+            "summary": "El mismo Centro Nacional de Huracanes de Estados Unidos, una de las máximas autoridades a nivel mundial en el tema, ha estado reconociendo \"la incertidumbre en el pronóstico de la trayectoria\" de Dorian, que amenaza Florida.",
+            "timestamp": 1567390439,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108560669",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1795E/production/_108560669_dorian.jpg",
+              "path": "/cpsprodpb/1795E/production/_108560669_dorian.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "El huracán Dorian",
+              "caption": "El huracán Dorian se ha intensificado y ya comienza a ser visible un \"ojo\" en el centro de la tormenta.",
+              "copyrightHolder": "NOAA",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-49530894",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "¿Qué nos dice exactamente el cono que predice el paso de un huracán y por qué tanta gente lo malinterpreta?",
+              "headline": "Huracán Dorian: ¿qué nos dice exactamente el cono que predice el paso de un ciclón y por qué tanta gente lo malinterpreta?"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-49532705",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-49532705"
+            },
+            "summary": "El \"cono de incertidumbre\" que elabora el Centro de Huracanes de Estados Unidos muestra diferentes datos sobre una tormenta. Pero ¿sabes realmente lo que predice?",
+            "timestamp": 1567209982,
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "108562918",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14006/production/_108562918_dorian-promo.png",
+              "path": "/cpsprodpb/14006/production/_108562918_dorian-promo.png",
+              "height": 549,
+              "width": 976,
+              "altText": "Gráfico Dorian",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-49532705",
+            "type": "cps"
+          }
         ]
-    }
+      }
+    ]
+  }
 }

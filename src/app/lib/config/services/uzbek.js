@@ -7,6 +7,9 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
+    ads: {
+      hasAds: false,
+    },
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
@@ -32,8 +35,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/uzbek/institutional-50220995#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/uzbek/institutional-50220995',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -154,9 +158,26 @@ export const service = {
         listen: 'Тингланг',
         watch: 'Кўринг',
         liveLabel: 'ЖОНЛИ ЭФИР',
+        nextLabel: 'NEXT',
         previousRadioShow: 'Аввалги радио дастур',
         nextRadioShow: 'Кейинги радио дастур',
         duration: 'Давомийлиги',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Видео тагсўзи, ',
+          text: 'Огоҳлантириш:Учинчи манба материалида реклама бўлиши мумкин',
+        },
+        fallback: {
+          text: 'Бу материалга кириш имконсиз',
+          linkText: 'Кўпроқ кўринг %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ташқи',
+          warningText: 'Би-би-си ташқи сайтлар мазмуни учун масъул эмас.',
+        },
+        skipLink: {
+          text: 'Ўтказиб юборинг %provider_name% пост ',
+          endTextVisuallyHidden: 'Охири %provider_name% пост',
+        },
       },
     },
     brandSVG,
