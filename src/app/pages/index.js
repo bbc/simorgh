@@ -3,6 +3,7 @@ import _ArticlePage from './ArticlePage';
 import _ErrorPage from './ErrorPage';
 import _FrontPage from './FrontPage';
 import _MediaAssetPage from './MediaAssetPage';
+import _MostReadPage from './MostReadPage';
 import _PhotoGalleryPage from './PhotoGalleryPage';
 import _RadioPage from './RadioPage';
 import _OnDemandRadioPage from './OnDemandRadioPage';
@@ -30,6 +31,7 @@ export const ArticlePage = pipe(
 export const ErrorPage = applyErrorPageHandlers(_ErrorPage);
 export const FrontPage = pipe(applyBasicPageHandlers, withVariant)(_FrontPage);
 export const MediaAssetPage = applyBasicPageHandlers(_MediaAssetPage);
+export const MostReadPage = applyBasicPageHandlers(_MostReadPage);
 export const PhotoGalleryPage = applyBasicPageHandlers(_PhotoGalleryPage);
 export const RadioPage = applyBasicPageHandlers(_RadioPage);
 export const OnDemandRadioPage = applyBasicPageHandlers(_OnDemandRadioPage);
