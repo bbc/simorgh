@@ -71,7 +71,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
-  const radioSchedulesData = path(['radioSchedules'], pageData);
+  const radioSchedule = path(['radioSchedule'], pageData);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -114,7 +114,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
               {group.type === 'top-stories' && (
-                <RadioScheduleContainer initialData={radioSchedulesData} />
+                <RadioScheduleContainer schedule={radioSchedule} />
               )}
             </Fragment>
           ))}

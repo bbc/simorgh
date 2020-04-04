@@ -1,23 +1,17 @@
 import { string, shape, arrayOf, number } from 'prop-types';
 
-const radioSchedulesShape = shape({
-  schedules: arrayOf(
-    shape({
-      publishedTimeStart: number,
-      publishedTimeEnd: number,
-      publishedTimeDuration: string,
-      serviceId: string,
-      episode: shape({
-        pid: string,
-        presentationTitle: string,
-        synopses: shape({
-          short: string,
-        }),
-      }),
-      broadcast: shape({ pid: string }),
-      brand: shape({ title: string }),
-    }),
-  ),
-});
+const radioSchedulesShape = arrayOf(
+  shape({
+    id: string,
+    state: string,
+    startTime: number,
+    link: string,
+    brandTitle: string,
+    episodeTitle: string,
+    summary: string,
+    duration: string,
+    durationLabel: string,
+  }),
+);
 
 export default radioSchedulesShape;

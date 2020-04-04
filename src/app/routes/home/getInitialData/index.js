@@ -9,6 +9,7 @@ import filterEmptyGroupItems from './filterEmptyGroupItems';
 import squashTopStories from './squashTopStories';
 import addIdsToItems from './addIdsToItems';
 import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
+import processRadioSchedule from '#app/containers/RadioSchedule/utilities/processRadioSchedule';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -39,24 +40,28 @@ export default async (path, service) => {
     };
   }
 
-  const radioSchedulesUrl = getRadioScheduleEndpoint({
+  const radioScheduleUrl = getRadioScheduleEndpoint({
     baseUrl: SIMORGH_BASE_URL,
     service,
     env: SIMORGH_APP_ENV,
     queryString: getQueryString(path),
   });
 
-  const [{ json, ...rest }, radioSchedulesData] = await Promise.all([
+  const [{ json, ...rest }, radioScheduleData] = await Promise.all([
     fetchPageData(path),
-    fetchPageData(radioSchedulesUrl, true),
+    fetchPageData(radioScheduleUrl, true),
   ]);
+
+  const radioSchedule =
+    radioScheduleData &&
+    processRadioSchedule(radioScheduleData.json, service, Date.now());
 
   return {
     ...rest,
     ...(json && {
       pageData: {
         ...transformJson(json),
-        radioSchedules: radioSchedulesData && radioSchedulesData.json,
+        radioSchedule,
       },
     }),
   };

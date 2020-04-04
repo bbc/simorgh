@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
 import 'isomorphic-fetch';
-import { string } from 'prop-types';
 import styled from 'styled-components';
 import pathOr from 'ramda/src/pathOr';
-import moment from 'moment';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -25,9 +23,6 @@ import SectionLabel from '@bbc/psammead-section-label';
 import { Link } from '@bbc/psammead-story-promo';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import processRadioSchedule from '../utilities/processRadioSchedule';
-import useData from './useData';
 import radioSchedulesShape from '../radioSchedulesShape';
 
 const RadioScheduleSection = styled.section.attrs(() => ({
@@ -80,9 +75,7 @@ const RadioFrequencyLink = styled(Link)`
   ${({ service }) => service && getSansRegular(service)};
 `;
 
-const CanonicalRadioSchedule = ({ endpoint, initialData }) => {
-  const radioScheduleData = useData(endpoint, initialData);
-
+const CanonicalRadioSchedule = ({ schedule }) => {
   const {
     service,
     script,
@@ -93,13 +86,9 @@ const CanonicalRadioSchedule = ({ endpoint, initialData }) => {
     translations,
   } = useContext(ServiceContext);
 
-  const { timeOnServer } = useContext(RequestContext);
-
-  if (!radioScheduleData) {
+  if (!schedule) {
     return null;
   }
-
-  const timeOnClient = parseInt(moment.utc().format('x'), 10);
 
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
@@ -112,16 +101,6 @@ const CanonicalRadioSchedule = ({ endpoint, initialData }) => {
     ['frequenciesPageLabel'],
     radioSchedule,
   );
-
-  const schedule = processRadioSchedule(
-    radioScheduleData,
-    service,
-    timeOnServer || timeOnClient,
-  );
-
-  if (!schedule) {
-    return null;
-  }
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
@@ -164,12 +143,11 @@ const CanonicalRadioSchedule = ({ endpoint, initialData }) => {
 };
 
 CanonicalRadioSchedule.propTypes = {
-  endpoint: string.isRequired,
-  initialData: radioSchedulesShape,
+  schedule: radioSchedulesShape,
 };
 
 CanonicalRadioSchedule.defaultProps = {
-  initialData: null,
+  schedule: null,
 };
 
 export default CanonicalRadioSchedule;
