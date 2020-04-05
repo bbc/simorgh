@@ -1,0 +1,651 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:pashto/columns-52106293",
+    "locators": {
+      "assetUri": "/pashto/columns-52106293",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-52106293",
+      "curie": "http://www.bbc.co.uk/asset/4fd90cab-25f4-3a44-9959-5e2ca19f180c",
+      "assetId": "52106293"
+    },
+    "type": "STY",
+    "createdBy": "pashto-v6",
+    "language": "ps",
+    "lastUpdated": 1585671481841,
+    "firstPublished": 1585667789000,
+    "lastPublished": 1585667789000,
+    "timestamp": 1585667789000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "pashto.columns.story.52106293.page",
+      "cps_asset_id": "52106293"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+        "categoryName": "Opinion"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Afghanistan",
+          "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+          "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+          "thingType": [
+            "nsl:Topic",
+            "Thing",
+            "Place",
+            "geoname:GeoTagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1149361/"
+          ],
+          "topicName": "افغانستان",
+          "topicId": "cr50y57xj52t",
+          "curationList": [
+            {
+              "curationId": "b5cf9918-5d68-4d53-bfe1-a487ae470baf",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Taliban",
+          "thingUri": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+          "thingId": "304deb8b-74ea-4a9c-94d1-d4b2c9806d92",
+          "thingType": [
+            "nsl:Topic",
+            "Thing",
+            "Organisation"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Taliban",
+            "http://www.wikidata.org/entity/Q42418"
+          ],
+          "topicName": "طالبان",
+          "topicId": "cnq68q90zpzt",
+          "curationList": [
+            {
+              "curationId": "f2664eb0-9a08-42f9-a35a-54cb37703bdf",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "US-Taliban peace talks",
+          "thingUri": "http://www.bbc.co.uk/things/527cc846-9544-41d6-be53-489c8c33996f#id",
+          "thingId": "527cc846-9544-41d6-be53-489c8c33996f",
+          "thingType": [
+            "Thing",
+            "Event"
+          ],
+          "thingSameAs": []
+        },
+        {
+          "thingLabel": "Society",
+          "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+          "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Society",
+            "http://www.wikidata.org/entity/Q8425"
+          ],
+          "topicName": "ټولنه",
+          "topicId": "cpzd4zngz7jt",
+          "curationList": [
+            {
+              "curationId": "5136a0c7-d6ff-469c-b1d2-006e2df7991d",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Women's rights",
+          "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+          "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Women%27s_rights",
+            "http://www.wikidata.org/entity/Q223569"
+          ],
+          "topicName": "د ښځو حقونه",
+          "topicId": "c6vzyvp192xt",
+          "curationList": [
+            {
+              "curationId": "2e7ed81f-fbae-4cb5-840e-6dcf5e01c791",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Women",
+          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Woman",
+            "http://www.wikidata.org/entity/Q467"
+          ],
+          "topicName": "ښځې",
+          "topicId": "cr50y5rq23gt",
+          "curationList": [
+            {
+              "curationId": "2c5495c3-e979-471f-9afa-9e737a95a62f",
+              "curationType": "vivo-stream"
+            }
+          ]
+        },
+        {
+          "thingLabel": "Women's health",
+          "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+          "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+          "thingType": [
+            "Thing",
+            "Theme"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q8031191"
+          ],
+          "topicName": "د ښځو روغتیا",
+          "topicId": "c5qvpq96x97t",
+          "curationList": [
+            {
+              "curationId": "5a975fd9-314a-40d9-a31c-e4344103215a",
+              "curationType": "vivo-stream"
+            }
+          ]
+        }
+      ]
+    },
+    "version": "v1.1.10",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list"
+    ],
+    "includeComments": false
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "111488498",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/15D90/production/_111488498_1.jpg",
+        "path": "/cpsprodpb/15D90/production/_111488498_1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ښځې",
+        "caption": "لیکواله: طالبانو سره د سولې خبرو کې د افغان ښځو حقونه باید د پېش شرط په توګه شامل وي",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "په خبرونو کې مې ولیدل او واورېدل چې د کونړ په مروره ولسوالۍ کې یوه ښځه درې ځله کونډه شوې او اوس د یوه معلول مېرمن ده. کله چې هغه خپل لومړی مېړه په جګړه کې له لاسه ورکوي بیا د خپل مېړه له ورور سره نکاح کوي،‌او کله چې يې دويم مېړه هم جګړه ځینې اخلي، درېيم لېوره ته په نکاح کېږي. درېيم مېړه یې هم  سرتېری وي او شهید کېږي اوس یې له خپل هغه لېور سره نکاح کړې چې جګړې معلول کړی دی. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "خواښې يې هم حیرانه او ویرجنه خواه کې ناسته وه. ببر سري، یبلي پښې او بېوزله معصوم یتیمان ترې  را تاو ول. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "زه ډاډه ویلی شم چې له همدې مېرمن به هغه مهال چې له خپل لومړي مېړه سره یې واده کېده چا نه وي پوښتلي چې له هغه سره نکاح کول غواړي او که نه.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بیا چې کله د دويم او درېيم وار لپاره کونډېږي او په پرله پسې توګه بل لېور ته په نکاح کېږي؛ چا به نه وي پوښتلې چې نکاح کوې او که نه؟",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": " افغانستان کې کله چې نجلۍ ودېږي، پلار یې لوړ ولور پرې کېږدي او یا یې د ځان او یا زوی لپاره په بدل ورکړي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "کله چې کونډه شي بیا یې نو اختیار د خسر او لېورونو وي چې څه پرې کوي، چا ته یې ورکوي که کونډتون ته یې مجبوره وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "کله ناکله د پلار او ورور د بدو په بدل کې مقابل لوري ته ورکول کېږي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "د افغان ښځو د روغتیایې ستونزو په اړه خو ښایې زما قلم هم کوتاهي وکړي، ځکه نه دي د ویلو هغه څه چې ما لیدلي دي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "لا هم یو شمېر کلیوالې افغاني ښځې په داسې ناسمو او ناپاکو ځایو کې لنګوالی ترسره کوي چې د ککړتیا حد پرې تمام وي لکه غوجل او د کوټې کونج کې جوړ شوی په اصطلاح تشناب. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "تر دې بدتره دا چې د درد پر مهال ورته د غږ د اوچتولو اجازه هم نه وي یو نیم وخت د کورنۍ د مشرانو مېرمنو له لوري له سوک څپېړې سره هم مخامخ کېږي وایې چوپ شه بې شرمې ټولې ښځې دې په شرمونو وشرمولې. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111488501",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/295C/production/_111488501_2.jpg",
+        "path": "/cpsprodpb/295C/production/_111488501_2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ښځې",
+        "caption": "لیکواله: د سولې خبرو کې د افغان ښځو ونډه باید یوازې سمبولیکه نه وي",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "په افغانستان کې د وروڼو تر مېنځ ګډ ژوند او ګډ دسترخوان د اتفاق او مینې نښه ګڼل کېږي او کورنۍ ویاړي چې په ګډ دسترخوان ډوډۍ خوري.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "خو پر دغه دسترخوانو یوازې د کورنۍ نارینه کېني د پخلي یا اینګولي سر سر خوري، او لاسوهوني د ماشومانو او ښځو په برخه وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "په داسې کورنو کې ښځو او نجونو ته ان په خپله خوښه د خوړو د خوړلو او د جامو د رنګ او ټوکر د انتخاب حق هم نه وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "کوم ټوکر چې نارینه ورته راوړي که هغه یې خوښ وي که نه، اغوندي به یې. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "په داسې کورنیو کې که د یوې نجلۍ لپاره  د ژوند د ملګري د غوره کولو د حق مساله شرم ننګ او بې حیایي ګڼل کېږي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که کومه نجلۍ دا جسارت وکړي نو پایله به یې مرګ او یا یوه داسې کس ته ورکول وي چې له عمره پوخ وي او یا هم د یوې لرې سیمي وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "زما ښه یاد دي هغه مهال چې موږ له جګړو تښتېدلي وو، په کلي کې مو ژوند کاوه. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "یوه ورځ مې یوه کلیواله ولیدله چې پر سر یې د اوبو غټ دېګ ایښی و او د اتو نهو میاشتو ماشوم یې په خېټه، بل یې په ډوډي کې نیولی او درېيم یې لمن پسې نیولې وه. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "هغه ښځې له کاڼو نه دي جوړې، کومې چې د ژوند درانه پېټي پر اوږو وړي. همداسې پیاوړو مېرمنو ته بیا افغان نارینه عاجزې وایې. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "همدا ښځې په پټیو کې کار کوي، مالونه ساتي، کروندو ته ځي، خو د حاصل په وخت کې بې واکه وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "یو مهال چې زه خبریاله وم او پکتیکا تللې وم. یو سهار چې کله د سروضې ولسوالۍ پر لور روان وو د کوچیانو له یوې جوپې ښځو سره مخامخ شوم، غوښتل مې خبرې ورسره وکړم. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ګورم چې یوه کوچي ماشوم د مور له لاسه لاس خوشې کړ او د باران په اوبو یې خوله کښته کړه. مور یې چې ما ته را نږدې شوه ویل یې، ډانګتره یې؟ یوه د ځان خوږو ګولۍ خو راکړه کوران داسې مې ځان خوږ شي ټول هډوکي مې بې ځایه دي.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111488503",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/777C/production/_111488503_4.jpg",
+        "path": "/cpsprodpb/777C/production/_111488503_4.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ښځې",
+        "caption": "افغانستان کې بېلابېل ټولنیز دودونه د ښځو د زدکړو مخه نیسي",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "دفتر ته مې له روزګانه یو کلیوال سړی راغلی و. ویل یې روزګان کې بیخي ژوند نشته. هره ګړۍ د مرګ په تمه ناست یو. څه موده وړاندې مو پر کلي جګړه وشوه. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دې سړي ویل، له جګړې د تېښتې پر مهال په یوه زنج ګاډي کې یوه حامله مېرمن سره له څه باندي لسو نارينوو سره سپره شوه. په لار کې د ښځې حالت خراب شو او د همدغو نارینو مېنځ کې ماشوم وزېږېد. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "یعنې دا چې یوازې کورني او ټولنیز محدویتونه د افغان ښځو ژوند نه ګواښي، له شته ناخوالو سره سره جګړې ور ته ستونزې نورې هم زیاتې کړي دي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "په ډېری سیمو کې افغان نجونې د بېلابېلو ستونزو او خنډونو له کبله د تعلیم له حقه بې برخې دي. په ښارونو کې هم داسې کورنۍ شته چې د نجونو د زدکړو پر وړاندې حساسې دي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "کله ناکله خو د خویندو کوچینی ورور ځان ته دا حق ورکوي خپله مشره خور د ښوونځي له تګه را وګرځوي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "په جګړه ییز ماحول کې ښایې خپله نجونې د خوندیتوب په موخه له کوره د باندې تګ اړین و نه ګڼي او یا هم په خپله سیمه کې د ښوونځي د نشتون له کبله له زدکړو بې برخې شي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ځینې کورنۍ بیا د ښځو لپاره زدکړې د لیک لوست د زدکړې پورې محدوده ګڼي او نه پرېږدي چي نجونې یې ښوونځی بشپړ کړي او لوړې زدکړې وکړي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111488505",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/C59C/production/_111488505_5.jpg",
+        "path": "/cpsprodpb/C59C/production/_111488505_5.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ښځې",
+        "caption": "په هېواد کې روانې جګړې د افغان ښځو ستونزې لا پسې زیاتې کړې دي",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "ښکاره خبره ده چې په یوه جګړه ځپلي هېواد کې جګړې د ځوانانو پر اخلاقو هم ناوړه اغېز کړی دی. کله چې یوه نجلۍ له کوره د باندي ووځي له لارويانو نیولې د سیمې د هر هټېوال سترګې ور اوښتې وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دې ته ورته ګڼي ستونزې شته چې د ښځو د زدکړو مخه یې ډب کړې. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "اوس چې له طالبانو سره د سولې د خبرو اترو پر پروسه خبرې روانې دي او طالبان خو هغه ډله ده چې د واکمنۍ په دوران کې یې ښځې له خپلو ډېرو حقونو بې برخې وې.‌",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "نږدې دوه لسیزي کېږي چې د ښځو چارو وزارت لرو خو یاد وزارت هم تر دې دمه پر دې نه دی توانېدلی چې د افغان ښځو د ژوند و ژواک بېلابېل اړخونه او ستونزې وڅېړي او له مخې یې يو داسې ملي د عمل وړ پروګرام جوړ کړي چې د لېرې پرتو سیمو او ان د طالبانو او مخالفینو تر ولکې لاندې ساحو د اوسیدونکو ښځو د ژوندانه د مثبت بدلون لپاره جوګه واوسي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "له تاریخه په زدکړې سره، د سولې پروسه باید یوازې د څو سیاسي ډلو او د قدرت د جزیرو تر منځ د چوکیو د وېش چاره نه وي، بلکې د تل پاتې سولې لپاره اړینه ده چې د هر افغان (ښځې او نارینه) وينه خوندي شي، سوکالې يې په برخه شي، ذهني سکون تر لاسه کړي او له اندېښنو لري ژوند پيل کړي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111488630",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/0E68/production/_111488630_3.jpg",
+        "path": "/cpsprodpb/0E68/production/_111488630_3.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "ښځې",
+        "caption": "د طالبانو په واکمنۍ کې افغانې ښځې له ګڼو حقونو بې برخې وې",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "زه د یوې افغاني ښځې په توګه د دې پلوۍ نه یم چې د سولې په پروسه کې دې افغان ښځې سمبولیکه ونډه ولري او یا دې په اصطلاح یو څو سیاسي او مدني ښځې سمبولیک مقامونه تر لاسه کړي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "تر هر څه وړاندي په شته نظام کې د ښځو حقونه تعریف، تضمین او د ترلاسه کولو لپاره دې عملي برنامې جوړي شي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>pashto/afghanistan-51792065</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "لومړۍ مېرمن: د سولې په تړون کې د ښځو ونډه خوندي ده",
+                  "headline": "لومړۍ مېرمن: د سولې په تړون کې د ښځو ونډه خوندي ده",
+                  "overtyped": "لومړۍ مېرمن: د سولې په تړون کې د ښځو ونډه خوندي ده"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/pashto/afghanistan-51792065"
+                },
+                "summary": "د افغانستان لومړۍ مېرمنې د ښځو نړيوالې ورځې په مناسبت په یوه وېډيويي پېغام کې افغان ښځو ته ډاډ ورکړی چې د دوی له مشورو پرته به د سولې هېڅ پرېکړه نه کېږي.رولا غني ویلي، افغان ښځو له لوړو ژورو ډکه لار وهلې.",
+                "timestamp": 1583673121000,
+                "language": "ps",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:pashto/afghanistan-51792065",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>pashto/afghanistan-47427890</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ځینې افغانې ښځې ولې د خلیلزاد مېرمنې ته په غوسه دي ؟",
+                  "headline": "ځینې افغانې ښځې ولې د خلیلزاد مېرمنې ته په غوسه دي ؟",
+                  "overtyped": "ځینې افغانې ښځې ولې د خلیلزاد مېرمنې ته په غوسه دي ؟"
+                },
+                "locators": {
+                  "href": "http://www.bbc.com/pashto/afghanistan-47427890"
+                },
+                "summary": "د رانډ موسسې څېړونکې او لیکوالې شیریل بینارډ چې د سولې خبرو کې د امریکا بهرنیو چارو وزارت د ځانګړې استازې زلمي خلیلزاد مېرمن ده، د افغان سولې له خبرو سره هممهاله په 'نېشنل انټرسټ' نومې خپرونه کې په دې تړاو یوه لیکنه کړې. نوموړې وايي، افغان ښځې باید له خپلو حقونو د دفاع لپاره خپله لاس په کار شي.",
+                "timestamp": 1551550067000,
+                "language": "ps",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:pashto/afghanistan-47427890",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "دا برنامې باید دومره هر اړخیزه وي چې هېڅ افغانه ښځه په کي له پامه نه وي لوېدلې، که هغه سیاسي وي، مدني وي، له کوره د باندې او یا په کور کي دننه کار کوي او که د ژوند په هر پړاو کې وي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "دا برنامې يې باید د حقونو او غوښتنو ضمانت کوونکې وي. په ټولیزه توګه زه د دې مخالفه یم چې زموږ پر حقونو باندې دې یوه ډله کريډيټ او شاباسی واخلي او بله دې پرې چنې ووهي.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "د خبرو اترو له پیل کېدو وړاندې باید زموږ د حقوونو د خوندیتوب برنامه د پیش شرط په توګه پر دواړو لورو ومنل شي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "که داسي نه وي؛ لکه څنګه چې د سولې پخوانۍ پروسې نابشپړې او نابریالۍ وې، همداسې به د خلیلزاد هلې ځلې هم له ناکامۍ سره مخامخ شي.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "داسې سوله چې افغان ښځو ته یې هم خیر ورسېږي",
+      "headline": "داسې سوله چې افغان ښځو ته یې هم خیر ورسېږي"
+    },
+    "locators": {
+      "assetUri": "/pashto/columns-52106293",
+      "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-52106293",
+      "curie": "http://www.bbc.co.uk/asset/4fd90cab-25f4-3a44-9959-5e2ca19f180c",
+      "assetId": "52106293"
+    },
+    "summary": "لیکواله: دا د منلو نه ده چې د سولې پروسه کې دې افغان ښځې سمبولیکه ونډه ولري او یا دې په اصطلاح یو څو سیاسي او مدني ښځې سمبولیک مقامونه تر لاسه کړي. تر هر څه وړاندي په شته نظام کې د ښځو حقونه تعریف، تضمین او د ترلاسه کولو لپاره دې عملي برنامې جوړي شي",
+    "timestamp": 1585667789000,
+    "language": "ps",
+    "byline": {
+      "name": "ملالۍ شینوارې",
+      "title": "افغانه سیاستواله او د حقونو فعاله",
+      "persons": [
+        {
+          "name": "ملالۍ شینوارې",
+          "function": "افغان سیاسي فعاله"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion",
+        "categoryName": "Opinion"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "111488499",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/184A0/production/_111488499_1.jpg",
+      "path": "/cpsprodpb/184A0/production/_111488499_1.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "ښځې",
+      "caption": "لیکواله: طالبانو سره د سولې خبرو کې د افغان ښځو حقونه باید د پېش شرط په توګه شامل وي",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:pashto/columns-52106293",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "کالم",
+      "uri": "/pashto/columns",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Pashto",
+      "uri": "/pashto",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "لومړۍ مېرمن: د سولې په تړون کې د ښځو ونډه خوندي ده",
+              "headline": "لومړۍ مېرمن: د سولې په تړون کې د ښځو ونډه خوندي ده"
+            },
+            "locators": {
+              "assetUri": "/pashto/afghanistan-51792065",
+              "cpsUrn": "urn:bbc:content:assetUri:/pashto/afghanistan-51792065"
+            },
+            "summary": "د افغانستان لومړۍ مېرمنې د ښځو نړيوالې ورځې په مناسبت په یوه وېډيويي پېغام کې افغان ښځو ته ډاډ ورکړی چې د دوی له مشورو پرته به د سولې هېڅ پرېکړه نه کېږي.رولا غني ویلي، افغان ښځو له لوړو ژورو ډکه لار وهلې.",
+            "timestamp": 1583673121000,
+            "language": "ps",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111182984",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/BF20/production/_111182984_fffffffffffff.png",
+              "path": "/cpsprodpb/BF20/production/_111182984_fffffffffffff.png",
+              "height": 549,
+              "width": 976,
+              "altText": "رولا غني ویلي، افغان ښځو له لوړو ژورو ډکه لار وهلې",
+              "caption": "رولا غني ویلي، افغان ښځو له لوړو ژورو ډکه لار وهلې",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:pashto/afghanistan-51792065",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "ځینې افغانې ښځې ولې د خلیلزاد مېرمنې ته په غوسه دي ؟",
+              "headline": "ځینې افغانې ښځې ولې د خلیلزاد مېرمنې ته په غوسه دي ؟"
+            },
+            "locators": {
+              "assetUri": "/pashto/afghanistan-47427890",
+              "cpsUrn": "urn:bbc:content:assetUri:/pashto/afghanistan-47427890"
+            },
+            "summary": "د رانډ موسسې څېړونکې او لیکوالې شیریل بینارډ چې د سولې خبرو کې د امریکا بهرنیو چارو وزارت د ځانګړې استازې زلمي خلیلزاد مېرمن ده، د افغان سولې له خبرو سره هممهاله په 'نېشنل انټرسټ' نومې خپرونه کې په دې تړاو یوه لیکنه کړې. نوموړې وايي، افغان ښځې باید له خپلو حقونو د دفاع لپاره خپله لاس په کار شي.",
+            "timestamp": 1551550067000,
+            "language": "ps",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "105863919",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16720/production/_105863919_21752013_10155466749514718_499586860289485427_n.jpg",
+              "path": "/cpsprodpb/16720/production/_105863919_21752013_10155466749514718_499586860289485427_n.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "افغانستان",
+              "caption": "شیرلی بنارد، همسر زلمی خلیلزاد در مقاله‌ای که در \"نشنال انترست\" آمریکا چاپ شده به زنان افغانستان تاخته است",
+              "copyrightHolder": "Cheryl Benard/FB",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:pashto/afghanistan-47427890",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
