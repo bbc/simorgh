@@ -349,6 +349,20 @@ describe('StoryPromo Container', () => {
       );
     });
 
+    it('should render time element with multiple calendars for Persian Story Promo', () => {
+      const firstJan2020 = 1577836800000;
+      const newItem = {
+        ...cpsItem,
+        timestamp: firstJan2020,
+      };
+      const persianContainer = render(
+        <WrappedStoryPromo service="persian" item={newItem} />,
+      ).container;
+      expect(
+        persianContainer.getElementsByTagName('time')[0].innerHTML,
+      ).toEqual('۱۱ دی ۱۳۹۸ - ۱ ژانویه ۲۰۲۰');
+    });
+
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
         <WrappedStoryPromo item={cpsItem} lazyLoadImage={false} />,
