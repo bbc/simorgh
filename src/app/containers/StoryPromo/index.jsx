@@ -81,6 +81,7 @@ const StoryPromoContainer = ({
   displaySummary,
 }) => {
   const {
+    altCalendar,
     script,
     datetimeLocale,
     service,
@@ -153,6 +154,7 @@ const StoryPromoContainer = ({
       )}
       {timestamp && !isStoryPromoPodcast && !isLive && (
         <Timestamp
+          altCalendar={altCalendar}
           locale={datetimeLocale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
