@@ -139,7 +139,7 @@ const simorghLaunchDates = {
   },
   portuguese: {
     articles: '',
-    frontPage: '',
+    frontPage: '31st March 2020',
     mediaAssetPage: '',
   },
   punjabi: {
