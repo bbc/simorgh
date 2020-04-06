@@ -211,12 +211,18 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/afrique/region-23278969', // CPS MAP
+              '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/afrique/region-23278969', // CPS MAP
+              '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1784,8 +1790,10 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/japanese/video-23248670', // CPS MAP with video clip
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/japanese/video-23248670'], // CPS MAP with video clip
@@ -2277,12 +2285,18 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/mundo/media-23283126', // CPS MAP
+              '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/mundo/media-23283126', // CPS MAP
+              '/mundo/noticias/2016/04/160427_tc2_testmap1', // TC2 MAP
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -3012,12 +3026,18 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/portuguese/media-23282671', // CPS MAP
+              '/portuguese/revista/2016/05/160506_tc2_map_0605', // TC2 MAP
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/portuguese/media-23282671', // CPS MAP
+              '/portuguese/revista/2016/05/160506_tc2_map_0605', // TC2 MAP
+            ],
+            enabled: true,
           },
         },
         smoke: false,

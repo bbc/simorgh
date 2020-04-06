@@ -32,6 +32,7 @@ const renderPromo = ({
       lazyLoadImage={lazyLoadImage}
       dir={dir}
       displayImage={displayImage}
+      displaySummary={displayImage}
     />
   );
 
