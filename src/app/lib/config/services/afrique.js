@@ -197,6 +197,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
+      frontPagePosition: 'top-stories',
       frequenciesPageUrl:
         '/afrique/institutionelles/2010/12/000000_schedules_frequencies_afrique',
       frequenciesPageLabel: 'Nos fréquences',
