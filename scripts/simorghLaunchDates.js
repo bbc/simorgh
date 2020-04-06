@@ -158,12 +158,12 @@ const simorghLaunchDates = {
   },
   serbianCyr: {
     articles: '',
-    frontPage: '',
+    frontPage: '17th March 2020',
     mediaAssetPage: '',
   },
   serbianLat: {
     articles: '',
-    frontPage: '',
+    frontPage: '17th March 2020',
     mediaAssetPage: '',
   },
   sinhala: {
@@ -217,17 +217,17 @@ const simorghLaunchDates = {
   },
   ukchinaSimp: {
     articles: '',
-    frontPage: '',
+    frontPage: '17th March 2020',
     mediaAssetPage: '',
   },
   ukchinaTrad: {
     articles: '',
-    frontPage: '',
+    frontPage: '17th March 2020',
     mediaAssetPage: '',
   },
   ukrainian: {
     articles: '',
-    frontPage: '',
+    frontPage: '17th March 2020',
     mediaAssetPage: '26th March 2020',
   },
   urdu: {
