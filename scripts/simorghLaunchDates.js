@@ -79,7 +79,7 @@ const simorghLaunchDates = {
     frontPage: '',
     liveRadio: '30th Jan 2020',
     mediaAssetPage: '5th March 2020',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   hindi: {
@@ -139,7 +139,7 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '2nd April 2020',
     mediaAssetPage: '',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   naidheachdan: {
@@ -201,7 +201,7 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '2nd April 2020',
     mediaAssetPage: '',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   scotland: {
@@ -212,14 +212,14 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '17th March 2020',
     mediaAssetPage: '',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   serbianLat: {
     articles: 'Sept 2019',
     frontPage: '17th March 2020',
     mediaAssetPage: '',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   sinhala: {
@@ -291,21 +291,21 @@ const simorghLaunchDates = {
     articles: 'Sept 2019',
     frontPage: '17th March 2020',
     mediaAssetPage: '',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   ukchinaTrad: {
     articles: 'Sept 2019',
     frontPage: '17th March 2020',
     mediaAssetPage: '',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   ukrainian: {
     articles: 'Sept 2019',
     frontPage: '17th March 2020',
     mediaAssetPage: '26th March 2020',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   urdu: {
@@ -313,7 +313,7 @@ const simorghLaunchDates = {
     frontPage: '3rd March 2020',
     liveRadio: '4th Feb 2020',
     mediaAssetPage: '5th March 2020',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   uzbek: {
@@ -341,13 +341,13 @@ const simorghLaunchDates = {
   zhongwenSimp: {
     articles: 'Sept 2019',
     frontPage: '31st March 2020',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
   zhongwenTrad: {
     articles: 'Sept 2019',
     frontPage: '31st March 2020',
-    photoGalleryPage: '',
+    photoGalleryPage: '24th March 2020',
     storyPage: '',
   },
 };
