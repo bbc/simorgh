@@ -58,14 +58,6 @@ describe('getPaths', () => {
     };
   });
 
-  beforeAll(() => {
-    global.Cypress = {
-      env: (name) => {
-        return name === 'APP_ENV' ? 'test' : null;
-      },
-    };
-  });
-
   const pageType = 'testPageType';
 
   describe('Given CYPRESS_SMOKE is true', () => {
