@@ -1,5 +1,3 @@
-const { canonical } = global;
-
 export default () => {
   it('I can see atleast a section', () => {
     const sect = canonical.document.querySelector('section');

@@ -52,11 +52,6 @@ describe('Given I am on a Pidgin Frontpage AMP/Canonical page', () => {
     });
   });
 
-  // To be enabled when the radio schedule is rendered server side
-  // describe('When I am looking for radio schedule component', () => {
-  //   runComponentRenderTest();
-  // });
-
   describe('When a search engine is crawling the website', () => {
     runCommonSeoTests({
       pageTitle: 'Domot - BBC News Pidgin',
