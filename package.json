@@ -120,7 +120,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
-    "react-lazyload": "^2.6.5",
+    "react-lazyload": "^2.6.7",
     "react-router": "^5.1.2",
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.1.2",
