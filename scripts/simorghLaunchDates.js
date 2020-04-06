@@ -1,7 +1,7 @@
 const simorghLaunchDates = {
   afaanoromoo: {
     articles: '',
-    frontPage: '',
+    frontPage: '5th Feb 2020',
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
   },
@@ -13,7 +13,7 @@ const simorghLaunchDates = {
   },
   amharic: {
     articles: '',
-    frontPage: '',
+    frontPage: '5th Feb 2020',
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
   },
@@ -31,7 +31,7 @@ const simorghLaunchDates = {
   },
   bengali: {
     articles: '',
-    frontPage: '',
+    frontPage: '5th Feb 2020',
     liveRadio: '10th Jan 2020',
     mediaAssetPage: '5th March 2020',
   },
@@ -112,7 +112,7 @@ const simorghLaunchDates = {
   },
   nepali: {
     articles: '',
-    frontPage: '',
+    frontPage: '5th Feb 2020',
     liveRadio: '14th Jan 2020',
     mediaAssetPage: '5th March 2020',
   },
@@ -168,7 +168,7 @@ const simorghLaunchDates = {
   },
   sinhala: {
     articles: '',
-    frontPage: '',
+    frontPage: '5th Feb 2020',
     liveRadio: '14th Jan 2020',
     mediaAssetPage: '27th Feb 2020',
   },
@@ -206,7 +206,7 @@ const simorghLaunchDates = {
   },
   tigrinya: {
     articles: '',
-    frontPage: '',
+    frontPage: '5th Feb 2020',
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '6th Feb 2020',
   },
