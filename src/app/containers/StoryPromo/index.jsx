@@ -78,8 +78,10 @@ const StoryPromoContainer = ({
   lazyLoadImage,
   dir,
   displayImage,
+  displaySummary,
 }) => {
   const {
+    altCalendar,
     script,
     datetimeLocale,
     service,
@@ -140,7 +142,7 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {summary && displayImage && (
+      {summary && displaySummary && (
         <Summary
           script={script}
           service={service}
@@ -152,6 +154,7 @@ const StoryPromoContainer = ({
       )}
       {timestamp && !isStoryPromoPodcast && !isLive && (
         <Timestamp
+          altCalendar={altCalendar}
           locale={datetimeLocale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
@@ -211,6 +214,7 @@ StoryPromoContainer.propTypes = {
   lazyLoadImage: bool,
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
+  displaySummary: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -218,6 +222,7 @@ StoryPromoContainer.defaultProps = {
   lazyLoadImage: true,
   dir: 'ltr',
   displayImage: true,
+  displaySummary: true,
 };
 
 export default StoryPromoContainer;

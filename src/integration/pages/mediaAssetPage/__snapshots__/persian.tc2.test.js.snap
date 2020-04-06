@@ -529,6 +529,15 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
+                  <a href="/persian/science-52004647"
+                     class="StyledDropdownLink-ukxuly-4 jgeItz"
+                  >
+                    ویروس کرونا
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
                   <a href="/persian/media-49522521"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
@@ -640,7 +649,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <a href="/persian/blogs/viewpoints"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
-                    ناظران می‌گویند...
+                    ناظران می‌گویند
                   </a>
                 </li>
                 <li role="listitem"
@@ -693,6 +702,16 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                     role="listitem"
                     class="StyledListItem-sc-158x7z5-3 bmJgVu"
                 >
+                  <a href="/persian/science-52004647"
+                     class="StyledLink-sc-158x7z5-2 gFuYXv"
+                  >
+                    ویروس کرونا
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
                   <a href="/persian/media-49522521"
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
@@ -816,7 +835,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <a href="/persian/blogs/viewpoints"
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
-                    ناظران می‌گویند...
+                    ناظران می‌گویند
                   </a>
                 </li>
                 <li dir="rtl"
@@ -1446,6 +1465,16 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 bmJgVu"
                   >
+                    <a href="/persian/science-52004647"
+                       class="StyledLink-sc-158x7z5-2 gFuYXv"
+                    >
+                      ویروس کرونا
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
                     <a href="/persian/media-49522521"
                        class="StyledLink-sc-158x7z5-2 gFuYXv"
                     >
@@ -1569,7 +1598,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                     <a href="/persian/blogs/viewpoints"
                        class="StyledLink-sc-158x7z5-2 gFuYXv"
                     >
-                      ناظران می‌گویند...
+                      ناظران می‌گویند
                     </a>
                   </li>
                   <li dir="rtl"
@@ -1618,6 +1647,15 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
                     صفحه اول
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/persian/science-52004647"
+                     class="StyledDropdownLink-ukxuly-4 jgeItz"
+                  >
+                    ویروس کرونا
                   </a>
                 </li>
                 <li role="listitem"
@@ -1734,7 +1772,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <a href="/persian/blogs/viewpoints"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
-                    ناظران می‌گویند...
+                    ناظران می‌گویند
                   </a>
                 </li>
                 <li role="listitem"

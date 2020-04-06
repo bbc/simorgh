@@ -9,6 +9,7 @@ import {
   AMP_ANALYTICS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
+import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
@@ -27,7 +28,7 @@ const Document = ({
   const title = helmet.title.toComponent();
   const links = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
-  const serialisedData = JSON.stringify(data);
+  const serialisedData = serialiseForScript(data);
   const scriptsAllowed = !isAmp;
   const StyledDiv = styled.div`
     min-height: 100vh;
