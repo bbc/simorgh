@@ -13,7 +13,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
-import CpsAsset from '../CpsAssets';
+import CpsAsset from '../CpsAsset';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
