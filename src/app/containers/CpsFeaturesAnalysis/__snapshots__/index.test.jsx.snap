@@ -4,14 +4,14 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-o5h25q-0 lbkhnQ"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-o5h25q-0 lbkhnQ"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-r0jyv5-1 dRpDSS"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-o5h25q-1 kESWOU"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -158,14 +158,14 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 <DocumentFragment>
   <section
     aria-labelledby="features-analysis-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-o5h25q-0 lbkhnQ"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-r0jyv5-0 hYcycd"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-o5h25q-0 lbkhnQ"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-r0jyv5-1 dRpDSS"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-o5h25q-1 kESWOU"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -191,7 +191,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         </h2>
       </div>
       <div
-        class="SingleContentWrapper-r0jyv5-2 dtTrCE"
+        class="SingleContentWrapper-o5h25q-2 gAwGyV"
       >
         <div
           class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
