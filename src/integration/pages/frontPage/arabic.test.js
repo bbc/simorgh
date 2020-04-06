@@ -13,6 +13,7 @@ import {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runPerformaceTests,
+  runSnapshotTests,
 } from '../../common';
 
 describe('Given I am on the Arabic AMP front page', () => {
@@ -91,5 +92,9 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     runCommonA11yTests({
       skipToContentText: 'إذهب الى المحتوى',
     });
+  });
+
+  describe('When I view the source code in the browser', () => {
+    runSnapshotTests();
   });
 });
