@@ -148,7 +148,7 @@
     "@storybook/react": "^5.3.17",
     "@storybook/theming": "^5.3.17",
     "@testing-library/dom": "^7.1.1",
-    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/jest-dom": "^5.3.0",
     "@testing-library/react": "^9.5.0",
     "@testing-library/react-hooks": "^3.2.1",
     "amphtml-validator": "^1.0.30",
