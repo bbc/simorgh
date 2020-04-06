@@ -1,0 +1,236 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "How do Germans remember the World Wars?",
+        "embedding": true,
+        "format": "video",
+        "id": "p01kdbns",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+        "subType": "clip",
+        "synopses": {
+          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+          "short": "Remembrance Day: How Germans remember the World Wars"
+        },
+        "title": "How Germans remember the World Wars",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1541761851000,
+            "availableTerritories": {
+              "nonUk": false,
+              "uk": true,
+              "world": false
+            },
+            "duration": 162,
+            "durationISO8601": "PT2M42S",
+            "types": ["Original"],
+            "versionId": "p01kdbnv",
+            "warnings": {
+              "long": "Contains some strong language.",
+              "short": "Contains some strong language."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Já ouviu falar da cabra gnu, do macaco de orelhas vermelhas ou do monstro de Gila?",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Eles podem ser os futuros ícones da conservação ambiental, de acordo com um estudo.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Os cientistas acreditam que estes animais pouco conhecidos são fundamentais para arrecadar dinheiro para proteger ecossistemas vulneráveis.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "As imagens de tigres e elefantes, que têm grande apelo junto ao público, são frequentemente selecionadas para campanhas de arrecadação de fundos.",
+        "type": "paragraph"
+      },
+      { "markupType": "plain_text", "text": "Heading", "type": "heading" },
+      {
+        "markupType": "plain_text",
+        "text": "text text text text",
+        "type": "paragraph"
+      },
+      {
+        "altText": "Two photos of nice animals",
+        "caption": "Nice animals",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/6A61/test/_63733272__110989783_animals-comp.jpg",
+        "id": "63733272",
+        "path": "/cpsdevpb/6A61/test/_63733272__110989783_animals-comp.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Subheading",
+        "type": "subheading"
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Conheça as 'superfrutas' encontradas na Mata Atlântica que pesquisadores tentam salvar da extinção",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Por que Greta Thunberg pode estar errada sobre estarmos diante da 'sexta extinção em massa na Terra'",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<italic>Mas essa abordagem tem sido criticada por negligenciar muitas outras espécies que precisam da nossa ajuda.</italic>",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "portuguese.media.media_asset.23282671.page",
+      "cps_asset_id": "23282671",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": [
+      "media",
+      "paragraph",
+      "heading",
+      "image",
+      "subheading",
+      "list"
+    ],
+    "createdBy": "brasil-v6",
+    "firstPublished": 1585672938000,
+    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
+    "includeComments": false,
+    "language": "pt-BR",
+    "lastPublished": 1585672938000,
+    "lastUpdated": 1585672950185,
+    "locators": {
+      "assetId": "23282671",
+      "assetUri": "/portuguese/media-23282671",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585672938000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Brasil/Portuguese test MAP",
+      "shortHeadline": "Brasil/Portuguese test MAP"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
+    "indexImage": {
+      "altText": "Description of picture (ALT TEXT)",
+      "copyrightHolder": "BBC",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/1C41/test/_63733270_p01kdbpk.jpg",
+      "id": "63733270",
+      "path": "/cpsdevpb/1C41/test/_63733270_p01kdbpk.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "pt-BR",
+    "locators": {
+      "assetId": "23282671",
+      "assetUri": "/portuguese/media-23282671",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "How do Germans remember the World Wars?",
+      "embedding": true,
+      "format": "video",
+      "id": "p01kdbns",
+      "imageCopyright": "BBC",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+        "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+        "short": "Remembrance Day: How Germans remember the World Wars"
+      },
+      "title": "How Germans remember the World Wars",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1541761851000,
+          "availableTerritories": {
+            "nonUk": false,
+            "uk": true,
+            "world": false
+          },
+          "duration": 162,
+          "durationISO8601": "PT2M42S",
+          "types": ["Original"],
+          "versionId": "p01kdbnv",
+          "warnings": {
+            "long": "Contains some strong language.",
+            "short": "Contains some strong language."
+          }
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+    "timestamp": 1585672938000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/portuguese/media"
+    },
+    "site": {
+      "name": "BBC Brasil",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/portuguese"
+    }
+  }
+}
