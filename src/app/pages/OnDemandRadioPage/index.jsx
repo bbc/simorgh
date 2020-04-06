@@ -1,14 +1,51 @@
 import React, { useContext } from 'react';
-import { string, shape } from 'prop-types';
+import { string, number, shape } from 'prop-types';
 import styled from 'styled-components';
 import MetadataContainer from '../../containers/Metadata';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import { ServiceContext } from '../../contexts/ServiceContext';
-
 import HeadingBlock from '#containers/RadioPageBlocks/Blocks/Heading';
 import ParagraphBlock from '#containers/RadioPageBlocks/Blocks/Paragraph';
+import AudioPlayerBlock from '#containers/RadioPageBlocks/Blocks/AudioPlayer';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
+const EPISODE_IS_AVAILABLE = 'available';
+const EPISODE_IS_EXPIRED = 'expired';
+const EPISODE_IS_NOT_YET_AVAILABLE = 'not-yet-available';
+
+const getEpisodeAvailability = (availableFrom, availableUntil) => {
+  const timeNow = Date.now();
+
+  if (!availableUntil) return EPISODE_IS_EXPIRED;
+  if (timeNow < availableFrom) return EPISODE_IS_NOT_YET_AVAILABLE;
+
+  return EPISODE_IS_AVAILABLE;
+};
+
+const StyledGelPageGrid = styled(GelPageGrid)`
+  flex-grow: 1;
+`;
+
+const renderEpisode = (
+  masterBrand,
+  episodeId,
+  episodeAvailableFrom,
+  episodeAvailableUntil,
+) => {
+  const episodeAvailability = getEpisodeAvailability(
+    episodeAvailableFrom,
+    episodeAvailableUntil,
+  );
+  switch (episodeAvailability) {
+    case EPISODE_IS_AVAILABLE:
+      return <AudioPlayerBlock externalId={masterBrand} id={episodeId} />;
+    case EPISODE_IS_EXPIRED:
+      return <AudioPlayerBlock isExpired />;
+    case EPISODE_IS_NOT_YET_AVAILABLE:
+    default:
+      return null;
+  }
+};
 
 const OnDemandRadioPage = ({ pageData }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
@@ -19,12 +56,13 @@ const OnDemandRadioPage = ({ pageData }) => {
     headline,
     summary,
     shortSynopsis,
+    masterBrand,
+    episodeId,
+    episodeAvailableFrom,
+    episodeAvailableUntil,
   } = pageData;
-
   const { dir } = useContext(ServiceContext);
-  const StyledGelPageGrid = styled(GelPageGrid)`
-    flex-grow: 1;
-  `;
+
   return (
     <>
       <MetadataContainer
@@ -72,6 +110,12 @@ const OnDemandRadioPage = ({ pageData }) => {
           <HeadingBlock idAttr={idAttr} text={brandTitle} />
           <ParagraphBlock text={episodeTitle} />
           <ParagraphBlock text={summary} />
+          {renderEpisode(
+            masterBrand,
+            episodeId,
+            episodeAvailableFrom,
+            episodeAvailableUntil,
+          )}
         </Grid>
       </StyledGelPageGrid>
     </>
@@ -85,6 +129,8 @@ OnDemandRadioPage.propTypes = {
     headline: string,
     summary: string,
     language: string,
+    episodeAvailableFrom: number,
+    episodeAvailableUntil: number,
   }).isRequired,
 };
 
