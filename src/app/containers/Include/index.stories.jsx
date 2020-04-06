@@ -16,7 +16,8 @@ const options = {
   idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
   vj: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html',
 };
-const defaultValue = 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html';
+const defaultValue =
+  'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html';
 const groupId = 'GROUP-ID1';
 
 const value = select(label, options, defaultValue, groupId);
@@ -40,5 +41,4 @@ storiesOf('Containers|Include', module)
     );
   });
 
-
-  // https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html
+// https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html

@@ -60,6 +60,7 @@ const IncludeContainer = ({ html, type, href }) => {
   // Keep the DOM up to date with our script tags.
   useEffect(() => {
     scriptTags.forEach((scriptTag) => {
+      // eslint-disable-next-line no-unused-vars
       const [_, contents] = scriptTag;
       createAppendScriptTag(contents);
     });
