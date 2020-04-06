@@ -1,26 +1,12 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, node } from 'prop-types';
-import styled from 'styled-components';
+import { arrayOf, shape } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
 
 import topStories from '#pages/StoryPage/topStories.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
 import CpsAsset from '../CpsAsset';
-
-const Wrapper = styled(GridItemConstrainedLarge)`
-  margin-bottom: ${GEL_SPACING_DBL};
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
 
 const TopStories = ({ content }) => {
   const { dir } = useContext(ServiceContext);
@@ -29,13 +15,6 @@ const TopStories = ({ content }) => {
     as: 'section',
     role: 'region',
     'aria-labelledby': 'top-stories-heading',
-  };
-
-  const TopStoriesWrapper = ({ children }) => (
-    <Wrapper {...a11yAttributes}>{children}</Wrapper>
-  );
-  TopStoriesWrapper.propTypes = {
-    children: node.isRequired,
   };
 
   if (!content || !content.length) return null;
