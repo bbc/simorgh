@@ -190,7 +190,7 @@ const simorghLaunchDates = {
   },
   tamil: {
     articles: '',
-    frontPage: '14th Jan 2020',
+    frontPage: '13th Jan 2020',
     liveRadio: '14th Jan 2020',
     mediaAssetPage: '5th March 2020',
   },
