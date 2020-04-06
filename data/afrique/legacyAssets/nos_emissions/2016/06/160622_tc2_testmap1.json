@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/afrique/meta/dps/junk/2016/06/emp/160622_tc2_testmap1.emp.xml",
+        "id": "17697658",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+          "id": "17697658",
+          "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/afrique/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160622_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/afrique/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160622_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/afrique/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160622_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Le camerounais Richard Bona sort dans les prochains jours son nouvel album &quot;Héritage&quot;. C'est un opus qui retrace la riche tradition de l'Afrique et des Caraïbes, notamment Cuba. Ata Ahli Ahebla a rencontré le chanteur.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17697658", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "afrique",
+    "firstPublished": 1466612374000,
+    "id": "urn:bbc:ares::asset:afrique/nos_emissions/2016/06/160622_tc2_testmap1",
+    "includeComments": false,
+    "language": "fr",
+    "lastPublished": 1466612374000,
+    "lastUpdated": 1585904544832,
+    "locators": {
+      "assetId": "17697658",
+      "assetUri": "/afrique/nos_emissions/2016/06/160622_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2016/06/160622_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/e9916696-3894-11e6-abd9-7341006d6ea2"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1466612374000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "\"Héritage\", le nouvel album de Richard Bona",
+      "shortHeadline": "\"Héritage\", le nouvel album de Richard Bona"
+    },
+    "id": "urn:bbc:ares::asset:afrique/nos_emissions/2016/06/160622_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "id": "d5e219",
+      "path": "/amz/worldservice/test/assets/images/2014/11/27/141127145732_scotland_tax_144x81_getty.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "fr",
+    "locators": {
+      "assetId": "17697658",
+      "assetUri": "/afrique/nos_emissions/2016/06/160622_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2016/06/160622_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/e9916696-3894-11e6-abd9-7341006d6ea2"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/afrique/meta/dps/junk/2016/06/emp/160622_tc2_testmap1.emp.xml",
+      "id": "17697658",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+        "id": "17697658",
+        "path": "/amz/worldservice/test/assets/images/2015/02/26/150226142623_netball_640x360_bbc.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/afrique/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160622_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/afrique/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160622_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/afrique/dps/junk/2016/06/hd_cps_sot_1800_24_2_105_5256622_toprores_160622_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "Le camerounais Richard Bona sort dans les prochains jours son nouvel album \"Héritage\". C'est un opus qui retrace la riche tradition de l'Afrique et des Caraïbes, notamment Cuba. Ata Ahli Ahebla a rencontré le chanteur.",
+    "timestamp": 1466612374000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Nos émissions",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/afrique/nos_emissions"
+    },
+    "site": {
+      "name": "BBCAfrique.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/afrique"
+    }
+  }
+}
