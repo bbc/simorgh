@@ -1,10 +1,12 @@
-import MostRead from '#pages/MostReadPage';
+import { MostReadPage } from '#pages';
+import getInitialData from './getInitialData';
 import { mostReadPagePath } from '../utils/regex';
 
 export default {
   path: mostReadPagePath,
   exact: true,
-  component: MostRead,
-  getInitialData: () => Promise.resolve({ status: 200 }),
+  component: MostReadPage,
+  getInitialData,
+  // getInitialData: () => Promise.resolve({ status: 200 }),
   pageType: 'mostRead',
 };

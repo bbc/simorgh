@@ -12,6 +12,7 @@ const getMostReadEndpoint = ({ service, variant }) =>
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
+  pageData,
   maxTwoColumns,
   constrainMaxWidth,
   isOnFrontPage,
@@ -35,6 +36,7 @@ const MostReadContainer = ({
 
   return (
     <Canonical
+      pageData={pageData}
       endpoint={endpoint}
       constrainMaxWidth={constrainMaxWidth}
       maxTwoColumns={maxTwoColumns}

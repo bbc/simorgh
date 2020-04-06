@@ -24,7 +24,7 @@ const WithContexts = (Component) => {
       variant,
       timeOnServer,
     } = props;
-
+    // console.log(props);
     return (
       <ToggleContextProvider service={service} origin={bbcOrigin}>
         <ServiceContextProvider service={service} variant={variant}>

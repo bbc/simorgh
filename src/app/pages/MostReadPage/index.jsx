@@ -1,24 +1,17 @@
-import React, { useContext } from 'react';
-import { string } from 'prop-types';
-import MostRead from '../../containers/MostRead';
-import { ServiceContext } from '#contexts/ServiceContext';
+import React from 'react';
 
-const MostReadContainer = ({ mostReadEndpointOverride }) => {
-  const { mostRead } = useContext(ServiceContext);
-  console.log(mostRead);
+import MostReadContainer from '#containers/MostRead';
+
+const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   return (
-    <div style={{ maxWidth: '1280px', margin: '32px auto' }}>
-      <MostRead mostReadEndpointOverride={mostReadEndpointOverride} />
-    </div>
+    <main>
+      <MostReadContainer
+        mostReadEndpointOverride={mostReadEndpointOverride}
+        constrainMaxWidth
+        pageData={pageData}
+      />
+    </main>
   );
 };
 
-MostReadContainer.propTypes = {
-  mostReadEndpointOverride: string,
-};
-
-MostReadContainer.defaultProps = {
-  mostReadEndpointOverride: null,
-};
-
-export default MostReadContainer;
+export default MostReadPage;

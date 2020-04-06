@@ -8,11 +8,11 @@ import {
   getManifestRegex,
   getCpsAssetRegex,
   getLiveRadioRegex,
+  getMostReadPageRegex,
+  getMostReadDataRegex,
   getRadioAndTVRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
-  getMostReadPageRegex,
-  getMostReadDataRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -35,6 +35,9 @@ export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 export const liveRadioPath = getLiveRadioRegex(allServices);
 export const liveRadioDataPath = `${liveRadioPath}.json`;
 
+export const mostReadPagePath = getMostReadPageRegex(allServices);
+export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
+
 export const radioAndTvPath = getRadioAndTVRegex(allServices);
 export const radioAndTvDataPath = `${radioAndTvPath}.json`;
 
@@ -42,6 +45,3 @@ export const errorPagePath = getErrorPageRegex(allServices);
 
 export const legacyAssetPagePath = getLegacyAssetRegex(allServices);
 export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
-
-export const mostReadPagePath = getMostReadPageRegex(allServices);
-export const mostReadDataRegexPath = getMostReadDataRegex(allServices);

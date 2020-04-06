@@ -80,6 +80,7 @@ const CanonicalMostRead = ({
   maxTwoColumns,
   constrainMaxWidth,
   isOnFrontPage,
+  pageData,
 }) => {
   const [items, setItems] = useState([]);
   const {
@@ -91,54 +92,72 @@ const CanonicalMostRead = ({
     mostRead: { header, lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
-  useEffect(() => {
-    const handleResponse = async (response) => {
-      const mostReadData = await response.json();
+  const mostReadItems = pageData.records
+    .slice(0, numberOfItems)
+    .map(({ id, promo: { headlines, locators, timestamp } }) => ({
+      id,
+      title: headlines.shortHeadline,
+      href: locators.assetUri,
+      timestamp: shouldRenderLastUpdated(timestamp) && (
+        <LastUpdated
+          prefix={lastUpdated}
+          script={script}
+          service={service}
+          timestamp={timestamp}
+          locale={datetimeLocale}
+          timezone={timezone}
+        />
+      ),
+    }));
 
-      // The ARES test endpoint for most read renders fixture data, so the data is stale
-      const isTest = process.env.SIMORGH_APP_ENV === 'test';
+  // useEffect(() => {
+  //   const handleResponse = async (response) => {
+  //     const mostReadData = await response.json();
 
-      // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
-      // in succession. This suggests ATI may be having issues, hence risk of stale data.
-      if (isTest || mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
-        const mostReadItems = mostReadData.records
-          .slice(0, numberOfItems)
-          .map(({ id, promo: { headlines, locators, timestamp } }) => ({
-            id,
-            title: headlines.shortHeadline,
-            href: locators.assetUri,
-            timestamp: shouldRenderLastUpdated(timestamp) && (
-              <LastUpdated
-                prefix={lastUpdated}
-                script={script}
-                service={service}
-                timestamp={timestamp}
-                locale={datetimeLocale}
-                timezone={timezone}
-              />
-            ),
-          }));
-        setItems(mostReadItems);
-      }
-    };
-    const fetchMostReadData = (pathname) =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch((e) => logger.error(`HTTP Error: "${e}"`));
-    fetchMostReadData(endpoint);
-  }, [
-    endpoint,
-    numberOfItems,
-    datetimeLocale,
-    lastUpdated,
-    script,
-    service,
-    timezone,
-  ]);
+  //     // The ARES test endpoint for most read renders fixture data, so the data is stale
+  //     const isTest = process.env.SIMORGH_APP_ENV === 'test';
 
-  if (!items.length) {
-    return null;
-  }
+  //     // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
+  //     // in succession. This suggests ATI may be having issues, hence risk of stale data.
+  //     if (isTest || mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
+  //       const mostReadItems = mostReadData.records
+  //         .slice(0, numberOfItems)
+  //         .map(({ id, promo: { headlines, locators, timestamp } }) => ({
+  //           id,
+  //           title: headlines.shortHeadline,
+  //           href: locators.assetUri,
+  //           timestamp: shouldRenderLastUpdated(timestamp) && (
+  //             <LastUpdated
+  //               prefix={lastUpdated}
+  //               script={script}
+  //               service={service}
+  //               timestamp={timestamp}
+  //               locale={datetimeLocale}
+  //               timezone={timezone}
+  //             />
+  //           ),
+  //         }));
+  //       setItems(mostReadItems);
+  //     }
+  //   };
+  //   const fetchMostReadData = (pathname) =>
+  //     fetch(pathname, { mode: 'no-cors' })
+  //       .then(handleResponse)
+  //       .catch((e) => logger.error(`HTTP Error: "${e}"`));
+  //   fetchMostReadData(endpoint);
+  // }, [
+  //   endpoint,
+  //   numberOfItems,
+  //   datetimeLocale,
+  //   lastUpdated,
+  //   script,
+  //   service,
+  //   timezone,
+  // ]);
+
+  // if (!items.length) {
+  //   return null;
+  // }
 
   const StyledMostRead = isOnFrontPage
     ? FrontPageMostReadSection
@@ -164,7 +183,7 @@ const CanonicalMostRead = ({
           dir={dir}
           maxTwoColumns={maxTwoColumns}
         >
-          {items.map((item, i) => (
+          {mostReadItems.map((item, i) => (
             <MostReadItemWrapper
               dir={dir}
               key={item.id}
@@ -174,7 +193,7 @@ const CanonicalMostRead = ({
                 service={service}
                 script={script}
                 listIndex={i + 1}
-                numberOfItems={items.length}
+                numberOfItems={mostReadItems.length}
                 dir={dir}
                 maxTwoColumns={maxTwoColumns}
               />

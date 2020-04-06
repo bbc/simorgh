@@ -6,7 +6,7 @@ import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
 
 const getRouteProps = (routes, url) => {
   const matchedRoutes = matchRoutes(routes, url);
-
+  console.log('phan', url);
   const route = path([0, 'route'], matchedRoutes);
   const match = path([0, 'match'], matchedRoutes);
   const params = pathOr({}, ['params'], match);
