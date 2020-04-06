@@ -1,41 +1,11 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
-
 import SocialEmbedContainer from '.';
+import withContexts from './helper.jsx';
 import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
 
 describe('SocialEmbedContainer', () => {
-  const withContexts = (Component, { isAmp, isEnabled }) => {
-    return (props) => (
-      <RequestContextProvider
-        isAmp={isAmp}
-        pageType="STY"
-        service="news"
-        pathname="/pathname"
-      >
-        <ServiceContextProvider service="news">
-          <ToggleContext.Provider
-            value={{
-              toggleState: {
-                socialEmbed: {
-                  enabled: isEnabled,
-                },
-              },
-              toggleDispatch: jest.fn(),
-            }}
-          >
-            <Component {...props} />
-          </ToggleContext.Provider>
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    );
-  };
-
   describe('Canonical', () => {
     shouldMatchSnapshot(
       'should render correctly',
