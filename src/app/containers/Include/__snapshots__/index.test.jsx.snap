@@ -9,15 +9,7 @@ exports[`IncludeContainer should not render any HTML when include toggle is disa
   <div
     class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
   >
-    <div>
-      <div>
-        Visual Journalism Markup
-      </div>
-      <script
-        src="localhost/vj.js"
-        type="text/javascript"
-      />
-    </div>
+    <div />
   </div>
 </div>
 `;
@@ -27,15 +19,7 @@ exports[`IncludeContainer should render HTML when include toggle is enabled 1`] 
   <div
     class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi"
   >
-    <div>
-      <div>
-        Visual Journalism Markup
-      </div>
-      <script
-        src="localhost/vj.js"
-        type="text/javascript"
-      />
-    </div>
+    <div />
   </div>
 </div>
 `;

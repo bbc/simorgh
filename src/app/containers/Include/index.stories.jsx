@@ -35,5 +35,3 @@ storiesOf('Containers|Include', module)
       </ToggleContextProvider>
     );
   });
-
-// need to update type value to be a variable
