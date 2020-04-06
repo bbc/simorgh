@@ -29,12 +29,14 @@ describe('Given I am on the Arabic AMP front page', () => {
   });
 });
 
-describe('When I am analysing user/performance metrics', () => {
-  runCommonCanonicalAnalyticsTests();
-});
+describe('Given I am on the Arabic Canonical front page', () => {
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonCanonicalAnalyticsTests();
+  });
 
-describe('When the application starts', () => {
-  runCoreCanonicalTests({ service: 'arabic' });
+  describe('When the application starts', () => {
+    runCoreCanonicalTests({ service: 'arabic' });
+  });
 });
 
 describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
