@@ -15,16 +15,18 @@ import {
   runPerformaceTests,
 } from '../../common';
 
-describe('When I am using the website', () => {
-  runAmpUserTests();
-});
+describe('Given I am on the Arabic AMP front page', () => {
+  describe('When I am using the website', () => {
+    runAmpUserTests();
+  });
 
-describe('When the application starts', () => {
-  runCoreAmpTests();
-});
+  describe('When the application starts', () => {
+    runCoreAmpTests();
+  });
 
-describe('When I am analysing user/performance metrics', () => {
-  runCommonAmpAnalyticsTests();
+  describe('When I am analysing user/performance metrics', () => {
+    runCommonAmpAnalyticsTests();
+  });
 });
 
 describe('When I am analysing user/performance metrics', () => {
