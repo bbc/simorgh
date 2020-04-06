@@ -212,7 +212,7 @@ const simorghLaunchDates = {
   },
   turkce: {
     articles: '',
-    frontPage: '',
+    frontPage: '3rd March 2020',
     mediaAssetPage: '5th March 2020',
   },
   ukchinaSimp: {
@@ -232,7 +232,7 @@ const simorghLaunchDates = {
   },
   urdu: {
     articles: '',
-    frontPage: '',
+    frontPage: '3rd March 2020',
     liveRadio: '4th Feb 2020',
     mediaAssetPage: '5th March 2020',
   },
@@ -244,7 +244,7 @@ const simorghLaunchDates = {
   },
   vietnamese: {
     articles: '',
-    frontPage: '',
+    frontPage: '3rd March 2020',
     mediaAssetPage: '27th Feb 2020',
   },
   yoruba: {
