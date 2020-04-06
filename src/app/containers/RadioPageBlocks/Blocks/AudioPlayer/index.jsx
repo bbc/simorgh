@@ -17,7 +17,7 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
-const getMediaInfo = assetId => ({
+const getMediaInfo = (assetId) => ({
   title: assetId === 'liveradio' ? 'Live radio' : 'On-demand radio',
   type: 'audio',
 });
