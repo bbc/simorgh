@@ -37,7 +37,7 @@ const simorghLaunchDates = {
   },
   burmese: {
     articles: '',
-    frontPage: '',
+    frontPage: '19th Feb 2020',
     liveRadio: '10th Jan 2020',
     mediaAssetPage: '5th March 2020',
   },
@@ -47,7 +47,7 @@ const simorghLaunchDates = {
   },
   gahuza: {
     articles: '',
-    frontPage: '',
+    frontPage: '19th Feb 2020',
     liveRadio: '10th Jan 2020',
     mediaAssetPage: '27th Feb 2020',
   },
