@@ -1,6 +1,6 @@
 module.exports = {
   // Size limit for all bundles used by each service (K)
   // Keep these +/- 5K and update frequently!
-  MIN_SIZE: 762,
-  MAX_SIZE: 806,
+  MIN_SIZE: 769,
+  MAX_SIZE: 813,
 };
