@@ -26,6 +26,9 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
+  position: relative;
+  overflow: hidden;
+  height: 165px;
 }
 
 .c1 {
@@ -177,6 +180,9 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
+  position: relative;
+  overflow: hidden;
+  height: 165px;
 }
 
 .c1 {
