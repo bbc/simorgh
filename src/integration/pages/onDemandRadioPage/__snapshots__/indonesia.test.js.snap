@@ -230,6 +230,12 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
             src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
     >
     </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
     <style amp-boilerplate>
       body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     </style>
@@ -622,6 +628,44 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
           <p class="Paragraph-k859h4-0 hymSIv">
             Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.
           </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_indonesian_radio/w172x6r5000f38s/id/amp"
+                            title="Pemutar Audio"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img layout="fill"
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img alt
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          This audio cannot play in your browser. Please enable JavaScript or try a different browser.
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer role="contentinfo">
@@ -1234,6 +1278,29 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
           <p class="Paragraph-k859h4-0 hymSIv">
             Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.
           </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_indonesian_radio/w172x6r5000f38s/id"
+                        title="Pemutar Audio"
+                        allow="autoplay; fullscreen"
+                        scrolling="no"
+                        allowfullscreen
+                        class="StyledIframe-fuo2ed-0 dIyDYU"
+                >
+                </iframe>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        This audio cannot play in your browser. Please enable JavaScript or try a different browser.
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer role="contentinfo">
@@ -1382,7 +1449,7 @@ exports[`Given I am on an Indonesian On Demand Radio Page When I view the source
       </footer>
     </div>
     <script>
-      window.SIMORGH_DATA={"status":200,"pageData":{"language":"id","brandTitle":"Dunia Pagi Ini","episodeTitle":"05/03/2020 GMT","headline":"Dunia Pagi Ini","shortSynopsis":"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.","summary":"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."},"path":"/indonesia/bbc_indonesian_radio/w172x6r5000f38s","timeOnServer": "mock-time"}
+      window.SIMORGH_DATA={"status":200,"pageData":{"language":"id","brandTitle":"Dunia Pagi Ini","episodeTitle":"05/03/2020 GMT","headline":"Dunia Pagi Ini","shortSynopsis":"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.","summary":"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya.","episodeId":"w172x6r5000f38s","masterBrand":"bbc_indonesian_radio","episodeAvailableFrom":1583450100000,"episodeAvailableUntil":1586042100000},"path":"/indonesia/bbc_indonesian_radio/w172x6r5000f38s","timeOnServer": "mock-time"}
     </script>
     <div>
       <!--[if !IE]><!-->
