@@ -971,13 +971,13 @@ exports[`Media Asset Page should render component 1`] = `
               role="region"
             >
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-o5h25q-0 lbkhnQ"
               >
                 <div
-                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-o5h25q-0 lbkhnQ"
                 >
                   <div
-                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-o5h25q-1 kESWOU"
                   >
                     <div
                       class="Bar-sc-1x4gwjz-0 jsgdXU"
