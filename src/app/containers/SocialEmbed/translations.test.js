@@ -1,7 +1,7 @@
 import createTranslations from './translations';
 
 describe('SocialEmbedContainer – createTranslations', () => {
-  const socialEmbedTranslations = {
+  const translations = {
     socialEmbed: {
       caption: {
         textPrefixVisuallyHidden: 'Título del video: ',
@@ -23,24 +23,7 @@ describe('SocialEmbedContainer – createTranslations', () => {
   };
 
   it('should create a translations object', () => {
-    expect(createTranslations(socialEmbedTranslations)).toEqual({
-      caption: {
-        text:
-          'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
-        textPrefixVisuallyHidden: 'Título del video: ',
-      },
-      fallback: {
-        linkText: 'Ver más en %provider_name%',
-        linkTextSuffixVisuallyHidden: ', externo',
-        text: 'Contenido no disponible',
-        warningText:
-          'La BBC no se hace responsable del contenido de sitios externos.',
-      },
-      skipLink: {
-        endTextVisuallyHidden: 'Fin del contenido de %provider_name%',
-        text: 'Saltar contenido de %provider_name%',
-      },
-    });
+    expect(createTranslations(translations)).toEqual(translations.socialEmbed);
   });
 
   it("should create a translations object with default translations when input isn't recognised", () => {

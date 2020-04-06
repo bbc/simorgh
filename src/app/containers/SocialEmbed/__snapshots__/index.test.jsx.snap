@@ -162,7 +162,6 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
           </div>
         </div>
       </div>
-      ,
     </div>
   </body>
 </html>
@@ -356,7 +355,6 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
           </div>
         </div>
       </div>
-      ,
     </div>
   </body>
 </html>
