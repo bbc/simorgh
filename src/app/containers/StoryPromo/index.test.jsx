@@ -312,19 +312,17 @@ describe('StoryPromo Container', () => {
         assetTypeContainer.getElementsByTagName('time')[0].innerHTML,
       ).toEqual('7 Ọgọọst 2019');
 
-      const newsContainer = render(
-        <WrappedStoryPromo service="news" item={cpsItem} />,
-      ).container;
-      expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '2 May 2019',
-      );
-
-      const yorubaContainer = render(
-        <WrappedStoryPromo service="yoruba" item={cpsItem} />,
-      ).container;
-      expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '2 Èbibi 2019',
-      );
+      [
+        { service: 'news', expectedTimeString: '2 May 2019' },
+        { service: 'yoruba', expectedTimeString: '2 Èbibi 2019' },
+      ].forEach(({ service, expectedTimeString }) => {
+        const { container } = render(
+          <WrappedStoryPromo service={service} item={cpsItem} />,
+        );
+        expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
+          expectedTimeString,
+        );
+      });
     });
 
     it('should render relative time if timestamp < 10 hours', () => {
@@ -334,19 +332,17 @@ describe('StoryPromo Container', () => {
         timestamp: oneMinuteAgo,
       };
 
-      const newsContainer = render(
-        <WrappedStoryPromo service="news" item={newItem} />,
-      ).container;
-      expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        '1 minute ago',
-      );
-
-      const yorubaContainer = render(
-        <WrappedStoryPromo service="yoruba" item={newItem} />,
-      ).container;
-      expect(yorubaContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
-        'ìṣẹ́jú kan sẹ́yìn',
-      );
+      [
+        { service: 'news', expectedTimeString: '1 minute ago' },
+        { service: 'yoruba', expectedTimeString: 'ìṣẹ́jú kan sẹ́yìn' },
+      ].forEach(({ service, expectedTimeString }) => {
+        const { container } = render(
+          <WrappedStoryPromo service={service} item={newItem} />,
+        );
+        expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
+          expectedTimeString,
+        );
+      });
     });
 
     it('should render img with src & alt when platform is canonical', () => {
@@ -386,12 +382,11 @@ describe('StoryPromo Container', () => {
       });
 
       it('should not include a headline element', () => {
-        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        [{ item: cpsItem }, { item: assetTypeItem }].forEach(({ item }) => {
+          const { container } = render(<WrappedStoryPromo item={item} />);
 
-        expect(cpsContainer.getElementsByTagName('h3').length).toEqual(0);
-        expect(assetTypeContainer.getElementsByTagName('h3').length).toEqual(0);
+          expect(container.getElementsByTagName('h3').length).toEqual(0);
+        });
       });
     });
 
@@ -401,14 +396,12 @@ describe('StoryPromo Container', () => {
         delete cpsItem.indexImage.copyrightHolder;
         delete assetTypeItem.summary;
       });
-
       it('should not include any paragraph element', () => {
-        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        [{ item: cpsItem }, { item: assetTypeItem }].forEach(({ item }) => {
+          const { container } = render(<WrappedStoryPromo item={item} />);
 
-        expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
-        expect(assetTypeContainer.getElementsByTagName('p').length).toEqual(0);
+          expect(container.getElementsByTagName('p').length).toEqual(0);
+        });
       });
     });
 
@@ -417,16 +410,11 @@ describe('StoryPromo Container', () => {
         delete cpsItem.timestamp;
         delete assetTypeItem.timestamp;
       });
-
       it('should not include a time element', () => {
-        cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
-
-        expect(cpsContainer.getElementsByTagName('time').length).toEqual(0);
-        expect(assetTypeContainer.getElementsByTagName('time').length).toEqual(
-          0,
-        );
+        [{ item: cpsItem }, { item: assetTypeItem }].forEach(({ item }) => {
+          const { container } = render(<WrappedStoryPromo item={item} />);
+          expect(container.getElementsByTagName('time').length).toEqual(0);
+        });
       });
     });
 
@@ -435,12 +423,11 @@ describe('StoryPromo Container', () => {
         delete cpsItem.indexImage;
         delete assetTypeItem.indexImage;
       });
-
       it('should not include an img element', () => {
-        expect(cpsContainer.getElementsByTagName('img').length).toEqual(0);
-        expect(assetTypeContainer.getElementsByTagName('img').length).toEqual(
-          0,
-        );
+        [{ item: cpsItem }, { item: assetTypeItem }].forEach(({ item }) => {
+          const { container } = render(<WrappedStoryPromo item={item} />);
+          expect(container.getElementsByTagName('img').length).toEqual(0);
+        });
       });
     });
 
@@ -450,45 +437,59 @@ describe('StoryPromo Container', () => {
       });
 
       it('should show the correct local date', () => {
-        const { container: newsContainer } = render(
-          <WrappedStoryPromo item={cpsItem} service="news" />,
-        );
-        const {
-          textContent: newsTime,
-          dateTime: newsDate,
-        } = newsContainer.querySelector('time');
+        [
+          {
+            service: 'bengali',
+            expectedDateTime: '2019-08-06',
+            expectedTime: '৬ অগাস্ট ২০১৯',
+          },
+          {
+            service: 'news',
+            expectedDateTime: '2019-08-05',
+            expectedTime: '5 August 2019',
+          },
+        ].forEach(({ service, expectedDateTime, expectedTime }) => {
+          const { container } = render(
+            <WrappedStoryPromo item={cpsItem} service={service} />,
+          );
+          const { textContent: time, dateTime } = container.querySelector(
+            'time',
+          );
 
-        expect(newsTime).toEqual('5 August 2019');
-        expect(newsDate).toEqual('2019-08-05');
-
-        const { container: bengaliContainer } = render(
-          <WrappedStoryPromo item={cpsItem} service="bengali" />,
-        );
-        const {
-          textContent: bengaliTime,
-          dateTime: bengaliDate,
-        } = bengaliContainer.querySelector('time');
-        expect(bengaliTime).toEqual('৬ অগাস্ট ২০১৯');
-        expect(bengaliDate).toEqual('2019-08-06');
+          expect(time).toEqual(expectedTime);
+          expect(dateTime).toEqual(expectedDateTime);
+        });
       });
     });
 
     describe('With Index Alsos', () => {
-      it('should render a list with two related items', () => {
-        const { container } = render(
-          <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
-        );
+      [
+        {
+          description: 'should render a list with two related items',
+          expectedNumUls: 1,
+          expectedNumLis: 2,
+          item: indexAlsosItem,
+        },
+        {
+          description:
+            'should render a related item not contained within a list',
+          expectedNumUls: 0,
+          expectedNumLis: 0,
+          item: onlyOneRelatedItem,
+        },
+      ].forEach(({ description, item, expectedNumLis, expectedNumUls }) => {
+        it(description, () => {
+          const { container } = render(
+            <WrappedStoryPromo item={item} promoType="top" />,
+          );
 
-        expect(container.getElementsByTagName('ul')).toHaveLength(1);
-        expect(container.getElementsByTagName('li')).toHaveLength(2);
-      });
-
-      it('should render a related item not contained within a list', () => {
-        const { container } = render(
-          <WrappedStoryPromo item={onlyOneRelatedItem} promoType="top" />,
-        );
-        expect(container.getElementsByTagName('ul')).toHaveLength(0);
-        expect(container.getElementsByTagName('li')).toHaveLength(0);
+          expect(container.getElementsByTagName('ul')).toHaveLength(
+            expectedNumUls,
+          );
+          expect(container.getElementsByTagName('li')).toHaveLength(
+            expectedNumLis,
+          );
+        });
       });
     });
 
