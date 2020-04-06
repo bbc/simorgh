@@ -3,13 +3,13 @@ import pathOr from 'ramda/src/pathOr';
 import { string, shape, arrayOf } from 'prop-types';
 
 import HeadingBlock from './Blocks/Heading';
-import LiveRadioBlock from './Blocks/LiveRadio';
+import AudioPlayer from './Blocks/AudioPlayer';
 import ParagraphBlock from './Blocks/Paragraph';
 
 const blockMap = {
   heading: HeadingBlock,
   paragraph: ParagraphBlock,
-  liveradio: LiveRadioBlock,
+  liveradio: AudioPlayer,
 };
 
 const SKIP_LINK_ANCHOR_ID = 'content';
