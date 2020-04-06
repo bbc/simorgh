@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CpsRelatedContent should render Top Stories components when given appropriate data 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="top-stories-heading"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    role="region"
+  >
+    <div
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    >
+      <div
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
+      >
+        <div
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
+        >
+          <div
+            class="FlexColumn-wx5kdp-0 dgpsiS"
+          >
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
+            >
+              <span
+                class="Title-wx5kdp-4 BeqZV"
+                dir="ltr"
+                id="top-stories-heading"
+              >
+                Top Stories
+              </span>
+            </span>
+          </div>
+        </h2>
+      </div>
+      <ul
+        class="StoryPromoUl-sc-171lqjd-1 isCYWc"
+        role="list"
+      >
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
+          role="listitem"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+              dir="ltr"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-3 gejHzT"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/mundo/noticias-internacional-51939501"
+                >
+                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 hTsuvP"
+              >
+                Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="2020-02-03"
+              >
+                3rd February 2020
+              </time>
+            </div>
+          </div>
+        </li>
+        <li
+          class="StoryPromoLi-sc-171lqjd-0 jTGbev"
+          role="listitem"
+        >
+          <div
+            class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+          >
+            <div
+              class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+              dir="ltr"
+            >
+              <h3
+                class="Headline-sc-1dvfmi3-3 gejHzT"
+              >
+                <a
+                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  href="/pidgin/tori-51945757"
+                >
+                  Nigeria don get five new cases of Coronavirus - See how e happun
+                </a>
+              </h3>
+              <p
+                class="Summary-sc-1dvfmi3-4 hTsuvP"
+              >
+                Nigeria Health say di patients from UK and America travel come di kontri.
+              </p>
+              <time
+                class="StyledTimestamp-um718p-0 kVWTyt"
+                datetime="2020-02-03"
+              >
+                3rd February 2020
+              </time>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="top-stories-heading"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    role="region"
+  >
+    <div
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    >
+      <div
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
+      >
+        <div
+          class="Bar-sc-1x4gwjz-0 jsgdXU"
+        />
+        <h2
+          class="Heading-sc-1x4gwjz-2 eZofTG"
+        >
+          <div
+            class="FlexColumn-wx5kdp-0 dgpsiS"
+          >
+            <span
+              class="FlexRow-wx5kdp-2 dVBNyZ"
+            >
+              <span
+                class="Title-wx5kdp-4 BeqZV"
+                dir="ltr"
+                id="top-stories-heading"
+              >
+                Top Stories
+              </span>
+            </span>
+          </div>
+        </h2>
+      </div>
+      <div
+        class="SpacingDiv-sc-14492ea-2 eZWPCT"
+      >
+        <div
+          class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
+        >
+          <div
+            class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
+            dir="ltr"
+          >
+            <h3
+              class="Headline-sc-1dvfmi3-3 gejHzT"
+            >
+              <a
+                class="Link-sc-1dvfmi3-5 yQgSu"
+                href="/mundo/noticias-internacional-51939501"
+              >
+                China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+              </a>
+            </h3>
+            <p
+              class="Summary-sc-1dvfmi3-4 hTsuvP"
+            >
+              Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
+            </p>
+            <time
+              class="StyledTimestamp-um718p-0 kVWTyt"
+              datetime="2020-02-03"
+            >
+              3rd February 2020
+            </time>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -1,0 +1,195 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": false,
+        "caption": "Some audio from a supermarket checkout in Birmingham",
+        "embedding": false,
+        "format": "audio",
+        "id": "p01m7d07",
+        "imageCopyright": "Getty Images",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "Some audio from a supermarket checkout in Birmingham"
+        },
+        "title": "Birmingham checkout",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1555067395000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 127,
+            "durationISO8601": "PT2M7S",
+            "types": ["Original"],
+            "versionId": "p01m7d09",
+            "warnings": {
+              "long": "Contains some strong language.",
+              "short": "Contains some strong language."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "This is an introduction to the Mundo test MAP",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<bold>Así lo asegura la Organización de Naciones Unidas al 30 de marzo.</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Eso quiere decir que son 1.500 millones de estudiantes sin clases en 165 países del mundo debido al coronavirus.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "Si eres una de esas personas que se ha quedado sin clases o si estás con ganas de aprender algo nuevo en tu tiempo libre, <bold>internet está lleno de cursos online en todas las áreas de especialización.</bold>",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Algunos incluso son dictados por las mejores universidades del mundo y de forma gratuita, aunque la mayoría están exclusivamente en inglés y es usual tener que para obtener un certificado oficial.",
+        "type": "paragraph"
+      },
+      { "markupType": "plain_text", "text": "Crosshead", "type": "crosshead" },
+      {
+        "altText": "Colourful studying",
+        "caption": "Do you like school?",
+        "copyrightHolder": "Getty/ BBC",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/5B25/test/_63733332__111437543_197389d9-800f-4763-8654-aa30c04220e4.png",
+        "id": "63733332",
+        "path": "/cpsdevpb/5B25/test/_63733332__111437543_197389d9-800f-4763-8654-aa30c04220e4.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "A continuación, los 24 disponibles en cinco prestigiosos centros, sobre temas tan variados como negocios, matemáticas y paternidad, y que incluye el curso más exitoso en la historia de Yale: La ciencia del bienestar.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "mundo.media.media_asset.23283126.page",
+      "cps_asset_id": "23283126",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph", "crosshead", "image"],
+    "createdBy": "mundo-v6",
+    "firstPublished": 1585748681000,
+    "id": "urn:bbc:ares::asset:mundo/media-23283126",
+    "includeComments": false,
+    "language": "es",
+    "lastPublished": 1585748681000,
+    "lastUpdated": 1585748692679,
+    "locators": {
+      "assetId": "23283126",
+      "assetUri": "/mundo/media-23283126",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/media-23283126",
+      "curie": "http://www.bbc.co.uk/asset/22720ea0-aaf8-8749-afa1-a0b36a632a71"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585748681000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Mundo test MAP !\"£$%^&*(){}[]:@;'~#?/>.<,|\\\\",
+      "shortHeadline": "Mundo test MAP !\"£$%^&*(){}[]:@;'~#?/>.<,|\\\\"
+    },
+    "id": "urn:bbc:ares::asset:mundo/media-23283126",
+    "indexImage": {
+      "altText": "England star Fran Kirby",
+      "copyrightHolder": "Getty Images",
+      "height": 576,
+      "href": "http://b.files.bbci.co.uk/0D05/test/_63733330_p01mt2kt.jpg",
+      "id": "63733330",
+      "path": "/cpsdevpb/0D05/test/_63733330_p01mt2kt.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 1024
+    },
+    "language": "es",
+    "locators": {
+      "assetId": "23283126",
+      "assetUri": "/mundo/media-23283126",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/media-23283126",
+      "curie": "http://www.bbc.co.uk/asset/22720ea0-aaf8-8749-afa1-a0b36a632a71"
+    },
+    "media": {
+      "advertising": false,
+      "caption": "Some audio from a supermarket checkout in Birmingham",
+      "embedding": false,
+      "format": "audio",
+      "id": "p01m7d07",
+      "imageCopyright": "Getty Images",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01mt2kt.jpg",
+      "subType": "clip",
+      "synopses": {
+        "short": "Some audio from a supermarket checkout in Birmingham"
+      },
+      "title": "Birmingham checkout",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1555067395000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 127,
+          "durationISO8601": "PT2M7S",
+          "types": ["Original"],
+          "versionId": "p01m7d09",
+          "warnings": {
+            "long": "Contains some strong language.",
+            "short": "Contains some strong language."
+          }
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "test",
+    "timestamp": 1585748681000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/mundo/media"
+    },
+    "site": {
+      "name": "BBC Mundo",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/mundo"
+    }
+  }
+}
