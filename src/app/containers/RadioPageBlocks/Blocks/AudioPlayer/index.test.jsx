@@ -7,11 +7,11 @@ import {
 import { BrowserRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import LiveRadio from '.';
+import AudioPlayer from '.';
 
 const origin = 'http://localhost:7080';
 
-describe('MediaPageBlocks LiveRadio', () => {
+describe('MediaPageBlocks AudioPlayer', () => {
   shouldMatchSnapshot(
     'should render correctly for canonical',
     <RequestContext.Provider
@@ -19,7 +19,7 @@ describe('MediaPageBlocks LiveRadio', () => {
     >
       <ServiceContextProvider service="korean">
         <BrowserRouter>
-          <LiveRadio
+          <AudioPlayer
             uuid="uuid"
             idAttr="idAttr"
             externalId="externalId"
@@ -38,7 +38,7 @@ describe('MediaPageBlocks LiveRadio', () => {
     <RequestContext.Provider value={{ platform: 'amp', isAmp: true, origin }}>
       <ServiceContextProvider service="korean">
         <BrowserRouter>
-          <LiveRadio
+          <AudioPlayer
             uuid="uuid"
             idAttr="idAttr"
             externalId="externalId"
@@ -57,7 +57,7 @@ describe('MediaPageBlocks LiveRadio', () => {
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <BrowserRouter>
-            <LiveRadio
+            <AudioPlayer
               uuid="uuid"
               idAttr="idAttr"
               externalId="externalId"
@@ -77,7 +77,7 @@ describe('MediaPageBlocks LiveRadio', () => {
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <BrowserRouter>
-            <LiveRadio uuid="uuid" idAttr="idAttr" externalId="externalId" />
+            <AudioPlayer uuid="uuid" idAttr="idAttr" externalId="externalId" />
           </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
@@ -92,7 +92,7 @@ describe('MediaPageBlocks LiveRadio', () => {
       <RequestContext.Provider value={{ platform: 'foobar', origin }}>
         <ServiceContextProvider service="korean">
           <BrowserRouter>
-            <LiveRadio uuid="uuid" idAttr="idAttr" id="id" />
+            <AudioPlayer uuid="uuid" idAttr="idAttr" id="id" />
           </BrowserRouter>
         </ServiceContextProvider>
       </RequestContext.Provider>,
@@ -107,7 +107,7 @@ describe('MediaPageBlocks LiveRadio', () => {
       >
         <ServiceContextProvider service="afaanoromoo">
           <BrowserRouter>
-            <LiveRadio
+            <AudioPlayer
               uuid="uuid"
               idAttr="idAttr"
               externalId="bbc_oromo_radio"
@@ -126,7 +126,7 @@ describe('MediaPageBlocks LiveRadio', () => {
       <RequestContext.Provider value={{ platform: 'amp', isAmp: true, origin }}>
         <ServiceContextProvider service="afaanoromoo">
           <BrowserRouter>
-            <LiveRadio
+            <AudioPlayer
               uuid="uuid"
               idAttr="idAttr"
               externalId="bbc_oromo_radio"
