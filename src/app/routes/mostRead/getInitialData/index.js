@@ -1,7 +1,7 @@
 import fetchPageData from '../../utils/fetchPageData';
 
-export default async (path) => {
-  const { json, ...rest } = await fetchPageData('/pidgin/mostread');
+export default async ({ path, service }) => {
+  const { json, ...rest } = await fetchPageData(`/${service}/mostread`);
 
   return {
     ...rest,

@@ -70,7 +70,7 @@ const handleError = (e) => {
 const fetchData = (pathname) => {
   const url = getUrl(pathname);
 
-  logger.info(DATA_REQUEST_RECEIVED, { url });
+  logger.info(DATA_REQUEST_RECEIVED, { pathname });
 
   return fetch(url).then(handleResponse(url)).catch(handleError);
 };
