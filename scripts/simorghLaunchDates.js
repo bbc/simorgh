@@ -254,11 +254,11 @@ const simorghLaunchDates = {
   },
   zhongwenSimp: {
     articles: '',
-    frontPage: '',
+    frontPage: '31st March 2020',
   },
   zhongwenTrad: {
     articles: '',
-    frontPage: '',
+    frontPage: '31st March 2020',
   },
 };
 
