@@ -1,13 +1,8 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, node } from 'prop-types';
-import SectionLabel from '@bbc/psammead-section-label';
 import styled from 'styled-components';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -18,6 +13,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 import StoryPromo from '../StoryPromo';
+import CpsAsset from '../CpsAssets';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -26,22 +22,8 @@ const Wrapper = styled(GridItemConstrainedLarge)`
   }
 `;
 
-const StyledSectionLabel = styled(SectionLabel)`
-  margin-top: 0;
-`;
-
-// Apply the right margin-top between the section label and the promos
-const SpacingDiv = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding-top: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_TRPL};
-  }
-`;
-
 const TopStories = ({ content }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { dir } = useContext(ServiceContext);
 
   const a11yAttributes = {
     as: 'section',
@@ -58,36 +40,29 @@ const TopStories = ({ content }) => {
 
   if (!content || !content.length) return null;
 
-  const hasSingleStory = content.filter(Boolean).length === 1;
-  const [singleStory] = content.filter(Boolean);
+  const singleTransform = (promo) => (
+    <StoryPromo item={promo} dir={dir} displayImage={false} />
+  );
+
+  const listTransform = (items) => (
+    <StoryPromoUl>
+      {items.map((item) => (
+        <StoryPromoLi key={item.id || item.uri}>
+          {singleTransform(item)}
+        </StoryPromoLi>
+      ))}
+    </StoryPromoUl>
+  );
 
   return (
-    <TopStoriesWrapper>
-      <Wrapper>
-        <StyledSectionLabel
-          script={script}
-          service={service}
-          dir={dir}
-          labelId="top-stories-heading"
-        >
-          Top Stories
-        </StyledSectionLabel>
-
-        {hasSingleStory ? (
-          <SpacingDiv>
-            <StoryPromo item={singleStory} dir={dir} displayImage={false} />
-          </SpacingDiv>
-        ) : (
-          <StoryPromoUl>
-            {content.map((item) => (
-              <StoryPromoLi key={item.id || item.uri}>
-                <StoryPromo item={item} dir={dir} displayImage={false} />
-              </StoryPromoLi>
-            ))}
-          </StoryPromoUl>
-        )}
-      </Wrapper>
-    </TopStoriesWrapper>
+    <CpsAsset
+      title="Top Stories"
+      a11yAttributes={a11yAttributes}
+      content={content}
+      enableGridWrapper={false}
+      singleTransform={singleTransform}
+      listTransform={listTransform}
+    />
   );
 };
 

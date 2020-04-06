@@ -4,14 +4,14 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-ra0uf3-0 htPwkI"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-ra0uf3-0 htPwkI"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-ra0uf3-1 fMcyoJ"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -120,14 +120,14 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
 <DocumentFragment>
   <section
     aria-labelledby="top-stories-heading"
-    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-ra0uf3-0 htPwkI"
     role="region"
   >
     <div
-      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-14492ea-0 eWXduN"
+      class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-ra0uf3-0 htPwkI"
     >
       <div
-        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-14492ea-1 kBWCTE"
+        class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-ra0uf3-1 fMcyoJ"
       >
         <div
           class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -153,7 +153,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="SpacingDiv-sc-14492ea-2 eZWPCT"
+        class="SingleContentWrapper-ra0uf3-2 cFjfGO"
       >
         <div
           class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys"
