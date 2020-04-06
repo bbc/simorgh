@@ -75,7 +75,7 @@ const simorghLaunchDates = {
   },
   indonesia: {
     articles: '',
-    frontPage: '',
+    frontPage: '26th Feb 2020',
     liveRadio: '30th Sept 2019',
     mediaAssetPage: '5th March 2020',
   },
