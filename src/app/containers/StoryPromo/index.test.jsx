@@ -365,12 +365,12 @@ describe('StoryPromo Container', () => {
           ...cpsItem,
           timestamp: firstJan2020,
         };
-        const persianContainer = render(
+        const { container } = render(
           <WrappedStoryPromo service={service} item={newItem} />,
-        ).container;
-        expect(
-          persianContainer.getElementsByTagName('time')[0].innerHTML,
-        ).toEqual(expectationFirstJan2020);
+        );
+        expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
+          expectationFirstJan2020,
+        );
       });
     });
 
