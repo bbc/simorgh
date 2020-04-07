@@ -10,7 +10,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   height: 0.75rem;
 }
 
-.c7 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -20,15 +20,6 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.c6 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
 }
 
 .c5 {
@@ -58,6 +49,15 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 
 .c5:visited {
   color: #6E6E73;
+}
+
+.c7 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 .c1 {
@@ -290,19 +290,21 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c6"
-            dir="ltr"
-          >
-            NA EME UGBU A 
-          </span>
-          <span
-            class="c7"
             lang="en-GB"
           >
             Gee ntị Live, 
           </span>
-          Test Radio Bulletin promo
+          <span
+            aria-hidden="true"
+            class="c7"
+            dir="ltr"
+          >
+            NA EME UGBU A 
+          </span>
+          <span>
+            Test Radio Bulletin promo
+          </span>
         </span>
       </a>
     </h3>
@@ -353,7 +355,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   height: 0.75rem;
 }
 
-.c7 {
+.c6 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
@@ -363,15 +365,6 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   position: absolute;
   width: 1px;
   margin: 0;
-}
-
-.c6 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
 }
 
 .c5 {
@@ -401,6 +394,15 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 
 .c5:visited {
   color: #6E6E73;
+}
+
+.c7 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
 }
 
 .c1 {
@@ -636,19 +638,21 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           role="text"
         >
           <span
-            aria-hidden="true"
             class="c6"
-            dir="ltr"
-          >
-            NA EME UGBU A 
-          </span>
-          <span
-            class="c7"
             lang="en-GB"
           >
             Lee Live, 
           </span>
-          Test TV Bulletin promo
+          <span
+            aria-hidden="true"
+            class="c7"
+            dir="ltr"
+          >
+            NA EME UGBU A 
+          </span>
+          <span>
+            Test TV Bulletin promo
+          </span>
         </span>
       </a>
     </h3>
