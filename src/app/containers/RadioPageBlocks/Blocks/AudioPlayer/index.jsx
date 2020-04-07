@@ -38,7 +38,7 @@ const InnerWrapper = styled.div`
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
   position: relative;
   overflow: hidden;
-  height: 165px;
+  min-height: 165px;
 `;
 
 const AudioPlayer = ({
