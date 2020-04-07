@@ -7,6 +7,5 @@ export default {
   exact: true,
   component: MostReadPage,
   getInitialData,
-  // getInitialData: () => Promise.resolve({ status: 200 }),
   pageType: 'mostRead',
 };

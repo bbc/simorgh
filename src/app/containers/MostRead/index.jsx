@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool, string, node } from 'prop-types';
+import { bool, string, elementType } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
@@ -48,14 +48,14 @@ MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
   maxTwoColumns: bool,
   initialData: mostReadShape,
-  wrapper: node,
+  wrapper: elementType,
 };
 
 MostReadContainer.defaultProps = {
-  mostReadEndpointOverride: null,
+  mostReadEndpointOverride: undefined,
   maxTwoColumns: false,
-  initialData: null,
-  wrapper: null,
+  initialData: undefined,
+  wrapper: undefined,
 };
 
 export default MostReadContainer;

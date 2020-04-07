@@ -66,9 +66,18 @@ const expectedPidginData = [
 ];
 
 describe('filterMostRead', () => {
-  it('should return', () => {
+  it('should return expected data', () => {
     expect(filterMostRead({ data: pidginData, numberOfItems: 10 })).toEqual(
       expectedPidginData,
     );
+  });
+
+  it('should return null when no data is passed', () => {
+    expect(filterMostRead({})).toBeNull();
+  });
+
+  it('should return empty array when records doesn not exist', () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    expect(filterMostRead({ data: {}, numberOfItems: 10 })).toEqual([]);
   });
 });

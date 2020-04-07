@@ -8,7 +8,7 @@ describe('getInitialData', () => {
 
   it('should return essential data for a page to render', async () => {
     jest.spyOn(global, 'fetch').mockResponse(JSON.stringify(mapJson));
-    const { pageData } = await getInitialData('mock-map-path');
+    const { pageData } = await getInitialData({ path: 'mock-map-path' });
 
     expect(pageData.metadata.id).toEqual(
       'urn:bbc:ares::asset:pidgin/media-23256549',

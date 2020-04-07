@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styled from 'styled-components';
 import 'isomorphic-fetch';
-import { bool, string, shape, node } from 'prop-types';
+import { bool, string, elementType } from 'prop-types';
 import {
   MostReadList,
   MostReadItemWrapper,
@@ -18,7 +18,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
-import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
+import { shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 import filterMostRead from './filterMostRead';
 import mostReadShape from '../utilities/mostReadShape';
@@ -66,7 +66,7 @@ const CanonicalMostRead = ({
         .then(handleResponse)
         .catch((e) => logger.error(`HTTP Error: "${e}"`));
 
-    if (items) {
+    if (!items) {
       fetchMostReadData(endpoint);
     }
   }, [
@@ -79,6 +79,8 @@ const CanonicalMostRead = ({
     timezone,
     items,
   ]);
+
+  console.log('items', items);
 
   if (!items) {
     return null;
@@ -136,7 +138,7 @@ CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   maxTwoColumns: bool,
   initialData: mostReadShape,
-  wrapper: node,
+  wrapper: elementType,
 };
 
 CanonicalMostRead.defaultProps = {
