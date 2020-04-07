@@ -241,6 +241,10 @@ export const service = {
         url: '/hindi',
       },
       {
+        title: 'कोरोनावायरस',
+        url: '/hindi/international-51848794',
+      },
+      {
         title: 'भारत',
         url: '/hindi/india',
       },

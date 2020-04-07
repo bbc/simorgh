@@ -225,6 +225,10 @@ export const service = {
         url: '/japanese',
       },
       {
+        title: 'コロナウイルス',
+        url: '/japanese/52137815',
+      },
+      {
         title: '日本',
         url:
           'https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b',
