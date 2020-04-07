@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { shape, string } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -88,6 +89,15 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       </StyledMain>
     </>
   );
+};
+
+MostReadPage.propTypes = {
+  pageData: shape({}),
+  mostReadEndpointOverride: string,
+};
+
+MostReadPage.defaultProps = {
+  mostReadEndpointOverride: null,
 };
 
 export default MostReadPage;

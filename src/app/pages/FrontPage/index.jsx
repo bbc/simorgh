@@ -76,15 +76,6 @@ const FrontPageMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const MarginWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
-`;
-
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     product,
@@ -126,7 +117,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       >
         {header}
       </SectionLabel>
-      <MarginWrapper>{children}</MarginWrapper>
+      {children}
     </FrontPageMostReadSection>
   );
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import styled from 'styled-components';
 import 'isomorphic-fetch';
 import { bool, string, shape, node } from 'prop-types';
 import {
@@ -7,6 +8,14 @@ import {
   MostReadRank,
   MostReadLink,
 } from '@bbc/psammead-most-read';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
@@ -14,6 +23,15 @@ import LastUpdated from './LastUpdated';
 import filterMostRead from './filterMostRead';
 
 const logger = webLogger();
+
+const MarginWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_TRPL};
+  }
+`;
 
 const CanonicalMostRead = ({
   endpoint,
@@ -72,46 +90,48 @@ const CanonicalMostRead = ({
 
   return (
     <Wrapper>
-      <MostReadList
-        numberOfItems={items.length}
-        dir={dir}
-        maxTwoColumns={maxTwoColumns}
-      >
-        {items.map((item, i) => (
-          <MostReadItemWrapper
-            dir={dir}
-            key={item.id}
-            maxTwoColumns={maxTwoColumns}
-          >
-            <MostReadRank
-              service={service}
-              script={script}
-              listIndex={i + 1}
-              numberOfItems={items.length}
+      <MarginWrapper>
+        <MostReadList
+          numberOfItems={items.length}
+          dir={dir}
+          maxTwoColumns={maxTwoColumns}
+        >
+          {items.map((item, i) => (
+            <MostReadItemWrapper
               dir={dir}
+              key={item.id}
               maxTwoColumns={maxTwoColumns}
-            />
-            <MostReadLink
-              dir={dir}
-              service={service}
-              script={script}
-              title={item.title}
-              href={item.href}
             >
-              {shouldRenderLastUpdated(item.timestamp) && (
-                <LastUpdated
-                  prefix={lastUpdated}
-                  script={script}
-                  service={service}
-                  timestamp={item.timestamp}
-                  locale={datetimeLocale}
-                  timezone={timezone}
-                />
-              )}
-            </MostReadLink>
-          </MostReadItemWrapper>
-        ))}
-      </MostReadList>
+              <MostReadRank
+                service={service}
+                script={script}
+                listIndex={i + 1}
+                numberOfItems={items.length}
+                dir={dir}
+                maxTwoColumns={maxTwoColumns}
+              />
+              <MostReadLink
+                dir={dir}
+                service={service}
+                script={script}
+                title={item.title}
+                href={item.href}
+              >
+                {shouldRenderLastUpdated(item.timestamp) && (
+                  <LastUpdated
+                    prefix={lastUpdated}
+                    script={script}
+                    service={service}
+                    timestamp={item.timestamp}
+                    locale={datetimeLocale}
+                    timezone={timezone}
+                  />
+                )}
+              </MostReadLink>
+            </MostReadItemWrapper>
+          ))}
+        </MostReadList>
+      </MarginWrapper>
     </Wrapper>
   );
 };

@@ -6,7 +6,6 @@ import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
@@ -60,15 +59,6 @@ const StyledMain = styled.main`
   flex-grow: 1;
 `;
 
-const MarginWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_DBL};
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_TRPL};
-  }
-`;
-
 const MostReadSection = styled.section.attrs(() => ({
   role: 'region',
   'aria-labelledby': 'Most-Read',
@@ -117,7 +107,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       >
         {header}
       </SectionLabel>
-      <MarginWrapper>{children}</MarginWrapper>
+      {children}
     </ConstrainedMostReadSection>
   );
 
