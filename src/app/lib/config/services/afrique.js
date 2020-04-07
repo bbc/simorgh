@@ -27,7 +27,7 @@ export const service = {
     videoCaptionOffscreenText: 'Légende vidéo, ',
     audioCaptionOffscreenText: 'Légende audio, ',
     defaultCaptionOffscreenText: 'Légende, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    imageCopyrightOffscreenText: 'Crédit photo, ',
     locale: `fr`,
     datetimeLocale: `fr`,
     service: 'afrique',
