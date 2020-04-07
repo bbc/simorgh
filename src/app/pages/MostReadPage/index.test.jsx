@@ -21,7 +21,7 @@ describe('Most Read Page Main', () => {
   it('should match snapshot for Canonical', async () => {
     await matchSnapshotAsync(
       <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
-        <ServiceContextProvider service="amharic">
+        <ServiceContextProvider service="pidgin">
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.com"
             isAmp={false}
