@@ -9,6 +9,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import Helmet from 'react-helmet';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
@@ -50,7 +51,39 @@ const AdContainer = () => {
     );
   }
 
-  return null;
+  return (
+    <>
+      <Helmet>
+        <script
+          async
+          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+        />
+        <script>
+          {`
+            window.googletag = window.googletag || {cmd: []};
+            googletag.cmd.push(function() {
+              googletag
+                  .defineSlot(
+                      '/4817/bbccom.test.site.amp.news', [970, 250], 'banner-ad')
+                  .addService(googletag.pubads());
+              googletag.enableServices();
+            });
+          `}
+        </script>
+      </Helmet>
+      <div id="banner-ad" style={{ width: '970px', height: '250px' }}>
+        <Helmet>
+          <script>
+            {`
+              googletag.cmd.push(function() {
+                googletag.display('banner-ad');
+              });
+            `}
+          </script>
+        </Helmet>
+      </div>
+    </>
+  );
 };
 
 export default AdContainer;
