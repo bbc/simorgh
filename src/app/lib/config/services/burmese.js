@@ -160,7 +160,7 @@ export const service = {
         },
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
-        liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
+        liveLabel: 'တိုက်ရိုက်',
         nextLabel: 'NEXT',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
