@@ -36,9 +36,13 @@ const InnerWrapper = styled.div`
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
+`;
+
+const MediaMessageWrapper = styled(InnerWrapper)`
   position: relative;
   overflow: hidden;
   min-height: 165px;
+  margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
 const AudioPlayer = ({
@@ -66,9 +70,9 @@ const AudioPlayer = ({
 
     return (
       <OuterWrapper>
-        <InnerWrapper>
+        <MediaMessageWrapper>
           <MediaMessage service={service} message={expiredContentMessage} />
-        </InnerWrapper>
+        </MediaMessageWrapper>
       </OuterWrapper>
     );
   }
