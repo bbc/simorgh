@@ -12,7 +12,7 @@ const buildIncludeUrl = (href, type) => {
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
-  return `${process.env.SIMORGH_INCLUDES_ENDPOINT}${withTrailingHref}${resolvers[type]}`;
+  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 };
 
 const fetchMarkup = async (url) => {

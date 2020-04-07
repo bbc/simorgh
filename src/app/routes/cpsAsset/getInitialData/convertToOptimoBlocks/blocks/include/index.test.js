@@ -7,8 +7,8 @@ const idt2Markup = `<div>IDT 2 Markup</div><script type="text/javascript" src="l
 const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 
 describe('convertInclude', () => {
-  const includesResource = 'https://foobar.com/includes';
-  process.env.SIMORGH_INCLUDES_ENDPOINT = includesResource;
+  const includesBaseUrl = 'https://foobar.com/includes';
+  process.env.SIMORGH_INCLUDES_BASE_URL = includesBaseUrl;
   afterEach(() => {
     fetch.resetMocks();
   });
