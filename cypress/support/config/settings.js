@@ -3395,11 +3395,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/cyr/23279016'],
             enabled: false,
           },
           local: {
-            paths: [], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
+            paths: ['/serbian/cyr/23279016'], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
             enabled: false,
           },
         },
@@ -3506,11 +3506,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/lat/23279016'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/serbian/lat/23279016'],
             enabled: false,
           },
         },
@@ -4655,11 +4655,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/simp/23279012'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/ukchina/simp/23279012'],
             enabled: false,
           },
         },
@@ -4766,11 +4766,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukchina/trad/23279012'],
             enabled: false,
           },
           local: {
-            paths: [], // Enable once variants supported '/ukchina/trad/49375846'
+            paths: ['/ukchina/trad/23279012'], // Enable once variants supported '/ukchina/trad/49375846'
             enabled: false,
           },
         },
@@ -5511,11 +5511,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/zhongwen/simp/uk-23283128'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/zhongwen/simp/uk-23283128'],
             enabled: false,
           },
         },
@@ -5622,11 +5622,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/zhongwen/trad/uk-23283128'],
             enabled: false,
           },
           local: {
-            paths: [], // Once variant support is available '/zhongwen/trad/chinese-news-49631219'
+            paths: ['/zhongwen/trad/uk-23283128'], // Once variant support is available '/zhongwen/trad/chinese-news-49631219'
             enabled: false,
           },
         },
