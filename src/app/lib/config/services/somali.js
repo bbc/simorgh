@@ -180,8 +180,8 @@ export const service = {
             'BBC masuul kama ahan macluumadka bogagga kale ee dibadda.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Ka bood %provider_name% boggan',
+          endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
     },
