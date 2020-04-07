@@ -22,7 +22,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -36,7 +36,7 @@ exports[`CpsRelatedContent should render Story Promo components in Live environm
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <ul
@@ -249,7 +249,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -263,7 +263,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <ul
@@ -476,7 +476,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -490,7 +490,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <div

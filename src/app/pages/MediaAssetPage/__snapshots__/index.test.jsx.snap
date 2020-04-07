@@ -985,7 +985,7 @@ exports[`Media Asset Page should render component 1`] = `
                     <h2
                       class="Heading-sc-1x4gwjz-2 eZofTG"
                     >
-                      <div
+                      <span
                         class="FlexColumn-wx5kdp-0 dgpsiS"
                       >
                         <span
@@ -999,7 +999,7 @@ exports[`Media Asset Page should render component 1`] = `
                             Another thing we de for inside dis tori
                           </span>
                         </span>
-                      </div>
+                      </span>
                     </h2>
                   </div>
                   <ul

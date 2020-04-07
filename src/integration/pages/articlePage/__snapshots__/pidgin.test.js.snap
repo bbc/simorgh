@@ -891,7 +891,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                 <div class="Bar-sc-1x4gwjz-0 jsgdXU">
                 </div>
                 <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span class="FlexRow-wx5kdp-2 dVBNyZ">
                       <span dir="ltr"
                             id="related-content-heading"
@@ -900,7 +900,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                         Another thing we de for inside dis tori
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </h2>
               </div>
               <ul dir="ltr"
@@ -1012,7 +1012,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   <div class="Bar-sc-1x4gwjz-0 jsgdXU">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="top-stories-heading"
@@ -1021,7 +1021,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                           Top Stories
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
@@ -1091,7 +1091,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   <div class="Bar-sc-1x4gwjz-0 jsgdXU">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="features-analysis-heading"
@@ -1100,7 +1100,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                           Features &amp; Analysis
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
@@ -2088,7 +2088,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                 <div class="Bar-sc-1x4gwjz-0 jsgdXU">
                 </div>
                 <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span class="FlexRow-wx5kdp-2 dVBNyZ">
                       <span dir="ltr"
                             id="related-content-heading"
@@ -2097,7 +2097,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                         Another thing we de for inside dis tori
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </h2>
               </div>
               <ul dir="ltr"
@@ -2197,7 +2197,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   <div class="Bar-sc-1x4gwjz-0 jsgdXU">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="top-stories-heading"
@@ -2206,7 +2206,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                           Top Stories
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
@@ -2276,7 +2276,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                   <div class="Bar-sc-1x4gwjz-0 jsgdXU">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="features-analysis-heading"
@@ -2285,7 +2285,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
                           Features &amp; Analysis
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"

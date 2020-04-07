@@ -1824,7 +1824,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       <h2
                         class="c35"
                       >
-                        <div
+                        <span
                           class="c36"
                         >
                           <span
@@ -1838,7 +1838,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               Another thing we de for inside dis tori
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <div
@@ -1871,7 +1871,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         <h2
                           class="c35"
                         >
-                          <div
+                          <span
                             class="c36"
                           >
                             <span
@@ -1885,7 +1885,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Top Stories
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -1986,7 +1986,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         <h2
                           class="c35"
                         >
-                          <div
+                          <span
                             class="c36"
                           >
                             <span
@@ -2000,7 +2000,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Features & Analysis
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -4227,7 +4227,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           <h2
                             class="c37"
                           >
-                            <div
+                            <span
                               class="c38"
                             >
                               <span
@@ -4241,7 +4241,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   Another thing we de for inside dis tori
                                 </span>
                               </span>
-                            </div>
+                            </span>
                           </h2>
                         </div>
                         <div
@@ -4274,7 +4274,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             <h2
                               class="c37"
                             >
-                              <div
+                              <span
                                 class="c38"
                               >
                                 <span
@@ -4288,7 +4288,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Top Stories
                                   </span>
                                 </span>
-                              </div>
+                              </span>
                             </h2>
                           </div>
                           <ul
@@ -4389,7 +4389,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             <h2
                               class="c37"
                             >
-                              <div
+                              <span
                                 class="c38"
                               >
                                 <span
@@ -4403,7 +4403,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Features & Analysis
                                   </span>
                                 </span>
-                              </div>
+                              </span>
                             </h2>
                           </div>
                           <ul
