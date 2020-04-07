@@ -23,7 +23,7 @@ const decodeHTML = (str) => {
   return str.replace(replacementsRegex, (match) => replacedParts[match]);
 };
 
-const IncludeContainer = ({ html, type, href }) => {
+const IncludeContainer = ({ html, type }) => {
   const { enabled } = useToggle('include');
   // const [data, setData] = useState('');
   const [includeHtml, setIncludeHtml] = useState('');
@@ -58,13 +58,8 @@ const IncludeContainer = ({ html, type, href }) => {
   };
 
   useEffect(() => {
-    const fetchInclude = async () => {
-      const response = await fetch(href);
-      const htmlString = await response.text();
-      setIncludeHtml(htmlString);
-    };
-    fetchInclude();
-  }, [href]);
+    setIncludeHtml(html);
+  }, [html]);
 
   useEffect(() => {
     const scriptTagRegExp = new RegExp(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
@@ -114,14 +109,10 @@ const IncludeContainer = ({ html, type, href }) => {
 };
 
 IncludeContainer.propTypes = {
-  href: string,
-  html: string,
+  html: string.isRequired,
   type: string.isRequired,
 };
 
-IncludeContainer.defaultProps = {
-  href: null,
-  html: null,
-};
+IncludeContainer.defaultProps = {};
 
 export default IncludeContainer;
