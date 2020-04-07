@@ -252,7 +252,7 @@ export const service = {
         url: '/persian',
       },
       {
-        title: 'ویروس کرونا',
+        title: 'کرونا',
         url: '/persian/science-52004647',
       },
       {
@@ -300,10 +300,6 @@ export const service = {
         url: '/persian/science',
       },
       {
-        title: 'شما',
-        url: '/persian/interactivity',
-      },
-      {
         title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
       },
@@ -314,10 +310,6 @@ export const service = {
       {
         title: 'وبلاگ‌ها',
         url: '/persian/services/2012/01/000000_blogs_list',
-      },
-      {
-        title: 'آموزش زبان انگلیسی',
-        url: '/persian/learningenglish',
       },
     ],
   },
