@@ -190,7 +190,7 @@ const StoryPage = ({ pageData }) => {
 
       <StyledGrid columns={gridColumns} enableGelGutters margins={gridMargins}>
         <Grid item columns={gridColsMain} startOffset={gridOffset}>
-          <main>
+          <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           <CpsRelatedContent content={relatedContent} />
