@@ -4,11 +4,6 @@ import nodeLogger from '#lib/logger.node';
 const logger = nodeLogger(__filename);
 
 const buildIncludeUrl = (href, type) => {
-  const hostName =
-    process.env.NODE_ENV === 'production'
-      ? 'https://bbc.com'
-      : 'https://test.bbc.com';
-
   const resolvers = {
     idt1: '',
     idt2: '/html',
@@ -17,7 +12,7 @@ const buildIncludeUrl = (href, type) => {
 
   const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
-  return `${hostName}/ws/includes${withTrailingHref}${resolvers[type]}`;
+  return `${process.env.SIMORGH_INCLUDES_ENDPOINT}${withTrailingHref}${resolvers[type]}`;
 };
 
 const fetchMarkup = async (url) => {

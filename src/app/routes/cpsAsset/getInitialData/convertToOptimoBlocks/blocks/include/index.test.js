@@ -1,12 +1,14 @@
 import convertInclude from '.';
 
-const vjMarkup = `<div>Visual Jounalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
+const vjMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 
 const idt2Markup = `<div>IDT 2 Markup</div><script type="text/javascript" src="localhost/idt2.js"></script>`;
 
 const idt1Markup = `<div>IDT 1 Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 
 describe('convertInclude', () => {
+  const includesResource = 'https://foobar.com/includes';
+  process.env.SIMORGH_INCLUDES_ENDPOINT = includesResource;
   afterEach(() => {
     fetch.resetMocks();
   });
@@ -82,7 +84,7 @@ describe('convertInclude', () => {
     expect(await convertInclude(input)).toEqual(expected);
     expect(fetch).toHaveBeenCalled();
     expect(fetch).toHaveBeenCalledWith(
-      'https://test.bbc.com/ws/includes/include/111-222-333-444-555',
+      'https://foobar.com/includes/include/111-222-333-444-555',
       {
         timeout: 3000,
       },
@@ -111,7 +113,7 @@ describe('convertInclude', () => {
     };
     expect(await convertInclude(input)).toEqual(expected);
     expect(fetch).toHaveBeenCalledWith(
-      'https://test.bbc.com/ws/includes/indepthtoolkit',
+      'https://foobar.com/includes/indepthtoolkit',
       {
         timeout: 3000,
       },
@@ -141,7 +143,7 @@ describe('convertInclude', () => {
     expect(await convertInclude(input)).toEqual(expected);
     expect(fetch).toHaveBeenCalled();
     expect(fetch).toHaveBeenCalledWith(
-      'https://test.bbc.com/ws/includes/idt2/html',
+      'https://foobar.com/includes/idt2/html',
       {
         timeout: 3000,
       },
@@ -172,7 +174,7 @@ describe('convertInclude', () => {
     expect(await convertInclude(input)).toEqual(expected);
     expect(fetch).toHaveBeenCalled();
     expect(fetch).toHaveBeenCalledWith(
-      'https://test.bbc.com/ws/includes/idt2/html',
+      'https://foobar.com/includes/idt2/html',
       {
         timeout: 3000,
       },
