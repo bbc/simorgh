@@ -6,12 +6,11 @@
         "caption": "BBC Pidgin Minute",
         "embedding": false,
         "format": "audio",
-        "id": "p06pdt28",
+        "id": "p081lwmg",
         "imageCopyright": "BBC",
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06pdt9g.jpg",
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081lx1r.jpg",
         "subType": "clip",
         "synopses": {
-          "long": null,
           "medium": "All di local and world tori wey you suppose know in 60 seconds!",
           "short": "BBC Pidgin Minute"
         },
@@ -19,14 +18,20 @@
         "type": "media",
         "versions": [
           {
-            "availableTerritories": { "nonUk": true, "uk": true },
-            "availableUntil": 1540125766,
-            "duration": 56,
+            "availableFrom": 1580215615000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "availableUntil": 1580302015000,
+            "duration": 60,
+            "durationISO8601": "PT1M",
             "types": ["Original"],
-            "versionId": "p06pdt2c"
+            "versionId": "p081lwmj",
+            "warnings": {}
           }
-        ],
-        "warnings": {}
+        ]
       },
       {
         "markupType": "plain_text",
@@ -43,11 +48,12 @@
     },
     "blockTypes": ["media", "paragraph"],
     "createdBy": "pidgin-v6",
-    "firstPublished": 1527054884,
+    "firstPublished": 1527054884000,
     "id": "urn:bbc:ares::asset:pidgin/media-44221514",
+    "includeComments": false,
     "language": "pcm",
-    "lastPublished": 1540039524,
-    "lastUpdated": 1542122731346,
+    "lastPublished": 1580216517000,
+    "lastUpdated": 1580216527670,
     "locators": {
       "assetUri": "/pidgin/media-44221514",
       "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
@@ -66,9 +72,94 @@
       "isIgorSeoTagsEnabled": false,
       "isKeyContent": false
     },
-    "tags": {},
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        },
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "curationList": [
+            {
+              "curationId": "30600bd9-ac23-45c9-948a-55fe7e115078",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
+          "thingLabel": "Nigeria",
+          "thingSameAs": ["http://sws.geonames.org/2328926/"],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
+          "topicId": "c2dwqd1zr92t",
+          "topicName": "Nigeria"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "6396890d-e9a6-4ca8-a8a0-29be9b9ef754",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "6ae05645-a3cf-4c86-a194-fdd98389a670",
+          "thingLabel": "Cameroon",
+          "thingSameAs": ["http://sws.geonames.org/2233387/"],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingUri": "http://www.bbc.co.uk/things/6ae05645-a3cf-4c86-a194-fdd98389a670#id",
+          "topicId": "c340q4z3n2qt",
+          "topicName": "Cameroon"
+        },
+        {
+          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+          "thingLabel": "Africa",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Africa",
+            "http://sws.geonames.org/6255146/",
+            "http://www.wikidata.org/entity/Q15"
+          ],
+          "thingType": ["news:Place", "Place", "Thing"],
+          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "bc8ddb8e-dd87-4a69-9cae-832d7c377302",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingId": "d3d75366-7593-4ef6-93c7-b9490925fea0",
+          "thingLabel": "Ghana",
+          "thingSameAs": ["http://sws.geonames.org/2300660/"],
+          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
+          "thingUri": "http://www.bbc.co.uk/things/d3d75366-7593-4ef6-93c7-b9490925fea0#id",
+          "topicId": "cg72673yg2rt",
+          "topicName": "Ghana"
+        }
+      ]
+    },
+    "timestamp": 1580216510000,
     "type": "MAP",
-    "version": "v0.4.11"
+    "version": "v1.1.4"
   },
   "promo": {
     "headlines": {
@@ -80,24 +171,28 @@
       "altText": "BBC Pidgin Minute",
       "copyrightHolder": "BBC",
       "height": 549,
-      "href": "http://c.files.bbci.co.uk/78F6/production/_103366903_p06kb8kc.jpg",
-      "id": "103366903",
-      "path": "/cpsprodpb/78F6/production/_103366903_p06kb8kc.jpg",
+      "href": "http://c.files.bbci.co.uk/14A8E/production/_110222648_p07y820h.jpg",
+      "id": "110222648",
+      "path": "/cpsprodpb/14A8E/production/_110222648_p07y820h.jpg",
       "subType": "index",
       "type": "image",
       "width": 976
     },
-    "indexMedia": {
+    "locators": {
+      "assetUri": "/pidgin/media-44221514",
+      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
+      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230"
+    },
+    "media": {
       "advertising": false,
       "caption": "BBC Pidgin Minute",
       "embedding": false,
       "format": "audio",
-      "id": "p06pdt28",
+      "id": "p081lwmg",
       "imageCopyright": "BBC",
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06pdt9g.jpg",
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p081lx1r.jpg",
       "subType": "clip",
       "synopses": {
-        "long": null,
         "medium": "All di local and world tori wey you suppose know in 60 seconds!",
         "short": "BBC Pidgin Minute"
       },
@@ -105,27 +200,59 @@
       "type": "media",
       "versions": [
         {
-          "availableTerritories": { "nonUk": true, "uk": true },
-          "availableUntil": 1540125766,
-          "duration": 56,
+          "availableFrom": 1580215615000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "availableUntil": 1580302015000,
+          "duration": 60,
+          "durationISO8601": "PT1M",
           "types": ["Original"],
-          "versionId": "p06pdt2c"
+          "versionId": "p081lwmj",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        },
+        {
+          "campaignId": "5a988e3e39461b000e9dabfb",
+          "campaignName": "WS - Keep me on trend"
+        },
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
         }
       ],
-      "warnings": {}
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
     },
-    "locators": {
-      "assetUri": "/pidgin/media-44221514",
-      "cpsUrn": "urn:bbc:content:assetUri:pidgin/media-44221514",
-      "curie": "http://www.bbc.co.uk/asset/80c40606-2288-7e48-820e-1770842e1230"
-    },
-    "passport": {},
     "summary": "All di local and world tori wey you suppose know in 60 seconds!",
-    "timestamp": 1542122731346
+    "timestamp": 1580216510000,
+    "type": "cps"
   },
   "relatedContent": {
     "groups": [],
-    "section": { "name": "Media", "subType": "index", "uri": "/pidgin/media" },
-    "site": { "name": "BBC Pidgin", "subType": "site", "uri": "/pidgin" }
+    "section": {
+      "name": "Media",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/pidgin/media"
+    },
+    "site": {
+      "name": "BBC Pidgin",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/pidgin"
+    }
   }
 }
