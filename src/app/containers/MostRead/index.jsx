@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { bool, string } from 'prop-types';
+import { bool, string, node } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
+import mostReadShape from './utilities/mostReadShape';
 
 const getMostReadEndpoint = ({ service, variant }) =>
   variant
@@ -45,16 +46,16 @@ const MostReadContainer = ({
 
 MostReadContainer.propTypes = {
   mostReadEndpointOverride: string,
-  constrainMaxWidth: bool,
   maxTwoColumns: bool,
-  isOnFrontPage: bool,
+  initialData: mostReadShape,
+  wrapper: node,
 };
 
 MostReadContainer.defaultProps = {
   mostReadEndpointOverride: null,
-  constrainMaxWidth: false,
   maxTwoColumns: false,
-  isOnFrontPage: false,
+  initialData: null,
+  wrapper: null,
 };
 
 export default MostReadContainer;

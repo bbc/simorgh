@@ -21,6 +21,7 @@ import webLogger from '#lib/logger.web';
 import { mostReadRecordIsFresh, shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
 import filterMostRead from './filterMostRead';
+import mostReadShape from '../utilities/mostReadShape';
 
 const logger = webLogger();
 
@@ -54,23 +55,18 @@ const CanonicalMostRead = ({
 
   useEffect(() => {
     const handleResponse = async (response) => {
-      const mostReadData = await response.json();
-
-      // The ARES test endpoint for most read renders fixture data, so the data is stale
-      const isTest = process.env.SIMORGH_APP_ENV === 'test';
-
-      // Do not show most read if lastRecordUpdated is greater than 35min as this means PopAPI has failed twice
-      // in succession. This suggests ATI may be having issues, hence risk of stale data.
-      if (isTest || mostReadRecordIsFresh(mostReadData.lastRecordTimeStamp)) {
-        setItems(filterMostRead({ data: mostReadData, numberOfItems }));
+      if (!response.ok) {
+        throw Error(response.statusText);
       }
+      const mostReadData = await response.json();
+      setItems(filterMostRead({ data: mostReadData, numberOfItems }));
     };
     const fetchMostReadData = (pathname) =>
       fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
         .catch((e) => logger.error(`HTTP Error: "${e}"`));
 
-    if (items.length === 0) {
+    if (items) {
       fetchMostReadData(endpoint);
     }
   }, [
@@ -84,7 +80,7 @@ const CanonicalMostRead = ({
     items,
   ]);
 
-  if (!items.length) {
+  if (!items) {
     return null;
   }
 
@@ -139,13 +135,13 @@ const CanonicalMostRead = ({
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   maxTwoColumns: bool,
-  initialData: shape({}),
+  initialData: mostReadShape,
   wrapper: node,
 };
 
 CanonicalMostRead.defaultProps = {
   maxTwoColumns: false,
-  initialData: { records: [] },
+  initialData: null,
   wrapper: React.Fragment,
 };
 

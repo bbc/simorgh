@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { shape, string } from 'prop-types';
+import { string } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -22,6 +22,7 @@ import { getCanon } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
+import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
@@ -92,7 +93,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 };
 
 MostReadPage.propTypes = {
-  pageData: shape({}),
+  pageData: mostReadShape.isRequired,
   mostReadEndpointOverride: string,
 };
 

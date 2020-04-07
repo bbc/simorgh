@@ -1,6 +1,6 @@
 import fetchPageData from '../../utils/fetchPageData';
 
-export default async ({ path, service }) => {
+export default async ({ service }) => {
   const { json, ...rest } = await fetchPageData(`/${service}/mostread`);
 
   return {
