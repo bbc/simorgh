@@ -1,0 +1,1018 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Most Read Page Main should match snapshot for Canonical 1`] = `
+.c4 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+}
+
+.c9 {
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+.c11 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.c11:hover,
+.c11:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.c10 {
+  padding-top: 0.375rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.c12 {
+  padding-top: 0.5rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.c6 {
+  position: relative;
+}
+
+.c13 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #6E6E73;
+  display: block;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c1 {
+  color: #6E6E73;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@supports (display:grid) {
+  .c3 {
+    display: grid;
+    position: initial;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c5 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c5 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c5 {
+    width: calc(100%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c5 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    width: calc(50%);
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    display: block;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c4 {
+    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c8 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c8 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c8 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    min-width: auto;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c14 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c14 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c14 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c14 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c15 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c15 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c15 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c15 {
+    min-width: 4rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c16 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c16 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c16 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    min-width: auto;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c9 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c9 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@supports (grid-template-columns:fit-content(200px)) {
+  .c10 {
+    padding-right: 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c13 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c13 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c2 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width:24.9375rem) {
+  .c0 {
+    margin: 0 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    margin: 0 1rem 2rem;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    margin: 0 1rem 2.5rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 0 1rem;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c1 {
+    font-size: 2.75rem;
+    line-height: 3.625rem;
+  }
+}
+
+<html
+  dir="ltr"
+  lang="am"
+>
+  <head>
+    <title>
+      ብዙ የተነበቡ - BBC News አማርኛ
+    </title>
+    <link
+      href="https://www.test.bbc.com/pathname"
+      rel="canonical"
+    />
+    <link
+      href="https://www.test.bbc.com/pathname.amp"
+      rel="amphtml"
+    />
+    <link
+      href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      rel="apple-touch-icon"
+      sizes="96x96"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
+      rel="apple-touch-icon"
+      sizes="128x128"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      rel="apple-touch-icon"
+      sizes="192x192"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
+      rel="apple-touch-icon"
+      sizes="384x384"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      rel="apple-touch-icon"
+      sizes="512x512"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
+      rel="icon"
+      sizes="72x72"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
+      rel="icon"
+      sizes="96x96"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
+      rel="icon"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
+      rel="apple-touch-startup-image"
+    />
+    <link
+      href="/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible"
+    />
+    <meta
+      charset="utf-8"
+    />
+    <meta
+      content="noodp,noydir"
+      name="robots"
+    />
+    <meta
+      content="#B80000"
+      name="theme-color"
+    />
+    <meta
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+      name="viewport"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="apple-mobile-web-app-title"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="application-name"
+    />
+    <meta
+      content="mostread"
+      name="description"
+    />
+    <meta
+      content="100004154058350"
+      property="fb:admins"
+    />
+    <meta
+      content="1609039196070050"
+      property="fb:app_id"
+    />
+    <meta
+      content="yes"
+      name="mobile-web-app-capable"
+    />
+    <meta
+      content="#B80000"
+      name="msapplication-TileColor"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
+      name="msapplication-TileImage"
+    />
+    <meta
+      content="mostread"
+      property="og:description"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      property="og:image"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      property="og:image:alt"
+    />
+    <meta
+      content="am-ET"
+      property="og:locale"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      property="og:site_name"
+    />
+    <meta
+      content="ብዙ የተነበቡ - BBC News አማርኛ"
+      property="og:title"
+    />
+    <meta
+      content="website"
+      property="og:type"
+    />
+    <meta
+      content="https://www.test.bbc.com/pathname"
+      property="og:url"
+    />
+    <meta
+      content="summary_large_image"
+      name="twitter:card"
+    />
+    <meta
+      content="@bbcnews"
+      name="twitter:creator"
+    />
+    <meta
+      content="mostread"
+      name="twitter:description"
+    />
+    <meta
+      content="BBC News አማርኛ"
+      name="twitter:image:alt"
+    />
+    <meta
+      content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
+      name="twitter:image:src"
+    />
+    <meta
+      content="@bbcnews"
+      name="twitter:site"
+    />
+    <meta
+      content="ብዙ የተነበቡ - BBC News አማርኛ"
+      name="twitter:title"
+    />
+  </head>
+  <body>
+    <div>
+      <div>
+        chartbeat
+      </div>
+      <main
+        class="c0"
+        dir="ltr"
+        role="main"
+      >
+        <h1
+          class="c1"
+          id="content"
+        >
+          ብዙ የተነበቡ
+        </h1>
+        <div
+          class="c2"
+        >
+          <ol
+            class="c3 c4"
+            dir="ltr"
+            role="list"
+          >
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c8"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    1
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-46729879"
+                  >
+                    Public Holidays wey go happun for 2019
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-05-21"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 21 ግንቦት 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c14"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    2
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-50304653"
+                  >
+                    Liberia banks don run out of money
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-11-05"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 5 ህዳር 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c8"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    3
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-50298882"
+                  >
+                    Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-11-05"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 5 ህዳር 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c14"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    4
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-50315150"
+                  >
+                    Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-11-06"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 6 ህዳር 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c8"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    5
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-50315157"
+                  >
+                    How Balogun market fire kill Policeman for Lagos
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-11-06"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 6 ህዳር 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c15"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    6
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-50093818"
+                  >
+                    Labour, FG finally agree minimum wage salary adjustment
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-10-18"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 18 ጥቅምት 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c16"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    7
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-50187218"
+                  >
+                    Naira Marley na 'Bad Influence'?
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-10-25"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 25 ጥቅምት 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c15"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    8
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-48347911"
+                  >
+                    Tins you suppose know about Naira Marley
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-05-23"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 23 ግንቦት 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c16"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    9
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/sport-50312710"
+                  >
+                    Golden Eaglets crash out of Fifa U17 World Cup
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-11-06"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 6 ህዳር 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="c5 c6"
+              dir="ltr"
+              role="listitem"
+            >
+              <div
+                class="c7"
+              >
+                <div
+                  class="c15"
+                  dir="ltr"
+                >
+                  <span
+                    class="c9"
+                  >
+                    10
+                  </span>
+                </div>
+                <div
+                  class="c10"
+                  dir="ltr"
+                >
+                  <a
+                    class="c11"
+                    href="/pidgin/tori-42945173"
+                  >
+                    Tiger nut drink fit wake up your sex drive - Nutritionist
+                  </a>
+                  <div
+                    class="c12"
+                  >
+                    <time
+                      class="c13"
+                      datetime="2019-05-21"
+                    >
+                      በመጨረሻ ማሻሻያ የተደረገበት 21 ግንቦት 2019
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+`;

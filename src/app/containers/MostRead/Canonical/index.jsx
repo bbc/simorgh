@@ -80,8 +80,6 @@ const CanonicalMostRead = ({
     items,
   ]);
 
-  console.log('items', items);
-
   if (!items) {
     return null;
   }

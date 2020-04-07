@@ -1,5 +1,6 @@
 import filterMostRead from './filterMostRead';
 import pidginData from '#data/pidgin/mostRead';
+import { setStaleLastRecordTimeStamp } from '../utilities/testHelpers';
 
 const expectedPidginData = [
   {
@@ -66,18 +67,31 @@ const expectedPidginData = [
 ];
 
 describe('filterMostRead', () => {
-  it('should return expected data', () => {
-    expect(filterMostRead({ data: pidginData, numberOfItems: 10 })).toEqual(
-      expectedPidginData,
-    );
-  });
-
-  it('should return null when no data is passed', () => {
-    expect(filterMostRead({})).toBeNull();
-  });
-
-  it('should return empty array when records doesn not exist', () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-    expect(filterMostRead({ data: {}, numberOfItems: 10 })).toEqual([]);
+  [
+    {
+      description: 'should return expected filtered data',
+      data: pidginData,
+      numberOfItems: 10,
+      expectedReturn: expectedPidginData,
+    },
+    {
+      description: 'should return null when last record time stamp is stale',
+      data: setStaleLastRecordTimeStamp(pidginData),
+      expectedReturn: null,
+    },
+    {
+      description: 'should return null when no data is passed',
+      data: undefined,
+      expectedReturn: null,
+    },
+    {
+      description: 'should return empty array when records does not exist',
+      data: { lastRecordTimeStamp: '2100-11-06T16:37:00Z' },
+      expectedReturn: [],
+    },
+  ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
+    it(description, () => {
+      expect(filterMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+    });
   });
 });
