@@ -15,7 +15,9 @@ const buildIncludeUrl = (href, type) => {
     vj: '',
   };
 
-  return `${hostName}/ws/includes${href}${resolvers[type]}`;
+  const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
+
+  return `${hostName}/ws/includes${withTrailingHref}${resolvers[type]}`;
 };
 
 const fetchMarkup = async (url) => {
