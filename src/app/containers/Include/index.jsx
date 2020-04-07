@@ -39,18 +39,21 @@ const IncludeContainer = ({ html, type, href }) => {
       const script = document.createElement('script');
       if (src) {
         script.src = src;
+        // eslint-disable-next-line func-names
+        script.onload = function () {
+          resolve();
+        };
       } else if (code) {
         script.appendChild(document.createTextNode(code));
       }
-      // eslint-disable-next-line func-names
-      script.onload = function () {
-        resolve();
-      };
       // eslint-disable-next-line func-names
       script.onerror = function () {
         reject();
       };
       document.body.append(script);
+      if (code) {
+        resolve();
+      }
     });
   };
 
