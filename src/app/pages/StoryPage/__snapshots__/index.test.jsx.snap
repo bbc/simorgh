@@ -1356,7 +1356,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 class="c2"
                 dir="ltr"
               >
-                <main>
+                <main
+                  role="main"
+                >
                   <div
                     class="c3"
                   >
@@ -3761,7 +3763,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     class="c2"
                     dir="ltr"
                   >
-                    <main>
+                    <main
+                      role="main"
+                    >
                       <div
                         class="c3"
                       >
