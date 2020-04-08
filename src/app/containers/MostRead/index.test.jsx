@@ -38,7 +38,6 @@ const MostReadWithContext = ({
     </RequestContextProvider>
   </ToggleContext.Provider>
 );
-/* eslint-enable react/prop-types */
 
 const shouldRenderMostRead = (container) =>
   expect(container.querySelector('ol')).toBeInTheDocument();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Most Read Page Main should match snapshot for Canonical 1`] = `
+exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 .c4 {
   list-style-type: none;
   margin: 0;

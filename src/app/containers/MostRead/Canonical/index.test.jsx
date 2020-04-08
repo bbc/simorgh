@@ -18,12 +18,14 @@ describe('MostReadContainerCanonical', () => {
 
   [
     {
+      description: 'should render 10 list items for pidgin from fetched data',
       service: 'pidgin',
       numberOfItems: 10,
       mostReadData: pidginMostReadData,
       endpoint: 'www.test.bbc.com/pidgin/mostread.json',
     },
     {
+      description: 'should render 5 list items for nepali from server data',
       service: 'nepali',
       numberOfItems: 5,
       mostReadData: nepaliMostReadData,
@@ -31,8 +33,15 @@ describe('MostReadContainerCanonical', () => {
       initialData: nepaliMostReadData,
     },
   ].forEach(
-    ({ service, numberOfItems, mostReadData, endpoint, initialData }) => {
-      it(`should return ${numberOfItems} list items for ${service} `, async () => {
+    ({
+      description,
+      service,
+      numberOfItems,
+      mostReadData,
+      endpoint,
+      initialData,
+    }) => {
+      it(description, async () => {
         fetch.mockResponse(
           JSON.stringify(setFreshPromoTimestamp(mostReadData)),
         );
@@ -56,6 +65,8 @@ describe('MostReadContainerCanonical', () => {
 
         if (initialData) {
           expect(fetch).not.toBeCalled();
+        } else {
+          expect(fetch).toBeCalled();
         }
       });
     },
@@ -125,6 +136,7 @@ describe('MostReadContainerCanonical', () => {
         JSON.stringify(setFreshPromoTimestamp(nepaliMostReadData)),
       );
 
+      /* eslint-disable-next-line react/prop-types */
       const MockWrapper = ({ children }) => (
         <div>
           <h1>Most Read</h1>
