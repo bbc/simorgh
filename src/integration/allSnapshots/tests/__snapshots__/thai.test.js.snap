@@ -1,0 +1,3328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /thai For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="th"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="th-TH"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/thai"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/thai/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/thai"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/thai"
+          hreflang="th"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"WebPage","url":"http://localhost:7080/thai","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ไทย","publishingPrinciples":"https://www.bbc.com/thai/institutional-49281839","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/thai","name":"หน้าแรก"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 cNzHxi"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 fdoQdE"
+                  >
+                    เราได้ปรับปรุงนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์แล้ว
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    เราได้แก้ไขข้อมูลที่สำคัญของนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์ และเราต้องการให้คุณทราบถึง ผลกระทบต่อตัวคุณและข้อมูลของคุณ
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ตกลง
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        ดูว่ามีอะไรเปลี่ยนแปลงไปบ้าง
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 cNzHxi"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 fdoQdE"
+                  >
+                    กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    เราใช้
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      คุกกีส์
+                    </a>
+                    เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        ยอมรับ
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        ไม่ยอมรับ ไปที่การตั้งค่า
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 epdEkN">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 icaRnC"
+            >
+              ข้ามไปยังเนื้อหา
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 kFmrTl"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                หมวดข่าว
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    <span dir="ltr"
+                          role="text"
+                          class="StyledCurrentLink-ukxuly-5 ecIXaD"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        หน้าปัจจุบัน
+                        ,
+                      </span>
+                      หน้าแรก
+                    </span>
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ประเทศไทย
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/international"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ต่างประเทศ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิทยาศาสตร์
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    สุขภาพ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/media/video"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิดีโอ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ยอดนิยม
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai"
+                     class="StyledLink-sc-158x7z5-2 bBpztS"
+                  >
+                    <span role="text"
+                          class="StyledSpan-sc-158x7z5-4 ktTFbu"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        หน้าปัจจุบัน
+                        ,
+                      </span>
+                      หน้าแรก
+                    </span>
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    ประเทศไทย
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/international"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    ต่างประเทศ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    วิทยาศาสตร์
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    สุขภาพ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/media/video"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    วิดีโอ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    ยอดนิยม
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=90&p=thai.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3fd51a2d-70f9-c435-e050-380a4e80342f]&x2=[amp]&x3=[news-thai]&x4=[th]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[หน้าแรก+-+BBC+News+ไทย]&x11=[2016-10-27T10:36:34.000Z]&x12=[2019-08-19T10:06:08.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Thai, Thai - IDX","uid":50924,"title":"หน้าแรก - BBC News ไทย","virtualReferrer":"\${documentReferrer}","contentType":"Index"}}
+        </script>
+      </amp-analytics>
+      <main role="main">
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          <span role="text">
+            <span lang="en-GB">
+              BBC News
+            </span>
+            ,
+            ไทย
+            -
+            หน้าแรก
+          </span>
+        </h1>
+        <div class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu">
+          <section role="region"
+                   aria-labelledby="Top-stories"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="Top-stories"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      ข่าวเด่น
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="ไทย นักท่องเที่ยว จีน อินเดีย"
+                               attribution="Wasawat Lukharang/bbc thai"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16770/production/_108361029_29978099625_0654dde287_h.jpg"
+                               height="900"
+                               width="1600"
+                      >
+                      </amp-img>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 jDuGEg">
+                    <a href="/thai/thailand-49393978"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      อดีตแนวร่วม กปปส. อัด ประวิตร-ดอน ฐานค้าน ฟรีวีซ่า อินเดีย-จีน
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 bVGGmr">
+                    รมต. อย่างน้อย 2 คนไม่เห็นด้วยกับการปล่อย “ฟรีวีซ่า” ให้นักท่องเที่ยวจีน-อินเดีย
+                  </p>
+                  <time datetime="2019-08-19"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    19 สิงหาคม 2019
+                  </time>
+                  <div data-e2e="index-alsos"
+                       class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
+                  >
+                    <h4 class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      อ่านข่าวนี้เพิ่มเติม
+                    </h4>
+                    <div class="StyledIndexAlso-xsqyvb-1 kZPHaK">
+                      <a href="/thai/49371889"
+                         class="StyledIndexAlsosLink-xsqyvb-5 ktEtui"
+                      >
+                        <span class="IndexAlsosText-xsqyvb-4 gvRfTv">
+                          ทำอย่างไรให้ได้เงินเที่ยวฟรี 1,000 บาท จากรัฐบาล
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section role="region"
+                   aria-labelledby="Special-reports-1"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <a href="http://www.bbc.com/thai/international"
+                   aria-labelledby="Special-reports-1"
+                   class="SectionLabelLink-wx5kdp-1 hlUWNS"
+                >
+                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span role="text"
+                          class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                    >
+                      <span id="Special-reports-1"
+                            dir="ltr"
+                            class="Title-wx5kdp-4 WYKXP"
+                      >
+                        รายงานพิเศษ
+                      </span>
+                      <span dir="ltr"
+                            aria-hidden="true"
+                            class="IndexLinkCta-wx5kdp-5 jCQWzq"
+                      >
+                        ดูทั้งหมด
+                      </span>
+                    </span>
+                  </div>
+                </a>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="วิทยุทรานซิสเตอร์จำนวน 10 เครื่อง จะถูกนำไปวางจุดต่าง ๆ ในอาคารรัฐสภาที่การถ่ายทอดสัญญาณเสียงการประชุมเข้าไม่ถึง เช่น หน้าห้องน้ำและโรงอาหาร"
+                                 attribution="กองโฆษก พรรคพลังประชารัฐ"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/804A/production/_108324823_whatsappimage2019-08-15at17.54.30.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/thailand-49354450"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        เมื่ออาคารรัฐสภา 2 หมื่นล้านต้องพึ่งวิทยุทรานซิสเตอร์
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      รู้จัก "วิทยุทรานซิสเตอร์" อุปกรณ์สื่อสารยุคแอนะล็อกที่จะมีบทบาทสำคัญในอาคารรัฐสภายุค 4.0
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="ส.ว."
+                                 attribution="WASAWAT LUKHARANG/BBC THAI"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1BDC/production/_108323170_48371422997_a45df151a3_k.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/thailand-49356887"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        สำรวจความมั่งคั่ง “ส.ว. เฉพาะกาล” ผ่านบัญชีทรัพย์สิน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ป.ป.ช. เปิดเผยบัญชีแสดงรายการทรัพย์สินและหนี้สิน ส.ว. เฉพาะกาล ทว่า "ส.ว. ผบ. เหล่าทัพ" นั้นสบช่องตามกฎหมาย ไม่ต้องยื่นบัญชีทรัพย์สินซ้ำ เนื่องจากเคยเป็น สนช. มาก่อน
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="ประท้วง"
+                                 attribution="NurPhoto/Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/5600/production/_108361022_gettyimages-1162580270.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/49347112"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        เปรียบเทียบการประท้วงฮ่องกง-ไทย กับ 2 ผู้เชี่ยวชาญจีน-อาเซียน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      บีบีซีไทยคุยกับ 2 นักวิชาการจุฬาฯ-ธรรมศาสตร์ เปรียบเทียบการชุมนุมที่ฮ่องกง กับ การชุมนุมขับไล่ “ระบอบทักษิณ”
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="ธนาธร"
+                                 attribution="กองโฆษก พรรคอนาคตใหม่"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/96D3/production/_108311683_img_0976.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/49346882"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ยุทธศาสตร์ 3 ขาของอนาคตใหม่ “หยุดระเบิดเวลา” รธน.
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      นายกฯ คนที่ 29 บอก “ยังไม่ถึงเวลา” แก้รัฐธรรมนูญฉบับปี 2560 ซึ่งพรรคอนาคตใหม่ชี้ว่าเป็น “ระเบิดเวลา”
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section role="region"
+                   aria-labelledby="WatchListen"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <a href="http://www.bbc.com/thai/international"
+                   aria-labelledby="WatchListen"
+                   class="SectionLabelLink-wx5kdp-1 hlUWNS"
+                >
+                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span role="text"
+                          class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                    >
+                      <span id="WatchListen"
+                            dir="ltr"
+                            class="Title-wx5kdp-4 WYKXP"
+                      >
+                        วิดีโอ
+                      </span>
+                      <span dir="ltr"
+                            aria-hidden="true"
+                            class="IndexLinkCta-wx5kdp-5 jCQWzq"
+                      >
+                        ดูทั้งหมด
+                      </span>
+                    </span>
+                  </div>
+                </a>
+              </h2>
+            </div>
+            <div class="SpacingDiv-sc-1t555e8-2 eeEZOm">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="Keyframe #3"
+                               attribution="BBC"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0716/production/_108341810_p07kvd7f.jpg"
+                               height="576"
+                               width="1024"
+                      >
+                      </amp-img>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                      <div aria-hidden="true"
+                           dir="ltr"
+                           class="StyledMediaIndicator-sc-1p6h86b-0 eztqLp"
+                      >
+                        <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                          <svg viewbox="0 0 32 32"
+                               width="12px"
+                               height="12px"
+                               focusable="false"
+                               aria-hidden="true"
+                               class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          >
+                            <polygon points="3,32 29,16 3,0">
+                            </polygon>
+                          </svg>
+                          <time datetime="PT59S"
+                                class="StyledTime-jpt91x-0 bYtFje"
+                          >
+                            0:59
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 jDuGEg">
+                    <a href="/thai/international-49371742"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      <span role="text">
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          วิดีโอ
+                          ,
+                        </span>
+                        <span>
+                          ดีเจคนแรกที่เปิดเพลงมาจากอวกาศ
+                        </span>
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          , 0,59
+                        </span>
+                      </span>
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 bVGGmr">
+                    ลูกา ปาร์มีตาโน นักบินอวกาศจากองค์การอวกาศยุโรป (ESA) นำชุดเครื่องเล่นเพลงขึ้นไปที่สถานีอวกาศนานาชาติเมื่อวันที่ 13 ส.ค. ที่ผ่านมา และเปิดเพลงผ่านระบบสตรีมมิ่งลงมายังคลับโดมบนเรือสำราญที่มีผู้โดยสาร 2,500 คน ในทะเลเมดิเตอร์ริเนียน
+                  </p>
+                  <time datetime="2019-08-16"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    16 สิงหาคม 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section role="region"
+                   aria-labelledby="Learning-English"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="Learning-English"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      แกลเลอรี่ภาพ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SpacingDiv-sc-1t555e8-2 eeEZOm">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="ในหลวง ร 10"
+                               attribution="Getty Images"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17641/production/_108090859_gettyimages-463105502.jpg"
+                               height="1152"
+                               width="2048"
+                      >
+                      </amp-img>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 jDuGEg">
+                    <a href="/thai/thailand-49098460"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      10 พระบรมฉายาลักษณ์ประวัติศาสตร์ในหลวงรัชกาลที่ 10
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 bVGGmr">
+                    บีบีซีไทยรวบรวม 10 พระบรมฉายาลักษณ์ประวัติศาสตร์ พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว ตั้งแต่ยังทรงพระเยาว์จนถึงเสด็จขึ้นครองราชย์
+                  </p>
+                  <time datetime="2019-07-28"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    28 กรกฎาคม 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section role="region"
+                   aria-labelledby="Features"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="Features"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      เรื่องน่าสนใจ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ">
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hXpmde">
+                      <a href="/thai/features-49369792"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ค้นพบ “อวัยวะ” ชิ้นใหม่ ทำหน้าที่ช่วยรับรู้ความเจ็บปวด
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ในอนาคตเราจะมียาแก้ปวดประสิทธิภาพสูง และพบวิธีรักษาอาการเจ็บปวดเรื้อรังได้ หากเข้าใจการทำงานของอวัยวะชิ้นเล็ก ๆ นี้
+                    </p>
+                    <time datetime="2019-08-16"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      16 สิงหาคม 2019
+                    </time>
+                  </div>
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 jPrZzm">
+                        <amp-img alt="ภาพจำลองโครงสร้างของเซลล์ประสาท"
+                                 attribution="GETTY IMAGES "
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/A70B/production/_108336724_neuronsgettyimages.png"
+                                 height="380"
+                                 width="676"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="โมดี"
+                                 attribution="AFP/Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/C551/production/_108331505_gettyimages-1161831064.jpg"
+                                 height="576"
+                                 width="1024"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49358163"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        นายกฯ อินเดียระบุการเพิกถอนสถานะพิเศษแคชเมียร์ เป็นการฟื้น "ความรุ่งเรืองในอดีต"
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      นายกฯ นเรนทรา โมดี ของ อินเดีย ระบุว่าการต่อต้านการเพิกถอนสถานะพิเศษของแคชเมียร์ภายใต้รัฐธรรมนูญเป็นการ "เล่นเกมการเมือง"
+                    </p>
+                    <time datetime="2019-08-16"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      16 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="คลิป &quot;ทดสอบความอดทนแอร์ วุ่นวายกันทั้งลำ&quot; ที่ถูกเผยแพร่เมื่อวันที่ 7 ส.ค. ที่ผ่านมา ณ ตอนนี้มีผู้ชมแล้วกว่า 8.1 แสนครั้ง"
+                                 attribution="WASAWAT LUKHARANG/BBC Thai"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/77B3/production/_108334603_bwsw6386.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/thailand-49355182"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ได้คุ้มเสียไหม เมื่อยูทิวเบอร์สายห่ามคิดโชว์อะไรแผลง ๆ
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ฟังความเห็นยูทิวเบอร์รุ่นบุกเบิกวิเคราะห์วงการผู้ผลิตรายการทางยูทิวบ์แข่งกันเดือดจนบางครั้งไม่แคร์กฎหมายหรือหมิ่นเหม่ต่อการละเมิดสิทธิ
+                    </p>
+                    <time datetime="2019-08-16"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      16 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="A fashion blogger holding up a t-shirt"
+                                 attribution="Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/FC31/production/_108216546_fashion-blogger-t-shirt.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49278133"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ต้นทุนที่ถูกมองข้ามของเสื้อผ้าแบรนด์ดังราคาถูก
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      โลกาภิวัตน์ทำให้แฟชั่นเปลี่ยนแปลงอย่างรวดเร็ว เรื่องนี้ส่งผลกระทบต่อคนงานในประเทศกำลังพัฒนาอย่างไรบ้าง
+                    </p>
+                    <time datetime="2019-08-13"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      13 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Ash Dykes standing in front of a mountain with the River Yangtze in the background"
+                                 attribution="Ash Dykes"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/50AF/production/_108255602_image00080.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49338067"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        เขาทำได้อย่างไร เดินเท้าตลอดแนวแม่น้ำแยงซี 6,300 กม. ในจีน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      แอช ไดก์ส กลายเป็นมนุษย์คนแรกที่เดินเท้าตลอดแนวแม่น้ำแยงซีของจีน ตั้งแต่ต้นน้ำในทิเบตจนถึงปลายสุดของแม่น้ำใกล้กับนครเซี่ยงไฮ้ โดยใช้เวลาเกือบ 1 ปี
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 cpErdj">
+                        <amp-img alt="เพนกวิน"
+                                 attribution="CANTERBURY MUSEUM"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/31A8/production/_108321721_8c6a6c79-e931-4386-a68d-78242450ad7f.jpg"
+                                 height="371"
+                                 width="660"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/features-49356597"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        นิวซีแลนด์พบฟอสซิลเพนกวินยักษ์ 66 ล้านปี ตัวใหญ่เท่ามนุษย์
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      หลังไดโนเสาร์สูญพันธุ์ไปไม่นาน เพนกวินยักษ์สูง 1.6 เมตร หนัก 80 กิโลกรัม ได้เข้าครอบครองน่านน้ำแถบซีกโลกใต้
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="พระพุทธรูป เจ้าแม่กวนอิม หรือพระสงฆ์?"
+                                 attribution="Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/58A2/production/_108309622_gettyimages-1161509035.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49344782"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        หุ่นยนต์นักบวช มิติใหม่ของศาสนาหรือหมิ่นศรัทธาชาวพุทธ
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      หุ่นยนต์นักบวช จะดึงดูดคนรุ่นใหม่ในญี่ปุ่นให้สนใจในพุทธศาสนามากขึ้นได้หรือไม่
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="A baby with a cross through it"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16588/production/_108282519_babythumbnailv2.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49333742"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ทำไมคนบางกลุ่มจึงอยากให้มนุษย์หยุดการสืบทอดเผ่าพันธุ์
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ใครคือ "ผู้ที่มีแนวคิดต่อต้านการเกิด” แล้วทำไมพวกเขาต้องการให้มนุษย์ค่อย ๆ สูญพันธุ์
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="หญิงมาเล"
+                                 attribution="JOSHUA PAUL FOR THE BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/23E6/production/_108309190_68757b3c-8b83-4446-b08a-3ec7af9f846e.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/features-49343003"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        "ผีสิงยกคณะ" หรือ อุปาทานหมู่ พิสูจน์เหตุนักเรียนหญิงกรีดร้องยกกลุ่มในมาเลเซีย
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      สังคมมุสลิมในรัฐกลันตันของมาเลเซียที่เคร่งทางศาสนา อาจเป็นสาเหตุของเหตุการณ์อุปาทานหมู่หลายต่อหลายครั้งในช่วงไม่กี่ปีที่ผ่านมาหรือไม่
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 cpErdj">
+                        <amp-img alt="ธงจีน"
+                                 attribution="Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/11DB/production/_108317540_9131fa72-8620-4007-8cd9-ce3fdffb4c9a.jpg"
+                                 height="371"
+                                 width="660"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49343002"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        จีนเข้าแทรกแซงเรื่องในฮ่องกงได้แค่ไหน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      มีช่องทางใดบ้างที่เปิดทางให้รัฐบาลจีนแผ่นดินใหญ่เข้ามาแทรกแซงการเมืองในฮ่องกง
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hFnQiR">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-49281839"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403477"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เงื่อนไขการใช้งานของ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403476"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เกี่ยวกับบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38497681"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    นโยบายความเป็นส่วนตัว
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-37981748"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ติดต่อบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /thai For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="th"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="th-TH"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/thai"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/thai/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/thai"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/thai"
+          hreflang="th"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/thai.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"WebPage","url":"http://localhost:7080/thai","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ไทย","publishingPrinciples":"https://www.bbc.com/thai/institutional-49281839","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/thai","name":"หน้าแรก"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 epdEkN">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 icaRnC"
+            >
+              ข้ามไปยังเนื้อหา
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 kFmrTl"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  หมวดข่าว
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai"
+                       class="StyledLink-sc-158x7z5-2 bBpztS"
+                    >
+                      <span role="text"
+                            class="StyledSpan-sc-158x7z5-4 ktTFbu"
+                      >
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          หน้าปัจจุบัน
+                          ,
+                        </span>
+                        หน้าแรก
+                      </span>
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      ประเทศไทย
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/international"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      ต่างประเทศ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      วิทยาศาสตร์
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      สุขภาพ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/media/video"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      วิดีโอ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      ยอดนิยม
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    <span dir="ltr"
+                          role="text"
+                          class="StyledCurrentLink-ukxuly-5 ecIXaD"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        หน้าปัจจุบัน
+                        ,
+                      </span>
+                      หน้าแรก
+                    </span>
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ประเทศไทย
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/international"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ต่างประเทศ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิทยาศาสตร์
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    สุขภาพ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/media/video"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิดีโอ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ยอดนิยม
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=90&amp;p=thai.page&amp;x1=[urn:bbc:cps:3fd51a2d-70f9-c435-e050-380a4e80342f]&amp;x2=[responsive]&amp;x3=[news-thai]&amp;x4=[th]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[หน้าแรก+-+BBC+News+ไทย]&amp;x11=[2016-10-27T10:36:34.000Z]&amp;x12=[2019-08-19T10:06:08.000Z]"
+        >
+      </noscript>
+      <main role="main">
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          <span role="text">
+            <span lang="en-GB">
+              BBC News
+            </span>
+            ,
+            ไทย
+            -
+            หน้าแรก
+          </span>
+        </h1>
+        <div class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu">
+          <section role="region"
+                   aria-labelledby="Top-stories"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 chnGCx">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="Top-stories"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      ข่าวเด่น
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 jDuGEg">
+                    <a href="/thai/thailand-49393978"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      อดีตแนวร่วม กปปส. อัด ประวิตร-ดอน ฐานค้าน ฟรีวีซ่า อินเดีย-จีน
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 bVGGmr">
+                    รมต. อย่างน้อย 2 คนไม่เห็นด้วยกับการปล่อย “ฟรีวีซ่า” ให้นักท่องเที่ยวจีน-อินเดีย
+                  </p>
+                  <time datetime="2019-08-19"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    19 สิงหาคม 2019
+                  </time>
+                  <div data-e2e="index-alsos"
+                       class="StyledIndexAlsos-xsqyvb-0 cMpdvs"
+                  >
+                    <h4 class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      อ่านข่าวนี้เพิ่มเติม
+                    </h4>
+                    <div class="StyledIndexAlso-xsqyvb-1 kZPHaK">
+                      <a href="/thai/49371889"
+                         class="StyledIndexAlsosLink-xsqyvb-5 ktEtui"
+                      >
+                        <span class="IndexAlsosText-xsqyvb-4 gvRfTv">
+                          ทำอย่างไรให้ได้เงินเที่ยวฟรี 1,000 บาท จากรัฐบาล
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section role="region"
+                   aria-labelledby="Special-reports-1"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <a href="http://www.bbc.com/thai/international"
+                   aria-labelledby="Special-reports-1"
+                   class="SectionLabelLink-wx5kdp-1 hlUWNS"
+                >
+                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span role="text"
+                          class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                    >
+                      <span id="Special-reports-1"
+                            dir="ltr"
+                            class="Title-wx5kdp-4 WYKXP"
+                      >
+                        รายงานพิเศษ
+                      </span>
+                      <span dir="ltr"
+                            aria-hidden="true"
+                            class="IndexLinkCta-wx5kdp-5 jCQWzq"
+                      >
+                        ดูทั้งหมด
+                      </span>
+                    </span>
+                  </div>
+                </a>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/thailand-49354450"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        เมื่ออาคารรัฐสภา 2 หมื่นล้านต้องพึ่งวิทยุทรานซิสเตอร์
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      รู้จัก "วิทยุทรานซิสเตอร์" อุปกรณ์สื่อสารยุคแอนะล็อกที่จะมีบทบาทสำคัญในอาคารรัฐสภายุค 4.0
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/thailand-49356887"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        สำรวจความมั่งคั่ง “ส.ว. เฉพาะกาล” ผ่านบัญชีทรัพย์สิน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ป.ป.ช. เปิดเผยบัญชีแสดงรายการทรัพย์สินและหนี้สิน ส.ว. เฉพาะกาล ทว่า "ส.ว. ผบ. เหล่าทัพ" นั้นสบช่องตามกฎหมาย ไม่ต้องยื่นบัญชีทรัพย์สินซ้ำ เนื่องจากเคยเป็น สนช. มาก่อน
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/49347112"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        เปรียบเทียบการประท้วงฮ่องกง-ไทย กับ 2 ผู้เชี่ยวชาญจีน-อาเซียน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      บีบีซีไทยคุยกับ 2 นักวิชาการจุฬาฯ-ธรรมศาสตร์ เปรียบเทียบการชุมนุมที่ฮ่องกง กับ การชุมนุมขับไล่ “ระบอบทักษิณ”
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/49346882"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ยุทธศาสตร์ 3 ขาของอนาคตใหม่ “หยุดระเบิดเวลา” รธน.
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      นายกฯ คนที่ 29 บอก “ยังไม่ถึงเวลา” แก้รัฐธรรมนูญฉบับปี 2560 ซึ่งพรรคอนาคตใหม่ชี้ว่าเป็น “ระเบิดเวลา”
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section role="region"
+                   aria-labelledby="WatchListen"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <a href="http://www.bbc.com/thai/international"
+                   aria-labelledby="WatchListen"
+                   class="SectionLabelLink-wx5kdp-1 hlUWNS"
+                >
+                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span role="text"
+                          class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
+                    >
+                      <span id="WatchListen"
+                            dir="ltr"
+                            class="Title-wx5kdp-4 WYKXP"
+                      >
+                        วิดีโอ
+                      </span>
+                      <span dir="ltr"
+                            aria-hidden="true"
+                            class="IndexLinkCta-wx5kdp-5 jCQWzq"
+                      >
+                        ดูทั้งหมด
+                      </span>
+                    </span>
+                  </div>
+                </a>
+              </h2>
+            </div>
+            <div class="SpacingDiv-sc-1t555e8-2 eeEZOm">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                      <div aria-hidden="true"
+                           dir="ltr"
+                           class="StyledMediaIndicator-sc-1p6h86b-0 eztqLp"
+                      >
+                        <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                          <svg viewbox="0 0 32 32"
+                               width="12px"
+                               height="12px"
+                               focusable="false"
+                               aria-hidden="true"
+                               class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                          >
+                            <polygon points="3,32 29,16 3,0">
+                            </polygon>
+                          </svg>
+                          <time datetime="PT59S"
+                                class="StyledTime-jpt91x-0 bYtFje"
+                          >
+                            0:59
+                          </time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 jDuGEg">
+                    <a href="/thai/international-49371742"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      <span role="text">
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          วิดีโอ
+                          ,
+                        </span>
+                        <span>
+                          ดีเจคนแรกที่เปิดเพลงมาจากอวกาศ
+                        </span>
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          , 0,59
+                        </span>
+                      </span>
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 bVGGmr">
+                    ลูกา ปาร์มีตาโน นักบินอวกาศจากองค์การอวกาศยุโรป (ESA) นำชุดเครื่องเล่นเพลงขึ้นไปที่สถานีอวกาศนานาชาติเมื่อวันที่ 13 ส.ค. ที่ผ่านมา และเปิดเพลงผ่านระบบสตรีมมิ่งลงมายังคลับโดมบนเรือสำราญที่มีผู้โดยสาร 2,500 คน ในทะเลเมดิเตอร์ริเนียน
+                  </p>
+                  <time datetime="2019-08-16"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    16 สิงหาคม 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section role="region"
+                   aria-labelledby="Learning-English"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="Learning-English"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      แกลเลอรี่ภาพ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SpacingDiv-sc-1t555e8-2 eeEZOm">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 hpUEiZ">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 dGiaGH"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 gAqLWy"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 jDuGEg">
+                    <a href="/thai/thailand-49098460"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      10 พระบรมฉายาลักษณ์ประวัติศาสตร์ในหลวงรัชกาลที่ 10
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 bVGGmr">
+                    บีบีซีไทยรวบรวม 10 พระบรมฉายาลักษณ์ประวัติศาสตร์ พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว ตั้งแต่ยังทรงพระเยาว์จนถึงเสด็จขึ้นครองราชย์
+                  </p>
+                  <time datetime="2019-07-28"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    28 กรกฎาคม 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section role="region"
+                   aria-labelledby="Features"
+                   class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
+          >
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="Features"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      เรื่องน่าสนใจ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fTPTiI"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 cgYtyQ">
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 bVRUir"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hXpmde">
+                      <a href="/thai/features-49369792"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ค้นพบ “อวัยวะ” ชิ้นใหม่ ทำหน้าที่ช่วยรับรู้ความเจ็บปวด
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ในอนาคตเราจะมียาแก้ปวดประสิทธิภาพสูง และพบวิธีรักษาอาการเจ็บปวดเรื้อรังได้ หากเข้าใจการทำงานของอวัยวะชิ้นเล็ก ๆ นี้
+                    </p>
+                    <time datetime="2019-08-16"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      16 สิงหาคม 2019
+                    </time>
+                  </div>
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 cpmLDn"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 jPrZzm">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 cWJDXG">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49358163"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        นายกฯ อินเดียระบุการเพิกถอนสถานะพิเศษแคชเมียร์ เป็นการฟื้น "ความรุ่งเรืองในอดีต"
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      นายกฯ นเรนทรา โมดี ของ อินเดีย ระบุว่าการต่อต้านการเพิกถอนสถานะพิเศษของแคชเมียร์ภายใต้รัฐธรรมนูญเป็นการ "เล่นเกมการเมือง"
+                    </p>
+                    <time datetime="2019-08-16"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      16 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/thailand-49355182"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ได้คุ้มเสียไหม เมื่อยูทิวเบอร์สายห่ามคิดโชว์อะไรแผลง ๆ
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ฟังความเห็นยูทิวเบอร์รุ่นบุกเบิกวิเคราะห์วงการผู้ผลิตรายการทางยูทิวบ์แข่งกันเดือดจนบางครั้งไม่แคร์กฎหมายหรือหมิ่นเหม่ต่อการละเมิดสิทธิ
+                    </p>
+                    <time datetime="2019-08-16"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      16 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49278133"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ต้นทุนที่ถูกมองข้ามของเสื้อผ้าแบรนด์ดังราคาถูก
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      โลกาภิวัตน์ทำให้แฟชั่นเปลี่ยนแปลงอย่างรวดเร็ว เรื่องนี้ส่งผลกระทบต่อคนงานในประเทศกำลังพัฒนาอย่างไรบ้าง
+                    </p>
+                    <time datetime="2019-08-13"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      13 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49338067"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        เขาทำได้อย่างไร เดินเท้าตลอดแนวแม่น้ำแยงซี 6,300 กม. ในจีน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      แอช ไดก์ส กลายเป็นมนุษย์คนแรกที่เดินเท้าตลอดแนวแม่น้ำแยงซีของจีน ตั้งแต่ต้นน้ำในทิเบตจนถึงปลายสุดของแม่น้ำใกล้กับนครเซี่ยงไฮ้ โดยใช้เวลาเกือบ 1 ปี
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 cpErdj">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/features-49356597"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        นิวซีแลนด์พบฟอสซิลเพนกวินยักษ์ 66 ล้านปี ตัวใหญ่เท่ามนุษย์
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      หลังไดโนเสาร์สูญพันธุ์ไปไม่นาน เพนกวินยักษ์สูง 1.6 เมตร หนัก 80 กิโลกรัม ได้เข้าครอบครองน่านน้ำแถบซีกโลกใต้
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49344782"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        หุ่นยนต์นักบวช มิติใหม่ของศาสนาหรือหมิ่นศรัทธาชาวพุทธ
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      หุ่นยนต์นักบวช จะดึงดูดคนรุ่นใหม่ในญี่ปุ่นให้สนใจในพุทธศาสนามากขึ้นได้หรือไม่
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49333742"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ทำไมคนบางกลุ่มจึงอยากให้มนุษย์หยุดการสืบทอดเผ่าพันธุ์
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      ใครคือ "ผู้ที่มีแนวคิดต่อต้านการเกิด” แล้วทำไมพวกเขาต้องการให้มนุษย์ค่อย ๆ สูญพันธุ์
+                    </p>
+                    <time datetime="2019-08-14"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      14 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/features-49343003"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        "ผีสิงยกคณะ" หรือ อุปาทานหมู่ พิสูจน์เหตุนักเรียนหญิงกรีดร้องยกกลุ่มในมาเลเซีย
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      สังคมมุสลิมในรัฐกลันตันของมาเลเซียที่เคร่งทางศาสนา อาจเป็นสาเหตุของเหตุการณ์อุปาทานหมู่หลายต่อหลายครั้งในช่วงไม่กี่ปีที่ผ่านมาหรือไม่
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 fxSOhP"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 cpErdj">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                      <a href="/thai/international-49343002"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        จีนเข้าแทรกแซงเรื่องในฮ่องกงได้แค่ไหน
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                      มีช่องทางใดบ้างที่เปิดทางให้รัฐบาลจีนแผ่นดินใหญ่เข้ามาแทรกแซงการเมืองในฮ่องกง
+                    </p>
+                    <time datetime="2019-08-15"
+                          class="StyledTimestamp-um718p-0 eKyewn"
+                    >
+                      15 สิงหาคม 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hFnQiR">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-49281839"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403477"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เงื่อนไขการใช้งานของ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403476"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เกี่ยวกับบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38497681"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    นโยบายความเป็นส่วนตัว
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-37981748"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ติดต่อบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"assetUri":"/thai/front_page","cpsUrn":"urn:bbc:content:assetUri:thai/front_page","curie":"http://www.bbc.co.uk/asset/3fd51a2d-70f9-c435-e050-380a4e80342f/desktop/domestic"},"type":"IDX","createdBy":"thai-v6","language":"th","lastUpdated":1566209175542,"firstPublished":1477564594000,"lastPublished":1566209168000,"options":{"allowAdvertising":true},"analyticsLabels":{"counterName":"thai.page","cps_asset_id":"37786334","cps_asset_type":"idx"},"tags":{},"version":"v1.1.1","blockTypes":["top-story","secondary-top-story","other-top-stories","special-reports","av-stories-now","featured-site-top-stories","picture-gallery-stories","feature-main","useful-links"],"title":"หน้าแรก","summary":"บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"},"content":{"groups":[{"type":"top-stories","title":"Top stories","items":[{"headlines":{"headline":"อดีตแนวร่วม กปปส. อัด ประวิตร-ดอน ฐานค้าน ฟรีวีซ่า อินเดีย-จีน"},"locators":{"assetUri":"/thai/thailand-49393978","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49393978"},"summary":"รมต. อย่างน้อย 2 คนไม่เห็นด้วยกับการปล่อย “ฟรีวีซ่า” ให้นักท่องเที่ยวจีน-อินเดีย","timestamp":1566208304000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/16770/production/_108361029_29978099625_0654dde287_h.jpg","path":"/cpsprodpb/16770/production/_108361029_29978099625_0654dde287_h.jpg","height":900,"width":1600,"altText":"ไทย นักท่องเที่ยว จีน อินเดีย","copyrightHolder":"Wasawat Lukharang/bbc thai"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/38D2/production/_108364541_29978099625_0654dde287_h.jpg","path":"/cpsprodpb/38D2/production/_108364541_29978099625_0654dde287_h.jpg","height":180,"width":320,"altText":"ไทย นักท่องเที่ยว จีน อินเดีย","copyrightHolder":"Wasawat Lukharang/bbc thai"},"options":{"isBreakingNews":false,"isFactCheck":false},"prominence":"standard","relatedItems":[{"headlines":{"headline":"ทำอย่างไรให้ได้เงินเที่ยวฟรี 1,000 บาท จากรัฐบาล"},"locators":{"assetUri":"/thai/49371889","cpsUrn":"urn:bbc:content:assetUri:/thai/49371889"},"summary":"แจกเงินให้เที่ยว คือหนึ่งในมาตรการกระตุ้นเศรษฐกิจวงเงิน 3.16 แสนล้านบาทของรัฐบาล","timestamp":1565959041000,"cpsType":"STY","id":"mock-id","type":"cps"}],"type":"cps","id":"mock-id"}],"strapline":{"name":"ข่าวเด่น"}},{"type":"special-reports","title":"Special reports 1","strapline":{"name":"รายงานพิเศษ","type":"LINK","links":{"highweb":"https://www.bbc.com/thai/international","desktop":"http://www.bbc.com/thai/international","mobile":"http://www.bbc.com/thai/international","enhancedmobile":"http://www.bbc.com/thai/international"}},"semanticGroupName":"Special reports 1","items":[{"headlines":{"headline":"เมื่ออาคารรัฐสภา 2 หมื่นล้านต้องพึ่งวิทยุทรานซิสเตอร์"},"locators":{"assetUri":"/thai/thailand-49354450","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49354450"},"summary":"รู้จัก \\"วิทยุทรานซิสเตอร์\\" อุปกรณ์สื่อสารยุคแอนะล็อกที่จะมีบทบาทสำคัญในอาคารรัฐสภายุค 4.0","timestamp":1565868659000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3139461b000e9dabf9","campaignName":"WS - Divert me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/804A/production/_108324823_whatsappimage2019-08-15at17.54.30.jpg","path":"/cpsprodpb/804A/production/_108324823_whatsappimage2019-08-15at17.54.30.jpg","height":549,"width":976,"altText":"วิทยุทรานซิสเตอร์จำนวน 10 เครื่อง จะถูกนำไปวางจุดต่าง ๆ ในอาคารรัฐสภาที่การถ่ายทอดสัญญาณเสียงการประชุมเข้าไม่ถึง เช่น หน้าห้องน้ำและโรงอาหาร","caption":"วิทยุทรานซิสเตอร์จำนวน 10 เครื่อง จะถูกนำไปวางจุดต่าง ๆ ในอาคารรัฐสภาที่การถ่ายทอดสัญญาณเสียงการประชุมเข้าไม่ถึง เช่น หน้าห้องน้ำและโรงอาหาร","copyrightHolder":"กองโฆษก พรรคพลังประชารัฐ"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/CE6A/production/_108324825_whatsappimage2019-08-15at17.54.30.jpg","path":"/cpsprodpb/CE6A/production/_108324825_whatsappimage2019-08-15at17.54.30.jpg","height":180,"width":320,"altText":"วิทยุทรานซิสเตอร์จำนวน 10 เครื่อง จะถูกนำไปวางจุดต่าง ๆ ในอาคารรัฐสภาที่การถ่ายทอดสัญญาณเสียงการประชุมเข้าไม่ถึง เช่น หน้าห้องน้ำและโรงอาหาร","caption":"วิทยุทรานซิสเตอร์จำนวน 10 เครื่อง จะถูกนำไปวางจุดต่าง ๆ ในอาคารรัฐสภาที่การถ่ายทอดสัญญาณเสียงการประชุมเข้าไม่ถึง เช่น หน้าห้องน้ำและโรงอาหาร","copyrightHolder":"กองโฆษก พรรคพลังประชารัฐ"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"สำรวจความมั่งคั่ง “ส.ว. เฉพาะกาล” ผ่านบัญชีทรัพย์สิน"},"locators":{"assetUri":"/thai/thailand-49356887","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49356887"},"summary":"ป.ป.ช. เปิดเผยบัญชีแสดงรายการทรัพย์สินและหนี้สิน ส.ว. เฉพาะกาล ทว่า \\"ส.ว. ผบ. เหล่าทัพ\\" นั้นสบช่องตามกฎหมาย ไม่ต้องยื่นบัญชีทรัพย์สินซ้ำ เนื่องจากเคยเป็น สนช. มาก่อน","timestamp":1565861307000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/1BDC/production/_108323170_48371422997_a45df151a3_k.jpg","path":"/cpsprodpb/1BDC/production/_108323170_48371422997_a45df151a3_k.jpg","height":549,"width":976,"altText":"ส.ว.","caption":"ผบ. เหล่าทัพที่ได้รับแต่งตั้งให้เป็น ส.ว. โดยตำแหน่งถอดเครื่องแบบประจำ แล้วสวมสูทร่วมรับฟังการแถลงนโยบายของรัฐบาลต่อรัฐสภาเมื่อปลาย ก.ค. ที่ผ่านมา","copyrightHolder":"WASAWAT LUKHARANG/BBC THAI"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/12D4C/production/_108323177_48371422997_a45df151a3_k.jpg","path":"/cpsprodpb/12D4C/production/_108323177_48371422997_a45df151a3_k.jpg","height":180,"width":320,"altText":"ส.ว.","caption":"ผบ. เหล่าทัพที่ได้รับแต่งตั้งให้เป็น ส.ว. โดยตำแหน่งถอดเครื่องแบบประจำ แล้วสวมสูทร่วมรับฟังการแถลงนโยบายของรัฐบาลต่อรัฐสภาเมื่อปลาย ก.ค. ที่ผ่านมา","copyrightHolder":"WASAWAT LUKHARANG/BBC THAI"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"เปรียบเทียบการประท้วงฮ่องกง-ไทย กับ 2 ผู้เชี่ยวชาญจีน-อาเซียน"},"locators":{"assetUri":"/thai/49347112","cpsUrn":"urn:bbc:content:assetUri:thai/49347112"},"summary":"บีบีซีไทยคุยกับ 2 นักวิชาการจุฬาฯ-ธรรมศาสตร์ เปรียบเทียบการชุมนุมที่ฮ่องกง กับ การชุมนุมขับไล่ “ระบอบทักษิณ”","timestamp":1565786591000,"byline":{"name":"ชัยยศ ยงค์เจริญชัย ผู้สื่อข่าวบีบีซีไทย","title":"สมิตานัน หยงสตาร์ ผู้สื่อข่าวพิเศษบีบีซีไทย","persons":[{"name":"ชัยยศ ยงค์เจริญชัย","function":"ผู้สื่อข่าวบีบีซีไทย"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e2939461b000e9dabf8","campaignName":"WS - Educate me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/5600/production/_108361022_gettyimages-1162580270.jpg","path":"/cpsprodpb/5600/production/_108361022_gettyimages-1162580270.jpg","height":549,"width":976,"altText":"ประท้วง","caption":"บรรยากาศการชุมนุมที่ฮ่องกงเข้าสู่สัปดาห์ที่ 11 แม้ฝนตกลงมเกือบตลอด แต่ประชาชนยังกองร่มปักหลักชุมนุมอย่างไม่ล่าถอยเมื่อ 18 ส.ค.","copyrightHolder":"NurPhoto/Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/7D10/production/_108361023_gettyimages-1162580270.jpg","path":"/cpsprodpb/7D10/production/_108361023_gettyimages-1162580270.jpg","height":180,"width":320,"altText":"ประท้วง","caption":"บรรยากาศการชุมนุมที่ฮ่องกงเข้าสู่สัปดาห์ที่ 11 แม้ฝนตกลงมเกือบตลอด แต่ประชาชนยังกองร่มปักหลักชุมนุมอย่างไม่ล่าถอยเมื่อ 18 ส.ค.","copyrightHolder":"NurPhoto/Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"section":{"subType":"IDX","name":"หน้าแรก","uri":"/thai/front_page","type":"simple"},"type":"cps","id":"mock-id"},{"headlines":{"headline":"ยุทธศาสตร์ 3 ขาของอนาคตใหม่ “หยุดระเบิดเวลา” รธน."},"locators":{"assetUri":"/thai/49346882","cpsUrn":"urn:bbc:content:assetUri:thai/49346882"},"summary":"นายกฯ คนที่ 29 บอก “ยังไม่ถึงเวลา” แก้รัฐธรรมนูญฉบับปี 2560 ซึ่งพรรคอนาคตใหม่ชี้ว่าเป็น “ระเบิดเวลา”","timestamp":1565786325000,"byline":{"name":"หทัยกาญจน์  ตรีสุวรรณ","title":"ผู้สื่อข่าวบีบีซีไทย","persons":[{"name":"หทัยกาญจน์ ตรีสุวรรณ","function":"ผู้สื่อข่าวบีบีซีไทย"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis","categoryName":"Analysis"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/96D3/production/_108311683_img_0976.jpg","path":"/cpsprodpb/96D3/production/_108311683_img_0976.jpg","height":549,"width":976,"altText":"ธนาธร","caption":"พรรคอนาคตใหม่เลือกใช้สัญลักษณ์ \\"รูปมือของประชาชนจับประสานกัน\\" เพื่อสื่อว่าถึงเวลาในการหาฉันทามติร่วมกัน","copyrightHolder":"กองโฆษก พรรคอนาคตใหม่"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/1F6D/production/_108354080_img_0976.jpg","path":"/cpsprodpb/1F6D/production/_108354080_img_0976.jpg","height":180,"width":320,"altText":"ธนาธร","caption":"พรรคอนาคตใหม่เลือกใช้สัญลักษณ์ \\"รูปมือของประชาชนจับประสานกัน\\" เพื่อสื่อว่าถึงเวลาในการหาฉันทามติร่วมกัน","copyrightHolder":"กองโฆษก พรรคอนาคตใหม่"},"options":{"isBreakingNews":false,"isFactCheck":false},"section":{"subType":"IDX","name":"หน้าแรก","uri":"/thai/front_page","type":"simple"},"type":"cps","id":"mock-id"}]},{"type":"av-stories-now","title":"Watch/Listen","strapline":{"name":"วิดีโอ","type":"LINK","links":{"highweb":"https://www.bbc.com/thai/international","desktop":"http://www.bbc.com/thai/international","mobile":"http://www.bbc.com/thai/international","enhancedmobile":"http://www.bbc.com/thai/international"}},"semanticGroupName":"Watch/Listen","items":[{"headlines":{"headline":"ดีเจคนแรกที่เปิดเพลงมาจากอวกาศ"},"locators":{"assetUri":"/thai/international-49371742","cpsUrn":"urn:bbc:content:assetUri:thai/international-49371742"},"summary":"ลูกา ปาร์มีตาโน นักบินอวกาศจากองค์การอวกาศยุโรป (ESA) นำชุดเครื่องเล่นเพลงขึ้นไปที่สถานีอวกาศนานาชาติเมื่อวันที่ 13 ส.ค. ที่ผ่านมา และเปิดเพลงผ่านระบบสตรีมมิ่งลงมายังคลับโดมบนเรือสำราญที่มีผู้โดยสาร 2,500 คน ในทะเลเมดิเตอร์ริเนียน","timestamp":1565963003000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3139461b000e9dabf9","campaignName":"WS - Divert me"}]},"cpsType":"MAP","media":{"id":"mock-id","subType":"clip","format":"video","title":"ดีเจคนแรกที่เปิดเพลงมาจากอวกาศ","synopses":{"short":"ดีเจคนแรกที่เปิดเพลงมาจากอวกาศ"},"imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p07kvd7f.jpg","embedding":true,"advertising":true,"caption":"ดีเจคนแรกที่เปิดเพลงมาจากอวกาศ","versions":[{"versionId":"p07kvcdn","types":["Original"],"duration":59,"durationISO8601":"PT59S","warnings":{},"availableTerritories":{"uk":true,"nonUk":true},"availableFrom":1565962700000}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/0716/production/_108341810_p07kvd7f.jpg","path":"/cpsprodpb/0716/production/_108341810_p07kvd7f.jpg","height":576,"width":1024,"altText":"Keyframe #3","copyrightHolder":"BBC"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/5536/production/_108341812_p07kvd7f.jpg","path":"/cpsprodpb/5536/production/_108341812_p07kvd7f.jpg","height":180,"width":320,"altText":"Keyframe #3","copyrightHolder":"BBC"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"}]},{"type":"featured-site-top-stories","title":"Learning English","strapline":{"name":"แกลเลอรี่ภาพ"},"semanticGroupName":"Picture galleries","items":[{"headlines":{"headline":"10 พระบรมฉายาลักษณ์ประวัติศาสตร์ในหลวงรัชกาลที่ 10"},"locators":{"assetUri":"/thai/thailand-49098460","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49098460"},"summary":"บีบีซีไทยรวบรวม 10 พระบรมฉายาลักษณ์ประวัติศาสตร์ พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว ตั้งแต่ยังทรงพระเยาว์จนถึงเสด็จขึ้นครองราชย์","timestamp":1564282524000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature","categoryName":"Feature"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/17641/production/_108090859_gettyimages-463105502.jpg","path":"/cpsprodpb/17641/production/_108090859_gettyimages-463105502.jpg","height":1152,"width":2048,"altText":"ในหลวง ร 10","caption":"สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง พร้อมด้วยพระราชโอรสและพระราชธิดาพระองค์ใหญ่ คือพระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว (ซ้าย) และทูลกระหม่อมหญิงอุบลรัตนราชกัญญา สิริวัฒนาพรรณวดี (ขวา) เมื่อปีพ.ศ. 2496","copyrightHolder":"Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/41A9/production/_108090861_gettyimages-463105502.jpg","path":"/cpsprodpb/41A9/production/_108090861_gettyimages-463105502.jpg","height":180,"width":320,"altText":"ในหลวง ร 10","caption":"สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง พร้อมด้วยพระราชโอรสและพระราชธิดาพระองค์ใหญ่ คือพระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว (ซ้าย) และทูลกระหม่อมหญิงอุบลรัตนราชกัญญา สิริวัฒนาพรรณวดี (ขวา) เมื่อปีพ.ศ. 2496","copyrightHolder":"Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"}]},{"type":"feature-main","title":"Features","strapline":{"name":"เรื่องน่าสนใจ"},"semanticGroupName":"Features","items":[{"headlines":{"headline":"ค้นพบ “อวัยวะ” ชิ้นใหม่ ทำหน้าที่ช่วยรับรู้ความเจ็บปวด"},"locators":{"assetUri":"/thai/features-49369792","cpsUrn":"urn:bbc:content:assetUri:thai/features-49369792"},"summary":"ในอนาคตเราจะมียาแก้ปวดประสิทธิภาพสูง และพบวิธีรักษาอาการเจ็บปวดเรื้อรังได้ หากเข้าใจการทำงานของอวัยวะชิ้นเล็ก ๆ นี้","timestamp":1565962126000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e2939461b000e9dabf8","campaignName":"WS - Educate me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/A70B/production/_108336724_neuronsgettyimages.png","path":"/cpsprodpb/A70B/production/_108336724_neuronsgettyimages.png","height":380,"width":676,"altText":"ภาพจำลองโครงสร้างของเซลล์ประสาท","caption":"ภาพจำลองโครงสร้างของเซลล์ประสาท","copyrightHolder":"GETTY IMAGES "},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/F52B/production/_108336726_neuronsgettyimages.png","path":"/cpsprodpb/F52B/production/_108336726_neuronsgettyimages.png","height":180,"width":320,"altText":"ภาพจำลองโครงสร้างของเซลล์ประสาท","caption":"ภาพจำลองโครงสร้างของเซลล์ประสาท","copyrightHolder":"GETTY IMAGES "},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"นายกฯ อินเดียระบุการเพิกถอนสถานะพิเศษแคชเมียร์ เป็นการฟื้น \\"ความรุ่งเรืองในอดีต\\""},"locators":{"assetUri":"/thai/international-49358163","cpsUrn":"urn:bbc:content:assetUri:thai/international-49358163"},"summary":"นายกฯ นเรนทรา โมดี ของ อินเดีย ระบุว่าการต่อต้านการเพิกถอนสถานะพิเศษของแคชเมียร์ภายใต้รัฐธรรมนูญเป็นการ \\"เล่นเกมการเมือง\\"","timestamp":1565916166000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/C551/production/_108331505_gettyimages-1161831064.jpg","path":"/cpsprodpb/C551/production/_108331505_gettyimages-1161831064.jpg","height":576,"width":1024,"altText":"โมดี","copyrightHolder":"AFP/Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/11371/production/_108331507_gettyimages-1161831064.jpg","path":"/cpsprodpb/11371/production/_108331507_gettyimages-1161831064.jpg","height":180,"width":320,"altText":"โมดี","copyrightHolder":"AFP/Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"ได้คุ้มเสียไหม เมื่อยูทิวเบอร์สายห่ามคิดโชว์อะไรแผลง ๆ"},"locators":{"assetUri":"/thai/thailand-49355182","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49355182"},"summary":"ฟังความเห็นยูทิวเบอร์รุ่นบุกเบิกวิเคราะห์วงการผู้ผลิตรายการทางยูทิวบ์แข่งกันเดือดจนบางครั้งไม่แคร์กฎหมายหรือหมิ่นเหม่ต่อการละเมิดสิทธิ","timestamp":1565944401000,"byline":{"name":"วัชชิรานนท์  ทองเทพ ","title":"ผู้สื่อข่าวบีบีซีไทย","persons":[{"name":"วัชชิรานนท์ ทองเทพ","function":"ผู้สื่อข่าวบีบีซีไทย"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/77B3/production/_108334603_bwsw6386.jpg","path":"/cpsprodpb/77B3/production/_108334603_bwsw6386.jpg","height":549,"width":976,"altText":"คลิป \\"ทดสอบความอดทนแอร์ วุ่นวายกันทั้งลำ\\" ที่ถูกเผยแพร่เมื่อวันที่ 7 ส.ค. ที่ผ่านมา ณ ตอนนี้มีผู้ชมแล้วกว่า 8.1 แสนครั้ง","caption":"คลิป \\"ทดสอบความอดทนแอร์ วุ่นวายกันทั้งลำ\\" ที่ถูกเผยแพร่เมื่อวันที่ 7 ส.ค. ที่ผ่านมา ณ ตอนนี้มีผู้ชมแล้วกว่า 8.1 แสนครั้ง","copyrightHolder":"WASAWAT LUKHARANG/BBC Thai"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/C5D3/production/_108334605_bwsw6386.jpg","path":"/cpsprodpb/C5D3/production/_108334605_bwsw6386.jpg","height":180,"width":320,"altText":"คลิป \\"ทดสอบความอดทนแอร์ วุ่นวายกันทั้งลำ\\" ที่ถูกเผยแพร่เมื่อวันที่ 7 ส.ค. ที่ผ่านมา ณ ตอนนี้มีผู้ชมแล้วกว่า 8.1 แสนครั้ง","caption":"คลิป \\"ทดสอบความอดทนแอร์ วุ่นวายกันทั้งลำ\\" ที่ถูกเผยแพร่เมื่อวันที่ 7 ส.ค. ที่ผ่านมา ณ ตอนนี้มีผู้ชมแล้วกว่า 8.1 แสนครั้ง","copyrightHolder":"WASAWAT LUKHARANG/BBC Thai"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"ต้นทุนที่ถูกมองข้ามของเสื้อผ้าแบรนด์ดังราคาถูก"},"locators":{"assetUri":"/thai/international-49278133","cpsUrn":"urn:bbc:content:assetUri:thai/international-49278133"},"summary":"โลกาภิวัตน์ทำให้แฟชั่นเปลี่ยนแปลงอย่างรวดเร็ว เรื่องนี้ส่งผลกระทบต่อคนงานในประเทศกำลังพัฒนาอย่างไรบ้าง","timestamp":1565661637000,"byline":{"name":"ดาร์ชินี เดวิด ","title":"ผู้สื่อข่าวเศรษฐกิจ ","persons":[{"name":"Dharshini David","function":"Economics correspondent"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/FC31/production/_108216546_fashion-blogger-t-shirt.jpg","path":"/cpsprodpb/FC31/production/_108216546_fashion-blogger-t-shirt.jpg","height":549,"width":976,"altText":"A fashion blogger holding up a t-shirt","copyrightHolder":"Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/35A1/production/_108292731_fashion-blogger-t-shirt.jpg","path":"/cpsprodpb/35A1/production/_108292731_fashion-blogger-t-shirt.jpg","height":180,"width":320,"altText":"A fashion blogger holding up a t-shirt","copyrightHolder":"Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"เขาทำได้อย่างไร เดินเท้าตลอดแนวแม่น้ำแยงซี 6,300 กม. ในจีน"},"locators":{"assetUri":"/thai/international-49338067","cpsUrn":"urn:bbc:content:assetUri:thai/international-49338067"},"summary":"แอช ไดก์ส กลายเป็นมนุษย์คนแรกที่เดินเท้าตลอดแนวแม่น้ำแยงซีของจีน ตั้งแต่ต้นน้ำในทิเบตจนถึงปลายสุดของแม่น้ำใกล้กับนครเซี่ยงไฮ้ โดยใช้เวลาเกือบ 1 ปี","timestamp":1565747989000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3139461b000e9dabf9","campaignName":"WS - Divert me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/50AF/production/_108255602_image00080.jpg","path":"/cpsprodpb/50AF/production/_108255602_image00080.jpg","height":549,"width":976,"altText":"Ash Dykes standing in front of a mountain with the River Yangtze in the background","caption":"Ash Dykes's trek across China took 352 days","copyrightHolder":"Ash Dykes"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/222E/production/_108305780_image00080.jpg","path":"/cpsprodpb/222E/production/_108305780_image00080.jpg","height":180,"width":320,"altText":"Ash Dykes standing in front of a mountain with the River Yangtze in the background","caption":"Ash Dykes's trek across China took 352 days","copyrightHolder":"Ash Dykes"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"นิวซีแลนด์พบฟอสซิลเพนกวินยักษ์ 66 ล้านปี ตัวใหญ่เท่ามนุษย์"},"locators":{"assetUri":"/thai/features-49356597","cpsUrn":"urn:bbc:content:assetUri:thai/features-49356597"},"summary":"หลังไดโนเสาร์สูญพันธุ์ไปไม่นาน เพนกวินยักษ์สูง 1.6 เมตร หนัก 80 กิโลกรัม ได้เข้าครอบครองน่านน้ำแถบซีกโลกใต้","timestamp":1565857576000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature","categoryName":"Feature"},"campaigns":[{"campaignId":"5a988e2939461b000e9dabf8","campaignName":"WS - Educate me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/31A8/production/_108321721_8c6a6c79-e931-4386-a68d-78242450ad7f.jpg","path":"/cpsprodpb/31A8/production/_108321721_8c6a6c79-e931-4386-a68d-78242450ad7f.jpg","height":371,"width":660,"altText":"เพนกวิน","caption":"ภาพจำลองเพนกวินยักษ์ยุคโบราณที่พิพิธภัณฑ์แคนเทอเบอรีสร้างขึ้น","copyrightHolder":"CANTERBURY MUSEUM"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/7FC8/production/_108321723_8c6a6c79-e931-4386-a68d-78242450ad7f.jpg","path":"/cpsprodpb/7FC8/production/_108321723_8c6a6c79-e931-4386-a68d-78242450ad7f.jpg","height":180,"width":320,"altText":"เพนกวิน","caption":"ภาพจำลองเพนกวินยักษ์ยุคโบราณที่พิพิธภัณฑ์แคนเทอเบอรีสร้างขึ้น","copyrightHolder":"CANTERBURY MUSEUM"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"หุ่นยนต์นักบวช มิติใหม่ของศาสนาหรือหมิ่นศรัทธาชาวพุทธ"},"locators":{"assetUri":"/thai/international-49344782","cpsUrn":"urn:bbc:content:assetUri:thai/international-49344782"},"summary":"หุ่นยนต์นักบวช จะดึงดูดคนรุ่นใหม่ในญี่ปุ่นให้สนใจในพุทธศาสนามากขึ้นได้หรือไม่","timestamp":1565843774000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature","categoryName":"Feature"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"},{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/58A2/production/_108309622_gettyimages-1161509035.jpg","path":"/cpsprodpb/58A2/production/_108309622_gettyimages-1161509035.jpg","height":549,"width":976,"altText":"พระพุทธรูป เจ้าแม่กวนอิม หรือพระสงฆ์?","caption":"พระพุทธรูป เจ้าแม่กวนอิม หรือพระสงฆ์?","copyrightHolder":"Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/A6C2/production/_108309624_gettyimages-1161509035.jpg","path":"/cpsprodpb/A6C2/production/_108309624_gettyimages-1161509035.jpg","height":180,"width":320,"altText":"พระพุทธรูป เจ้าแม่กวนอิม หรือพระสงฆ์?","caption":"พระพุทธรูป เจ้าแม่กวนอิม หรือพระสงฆ์?","copyrightHolder":"Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"ทำไมคนบางกลุ่มจึงอยากให้มนุษย์หยุดการสืบทอดเผ่าพันธุ์"},"locators":{"assetUri":"/thai/international-49333742","cpsUrn":"urn:bbc:content:assetUri:thai/international-49333742"},"summary":"ใครคือ \\"ผู้ที่มีแนวคิดต่อต้านการเกิด” แล้วทำไมพวกเขาต้องการให้มนุษย์ค่อย ๆ สูญพันธุ์","timestamp":1565741807000,"byline":{"name":"โจนาธาน กริฟฟิน ","title":"บีบีซี เทรนดิง ","persons":[{"name":"BBC Trending","function":"What's popular and why","thumbnail":"http://news.bbcimg.co.uk/media/images/82085000/png/_82085681_pic.png"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/16588/production/_108282519_babythumbnailv2.jpg","path":"/cpsprodpb/16588/production/_108282519_babythumbnailv2.jpg","height":549,"width":976,"altText":"A baby with a cross through it","copyrightHolder":"BBC"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/09E0/production/_108282520_babythumbnailv2.jpg","path":"/cpsprodpb/09E0/production/_108282520_babythumbnailv2.jpg","height":180,"width":320,"altText":"A baby with a cross through it","copyrightHolder":"BBC"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"\\"ผีสิงยกคณะ\\" หรือ อุปาทานหมู่ พิสูจน์เหตุนักเรียนหญิงกรีดร้องยกกลุ่มในมาเลเซีย"},"locators":{"assetUri":"/thai/features-49343003","cpsUrn":"urn:bbc:content:assetUri:thai/features-49343003"},"summary":"สังคมมุสลิมในรัฐกลันตันของมาเลเซียที่เคร่งทางศาสนา อาจเป็นสาเหตุของเหตุการณ์อุปาทานหมู่หลายต่อหลายครั้งในช่วงไม่กี่ปีที่ผ่านมาหรือไม่","timestamp":1565828840000,"byline":{"name":"ฮีเธอร์ เชน","title":"บีบีซีนิวส์, รัฐกลันตัน-มาเลเซีย ","persons":[{"name":"แคลร์ ปัจฉิมานนท์","function":"ผู้สื่อข่าวอิสระ"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature","categoryName":"Feature"},"campaigns":[{"campaignId":"5a988e2939461b000e9dabf8","campaignName":"WS - Educate me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/23E6/production/_108309190_68757b3c-8b83-4446-b08a-3ec7af9f846e.jpg","path":"/cpsprodpb/23E6/production/_108309190_68757b3c-8b83-4446-b08a-3ec7af9f846e.jpg","height":549,"width":976,"altText":"หญิงมาเล","copyrightHolder":"JOSHUA PAUL FOR THE BBC"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/6087/production/_108311742_68757b3c-8b83-4446-b08a-3ec7af9f846e.jpg","path":"/cpsprodpb/6087/production/_108311742_68757b3c-8b83-4446-b08a-3ec7af9f846e.jpg","height":180,"width":320,"altText":"หญิงมาเล","copyrightHolder":"JOSHUA PAUL FOR THE BBC"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"จีนเข้าแทรกแซงเรื่องในฮ่องกงได้แค่ไหน"},"locators":{"assetUri":"/thai/international-49343002","cpsUrn":"urn:bbc:content:assetUri:thai/international-49343002"},"summary":"มีช่องทางใดบ้างที่เปิดทางให้รัฐบาลจีนแผ่นดินใหญ่เข้ามาแทรกแซงการเมืองในฮ่องกง","timestamp":1565835745000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"WS - Give me perspective"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/11DB/production/_108317540_9131fa72-8620-4007-8cd9-ce3fdffb4c9a.jpg","path":"/cpsprodpb/11DB/production/_108317540_9131fa72-8620-4007-8cd9-ce3fdffb4c9a.jpg","height":371,"width":660,"altText":"ธงจีน","caption":"การชุมนุมประท้วงในฮ่องกงกดดันจีนอย่างต่อเนื่อง","copyrightHolder":"Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/5FFB/production/_108317542_9131fa72-8620-4007-8cd9-ce3fdffb4c9a.jpg","path":"/cpsprodpb/5FFB/production/_108317542_9131fa72-8620-4007-8cd9-ce3fdffb4c9a.jpg","height":180,"width":320,"altText":"ธงจีน","caption":"การชุมนุมประท้วงในฮ่องกงกดดันจีนอย่างต่อเนื่อง","copyrightHolder":"Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"},{"headlines":{"headline":"ชายที่พบไททานิค จะหา อะมีเลีย แอร์ฮาร์ต เจอหรือไม่"},"locators":{"assetUri":"/thai/international-49312696","cpsUrn":"urn:bbc:content:assetUri:thai/international-49312696"},"summary":"โรเบิร์ต บัลลาร์ด นักสมุทรศาสตร์ กำลังค้นหาร่องรอยของ อะมีเลีย แอร์ฮาร์ต นักบินชื่อดังที่สูญหายไปขณะขับเครื่องบินรอบโลกในปี 1937 การค้นหาครั้งนี้เริ่มขึ้นที่เกาะเล็ก ๆ ในมหาสมุทรแปซิฟิก","timestamp":1565583899000,"byline":{"name":"อันเดรียส์ อิลล์เมอร์","title":"บีบีซี นิวส์ ","persons":[{"name":"Andreas Illmer","function":"BBC News"}]},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e2139461b000e9dabf7","campaignName":"WS - Inspire me"}]},"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/14A91/production/_108252648_gettyimages-1161352.jpg","path":"/cpsprodpb/14A91/production/_108252648_gettyimages-1161352.jpg","height":549,"width":976,"altText":"อะมีเลีย แอร์ฮาร์ต หน้าเครื่องบิน","caption":"อะมีเลีย แอร์ฮาร์ต นักบินผู้สร้างตำนานและเรื่องราวลึกลับมาจนถึงทุกวันนี้","copyrightHolder":"Getty Images"},"imageThumbnail":{"id":"mock-id","subType":"index-thumbnail","href":"http://c.files.bbci.co.uk/938B/production/_108317773_gettyimages-1161352.jpg","path":"/cpsprodpb/938B/production/_108317773_gettyimages-1161352.jpg","height":180,"width":320,"altText":"อะมีเลีย แอร์ฮาร์ต หน้าเครื่องบิน","caption":"อะมีเลีย แอร์ฮาร์ต นักบินผู้สร้างตำนานและเรื่องราวลึกลับมาจนถึงทุกวันนี้","copyrightHolder":"Getty Images"},"options":{"isBreakingNews":false,"isFactCheck":false},"type":"cps","id":"mock-id"}]}]},"promo":{"subType":"IDX","name":"หน้าแรก","uri":"/thai/front_page","id":"mock-id","type":"simple"},"relatedContent":{"section":{"subType":"index","name":"หน้าแรก","uri":"/thai/front_page","type":"simple"},"site":{"subType":"site","name":"บีบีซีไทย","uri":"/thai","type":"simple"},"groups":[]}},"path":"/thai","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [39]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="thai"
+            src="http://localhost:7080/static/js/thai-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

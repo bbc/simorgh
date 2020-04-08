@@ -1,0 +1,2405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /russian/features-45782775 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ru"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_russian/FB76/production/_103747346_hi049784039.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС."
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ru-RU"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="В Чернобыле построили первую солнечную электростанцию. Фото - BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/russian/features-45782775"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcrussian"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_russian/FB76/production/_103747346_hi049784039.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcrussian"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="В Чернобыле построили первую солнечную электростанцию. Фото - BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Renewable energy"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Nuclear power"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Ukraine"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-10-08T08:07:17.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-10-08T08:18:06.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      В Чернобыле построили первую солнечную электростанцию. Фото - BBC News Русская служба
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/russian/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/russian/features-45782775"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/russian/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/russian/features-45782775","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Русская служба","publishingPrinciples":"https://www.bbc.com/russian/institutional-50098149","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/russian/features-45782775","name":"В Чернобыле построили первую солнечную электростанцию. Фото"},"headline":"В Чернобыле построили первую солнечную электростанцию. Фото","description":"Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","datePublished":"2018-10-08T08:07:17.000Z","dateModified":"2018-10-08T08:18:06.000Z","about":[{"@type":"Thing","name":"Renewable energy","sameAs":["http://dbpedia.org/resource/Renewable_energy"]},{"@type":"Thing","name":"Nuclear power","sameAs":["http://dbpedia.org/resource/Nuclear_power"]},{"@type":"Thing","name":"Ukraine","sameAs":["http://dbpedia.org/resource/Ukraine"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Русская служба","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"},"noBylinesPolicy":"https://www.bbc.com/russian/institutional-50098149#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 gIWVBy"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Мы обновили наши правила использования личных данных и куки.
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Мы внесли важные изменения в наши правила использования личных данных и cookies и хотели бы сообщить вам, что это значит для вас и ваших личных данных.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ОК
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Посмотреть, что изменилось
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 gIWVBy"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Сообщить, что вы согласны с использованием cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Мы используем
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    , чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Да, согласен
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Нет, мне надо посмотреть настройки
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/russian"
+               class="StyledLink-m3awbo-2 fInbeK"
+            >
+              <svg height="24"
+                   viewbox="0 0 327.19 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eCBZb"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M193.84 6.46l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M184.38 6.3h3.31a4.27 4.27 0 0 1 1.5.24 2.89 2.89 0 0 1 1 .65 2.6 2.6 0 0 1 .61 1 3.47 3.47 0 0 1 .2 1.18 3.17 3.17 0 0 1-.21 1.16 2.47 2.47 0 0 1-.65.94 3.16 3.16 0 0 1-1.11.63 4.9 4.9 0 0 1-1.59.23h-1.54v4.57h-1.52zm1.52 1.36v3.28h1.72a2.52 2.52 0 0 0 .77-.11 1.6 1.6 0 0 0 .59-.33 1.46 1.46 0 0 0 .37-.53 1.78 1.78 0 0 0 .13-.7 2 2 0 0 0-.09-.58 1.35 1.35 0 0 0-.3-.52 1.51 1.51 0 0 0-.55-.37 2.24 2.24 0 0 0-.86-.14zM211.27 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM222.59 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM225.09 6.3h1.51v4.3a3.69 3.69 0 0 0 .77-.07 1.57 1.57 0 0 0 .61-.28 2.11 2.11 0 0 0 .51-.57 5.75 5.75 0 0 0 .47-1 6.87 6.87 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.16 2.16 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.08 3.08 0 0 0-.84.09 1.3 1.3 0 0 0-.54.3 1.77 1.77 0 0 0-.37.54q-.16.33-.32.79a3.78 3.78 0 0 1-.26.57 4.16 4.16 0 0 1-.35.54 3.52 3.52 0 0 1-.41.45 1.66 1.66 0 0 1-.43.29 5.07 5.07 0 0 1 .68.37 2.9 2.9 0 0 1 .53.46 5 5 0 0 1 .49.65q.25.38.56.94l1.86 3.22h-1.73L229.46 14a11.83 11.83 0 0 0-.7-1.1 3.26 3.26 0 0 0-.62-.67 1.83 1.83 0 0 0-.68-.33 3.56 3.56 0 0 0-.86-.09v5h-1.51zM240 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5L236 16.87h-1.6l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28zM247.66 14.51a15.33 15.33 0 0 1 1-1.32 5.34 5.34 0 0 1 1-1 8.06 8.06 0 0 1-.79-.41 3 3 0 0 1-.7-.57 2.67 2.67 0 0 1-.5-.81 3 3 0 0 1-.19-1.13 3 3 0 0 1 .23-1.27 2.65 2.65 0 0 1 .78-.95 3.38 3.38 0 0 1 1.18-.56 5.64 5.64 0 0 1 1.48-.19h3.18v10.57h-1.51v-4.34h-.42a3.36 3.36 0 0 0-.87.11 2.41 2.41 0 0 0-.76.36 3.9 3.9 0 0 0-.73.7 9.13 9.13 0 0 0-.78 1.11L248 16.87h-1.82zm5.15-3.28V7.6h-1.58a2.54 2.54 0 0 0-1.67.47 1.59 1.59 0 0 0-.56 1.28 1.8 1.8 0 0 0 .13.66 1.69 1.69 0 0 0 .41.61 2.15 2.15 0 0 0 .71.44 2.88 2.88 0 0 0 1 .17z">
+                  </path>
+                  <path d="M285 6.47l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M271.65 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84A3.83 3.83 0 0 0 264 10a4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM278.91 6.23l4.73 10.63h-1.55l-3.73-8.58-3.5 8.58h-1.55l4.54-10.63zM293.63 6.3a4 4 0 0 1 1 .11 2.17 2.17 0 0 1 .8.39 3 3 0 0 1 .66.75 7 7 0 0 1 .58 1.17 5.93 5.93 0 0 0 .47 1 2.43 2.43 0 0 0 .47.57 1.33 1.33 0 0 0 .5.28 2.08 2.08 0 0 0 .56.07V6.3h1.52v4.3a2.08 2.08 0 0 0 .56-.07 1.32 1.32 0 0 0 .5-.28 2.43 2.43 0 0 0 .47-.57 5.93 5.93 0 0 0 .47-1 6.92 6.92 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.17 2.17 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.09 3.09 0 0 0-.84.09 1.34 1.34 0 0 0-.55.3 1.7 1.7 0 0 0-.37.53 8.08 8.08 0 0 0-.31.79 3.16 3.16 0 0 1-.27.58 3.73 3.73 0 0 1-.39.54 3.84 3.84 0 0 1-.46.45 2.29 2.29 0 0 1-.48.31 3.34 3.34 0 0 1 .57.25 2.34 2.34 0 0 1 .45.34 3.72 3.72 0 0 1 .42.48q.2.28.45.68l2.38 3.84h-1.75l-1.91-3.22a8.16 8.16 0 0 0-.53-.81 3.48 3.48 0 0 0-.52-.56 1.94 1.94 0 0 0-.55-.33 1.69 1.69 0 0 0-.62-.11v5h-1.52v-5a1.68 1.68 0 0 0-.62.11 2 2 0 0 0-.56.34 3.39 3.39 0 0 0-.52.57 8.58 8.58 0 0 0-.52.79l-1.91 3.22h-1.75l2.4-3.84a5.7 5.7 0 0 1 .87-1.11 3.12 3.12 0 0 1 1-.65 2.28 2.28 0 0 1-.48-.31 3.84 3.84 0 0 1-.46-.45 3.79 3.79 0 0 1-.39-.54 3.16 3.16 0 0 1-.27-.58 7.41 7.41 0 0 0-.31-.79 1.78 1.78 0 0 0-.37-.53 1.31 1.31 0 0 0-.55-.3 3.09 3.09 0 0 0-.84-.09V6.3zM308.2 16.87V6.3h6.74v1.36h-5.22v2.87h2.14a5.18 5.18 0 0 1 1.54.22 3.55 3.55 0 0 1 1.2.62 2.84 2.84 0 0 1 .78 1 3.09 3.09 0 0 1 .28 1.34 3.05 3.05 0 0 1-.28 1.33 2.85 2.85 0 0 1-.78 1 3.54 3.54 0 0 1-1.2.62 5.17 5.17 0 0 1-1.54.22zm1.51-5v3.61H312a2.37 2.37 0 0 0 .85-.14 2 2 0 0 0 .64-.39 1.72 1.72 0 0 0 .55-1.27 1.62 1.62 0 0 0-.59-1.34 2.79 2.79 0 0 0-1.77-.47zM322.46 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5l-1.33 3.12h-1.55l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Русская служба
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bbZqWC"
+            >
+              Перейти к содержанию
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Разделы
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Главная
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/in-depth-51962199"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Коронавирус
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/features-50983593"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Истории
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/media/video"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Видео
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/in-depth-48104242"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Фильмы
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/media-47937790"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Подкасты
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/russian"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Главная
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/russian/in-depth-51962199"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Коронавирус
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/russian/features-50983593"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Истории
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/russian/media/video"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Видео
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/russian/in-depth-48104242"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Фильмы
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/russian/media-47937790"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Подкасты
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=75&p=features::russian.features.photo_gallery.45782775.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:d8233746-0c01-2542-8577-82a832d28475]&x2=[amp]&x3=[news-russian]&x4=[ru]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[В+Чернобыле+построили+первую+солнечную+электростанцию.+Фото+-+BBC+News+Русская+служба]&x11=[2018-10-08T08:07:17.000Z]&x12=[2018-10-08T08:18:06.000Z]&x13=[Renewable+energy~Nuclear+power~Ukraine]&x14=[7a198bf4-40e2-4131-b2e5-8027f5497bf1~c191b8f2-d9db-49eb-9194-8980e1bf3661~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&x16=[Give%20me%20perspective]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+          >
+            В Чернобыле построили первую солнечную электростанцию. Фото
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-10-08"
+                class="StyledTimestamp-um718p-0 kSGFFg"
+          >
+            8 октября 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 dSVJxu">
+            Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/FB76/production/_103747346_hi049784039.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    На месте бывшей Чернобыльской АЭС, где в 1986 году произошла самая серьезная за всю историю ядерная катастрофа, построена первая на Украине солнечная электростанция.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14996/production/_103747348_hi049782415.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Операция по удалению опухоли щитовидной железы в Институте эндокринологии в Киеве 5 апреля 2004 года"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    В апреле 1986 года в результате разрушения реактора в атмосферу была выброшена огромная масса радиоактивных материалов, что привело к росту числа заболеваний раком щитовидной железы.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Чернобыльский пейзаж 10 апреля 2010 года"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B13E/production/_103747354_hi011040701.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    В настоящее время комплекс бывшей ЧАЭС окружен запретной зоной, площадь которой составляет 2600 кв. км.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Украина построила в зоне отчуждения первую в стране крупную солнечную электростанцию - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Рабочие на открытой 5 октября 2018 года солнечной установке"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Правительство Украины предлагает развернуть в запретной зоне строительство энергоустановок, использующих альтернативные источники энергии.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Рабочие на открытой 5 октября 2018 года солнечной установке"
+                           attribution="EPA"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Рабочие на открытой 5 октября 2018 года солнечной установке.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Однако, согласно заявлению украинских властей, запретная зона останется закрытой для людей в течение 24 тысяч лет - это срок полураспада изотопов плутония.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 eCnUAT"
+                    >
+                      Новости по теме
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Шествие в Беларуси"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/49C5/production/_101058881_photo3.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 dnWhDh">
+                      <a href="/russian/features-43915925?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        "Чернобыльский шлях" из Минска дойдет до Островца?
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 fFkFvc">
+                      Шествие с названием "Чернобыльский шлях" (Чернобыльский путь) - ежегодная традиция для Беларуси, наиболее пострадавшей от аварии на АЭС в украинском Чернобыле в 1986 году.
+                    </p>
+                    <time datetime="2018-04-26"
+                          class="StyledTimestamp-um718p-0 dlmfdW"
+                    >
+                      26 апреля 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Знак радиации"
+                                 attribution="iStock"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/20BD/production/_101018380_radimainistock.jpg"
+                                 height="1152"
+                                 width="2048"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 dnWhDh">
+                      <a href="/russian/vert-fut-43883685?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        "Мой счетчик Гейгера ожил". Что ищет охотник за радиацией
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 fFkFvc">
+                      Большинство из нас не хотело бы подвергнуться воздействию радиации, но Эндрю Уокер разыскивает и собирает вещи, ее излучающие. Сам, по собственной воле. Оказывается, такие вещи можно найти где угодно.
+                    </p>
+                    <time datetime="2018-04-29"
+                          class="StyledTimestamp-um718p-0 dlmfdW"
+                    >
+                      29 апреля 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/russian"
+               class="StyledLink-m3awbo-2 fInbeK"
+            >
+              <svg height="24"
+                   viewbox="0 0 327.19 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eCBZb"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M193.84 6.46l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M184.38 6.3h3.31a4.27 4.27 0 0 1 1.5.24 2.89 2.89 0 0 1 1 .65 2.6 2.6 0 0 1 .61 1 3.47 3.47 0 0 1 .2 1.18 3.17 3.17 0 0 1-.21 1.16 2.47 2.47 0 0 1-.65.94 3.16 3.16 0 0 1-1.11.63 4.9 4.9 0 0 1-1.59.23h-1.54v4.57h-1.52zm1.52 1.36v3.28h1.72a2.52 2.52 0 0 0 .77-.11 1.6 1.6 0 0 0 .59-.33 1.46 1.46 0 0 0 .37-.53 1.78 1.78 0 0 0 .13-.7 2 2 0 0 0-.09-.58 1.35 1.35 0 0 0-.3-.52 1.51 1.51 0 0 0-.55-.37 2.24 2.24 0 0 0-.86-.14zM211.27 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM222.59 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM225.09 6.3h1.51v4.3a3.69 3.69 0 0 0 .77-.07 1.57 1.57 0 0 0 .61-.28 2.11 2.11 0 0 0 .51-.57 5.75 5.75 0 0 0 .47-1 6.87 6.87 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.16 2.16 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.08 3.08 0 0 0-.84.09 1.3 1.3 0 0 0-.54.3 1.77 1.77 0 0 0-.37.54q-.16.33-.32.79a3.78 3.78 0 0 1-.26.57 4.16 4.16 0 0 1-.35.54 3.52 3.52 0 0 1-.41.45 1.66 1.66 0 0 1-.43.29 5.07 5.07 0 0 1 .68.37 2.9 2.9 0 0 1 .53.46 5 5 0 0 1 .49.65q.25.38.56.94l1.86 3.22h-1.73L229.46 14a11.83 11.83 0 0 0-.7-1.1 3.26 3.26 0 0 0-.62-.67 1.83 1.83 0 0 0-.68-.33 3.56 3.56 0 0 0-.86-.09v5h-1.51zM240 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5L236 16.87h-1.6l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28zM247.66 14.51a15.33 15.33 0 0 1 1-1.32 5.34 5.34 0 0 1 1-1 8.06 8.06 0 0 1-.79-.41 3 3 0 0 1-.7-.57 2.67 2.67 0 0 1-.5-.81 3 3 0 0 1-.19-1.13 3 3 0 0 1 .23-1.27 2.65 2.65 0 0 1 .78-.95 3.38 3.38 0 0 1 1.18-.56 5.64 5.64 0 0 1 1.48-.19h3.18v10.57h-1.51v-4.34h-.42a3.36 3.36 0 0 0-.87.11 2.41 2.41 0 0 0-.76.36 3.9 3.9 0 0 0-.73.7 9.13 9.13 0 0 0-.78 1.11L248 16.87h-1.82zm5.15-3.28V7.6h-1.58a2.54 2.54 0 0 0-1.67.47 1.59 1.59 0 0 0-.56 1.28 1.8 1.8 0 0 0 .13.66 1.69 1.69 0 0 0 .41.61 2.15 2.15 0 0 0 .71.44 2.88 2.88 0 0 0 1 .17z">
+                  </path>
+                  <path d="M285 6.47l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M271.65 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84A3.83 3.83 0 0 0 264 10a4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM278.91 6.23l4.73 10.63h-1.55l-3.73-8.58-3.5 8.58h-1.55l4.54-10.63zM293.63 6.3a4 4 0 0 1 1 .11 2.17 2.17 0 0 1 .8.39 3 3 0 0 1 .66.75 7 7 0 0 1 .58 1.17 5.93 5.93 0 0 0 .47 1 2.43 2.43 0 0 0 .47.57 1.33 1.33 0 0 0 .5.28 2.08 2.08 0 0 0 .56.07V6.3h1.52v4.3a2.08 2.08 0 0 0 .56-.07 1.32 1.32 0 0 0 .5-.28 2.43 2.43 0 0 0 .47-.57 5.93 5.93 0 0 0 .47-1 6.92 6.92 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.17 2.17 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.09 3.09 0 0 0-.84.09 1.34 1.34 0 0 0-.55.3 1.7 1.7 0 0 0-.37.53 8.08 8.08 0 0 0-.31.79 3.16 3.16 0 0 1-.27.58 3.73 3.73 0 0 1-.39.54 3.84 3.84 0 0 1-.46.45 2.29 2.29 0 0 1-.48.31 3.34 3.34 0 0 1 .57.25 2.34 2.34 0 0 1 .45.34 3.72 3.72 0 0 1 .42.48q.2.28.45.68l2.38 3.84h-1.75l-1.91-3.22a8.16 8.16 0 0 0-.53-.81 3.48 3.48 0 0 0-.52-.56 1.94 1.94 0 0 0-.55-.33 1.69 1.69 0 0 0-.62-.11v5h-1.52v-5a1.68 1.68 0 0 0-.62.11 2 2 0 0 0-.56.34 3.39 3.39 0 0 0-.52.57 8.58 8.58 0 0 0-.52.79l-1.91 3.22h-1.75l2.4-3.84a5.7 5.7 0 0 1 .87-1.11 3.12 3.12 0 0 1 1-.65 2.28 2.28 0 0 1-.48-.31 3.84 3.84 0 0 1-.46-.45 3.79 3.79 0 0 1-.39-.54 3.16 3.16 0 0 1-.27-.58 7.41 7.41 0 0 0-.31-.79 1.78 1.78 0 0 0-.37-.53 1.31 1.31 0 0 0-.55-.3 3.09 3.09 0 0 0-.84-.09V6.3zM308.2 16.87V6.3h6.74v1.36h-5.22v2.87h2.14a5.18 5.18 0 0 1 1.54.22 3.55 3.55 0 0 1 1.2.62 2.84 2.84 0 0 1 .78 1 3.09 3.09 0 0 1 .28 1.34 3.05 3.05 0 0 1-.28 1.33 2.85 2.85 0 0 1-.78 1 3.54 3.54 0 0 1-1.2.62 5.17 5.17 0 0 1-1.54.22zm1.51-5v3.61H312a2.37 2.37 0 0 0 .85-.14 2 2 0 0 0 .64-.39 1.72 1.72 0 0 0 .55-1.27 1.62 1.62 0 0 0-.59-1.34 2.79 2.79 0 0 0-1.77-.47zM322.46 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5l-1.33 3.12h-1.55l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Русская служба
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-50098149"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Почему BBC News заслуживает доверия
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36515745"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Правила использования
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36515748"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    О Би-би-си
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36517234"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Личные данные
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Куки
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36517237"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Связаться с Би-би-си
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Би-би-си на несет ответственности за содержание других сайтов.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Познакомьтесь с нашими правилами внешних ссылок.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /russian/features-45782775 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ru"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_russian/FB76/production/_103747346_hi049784039.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС."
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ru-RU"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="В Чернобыле построили первую солнечную электростанцию. Фото - BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/russian/features-45782775"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcrussian"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_russian/FB76/production/_103747346_hi049784039.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcrussian"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="В Чернобыле построили первую солнечную электростанцию. Фото - BBC News Русская служба"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Renewable energy"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Nuclear power"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Ukraine"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-10-08T08:07:17.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-10-08T08:18:06.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      В Чернобыле построили первую солнечную электростанцию. Фото - BBC News Русская служба
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/russian/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/russian/features-45782775"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/russian/features-45782775.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/russian/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/russian/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/russian/features-45782775","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Русская служба","publishingPrinciples":"https://www.bbc.com/russian/institutional-50098149","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/russian/features-45782775","name":"В Чернобыле построили первую солнечную электростанцию. Фото"},"headline":"В Чернобыле построили первую солнечную электростанцию. Фото","description":"Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","datePublished":"2018-10-08T08:07:17.000Z","dateModified":"2018-10-08T08:18:06.000Z","about":[{"@type":"Thing","name":"Renewable energy","sameAs":["http://dbpedia.org/resource/Renewable_energy"]},{"@type":"Thing","name":"Nuclear power","sameAs":["http://dbpedia.org/resource/Nuclear_power"]},{"@type":"Thing","name":"Ukraine","sameAs":["http://dbpedia.org/resource/Ukraine"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Русская служба","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/russian.png"},"noBylinesPolicy":"https://www.bbc.com/russian/institutional-50098149#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/russian"
+               class="StyledLink-m3awbo-2 fInbeK"
+            >
+              <svg height="24"
+                   viewbox="0 0 327.19 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eCBZb"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M193.84 6.46l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M184.38 6.3h3.31a4.27 4.27 0 0 1 1.5.24 2.89 2.89 0 0 1 1 .65 2.6 2.6 0 0 1 .61 1 3.47 3.47 0 0 1 .2 1.18 3.17 3.17 0 0 1-.21 1.16 2.47 2.47 0 0 1-.65.94 3.16 3.16 0 0 1-1.11.63 4.9 4.9 0 0 1-1.59.23h-1.54v4.57h-1.52zm1.52 1.36v3.28h1.72a2.52 2.52 0 0 0 .77-.11 1.6 1.6 0 0 0 .59-.33 1.46 1.46 0 0 0 .37-.53 1.78 1.78 0 0 0 .13-.7 2 2 0 0 0-.09-.58 1.35 1.35 0 0 0-.3-.52 1.51 1.51 0 0 0-.55-.37 2.24 2.24 0 0 0-.86-.14zM211.27 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM222.59 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM225.09 6.3h1.51v4.3a3.69 3.69 0 0 0 .77-.07 1.57 1.57 0 0 0 .61-.28 2.11 2.11 0 0 0 .51-.57 5.75 5.75 0 0 0 .47-1 6.87 6.87 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.16 2.16 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.08 3.08 0 0 0-.84.09 1.3 1.3 0 0 0-.54.3 1.77 1.77 0 0 0-.37.54q-.16.33-.32.79a3.78 3.78 0 0 1-.26.57 4.16 4.16 0 0 1-.35.54 3.52 3.52 0 0 1-.41.45 1.66 1.66 0 0 1-.43.29 5.07 5.07 0 0 1 .68.37 2.9 2.9 0 0 1 .53.46 5 5 0 0 1 .49.65q.25.38.56.94l1.86 3.22h-1.73L229.46 14a11.83 11.83 0 0 0-.7-1.1 3.26 3.26 0 0 0-.62-.67 1.83 1.83 0 0 0-.68-.33 3.56 3.56 0 0 0-.86-.09v5h-1.51zM240 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5L236 16.87h-1.6l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28zM247.66 14.51a15.33 15.33 0 0 1 1-1.32 5.34 5.34 0 0 1 1-1 8.06 8.06 0 0 1-.79-.41 3 3 0 0 1-.7-.57 2.67 2.67 0 0 1-.5-.81 3 3 0 0 1-.19-1.13 3 3 0 0 1 .23-1.27 2.65 2.65 0 0 1 .78-.95 3.38 3.38 0 0 1 1.18-.56 5.64 5.64 0 0 1 1.48-.19h3.18v10.57h-1.51v-4.34h-.42a3.36 3.36 0 0 0-.87.11 2.41 2.41 0 0 0-.76.36 3.9 3.9 0 0 0-.73.7 9.13 9.13 0 0 0-.78 1.11L248 16.87h-1.82zm5.15-3.28V7.6h-1.58a2.54 2.54 0 0 0-1.67.47 1.59 1.59 0 0 0-.56 1.28 1.8 1.8 0 0 0 .13.66 1.69 1.69 0 0 0 .41.61 2.15 2.15 0 0 0 .71.44 2.88 2.88 0 0 0 1 .17z">
+                  </path>
+                  <path d="M285 6.47l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M271.65 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84A3.83 3.83 0 0 0 264 10a4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM278.91 6.23l4.73 10.63h-1.55l-3.73-8.58-3.5 8.58h-1.55l4.54-10.63zM293.63 6.3a4 4 0 0 1 1 .11 2.17 2.17 0 0 1 .8.39 3 3 0 0 1 .66.75 7 7 0 0 1 .58 1.17 5.93 5.93 0 0 0 .47 1 2.43 2.43 0 0 0 .47.57 1.33 1.33 0 0 0 .5.28 2.08 2.08 0 0 0 .56.07V6.3h1.52v4.3a2.08 2.08 0 0 0 .56-.07 1.32 1.32 0 0 0 .5-.28 2.43 2.43 0 0 0 .47-.57 5.93 5.93 0 0 0 .47-1 6.92 6.92 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.17 2.17 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.09 3.09 0 0 0-.84.09 1.34 1.34 0 0 0-.55.3 1.7 1.7 0 0 0-.37.53 8.08 8.08 0 0 0-.31.79 3.16 3.16 0 0 1-.27.58 3.73 3.73 0 0 1-.39.54 3.84 3.84 0 0 1-.46.45 2.29 2.29 0 0 1-.48.31 3.34 3.34 0 0 1 .57.25 2.34 2.34 0 0 1 .45.34 3.72 3.72 0 0 1 .42.48q.2.28.45.68l2.38 3.84h-1.75l-1.91-3.22a8.16 8.16 0 0 0-.53-.81 3.48 3.48 0 0 0-.52-.56 1.94 1.94 0 0 0-.55-.33 1.69 1.69 0 0 0-.62-.11v5h-1.52v-5a1.68 1.68 0 0 0-.62.11 2 2 0 0 0-.56.34 3.39 3.39 0 0 0-.52.57 8.58 8.58 0 0 0-.52.79l-1.91 3.22h-1.75l2.4-3.84a5.7 5.7 0 0 1 .87-1.11 3.12 3.12 0 0 1 1-.65 2.28 2.28 0 0 1-.48-.31 3.84 3.84 0 0 1-.46-.45 3.79 3.79 0 0 1-.39-.54 3.16 3.16 0 0 1-.27-.58 7.41 7.41 0 0 0-.31-.79 1.78 1.78 0 0 0-.37-.53 1.31 1.31 0 0 0-.55-.3 3.09 3.09 0 0 0-.84-.09V6.3zM308.2 16.87V6.3h6.74v1.36h-5.22v2.87h2.14a5.18 5.18 0 0 1 1.54.22 3.55 3.55 0 0 1 1.2.62 2.84 2.84 0 0 1 .78 1 3.09 3.09 0 0 1 .28 1.34 3.05 3.05 0 0 1-.28 1.33 2.85 2.85 0 0 1-.78 1 3.54 3.54 0 0 1-1.2.62 5.17 5.17 0 0 1-1.54.22zm1.51-5v3.61H312a2.37 2.37 0 0 0 .85-.14 2 2 0 0 0 .64-.39 1.72 1.72 0 0 0 .55-1.27 1.62 1.62 0 0 0-.59-1.34 2.79 2.79 0 0 0-1.77-.47zM322.46 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5l-1.33 3.12h-1.55l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Русская служба
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bbZqWC"
+            >
+              Перейти к содержанию
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Разделы
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/russian"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Главная
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/russian/in-depth-51962199"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Коронавирус
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/russian/features-50983593"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Истории
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/russian/media/video"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Видео
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/russian/in-depth-48104242"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Фильмы
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/russian/media-47937790"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Подкасты
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Главная
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/in-depth-51962199"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Коронавирус
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/features-50983593"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Истории
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/media/video"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Видео
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/in-depth-48104242"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Фильмы
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/russian/media-47937790"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Подкасты
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=75&amp;p=features::russian.features.photo_gallery.45782775.page&amp;x1=[urn:bbc:cps:d8233746-0c01-2542-8577-82a832d28475]&amp;x2=[responsive]&amp;x3=[news-russian]&amp;x4=[ru]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[В+Чернобыле+построили+первую+солнечную+электростанцию.+Фото+-+BBC+News+Русская+служба]&amp;x11=[2018-10-08T08:07:17.000Z]&amp;x12=[2018-10-08T08:18:06.000Z]&amp;x13=[Renewable+energy~Nuclear+power~Ukraine]&amp;x14=[7a198bf4-40e2-4131-b2e5-8027f5497bf1~c191b8f2-d9db-49eb-9194-8980e1bf3661~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]&amp;x16=[Give%20me%20perspective]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+          >
+            В Чернобыле построили первую солнечную электростанцию. Фото
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-10-08"
+                class="StyledTimestamp-um718p-0 kSGFFg"
+          >
+            8 октября 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 dSVJxu">
+            Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/FB76/production/_103747346_hi049784039.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/FB76/production/_103747346_hi049784039.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/FB76/production/_103747346_hi049784039.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/FB76/production/_103747346_hi049784039.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/FB76/production/_103747346_hi049784039.jpg 800w"
+                         alt="Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/FB76/production/_103747346_hi049784039.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    На месте бывшей Чернобыльской АЭС, где в 1986 году произошла самая серьезная за всю историю ядерная катастрофа, построена первая на Украине солнечная электростанция.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/14996/production/_103747348_hi049782415.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14996/production/_103747348_hi049782415.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/14996/production/_103747348_hi049782415.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/14996/production/_103747348_hi049782415.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/14996/production/_103747348_hi049782415.jpg 800w"
+                         alt="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14996/production/_103747348_hi049782415.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg 800w"
+                         alt="Операция по удалению опухоли щитовидной железы в Институте эндокринологии в Киеве 5 апреля 2004 года"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9F46/production/_103747704_mediaitem103747702.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    В апреле 1986 года в результате разрушения реактора в атмосферу была выброшена огромная масса радиоактивных материалов, что привело к росту числа заболеваний раком щитовидной железы.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/B13E/production/_103747354_hi011040701.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B13E/production/_103747354_hi011040701.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/B13E/production/_103747354_hi011040701.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/B13E/production/_103747354_hi011040701.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/B13E/production/_103747354_hi011040701.jpg 800w"
+                         alt="Чернобыльский пейзаж 10 апреля 2010 года"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B13E/production/_103747354_hi011040701.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    В настоящее время комплекс бывшей ЧАЭС окружен запретной зоной, площадь которой составляет 2600 кв. км.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg 800w"
+                         alt="Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C976/production/_103747515_mediaitem103747504.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Украина построила в зоне отчуждения первую в стране крупную солнечную электростанцию - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg 800w"
+                         alt="Рабочие на открытой 5 октября 2018 года солнечной установке"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/582E/production/_103747522_mediaitem103747521.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Правительство Украины предлагает развернуть в запретной зоне строительство энергоустановок, использующих альтернативные источники энергии.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg 800w"
+                         alt="Рабочие на открытой 5 октября 2018 года солнечной установке"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/068A/production/_103747610_mediaitem103747609.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Рабочие на открытой 5 октября 2018 года солнечной установке.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg 800w"
+                         alt="Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16DEA/production/_103747639_mediaitem103747638.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Автор фото,
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Подпись к фото,
+                  </span>
+                  <p>
+                    Однако, согласно заявлению украинских властей, запретная зона останется закрытой для людей в течение 24 тысяч лет - это срок полураспада изотопов плутония.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 eCnUAT"
+                    >
+                      Новости по теме
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 dnWhDh">
+                      <a href="/russian/features-43915925?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        "Чернобыльский шлях" из Минска дойдет до Островца?
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 fFkFvc">
+                      Шествие с названием "Чернобыльский шлях" (Чернобыльский путь) - ежегодная традиция для Беларуси, наиболее пострадавшей от аварии на АЭС в украинском Чернобыле в 1986 году.
+                    </p>
+                    <time datetime="2018-04-26"
+                          class="StyledTimestamp-um718p-0 dlmfdW"
+                    >
+                      26 апреля 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 dnWhDh">
+                      <a href="/russian/vert-fut-43883685?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        "Мой счетчик Гейгера ожил". Что ищет охотник за радиацией
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 fFkFvc">
+                      Большинство из нас не хотело бы подвергнуться воздействию радиации, но Эндрю Уокер разыскивает и собирает вещи, ее излучающие. Сам, по собственной воле. Оказывается, такие вещи можно найти где угодно.
+                    </p>
+                    <time datetime="2018-04-29"
+                          class="StyledTimestamp-um718p-0 dlmfdW"
+                    >
+                      29 апреля 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/russian"
+               class="StyledLink-m3awbo-2 fInbeK"
+            >
+              <svg height="24"
+                   viewbox="0 0 327.19 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eCBZb"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M193.84 6.46l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M184.38 6.3h3.31a4.27 4.27 0 0 1 1.5.24 2.89 2.89 0 0 1 1 .65 2.6 2.6 0 0 1 .61 1 3.47 3.47 0 0 1 .2 1.18 3.17 3.17 0 0 1-.21 1.16 2.47 2.47 0 0 1-.65.94 3.16 3.16 0 0 1-1.11.63 4.9 4.9 0 0 1-1.59.23h-1.54v4.57h-1.52zm1.52 1.36v3.28h1.72a2.52 2.52 0 0 0 .77-.11 1.6 1.6 0 0 0 .59-.33 1.46 1.46 0 0 0 .37-.53 1.78 1.78 0 0 0 .13-.7 2 2 0 0 0-.09-.58 1.35 1.35 0 0 0-.3-.52 1.51 1.51 0 0 0-.55-.37 2.24 2.24 0 0 0-.86-.14zM211.27 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM222.59 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84 3.83 3.83 0 0 0-.88 1.28 4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM225.09 6.3h1.51v4.3a3.69 3.69 0 0 0 .77-.07 1.57 1.57 0 0 0 .61-.28 2.11 2.11 0 0 0 .51-.57 5.75 5.75 0 0 0 .47-1 6.87 6.87 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.16 2.16 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.08 3.08 0 0 0-.84.09 1.3 1.3 0 0 0-.54.3 1.77 1.77 0 0 0-.37.54q-.16.33-.32.79a3.78 3.78 0 0 1-.26.57 4.16 4.16 0 0 1-.35.54 3.52 3.52 0 0 1-.41.45 1.66 1.66 0 0 1-.43.29 5.07 5.07 0 0 1 .68.37 2.9 2.9 0 0 1 .53.46 5 5 0 0 1 .49.65q.25.38.56.94l1.86 3.22h-1.73L229.46 14a11.83 11.83 0 0 0-.7-1.1 3.26 3.26 0 0 0-.62-.67 1.83 1.83 0 0 0-.68-.33 3.56 3.56 0 0 0-.86-.09v5h-1.51zM240 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5L236 16.87h-1.6l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28zM247.66 14.51a15.33 15.33 0 0 1 1-1.32 5.34 5.34 0 0 1 1-1 8.06 8.06 0 0 1-.79-.41 3 3 0 0 1-.7-.57 2.67 2.67 0 0 1-.5-.81 3 3 0 0 1-.19-1.13 3 3 0 0 1 .23-1.27 2.65 2.65 0 0 1 .78-.95 3.38 3.38 0 0 1 1.18-.56 5.64 5.64 0 0 1 1.48-.19h3.18v10.57h-1.51v-4.34h-.42a3.36 3.36 0 0 0-.87.11 2.41 2.41 0 0 0-.76.36 3.9 3.9 0 0 0-.73.7 9.13 9.13 0 0 0-.78 1.11L248 16.87h-1.82zm5.15-3.28V7.6h-1.58a2.54 2.54 0 0 0-1.67.47 1.59 1.59 0 0 0-.56 1.28 1.8 1.8 0 0 0 .13.66 1.69 1.69 0 0 0 .41.61 2.15 2.15 0 0 0 .71.44 2.88 2.88 0 0 0 1 .17z">
+                  </path>
+                  <path d="M285 6.47l3 7.06 2.49-7.06h1.18l-3.14 8.44a5.86 5.86 0 0 1-.41.87 2.51 2.51 0 0 1-.47.6 1.67 1.67 0 0 1-.56.34 2 2 0 0 1-.67.11 2 2 0 0 1-.59-.08 1.88 1.88 0 0 1-.47-.21v-1.09a1.22 1.22 0 0 0 .47.31 1.93 1.93 0 0 0 .64.09.79.79 0 0 0 .29-.06 1.12 1.12 0 0 0 .31-.18 1.24 1.24 0 0 0 .25-.29.91.91 0 0 0 .13-.39l-3.71-8.44z">
+                  </path>
+                  <path d="M271.65 16.08q-.39.2-.8.37a6.94 6.94 0 0 1-.88.29 8 8 0 0 1-1 .19 9.07 9.07 0 0 1-1.15.07 6.47 6.47 0 0 1-1.8-.23 5.55 5.55 0 0 1-1.44-.64 5.07 5.07 0 0 1-1.1-.93 5.54 5.54 0 0 1-.77-1.12 5.36 5.36 0 0 1-.45-1.19 4.87 4.87 0 0 1-.15-1.16 5.86 5.86 0 0 1 .2-1.53 5.41 5.41 0 0 1 .56-1.35 5.24 5.24 0 0 1 .88-1.12 5.4 5.4 0 0 1 1.16-.85 5.89 5.89 0 0 1 1.4-.54 6.58 6.58 0 0 1 1.6-.19 6.88 6.88 0 0 1 1.68.21q.44.11.92.27t1 .39v1.64a10.69 10.69 0 0 0-.95-.5 7.55 7.55 0 0 0-.9-.34 5.85 5.85 0 0 0-.89-.2 6.29 6.29 0 0 0-.9-.06 4.51 4.51 0 0 0-1.68.31 4.12 4.12 0 0 0-1.34.84A3.83 3.83 0 0 0 264 10a4.07 4.07 0 0 0-.32 1.62 4.15 4.15 0 0 0 .31 1.62 3.67 3.67 0 0 0 .87 1.27 4 4 0 0 0 1.35.82 4.92 4.92 0 0 0 1.74.3 6 6 0 0 0 1.85-.3 7.77 7.77 0 0 0 1.85-.89zM278.91 6.23l4.73 10.63h-1.55l-3.73-8.58-3.5 8.58h-1.55l4.54-10.63zM293.63 6.3a4 4 0 0 1 1 .11 2.17 2.17 0 0 1 .8.39 3 3 0 0 1 .66.75 7 7 0 0 1 .58 1.17 5.93 5.93 0 0 0 .47 1 2.43 2.43 0 0 0 .47.57 1.33 1.33 0 0 0 .5.28 2.08 2.08 0 0 0 .56.07V6.3h1.52v4.3a2.08 2.08 0 0 0 .56-.07 1.32 1.32 0 0 0 .5-.28 2.43 2.43 0 0 0 .47-.57 5.93 5.93 0 0 0 .47-1 6.92 6.92 0 0 1 .58-1.17 3 3 0 0 1 .66-.75 2.17 2.17 0 0 1 .8-.39 4 4 0 0 1 1-.11h.23v1.4a3.09 3.09 0 0 0-.84.09 1.34 1.34 0 0 0-.55.3 1.7 1.7 0 0 0-.37.53 8.08 8.08 0 0 0-.31.79 3.16 3.16 0 0 1-.27.58 3.73 3.73 0 0 1-.39.54 3.84 3.84 0 0 1-.46.45 2.29 2.29 0 0 1-.48.31 3.34 3.34 0 0 1 .57.25 2.34 2.34 0 0 1 .45.34 3.72 3.72 0 0 1 .42.48q.2.28.45.68l2.38 3.84h-1.75l-1.91-3.22a8.16 8.16 0 0 0-.53-.81 3.48 3.48 0 0 0-.52-.56 1.94 1.94 0 0 0-.55-.33 1.69 1.69 0 0 0-.62-.11v5h-1.52v-5a1.68 1.68 0 0 0-.62.11 2 2 0 0 0-.56.34 3.39 3.39 0 0 0-.52.57 8.58 8.58 0 0 0-.52.79l-1.91 3.22h-1.75l2.4-3.84a5.7 5.7 0 0 1 .87-1.11 3.12 3.12 0 0 1 1-.65 2.28 2.28 0 0 1-.48-.31 3.84 3.84 0 0 1-.46-.45 3.79 3.79 0 0 1-.39-.54 3.16 3.16 0 0 1-.27-.58 7.41 7.41 0 0 0-.31-.79 1.78 1.78 0 0 0-.37-.53 1.31 1.31 0 0 0-.55-.3 3.09 3.09 0 0 0-.84-.09V6.3zM308.2 16.87V6.3h6.74v1.36h-5.22v2.87h2.14a5.18 5.18 0 0 1 1.54.22 3.55 3.55 0 0 1 1.2.62 2.84 2.84 0 0 1 .78 1 3.09 3.09 0 0 1 .28 1.34 3.05 3.05 0 0 1-.28 1.33 2.85 2.85 0 0 1-.78 1 3.54 3.54 0 0 1-1.2.62 5.17 5.17 0 0 1-1.54.22zm1.51-5v3.61H312a2.37 2.37 0 0 0 .85-.14 2 2 0 0 0 .64-.39 1.72 1.72 0 0 0 .55-1.27 1.62 1.62 0 0 0-.59-1.34 2.79 2.79 0 0 0-1.77-.47zM322.46 6.23l4.73 10.63h-1.55l-1.41-3.12h-4.5l-1.33 3.12h-1.55l4.54-10.63zm-.55 2.32l-1.58 3.83h3.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Русская служба
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-50098149"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Почему BBC News заслуживает доверия
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36515745"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Правила использования
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36515748"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    О Би-би-си
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36517234"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Личные данные
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Куки
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/russian/institutional-36517237"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Связаться с Би-би-си
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Би-би-си на несет ответственности за содержание других сайтов.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Познакомьтесь с нашими правилами внешних ссылок.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1538986037000,"lastPublished":1538986686000,"lastUpdated":1579165907791,"id":"mock-id","locators":{"assetUri":"/russian/features-45782775","cpsUrn":"urn:bbc:content:assetUri:russian/features-45782775","curie":"http://www.bbc.co.uk/asset/d8233746-0c01-2542-8577-82a832d28475"},"type":"PGL","createdBy":"russian-v6","language":"ru","timestamp":1538986037000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"russian.features.photo_gallery.45782775.page","cps_asset_id":"45782775"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"Give me perspective"}],"taggings":[]},"tags":{"about":[{"thingLabel":"Renewable energy","thingUri":"http://www.bbc.co.uk/things/7a198bf4-40e2-4131-b2e5-8027f5497bf1#id","thingId":"7a198bf4-40e2-4131-b2e5-8027f5497bf1","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Renewable_energy","http://www.wikidata.org/entity/Q12705"]},{"thingLabel":"Nuclear power","thingUri":"http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id","thingId":"c191b8f2-d9db-49eb-9194-8980e1bf3661","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Nuclear_power","http://www.wikidata.org/entity/Q12739"]},{"thingLabel":"Ukraine","thingUri":"http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id","thingId":"ee8750ed-a7fb-453f-bfca-2aa8b3fb064c","thingType":["Thing","Place","geoname:GeoTagConcept"],"thingSameAs":["http://dbpedia.org/resource/Ukraine","http://sws.geonames.org/690791/","http://www.wikidata.org/entity/Q212"]}]},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"\\"Чернобыльский шлях\\" из Минска дойдет до Островца?","headline":"\\"Чернобыльский шлях\\" из Минска дойдет до Островца?"},"locators":{"assetUri":"/russian/features-43915925","cpsUrn":"urn:bbc:content:assetUri:/russian/features-43915925"},"summary":"Шествие с названием \\"Чернобыльский шлях\\" (Чернобыльский путь) - ежегодная традиция для Беларуси, наиболее пострадавшей от аварии на АЭС в украинском Чернобыле в 1986 году.","timestamp":1524785878000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/49C5/production/_101058881_photo3.jpg","path":"/cpsprodpb/49C5/production/_101058881_photo3.jpg","height":549,"width":976,"altText":"Шествие в Беларуси","caption":"Организованные оппозицией шествие и митинг у поминального Чернобыльского камня в этом году были санкционированы в Минске","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"\\"Мой счетчик Гейгера ожил\\". Что ищет охотник за радиацией","headline":"\\"Мой счетчик Гейгера ожил\\". Что ищет охотник за радиацией"},"locators":{"assetUri":"/russian/vert-fut-43883685","cpsUrn":"urn:bbc:content:assetUri:/russian/vert-fut-43883685"},"summary":"Большинство из нас не хотело бы подвергнуться воздействию радиации, но Эндрю Уокер разыскивает и собирает вещи, ее излучающие. Сам, по собственной воле. Оказывается, такие вещи можно найти где угодно.","timestamp":1524984759000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/20BD/production/_101018380_radimainistock.jpg","path":"/cpsprodpb/20BD/production/_101018380_radimainistock.jpg","height":1152,"width":2048,"altText":"Знак радиации","copyrightHolder":"iStock","type":"image"},"id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"Подробности","uri":"/russian/features","type":"simple"},"site":{"subType":"site","name":"Новости на русском языке","uri":"/russian","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"В Чернобыле построили первую солнечную электростанцию. Фото","blocks":[{"type":"fragment","model":{"text":"В Чернобыле построили первую солнечную электростанцию. Фото","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1538986037000,"lastPublished":1538986686000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","blocks":[{"type":"fragment","model":{"text":"Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"На месте бывшей Чернобыльской АЭС, где в 1986 году произошла самая серьезная за всю историю ядерная катастрофа, построена первая на Украине солнечная электростанция.","blocks":[{"type":"fragment","model":{"text":"На месте бывшей Чернобыльской АЭС, где в 1986 году произошла самая серьезная за всю историю ядерная катастрофа, построена первая на Украине солнечная электростанция.","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС","blocks":[{"type":"fragment","model":{"text":"Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"FB76/production/_103747346_hi049784039.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.","blocks":[{"type":"fragment","model":{"text":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС","blocks":[{"type":"fragment","model":{"text":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"14996/production/_103747348_hi049782415.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"В апреле 1986 года в результате разрушения реактора в атмосферу была выброшена огромная масса радиоактивных материалов, что привело к росту числа заболеваний раком щитовидной железы.","blocks":[{"type":"fragment","model":{"text":"В апреле 1986 года в результате разрушения реактора в атмосферу была выброшена огромная масса радиоактивных материалов, что привело к росту числа заболеваний раком щитовидной железы.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Операция по удалению опухоли щитовидной железы в Институте эндокринологии в Киеве 5 апреля 2004 года","blocks":[{"type":"fragment","model":{"text":"Операция по удалению опухоли щитовидной железы в Институте эндокринологии в Киеве 5 апреля 2004 года","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"9F46/production/_103747704_mediaitem103747702.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"В настоящее время комплекс бывшей ЧАЭС окружен запретной зоной, площадь которой составляет 2600 кв. км.","blocks":[{"type":"fragment","model":{"text":"В настоящее время комплекс бывшей ЧАЭС окружен запретной зоной, площадь которой составляет 2600 кв. км.","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Чернобыльский пейзаж 10 апреля 2010 года","blocks":[{"type":"fragment","model":{"text":"Чернобыльский пейзаж 10 апреля 2010 года","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"B13E/production/_103747354_hi011040701.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Украина построила в зоне отчуждения первую в стране крупную солнечную электростанцию - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","blocks":[{"type":"fragment","model":{"text":"Украина построила в зоне отчуждения первую в стране крупную солнечную электростанцию - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС","blocks":[{"type":"fragment","model":{"text":"Солнечные панели на фоне колючей проволоки перед новым саркофагом, построенным над остатками поврежденного четвертого блока реакторов ЧАЭС","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"C976/production/_103747515_mediaitem103747504.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Правительство Украины предлагает развернуть в запретной зоне строительство энергоустановок, использующих альтернативные источники энергии.","blocks":[{"type":"fragment","model":{"text":"Правительство Украины предлагает развернуть в запретной зоне строительство энергоустановок, использующих альтернативные источники энергии.","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Рабочие на открытой 5 октября 2018 года солнечной установке","blocks":[{"type":"fragment","model":{"text":"Рабочие на открытой 5 октября 2018 года солнечной установке","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"582E/production/_103747522_mediaitem103747521.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Рабочие на открытой 5 октября 2018 года солнечной установке.","blocks":[{"type":"fragment","model":{"text":"Рабочие на открытой 5 октября 2018 года солнечной установке.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Рабочие на открытой 5 октября 2018 года солнечной установке","blocks":[{"type":"fragment","model":{"text":"Рабочие на открытой 5 октября 2018 года солнечной установке","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"EPA","height":549,"locator":"068A/production/_103747610_mediaitem103747609.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Однако, согласно заявлению украинских властей, запретная зона останется закрытой для людей в течение 24 тысяч лет - это срок полураспада изотопов плутония.","blocks":[{"type":"fragment","model":{"text":"Однако, согласно заявлению украинских властей, запретная зона останется закрытой для людей в течение 24 тысяч лет - это срок полураспада изотопов плутония.","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС","blocks":[{"type":"fragment","model":{"text":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"16DEA/production/_103747639_mediaitem103747638.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]}]}},"promo":{"headlines":{"shortHeadline":"В Чернобыле построили первую солнечную электростанцию. Всего в 100 метрах от саркофага","headline":"В Чернобыле построили первую солнечную электростанцию. Фото"},"locators":{"assetUri":"/russian/features-45782775","cpsUrn":"urn:bbc:content:assetUri:russian/features-45782775","curie":"http://www.bbc.co.uk/asset/d8233746-0c01-2542-8577-82a832d28475"},"summary":"Украина открыла свою первую солнечную электростанцию на месте Чернобыльской ядерной катастрофы - всего в 100 метрах от саркофага, закрывающего взорвавшийся в 1986 году атомный реактор.","timestamp":1538986037000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3739461b000e9dabfa","campaignName":"Give me perspective"}],"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/FB76/production/_103747346_hi049784039.jpg","path":"/cpsprodpb/FB76/production/_103747346_hi049784039.jpg","height":549,"width":976,"altText":"Построенный на средства ЕС новый гигантский саркофаг изолирует поврежденный в 1986 году четвертый блок ЧАЭС.","copyrightHolder":"Reuters","type":"image"},"id":"mock-id","type":"cps"}},"path":"/russian/features-45782775","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [31]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="russian"
+            src="http://localhost:7080/static/js/russian-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

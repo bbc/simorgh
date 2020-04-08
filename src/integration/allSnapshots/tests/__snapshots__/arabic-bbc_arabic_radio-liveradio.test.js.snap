@@ -1,0 +1,1973 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /arabic/bbc_arabic_radio/liveradio For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ar"
+      dir="rtl"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ar"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="إذاعة بي بي سي العربية - BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/arabic/bbc_arabic_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCArabic"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCArabic"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="إذاعة بي بي سي العربية - BBC News عربي"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      إذاعة بي بي سي العربية - BBC News عربي
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/arabic/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/arabic/bbc_arabic_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/arabic/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/arabic/bbc_arabic_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News عربي","publishingPrinciples":"https://www.bbc.com/arabic/institutional-49283069","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/arabic/bbc_arabic_radio/liveradio","name":"إذاعة بي بي سي العربية"}}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="rtl"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fctLCD"
+              >
+                <div dir="rtl"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="rtl"
+                      class="Title-sc-7g3fro-2 kcHhsl"
+                  >
+                    لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط (الكوكيز)
+                  </h2>
+                  <p dir="rtl"
+                     class="ConsentBannerText-sc-7g3fro-4 feAsrw"
+                  >
+                    لقد أدخلنا تغييرات مهمة على سياستنا المتعلقة بالخصوصية وعلى الشروط الخاصة بملفات الارتباط (الكوكيز)، ويهمنا أن تكونوا ملمين بما قد تعني هذه التغييرات بالنسبة لكم ولبياناتكم
+                  </p>
+                  <ul dir="rtl"
+                      class="Options-sc-7g3fro-3 gbuXMf"
+                  >
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        موافق
+                      </button>
+                    </li>
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        إطلع على التغييرات
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="rtl"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fctLCD"
+              >
+                <div dir="rtl"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="rtl"
+                      class="Title-sc-7g3fro-2 kcHhsl"
+                  >
+                    أخبرنا عما إذا كنت توافق على تحميل الكوكيز
+                  </h2>
+                  <p dir="rtl"
+                     class="ConsentBannerText-sc-7g3fro-4 feAsrw"
+                  >
+                    نستخدم
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      ملفات ارتباط (كوكيز)
+                    </a>
+                    لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الكوكيز.
+                  </p>
+                  <ul dir="rtl"
+                      class="Options-sc-7g3fro-3 gbuXMf"
+                  >
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        نعم، موافق
+                      </button>
+                    </li>
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        كلا، أعدني إلى الإعدادات
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/arabic"
+               class="StyledLink-m3awbo-2 eUQWAG"
+            >
+              <svg height="24"
+                   viewbox="0 0 223 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eyiIAH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M203 4.64c-.11-.21-.26-.49-.32-.58h-.06L201 5.56v.06l.13.19.17.26a.79.79 0 0 0 .1.14 6.14 6.14 0 0 1 1.08 3.66v.25h-10.4l.42 1.76c0 .13 0 .2.3.2h2.86l-.16.35a4.36 4.36 0 0 1-4.26 2.7c-2.49 0-4.52-2-5.44-5.3l-.8 1.77a8.5 8.5 0 0 0 1.07 2.64 6.42 6.42 0 0 0 5.6 2.9 6.53 6.53 0 0 0 6.06-4.82v-.19h6.43c.11-1.07.16-1.53.16-1.92a6.12 6.12 0 0 0 0-.62A10.53 10.53 0 0 0 203 4.64M200.35 15.23a.27.27 0 0 0-.06.16.22.22 0 0 0 .05.13l1 1a.28.28 0 0 0 .16.06s.07 0 .16-.08l1-1a.24.24 0 0 0 .08-.13.21.21 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06.25.25 0 0 0-.16.06zM190 18.36a.24.24 0 0 0-.16.06l-1 1a.18.18 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1s.06.06.16.06a.18.18 0 0 0 .13-.06l1-1a.23.23 0 0 0 .05-.13.31.31 0 0 0-.06-.16l-1-1a.29.29 0 0 0-.15-.07">
+                  </path>
+                  <path d="M192.4 18.36a.3.3 0 0 0-.19.08l-1 1a.14.14 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1a.27.27 0 0 0 .16.06h.11l1-1a.23.23 0 0 0 .08-.13.25.25 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06M218.85 10.2a2.28 2.28 0 0 1-2.5-2.37c0-1.28.68-2.34 3.92-2.34h.55V4.31a13.17 13.17 0 0 0-2.49-.24c-2.43 0-4.2 1.45-4.2 3.45a3.72 3.72 0 0 0 .71 2.29l.26.39h-4.52v-.22a16.31 16.31 0 0 0-.84-3.62c-.14-.4-.34-1-.45-1.2l-1.7 1.55a.24.24 0 0 0 0 .06.71.71 0 0 0 .12.32 8.9 8.9 0 0 1 1.14 4.41 4.44 4.44 0 0 1-.55 2.37 4.27 4.27 0 0 1-3.3 1.83l1.49 1.42c2.52-.4 4-2.24 4.2-5.05a.78.78 0 0 0 .37.08h10.64c.21 0 .32-.06.32-.16V10.2z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                عربي
+              </span>
+            </a>
+            <a dir="rtl"
+               href="#content"
+               class="SkipLink-wmpyxz-0 eXGlfx"
+            >
+              إذهب الى المحتوى
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="rtl"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 dmaate"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="rtl"
+                    class="MenuButton-ukxuly-6 dEgmnw"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                أقسام
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    رئيسية
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/middleeast"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    شرق أوسط
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/world"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    عالم
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/scienceandtech"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    علوم وتكنولوجيا
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    صحة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/business"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    اقتصاد
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/artandculture"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    فنون
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/sports"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    رياضة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/magazine"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    مجلة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    مرأة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/media"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    فيديو
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/inthepress"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    صحافة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/tv-and-radio-37728883"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    برامجنا
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/trending"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    ترند
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/interactivity"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    حوارات
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/in_depth"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    ملفات
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="rtl"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 pgOHc StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    رئيسية
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/middleeast"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    شرق أوسط
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/world"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    عالم
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/scienceandtech"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    علوم وتكنولوجيا
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    صحة
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/business"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    اقتصاد
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/artandculture"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    فنون
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/sports"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    رياضة
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/magazine"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    مجلة
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    مرأة
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/media"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    فيديو
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/inthepress"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    صحافة
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/tv-and-radio-37728883"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    برامجنا
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/trending"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    ترند
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/interactivity"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    حوارات
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/arabic/in_depth"
+                     class="StyledLink-sc-158x7z5-2 eqATum"
+                  >
+                    ملفات
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=5&p=arabic.bbc_arabic_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_arabic_radio]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[إذاعة+بي+بي+سي+العربية+-+BBC+News+Arabic]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Arabic, Arabic - , Arabic - unknown, Arabic - unknown, Arabic - unknown","uid":50924,"title":"إذاعة بي بي سي العربية","virtualReferrer":"\${documentReferrer}","contentType":"Live Radio"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            dir="rtl"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="rtl"
+             class="GridComponent-nf79gm-0 cAoCCU"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 jPLlcj"
+          >
+            إذاعة بي بي سي العربية
+          </h1>
+          <p class="Paragraph-k859h4-0 jTfwXE">
+            خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي
+          </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_arabic_radio/liveradio/ar/amp"
+                            title="مشغل ملف صوتي"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img layout="fill"
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img alt
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 bEuAwJ">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          جهازك لا يدعم تشغيل الفيديو
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/arabic"
+               class="StyledLink-m3awbo-2 eUQWAG"
+            >
+              <svg height="24"
+                   viewbox="0 0 223 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eyiIAH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M203 4.64c-.11-.21-.26-.49-.32-.58h-.06L201 5.56v.06l.13.19.17.26a.79.79 0 0 0 .1.14 6.14 6.14 0 0 1 1.08 3.66v.25h-10.4l.42 1.76c0 .13 0 .2.3.2h2.86l-.16.35a4.36 4.36 0 0 1-4.26 2.7c-2.49 0-4.52-2-5.44-5.3l-.8 1.77a8.5 8.5 0 0 0 1.07 2.64 6.42 6.42 0 0 0 5.6 2.9 6.53 6.53 0 0 0 6.06-4.82v-.19h6.43c.11-1.07.16-1.53.16-1.92a6.12 6.12 0 0 0 0-.62A10.53 10.53 0 0 0 203 4.64M200.35 15.23a.27.27 0 0 0-.06.16.22.22 0 0 0 .05.13l1 1a.28.28 0 0 0 .16.06s.07 0 .16-.08l1-1a.24.24 0 0 0 .08-.13.21.21 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06.25.25 0 0 0-.16.06zM190 18.36a.24.24 0 0 0-.16.06l-1 1a.18.18 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1s.06.06.16.06a.18.18 0 0 0 .13-.06l1-1a.23.23 0 0 0 .05-.13.31.31 0 0 0-.06-.16l-1-1a.29.29 0 0 0-.15-.07">
+                  </path>
+                  <path d="M192.4 18.36a.3.3 0 0 0-.19.08l-1 1a.14.14 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1a.27.27 0 0 0 .16.06h.11l1-1a.23.23 0 0 0 .08-.13.25.25 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06M218.85 10.2a2.28 2.28 0 0 1-2.5-2.37c0-1.28.68-2.34 3.92-2.34h.55V4.31a13.17 13.17 0 0 0-2.49-.24c-2.43 0-4.2 1.45-4.2 3.45a3.72 3.72 0 0 0 .71 2.29l.26.39h-4.52v-.22a16.31 16.31 0 0 0-.84-3.62c-.14-.4-.34-1-.45-1.2l-1.7 1.55a.24.24 0 0 0 0 .06.71.71 0 0 0 .12.32 8.9 8.9 0 0 1 1.14 4.41 4.44 4.44 0 0 1-.55 2.37 4.27 4.27 0 0 1-3.3 1.83l1.49 1.42c2.52-.4 4-2.24 4.2-5.05a.78.78 0 0 0 .37.08h10.64c.21 0 .32-.06.32-.16V10.2z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                عربي
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 dNERxK">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-49283069"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    لماذا يمكنك الإعتماد على أخبار بي بي سي
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731351"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    شروط الاستخدام
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731352"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    عن بي بي سي
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731353"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    سياسة الخصوصية
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ملفات الارتباط Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731355"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    اتصل بـ بي بي سي
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  سياستنا بخصوص الروابط الخارجية.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /arabic/bbc_arabic_radio/liveradio For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ar"
+      class="no-js"
+      dir="rtl"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ar"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="إذاعة بي بي سي العربية - BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/arabic/bbc_arabic_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCArabic"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News عربي"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCArabic"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="إذاعة بي بي سي العربية - BBC News عربي"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      إذاعة بي بي سي العربية - BBC News عربي
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/arabic/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/arabic/bbc_arabic_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/arabic/bbc_arabic_radio/liveradio.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/arabic/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/arabic/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/arabic/bbc_arabic_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News عربي","publishingPrinciples":"https://www.bbc.com/arabic/institutional-49283069","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/arabic/bbc_arabic_radio/liveradio","name":"إذاعة بي بي سي العربية"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/arabic"
+               class="StyledLink-m3awbo-2 eUQWAG"
+            >
+              <svg height="24"
+                   viewbox="0 0 223 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eyiIAH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M203 4.64c-.11-.21-.26-.49-.32-.58h-.06L201 5.56v.06l.13.19.17.26a.79.79 0 0 0 .1.14 6.14 6.14 0 0 1 1.08 3.66v.25h-10.4l.42 1.76c0 .13 0 .2.3.2h2.86l-.16.35a4.36 4.36 0 0 1-4.26 2.7c-2.49 0-4.52-2-5.44-5.3l-.8 1.77a8.5 8.5 0 0 0 1.07 2.64 6.42 6.42 0 0 0 5.6 2.9 6.53 6.53 0 0 0 6.06-4.82v-.19h6.43c.11-1.07.16-1.53.16-1.92a6.12 6.12 0 0 0 0-.62A10.53 10.53 0 0 0 203 4.64M200.35 15.23a.27.27 0 0 0-.06.16.22.22 0 0 0 .05.13l1 1a.28.28 0 0 0 .16.06s.07 0 .16-.08l1-1a.24.24 0 0 0 .08-.13.21.21 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06.25.25 0 0 0-.16.06zM190 18.36a.24.24 0 0 0-.16.06l-1 1a.18.18 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1s.06.06.16.06a.18.18 0 0 0 .13-.06l1-1a.23.23 0 0 0 .05-.13.31.31 0 0 0-.06-.16l-1-1a.29.29 0 0 0-.15-.07">
+                  </path>
+                  <path d="M192.4 18.36a.3.3 0 0 0-.19.08l-1 1a.14.14 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1a.27.27 0 0 0 .16.06h.11l1-1a.23.23 0 0 0 .08-.13.25.25 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06M218.85 10.2a2.28 2.28 0 0 1-2.5-2.37c0-1.28.68-2.34 3.92-2.34h.55V4.31a13.17 13.17 0 0 0-2.49-.24c-2.43 0-4.2 1.45-4.2 3.45a3.72 3.72 0 0 0 .71 2.29l.26.39h-4.52v-.22a16.31 16.31 0 0 0-.84-3.62c-.14-.4-.34-1-.45-1.2l-1.7 1.55a.24.24 0 0 0 0 .06.71.71 0 0 0 .12.32 8.9 8.9 0 0 1 1.14 4.41 4.44 4.44 0 0 1-.55 2.37 4.27 4.27 0 0 1-3.3 1.83l1.49 1.42c2.52-.4 4-2.24 4.2-5.05a.78.78 0 0 0 .37.08h10.64c.21 0 .32-.06.32-.16V10.2z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                عربي
+              </span>
+            </a>
+            <a dir="rtl"
+               href="#content"
+               class="SkipLink-wmpyxz-0 eXGlfx"
+            >
+              إذهب الى المحتوى
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="rtl"
+             class="StyledNav-sc-158x7z5-5 fdVKyQ"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="rtl"
+                      class="MenuButton-ukxuly-6 dEgmnw"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  أقسام
+                </span>
+              </button>
+              <div dir="rtl"
+                   class="StyledScrollableNav-sc-1nc6e54-0 pgOHc"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      رئيسية
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/middleeast"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      شرق أوسط
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/world"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      عالم
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/scienceandtech"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      علوم وتكنولوجيا
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      صحة
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/business"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      اقتصاد
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/artandculture"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      فنون
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/sports"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      رياضة
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/magazine"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      مجلة
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      مرأة
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/media"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      فيديو
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/inthepress"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      صحافة
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/tv-and-radio-37728883"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      برامجنا
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/trending"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      ترند
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/interactivity"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      حوارات
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/arabic/in_depth"
+                       class="StyledLink-sc-158x7z5-2 eqATum"
+                    >
+                      ملفات
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    رئيسية
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/middleeast"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    شرق أوسط
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/world"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    عالم
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/scienceandtech"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    علوم وتكنولوجيا
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    صحة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/business"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    اقتصاد
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/artandculture"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    فنون
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/sports"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    رياضة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/magazine"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    مجلة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    مرأة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/media"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    فيديو
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/inthepress"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    صحافة
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/tv-and-radio-37728883"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    برامجنا
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/trending"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    ترند
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/interactivity"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    حوارات
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/arabic/in_depth"
+                     class="StyledDropdownLink-ukxuly-4 gGAPJl"
+                  >
+                    ملفات
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.bbc_arabic_radio.liveradio.page&amp;x1=[urn:bbc:ares::ws_live:bbc_arabic_radio]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[إذاعة+بي+بي+سي+العربية+-+BBC+News+Arabic]"
+        >
+      </noscript>
+      <main role="main"
+            dir="rtl"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="rtl"
+             class="GridComponent-nf79gm-0 cAoCCU"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 jPLlcj"
+          >
+            إذاعة بي بي سي العربية
+          </h1>
+          <p class="Paragraph-k859h4-0 jTfwXE">
+            خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي
+          </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_arabic_radio/liveradio/ar"
+                        title="مشغل ملف صوتي"
+                        allow="autoplay; fullscreen"
+                        scrolling="no"
+                        allowfullscreen
+                        class="StyledIframe-fuo2ed-0 dIyDYU"
+                >
+                </iframe>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <div class="MessageWrapper-sc-1pnftlt-1 bEuAwJ">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        جهازك لا يدعم تشغيل الفيديو
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/arabic"
+               class="StyledLink-m3awbo-2 eUQWAG"
+            >
+              <svg height="24"
+                   viewbox="0 0 223 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 eyiIAH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M203 4.64c-.11-.21-.26-.49-.32-.58h-.06L201 5.56v.06l.13.19.17.26a.79.79 0 0 0 .1.14 6.14 6.14 0 0 1 1.08 3.66v.25h-10.4l.42 1.76c0 .13 0 .2.3.2h2.86l-.16.35a4.36 4.36 0 0 1-4.26 2.7c-2.49 0-4.52-2-5.44-5.3l-.8 1.77a8.5 8.5 0 0 0 1.07 2.64 6.42 6.42 0 0 0 5.6 2.9 6.53 6.53 0 0 0 6.06-4.82v-.19h6.43c.11-1.07.16-1.53.16-1.92a6.12 6.12 0 0 0 0-.62A10.53 10.53 0 0 0 203 4.64M200.35 15.23a.27.27 0 0 0-.06.16.22.22 0 0 0 .05.13l1 1a.28.28 0 0 0 .16.06s.07 0 .16-.08l1-1a.24.24 0 0 0 .08-.13.21.21 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06.25.25 0 0 0-.16.06zM190 18.36a.24.24 0 0 0-.16.06l-1 1a.18.18 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1s.06.06.16.06a.18.18 0 0 0 .13-.06l1-1a.23.23 0 0 0 .05-.13.31.31 0 0 0-.06-.16l-1-1a.29.29 0 0 0-.15-.07">
+                  </path>
+                  <path d="M192.4 18.36a.3.3 0 0 0-.19.08l-1 1a.14.14 0 0 0-.06.14.3.3 0 0 0 .08.19l1 1a.27.27 0 0 0 .16.06h.11l1-1a.23.23 0 0 0 .08-.13.25.25 0 0 0-.08-.16l-1-1a.18.18 0 0 0-.13-.06M218.85 10.2a2.28 2.28 0 0 1-2.5-2.37c0-1.28.68-2.34 3.92-2.34h.55V4.31a13.17 13.17 0 0 0-2.49-.24c-2.43 0-4.2 1.45-4.2 3.45a3.72 3.72 0 0 0 .71 2.29l.26.39h-4.52v-.22a16.31 16.31 0 0 0-.84-3.62c-.14-.4-.34-1-.45-1.2l-1.7 1.55a.24.24 0 0 0 0 .06.71.71 0 0 0 .12.32 8.9 8.9 0 0 1 1.14 4.41 4.44 4.44 0 0 1-.55 2.37 4.27 4.27 0 0 1-3.3 1.83l1.49 1.42c2.52-.4 4-2.24 4.2-5.05a.78.78 0 0 0 .37.08h10.64c.21 0 .32-.06.32-.16V10.2z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                عربي
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 dNERxK">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-49283069"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    لماذا يمكنك الإعتماد على أخبار بي بي سي
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731351"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    شروط الاستخدام
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731352"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    عن بي بي سي
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731353"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    سياسة الخصوصية
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ملفات الارتباط Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/arabic/institutional-37731355"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    اتصل بـ بي بي سي
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  سياستنا بخصوص الروابط الخارجية.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"إذاعة بي بي سي العربية","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_arabic_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_arabic_radio"},"type":"WS-LIVE","createdBy":"arabic","language":"ar","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"إذاعة بي بي سي العربية - BBC News Arabic","pageIdentifier":"arabic.bbc_arabic_radio.liveradio.page","producerId":"5","contentType":"player-live","producer":"ARABIC"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"إذاعة بي بي سي العربية","summary":"خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي","uri":"/arabic/bbc_arabic_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"arabic","uri":"/arabic","type":"simple"},"groups":[]}},"path":"/arabic/bbc_arabic_radio/liveradio","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [3]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="arabic"
+            src="http://localhost:7080/static/js/arabic-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

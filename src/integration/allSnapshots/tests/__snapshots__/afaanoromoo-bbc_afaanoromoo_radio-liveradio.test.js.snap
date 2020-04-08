@@ -1,0 +1,1473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /afaanoromoo/bbc_afaanoromoo_radio/liveradio For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="om"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Sagantaawwan keenya"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Sagantaawwan keenya"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="om-ET"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Dhaggeeffadhaa - BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Sagantaawwan keenya"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Dhaggeeffadhaa - BBC News Afaan Oromoo"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Dhaggeeffadhaa - BBC News Afaan Oromoo
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/afaanoromoo/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Afaan Oromoo","publishingPrinciples":"https://www.bbc.com/afaanoromoo/institutional-49281861","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio","name":"Dhaggeeffadhaa"}}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Imaammata mateenyaafi kuus-yadannoo keenyaa haaromsiineera.
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Imaammata mateenyaafi kuus-yaadannoo keenyaarratti jijjirama barbaachisaa muraasa kan taasifne yoo ta'u, kunis siifi daataa keetiif maal jechu akka ta'e akka bartu barbaadna.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        TOLE
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Maaltu akka jijjirame bari
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Kuus-yaadannoo waliin waliigalu kee haa beeknu
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Kan nuti
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      kuus-yaadannoo fayyadamnu
+                    </a>
+                    muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Eyyee, walii nan gala.
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Lakki, gara bakka itti argamuutti na geessi
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Qabiyyeetti darbi
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Kutaawwan
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Oduu
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Itoophiyaa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Viidiyoo
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Jajjaboo
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Oduu
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Itoophiyaa
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Viidiyoo
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Jajjaboo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=2&p=afaanoromoo.bbc_afaanoromoo_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_oromo_radio]&x2=[amp]&x3=[news-afaanoromoo]&x4=[om]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[Dhaggeeffadhaa+-+BBC+News+Afaan+Oromoo]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Afaanoromoo, Afaanoromoo - , Afaanoromoo - unknown, Afaanoromoo - unknown, Afaanoromoo - unknown","uid":50924,"title":"Dhaggeeffadhaa","virtualReferrer":"\${documentReferrer}","contentType":"Live Radio"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            dir="ltr"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 kMhoTR"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 hzbExq"
+          >
+            Dhaggeeffadhaa
+          </h1>
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Sagantaawwan keenya
+          </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/liveradio/om/amp"
+                            title="Audio player"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img layout="fill"
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img alt
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          Meeshaan kee Miidiyaa taphachiisuu hin danda'u
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-49281861"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News maaliif amanuu dandeessa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Haala itti fayyadamaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Waa'ee BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Imaammata mateenyaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuus-yaadannoo
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-42228538"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC qunnami
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Gara geessituu alaatti akkaataa itti hojjennu dubbisi.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /afaanoromoo/bbc_afaanoromoo_radio/liveradio For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="om"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Sagantaawwan keenya"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Sagantaawwan keenya"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="om-ET"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Dhaggeeffadhaa - BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Sagantaawwan keenya"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Dhaggeeffadhaa - BBC News Afaan Oromoo"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Dhaggeeffadhaa - BBC News Afaan Oromoo
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/afaanoromoo/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Afaan Oromoo","publishingPrinciples":"https://www.bbc.com/afaanoromoo/institutional-49281861","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio","name":"Dhaggeeffadhaa"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Qabiyyeetti darbi
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Kutaawwan
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Oduu
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Itoophiyaa
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Viidiyoo
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Jajjaboo
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Oduu
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Itoophiyaa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Viidiyoo
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Jajjaboo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=2&amp;p=afaanoromoo.bbc_afaanoromoo_radio.liveradio.page&amp;x1=[urn:bbc:ares::ws_live:bbc_oromo_radio]&amp;x2=[responsive]&amp;x3=[news-afaanoromoo]&amp;x4=[om]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[Dhaggeeffadhaa+-+BBC+News+Afaan+Oromoo]"
+        >
+      </noscript>
+      <main role="main"
+            dir="ltr"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 kMhoTR"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 hzbExq"
+          >
+            Dhaggeeffadhaa
+          </h1>
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Sagantaawwan keenya
+          </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/liveradio/om"
+                        title="Audio player"
+                        allow="autoplay; fullscreen"
+                        scrolling="no"
+                        allowfullscreen
+                        class="StyledIframe-fuo2ed-0 dIyDYU"
+                >
+                </iframe>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        Meeshaan kee Miidiyaa taphachiisuu hin danda'u
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-49281861"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News maaliif amanuu dandeessa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Haala itti fayyadamaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Waa'ee BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Imaammata mateenyaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuus-yaadannoo
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-42228538"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC qunnami
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Gara geessituu alaatti akkaataa itti hojjennu dubbisi.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"Dhaggeeffadhaa","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"Sagantaawwan keenya","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_oromo_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_oromo_radio"},"type":"WS-LIVE","createdBy":"afaanoromoo","language":"om","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"Dhaggeeffadhaa - BBC News Afaan Oromoo","pageIdentifier":"afaanoromoo.bbc_afaanoromoo_radio.liveradio.page","producerId":"2","contentType":"player-live","producer":"AFAAN_OROMOO"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"Dhaggeeffadhaa","summary":"Sagantaawwan keenya","uri":"/afaanoromoo/bbc_afaanoromoo_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"afaanoromoo","uri":"/afaanoromoo","type":"simple"},"groups":[]}},"path":"/afaanoromoo/bbc_afaanoromoo_radio/liveradio","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [0]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="afaanoromoo"
+            src="http://localhost:7080/static/js/afaanoromoo-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

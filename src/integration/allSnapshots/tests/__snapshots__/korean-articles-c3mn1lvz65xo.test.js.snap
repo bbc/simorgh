@@ -1,0 +1,1730 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /korean/articles/c3mn1lvz65xo For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ko"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="이것이이 테스트 기사의 헤드 라인입니다."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="이것이이 테스트 기사의 헤드 라인입니다."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ko-KO"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/korean/articles/c3mn1lvz65xo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="이것이이 테스트 기사의 헤드 라인입니다."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-11-27T11:45:47.209Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-11-27T11:45:47.209Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/korean/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/korean/articles/c3mn1lvz65xo"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/korean/articles/c3mn1lvz65xo","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/articles/c3mn1lvz65xo","name":"이것이이 테스트 기사의 헤드 라인입니다."},"headline":"이것이이 테스트 기사의 헤드 라인입니다.","datePublished":"2019-11-27T11:45:47.209Z","dateModified":"2019-11-27T11:45:47.209Z","author":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"noBylinesPolicy":"https://www.bbc.com/korean/institutional-49283197#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/c3mn1lvz65xo/p01k6msp/ko/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 bBwfkj"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    개인정보와 쿠키 처리방침을 변경했습니다
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        알겠습니다
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        변경사항을 확인하세요
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 bBwfkj"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    쿠키생성에 동의하시나요
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    BBC는 이용자의 최적의 온라인 경험을 위해
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      쿠키
+                    </a>
+                    정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        네, 동의합니다
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        아니요, 재 세팅 하겠습니다
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 dUSIGf"
+            >
+              내용으로 건너뛰기
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                섹션
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=57&p=korean.articles.c3mn1lvz65xo.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c3mn1lvz65xo]&x2=[amp]&x3=[news-korean]&x4=[ko]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[이것이이+테스트+기사의+헤드+라인입니다.]&x11=[2019-11-27T11:45:47.209Z]&x12=[2019-11-27T11:45:47.209Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Korean, Korean - ART","uid":50924,"title":"이것이이 테스트 기사의 헤드 라인입니다.","virtualReferrer":"\${documentReferrer}","contentType":"New Article"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hFaagK"
+            >
+              이것이이 테스트 기사의 헤드 라인입니다.
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다."
+                             attribution
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg"
+                             height="351"
+                             width="624"
+                    >
+                    </amp-img>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 설명
+                    </span>
+                    <p>
+                      이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-11-27"
+                  class="StyledTimestamp-um718p-0 gNVSxm"
+            >
+              27 11월 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 Kskll">
+              이것은
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                홈페이지에 대한
+              </a>
+              링크를 포함하는 텍스트 블록입니다.
+            </p>
+          </div>
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c3mn1lvz65xo/p01k6msp/ko/amp"
+                            title="Media player"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           layout="fill"
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           alt
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          사용 기기에서 미디어 재생이 지원되지 않습니다
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  동영상 설명
+                </span>
+                <p>
+                  이것은 크를 포함하는 텍스트 블록입니다.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="이것은-소제목입니다"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 exafXz"
+            >
+              이것은 소제목입니다
+            </h2>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="이것은 소제목입니다"
+                             attribution="Getty Images"
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg"
+                             height="450"
+                             width="800"
+                    >
+                    </amp-img>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        사진 출처
+                      </span>
+                      <span lang="en-GB">
+                        Getty Images
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 Kskll">
+              이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-49283197"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News를 신뢰할 수 있는 이유
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    이용 약관
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC 소개
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    개인정보취급방침
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    쿠키정책
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-42224941"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    고객센터
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /korean/articles/c3mn1lvz65xo For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ko"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="이것이이 테스트 기사의 헤드 라인입니다."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="이것이이 테스트 기사의 헤드 라인입니다."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ko-KO"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/korean/articles/c3mn1lvz65xo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="이것이이 테스트 기사의 헤드 라인입니다."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-11-27T11:45:47.209Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-11-27T11:45:47.209Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      이것이이 테스트 기사의 헤드 라인입니다. - BBC News 코리아
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/korean/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/korean/articles/c3mn1lvz65xo"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/korean/articles/c3mn1lvz65xo.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/korean/articles/c3mn1lvz65xo","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/articles/c3mn1lvz65xo","name":"이것이이 테스트 기사의 헤드 라인입니다."},"headline":"이것이이 테스트 기사의 헤드 라인입니다.","datePublished":"2019-11-27T11:45:47.209Z","dateModified":"2019-11-27T11:45:47.209Z","author":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"noBylinesPolicy":"https://www.bbc.com/korean/institutional-49283197#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/c3mn1lvz65xo/p01k6msp/ko"}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 dUSIGf"
+            >
+              내용으로 건너뛰기
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  섹션
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      뉴스
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/media/video"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      비디오
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/downloads"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      다운로드
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      TOP 뉴스
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=57&amp;p=korean.articles.c3mn1lvz65xo.page&amp;x1=[urn:bbc:optimo:c3mn1lvz65xo]&amp;x2=[responsive]&amp;x3=[news-korean]&amp;x4=[ko]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[이것이이+테스트+기사의+헤드+라인입니다.]&amp;x11=[2019-11-27T11:45:47.209Z]&amp;x12=[2019-11-27T11:45:47.209Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hFaagK"
+            >
+              이것이이 테스트 기사의 헤드 라인입니다.
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg 624w"
+                         alt="이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다."
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg"
+                         width="624"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 설명
+                    </span>
+                    <p>
+                      이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-11-27"
+                  class="StyledTimestamp-um718p-0 gNVSxm"
+            >
+              27 11월 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 Kskll">
+              이것은
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                홈페이지에 대한
+              </a>
+              링크를 포함하는 텍스트 블록입니다.
+            </p>
+          </div>
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <div class="StyledPlaceholder-sc-11nyhtu-0 dDNqOp">
+                  <div class="GuidanceWrapper-sc-1wm6qsk-0 fIjPrR">
+                    <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO guidance-message"
+                            aria-hidden="true"
+                    >
+                      Contains strong language and adult humour.
+                    </strong>
+                    <noscript class="StyledNoScript-sc-1wm6qsk-2 fsOOOd">
+                      <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO">
+                        사용 기기에서 미디어 재생이 지원되지 않습니다
+                      </strong>
+                    </noscript>
+                  </div>
+                  <button class="Button-sc-34e3rb-0 bQIqbq StyledPlayButton-sc-11nyhtu-1 bBTuxK">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
+                    </span>
+                    <div aria-hidden="true"
+                         class="IconWrapper-sc-34e3rb-1 jGavfg"
+                    >
+                      <svg viewbox="0 0 32 32"
+                           width="12px"
+                           height="12px"
+                           focusable="false"
+                           aria-hidden="true"
+                           class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                      >
+                        <polygon points="3,32 29,16 3,0">
+                        </polygon>
+                      </svg>
+                    </div>
+                    <time datetime="PT3M11S"
+                          aria-hidden="true"
+                          class="TimeDuration-sc-34e3rb-2 cZLyLe"
+                    >
+                      03:11
+                    </time>
+                  </button>
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                </div>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  동영상 설명
+                </span>
+                <p>
+                  이것은 크를 포함하는 텍스트 블록입니다.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="이것은-소제목입니다"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 exafXz"
+            >
+              이것은 소제목입니다
+            </h2>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <div class="lazyload-placeholder">
+                    </div>
+                    <noscript>
+                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg 800w"
+                           alt="이것은 소제목입니다"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg"
+                           width="800"
+                           class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                      >
+                    </noscript>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        사진 출처
+                      </span>
+                      <span lang="en-GB">
+                        Getty Images
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 Kskll">
+              이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-49283197"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News를 신뢰할 수 있는 이유
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    이용 약관
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC 소개
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    개인정보취급방침
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    쿠키정책
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-42224941"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    고객센터
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"optimoUrn":"urn:bbc:optimo:asset:c3mn1lvz65xo","canonicalUrl":"https://www.bbc.com/korean/articles/c3mn1lvz65xo"},"type":"article","createdBy":"Korean","language":"ko","lastUpdated":1575558253480,"firstPublished":1574855147209,"lastPublished":1574855147209,"options":{},"analyticsLabels":{},"passport":{"language":"ko","home":"http://www.bbc.co.uk/ontologies/passport/home/Korean","passportId":"737b7d88-66a6-48a7-95f2-897afd1d4791","locator":"urn:bbc:optimo:asset:c3mn1lvz65xo","availability":"AVAILABLE","taggings":[]},"tags":{},"version":"v1.1.3","blockTypes":["headline","text","paragraph","fragment","image","caption","altText","rawImage","urlLink","video","subheadline"]},"content":{"model":{"blocks":[{"type":"headline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이것이이 테스트 기사의 헤드 라인입니다.","blocks":[{"type":"fragment","model":{"text":"이것이이 테스트 기사의 헤드 라인입니다.","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"id":"mock-id","position":[1]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.","blocks":[{"type":"fragment","model":{"text":"이 테스트 이미지 인 저작권 는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.","attributes":[]},"id":"mock-id","position":[2,1,1,1,1]}]},"id":"mock-id","position":[2,1,1,1]}]},"id":"mock-id","position":[2,1,1]}]},"id":"mock-id","position":[2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.","blocks":[{"type":"fragment","model":{"text":"이 테스트 이미지 인 저작권 BBC는 프랑스지도를 보여줍니다. 이미지는 처음 세 블록에 있으며이 캡션이 있습니다.","attributes":[]},"id":"mock-id","position":[2,2,1,1,1]}]},"id":"mock-id","position":[2,2,1,1]}]},"id":"mock-id","position":[2,2,1]}]},"id":"mock-id","position":[2,2]},{"type":"rawImage","model":{"width":624,"height":351,"locator":"4017/test/ba378f90-110a-11ea-acaa-cd607a38aea4.jpg","originCode":"cpsdevpb","copyrightHolder":"BBC"},"id":"mock-id","position":[2,3]}]},"id":"mock-id","position":[2]},{"type":"timestamp","model":{"firstPublished":1574855147209,"lastPublished":1574855147209},"id":"mock-id","position":[3]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이것은 홈페이지에 대한 링크를 포함하는 텍스트 블록입니다.","blocks":[{"type":"fragment","model":{"text":"이것은 ","attributes":[]},"id":"mock-id","position":[4,1,1]},{"type":"urlLink","model":{"text":"홈페이지에 대한","blocks":[{"type":"fragment","model":{"text":"홈페이지에 대한","attributes":[]},"id":"mock-id","position":[4,1,2,1]}],"locator":"https://www.bbc.co.uk/weather","isExternal":false},"id":"mock-id","position":[4,1,2]},{"type":"fragment","model":{"text":" 링크를 포함하는 텍스트 블록입니다.","attributes":[]},"id":"mock-id","position":[4,1,3]}]},"id":"mock-id","position":[4,1]}]},"id":"mock-id","position":[4]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01k6msm","blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이것은 크를 포함하는 텍스트 블록입니다.","blocks":[{"type":"fragment","model":{"text":"이것은 크를 포함하는 텍스트 블록입니다.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"aresMedia","model":{"blocks":[{"blockId":"urn:bbc:ares::clip:p01k6msm","type":"aresMediaMetadata","model":{"id":"mock-id","subType":"clip","format":"audio_video","title":"Five things ants can teach us about management","synopses":{"short":"They may be tiny, but us humans could learn a thing or two from ants."},"imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg","imageCopyright":"BBC","embedding":true,"advertising":true,"versions":[{"versionId":"p01k6msp","types":["Original"],"duration":191,"durationISO8601":"PT3M11S","warnings":{"short":"Contains strong language and adult humour.","long":"Contains strong language and adult humour."},"availableTerritories":{"uk":true,"nonUk":true,"world":false},"availableFrom":1540218932000}],"syndication":{"destinations":[]}},"id":"mock-id","position":[5,2,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"width":1920,"height":1080,"locator":"ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg","originCode":"mpv","copyrightHolder":"BBC"},"id":"mock-id","position":[5,2,2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ants","blocks":[{"type":"fragment","model":{"text":"Ants","attributes":[]},"id":"mock-id","position":[5,2,2,2,1,1,1]}]},"id":"mock-id","position":[5,2,2,2,1,1]}]},"id":"mock-id","position":[5,2,2,2,1]}]},"id":"mock-id","position":[5,2,2,2]}]},"id":"mock-id","position":[5,2,2]}]},"id":"mock-id","position":[5,2]}]},"id":"mock-id","position":[5]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이것은 소제목입니다","blocks":[{"type":"fragment","model":{"text":"이것은 소제목입니다","attributes":[]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이것은 소제목입니다","blocks":[{"type":"fragment","model":{"text":"이것은 소제목입니다","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"rawImage","model":{"width":800,"height":450,"locator":"32d6/test/2e77d860-110b-11ea-acaa-cd607a38aea4.jpg","originCode":"cpsdevpb","copyrightHolder":"Getty Images"},"id":"mock-id","position":[7,2]}]},"id":"mock-id","position":[7]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.","blocks":[{"type":"fragment","model":{"text":"이 테스트 기사는 웹 사이트에서 자동화 된 엔드 투 엔드 테스트를 실행할 수 있도록 작성되었습니다.","attributes":[]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]}]},"id":"mock-id","position":[8]}]}},"promo":{"headlines":{"seoHeadline":"이것이이 테스트 기사의 헤드 라인입니다."},"locators":{"optimoUrn":"urn:bbc:optimo:asset:c3mn1lvz65xo"},"summary":"","timestamp":1574855147209,"id":"mock-id","type":"cps"},"relatedContent":{"site":{"subType":"site","name":"Korean","uri":"/korean","type":"simple"},"groups":[]}},"path":"/korean/articles/c3mn1lvz65xo","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [16]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="korean"
+            src="http://localhost:7080/static/js/korean-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

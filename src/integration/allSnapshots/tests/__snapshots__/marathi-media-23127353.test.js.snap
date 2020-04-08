@@ -1,0 +1,1673 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /marathi/media-23127353 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="mr"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_marathi/049F/test/_63538110_p01b7w2v.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="आयपीएल ट्रॉफी सिद्धिविनायक चरणी!"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="mr-IN"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७ - BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/marathi/media-23127353"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnewsmarathi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="आयपीएल ट्रॉफी सिद्धिविनायक चरणी!"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_marathi/049F/test/_63538110_p01b7w2v.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnewsmarathi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७ - BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-05-22T15:47:40.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-05-22T15:47:41.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७ - BBC News मराठी
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/marathi/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/marathi/media-23127353"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/marathi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/marathi/media-23127353","publisher":{"@type":"NewsMediaOrganization","name":"BBC News मराठी","publishingPrinciples":"https://www.bbc.com/marathi/institutional-50418391","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/marathi/media-23127353","name":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७"},"headline":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","datePublished":"2017-05-22T15:47:40.000Z","dateModified":"2017-05-22T15:47:41.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News मराठी","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"},"noBylinesPolicy":"https://www.bbc.com/marathi/institutional-50418391#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!","description":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले","duration":null,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg","uploadDate":"1970-01-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/marathi/media-23127353/p01b7vw8/mr/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 kzWyCs"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 beCRFL"
+                  >
+                    आम्ही आमचं गोपनीयतेचं आणि कुकीजच्या बाबतीतलं धोरण अपडेट केलं आहे
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dAwZdH"
+                  >
+                    आम्ही आमच्या गोपनीयतेच्या आणि कुकीजच्या बाबतीतल्या धोरणांमध्ये काही महत्त्वपूर्ण बदल केले आहेत आणि आम्हाला वाटतं तुम्ही हे जाणून घ्यायला हवं की त्याचा तुमच्यावर काय परिणाम होऊ शकतो.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iffYYc"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ओके
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        पाहा नेमकं काय बदललंय
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 kzWyCs"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 beCRFL"
+                  >
+                    तुम्ही कुकीजच्या बाबतीत सहमत असल्याचं आम्हाला सांगा
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dAwZdH"
+                  >
+                    आम्ही
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      कुकीज
+                    </a>
+                    वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iffYYc"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        हो, माझी सहमती आहे
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        नाही, मला सेटिंग्स दाखवा
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/marathi"
+               class="StyledLink-m3awbo-2 erFJEn"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.77 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cVMbko"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194 8.45h-2v10.83h-1.6v-4.9h-4.34v.71a1.42 1.42 0 0 1-.26.9.84.84 0 0 1-.69.33 1.8 1.8 0 0 1-1-.4 3.61 3.61 0 0 1-.95-1 2.09 2.09 0 0 1-.39-1.09.72.72 0 0 1 .31-.63 1.55 1.55 0 0 1 .92-.2h.53V8.45H182V7h12zM190.4 13V8.45h-4.34V13z">
+                  </path>
+                  <path d="M202.08 8.45h-2a4.63 4.63 0 0 1 .33 1.83 3.69 3.69 0 0 1-.25 1.42 3.58 3.58 0 0 1-.7 1.09 4.87 4.87 0 0 1-1.06.84 9.57 9.57 0 0 1-1.32.65 23.55 23.55 0 0 0 2 2q1.17 1.09 2.51 2.14l-1.06 1.06q-.82-.67-1.65-1.44t-1.7-1.66q-.86-.89-1.42-1.58a9.64 9.64 0 0 1-.79-1.08 3 3 0 0 1-.3-.63 1.9 1.9 0 0 1-.07-.53 1 1 0 0 1 .13-.49 1 1 0 0 1 .41-.39 1.49 1.49 0 0 1 .72-.15 1.64 1.64 0 0 1 .87.23 2.37 2.37 0 0 1 .67.63 2.7 2.7 0 0 0 1.11-1 2.6 2.6 0 0 0 .35-1.37 4.54 4.54 0 0 0-.09-.84 3.28 3.28 0 0 0-.24-.78h-4.71V7h8.34z">
+                  </path>
+                  <path d="M207.17 8.45h-2v10.83h-1.58V8.45h-1.75V7h5.38z">
+                  </path>
+                  <path d="M218.68 8.45h-4.5v2.71a6 6 0 0 1 2.46 1.77 3.89 3.89 0 0 1 .84 2.45 3.77 3.77 0 0 1-.59 2.14 3.55 3.55 0 0 1-1.67 1.32 6.61 6.61 0 0 1-2.49.44 5.84 5.84 0 0 1-2.54-.54A4 4 0 0 1 207.8 15a3.58 3.58 0 0 1 .61-2.07 3.93 3.93 0 0 1 1.72-1.39 5.88 5.88 0 0 1 2.39-.49h.07v-2.6h-5.71V7h11.8zm-5.05 4h-.69a5.32 5.32 0 0 0-1.86.3 2.68 2.68 0 0 0-1.25.9 2.39 2.39 0 0 0-.45 1.47 2.86 2.86 0 0 0 .25 1.24 2.42 2.42 0 0 0 .69.87 2.92 2.92 0 0 0 1 .51 4.81 4.81 0 0 0 1.3.17 3.9 3.9 0 0 0 2.4-.65 2.21 2.21 0 0 0 .85-1.88 2.75 2.75 0 0 0-.57-1.7 4.07 4.07 0 0 0-1.67-1.26z">
+                  </path>
+                  <path d="M214.78 7.19a7 7 0 0 1-.52-1.32 4.91 4.91 0 0 1-.17-1.3 3.1 3.1 0 0 1 .36-1.51 2.55 2.55 0 0 1 1.07-1 3.53 3.53 0 0 1 1.68-.37 3.28 3.28 0 0 1 1.91.53 4.35 4.35 0 0 1 1.34 1.65A17.71 17.71 0 0 1 221.6 7h2.17v1.4h-2v10.88h-1.58V8.45h-1.75V7h1.72a15.51 15.51 0 0 0-.78-2.35 3.49 3.49 0 0 0-.86-1.24 1.78 1.78 0 0 0-1.19-.41 1.51 1.51 0 0 0-1.19.48 2 2 0 0 0-.42 1.34 4 4 0 0 0 .15 1.08 7.11 7.11 0 0 0 .5 1.25z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                मराठी
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 ePPdTz"
+            >
+              थेट मजकुरावर जा
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                विभाग
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    बातम्या
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/topics/c5qvpxvv7y3t"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    महाराष्ट्र
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/topics/cxnyk3y49x6t"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    भारत
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/international"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    आंतरराष्ट्रीय
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/media/video"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    व्हीडिओ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    लोकप्रिय
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    #ISWOTY
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    बातम्या
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi/topics/c5qvpxvv7y3t"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    महाराष्ट्र
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi/topics/cxnyk3y49x6t"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    भारत
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi/international"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    आंतरराष्ट्रीय
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi/media/video"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    व्हीडिओ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi/popular/read"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    लोकप्रिय
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035"
+                     class="StyledLink-sc-158x7z5-2 eIfkCg"
+                  >
+                    #ISWOTY
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Marathi, Marathi - Media, Marathi - MAP, Marathi - Media - MAP, Marathi - undefined-category","uid":50924,"title":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","virtualReferrer":"\${documentReferrer}","contentType":"article-media-asset"}}
+        </script>
+      </amp-analytics>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=59&p=embedded_media::marathi.embedded_media.media_asset.23127353.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:4dadc808-3e48-314a-99fb-11f6418379f9]&x2=[amp]&x3=[news-marathi]&x4=[mr]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[मुंबई+इंडियन्स+संघा+मालक+अंबानी+यांनी+आज+आयपीएल+ट्रॉफीसह+सिद्धिविनायक+मंदिरात+दर्शन+घेतले+२०१७+-+BBC+News+मराठी]&x11=[2017-05-22T15:47:40.000Z]&x12=[2017-05-22T15:47:41.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+      >
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७
+        </h1>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+              <amp-iframe sandbox="allow-scripts allow-same-origin"
+                          layout="fill"
+                          scrolling="no"
+                          frameborder="0"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/marathi/media-23127353/p01b7vw8/mr/amp"
+                          title="मीडिया प्लेयर"
+                          allowfullscreen="allowfullscreen"
+              >
+                <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 800w"
+                         layout="fill"
+                         src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg"
+                         placeholder="true"
+                         alt
+                         height="16"
+                         width="9"
+                         attribution
+                >
+                </amp-img>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 800w"
+                         alt
+                         src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg"
+                         aria-hidden="true"
+                         class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    >
+                    <div class="MessageWrapper-sc-1pnftlt-1 hjDWEg">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </amp-iframe>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <strong aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 jPtRzT StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+          >
+            मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७
+          </strong>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG">
+          <time datetime="2017-05-22"
+                class="StyledTimestamp-um718p-0 eEXOnx"
+          >
+            22 मे 2017
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 jEUGiu">
+            <b>
+              अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.
+            </b>
+          </p>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/marathi"
+               class="StyledLink-m3awbo-2 erFJEn"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.77 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cVMbko"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194 8.45h-2v10.83h-1.6v-4.9h-4.34v.71a1.42 1.42 0 0 1-.26.9.84.84 0 0 1-.69.33 1.8 1.8 0 0 1-1-.4 3.61 3.61 0 0 1-.95-1 2.09 2.09 0 0 1-.39-1.09.72.72 0 0 1 .31-.63 1.55 1.55 0 0 1 .92-.2h.53V8.45H182V7h12zM190.4 13V8.45h-4.34V13z">
+                  </path>
+                  <path d="M202.08 8.45h-2a4.63 4.63 0 0 1 .33 1.83 3.69 3.69 0 0 1-.25 1.42 3.58 3.58 0 0 1-.7 1.09 4.87 4.87 0 0 1-1.06.84 9.57 9.57 0 0 1-1.32.65 23.55 23.55 0 0 0 2 2q1.17 1.09 2.51 2.14l-1.06 1.06q-.82-.67-1.65-1.44t-1.7-1.66q-.86-.89-1.42-1.58a9.64 9.64 0 0 1-.79-1.08 3 3 0 0 1-.3-.63 1.9 1.9 0 0 1-.07-.53 1 1 0 0 1 .13-.49 1 1 0 0 1 .41-.39 1.49 1.49 0 0 1 .72-.15 1.64 1.64 0 0 1 .87.23 2.37 2.37 0 0 1 .67.63 2.7 2.7 0 0 0 1.11-1 2.6 2.6 0 0 0 .35-1.37 4.54 4.54 0 0 0-.09-.84 3.28 3.28 0 0 0-.24-.78h-4.71V7h8.34z">
+                  </path>
+                  <path d="M207.17 8.45h-2v10.83h-1.58V8.45h-1.75V7h5.38z">
+                  </path>
+                  <path d="M218.68 8.45h-4.5v2.71a6 6 0 0 1 2.46 1.77 3.89 3.89 0 0 1 .84 2.45 3.77 3.77 0 0 1-.59 2.14 3.55 3.55 0 0 1-1.67 1.32 6.61 6.61 0 0 1-2.49.44 5.84 5.84 0 0 1-2.54-.54A4 4 0 0 1 207.8 15a3.58 3.58 0 0 1 .61-2.07 3.93 3.93 0 0 1 1.72-1.39 5.88 5.88 0 0 1 2.39-.49h.07v-2.6h-5.71V7h11.8zm-5.05 4h-.69a5.32 5.32 0 0 0-1.86.3 2.68 2.68 0 0 0-1.25.9 2.39 2.39 0 0 0-.45 1.47 2.86 2.86 0 0 0 .25 1.24 2.42 2.42 0 0 0 .69.87 2.92 2.92 0 0 0 1 .51 4.81 4.81 0 0 0 1.3.17 3.9 3.9 0 0 0 2.4-.65 2.21 2.21 0 0 0 .85-1.88 2.75 2.75 0 0 0-.57-1.7 4.07 4.07 0 0 0-1.67-1.26z">
+                  </path>
+                  <path d="M214.78 7.19a7 7 0 0 1-.52-1.32 4.91 4.91 0 0 1-.17-1.3 3.1 3.1 0 0 1 .36-1.51 2.55 2.55 0 0 1 1.07-1 3.53 3.53 0 0 1 1.68-.37 3.28 3.28 0 0 1 1.91.53 4.35 4.35 0 0 1 1.34 1.65A17.71 17.71 0 0 1 221.6 7h2.17v1.4h-2v10.88h-1.58V8.45h-1.75V7h1.72a15.51 15.51 0 0 0-.78-2.35 3.49 3.49 0 0 0-.86-1.24 1.78 1.78 0 0 0-1.19-.41 1.51 1.51 0 0 0-1.19.48 2 2 0 0 0-.42 1.34 4 4 0 0 0 .15 1.08 7.11 7.11 0 0 0 .5 1.25z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                मराठी
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hJydAl">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/marathi/institutional-50418391"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    वापराच्या अटी
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    गोपनीयतेचं धोरण
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    कुकीज
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/marathi/institutional-42227676"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीशी संपर्क साधाा
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /marathi/media-23127353 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="mr"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_marathi/049F/test/_63538110_p01b7w2v.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="आयपीएल ट्रॉफी सिद्धिविनायक चरणी!"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="mr-IN"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७ - BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/marathi/media-23127353"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnewsmarathi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="आयपीएल ट्रॉफी सिद्धिविनायक चरणी!"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_marathi/049F/test/_63538110_p01b7w2v.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnewsmarathi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७ - BBC News मराठी"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-05-22T15:47:40.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-05-22T15:47:41.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७ - BBC News मराठी
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/marathi/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/marathi/media-23127353"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/marathi/media-23127353.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/marathi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/marathi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/marathi/media-23127353","publisher":{"@type":"NewsMediaOrganization","name":"BBC News मराठी","publishingPrinciples":"https://www.bbc.com/marathi/institutional-50418391","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/marathi/media-23127353","name":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७"},"headline":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","datePublished":"2017-05-22T15:47:40.000Z","dateModified":"2017-05-22T15:47:41.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News मराठी","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png"},"noBylinesPolicy":"https://www.bbc.com/marathi/institutional-50418391#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!","description":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले","duration":null,"thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg","uploadDate":"1970-01-01T00:00:00.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/marathi/media-23127353/p01b7vw8/mr"}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/marathi"
+               class="StyledLink-m3awbo-2 erFJEn"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.77 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cVMbko"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194 8.45h-2v10.83h-1.6v-4.9h-4.34v.71a1.42 1.42 0 0 1-.26.9.84.84 0 0 1-.69.33 1.8 1.8 0 0 1-1-.4 3.61 3.61 0 0 1-.95-1 2.09 2.09 0 0 1-.39-1.09.72.72 0 0 1 .31-.63 1.55 1.55 0 0 1 .92-.2h.53V8.45H182V7h12zM190.4 13V8.45h-4.34V13z">
+                  </path>
+                  <path d="M202.08 8.45h-2a4.63 4.63 0 0 1 .33 1.83 3.69 3.69 0 0 1-.25 1.42 3.58 3.58 0 0 1-.7 1.09 4.87 4.87 0 0 1-1.06.84 9.57 9.57 0 0 1-1.32.65 23.55 23.55 0 0 0 2 2q1.17 1.09 2.51 2.14l-1.06 1.06q-.82-.67-1.65-1.44t-1.7-1.66q-.86-.89-1.42-1.58a9.64 9.64 0 0 1-.79-1.08 3 3 0 0 1-.3-.63 1.9 1.9 0 0 1-.07-.53 1 1 0 0 1 .13-.49 1 1 0 0 1 .41-.39 1.49 1.49 0 0 1 .72-.15 1.64 1.64 0 0 1 .87.23 2.37 2.37 0 0 1 .67.63 2.7 2.7 0 0 0 1.11-1 2.6 2.6 0 0 0 .35-1.37 4.54 4.54 0 0 0-.09-.84 3.28 3.28 0 0 0-.24-.78h-4.71V7h8.34z">
+                  </path>
+                  <path d="M207.17 8.45h-2v10.83h-1.58V8.45h-1.75V7h5.38z">
+                  </path>
+                  <path d="M218.68 8.45h-4.5v2.71a6 6 0 0 1 2.46 1.77 3.89 3.89 0 0 1 .84 2.45 3.77 3.77 0 0 1-.59 2.14 3.55 3.55 0 0 1-1.67 1.32 6.61 6.61 0 0 1-2.49.44 5.84 5.84 0 0 1-2.54-.54A4 4 0 0 1 207.8 15a3.58 3.58 0 0 1 .61-2.07 3.93 3.93 0 0 1 1.72-1.39 5.88 5.88 0 0 1 2.39-.49h.07v-2.6h-5.71V7h11.8zm-5.05 4h-.69a5.32 5.32 0 0 0-1.86.3 2.68 2.68 0 0 0-1.25.9 2.39 2.39 0 0 0-.45 1.47 2.86 2.86 0 0 0 .25 1.24 2.42 2.42 0 0 0 .69.87 2.92 2.92 0 0 0 1 .51 4.81 4.81 0 0 0 1.3.17 3.9 3.9 0 0 0 2.4-.65 2.21 2.21 0 0 0 .85-1.88 2.75 2.75 0 0 0-.57-1.7 4.07 4.07 0 0 0-1.67-1.26z">
+                  </path>
+                  <path d="M214.78 7.19a7 7 0 0 1-.52-1.32 4.91 4.91 0 0 1-.17-1.3 3.1 3.1 0 0 1 .36-1.51 2.55 2.55 0 0 1 1.07-1 3.53 3.53 0 0 1 1.68-.37 3.28 3.28 0 0 1 1.91.53 4.35 4.35 0 0 1 1.34 1.65A17.71 17.71 0 0 1 221.6 7h2.17v1.4h-2v10.88h-1.58V8.45h-1.75V7h1.72a15.51 15.51 0 0 0-.78-2.35 3.49 3.49 0 0 0-.86-1.24 1.78 1.78 0 0 0-1.19-.41 1.51 1.51 0 0 0-1.19.48 2 2 0 0 0-.42 1.34 4 4 0 0 0 .15 1.08 7.11 7.11 0 0 0 .5 1.25z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                मराठी
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 ePPdTz"
+            >
+              थेट मजकुरावर जा
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  विभाग
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      बातम्या
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi/topics/c5qvpxvv7y3t"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      महाराष्ट्र
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi/topics/cxnyk3y49x6t"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      भारत
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi/international"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      आंतरराष्ट्रीय
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi/media/video"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      व्हीडिओ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi/popular/read"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      लोकप्रिय
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035"
+                       class="StyledLink-sc-158x7z5-2 eIfkCg"
+                    >
+                      #ISWOTY
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    बातम्या
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/topics/c5qvpxvv7y3t"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    महाराष्ट्र
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/topics/cxnyk3y49x6t"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    भारत
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/international"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    आंतरराष्ट्रीय
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/media/video"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    व्हीडिओ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    लोकप्रिय
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/marathi/resources/idt-43ff5603-f85f-47c1-972f-097e67eeb035"
+                     class="StyledDropdownLink-ukxuly-4 dwrHEX"
+                  >
+                    #ISWOTY
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=59&amp;p=embedded_media::marathi.embedded_media.media_asset.23127353.page&amp;x1=[urn:bbc:cps:4dadc808-3e48-314a-99fb-11f6418379f9]&amp;x2=[responsive]&amp;x3=[news-marathi]&amp;x4=[mr]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[मुंबई+इंडियन्स+संघा+मालक+अंबानी+यांनी+आज+आयपीएल+ट्रॉफीसह+सिद्धिविनायक+मंदिरात+दर्शन+घेतले+२०१७+-+BBC+News+मराठी]&amp;x11=[2017-05-22T15:47:40.000Z]&amp;x12=[2017-05-22T15:47:41.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+      >
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७
+        </h1>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/marathi/media-23127353/p01b7vw8/mr"
+                      title="मीडिया प्लेयर"
+                      allow="autoplay; fullscreen"
+                      scrolling="no"
+                      allowfullscreen
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
+              >
+              </iframe>
+              <noscript>
+                <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg"
+                       aria-hidden="true"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                  <div class="MessageWrapper-sc-1pnftlt-1 hjDWEg">
+                    <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                      मीडिया प्लेबॅक आपल्या डिव्हाइसवर असमर्थित आहे
+                    </strong>
+                  </div>
+                </div>
+              </noscript>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <strong aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 jPtRzT StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+          >
+            मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७
+          </strong>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG">
+          <time datetime="2017-05-22"
+                class="StyledTimestamp-um718p-0 eEXOnx"
+          >
+            22 मे 2017
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 jEUGiu">
+            <b>
+              अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.
+            </b>
+          </p>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/marathi"
+               class="StyledLink-m3awbo-2 erFJEn"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.77 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cVMbko"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194 8.45h-2v10.83h-1.6v-4.9h-4.34v.71a1.42 1.42 0 0 1-.26.9.84.84 0 0 1-.69.33 1.8 1.8 0 0 1-1-.4 3.61 3.61 0 0 1-.95-1 2.09 2.09 0 0 1-.39-1.09.72.72 0 0 1 .31-.63 1.55 1.55 0 0 1 .92-.2h.53V8.45H182V7h12zM190.4 13V8.45h-4.34V13z">
+                  </path>
+                  <path d="M202.08 8.45h-2a4.63 4.63 0 0 1 .33 1.83 3.69 3.69 0 0 1-.25 1.42 3.58 3.58 0 0 1-.7 1.09 4.87 4.87 0 0 1-1.06.84 9.57 9.57 0 0 1-1.32.65 23.55 23.55 0 0 0 2 2q1.17 1.09 2.51 2.14l-1.06 1.06q-.82-.67-1.65-1.44t-1.7-1.66q-.86-.89-1.42-1.58a9.64 9.64 0 0 1-.79-1.08 3 3 0 0 1-.3-.63 1.9 1.9 0 0 1-.07-.53 1 1 0 0 1 .13-.49 1 1 0 0 1 .41-.39 1.49 1.49 0 0 1 .72-.15 1.64 1.64 0 0 1 .87.23 2.37 2.37 0 0 1 .67.63 2.7 2.7 0 0 0 1.11-1 2.6 2.6 0 0 0 .35-1.37 4.54 4.54 0 0 0-.09-.84 3.28 3.28 0 0 0-.24-.78h-4.71V7h8.34z">
+                  </path>
+                  <path d="M207.17 8.45h-2v10.83h-1.58V8.45h-1.75V7h5.38z">
+                  </path>
+                  <path d="M218.68 8.45h-4.5v2.71a6 6 0 0 1 2.46 1.77 3.89 3.89 0 0 1 .84 2.45 3.77 3.77 0 0 1-.59 2.14 3.55 3.55 0 0 1-1.67 1.32 6.61 6.61 0 0 1-2.49.44 5.84 5.84 0 0 1-2.54-.54A4 4 0 0 1 207.8 15a3.58 3.58 0 0 1 .61-2.07 3.93 3.93 0 0 1 1.72-1.39 5.88 5.88 0 0 1 2.39-.49h.07v-2.6h-5.71V7h11.8zm-5.05 4h-.69a5.32 5.32 0 0 0-1.86.3 2.68 2.68 0 0 0-1.25.9 2.39 2.39 0 0 0-.45 1.47 2.86 2.86 0 0 0 .25 1.24 2.42 2.42 0 0 0 .69.87 2.92 2.92 0 0 0 1 .51 4.81 4.81 0 0 0 1.3.17 3.9 3.9 0 0 0 2.4-.65 2.21 2.21 0 0 0 .85-1.88 2.75 2.75 0 0 0-.57-1.7 4.07 4.07 0 0 0-1.67-1.26z">
+                  </path>
+                  <path d="M214.78 7.19a7 7 0 0 1-.52-1.32 4.91 4.91 0 0 1-.17-1.3 3.1 3.1 0 0 1 .36-1.51 2.55 2.55 0 0 1 1.07-1 3.53 3.53 0 0 1 1.68-.37 3.28 3.28 0 0 1 1.91.53 4.35 4.35 0 0 1 1.34 1.65A17.71 17.71 0 0 1 221.6 7h2.17v1.4h-2v10.88h-1.58V8.45h-1.75V7h1.72a15.51 15.51 0 0 0-.78-2.35 3.49 3.49 0 0 0-.86-1.24 1.78 1.78 0 0 0-1.19-.41 1.51 1.51 0 0 0-1.19.48 2 2 0 0 0-.42 1.34 4 4 0 0 0 .15 1.08 7.11 7.11 0 0 0 .5 1.25z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                मराठी
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hJydAl">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/marathi/institutional-50418391"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    तुम्ही बीबीसीवर विश्वास ठेवू शकता कारणा
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    वापराच्या अटी
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    गोपनीयतेचं धोरण
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    कुकीज
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/marathi/institutional-42227676"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीशी संपर्क साधाा
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 बीबीसी बाह्य इंटरनेट साइट्सच्या सामग्रीसाठी बीबीसी जबाबदार नाही.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1495468060000,"lastPublished":1495468061000,"lastUpdated":1557824968121,"analyticsLabels":{"counterName":"marathi.embedded_media.media_asset.23127353.page","cps_asset_id":"23127353","cps_asset_type":"map"},"blockTypes":["media","paragraph"],"createdBy":"marathi-v6","id":"mock-id","includeComments":false,"language":"mr","locators":{"assetUri":"/marathi/media-23127353","cpsUrn":"urn:bbc:content:assetUri:marathi/media-23127353","curie":"http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9"},"options":{"allowDateStamp":true,"allowHeadline":true,"allowPrintingSharingLinks":true,"allowRelatedStoriesBox":true,"allowRightHandSide":true,"hasNewsTracker":false,"includeComments":false,"isBreakingNews":false,"isFactCheck":false,"isIgorSeoTagsEnabled":false,"isKeyContent":false},"tags":{},"type":"MAP","version":"v1.0.7"},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","blocks":[{"type":"fragment","model":{"text":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"visuallyHiddenHeadline","id":"mock-id","position":[1]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01b7vw2","blocks":[{"type":"aresMedia","model":{"blocks":[{"type":"aresMediaMetadata","blockId":"urn:bbc:ares::clip:p01b7vw2","model":{"advertising":true,"embedding":true,"format":"audio_video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg","subType":"clip","synopses":{"long":"अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.","medium":"अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.","short":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले"},"title":"आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!","versions":[{"availableTerritories":{"nonUk":true,"uk":true},"duration":20,"types":["Original"],"versionId":"p01b7vw8","warnings":{}}],"available":true},"id":"mock-id","position":[2,1,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"locator":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01b7w2v.jpg","originCode":"pips"},"id":"mock-id","position":[2,1,2,1]}]},"id":"mock-id","position":[2,1,2]}]},"id":"mock-id","position":[2,1]}]},"id":"mock-id","position":[2]},{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","blocks":[{"type":"fragment","model":{"text":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","attributes":[]},"id":"mock-id","position":[3,1,1,1]}]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"type":"fauxHeadline","id":"mock-id","position":[3]},{"type":"timestamp","model":{"firstPublished":1495468060000,"lastPublished":1495468061000},"id":"mock-id","position":[4]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.","blocks":[{"type":"fragment","model":{"text":"अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.","attributes":["bold"]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]}]},"id":"mock-id","position":[5]}]}},"promo":{"headlines":{"headline":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले २०१७","shortHeadline":"आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी २०१७!"},"id":"mock-id","indexImage":{"altText":"आयपीएल ट्रॉफी सिद्धिविनायक चरणी!","copyrightHolder":"Magnum Photos","height":576,"href":"http://b.files.bbci.co.uk/049F/test/_63538110_p01b7w2v.jpg","id":"mock-id","path":"/cpsdevpb/049F/test/_63538110_p01b7w2v.jpg","subType":"index","type":"image","width":1024},"locators":{"assetUri":"/marathi/media-23127353","cpsUrn":"urn:bbc:content:assetUri:marathi/media-23127353","curie":"http://www.bbc.co.uk/asset/4dadc808-3e48-314a-99fb-11f6418379f9"},"media":{"advertising":true,"caption":"आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी caption!","embedding":true,"format":"video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01b7w2v.jpg","subType":"clip","synopses":{"long":"अंबानी परिवाराची सिद्धिविनायकावर श्रद्धा आहे. या श्रद्धेतूनच अनंत यांनी ट्रॉफीसह बाप्पांचं दर्शन घेतल्याचं सांगण्यात येत आहे. विशेष म्हणजे केवळ अनंतच नाही तर अनंत यांची आजी, नीता अंबानी यांची आई पुर्णिमाबेन दलाल यांचीही प्रचंड श्रद्धाळू आहेत. अंतिम सामन्याच्या शेवटच्या षटकामध्ये हात जोडून, डोळे बंद करून त्या देवाचा धावा करत असल्याचे चित्र सगळ्यांनीच पाहिलं आहे. त्यातच आज सोशल मीडियातही पुर्णिमाबेन यांचा हा फोटो व्हायरल झाला आहे आणि त्याच्या बातम्याही झाल्या आहेत.","medium":"अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.","short":"मुंबई इंडियन्स संघा मालक अंबानी यांनी आज आयपीएल ट्रॉफीसह सिद्धिविनायक मंदिरात दर्शन घेतले"},"title":"आयपीएल (IPL) ट्रॉफी सिद्धिविनायक चरणी!","type":"media","versions":[{"availableTerritories":{"nonUk":true,"uk":true},"duration":20,"types":["Original"],"versionId":"p01b7vw8","warnings":{}}]},"passport":{},"summary":"अनंत यांच्यासोबत पोलिसांचा फौजफाटाही दिसत होता. सिद्धिविनायक चरणी ट्रॉफी ठेऊन दर्शन घेऊन अनंत अंबानी माघारी परतले.","timestamp":1557824968121,"type":"cps"},"relatedContent":{"groups":[],"section":{"name":"Media","subType":"index","type":"simple","uri":"/marathi/media"},"site":{"name":"BBC मराठी","subType":"site","type":"simple","uri":"/marathi"}}},"path":"/marathi/media-23127353","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [20]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="marathi"
+            src="http://localhost:7080/static/js/marathi-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

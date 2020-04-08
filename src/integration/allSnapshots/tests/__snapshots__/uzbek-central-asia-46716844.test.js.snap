@@ -1,0 +1,2137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /uzbek/central-asia-46716844 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="uz-Cyrl"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_uzbek/17713/production/_104991069_9.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="она"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="uz-UZ"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти? - BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/uzbek/central-asia-46716844"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcuzbek"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="она"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_uzbek/17713/production/_104991069_9.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcuzbek"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти? - BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Business"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Tajikistan"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Currency markets"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Economy"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-12-30T16:11:50.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-12-30T16:12:43.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти? - BBC News O'zbek
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/uzbek/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/uzbek/central-asia-46716844"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/uzbek/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/uzbek/central-asia-46716844","publisher":{"@type":"NewsMediaOrganization","name":"BBC News O'zbek","publishingPrinciples":"https://www.bbc.com/uzbek/institutional-50220995","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/uzbek/central-asia-46716844","name":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?"},"headline":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?","description":"Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.","datePublished":"2018-12-30T16:11:50.000Z","dateModified":"2018-12-30T16:12:43.000Z","about":[{"@type":"Thing","name":"Business","sameAs":["http://dbpedia.org/resource/Business"]},{"@type":"Thing","name":"Tajikistan"},{"@type":"Thing","name":"Currency markets","sameAs":["http://dbpedia.org/resource/Foreign_exchange_market"]},{"@type":"Thing","name":"Economy","sameAs":["http://dbpedia.org/resource/Economy"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News O'zbek","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"},"noBylinesPolicy":"https://www.bbc.com/uzbek/institutional-50220995#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Биз шахсий ҳаёт махфийлиги ва Куки(Cookies)га оид сиёсатимизни янгиладик
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Биз шахсий ҳаёт махфийлиги ва Куки(Cookie)га оид сиёсатимизга айрим муҳим ўзгаришларни киритдик. Ва бу нарса сиз ва сизнинг маълумотингиз учун нимани англатиши ҳақида сизни бохабар этиш истагидамиз.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        Маъқул
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Нималар ўзгарди?
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Кукис(Cookies)га рози эканингизни билдиринг
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Биз
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      кукидан
+                    </a>
+                    сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Ҳа, мен розиман
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Йўқ, мени ўзгартириш саҳифасига етакланг
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/uzbek"
+               class="StyledLink-m3awbo-2 cmbfGD"
+            >
+              <svg height="24"
+                   viewbox="0 0 238.99 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fTrFbY"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M200.58 6.28h9.12l-6.76 9.25h6.76v1.35h-9.55l6.77-9.25h-6.34zM211.82 16.87V6.29h3.07a4.12 4.12 0 0 1 1.47.23 3 3 0 0 1 1 .61A2.38 2.38 0 0 1 218 8a2.72 2.72 0 0 1 .19 1 2.33 2.33 0 0 1-.39 1.37 2.68 2.68 0 0 1-1.23.89 4 4 0 0 1 1.06.36 2.85 2.85 0 0 1 .8.6 2.5 2.5 0 0 1 .5.81 2.76 2.76 0 0 1 0 2 2.48 2.48 0 0 1-.62.91 3.26 3.26 0 0 1-1.12.67 4.86 4.86 0 0 1-1.68.26zm1.51-9.21v3.16h1a2.8 2.8 0 0 0 1.69-.41 1.5 1.5 0 0 0 .55-1.28 1.75 1.75 0 0 0-.09-.56 1.13 1.13 0 0 0-.31-.47 1.57 1.57 0 0 0-.57-.32 2.72 2.72 0 0 0-.87-.12zm0 4.54v3.32h1.91a3.42 3.42 0 0 0 1.11-.15A2 2 0 0 0 217 15a1.31 1.31 0 0 0 .36-.54 1.83 1.83 0 0 0 .1-.59 1.54 1.54 0 0 0-.14-.66 1.38 1.38 0 0 0-.43-.52 2.15 2.15 0 0 0-.73-.34 3.92 3.92 0 0 0-1-.12zM227.28 6.29v1.37h-4.48v3.2h4.33v1.37h-4.33v3.29h4.63v1.36h-6.14V6.29zM236 6.29h1.89l-4.59 5 5.7 5.58h-2.07l-5.41-5.22v5.22H230V6.29h1.51v4.84zM189.7 6.14a5.69 5.69 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.07 5.07 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.52 5.52 0 0 1-4-1.53 5.11 5.11 0 0 1-1.62-3.85 5.23 5.23 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.1-1.56zm.06 1.44a4.1 4.1 0 0 0-3 1.14 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.18z">
+                  </path>
+                  <path d="M198.46 6.16v.23a2.22 2.22 0 0 0-.65 1.5.89.89 0 0 0 0 .17 1 1 0 0 1 .81 1 .84.84 0 0 1-.28.64 1 1 0 0 1-.67.26.89.89 0 0 1-.76-.38 1.7 1.7 0 0 1-.28-1 2.31 2.31 0 0 1 1.83-2.42z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                O'zbek
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Саҳифага ўтиш
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Бўлимлар
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Бош саҳифа
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/lotin"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Lotinda
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/uzbekistan"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Ўзбекистон
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/central_asia"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Минтақа
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Дунё
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/sport"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Спорт
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Илм-Фан
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Технология
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Видео
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Бош саҳифа
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/lotin"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Lotinda
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/uzbekistan"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Ўзбекистон
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/central_asia"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Минтақа
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/world"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Дунё
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/sport"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Спорт
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Илм-Фан
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Технология
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/uzbek/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Видео
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=96&p=central_asia::uzbek.central_asia.photo_gallery.46716844.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:168e7915-8439-324c-b403-6805b0b844f1]&x2=[amp]&x3=[news-uzbek]&x4=[uz-Cyrl]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Тожикистон:+Қишда+оддий+одамларнинг+тирикчилиги+қандай+ўтяпти?+-+BBC+News+O'zbek]&x11=[2018-12-30T16:11:50.000Z]&x12=[2018-12-30T16:12:43.000Z]&x13=[Business~Tajikistan~Currency+markets~Economy]&x14=[2f2db234-3c2d-40a4-b4ac-eea661faadd0~896fde99-08a3-4291-bcaf-f40b89bd0e67~c34824bf-225d-4efa-ab84-53e95d40656d~ca170ae3-99c1-48db-9b67-2866f85e7342]&x16=[Keep%20me%20on%20trend]&x17=[Opinion]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-12-30"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            30 декабр 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»"
+                           attribution="BBC "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/7010/production/_104988682_1.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Сурат манбаси,
+                    </span>
+                    <span lang="en-GB">
+                      BBC
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="«Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/BE30/production/_104988684_2.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="«Нон Янги йилдагина эмас, ҳар куни керак»."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10C50/production/_104988686_3.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    Нон Янги йилдагина эмас, ҳар куни керак.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="«Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17A8D/production/_104990969_5.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="6. «Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ»."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/45F5/production/_104990971_6.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ».
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="7. «Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9415/production/_104990973_7.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="10. «Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E235/production/_104990975_9.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="совға"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13055/production/_104990977_10.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    Болалар учун совға
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/uzbek"
+               class="StyledLink-m3awbo-2 cmbfGD"
+            >
+              <svg height="24"
+                   viewbox="0 0 238.99 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fTrFbY"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M200.58 6.28h9.12l-6.76 9.25h6.76v1.35h-9.55l6.77-9.25h-6.34zM211.82 16.87V6.29h3.07a4.12 4.12 0 0 1 1.47.23 3 3 0 0 1 1 .61A2.38 2.38 0 0 1 218 8a2.72 2.72 0 0 1 .19 1 2.33 2.33 0 0 1-.39 1.37 2.68 2.68 0 0 1-1.23.89 4 4 0 0 1 1.06.36 2.85 2.85 0 0 1 .8.6 2.5 2.5 0 0 1 .5.81 2.76 2.76 0 0 1 0 2 2.48 2.48 0 0 1-.62.91 3.26 3.26 0 0 1-1.12.67 4.86 4.86 0 0 1-1.68.26zm1.51-9.21v3.16h1a2.8 2.8 0 0 0 1.69-.41 1.5 1.5 0 0 0 .55-1.28 1.75 1.75 0 0 0-.09-.56 1.13 1.13 0 0 0-.31-.47 1.57 1.57 0 0 0-.57-.32 2.72 2.72 0 0 0-.87-.12zm0 4.54v3.32h1.91a3.42 3.42 0 0 0 1.11-.15A2 2 0 0 0 217 15a1.31 1.31 0 0 0 .36-.54 1.83 1.83 0 0 0 .1-.59 1.54 1.54 0 0 0-.14-.66 1.38 1.38 0 0 0-.43-.52 2.15 2.15 0 0 0-.73-.34 3.92 3.92 0 0 0-1-.12zM227.28 6.29v1.37h-4.48v3.2h4.33v1.37h-4.33v3.29h4.63v1.36h-6.14V6.29zM236 6.29h1.89l-4.59 5 5.7 5.58h-2.07l-5.41-5.22v5.22H230V6.29h1.51v4.84zM189.7 6.14a5.69 5.69 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.07 5.07 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.52 5.52 0 0 1-4-1.53 5.11 5.11 0 0 1-1.62-3.85 5.23 5.23 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.1-1.56zm.06 1.44a4.1 4.1 0 0 0-3 1.14 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.18z">
+                  </path>
+                  <path d="M198.46 6.16v.23a2.22 2.22 0 0 0-.65 1.5.89.89 0 0 0 0 .17 1 1 0 0 1 .81 1 .84.84 0 0 1-.28.64 1 1 0 0 1-.67.26.89.89 0 0 1-.76-.38 1.7 1.7 0 0 1-.28-1 2.31 2.31 0 0 1 1.83-2.42z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                O'zbek
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-50220995"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Нега сиз Би-би-сига ишонишингиз мумкин?
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-36824297"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Фойдаланиш шартлари
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-36824300"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Шахсий ҳаёт махфийлиги сиёсати
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Куки(Cookies)
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-36826360"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Би-би-си билан боғланиш
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /uzbek/central-asia-46716844 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="uz-Cyrl"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_uzbek/17713/production/_104991069_9.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="она"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="uz-UZ"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти? - BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/uzbek/central-asia-46716844"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcuzbek"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="она"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_uzbek/17713/production/_104991069_9.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcuzbek"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти? - BBC News O'zbek"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Business"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Tajikistan"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Currency markets"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Economy"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-12-30T16:11:50.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-12-30T16:12:43.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти? - BBC News O'zbek
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/uzbek/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/uzbek/central-asia-46716844"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/uzbek/central-asia-46716844.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/uzbek/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/uzbek/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/uzbek/central-asia-46716844","publisher":{"@type":"NewsMediaOrganization","name":"BBC News O'zbek","publishingPrinciples":"https://www.bbc.com/uzbek/institutional-50220995","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/uzbek/central-asia-46716844","name":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?"},"headline":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?","description":"Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.","datePublished":"2018-12-30T16:11:50.000Z","dateModified":"2018-12-30T16:12:43.000Z","about":[{"@type":"Thing","name":"Business","sameAs":["http://dbpedia.org/resource/Business"]},{"@type":"Thing","name":"Tajikistan"},{"@type":"Thing","name":"Currency markets","sameAs":["http://dbpedia.org/resource/Foreign_exchange_market"]},{"@type":"Thing","name":"Economy","sameAs":["http://dbpedia.org/resource/Economy"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News O'zbek","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"},"noBylinesPolicy":"https://www.bbc.com/uzbek/institutional-50220995#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/uzbek"
+               class="StyledLink-m3awbo-2 cmbfGD"
+            >
+              <svg height="24"
+                   viewbox="0 0 238.99 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fTrFbY"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M200.58 6.28h9.12l-6.76 9.25h6.76v1.35h-9.55l6.77-9.25h-6.34zM211.82 16.87V6.29h3.07a4.12 4.12 0 0 1 1.47.23 3 3 0 0 1 1 .61A2.38 2.38 0 0 1 218 8a2.72 2.72 0 0 1 .19 1 2.33 2.33 0 0 1-.39 1.37 2.68 2.68 0 0 1-1.23.89 4 4 0 0 1 1.06.36 2.85 2.85 0 0 1 .8.6 2.5 2.5 0 0 1 .5.81 2.76 2.76 0 0 1 0 2 2.48 2.48 0 0 1-.62.91 3.26 3.26 0 0 1-1.12.67 4.86 4.86 0 0 1-1.68.26zm1.51-9.21v3.16h1a2.8 2.8 0 0 0 1.69-.41 1.5 1.5 0 0 0 .55-1.28 1.75 1.75 0 0 0-.09-.56 1.13 1.13 0 0 0-.31-.47 1.57 1.57 0 0 0-.57-.32 2.72 2.72 0 0 0-.87-.12zm0 4.54v3.32h1.91a3.42 3.42 0 0 0 1.11-.15A2 2 0 0 0 217 15a1.31 1.31 0 0 0 .36-.54 1.83 1.83 0 0 0 .1-.59 1.54 1.54 0 0 0-.14-.66 1.38 1.38 0 0 0-.43-.52 2.15 2.15 0 0 0-.73-.34 3.92 3.92 0 0 0-1-.12zM227.28 6.29v1.37h-4.48v3.2h4.33v1.37h-4.33v3.29h4.63v1.36h-6.14V6.29zM236 6.29h1.89l-4.59 5 5.7 5.58h-2.07l-5.41-5.22v5.22H230V6.29h1.51v4.84zM189.7 6.14a5.69 5.69 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.07 5.07 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.52 5.52 0 0 1-4-1.53 5.11 5.11 0 0 1-1.62-3.85 5.23 5.23 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.1-1.56zm.06 1.44a4.1 4.1 0 0 0-3 1.14 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.18z">
+                  </path>
+                  <path d="M198.46 6.16v.23a2.22 2.22 0 0 0-.65 1.5.89.89 0 0 0 0 .17 1 1 0 0 1 .81 1 .84.84 0 0 1-.28.64 1 1 0 0 1-.67.26.89.89 0 0 1-.76-.38 1.7 1.7 0 0 1-.28-1 2.31 2.31 0 0 1 1.83-2.42z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                O'zbek
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Саҳифага ўтиш
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Бўлимлар
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Бош саҳифа
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/lotin"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Lotinda
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/uzbekistan"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Ўзбекистон
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/central_asia"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Минтақа
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/world"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Дунё
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/sport"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Спорт
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Илм-Фан
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Технология
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/uzbek/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Видео
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Бош саҳифа
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/lotin"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Lotinda
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/uzbekistan"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Ўзбекистон
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/central_asia"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Минтақа
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Дунё
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/sport"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Спорт
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Илм-Фан
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Технология
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/uzbek/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Видео
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=96&amp;p=central_asia::uzbek.central_asia.photo_gallery.46716844.page&amp;x1=[urn:bbc:cps:168e7915-8439-324c-b403-6805b0b844f1]&amp;x2=[responsive]&amp;x3=[news-uzbek]&amp;x4=[uz-Cyrl]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[Тожикистон:+Қишда+оддий+одамларнинг+тирикчилиги+қандай+ўтяпти?+-+BBC+News+O'zbek]&amp;x11=[2018-12-30T16:11:50.000Z]&amp;x12=[2018-12-30T16:12:43.000Z]&amp;x13=[Business~Tajikistan~Currency+markets~Economy]&amp;x14=[2f2db234-3c2d-40a4-b4ac-eea661faadd0~896fde99-08a3-4291-bcaf-f40b89bd0e67~c34824bf-225d-4efa-ab84-53e95d40656d~ca170ae3-99c1-48db-9b67-2866f85e7342]&amp;x16=[Keep%20me%20on%20trend]&amp;x17=[Opinion]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-12-30"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            30 декабр 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/7010/production/_104988682_1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7010/production/_104988682_1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/7010/production/_104988682_1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7010/production/_104988682_1.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/7010/production/_104988682_1.jpg 800w"
+                         alt="Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/7010/production/_104988682_1.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Сурат манбаси,
+                    </span>
+                    <span lang="en-GB">
+                      BBC
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/BE30/production/_104988684_2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/BE30/production/_104988684_2.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/BE30/production/_104988684_2.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/BE30/production/_104988684_2.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/BE30/production/_104988684_2.jpg 800w"
+                         alt="«Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/BE30/production/_104988684_2.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/10C50/production/_104988686_3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10C50/production/_104988686_3.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/10C50/production/_104988686_3.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/10C50/production/_104988686_3.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/10C50/production/_104988686_3.jpg 800w"
+                         alt="«Нон Янги йилдагина эмас, ҳар куни керак»."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10C50/production/_104988686_3.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    Нон Янги йилдагина эмас, ҳар куни керак.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17A8D/production/_104990969_5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17A8D/production/_104990969_5.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17A8D/production/_104990969_5.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17A8D/production/_104990969_5.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17A8D/production/_104990969_5.jpg 800w"
+                         alt="«Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17A8D/production/_104990969_5.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/45F5/production/_104990971_6.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/45F5/production/_104990971_6.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/45F5/production/_104990971_6.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/45F5/production/_104990971_6.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/45F5/production/_104990971_6.jpg 800w"
+                         alt="6. «Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ»."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/45F5/production/_104990971_6.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ».
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/9415/production/_104990973_7.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9415/production/_104990973_7.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/9415/production/_104990973_7.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/9415/production/_104990973_7.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/9415/production/_104990973_7.jpg 800w"
+                         alt="7. «Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9415/production/_104990973_7.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/E235/production/_104990975_9.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/E235/production/_104990975_9.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/E235/production/_104990975_9.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/E235/production/_104990975_9.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/E235/production/_104990975_9.jpg 800w"
+                         alt="10. «Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E235/production/_104990975_9.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    «Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13055/production/_104990977_10.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13055/production/_104990977_10.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13055/production/_104990977_10.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13055/production/_104990977_10.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13055/production/_104990977_10.jpg 800w"
+                         alt="совға"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13055/production/_104990977_10.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Сурат тагсўзи,
+                  </span>
+                  <p>
+                    Болалар учун совға
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/uzbek"
+               class="StyledLink-m3awbo-2 cmbfGD"
+            >
+              <svg height="24"
+                   viewbox="0 0 238.99 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fTrFbY"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M200.58 6.28h9.12l-6.76 9.25h6.76v1.35h-9.55l6.77-9.25h-6.34zM211.82 16.87V6.29h3.07a4.12 4.12 0 0 1 1.47.23 3 3 0 0 1 1 .61A2.38 2.38 0 0 1 218 8a2.72 2.72 0 0 1 .19 1 2.33 2.33 0 0 1-.39 1.37 2.68 2.68 0 0 1-1.23.89 4 4 0 0 1 1.06.36 2.85 2.85 0 0 1 .8.6 2.5 2.5 0 0 1 .5.81 2.76 2.76 0 0 1 0 2 2.48 2.48 0 0 1-.62.91 3.26 3.26 0 0 1-1.12.67 4.86 4.86 0 0 1-1.68.26zm1.51-9.21v3.16h1a2.8 2.8 0 0 0 1.69-.41 1.5 1.5 0 0 0 .55-1.28 1.75 1.75 0 0 0-.09-.56 1.13 1.13 0 0 0-.31-.47 1.57 1.57 0 0 0-.57-.32 2.72 2.72 0 0 0-.87-.12zm0 4.54v3.32h1.91a3.42 3.42 0 0 0 1.11-.15A2 2 0 0 0 217 15a1.31 1.31 0 0 0 .36-.54 1.83 1.83 0 0 0 .1-.59 1.54 1.54 0 0 0-.14-.66 1.38 1.38 0 0 0-.43-.52 2.15 2.15 0 0 0-.73-.34 3.92 3.92 0 0 0-1-.12zM227.28 6.29v1.37h-4.48v3.2h4.33v1.37h-4.33v3.29h4.63v1.36h-6.14V6.29zM236 6.29h1.89l-4.59 5 5.7 5.58h-2.07l-5.41-5.22v5.22H230V6.29h1.51v4.84zM189.7 6.14a5.69 5.69 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.07 5.07 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.52 5.52 0 0 1-4-1.53 5.11 5.11 0 0 1-1.62-3.85 5.23 5.23 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.1-1.56zm.06 1.44a4.1 4.1 0 0 0-3 1.14 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.18z">
+                  </path>
+                  <path d="M198.46 6.16v.23a2.22 2.22 0 0 0-.65 1.5.89.89 0 0 0 0 .17 1 1 0 0 1 .81 1 .84.84 0 0 1-.28.64 1 1 0 0 1-.67.26.89.89 0 0 1-.76-.38 1.7 1.7 0 0 1-.28-1 2.31 2.31 0 0 1 1.83-2.42z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                O'zbek
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-50220995"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Нега сиз Би-би-сига ишонишингиз мумкин?
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-36824297"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Фойдаланиш шартлари
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-36824300"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Шахсий ҳаёт махфийлиги сиёсати
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Куки(Cookies)
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/uzbek/institutional-36826360"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Би-би-си билан боғланиш
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1546186310000,"lastPublished":1546186363000,"lastUpdated":1546186371717,"id":"mock-id","locators":{"assetUri":"/uzbek/central-asia-46716844","cpsUrn":"urn:bbc:content:assetUri:uzbek/central-asia-46716844","curie":"http://www.bbc.co.uk/asset/168e7915-8439-324c-b403-6805b0b844f1"},"type":"PGL","createdBy":"uzbek-v6","language":"uz-Cyrl","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"counterName":"uzbek.central_asia.photo_gallery.46716844.page","cps_asset_id":"46716844","cps_asset_type":"pgl"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion","categoryName":"Opinion"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"Keep me on trend"}]},"tags":{"about":[{"thingLabel":"Business","thingUri":"http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id","thingId":"2f2db234-3c2d-40a4-b4ac-eea661faadd0","thingType":["Theme","Thing"],"thingSameAs":["http://dbpedia.org/resource/Business","http://www.wikidata.org/entity/Q21857788"]},{"thingLabel":"Tajikistan","thingUri":"http://www.bbc.co.uk/things/896fde99-08a3-4291-bcaf-f40b89bd0e67#id","thingId":"896fde99-08a3-4291-bcaf-f40b89bd0e67","thingType":["Place","Thing","geoname:GeoTagConcept"],"thingSameAs":["http://sws.geonames.org/1220409/"]},{"thingLabel":"Currency markets","thingUri":"http://www.bbc.co.uk/things/c34824bf-225d-4efa-ab84-53e95d40656d#id","thingId":"c34824bf-225d-4efa-ab84-53e95d40656d","thingType":["Theme","Thing"],"thingSameAs":["http://dbpedia.org/resource/Foreign_exchange_market"]},{"thingLabel":"Economy","thingUri":"http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id","thingId":"ca170ae3-99c1-48db-9b67-2866f85e7342","thingType":["Theme","Thing"],"thingSameAs":["http://dbpedia.org/resource/Economy"]}]},"version":"v0.4.12","blockTypes":["image"]},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?","blocks":[{"type":"fragment","model":{"text":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1546186310000,"lastPublished":1546186363000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.","blocks":[{"type":"fragment","model":{"text":"Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»","blocks":[{"type":"fragment","model":{"text":"Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»","blocks":[{"type":"fragment","model":{"text":"Янги йил арафасида нима яхши кетади? Торт-да, албатта. «Аёллар пишираверишсин, сотишни менга қўйиб беришсин!»","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC ","height":549,"locator":"7010/production/_104988682_1.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»","blocks":[{"type":"fragment","model":{"text":"«Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»","blocks":[{"type":"fragment","model":{"text":"«Бизда Янги йил дастурхонини безайдиган ҳамма нарса бор. Болаларга совға оласизми, марҳамат!»","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"BE30/production/_104988684_2.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Нон Янги йилдагина эмас, ҳар куни керак.","blocks":[{"type":"fragment","model":{"text":"Нон Янги йилдагина эмас, ҳар куни керак.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Нон Янги йилдагина эмас, ҳар куни керак».","blocks":[{"type":"fragment","model":{"text":"«Нон Янги йилдагина эмас, ҳар куни керак».","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"10C50/production/_104988686_3.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»","blocks":[{"type":"fragment","model":{"text":"«Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»","blocks":[{"type":"fragment","model":{"text":"«Нима бўлса ҳам, майли, аравамизга ортишсин, уйга тўрт танга ишлаб борайлик!»","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"17A8D/production/_104990969_5.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ».","blocks":[{"type":"fragment","model":{"text":"«Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ».","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"6. «Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ».","blocks":[{"type":"fragment","model":{"text":"6. «Биз, пойабзал таъмирловчиларга қишин-ёзин иш топилади. Лекин совуқда кўчага чиқишмаяптими, бугун иш камроқ».","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"45F5/production/_104990971_6.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»","blocks":[{"type":"fragment","model":{"text":"«Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"7. «Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»","blocks":[{"type":"fragment","model":{"text":"7. «Болажон, машинага хўб ярашибсан, кел, суратингни олиб қўяй!»","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"9415/production/_104990973_7.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"«Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»","blocks":[{"type":"fragment","model":{"text":"«Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"10. «Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»","blocks":[{"type":"fragment","model":{"text":"10. «Сотишга лицензиянгиз борми, деганлари нимаси? Пенсия пули ўн кунга етмаса, «олма пиш», деб уйда ўтирайинми?»","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"E235/production/_104990975_9.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Болалар учун совға","blocks":[{"type":"fragment","model":{"text":"Болалар учун совға","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"совға","blocks":[{"type":"fragment","model":{"text":"совға","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"13055/production/_104990977_10.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]}]}},"promo":{"headlines":{"shortHeadline":"Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?","headline":"Тожикистон: Қишда оддий одамларнинг тирикчилиги қандай ўтяпти?"},"locators":{"assetUri":"/uzbek/central-asia-46716844","cpsUrn":"urn:bbc:content:assetUri:uzbek/central-asia-46716844","curie":"http://www.bbc.co.uk/asset/168e7915-8439-324c-b403-6805b0b844f1"},"summary":"Тожикистонда ҳам Ўзбекистондаги каби янги йил арафасида савдо-сотиқ авжига чиққан. Байрам олдидан одамлар дастурхонни безашга ёки болаларга совға олишга ошиқмоқда.","timestamp":1546186371717,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion","categoryName":"Opinion"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"Keep me on trend"}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/17713/production/_104991069_9.jpg","path":"/cpsprodpb/17713/production/_104991069_9.jpg","height":1152,"width":2048,"altText":"она","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Минтақа","uri":"/uzbek/central_asia","type":"simple"},"site":{"subType":"site","name":"Ўзбек тилидаги янгиликлар","uri":"/uzbek","type":"simple"},"groups":[]}},"path":"/uzbek/central-asia-46716844","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [45]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="uzbek"
+            src="http://localhost:7080/static/js/uzbek-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

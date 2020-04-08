@@ -1,0 +1,2215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /vietnamese/world-48605529 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="vi"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_vietnamese/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="hong kong"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="vi-VN"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Hong Kong: Đợt biểu tình mới hôm 16/6 - BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/vietnamese/world-48605529"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcvietnamese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="hong kong"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_vietnamese/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcvietnamese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Hong Kong: Đợt biểu tình mới hôm 16/6 - BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-06-16T06:23:16.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-06-16T07:22:16.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Hong Kong: Đợt biểu tình mới hôm 16/6 - BBC News Tiếng Việt
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/vietnamese/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/vietnamese/world-48605529"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/vietnamese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/vietnamese/world-48605529","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Tiếng Việt","publishingPrinciples":"https://www.bbc.com/vietnamese/institutional-49283563","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/vietnamese/world-48605529","name":"Hong Kong: Đợt biểu tình mới hôm 16/6"},"headline":"Hong Kong: Đợt biểu tình mới hôm 16/6","description":"Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","datePublished":"2019-06-16T06:23:16.000Z","dateModified":"2019-06-16T07:22:16.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Tiếng Việt","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"},"noBylinesPolicy":"https://www.bbc.com/vietnamese/institutional-49283563#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Chúng tôi đã cập nhật Chính sách về Riêng tư và Cookie
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 kOYkDy"
+                  >
+                    Chúng tôi có một số thay đổi quan trọng về Chính sách Riêng tư và Cookie, và muống bạn biết ý nghĩa của nó đối với bạn và dữ liệu của bạn.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iZFJYN"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        OK
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Tìm hiểu các thay đổi
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Cho chúng tôi biết bạn đồng ý về cookie
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 kOYkDy"
+                  >
+                    Chúng tôi dùng
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookie
+                    </a>
+                    để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iZFJYN"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Vâng, tôi đồng ý
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Không, đưa tôi xem phần Settings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/vietnamese"
+               class="StyledLink-m3awbo-2 gfHRao"
+            >
+              <svg height="24"
+                   viewbox="0 0 268.46 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iFLkRB"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M183 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3H183zM194 6.73h1.52v10.64H194zM204.17 12.44h-4.07v3.79h4.55v1.14h-5.93V6.86h5.69V8h-4.31v3.32h4.07zM215.4 6.73h1.45v10.64h-1.31l-7.12-8.2v8.2H207V6.73h1.23L215.4 15zM225.38 12.13h3.57v4.51a9.74 9.74 0 0 1-3.9.85 5.79 5.79 0 0 1-4.23-1.49 5.11 5.11 0 0 1-1.58-3.81 5.29 5.29 0 0 1 1.64-4 5.67 5.67 0 0 1 4.12-1.6 7.26 7.26 0 0 1 1.71.19 14 14 0 0 1 2 .71v1.56a7.49 7.49 0 0 0-3.71-1.1 4 4 0 0 0-3 1.19 4 4 0 0 0-1.2 2.92 3.93 3.93 0 0 0 1.2 3 4.26 4.26 0 0 0 3.08 1.15 7.18 7.18 0 0 0 2.19-.42h.14v-2.3h-2zM243.81 6.73h1.52l-4.5 10.69h-.35l-4.59-10.69h1.53l3.2 7.47zM247.33 6.73h1.52v10.64h-1.52zM257.49 12.44h-4.07v3.79H258v1.14h-6V6.86h5.69V8h-4.32v3.32h4.07zM259.57 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3h-3.65zM202.99 3.79h1.21l2.29-1.97h-1.92l-1.58 1.97zM201.06 3.68l-1.72 2.11h1.5l.79-1 .81 1h1.53l-1.76-2.11h-1.15zM254.95 19.13a1 1 0 0 0-.95.95.93.93 0 1 0 .95-.95zM255.53 3.68h-1.19l-1.89 2.11h1.56l.94-1.01.92 1.01h1.61l-1.95-2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Tiếng Việt
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Bỏ qua để xem nội dung
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Mục
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Tin chính
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/vietnam"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Việt Nam
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Thế giới
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/forum"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Diễn đàn
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/business"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Kinh tế
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/magazine"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nhịp sống mới
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/sport"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Thể thao
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/english"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Học tiếng Anh
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Tin chính
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/vietnam"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Việt Nam
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/world"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Thế giới
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/forum"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Diễn đàn
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/business"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Kinh tế
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/magazine"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Nhịp sống mới
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/sport"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Thể thao
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/english"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Học tiếng Anh
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/vietnamese/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Video
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=97&p=world::vietnamese.world.photo_gallery.48605529.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3503ddd7-6ad7-7645-bb4c-9223969a7c18]&x2=[amp]&x3=[news-vietnamese]&x4=[vi]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Hong+Kong:+Đợt+biểu+tình+mới+hôm+16/6+-+BBC+News+Tiếng+Việt]&x11=[2019-06-16T06:23:16.000Z]&x12=[2019-06-16T07:22:16.000Z]&x16=[WS%20-%20Update%20me]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 cBtcWN"
+          >
+            Hong Kong: Đợt biểu tình mới hôm 16/6
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-06-16"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            16 tháng 6 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Phóng viên Tina Hà Giang của BBC Tiếng Việt cho hay, các bạn trẻ mặc áo đen tập hợp tại Pacific Place shopping center, gần các tòa nhà chính quyền.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Một cô gái thành kính thắp nhang tưởng nhớ người đã khuất.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Hoa và thiệp tưởng nhớ người đã khuất.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Những gương mặt rất trẻ xuống đường hôm nay để phản đối dự luật dẫn độ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Gần 80 người bị thương trong tình trạng bất ổn tuần qua, gồm 22 cảnh sát và một người đàn ông đã chết vào đêm 15/6 khi rơi xuống từ một tòa nhà.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Đám đông đang kéo về
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Hàng vạn người Hong Kong dự kiến biểu tình hôm nay 16/6 để yêu cầu Trưởng đặc khu Hành chính Hong Kong Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Cô Nancy Nguyễn (phải), nhà hoạt động gốc Việt, trong đám đông biểu tình hôm nay 16/6.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Nhiều bạn trẻ mang theo vật dụng cổ vũ biểu tình tự chế.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="hong kong"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Phần lớn người biểu tình mặc áo đen.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/vietnamese"
+               class="StyledLink-m3awbo-2 gfHRao"
+            >
+              <svg height="24"
+                   viewbox="0 0 268.46 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iFLkRB"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M183 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3H183zM194 6.73h1.52v10.64H194zM204.17 12.44h-4.07v3.79h4.55v1.14h-5.93V6.86h5.69V8h-4.31v3.32h4.07zM215.4 6.73h1.45v10.64h-1.31l-7.12-8.2v8.2H207V6.73h1.23L215.4 15zM225.38 12.13h3.57v4.51a9.74 9.74 0 0 1-3.9.85 5.79 5.79 0 0 1-4.23-1.49 5.11 5.11 0 0 1-1.58-3.81 5.29 5.29 0 0 1 1.64-4 5.67 5.67 0 0 1 4.12-1.6 7.26 7.26 0 0 1 1.71.19 14 14 0 0 1 2 .71v1.56a7.49 7.49 0 0 0-3.71-1.1 4 4 0 0 0-3 1.19 4 4 0 0 0-1.2 2.92 3.93 3.93 0 0 0 1.2 3 4.26 4.26 0 0 0 3.08 1.15 7.18 7.18 0 0 0 2.19-.42h.14v-2.3h-2zM243.81 6.73h1.52l-4.5 10.69h-.35l-4.59-10.69h1.53l3.2 7.47zM247.33 6.73h1.52v10.64h-1.52zM257.49 12.44h-4.07v3.79H258v1.14h-6V6.86h5.69V8h-4.32v3.32h4.07zM259.57 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3h-3.65zM202.99 3.79h1.21l2.29-1.97h-1.92l-1.58 1.97zM201.06 3.68l-1.72 2.11h1.5l.79-1 .81 1h1.53l-1.76-2.11h-1.15zM254.95 19.13a1 1 0 0 0-.95.95.93.93 0 1 0 .95-.95zM255.53 3.68h-1.19l-1.89 2.11h1.56l.94-1.01.92 1.01h1.61l-1.95-2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Tiếng Việt
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-49283563"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Tại sao bạn có thể tin tưởng BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37622991"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Điều khoản sử dụng
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37623840"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Về BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37623841"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Chính sách riêng tư
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37623842"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Liên hệ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /vietnamese/world-48605529 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="vi"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_vietnamese/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="hong kong"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="vi-VN"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Hong Kong: Đợt biểu tình mới hôm 16/6 - BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/vietnamese/world-48605529"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcvietnamese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="hong kong"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_vietnamese/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcvietnamese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Hong Kong: Đợt biểu tình mới hôm 16/6 - BBC News Tiếng Việt"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-06-16T06:23:16.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-06-16T07:22:16.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Hong Kong: Đợt biểu tình mới hôm 16/6 - BBC News Tiếng Việt
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/vietnamese/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/vietnamese/world-48605529"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/vietnamese/world-48605529.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/vietnamese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/vietnamese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/vietnamese/world-48605529","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Tiếng Việt","publishingPrinciples":"https://www.bbc.com/vietnamese/institutional-49283563","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/vietnamese/world-48605529","name":"Hong Kong: Đợt biểu tình mới hôm 16/6"},"headline":"Hong Kong: Đợt biểu tình mới hôm 16/6","description":"Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","datePublished":"2019-06-16T06:23:16.000Z","dateModified":"2019-06-16T07:22:16.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Tiếng Việt","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"},"noBylinesPolicy":"https://www.bbc.com/vietnamese/institutional-49283563#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/vietnamese"
+               class="StyledLink-m3awbo-2 gfHRao"
+            >
+              <svg height="24"
+                   viewbox="0 0 268.46 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iFLkRB"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M183 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3H183zM194 6.73h1.52v10.64H194zM204.17 12.44h-4.07v3.79h4.55v1.14h-5.93V6.86h5.69V8h-4.31v3.32h4.07zM215.4 6.73h1.45v10.64h-1.31l-7.12-8.2v8.2H207V6.73h1.23L215.4 15zM225.38 12.13h3.57v4.51a9.74 9.74 0 0 1-3.9.85 5.79 5.79 0 0 1-4.23-1.49 5.11 5.11 0 0 1-1.58-3.81 5.29 5.29 0 0 1 1.64-4 5.67 5.67 0 0 1 4.12-1.6 7.26 7.26 0 0 1 1.71.19 14 14 0 0 1 2 .71v1.56a7.49 7.49 0 0 0-3.71-1.1 4 4 0 0 0-3 1.19 4 4 0 0 0-1.2 2.92 3.93 3.93 0 0 0 1.2 3 4.26 4.26 0 0 0 3.08 1.15 7.18 7.18 0 0 0 2.19-.42h.14v-2.3h-2zM243.81 6.73h1.52l-4.5 10.69h-.35l-4.59-10.69h1.53l3.2 7.47zM247.33 6.73h1.52v10.64h-1.52zM257.49 12.44h-4.07v3.79H258v1.14h-6V6.86h5.69V8h-4.32v3.32h4.07zM259.57 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3h-3.65zM202.99 3.79h1.21l2.29-1.97h-1.92l-1.58 1.97zM201.06 3.68l-1.72 2.11h1.5l.79-1 .81 1h1.53l-1.76-2.11h-1.15zM254.95 19.13a1 1 0 0 0-.95.95.93.93 0 1 0 .95-.95zM255.53 3.68h-1.19l-1.89 2.11h1.56l.94-1.01.92 1.01h1.61l-1.95-2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Tiếng Việt
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Bỏ qua để xem nội dung
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Mục
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Tin chính
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/vietnam"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Việt Nam
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/world"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Thế giới
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/forum"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Diễn đàn
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/business"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Kinh tế
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/magazine"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Nhịp sống mới
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/sport"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Thể thao
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/english"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Học tiếng Anh
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/vietnamese/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Video
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Tin chính
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/vietnam"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Việt Nam
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Thế giới
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/forum"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Diễn đàn
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/business"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Kinh tế
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/magazine"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nhịp sống mới
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/sport"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Thể thao
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/english"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Học tiếng Anh
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/vietnamese/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=world::vietnamese.world.photo_gallery.48605529.page&amp;x1=[urn:bbc:cps:3503ddd7-6ad7-7645-bb4c-9223969a7c18]&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[Hong+Kong:+Đợt+biểu+tình+mới+hôm+16/6+-+BBC+News+Tiếng+Việt]&amp;x11=[2019-06-16T06:23:16.000Z]&amp;x12=[2019-06-16T07:22:16.000Z]&amp;x16=[WS%20-%20Update%20me]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 cBtcWN"
+          >
+            Hong Kong: Đợt biểu tình mới hôm 16/6
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-06-16"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            16 tháng 6 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Phóng viên Tina Hà Giang của BBC Tiếng Việt cho hay, các bạn trẻ mặc áo đen tập hợp tại Pacific Place shopping center, gần các tòa nhà chính quyền.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Một cô gái thành kính thắp nhang tưởng nhớ người đã khuất.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Hoa và thiệp tưởng nhớ người đã khuất.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Những gương mặt rất trẻ xuống đường hôm nay để phản đối dự luật dẫn độ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Gần 80 người bị thương trong tình trạng bất ổn tuần qua, gồm 22 cảnh sát và một người đàn ông đã chết vào đêm 15/6 khi rơi xuống từ một tòa nhà.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Đám đông đang kéo về
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Hàng vạn người Hong Kong dự kiến biểu tình hôm nay 16/6 để yêu cầu Trưởng đặc khu Hành chính Hong Kong Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Cô Nancy Nguyễn (phải), nhà hoạt động gốc Việt, trong đám đông biểu tình hôm nay 16/6.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Nhiều bạn trẻ mang theo vật dụng cổ vũ biểu tình tự chế.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg 800w"
+                         alt="hong kong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 emSaHV">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Chụp lại hình ảnh,
+                  </span>
+                  <p>
+                    Phần lớn người biểu tình mặc áo đen.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/vietnamese"
+               class="StyledLink-m3awbo-2 gfHRao"
+            >
+              <svg height="24"
+                   viewbox="0 0 268.46 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iFLkRB"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M183 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3H183zM194 6.73h1.52v10.64H194zM204.17 12.44h-4.07v3.79h4.55v1.14h-5.93V6.86h5.69V8h-4.31v3.32h4.07zM215.4 6.73h1.45v10.64h-1.31l-7.12-8.2v8.2H207V6.73h1.23L215.4 15zM225.38 12.13h3.57v4.51a9.74 9.74 0 0 1-3.9.85 5.79 5.79 0 0 1-4.23-1.49 5.11 5.11 0 0 1-1.58-3.81 5.29 5.29 0 0 1 1.64-4 5.67 5.67 0 0 1 4.12-1.6 7.26 7.26 0 0 1 1.71.19 14 14 0 0 1 2 .71v1.56a7.49 7.49 0 0 0-3.71-1.1 4 4 0 0 0-3 1.19 4 4 0 0 0-1.2 2.92 3.93 3.93 0 0 0 1.2 3 4.26 4.26 0 0 0 3.08 1.15 7.18 7.18 0 0 0 2.19-.42h.14v-2.3h-2zM243.81 6.73h1.52l-4.5 10.69h-.35l-4.59-10.69h1.53l3.2 7.47zM247.33 6.73h1.52v10.64h-1.52zM257.49 12.44h-4.07v3.79H258v1.14h-6V6.86h5.69V8h-4.32v3.32h4.07zM259.57 6.71h8.89v1.36h-3.71v9.3h-1.53v-9.3h-3.65zM202.99 3.79h1.21l2.29-1.97h-1.92l-1.58 1.97zM201.06 3.68l-1.72 2.11h1.5l.79-1 .81 1h1.53l-1.76-2.11h-1.15zM254.95 19.13a1 1 0 0 0-.95.95.93.93 0 1 0 .95-.95zM255.53 3.68h-1.19l-1.89 2.11h1.56l.94-1.01.92 1.01h1.61l-1.95-2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Tiếng Việt
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-49283563"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Tại sao bạn có thể tin tưởng BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37622991"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Điều khoản sử dụng
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37623840"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Về BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37623841"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Chính sách riêng tư
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/vietnamese/institutional-37623842"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Liên hệ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1560666196000,"lastPublished":1560669736000,"lastUpdated":1560669745833,"id":"mock-id","locators":{"assetUri":"/vietnamese/world-48605529","cpsUrn":"urn:bbc:content:assetUri:vietnamese/world-48605529","curie":"http://www.bbc.co.uk/asset/3503ddd7-6ad7-7645-bb4c-9223969a7c18"},"type":"PGL","createdBy":"vietnamese-v6","language":"vi","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"vietnamese.world.photo_gallery.48605529.page","cps_asset_id":"48605529"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}]},"tags":{"mentions":[{"thingLabel":"Hong Kong","thingUri":"http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id","thingId":"a3b15769-775e-471d-a511-a7b78f346859","thingType":["Place","Thing","geoname:GeoTagConcept"],"thingSameAs":["http://sws.geonames.org/1819729/"],"topicName":"Hong Kong","topicId":"c8y9491y26nt","curationList":[{"curationId":"f74ad3a8-2594-482c-bd67-95fac6914c5b","curationType":"vivo-stream"}]}]},"version":"v1.0.0","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Hong Kong: Đợt biểu tình mới hôm 16/6","blocks":[{"type":"fragment","model":{"text":"Hong Kong: Đợt biểu tình mới hôm 16/6","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1560666196000,"lastPublished":1560669736000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","blocks":[{"type":"fragment","model":{"text":"Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Phóng viên Tina Hà Giang của BBC Tiếng Việt cho hay, các bạn trẻ mặc áo đen tập hợp tại Pacific Place shopping center, gần các tòa nhà chính quyền.","blocks":[{"type":"fragment","model":{"text":"Phóng viên Tina Hà Giang của BBC Tiếng Việt cho hay, các bạn trẻ mặc áo đen tập hợp tại Pacific Place shopping center, gần các tòa nhà chính quyền.","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"380D/production/_107394341_64478760_618661238632427_5281532485165907968_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Một cô gái thành kính thắp nhang tưởng nhớ người đã khuất.","blocks":[{"type":"fragment","model":{"text":"Một cô gái thành kính thắp nhang tưởng nhớ người đã khuất.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"862D/production/_107394343_64857583_2153839961408725_5860674576962289664_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Hoa và thiệp tưởng nhớ người đã khuất.","blocks":[{"type":"fragment","model":{"text":"Hoa và thiệp tưởng nhớ người đã khuất.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"D44D/production/_107394345_64402320_690170728099257_1227566343994212352_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Những gương mặt rất trẻ xuống đường hôm nay để phản đối dự luật dẫn độ.","blocks":[{"type":"fragment","model":{"text":"Những gương mặt rất trẻ xuống đường hôm nay để phản đối dự luật dẫn độ.","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"1226D/production/_107394347_62590773_1095489037316373_7522281369473384448_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Gần 80 người bị thương trong tình trạng bất ổn tuần qua, gồm 22 cảnh sát và một người đàn ông đã chết vào đêm 15/6 khi rơi xuống từ một tòa nhà.","blocks":[{"type":"fragment","model":{"text":"Gần 80 người bị thương trong tình trạng bất ổn tuần qua, gồm 22 cảnh sát và một người đàn ông đã chết vào đêm 15/6 khi rơi xuống từ một tòa nhà.","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"17E9D/production/_107394979_64685174_1750009351769252_4277115431937900544_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Đám đông đang kéo về","blocks":[{"type":"fragment","model":{"text":"Đám đông đang kéo về","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"EE83/production/_107395016_64307247_668670380245445_2930193076364247040_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Hàng vạn người Hong Kong dự kiến biểu tình hôm nay 16/6 để yêu cầu Trưởng đặc khu Hành chính Hong Kong Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","blocks":[{"type":"fragment","model":{"text":"Hàng vạn người Hong Kong dự kiến biểu tình hôm nay 16/6 để yêu cầu Trưởng đặc khu Hành chính Hong Kong Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"15413/production/_107395078_64647053_434763684014739_6218418801231265792_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cô Nancy Nguyễn (phải), nhà hoạt động gốc Việt, trong đám đông biểu tình hôm nay 16/6.","blocks":[{"type":"fragment","model":{"text":"Cô Nancy Nguyễn (phải), nhà hoạt động gốc Việt, trong đám đông biểu tình hôm nay 16/6.","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"1602F/production/_107395109_65042061_456970265098549_632756795617574912_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Nhiều bạn trẻ mang theo vật dụng cổ vũ biểu tình tự chế.","blocks":[{"type":"fragment","model":{"text":"Nhiều bạn trẻ mang theo vật dụng cổ vũ biểu tình tự chế.","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"11A43/production/_107395227_62633022_694053677681593_1434911520910737408_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Phần lớn người biểu tình mặc áo đen.","blocks":[{"type":"fragment","model":{"text":"Phần lớn người biểu tình mặc áo đen.","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"hong kong","blocks":[{"type":"fragment","model":{"text":"hong kong","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"17FD3/production/_107395289_64270616_335711173769586_6727835951562752000_n.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]}]}},"promo":{"headlines":{"shortHeadline":"Hong Kong: Đợt biểu tình mới hôm 16/6","headline":"Hong Kong: Đợt biểu tình mới hôm 16/6"},"locators":{"assetUri":"/vietnamese/world-48605529","cpsUrn":"urn:bbc:content:assetUri:vietnamese/world-48605529","curie":"http://www.bbc.co.uk/asset/3503ddd7-6ad7-7645-bb4c-9223969a7c18"},"summary":"Dự kiến hàng vạn người Hong Kong biểu tình hôm 16/6 để yêu cầu bà Carrie Lam từ chức, một ngày sau khi bà tuyên bố hoãn dự luật dẫn độ.","timestamp":1560669745833,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg","path":"/cpsprodpb/242B/production/_107395290_62633022_694053677681593_1434911520910737408_n.jpg","height":1080,"width":1920,"altText":"hong kong","caption":"hong kong","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Thế giới","uri":"/vietnamese/world","type":"simple"},"site":{"subType":"site","name":"BBC Tiếng Việt","uri":"/vietnamese","type":"simple"},"groups":[]}},"path":"/vietnamese/world-48605529","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [51]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="vietnamese"
+            src="http://localhost:7080/static/js/vietnamese-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

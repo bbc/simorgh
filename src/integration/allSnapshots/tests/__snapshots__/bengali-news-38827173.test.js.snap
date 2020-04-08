@@ -1,0 +1,1943 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /bengali/news-38827173 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="bn"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_bengali/AE56/production/_93903644_888.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="গোলাপ ফুল"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="bn-BD"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="শীতের স্বর্ণরাঙা রোদের ফুল - BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/bengali/news-38827173"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcbangla"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="গোলাপ ফুল"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_bengali/AE56/production/_93903644_888.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcbangla"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="শীতের স্বর্ণরাঙা রোদের ফুল - BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-02-01T11:00:32.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-02-01T11:00:45.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      শীতের স্বর্ণরাঙা রোদের ফুল - BBC News বাংলা
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/bengali/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/bengali/news-38827173"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/bengali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/bengali/news-38827173","publisher":{"@type":"NewsMediaOrganization","name":"BBC News বাংলা","publishingPrinciples":"https://www.bbc.com/bengali/institutional-50409861","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/bengali/news-38827173","name":"শীতের স্বর্ণরাঙা রোদের ফুল"},"headline":"শীতের স্বর্ণরাঙা রোদের ফুল","description":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।","datePublished":"2017-02-01T11:00:32.000Z","dateModified":"2017-02-01T11:00:45.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News বাংলা","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"},"noBylinesPolicy":"https://www.bbc.com/bengali/institutional-50409861#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 cOdcPH"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 dwinOQ"
+                  >
+                    আমরা আমাদের প্রিভেসি এবং কুকি বিষয়ক নীতিমালা আপডেট করেছি।
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 iyAQfQ"
+                  >
+                    আমাদের প্রিভেসি এবং কুকি নীতিমালায় আমরা কিছু গুরুত্বপূর্ণ পরিবর্তন এনেছি।  আপনার এবং আপনার ব্যবহৃত ডেটার জন্য এই পরিবর্তনের অর্থ কী সেটা আমরা আপনাকে জানাতে চাই।
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 gSqVEs"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kWfiNQ"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ঠিক আছে।
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kWfiNQ"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        কী পরিবর্তন হয়েছে দেখুন।
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 cOdcPH"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 dwinOQ"
+                  >
+                    আপনি কুকিগুলো ব্যবহারের সম্মতি দিচ্ছেন সেটা আমাদের জানান।
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 iyAQfQ"
+                  >
+                    আমরা
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      কুকি
+                    </a>
+                    ব্যবহার করি যাতে অনলাইনে আপনার বিচরণ স্বচ্ছন্দ হয়।সবগুলো কুকি ব্যবহারের জন্য আপনি সম্মতি দিচ্ছেন কিনা জানান।
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 gSqVEs"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kWfiNQ"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        হ্যাঁ, আমি সম্মতি দিচ্ছি।
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kWfiNQ"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        না, আমাকে সেটিং-এ ফেরত নিয়ে যান।
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/bengali"
+               class="StyledLink-m3awbo-2 hxhVJi"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.94 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fCwdWu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M196.8 4.94h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32H182v1.4h8.55v.65a32.69 32.69 0 0 0-3.73 1.45 42.48 42.48 0 0 0-3.9 2l.77 1.89a9.79 9.79 0 0 1 4.07 1.66 8.78 8.78 0 0 1 2.79 3.12H192V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4h-2.08zm-8.61 9a10.89 10.89 0 0 0-3.47-1.47 28.21 28.21 0 0 1 2.74-1.43q1.45-.66 3.06-1.22v4.91q0 .8.07 1.59a7.45 7.45 0 0 0-2.4-2.32zM203.63 11.6a2.72 2.72 0 0 0 2-.77 2.57 2.57 0 0 0 .79-1.92 2.54 2.54 0 0 0-.8-1.91 2.92 2.92 0 0 0-3.95 0 2.57 2.57 0 0 0-.79 1.91 2.57 2.57 0 0 0 .79 1.92 2.72 2.72 0 0 0 1.96.77zm-1-3.7a1.42 1.42 0 0 1 2.44 1 1.36 1.36 0 0 1-.41 1 1.49 1.49 0 0 1-2 0 1.47 1.47 0 0 1 0-2zM201.74 12.29l-1 1.28a15.62 15.62 0 0 1 3 2.28 21.5 21.5 0 0 1 2.67 3.43l1.29-.65A18.94 18.94 0 0 0 205 15a15.76 15.76 0 0 0-3.26-2.71zM225.86 6.24l-.44-1.3h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32h-14.83v1.4h11.21v2.84a4.24 4.24 0 0 0-1.11-.7 2.9 2.9 0 0 0-1-.18 2.17 2.17 0 0 0-1.08.28 1.81 1.81 0 0 0-.75.78 3.85 3.85 0 0 0-1.31-1 3.93 3.93 0 0 0-1.67-.33 3.29 3.29 0 0 0-2.27.81 2.63 2.63 0 0 0-.91 2.06 3.44 3.44 0 0 0 .84 2.3 5.2 5.2 0 0 0 2.46 1.5l.53-1.45a4.35 4.35 0 0 1-1.67-1 1.82 1.82 0 0 1-.56-1.32 1.42 1.42 0 0 1 .47-1.1 1.74 1.74 0 0 1 1.22-.43 2.17 2.17 0 0 1 1.59.68 3 3 0 0 1 .81 1.83l1.28-.09a5 5 0 0 1 0-.71 1.56 1.56 0 0 1 .33-1.07 1.25 1.25 0 0 1 1-.37 1.67 1.67 0 0 1 .94.29 4 4 0 0 1 .94 1v6.22h1.51V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                বাংলা
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 hiJaEK"
+            >
+              সরাসরি কনটেন্টে যান
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 jJDpRZ"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                সেকশন
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/bengali"
+                     class="StyledDropdownLink-ukxuly-4 dlBFyI"
+                  >
+                    মূলপাতা
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/bengali/media/video"
+                     class="StyledDropdownLink-ukxuly-4 dlBFyI"
+                  >
+                    ভিডিও
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/bengali"
+                     class="StyledLink-sc-158x7z5-2 imHqPK"
+                  >
+                    মূলপাতা
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/bengali/media/video"
+                     class="StyledLink-sc-158x7z5-2 imHqPK"
+                  >
+                    ভিডিও
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=31&p=news::bengali.news.photo_gallery.38827173.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:ab75ee89-8a70-524f-861c-d5b8dc5709d5]&x2=[amp]&x3=[news-bengali]&x4=[bn]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[শীতের+স্বর্ণরাঙা+রোদের+ফুল+-+BBC+News+বাংলা]&x11=[2017-02-01T11:00:32.000Z]&x12=[2017-02-01T11:00:45.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hNKIvJ"
+          >
+            শীতের স্বর্ণরাঙা রোদের ফুল
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2017-02-01"
+                class="StyledTimestamp-um718p-0 kdCwhz"
+          >
+            ১ ফেব্রুয়ারি ২০১৭
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 RXHgt">
+            বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="গোলাপ ফুল"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10EA/production/_93903340_888.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="শিমুল ফুল"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/5F0A/production/_93903342_capture.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    মাঘের শেষে ফাগুনে হাওয়া বইতে শুরু করেছে। গাছে গাছে ফুটতে শুরু করেছে শিমুল ফুল। ছবিটি রংপুরের তাজহাট এলাকা থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="গাদাঁ ফুল"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E88A/production/_93903595_capture2.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    বাংলাদেশে সারাবছরই ফুলের চাহিদা থাকে। তাই বাণিজ্যিকভাবে এখন ফুলের চাষও হচ্ছে। বিশেষ করে শীতের সময় গাদাঁ ফুলে চাহিদা থাকে অনেক বেশি। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/136AA/production/_93903597_capture3.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ডালিয়া ফুল।"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/184CA/production/_93903599_capture4.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    ঢাকার বোটানিক্যাল গার্ডেনের বাগানে ফুটেছে অসংখ্য ডালিয়া ফুল।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ফুল গাছ।"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/2986/production/_93903601_capture5.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    বোটানিক্যাল গার্ডেনের বাগানে সাজানো রয়েছে নানাজাতের অসংখ্য ফুল গাছ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ফুল"
+                           attribution="Focus Bangla "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8746/production/_93903643_capture6.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    শীতের সকালে বাগানে নানা রঙের ফুলের উপর পড়েছে সকালের কোমল রোদ। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/bengali"
+               class="StyledLink-m3awbo-2 hxhVJi"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.94 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fCwdWu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M196.8 4.94h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32H182v1.4h8.55v.65a32.69 32.69 0 0 0-3.73 1.45 42.48 42.48 0 0 0-3.9 2l.77 1.89a9.79 9.79 0 0 1 4.07 1.66 8.78 8.78 0 0 1 2.79 3.12H192V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4h-2.08zm-8.61 9a10.89 10.89 0 0 0-3.47-1.47 28.21 28.21 0 0 1 2.74-1.43q1.45-.66 3.06-1.22v4.91q0 .8.07 1.59a7.45 7.45 0 0 0-2.4-2.32zM203.63 11.6a2.72 2.72 0 0 0 2-.77 2.57 2.57 0 0 0 .79-1.92 2.54 2.54 0 0 0-.8-1.91 2.92 2.92 0 0 0-3.95 0 2.57 2.57 0 0 0-.79 1.91 2.57 2.57 0 0 0 .79 1.92 2.72 2.72 0 0 0 1.96.77zm-1-3.7a1.42 1.42 0 0 1 2.44 1 1.36 1.36 0 0 1-.41 1 1.49 1.49 0 0 1-2 0 1.47 1.47 0 0 1 0-2zM201.74 12.29l-1 1.28a15.62 15.62 0 0 1 3 2.28 21.5 21.5 0 0 1 2.67 3.43l1.29-.65A18.94 18.94 0 0 0 205 15a15.76 15.76 0 0 0-3.26-2.71zM225.86 6.24l-.44-1.3h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32h-14.83v1.4h11.21v2.84a4.24 4.24 0 0 0-1.11-.7 2.9 2.9 0 0 0-1-.18 2.17 2.17 0 0 0-1.08.28 1.81 1.81 0 0 0-.75.78 3.85 3.85 0 0 0-1.31-1 3.93 3.93 0 0 0-1.67-.33 3.29 3.29 0 0 0-2.27.81 2.63 2.63 0 0 0-.91 2.06 3.44 3.44 0 0 0 .84 2.3 5.2 5.2 0 0 0 2.46 1.5l.53-1.45a4.35 4.35 0 0 1-1.67-1 1.82 1.82 0 0 1-.56-1.32 1.42 1.42 0 0 1 .47-1.1 1.74 1.74 0 0 1 1.22-.43 2.17 2.17 0 0 1 1.59.68 3 3 0 0 1 .81 1.83l1.28-.09a5 5 0 0 1 0-.71 1.56 1.56 0 0 1 .33-1.07 1.25 1.25 0 0 1 1-.37 1.67 1.67 0 0 1 .94.29 4 4 0 0 1 .94 1v6.22h1.51V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                বাংলা
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 idqvVi">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-50409861"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289190"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ব্যবহারের শর্তাবলী
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289764"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    বিবিসি সম্পর্কে
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    প্রিভেসি নীতি
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289967"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    কুকিজ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    বিবিসির সঙ্গে যোগাযোগ করুন
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /bengali/news-38827173 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="bn"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_bengali/AE56/production/_93903644_888.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="গোলাপ ফুল"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="bn-BD"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="শীতের স্বর্ণরাঙা রোদের ফুল - BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/bengali/news-38827173"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcbangla"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="গোলাপ ফুল"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_bengali/AE56/production/_93903644_888.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcbangla"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="শীতের স্বর্ণরাঙা রোদের ফুল - BBC News বাংলা"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-02-01T11:00:32.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-02-01T11:00:45.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      শীতের স্বর্ণরাঙা রোদের ফুল - BBC News বাংলা
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/bengali/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/bengali/news-38827173"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/bengali/news-38827173.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/bengali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/bengali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/bengali/news-38827173","publisher":{"@type":"NewsMediaOrganization","name":"BBC News বাংলা","publishingPrinciples":"https://www.bbc.com/bengali/institutional-50409861","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/bengali/news-38827173","name":"শীতের স্বর্ণরাঙা রোদের ফুল"},"headline":"শীতের স্বর্ণরাঙা রোদের ফুল","description":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।","datePublished":"2017-02-01T11:00:32.000Z","dateModified":"2017-02-01T11:00:45.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News বাংলা","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"},"noBylinesPolicy":"https://www.bbc.com/bengali/institutional-50409861#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/bengali"
+               class="StyledLink-m3awbo-2 hxhVJi"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.94 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fCwdWu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M196.8 4.94h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32H182v1.4h8.55v.65a32.69 32.69 0 0 0-3.73 1.45 42.48 42.48 0 0 0-3.9 2l.77 1.89a9.79 9.79 0 0 1 4.07 1.66 8.78 8.78 0 0 1 2.79 3.12H192V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4h-2.08zm-8.61 9a10.89 10.89 0 0 0-3.47-1.47 28.21 28.21 0 0 1 2.74-1.43q1.45-.66 3.06-1.22v4.91q0 .8.07 1.59a7.45 7.45 0 0 0-2.4-2.32zM203.63 11.6a2.72 2.72 0 0 0 2-.77 2.57 2.57 0 0 0 .79-1.92 2.54 2.54 0 0 0-.8-1.91 2.92 2.92 0 0 0-3.95 0 2.57 2.57 0 0 0-.79 1.91 2.57 2.57 0 0 0 .79 1.92 2.72 2.72 0 0 0 1.96.77zm-1-3.7a1.42 1.42 0 0 1 2.44 1 1.36 1.36 0 0 1-.41 1 1.49 1.49 0 0 1-2 0 1.47 1.47 0 0 1 0-2zM201.74 12.29l-1 1.28a15.62 15.62 0 0 1 3 2.28 21.5 21.5 0 0 1 2.67 3.43l1.29-.65A18.94 18.94 0 0 0 205 15a15.76 15.76 0 0 0-3.26-2.71zM225.86 6.24l-.44-1.3h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32h-14.83v1.4h11.21v2.84a4.24 4.24 0 0 0-1.11-.7 2.9 2.9 0 0 0-1-.18 2.17 2.17 0 0 0-1.08.28 1.81 1.81 0 0 0-.75.78 3.85 3.85 0 0 0-1.31-1 3.93 3.93 0 0 0-1.67-.33 3.29 3.29 0 0 0-2.27.81 2.63 2.63 0 0 0-.91 2.06 3.44 3.44 0 0 0 .84 2.3 5.2 5.2 0 0 0 2.46 1.5l.53-1.45a4.35 4.35 0 0 1-1.67-1 1.82 1.82 0 0 1-.56-1.32 1.42 1.42 0 0 1 .47-1.1 1.74 1.74 0 0 1 1.22-.43 2.17 2.17 0 0 1 1.59.68 3 3 0 0 1 .81 1.83l1.28-.09a5 5 0 0 1 0-.71 1.56 1.56 0 0 1 .33-1.07 1.25 1.25 0 0 1 1-.37 1.67 1.67 0 0 1 .94.29 4 4 0 0 1 .94 1v6.22h1.51V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                বাংলা
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 hiJaEK"
+            >
+              সরাসরি কনটেন্টে যান
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 jJDpRZ"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  সেকশন
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/bengali"
+                       class="StyledLink-sc-158x7z5-2 imHqPK"
+                    >
+                      মূলপাতা
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/bengali/media/video"
+                       class="StyledLink-sc-158x7z5-2 imHqPK"
+                    >
+                      ভিডিও
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/bengali"
+                     class="StyledDropdownLink-ukxuly-4 dlBFyI"
+                  >
+                    মূলপাতা
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/bengali/media/video"
+                     class="StyledDropdownLink-ukxuly-4 dlBFyI"
+                  >
+                    ভিডিও
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=31&amp;p=news::bengali.news.photo_gallery.38827173.page&amp;x1=[urn:bbc:cps:ab75ee89-8a70-524f-861c-d5b8dc5709d5]&amp;x2=[responsive]&amp;x3=[news-bengali]&amp;x4=[bn]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[শীতের+স্বর্ণরাঙা+রোদের+ফুল+-+BBC+News+বাংলা]&amp;x11=[2017-02-01T11:00:32.000Z]&amp;x12=[2017-02-01T11:00:45.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hNKIvJ"
+          >
+            শীতের স্বর্ণরাঙা রোদের ফুল
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2017-02-01"
+                class="StyledTimestamp-um718p-0 kdCwhz"
+          >
+            ১ ফেব্রুয়ারি ২০১৭
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 RXHgt">
+            বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/10EA/production/_93903340_888.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10EA/production/_93903340_888.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/10EA/production/_93903340_888.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/10EA/production/_93903340_888.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/10EA/production/_93903340_888.jpg 800w"
+                         alt="গোলাপ ফুল"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10EA/production/_93903340_888.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/5F0A/production/_93903342_capture.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/5F0A/production/_93903342_capture.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/5F0A/production/_93903342_capture.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/5F0A/production/_93903342_capture.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/5F0A/production/_93903342_capture.jpg 800w"
+                         alt="শিমুল ফুল"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/5F0A/production/_93903342_capture.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    মাঘের শেষে ফাগুনে হাওয়া বইতে শুরু করেছে। গাছে গাছে ফুটতে শুরু করেছে শিমুল ফুল। ছবিটি রংপুরের তাজহাট এলাকা থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/E88A/production/_93903595_capture2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/E88A/production/_93903595_capture2.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/E88A/production/_93903595_capture2.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/E88A/production/_93903595_capture2.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/E88A/production/_93903595_capture2.jpg 800w"
+                         alt="গাদাঁ ফুল"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E88A/production/_93903595_capture2.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    বাংলাদেশে সারাবছরই ফুলের চাহিদা থাকে। তাই বাণিজ্যিকভাবে এখন ফুলের চাষও হচ্ছে। বিশেষ করে শীতের সময় গাদাঁ ফুলে চাহিদা থাকে অনেক বেশি। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/136AA/production/_93903597_capture3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/136AA/production/_93903597_capture3.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/136AA/production/_93903597_capture3.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/136AA/production/_93903597_capture3.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/136AA/production/_93903597_capture3.jpg 800w"
+                         alt="ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/136AA/production/_93903597_capture3.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/184CA/production/_93903599_capture4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/184CA/production/_93903599_capture4.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/184CA/production/_93903599_capture4.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/184CA/production/_93903599_capture4.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/184CA/production/_93903599_capture4.jpg 800w"
+                         alt="ডালিয়া ফুল।"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/184CA/production/_93903599_capture4.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    ঢাকার বোটানিক্যাল গার্ডেনের বাগানে ফুটেছে অসংখ্য ডালিয়া ফুল।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/2986/production/_93903601_capture5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/2986/production/_93903601_capture5.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/2986/production/_93903601_capture5.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/2986/production/_93903601_capture5.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/2986/production/_93903601_capture5.jpg 800w"
+                         alt="ফুল গাছ।"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/2986/production/_93903601_capture5.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    বোটানিক্যাল গার্ডেনের বাগানে সাজানো রয়েছে নানাজাতের অসংখ্য ফুল গাছ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8746/production/_93903643_capture6.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8746/production/_93903643_capture6.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8746/production/_93903643_capture6.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8746/production/_93903643_capture6.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8746/production/_93903643_capture6.jpg 800w"
+                         alt="ফুল"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8746/production/_93903643_capture6.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ছবির উৎস,
+                    </span>
+                    <span lang="en-GB">
+                      Focus Bangla
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jClRdi">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ছবির ক্যাপশান,
+                  </span>
+                  <p>
+                    শীতের সকালে বাগানে নানা রঙের ফুলের উপর পড়েছে সকালের কোমল রোদ। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/bengali"
+               class="StyledLink-m3awbo-2 hxhVJi"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.94 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fCwdWu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M196.8 4.94h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32H182v1.4h8.55v.65a32.69 32.69 0 0 0-3.73 1.45 42.48 42.48 0 0 0-3.9 2l.77 1.89a9.79 9.79 0 0 1 4.07 1.66 8.78 8.78 0 0 1 2.79 3.12H192V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4h-2.08zm-8.61 9a10.89 10.89 0 0 0-3.47-1.47 28.21 28.21 0 0 1 2.74-1.43q1.45-.66 3.06-1.22v4.91q0 .8.07 1.59a7.45 7.45 0 0 0-2.4-2.32zM203.63 11.6a2.72 2.72 0 0 0 2-.77 2.57 2.57 0 0 0 .79-1.92 2.54 2.54 0 0 0-.8-1.91 2.92 2.92 0 0 0-3.95 0 2.57 2.57 0 0 0-.79 1.91 2.57 2.57 0 0 0 .79 1.92 2.72 2.72 0 0 0 1.96.77zm-1-3.7a1.42 1.42 0 0 1 2.44 1 1.36 1.36 0 0 1-.41 1 1.49 1.49 0 0 1-2 0 1.47 1.47 0 0 1 0-2zM201.74 12.29l-1 1.28a15.62 15.62 0 0 1 3 2.28 21.5 21.5 0 0 1 2.67 3.43l1.29-.65A18.94 18.94 0 0 0 205 15a15.76 15.76 0 0 0-3.26-2.71zM225.86 6.24l-.44-1.3h-1v1.47a7.51 7.51 0 0 0 .07 1.07 2.46 2.46 0 0 0-.8-.91 1.81 1.81 0 0 0-.93-.32h-14.83v1.4h11.21v2.84a4.24 4.24 0 0 0-1.11-.7 2.9 2.9 0 0 0-1-.18 2.17 2.17 0 0 0-1.08.28 1.81 1.81 0 0 0-.75.78 3.85 3.85 0 0 0-1.31-1 3.93 3.93 0 0 0-1.67-.33 3.29 3.29 0 0 0-2.27.81 2.63 2.63 0 0 0-.91 2.06 3.44 3.44 0 0 0 .84 2.3 5.2 5.2 0 0 0 2.46 1.5l.53-1.45a4.35 4.35 0 0 1-1.67-1 1.82 1.82 0 0 1-.56-1.32 1.42 1.42 0 0 1 .47-1.1 1.74 1.74 0 0 1 1.22-.43 2.17 2.17 0 0 1 1.59.68 3 3 0 0 1 .81 1.83l1.28-.09a5 5 0 0 1 0-.71 1.56 1.56 0 0 1 .33-1.07 1.25 1.25 0 0 1 1-.37 1.67 1.67 0 0 1 .94.29 4 4 0 0 1 .94 1v6.22h1.51V7.64h1.83a1.67 1.67 0 0 1 1.13.42 2.77 2.77 0 0 1 .76 1.19v9.22h1.51V7.64h2.06v-1.4z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                বাংলা
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 idqvVi">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-50409861"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289190"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ব্যবহারের শর্তাবলী
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289764"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    বিবিসি সম্পর্কে
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    প্রিভেসি নীতি
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/bengali/institutional-37289967"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    কুকিজ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    বিবিসির সঙ্গে যোগাযোগ করুন
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1485946832000,"lastPublished":1485946845000,"lastUpdated":1579163671124,"id":"mock-id","locators":{"assetUri":"/bengali/news-38827173","cpsUrn":"urn:bbc:content:assetUri:bengali/news-38827173","curie":"http://www.bbc.co.uk/asset/ab75ee89-8a70-524f-861c-d5b8dc5709d5"},"type":"PGL","createdBy":"bengali-v6","language":"bn","timestamp":1485946832000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"bengali.news.photo_gallery.38827173.page","cps_asset_id":"38827173"},"tags":{},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"শীতের স্বর্ণরাঙা রোদের ফুল","blocks":[{"type":"fragment","model":{"text":"শীতের স্বর্ণরাঙা রোদের ফুল","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1485946832000,"lastPublished":1485946845000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।","blocks":[{"type":"fragment","model":{"text":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","blocks":[{"type":"fragment","model":{"text":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"গোলাপ ফুল","blocks":[{"type":"fragment","model":{"text":"গোলাপ ফুল","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"10EA/production/_93903340_888.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"মাঘের শেষে ফাগুনে হাওয়া বইতে শুরু করেছে। গাছে গাছে ফুটতে শুরু করেছে শিমুল ফুল। ছবিটি রংপুরের তাজহাট এলাকা থেকে তোলা","blocks":[{"type":"fragment","model":{"text":"মাঘের শেষে ফাগুনে হাওয়া বইতে শুরু করেছে। গাছে গাছে ফুটতে শুরু করেছে শিমুল ফুল। ছবিটি রংপুরের তাজহাট এলাকা থেকে তোলা","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"শিমুল ফুল","blocks":[{"type":"fragment","model":{"text":"শিমুল ফুল","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"5F0A/production/_93903342_capture.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"বাংলাদেশে সারাবছরই ফুলের চাহিদা থাকে। তাই বাণিজ্যিকভাবে এখন ফুলের চাষও হচ্ছে। বিশেষ করে শীতের সময় গাদাঁ ফুলে চাহিদা থাকে অনেক বেশি। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","blocks":[{"type":"fragment","model":{"text":"বাংলাদেশে সারাবছরই ফুলের চাহিদা থাকে। তাই বাণিজ্যিকভাবে এখন ফুলের চাষও হচ্ছে। বিশেষ করে শীতের সময় গাদাঁ ফুলে চাহিদা থাকে অনেক বেশি। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"গাদাঁ ফুল","blocks":[{"type":"fragment","model":{"text":"গাদাঁ ফুল","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"E88A/production/_93903595_capture2.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।","blocks":[{"type":"fragment","model":{"text":"ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।","blocks":[{"type":"fragment","model":{"text":"ফুল ভালোবাসেন না এমন মানুষ পাওয়া যাবে না। শুষ্ক প্রকৃতির মাঝে শীতে বাড়তি আকর্ষণ বাহারি রঙের ফুল।","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"136AA/production/_93903597_capture3.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ঢাকার বোটানিক্যাল গার্ডেনের বাগানে ফুটেছে অসংখ্য ডালিয়া ফুল।","blocks":[{"type":"fragment","model":{"text":"ঢাকার বোটানিক্যাল গার্ডেনের বাগানে ফুটেছে অসংখ্য ডালিয়া ফুল।","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ডালিয়া ফুল।","blocks":[{"type":"fragment","model":{"text":"ডালিয়া ফুল।","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"184CA/production/_93903599_capture4.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"বোটানিক্যাল গার্ডেনের বাগানে সাজানো রয়েছে নানাজাতের অসংখ্য ফুল গাছ।","blocks":[{"type":"fragment","model":{"text":"বোটানিক্যাল গার্ডেনের বাগানে সাজানো রয়েছে নানাজাতের অসংখ্য ফুল গাছ।","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ফুল গাছ।","blocks":[{"type":"fragment","model":{"text":"ফুল গাছ।","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"2986/production/_93903601_capture5.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"শীতের সকালে বাগানে নানা রঙের ফুলের উপর পড়েছে সকালের কোমল রোদ। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","blocks":[{"type":"fragment","model":{"text":"শীতের সকালে বাগানে নানা রঙের ফুলের উপর পড়েছে সকালের কোমল রোদ। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ফুল","blocks":[{"type":"fragment","model":{"text":"ফুল","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"Focus Bangla ","height":549,"locator":"8746/production/_93903643_capture6.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]}]}},"promo":{"headlines":{"shortHeadline":"শীতের স্বর্ণরাঙা রোদের ফুল","headline":"শীতের স্বর্ণরাঙা রোদের ফুল"},"locators":{"assetUri":"/bengali/news-38827173","cpsUrn":"urn:bbc:content:assetUri:bengali/news-38827173","curie":"http://www.bbc.co.uk/asset/ab75ee89-8a70-524f-861c-d5b8dc5709d5"},"summary":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। অনেক ফুল সারাবছর ফুটলেও শীতের সময় সকালের রোদে যেন তাদের সৌন্দর্য আলাদা মাত্রা পায়।","timestamp":1485946832000,"passport":{"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/AE56/production/_93903644_888.jpg","path":"/cpsprodpb/AE56/production/_93903644_888.jpg","height":549,"width":976,"altText":"গোলাপ ফুল","caption":"বাংলাদেশে শীতের সময় নানা রঙের ফুল ফোটে। যদিও গোলাপ ফোটে সারা বছরই। তার উপর শীতের স্বর্ণরাঙা রোদের কিরণ ছড়িয়ে পড়তেই আভা চারদিকে ছড়িয়ে পড়েছে। ছবিটি ঢাকার বোটানিক্যাল গার্ডেন থেকে তোলা","copyrightHolder":"Focus Bangla ","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"খবর","uri":"/bengali/news","type":"simple"},"site":{"subType":"site","name":"BBC বাংলা","uri":"/bengali","type":"simple"},"groups":[]}},"path":"/bengali/news-38827173","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [6]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="bengali"
+            src="http://localhost:7080/static/js/bengali-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

@@ -1,0 +1,2415 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /zhongwen/trad/chinese-news-49065935 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="zh-Hant"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_zhongwen/B456/production/_107966164_hk_gas_7_getty.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="香港抗議"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="zh-hant"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="圖輯：香港示威抗議繼續 大規模警民衝突 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/zhongwen/trad/chinese-news-49065935"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="香港抗議"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_zhongwen/B456/production/_107966164_hk_gas_7_getty.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="圖輯：香港示威抗議繼續 大規模警民衝突 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Hong Kong extradition bill"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="China"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Hong Kong"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcworldservice/"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-21T17:40:02.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-07-21T17:57:12.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      圖輯：香港示威抗議繼續 大規模警民衝突 - BBC News 中文
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/zhongwen/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/zhongwen/trad/chinese-news-49065935"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/zhongwen/trad/chinese-news-49065935","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 中文","publishingPrinciples":"https://www.bbc.com/zhongwen/trad/institutional-51359584","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/zhongwen/trad/chinese-news-49065935","name":"圖輯：香港示威抗議繼續 大規模警民衝突"},"headline":"圖輯：香港示威抗議繼續 大規模警民衝突","description":"香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。","datePublished":"2019-07-21T17:40:02.000Z","dateModified":"2019-07-21T17:57:12.000Z","about":[{"@type":"Thing","name":"Hong Kong extradition bill"},{"@type":"Thing","name":"China","sameAs":["http://dbpedia.org/resource/China"]},{"@type":"Thing","name":"Politics","sameAs":["http://dbpedia.org/resource/Politics"]},{"@type":"Thing","name":"Hong Kong"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News 中文","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"noBylinesPolicy":"https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 bURgYT"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    我們更新了隱私和Cookies條款
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    我們在隱私和Cookies條款上有重要更新，希望告知這對您和您的數據意味著什麼。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        可以
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        了解更新內容
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 bURgYT"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    請告知您認可接受Cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    我們使用
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    以便給您最好的網上體驗。請告知您是否認同使cookies。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        可以，我同意
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        不可，帶我去設置頁面
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 kRCdQO">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 idouBx"
+            >
+              跳過此內容
+            </a>
+            <div>
+              <a href="/zhongwen/simp/chinese-news-49065935"
+                 data-variant="simp"
+                 class="StyledLink-dda4ku-0 jbNelX"
+              >
+                <span class="StyledSpan-dda4ku-1 eibrWk">
+                  简
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                分類
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    主頁
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/world"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    國際
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/chinese_news"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    兩岸
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/uk"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    英國
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/indepth"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    評論
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/science"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    科技
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/business"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    財經
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/media/video"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    視頻材料
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="http://www.bbc.co.uk/ukchina/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    BBC英倫網
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    主頁
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/world"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    國際
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/chinese_news"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    兩岸
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/uk"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    英國
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/indepth"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    評論
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/science"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    科技
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/business"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    財經
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/media/video"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    視頻材料
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="http://www.bbc.co.uk/ukchina/trad"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    BBC英倫網
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=38&p=chinese_news::zhongwentrad.chinese_news.photo_gallery.49065935.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:093e8311-37b7-6944-931d-655cc0efb5c0]&x2=[amp]&x3=[news-zhongwen]&x4=[zh-Hant]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[圖輯：香港示威抗議繼續+大規模警民衝突+-+BBC+News+中文]&x11=[2019-07-21T17:40:02.000Z]&x12=[2019-07-21T17:57:12.000Z]&x13=[Hong+Kong+extradition+bill~China~Politics~Hong+Kong]&x14=[5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e~6892384e-1966-4c03-9ce3-f694a8f9f69e~75612fa6-147c-4a43-97fa-fcf70d9cced3~a3b15769-775e-471d-a511-a7b78f346859]&x16=[WS%20-%20Update%20me]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ixwRQg"
+          >
+            圖輯：香港示威抗議繼續 大規模警民衝突
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-07-21"
+                class="StyledTimestamp-um718p-0 iENDai"
+          >
+            21 七月 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 bWtIRA">
+            香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="香港示威抗議"
+                           attribution="EPA"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="香港示威"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="抗議者自製盾牌"
+                           attribution="EPA"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="在場記者受傷"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="中國中央政府駐香港機構的國徽被塗污"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="香港抗議"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="香港抗議"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="香港示威"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 bpKrWD"
+                    >
+                      更多相關內容
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="Anti extradition bill protesters"
+                               attribution="Reuters"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10377/production/_107832466_wz59muhl.jpg"
+                               height="432"
+                               width="768"
+                      >
+                      </amp-img>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 knMLuh">
+                    <a href="/zhongwen/trad/chinese-news-48972427?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      香港逃犯條例壽終正寢為何仍然對經濟不利
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 egMcTs">
+                    香港這顆東方明珠，在逃犯條例引發大規模遊行示威之後，還能繼續璀璨下去嗎？
+                  </p>
+                  <time datetime="2019-07-12"
+                        class="StyledTimestamp-um718p-0 goWQjX"
+                  >
+                    2019年7月12日
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 WBcXh">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-51359584"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC值得信賴的原因
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652837"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    使用條款
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652843"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    隱私政策
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38664417"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    聯絡BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC對外部網站內容不負責任。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  閱讀了解我們對待外部鏈接的做法。
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /zhongwen/trad/chinese-news-49065935 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="zh-Hant"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_zhongwen/B456/production/_107966164_hk_gas_7_getty.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="香港抗議"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="zh-hant"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="圖輯：香港示威抗議繼續 大規模警民衝突 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/zhongwen/trad/chinese-news-49065935"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="香港抗議"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_zhongwen/B456/production/_107966164_hk_gas_7_getty.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="圖輯：香港示威抗議繼續 大規模警民衝突 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Hong Kong extradition bill"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="China"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Hong Kong"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcworldservice/"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-21T17:40:02.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-07-21T17:57:12.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      圖輯：香港示威抗議繼續 大規模警民衝突 - BBC News 中文
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/zhongwen/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/zhongwen/trad/chinese-news-49065935"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/zhongwen/trad/chinese-news-49065935.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/zhongwen/trad/chinese-news-49065935","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 中文","publishingPrinciples":"https://www.bbc.com/zhongwen/trad/institutional-51359584","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/zhongwen/trad/chinese-news-49065935","name":"圖輯：香港示威抗議繼續 大規模警民衝突"},"headline":"圖輯：香港示威抗議繼續 大規模警民衝突","description":"香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。","datePublished":"2019-07-21T17:40:02.000Z","dateModified":"2019-07-21T17:57:12.000Z","about":[{"@type":"Thing","name":"Hong Kong extradition bill"},{"@type":"Thing","name":"China","sameAs":["http://dbpedia.org/resource/China"]},{"@type":"Thing","name":"Politics","sameAs":["http://dbpedia.org/resource/Politics"]},{"@type":"Thing","name":"Hong Kong"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News 中文","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"noBylinesPolicy":"https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 kRCdQO">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 idouBx"
+            >
+              跳過此內容
+            </a>
+            <div>
+              <a href="/zhongwen/simp/chinese-news-49065935"
+                 data-variant="simp"
+                 class="StyledLink-dda4ku-0 jbNelX"
+              >
+                <span class="StyledSpan-dda4ku-1 eibrWk">
+                  简
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  分類
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      主頁
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/world"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      國際
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/chinese_news"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      兩岸
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/uk"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      英國
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/indepth"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      評論
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/science"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      科技
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/business"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      財經
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/media/video"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      視頻材料
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="http://www.bbc.co.uk/ukchina/trad"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      BBC英倫網
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    主頁
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/world"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    國際
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/chinese_news"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    兩岸
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/uk"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    英國
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/indepth"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    評論
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/science"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    科技
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/business"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    財經
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/media/video"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    視頻材料
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="http://www.bbc.co.uk/ukchina/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    BBC英倫網
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=38&amp;p=chinese_news::zhongwentrad.chinese_news.photo_gallery.49065935.page&amp;x1=[urn:bbc:cps:093e8311-37b7-6944-931d-655cc0efb5c0]&amp;x2=[responsive]&amp;x3=[news-zhongwen]&amp;x4=[zh-Hant]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[圖輯：香港示威抗議繼續+大規模警民衝突+-+BBC+News+中文]&amp;x11=[2019-07-21T17:40:02.000Z]&amp;x12=[2019-07-21T17:57:12.000Z]&amp;x13=[Hong+Kong+extradition+bill~China~Politics~Hong+Kong]&amp;x14=[5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e~6892384e-1966-4c03-9ce3-f694a8f9f69e~75612fa6-147c-4a43-97fa-fcf70d9cced3~a3b15769-775e-471d-a511-a7b78f346859]&amp;x16=[WS%20-%20Update%20me]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ixwRQg"
+          >
+            圖輯：香港示威抗議繼續 大規模警民衝突
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-07-21"
+                class="StyledTimestamp-um718p-0 iENDai"
+          >
+            21 七月 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 bWtIRA">
+            香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg 800w"
+                         alt="香港示威抗議"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/2D88/production/_107965611_mediaitem107965610.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg 800w"
+                         alt="香港示威"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/A2B8/production/_107965614_hk_2_reuters.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg 800w"
+                         alt="抗議者自製盾牌"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F0D8/production/_107965616_hk_3_epa.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg 800w"
+                         alt="在場記者受傷"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16608/production/_107965619_hk_5_reuters.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg 800w"
+                         alt="中國中央政府駐香港機構的國徽被塗污"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/39A4/production/_107965741_hk_8_china_office_getty.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg 800w"
+                         alt="香港抗議"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17224/production/_107965749_hk_gas_7_getty.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg 800w"
+                         alt="香港抗議"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/133A4/production/_107965787_hk_reuters.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg 800w"
+                         alt="香港示威"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1253A/production/_107966057_hk_getty_protesters.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      圖像來源，
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 hBgDCs">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    圖像加註文字，
+                  </span>
+                  <p>
+                    過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 bpKrWD"
+                    >
+                      更多相關內容
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 knMLuh">
+                    <a href="/zhongwen/trad/chinese-news-48972427?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      香港逃犯條例壽終正寢為何仍然對經濟不利
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 egMcTs">
+                    香港這顆東方明珠，在逃犯條例引發大規模遊行示威之後，還能繼續璀璨下去嗎？
+                  </p>
+                  <time datetime="2019-07-12"
+                        class="StyledTimestamp-um718p-0 goWQjX"
+                  >
+                    2019年7月12日
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 WBcXh">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-51359584"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC值得信賴的原因
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652837"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    使用條款
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652843"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    隱私政策
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38664417"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    聯絡BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC對外部網站內容不負責任。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  閱讀了解我們對待外部鏈接的做法。
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1563730802000,"lastPublished":1563731832000,"lastUpdated":1563731841088,"id":"mock-id","locators":{"assetUri":"/zhongwen/trad/chinese-news-49065935","cpsUrn":"urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065935","curie":"http://www.bbc.co.uk/asset/093e8311-37b7-6944-931d-655cc0efb5c0"},"type":"PGL","createdBy":"zhongwen-traditional-v6","language":"zh-Hant","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"zhongwentrad.chinese_news.photo_gallery.49065935.page","cps_asset_id":"49065935"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}]},"tags":{"about":[{"thingLabel":"Hong Kong extradition bill","thingUri":"http://www.bbc.co.uk/things/5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e#id","thingId":"5b7a6e71-b3b5-40a0-9d55-dfdf90f8d34e","thingType":["Theme","Thing"],"thingSameAs":["http://www.wikidata.org/entity/Q63412799"]},{"thingLabel":"China","thingUri":"http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id","thingId":"6892384e-1966-4c03-9ce3-f694a8f9f69e","thingType":["Place","Thing","geoname:GeoTagConcept"],"thingSameAs":["http://dbpedia.org/resource/China","http://sws.geonames.org/1814991/","http://www.wikidata.org/entity/Q148"]},{"thingLabel":"Politics","thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id","thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3","thingType":["Theme","Thing"],"thingSameAs":["http://dbpedia.org/resource/Politics"]},{"thingLabel":"Hong Kong","thingUri":"http://www.bbc.co.uk/things/a3b15769-775e-471d-a511-a7b78f346859#id","thingId":"a3b15769-775e-471d-a511-a7b78f346859","thingType":["Place","Thing","geoname:GeoTagConcept"],"thingSameAs":["http://sws.geonames.org/1819729/"]}]},"version":"v1.0.10","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"香港逃犯條例壽終正寢為何仍然對經濟不利","headline":"香港逃犯條例壽終正寢為何仍然對經濟不利"},"locators":{"assetUri":"/zhongwen/trad/chinese-news-48972427","cpsUrn":"urn:bbc:content:assetUri:/zhongwen/trad/chinese-news-48972427"},"summary":"香港這顆東方明珠，在逃犯條例引發大規模遊行示威之後，還能繼續璀璨下去嗎？","timestamp":1562968859000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/10377/production/_107832466_wz59muhl.jpg","path":"/cpsprodpb/10377/production/_107832466_wz59muhl.jpg","height":432,"width":768,"altText":"Anti extradition bill protesters","copyrightHolder":"Reuters","type":"image"},"id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"兩岸三地","uri":"/zhongwen/trad/chinese_news","type":"simple"},"site":{"subType":"site","name":"BBC 中文網","uri":"/zhongwen/trad","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"圖輯：香港示威抗議繼續 大規模警民衝突","blocks":[{"type":"fragment","model":{"text":"圖輯：香港示威抗議繼續 大規模警民衝突","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1563730802000,"lastPublished":1563731832000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。","blocks":[{"type":"fragment","model":{"text":"香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。","blocks":[{"type":"fragment","model":{"text":"香港周日（21日）繼續發生大規模抗議行動，成千上萬的民眾走上街頭，與警察衝突。香港政府深夜發出聲明稱，繼早前衝擊中聯辦大樓後，再有「激進示威者」在上環向警方發動暴力襲擊，另外在元朗，有人聚眾於港鐵車站月台及車廂內襲擊乘客，引發衝突，導致有人受傷。香港政府重申香港作為法治社會，完全不能容忍任何暴力行為。","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港示威抗議","blocks":[{"type":"fragment","model":{"text":"香港示威抗議","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"EPA","height":549,"locator":"2D88/production/_107965611_mediaitem107965610.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。","blocks":[{"type":"fragment","model":{"text":"遊行原定終點是灣仔盧押道，但示威者越過終點繼續前進，佔據金鐘政府總部附近的主要道路，以及灣仔警察總部外的馬路 。","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港示威","blocks":[{"type":"fragment","model":{"text":"香港示威","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"A2B8/production/_107965614_hk_2_reuters.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。","blocks":[{"type":"fragment","model":{"text":"組織者稱，估計周日有43萬人參加了大遊行。這是連續第七個周末香港出現遊行示威。","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"抗議者自製盾牌","blocks":[{"type":"fragment","model":{"text":"抗議者自製盾牌","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"EPA","height":549,"locator":"F0D8/production/_107965616_hk_3_epa.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。","blocks":[{"type":"fragment","model":{"text":"抗議期間，有志願者告訴抗議人士戴上面具防止被警方認出身份，另外有人送水、傘、等。衝突中，有記者受傷。","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"在場記者受傷","blocks":[{"type":"fragment","model":{"text":"在場記者受傷","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"16608/production/_107965619_hk_5_reuters.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。","blocks":[{"type":"fragment","model":{"text":"抗議過程中，有人向中聯辦的中國國徽潑墨，並在中聯辦匾牌旁塗寫。","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"中國中央政府駐香港機構的國徽被塗污","blocks":[{"type":"fragment","model":{"text":"中國中央政府駐香港機構的國徽被塗污","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"39A4/production/_107965741_hk_8_china_office_getty.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。","blocks":[{"type":"fragment","model":{"text":"抗議人群穿著黑色上衣，高喊口號，要求對警方粗暴執法展開調查，要求撤回對被捕抗議者的檢控。","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港抗議","blocks":[{"type":"fragment","model":{"text":"香港抗議","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"17224/production/_107965749_hk_gas_7_getty.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。","blocks":[{"type":"fragment","model":{"text":"香港的抗議行動已經持續了一段時間，從最初的抗議「逃犯條例」到現在要求獨立調查警方是否過度執法，等。","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港抗議","blocks":[{"type":"fragment","model":{"text":"香港抗議","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":549,"locator":"133A4/production/_107965787_hk_reuters.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。","blocks":[{"type":"fragment","model":{"text":"過去數周，香港多次爆發大規模抗議活動，部分示威演變成警民衝突，並有暴力升級跡象。","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"香港示威","blocks":[{"type":"fragment","model":{"text":"香港示威","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"1253A/production/_107966057_hk_getty_protesters.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]}]}},"promo":{"headlines":{"shortHeadline":"圖輯：香港示威抗議繼續 大規模警民衝突","headline":"圖輯：香港示威抗議繼續 大規模警民衝突"},"locators":{"assetUri":"/zhongwen/trad/chinese-news-49065935","cpsUrn":"urn:bbc:content:assetUri:zhongwen/trad/chinese-news-49065935","curie":"http://www.bbc.co.uk/asset/093e8311-37b7-6944-931d-655cc0efb5c0"},"summary":"香港「反送中」示威抗議周日（21日）在多個地點出現警民衝突，警方發射催淚彈、煙霧彈和橡皮子彈。","timestamp":1563731841088,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/B456/production/_107966164_hk_gas_7_getty.jpg","path":"/cpsprodpb/B456/production/_107966164_hk_gas_7_getty.jpg","height":749,"width":1331,"altText":"香港抗議","caption":"香港連續第七個周末出現抗議示威","copyrightHolder":"Getty Images","type":"image"},"id":"mock-id","type":"cps"}},"path":"/zhongwen/trad/chinese-news-49065935","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [53]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="zhongwen"
+            src="http://localhost:7080/static/js/zhongwen-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

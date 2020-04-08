@@ -1,0 +1,1481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /nepali/bbc_nepali_radio/liveradio For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ne"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ne-NP"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="बीबीसी नेपाली रेडियो - BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/nepali/bbc_nepali_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnepali"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnepali"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="बीबीसी नेपाली रेडियो - BBC News नेपाली"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      बीबीसी नेपाली रेडियो - BBC News नेपाली
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/nepali/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/nepali/bbc_nepali_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/nepali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/nepali/bbc_nepali_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News नेपाली","publishingPrinciples":"https://www.bbc.com/nepali/institutional-50318130","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/nepali/bbc_nepali_radio/liveradio","name":"बीबीसी नेपाली रेडियो"}}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 jXgblJ"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 beCRFL"
+                  >
+                    हामीले गोपनीयता र कुकीजसम्बन्धी नीतिहरू परिमार्जन गरेका छौँ।
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dAwZdH"
+                  >
+                    हामीले गोपनीयता र कुकीजसम्बन्धी नीतिहरूमा महत्त्वपूर्ण परिमार्जन गरेका कारण यसबाट तपाईँ र तपाईँको डेटालाई पार्न सक्ने प्रभावबारे पढ्नुहोस्।
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iffYYc"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        मान्य छ।
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        परिमार्जित कुरा हेर्नुहोस्।
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 jXgblJ"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 beCRFL"
+                  >
+                    कुकीजसम्बन्धी नीति मान्य छ भन्ने हामीलाई जानकारी दिनुहोस्।
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dAwZdH"
+                  >
+                    हामी तपाईँको अनलाइन अनुभव अझ उपयोगी होओस् भनेर
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      कुकीज
+                    </a>
+                    प्रयोग गर्छौँ। कृपया तपाईँलाई कुकीज मान्य छ भने हामीलाई जानकारी दिनुहोस्।
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iffYYc"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        मलाई मान्य छ।
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        मलाई मान्य छैन, सेटिङ्समा जान चाहन्छु।
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/nepali"
+               class="StyledLink-m3awbo-2 ciTmCP"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.63 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 jicHvu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M225.47 7.08a17.54 17.54 0 0 0-1.14-3.19A4.32 4.32 0 0 0 223 2.24a3.26 3.26 0 0 0-1.89-.53 3.5 3.5 0 0 0-1.67.37 2.53 2.53 0 0 0-1.06 1 3.08 3.08 0 0 0-.36 1.5 4.9 4.9 0 0 0 .17 1.29 6.89 6.89 0 0 0 .45 1.16H191a20.77 20.77 0 0 0-.84-2.51 7 7 0 0 0-1-1.67 3.12 3.12 0 0 0-1.12-.9 3.45 3.45 0 0 0-1.45-.28 5.94 5.94 0 0 0-.92.07 4.78 4.78 0 0 0-.85.22l.48 1.42a3.7 3.7 0 0 1 .72-.21 3.75 3.75 0 0 1 .64-.05 1.82 1.82 0 0 1 1.16.38 3.33 3.33 0 0 1 .87 1.23 15 15 0 0 1 .78 2.31H182v1.43h7.52V12h-5.61q-1.18 0-1.18 1a2.19 2.19 0 0 0 .36 1.12 3.49 3.49 0 0 0 .91 1 1.72 1.72 0 0 0 1 .41 1 1 0 0 0 .74-.28 1.14 1.14 0 0 0 .26-.81v-1h3.52v5.82h1.58V8.47h3.29v3.76a7.32 7.32 0 0 0 .19 1.83 3.08 3.08 0 0 0 .64 1.23 2.92 2.92 0 0 0 1.12.81 3.83 3.83 0 0 0 1.48.28 5 5 0 0 0 1.4-.2 5.73 5.73 0 0 0 1.42-.67v3.73h1.56V8.47h3.48v10.76h1.58V8.47H219v2.45h-.17A4 4 0 0 0 216 12a5.2 5.2 0 0 0-1.42-.82 4.34 4.34 0 0 0-1.52-.27 3.43 3.43 0 0 0-1.56.36 2.75 2.75 0 0 0-1.14 1 2.89 2.89 0 0 0-.41 1.55 3.59 3.59 0 0 0 .14 1 4.51 4.51 0 0 0 .43 1 6.92 6.92 0 0 0 .77 1.06 13.85 13.85 0 0 0 1.04 1.12q.6.55 1.68 1.48l1-1q-.81-.68-1.41-1.21t-1-.93a6.1 6.1 0 0 1-.6-.73 4.25 4.25 0 0 1-.35-.6 2.44 2.44 0 0 1-.18-.53 2.61 2.61 0 0 1-.05-.52 1.55 1.55 0 0 1 .43-1.15 1.62 1.62 0 0 1 1.19-.43 2.71 2.71 0 0 1 .94.17 4.2 4.2 0 0 1 1 .6 6.55 6.55 0 0 0-.61 1.58l1.5.47a5.43 5.43 0 0 1 1.2-2.2 2.1 2.1 0 0 1 1.6-.73h.3v6.94h1.57V8.47H224v10.76h1.58V8.47h2V7.08zm-24.81 6.64a4.46 4.46 0 0 1-1.28.94A3.24 3.24 0 0 1 198 15a2.92 2.92 0 0 1-.8-.1 1.39 1.39 0 0 1-.55-.29 1.76 1.76 0 0 1-.37-.46 2.11 2.11 0 0 1-.21-.72A10.55 10.55 0 0 1 196 12V8.47h4.69zm21.91-6.64h-2.41a6.82 6.82 0 0 1-.44-1.1 4 4 0 0 1-.15-1.07 1.94 1.94 0 0 1 .43-1.33 1.5 1.5 0 0 1 1.18-.47 1.77 1.77 0 0 1 1.18.41 3.46 3.46 0 0 1 .86 1.23 15.46 15.46 0 0 1 .78 2.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                नेपाली
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 efCCAx"
+            >
+              सामग्रीमा जानुहोस्
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                सूची
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    मुख पृष्ठ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali/news-51941128"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    कोरोनाभाइरसको
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali/multimedia/radio_programmes"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    पछिल्लो कार्यक्रम
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali/media/video"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    भिडियो
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/nepali"
+                     class="StyledLink-sc-158x7z5-2 eBvjeu"
+                  >
+                    मुख पृष्ठ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/nepali/news-51941128"
+                     class="StyledLink-sc-158x7z5-2 eBvjeu"
+                  >
+                    कोरोनाभाइरसको
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/nepali/multimedia/radio_programmes"
+                     class="StyledLink-sc-158x7z5-2 eBvjeu"
+                  >
+                    पछिल्लो कार्यक्रम
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/nepali/media/video"
+                     class="StyledLink-sc-158x7z5-2 eBvjeu"
+                  >
+                    भिडियो
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=63&p=nepali.bbc_nepali_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_nepali_radio]&x2=[amp]&x3=[news-nepali]&x4=[ne]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[बीबीसी+नेपाली+रेडियो+-+BBC+News+नेपाली]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Nepali, Nepali - , Nepali - unknown, Nepali - unknown, Nepali - unknown","uid":50924,"title":"बीबीसी नेपाली रेडियो","virtualReferrer":"\${documentReferrer}","contentType":"Live Radio"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            dir="ltr"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 kMhoTR"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 SIwG"
+          >
+            बीबीसी नेपाली रेडियो
+          </h1>
+          <p class="Paragraph-k859h4-0 foLxvG">
+            नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.
+          </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_nepali_radio/liveradio/ne/amp"
+                            title="अडिओ प्लेअर"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img layout="fill"
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img alt
+                           src="http://localhost:7080/images/amp_audio_placeholder.png"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 gAomQV">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/nepali"
+               class="StyledLink-m3awbo-2 ciTmCP"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.63 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 jicHvu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M225.47 7.08a17.54 17.54 0 0 0-1.14-3.19A4.32 4.32 0 0 0 223 2.24a3.26 3.26 0 0 0-1.89-.53 3.5 3.5 0 0 0-1.67.37 2.53 2.53 0 0 0-1.06 1 3.08 3.08 0 0 0-.36 1.5 4.9 4.9 0 0 0 .17 1.29 6.89 6.89 0 0 0 .45 1.16H191a20.77 20.77 0 0 0-.84-2.51 7 7 0 0 0-1-1.67 3.12 3.12 0 0 0-1.12-.9 3.45 3.45 0 0 0-1.45-.28 5.94 5.94 0 0 0-.92.07 4.78 4.78 0 0 0-.85.22l.48 1.42a3.7 3.7 0 0 1 .72-.21 3.75 3.75 0 0 1 .64-.05 1.82 1.82 0 0 1 1.16.38 3.33 3.33 0 0 1 .87 1.23 15 15 0 0 1 .78 2.31H182v1.43h7.52V12h-5.61q-1.18 0-1.18 1a2.19 2.19 0 0 0 .36 1.12 3.49 3.49 0 0 0 .91 1 1.72 1.72 0 0 0 1 .41 1 1 0 0 0 .74-.28 1.14 1.14 0 0 0 .26-.81v-1h3.52v5.82h1.58V8.47h3.29v3.76a7.32 7.32 0 0 0 .19 1.83 3.08 3.08 0 0 0 .64 1.23 2.92 2.92 0 0 0 1.12.81 3.83 3.83 0 0 0 1.48.28 5 5 0 0 0 1.4-.2 5.73 5.73 0 0 0 1.42-.67v3.73h1.56V8.47h3.48v10.76h1.58V8.47H219v2.45h-.17A4 4 0 0 0 216 12a5.2 5.2 0 0 0-1.42-.82 4.34 4.34 0 0 0-1.52-.27 3.43 3.43 0 0 0-1.56.36 2.75 2.75 0 0 0-1.14 1 2.89 2.89 0 0 0-.41 1.55 3.59 3.59 0 0 0 .14 1 4.51 4.51 0 0 0 .43 1 6.92 6.92 0 0 0 .77 1.06 13.85 13.85 0 0 0 1.04 1.12q.6.55 1.68 1.48l1-1q-.81-.68-1.41-1.21t-1-.93a6.1 6.1 0 0 1-.6-.73 4.25 4.25 0 0 1-.35-.6 2.44 2.44 0 0 1-.18-.53 2.61 2.61 0 0 1-.05-.52 1.55 1.55 0 0 1 .43-1.15 1.62 1.62 0 0 1 1.19-.43 2.71 2.71 0 0 1 .94.17 4.2 4.2 0 0 1 1 .6 6.55 6.55 0 0 0-.61 1.58l1.5.47a5.43 5.43 0 0 1 1.2-2.2 2.1 2.1 0 0 1 1.6-.73h.3v6.94h1.57V8.47H224v10.76h1.58V8.47h2V7.08zm-24.81 6.64a4.46 4.46 0 0 1-1.28.94A3.24 3.24 0 0 1 198 15a2.92 2.92 0 0 1-.8-.1 1.39 1.39 0 0 1-.55-.29 1.76 1.76 0 0 1-.37-.46 2.11 2.11 0 0 1-.21-.72A10.55 10.55 0 0 1 196 12V8.47h4.69zm21.91-6.64h-2.41a6.82 6.82 0 0 1-.44-1.1 4 4 0 0 1-.15-1.07 1.94 1.94 0 0 1 .43-1.33 1.5 1.5 0 0 1 1.18-.47 1.77 1.77 0 0 1 1.18.41 3.46 3.46 0 0 1 .86 1.23 15.46 15.46 0 0 1 .78 2.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                नेपाली
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gkUrFc">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/nepali/institutional-50318130"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीको विश्वसनीयता
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    प्रयोगका सर्तहरू
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/nepali/institutional-38157766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीको बारेमा
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    गोपनीयता नीति
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    कुकीज
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीलाई सम्पर्क गर्नुहोस्
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 २०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /nepali/bbc_nepali_radio/liveradio For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ne"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ne-NP"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="बीबीसी नेपाली रेडियो - BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="website"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/nepali/bbc_nepali_radio/liveradio"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnepali"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News नेपाली"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnepali"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="बीबीसी नेपाली रेडियो - BBC News नेपाली"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      बीबीसी नेपाली रेडियो - BBC News नेपाली
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/nepali/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/nepali/bbc_nepali_radio/liveradio"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/nepali/bbc_nepali_radio/liveradio.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/nepali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/nepali/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/nepali/bbc_nepali_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News नेपाली","publishingPrinciples":"https://www.bbc.com/nepali/institutional-50318130","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/nepali/bbc_nepali_radio/liveradio","name":"बीबीसी नेपाली रेडियो"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/nepali"
+               class="StyledLink-m3awbo-2 ciTmCP"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.63 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 jicHvu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M225.47 7.08a17.54 17.54 0 0 0-1.14-3.19A4.32 4.32 0 0 0 223 2.24a3.26 3.26 0 0 0-1.89-.53 3.5 3.5 0 0 0-1.67.37 2.53 2.53 0 0 0-1.06 1 3.08 3.08 0 0 0-.36 1.5 4.9 4.9 0 0 0 .17 1.29 6.89 6.89 0 0 0 .45 1.16H191a20.77 20.77 0 0 0-.84-2.51 7 7 0 0 0-1-1.67 3.12 3.12 0 0 0-1.12-.9 3.45 3.45 0 0 0-1.45-.28 5.94 5.94 0 0 0-.92.07 4.78 4.78 0 0 0-.85.22l.48 1.42a3.7 3.7 0 0 1 .72-.21 3.75 3.75 0 0 1 .64-.05 1.82 1.82 0 0 1 1.16.38 3.33 3.33 0 0 1 .87 1.23 15 15 0 0 1 .78 2.31H182v1.43h7.52V12h-5.61q-1.18 0-1.18 1a2.19 2.19 0 0 0 .36 1.12 3.49 3.49 0 0 0 .91 1 1.72 1.72 0 0 0 1 .41 1 1 0 0 0 .74-.28 1.14 1.14 0 0 0 .26-.81v-1h3.52v5.82h1.58V8.47h3.29v3.76a7.32 7.32 0 0 0 .19 1.83 3.08 3.08 0 0 0 .64 1.23 2.92 2.92 0 0 0 1.12.81 3.83 3.83 0 0 0 1.48.28 5 5 0 0 0 1.4-.2 5.73 5.73 0 0 0 1.42-.67v3.73h1.56V8.47h3.48v10.76h1.58V8.47H219v2.45h-.17A4 4 0 0 0 216 12a5.2 5.2 0 0 0-1.42-.82 4.34 4.34 0 0 0-1.52-.27 3.43 3.43 0 0 0-1.56.36 2.75 2.75 0 0 0-1.14 1 2.89 2.89 0 0 0-.41 1.55 3.59 3.59 0 0 0 .14 1 4.51 4.51 0 0 0 .43 1 6.92 6.92 0 0 0 .77 1.06 13.85 13.85 0 0 0 1.04 1.12q.6.55 1.68 1.48l1-1q-.81-.68-1.41-1.21t-1-.93a6.1 6.1 0 0 1-.6-.73 4.25 4.25 0 0 1-.35-.6 2.44 2.44 0 0 1-.18-.53 2.61 2.61 0 0 1-.05-.52 1.55 1.55 0 0 1 .43-1.15 1.62 1.62 0 0 1 1.19-.43 2.71 2.71 0 0 1 .94.17 4.2 4.2 0 0 1 1 .6 6.55 6.55 0 0 0-.61 1.58l1.5.47a5.43 5.43 0 0 1 1.2-2.2 2.1 2.1 0 0 1 1.6-.73h.3v6.94h1.57V8.47H224v10.76h1.58V8.47h2V7.08zm-24.81 6.64a4.46 4.46 0 0 1-1.28.94A3.24 3.24 0 0 1 198 15a2.92 2.92 0 0 1-.8-.1 1.39 1.39 0 0 1-.55-.29 1.76 1.76 0 0 1-.37-.46 2.11 2.11 0 0 1-.21-.72A10.55 10.55 0 0 1 196 12V8.47h4.69zm21.91-6.64h-2.41a6.82 6.82 0 0 1-.44-1.1 4 4 0 0 1-.15-1.07 1.94 1.94 0 0 1 .43-1.33 1.5 1.5 0 0 1 1.18-.47 1.77 1.77 0 0 1 1.18.41 3.46 3.46 0 0 1 .86 1.23 15.46 15.46 0 0 1 .78 2.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                नेपाली
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 efCCAx"
+            >
+              सामग्रीमा जानुहोस्
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  सूची
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/nepali"
+                       class="StyledLink-sc-158x7z5-2 eBvjeu"
+                    >
+                      मुख पृष्ठ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/nepali/news-51941128"
+                       class="StyledLink-sc-158x7z5-2 eBvjeu"
+                    >
+                      कोरोनाभाइरसको
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/nepali/multimedia/radio_programmes"
+                       class="StyledLink-sc-158x7z5-2 eBvjeu"
+                    >
+                      पछिल्लो कार्यक्रम
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/nepali/media/video"
+                       class="StyledLink-sc-158x7z5-2 eBvjeu"
+                    >
+                      भिडियो
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    मुख पृष्ठ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali/news-51941128"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    कोरोनाभाइरसको
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali/multimedia/radio_programmes"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    पछिल्लो कार्यक्रम
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/nepali/media/video"
+                     class="StyledDropdownLink-ukxuly-4 bLnVuG"
+                  >
+                    भिडियो
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=63&amp;p=nepali.bbc_nepali_radio.liveradio.page&amp;x1=[urn:bbc:ares::ws_live:bbc_nepali_radio]&amp;x2=[responsive]&amp;x3=[news-nepali]&amp;x4=[ne]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[बीबीसी+नेपाली+रेडियो+-+BBC+News+नेपाली]"
+        >
+      </noscript>
+      <main role="main"
+            dir="ltr"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+      >
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 kMhoTR"
+        >
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 SIwG"
+          >
+            बीबीसी नेपाली रेडियो
+          </h1>
+          <p class="Paragraph-k859h4-0 foLxvG">
+            नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.
+          </p>
+          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
+              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_nepali_radio/liveradio/ne"
+                        title="अडिओ प्लेअर"
+                        allow="autoplay; fullscreen"
+                        scrolling="no"
+                        allowfullscreen
+                        class="StyledIframe-fuo2ed-0 dIyDYU"
+                >
+                </iframe>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <div class="MessageWrapper-sc-1pnftlt-1 gAomQV">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        तपाईंको उपकरणमा मिडिया प्लेब्याक सपोर्ट छैन
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/nepali"
+               class="StyledLink-m3awbo-2 ciTmCP"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.63 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 jicHvu"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M225.47 7.08a17.54 17.54 0 0 0-1.14-3.19A4.32 4.32 0 0 0 223 2.24a3.26 3.26 0 0 0-1.89-.53 3.5 3.5 0 0 0-1.67.37 2.53 2.53 0 0 0-1.06 1 3.08 3.08 0 0 0-.36 1.5 4.9 4.9 0 0 0 .17 1.29 6.89 6.89 0 0 0 .45 1.16H191a20.77 20.77 0 0 0-.84-2.51 7 7 0 0 0-1-1.67 3.12 3.12 0 0 0-1.12-.9 3.45 3.45 0 0 0-1.45-.28 5.94 5.94 0 0 0-.92.07 4.78 4.78 0 0 0-.85.22l.48 1.42a3.7 3.7 0 0 1 .72-.21 3.75 3.75 0 0 1 .64-.05 1.82 1.82 0 0 1 1.16.38 3.33 3.33 0 0 1 .87 1.23 15 15 0 0 1 .78 2.31H182v1.43h7.52V12h-5.61q-1.18 0-1.18 1a2.19 2.19 0 0 0 .36 1.12 3.49 3.49 0 0 0 .91 1 1.72 1.72 0 0 0 1 .41 1 1 0 0 0 .74-.28 1.14 1.14 0 0 0 .26-.81v-1h3.52v5.82h1.58V8.47h3.29v3.76a7.32 7.32 0 0 0 .19 1.83 3.08 3.08 0 0 0 .64 1.23 2.92 2.92 0 0 0 1.12.81 3.83 3.83 0 0 0 1.48.28 5 5 0 0 0 1.4-.2 5.73 5.73 0 0 0 1.42-.67v3.73h1.56V8.47h3.48v10.76h1.58V8.47H219v2.45h-.17A4 4 0 0 0 216 12a5.2 5.2 0 0 0-1.42-.82 4.34 4.34 0 0 0-1.52-.27 3.43 3.43 0 0 0-1.56.36 2.75 2.75 0 0 0-1.14 1 2.89 2.89 0 0 0-.41 1.55 3.59 3.59 0 0 0 .14 1 4.51 4.51 0 0 0 .43 1 6.92 6.92 0 0 0 .77 1.06 13.85 13.85 0 0 0 1.04 1.12q.6.55 1.68 1.48l1-1q-.81-.68-1.41-1.21t-1-.93a6.1 6.1 0 0 1-.6-.73 4.25 4.25 0 0 1-.35-.6 2.44 2.44 0 0 1-.18-.53 2.61 2.61 0 0 1-.05-.52 1.55 1.55 0 0 1 .43-1.15 1.62 1.62 0 0 1 1.19-.43 2.71 2.71 0 0 1 .94.17 4.2 4.2 0 0 1 1 .6 6.55 6.55 0 0 0-.61 1.58l1.5.47a5.43 5.43 0 0 1 1.2-2.2 2.1 2.1 0 0 1 1.6-.73h.3v6.94h1.57V8.47H224v10.76h1.58V8.47h2V7.08zm-24.81 6.64a4.46 4.46 0 0 1-1.28.94A3.24 3.24 0 0 1 198 15a2.92 2.92 0 0 1-.8-.1 1.39 1.39 0 0 1-.55-.29 1.76 1.76 0 0 1-.37-.46 2.11 2.11 0 0 1-.21-.72A10.55 10.55 0 0 1 196 12V8.47h4.69zm21.91-6.64h-2.41a6.82 6.82 0 0 1-.44-1.1 4 4 0 0 1-.15-1.07 1.94 1.94 0 0 1 .43-1.33 1.5 1.5 0 0 1 1.18-.47 1.77 1.77 0 0 1 1.18.41 3.46 3.46 0 0 1 .86 1.23 15.46 15.46 0 0 1 .78 2.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                नेपाली
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gkUrFc">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/nepali/institutional-50318130"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीको विश्वसनीयता
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    प्रयोगका सर्तहरू
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/nepali/institutional-38157766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीको बारेमा
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    गोपनीयता नीति
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    कुकीज
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    बीबीसीलाई सम्पर्क गर्नुहोस्
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 २०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन।
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"बीबीसी नेपाली रेडियो","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_nepali_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_nepali_radio"},"type":"WS-LIVE","createdBy":"nepali","language":"ne","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"बीबीसी नेपाली रेडियो - BBC News नेपाली","pageIdentifier":"nepali.bbc_nepali_radio.liveradio.page","producerId":"63","contentType":"player-live","producer":"NEPALI"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"बीबीसी नेपाली रेडियो","summary":"नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.","uri":"/nepali/bbc_nepali_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"nepali","uri":"/nepali","type":"simple"},"groups":[]}},"path":"/nepali/bbc_nepali_radio/liveradio","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [23]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="nepali"
+            src="http://localhost:7080/static/js/nepali-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

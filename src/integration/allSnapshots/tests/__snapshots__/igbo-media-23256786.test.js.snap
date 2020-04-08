@@ -1,0 +1,2261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /igbo/media-23256786 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ig"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_igbo/13D0A/test/_63726118_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ig"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/igbo/media-23256786"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_igbo/13D0A/test/_63726118_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-11-27T12:00:14.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-11-27T12:05:57.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/igbo/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/igbo/media-23256786"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/igbo/media-23256786"
+          hreflang="ig"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/igbo/media-23256786","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/igbo/institutional-48529074","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/igbo/media-23256786","name":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"},"headline":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","datePublished":"2019-11-27T12:00:14.000Z","dateModified":"2019-11-27T12:05:57.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"noBylinesPolicy":"https://www.bbc.com/igbo/institutional-48529074#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/media-23256786/p01kx42v/ig/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Anyị ewelitela ihe nzuzo anyị nakwa iwu dị na ya.
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Anyị agbanwela ụfọdụ ihe dị mkpa nye ihe nzuzo anyị na iwu dị na ya nakwa anyị chọrọ ka ị mata ihe nke a pụtara nye gị na data gị.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        Ọ dị mma
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Chọpụta ihe gbanwere
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Ka anyị mara ma i kwenyere n'iwu ndị a
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Anyị na-eji
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Eeh, ekwere m
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Mba, duga m n'ebe mwube
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/igbo"
+               class="StyledLink-m3awbo-2 Ilnmj"
+            >
+              <svg height="24"
+                   viewbox="0 0 222 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 dKXglE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.26 6.26h1.52v10.61h-1.52zM194.63 11.64h3.56v4.5a9.71 9.71 0 0 1-3.89.85 5.77 5.77 0 0 1-4.21-1.54 5.09 5.09 0 0 1-1.58-3.8 5.28 5.28 0 0 1 1.63-4 5.65 5.65 0 0 1 4.1-1.58 7.24 7.24 0 0 1 1.7.19A13.91 13.91 0 0 1 198 7v1.57a7.47 7.47 0 0 0-3.77-1.1 4 4 0 0 0-2.93 1.19 3.94 3.94 0 0 0-1.19 2.91 3.92 3.92 0 0 0 1.19 3 4.24 4.24 0 0 0 3.07 1.15 7.16 7.16 0 0 0 2.18-.42h.14V13h-2zM204.89 16.87h-3.59V6.26h2.78a4.84 4.84 0 0 1 2.05.35A2.54 2.54 0 0 1 207.64 9a2.31 2.31 0 0 1-1.64 2.26 3.28 3.28 0 0 1 1.85 1 2.49 2.49 0 0 1 .69 1.76 2.59 2.59 0 0 1-.42 1.45 3 3 0 0 1-1.23 1 4.53 4.53 0 0 1-2 .4zm-.77-9.26h-1.31v3.19h1a2.56 2.56 0 0 0 1.73-.46 1.54 1.54 0 0 0 .51-1.2q.02-1.53-1.93-1.53zm.11 4.54h-1.42v3.37h1.5a4.88 4.88 0 0 0 1.69-.19 1.61 1.61 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.51 1.51 0 0 0-.28-.89 1.69 1.69 0 0 0-.81-.6 5.07 5.07 0 0 0-1.66-.21zM216 6.1a5.71 5.71 0 0 1 4.1 1.56 5.17 5.17 0 0 1 1.64 3.91 5.08 5.08 0 0 1-1.65 3.89A5.87 5.87 0 0 1 216 17a5.54 5.54 0 0 1-4-1.54 5.13 5.13 0 0 1-1.6-3.86 5.24 5.24 0 0 1 1.6-3.94 5.61 5.61 0 0 1 4-1.56zm.06 1.44a4.12 4.12 0 0 0-3 1.14 3.88 3.88 0 0 0-1.17 2.91 3.81 3.81 0 0 0 1.18 2.86 4.37 4.37 0 0 0 5.91 0 3.89 3.89 0 0 0 1.19-2.89A3.8 3.8 0 0 0 219 8.7a4 4 0 0 0-2.9-1.15z">
+                  </path>
+                  <path d="M184.64 2.52l1.05 2.28h-.85l-1.75-2.28h1.55zM215.81 2.52l1.05 2.28h-.85l-1.75-2.28h1.55z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Ìgbò
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Wụga n’ọdịnaya
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Ngalaba
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Akụkọ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Egwuregwu
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Ihe nkiri
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nke ka ewuewu
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/igbo"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Akụkọ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Egwuregwu
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/igbo/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Ihe nkiri
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/igbo/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Nke ka ewuewu
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Igbo, Igbo - Media, Igbo - MAP, Igbo - Media - MAP, Igbo - undefined-category","uid":50924,"title":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","virtualReferrer":"\${documentReferrer}","contentType":"article-media-asset"}}
+        </script>
+      </amp-analytics>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=53&p=embedded_media::igbo.embedded_media.media_asset.23256786.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:81811624-5245-4c4a-9c52-df2cdeef356c]&x2=[amp]&x3=[news-igbo]&x4=[ig]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Ọgba+mbọ:+Onye+ọkaiwu+na-ere+ọkpa+-+BBC+News+Ìgbò]&x11=[2019-11-27T12:00:14.000Z]&x12=[2019-11-27T12:05:57.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+      >
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          Ọgba mbọ: Onye ọkaiwu na-ere ọkpa
+        </h1>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+              <amp-iframe sandbox="allow-scripts allow-same-origin"
+                          layout="fill"
+                          scrolling="no"
+                          frameborder="0"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/media-23256786/p01kx42v/ig/amp"
+                          title="Media player"
+                          allowfullscreen="allowfullscreen"
+              >
+                <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 800w"
+                         layout="fill"
+                         src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"
+                         placeholder="true"
+                         alt
+                         height="16"
+                         width="9"
+                         attribution
+                >
+                </amp-img>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 800w"
+                         alt
+                         src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"
+                         aria-hidden="true"
+                         class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    >
+                    <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </amp-iframe>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <strong aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+          >
+            Ọgba mbọ: Onye ọkaiwu na-ere ọkpa
+          </strong>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG">
+          <time datetime="2019-11-27"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            27 Nọvemba 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa. (introduction)
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya.
+            </b>
+            <b>
+              (heading)
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              <b>
+                Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (
+              </b>
+            </i>
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              <b>
+                sub
+              </b>
+            </i>
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              <b>
+                heading)
+              </b>
+            </i>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list)
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Lee nri ogbenye 10 ọgaranya na-erizi
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="test image"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/79BA/test/_63726113_test66.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Ebe foto si
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Nkọwa foto
+                  </span>
+                  <p>
+                    This is a test
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Akụkọ ndị ga-amasị gị (bulleted list)
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ị na-anụ maka Dan Anyiam, gịnị ka ị ma maka ya?
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ihe ise ị ga-eme ma ọ bụrụ na esemokwu ezinụlọ na-emekpa gị
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Allen Onyema tụkwasịrị m asị - Nnamdi Kanu
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ndị hụrụ ka e si gbuo ndị ọrụ koolu n'Enugwu
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.
+            </b>
+            <b>
+              (bold)
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="test image"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/115FA/test/_63726117_test66.jpg"
+                           height="360"
+                           width="640"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Nkọwa foto
+                  </span>
+                  <p>
+                    syndication has been restricted
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.
+            </i>
+          </p>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 BeqZV"
+                    >
+                      Ihe ndị ọzọ n'akụkọ a
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/igbo/institutional-23159681?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Image gallery
+                            ,
+                          </span>
+                          <span>
+                            A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      Sụ́m̀m̄ary fọ̀r t€st ass€t. Pl€ase ị̄gn̄ọ̄r€.
+                    </p>
+                    <time datetime="2017-10-24"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      24 Ọktọba 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Keyframe #7"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsdevpb/8CEF/test/_63597063_p01ds669.jpg"
+                                 height="576"
+                                 width="1024"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 32"
+                                 width="12px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                            >
+                              <polygon points="3,32 29,16 3,0">
+                              </polygon>
+                            </svg>
+                            <time datetime="PT16S"
+                                  class="StyledTime-jpt91x-0 bYtFje"
+                            >
+                              0:16
+                            </time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/igbo/media-23159529?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Vidio
+                            ,
+                          </span>
+                          <span>
+                            teṅst da¶ta fm̀or thm̄e vin̄deo1
+                          </span>
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            , 0,16
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      tes€t datụa fo¶r thọ̄e videụụ̀12
+                    </p>
+                    <time datetime="2017-10-25"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      25 Ọktọba 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/igbo"
+               class="StyledLink-m3awbo-2 Ilnmj"
+            >
+              <svg height="24"
+                   viewbox="0 0 222 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 dKXglE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.26 6.26h1.52v10.61h-1.52zM194.63 11.64h3.56v4.5a9.71 9.71 0 0 1-3.89.85 5.77 5.77 0 0 1-4.21-1.54 5.09 5.09 0 0 1-1.58-3.8 5.28 5.28 0 0 1 1.63-4 5.65 5.65 0 0 1 4.1-1.58 7.24 7.24 0 0 1 1.7.19A13.91 13.91 0 0 1 198 7v1.57a7.47 7.47 0 0 0-3.77-1.1 4 4 0 0 0-2.93 1.19 3.94 3.94 0 0 0-1.19 2.91 3.92 3.92 0 0 0 1.19 3 4.24 4.24 0 0 0 3.07 1.15 7.16 7.16 0 0 0 2.18-.42h.14V13h-2zM204.89 16.87h-3.59V6.26h2.78a4.84 4.84 0 0 1 2.05.35A2.54 2.54 0 0 1 207.64 9a2.31 2.31 0 0 1-1.64 2.26 3.28 3.28 0 0 1 1.85 1 2.49 2.49 0 0 1 .69 1.76 2.59 2.59 0 0 1-.42 1.45 3 3 0 0 1-1.23 1 4.53 4.53 0 0 1-2 .4zm-.77-9.26h-1.31v3.19h1a2.56 2.56 0 0 0 1.73-.46 1.54 1.54 0 0 0 .51-1.2q.02-1.53-1.93-1.53zm.11 4.54h-1.42v3.37h1.5a4.88 4.88 0 0 0 1.69-.19 1.61 1.61 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.51 1.51 0 0 0-.28-.89 1.69 1.69 0 0 0-.81-.6 5.07 5.07 0 0 0-1.66-.21zM216 6.1a5.71 5.71 0 0 1 4.1 1.56 5.17 5.17 0 0 1 1.64 3.91 5.08 5.08 0 0 1-1.65 3.89A5.87 5.87 0 0 1 216 17a5.54 5.54 0 0 1-4-1.54 5.13 5.13 0 0 1-1.6-3.86 5.24 5.24 0 0 1 1.6-3.94 5.61 5.61 0 0 1 4-1.56zm.06 1.44a4.12 4.12 0 0 0-3 1.14 3.88 3.88 0 0 0-1.17 2.91 3.81 3.81 0 0 0 1.18 2.86 4.37 4.37 0 0 0 5.91 0 3.89 3.89 0 0 0 1.19-2.89A3.8 3.8 0 0 0 219 8.7a4 4 0 0 0-2.9-1.15z">
+                  </path>
+                  <path d="M184.64 2.52l1.05 2.28h-.85l-1.75-2.28h1.55zM215.81 2.52l1.05 2.28h-.85l-1.75-2.28h1.55z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Ìgbò
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/igbo/institutional-48529074"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Usoro Ojiji
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Gbasara BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Iwu Nzuzo
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuki
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/igbo/institutional-43090448"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kpọtụrụ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Usoro anyị maka njikọ dị na mpụga.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /igbo/media-23256786 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ig"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_igbo/13D0A/test/_63726118_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ig"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/igbo/media-23256786"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_igbo/13D0A/test/_63726118_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-11-27T12:00:14.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-11-27T12:05:57.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/igbo/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/igbo/media-23256786"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/igbo/media-23256786"
+          hreflang="ig"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/igbo/media-23256786.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/igbo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/igbo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/igbo/media-23256786","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","publishingPrinciples":"https://www.bbc.com/igbo/institutional-48529074","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/igbo/media-23256786","name":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"},"headline":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","datePublished":"2019-11-27T12:00:14.000Z","dateModified":"2019-11-27T12:05:57.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Ìgbò","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png"},"noBylinesPolicy":"https://www.bbc.com/igbo/institutional-48529074#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/media-23256786/p01kx42v/ig"}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/igbo"
+               class="StyledLink-m3awbo-2 Ilnmj"
+            >
+              <svg height="24"
+                   viewbox="0 0 222 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 dKXglE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.26 6.26h1.52v10.61h-1.52zM194.63 11.64h3.56v4.5a9.71 9.71 0 0 1-3.89.85 5.77 5.77 0 0 1-4.21-1.54 5.09 5.09 0 0 1-1.58-3.8 5.28 5.28 0 0 1 1.63-4 5.65 5.65 0 0 1 4.1-1.58 7.24 7.24 0 0 1 1.7.19A13.91 13.91 0 0 1 198 7v1.57a7.47 7.47 0 0 0-3.77-1.1 4 4 0 0 0-2.93 1.19 3.94 3.94 0 0 0-1.19 2.91 3.92 3.92 0 0 0 1.19 3 4.24 4.24 0 0 0 3.07 1.15 7.16 7.16 0 0 0 2.18-.42h.14V13h-2zM204.89 16.87h-3.59V6.26h2.78a4.84 4.84 0 0 1 2.05.35A2.54 2.54 0 0 1 207.64 9a2.31 2.31 0 0 1-1.64 2.26 3.28 3.28 0 0 1 1.85 1 2.49 2.49 0 0 1 .69 1.76 2.59 2.59 0 0 1-.42 1.45 3 3 0 0 1-1.23 1 4.53 4.53 0 0 1-2 .4zm-.77-9.26h-1.31v3.19h1a2.56 2.56 0 0 0 1.73-.46 1.54 1.54 0 0 0 .51-1.2q.02-1.53-1.93-1.53zm.11 4.54h-1.42v3.37h1.5a4.88 4.88 0 0 0 1.69-.19 1.61 1.61 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.51 1.51 0 0 0-.28-.89 1.69 1.69 0 0 0-.81-.6 5.07 5.07 0 0 0-1.66-.21zM216 6.1a5.71 5.71 0 0 1 4.1 1.56 5.17 5.17 0 0 1 1.64 3.91 5.08 5.08 0 0 1-1.65 3.89A5.87 5.87 0 0 1 216 17a5.54 5.54 0 0 1-4-1.54 5.13 5.13 0 0 1-1.6-3.86 5.24 5.24 0 0 1 1.6-3.94 5.61 5.61 0 0 1 4-1.56zm.06 1.44a4.12 4.12 0 0 0-3 1.14 3.88 3.88 0 0 0-1.17 2.91 3.81 3.81 0 0 0 1.18 2.86 4.37 4.37 0 0 0 5.91 0 3.89 3.89 0 0 0 1.19-2.89A3.8 3.8 0 0 0 219 8.7a4 4 0 0 0-2.9-1.15z">
+                  </path>
+                  <path d="M184.64 2.52l1.05 2.28h-.85l-1.75-2.28h1.55zM215.81 2.52l1.05 2.28h-.85l-1.75-2.28h1.55z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Ìgbò
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Wụga n’ọdịnaya
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Ngalaba
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/igbo"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Akụkọ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Egwuregwu
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/igbo/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Ihe nkiri
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/igbo/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Nke ka ewuewu
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Akụkọ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Egwuregwu
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Ihe nkiri
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/igbo/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nke ka ewuewu
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=53&amp;p=embedded_media::igbo.embedded_media.media_asset.23256786.page&amp;x1=[urn:bbc:cps:81811624-5245-4c4a-9c52-df2cdeef356c]&amp;x2=[responsive]&amp;x3=[news-igbo]&amp;x4=[ig]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Ọgba+mbọ:+Onye+ọkaiwu+na-ere+ọkpa+-+BBC+News+Ìgbò]&amp;x11=[2019-11-27T12:00:14.000Z]&amp;x12=[2019-11-27T12:05:57.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+      >
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          Ọgba mbọ: Onye ọkaiwu na-ere ọkpa
+        </h1>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/media-23256786/p01kx42v/ig"
+                      title="Media player"
+                      allow="autoplay; fullscreen"
+                      scrolling="no"
+                      allowfullscreen
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
+              >
+              </iframe>
+              <noscript>
+                <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"
+                       aria-hidden="true"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                  <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                    <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                      Ngwaọrụ gị akwadoghi ọkpụkpọ mgbasa ozi
+                    </strong>
+                  </div>
+                </div>
+              </noscript>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <strong aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+          >
+            Ọgba mbọ: Onye ọkaiwu na-ere ọkpa
+          </strong>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG">
+          <time datetime="2019-11-27"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            27 Nọvemba 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa. (introduction)
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya.
+            </b>
+            <b>
+              (heading)
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              <b>
+                Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (
+              </b>
+            </i>
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              <b>
+                sub
+              </b>
+            </i>
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              <b>
+                heading)
+              </b>
+            </i>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list)
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Lee nri ogbenye 10 ọgaranya na-erizi
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/79BA/test/_63726113_test66.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/79BA/test/_63726113_test66.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/79BA/test/_63726113_test66.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/79BA/test/_63726113_test66.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/79BA/test/_63726113_test66.jpg 800w"
+                         alt="test image"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/79BA/test/_63726113_test66.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Ebe foto si
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Nkọwa foto
+                  </span>
+                  <p>
+                    This is a test
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Akụkọ ndị ga-amasị gị (bulleted list)
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ị na-anụ maka Dan Anyiam, gịnị ka ị ma maka ya?
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ihe ise ị ga-eme ma ọ bụrụ na esemokwu ezinụlọ na-emekpa gị
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Allen Onyema tụkwasịrị m asị - Nnamdi Kanu
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                Ndị hụrụ ka e si gbuo ndị ọrụ koolu n'Enugwu
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.
+            </b>
+            <b>
+              (bold)
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/115FA/test/_63726117_test66.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/115FA/test/_63726117_test66.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/115FA/test/_63726117_test66.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/115FA/test/_63726117_test66.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/115FA/test/_63726117_test66.jpg 640w"
+                         alt="test image"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/115FA/test/_63726117_test66.jpg"
+                         width="640"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Nkọwa foto
+                  </span>
+                  <p>
+                    syndication has been restricted
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.
+            </i>
+          </p>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 BeqZV"
+                    >
+                      Ihe ndị ọzọ n'akụkọ a
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/igbo/institutional-23159681?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Image gallery
+                            ,
+                          </span>
+                          <span>
+                            A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      Sụ́m̀m̄ary fọ̀r t€st ass€t. Pl€ase ị̄gn̄ọ̄r€.
+                    </p>
+                    <time datetime="2017-10-24"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      24 Ọktọba 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 32"
+                                 width="12px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                            >
+                              <polygon points="3,32 29,16 3,0">
+                              </polygon>
+                            </svg>
+                            <time datetime="PT16S"
+                                  class="StyledTime-jpt91x-0 bYtFje"
+                            >
+                              0:16
+                            </time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/igbo/media-23159529?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Vidio
+                            ,
+                          </span>
+                          <span>
+                            teṅst da¶ta fm̀or thm̄e vin̄deo1
+                          </span>
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            , 0,16
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      tes€t datụa fo¶r thọ̄e videụụ̀12
+                    </p>
+                    <time datetime="2017-10-25"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      25 Ọktọba 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/igbo"
+               class="StyledLink-m3awbo-2 Ilnmj"
+            >
+              <svg height="24"
+                   viewbox="0 0 222 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 dKXglE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.26 6.26h1.52v10.61h-1.52zM194.63 11.64h3.56v4.5a9.71 9.71 0 0 1-3.89.85 5.77 5.77 0 0 1-4.21-1.54 5.09 5.09 0 0 1-1.58-3.8 5.28 5.28 0 0 1 1.63-4 5.65 5.65 0 0 1 4.1-1.58 7.24 7.24 0 0 1 1.7.19A13.91 13.91 0 0 1 198 7v1.57a7.47 7.47 0 0 0-3.77-1.1 4 4 0 0 0-2.93 1.19 3.94 3.94 0 0 0-1.19 2.91 3.92 3.92 0 0 0 1.19 3 4.24 4.24 0 0 0 3.07 1.15 7.16 7.16 0 0 0 2.18-.42h.14V13h-2zM204.89 16.87h-3.59V6.26h2.78a4.84 4.84 0 0 1 2.05.35A2.54 2.54 0 0 1 207.64 9a2.31 2.31 0 0 1-1.64 2.26 3.28 3.28 0 0 1 1.85 1 2.49 2.49 0 0 1 .69 1.76 2.59 2.59 0 0 1-.42 1.45 3 3 0 0 1-1.23 1 4.53 4.53 0 0 1-2 .4zm-.77-9.26h-1.31v3.19h1a2.56 2.56 0 0 0 1.73-.46 1.54 1.54 0 0 0 .51-1.2q.02-1.53-1.93-1.53zm.11 4.54h-1.42v3.37h1.5a4.88 4.88 0 0 0 1.69-.19 1.61 1.61 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.51 1.51 0 0 0-.28-.89 1.69 1.69 0 0 0-.81-.6 5.07 5.07 0 0 0-1.66-.21zM216 6.1a5.71 5.71 0 0 1 4.1 1.56 5.17 5.17 0 0 1 1.64 3.91 5.08 5.08 0 0 1-1.65 3.89A5.87 5.87 0 0 1 216 17a5.54 5.54 0 0 1-4-1.54 5.13 5.13 0 0 1-1.6-3.86 5.24 5.24 0 0 1 1.6-3.94 5.61 5.61 0 0 1 4-1.56zm.06 1.44a4.12 4.12 0 0 0-3 1.14 3.88 3.88 0 0 0-1.17 2.91 3.81 3.81 0 0 0 1.18 2.86 4.37 4.37 0 0 0 5.91 0 3.89 3.89 0 0 0 1.19-2.89A3.8 3.8 0 0 0 219 8.7a4 4 0 0 0-2.9-1.15z">
+                  </path>
+                  <path d="M184.64 2.52l1.05 2.28h-.85l-1.75-2.28h1.55zM215.81 2.52l1.05 2.28h-.85l-1.75-2.28h1.55z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Ìgbò
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/igbo/institutional-48529074"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Usoro Ojiji
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Gbasara BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Iwu Nzuzo
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuki
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/igbo/institutional-43090448"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kpọtụrụ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Usoro anyị maka njikọ dị na mpụga.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1574856014000,"lastPublished":1574856357000,"lastUpdated":1574856371581,"analyticsLabels":{"counterName":"igbo.embedded_media.media_asset.23256786.page","cps_asset_id":"23256786","cps_asset_type":"map"},"blockTypes":["media","paragraph","list","image"],"createdBy":"igbo-v6","id":"mock-id","includeComments":false,"language":"ig","locators":{"assetUri":"/igbo/media-23256786","cpsUrn":"urn:bbc:content:assetUri:igbo/media-23256786","curie":"http://www.bbc.co.uk/asset/81811624-5245-4c4a-9c52-df2cdeef356c"},"options":{"allowDateStamp":true,"allowHeadline":true,"allowPrintingSharingLinks":true,"allowRelatedStoriesBox":true,"allowRightHandSide":true,"hasNewsTracker":false,"includeComments":false,"isBreakingNews":false,"isFactCheck":false,"isIgorSeoTagsEnabled":false,"isKeyContent":false},"tags":{},"type":"MAP","version":"v1.1.3"},"relatedContent":{"groups":[{"promos":[{"cpsType":"PGL","headlines":{"headline":"A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d","shortHeadline":"A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€d"},"id":"mock-id","locators":{"assetUri":"/igbo/institutional-23159681","cpsUrn":"urn:bbc:content:assetUri:/igbo/institutional-23159681"},"summary":"Sụ́m̀m̄ary fọ̀r t€st ass€t. Pl€ase ị̄gn̄ọ̄r€.","timestamp":1508840394000,"type":"cps"},{"cpsType":"MAP","headlines":{"headline":"teṅst da¶ta fm̀or thm̄e vin̄deo1","shortHeadline":"Teọ́st datọ̀a fọ̄or tụ́he vụ̀ideo ụ̄pgfcvgv"},"id":"mock-id","indexImage":{"altText":"Keyframe #7","caption":"te¶st_cụ́aptị̀ọ̀n","copyrightHolder":"BBC","height":576,"href":"http://b.files.bbci.co.uk/8CEF/test/_63597063_p01ds669.jpg","id":"mock-id","path":"/cpsdevpb/8CEF/test/_63597063_p01ds669.jpg","subType":"index","type":"image","width":1024},"locators":{"assetUri":"/igbo/media-23159529","cpsUrn":"urn:bbc:content:assetUri:/igbo/media-23159529"},"media":{"advertising":true,"caption":"teị̀st_captịọn","embedding":false,"format":"video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01ds669.jpg","subType":"clip","synopses":{"long":"test data for the video123","medium":"test data for the video12","short":"test data for the video1"},"title":"Test data for the video","type":"media","versions":[{"availableFrom":1508759722000,"availableTerritories":{"nonUk":true,"uk":true,"world":false},"duration":16,"durationISO8601":"PT16S","types":["Original"],"versionId":"p01ds65f","warnings":{}}]},"mediaType":"Video","summary":"tes€t datụa fo¶r thọ̄e videụụ̀12","timestamp":1508925023000,"type":"cps"}],"type":"see-alsos"}],"section":{"name":"Media","subType":"index","type":"simple","uri":"/igbo/media"},"site":{"name":"BBC News Ìgbò","subType":"site","type":"simple","uri":"/igbo"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","blocks":[{"type":"fragment","model":{"text":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"visuallyHiddenHeadline","id":"mock-id","position":[1]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01kx42s","blocks":[{"type":"aresMedia","model":{"blocks":[{"type":"aresMediaMetadata","blockId":"urn:bbc:ares::clip:p01kx42s","model":{"advertising":true,"embedding":true,"format":"audio_video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg","subType":"clip","synopses":{"short":"short"},"title":"alt-text world service clip","versions":[{"availableFrom":1545304011000,"availableTerritories":{"nonUk":true,"uk":true,"world":false},"duration":5,"durationISO8601":"PT5S","types":["Original"],"versionId":"p01kx42v","warnings":{}}],"available":true},"id":"mock-id","position":[2,1,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"locator":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","originCode":"pips"},"id":"mock-id","position":[2,1,2,1]}]},"id":"mock-id","position":[2,1,2]}]},"id":"mock-id","position":[2,1]}]},"id":"mock-id","position":[2]},{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","blocks":[{"type":"fragment","model":{"text":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","attributes":[]},"id":"mock-id","position":[3,1,1,1]}]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"type":"fauxHeadline","id":"mock-id","position":[3]},{"type":"timestamp","model":{"firstPublished":1574856014000,"lastPublished":1574856357000},"id":"mock-id","position":[4]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa. (introduction)","blocks":[{"type":"fragment","model":{"text":"Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa. (introduction)","attributes":["bold"]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]}]},"id":"mock-id","position":[5]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (heading) ","blocks":[{"type":"fragment","model":{"text":"Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya.","attributes":["bold"]},"id":"mock-id","position":[6,1,1]},{"type":"fragment","model":{"text":" (heading) ","attributes":["bold"]},"id":"mock-id","position":[6,1,2]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (subheading) ","blocks":[{"type":"fragment","model":{"text":"Ọ gwara BBC Igbo na ọ bụ mgbe onye dọkịta chọpụtara otu ọrịa n'ahụ nwa ya nwoke mere o ji kwụsị ọrụ iji nwee ohere ileta nwa ya anya. (","attributes":["bold","italic"]},"id":"mock-id","position":[7,1,1]},{"type":"fragment","model":{"text":"sub","attributes":["bold","italic"]},"id":"mock-id","position":[7,1,2]},{"type":"fragment","model":{"text":"heading) ","attributes":["bold","italic"]},"id":"mock-id","position":[7,1,3]}]},"id":"mock-id","position":[7,1]}]},"id":"mock-id","position":[7]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list) ","blocks":[{"type":"fragment","model":{"text":"Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list) ","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Lee nri ogbenye 10 ọgaranya na-erizi","blocks":[{"type":"fragment","model":{"text":"Lee nri ogbenye 10 ọgaranya na-erizi","attributes":[]},"id":"mock-id","position":[8,1,2,1,1]}]},"id":"mock-id","position":[8,1,2,1]}]},"id":"mock-id","position":[8,1,2]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.","blocks":[{"type":"fragment","model":{"text":"Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.","attributes":[]},"id":"mock-id","position":[8,1,3,1,1]}]},"id":"mock-id","position":[8,1,3,1]}]},"id":"mock-id","position":[8,1,3]}]},"type":"orderedList","id":"mock-id","position":[8,1]}]},"type":"text","id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a test","blocks":[{"type":"fragment","model":{"text":"This is a test","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"test image","blocks":[{"type":"fragment","model":{"text":"test image","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"79BA/test/_63726113_test66.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.","blocks":[{"type":"fragment","model":{"text":"Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Akụkọ ndị ga-amasị gị (bulleted list)","blocks":[{"type":"fragment","model":{"text":"Akụkọ ndị ga-amasị gị (bulleted list)","attributes":[]},"id":"mock-id","position":[10,1,2,1,1]}]},"id":"mock-id","position":[10,1,2,1]}]},"id":"mock-id","position":[10,1,2]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Ị na-anụ maka Dan Anyiam, gịnị ka ị ma maka ya?","blocks":[{"type":"fragment","model":{"text":"Ị na-anụ maka Dan Anyiam, gịnị ka ị ma maka ya?","attributes":[]},"id":"mock-id","position":[10,1,3,1,1]}]},"id":"mock-id","position":[10,1,3,1]}]},"id":"mock-id","position":[10,1,3]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Ihe ise ị ga-eme ma ọ bụrụ na esemokwu ezinụlọ na-emekpa gị","blocks":[{"type":"fragment","model":{"text":"Ihe ise ị ga-eme ma ọ bụrụ na esemokwu ezinụlọ na-emekpa gị","attributes":[]},"id":"mock-id","position":[10,1,4,1,1]}]},"id":"mock-id","position":[10,1,4,1]}]},"id":"mock-id","position":[10,1,4]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Allen Onyema tụkwasịrị m asị - Nnamdi Kanu","blocks":[{"type":"fragment","model":{"text":"Allen Onyema tụkwasịrị m asị - Nnamdi Kanu","attributes":[]},"id":"mock-id","position":[10,1,5,1,1]}]},"id":"mock-id","position":[10,1,5,1]}]},"id":"mock-id","position":[10,1,5]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"Ndị hụrụ ka e si gbuo ndị ọrụ koolu n'Enugwu","blocks":[{"type":"fragment","model":{"text":"Ndị hụrụ ka e si gbuo ndị ọrụ koolu n'Enugwu","attributes":[]},"id":"mock-id","position":[10,1,6,1,1]}]},"id":"mock-id","position":[10,1,6,1]}]},"id":"mock-id","position":[10,1,6]}]},"type":"unorderedList","id":"mock-id","position":[10,1]}]},"type":"text","id":"mock-id","position":[10]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs. (bold)","blocks":[{"type":"fragment","model":{"text":"Loveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs.","attributes":["bold"]},"id":"mock-id","position":[11,1,1]},{"type":"fragment","model":{"text":" (bold)","attributes":["bold"]},"id":"mock-id","position":[11,1,2]}]},"id":"mock-id","position":[11,1]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"syndication has been restricted","blocks":[{"type":"fragment","model":{"text":"syndication has been restricted","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"test image","blocks":[{"type":"fragment","model":{"text":"test image","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":360,"locator":"115FA/test/_63726117_test66.jpg","originCode":"cpsdevpb","width":640},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.","blocks":[{"type":"fragment","model":{"text":"Akụkọ ihe ndị ọzọ ọ gabigara dị n'ihe onyonyo a. Ọ ga-akpalite mmụọ gị ma mekwa ka ọkpa ya gụwa gị agụ.","attributes":["italic"]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]}]},"id":"mock-id","position":[13]}]}},"promo":{"headlines":{"headline":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa","shortHeadline":"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"},"id":"mock-id","indexImage":{"altText":"connectionAltText","copyrightHolder":"BBC","height":576,"href":"http://b.files.bbci.co.uk/13D0A/test/_63726118_p01kx435.jpg","id":"mock-id","path":"/cpsdevpb/13D0A/test/_63726118_p01kx435.jpg","subType":"index","type":"image","width":1024},"locators":{"assetUri":"/igbo/media-23256786","cpsUrn":"urn:bbc:content:assetUri:igbo/media-23256786","curie":"http://www.bbc.co.uk/asset/81811624-5245-4c4a-9c52-df2cdeef356c"},"media":{"advertising":true,"caption":"short","embedding":true,"format":"video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg","subType":"clip","synopses":{"short":"short"},"title":"alt-text world service clip","type":"media","versions":[{"availableFrom":1545304011000,"availableTerritories":{"nonUk":true,"uk":true,"world":false},"duration":5,"durationISO8601":"PT5S","types":["Original"],"versionId":"p01kx42v","warnings":{}}]},"passport":{"taggings":[]},"summary":"Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa.","timestamp":1574856371581,"type":"cps"}},"path":"/igbo/media-23256786","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [13]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="igbo"
+            src="http://localhost:7080/static/js/igbo-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

@@ -1,0 +1,1672 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /zhongwen/articles/c3xd4x9prgyo/trad For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="zh-hant"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="zh-hant"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcworldservice/"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-07-12T14:52:32.251Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-12T14:52:32.251Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典 - BBC News 中文
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/zhongwen/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 中文","publishingPrinciples":"https://www.bbc.com/zhongwen/trad/institutional-51359584","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad","name":"花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"},"headline":"花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典","datePublished":"2019-07-12T14:52:32.251Z","dateModified":"2019-07-12T14:52:32.251Z","author":{"@type":"NewsMediaOrganization","name":"BBC News 中文","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"noBylinesPolicy":"https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 bURgYT"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    我們更新了隱私和Cookies條款
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    我們在隱私和Cookies條款上有重要更新，希望告知這對您和您的數據意味著什麼。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        可以
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        了解更新內容
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 bURgYT"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    請告知您認可接受Cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    我們使用
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    以便給您最好的網上體驗。請告知您是否認同使cookies。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        可以，我同意
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        不可，帶我去設置頁面
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 kRCdQO">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 idouBx"
+            >
+              跳過此內容
+            </a>
+            <div>
+              <a href="/zhongwen/articles/c3xd4x9prgyo/simp"
+                 data-variant="simp"
+                 class="StyledLink-dda4ku-0 jbNelX"
+              >
+                <span class="StyledSpan-dda4ku-1 eibrWk">
+                  简
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                分類
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    主頁
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/world"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    國際
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/chinese_news"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    兩岸
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/uk"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    英國
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/indepth"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    評論
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/science"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    科技
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/business"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    財經
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/media/video"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    視頻材料
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="http://www.bbc.co.uk/ukchina/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    BBC英倫網
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    主頁
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/world"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    國際
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/chinese_news"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    兩岸
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/uk"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    英國
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/indepth"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    評論
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/science"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    科技
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/business"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    財經
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/zhongwen/trad/media/video"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    視頻材料
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="http://www.bbc.co.uk/ukchina/trad"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    BBC英倫網
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=38&p=zhongwen.articles.c3xd4x9prgyo.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c3xd4x9prgyo]&x2=[amp]&x3=[news-zhongwen]&x4=[zh-hant]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典]&x11=[2019-07-12T14:52:32.251Z]&x12=[2019-07-12T14:52:32.251Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Zhongwen, Zhongwen - ART","uid":50924,"title":"花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典","virtualReferrer":"\${documentReferrer}","contentType":"New Article"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ixwRQg"
+            >
+              TRAD - 花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典
+            </h1>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-12"
+                  class="StyledTimestamp-um718p-0 iENDai"
+            >
+              12 七月 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              這一次，電影裏不會再有唱段，也不會再有會說話的龍，故事裏的反派也不再是匈奴的軍隊，而變成了一個女巫……但是，不管怎樣，《花木蘭》終於要重登上銀幕了。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              本周，迪士尼（Disney）發佈了真人版電影的初版預告片，宣告這部1998年經典動畫的重製作品即將問世。中國古代女子女扮男裝代父從軍上戰場的傳奇故事，將再次與觀眾見面。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              迪士尼在21世紀已經重拍過一系列來自該公司1990年代的經典作品，包括《灰姑娘》、《美女與野獸》和《阿拉丁》等。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              20多年前，動畫版的《花木蘭》卻在故事發源地中國遭遇慘敗；這一次，迪士尼想盡了一切辦法要以新版的女英雄傳奇征服中國觀眾。
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 WBcXh">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-51359584"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC值得信賴的原因
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652837"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    使用條款
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652843"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    隱私政策
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38664417"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    聯絡BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC對外部網站內容不負責任。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  閱讀了解我們對待外部鏈接的做法。
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /zhongwen/articles/c3xd4x9prgyo/trad For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="zh-hant"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="zh-hant"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcchinese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典 - BBC News 中文"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcworldservice/"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-07-12T14:52:32.251Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-12T14:52:32.251Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典 - BBC News 中文
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/zhongwen/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/zhongwen/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 中文","publishingPrinciples":"https://www.bbc.com/zhongwen/trad/institutional-51359584","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/trad","name":"花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"},"headline":"花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典","datePublished":"2019-07-12T14:52:32.251Z","dateModified":"2019-07-12T14:52:32.251Z","author":{"@type":"NewsMediaOrganization","name":"BBC News 中文","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"},"noBylinesPolicy":"https://www.bbc.com/zhongwen/trad/institutional-51359584#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 kRCdQO">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 idouBx"
+            >
+              跳過此內容
+            </a>
+            <div>
+              <a href="/zhongwen/articles/c3xd4x9prgyo/simp"
+                 data-variant="simp"
+                 class="StyledLink-dda4ku-0 jbNelX"
+              >
+                <span class="StyledSpan-dda4ku-1 eibrWk">
+                  简
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  分類
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      主頁
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/world"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      國際
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/chinese_news"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      兩岸
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/uk"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      英國
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/indepth"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      評論
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/science"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      科技
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/business"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      財經
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/zhongwen/trad/media/video"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      視頻材料
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="http://www.bbc.co.uk/ukchina/trad"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      BBC英倫網
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    主頁
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/world"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    國際
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/chinese_news"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    兩岸
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/uk"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    英國
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/indepth"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    評論
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/science"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    科技
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/business"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    財經
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/zhongwen/trad/media/video"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    視頻材料
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="http://www.bbc.co.uk/ukchina/trad"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    BBC英倫網
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=38&amp;p=zhongwen.articles.c3xd4x9prgyo.page&amp;x1=[urn:bbc:optimo:c3xd4x9prgyo]&amp;x2=[responsive]&amp;x3=[news-zhongwen]&amp;x4=[zh-hant]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典]&amp;x11=[2019-07-12T14:52:32.251Z]&amp;x12=[2019-07-12T14:52:32.251Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ixwRQg"
+            >
+              TRAD - 花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典
+            </h1>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-12"
+                  class="StyledTimestamp-um718p-0 iENDai"
+            >
+              12 七月 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              這一次，電影裏不會再有唱段，也不會再有會說話的龍，故事裏的反派也不再是匈奴的軍隊，而變成了一個女巫……但是，不管怎樣，《花木蘭》終於要重登上銀幕了。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              本周，迪士尼（Disney）發佈了真人版電影的初版預告片，宣告這部1998年經典動畫的重製作品即將問世。中國古代女子女扮男裝代父從軍上戰場的傳奇故事，將再次與觀眾見面。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              迪士尼在21世紀已經重拍過一系列來自該公司1990年代的經典作品，包括《灰姑娘》、《美女與野獸》和《阿拉丁》等。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              20多年前，動畫版的《花木蘭》卻在故事發源地中國遭遇慘敗；這一次，迪士尼想盡了一切辦法要以新版的女英雄傳奇征服中國觀眾。
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/zhongwen"
+               class="StyledLink-m3awbo-2 kwiuCU"
+            >
+              <svg height="24"
+                   viewbox="0 0 217.3 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ldeDeZ"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M198 5.92v8.49h-1.38v-1h-5.21v5.88h-1.4v-5.91h-5.19v1.12h-1.32V5.92h6.51V2.69h1.4v3.23zm-8 6.13v-4.8h-5.19v4.81zm6.6 0v-4.8h-5.21v4.81zM214.33 7.08a19.42 19.42 0 0 1-4.39 7.28A17.41 17.41 0 0 0 217.3 18a6.06 6.06 0 0 0-1 1.31 17.46 17.46 0 0 1-7.49-3.88 21.1 21.1 0 0 1-7.37 3.9 5.46 5.46 0 0 0-.85-1.29 19.74 19.74 0 0 0 7.2-3.59 20.58 20.58 0 0 1-4.32-7.31h-2.67V5.76h7.38V2.69h1.36v3.07h7.53v1.32zm-9.33 0a17.54 17.54 0 0 0 3.9 6.33 17 17 0 0 0 3.86-6.33z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                中文
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 WBcXh">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-51359584"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC值得信賴的原因
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652837"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    使用條款
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38652843"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    隱私政策
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/zhongwen/trad/institutional-38664417"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    聯絡BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC對外部網站內容不負責任。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  閱讀了解我們對待外部鏈接的做法。
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"optimoUrn":"urn:bbc:optimo:asset:c3xd4x9prgyo"},"type":"article","createdBy":"Zhongwen","language":"zh-hant","lastUpdated":1562943154400,"firstPublished":1562943152251,"lastPublished":1562943152251,"options":{},"analyticsLabels":{},"passport":{"language":"zh-hant","home":"http://www.bbc.co.uk/ontologies/passport/home/Zhongwen"},"tags":{},"version":"v1.1.0","blockTypes":["headline","text","paragraph","fragment"]},"content":{"model":{"blocks":[{"type":"headline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"TRAD - 花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典","blocks":[{"type":"fragment","model":{"text":"TRAD - 花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1562943152251,"lastPublished":1562943152251},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"這一次，電影裏不會再有唱段，也不會再有會說話的龍，故事裏的反派也不再是匈奴的軍隊，而變成了一個女巫……但是，不管怎樣，《花木蘭》終於要重登上銀幕了。","blocks":[{"type":"fragment","model":{"text":"這一次，電影裏不會再有唱段，也不會再有會說話的龍，故事裏的反派也不再是匈奴的軍隊，而變成了一個女巫……但是，不管怎樣，《花木蘭》終於要重登上銀幕了。","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]},{"type":"paragraph","model":{"text":"本周，迪士尼（Disney）發佈了真人版電影的初版預告片，宣告這部1998年經典動畫的重製作品即將問世。中國古代女子女扮男裝代父從軍上戰場的傳奇故事，將再次與觀眾見面。","blocks":[{"type":"fragment","model":{"text":"本周，迪士尼（Disney）發佈了真人版電影的初版預告片，宣告這部1998年經典動畫的重製作品即將問世。中國古代女子女扮男裝代父從軍上戰場的傳奇故事，將再次與觀眾見面。","attributes":[]},"id":"mock-id","position":[3,2,1]}]},"id":"mock-id","position":[3,2]},{"type":"paragraph","model":{"text":"迪士尼在21世紀已經重拍過一系列來自該公司1990年代的經典作品，包括《灰姑娘》、《美女與野獸》和《阿拉丁》等。","blocks":[{"type":"fragment","model":{"text":"迪士尼在21世紀已經重拍過一系列來自該公司1990年代的經典作品，包括《灰姑娘》、《美女與野獸》和《阿拉丁》等。","attributes":[]},"id":"mock-id","position":[3,3,1]}]},"id":"mock-id","position":[3,3]},{"type":"paragraph","model":{"text":"20多年前，動畫版的《花木蘭》卻在故事發源地中國遭遇慘敗；這一次，迪士尼想盡了一切辦法要以新版的女英雄傳奇征服中國觀眾。","blocks":[{"type":"fragment","model":{"text":"20多年前，動畫版的《花木蘭》卻在故事發源地中國遭遇慘敗；這一次，迪士尼想盡了一切辦法要以新版的女英雄傳奇征服中國觀眾。","attributes":[]},"id":"mock-id","position":[3,4,1]}]},"id":"mock-id","position":[3,4]}]},"id":"mock-id","position":[3]}]}},"promo":{"headlines":{"seoHeadline":"花木蘭真人版：迪士尼斥巨資集結明星重拍的中國經典"},"locators":{"optimoUrn":"urn:bbc:optimo:asset:c3xd4x9prgyo"},"summary":"","timestamp":1562943152251,"id":"mock-id","type":"cps"},"relatedContent":{"site":{"subType":"site","name":"Zhongwen","uri":"/zhongwen","type":"simple"},"groups":[]}},"path":"/zhongwen/articles/c3xd4x9prgyo/trad","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [53]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="zhongwen"
+            src="http://localhost:7080/static/js/zhongwen-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

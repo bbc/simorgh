@@ -1,0 +1,1670 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /naidheachdan/sgeulachdan/c18q7nedn2ko For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="gd"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="gd"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnaidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnaidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-11T14:52:07.001Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-13T12:48:34.054Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/naidheachdan/articles/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/naidheachdan/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko","publisher":{"@type":"NewsMediaOrganization","name":"BBC Naidheachdan","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko","name":"Seo an ceann-naidheachd SEO ‘son an artaigil seo"},"headline":"Seo an ceann-naidheachd SEO ‘son an artaigil seo","datePublished":"2019-07-13T12:48:34.054Z","dateModified":"2019-10-11T14:52:07.001Z","author":{"@type":"NewsMediaOrganization","name":"BBC Naidheachdan","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/c18q7nedn2ko/p01k6msp/gd/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 gIWVBy"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Rinn sinn ùrachadh air ar poileasaidh mu phrìobhaideachd is dàta-brabhsair
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 kOYkDy"
+                  >
+                    Rinn sinn atharrachadh cudromach air ar poileasaidh mu phrìobhaideachd is dàta-brabhsair agus tha sinn airson tuigse a bhith agaibh dè tha sin a' ciallachadh dhuibhse agus dhan dàta agaibh.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iZFJYN"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        Gabh ris
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Faigh a-mach dè tha air atharrachadh
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 gIWVBy"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Leig fios dhuinn gu bheil sibh ag aontachadh ri dàta-brabhsair
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 kOYkDy"
+                  >
+                    Bidh sinn a' cleachdadh
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      dàta-brabhsair
+                    </a>
+                    'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iZFJYN"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Tha mi ag aontachadh
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Chan eil mi ag aontachadh, fosgail roghainnean
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/naidheachdan"
+               class="StyledLink-m3awbo-2 hitFBa"
+            >
+              <svg height="24"
+                   viewbox="0 0 270 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fxeAvH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M99.163 3.992h2.167v15.933h-1.96L88.717 7.665v12.26h-2.144V3.992h1.847l10.743 12.363V3.992zm10.664-.09h1.608l7.128 16.023h-2.338l-2.122-4.722h-6.774l-2.007 4.722h-2.338L109.827 3.9zm3.341 9.271l-2.566-5.77-2.383 5.77h4.95zm7.174-9.18h2.28v15.932h-2.28V3.992zm5.839 15.909V3.992h5.371c2.167 0 3.882.325 5.144.975 1.262.65 2.266 1.607 3.01 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.615 3.057 7.721 7.721 0 01-1.757 2.566 7.71 7.71 0 01-2.703 1.722c-.6.235-1.152.393-1.653.473-.502.08-1.46.12-2.874.12h-5.041zm5.132-13.88h-2.851v11.85h2.92c1.14 0 2.026-.078 2.657-.234.63-.156 1.157-.354 1.58-.593a5.44 5.44 0 001.157-.884c1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.569-.513c-.494-.084-1.288-.126-2.383-.126zm23.596-2.03h2.281v15.933h-2.28V12.99h-8.954v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.794 0h9.032v2.03h-6.751v4.859h6.523v2.041h-6.523v4.95h6.968v2.03h-9.25V3.992zm16.764-.09h1.608l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L177.467 3.9zm3.342 9.271l-2.566-5.77-2.384 5.77h4.95zm20.882 3.057v2.509c-1.673.912-3.604 1.368-5.794 1.368-1.779 0-3.288-.357-4.527-1.072a7.894 7.894 0 01-2.943-2.954 8.022 8.022 0 01-1.083-4.071c0-2.32.827-4.27 2.48-5.85 1.654-1.582 3.693-2.373 6.119-2.373 1.673 0 3.531.437 5.577 1.312V7.55c-1.863-1.065-3.684-1.597-5.463-1.597-1.825 0-3.34.576-4.545 1.728-1.205 1.152-1.807 2.594-1.807 4.328 0 1.749.593 3.185 1.779 4.31 1.186 1.126 2.703 1.689 4.55 1.689 1.931 0 3.817-.593 5.657-1.78zM215.73 3.992h2.28v15.933h-2.28V12.99h-8.953v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.816 15.91V3.992h5.372c2.167 0 3.881.325 5.143.975 1.262.65 2.266 1.607 3.011 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.616 3.057 7.721 7.721 0 01-1.756 2.566 7.71 7.71 0 01-2.703 1.722 8.093 8.093 0 01-1.654.473c-.502.08-1.46.12-2.874.12h-5.04zm5.132-13.88h-2.85v11.85h2.919c1.14 0 2.026-.078 2.657-.234.631-.156 1.158-.354 1.58-.593.422-.24.807-.534 1.157-.884 1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.568-.513c-.494-.084-1.289-.126-2.384-.126zm17.45-2.12h1.607l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L244.127 3.9zm3.34 9.271l-2.565-5.77-2.384 5.77h4.95zm19.81-9.18h2.168v15.932h-1.962l-10.652-12.26v12.26h-2.144V3.992h1.848l10.743 12.363V3.992zM73.797 15.747l-.377.23c-1.82 1.112-3.801 1.708-5.6 1.707-3.85-.014-6.385-2.295-6.395-5.617.004-3.248 2.652-5.651 6.298-5.66 1.857.001 3.54.481 5.538 1.576l.368.202V5.22l-.158-.061c-2.254-.891-4-1.287-5.723-1.286-2.665-.001-4.978.879-6.625 2.373-1.648 1.494-2.627 3.603-2.626 6.025.001 1.688.698 3.666 2.19 5.235 1.486 1.57 3.775 2.715 6.917 2.713h.01c2.605 0 4.412-.582 6.045-1.385l.138-.067v-3.02zM54.957 23.1h23.51V.975h-23.51V23.1zm-9.166-7.455c.007-2.011-1.332-3.538-3.474-4.125.578-.296 1.034-.657 1.37-1.098.448-.59.662-1.314.66-2.157a3.849 3.849 0 00-1.281-2.884c-.877-.79-2.207-1.303-4.02-1.303h-5.012V20.01h5.882c2.098 0 3.571-.568 4.52-1.41a3.934 3.934 0 001.355-2.957zM27.865 23.1h23.51V.975h-23.51V23.1z">
+                  </path>
+                  <path d="M42.865 15.326c-.002.527-.164 1.056-.636 1.47-.47.413-1.282.727-2.63.727h-2.71v-4.349h2.59c1.21 0 2.066.244 2.604.627.535.386.778.891.782 1.525zm-2.197-5.208c.505-.365.748-.878.752-1.65-.003-.53-.154-.984-.535-1.322-.382-.34-1.032-.58-2.079-.58h-1.918v4.12h1.317c1.139.002 1.956-.202 2.463-.568zm-21.966 5.526c.007-2.011-1.334-3.538-3.474-4.125.577-.296 1.034-.657 1.369-1.098.448-.59.662-1.314.66-2.157a3.85 3.85 0 00-1.281-2.884c-.875-.79-2.204-1.303-4.019-1.303H6.944V20.01h5.882c2.099 0 3.571-.568 4.519-1.41a3.932 3.932 0 001.357-2.957zM.778 23.099h23.509V.975H.777V23.1z">
+                  </path>
+                  <path d="M13.578 10.118c.505-.365.75-.878.754-1.65-.002-.53-.154-.984-.536-1.322-.383-.34-1.032-.58-2.08-.58H9.8v4.12h1.316c1.139.002 1.956-.202 2.463-.568m1.416 3.683c-.539-.383-1.396-.627-2.603-.627H9.799v4.35h2.711c1.348 0 2.16-.315 2.632-.729.47-.413.632-.942.635-1.469-.007-.634-.248-1.14-.783-1.525">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Naidheachdan
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bbZqWC"
+            >
+              Air adhart
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Earrannan
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/naidheachdan"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Alba
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/news/scotland"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Scotland News
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/naidheachdan"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Alba
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/news/scotland"
+                     class="StyledLink-sc-158x7z5-2 bIwJBN"
+                  >
+                    Scotland News
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598292&s2=79&p=naidheachdan.articles.c18q7nedn2ko.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c18q7nedn2ko]&x2=[amp]&x3=[news-naidheachdan]&x4=[gd]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Seo+an+ceann-naidheachd+SEO+‘son+an+artaigil+seo]&x11=[2019-07-13T12:48:34.054Z]&x12=[2019-10-11T14:52:07.001Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Naidheachdan, Naidheachdan - ART","uid":50924,"title":"Seo an ceann-naidheachd SEO ‘son an artaigil seo","virtualReferrer":"\${documentReferrer}","contentType":"New Article"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 kAojgD"
+            >
+              Seo an ceann-naidheachd don artaigil deuchainn
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="Mapa na Frainge a’ sealltainn Paris agus Cognac"
+                             attribution
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg"
+                             height="351"
+                             width="624"
+                    >
+                    </amp-img>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 kzTJkj">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Tiotal an deilbh,
+                    </span>
+                    <p>
+                      ‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-13"
+                  class="StyledTimestamp-um718p-0 kSGFFg"
+            >
+              13 An t-Iuchar 2019
+            </time>
+            <div>
+              <time datetime="2019-10-11"
+                    class="StyledTimestamp-um718p-0 kSGFFg"
+              >
+                Ùraichte 11 An Dàmhair 2019
+              </time>
+            </div>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              ‘S e bloc teacsa a tha seo, anns a bheil url do làraich
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                Aimisire a’ BhBC
+              </a>
+            </p>
+          </div>
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c18q7nedn2ko/p01k6msp/gd/amp"
+                            title="Media player"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           layout="fill"
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           alt
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 dHbulA">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          To play this content, please enable JavaScript, or try a different browser
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 kzTJkj">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Tiotal a' bhidio,
+                </span>
+                <p>
+                  ‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="S-e-bloc-focheannnaidheachd-a-tha-seo"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 nSlOl"
+            >
+              'S e bloc fo-cheann-naidheachd a tha seo
+            </h2>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="Cluicheadairean bhuill-coise às dèidh gheama"
+                             attribution="Getty Images"
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg"
+                             height="1152"
+                             width="2048"
+                    >
+                    </amp-img>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Tùs an deilbh,
+                      </span>
+                      <span lang="en-GB">
+                        Getty Images
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/naidheachdan"
+               class="StyledLink-m3awbo-2 hitFBa"
+            >
+              <svg height="24"
+                   viewbox="0 0 270 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fxeAvH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M99.163 3.992h2.167v15.933h-1.96L88.717 7.665v12.26h-2.144V3.992h1.847l10.743 12.363V3.992zm10.664-.09h1.608l7.128 16.023h-2.338l-2.122-4.722h-6.774l-2.007 4.722h-2.338L109.827 3.9zm3.341 9.271l-2.566-5.77-2.383 5.77h4.95zm7.174-9.18h2.28v15.932h-2.28V3.992zm5.839 15.909V3.992h5.371c2.167 0 3.882.325 5.144.975 1.262.65 2.266 1.607 3.01 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.615 3.057 7.721 7.721 0 01-1.757 2.566 7.71 7.71 0 01-2.703 1.722c-.6.235-1.152.393-1.653.473-.502.08-1.46.12-2.874.12h-5.041zm5.132-13.88h-2.851v11.85h2.92c1.14 0 2.026-.078 2.657-.234.63-.156 1.157-.354 1.58-.593a5.44 5.44 0 001.157-.884c1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.569-.513c-.494-.084-1.288-.126-2.383-.126zm23.596-2.03h2.281v15.933h-2.28V12.99h-8.954v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.794 0h9.032v2.03h-6.751v4.859h6.523v2.041h-6.523v4.95h6.968v2.03h-9.25V3.992zm16.764-.09h1.608l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L177.467 3.9zm3.342 9.271l-2.566-5.77-2.384 5.77h4.95zm20.882 3.057v2.509c-1.673.912-3.604 1.368-5.794 1.368-1.779 0-3.288-.357-4.527-1.072a7.894 7.894 0 01-2.943-2.954 8.022 8.022 0 01-1.083-4.071c0-2.32.827-4.27 2.48-5.85 1.654-1.582 3.693-2.373 6.119-2.373 1.673 0 3.531.437 5.577 1.312V7.55c-1.863-1.065-3.684-1.597-5.463-1.597-1.825 0-3.34.576-4.545 1.728-1.205 1.152-1.807 2.594-1.807 4.328 0 1.749.593 3.185 1.779 4.31 1.186 1.126 2.703 1.689 4.55 1.689 1.931 0 3.817-.593 5.657-1.78zM215.73 3.992h2.28v15.933h-2.28V12.99h-8.953v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.816 15.91V3.992h5.372c2.167 0 3.881.325 5.143.975 1.262.65 2.266 1.607 3.011 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.616 3.057 7.721 7.721 0 01-1.756 2.566 7.71 7.71 0 01-2.703 1.722 8.093 8.093 0 01-1.654.473c-.502.08-1.46.12-2.874.12h-5.04zm5.132-13.88h-2.85v11.85h2.919c1.14 0 2.026-.078 2.657-.234.631-.156 1.158-.354 1.58-.593.422-.24.807-.534 1.157-.884 1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.568-.513c-.494-.084-1.289-.126-2.384-.126zm17.45-2.12h1.607l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L244.127 3.9zm3.34 9.271l-2.565-5.77-2.384 5.77h4.95zm19.81-9.18h2.168v15.932h-1.962l-10.652-12.26v12.26h-2.144V3.992h1.848l10.743 12.363V3.992zM73.797 15.747l-.377.23c-1.82 1.112-3.801 1.708-5.6 1.707-3.85-.014-6.385-2.295-6.395-5.617.004-3.248 2.652-5.651 6.298-5.66 1.857.001 3.54.481 5.538 1.576l.368.202V5.22l-.158-.061c-2.254-.891-4-1.287-5.723-1.286-2.665-.001-4.978.879-6.625 2.373-1.648 1.494-2.627 3.603-2.626 6.025.001 1.688.698 3.666 2.19 5.235 1.486 1.57 3.775 2.715 6.917 2.713h.01c2.605 0 4.412-.582 6.045-1.385l.138-.067v-3.02zM54.957 23.1h23.51V.975h-23.51V23.1zm-9.166-7.455c.007-2.011-1.332-3.538-3.474-4.125.578-.296 1.034-.657 1.37-1.098.448-.59.662-1.314.66-2.157a3.849 3.849 0 00-1.281-2.884c-.877-.79-2.207-1.303-4.02-1.303h-5.012V20.01h5.882c2.098 0 3.571-.568 4.52-1.41a3.934 3.934 0 001.355-2.957zM27.865 23.1h23.51V.975h-23.51V23.1z">
+                  </path>
+                  <path d="M42.865 15.326c-.002.527-.164 1.056-.636 1.47-.47.413-1.282.727-2.63.727h-2.71v-4.349h2.59c1.21 0 2.066.244 2.604.627.535.386.778.891.782 1.525zm-2.197-5.208c.505-.365.748-.878.752-1.65-.003-.53-.154-.984-.535-1.322-.382-.34-1.032-.58-2.079-.58h-1.918v4.12h1.317c1.139.002 1.956-.202 2.463-.568zm-21.966 5.526c.007-2.011-1.334-3.538-3.474-4.125.577-.296 1.034-.657 1.369-1.098.448-.59.662-1.314.66-2.157a3.85 3.85 0 00-1.281-2.884c-.875-.79-2.204-1.303-4.019-1.303H6.944V20.01h5.882c2.099 0 3.571-.568 4.519-1.41a3.932 3.932 0 001.357-2.957zM.778 23.099h23.509V.975H.777V23.1z">
+                  </path>
+                  <path d="M13.578 10.118c.505-.365.75-.878.754-1.65-.002-.53-.154-.984-.536-1.322-.383-.34-1.032-.58-2.08-.58H9.8v4.12h1.316c1.139.002 1.956-.202 2.463-.568m1.416 3.683c-.539-.383-1.396-.627-2.603-.627H9.799v4.35h2.711c1.348 0 2.16-.315 2.632-.729.47-.413.632-.942.635-1.469-.007-.634-.248-1.14-.783-1.525">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Naidheachdan
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/news/help-41670342"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Carson as urrainear earbsa a chur sa BhBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Teirmean Cleachdaidh
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Mun BhBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Poileasaidh Prìobhaideachd
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Dàta-brabhsair
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cuir fios dhan BhBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /naidheachdan/sgeulachdan/c18q7nedn2ko For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="gd"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="gd"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnaidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnaidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-11T14:52:07.001Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-13T12:48:34.054Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/naidheachdan/articles/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/naidheachdan/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/naidheachdan/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko","publisher":{"@type":"NewsMediaOrganization","name":"BBC Naidheachdan","publishingPrinciples":"https://www.bbc.com/news/help-41670342","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"},"thumbnailUrl":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko","name":"Seo an ceann-naidheachd SEO ‘son an artaigil seo"},"headline":"Seo an ceann-naidheachd SEO ‘son an artaigil seo","datePublished":"2019-07-13T12:48:34.054Z","dateModified":"2019-10-11T14:52:07.001Z","author":{"@type":"NewsMediaOrganization","name":"BBC Naidheachdan","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"},"noBylinesPolicy":"https://www.bbc.com/news/help-41670342#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/c18q7nedn2ko/p01k6msp/gd"}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/naidheachdan"
+               class="StyledLink-m3awbo-2 hitFBa"
+            >
+              <svg height="24"
+                   viewbox="0 0 270 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fxeAvH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M99.163 3.992h2.167v15.933h-1.96L88.717 7.665v12.26h-2.144V3.992h1.847l10.743 12.363V3.992zm10.664-.09h1.608l7.128 16.023h-2.338l-2.122-4.722h-6.774l-2.007 4.722h-2.338L109.827 3.9zm3.341 9.271l-2.566-5.77-2.383 5.77h4.95zm7.174-9.18h2.28v15.932h-2.28V3.992zm5.839 15.909V3.992h5.371c2.167 0 3.882.325 5.144.975 1.262.65 2.266 1.607 3.01 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.615 3.057 7.721 7.721 0 01-1.757 2.566 7.71 7.71 0 01-2.703 1.722c-.6.235-1.152.393-1.653.473-.502.08-1.46.12-2.874.12h-5.041zm5.132-13.88h-2.851v11.85h2.92c1.14 0 2.026-.078 2.657-.234.63-.156 1.157-.354 1.58-.593a5.44 5.44 0 001.157-.884c1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.569-.513c-.494-.084-1.288-.126-2.383-.126zm23.596-2.03h2.281v15.933h-2.28V12.99h-8.954v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.794 0h9.032v2.03h-6.751v4.859h6.523v2.041h-6.523v4.95h6.968v2.03h-9.25V3.992zm16.764-.09h1.608l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L177.467 3.9zm3.342 9.271l-2.566-5.77-2.384 5.77h4.95zm20.882 3.057v2.509c-1.673.912-3.604 1.368-5.794 1.368-1.779 0-3.288-.357-4.527-1.072a7.894 7.894 0 01-2.943-2.954 8.022 8.022 0 01-1.083-4.071c0-2.32.827-4.27 2.48-5.85 1.654-1.582 3.693-2.373 6.119-2.373 1.673 0 3.531.437 5.577 1.312V7.55c-1.863-1.065-3.684-1.597-5.463-1.597-1.825 0-3.34.576-4.545 1.728-1.205 1.152-1.807 2.594-1.807 4.328 0 1.749.593 3.185 1.779 4.31 1.186 1.126 2.703 1.689 4.55 1.689 1.931 0 3.817-.593 5.657-1.78zM215.73 3.992h2.28v15.933h-2.28V12.99h-8.953v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.816 15.91V3.992h5.372c2.167 0 3.881.325 5.143.975 1.262.65 2.266 1.607 3.011 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.616 3.057 7.721 7.721 0 01-1.756 2.566 7.71 7.71 0 01-2.703 1.722 8.093 8.093 0 01-1.654.473c-.502.08-1.46.12-2.874.12h-5.04zm5.132-13.88h-2.85v11.85h2.919c1.14 0 2.026-.078 2.657-.234.631-.156 1.158-.354 1.58-.593.422-.24.807-.534 1.157-.884 1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.568-.513c-.494-.084-1.289-.126-2.384-.126zm17.45-2.12h1.607l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L244.127 3.9zm3.34 9.271l-2.565-5.77-2.384 5.77h4.95zm19.81-9.18h2.168v15.932h-1.962l-10.652-12.26v12.26h-2.144V3.992h1.848l10.743 12.363V3.992zM73.797 15.747l-.377.23c-1.82 1.112-3.801 1.708-5.6 1.707-3.85-.014-6.385-2.295-6.395-5.617.004-3.248 2.652-5.651 6.298-5.66 1.857.001 3.54.481 5.538 1.576l.368.202V5.22l-.158-.061c-2.254-.891-4-1.287-5.723-1.286-2.665-.001-4.978.879-6.625 2.373-1.648 1.494-2.627 3.603-2.626 6.025.001 1.688.698 3.666 2.19 5.235 1.486 1.57 3.775 2.715 6.917 2.713h.01c2.605 0 4.412-.582 6.045-1.385l.138-.067v-3.02zM54.957 23.1h23.51V.975h-23.51V23.1zm-9.166-7.455c.007-2.011-1.332-3.538-3.474-4.125.578-.296 1.034-.657 1.37-1.098.448-.59.662-1.314.66-2.157a3.849 3.849 0 00-1.281-2.884c-.877-.79-2.207-1.303-4.02-1.303h-5.012V20.01h5.882c2.098 0 3.571-.568 4.52-1.41a3.934 3.934 0 001.355-2.957zM27.865 23.1h23.51V.975h-23.51V23.1z">
+                  </path>
+                  <path d="M42.865 15.326c-.002.527-.164 1.056-.636 1.47-.47.413-1.282.727-2.63.727h-2.71v-4.349h2.59c1.21 0 2.066.244 2.604.627.535.386.778.891.782 1.525zm-2.197-5.208c.505-.365.748-.878.752-1.65-.003-.53-.154-.984-.535-1.322-.382-.34-1.032-.58-2.079-.58h-1.918v4.12h1.317c1.139.002 1.956-.202 2.463-.568zm-21.966 5.526c.007-2.011-1.334-3.538-3.474-4.125.577-.296 1.034-.657 1.369-1.098.448-.59.662-1.314.66-2.157a3.85 3.85 0 00-1.281-2.884c-.875-.79-2.204-1.303-4.019-1.303H6.944V20.01h5.882c2.099 0 3.571-.568 4.519-1.41a3.932 3.932 0 001.357-2.957zM.778 23.099h23.509V.975H.777V23.1z">
+                  </path>
+                  <path d="M13.578 10.118c.505-.365.75-.878.754-1.65-.002-.53-.154-.984-.536-1.322-.383-.34-1.032-.58-2.08-.58H9.8v4.12h1.316c1.139.002 1.956-.202 2.463-.568m1.416 3.683c-.539-.383-1.396-.627-2.603-.627H9.799v4.35h2.711c1.348 0 2.16-.315 2.632-.729.47-.413.632-.942.635-1.469-.007-.634-.248-1.14-.783-1.525">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Naidheachdan
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bbZqWC"
+            >
+              Air adhart
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Earrannan
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/naidheachdan"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Alba
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/news/scotland"
+                       class="StyledLink-sc-158x7z5-2 bIwJBN"
+                    >
+                      Scotland News
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/naidheachdan"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Alba
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/news/scotland"
+                     class="StyledDropdownLink-ukxuly-4 dUsiqQ"
+                  >
+                    Scotland News
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598292&amp;s2=79&amp;p=naidheachdan.articles.c18q7nedn2ko.page&amp;x1=[urn:bbc:optimo:c18q7nedn2ko]&amp;x2=[responsive]&amp;x3=[news-naidheachdan]&amp;x4=[gd]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Seo+an+ceann-naidheachd+SEO+‘son+an+artaigil+seo]&amp;x11=[2019-07-13T12:48:34.054Z]&amp;x12=[2019-10-11T14:52:07.001Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 kAojgD"
+            >
+              Seo an ceann-naidheachd don artaigil deuchainn
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg 624w"
+                         alt="Mapa na Frainge a’ sealltainn Paris agus Cognac"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg"
+                         width="624"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 kzTJkj">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Tiotal an deilbh,
+                    </span>
+                    <p>
+                      ‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-13"
+                  class="StyledTimestamp-um718p-0 kSGFFg"
+            >
+              13 An t-Iuchar 2019
+            </time>
+            <div>
+              <time datetime="2019-10-11"
+                    class="StyledTimestamp-um718p-0 kSGFFg"
+              >
+                Ùraichte 11 An Dàmhair 2019
+              </time>
+            </div>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              ‘S e bloc teacsa a tha seo, anns a bheil url do làraich
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                Aimisire a’ BhBC
+              </a>
+            </p>
+          </div>
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <div class="StyledPlaceholder-sc-11nyhtu-0 dDNqOp">
+                  <div class="GuidanceWrapper-sc-1wm6qsk-0 dSCKAT">
+                    <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO guidance-message"
+                            aria-hidden="true"
+                    >
+                      Contains strong language and adult humour.
+                    </strong>
+                    <noscript class="StyledNoScript-sc-1wm6qsk-2 fsOOOd">
+                      <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO">
+                        To play this content, please enable JavaScript, or try a different browser
+                      </strong>
+                    </noscript>
+                  </div>
+                  <button class="Button-sc-34e3rb-0 kwlSXK StyledPlayButton-sc-11nyhtu-1 bBTuxK">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
+                    </span>
+                    <div aria-hidden="true"
+                         class="IconWrapper-sc-34e3rb-1 jGavfg"
+                    >
+                      <svg viewbox="0 0 32 32"
+                           width="12px"
+                           height="12px"
+                           focusable="false"
+                           aria-hidden="true"
+                           class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                      >
+                        <polygon points="3,32 29,16 3,0">
+                        </polygon>
+                      </svg>
+                    </div>
+                    <time datetime="PT3M11S"
+                          aria-hidden="true"
+                          class="TimeDuration-sc-34e3rb-2 cZLyLe"
+                    >
+                      03:11
+                    </time>
+                  </button>
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                </div>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 kzTJkj">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Tiotal a' bhidio,
+                </span>
+                <p>
+                  ‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="S-e-bloc-focheannnaidheachd-a-tha-seo"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 nSlOl"
+            >
+              'S e bloc fo-cheann-naidheachd a tha seo
+            </h2>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <div class="lazyload-placeholder">
+                    </div>
+                    <noscript>
+                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg 800w"
+                           alt="Cluicheadairean bhuill-coise às dèidh gheama"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg"
+                           width="2048"
+                           class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                      >
+                    </noscript>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Tùs an deilbh,
+                      </span>
+                      <span lang="en-GB">
+                        Getty Images
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/naidheachdan"
+               class="StyledLink-m3awbo-2 hitFBa"
+            >
+              <svg height="24"
+                   viewbox="0 0 270 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fxeAvH"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M99.163 3.992h2.167v15.933h-1.96L88.717 7.665v12.26h-2.144V3.992h1.847l10.743 12.363V3.992zm10.664-.09h1.608l7.128 16.023h-2.338l-2.122-4.722h-6.774l-2.007 4.722h-2.338L109.827 3.9zm3.341 9.271l-2.566-5.77-2.383 5.77h4.95zm7.174-9.18h2.28v15.932h-2.28V3.992zm5.839 15.909V3.992h5.371c2.167 0 3.882.325 5.144.975 1.262.65 2.266 1.607 3.01 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.615 3.057 7.721 7.721 0 01-1.757 2.566 7.71 7.71 0 01-2.703 1.722c-.6.235-1.152.393-1.653.473-.502.08-1.46.12-2.874.12h-5.041zm5.132-13.88h-2.851v11.85h2.92c1.14 0 2.026-.078 2.657-.234.63-.156 1.157-.354 1.58-.593a5.44 5.44 0 001.157-.884c1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.569-.513c-.494-.084-1.288-.126-2.383-.126zm23.596-2.03h2.281v15.933h-2.28V12.99h-8.954v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.794 0h9.032v2.03h-6.751v4.859h6.523v2.041h-6.523v4.95h6.968v2.03h-9.25V3.992zm16.764-.09h1.608l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L177.467 3.9zm3.342 9.271l-2.566-5.77-2.384 5.77h4.95zm20.882 3.057v2.509c-1.673.912-3.604 1.368-5.794 1.368-1.779 0-3.288-.357-4.527-1.072a7.894 7.894 0 01-2.943-2.954 8.022 8.022 0 01-1.083-4.071c0-2.32.827-4.27 2.48-5.85 1.654-1.582 3.693-2.373 6.119-2.373 1.673 0 3.531.437 5.577 1.312V7.55c-1.863-1.065-3.684-1.597-5.463-1.597-1.825 0-3.34.576-4.545 1.728-1.205 1.152-1.807 2.594-1.807 4.328 0 1.749.593 3.185 1.779 4.31 1.186 1.126 2.703 1.689 4.55 1.689 1.931 0 3.817-.593 5.657-1.78zM215.73 3.992h2.28v15.933h-2.28V12.99h-8.953v6.934h-2.28V3.992h2.28v6.889h8.953V3.992zm5.816 15.91V3.992h5.372c2.167 0 3.881.325 5.143.975 1.262.65 2.266 1.607 3.011 2.869a7.975 7.975 0 011.118 4.128 7.785 7.785 0 01-.616 3.057 7.721 7.721 0 01-1.756 2.566 7.71 7.71 0 01-2.703 1.722 8.093 8.093 0 01-1.654.473c-.502.08-1.46.12-2.874.12h-5.04zm5.132-13.88h-2.85v11.85h2.919c1.14 0 2.026-.078 2.657-.234.631-.156 1.158-.354 1.58-.593.422-.24.807-.534 1.157-.884 1.125-1.14 1.688-2.581 1.688-4.322 0-1.711-.578-3.106-1.734-4.186a5.531 5.531 0 00-1.465-.992 6.126 6.126 0 00-1.568-.513c-.494-.084-1.289-.126-2.384-.126zm17.45-2.12h1.607l7.128 16.023h-2.338l-2.12-4.722h-6.775l-2.007 4.722h-2.338L244.127 3.9zm3.34 9.271l-2.565-5.77-2.384 5.77h4.95zm19.81-9.18h2.168v15.932h-1.962l-10.652-12.26v12.26h-2.144V3.992h1.848l10.743 12.363V3.992zM73.797 15.747l-.377.23c-1.82 1.112-3.801 1.708-5.6 1.707-3.85-.014-6.385-2.295-6.395-5.617.004-3.248 2.652-5.651 6.298-5.66 1.857.001 3.54.481 5.538 1.576l.368.202V5.22l-.158-.061c-2.254-.891-4-1.287-5.723-1.286-2.665-.001-4.978.879-6.625 2.373-1.648 1.494-2.627 3.603-2.626 6.025.001 1.688.698 3.666 2.19 5.235 1.486 1.57 3.775 2.715 6.917 2.713h.01c2.605 0 4.412-.582 6.045-1.385l.138-.067v-3.02zM54.957 23.1h23.51V.975h-23.51V23.1zm-9.166-7.455c.007-2.011-1.332-3.538-3.474-4.125.578-.296 1.034-.657 1.37-1.098.448-.59.662-1.314.66-2.157a3.849 3.849 0 00-1.281-2.884c-.877-.79-2.207-1.303-4.02-1.303h-5.012V20.01h5.882c2.098 0 3.571-.568 4.52-1.41a3.934 3.934 0 001.355-2.957zM27.865 23.1h23.51V.975h-23.51V23.1z">
+                  </path>
+                  <path d="M42.865 15.326c-.002.527-.164 1.056-.636 1.47-.47.413-1.282.727-2.63.727h-2.71v-4.349h2.59c1.21 0 2.066.244 2.604.627.535.386.778.891.782 1.525zm-2.197-5.208c.505-.365.748-.878.752-1.65-.003-.53-.154-.984-.535-1.322-.382-.34-1.032-.58-2.079-.58h-1.918v4.12h1.317c1.139.002 1.956-.202 2.463-.568zm-21.966 5.526c.007-2.011-1.334-3.538-3.474-4.125.577-.296 1.034-.657 1.369-1.098.448-.59.662-1.314.66-2.157a3.85 3.85 0 00-1.281-2.884c-.875-.79-2.204-1.303-4.019-1.303H6.944V20.01h5.882c2.099 0 3.571-.568 4.519-1.41a3.932 3.932 0 001.357-2.957zM.778 23.099h23.509V.975H.777V23.1z">
+                  </path>
+                  <path d="M13.578 10.118c.505-.365.75-.878.754-1.65-.002-.53-.154-.984-.536-1.322-.383-.34-1.032-.58-2.08-.58H9.8v4.12h1.316c1.139.002 1.956-.202 2.463-.568m1.416 3.683c-.539-.383-1.396-.627-2.603-.627H9.799v4.35h2.711c1.348 0 2.16-.315 2.632-.729.47-.413.632-.942.635-1.469-.007-.634-.248-1.14-.783-1.525">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Naidheachdan
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/news/help-41670342"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Carson as urrainear earbsa a chur sa BhBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Teirmean Cleachdaidh
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Mun BhBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Poileasaidh Prìobhaideachd
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Dàta-brabhsair
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cuir fios dhan BhBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"optimoUrn":"urn:bbc:optimo:asset:c18q7nedn2ko"},"type":"article","createdBy":"Naidheachdan","language":"gd","lastUpdated":1571231858885,"firstPublished":1563022114054,"lastPublished":1570805527001,"options":{},"analyticsLabels":{},"passport":{"language":"gd","home":"http://www.bbc.co.uk/ontologies/passport/home/Naidheachdan"},"tags":{},"version":"v1.1.2","blockTypes":["headline","text","paragraph","fragment","image","caption","altText","rawImage","urlLink","video","subheadline"]},"content":{"model":{"blocks":[{"type":"headline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Seo an ceann-naidheachd don artaigil deuchainn","blocks":[{"type":"fragment","model":{"text":"Seo an ceann-naidheachd don artaigil deuchainn","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"id":"mock-id","position":[1]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.","blocks":[{"type":"fragment","model":{"text":"‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo.","attributes":[]},"id":"mock-id","position":[2,1,1,1,1]}]},"id":"mock-id","position":[2,1,1,1]}]},"id":"mock-id","position":[2,1,1]}]},"id":"mock-id","position":[2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mapa na Frainge a’ sealltainn Paris agus Cognac","blocks":[{"type":"fragment","model":{"text":"Mapa na Frainge a’ sealltainn Paris agus Cognac","attributes":[]},"id":"mock-id","position":[2,2,1,1,1]}]},"id":"mock-id","position":[2,2,1,1]}]},"id":"mock-id","position":[2,2,1]}]},"id":"mock-id","position":[2,2]},{"type":"rawImage","model":{"width":624,"height":351,"locator":"d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg","originCode":"cpsdevpb","copyrightHolder":"BBC"},"id":"mock-id","position":[2,3]}]},"id":"mock-id","position":[2]},{"type":"timestamp","model":{"firstPublished":1563022114054,"lastPublished":1570805527001},"id":"mock-id","position":[3]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"‘S e bloc teacsa a tha seo, anns a bheil url do làraich Aimisire a’ BhBC","blocks":[{"type":"fragment","model":{"text":"‘S e bloc teacsa a tha seo, anns a bheil url do làraich ","attributes":[]},"id":"mock-id","position":[4,1,1]},{"type":"urlLink","model":{"text":"Aimisire a’ BhBC","blocks":[{"type":"fragment","model":{"text":"Aimisire a’ BhBC","attributes":[]},"id":"mock-id","position":[4,1,2,1]}],"locator":"https://www.bbc.co.uk/weather","isExternal":false},"id":"mock-id","position":[4,1,2]}]},"id":"mock-id","position":[4,1]}]},"id":"mock-id","position":[4]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01k6msm","blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan","blocks":[{"type":"fragment","model":{"text":"‘S e bloc bhidio a tha seo anns a bheil bhidio mu sheangan","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"aresMedia","model":{"blocks":[{"blockId":"urn:bbc:ares::clip:p01k6msm","type":"aresMediaMetadata","model":{"id":"mock-id","subType":"clip","format":"audio_video","title":"Five things ants can teach us about management","synopses":{"short":"They may be tiny, but us humans could learn a thing or two from ants."},"imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg","imageCopyright":"BBC","embedding":true,"advertising":true,"versions":[{"versionId":"p01k6msp","types":["Original"],"duration":191,"durationISO8601":"PT3M11S","warnings":{"short":"Contains strong language and adult humour.","long":"Contains strong language and adult humour."},"availableTerritories":{"uk":true,"nonUk":true},"availableFrom":1540218932000}],"syndication":{"destinations":[]}},"id":"mock-id","position":[5,2,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"width":1920,"height":1080,"locator":"ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg","originCode":"mpv","copyrightHolder":"BBC"},"id":"mock-id","position":[5,2,2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ants","blocks":[{"type":"fragment","model":{"text":"Ants","attributes":[]},"id":"mock-id","position":[5,2,2,2,1,1,1]}]},"id":"mock-id","position":[5,2,2,2,1,1]}]},"id":"mock-id","position":[5,2,2,2,1]}]},"id":"mock-id","position":[5,2,2,2]}]},"id":"mock-id","position":[5,2,2]}]},"id":"mock-id","position":[5,2]}]},"id":"mock-id","position":[5]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"'S e bloc fo-cheann-naidheachd a tha seo","blocks":[{"type":"fragment","model":{"text":"'S e bloc fo-cheann-naidheachd a tha seo","attributes":[]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cluicheadairean bhuill-coise às dèidh gheama","blocks":[{"type":"fragment","model":{"text":"Cluicheadairean bhuill-coise às dèidh gheama","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"rawImage","model":{"width":2048,"height":1152,"locator":"46ba/test/9b6ea6a0-ec36-11e9-88d6-81aa2ccc6d4c.jpg","originCode":"cpsdevpb","copyrightHolder":"Getty Images"},"id":"mock-id","position":[7,2]}]},"id":"mock-id","position":[7]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich","blocks":[{"type":"fragment","model":{"text":"Chaidh an t-artaigil deuchainn seo a chruthachadh gus an tèid againn air sgrùdadh domhain a dhèanamh air an làraich","attributes":[]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]}]},"id":"mock-id","position":[8]}]}},"promo":{"headlines":{"seoHeadline":"Seo an ceann-naidheachd SEO ‘son an artaigil seo"},"locators":{"optimoUrn":"urn:bbc:optimo:asset:c18q7nedn2ko"},"summary":"","timestamp":1570805527001,"id":"mock-id","type":"cps"},"relatedContent":{"site":{"subType":"site","name":"Naidheachdan","uri":"/naidheachdan","type":"simple"},"groups":[]}},"path":"/naidheachdan/sgeulachdan/c18q7nedn2ko","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [22]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="naidheachdan"
+            src="http://localhost:7080/static/js/naidheachdan-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

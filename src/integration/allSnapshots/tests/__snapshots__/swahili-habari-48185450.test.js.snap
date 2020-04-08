@@ -1,0 +1,2441 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /swahili/habari-48185450 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="sw"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_swahili/136C0/production/_106825597_mengie.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="sw-KE"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi - BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/swahili/habari-48185450"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcswahili"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_swahili/136C0/production/_106825597_mengie.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcswahili"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi - BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-05-07T11:03:14.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-05-07T11:56:44.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi - BBC News Swahili
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/swahili/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/swahili/habari-48185450"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/swahili/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/swahili/habari-48185450","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Swahili","publishingPrinciples":"https://www.bbc.com/swahili/taasisi-49283417","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/swahili/habari-48185450","name":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi"},"headline":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi","description":"Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai","datePublished":"2019-05-07T11:03:14.000Z","dateModified":"2019-05-07T11:56:44.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Swahili","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"},"noBylinesPolicy":"https://www.bbc.com/swahili/taasisi-49283417#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Tumeboresha sera yetu ya faragha na vidakuzi au cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Tumefanya mabadiliko muhimu katika sera zetu za faragha na vidakuzi au cookies na tungependa ufahamu ina maana gani kwako na data yako.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        Ndio
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Fahamu kilichobadilika
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Tufahamishe iwapo unakubali kupokea cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Tunatumia
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      kuki
+                    </a>
+                    kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Ndio, ninakubali
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Hapana, nipeleke kwa mpangilio
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/swahili"
+               class="StyledLink-m3awbo-2 fvhHOS"
+            >
+              <svg height="24"
+                   viewbox="0 0 246.28 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ktjcvW"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M187.13 12.44l-1.15-.7a5.22 5.22 0 0 1-1.54-1.3A2.46 2.46 0 0 1 184 9a2.6 2.6 0 0 1 .87-2 3.24 3.24 0 0 1 2.25-.78 4.26 4.26 0 0 1 2.43.74v1.66a3.5 3.5 0 0 0-2.46-1.1 2 2 0 0 0-1.22.34 1 1 0 0 0-.48.88 1.35 1.35 0 0 0 .35.89 4.41 4.41 0 0 0 1.13.87l1.16.68a3.39 3.39 0 0 1 1.93 2.94 2.7 2.7 0 0 1-.85 2.07 3.11 3.11 0 0 1-2.21.79A4.65 4.65 0 0 1 184 16v-1.9a3.56 3.56 0 0 0 2.84 1.55 1.78 1.78 0 0 0 1.18-.4 1.24 1.24 0 0 0 .47-1q.04-.95-1.36-1.81zM206 6.3h1.51l-4.27 10.62h-.33l-3.46-8.6-3.45 8.59h-.32L191.37 6.3h1.53l2.91 7.29 2.93-7.29h1.43l2.95 7.29zM211.53 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H207zm2.22 6.15l-1.71-3.83-1.58 3.83zM226.82 6.3h1.51v10.57h-1.51v-4.6h-5.94v4.6h-1.51V6.3h1.51v4.57h5.94zM231.6 6.3h1.51v10.57h-1.51zM236.38 6.3h1.51v9.2h4.76v1.38h-6.27zM244.77 6.3h1.51v10.57h-1.51z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Swahili
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Ruka hadi maelezo
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Yaliyomo
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Habari
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili/michezo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Michezo
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili/kwa_kina/redio"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Vipindi vya Redio
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/swahili"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Habari
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/swahili/michezo"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Michezo
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/swahili/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/swahili/kwa_kina/redio"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Vipindi vya Redio
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=86&p=news::swahili.news.photo_gallery.48185450.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:cc51ed65-2db8-a740-8c2a-92cfba89bc24]&x2=[amp]&x3=[news-swahili]&x4=[sw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Kwa+picha:+Watanzania+wajitokeza+kwa+wingi+kumuaga+Mengi+-+BBC+News+Swahili]&x11=[2019-05-07T11:03:14.000Z]&x12=[2019-05-07T11:56:44.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-05-07"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            7 Mei 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karim Jee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karimjee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/09EE/production/_106824520_mengij.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Muombolezaji"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/A62E/production/_106824524_mengil.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Mtoto pekee wakike wa marehemu Reginald Mengi, Regina akiingia ukumbini na picha ya baba yake.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B5CE/production/_106824564_mengib.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10006/production/_106824556_mengim.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14E26/production/_106824558_mengin.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa karimjee kwa ajili ya maombolezo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/198E/production/_106824560_mengio.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa Karimjee kwa ajili ya maombolezo
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee jijini Dar es salaam"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/580E/production/_106824522_mengik.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0606/production/_106824510_mengie.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshima za mwisho
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E8A0/production/_106825595_mengie.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Waombolezaji"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F066/production/_106824516_mengih.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Waombolezaji
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Wanawake waliovalia mavazi meusi, Ni huzuni na majonzi vilivyotawala miongoni mwa waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13A9E/production/_106824508_mengid.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Ni huzuni na majonzi vilivyotawala waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Waombolezaji"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/A246/production/_106824514_mengig.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Waombolezaji
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukumbi wa Karim Jee kupewa heshma za mwisho"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10FB0/production/_106825596_mengie.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Jeneza lenye mwili wa Reginald Mengi likiingizwa ukumbini.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Viongozi mbali mbali nchini Tanzania wakisikiliza hotba wakati wa maombolezo katika ukumbi wa Karim Jee jijini Dar es salaam"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/5426/production/_106824512_mengif.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Viongozi mbali mbali nchini Tanzania wakisikiliza hotuba wakati wa maombolezo katika ukumbi wa Karimjee jijini Dar es salaam
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 BeqZV"
+                    >
+                      Maelezo zaidi kuhusu taarifa hii
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="Reginald Mengi"
+                               attribution="IPP"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/10E41/production/_106758196_mengiii.jpg"
+                               height="549"
+                               width="976"
+                      >
+                      </amp-img>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                    <a href="/swahili/habari-48130222?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      Reginald Mengi na safari ya ufukara mpaka utajiri
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                    Reginald Mengi ni jina kubwa Tanzania na Afrika kwa ujumla, lakini wajua ametokea wapi?
+                  </p>
+                  <time datetime="2019-05-02"
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                  >
+                    2 Mei 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/swahili"
+               class="StyledLink-m3awbo-2 fvhHOS"
+            >
+              <svg height="24"
+                   viewbox="0 0 246.28 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ktjcvW"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M187.13 12.44l-1.15-.7a5.22 5.22 0 0 1-1.54-1.3A2.46 2.46 0 0 1 184 9a2.6 2.6 0 0 1 .87-2 3.24 3.24 0 0 1 2.25-.78 4.26 4.26 0 0 1 2.43.74v1.66a3.5 3.5 0 0 0-2.46-1.1 2 2 0 0 0-1.22.34 1 1 0 0 0-.48.88 1.35 1.35 0 0 0 .35.89 4.41 4.41 0 0 0 1.13.87l1.16.68a3.39 3.39 0 0 1 1.93 2.94 2.7 2.7 0 0 1-.85 2.07 3.11 3.11 0 0 1-2.21.79A4.65 4.65 0 0 1 184 16v-1.9a3.56 3.56 0 0 0 2.84 1.55 1.78 1.78 0 0 0 1.18-.4 1.24 1.24 0 0 0 .47-1q.04-.95-1.36-1.81zM206 6.3h1.51l-4.27 10.62h-.33l-3.46-8.6-3.45 8.59h-.32L191.37 6.3h1.53l2.91 7.29 2.93-7.29h1.43l2.95 7.29zM211.53 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H207zm2.22 6.15l-1.71-3.83-1.58 3.83zM226.82 6.3h1.51v10.57h-1.51v-4.6h-5.94v4.6h-1.51V6.3h1.51v4.57h5.94zM231.6 6.3h1.51v10.57h-1.51zM236.38 6.3h1.51v9.2h4.76v1.38h-6.27zM244.77 6.3h1.51v10.57h-1.51z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Swahili
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi-49283417"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kwanini unaweza kuiamini BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Sheria ya matumizi
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuhusu BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_privacy"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Sera ya faragha
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Wasiliana na BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Soma kuhusu mtazamo wetu wa viambatanishi vya nje.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /swahili/habari-48185450 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="sw"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_swahili/136C0/production/_106825597_mengie.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="sw-KE"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi - BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/swahili/habari-48185450"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcswahili"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_swahili/136C0/production/_106825597_mengie.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcswahili"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi - BBC News Swahili"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-05-07T11:03:14.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-05-07T11:56:44.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi - BBC News Swahili
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/swahili/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/swahili/habari-48185450"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/swahili/habari-48185450.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/swahili/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/swahili/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/swahili/habari-48185450","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Swahili","publishingPrinciples":"https://www.bbc.com/swahili/taasisi-49283417","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/swahili/habari-48185450","name":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi"},"headline":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi","description":"Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai","datePublished":"2019-05-07T11:03:14.000Z","dateModified":"2019-05-07T11:56:44.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Swahili","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"},"noBylinesPolicy":"https://www.bbc.com/swahili/taasisi-49283417#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/swahili"
+               class="StyledLink-m3awbo-2 fvhHOS"
+            >
+              <svg height="24"
+                   viewbox="0 0 246.28 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ktjcvW"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M187.13 12.44l-1.15-.7a5.22 5.22 0 0 1-1.54-1.3A2.46 2.46 0 0 1 184 9a2.6 2.6 0 0 1 .87-2 3.24 3.24 0 0 1 2.25-.78 4.26 4.26 0 0 1 2.43.74v1.66a3.5 3.5 0 0 0-2.46-1.1 2 2 0 0 0-1.22.34 1 1 0 0 0-.48.88 1.35 1.35 0 0 0 .35.89 4.41 4.41 0 0 0 1.13.87l1.16.68a3.39 3.39 0 0 1 1.93 2.94 2.7 2.7 0 0 1-.85 2.07 3.11 3.11 0 0 1-2.21.79A4.65 4.65 0 0 1 184 16v-1.9a3.56 3.56 0 0 0 2.84 1.55 1.78 1.78 0 0 0 1.18-.4 1.24 1.24 0 0 0 .47-1q.04-.95-1.36-1.81zM206 6.3h1.51l-4.27 10.62h-.33l-3.46-8.6-3.45 8.59h-.32L191.37 6.3h1.53l2.91 7.29 2.93-7.29h1.43l2.95 7.29zM211.53 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H207zm2.22 6.15l-1.71-3.83-1.58 3.83zM226.82 6.3h1.51v10.57h-1.51v-4.6h-5.94v4.6h-1.51V6.3h1.51v4.57h5.94zM231.6 6.3h1.51v10.57h-1.51zM236.38 6.3h1.51v9.2h4.76v1.38h-6.27zM244.77 6.3h1.51v10.57h-1.51z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Swahili
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Ruka hadi maelezo
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Yaliyomo
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/swahili"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Habari
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/swahili/michezo"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Michezo
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/swahili/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Video
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/swahili/kwa_kina/redio"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Vipindi vya Redio
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Habari
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili/michezo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Michezo
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/swahili/kwa_kina/redio"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Vipindi vya Redio
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=86&amp;p=news::swahili.news.photo_gallery.48185450.page&amp;x1=[urn:bbc:cps:cc51ed65-2db8-a740-8c2a-92cfba89bc24]&amp;x2=[responsive]&amp;x3=[news-swahili]&amp;x4=[sw]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[Kwa+picha:+Watanzania+wajitokeza+kwa+wingi+kumuaga+Mengi+-+BBC+News+Swahili]&amp;x11=[2019-05-07T11:03:14.000Z]&amp;x12=[2019-05-07T11:56:44.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-05-07"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            7 Mei 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg 800w"
+                         alt="Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karim Jee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karimjee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/09EE/production/_106824520_mengij.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/09EE/production/_106824520_mengij.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/09EE/production/_106824520_mengij.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/09EE/production/_106824520_mengij.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/09EE/production/_106824520_mengij.jpg 800w"
+                         alt="Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/09EE/production/_106824520_mengij.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/A62E/production/_106824524_mengil.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/A62E/production/_106824524_mengil.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/A62E/production/_106824524_mengil.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/A62E/production/_106824524_mengil.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/A62E/production/_106824524_mengil.jpg 800w"
+                         alt="Muombolezaji"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/A62E/production/_106824524_mengil.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Mtoto pekee wakike wa marehemu Reginald Mengi, Regina akiingia ukumbini na picha ya baba yake.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/B5CE/production/_106824564_mengib.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B5CE/production/_106824564_mengib.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/B5CE/production/_106824564_mengib.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/B5CE/production/_106824564_mengib.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/B5CE/production/_106824564_mengib.jpg 800w"
+                         alt="Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B5CE/production/_106824564_mengib.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/10006/production/_106824556_mengim.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10006/production/_106824556_mengim.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/10006/production/_106824556_mengim.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/10006/production/_106824556_mengim.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/10006/production/_106824556_mengim.jpg 800w"
+                         alt="Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10006/production/_106824556_mengim.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/14E26/production/_106824558_mengin.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14E26/production/_106824558_mengin.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/14E26/production/_106824558_mengin.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/14E26/production/_106824558_mengin.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/14E26/production/_106824558_mengin.jpg 800w"
+                         alt="Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14E26/production/_106824558_mengin.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/198E/production/_106824560_mengio.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/198E/production/_106824560_mengio.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/198E/production/_106824560_mengio.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/198E/production/_106824560_mengio.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/198E/production/_106824560_mengio.jpg 800w"
+                         alt="Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa karimjee kwa ajili ya maombolezo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/198E/production/_106824560_mengio.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa Karimjee kwa ajili ya maombolezo
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/580E/production/_106824522_mengik.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/580E/production/_106824522_mengik.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/580E/production/_106824522_mengik.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/580E/production/_106824522_mengik.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/580E/production/_106824522_mengik.jpg 800w"
+                         alt="Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee jijini Dar es salaam"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/580E/production/_106824522_mengik.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/0606/production/_106824510_mengie.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0606/production/_106824510_mengie.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0606/production/_106824510_mengie.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0606/production/_106824510_mengie.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0606/production/_106824510_mengie.jpg 800w"
+                         alt="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0606/production/_106824510_mengie.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshima za mwisho
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/E8A0/production/_106825595_mengie.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/E8A0/production/_106825595_mengie.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/E8A0/production/_106825595_mengie.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/E8A0/production/_106825595_mengie.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/E8A0/production/_106825595_mengie.jpg 800w"
+                         alt="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E8A0/production/_106825595_mengie.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/F066/production/_106824516_mengih.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F066/production/_106824516_mengih.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/F066/production/_106824516_mengih.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/F066/production/_106824516_mengih.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/F066/production/_106824516_mengih.jpg 800w"
+                         alt="Waombolezaji"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F066/production/_106824516_mengih.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Waombolezaji
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13A9E/production/_106824508_mengid.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13A9E/production/_106824508_mengid.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13A9E/production/_106824508_mengid.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13A9E/production/_106824508_mengid.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13A9E/production/_106824508_mengid.jpg 800w"
+                         alt="Wanawake waliovalia mavazi meusi, Ni huzuni na majonzi vilivyotawala miongoni mwa waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13A9E/production/_106824508_mengid.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Ni huzuni na majonzi vilivyotawala waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/A246/production/_106824514_mengig.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/A246/production/_106824514_mengig.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/A246/production/_106824514_mengig.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/A246/production/_106824514_mengig.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/A246/production/_106824514_mengig.jpg 800w"
+                         alt="Waombolezaji"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/A246/production/_106824514_mengig.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Waombolezaji
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/10FB0/production/_106825596_mengie.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10FB0/production/_106825596_mengie.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/10FB0/production/_106825596_mengie.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/10FB0/production/_106825596_mengie.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/10FB0/production/_106825596_mengie.jpg 800w"
+                         alt="Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukumbi wa Karim Jee kupewa heshma za mwisho"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10FB0/production/_106825596_mengie.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Jeneza lenye mwili wa Reginald Mengi likiingizwa ukumbini.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/5426/production/_106824512_mengif.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/5426/production/_106824512_mengif.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/5426/production/_106824512_mengif.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/5426/production/_106824512_mengif.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/5426/production/_106824512_mengif.jpg 800w"
+                         alt="Viongozi mbali mbali nchini Tanzania wakisikiliza hotba wakati wa maombolezo katika ukumbi wa Karim Jee jijini Dar es salaam"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/5426/production/_106824512_mengif.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Maelezo ya picha,
+                  </span>
+                  <p>
+                    Viongozi mbali mbali nchini Tanzania wakisikiliza hotuba wakati wa maombolezo katika ukumbi wa Karimjee jijini Dar es salaam
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 BeqZV"
+                    >
+                      Maelezo zaidi kuhusu taarifa hii
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                    <a href="/swahili/habari-48130222?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      Reginald Mengi na safari ya ufukara mpaka utajiri
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                    Reginald Mengi ni jina kubwa Tanzania na Afrika kwa ujumla, lakini wajua ametokea wapi?
+                  </p>
+                  <time datetime="2019-05-02"
+                        class="StyledTimestamp-um718p-0 kVWTyt"
+                  >
+                    2 Mei 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/swahili"
+               class="StyledLink-m3awbo-2 fvhHOS"
+            >
+              <svg height="24"
+                   viewbox="0 0 246.28 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 ktjcvW"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M187.13 12.44l-1.15-.7a5.22 5.22 0 0 1-1.54-1.3A2.46 2.46 0 0 1 184 9a2.6 2.6 0 0 1 .87-2 3.24 3.24 0 0 1 2.25-.78 4.26 4.26 0 0 1 2.43.74v1.66a3.5 3.5 0 0 0-2.46-1.1 2 2 0 0 0-1.22.34 1 1 0 0 0-.48.88 1.35 1.35 0 0 0 .35.89 4.41 4.41 0 0 0 1.13.87l1.16.68a3.39 3.39 0 0 1 1.93 2.94 2.7 2.7 0 0 1-.85 2.07 3.11 3.11 0 0 1-2.21.79A4.65 4.65 0 0 1 184 16v-1.9a3.56 3.56 0 0 0 2.84 1.55 1.78 1.78 0 0 0 1.18-.4 1.24 1.24 0 0 0 .47-1q.04-.95-1.36-1.81zM206 6.3h1.51l-4.27 10.62h-.33l-3.46-8.6-3.45 8.59h-.32L191.37 6.3h1.53l2.91 7.29 2.93-7.29h1.43l2.95 7.29zM211.53 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H207zm2.22 6.15l-1.71-3.83-1.58 3.83zM226.82 6.3h1.51v10.57h-1.51v-4.6h-5.94v4.6h-1.51V6.3h1.51v4.57h5.94zM231.6 6.3h1.51v10.57h-1.51zM236.38 6.3h1.51v9.2h4.76v1.38h-6.27zM244.77 6.3h1.51v10.57h-1.51z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Swahili
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi-49283417"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kwanini unaweza kuiamini BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_terms_of_use"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Sheria ya matumizi
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_aboutus"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuhusu BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_privacy"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Sera ya faragha
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/swahili/taasisi/2011/10/000001_contactus"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Wasiliana na BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Soma kuhusu mtazamo wetu wa viambatanishi vya nje.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1557226994000,"lastPublished":1557230204000,"lastUpdated":1557230213399,"id":"mock-id","locators":{"assetUri":"/swahili/habari-48185450","cpsUrn":"urn:bbc:content:assetUri:swahili/habari-48185450","curie":"http://www.bbc.co.uk/asset/cc51ed65-2db8-a740-8c2a-92cfba89bc24"},"type":"PGL","createdBy":"swahili-v6","language":"sw","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"swahili.news.photo_gallery.48185450.page","cps_asset_id":"48185450"},"tags":{},"version":"v1.0.0","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"Reginald Mengi: Nilizaliwa katika umasikini wa kutupwa","headline":"Reginald Mengi na safari ya ufukara mpaka utajiri"},"locators":{"assetUri":"/swahili/habari-48130222","cpsUrn":"urn:bbc:content:assetUri:/swahili/habari-48130222"},"summary":"Reginald Mengi ni jina kubwa Tanzania na Afrika kwa ujumla, lakini wajua ametokea wapi?","timestamp":1556795873000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/10E41/production/_106758196_mengiii.jpg","path":"/cpsprodpb/10E41/production/_106758196_mengiii.jpg","height":549,"width":976,"altText":"Reginald Mengi","copyrightHolder":"IPP","type":"image"},"id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"Habari","uri":"/swahili/habari","type":"simple"},"site":{"subType":"site","name":"BBC Swahili","uri":"/swahili","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi","blocks":[{"type":"fragment","model":{"text":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1557226994000,"lastPublished":1557230204000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai","blocks":[{"type":"fragment","model":{"text":"Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karimjee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi","blocks":[{"type":"fragment","model":{"text":"Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karimjee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karim Jee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi","blocks":[{"type":"fragment","model":{"text":"Watoto wa marehemu Regnald Mengi wakiingia katika ukumbi wa Karim Jee jijini Dar es salaam kuomboleza kifo cha baba yao(nyuma aliyeshika msalaba mweupe wenye shada la maua) ni jacline Ntuyabaliwe- mjane wa Dkt. Mengi","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"067E/production/_106826610_934a63b0-d49f-4b1b-a5d0-b5f2d022b952.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.","blocks":[{"type":"fragment","model":{"text":"Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.","blocks":[{"type":"fragment","model":{"text":"Mjane wa Dkt. Mengi, Jackline Ntuyabaliwe (mwenye shada jeupe la maua lenye muundo wa msalaba) akiingia katika ukumbi wa Karim Jee kwa ajili ya kuuaga rasmi mwili wa mumewe aliyefariki dunia mjini Dubai wiki iliyopita.","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"09EE/production/_106824520_mengij.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mtoto pekee wakike wa marehemu Reginald Mengi, Regina akiingia ukumbini na picha ya baba yake.","blocks":[{"type":"fragment","model":{"text":"Mtoto pekee wakike wa marehemu Reginald Mengi, Regina akiingia ukumbini na picha ya baba yake.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Muombolezaji","blocks":[{"type":"fragment","model":{"text":"Muombolezaji","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"A62E/production/_106824524_mengil.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015","blocks":[{"type":"fragment","model":{"text":"Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015","blocks":[{"type":"fragment","model":{"text":"Rais wa Tanzania John Pombe Maguguli ( kati kati) akiongoza waombolezaji kuuaga mwili wa Dkt Regnald Mengi aliyefariki dunia mjini Dubai tarehe 02/05/2015","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"B5CE/production/_106824564_mengib.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza","blocks":[{"type":"fragment","model":{"text":"Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza","blocks":[{"type":"fragment","model":{"text":"Mjane wa marehemu Reginald Mengi akiweka shada la maua juu ya jeneza","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"10006/production/_106824556_mengim.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee","blocks":[{"type":"fragment","model":{"text":"Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee","blocks":[{"type":"fragment","model":{"text":"Jeneza lililoubeba mwili wa Dkt. Reginald Mengi likiingizwa katika ukumbi wa Karimjee","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"14E26/production/_106824558_mengin.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa Karimjee kwa ajili ya maombolezo","blocks":[{"type":"fragment","model":{"text":"Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa Karimjee kwa ajili ya maombolezo","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa karimjee kwa ajili ya maombolezo","blocks":[{"type":"fragment","model":{"text":"Picha ya Regnald Mengi ilitundikwa kwenye ukumbi wa karimjee kwa ajili ya maombolezo","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"198E/production/_106824560_mengio.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee","blocks":[{"type":"fragment","model":{"text":"Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee jijini Dar es salaam","blocks":[{"type":"fragment","model":{"text":"Waombolezaji wakilitazama jeneza lililoubeba mwili wa marehemu Reginald Mengi likiingizwa ndani ya ukumbi wa Karimjee jijini Dar es salaam","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"580E/production/_106824522_mengik.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshima za mwisho","blocks":[{"type":"fragment","model":{"text":"jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshima za mwisho","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho","blocks":[{"type":"fragment","model":{"text":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"0606/production/_106824510_mengie.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho","blocks":[{"type":"fragment","model":{"text":"Jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karimjee kupewa heshma za mwisho","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho","blocks":[{"type":"fragment","model":{"text":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"E8A0/production/_106825595_mengie.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Waombolezaji","blocks":[{"type":"fragment","model":{"text":"Waombolezaji","attributes":[]},"id":"mock-id","position":[14,1,1,1,1]}]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Waombolezaji","blocks":[{"type":"fragment","model":{"text":"Waombolezaji","attributes":[]},"id":"mock-id","position":[14,2,1,1,1]}]},"id":"mock-id","position":[14,2,1,1]}]},"id":"mock-id","position":[14,2,1]}]},"id":"mock-id","position":[14,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"F066/production/_106824516_mengih.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[14,3]}]},"id":"mock-id","position":[14]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ni huzuni na majonzi vilivyotawala waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi","blocks":[{"type":"fragment","model":{"text":"Ni huzuni na majonzi vilivyotawala waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi","attributes":[]},"id":"mock-id","position":[15,1,1,1,1]}]},"id":"mock-id","position":[15,1,1,1]}]},"id":"mock-id","position":[15,1,1]}]},"id":"mock-id","position":[15,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Wanawake waliovalia mavazi meusi, Ni huzuni na majonzi vilivyotawala miongoni mwa waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi","blocks":[{"type":"fragment","model":{"text":"Wanawake waliovalia mavazi meusi, Ni huzuni na majonzi vilivyotawala miongoni mwa waliofika kwenye shughuli ya kuuaga mwili wa Regnald Mengi","attributes":[]},"id":"mock-id","position":[15,2,1,1,1]}]},"id":"mock-id","position":[15,2,1,1]}]},"id":"mock-id","position":[15,2,1]}]},"id":"mock-id","position":[15,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"13A9E/production/_106824508_mengid.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[15,3]}]},"id":"mock-id","position":[15]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Waombolezaji","blocks":[{"type":"fragment","model":{"text":"Waombolezaji","attributes":[]},"id":"mock-id","position":[16,1,1,1,1]}]},"id":"mock-id","position":[16,1,1,1]}]},"id":"mock-id","position":[16,1,1]}]},"id":"mock-id","position":[16,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Waombolezaji","blocks":[{"type":"fragment","model":{"text":"Waombolezaji","attributes":[]},"id":"mock-id","position":[16,2,1,1,1]}]},"id":"mock-id","position":[16,2,1,1]}]},"id":"mock-id","position":[16,2,1]}]},"id":"mock-id","position":[16,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"A246/production/_106824514_mengig.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[16,3]}]},"id":"mock-id","position":[16]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza lenye mwili wa Reginald Mengi likiingizwa ukumbini.","blocks":[{"type":"fragment","model":{"text":"Jeneza lenye mwili wa Reginald Mengi likiingizwa ukumbini.","attributes":[]},"id":"mock-id","position":[17,1,1,1,1]}]},"id":"mock-id","position":[17,1,1,1]}]},"id":"mock-id","position":[17,1,1]}]},"id":"mock-id","position":[17,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukumbi wa Karim Jee kupewa heshma za mwisho","blocks":[{"type":"fragment","model":{"text":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukumbi wa Karim Jee kupewa heshma za mwisho","attributes":[]},"id":"mock-id","position":[17,2,1,1,1]}]},"id":"mock-id","position":[17,2,1,1]}]},"id":"mock-id","position":[17,2,1]}]},"id":"mock-id","position":[17,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"10FB0/production/_106825596_mengie.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[17,3]}]},"id":"mock-id","position":[17]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Viongozi mbali mbali nchini Tanzania wakisikiliza hotuba wakati wa maombolezo katika ukumbi wa Karimjee jijini Dar es salaam","blocks":[{"type":"fragment","model":{"text":"Viongozi mbali mbali nchini Tanzania wakisikiliza hotuba wakati wa maombolezo katika ukumbi wa Karimjee jijini Dar es salaam","attributes":[]},"id":"mock-id","position":[18,1,1,1,1]}]},"id":"mock-id","position":[18,1,1,1]}]},"id":"mock-id","position":[18,1,1]}]},"id":"mock-id","position":[18,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Viongozi mbali mbali nchini Tanzania wakisikiliza hotba wakati wa maombolezo katika ukumbi wa Karim Jee jijini Dar es salaam","blocks":[{"type":"fragment","model":{"text":"Viongozi mbali mbali nchini Tanzania wakisikiliza hotba wakati wa maombolezo katika ukumbi wa Karim Jee jijini Dar es salaam","attributes":[]},"id":"mock-id","position":[18,2,1,1,1]}]},"id":"mock-id","position":[18,2,1,1]}]},"id":"mock-id","position":[18,2,1]}]},"id":"mock-id","position":[18,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"5426/production/_106824512_mengif.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[18,3]}]},"id":"mock-id","position":[18]}]}},"promo":{"headlines":{"shortHeadline":"Watanzania wajitokeza kwa wingi kumuaga Mengi","headline":"Kwa picha: Watanzania wajitokeza kwa wingi kumuaga Mengi"},"locators":{"assetUri":"/swahili/habari-48185450","cpsUrn":"urn:bbc:content:assetUri:swahili/habari-48185450","curie":"http://www.bbc.co.uk/asset/cc51ed65-2db8-a740-8c2a-92cfba89bc24"},"summary":"Viongozi mbali mbali wa serikali pamoja na Watanzania wa tabaka mabli mbali wamejitokeza kuuaga mwili wa mfanyabiashara maarufu Regnald Mengi aliyefariki dunia wiki iliyopita mjini Dubai","timestamp":1557230213399,"passport":{},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/136C0/production/_106825597_mengie.jpg","path":"/cpsprodpb/136C0/production/_106825597_mengie.jpg","height":549,"width":976,"altText":"Jeneza Mwili wa marehemu Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho","caption":"jeneza la mwili wa marehemu Dkt. Reginald Mengi ukiingizwa kwenye ukmbi wa Karim Jee kupewa heshma za mwisho","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"}},"path":"/swahili/habari-48185450","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [36]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="swahili"
+            src="http://localhost:7080/static/js/swahili-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

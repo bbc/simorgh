@@ -1,0 +1,2135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /pidgin/sport-23252855 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="pcm"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="This is a test asset used in Simorgh, please do not edit it without asking."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="This is a test asset used in Simorgh, please do not edit it without asking."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="pcm"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/pidgin/sport-23252855"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="This is a test asset used in Simorgh, please do not edit it without asking."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-10-23T13:19:44.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-23T13:21:59.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      PGL - Blood pressure drugs dey work better - BBC News Pidgin
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/pidgin/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/pidgin/sport-23252855"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/sport-23252855","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/sport-23252855","name":"PGL - Blood pressure drugs dey work better"},"headline":"PGL - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T13:19:44.000Z","dateModified":"2019-10-23T13:21:59.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    We don update our Privacy and Cookies Policy
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        OK
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Find out wetin don change
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Let us know say you agree to cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    We use
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Yes, I agree
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        No, cari me go settings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Waka go wetin de inside
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Plenti seshon
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nigeria
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Africa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    World
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Most popular
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Nigeria
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Africa
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/world"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    World
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Most popular
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=70&p=sport::pidgin.sport.photo_gallery.23252855.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:e0cab3d5-421d-1c41-a425-4696586278a1]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[PGL+-+Blood+pressure+drugs+dey+work+better+-+BBC+News+Pidgin]&x11=[2019-10-23T13:19:44.000Z]&x12=[2019-10-23T13:21:59.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            PGL - Blood pressure drugs dey work better
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-10-23"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            23 October 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is a test asset used in Simorgh, please do not edit it without asking.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Bill Clinton"
+                           attribution="Someone"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1840E/test/_63724399_clinton.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Someone
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Holy and Phil at NTAs"
+                           attribution="Stuart C. Wilson"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Stuart C. Wilson
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Holy and Phil at NTAs holding an award
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="The guy from the bodyguard at the NTAs"
+                           attribution="Joe Maher"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Joe Maher
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Some people at the NTAs"
+                           attribution="Joe Maher"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Joe Maher
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Ant and Dec at the NTA Awards"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Someone at the NTA Awards"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Some people at the NTAs"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-48528766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Why you fit trust BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    How dem dey take use am
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    As e concern BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-42188215"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Call BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. De external site no concern BBC.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  De way wey we de take go external link.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /pidgin/sport-23252855 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="pcm"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="This is a test asset used in Simorgh, please do not edit it without asking."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="This is a test asset used in Simorgh, please do not edit it without asking."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="pcm"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/pidgin/sport-23252855"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="This is a test asset used in Simorgh, please do not edit it without asking."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="PGL - Blood pressure drugs dey work better - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-10-23T13:19:44.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-23T13:21:59.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      PGL - Blood pressure drugs dey work better - BBC News Pidgin
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/pidgin/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/pidgin/sport-23252855"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/pidgin/sport-23252855.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/sport-23252855","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/sport-23252855","name":"PGL - Blood pressure drugs dey work better"},"headline":"PGL - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T13:19:44.000Z","dateModified":"2019-10-23T13:21:59.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Waka go wetin de inside
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Plenti seshon
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Nigeria
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Africa
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/world"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      World
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Video
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Sport
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Entertainment
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Most popular
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nigeria
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Africa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    World
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Most popular
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=sport::pidgin.sport.photo_gallery.23252855.page&amp;x1=[urn:bbc:cps:e0cab3d5-421d-1c41-a425-4696586278a1]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[PGL+-+Blood+pressure+drugs+dey+work+better+-+BBC+News+Pidgin]&amp;x11=[2019-10-23T13:19:44.000Z]&amp;x12=[2019-10-23T13:21:59.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            PGL - Blood pressure drugs dey work better
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-10-23"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            23 October 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is a test asset used in Simorgh, please do not edit it without asking.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1840E/test/_63724399_clinton.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1840E/test/_63724399_clinton.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1840E/test/_63724399_clinton.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1840E/test/_63724399_clinton.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/1840E/test/_63724399_clinton.jpg 800w"
+                         alt="Bill Clinton"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1840E/test/_63724399_clinton.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Someone
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg 800w"
+                         alt="Holy and Phil at NTAs"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1552E/test/_63724378_gettyimages-1098040380.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Stuart C. Wilson
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Holy and Phil at NTAs holding an award
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg 800w"
+                         alt="The guy from the bodyguard at the NTAs"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/2096/test/_63724380_gettyimages-1098050396.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Joe Maher
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg 800w"
+                         alt="Some people at the NTAs"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Joe Maher
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg 800w"
+                         alt="Ant and Dec at the NTA Awards"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/C0BE/test/_63724394_pa-34614410.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg 800w"
+                         alt="Someone at the NTA Awards"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/10EDE/test/_63724396_pa-40773536.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg 800w"
+                         alt="Some people at the NTAs"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/15CFE/test/_63724398_pa-40775105.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-48528766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Why you fit trust BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    How dem dey take use am
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    As e concern BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-42188215"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Call BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. De external site no concern BBC.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  De way wey we de take go external link.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1571836784000,"lastPublished":1571836919000,"lastUpdated":1571836928021,"id":"mock-id","locators":{"assetUri":"/pidgin/sport-23252855","cpsUrn":"urn:bbc:content:assetUri:pidgin/sport-23252855","curie":"http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"},"type":"PGL","createdBy":"pidgin-v6","language":"pcm","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"pidgin.sport.photo_gallery.23252855.page","cps_asset_id":"23252855"},"tags":{},"version":"v1.1.2","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"PGL - Blood pressure drugs dey work better","blocks":[{"type":"fragment","model":{"text":"PGL - Blood pressure drugs dey work better","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1571836784000,"lastPublished":1571836919000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a test asset used in Simorgh, please do not edit it without asking.","blocks":[{"type":"fragment","model":{"text":"This is a test asset used in Simorgh, please do not edit it without asking.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.","blocks":[{"type":"fragment","model":{"text":"Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Bill Clinton","blocks":[{"type":"fragment","model":{"text":"Bill Clinton","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"Someone","height":549,"locator":"1840E/test/_63724399_clinton.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Holy and Phil at NTAs holding an award","blocks":[{"type":"fragment","model":{"text":"Holy and Phil at NTAs holding an award","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Holy and Phil at NTAs","blocks":[{"type":"fragment","model":{"text":"Holy and Phil at NTAs","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"Stuart C. Wilson","height":549,"locator":"1552E/test/_63724378_gettyimages-1098040380.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","blocks":[{"type":"fragment","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"The guy from the bodyguard at the NTAs","blocks":[{"type":"fragment","model":{"text":"The guy from the bodyguard at the NTAs","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"Joe Maher","height":549,"locator":"2096/test/_63724380_gettyimages-1098050396.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","blocks":[{"type":"fragment","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Some people at the NTAs","blocks":[{"type":"fragment","model":{"text":"Some people at the NTAs","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"Joe Maher","height":549,"locator":"729E/test/_63724392_gettyimages-1098075358.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","blocks":[{"type":"fragment","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ant and Dec at the NTA Awards","blocks":[{"type":"fragment","model":{"text":"Ant and Dec at the NTA Awards","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"C0BE/test/_63724394_pa-34614410.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","blocks":[{"type":"fragment","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Someone at the NTA Awards","blocks":[{"type":"fragment","model":{"text":"Someone at the NTA Awards","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"10EDE/test/_63724396_pa-40773536.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","blocks":[{"type":"fragment","model":{"text":"Cheese and biscuits cut the cheese jarlsberg. Danish fontina goat cream cheese goat when the cheese comes out everybody's happy queso mascarpone mozzarella. Babybel cheese and wine bavarian bergkase emmental parmesan rubber cheese rubber cheese cheesecake. Cheese slices paneer caerphilly squirty cheese goat stinking bishop cheesecake camembert de normandie. Dolcelatte.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Some people at the NTAs","blocks":[{"type":"fragment","model":{"text":"Some people at the NTAs","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"15CFE/test/_63724398_pa-40775105.jpg","originCode":"cpsdevpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]}]}},"promo":{"headlines":{"shortHeadline":"PGL - Blood pressure drugs dey work better","headline":"PGL - Blood pressure drugs dey work better"},"locators":{"assetUri":"/pidgin/sport-23252855","cpsUrn":"urn:bbc:content:assetUri:pidgin/sport-23252855","curie":"http://www.bbc.co.uk/asset/e0cab3d5-421d-1c41-a425-4696586278a1"},"summary":"This is a test asset used in Simorgh, please do not edit it without asking.","timestamp":1571836928021,"passport":{},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Sport","uri":"/pidgin/sport","type":"simple"},"site":{"subType":"site","name":"BBC Pidgin","uri":"/pidgin","type":"simple"},"groups":[]}},"path":"/pidgin/sport-23252855","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [27]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="pidgin"
+            src="http://localhost:7080/static/js/pidgin-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

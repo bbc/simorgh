@@ -1,0 +1,1433 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /scotland/articles/czwj5l0n210o For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="en-gb"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#23104C"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="This is the SEO headline of this test article"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#23104C"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="This is the SEO headline of this test article"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="en_GB"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="This is the SEO headline of this test article - BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/scotland/articles/czwj5l0n210o"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCScotland"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="This is the SEO headline of this test article"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCScotland"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="This is the SEO headline of this test article - BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcscotland"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-09-13T12:36:29.124Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-09-13T12:36:29.124Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      This is the SEO headline of this test article - BBC Scotland
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/scotland/articles/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/scotland/articles/czwj5l0n210o"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/scotland/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/scotland/articles/czwj5l0n210o","publisher":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/scotland/articles/czwj5l0n210o","name":"This is the SEO headline of this test article"},"headline":"This is the SEO headline of this test article","datePublished":"2019-09-13T12:36:29.124Z","dateModified":"2019-09-13T12:36:29.124Z","author":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 gIWVBy"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    We've updated our Privacy and Cookies Policy
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        OK
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Find out what's changed
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 gIWVBy"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Let us know you agree to cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    We use
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    to give you the best online experience. Please let us know if you agree to all of these cookies.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Yes, I agree
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        No, take me to settings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 hvwVTI">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/scotland"
+               class="StyledLink-m3awbo-2 gEzIuE"
+            >
+              <svg height="24"
+                   viewbox="0 0 176.15 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 foIrMR"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M48.82 15.91v.01-.01zM58.76 0v24h25.5V0zm20.42 19.3l-.15.07a14 14 0 01-6.56 1.5A10 10 0 0165 17.93a8.45 8.45 0 01-2.37-5.68 8.68 8.68 0 012.84-6.54 10.56 10.56 0 017.19-2.57 16.52 16.52 0 016.2 1.4l.17.06v3.22l-.4-.22a12 12 0 00-6-1.71c-4 0-6.84 2.53-6.83 6.14s2.74 6.1 6.94 6.1a11.9 11.9 0 006.08-1.85l.41-.25zM29.38 24h25.5V0h-25.5zm6.69-20.65h5.45a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.26 4.26 0 01-1.49 1.2 4.62 4.62 0 013.77 4.46 4.26 4.26 0 01-1.47 3.2 7.19 7.19 0 01-4.9 1.53h-6.4z">
+                  </path>
+                  <path d="M45 17.16a2 2 0 00.69-1.59 1.93 1.93 0 00-.85-1.65 4.89 4.89 0 00-2.84-.69h-2.84v4.71h2.94a4.2 4.2 0 002.9-.78zm.65-1.6v.01-.01zm-2.4-5.62a2 2 0 00.81-1.76 1.82 1.82 0 00-.58-1.44 3.32 3.32 0 00-2.26-.63h-2.1v4.47h1.43a4.62 4.62 0 002.7-.64zM0 24h25.5V0H0zM6.7 3.35h5.44a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.2 4.2 0 01-1.49 1.2 4.62 4.62 0 013.77 4.47A4.26 4.26 0 0118 19.11a7.18 7.18 0 01-4.9 1.53H6.7z">
+                  </path>
+                  <path d="M13.87 9.94a2 2 0 00.82-1.76 1.82 1.82 0 00-.58-1.44 3.33 3.33 0 00-2.26-.63H9.77v4.47h1.43a4.62 4.62 0 002.67-.64zm1.71 7.22a2.1 2.1 0 00.69-1.6 1.93 1.93 0 00-.85-1.66 4.89 4.89 0 00-2.82-.68H9.79v4.71h2.94a4.2 4.2 0 002.85-.77zm81.61-3.76l-1.93-1.13a8.55 8.55 0 01-2.53-2.1A4 4 0 0192 7.76a4.26 4.26 0 011.4-3.33 5.3 5.3 0 013.69-1.28 7 7 0 014 1.22v2.81a5.74 5.74 0 00-4-1.8 3.34 3.34 0 00-2 .57 1.71 1.71 0 00-.78 1.44 2.21 2.21 0 00.58 1.46 7.26 7.26 0 001.89 1.42l1.9 1.12q3.15 1.89 3.15 4.82a4.42 4.42 0 01-1.4 3.39 5.1 5.1 0 01-3.63 1.3 7.62 7.62 0 01-4.65-1.58v-3.17a5.83 5.83 0 004.64 2.5 2.92 2.92 0 001.9-.65 2 2 0 00.78-1.63q-.02-1.53-2.28-2.97zm15.58 4.6v2.24a9.44 9.44 0 01-3.33.63 5.78 5.78 0 01-4.27-1.58 5.74 5.74 0 01-1.6-4.25 6.08 6.08 0 011.55-4.33 5.34 5.34 0 014.08-1.65 6.82 6.82 0 011.58.17 10.2 10.2 0 011.73.63v2.4a6 6 0 00-3.15-1 3.24 3.24 0 00-2.51 1 3.9 3.9 0 00-1 2.74 3.69 3.69 0 001 2.78 3.92 3.92 0 002.85 1 7.44 7.44 0 003.07-.78zm7.84-8.8a6 6 0 014.32 1.68 5.66 5.66 0 011.72 4.2 5.36 5.36 0 01-1.75 4.1 6.2 6.2 0 01-4.41 1.63 6 6 0 01-4.25-1.6 5.5 5.5 0 01-1.72-4.13 5.54 5.54 0 011.74-4.2 6.07 6.07 0 014.35-1.68zm-.17 2.1a3.57 3.57 0 00-2.67 1 3.73 3.73 0 00-1 2.72 3.56 3.56 0 001 2.68 3.77 3.77 0 002.74 1 3.7 3.7 0 002.72-1 3.61 3.61 0 001-2.69 3.58 3.58 0 00-1-2.71 3.83 3.83 0 00-2.79-1zm6.98-.23l4.2-4.2v2.36h3.61v2.07h-3.56v5.58q0 2 1.63 2a5 5 0 002.57-.81v2.1a5.7 5.7 0 01-2.84.73 3.77 3.77 0 01-2.58-.9 2.56 2.56 0 01-.54-.61 3.26 3.26 0 01-.36-.89 10 10 0 01-.15-2.1v-5.1h-2zm10.86-7.72h2.26v17.32h-2.26zM151 13.82v4.83q0 .59.4.58a2.73 2.73 0 001.28-.61V20a7.4 7.4 0 01-1.24.67 2.68 2.68 0 01-1 .18q-1.45 0-1.71-1.14a4.91 4.91 0 01-3.06 1.11 2.71 2.71 0 01-2-.79 2.68 2.68 0 01-.8-2 2.78 2.78 0 01.78-1.93 5.25 5.25 0 012.2-1.34l2.89-1v-.61a1.82 1.82 0 00-2.1-2.1 5 5 0 00-3.6 1.91v-2.37A4.68 4.68 0 01146.85 9a4.37 4.37 0 013 1 3 3 0 01.67.83 3 3 0 01.38 1 15.3 15.3 0 01.1 1.99zm-2.22 4.6V15l-1.51.59a5.11 5.11 0 00-1.64.93 1.67 1.67 0 000 2.31 1.6 1.6 0 001.18.45 2.83 2.83 0 001.96-.86zm8.08-9.15v1.45A4.53 4.53 0 01160.29 9a3.79 3.79 0 012 .56 3.6 3.6 0 011.4 1.51 7.24 7.24 0 01.48 3v6.53h-2.26v-6.5a4.44 4.44 0 00-.54-2.5 2 2 0 00-1.78-.75 3.25 3.25 0 00-2.72 1.6v8.14h-2.31V9.27zm17.03-5.92h2.27v17.32h-4.83a5.25 5.25 0 01-4-1.6 6 6 0 01-1.51-4.29 5.69 5.69 0 011.58-4.15 5.38 5.38 0 014-1.63 7.35 7.35 0 012.48.48zm0 15.38v-7.22a4.68 4.68 0 00-2.1-.54 3.44 3.44 0 00-2.69 1.1 4.27 4.27 0 00-1 3 3.9 3.9 0 00.87 2.72 2.69 2.69 0 001.1.77 7.46 7.46 0 002.1.2z">
+                  </path>
+                </g>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                BBC Scotland
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bbZqWC"
+            >
+              Skip to content
+            </a>
+          </div>
+        </div>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598274&s2=79&p=scotland.articles.czwj5l0n210o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:czwj5l0n210o]&x2=[amp]&x3=[scotland]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[This+is+the+SEO+headline+of+this+test+article]&x11=[2019-09-13T12:36:29.124Z]&x12=[2019-09-13T12:36:29.124Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Scotland, Scotland - ART","uid":50924,"title":"This is the SEO headline of this test article","virtualReferrer":"\${documentReferrer}","contentType":"New Article"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+            >
+              This is the headline of this test article
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="Map of France showing Paris and Cognac"
+                             attribution
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
+                             height="351"
+                             width="624"
+                    >
+                    </amp-img>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Image caption,
+                    </span>
+                    <p>
+                      This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-09-13"
+                  class="StyledTimestamp-um718p-0 kSGFFg"
+            >
+              13 September 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              This is a text block, which contains a url link to
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                the BBC Weather homepage
+              </a>
+              .
+            </p>
+          </div>
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB/amp"
+                            title="Media player"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           layout="fill"
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           alt
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 dHbulA">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          This video cannot play in your browser. Please enable JavaScript or try a different browser.
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Video caption,
+                </span>
+                <p>
+                  This is a video block containing a video about ants
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="This-is-a-subheadline-block"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 cCDAFN"
+            >
+              This is a subheadline block
+            </h2>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="Footballers after a match"
+                             attribution="Getty Images"
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg"
+                             height="1152"
+                             width="2048"
+                    >
+                    </amp-img>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Image source,
+                      </span>
+                      Getty Images
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              This test article has been created so that we can run automated end-to-end tests on our website.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gQVRNl">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/scotland"
+               class="StyledLink-m3awbo-2 gEzIuE"
+            >
+              <svg height="24"
+                   viewbox="0 0 176.15 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 foIrMR"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M48.82 15.91v.01-.01zM58.76 0v24h25.5V0zm20.42 19.3l-.15.07a14 14 0 01-6.56 1.5A10 10 0 0165 17.93a8.45 8.45 0 01-2.37-5.68 8.68 8.68 0 012.84-6.54 10.56 10.56 0 017.19-2.57 16.52 16.52 0 016.2 1.4l.17.06v3.22l-.4-.22a12 12 0 00-6-1.71c-4 0-6.84 2.53-6.83 6.14s2.74 6.1 6.94 6.1a11.9 11.9 0 006.08-1.85l.41-.25zM29.38 24h25.5V0h-25.5zm6.69-20.65h5.45a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.26 4.26 0 01-1.49 1.2 4.62 4.62 0 013.77 4.46 4.26 4.26 0 01-1.47 3.2 7.19 7.19 0 01-4.9 1.53h-6.4z">
+                  </path>
+                  <path d="M45 17.16a2 2 0 00.69-1.59 1.93 1.93 0 00-.85-1.65 4.89 4.89 0 00-2.84-.69h-2.84v4.71h2.94a4.2 4.2 0 002.9-.78zm.65-1.6v.01-.01zm-2.4-5.62a2 2 0 00.81-1.76 1.82 1.82 0 00-.58-1.44 3.32 3.32 0 00-2.26-.63h-2.1v4.47h1.43a4.62 4.62 0 002.7-.64zM0 24h25.5V0H0zM6.7 3.35h5.44a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.2 4.2 0 01-1.49 1.2 4.62 4.62 0 013.77 4.47A4.26 4.26 0 0118 19.11a7.18 7.18 0 01-4.9 1.53H6.7z">
+                  </path>
+                  <path d="M13.87 9.94a2 2 0 00.82-1.76 1.82 1.82 0 00-.58-1.44 3.33 3.33 0 00-2.26-.63H9.77v4.47h1.43a4.62 4.62 0 002.67-.64zm1.71 7.22a2.1 2.1 0 00.69-1.6 1.93 1.93 0 00-.85-1.66 4.89 4.89 0 00-2.82-.68H9.79v4.71h2.94a4.2 4.2 0 002.85-.77zm81.61-3.76l-1.93-1.13a8.55 8.55 0 01-2.53-2.1A4 4 0 0192 7.76a4.26 4.26 0 011.4-3.33 5.3 5.3 0 013.69-1.28 7 7 0 014 1.22v2.81a5.74 5.74 0 00-4-1.8 3.34 3.34 0 00-2 .57 1.71 1.71 0 00-.78 1.44 2.21 2.21 0 00.58 1.46 7.26 7.26 0 001.89 1.42l1.9 1.12q3.15 1.89 3.15 4.82a4.42 4.42 0 01-1.4 3.39 5.1 5.1 0 01-3.63 1.3 7.62 7.62 0 01-4.65-1.58v-3.17a5.83 5.83 0 004.64 2.5 2.92 2.92 0 001.9-.65 2 2 0 00.78-1.63q-.02-1.53-2.28-2.97zm15.58 4.6v2.24a9.44 9.44 0 01-3.33.63 5.78 5.78 0 01-4.27-1.58 5.74 5.74 0 01-1.6-4.25 6.08 6.08 0 011.55-4.33 5.34 5.34 0 014.08-1.65 6.82 6.82 0 011.58.17 10.2 10.2 0 011.73.63v2.4a6 6 0 00-3.15-1 3.24 3.24 0 00-2.51 1 3.9 3.9 0 00-1 2.74 3.69 3.69 0 001 2.78 3.92 3.92 0 002.85 1 7.44 7.44 0 003.07-.78zm7.84-8.8a6 6 0 014.32 1.68 5.66 5.66 0 011.72 4.2 5.36 5.36 0 01-1.75 4.1 6.2 6.2 0 01-4.41 1.63 6 6 0 01-4.25-1.6 5.5 5.5 0 01-1.72-4.13 5.54 5.54 0 011.74-4.2 6.07 6.07 0 014.35-1.68zm-.17 2.1a3.57 3.57 0 00-2.67 1 3.73 3.73 0 00-1 2.72 3.56 3.56 0 001 2.68 3.77 3.77 0 002.74 1 3.7 3.7 0 002.72-1 3.61 3.61 0 001-2.69 3.58 3.58 0 00-1-2.71 3.83 3.83 0 00-2.79-1zm6.98-.23l4.2-4.2v2.36h3.61v2.07h-3.56v5.58q0 2 1.63 2a5 5 0 002.57-.81v2.1a5.7 5.7 0 01-2.84.73 3.77 3.77 0 01-2.58-.9 2.56 2.56 0 01-.54-.61 3.26 3.26 0 01-.36-.89 10 10 0 01-.15-2.1v-5.1h-2zm10.86-7.72h2.26v17.32h-2.26zM151 13.82v4.83q0 .59.4.58a2.73 2.73 0 001.28-.61V20a7.4 7.4 0 01-1.24.67 2.68 2.68 0 01-1 .18q-1.45 0-1.71-1.14a4.91 4.91 0 01-3.06 1.11 2.71 2.71 0 01-2-.79 2.68 2.68 0 01-.8-2 2.78 2.78 0 01.78-1.93 5.25 5.25 0 012.2-1.34l2.89-1v-.61a1.82 1.82 0 00-2.1-2.1 5 5 0 00-3.6 1.91v-2.37A4.68 4.68 0 01146.85 9a4.37 4.37 0 013 1 3 3 0 01.67.83 3 3 0 01.38 1 15.3 15.3 0 01.1 1.99zm-2.22 4.6V15l-1.51.59a5.11 5.11 0 00-1.64.93 1.67 1.67 0 000 2.31 1.6 1.6 0 001.18.45 2.83 2.83 0 001.96-.86zm8.08-9.15v1.45A4.53 4.53 0 01160.29 9a3.79 3.79 0 012 .56 3.6 3.6 0 011.4 1.51 7.24 7.24 0 01.48 3v6.53h-2.26v-6.5a4.44 4.44 0 00-.54-2.5 2 2 0 00-1.78-.75 3.25 3.25 0 00-2.72 1.6v8.14h-2.31V9.27zm17.03-5.92h2.27v17.32h-4.83a5.25 5.25 0 01-4-1.6 6 6 0 01-1.51-4.29 5.69 5.69 0 011.58-4.15 5.38 5.38 0 014-1.63 7.35 7.35 0 012.48.48zm0 15.38v-7.22a4.68 4.68 0 00-2.1-.54 3.44 3.44 0 00-2.69 1.1 4.27 4.27 0 00-1 3 3.9 3.9 0 00.87 2.72 2.69 2.69 0 001.1.77 7.46 7.46 0 002.1.2z">
+                  </path>
+                </g>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                BBC Scotland
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 gZsHvP">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 Hkot"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Terms of Use
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    About the BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/accessibility/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Accessibility Help
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Contact the BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. The BBC is not responsible for the content of external sites.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Read about our approach to external linking.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /scotland/articles/czwj5l0n210o For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="en-gb"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#23104C"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="This is the SEO headline of this test article"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#23104C"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="This is the SEO headline of this test article"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="en_GB"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="This is the SEO headline of this test article - BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/scotland/articles/czwj5l0n210o"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCScotland"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="This is the SEO headline of this test article"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCScotland"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="This is the SEO headline of this test article - BBC Scotland"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcscotland"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-09-13T12:36:29.124Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-09-13T12:36:29.124Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      This is the SEO headline of this test article - BBC Scotland
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/scotland/articles/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/scotland/articles/czwj5l0n210o"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/scotland/articles/czwj5l0n210o.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/scotland/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/scotland/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/scotland/articles/czwj5l0n210o","publisher":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/scotland/articles/czwj5l0n210o","name":"This is the SEO headline of this test article"},"headline":"This is the SEO headline of this test article","datePublished":"2019-09-13T12:36:29.124Z","dateModified":"2019-09-13T12:36:29.124Z","author":{"@type":"Organization","name":"BBC","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"}}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/czwj5l0n210o/p01k6msp/en-GB"}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 hvwVTI">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/scotland"
+               class="StyledLink-m3awbo-2 gEzIuE"
+            >
+              <svg height="24"
+                   viewbox="0 0 176.15 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 foIrMR"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M48.82 15.91v.01-.01zM58.76 0v24h25.5V0zm20.42 19.3l-.15.07a14 14 0 01-6.56 1.5A10 10 0 0165 17.93a8.45 8.45 0 01-2.37-5.68 8.68 8.68 0 012.84-6.54 10.56 10.56 0 017.19-2.57 16.52 16.52 0 016.2 1.4l.17.06v3.22l-.4-.22a12 12 0 00-6-1.71c-4 0-6.84 2.53-6.83 6.14s2.74 6.1 6.94 6.1a11.9 11.9 0 006.08-1.85l.41-.25zM29.38 24h25.5V0h-25.5zm6.69-20.65h5.45a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.26 4.26 0 01-1.49 1.2 4.62 4.62 0 013.77 4.46 4.26 4.26 0 01-1.47 3.2 7.19 7.19 0 01-4.9 1.53h-6.4z">
+                  </path>
+                  <path d="M45 17.16a2 2 0 00.69-1.59 1.93 1.93 0 00-.85-1.65 4.89 4.89 0 00-2.84-.69h-2.84v4.71h2.94a4.2 4.2 0 002.9-.78zm.65-1.6v.01-.01zm-2.4-5.62a2 2 0 00.81-1.76 1.82 1.82 0 00-.58-1.44 3.32 3.32 0 00-2.26-.63h-2.1v4.47h1.43a4.62 4.62 0 002.7-.64zM0 24h25.5V0H0zM6.7 3.35h5.44a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.2 4.2 0 01-1.49 1.2 4.62 4.62 0 013.77 4.47A4.26 4.26 0 0118 19.11a7.18 7.18 0 01-4.9 1.53H6.7z">
+                  </path>
+                  <path d="M13.87 9.94a2 2 0 00.82-1.76 1.82 1.82 0 00-.58-1.44 3.33 3.33 0 00-2.26-.63H9.77v4.47h1.43a4.62 4.62 0 002.67-.64zm1.71 7.22a2.1 2.1 0 00.69-1.6 1.93 1.93 0 00-.85-1.66 4.89 4.89 0 00-2.82-.68H9.79v4.71h2.94a4.2 4.2 0 002.85-.77zm81.61-3.76l-1.93-1.13a8.55 8.55 0 01-2.53-2.1A4 4 0 0192 7.76a4.26 4.26 0 011.4-3.33 5.3 5.3 0 013.69-1.28 7 7 0 014 1.22v2.81a5.74 5.74 0 00-4-1.8 3.34 3.34 0 00-2 .57 1.71 1.71 0 00-.78 1.44 2.21 2.21 0 00.58 1.46 7.26 7.26 0 001.89 1.42l1.9 1.12q3.15 1.89 3.15 4.82a4.42 4.42 0 01-1.4 3.39 5.1 5.1 0 01-3.63 1.3 7.62 7.62 0 01-4.65-1.58v-3.17a5.83 5.83 0 004.64 2.5 2.92 2.92 0 001.9-.65 2 2 0 00.78-1.63q-.02-1.53-2.28-2.97zm15.58 4.6v2.24a9.44 9.44 0 01-3.33.63 5.78 5.78 0 01-4.27-1.58 5.74 5.74 0 01-1.6-4.25 6.08 6.08 0 011.55-4.33 5.34 5.34 0 014.08-1.65 6.82 6.82 0 011.58.17 10.2 10.2 0 011.73.63v2.4a6 6 0 00-3.15-1 3.24 3.24 0 00-2.51 1 3.9 3.9 0 00-1 2.74 3.69 3.69 0 001 2.78 3.92 3.92 0 002.85 1 7.44 7.44 0 003.07-.78zm7.84-8.8a6 6 0 014.32 1.68 5.66 5.66 0 011.72 4.2 5.36 5.36 0 01-1.75 4.1 6.2 6.2 0 01-4.41 1.63 6 6 0 01-4.25-1.6 5.5 5.5 0 01-1.72-4.13 5.54 5.54 0 011.74-4.2 6.07 6.07 0 014.35-1.68zm-.17 2.1a3.57 3.57 0 00-2.67 1 3.73 3.73 0 00-1 2.72 3.56 3.56 0 001 2.68 3.77 3.77 0 002.74 1 3.7 3.7 0 002.72-1 3.61 3.61 0 001-2.69 3.58 3.58 0 00-1-2.71 3.83 3.83 0 00-2.79-1zm6.98-.23l4.2-4.2v2.36h3.61v2.07h-3.56v5.58q0 2 1.63 2a5 5 0 002.57-.81v2.1a5.7 5.7 0 01-2.84.73 3.77 3.77 0 01-2.58-.9 2.56 2.56 0 01-.54-.61 3.26 3.26 0 01-.36-.89 10 10 0 01-.15-2.1v-5.1h-2zm10.86-7.72h2.26v17.32h-2.26zM151 13.82v4.83q0 .59.4.58a2.73 2.73 0 001.28-.61V20a7.4 7.4 0 01-1.24.67 2.68 2.68 0 01-1 .18q-1.45 0-1.71-1.14a4.91 4.91 0 01-3.06 1.11 2.71 2.71 0 01-2-.79 2.68 2.68 0 01-.8-2 2.78 2.78 0 01.78-1.93 5.25 5.25 0 012.2-1.34l2.89-1v-.61a1.82 1.82 0 00-2.1-2.1 5 5 0 00-3.6 1.91v-2.37A4.68 4.68 0 01146.85 9a4.37 4.37 0 013 1 3 3 0 01.67.83 3 3 0 01.38 1 15.3 15.3 0 01.1 1.99zm-2.22 4.6V15l-1.51.59a5.11 5.11 0 00-1.64.93 1.67 1.67 0 000 2.31 1.6 1.6 0 001.18.45 2.83 2.83 0 001.96-.86zm8.08-9.15v1.45A4.53 4.53 0 01160.29 9a3.79 3.79 0 012 .56 3.6 3.6 0 011.4 1.51 7.24 7.24 0 01.48 3v6.53h-2.26v-6.5a4.44 4.44 0 00-.54-2.5 2 2 0 00-1.78-.75 3.25 3.25 0 00-2.72 1.6v8.14h-2.31V9.27zm17.03-5.92h2.27v17.32h-4.83a5.25 5.25 0 01-4-1.6 6 6 0 01-1.51-4.29 5.69 5.69 0 011.58-4.15 5.38 5.38 0 014-1.63 7.35 7.35 0 012.48.48zm0 15.38v-7.22a4.68 4.68 0 00-2.1-.54 3.44 3.44 0 00-2.69 1.1 4.27 4.27 0 00-1 3 3.9 3.9 0 00.87 2.72 2.69 2.69 0 001.1.77 7.46 7.46 0 002.1.2z">
+                  </path>
+                </g>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                BBC Scotland
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bbZqWC"
+            >
+              Skip to content
+            </a>
+          </div>
+        </div>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598274&amp;s2=79&amp;p=scotland.articles.czwj5l0n210o.page&amp;x1=[urn:bbc:optimo:czwj5l0n210o]&amp;x2=[responsive]&amp;x3=[scotland]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[This+is+the+SEO+headline+of+this+test+article]&amp;x11=[2019-09-13T12:36:29.124Z]&amp;x12=[2019-09-13T12:36:29.124Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 aNHLE"
+            >
+              This is the headline of this test article
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
+                         alt="Map of France showing Paris and Cognac"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
+                         width="624"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Image caption,
+                    </span>
+                    <p>
+                      This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-09-13"
+                  class="StyledTimestamp-um718p-0 kSGFFg"
+            >
+              13 September 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              This is a text block, which contains a url link to
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                the BBC Weather homepage
+              </a>
+              .
+            </p>
+          </div>
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <div class="StyledPlaceholder-sc-11nyhtu-0 dDNqOp">
+                  <div class="GuidanceWrapper-sc-1wm6qsk-0 dSCKAT">
+                    <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO guidance-message"
+                            aria-hidden="true"
+                    >
+                      Contains strong language and adult humour.
+                    </strong>
+                    <noscript class="StyledNoScript-sc-1wm6qsk-2 fsOOOd">
+                      <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO">
+                        This video cannot play in your browser. Please enable JavaScript or try a different browser.
+                      </strong>
+                    </noscript>
+                  </div>
+                  <button class="Button-sc-34e3rb-0 kwlSXK StyledPlayButton-sc-11nyhtu-1 bBTuxK">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
+                    </span>
+                    <div aria-hidden="true"
+                         class="IconWrapper-sc-34e3rb-1 jGavfg"
+                    >
+                      <svg viewbox="0 0 32 32"
+                           width="12px"
+                           height="12px"
+                           focusable="false"
+                           aria-hidden="true"
+                           class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                      >
+                        <polygon points="3,32 29,16 3,0">
+                        </polygon>
+                      </svg>
+                    </div>
+                    <time datetime="PT3M11S"
+                          aria-hidden="true"
+                          class="TimeDuration-sc-34e3rb-2 cZLyLe"
+                    >
+                      03:11
+                    </time>
+                  </button>
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                </div>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 gDfBZX">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Video caption,
+                </span>
+                <p>
+                  This is a video block containing a video about ants
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="This-is-a-subheadline-block"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 cCDAFN"
+            >
+              This is a subheadline block
+            </h2>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <div class="lazyload-placeholder">
+                    </div>
+                    <noscript>
+                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg 800w"
+                           alt="Footballers after a match"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg"
+                           width="2048"
+                           class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                      >
+                    </noscript>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Image source,
+                      </span>
+                      Getty Images
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 dSVJxu">
+              This test article has been created so that we can run automated end-to-end tests on our website.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gQVRNl">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/scotland"
+               class="StyledLink-m3awbo-2 gEzIuE"
+            >
+              <svg height="24"
+                   viewbox="0 0 176.15 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 foIrMR"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M48.82 15.91v.01-.01zM58.76 0v24h25.5V0zm20.42 19.3l-.15.07a14 14 0 01-6.56 1.5A10 10 0 0165 17.93a8.45 8.45 0 01-2.37-5.68 8.68 8.68 0 012.84-6.54 10.56 10.56 0 017.19-2.57 16.52 16.52 0 016.2 1.4l.17.06v3.22l-.4-.22a12 12 0 00-6-1.71c-4 0-6.84 2.53-6.83 6.14s2.74 6.1 6.94 6.1a11.9 11.9 0 006.08-1.85l.41-.25zM29.38 24h25.5V0h-25.5zm6.69-20.65h5.45a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.26 4.26 0 01-1.49 1.2 4.62 4.62 0 013.77 4.46 4.26 4.26 0 01-1.47 3.2 7.19 7.19 0 01-4.9 1.53h-6.4z">
+                  </path>
+                  <path d="M45 17.16a2 2 0 00.69-1.59 1.93 1.93 0 00-.85-1.65 4.89 4.89 0 00-2.84-.69h-2.84v4.71h2.94a4.2 4.2 0 002.9-.78zm.65-1.6v.01-.01zm-2.4-5.62a2 2 0 00.81-1.76 1.82 1.82 0 00-.58-1.44 3.32 3.32 0 00-2.26-.63h-2.1v4.47h1.43a4.62 4.62 0 002.7-.64zM0 24h25.5V0H0zM6.7 3.35h5.44a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.2 4.2 0 01-1.49 1.2 4.62 4.62 0 013.77 4.47A4.26 4.26 0 0118 19.11a7.18 7.18 0 01-4.9 1.53H6.7z">
+                  </path>
+                  <path d="M13.87 9.94a2 2 0 00.82-1.76 1.82 1.82 0 00-.58-1.44 3.33 3.33 0 00-2.26-.63H9.77v4.47h1.43a4.62 4.62 0 002.67-.64zm1.71 7.22a2.1 2.1 0 00.69-1.6 1.93 1.93 0 00-.85-1.66 4.89 4.89 0 00-2.82-.68H9.79v4.71h2.94a4.2 4.2 0 002.85-.77zm81.61-3.76l-1.93-1.13a8.55 8.55 0 01-2.53-2.1A4 4 0 0192 7.76a4.26 4.26 0 011.4-3.33 5.3 5.3 0 013.69-1.28 7 7 0 014 1.22v2.81a5.74 5.74 0 00-4-1.8 3.34 3.34 0 00-2 .57 1.71 1.71 0 00-.78 1.44 2.21 2.21 0 00.58 1.46 7.26 7.26 0 001.89 1.42l1.9 1.12q3.15 1.89 3.15 4.82a4.42 4.42 0 01-1.4 3.39 5.1 5.1 0 01-3.63 1.3 7.62 7.62 0 01-4.65-1.58v-3.17a5.83 5.83 0 004.64 2.5 2.92 2.92 0 001.9-.65 2 2 0 00.78-1.63q-.02-1.53-2.28-2.97zm15.58 4.6v2.24a9.44 9.44 0 01-3.33.63 5.78 5.78 0 01-4.27-1.58 5.74 5.74 0 01-1.6-4.25 6.08 6.08 0 011.55-4.33 5.34 5.34 0 014.08-1.65 6.82 6.82 0 011.58.17 10.2 10.2 0 011.73.63v2.4a6 6 0 00-3.15-1 3.24 3.24 0 00-2.51 1 3.9 3.9 0 00-1 2.74 3.69 3.69 0 001 2.78 3.92 3.92 0 002.85 1 7.44 7.44 0 003.07-.78zm7.84-8.8a6 6 0 014.32 1.68 5.66 5.66 0 011.72 4.2 5.36 5.36 0 01-1.75 4.1 6.2 6.2 0 01-4.41 1.63 6 6 0 01-4.25-1.6 5.5 5.5 0 01-1.72-4.13 5.54 5.54 0 011.74-4.2 6.07 6.07 0 014.35-1.68zm-.17 2.1a3.57 3.57 0 00-2.67 1 3.73 3.73 0 00-1 2.72 3.56 3.56 0 001 2.68 3.77 3.77 0 002.74 1 3.7 3.7 0 002.72-1 3.61 3.61 0 001-2.69 3.58 3.58 0 00-1-2.71 3.83 3.83 0 00-2.79-1zm6.98-.23l4.2-4.2v2.36h3.61v2.07h-3.56v5.58q0 2 1.63 2a5 5 0 002.57-.81v2.1a5.7 5.7 0 01-2.84.73 3.77 3.77 0 01-2.58-.9 2.56 2.56 0 01-.54-.61 3.26 3.26 0 01-.36-.89 10 10 0 01-.15-2.1v-5.1h-2zm10.86-7.72h2.26v17.32h-2.26zM151 13.82v4.83q0 .59.4.58a2.73 2.73 0 001.28-.61V20a7.4 7.4 0 01-1.24.67 2.68 2.68 0 01-1 .18q-1.45 0-1.71-1.14a4.91 4.91 0 01-3.06 1.11 2.71 2.71 0 01-2-.79 2.68 2.68 0 01-.8-2 2.78 2.78 0 01.78-1.93 5.25 5.25 0 012.2-1.34l2.89-1v-.61a1.82 1.82 0 00-2.1-2.1 5 5 0 00-3.6 1.91v-2.37A4.68 4.68 0 01146.85 9a4.37 4.37 0 013 1 3 3 0 01.67.83 3 3 0 01.38 1 15.3 15.3 0 01.1 1.99zm-2.22 4.6V15l-1.51.59a5.11 5.11 0 00-1.64.93 1.67 1.67 0 000 2.31 1.6 1.6 0 001.18.45 2.83 2.83 0 001.96-.86zm8.08-9.15v1.45A4.53 4.53 0 01160.29 9a3.79 3.79 0 012 .56 3.6 3.6 0 011.4 1.51 7.24 7.24 0 01.48 3v6.53h-2.26v-6.5a4.44 4.44 0 00-.54-2.5 2 2 0 00-1.78-.75 3.25 3.25 0 00-2.72 1.6v8.14h-2.31V9.27zm17.03-5.92h2.27v17.32h-4.83a5.25 5.25 0 01-4-1.6 6 6 0 01-1.51-4.29 5.69 5.69 0 011.58-4.15 5.38 5.38 0 014-1.63 7.35 7.35 0 012.48.48zm0 15.38v-7.22a4.68 4.68 0 00-2.1-.54 3.44 3.44 0 00-2.69 1.1 4.27 4.27 0 00-1 3 3.9 3.9 0 00.87 2.72 2.69 2.69 0 001.1.77 7.46 7.46 0 002.1.2z">
+                  </path>
+                </g>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                BBC Scotland
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iGoLNb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 gZsHvP">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 Hkot"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Terms of Use
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    About the BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/accessibility/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Accessibility Help
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Contact the BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. The BBC is not responsible for the content of external sites.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Read about our approach to external linking.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"optimoUrn":"urn:bbc:optimo:asset:czwj5l0n210o"},"type":"article","createdBy":"Bbcscotland","language":"en-gb","lastUpdated":1568378195777,"firstPublished":1568378189124,"lastPublished":1568378189124,"options":{},"analyticsLabels":{},"passport":{"language":"en-gb","home":"http://www.bbc.co.uk/ontologies/passport/home/BBCScotland"},"tags":{},"version":"v1.1.2","blockTypes":["headline","text","paragraph","fragment","image","caption","altText","rawImage","urlLink","video","subheadline"]},"content":{"model":{"blocks":[{"type":"headline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is the headline of this test article","blocks":[{"type":"fragment","model":{"text":"This is the headline of this test article","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"id":"mock-id","position":[1]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.","blocks":[{"type":"fragment","model":{"text":"This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption.","attributes":[]},"id":"mock-id","position":[2,1,1,1,1]}]},"id":"mock-id","position":[2,1,1,1]}]},"id":"mock-id","position":[2,1,1]}]},"id":"mock-id","position":[2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Map of France showing Paris and Cognac","blocks":[{"type":"fragment","model":{"text":"Map of France showing Paris and Cognac","attributes":[]},"id":"mock-id","position":[2,2,1,1,1]}]},"id":"mock-id","position":[2,2,1,1]}]},"id":"mock-id","position":[2,2,1]}]},"id":"mock-id","position":[2,2]},{"type":"rawImage","model":{"width":624,"height":351,"locator":"feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg","originCode":"cpsdevpb","copyrightHolder":"BBC"},"id":"mock-id","position":[2,3]}]},"id":"mock-id","position":[2]},{"type":"timestamp","model":{"firstPublished":1568378189124,"lastPublished":1568378189124},"id":"mock-id","position":[3]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a text block, which contains a url link to the BBC Weather homepage.","blocks":[{"type":"fragment","model":{"text":"This is a text block, which contains a url link to ","attributes":[]},"id":"mock-id","position":[4,1,1]},{"type":"urlLink","model":{"text":"the BBC Weather homepage","blocks":[{"type":"fragment","model":{"text":"the BBC Weather homepage","attributes":[]},"id":"mock-id","position":[4,1,2,1]}],"locator":"https://www.bbc.co.uk/weather","isExternal":false},"id":"mock-id","position":[4,1,2]},{"type":"fragment","model":{"text":".","attributes":[]},"id":"mock-id","position":[4,1,3]}]},"id":"mock-id","position":[4,1]}]},"id":"mock-id","position":[4]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01k6msm","blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a video block containing a video about ants","blocks":[{"type":"fragment","model":{"text":"This is a video block containing a video about ants","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"aresMedia","model":{"blocks":[{"blockId":"urn:bbc:ares::clip:p01k6msm","type":"aresMediaMetadata","model":{"id":"mock-id","subType":"clip","format":"audio_video","title":"Five things ants can teach us about management","synopses":{"short":"They may be tiny, but us humans could learn a thing or two from ants."},"imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg","imageCopyright":"BBC","embedding":true,"advertising":true,"versions":[{"versionId":"p01k6msp","types":["Original"],"duration":191,"durationISO8601":"PT3M11S","warnings":{"short":"Contains strong language and adult humour.","long":"Contains strong language and adult humour."},"availableTerritories":{"uk":true,"nonUk":true},"availableFrom":1540218932000}],"syndication":{"destinations":[]}},"id":"mock-id","position":[5,2,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"width":1920,"height":1080,"locator":"ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg","originCode":"mpv","copyrightHolder":"BBC"},"id":"mock-id","position":[5,2,2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ants","blocks":[{"type":"fragment","model":{"text":"Ants","attributes":[]},"id":"mock-id","position":[5,2,2,2,1,1,1]}]},"id":"mock-id","position":[5,2,2,2,1,1]}]},"id":"mock-id","position":[5,2,2,2,1]}]},"id":"mock-id","position":[5,2,2,2]}]},"id":"mock-id","position":[5,2,2]}]},"id":"mock-id","position":[5,2]}]},"id":"mock-id","position":[5]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a subheadline block","blocks":[{"type":"fragment","model":{"text":"This is a subheadline block","attributes":[]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Footballers after a match","blocks":[{"type":"fragment","model":{"text":"Footballers after a match","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"rawImage","model":{"width":2048,"height":1152,"locator":"7a0b/test/d3d5d830-d622-11e9-851e-f35866034a7a.jpg","originCode":"cpsdevpb","copyrightHolder":"Getty Images"},"id":"mock-id","position":[7,2]}]},"id":"mock-id","position":[7]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This test article has been created so that we can run automated end-to-end tests on our website.","blocks":[{"type":"fragment","model":{"text":"This test article has been created so that we can run automated end-to-end tests on our website.","attributes":[]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]}]},"id":"mock-id","position":[8]}]}},"promo":{"headlines":{"seoHeadline":"This is the SEO headline of this test article"},"locators":{"optimoUrn":"urn:bbc:optimo:asset:czwj5l0n210o"},"summary":"","timestamp":1568378189124,"id":"mock-id","type":"cps"},"relatedContent":{"site":{"subType":"site","name":"Bbcscotland","uri":"/bbcscotland","type":"simple"},"groups":[]}},"path":"/scotland/articles/czwj5l0n210o","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [32]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="scotland"
+            src="http://localhost:7080/static/js/scotland-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

@@ -1,0 +1,2377 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /burmese/media-47680015 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="my"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_burmese/DC5F/production/_106151465_gg2.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="အကယ်ဒမီ"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="my-MM"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။ - BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/burmese/media-47680015"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcburmese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="အကယ်ဒမီ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_burmese/DC5F/production/_106151465_gg2.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcburmese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။ - BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Film"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Myanmar"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-03-23T16:42:44.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-03-23T17:53:56.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။ - BBC News မြန်မာ
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/burmese/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/burmese/media-47680015"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/burmese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/burmese/media-47680015","publisher":{"@type":"NewsMediaOrganization","name":"BBC News မြန်မာ","publishingPrinciples":"https://www.bbc.com/burmese/institutional-51387206","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/burmese/media-47680015","name":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။"},"headline":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။","description":"၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ","datePublished":"2019-03-23T16:42:44.000Z","dateModified":"2019-03-23T17:53:56.000Z","about":[{"@type":"Thing","name":"Film","sameAs":["http://dbpedia.org/resource/Film"]},{"@type":"Thing","name":"Myanmar"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News မြန်မာ","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"},"noBylinesPolicy":"https://www.bbc.com/burmese/institutional-51387206#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 beeOaK"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 btngaa"
+                  >
+                    ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများ အသစ်ပြင်ဆင်ထားပါသည်။
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 gJWRij"
+                  >
+                    ကိုယ်ရေးအချက်အလက်လုံခြုံမှုနှင့် ကွတ်ကီးအသုံးပြုမှု မူဝါဒများတွင် အရေးကြီးသော အပြောင်းအလဲအချို့ပြုလုပ်ထားသဖြင့် သုံးစွဲသူများအပေါ် သက်ရောက်မှုကို အသိပေးလိုပါသည်။
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 fycmuQ"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 cdHkRT"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ကောင်းပါပြီ။
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 cdHkRT"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        ဘာတွေပြောင်းလဲသွားသလဲ ကြည့်ရန်
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 beeOaK"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 btngaa"
+                  >
+                    ကွတ်ကီးများအသုံးပြုမှုကို သဘောတူမတူ ပြောပါ။
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 gJWRij"
+                  >
+                    ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      နှင့် ကွတ်ကီးများ
+                    </a>
+                    ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 fycmuQ"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 cdHkRT"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        သဘောတူပါသည်။
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 cdHkRT"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        သဘောမတူပါ၊ ဆက်တင်ကို သွားကြည့်လိုပါသည်။
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/burmese"
+               class="StyledLink-m3awbo-2 cKpQta"
+            >
+              <svg height="24"
+                   viewbox="0 0 213.48 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iLeUvv"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M192.87 15.58v1.13a3.39 3.39 0 0 1-.83 2.46 2.44 2.44 0 0 1-1.1.7 5.15 5.15 0 0 1-1.4.17h-1.21a5.22 5.22 0 0 1-1.41-.17 2.44 2.44 0 0 1-1.11-.7 3.37 3.37 0 0 1-.83-2.46v-11a3.34 3.34 0 0 1 .83-2.46 3.4 3.4 0 0 1 2.51-.87h1.21a3.34 3.34 0 0 1 2.49.88 3.07 3.07 0 0 1 .62.92 2.3 2.3 0 0 1 .23.87h-.64a1.71 1.71 0 0 0-.2-.64 2.52 2.52 0 0 0-.49-.72 1.9 1.9 0 0 0-.74-.47 3.06 3.06 0 0 0-.74-.18h-2.24a3.28 3.28 0 0 0-.75.18 2 2 0 0 0-.76.45 3.16 3.16 0 0 0-.68 2.33v10.49a3.12 3.12 0 0 0 .68 2.26 3.21 3.21 0 0 0 2.3.65h.64a3.21 3.21 0 0 0 2.3-.65 3.12 3.12 0 0 0 .68-2.26v-.9z">
+                  </path>
+                  <path d="M193.17 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31 3.31 3.31 0 0 1 1.23-2.73l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.7zM192 13.06a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.88zM200.1 12.57a1.73 1.73 0 0 1-.45 1.28 2.65 2.65 0 0 1-1.37.64V20h-.64v-5.42h-.52q-2.3 0-2.3-1.41a1.13 1.13 0 0 1 .46-.89 1.76 1.76 0 0 1 1.16-.38 1.53 1.53 0 0 1 1.26.58 2.69 2.69 0 0 1 .55 1.38q1.21-.21 1.21-1.29a.92.92 0 0 0-.36-.73 2.76 2.76 0 0 0-.88-.48l-1-.35a2.83 2.83 0 0 1-.88-.47.89.89 0 0 1-.36-.71 1 1 0 0 1 .5-.89 2.07 2.07 0 0 1 1.12-.31 2.11 2.11 0 0 1 1.4.47l-.41.49a1.42 1.42 0 0 0-.4-.21 1.59 1.59 0 0 0-.6-.11 1.67 1.67 0 0 0-.68.13.44.44 0 0 0-.3.42q0 .23.36.4a6.65 6.65 0 0 0 .88.34q.52.16 1 .38a2.42 2.42 0 0 1 .88.63 1.45 1.45 0 0 1 .37 1zm-2.49 1.37a2.11 2.11 0 0 0-.4-1 .94.94 0 0 0-.77-.41 1.3 1.3 0 0 0-.69.18.52.52 0 0 0-.29.45.6.6 0 0 0 .14.41.8.8 0 0 0 .42.23 3.7 3.7 0 0 0 .52.09h.57zM200.12 3.91l-.36.3a1.49 1.49 0 0 0-1.36-.78 1.77 1.77 0 0 0-1.75 1.81 1.77 1.77 0 0 0 .21.87 1.59 1.59 0 0 0 .53.59 3.36 3.36 0 0 0 .61.3 1.36 1.36 0 0 0 .48.11v.49a2.35 2.35 0 0 1-1.56-.6 2.15 2.15 0 0 1-.75-1.71 2.2 2.2 0 0 1 .67-1.64 2.15 2.15 0 0 1 1.55-.66 2.11 2.11 0 0 1 1 .26 1.6 1.6 0 0 1 .73.66zM207.72 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31A3.31 3.31 0 0 1 203 8.65l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.69zm-1.17 1.68a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.87z">
+                  </path>
+                  <path d="M213.27 11.6a2.88 2.88 0 0 1-.87 2.1 2.8 2.8 0 0 1-2.06.87 2.52 2.52 0 0 1-1.09-.23l.25-.58a1.88 1.88 0 0 0 .84.16 2.18 2.18 0 0 0 1.61-.68 2.36 2.36 0 0 0 0-3.3 2.17 2.17 0 0 0-1.61-.69 2.45 2.45 0 0 0-1.26.35 11.92 11.92 0 0 0-1.51 1.11l-.38-.57q.69-.57 1.06-.82a4.56 4.56 0 0 1 .93-.48 3.09 3.09 0 0 1 1.16-.23 2.8 2.8 0 0 1 2.06.88 2.88 2.88 0 0 1 .87 2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                မြန်မာ
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 gNrzCs"
+            >
+              အကြောင်းအရာများဆီ ကျော်သွားရန်
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 Bxpmp"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                ကဏ္ဍများ
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ပင်မစာမျက်နှာ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/burma"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    မြန်မာ့ရေးရာ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/world"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    နိုင်ငံတကာ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/in_depth"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ဆောင်းပါး
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/sport"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    အားကစား
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/economy"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ကုန်သွယ်စီးပွား
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/media/video"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ဗီဒီယိုများ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    ပင်မစာမျက်နှာ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese/burma"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    မြန်မာ့ရေးရာ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese/world"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    နိုင်ငံတကာ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese/in_depth"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    ဆောင်းပါး
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese/sport"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    အားကစား
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese/economy"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    ကုန်သွယ်စီးပွား
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/burmese/media/video"
+                     class="StyledLink-sc-158x7z5-2 HfYDi"
+                  >
+                    ဗီဒီယိုများ
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=35&p=embedded_media::burmese.embedded_media.photo_gallery.47680015.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:e264aede-b892-c24b-9945-b5fbb4122ab0]&x2=[amp]&x3=[news-burmese]&x4=[my]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[ရွှေကြာ၄၊+မုန်းစွဲ+၃။+မီတို့+ခီတို့+အကယ်ဒမီလွဲ။+-+BBC+News+မြန်မာ]&x11=[2019-03-23T16:42:44.000Z]&x12=[2019-03-23T17:53:56.000Z]&x13=[Film~Myanmar]&x14=[2611f753-ece7-47ea-9782-f912bc1e4088~a26174f5-fa3c-4cf8-95a2-29d877175eab]&x16=[WS%20-%20Keep%20me%20on%20trend]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 gJEbHr"
+          >
+            ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-03-23"
+                class="StyledTimestamp-um718p-0 hULnEO"
+          >
+            ၂၃ မတ် ၂၀၁၉
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 eHkkDa">
+            ၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BB Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BB Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    တသက်တာဆုရတဲ့ ဒေါ်မြင့်မြင့်ခင်။ မချမ်းသာသေးတဲ့အချိန် နိုင်ငံတော် အထောက်အပံ့ဟာ အကန့်အသတ်နဲ့ ရှိနေဦးမယ်လို့ အတိုင်ပင်ခံပြော။ စီးပွားရေး လုပ်ငန်းရှင်တွေကို ရုပ်ရှင်မှာ ရင်းနှီးမြှုပ်နှံဖို့ ဖိတ်ခေါ်။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8FC5/production/_106150863_amt.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    အကောင်းဆုံး အမျိုးသမီးဇာတ်ပို့ဆု - အေးမြတ်သူ ( နောင်တွင်ဥဒါန်းတွင်စေသတည်း )။ ပထမဆုံး အကယ်ဒမီ ရွှေစင်ရုပ်ကို ကိုင်ပြီး ပါးချိုင့်လေးခွက်အောင် ပြုံးနေတဲ့ မင်းသမီး အေးမြတ်သူ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ရွေကြာနဲ့ အကောင်းဆုံး အမျိုးသမီးဇာတ်ဆောင်ဆုရသူ ဖွေးဖွေး။ ဇာတ်ကားကောင်း၊ သရုပ်ဆောင်ကောင်းတွေ အများကြီးကြားထဲ မင်းသမီးဆုကို အရယူသွားနိုင်တဲ့ ဖွေးဖွေး
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    အကောင်းဆုံး အမျိုးသားဇာတ်ဆောင် သူထူးစံ (မှော်ဝင်သမန်းကျား)။ အကောင်းဆုံးမင်းသားဆု သူထူးစံဆီ ရောက်လာ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/11A7B/production/_106151327_wine.jpg"
+                           height="549"
+                           width="412"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ရုပ်ရှင် ဇာတ်ညွှန်းဆု ဝိုင်း (ရွှေကြာ)။ ရွှေကြာနဲ့ ဒါရိုက်တာဆု မရခဲ့ပေမယ့် အကောင်းဆုံး ဇာတ်ညွှန်းဆုကိုတော့ ဆွတ်ခူးခဲ့တဲ့ ဝိုင်း။ သရုပ်ဆောင်လိုင်းကနေ ဒါရိုက်တာ ဖြစ်လာတဲ့အခါ ဇာတ်ကားကောင်းတွေ ဖန်တီးသူ အဖြစ် ချီးကျူးခံရသူ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg"
+                           height="549"
+                           width="412"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    မုန်းစွဲနဲ့ အကောင်းဆုံး အမျိုးသား ဇာတ်ပို့ဆုရသွားတဲ့ ကျော်ကျော်ဗိုလ်။ ကိုကြံ့လို့ ရင်းနှီးတဲ့ ရုပ်ရှင်အသိုင်းဝိုင်းကြား ခေါ်ကြတဲ့ ကျော်ကျော်ဗိုလ် မုန်းစွဲနဲ့ အကယ်ဒမီရပါတယ်။ အစဉ်အလာကြီးတဲ့ ရွှေမန်း ဦးတင်မောင် မျိုးဆက်တစ်ယောက် ဖြစ်ပါတယ်။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg"
+                           height="549"
+                           width="412"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    စီစဉ်သူလူကြီးနေရာရောက်လာပြီဖြစ်တဲ့ အကယ်ဒမီများရှင် ကိုရန်အောင်။ ကိုရန်လေးဆိုတဲ့ မင်းသားချော အဖြစ်ကနေ တည်တည်ခန့်ခန့် ဦးစီးဦးဆောင် လူကြီးနေရာ ရောက်လာတဲ့ ကိုရန်အောင်။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg"
+                           height="549"
+                           width="412"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    မုန်းစွဲနဲ့ အကယ်ဒမီ ဆွတ်ခူးပြန်ဦမလား တစ်ပေးခံခဲ့ရပေမယ့် လွဲခဲ့ရတဲ့ ကိုနေတိုး။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg"
+                           height="549"
+                           width="412"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ဥပါယ်တံမျဉ်၊ မုဒြာခေါ်သံတို့နဲ့ ပရိသတ် အားပေးတာ တခဲနက် ရခဲ့ကြတဲ့ အမေရိကန်ပြန် ခီမောင်နှံ၊
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <amp-img alt="အကယ်ဒမီ"
+                           attribution="BBC Burmese"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg"
+                           height="549"
+                           width="412"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ၉ဝ ပြည့်ကျော်နှစ်တွေမှာ လွှမ်းမိုးခဲ့တဲ့ အကယ်ဒမီများရှင် မေသန်းနု။ သင်္ကြန်မိုးက စလို့ ပရိသတ်ရင်ထဲ ရောက်လာခဲ့တဲ့ မဆင့်ရဲ့ ရင့်ကျက်တဲ့ အလှ။ သားနဲ့အတူ အကယ်ဒမီပွဲမှာ တွေ့ခဲ့ရ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/burmese"
+               class="StyledLink-m3awbo-2 cKpQta"
+            >
+              <svg height="24"
+                   viewbox="0 0 213.48 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iLeUvv"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M192.87 15.58v1.13a3.39 3.39 0 0 1-.83 2.46 2.44 2.44 0 0 1-1.1.7 5.15 5.15 0 0 1-1.4.17h-1.21a5.22 5.22 0 0 1-1.41-.17 2.44 2.44 0 0 1-1.11-.7 3.37 3.37 0 0 1-.83-2.46v-11a3.34 3.34 0 0 1 .83-2.46 3.4 3.4 0 0 1 2.51-.87h1.21a3.34 3.34 0 0 1 2.49.88 3.07 3.07 0 0 1 .62.92 2.3 2.3 0 0 1 .23.87h-.64a1.71 1.71 0 0 0-.2-.64 2.52 2.52 0 0 0-.49-.72 1.9 1.9 0 0 0-.74-.47 3.06 3.06 0 0 0-.74-.18h-2.24a3.28 3.28 0 0 0-.75.18 2 2 0 0 0-.76.45 3.16 3.16 0 0 0-.68 2.33v10.49a3.12 3.12 0 0 0 .68 2.26 3.21 3.21 0 0 0 2.3.65h.64a3.21 3.21 0 0 0 2.3-.65 3.12 3.12 0 0 0 .68-2.26v-.9z">
+                  </path>
+                  <path d="M193.17 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31 3.31 3.31 0 0 1 1.23-2.73l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.7zM192 13.06a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.88zM200.1 12.57a1.73 1.73 0 0 1-.45 1.28 2.65 2.65 0 0 1-1.37.64V20h-.64v-5.42h-.52q-2.3 0-2.3-1.41a1.13 1.13 0 0 1 .46-.89 1.76 1.76 0 0 1 1.16-.38 1.53 1.53 0 0 1 1.26.58 2.69 2.69 0 0 1 .55 1.38q1.21-.21 1.21-1.29a.92.92 0 0 0-.36-.73 2.76 2.76 0 0 0-.88-.48l-1-.35a2.83 2.83 0 0 1-.88-.47.89.89 0 0 1-.36-.71 1 1 0 0 1 .5-.89 2.07 2.07 0 0 1 1.12-.31 2.11 2.11 0 0 1 1.4.47l-.41.49a1.42 1.42 0 0 0-.4-.21 1.59 1.59 0 0 0-.6-.11 1.67 1.67 0 0 0-.68.13.44.44 0 0 0-.3.42q0 .23.36.4a6.65 6.65 0 0 0 .88.34q.52.16 1 .38a2.42 2.42 0 0 1 .88.63 1.45 1.45 0 0 1 .37 1zm-2.49 1.37a2.11 2.11 0 0 0-.4-1 .94.94 0 0 0-.77-.41 1.3 1.3 0 0 0-.69.18.52.52 0 0 0-.29.45.6.6 0 0 0 .14.41.8.8 0 0 0 .42.23 3.7 3.7 0 0 0 .52.09h.57zM200.12 3.91l-.36.3a1.49 1.49 0 0 0-1.36-.78 1.77 1.77 0 0 0-1.75 1.81 1.77 1.77 0 0 0 .21.87 1.59 1.59 0 0 0 .53.59 3.36 3.36 0 0 0 .61.3 1.36 1.36 0 0 0 .48.11v.49a2.35 2.35 0 0 1-1.56-.6 2.15 2.15 0 0 1-.75-1.71 2.2 2.2 0 0 1 .67-1.64 2.15 2.15 0 0 1 1.55-.66 2.11 2.11 0 0 1 1 .26 1.6 1.6 0 0 1 .73.66zM207.72 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31A3.31 3.31 0 0 1 203 8.65l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.69zm-1.17 1.68a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.87z">
+                  </path>
+                  <path d="M213.27 11.6a2.88 2.88 0 0 1-.87 2.1 2.8 2.8 0 0 1-2.06.87 2.52 2.52 0 0 1-1.09-.23l.25-.58a1.88 1.88 0 0 0 .84.16 2.18 2.18 0 0 0 1.61-.68 2.36 2.36 0 0 0 0-3.3 2.17 2.17 0 0 0-1.61-.69 2.45 2.45 0 0 0-1.26.35 11.92 11.92 0 0 0-1.51 1.11l-.38-.57q.69-.57 1.06-.82a4.56 4.56 0 0 1 .93-.48 3.09 3.09 0 0 1 1.16-.23 2.8 2.8 0 0 1 2.06.88 2.88 2.88 0 0 1 .87 2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                မြန်မာ
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gDUSDA">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-51387206"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-37574842"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    အသုံးပြုရန်စည်းမျဉ်း
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-37577521"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ကိုယ်ရေးအချက်အလက်လုံခြုံမှု မူဝါဒ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ကွတ်ကီး
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-37577525"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ဘီဘီစီကို ဆက်သွယ်ရန်
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /burmese/media-47680015 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="my"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_burmese/DC5F/production/_106151465_gg2.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="အကယ်ဒမီ"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="my-MM"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။ - BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/burmese/media-47680015"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcburmese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="အကယ်ဒမီ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_burmese/DC5F/production/_106151465_gg2.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcburmese"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။ - BBC News မြန်မာ"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Film"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Myanmar"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-03-23T16:42:44.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-03-23T17:53:56.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။ - BBC News မြန်မာ
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/burmese/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/burmese/media-47680015"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/burmese/media-47680015.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/burmese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/burmese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/burmese/media-47680015","publisher":{"@type":"NewsMediaOrganization","name":"BBC News မြန်မာ","publishingPrinciples":"https://www.bbc.com/burmese/institutional-51387206","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/burmese/media-47680015","name":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။"},"headline":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။","description":"၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ","datePublished":"2019-03-23T16:42:44.000Z","dateModified":"2019-03-23T17:53:56.000Z","about":[{"@type":"Thing","name":"Film","sameAs":["http://dbpedia.org/resource/Film"]},{"@type":"Thing","name":"Myanmar"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News မြန်မာ","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png"},"noBylinesPolicy":"https://www.bbc.com/burmese/institutional-51387206#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/burmese"
+               class="StyledLink-m3awbo-2 cKpQta"
+            >
+              <svg height="24"
+                   viewbox="0 0 213.48 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iLeUvv"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M192.87 15.58v1.13a3.39 3.39 0 0 1-.83 2.46 2.44 2.44 0 0 1-1.1.7 5.15 5.15 0 0 1-1.4.17h-1.21a5.22 5.22 0 0 1-1.41-.17 2.44 2.44 0 0 1-1.11-.7 3.37 3.37 0 0 1-.83-2.46v-11a3.34 3.34 0 0 1 .83-2.46 3.4 3.4 0 0 1 2.51-.87h1.21a3.34 3.34 0 0 1 2.49.88 3.07 3.07 0 0 1 .62.92 2.3 2.3 0 0 1 .23.87h-.64a1.71 1.71 0 0 0-.2-.64 2.52 2.52 0 0 0-.49-.72 1.9 1.9 0 0 0-.74-.47 3.06 3.06 0 0 0-.74-.18h-2.24a3.28 3.28 0 0 0-.75.18 2 2 0 0 0-.76.45 3.16 3.16 0 0 0-.68 2.33v10.49a3.12 3.12 0 0 0 .68 2.26 3.21 3.21 0 0 0 2.3.65h.64a3.21 3.21 0 0 0 2.3-.65 3.12 3.12 0 0 0 .68-2.26v-.9z">
+                  </path>
+                  <path d="M193.17 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31 3.31 3.31 0 0 1 1.23-2.73l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.7zM192 13.06a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.88zM200.1 12.57a1.73 1.73 0 0 1-.45 1.28 2.65 2.65 0 0 1-1.37.64V20h-.64v-5.42h-.52q-2.3 0-2.3-1.41a1.13 1.13 0 0 1 .46-.89 1.76 1.76 0 0 1 1.16-.38 1.53 1.53 0 0 1 1.26.58 2.69 2.69 0 0 1 .55 1.38q1.21-.21 1.21-1.29a.92.92 0 0 0-.36-.73 2.76 2.76 0 0 0-.88-.48l-1-.35a2.83 2.83 0 0 1-.88-.47.89.89 0 0 1-.36-.71 1 1 0 0 1 .5-.89 2.07 2.07 0 0 1 1.12-.31 2.11 2.11 0 0 1 1.4.47l-.41.49a1.42 1.42 0 0 0-.4-.21 1.59 1.59 0 0 0-.6-.11 1.67 1.67 0 0 0-.68.13.44.44 0 0 0-.3.42q0 .23.36.4a6.65 6.65 0 0 0 .88.34q.52.16 1 .38a2.42 2.42 0 0 1 .88.63 1.45 1.45 0 0 1 .37 1zm-2.49 1.37a2.11 2.11 0 0 0-.4-1 .94.94 0 0 0-.77-.41 1.3 1.3 0 0 0-.69.18.52.52 0 0 0-.29.45.6.6 0 0 0 .14.41.8.8 0 0 0 .42.23 3.7 3.7 0 0 0 .52.09h.57zM200.12 3.91l-.36.3a1.49 1.49 0 0 0-1.36-.78 1.77 1.77 0 0 0-1.75 1.81 1.77 1.77 0 0 0 .21.87 1.59 1.59 0 0 0 .53.59 3.36 3.36 0 0 0 .61.3 1.36 1.36 0 0 0 .48.11v.49a2.35 2.35 0 0 1-1.56-.6 2.15 2.15 0 0 1-.75-1.71 2.2 2.2 0 0 1 .67-1.64 2.15 2.15 0 0 1 1.55-.66 2.11 2.11 0 0 1 1 .26 1.6 1.6 0 0 1 .73.66zM207.72 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31A3.31 3.31 0 0 1 203 8.65l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.69zm-1.17 1.68a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.87z">
+                  </path>
+                  <path d="M213.27 11.6a2.88 2.88 0 0 1-.87 2.1 2.8 2.8 0 0 1-2.06.87 2.52 2.52 0 0 1-1.09-.23l.25-.58a1.88 1.88 0 0 0 .84.16 2.18 2.18 0 0 0 1.61-.68 2.36 2.36 0 0 0 0-3.3 2.17 2.17 0 0 0-1.61-.69 2.45 2.45 0 0 0-1.26.35 11.92 11.92 0 0 0-1.51 1.11l-.38-.57q.69-.57 1.06-.82a4.56 4.56 0 0 1 .93-.48 3.09 3.09 0 0 1 1.16-.23 2.8 2.8 0 0 1 2.06.88 2.88 2.88 0 0 1 .87 2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                မြန်မာ
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 gNrzCs"
+            >
+              အကြောင်းအရာများဆီ ကျော်သွားရန်
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 Bxpmp"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  ကဏ္ဍများ
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      ပင်မစာမျက်နှာ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese/burma"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      မြန်မာ့ရေးရာ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese/world"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      နိုင်ငံတကာ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese/in_depth"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      ဆောင်းပါး
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese/sport"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      အားကစား
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese/economy"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      ကုန်သွယ်စီးပွား
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/burmese/media/video"
+                       class="StyledLink-sc-158x7z5-2 HfYDi"
+                    >
+                      ဗီဒီယိုများ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ပင်မစာမျက်နှာ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/burma"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    မြန်မာ့ရေးရာ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/world"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    နိုင်ငံတကာ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/in_depth"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ဆောင်းပါး
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/sport"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    အားကစား
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/economy"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ကုန်သွယ်စီးပွား
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/burmese/media/video"
+                     class="StyledDropdownLink-ukxuly-4 hzIhki"
+                  >
+                    ဗီဒီယိုများ
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=35&amp;p=embedded_media::burmese.embedded_media.photo_gallery.47680015.page&amp;x1=[urn:bbc:cps:e264aede-b892-c24b-9945-b5fbb4122ab0]&amp;x2=[responsive]&amp;x3=[news-burmese]&amp;x4=[my]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[ရွှေကြာ၄၊+မုန်းစွဲ+၃။+မီတို့+ခီတို့+အကယ်ဒမီလွဲ။+-+BBC+News+မြန်မာ]&amp;x11=[2019-03-23T16:42:44.000Z]&amp;x12=[2019-03-23T17:53:56.000Z]&amp;x13=[Film~Myanmar]&amp;x14=[2611f753-ece7-47ea-9782-f912bc1e4088~a26174f5-fa3c-4cf8-95a2-29d877175eab]&amp;x16=[WS%20-%20Keep%20me%20on%20trend]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 gJEbHr"
+          >
+            ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-03-23"
+                class="StyledTimestamp-um718p-0 hULnEO"
+          >
+            ၂၃ မတ် ၂၀၁၉
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 eHkkDa">
+            ၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg 800w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1A95/production/_106150860_dawsuummk.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BB Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    တသက်တာဆုရတဲ့ ဒေါ်မြင့်မြင့်ခင်။ မချမ်းသာသေးတဲ့အချိန် နိုင်ငံတော် အထောက်အပံ့ဟာ အကန့်အသတ်နဲ့ ရှိနေဦးမယ်လို့ အတိုင်ပင်ခံပြော။ စီးပွားရေး လုပ်ငန်းရှင်တွေကို ရုပ်ရှင်မှာ ရင်းနှီးမြှုပ်နှံဖို့ ဖိတ်ခေါ်။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8FC5/production/_106150863_amt.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8FC5/production/_106150863_amt.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8FC5/production/_106150863_amt.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8FC5/production/_106150863_amt.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8FC5/production/_106150863_amt.jpg 800w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8FC5/production/_106150863_amt.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    အကောင်းဆုံး အမျိုးသမီးဇာတ်ပို့ဆု - အေးမြတ်သူ ( နောင်တွင်ဥဒါန်းတွင်စေသတည်း )။ ပထမဆုံး အကယ်ဒမီ ရွှေစင်ရုပ်ကို ကိုင်ပြီး ပါးချိုင့်လေးခွက်အောင် ပြုံးနေတဲ့ မင်းသမီး အေးမြတ်သူ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg 800w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ရွေကြာနဲ့ အကောင်းဆုံး အမျိုးသမီးဇာတ်ဆောင်ဆုရသူ ဖွေးဖွေး။ ဇာတ်ကားကောင်း၊ သရုပ်ဆောင်ကောင်းတွေ အများကြီးကြားထဲ မင်းသမီးဆုကို အရယူသွားနိုင်တဲ့ ဖွေးဖွေး
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg 800w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    အကောင်းဆုံး အမျိုးသားဇာတ်ဆောင် သူထူးစံ (မှော်ဝင်သမန်းကျား)။ အကောင်းဆုံးမင်းသားဆု သူထူးစံဆီ ရောက်လာ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/11A7B/production/_106151327_wine.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/11A7B/production/_106151327_wine.jpg 320w, https://ichef.bbci.co.uk/news/412/cpsprodpb/11A7B/production/_106151327_wine.jpg 412w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/11A7B/production/_106151327_wine.jpg"
+                         width="412"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ရုပ်ရှင် ဇာတ်ညွှန်းဆု ဝိုင်း (ရွှေကြာ)။ ရွှေကြာနဲ့ ဒါရိုက်တာဆု မရခဲ့ပေမယ့် အကောင်းဆုံး ဇာတ်ညွှန်းဆုကိုတော့ ဆွတ်ခူးခဲ့တဲ့ ဝိုင်း။ သရုပ်ဆောင်လိုင်းကနေ ဒါရိုက်တာ ဖြစ်လာတဲ့အခါ ဇာတ်ကားကောင်းတွေ ဖန်တီးသူ အဖြစ် ချီးကျူးခံရသူ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg 320w, https://ichef.bbci.co.uk/news/412/cpsprodpb/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg 412w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg"
+                         width="412"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    မုန်းစွဲနဲ့ အကောင်းဆုံး အမျိုးသား ဇာတ်ပို့ဆုရသွားတဲ့ ကျော်ကျော်ဗိုလ်။ ကိုကြံ့လို့ ရင်းနှီးတဲ့ ရုပ်ရှင်အသိုင်းဝိုင်းကြား ခေါ်ကြတဲ့ ကျော်ကျော်ဗိုလ် မုန်းစွဲနဲ့ အကယ်ဒမီရပါတယ်။ အစဉ်အလာကြီးတဲ့ ရွှေမန်း ဦးတင်မောင် မျိုးဆက်တစ်ယောက် ဖြစ်ပါတယ်။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg 320w, https://ichef.bbci.co.uk/news/412/cpsprodpb/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg 412w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg"
+                         width="412"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    စီစဉ်သူလူကြီးနေရာရောက်လာပြီဖြစ်တဲ့ အကယ်ဒမီများရှင် ကိုရန်အောင်။ ကိုရန်လေးဆိုတဲ့ မင်းသားချော အဖြစ်ကနေ တည်တည်ခန့်ခန့် ဦးစီးဦးဆောင် လူကြီးနေရာ ရောက်လာတဲ့ ကိုရန်အောင်။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg 320w, https://ichef.bbci.co.uk/news/412/cpsprodpb/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg 412w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg"
+                         width="412"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    မုန်းစွဲနဲ့ အကယ်ဒမီ ဆွတ်ခူးပြန်ဦမလား တစ်ပေးခံခဲ့ရပေမယ့် လွဲခဲ့ရတဲ့ ကိုနေတိုး။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg 320w, https://ichef.bbci.co.uk/news/412/cpsprodpb/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg 412w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg"
+                         width="412"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ဥပါယ်တံမျဉ်၊ မုဒြာခေါ်သံတို့နဲ့ ပရိသတ် အားပေးတာ တခဲနက် ရခဲ့ကြတဲ့ အမေရိကန်ပြန် ခီမောင်နှံ၊
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cAbozE">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg 320w, https://ichef.bbci.co.uk/news/412/cpsprodpb/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg 412w"
+                         alt="အကယ်ဒမီ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg"
+                         width="412"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ဓာတ်ပုံ ရင်းမြစ်,
+                    </span>
+                    <span lang="en-GB">
+                      BBC Burmese
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fdvPIm">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ဓာတ်ပုံ ပုံစာ,
+                  </span>
+                  <p>
+                    ၉ဝ ပြည့်ကျော်နှစ်တွေမှာ လွှမ်းမိုးခဲ့တဲ့ အကယ်ဒမီများရှင် မေသန်းနု။ သင်္ကြန်မိုးက စလို့ ပရိသတ်ရင်ထဲ ရောက်လာခဲ့တဲ့ မဆင့်ရဲ့ ရင့်ကျက်တဲ့ အလှ။ သားနဲ့အတူ အကယ်ဒမီပွဲမှာ တွေ့ခဲ့ရ။
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/burmese"
+               class="StyledLink-m3awbo-2 cKpQta"
+            >
+              <svg height="24"
+                   viewbox="0 0 213.48 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iLeUvv"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M192.87 15.58v1.13a3.39 3.39 0 0 1-.83 2.46 2.44 2.44 0 0 1-1.1.7 5.15 5.15 0 0 1-1.4.17h-1.21a5.22 5.22 0 0 1-1.41-.17 2.44 2.44 0 0 1-1.11-.7 3.37 3.37 0 0 1-.83-2.46v-11a3.34 3.34 0 0 1 .83-2.46 3.4 3.4 0 0 1 2.51-.87h1.21a3.34 3.34 0 0 1 2.49.88 3.07 3.07 0 0 1 .62.92 2.3 2.3 0 0 1 .23.87h-.64a1.71 1.71 0 0 0-.2-.64 2.52 2.52 0 0 0-.49-.72 1.9 1.9 0 0 0-.74-.47 3.06 3.06 0 0 0-.74-.18h-2.24a3.28 3.28 0 0 0-.75.18 2 2 0 0 0-.76.45 3.16 3.16 0 0 0-.68 2.33v10.49a3.12 3.12 0 0 0 .68 2.26 3.21 3.21 0 0 0 2.3.65h.64a3.21 3.21 0 0 0 2.3-.65 3.12 3.12 0 0 0 .68-2.26v-.9z">
+                  </path>
+                  <path d="M193.17 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31 3.31 3.31 0 0 1 1.23-2.73l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.7zM192 13.06a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.88zM200.1 12.57a1.73 1.73 0 0 1-.45 1.28 2.65 2.65 0 0 1-1.37.64V20h-.64v-5.42h-.52q-2.3 0-2.3-1.41a1.13 1.13 0 0 1 .46-.89 1.76 1.76 0 0 1 1.16-.38 1.53 1.53 0 0 1 1.26.58 2.69 2.69 0 0 1 .55 1.38q1.21-.21 1.21-1.29a.92.92 0 0 0-.36-.73 2.76 2.76 0 0 0-.88-.48l-1-.35a2.83 2.83 0 0 1-.88-.47.89.89 0 0 1-.36-.71 1 1 0 0 1 .5-.89 2.07 2.07 0 0 1 1.12-.31 2.11 2.11 0 0 1 1.4.47l-.41.49a1.42 1.42 0 0 0-.4-.21 1.59 1.59 0 0 0-.6-.11 1.67 1.67 0 0 0-.68.13.44.44 0 0 0-.3.42q0 .23.36.4a6.65 6.65 0 0 0 .88.34q.52.16 1 .38a2.42 2.42 0 0 1 .88.63 1.45 1.45 0 0 1 .37 1zm-2.49 1.37a2.11 2.11 0 0 0-.4-1 .94.94 0 0 0-.77-.41 1.3 1.3 0 0 0-.69.18.52.52 0 0 0-.29.45.6.6 0 0 0 .14.41.8.8 0 0 0 .42.23 3.7 3.7 0 0 0 .52.09h.57zM200.12 3.91l-.36.3a1.49 1.49 0 0 0-1.36-.78 1.77 1.77 0 0 0-1.75 1.81 1.77 1.77 0 0 0 .21.87 1.59 1.59 0 0 0 .53.59 3.36 3.36 0 0 0 .61.3 1.36 1.36 0 0 0 .48.11v.49a2.35 2.35 0 0 1-1.56-.6 2.15 2.15 0 0 1-.75-1.71 2.2 2.2 0 0 1 .67-1.64 2.15 2.15 0 0 1 1.55-.66 2.11 2.11 0 0 1 1 .26 1.6 1.6 0 0 1 .73.66zM207.72 11.37a3.19 3.19 0 0 1-.86 2.31 3 3 0 0 1-4.23 0 3.19 3.19 0 0 1-.86-2.31A3.31 3.31 0 0 1 203 8.65l.38.54a2.83 2.83 0 0 0-1 2.19 3.22 3.22 0 0 0 .21 1.12 3 3 0 0 1 4.26 0 3 3 0 0 0 .2-1.09 2.93 2.93 0 0 0-1-2.19l.38-.54a3.28 3.28 0 0 1 1.29 2.69zm-1.17 1.68a2.54 2.54 0 0 0-1.81-.82 2.47 2.47 0 0 0-1.78.83 2.11 2.11 0 0 0 1.78.87 2.17 2.17 0 0 0 1.81-.87z">
+                  </path>
+                  <path d="M213.27 11.6a2.88 2.88 0 0 1-.87 2.1 2.8 2.8 0 0 1-2.06.87 2.52 2.52 0 0 1-1.09-.23l.25-.58a1.88 1.88 0 0 0 .84.16 2.18 2.18 0 0 0 1.61-.68 2.36 2.36 0 0 0 0-3.3 2.17 2.17 0 0 0-1.61-.69 2.45 2.45 0 0 0-1.26.35 11.92 11.92 0 0 0-1.51 1.11l-.38-.57q.69-.57 1.06-.82a4.56 4.56 0 0 1 .93-.48 3.09 3.09 0 0 1 1.16-.23 2.8 2.8 0 0 1 2.06.88 2.88 2.88 0 0 1 .87 2.11z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                မြန်မာ
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gDUSDA">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-51387206"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-37574842"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    အသုံးပြုရန်စည်းမျဉ်း
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-37577521"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ကိုယ်ရေးအချက်အလက်လုံခြုံမှု မူဝါဒ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ကွတ်ကီး
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/burmese/institutional-37577525"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ဘီဘီစီကို ဆက်သွယ်ရန်
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. ပြင်ပဝက်ဆိုက်များတွင် ပါဝင်သော အကြောင်းအရာများအတွက် ဘီဘီစီက တာဝန်မယူပါ။
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1553359364000,"lastPublished":1553363636000,"lastUpdated":1553363645175,"id":"mock-id","locators":{"assetUri":"/burmese/media-47680015","cpsUrn":"urn:bbc:content:assetUri:burmese/media-47680015","curie":"http://www.bbc.co.uk/asset/e264aede-b892-c24b-9945-b5fbb4122ab0"},"type":"PGL","createdBy":"burmese-v6","language":"my","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"burmese.embedded_media.photo_gallery.47680015.page","cps_asset_id":"47680015"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"tags":{"about":[{"thingLabel":"Film","thingUri":"http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id","thingId":"2611f753-ece7-47ea-9782-f912bc1e4088","thingType":["Theme","Thing"],"thingSameAs":["http://dbpedia.org/resource/Film","http://www.wikidata.org/entity/Q11424"]},{"thingLabel":"Myanmar","thingUri":"http://www.bbc.co.uk/things/a26174f5-fa3c-4cf8-95a2-29d877175eab#id","thingId":"a26174f5-fa3c-4cf8-95a2-29d877175eab","thingType":["Place","Thing","geoname:GeoTagConcept"],"thingSameAs":["http://sws.geonames.org/1327865/"]}]},"version":"v1.0.0","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။","blocks":[{"type":"fragment","model":{"text":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1553359364000,"lastPublished":1553363636000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ","blocks":[{"type":"fragment","model":{"text":"၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"တသက်တာဆုရတဲ့ ဒေါ်မြင့်မြင့်ခင်။ မချမ်းသာသေးတဲ့အချိန် နိုင်ငံတော် အထောက်အပံ့ဟာ အကန့်အသတ်နဲ့ ရှိနေဦးမယ်လို့ အတိုင်ပင်ခံပြော။ စီးပွားရေး လုပ်ငန်းရှင်တွေကို ရုပ်ရှင်မှာ ရင်းနှီးမြှုပ်နှံဖို့ ဖိတ်ခေါ်။","blocks":[{"type":"fragment","model":{"text":"တသက်တာဆုရတဲ့ ဒေါ်မြင့်မြင့်ခင်။ မချမ်းသာသေးတဲ့အချိန် နိုင်ငံတော် အထောက်အပံ့ဟာ အကန့်အသတ်နဲ့ ရှိနေဦးမယ်လို့ အတိုင်ပင်ခံပြော။ စီးပွားရေး လုပ်ငန်းရှင်တွေကို ရုပ်ရှင်မှာ ရင်းနှီးမြှုပ်နှံဖို့ ဖိတ်ခေါ်။","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BB Burmese","height":549,"locator":"1A95/production/_106150860_dawsuummk.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကောင်းဆုံး အမျိုးသမီးဇာတ်ပို့ဆု - အေးမြတ်သူ ( နောင်တွင်ဥဒါန်းတွင်စေသတည်း )။ ပထမဆုံး အကယ်ဒမီ ရွှေစင်ရုပ်ကို ကိုင်ပြီး ပါးချိုင့်လေးခွက်အောင် ပြုံးနေတဲ့ မင်းသမီး အေးမြတ်သူ။","blocks":[{"type":"fragment","model":{"text":"အကောင်းဆုံး အမျိုးသမီးဇာတ်ပို့ဆု - အေးမြတ်သူ ( နောင်တွင်ဥဒါန်းတွင်စေသတည်း )။ ပထမဆုံး အကယ်ဒမီ ရွှေစင်ရုပ်ကို ကိုင်ပြီး ပါးချိုင့်လေးခွက်အောင် ပြုံးနေတဲ့ မင်းသမီး အေးမြတ်သူ။","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"8FC5/production/_106150863_amt.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ရွေကြာနဲ့ အကောင်းဆုံး အမျိုးသမီးဇာတ်ဆောင်ဆုရသူ ဖွေးဖွေး။ ဇာတ်ကားကောင်း၊ သရုပ်ဆောင်ကောင်းတွေ အများကြီးကြားထဲ မင်းသမီးဆုကို အရယူသွားနိုင်တဲ့ ဖွေးဖွေး","blocks":[{"type":"fragment","model":{"text":"ရွေကြာနဲ့ အကောင်းဆုံး အမျိုးသမီးဇာတ်ဆောင်ဆုရသူ ဖွေးဖွေး။ ဇာတ်ကားကောင်း၊ သရုပ်ဆောင်ကောင်းတွေ အများကြီးကြားထဲ မင်းသမီးဆုကို အရယူသွားနိုင်တဲ့ ဖွေးဖွေး","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"8223/production/_106151333_55506930_10157176354938988_3317048790828974080_o.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကောင်းဆုံး အမျိုးသားဇာတ်ဆောင် သူထူးစံ (မှော်ဝင်သမန်းကျား)။ အကောင်းဆုံးမင်းသားဆု သူထူးစံဆီ ရောက်လာ။","blocks":[{"type":"fragment","model":{"text":"အကောင်းဆုံး အမျိုးသားဇာတ်ဆောင် သူထူးစံ (မှော်ဝင်သမန်းကျား)။ အကောင်းဆုံးမင်းသားဆု သူထူးစံဆီ ရောက်လာ။","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"DDE5/production/_106150865_54516193_2209916582397548_7506522709262598144_o.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ရုပ်ရှင် ဇာတ်ညွှန်းဆု ဝိုင်း (ရွှေကြာ)။ ရွှေကြာနဲ့ ဒါရိုက်တာဆု မရခဲ့ပေမယ့် အကောင်းဆုံး ဇာတ်ညွှန်းဆုကိုတော့ ဆွတ်ခူးခဲ့တဲ့ ဝိုင်း။ သရုပ်ဆောင်လိုင်းကနေ ဒါရိုက်တာ ဖြစ်လာတဲ့အခါ ဇာတ်ကားကောင်းတွေ ဖန်တီးသူ အဖြစ် ချီးကျူးခံရသူ။","blocks":[{"type":"fragment","model":{"text":"ရုပ်ရှင် ဇာတ်ညွှန်းဆု ဝိုင်း (ရွှေကြာ)။ ရွှေကြာနဲ့ ဒါရိုက်တာဆု မရခဲ့ပေမယ့် အကောင်းဆုံး ဇာတ်ညွှန်းဆုကိုတော့ ဆွတ်ခူးခဲ့တဲ့ ဝိုင်း။ သရုပ်ဆောင်လိုင်းကနေ ဒါရိုက်တာ ဖြစ်လာတဲ့အခါ ဇာတ်ကားကောင်းတွေ ဖန်တီးသူ အဖြစ် ချီးကျူးခံရသူ။","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"11A7B/production/_106151327_wine.jpg","originCode":"cpsprodpb","width":412},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"မုန်းစွဲနဲ့ အကောင်းဆုံး အမျိုးသား ဇာတ်ပို့ဆုရသွားတဲ့ ကျော်ကျော်ဗိုလ်။ ကိုကြံ့လို့ ရင်းနှီးတဲ့ ရုပ်ရှင်အသိုင်းဝိုင်းကြား ခေါ်ကြတဲ့ ကျော်ကျော်ဗိုလ် မုန်းစွဲနဲ့ အကယ်ဒမီရပါတယ်။ အစဉ်အလာကြီးတဲ့ ရွှေမန်း ဦးတင်မောင် မျိုးဆက်တစ်ယောက် ဖြစ်ပါတယ်။","blocks":[{"type":"fragment","model":{"text":"မုန်းစွဲနဲ့ အကောင်းဆုံး အမျိုးသား ဇာတ်ပို့ဆုရသွားတဲ့ ကျော်ကျော်ဗိုလ်။ ကိုကြံ့လို့ ရင်းနှီးတဲ့ ရုပ်ရှင်အသိုင်းဝိုင်းကြား ခေါ်ကြတဲ့ ကျော်ကျော်ဗိုလ် မုန်းစွဲနဲ့ အကယ်ဒမီရပါတယ်။ အစဉ်အလာကြီးတဲ့ ရွှေမန်း ဦးတင်မောင် မျိုးဆက်တစ်ယောက် ဖြစ်ပါတယ်။","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"1689B/production/_106151329_55719271_1098693330479676_3461988084344684544_n.jpg","originCode":"cpsprodpb","width":412},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"စီစဉ်သူလူကြီးနေရာရောက်လာပြီဖြစ်တဲ့ အကယ်ဒမီများရှင် ကိုရန်အောင်။ ကိုရန်လေးဆိုတဲ့ မင်းသားချော အဖြစ်ကနေ တည်တည်ခန့်ခန့် ဦးစီးဦးဆောင် လူကြီးနေရာ ရောက်လာတဲ့ ကိုရန်အောင်။","blocks":[{"type":"fragment","model":{"text":"စီစဉ်သူလူကြီးနေရာရောက်လာပြီဖြစ်တဲ့ အကယ်ဒမီများရှင် ကိုရန်အောင်။ ကိုရန်လေးဆိုတဲ့ မင်းသားချော အဖြစ်ကနေ တည်တည်ခန့်ခန့် ဦးစီးဦးဆောင် လူကြီးနေရာ ရောက်လာတဲ့ ကိုရန်အောင်။","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"D043/production/_106151335_54728794_384851575687764_7833030508266127360_n.jpg","originCode":"cpsprodpb","width":412},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"မုန်းစွဲနဲ့ အကယ်ဒမီ ဆွတ်ခူးပြန်ဦမလား တစ်ပေးခံခဲ့ရပေမယ့် လွဲခဲ့ရတဲ့ ကိုနေတိုး။","blocks":[{"type":"fragment","model":{"text":"မုန်းစွဲနဲ့ အကယ်ဒမီ ဆွတ်ခူးပြန်ဦမလား တစ်ပေးခံခဲ့ရပေမယ့် လွဲခဲ့ရတဲ့ ကိုနေတိုး။","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"14DA7/production/_106151458_54070313_2321260681447855_986695472703864832_n.jpg","originCode":"cpsprodpb","width":412},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ဥပါယ်တံမျဉ်၊ မုဒြာခေါ်သံတို့နဲ့ ပရိသတ် အားပေးတာ တခဲနက် ရခဲ့ကြတဲ့ အမေရိကန်ပြန် ခီမောင်နှံ၊","blocks":[{"type":"fragment","model":{"text":"ဥပါယ်တံမျဉ်၊ မုဒြာခေါ်သံတို့နဲ့ ပရိသတ် အားပေးတာ တခဲနက် ရခဲ့ကြတဲ့ အမေရိကန်ပြန် ခီမောင်နှံ၊","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"401F/production/_106151461_53752121_2209717725750767_8783743565302857728_n.jpg","originCode":"cpsprodpb","width":412},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"၉ဝ ပြည့်ကျော်နှစ်တွေမှာ လွှမ်းမိုးခဲ့တဲ့ အကယ်ဒမီများရှင် မေသန်းနု။ သင်္ကြန်မိုးက စလို့ ပရိသတ်ရင်ထဲ ရောက်လာခဲ့တဲ့ မဆင့်ရဲ့ ရင့်ကျက်တဲ့ အလှ။ သားနဲ့အတူ အကယ်ဒမီပွဲမှာ တွေ့ခဲ့ရ။","blocks":[{"type":"fragment","model":{"text":"၉ဝ ပြည့်ကျော်နှစ်တွေမှာ လွှမ်းမိုးခဲ့တဲ့ အကယ်ဒမီများရှင် မေသန်းနု။ သင်္ကြန်မိုးက စလို့ ပရိသတ်ရင်ထဲ ရောက်လာခဲ့တဲ့ မဆင့်ရဲ့ ရင့်ကျက်တဲ့ အလှ။ သားနဲ့အတူ အကယ်ဒမီပွဲမှာ တွေ့ခဲ့ရ။","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"အကယ်ဒမီ","blocks":[{"type":"fragment","model":{"text":"အကယ်ဒမီ","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC Burmese","height":549,"locator":"8E3F/production/_106151463_54798636_2342304282649122_2590260485198708736_n.jpg","originCode":"cpsprodpb","width":412},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]}]}},"promo":{"headlines":{"shortHeadline":"ပရိသတ်ထင်ကြေးတချို့ လွဲခဲ့တဲ့၂၀၁၈ အကယ်ဒမီဆုများ","headline":"ရွှေကြာ၄၊ မုန်းစွဲ ၃။ မီတို့ ခီတို့ အကယ်ဒမီလွဲ။"},"locators":{"assetUri":"/burmese/media-47680015","cpsUrn":"urn:bbc:content:assetUri:burmese/media-47680015","curie":"http://www.bbc.co.uk/asset/e264aede-b892-c24b-9945-b5fbb4122ab0"},"summary":"၂ဝ၁၈ အကယ်ဒမီပုံရိပ်၊ ပွဲတက်ဖက်ရှင် ဓာတ်ပုံတွေ","timestamp":1553363645175,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/DC5F/production/_106151465_gg2.jpg","path":"/cpsprodpb/DC5F/production/_106151465_gg2.jpg","height":360,"width":640,"altText":"အကယ်ဒမီ","caption":"၂ဝ၁၈ အတွက် အကယ်ဒမီ ဆုရှင်တွေ","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Media","uri":"/burmese/media","type":"simple"},"site":{"subType":"site","name":"ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း","uri":"/burmese","type":"simple"},"groups":[]}},"path":"/burmese/media-47680015","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [7]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="burmese"
+            src="http://localhost:7080/static/js/burmese-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

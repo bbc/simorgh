@@ -1,0 +1,3325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /urdu/pakistan-48242478 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ur"
+      dir="rtl"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_urdu/AB1A/production/_106920834_hi053806837.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="رمضان"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ur"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="گذشتہ ہفتے کا پاکستان تصاویر میں - BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/urdu/pakistan-48242478"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcurdu"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="رمضان"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_urdu/AB1A/production/_106920834_hi053806837.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcurdu"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="گذشتہ ہفتے کا پاکستان تصاویر میں - BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-05-12T09:11:31.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-05-12T09:11:34.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      گذشتہ ہفتے کا پاکستان تصاویر میں - BBC News اردو
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/urdu/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/urdu/pakistan-48242478"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/urdu/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/urdu/pakistan-48242478","publisher":{"@type":"NewsMediaOrganization","name":"BBC News اردو","publishingPrinciples":"https://www.bbc.com/urdu/institutional-49282935","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/urdu/pakistan-48242478","name":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"headline":"گذشتہ ہفتے کا پاکستان تصاویر میں","description":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔","datePublished":"2019-05-12T09:11:31.000Z","dateModified":"2019-05-12T09:11:34.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News اردو","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"},"noBylinesPolicy":"https://www.bbc.com/urdu/institutional-49282935#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="rtl"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 gzrRkF"
+              >
+                <div dir="rtl"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="rtl"
+                      class="Title-sc-7g3fro-2 kcHhsl"
+                  >
+                    ہم نے اپنی پرائیویسی اور کوکیز پالیسی اپ ڈیٹ کر دی ہے
+                  </h2>
+                  <p dir="rtl"
+                     class="ConsentBannerText-sc-7g3fro-4 feAsrw"
+                  >
+                    .ہم نے اپنی پرائیویسی اور کوکیز پالیسیوں میں کچھ اہم تبدیلیاں کی ہیں اور ہم چاہتے ہیں کہ ان کا آپ اور آپ کے ڈیٹا کے لیے کیا مطلب ہے
+                  </p>
+                  <ul dir="rtl"
+                      class="Options-sc-7g3fro-3 gbuXMf"
+                  >
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        اوکے
+                      </button>
+                    </li>
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        جانیے کہ تبدیلیاں کیا ہیں
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="rtl"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 gzrRkF"
+              >
+                <div dir="rtl"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="rtl"
+                      class="Title-sc-7g3fro-2 kcHhsl"
+                  >
+                    بتائیے کہ آپ کوکیز کے بارے میں متفق ہیں
+                  </h2>
+                  <p dir="rtl"
+                     class="ConsentBannerText-sc-7g3fro-4 feAsrw"
+                  >
+                    ہم آپ کو بہترین آن لائن تجربہ دینے کے لیے
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      کوکیز
+                    </a>
+                    استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں
+                  </p>
+                  <ul dir="rtl"
+                      class="Options-sc-7g3fro-3 gbuXMf"
+                  >
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        میں متفق ہوں
+                      </button>
+                    </li>
+                    <li dir="rtl"
+                        class="ListItem-sc-7g3fro-5 dCLFkB"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        نہیں، مجھے سیٹنگز میں لے جائیں
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/urdu"
+               class="StyledLink-m3awbo-2 jjxEfP"
+            >
+              <svg height="24"
+                   viewbox="0 0 211 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cKCNAA"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M189.72 11.15a3.51 3.51 0 0 0-1-1 2 2 0 0 0-1.15-.37 1.82 1.82 0 0 0-1 .32 3.3 3.3 0 0 0-.85.81 4.17 4.17 0 0 0-.58 1.1 3.56 3.56 0 0 0-.22 1.19 3.08 3.08 0 0 0 .22 1.17 2.84 2.84 0 0 0 .6.93 2.67 2.67 0 0 0 .89.61 2.76 2.76 0 0 0 1.09.22 2.31 2.31 0 0 0 1-.23 2.74 2.74 0 0 0 .75-.51 5 5 0 0 1-.75 1.52 7.65 7.65 0 0 1-1.42 1.51 12 12 0 0 1-2.06 1.34 13.26 13.26 0 0 1-2.65 1l.36.51 3.24.41a7.85 7.85 0 0 0 1.81-1.26 8.78 8.78 0 0 0 1.39-1.71 8.17 8.17 0 0 0 .9-2 8.08 8.08 0 0 0 .32-2.26 6.61 6.61 0 0 0-.24-1.79 5.3 5.3 0 0 0-.65-1.51zm-.9 3a3.7 3.7 0 0 1-.94.13 2.73 2.73 0 0 1-1.26-.28 1.81 1.81 0 0 1-.82-.86 2.5 2.5 0 0 1 .63-1.08 1.41 1.41 0 0 1 1-.42 1.86 1.86 0 0 1 1.26.58 2.82 2.82 0 0 1 .8 1.65 2.06 2.06 0 0 1-.67.32zM200.16 14.13a3.67 3.67 0 0 0 .22-1.21 5.08 5.08 0 0 0-.18-1.33 4.91 4.91 0 0 0-.72-1.43 14.14 14.14 0 0 0-1.54-1.79q-1-1-2.61-2.4l-.46 2.26q1.47 1.27 2.35 2.14a13.28 13.28 0 0 1 1.34 1.52 4.41 4.41 0 0 1 .64 1.11 4.72 4.72 0 0 1 .22 1 4.69 4.69 0 0 1-1.41.38 16.65 16.65 0 0 1-2.27.13 4 4 0 0 1-1.84-.32 1 1 0 0 1-.57-1 4 4 0 0 1 0-.6c0-.16.05-.32.09-.47l-.41.28a1.26 1.26 0 0 0-.39.61 3 3 0 0 0-.19 1.09 2.05 2.05 0 0 0 .87 1.9 3.68 3.68 0 0 0 2.18.6 8.71 8.71 0 0 0 2.57-.33 3 3 0 0 0 1.59-1 4.2 4.2 0 0 0 .52-1.14zM203.35 9.86L202.29 12a9.73 9.73 0 0 1 1.57 1.83 5.94 5.94 0 0 1 .81 1.75 4.68 4.68 0 0 1-.81 1.48 8.51 8.51 0 0 1-1.48 1.45 12.78 12.78 0 0 1-2.06 1.28 13.75 13.75 0 0 1-2.52 1l.36.51 3.24.41a7.6 7.6 0 0 0 1.75-1.27 9.21 9.21 0 0 0 1.34-1.64 8 8 0 0 0 .86-1.8 5.78 5.78 0 0 0 .3-1.81 6.78 6.78 0 0 0-.55-2.66 9.84 9.84 0 0 0-1.75-2.67zM209.43 10.67q-.05-1.29-.13-2.74t-.1-3.08v-3.8l-1.7 1.42q0 1.67.09 3.07t.22 3q.15 1.65.27 3.6t.11 4.67h.51a7.94 7.94 0 0 0 .3-.81c.12-.27.21-.51.28-.71a4.26 4.26 0 0 0 .14-.81v-1.47q0-1.01.01-2.34z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                اردو
+              </span>
+            </a>
+            <a dir="rtl"
+               href="#content"
+               class="SkipLink-wmpyxz-0 kSJMkE"
+            >
+              مواد پر جائیں
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="rtl"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 dmaate"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="rtl"
+                    class="MenuButton-ukxuly-6 dEgmnw"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                سیکشن
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    صفحۂ اول
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/pakistan"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    پاکستان
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/regional"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    آس پاس
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/world"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    ورلڈ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/sport"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    کھیل
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/entertainment"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    فن فنکار
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/science"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    سائنس
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/media/video"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    ویڈیو
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/punjabi_video"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    پنجابی ويڈیو
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="rtl"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 pgOHc StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    صفحۂ اول
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/pakistan"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    پاکستان
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/regional"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    آس پاس
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/world"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    ورلڈ
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/sport"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    کھیل
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/entertainment"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    فن فنکار
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/science"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    سائنس
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/media/video"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    ویڈیو
+                  </a>
+                </li>
+                <li dir="rtl"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                >
+                  <a href="/urdu/punjabi_video"
+                     class="StyledLink-sc-158x7z5-2 eVHHC"
+                  >
+                    پنجابی ويڈیو
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=95&p=pakistan::urdu.pakistan.photo_gallery.48242478.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:e9a5c193-0f46-594b-95d7-543c5393ea6b]&x2=[amp]&x3=[news-urdu]&x4=[ur]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[گذشتہ+ہفتے+کا+پاکستان+تصاویر+میں+-+BBC+News+اردو]&x11=[2019-05-12T09:11:31.000Z]&x12=[2019-05-12T09:11:34.000Z]&x16=[WS%20-%20Divert%20me~WS%20-%20Keep%20me%20on%20trend]&x17=[Feature]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bDniIN"
+          >
+            گذشتہ ہفتے کا پاکستان تصاویر میں
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-05-12"
+                class="StyledTimestamp-um718p-0 euSVSC"
+          >
+            12 مئ 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hUhZbB">
+            پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="رمضان"
+                           attribution="AFP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہے ہیں۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="لاہور"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستانی کے دوسرے بڑے شہر لاہور میں صوفی بزرگ داتا گنج بخش کے مزار کے باہر ہونے والے خودکش حملے کے بعد سکیورٹی اہلکار ایلیٹ فورس کی نشانہ بننے والی گاڑی کا معائنہ کر رہے ہیں۔ اس دھماکے میں کم از کم 10 افرا ہلاک جبکہ دو خواتین سمیت متعدد افراد زخمی ہوئے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="آسیہ بی بی"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9602/production/_106920483_tv036780455.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستانی حکام کے مطابق توہین مذہب کے مقدمے میں سپریم کورٹ سے باعزت بری ہونے والی مسیحی خاتون آسیہ بی بی پاکستان سے چلی گئی ہیں۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jssBwf">
+                  <amp-img alt="چینی"
+                           attribution="Reuters"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg"
+                           height="647"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    چینی باشندے پولیس کی نگرانی میں لاہور کے سول کورٹ میں پیش ہونے جارہے ہیں۔ وفاقی تحقیقاتی ادارے (ایف آئی اے) کے مطابق یہ افراد ایسے گینگ کا حصہ ہیں جو پاکستانی خواتین کو جسم فروشی کی غرض سے چائنہ لے جاتے ہیں۔ انسانی حقوق کے کارکنوں کے مطابق پچھلے ایک سال سے پاکستان کے صوبے پنجاب میں چینی باشندے شادی کی غرض سے آرہے ہیں اور لڑکیوں کو شادی کرکے چین لے جارہے ہیں جس کا مقصد ازدواجی تعلقات قائم کرنا نہیں ہے بلکہ یہ مبینہ طور پر بین الاقوامی سطح پر جسم فروشی کا ایک اہم ذریعہ ہے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="نواز"
+                           attribution="AFP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستان کے سابق وزیر اعظم اور پاکستان مسلم لیگ نون کے قائد محمد نواز شریف العزیزیہ سٹیل ملز کیس میں چھ ہفتے کی ضمانت ختم ہونے کے بعد دوبارہ کوٹ لکھپت جیل پہنچ گئے ہیں۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jZnoFp">
+                  <amp-img alt="نرسیں"
+                           attribution="EPA"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F93A/production/_106920836_hi053882657.jpg"
+                           height="650"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    نرسوں کے عالمی دن کے موقع پر پاکستان کے شہر پشاور میں ایک نرس مریض کی دیکھ بھال کرتے ہوئے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="رمضان"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/97EC/production/_106829883_ramzan3.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستان میں رمضان کی آمد کے ساتھ ہی بنیادی اشیائے خورد و نوش بالخصوص پھلوں اور سبزیوں کی قیمتوں میں ہوشربا اضافہ دیکھنے میں آیا ہے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="rtl"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 jfJCah"
+                    >
+                      اسی بارے میں
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="rtl"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-48167724?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔
+                    </p>
+                    <time datetime="2019-05-05"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      5 مئ 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-48083226?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔
+                    </p>
+                    <time datetime="2019-04-28"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      28 اپريل 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-47182263?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔
+                    </p>
+                    <time datetime="2019-02-09"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      9 فروری 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-43688828?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان: تصاویر
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2018-04-08"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      8 اپريل 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-45365033?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں رونما ہونے والے واقعات کی تصویری جھلکیاں۔
+                    </p>
+                    <time datetime="2018-09-02"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      2 ستمبر 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-43603915?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2018-04-01"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      1 اپريل 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-40240151?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2017-06-11"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      11 جون 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-42382974?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2017-12-17"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      17 دسمبر 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/urdu"
+               class="StyledLink-m3awbo-2 jjxEfP"
+            >
+              <svg height="24"
+                   viewbox="0 0 211 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cKCNAA"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M189.72 11.15a3.51 3.51 0 0 0-1-1 2 2 0 0 0-1.15-.37 1.82 1.82 0 0 0-1 .32 3.3 3.3 0 0 0-.85.81 4.17 4.17 0 0 0-.58 1.1 3.56 3.56 0 0 0-.22 1.19 3.08 3.08 0 0 0 .22 1.17 2.84 2.84 0 0 0 .6.93 2.67 2.67 0 0 0 .89.61 2.76 2.76 0 0 0 1.09.22 2.31 2.31 0 0 0 1-.23 2.74 2.74 0 0 0 .75-.51 5 5 0 0 1-.75 1.52 7.65 7.65 0 0 1-1.42 1.51 12 12 0 0 1-2.06 1.34 13.26 13.26 0 0 1-2.65 1l.36.51 3.24.41a7.85 7.85 0 0 0 1.81-1.26 8.78 8.78 0 0 0 1.39-1.71 8.17 8.17 0 0 0 .9-2 8.08 8.08 0 0 0 .32-2.26 6.61 6.61 0 0 0-.24-1.79 5.3 5.3 0 0 0-.65-1.51zm-.9 3a3.7 3.7 0 0 1-.94.13 2.73 2.73 0 0 1-1.26-.28 1.81 1.81 0 0 1-.82-.86 2.5 2.5 0 0 1 .63-1.08 1.41 1.41 0 0 1 1-.42 1.86 1.86 0 0 1 1.26.58 2.82 2.82 0 0 1 .8 1.65 2.06 2.06 0 0 1-.67.32zM200.16 14.13a3.67 3.67 0 0 0 .22-1.21 5.08 5.08 0 0 0-.18-1.33 4.91 4.91 0 0 0-.72-1.43 14.14 14.14 0 0 0-1.54-1.79q-1-1-2.61-2.4l-.46 2.26q1.47 1.27 2.35 2.14a13.28 13.28 0 0 1 1.34 1.52 4.41 4.41 0 0 1 .64 1.11 4.72 4.72 0 0 1 .22 1 4.69 4.69 0 0 1-1.41.38 16.65 16.65 0 0 1-2.27.13 4 4 0 0 1-1.84-.32 1 1 0 0 1-.57-1 4 4 0 0 1 0-.6c0-.16.05-.32.09-.47l-.41.28a1.26 1.26 0 0 0-.39.61 3 3 0 0 0-.19 1.09 2.05 2.05 0 0 0 .87 1.9 3.68 3.68 0 0 0 2.18.6 8.71 8.71 0 0 0 2.57-.33 3 3 0 0 0 1.59-1 4.2 4.2 0 0 0 .52-1.14zM203.35 9.86L202.29 12a9.73 9.73 0 0 1 1.57 1.83 5.94 5.94 0 0 1 .81 1.75 4.68 4.68 0 0 1-.81 1.48 8.51 8.51 0 0 1-1.48 1.45 12.78 12.78 0 0 1-2.06 1.28 13.75 13.75 0 0 1-2.52 1l.36.51 3.24.41a7.6 7.6 0 0 0 1.75-1.27 9.21 9.21 0 0 0 1.34-1.64 8 8 0 0 0 .86-1.8 5.78 5.78 0 0 0 .3-1.81 6.78 6.78 0 0 0-.55-2.66 9.84 9.84 0 0 0-1.75-2.67zM209.43 10.67q-.05-1.29-.13-2.74t-.1-3.08v-3.8l-1.7 1.42q0 1.67.09 3.07t.22 3q.15 1.65.27 3.6t.11 4.67h.51a7.94 7.94 0 0 0 .3-.81c.12-.27.21-.51.28-.71a4.26 4.26 0 0 0 .14-.81v-1.47q0-1.01.01-2.34z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                اردو
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hamapS">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-49282935"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588278"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    استعمال کے ضوابط
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588280"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    بی بی سی کے بارے میں
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588282"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    پرائیویسی پالیسی
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    کوکیز
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588285"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    بی بی سی سے رابطہ کریں
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  بیرونی لنکس کے بارے میں ہماری پالیسی.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /urdu/pakistan-48242478 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ur"
+      class="no-js"
+      dir="rtl"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_urdu/AB1A/production/_106920834_hi053806837.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="رمضان"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ur"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="گذشتہ ہفتے کا پاکستان تصاویر میں - BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/urdu/pakistan-48242478"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcurdu"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="رمضان"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_urdu/AB1A/production/_106920834_hi053806837.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcurdu"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="گذشتہ ہفتے کا پاکستان تصاویر میں - BBC News اردو"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-05-12T09:11:31.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-05-12T09:11:34.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      گذشتہ ہفتے کا پاکستان تصاویر میں - BBC News اردو
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/urdu/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/urdu/pakistan-48242478"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/urdu/pakistan-48242478.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/urdu/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/urdu/pakistan-48242478","publisher":{"@type":"NewsMediaOrganization","name":"BBC News اردو","publishingPrinciples":"https://www.bbc.com/urdu/institutional-49282935","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/urdu/pakistan-48242478","name":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"headline":"گذشتہ ہفتے کا پاکستان تصاویر میں","description":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔","datePublished":"2019-05-12T09:11:31.000Z","dateModified":"2019-05-12T09:11:34.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News اردو","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"},"noBylinesPolicy":"https://www.bbc.com/urdu/institutional-49282935#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/urdu"
+               class="StyledLink-m3awbo-2 jjxEfP"
+            >
+              <svg height="24"
+                   viewbox="0 0 211 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cKCNAA"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M189.72 11.15a3.51 3.51 0 0 0-1-1 2 2 0 0 0-1.15-.37 1.82 1.82 0 0 0-1 .32 3.3 3.3 0 0 0-.85.81 4.17 4.17 0 0 0-.58 1.1 3.56 3.56 0 0 0-.22 1.19 3.08 3.08 0 0 0 .22 1.17 2.84 2.84 0 0 0 .6.93 2.67 2.67 0 0 0 .89.61 2.76 2.76 0 0 0 1.09.22 2.31 2.31 0 0 0 1-.23 2.74 2.74 0 0 0 .75-.51 5 5 0 0 1-.75 1.52 7.65 7.65 0 0 1-1.42 1.51 12 12 0 0 1-2.06 1.34 13.26 13.26 0 0 1-2.65 1l.36.51 3.24.41a7.85 7.85 0 0 0 1.81-1.26 8.78 8.78 0 0 0 1.39-1.71 8.17 8.17 0 0 0 .9-2 8.08 8.08 0 0 0 .32-2.26 6.61 6.61 0 0 0-.24-1.79 5.3 5.3 0 0 0-.65-1.51zm-.9 3a3.7 3.7 0 0 1-.94.13 2.73 2.73 0 0 1-1.26-.28 1.81 1.81 0 0 1-.82-.86 2.5 2.5 0 0 1 .63-1.08 1.41 1.41 0 0 1 1-.42 1.86 1.86 0 0 1 1.26.58 2.82 2.82 0 0 1 .8 1.65 2.06 2.06 0 0 1-.67.32zM200.16 14.13a3.67 3.67 0 0 0 .22-1.21 5.08 5.08 0 0 0-.18-1.33 4.91 4.91 0 0 0-.72-1.43 14.14 14.14 0 0 0-1.54-1.79q-1-1-2.61-2.4l-.46 2.26q1.47 1.27 2.35 2.14a13.28 13.28 0 0 1 1.34 1.52 4.41 4.41 0 0 1 .64 1.11 4.72 4.72 0 0 1 .22 1 4.69 4.69 0 0 1-1.41.38 16.65 16.65 0 0 1-2.27.13 4 4 0 0 1-1.84-.32 1 1 0 0 1-.57-1 4 4 0 0 1 0-.6c0-.16.05-.32.09-.47l-.41.28a1.26 1.26 0 0 0-.39.61 3 3 0 0 0-.19 1.09 2.05 2.05 0 0 0 .87 1.9 3.68 3.68 0 0 0 2.18.6 8.71 8.71 0 0 0 2.57-.33 3 3 0 0 0 1.59-1 4.2 4.2 0 0 0 .52-1.14zM203.35 9.86L202.29 12a9.73 9.73 0 0 1 1.57 1.83 5.94 5.94 0 0 1 .81 1.75 4.68 4.68 0 0 1-.81 1.48 8.51 8.51 0 0 1-1.48 1.45 12.78 12.78 0 0 1-2.06 1.28 13.75 13.75 0 0 1-2.52 1l.36.51 3.24.41a7.6 7.6 0 0 0 1.75-1.27 9.21 9.21 0 0 0 1.34-1.64 8 8 0 0 0 .86-1.8 5.78 5.78 0 0 0 .3-1.81 6.78 6.78 0 0 0-.55-2.66 9.84 9.84 0 0 0-1.75-2.67zM209.43 10.67q-.05-1.29-.13-2.74t-.1-3.08v-3.8l-1.7 1.42q0 1.67.09 3.07t.22 3q.15 1.65.27 3.6t.11 4.67h.51a7.94 7.94 0 0 0 .3-.81c.12-.27.21-.51.28-.71a4.26 4.26 0 0 0 .14-.81v-1.47q0-1.01.01-2.34z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                اردو
+              </span>
+            </a>
+            <a dir="rtl"
+               href="#content"
+               class="SkipLink-wmpyxz-0 kSJMkE"
+            >
+              مواد پر جائیں
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="rtl"
+             class="StyledNav-sc-158x7z5-5 fdVKyQ"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="rtl"
+                      class="MenuButton-ukxuly-6 dEgmnw"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  سیکشن
+                </span>
+              </button>
+              <div dir="rtl"
+                   class="StyledScrollableNav-sc-1nc6e54-0 pgOHc"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      صفحۂ اول
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/pakistan"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      پاکستان
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/regional"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      آس پاس
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/world"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      ورلڈ
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/sport"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      کھیل
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/entertainment"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      فن فنکار
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/science"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      سائنس
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/media/video"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      ویڈیو
+                    </a>
+                  </li>
+                  <li dir="rtl"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
+                  >
+                    <a href="/urdu/punjabi_video"
+                       class="StyledLink-sc-158x7z5-2 eVHHC"
+                    >
+                      پنجابی ويڈیو
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    صفحۂ اول
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/pakistan"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    پاکستان
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/regional"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    آس پاس
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/world"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    ورلڈ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/sport"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    کھیل
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/entertainment"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    فن فنکار
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/science"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    سائنس
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/media/video"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    ویڈیو
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/urdu/punjabi_video"
+                     class="StyledDropdownLink-ukxuly-4 gBeZGL"
+                  >
+                    پنجابی ويڈیو
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=pakistan::urdu.pakistan.photo_gallery.48242478.page&amp;x1=[urn:bbc:cps:e9a5c193-0f46-594b-95d7-543c5393ea6b]&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[گذشتہ+ہفتے+کا+پاکستان+تصاویر+میں+-+BBC+News+اردو]&amp;x11=[2019-05-12T09:11:31.000Z]&amp;x12=[2019-05-12T09:11:34.000Z]&amp;x16=[WS%20-%20Divert%20me~WS%20-%20Keep%20me%20on%20trend]&amp;x17=[Feature]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 bDniIN"
+          >
+            گذشتہ ہفتے کا پاکستان تصاویر میں
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-05-12"
+                class="StyledTimestamp-um718p-0 euSVSC"
+          >
+            12 مئ 2019
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hUhZbB">
+            پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg 800w"
+                         alt="رمضان"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہے ہیں۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg 800w"
+                         alt="لاہور"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/47E2/production/_106920481_gettyimages-1142151782.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستانی کے دوسرے بڑے شہر لاہور میں صوفی بزرگ داتا گنج بخش کے مزار کے باہر ہونے والے خودکش حملے کے بعد سکیورٹی اہلکار ایلیٹ فورس کی نشانہ بننے والی گاڑی کا معائنہ کر رہے ہیں۔ اس دھماکے میں کم از کم 10 افرا ہلاک جبکہ دو خواتین سمیت متعدد افراد زخمی ہوئے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/9602/production/_106920483_tv036780455.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9602/production/_106920483_tv036780455.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/9602/production/_106920483_tv036780455.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/9602/production/_106920483_tv036780455.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/9602/production/_106920483_tv036780455.jpg 800w"
+                         alt="آسیہ بی بی"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9602/production/_106920483_tv036780455.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستانی حکام کے مطابق توہین مذہب کے مقدمے میں سپریم کورٹ سے باعزت بری ہونے والی مسیحی خاتون آسیہ بی بی پاکستان سے چلی گئی ہیں۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jssBwf">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg 800w"
+                         alt="چینی"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/CD7A/production/_106920625_hi053876878.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Reuters
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    چینی باشندے پولیس کی نگرانی میں لاہور کے سول کورٹ میں پیش ہونے جارہے ہیں۔ وفاقی تحقیقاتی ادارے (ایف آئی اے) کے مطابق یہ افراد ایسے گینگ کا حصہ ہیں جو پاکستانی خواتین کو جسم فروشی کی غرض سے چائنہ لے جاتے ہیں۔ انسانی حقوق کے کارکنوں کے مطابق پچھلے ایک سال سے پاکستان کے صوبے پنجاب میں چینی باشندے شادی کی غرض سے آرہے ہیں اور لڑکیوں کو شادی کرکے چین لے جارہے ہیں جس کا مقصد ازدواجی تعلقات قائم کرنا نہیں ہے بلکہ یہ مبینہ طور پر بین الاقوامی سطح پر جسم فروشی کا ایک اہم ذریعہ ہے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg 800w"
+                         alt="نواز"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13ADA/production/_106920608_hi053808703.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستان کے سابق وزیر اعظم اور پاکستان مسلم لیگ نون کے قائد محمد نواز شریف العزیزیہ سٹیل ملز کیس میں چھ ہفتے کی ضمانت ختم ہونے کے بعد دوبارہ کوٹ لکھپت جیل پہنچ گئے ہیں۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jZnoFp">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/F93A/production/_106920836_hi053882657.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F93A/production/_106920836_hi053882657.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/F93A/production/_106920836_hi053882657.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/F93A/production/_106920836_hi053882657.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/F93A/production/_106920836_hi053882657.jpg 800w"
+                         alt="نرسیں"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F93A/production/_106920836_hi053882657.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      EPA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    نرسوں کے عالمی دن کے موقع پر پاکستان کے شہر پشاور میں ایک نرس مریض کی دیکھ بھال کرتے ہوئے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/97EC/production/_106829883_ramzan3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/97EC/production/_106829883_ramzan3.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/97EC/production/_106829883_ramzan3.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/97EC/production/_106829883_ramzan3.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/97EC/production/_106829883_ramzan3.jpg 800w"
+                         alt="رمضان"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/97EC/production/_106829883_ramzan3.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 ihjZWK"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ،تصویر کا ذریعہ
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jRslDt">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ،تصویر کا کیپشن
+                  </span>
+                  <p>
+                    پاکستان میں رمضان کی آمد کے ساتھ ہی بنیادی اشیائے خورد و نوش بالخصوص پھلوں اور سبزیوں کی قیمتوں میں ہوشربا اضافہ دیکھنے میں آیا ہے۔
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="rtl"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 jfJCah"
+                    >
+                      اسی بارے میں
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="rtl"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-48167724?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔
+                    </p>
+                    <time datetime="2019-05-05"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      5 مئ 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-48083226?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔
+                    </p>
+                    <time datetime="2019-04-28"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      28 اپريل 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-47182263?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔
+                    </p>
+                    <time datetime="2019-02-09"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      9 فروری 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-43688828?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان: تصاویر
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2018-04-08"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      8 اپريل 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-45365033?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں رونما ہونے والے واقعات کی تصویری جھلکیاں۔
+                    </p>
+                    <time datetime="2018-09-02"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      2 ستمبر 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-43603915?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2018-04-01"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      1 اپريل 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-40240151?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2017-06-11"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      11 جون 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="rtl"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="rtl"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="rtl"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 dBhYmE"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="rtl"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hJlxpH">
+                      <a href="/urdu/pakistan-42382974?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            تصاویر
+                            ,
+                          </span>
+                          <span>
+                            گذشتہ ہفتے کا پاکستان تصاویر میں
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 dTgtCP">
+                      گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں
+                    </p>
+                    <time datetime="2017-12-17"
+                          class="StyledTimestamp-um718p-0 bfzJWv"
+                    >
+                      17 دسمبر 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/urdu"
+               class="StyledLink-m3awbo-2 jjxEfP"
+            >
+              <svg height="24"
+                   viewbox="0 0 211 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 cKCNAA"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M189.72 11.15a3.51 3.51 0 0 0-1-1 2 2 0 0 0-1.15-.37 1.82 1.82 0 0 0-1 .32 3.3 3.3 0 0 0-.85.81 4.17 4.17 0 0 0-.58 1.1 3.56 3.56 0 0 0-.22 1.19 3.08 3.08 0 0 0 .22 1.17 2.84 2.84 0 0 0 .6.93 2.67 2.67 0 0 0 .89.61 2.76 2.76 0 0 0 1.09.22 2.31 2.31 0 0 0 1-.23 2.74 2.74 0 0 0 .75-.51 5 5 0 0 1-.75 1.52 7.65 7.65 0 0 1-1.42 1.51 12 12 0 0 1-2.06 1.34 13.26 13.26 0 0 1-2.65 1l.36.51 3.24.41a7.85 7.85 0 0 0 1.81-1.26 8.78 8.78 0 0 0 1.39-1.71 8.17 8.17 0 0 0 .9-2 8.08 8.08 0 0 0 .32-2.26 6.61 6.61 0 0 0-.24-1.79 5.3 5.3 0 0 0-.65-1.51zm-.9 3a3.7 3.7 0 0 1-.94.13 2.73 2.73 0 0 1-1.26-.28 1.81 1.81 0 0 1-.82-.86 2.5 2.5 0 0 1 .63-1.08 1.41 1.41 0 0 1 1-.42 1.86 1.86 0 0 1 1.26.58 2.82 2.82 0 0 1 .8 1.65 2.06 2.06 0 0 1-.67.32zM200.16 14.13a3.67 3.67 0 0 0 .22-1.21 5.08 5.08 0 0 0-.18-1.33 4.91 4.91 0 0 0-.72-1.43 14.14 14.14 0 0 0-1.54-1.79q-1-1-2.61-2.4l-.46 2.26q1.47 1.27 2.35 2.14a13.28 13.28 0 0 1 1.34 1.52 4.41 4.41 0 0 1 .64 1.11 4.72 4.72 0 0 1 .22 1 4.69 4.69 0 0 1-1.41.38 16.65 16.65 0 0 1-2.27.13 4 4 0 0 1-1.84-.32 1 1 0 0 1-.57-1 4 4 0 0 1 0-.6c0-.16.05-.32.09-.47l-.41.28a1.26 1.26 0 0 0-.39.61 3 3 0 0 0-.19 1.09 2.05 2.05 0 0 0 .87 1.9 3.68 3.68 0 0 0 2.18.6 8.71 8.71 0 0 0 2.57-.33 3 3 0 0 0 1.59-1 4.2 4.2 0 0 0 .52-1.14zM203.35 9.86L202.29 12a9.73 9.73 0 0 1 1.57 1.83 5.94 5.94 0 0 1 .81 1.75 4.68 4.68 0 0 1-.81 1.48 8.51 8.51 0 0 1-1.48 1.45 12.78 12.78 0 0 1-2.06 1.28 13.75 13.75 0 0 1-2.52 1l.36.51 3.24.41a7.6 7.6 0 0 0 1.75-1.27 9.21 9.21 0 0 0 1.34-1.64 8 8 0 0 0 .86-1.8 5.78 5.78 0 0 0 .3-1.81 6.78 6.78 0 0 0-.55-2.66 9.84 9.84 0 0 0-1.75-2.67zM209.43 10.67q-.05-1.29-.13-2.74t-.1-3.08v-3.8l-1.7 1.42q0 1.67.09 3.07t.22 3q.15 1.65.27 3.6t.11 4.67h.51a7.94 7.94 0 0 0 .3-.81c.12-.27.21-.51.28-.71a4.26 4.26 0 0 0 .14-.81v-1.47q0-1.01.01-2.34z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                اردو
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hamapS">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-49282935"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588278"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    استعمال کے ضوابط
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588280"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    بی بی سی کے بارے میں
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588282"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    پرائیویسی پالیسی
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    کوکیز
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/urdu/institutional-37588285"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    بی بی سی سے رابطہ کریں
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  بیرونی لنکس کے بارے میں ہماری پالیسی.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1557652291000,"lastPublished":1557652294000,"lastUpdated":1557652304238,"id":"mock-id","locators":{"assetUri":"/urdu/pakistan-48242478","cpsUrn":"urn:bbc:content:assetUri:urdu/pakistan-48242478","curie":"http://www.bbc.co.uk/asset/e9a5c193-0f46-594b-95d7-543c5393ea6b"},"type":"PGL","createdBy":"urdu-v6","language":"ur","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"urdu.pakistan.photo_gallery.48242478.page","cps_asset_id":"48242478"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature","categoryName":"Feature"},"campaigns":[{"campaignId":"5a988e3139461b000e9dabf9","campaignName":"WS - Divert me"},{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"tags":{},"version":"v1.0.0","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان تصاویر میں","headline":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"locators":{"assetUri":"/urdu/pakistan-48167724","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-48167724"},"summary":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔","timestamp":1557056036000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان تصاویر میں","headline":"گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں"},"locators":{"assetUri":"/urdu/pakistan-48083226","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-48083226"},"summary":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔","timestamp":1556443883000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان","headline":"گذشتہ ہفتے کے پاکستان کی تصویری جھلکیاں"},"locators":{"assetUri":"/urdu/pakistan-47182263","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-47182263"},"summary":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی یہاں تصویری جھلکیاں پیش کی جا رہی ہیں۔","timestamp":1549707378000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان","headline":"گذشتہ ہفتے کا پاکستان: تصاویر"},"locators":{"assetUri":"/urdu/pakistan-43688828","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-43688828"},"summary":"گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں","timestamp":1523178301000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان","headline":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"locators":{"assetUri":"/urdu/pakistan-45365033","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-45365033"},"summary":"گذشتہ ہفتے پاکستان میں رونما ہونے والے واقعات کی تصویری جھلکیاں۔","timestamp":1535878916000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان","headline":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"locators":{"assetUri":"/urdu/pakistan-43603915","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-43603915"},"summary":"گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں","timestamp":1522557209000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان","headline":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"locators":{"assetUri":"/urdu/pakistan-40240151","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-40240151"},"summary":"گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں","timestamp":1497183615000,"cpsType":"PGL","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان","headline":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"locators":{"assetUri":"/urdu/pakistan-42382974","cpsUrn":"urn:bbc:content:assetUri:/urdu/pakistan-42382974"},"summary":"گذشتہ ہفتے پاکستان میں پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں","timestamp":1513485682000,"cpsType":"PGL","id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"پاکستان","uri":"/urdu/pakistan","type":"simple"},"site":{"subType":"site","name":"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news","uri":"/urdu","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"گذشتہ ہفتے کا پاکستان تصاویر میں","blocks":[{"type":"fragment","model":{"text":"گذشتہ ہفتے کا پاکستان تصاویر میں","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1557652291000,"lastPublished":1557652294000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔","blocks":[{"type":"fragment","model":{"text":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہے ہیں۔","blocks":[{"type":"fragment","model":{"text":"کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہے ہیں۔","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"رمضان","blocks":[{"type":"fragment","model":{"text":"رمضان","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP","height":549,"locator":"AB1A/production/_106920834_hi053806837.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"پاکستانی کے دوسرے بڑے شہر لاہور میں صوفی بزرگ داتا گنج بخش کے مزار کے باہر ہونے والے خودکش حملے کے بعد سکیورٹی اہلکار ایلیٹ فورس کی نشانہ بننے والی گاڑی کا معائنہ کر رہے ہیں۔ اس دھماکے میں کم از کم 10 افرا ہلاک جبکہ دو خواتین سمیت متعدد افراد زخمی ہوئے۔","blocks":[{"type":"fragment","model":{"text":"پاکستانی کے دوسرے بڑے شہر لاہور میں صوفی بزرگ داتا گنج بخش کے مزار کے باہر ہونے والے خودکش حملے کے بعد سکیورٹی اہلکار ایلیٹ فورس کی نشانہ بننے والی گاڑی کا معائنہ کر رہے ہیں۔ اس دھماکے میں کم از کم 10 افرا ہلاک جبکہ دو خواتین سمیت متعدد افراد زخمی ہوئے۔","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"لاہور","blocks":[{"type":"fragment","model":{"text":"لاہور","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"47E2/production/_106920481_gettyimages-1142151782.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"پاکستانی حکام کے مطابق توہین مذہب کے مقدمے میں سپریم کورٹ سے باعزت بری ہونے والی مسیحی خاتون آسیہ بی بی پاکستان سے چلی گئی ہیں۔","blocks":[{"type":"fragment","model":{"text":"پاکستانی حکام کے مطابق توہین مذہب کے مقدمے میں سپریم کورٹ سے باعزت بری ہونے والی مسیحی خاتون آسیہ بی بی پاکستان سے چلی گئی ہیں۔","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"آسیہ بی بی","blocks":[{"type":"fragment","model":{"text":"آسیہ بی بی","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"9602/production/_106920483_tv036780455.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"چینی باشندے پولیس کی نگرانی میں لاہور کے سول کورٹ میں پیش ہونے جارہے ہیں۔ وفاقی تحقیقاتی ادارے (ایف آئی اے) کے مطابق یہ افراد ایسے گینگ کا حصہ ہیں جو پاکستانی خواتین کو جسم فروشی کی غرض سے چائنہ لے جاتے ہیں۔ انسانی حقوق کے کارکنوں کے مطابق پچھلے ایک سال سے پاکستان کے صوبے پنجاب میں چینی باشندے شادی کی غرض سے آرہے ہیں اور لڑکیوں کو شادی کرکے چین لے جارہے ہیں جس کا مقصد ازدواجی تعلقات قائم کرنا نہیں ہے بلکہ یہ مبینہ طور پر بین الاقوامی سطح پر جسم فروشی کا ایک اہم ذریعہ ہے۔","blocks":[{"type":"fragment","model":{"text":"چینی باشندے پولیس کی نگرانی میں لاہور کے سول کورٹ میں پیش ہونے جارہے ہیں۔ وفاقی تحقیقاتی ادارے (ایف آئی اے) کے مطابق یہ افراد ایسے گینگ کا حصہ ہیں جو پاکستانی خواتین کو جسم فروشی کی غرض سے چائنہ لے جاتے ہیں۔ انسانی حقوق کے کارکنوں کے مطابق پچھلے ایک سال سے پاکستان کے صوبے پنجاب میں چینی باشندے شادی کی غرض سے آرہے ہیں اور لڑکیوں کو شادی کرکے چین لے جارہے ہیں جس کا مقصد ازدواجی تعلقات قائم کرنا نہیں ہے بلکہ یہ مبینہ طور پر بین الاقوامی سطح پر جسم فروشی کا ایک اہم ذریعہ ہے۔","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"چینی","blocks":[{"type":"fragment","model":{"text":"چینی","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"Reuters","height":647,"locator":"CD7A/production/_106920625_hi053876878.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"پاکستان کے سابق وزیر اعظم اور پاکستان مسلم لیگ نون کے قائد محمد نواز شریف العزیزیہ سٹیل ملز کیس میں چھ ہفتے کی ضمانت ختم ہونے کے بعد دوبارہ کوٹ لکھپت جیل پہنچ گئے ہیں۔","blocks":[{"type":"fragment","model":{"text":"پاکستان کے سابق وزیر اعظم اور پاکستان مسلم لیگ نون کے قائد محمد نواز شریف العزیزیہ سٹیل ملز کیس میں چھ ہفتے کی ضمانت ختم ہونے کے بعد دوبارہ کوٹ لکھپت جیل پہنچ گئے ہیں۔","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"نواز","blocks":[{"type":"fragment","model":{"text":"نواز","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP","height":549,"locator":"13ADA/production/_106920608_hi053808703.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"نرسوں کے عالمی دن کے موقع پر پاکستان کے شہر پشاور میں ایک نرس مریض کی دیکھ بھال کرتے ہوئے۔","blocks":[{"type":"fragment","model":{"text":"نرسوں کے عالمی دن کے موقع پر پاکستان کے شہر پشاور میں ایک نرس مریض کی دیکھ بھال کرتے ہوئے۔","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"نرسیں","blocks":[{"type":"fragment","model":{"text":"نرسیں","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"EPA","height":650,"locator":"F93A/production/_106920836_hi053882657.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"پاکستان میں رمضان کی آمد کے ساتھ ہی بنیادی اشیائے خورد و نوش بالخصوص پھلوں اور سبزیوں کی قیمتوں میں ہوشربا اضافہ دیکھنے میں آیا ہے۔","blocks":[{"type":"fragment","model":{"text":"پاکستان میں رمضان کی آمد کے ساتھ ہی بنیادی اشیائے خورد و نوش بالخصوص پھلوں اور سبزیوں کی قیمتوں میں ہوشربا اضافہ دیکھنے میں آیا ہے۔","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"رمضان","blocks":[{"type":"fragment","model":{"text":"رمضان","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":549,"locator":"97EC/production/_106829883_ramzan3.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]}]}},"promo":{"headlines":{"shortHeadline":"گذشتہ ہفتے کا پاکستان تصاویر میں","headline":"گذشتہ ہفتے کا پاکستان تصاویر میں"},"locators":{"assetUri":"/urdu/pakistan-48242478","cpsUrn":"urn:bbc:content:assetUri:urdu/pakistan-48242478","curie":"http://www.bbc.co.uk/asset/e9a5c193-0f46-594b-95d7-543c5393ea6b"},"summary":"پاکستان میں گذشتہ ہفتے پیش آنے والے چند اہم واقعات کی تصویری جھلکیاں پیش کی جا رہی ہیں۔","timestamp":1557652304238,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature","categoryName":"Feature"},"campaigns":[{"campaignId":"5a988e3139461b000e9dabf9","campaignName":"WS - Divert me"},{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/AB1A/production/_106920834_hi053806837.jpg","path":"/cpsprodpb/AB1A/production/_106920834_hi053806837.jpg","height":549,"width":976,"altText":"رمضان","caption":"کراچی کی ایک مسجد میں رضاکار لوگوں کے لیے افطار کا اہتمام کر رہا ہے۔","copyrightHolder":"AFP","type":"image"},"id":"mock-id","type":"cps"}},"path":"/urdu/pakistan-48242478","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [44]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="urdu"
+            src="http://localhost:7080/static/js/urdu-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

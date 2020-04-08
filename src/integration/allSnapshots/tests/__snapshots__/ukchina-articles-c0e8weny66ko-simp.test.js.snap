@@ -1,0 +1,1428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /ukchina/articles/c0e8weny66ko/simp For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="zh-hans"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="历史：英国近代的五位知名华人"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="历史：英国近代的五位知名华人"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="zh-hans"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="历史：英国近代的五位知名华人 - BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/ukchina/articles/c0e8weny66ko/simp"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCChina"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="历史：英国近代的五位知名华人"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCChina"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="历史：英国近代的五位知名华人 - BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-07-12T14:53:30.269Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-12T14:53:30.269Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      历史：英国近代的五位知名华人 - BBC 英伦网
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/ukchina/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/ukchina/articles/c0e8weny66ko/simp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/ukchina/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/ukchina/articles/c0e8weny66ko/simp","publisher":{"@type":"NewsMediaOrganization","name":"BBC 英伦网","publishingPrinciples":"https://www.bbc.com/ukchina/simp/institutional-51359562","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/ukchina/articles/c0e8weny66ko/simp","name":"历史：英国近代的五位知名华人"},"headline":"历史：英国近代的五位知名华人","datePublished":"2019-07-12T14:53:30.269Z","dateModified":"2019-07-12T14:53:30.269Z","author":{"@type":"NewsMediaOrganization","name":"BBC 英伦网","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"},"noBylinesPolicy":"https://www.bbc.com/ukchina/simp/institutional-51359562#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 bURgYT"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    我们更新了隐私和Cookies条款
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    我们在隐私和Cookies条款上有重要更新，希望告知这对您和您的数据意味着什么。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        可以
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        了解更新内容
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 bURgYT"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    请告知您认可接受Cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    我们使用
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    以便给您最好的网上体验。请告知您是否认同使cookies。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        可以，我同意
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        不可，带我去设置页面
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 kRCdQO">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/ukchina"
+               class="StyledLink-m3awbo-2 jqJQFB"
+            >
+              <svg height="24"
+                   viewbox="0 0 162.27 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 GIcbP"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M92.89 0v22.59">
+                  </path>
+                  <path d="M118.12 14.17c1.31 2.24 3.75 3.52 7.23 4a5.78 5.78 0 0 0-.87 1.22c-3.61-.64-6.07-2.11-7.5-4.77-.84 1.91-2.88 3.62-7.61 4.77a6.3 6.3 0 0 0-.82-1.13c4.55-1 6.38-2.48 7.1-4.1h-6.78V12.9h1.88V8.65h5.37V6.56h1.38v2.1h5.63v4.24h1.78v1.28zm-5.19-8.54h-3.84V4.39h3.84V2.73h1.33v1.66h5.15V2.73h1.33v1.66h3.86v1.24h-3.86v1.89h-1.33V5.63h-5.15v1.89h-1.33zM116 12.9a7.91 7.91 0 0 0 .09-1.31V9.87h-4.06v3zm1.48-3v1.7a10.32 10.32 0 0 1-.07 1.29h4.35v-3zM132.81 3.11a33 33 0 0 1-1.82 4v12.22h-1.29V9.23a17.57 17.57 0 0 1-1.6 2.06 12.47 12.47 0 0 0-.77-1.33 20.67 20.67 0 0 0 4.21-7.21zm6.38-.22l-.47.89a17.76 17.76 0 0 0 5.7 5.37 5.25 5.25 0 0 0-.95 1.06A21.22 21.22 0 0 1 138 4.9a18.65 18.65 0 0 1-5.65 5.54 3.64 3.64 0 0 0-.89-1 16.08 16.08 0 0 0 6.28-6.79zm1.59 14.9c1 0 1.11-.4 1.24-2.51a3.82 3.82 0 0 0 1.22.53c-.18 2.51-.6 3.21-2.39 3.21h-4c-2 0-2.59-.44-2.59-2.11V9.38h1.33v3.83a37.8 37.8 0 0 0 5.48-3l.87 1.15a48 48 0 0 1-6.36 3.15v2.39c0 .73.2.89 1.33.89zM162.27 17.56c0 .86-.24 1.28-.82 1.51a10.38 10.38 0 0 1-3.21.24 6.79 6.79 0 0 0-.51-1.35c1.2.05 2.39 0 2.73 0s.47-.13.47-.44V5.1H148.7v14.23h-1.35V3.82h14.92zm-8.27-2.5c-.35-.66-.84-1.46-1.38-2.31a14.56 14.56 0 0 1-2.71 4.32 10.63 10.63 0 0 0-1.06-.75 12.36 12.36 0 0 0 2.91-4.77c-.8-1.15-1.69-2.33-2.51-3.33l.84-.75c.71.82 1.44 1.77 2.13 2.7a32.5 32.5 0 0 0 .78-3.81l1.24.13a33 33 0 0 1-1.17 4.92c.71 1 1.35 2 1.79 2.79zm5.25.55a29.36 29.36 0 0 0-1.49-2.77 13.92 13.92 0 0 1-2.76 4.37 8 8 0 0 0-1.07-.75 12 12 0 0 0 3-4.9c-.78-1.15-1.66-2.33-2.48-3.35l.87-.67c.69.8 1.38 1.71 2 2.62a28.72 28.72 0 0 0 .78-3.77l1.22.13a30.55 30.55 0 0 1-1.13 4.92 26.5 26.5 0 0 1 1.93 3.39zM76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5z">
+                  </path>
+                  <path d="M92.89 0v22.59"
+                        stroke-width="2"
+                        style="stroke:#fff"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC
+                </span>
+                ,
+                英伦网
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 idouBx"
+            >
+              跳过此内容
+            </a>
+            <div>
+              <a href="/ukchina/articles/c0e8weny66ko/trad"
+                 data-variant="trad"
+                 class="StyledLink-dda4ku-0 jbNelX"
+              >
+                <span class="StyledSpan-dda4ku-1 eibrWk">
+                  繁
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                分类
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/ukchina/simp"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    主页
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/ukchina/simp/horizon"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    BBC精选
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/ukchina/simp/media/video"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    视频内容
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/ukchina/simp"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    主页
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/ukchina/simp/horizon"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    BBC精选
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/ukchina/simp/media/video"
+                     class="StyledLink-sc-158x7z5-2 ZUTxE"
+                  >
+                    视频内容
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=93&p=ukchina.articles.c0e8weny66ko.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c0e8weny66ko]&x2=[amp]&x3=[news-ukchina]&x4=[zh-hans]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[历史：英国近代的五位知名华人]&x11=[2019-07-12T14:53:30.269Z]&x12=[2019-07-12T14:53:30.269Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Ukchina, Ukchina - ART","uid":50924,"title":"历史：英国近代的五位知名华人","virtualReferrer":"\${documentReferrer}","contentType":"New Article"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ixwRQg"
+            >
+              历史：英国近代的五位知名华人
+            </h1>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-12"
+                  class="StyledTimestamp-um718p-0 iENDai"
+            >
+              12 七月 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              SIMP - 华人世界每谈及英中关系话题，想到的往往不是19世纪的鸦片战争、香港殖民地，便是21世纪的经贸交流和留学潮。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              其实，在过去三百年的近现代史上，英中交流远远不止上述这些地缘政治大格局。从人与人的交流层面讲，谁是第一位抵达英国的中国人？谁是第一个在英国作画或著书的中国人？这些在英中交流历史上创造了众多第一的华人，他们因何而来，又有何事迹？历史纷繁复杂，许多故事也许并不为大众所知……
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/ukchina"
+               class="StyledLink-m3awbo-2 jqJQFB"
+            >
+              <svg height="24"
+                   viewbox="0 0 162.27 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 GIcbP"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M92.89 0v22.59">
+                  </path>
+                  <path d="M118.12 14.17c1.31 2.24 3.75 3.52 7.23 4a5.78 5.78 0 0 0-.87 1.22c-3.61-.64-6.07-2.11-7.5-4.77-.84 1.91-2.88 3.62-7.61 4.77a6.3 6.3 0 0 0-.82-1.13c4.55-1 6.38-2.48 7.1-4.1h-6.78V12.9h1.88V8.65h5.37V6.56h1.38v2.1h5.63v4.24h1.78v1.28zm-5.19-8.54h-3.84V4.39h3.84V2.73h1.33v1.66h5.15V2.73h1.33v1.66h3.86v1.24h-3.86v1.89h-1.33V5.63h-5.15v1.89h-1.33zM116 12.9a7.91 7.91 0 0 0 .09-1.31V9.87h-4.06v3zm1.48-3v1.7a10.32 10.32 0 0 1-.07 1.29h4.35v-3zM132.81 3.11a33 33 0 0 1-1.82 4v12.22h-1.29V9.23a17.57 17.57 0 0 1-1.6 2.06 12.47 12.47 0 0 0-.77-1.33 20.67 20.67 0 0 0 4.21-7.21zm6.38-.22l-.47.89a17.76 17.76 0 0 0 5.7 5.37 5.25 5.25 0 0 0-.95 1.06A21.22 21.22 0 0 1 138 4.9a18.65 18.65 0 0 1-5.65 5.54 3.64 3.64 0 0 0-.89-1 16.08 16.08 0 0 0 6.28-6.79zm1.59 14.9c1 0 1.11-.4 1.24-2.51a3.82 3.82 0 0 0 1.22.53c-.18 2.51-.6 3.21-2.39 3.21h-4c-2 0-2.59-.44-2.59-2.11V9.38h1.33v3.83a37.8 37.8 0 0 0 5.48-3l.87 1.15a48 48 0 0 1-6.36 3.15v2.39c0 .73.2.89 1.33.89zM162.27 17.56c0 .86-.24 1.28-.82 1.51a10.38 10.38 0 0 1-3.21.24 6.79 6.79 0 0 0-.51-1.35c1.2.05 2.39 0 2.73 0s.47-.13.47-.44V5.1H148.7v14.23h-1.35V3.82h14.92zm-8.27-2.5c-.35-.66-.84-1.46-1.38-2.31a14.56 14.56 0 0 1-2.71 4.32 10.63 10.63 0 0 0-1.06-.75 12.36 12.36 0 0 0 2.91-4.77c-.8-1.15-1.69-2.33-2.51-3.33l.84-.75c.71.82 1.44 1.77 2.13 2.7a32.5 32.5 0 0 0 .78-3.81l1.24.13a33 33 0 0 1-1.17 4.92c.71 1 1.35 2 1.79 2.79zm5.25.55a29.36 29.36 0 0 0-1.49-2.77 13.92 13.92 0 0 1-2.76 4.37 8 8 0 0 0-1.07-.75 12 12 0 0 0 3-4.9c-.78-1.15-1.66-2.33-2.48-3.35l.87-.67c.69.8 1.38 1.71 2 2.62a28.72 28.72 0 0 0 .78-3.77l1.22.13a30.55 30.55 0 0 1-1.13 4.92 26.5 26.5 0 0 1 1.93 3.39zM76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5z">
+                  </path>
+                  <path d="M92.89 0v22.59"
+                        stroke-width="2"
+                        style="stroke:#fff"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC
+                </span>
+                ,
+                英伦网
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 WBcXh">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/ukchina/simp/institutional-51359562"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC值得信赖的原因
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    使用条款
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    隐私政策
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    联络BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC对外部网站内容不负责任。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  阅读了解我们对待外部链接的做法。
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /ukchina/articles/c0e8weny66ko/simp For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="zh-hans"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="历史：英国近代的五位知名华人"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="历史：英国近代的五位知名华人"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="zh-hans"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="历史：英国近代的五位知名华人 - BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/ukchina/articles/c0e8weny66ko/simp"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCChina"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="历史：英国近代的五位知名华人"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCChina"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="历史：英国近代的五位知名华人 - BBC 英伦网"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-07-12T14:53:30.269Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-07-12T14:53:30.269Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      历史：英国近代的五位知名华人 - BBC 英伦网
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/ukchina/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/ukchina/articles/c0e8weny66ko/simp"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/ukchina/articles/c0e8weny66ko/simp.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/ukchina/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/ukchina/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/ukchina/articles/c0e8weny66ko/simp","publisher":{"@type":"NewsMediaOrganization","name":"BBC 英伦网","publishingPrinciples":"https://www.bbc.com/ukchina/simp/institutional-51359562","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/ukchina/articles/c0e8weny66ko/simp","name":"历史：英国近代的五位知名华人"},"headline":"历史：英国近代的五位知名华人","datePublished":"2019-07-12T14:53:30.269Z","dateModified":"2019-07-12T14:53:30.269Z","author":{"@type":"NewsMediaOrganization","name":"BBC 英伦网","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/ukchina.png"},"noBylinesPolicy":"https://www.bbc.com/ukchina/simp/institutional-51359562#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 kRCdQO">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/ukchina"
+               class="StyledLink-m3awbo-2 jqJQFB"
+            >
+              <svg height="24"
+                   viewbox="0 0 162.27 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 GIcbP"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M92.89 0v22.59">
+                  </path>
+                  <path d="M118.12 14.17c1.31 2.24 3.75 3.52 7.23 4a5.78 5.78 0 0 0-.87 1.22c-3.61-.64-6.07-2.11-7.5-4.77-.84 1.91-2.88 3.62-7.61 4.77a6.3 6.3 0 0 0-.82-1.13c4.55-1 6.38-2.48 7.1-4.1h-6.78V12.9h1.88V8.65h5.37V6.56h1.38v2.1h5.63v4.24h1.78v1.28zm-5.19-8.54h-3.84V4.39h3.84V2.73h1.33v1.66h5.15V2.73h1.33v1.66h3.86v1.24h-3.86v1.89h-1.33V5.63h-5.15v1.89h-1.33zM116 12.9a7.91 7.91 0 0 0 .09-1.31V9.87h-4.06v3zm1.48-3v1.7a10.32 10.32 0 0 1-.07 1.29h4.35v-3zM132.81 3.11a33 33 0 0 1-1.82 4v12.22h-1.29V9.23a17.57 17.57 0 0 1-1.6 2.06 12.47 12.47 0 0 0-.77-1.33 20.67 20.67 0 0 0 4.21-7.21zm6.38-.22l-.47.89a17.76 17.76 0 0 0 5.7 5.37 5.25 5.25 0 0 0-.95 1.06A21.22 21.22 0 0 1 138 4.9a18.65 18.65 0 0 1-5.65 5.54 3.64 3.64 0 0 0-.89-1 16.08 16.08 0 0 0 6.28-6.79zm1.59 14.9c1 0 1.11-.4 1.24-2.51a3.82 3.82 0 0 0 1.22.53c-.18 2.51-.6 3.21-2.39 3.21h-4c-2 0-2.59-.44-2.59-2.11V9.38h1.33v3.83a37.8 37.8 0 0 0 5.48-3l.87 1.15a48 48 0 0 1-6.36 3.15v2.39c0 .73.2.89 1.33.89zM162.27 17.56c0 .86-.24 1.28-.82 1.51a10.38 10.38 0 0 1-3.21.24 6.79 6.79 0 0 0-.51-1.35c1.2.05 2.39 0 2.73 0s.47-.13.47-.44V5.1H148.7v14.23h-1.35V3.82h14.92zm-8.27-2.5c-.35-.66-.84-1.46-1.38-2.31a14.56 14.56 0 0 1-2.71 4.32 10.63 10.63 0 0 0-1.06-.75 12.36 12.36 0 0 0 2.91-4.77c-.8-1.15-1.69-2.33-2.51-3.33l.84-.75c.71.82 1.44 1.77 2.13 2.7a32.5 32.5 0 0 0 .78-3.81l1.24.13a33 33 0 0 1-1.17 4.92c.71 1 1.35 2 1.79 2.79zm5.25.55a29.36 29.36 0 0 0-1.49-2.77 13.92 13.92 0 0 1-2.76 4.37 8 8 0 0 0-1.07-.75 12 12 0 0 0 3-4.9c-.78-1.15-1.66-2.33-2.48-3.35l.87-.67c.69.8 1.38 1.71 2 2.62a28.72 28.72 0 0 0 .78-3.77l1.22.13a30.55 30.55 0 0 1-1.13 4.92 26.5 26.5 0 0 1 1.93 3.39zM76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5z">
+                  </path>
+                  <path d="M92.89 0v22.59"
+                        stroke-width="2"
+                        style="stroke:#fff"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC
+                </span>
+                ,
+                英伦网
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 idouBx"
+            >
+              跳过此内容
+            </a>
+            <div>
+              <a href="/ukchina/articles/c0e8weny66ko/trad"
+                 data-variant="trad"
+                 class="StyledLink-dda4ku-0 jbNelX"
+              >
+                <span class="StyledSpan-dda4ku-1 eibrWk">
+                  繁
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  分类
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/ukchina/simp"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      主页
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/ukchina/simp/horizon"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      BBC精选
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/ukchina/simp/media/video"
+                       class="StyledLink-sc-158x7z5-2 ZUTxE"
+                    >
+                      视频内容
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/ukchina/simp"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    主页
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/ukchina/simp/horizon"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    BBC精选
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/ukchina/simp/media/video"
+                     class="StyledDropdownLink-ukxuly-4 cXbmAg"
+                  >
+                    视频内容
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=93&amp;p=ukchina.articles.c0e8weny66ko.page&amp;x1=[urn:bbc:optimo:c0e8weny66ko]&amp;x2=[responsive]&amp;x3=[news-ukchina]&amp;x4=[zh-hans]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[历史：英国近代的五位知名华人]&amp;x11=[2019-07-12T14:53:30.269Z]&amp;x12=[2019-07-12T14:53:30.269Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
+      >
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 ixwRQg"
+            >
+              历史：英国近代的五位知名华人
+            </h1>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-12"
+                  class="StyledTimestamp-um718p-0 iENDai"
+            >
+              12 七月 2019
+            </time>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              SIMP - 华人世界每谈及英中关系话题，想到的往往不是19世纪的鸦片战争、香港殖民地，便是21世纪的经贸交流和留学潮。
+            </p>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 bWtIRA">
+              其实，在过去三百年的近现代史上，英中交流远远不止上述这些地缘政治大格局。从人与人的交流层面讲，谁是第一位抵达英国的中国人？谁是第一个在英国作画或著书的中国人？这些在英中交流历史上创造了众多第一的华人，他们因何而来，又有何事迹？历史纷繁复杂，许多故事也许并不为大众所知……
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/ukchina"
+               class="StyledLink-m3awbo-2 jqJQFB"
+            >
+              <svg height="24"
+                   viewbox="0 0 162.27 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 GIcbP"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M92.89 0v22.59">
+                  </path>
+                  <path d="M118.12 14.17c1.31 2.24 3.75 3.52 7.23 4a5.78 5.78 0 0 0-.87 1.22c-3.61-.64-6.07-2.11-7.5-4.77-.84 1.91-2.88 3.62-7.61 4.77a6.3 6.3 0 0 0-.82-1.13c4.55-1 6.38-2.48 7.1-4.1h-6.78V12.9h1.88V8.65h5.37V6.56h1.38v2.1h5.63v4.24h1.78v1.28zm-5.19-8.54h-3.84V4.39h3.84V2.73h1.33v1.66h5.15V2.73h1.33v1.66h3.86v1.24h-3.86v1.89h-1.33V5.63h-5.15v1.89h-1.33zM116 12.9a7.91 7.91 0 0 0 .09-1.31V9.87h-4.06v3zm1.48-3v1.7a10.32 10.32 0 0 1-.07 1.29h4.35v-3zM132.81 3.11a33 33 0 0 1-1.82 4v12.22h-1.29V9.23a17.57 17.57 0 0 1-1.6 2.06 12.47 12.47 0 0 0-.77-1.33 20.67 20.67 0 0 0 4.21-7.21zm6.38-.22l-.47.89a17.76 17.76 0 0 0 5.7 5.37 5.25 5.25 0 0 0-.95 1.06A21.22 21.22 0 0 1 138 4.9a18.65 18.65 0 0 1-5.65 5.54 3.64 3.64 0 0 0-.89-1 16.08 16.08 0 0 0 6.28-6.79zm1.59 14.9c1 0 1.11-.4 1.24-2.51a3.82 3.82 0 0 0 1.22.53c-.18 2.51-.6 3.21-2.39 3.21h-4c-2 0-2.59-.44-2.59-2.11V9.38h1.33v3.83a37.8 37.8 0 0 0 5.48-3l.87 1.15a48 48 0 0 1-6.36 3.15v2.39c0 .73.2.89 1.33.89zM162.27 17.56c0 .86-.24 1.28-.82 1.51a10.38 10.38 0 0 1-3.21.24 6.79 6.79 0 0 0-.51-1.35c1.2.05 2.39 0 2.73 0s.47-.13.47-.44V5.1H148.7v14.23h-1.35V3.82h14.92zm-8.27-2.5c-.35-.66-.84-1.46-1.38-2.31a14.56 14.56 0 0 1-2.71 4.32 10.63 10.63 0 0 0-1.06-.75 12.36 12.36 0 0 0 2.91-4.77c-.8-1.15-1.69-2.33-2.51-3.33l.84-.75c.71.82 1.44 1.77 2.13 2.7a32.5 32.5 0 0 0 .78-3.81l1.24.13a33 33 0 0 1-1.17 4.92c.71 1 1.35 2 1.79 2.79zm5.25.55a29.36 29.36 0 0 0-1.49-2.77 13.92 13.92 0 0 1-2.76 4.37 8 8 0 0 0-1.07-.75 12 12 0 0 0 3-4.9c-.78-1.15-1.66-2.33-2.48-3.35l.87-.67c.69.8 1.38 1.71 2 2.62a28.72 28.72 0 0 0 .78-3.77l1.22.13a30.55 30.55 0 0 1-1.13 4.92 26.5 26.5 0 0 1 1.93 3.39zM76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5z">
+                  </path>
+                  <path d="M92.89 0v22.59"
+                        stroke-width="2"
+                        style="stroke:#fff"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC
+                </span>
+                ,
+                英伦网
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 WBcXh">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/ukchina/simp/institutional-51359562"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC值得信赖的原因
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    使用条款
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    隐私政策
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    联络BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC对外部网站内容不负责任。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  阅读了解我们对待外部链接的做法。
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"optimoUrn":"urn:bbc:optimo:asset:c0e8weny66ko"},"type":"article","createdBy":"Ukchina","language":"zh-hans","lastUpdated":1562943212602,"firstPublished":1562943210269,"lastPublished":1562943210269,"options":{},"analyticsLabels":{},"passport":{"language":"zh-hans","home":"http://www.bbc.co.uk/ontologies/passport/home/UKChina"},"tags":{},"version":"v1.1.0","blockTypes":["headline","text","paragraph","fragment"]},"content":{"model":{"blocks":[{"type":"headline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"历史：英国近代的五位知名华人","blocks":[{"type":"fragment","model":{"text":"历史：英国近代的五位知名华人","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1562943210269,"lastPublished":1562943210269},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"SIMP - 华人世界每谈及英中关系话题，想到的往往不是19世纪的鸦片战争、香港殖民地，便是21世纪的经贸交流和留学潮。","blocks":[{"type":"fragment","model":{"text":"SIMP - 华人世界每谈及英中关系话题，想到的往往不是19世纪的鸦片战争、香港殖民地，便是21世纪的经贸交流和留学潮。","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]},{"type":"paragraph","model":{"text":"其实，在过去三百年的近现代史上，英中交流远远不止上述这些地缘政治大格局。从人与人的交流层面讲，谁是第一位抵达英国的中国人？谁是第一个在英国作画或著书的中国人？这些在英中交流历史上创造了众多第一的华人，他们因何而来，又有何事迹？历史纷繁复杂，许多故事也许并不为大众所知……","blocks":[{"type":"fragment","model":{"text":"其实，在过去三百年的近现代史上，英中交流远远不止上述这些地缘政治大格局。从人与人的交流层面讲，谁是第一位抵达英国的中国人？谁是第一个在英国作画或著书的中国人？这些在英中交流历史上创造了众多第一的华人，他们因何而来，又有何事迹？历史纷繁复杂，许多故事也许并不为大众所知……","attributes":[]},"id":"mock-id","position":[3,2,1]}]},"id":"mock-id","position":[3,2]}]},"id":"mock-id","position":[3]}]}},"promo":{"headlines":{"seoHeadline":"历史：英国近代的五位知名华人"},"locators":{"optimoUrn":"urn:bbc:optimo:asset:c0e8weny66ko"},"summary":"","timestamp":1562943210269,"id":"mock-id","type":"cps"},"relatedContent":{"site":{"subType":"site","name":"Ukchina","uri":"/ukchina","type":"simple"},"groups":[]}},"path":"/ukchina/articles/c0e8weny66ko/simp","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [42]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="ukchina"
+            src="http://localhost:7080/static/js/ukchina-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

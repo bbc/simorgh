@@ -1,0 +1,2419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /tigrinya/news-49944566 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ti"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_tigrinya/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="ዕዱማት እቲ ብዓል"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ti-ET"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ - BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/tigrinya/news-49944566"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="ዕዱማት እቲ ብዓል"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_tigrinya/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ - BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-10-05T09:31:56.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-07T14:29:04.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ - BBC News ትግርኛ
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/tigrinya/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/tigrinya/news-49944566"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/tigrinya/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/tigrinya/news-49944566","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ትግርኛ","publishingPrinciples":"https://www.bbc.com/tigrinya/institutional-49283259","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/tigrinya/news-49944566","name":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ"},"headline":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ","description":"ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ","datePublished":"2019-10-05T09:31:56.000Z","dateModified":"2019-10-07T14:29:04.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News ትግርኛ","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"},"noBylinesPolicy":"https://www.bbc.com/tigrinya/institutional-49283259#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 crIyKr"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    ኣብ ፖሊሲ ብሕትውናናን ኩኪታትን ምምሕያሻት ገይርና ኣለና።
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    ኣብ ፖሊሲ ብሕትውናናን ኩኪታትን ብዙሓት ኣገደስቲ ለውጥታት ገይርና ኣለና። እዚ ንዓኹምን ንዴታኹምን እንታይ ማለት ከምዝኾነ ክነፍልጠኩም ንደሊ።
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ሕራይ
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        እንታይ ከምዝተለወጠ ረኣዩ
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 crIyKr"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    ኩኪስ'&nbsp;ንምጥቃም&nbsp;ከም ዝተሰማማዕኩም ኣፍልጡና
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    ኣብ መርበብ ሓበሬታና ዝበለጸ ኣገልግሎት መታን ክትረኽቡ ኢና
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      'ኩኪስ'
+                    </a>
+                    እንጥቀም። ንኹሎም እዞም 'ኩኪስ'  ከም እተሰማማዕኩምሎም ኣፍልጡና።
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        እወ፡ እሰማማዕ እየ።
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        ኣይፋል፡ ናብ መተዓራረዪ (ሴቲንግ) ውሰዱኒ።
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/tigrinya"
+               class="StyledLink-m3awbo-2 iwHmhw"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.25 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hJEPnh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.21 18v-7h-2.1v.08a2 2 0 0 1-.52.93 1.12 1.12 0 0 1-.81.37h-.2l.31-2.28h3.34V9h-.11a4 4 0 0 1-1.66-.38 2 2 0 0 1-.84-1 4.47 4.47 0 0 1-.28-1.75V5.2h1.34v.68a3.26 3.26 0 0 0 .18 1.21 1.29 1.29 0 0 0 .58.67 2.9 2.9 0 0 0 1.29.2h.84v2.12h3.33l.31 2.28H192a1.14 1.14 0 0 1-.8-.35 2.09 2.09 0 0 1-.56-.95v-.08h-2.07V18zM202.44 18v-6.33a8.94 8.94 0 0 0-.36-2.92 2.49 2.49 0 0 0-1.21-1.4 5.5 5.5 0 0 0-2.39-.43h-.2l.1.17a2.26 2.26 0 0 1 .3 1.16 2.16 2.16 0 0 1-.76 1.74 3.73 3.73 0 0 1-4.22 0 2.2 2.2 0 0 1-.7-1.74 2 2 0 0 1 .71-1.68 3.4 3.4 0 0 1 2.11-.57h2.43a8.93 8.93 0 0 1 3.41.5 3.12 3.12 0 0 1 1.62 1.6 7.71 7.71 0 0 1 .51 3.12V18zm-6.62-11.24a1.59 1.59 0 0 0-1.13.4 1.45 1.45 0 0 0-.43 1.1 1.68 1.68 0 0 0 .43 1.19 1.6 1.6 0 0 0 2.26 0 1.68 1.68 0 0 0 .43-1.19 1.45 1.45 0 0 0-.43-1.1 1.59 1.59 0 0 0-1.13-.4zM212.72 19.42a1.13 1.13 0 0 1-.79-.36 2 2 0 0 1-.55-.94v-.08h-1.19a7.06 7.06 0 0 1-2.56-.35 2.19 2.19 0 0 1-1.18-1.12 5.61 5.61 0 0 1-.37-2.29v-1.16a14.18 14.18 0 0 1 .49-4.19 4.11 4.11 0 0 1 1.53-2.22 4.91 4.91 0 0 1 2.8-.71h1.71l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.46a2.84 2.84 0 0 0-2.66 1.49 10.1 10.1 0 0 0-.82 4.71v1.36a4.23 4.23 0 0 0 .24 1.61 1.54 1.54 0 0 0 .8.83 4.61 4.61 0 0 0 1.76.24h1.13v-.08a2.07 2.07 0 0 1 .55-.94 1.12 1.12 0 0 1 .78-.36h.2l-.26 1.79.26 1.87zM218.41 18v-3.8h-2.84V13a5.08 5.08 0 0 1 .72-2.85 3.45 3.45 0 0 1 2-1.43h.08v-2h-2v.08a1.7 1.7 0 0 1-.53.82 1.22 1.22 0 0 1-.81.31h-.19l.26-1.56-.2-1.57h.19a1.22 1.22 0 0 1 .8.3 1.72 1.72 0 0 1 .54.83v.08h5.24v-.08a1.71 1.71 0 0 1 .54-.84 1.23 1.23 0 0 1 .79-.29h.19L223 6.35l.26 1.59h-.19a1.23 1.23 0 0 1-.8-.3 1.71 1.71 0 0 1-.53-.83v-.08h-2v1.86h1.51l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.43a2.39 2.39 0 0 0-2 .89 4 4 0 0 0-.7 2.51v.39h2.84V18z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ትግርኛ
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 cVAqlL"
+            >
+              ናብቲ ትሕዝቶ ቀጽሉ
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                ክፍልታት
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/tigrinya"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
+                  >
+                    ዜና
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/tigrinya/media/video"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
+                  >
+                    ቪድዮ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/tigrinya/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
+                  >
+                    ኣመና ፍቱዋት
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/tigrinya"
+                     class="StyledLink-sc-158x7z5-2 dGwkJs"
+                  >
+                    ዜና
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/tigrinya/media/video"
+                     class="StyledLink-sc-158x7z5-2 dGwkJs"
+                  >
+                    ቪድዮ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/tigrinya/popular/read"
+                     class="StyledLink-sc-158x7z5-2 dGwkJs"
+                  >
+                    ኣመና ፍቱዋት
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=91&p=news::tigrinya.news.photo_gallery.49944566.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:e4c276d4-2110-2641-a6bd-2ff70db0e12e]&x2=[amp]&x3=[news-tigrinya]&x4=[ti]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[ኣብ+ኣዲስ+ኣበባ+[ፊንፊኔ]+ካብ+ዝኽበር+ዘሎ+ኢሬቻ+ብስእሊ+-+BBC+News+ትግርኛ]&x11=[2019-10-05T09:31:56.000Z]&x12=[2019-10-07T14:29:04.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jIBJsF"
+          >
+            ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-10-05"
+                class="StyledTimestamp-um718p-0 dkdqkZ"
+          >
+            5 ጥቅምቲ 2019
+          </time>
+          <div>
+            <time datetime="2019-10-07"
+                  class="StyledTimestamp-um718p-0 dkdqkZ"
+            >
+              ዝተመሓየሸ 7 ጥቅምቲ 2019
+            </time>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 cnKvCl">
+            ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ባህላዊ ክዳን ዝተኸደና ዕዱማት እቲ ብዓል"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ባህላዊ ክዳን ኦሮሞ ዝተኸደና ዕዱማት እቲ ብዓል
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ኣብቲ ምስጋና ዝቐርበሉ ቦታ"
+                           attribution=" ኣብቲ ምስጋና ዝቐርበሉ ቦታ"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ምንጪ ስእሊ,
+                    </span>
+                    <span lang="en-GB">
+                      ኣብቲ ምስጋና ዝቐርበሉ ቦታ
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ምስጋና ዝቐርበሉ ቦታ ኢሬቻ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዕዱማት እቲ ብዓል"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዝተፈላለየ ባህላዊ ክዳን ዝተኸደኑ ዕዱማት ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዝተፈላለየ ባህላዊ ክዳን ኦሮሞ ዝተኸደኑ ዕዱማት ነቲ ብዓል ኣድሚቐምዎ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 hsQQaX"
+                    >
+                      ተዛማዲ ትሕዝቶ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="ምፅብባቕ ጓል ኣሸንዳ"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/12428/production/_103129747_p06j4wbv.jpg"
+                                 height="360"
+                                 width="640"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 IFzbV">
+                      <a href="/tigrinya/news-45272046?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ,
+                          </span>
+                          <span>
+                            ምፅብባቕ ጓል ኣሸንዳ
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bsVNyu">
+                      ቆልዓ ኣሸንዳ ካብ ምፅብባቕ ጀሚሩ
+                    </p>
+                    <time datetime="2018-08-22"
+                          class="StyledTimestamp-um718p-0 dCcNVO"
+                    >
+                      22 ነሓሰ 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="ሓወልቲ ኣክሱም"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B8E8/production/_106063374_mediaitem106063039.jpg"
+                                 height="720"
+                                 width="1280"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 IFzbV">
+                      <a href="/tigrinya/news-47607740?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ትግራይ፡ ካብ ዘለውዋ ጸጋታት ቱሪዝም ተረባሒት ኣይኮነትን ተባሂሉ
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bsVNyu">
+                      ቱሪዝም ባህላዊ ኢንዳስትሪ ኢትዮጵያ ኾይኑ፡ እዛ ሃገር ካብተን ጥንታዊ ሓድጊ፣ ባህልን ታሪኽን ዓቂበን ዝርከባ ሃገራት ሓንቲ'ያ። ትግራይ ድማ፡ ኢትዮጵያ ብሓድጊ ቱሪዝም ንዓለም ክተበርክቶ እትኽእላ ጸጋ ዝሓቖፈት'ያ። ተጠቃምነታ ግን ክሳብ ክንደይ'ዩ?
+                    </p>
+                    <time datetime="2019-03-18"
+                          class="StyledTimestamp-um718p-0 dCcNVO"
+                    >
+                      18 መጋቢት 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="ኣብ ሩባ ወሪዱ ማይ ጳጉሜን ዝሕጸብ ቆልዓ"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/15EC4/production/_108769798_whatsappimage2019-09-12at18.30.22-1.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 IFzbV">
+                      <a href="/tigrinya/news-45345796?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ጳጉሜን -'ጸያቕ ኣዋርሕ'
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bsVNyu">
+                      ኣብ ኤርትራን ኢትዮጵያን ቅንያት 'ጳጉሜን' ትማሊ ተዛዚሙ ኣሎ። እዚ ብዓቢ ድምቀት ዝበዓልን ዝካየድን እምነትን ልምድን ካብይ ዝነቅለ'ዩ፡ ብኸመይ'ከ ይካየድ? ቢቢሲ ትግርኛ ኣብ ዝሓለፈ ዓመት ዘዳለዎ ንዝኽርኹም ዘበራብርን ዝሕግዝን ሕጽር ዝበለ ዛንታ እነሆ!
+                    </p>
+                    <time datetime="2019-09-12"
+                          class="StyledTimestamp-um718p-0 dCcNVO"
+                    >
+                      12 መስከረም 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/tigrinya"
+               class="StyledLink-m3awbo-2 iwHmhw"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.25 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hJEPnh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.21 18v-7h-2.1v.08a2 2 0 0 1-.52.93 1.12 1.12 0 0 1-.81.37h-.2l.31-2.28h3.34V9h-.11a4 4 0 0 1-1.66-.38 2 2 0 0 1-.84-1 4.47 4.47 0 0 1-.28-1.75V5.2h1.34v.68a3.26 3.26 0 0 0 .18 1.21 1.29 1.29 0 0 0 .58.67 2.9 2.9 0 0 0 1.29.2h.84v2.12h3.33l.31 2.28H192a1.14 1.14 0 0 1-.8-.35 2.09 2.09 0 0 1-.56-.95v-.08h-2.07V18zM202.44 18v-6.33a8.94 8.94 0 0 0-.36-2.92 2.49 2.49 0 0 0-1.21-1.4 5.5 5.5 0 0 0-2.39-.43h-.2l.1.17a2.26 2.26 0 0 1 .3 1.16 2.16 2.16 0 0 1-.76 1.74 3.73 3.73 0 0 1-4.22 0 2.2 2.2 0 0 1-.7-1.74 2 2 0 0 1 .71-1.68 3.4 3.4 0 0 1 2.11-.57h2.43a8.93 8.93 0 0 1 3.41.5 3.12 3.12 0 0 1 1.62 1.6 7.71 7.71 0 0 1 .51 3.12V18zm-6.62-11.24a1.59 1.59 0 0 0-1.13.4 1.45 1.45 0 0 0-.43 1.1 1.68 1.68 0 0 0 .43 1.19 1.6 1.6 0 0 0 2.26 0 1.68 1.68 0 0 0 .43-1.19 1.45 1.45 0 0 0-.43-1.1 1.59 1.59 0 0 0-1.13-.4zM212.72 19.42a1.13 1.13 0 0 1-.79-.36 2 2 0 0 1-.55-.94v-.08h-1.19a7.06 7.06 0 0 1-2.56-.35 2.19 2.19 0 0 1-1.18-1.12 5.61 5.61 0 0 1-.37-2.29v-1.16a14.18 14.18 0 0 1 .49-4.19 4.11 4.11 0 0 1 1.53-2.22 4.91 4.91 0 0 1 2.8-.71h1.71l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.46a2.84 2.84 0 0 0-2.66 1.49 10.1 10.1 0 0 0-.82 4.71v1.36a4.23 4.23 0 0 0 .24 1.61 1.54 1.54 0 0 0 .8.83 4.61 4.61 0 0 0 1.76.24h1.13v-.08a2.07 2.07 0 0 1 .55-.94 1.12 1.12 0 0 1 .78-.36h.2l-.26 1.79.26 1.87zM218.41 18v-3.8h-2.84V13a5.08 5.08 0 0 1 .72-2.85 3.45 3.45 0 0 1 2-1.43h.08v-2h-2v.08a1.7 1.7 0 0 1-.53.82 1.22 1.22 0 0 1-.81.31h-.19l.26-1.56-.2-1.57h.19a1.22 1.22 0 0 1 .8.3 1.72 1.72 0 0 1 .54.83v.08h5.24v-.08a1.71 1.71 0 0 1 .54-.84 1.23 1.23 0 0 1 .79-.29h.19L223 6.35l.26 1.59h-.19a1.23 1.23 0 0 1-.8-.3 1.71 1.71 0 0 1-.53-.83v-.08h-2v1.86h1.51l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.43a2.39 2.39 0 0 0-2 .89 4 4 0 0 0-.7 2.51v.39h2.84V18z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ትግርኛ
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iXrFjz">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/tigrinya/institutional-49283259"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ውዕል&nbsp;ተጠቃምነት
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ብዛዕባ ቢቢሲ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ናይ ስቱርነት ፖሊሲ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ኩኪስ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/tigrinya/institutional-42228875"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ንቢቢሲ ንምርካብ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን።
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና&nbsp;ኣረኣእያ ንምርዳእ ኣንብቡ።
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /tigrinya/news-49944566 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ti"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_tigrinya/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="ዕዱማት እቲ ብዓል"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ti-ET"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ - BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/tigrinya/news-49944566"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="ዕዱማት እቲ ብዓል"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_tigrinya/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ - BBC News ትግርኛ"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-10-05T09:31:56.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-07T14:29:04.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ - BBC News ትግርኛ
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/tigrinya/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/tigrinya/news-49944566"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/tigrinya/news-49944566.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/tigrinya/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/tigrinya/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/tigrinya/news-49944566","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ትግርኛ","publishingPrinciples":"https://www.bbc.com/tigrinya/institutional-49283259","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/tigrinya/news-49944566","name":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ"},"headline":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ","description":"ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ","datePublished":"2019-10-05T09:31:56.000Z","dateModified":"2019-10-07T14:29:04.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News ትግርኛ","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png"},"noBylinesPolicy":"https://www.bbc.com/tigrinya/institutional-49283259#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/tigrinya"
+               class="StyledLink-m3awbo-2 iwHmhw"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.25 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hJEPnh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.21 18v-7h-2.1v.08a2 2 0 0 1-.52.93 1.12 1.12 0 0 1-.81.37h-.2l.31-2.28h3.34V9h-.11a4 4 0 0 1-1.66-.38 2 2 0 0 1-.84-1 4.47 4.47 0 0 1-.28-1.75V5.2h1.34v.68a3.26 3.26 0 0 0 .18 1.21 1.29 1.29 0 0 0 .58.67 2.9 2.9 0 0 0 1.29.2h.84v2.12h3.33l.31 2.28H192a1.14 1.14 0 0 1-.8-.35 2.09 2.09 0 0 1-.56-.95v-.08h-2.07V18zM202.44 18v-6.33a8.94 8.94 0 0 0-.36-2.92 2.49 2.49 0 0 0-1.21-1.4 5.5 5.5 0 0 0-2.39-.43h-.2l.1.17a2.26 2.26 0 0 1 .3 1.16 2.16 2.16 0 0 1-.76 1.74 3.73 3.73 0 0 1-4.22 0 2.2 2.2 0 0 1-.7-1.74 2 2 0 0 1 .71-1.68 3.4 3.4 0 0 1 2.11-.57h2.43a8.93 8.93 0 0 1 3.41.5 3.12 3.12 0 0 1 1.62 1.6 7.71 7.71 0 0 1 .51 3.12V18zm-6.62-11.24a1.59 1.59 0 0 0-1.13.4 1.45 1.45 0 0 0-.43 1.1 1.68 1.68 0 0 0 .43 1.19 1.6 1.6 0 0 0 2.26 0 1.68 1.68 0 0 0 .43-1.19 1.45 1.45 0 0 0-.43-1.1 1.59 1.59 0 0 0-1.13-.4zM212.72 19.42a1.13 1.13 0 0 1-.79-.36 2 2 0 0 1-.55-.94v-.08h-1.19a7.06 7.06 0 0 1-2.56-.35 2.19 2.19 0 0 1-1.18-1.12 5.61 5.61 0 0 1-.37-2.29v-1.16a14.18 14.18 0 0 1 .49-4.19 4.11 4.11 0 0 1 1.53-2.22 4.91 4.91 0 0 1 2.8-.71h1.71l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.46a2.84 2.84 0 0 0-2.66 1.49 10.1 10.1 0 0 0-.82 4.71v1.36a4.23 4.23 0 0 0 .24 1.61 1.54 1.54 0 0 0 .8.83 4.61 4.61 0 0 0 1.76.24h1.13v-.08a2.07 2.07 0 0 1 .55-.94 1.12 1.12 0 0 1 .78-.36h.2l-.26 1.79.26 1.87zM218.41 18v-3.8h-2.84V13a5.08 5.08 0 0 1 .72-2.85 3.45 3.45 0 0 1 2-1.43h.08v-2h-2v.08a1.7 1.7 0 0 1-.53.82 1.22 1.22 0 0 1-.81.31h-.19l.26-1.56-.2-1.57h.19a1.22 1.22 0 0 1 .8.3 1.72 1.72 0 0 1 .54.83v.08h5.24v-.08a1.71 1.71 0 0 1 .54-.84 1.23 1.23 0 0 1 .79-.29h.19L223 6.35l.26 1.59h-.19a1.23 1.23 0 0 1-.8-.3 1.71 1.71 0 0 1-.53-.83v-.08h-2v1.86h1.51l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.43a2.39 2.39 0 0 0-2 .89 4 4 0 0 0-.7 2.51v.39h2.84V18z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ትግርኛ
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 cVAqlL"
+            >
+              ናብቲ ትሕዝቶ ቀጽሉ
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  ክፍልታት
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/tigrinya"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
+                    >
+                      ዜና
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/tigrinya/media/video"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
+                    >
+                      ቪድዮ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/tigrinya/popular/read"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
+                    >
+                      ኣመና ፍቱዋት
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/tigrinya"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
+                  >
+                    ዜና
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/tigrinya/media/video"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
+                  >
+                    ቪድዮ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/tigrinya/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
+                  >
+                    ኣመና ፍቱዋት
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=91&amp;p=news::tigrinya.news.photo_gallery.49944566.page&amp;x1=[urn:bbc:cps:e4c276d4-2110-2641-a6bd-2ff70db0e12e]&amp;x2=[responsive]&amp;x3=[news-tigrinya]&amp;x4=[ti]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[ኣብ+ኣዲስ+ኣበባ+[ፊንፊኔ]+ካብ+ዝኽበር+ዘሎ+ኢሬቻ+ብስእሊ+-+BBC+News+ትግርኛ]&amp;x11=[2019-10-05T09:31:56.000Z]&amp;x12=[2019-10-07T14:29:04.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jIBJsF"
+          >
+            ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-10-05"
+                class="StyledTimestamp-um718p-0 dkdqkZ"
+          >
+            5 ጥቅምቲ 2019
+          </time>
+          <div>
+            <time datetime="2019-10-07"
+                  class="StyledTimestamp-um718p-0 dkdqkZ"
+            >
+              ዝተመሓየሸ 7 ጥቅምቲ 2019
+            </time>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 cnKvCl">
+            ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg 800w"
+                         alt="ባህላዊ ክዳን ዝተኸደና ዕዱማት እቲ ብዓል"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ባህላዊ ክዳን ኦሮሞ ዝተኸደና ዕዱማት እቲ ብዓል
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg 800w"
+                         alt="ኣብቲ ምስጋና ዝቐርበሉ ቦታ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ምንጪ ስእሊ,
+                    </span>
+                    <span lang="en-GB">
+                      ኣብቲ ምስጋና ዝቐርበሉ ቦታ
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ምስጋና ዝቐርበሉ ቦታ ኢሬቻ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg 800w"
+                         alt="ዕዱማት እቲ ብዓል"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg 800w"
+                         alt="ዝተፈላለየ ባህላዊ ክዳን ዝተኸደኑ ዕዱማት ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዝተፈላለየ ባህላዊ ክዳን ኦሮሞ ዝተኸደኑ ዕዱማት ነቲ ብዓል ኣድሚቐምዎ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg 800w"
+                         alt="ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg 800w"
+                         alt="ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg 800w"
+                         alt="ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg 800w"
+                         alt="ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg 800w"
+                         alt="ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg 800w"
+                         alt="ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg 800w"
+                         alt="ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 jVdgcr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    መግለጺ ስእሊ,
+                  </span>
+                  <p>
+                    ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 hsQQaX"
+                    >
+                      ተዛማዲ ትሕዝቶ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 IFzbV">
+                      <a href="/tigrinya/news-45272046?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ,
+                          </span>
+                          <span>
+                            ምፅብባቕ ጓል ኣሸንዳ
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bsVNyu">
+                      ቆልዓ ኣሸንዳ ካብ ምፅብባቕ ጀሚሩ
+                    </p>
+                    <time datetime="2018-08-22"
+                          class="StyledTimestamp-um718p-0 dCcNVO"
+                    >
+                      22 ነሓሰ 2018
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 IFzbV">
+                      <a href="/tigrinya/news-47607740?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ትግራይ፡ ካብ ዘለውዋ ጸጋታት ቱሪዝም ተረባሒት ኣይኮነትን ተባሂሉ
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bsVNyu">
+                      ቱሪዝም ባህላዊ ኢንዳስትሪ ኢትዮጵያ ኾይኑ፡ እዛ ሃገር ካብተን ጥንታዊ ሓድጊ፣ ባህልን ታሪኽን ዓቂበን ዝርከባ ሃገራት ሓንቲ'ያ። ትግራይ ድማ፡ ኢትዮጵያ ብሓድጊ ቱሪዝም ንዓለም ክተበርክቶ እትኽእላ ጸጋ ዝሓቖፈት'ያ። ተጠቃምነታ ግን ክሳብ ክንደይ'ዩ?
+                    </p>
+                    <time datetime="2019-03-18"
+                          class="StyledTimestamp-um718p-0 dCcNVO"
+                    >
+                      18 መጋቢት 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 IFzbV">
+                      <a href="/tigrinya/news-45345796?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        ጳጉሜን -'ጸያቕ ኣዋርሕ'
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bsVNyu">
+                      ኣብ ኤርትራን ኢትዮጵያን ቅንያት 'ጳጉሜን' ትማሊ ተዛዚሙ ኣሎ። እዚ ብዓቢ ድምቀት ዝበዓልን ዝካየድን እምነትን ልምድን ካብይ ዝነቅለ'ዩ፡ ብኸመይ'ከ ይካየድ? ቢቢሲ ትግርኛ ኣብ ዝሓለፈ ዓመት ዘዳለዎ ንዝኽርኹም ዘበራብርን ዝሕግዝን ሕጽር ዝበለ ዛንታ እነሆ!
+                    </p>
+                    <time datetime="2019-09-12"
+                          class="StyledTimestamp-um718p-0 dCcNVO"
+                    >
+                      12 መስከረም 2019
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/tigrinya"
+               class="StyledLink-m3awbo-2 iwHmhw"
+            >
+              <svg height="24"
+                   viewbox="0 0 223.25 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hJEPnh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.21 18v-7h-2.1v.08a2 2 0 0 1-.52.93 1.12 1.12 0 0 1-.81.37h-.2l.31-2.28h3.34V9h-.11a4 4 0 0 1-1.66-.38 2 2 0 0 1-.84-1 4.47 4.47 0 0 1-.28-1.75V5.2h1.34v.68a3.26 3.26 0 0 0 .18 1.21 1.29 1.29 0 0 0 .58.67 2.9 2.9 0 0 0 1.29.2h.84v2.12h3.33l.31 2.28H192a1.14 1.14 0 0 1-.8-.35 2.09 2.09 0 0 1-.56-.95v-.08h-2.07V18zM202.44 18v-6.33a8.94 8.94 0 0 0-.36-2.92 2.49 2.49 0 0 0-1.21-1.4 5.5 5.5 0 0 0-2.39-.43h-.2l.1.17a2.26 2.26 0 0 1 .3 1.16 2.16 2.16 0 0 1-.76 1.74 3.73 3.73 0 0 1-4.22 0 2.2 2.2 0 0 1-.7-1.74 2 2 0 0 1 .71-1.68 3.4 3.4 0 0 1 2.11-.57h2.43a8.93 8.93 0 0 1 3.41.5 3.12 3.12 0 0 1 1.62 1.6 7.71 7.71 0 0 1 .51 3.12V18zm-6.62-11.24a1.59 1.59 0 0 0-1.13.4 1.45 1.45 0 0 0-.43 1.1 1.68 1.68 0 0 0 .43 1.19 1.6 1.6 0 0 0 2.26 0 1.68 1.68 0 0 0 .43-1.19 1.45 1.45 0 0 0-.43-1.1 1.59 1.59 0 0 0-1.13-.4zM212.72 19.42a1.13 1.13 0 0 1-.79-.36 2 2 0 0 1-.55-.94v-.08h-1.19a7.06 7.06 0 0 1-2.56-.35 2.19 2.19 0 0 1-1.18-1.12 5.61 5.61 0 0 1-.37-2.29v-1.16a14.18 14.18 0 0 1 .49-4.19 4.11 4.11 0 0 1 1.53-2.22 4.91 4.91 0 0 1 2.8-.71h1.71l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.46a2.84 2.84 0 0 0-2.66 1.49 10.1 10.1 0 0 0-.82 4.71v1.36a4.23 4.23 0 0 0 .24 1.61 1.54 1.54 0 0 0 .8.83 4.61 4.61 0 0 0 1.76.24h1.13v-.08a2.07 2.07 0 0 1 .55-.94 1.12 1.12 0 0 1 .78-.36h.2l-.26 1.79.26 1.87zM218.41 18v-3.8h-2.84V13a5.08 5.08 0 0 1 .72-2.85 3.45 3.45 0 0 1 2-1.43h.08v-2h-2v.08a1.7 1.7 0 0 1-.53.82 1.22 1.22 0 0 1-.81.31h-.19l.26-1.56-.2-1.57h.19a1.22 1.22 0 0 1 .8.3 1.72 1.72 0 0 1 .54.83v.08h5.24v-.08a1.71 1.71 0 0 1 .54-.84 1.23 1.23 0 0 1 .79-.29h.19L223 6.35l.26 1.59h-.19a1.23 1.23 0 0 1-.8-.3 1.71 1.71 0 0 1-.53-.83v-.08h-2v1.86h1.51l.31 2.28h-.2a1.11 1.11 0 0 1-.77-.35 2.17 2.17 0 0 1-.56-1v-.08h-.43a2.39 2.39 0 0 0-2 .89 4 4 0 0 0-.7 2.51v.39h2.84V18z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ትግርኛ
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iXrFjz">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/tigrinya/institutional-49283259"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ውዕል&nbsp;ተጠቃምነት
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ብዛዕባ ቢቢሲ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ናይ ስቱርነት ፖሊሲ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ኩኪስ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/tigrinya/institutional-42228875"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ንቢቢሲ ንምርካብ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. ቢቢሲ፡ ንትሕዝቶ ካልኦት መርበባት ሓበሬታ ሓላፍነት ኣይወስድን።
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና&nbsp;ኣረኣእያ ንምርዳእ ኣንብቡ።
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1570267916000,"lastPublished":1570458544000,"lastUpdated":1570458551420,"id":"mock-id","locators":{"assetUri":"/tigrinya/news-49944566","cpsUrn":"urn:bbc:content:assetUri:tigrinya/news-49944566","curie":"http://www.bbc.co.uk/asset/e4c276d4-2110-2641-a6bd-2ff70db0e12e"},"type":"PGL","createdBy":"tigrinya-v6","language":"ti","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"tigrinya.news.photo_gallery.49944566.page","cps_asset_id":"49944566"},"tags":{},"version":"v1.1.2","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"\\"ኣሸንዳዋይ ናዓሚ ናዓሚየ ተጋኒና ሎሚየ\\"","headline":"ምፅብባቕ ጓል ኣሸንዳ"},"locators":{"assetUri":"/tigrinya/news-45272046","cpsUrn":"urn:bbc:content:assetUri:/tigrinya/news-45272046"},"summary":"ቆልዓ ኣሸንዳ ካብ ምፅብባቕ ጀሚሩ","timestamp":1534951171000,"cpsType":"MAP","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/12428/production/_103129747_p06j4wbv.jpg","path":"/cpsprodpb/12428/production/_103129747_p06j4wbv.jpg","height":360,"width":640,"altText":"ምፅብባቕ ጓል ኣሸንዳ","copyrightHolder":"BBC","type":"image"},"mediaType":"Video","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"\\"ቢሮ ባህልን ቱሪዝምን ትግራይ፡ ኣብ መቐለ እንታይ'ዩ ዝገብር ዘሎ?\\"","headline":"ትግራይ፡ ካብ ዘለውዋ ጸጋታት ቱሪዝም ተረባሒት ኣይኮነትን ተባሂሉ"},"locators":{"assetUri":"/tigrinya/news-47607740","cpsUrn":"urn:bbc:content:assetUri:/tigrinya/news-47607740"},"summary":"ቱሪዝም ባህላዊ ኢንዳስትሪ ኢትዮጵያ ኾይኑ፡ እዛ ሃገር ካብተን ጥንታዊ ሓድጊ፣ ባህልን ታሪኽን ዓቂበን ዝርከባ ሃገራት ሓንቲ'ያ። ትግራይ ድማ፡ ኢትዮጵያ ብሓድጊ ቱሪዝም ንዓለም ክተበርክቶ እትኽእላ ጸጋ ዝሓቖፈት'ያ። ተጠቃምነታ ግን ክሳብ ክንደይ'ዩ?","timestamp":1552893336000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/B8E8/production/_106063374_mediaitem106063039.jpg","path":"/cpsprodpb/B8E8/production/_106063374_mediaitem106063039.jpg","height":720,"width":1280,"altText":"ሓወልቲ ኣክሱም","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"'ዲም-ዲም...ተሓጺብክን ዶ ማይ ጳጉሜን'","headline":"ጳጉሜን -'ጸያቕ ኣዋርሕ'"},"locators":{"assetUri":"/tigrinya/news-45345796","cpsUrn":"urn:bbc:content:assetUri:/tigrinya/news-45345796"},"summary":"ኣብ ኤርትራን ኢትዮጵያን ቅንያት 'ጳጉሜን' ትማሊ ተዛዚሙ ኣሎ። እዚ ብዓቢ ድምቀት ዝበዓልን ዝካየድን እምነትን ልምድን ካብይ ዝነቅለ'ዩ፡ ብኸመይ'ከ ይካየድ? ቢቢሲ ትግርኛ ኣብ ዝሓለፈ ዓመት ዘዳለዎ ንዝኽርኹም ዘበራብርን ዝሕግዝን ሕጽር ዝበለ ዛንታ እነሆ!","timestamp":1568302917000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/15EC4/production/_108769798_whatsappimage2019-09-12at18.30.22-1.jpg","path":"/cpsprodpb/15EC4/production/_108769798_whatsappimage2019-09-12at18.30.22-1.jpg","height":549,"width":976,"altText":"ኣብ ሩባ ወሪዱ ማይ ጳጉሜን ዝሕጸብ ቆልዓ","caption":"ኣብ ሩባ ወሪዱ ማይ ጳጉሜን ዝሕጸብ ቆልዓ","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"ዜና","uri":"/tigrinya/news","type":"simple"},"site":{"subType":"site","name":"BBC ትግርኛ","uri":"/tigrinya","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ","blocks":[{"type":"fragment","model":{"text":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1570267916000,"lastPublished":1570458544000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ","blocks":[{"type":"fragment","model":{"text":"ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ባህላዊ ክዳን ኦሮሞ ዝተኸደና ዕዱማት እቲ ብዓል","blocks":[{"type":"fragment","model":{"text":"ባህላዊ ክዳን ኦሮሞ ዝተኸደና ዕዱማት እቲ ብዓል","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ባህላዊ ክዳን ዝተኸደና ዕዱማት እቲ ብዓል","blocks":[{"type":"fragment","model":{"text":"ባህላዊ ክዳን ዝተኸደና ዕዱማት እቲ ብዓል","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"16455/production/_109112219_whatsappimage2019-10-05at11.53.34am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ምስጋና ዝቐርበሉ ቦታ ኢሬቻ","blocks":[{"type":"fragment","model":{"text":"ምስጋና ዝቐርበሉ ቦታ ኢሬቻ","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ኣብቲ ምስጋና ዝቐርበሉ ቦታ","blocks":[{"type":"fragment","model":{"text":"ኣብቲ ምስጋና ዝቐርበሉ ቦታ","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":" ኣብቲ ምስጋና ዝቐርበሉ ቦታ","height":549,"locator":"C0A9/production/_109112394_ee86b2cc-8acd-4a49-96fd-15b782003b85.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል","blocks":[{"type":"fragment","model":{"text":"ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት እቲ ብዓል","blocks":[{"type":"fragment","model":{"text":"ዕዱማት እቲ ብዓል","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"8E45/production/_109112463_whatsappimage2019-10-05at11.26.02am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ኦሮሞ ዝተኸደኑ ዕዱማት ነቲ ብዓል ኣድሚቐምዎ","blocks":[{"type":"fragment","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ኦሮሞ ዝተኸደኑ ዕዱማት ነቲ ብዓል ኣድሚቐምዎ","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደኑ ዕዱማት ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ","blocks":[{"type":"fragment","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደኑ ዕዱማት ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"12A7B/production/_109111467_whatsappimage2019-10-05at11.25.38am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ","blocks":[{"type":"fragment","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ","blocks":[{"type":"fragment","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"DF21/production/_109112175_whatsappimage2019-10-05at11.53.41am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ","blocks":[{"type":"fragment","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበንኦ ይርከባ","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ","blocks":[{"type":"fragment","model":{"text":"ዝተፈላለየ ባህላዊ ክዳን ዝተኸደና ዕዱማት ደቂ ኣንስትዮ ነቲ ብዓል ድምቐት ሂበሞ ይርከቡ","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"E7B9/production/_109112395_whatsappimage2019-10-05at11.23.08am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","blocks":[{"type":"fragment","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","blocks":[{"type":"fragment","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"8CB5/production/_109112063_whatsappimage2019-10-05at11.22.11am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","blocks":[{"type":"fragment","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","blocks":[{"type":"fragment","model":{"text":"ዕዱማት ኣብ ጎደናታት ኣዲስ ኣበባ","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"128F5/production/_109112067_whatsappimage2019-10-05at11.36.46am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል","blocks":[{"type":"fragment","model":{"text":"ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል","blocks":[{"type":"fragment","model":{"text":"ባህላዊ ክዳን ዝተኸነት ተሳታፊት እቲ ብዓል","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"12D41/production/_109112177_whatsappimage2019-10-05at11.53.36am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ","blocks":[{"type":"fragment","model":{"text":"ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ","blocks":[{"type":"fragment","model":{"text":"ባህላዊ ክዳን ዝተኸደና ደቂ ኣንስትዮ","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"17715/production/_109112069_whatsappimage2019-10-05at11.36.40am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ","blocks":[{"type":"fragment","model":{"text":"ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ","attributes":[]},"id":"mock-id","position":[14,1,1,1,1]}]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ","blocks":[{"type":"fragment","model":{"text":"ዕዱማት ናብቲ ጽንብል ዝካየደሉ ቦታ እናኸዱ","attributes":[]},"id":"mock-id","position":[14,2,1,1,1]}]},"id":"mock-id","position":[14,2,1,1]}]},"id":"mock-id","position":[14,2,1]}]},"id":"mock-id","position":[14,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"DAD5/production/_109112065_whatsappimage2019-10-05at11.36.57am.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[14,3]}]},"id":"mock-id","position":[14]}]}},"promo":{"headlines":{"shortHeadline":"ሎሚ ኣብ ኣዲስ ኣበባ ዝኽበር ዘሎ በዓል ኢሬቻ ፡ ንቐደም በሉ","headline":"ኣብ ኣዲስ ኣበባ [ፊንፊኔ] ካብ ዝኽበር ዘሎ ኢሬቻ ብስእሊ"},"locators":{"assetUri":"/tigrinya/news-49944566","cpsUrn":"urn:bbc:content:assetUri:tigrinya/news-49944566","curie":"http://www.bbc.co.uk/asset/e4c276d4-2110-2641-a6bd-2ff70db0e12e"},"summary":"ሎሚ ኣብ ኣዲስ ኣበባ ካብ ዝኽበር ዘሎ ኢሬቻ ዝተሳኣለ ስእሊ ንቐደም በሉ","timestamp":1570458551420,"passport":{},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg","path":"/cpsprodpb/DC65/production/_109112465_whatsappimage2019-10-05at11.26.02am.jpg","height":549,"width":976,"altText":"ዕዱማት እቲ ብዓል","caption":"ብባህሊ ኦሮሞ ዝማዕረጉ ገለ ዕዱማት እቲ ብዓል","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"}},"path":"/tigrinya/news-49944566","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [40]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="tigrinya"
+            src="http://localhost:7080/static/js/tigrinya-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

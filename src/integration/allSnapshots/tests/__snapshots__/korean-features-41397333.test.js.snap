@@ -1,0 +1,2685 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /korean/features-41397333 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ko"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_korean/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Two bears wade in the river."
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ko-KO"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="내셔널지오그래픽 사진 공모작 - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/korean/features-41397333"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Two bears wade in the river."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_korean/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="내셔널지오그래픽 사진 공모작 - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Nature"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Photography"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-10-03T01:51:04.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-10-03T01:51:05.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      내셔널지오그래픽 사진 공모작 - BBC News 코리아
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/korean/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/korean/features-41397333"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/korean/features-41397333","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/features-41397333","name":"내셔널지오그래픽 사진 공모작"},"headline":"내셔널지오그래픽 사진 공모작","description":"내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.","datePublished":"2017-10-03T01:51:04.000Z","dateModified":"2017-10-03T01:51:05.000Z","about":[{"@type":"Thing","name":"Nature","sameAs":["http://dbpedia.org/resource/Nature"]},{"@type":"Thing","name":"Photography","sameAs":["http://dbpedia.org/resource/Photography"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"noBylinesPolicy":"https://www.bbc.com/korean/institutional-49283197#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 bBwfkj"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    개인정보와 쿠키 처리방침을 변경했습니다
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        알겠습니다
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        변경사항을 확인하세요
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 bBwfkj"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    쿠키생성에 동의하시나요
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    BBC는 이용자의 최적의 온라인 경험을 위해
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      쿠키
+                    </a>
+                    정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        네, 동의합니다
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        아니요, 재 세팅 하겠습니다
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 dUSIGf"
+            >
+              내용으로 건너뛰기
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                섹션
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gvYbSn"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=57&p=features::korean.features.photo_gallery.41397333.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:7c7c43a5-7588-7145-b74a-63e687c7b68e]&x2=[amp]&x3=[news-korean]&x4=[ko]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[내셔널지오그래픽+사진+공모작+-+BBC+News+코리아]&x11=[2017-10-03T01:51:04.000Z]&x12=[2017-10-03T01:51:05.000Z]&x13=[Nature~Photography]&x14=[12e69b92-a7ba-4463-84e0-be107b9805d0~ae0d5073-dfeb-4251-b555-0a9c74f3d4e0]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hFaagK"
+          >
+            내셔널지오그래픽 사진 공모작
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2017-10-03"
+                class="StyledTimestamp-um718p-0 gNVSxm"
+          >
+            3 10월 2017
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 Kskll">
+            내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다."
+                           attribution="Angad Achappa"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Angad Achappa
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다. 눈 주위의 파란 줄 때문에 ‘파란눈 관목 개구리’라고도 불린다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="산 속 안개가 드리워진 다리위로 기차가 지나간다."
+                           attribution="TERUO ARAYA"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      TERUO ARAYA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    일본의 후쿠시마와 니카타 현을 연결하는 타다미노선. 이 철도노선에는 한 대의 열차만 통과할 수 있는 단선 구간이 있다. 사진가 아라야는 특히 타다미 강 구간을 백미로 꼽았다. 그는 “봄에는 벚꽃, 여름엔 신록, 가을엔 단풍, 겨울엔 설경이 그림처럼 펼쳐진다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습"
+                           attribution="Sebastiaen"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Sebastiaen
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    루마니아 트란실바니아 산악지역의 아침 풍경. 사진가 세바스찬은 언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습을 렌즈에 담았다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="암사자가 기지개를 켜는 모습"
+                           attribution="Joel Fischer"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Joel Fischer
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    조엘 피샬은 케냐 마사이 마라 국립공원에서 암사자가 기지개를 켜는 모습을 카메라에 담았다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 dbIZPm">
+                  <amp-img alt="그레이트불루 황새가 물위에 있다."
+                           attribution="Jerry am Ende"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg"
+                           height="949"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Jerry am Ende
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    “오늘 아침 인도 델라웨어의 야생동물 보호지역 최고의 순간”이라고 제리 엔덴은 말한다. 그는 “그레이트불루 황새가 몸치장 하는 순간 바람 한점 없이 고요했다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 hNzfGz">
+                  <amp-img alt="상공에서 바라 본 호주 케이블 해변. 해변을 따라 낙타 한 무리가 걷고 있다."
+                           attribution="Todd Kennedy"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg"
+                           height="1249"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Todd Kennedy
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    토드 케네디는 호주 서부 상공에서 해변을 따라 걷는 한 무리의 낙타이 모습을 카메라에 담았다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="강가에 있는 어미 곰과 새끼 곰의 모습."
+                           attribution="anat gutman"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      anat gutman
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    아네트 구트만가 러시아의 캄차카반도에서 찍은 사진. 그는 “3개월 된 새끼 곰이 너무 귀여워 달려가 안아주고 싶었다. 근데 어미 곰이 나를 쳐다보고 있어 할 수 없었다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="철새들의 비행을 항공촬영한 모습."
+                           attribution="Jassen Todorov"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Jassen Todorov
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    미국 북부 캘리포니아 지역에는 매년 12~3월에 특별한 방문객이 온다. 겨울철 서식지를 찾아 날아온 철새들의 모습을 항공기에서 촬영한 모습.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <amp-img alt="갑오징어의 모습."
+                           attribution="Cameron McFarlane"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg"
+                           height="649"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Cameron McFarlane
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    서부 호주 항구도시 화이앨라의 바닷속 모습. 카메론 맥팔란은 “매년 교미 때가되면 대왕갑오징어 수만 만리가 몰려온다”며 이 지역은 “단 기간 가장 많은 수의 갑오징어를 볼 수 있는 곳”라고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 NUObQ">
+                  <amp-img alt="수면위로 모습을 드러내는 악어."
+                           attribution="Cole Frechou"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg"
+                           height="1449"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Cole Frechou
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    미국 루이지애나 뉴올리언스의 강가에서 촬영한 이 장면은 눈을 크게 뜨고 보면 수초 아래 악어 한 마리가 보인다. 이 모습을 찍은 프래쉐는 “산책로 밖에서 안전하게 촬영했다”고 덧붙였다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cbPJXY">
+                  <amp-img alt="골격새우의 모습"
+                           attribution="Adam Silverman"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg"
+                           height="599"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Adam Silverman
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    애덤 실버만은 이 사진을 자신이 찍은 생물 사진 중 최고로 꼽는다. 그는 “확대 랜즈를 통해 골격 새우의 정교한 모습을 사진에 담았다. 붉은 눈도 볼 수 있고, 특히 카메라를 보는 얼굴과 펼쳐진 다리가 대칭을 이룬다”며 사진을 설명했다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 iVmVGb">
+                  <amp-img alt="거위의 모습을 드론으로 촬영했다."
+                           attribution="Csaba Daroczi"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg"
+                           height="699"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Csaba Daroczi
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    사진가 다로치는 이 장면을 담은 순간이 생생하다. 그는 “아침 촬영을 마치고 집으로 가는 길이었다. 갑자기 한 무리의 거위가 눈앞에 펼쳐졌다.” 그는 거위들이 놀라지 않을 위치에 드론을 띄워 촬영했다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 ekohAD">
+                  <amp-img alt="구불구불한 산악 도로를 하늘에서 본 모습."
+                           attribution="Calin Stan"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg"
+                           height="719"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Calin Stan
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    루마니아의 트란실바니아 지역으로 향하는DN 1A도로. 사진가 스탄은 “그 유명한 드라큘라 백작이 태어난 트란실바니아로 가는 길”이라고 강조했다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 epLEXK">
+                  <amp-img alt="형형색색의 산악지대 모습."
+                           attribution="Alain Boudreau "
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg"
+                           height="659"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Alain Boudreau
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    알랑 보드로는 캐나다 메켄지 산맥의 절경을 담았다. 녹색의 산지와 회색의 기암이 절묘한 조화를 이루고 있다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 kuclOq">
+                  <amp-img alt="노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이."
+                           attribution="Felix Inden"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg"
+                           height="669"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Felix Inden
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이. 조수 간만의 차로 생긴 이곳은 신비한 자연경관을 연출한다. 펠릭스는 “만조일 때 백사장의 모래가 웅덩이로 밀려 들어오면 정말 장관이다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 gXocyg"
+                    >
+                      관련 기사 더 보기
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-49283197"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News를 신뢰할 수 있는 이유
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    이용 약관
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC 소개
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    개인정보취급방침
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    쿠키정책
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-42224941"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    고객센터
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /korean/features-41397333 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ko"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_korean/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Two bears wade in the river."
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ko-KO"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="내셔널지오그래픽 사진 공모작 - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/korean/features-41397333"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Two bears wade in the river."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_korean/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="내셔널지오그래픽 사진 공모작 - BBC News 코리아"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Nature"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Photography"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-10-03T01:51:04.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-10-03T01:51:05.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      내셔널지오그래픽 사진 공모작 - BBC News 코리아
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/korean/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/korean/features-41397333"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/korean/features-41397333.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/korean/features-41397333","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/features-41397333","name":"내셔널지오그래픽 사진 공모작"},"headline":"내셔널지오그래픽 사진 공모작","description":"내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.","datePublished":"2017-10-03T01:51:04.000Z","dateModified":"2017-10-03T01:51:05.000Z","about":[{"@type":"Thing","name":"Nature","sameAs":["http://dbpedia.org/resource/Nature"]},{"@type":"Thing","name":"Photography","sameAs":["http://dbpedia.org/resource/Photography"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"noBylinesPolicy":"https://www.bbc.com/korean/institutional-49283197#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 dUSIGf"
+            >
+              내용으로 건너뛰기
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  섹션
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      뉴스
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/media/video"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      비디오
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/downloads"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      다운로드
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/korean/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    >
+                      TOP 뉴스
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    뉴스
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/media/video"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    비디오
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/downloads"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    다운로드
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/korean/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  >
+                    TOP 뉴스
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=57&amp;p=features::korean.features.photo_gallery.41397333.page&amp;x1=[urn:bbc:cps:7c7c43a5-7588-7145-b74a-63e687c7b68e]&amp;x2=[responsive]&amp;x3=[news-korean]&amp;x4=[ko]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[내셔널지오그래픽+사진+공모작+-+BBC+News+코리아]&amp;x11=[2017-10-03T01:51:04.000Z]&amp;x12=[2017-10-03T01:51:05.000Z]&amp;x13=[Nature~Photography]&amp;x14=[12e69b92-a7ba-4463-84e0-be107b9805d0~ae0d5073-dfeb-4251-b555-0a9c74f3d4e0]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 hFaagK"
+          >
+            내셔널지오그래픽 사진 공모작
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2017-10-03"
+                class="StyledTimestamp-um718p-0 gNVSxm"
+          >
+            3 10월 2017
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 Kskll">
+            내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg 800w"
+                         alt="사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Angad Achappa
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다. 눈 주위의 파란 줄 때문에 ‘파란눈 관목 개구리’라고도 불린다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg 800w"
+                         alt="산 속 안개가 드리워진 다리위로 기차가 지나간다."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      TERUO ARAYA
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    일본의 후쿠시마와 니카타 현을 연결하는 타다미노선. 이 철도노선에는 한 대의 열차만 통과할 수 있는 단선 구간이 있다. 사진가 아라야는 특히 타다미 강 구간을 백미로 꼽았다. 그는 “봄에는 벚꽃, 여름엔 신록, 가을엔 단풍, 겨울엔 설경이 그림처럼 펼쳐진다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg 800w"
+                         alt="언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Sebastiaen
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    루마니아 트란실바니아 산악지역의 아침 풍경. 사진가 세바스찬은 언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습을 렌즈에 담았다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg 800w"
+                         alt="암사자가 기지개를 켜는 모습"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Joel Fischer
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    조엘 피샬은 케냐 마사이 마라 국립공원에서 암사자가 기지개를 켜는 모습을 카메라에 담았다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 dbIZPm">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg 800w"
+                         alt="그레이트불루 황새가 물위에 있다."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Jerry am Ende
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    “오늘 아침 인도 델라웨어의 야생동물 보호지역 최고의 순간”이라고 제리 엔덴은 말한다. 그는 “그레이트불루 황새가 몸치장 하는 순간 바람 한점 없이 고요했다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 hNzfGz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg 800w"
+                         alt="상공에서 바라 본 호주 케이블 해변. 해변을 따라 낙타 한 무리가 걷고 있다."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Todd Kennedy
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    토드 케네디는 호주 서부 상공에서 해변을 따라 걷는 한 무리의 낙타이 모습을 카메라에 담았다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg 800w"
+                         alt="강가에 있는 어미 곰과 새끼 곰의 모습."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      anat gutman
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    아네트 구트만가 러시아의 캄차카반도에서 찍은 사진. 그는 “3개월 된 새끼 곰이 너무 귀여워 달려가 안아주고 싶었다. 근데 어미 곰이 나를 쳐다보고 있어 할 수 없었다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg 800w"
+                         alt="철새들의 비행을 항공촬영한 모습."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Jassen Todorov
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    미국 북부 캘리포니아 지역에는 매년 12~3월에 특별한 방문객이 온다. 겨울철 서식지를 찾아 날아온 철새들의 모습을 항공기에서 촬영한 모습.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 diErbx">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg 800w"
+                         alt="갑오징어의 모습."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Cameron McFarlane
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    서부 호주 항구도시 화이앨라의 바닷속 모습. 카메론 맥팔란은 “매년 교미 때가되면 대왕갑오징어 수만 만리가 몰려온다”며 이 지역은 “단 기간 가장 많은 수의 갑오징어를 볼 수 있는 곳”라고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 NUObQ">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg 800w"
+                         alt="수면위로 모습을 드러내는 악어."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Cole Frechou
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    미국 루이지애나 뉴올리언스의 강가에서 촬영한 이 장면은 눈을 크게 뜨고 보면 수초 아래 악어 한 마리가 보인다. 이 모습을 찍은 프래쉐는 “산책로 밖에서 안전하게 촬영했다”고 덧붙였다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 cbPJXY">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg 800w"
+                         alt="골격새우의 모습"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Adam Silverman
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    애덤 실버만은 이 사진을 자신이 찍은 생물 사진 중 최고로 꼽는다. 그는 “확대 랜즈를 통해 골격 새우의 정교한 모습을 사진에 담았다. 붉은 눈도 볼 수 있고, 특히 카메라를 보는 얼굴과 펼쳐진 다리가 대칭을 이룬다”며 사진을 설명했다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 iVmVGb">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg 800w"
+                         alt="거위의 모습을 드론으로 촬영했다."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Csaba Daroczi
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    사진가 다로치는 이 장면을 담은 순간이 생생하다. 그는 “아침 촬영을 마치고 집으로 가는 길이었다. 갑자기 한 무리의 거위가 눈앞에 펼쳐졌다.” 그는 거위들이 놀라지 않을 위치에 드론을 띄워 촬영했다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 ekohAD">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg 800w"
+                         alt="구불구불한 산악 도로를 하늘에서 본 모습."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Calin Stan
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    루마니아의 트란실바니아 지역으로 향하는DN 1A도로. 사진가 스탄은 “그 유명한 드라큘라 백작이 태어난 트란실바니아로 가는 길”이라고 강조했다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 epLEXK">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg 800w"
+                         alt="형형색색의 산악지대 모습."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Alain Boudreau
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    알랑 보드로는 캐나다 메켄지 산맥의 절경을 담았다. 녹색의 산지와 회색의 기암이 절묘한 조화를 이루고 있다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 kuclOq">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg 800w"
+                         alt="노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      사진 출처
+                    </span>
+                    <span lang="en-GB">
+                      Felix Inden
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fppYUr">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    사진 설명
+                  </span>
+                  <p>
+                    노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이. 조수 간만의 차로 생긴 이곳은 신비한 자연경관을 연출한다. 펠릭스는 “만조일 때 백사장의 모래가 웅덩이로 밀려 들어오면 정말 장관이다”고 한다.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 gXocyg"
+                    >
+                      관련 기사 더 보기
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/korean"
+               class="StyledLink-m3awbo-2 cUhFgi"
+            >
+              <svg height="24"
+                   viewbox="0 0 233.01 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gTUCvL"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                코리아
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-49283197"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News를 신뢰할 수 있는 이유
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    이용 약관
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC 소개
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    개인정보취급방침
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    쿠키정책
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/korean/institutional-42224941"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    고객센터
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1506995464000,"lastPublished":1506995465000,"lastUpdated":1579164336823,"id":"mock-id","locators":{"assetUri":"/korean/features-41397333","cpsUrn":"urn:bbc:content:assetUri:korean/features-41397333","curie":"http://www.bbc.co.uk/asset/7c7c43a5-7588-7145-b74a-63e687c7b68e"},"type":"PGL","createdBy":"korean-v6","language":"ko","timestamp":1506995464000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"korean.features.photo_gallery.41397333.page","cps_asset_id":"41397333"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"taggings":[]},"tags":{"about":[{"thingLabel":"Nature","thingUri":"http://www.bbc.co.uk/things/12e69b92-a7ba-4463-84e0-be107b9805d0#id","thingId":"12e69b92-a7ba-4463-84e0-be107b9805d0","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Nature"],"topicName":"자연","topicId":"c5qvpx19pw2t","curationList":[{"curationId":"832916de-c5e5-40c4-b549-dfe3fbdb7322","curationType":"vivo-stream"}]},{"thingLabel":"Photography","thingUri":"http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id","thingId":"ae0d5073-dfeb-4251-b555-0a9c74f3d4e0","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Photography"],"topicName":"사진","topicId":"c1gdq2rq7rxt","curationList":[{"curationId":"8336d1a7-7050-49f8-86a7-bec1a5c65d10","curationType":"vivo-stream"}]}]},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"related-urls","promos":[{"name":"2017 National Geographic Nature Photographer of the Year - National Geographic","uri":"http://photography.nationalgeographic.com/nature-photographer-of-the-year-2017","type":"link"}]}],"section":{"subType":"index","name":"매거진","uri":"/korean/features","type":"simple"},"site":{"subType":"site","name":"BBC 코리아","uri":"/korean","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"내셔널지오그래픽 사진 공모작","blocks":[{"type":"fragment","model":{"text":"내셔널지오그래픽 사진 공모작","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1506995464000,"lastPublished":1506995465000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.","blocks":[{"type":"fragment","model":{"text":"내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다. 눈 주위의 파란 줄 때문에 ‘파란눈 관목 개구리’라고도 불린다.","blocks":[{"type":"fragment","model":{"text":"사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다. 눈 주위의 파란 줄 때문에 ‘파란눈 관목 개구리’라고도 불린다.","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다.","blocks":[{"type":"fragment","model":{"text":"사진가 아차파는 인도 남서부 카르나타카 밀림 지역에 서식하는 노란 관목개구리(Coorg yellow bush frog)를 찍었다.","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"Angad Achappa","height":649,"locator":"12EBC/production/_98000577_prod-yourshot-101177-10940182_005.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"일본의 후쿠시마와 니카타 현을 연결하는 타다미노선. 이 철도노선에는 한 대의 열차만 통과할 수 있는 단선 구간이 있다. 사진가 아라야는 특히 타다미 강 구간을 백미로 꼽았다. 그는 “봄에는 벚꽃, 여름엔 신록, 가을엔 단풍, 겨울엔 설경이 그림처럼 펼쳐진다”고 한다.","blocks":[{"type":"fragment","model":{"text":"일본의 후쿠시마와 니카타 현을 연결하는 타다미노선. 이 철도노선에는 한 대의 열차만 통과할 수 있는 단선 구간이 있다. 사진가 아라야는 특히 타다미 강 구간을 백미로 꼽았다. 그는 “봄에는 벚꽃, 여름엔 신록, 가을엔 단풍, 겨울엔 설경이 그림처럼 펼쳐진다”고 한다.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"산 속 안개가 드리워진 다리위로 기차가 지나간다.","blocks":[{"type":"fragment","model":{"text":"산 속 안개가 드리워진 다리위로 기차가 지나간다.","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"TERUO ARAYA","height":649,"locator":"C194/production/_97965594_prod-yourshot-61445-10898184_003.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"루마니아 트란실바니아 산악지역의 아침 풍경. 사진가 세바스찬은 언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습을 렌즈에 담았다.","blocks":[{"type":"fragment","model":{"text":"루마니아 트란실바니아 산악지역의 아침 풍경. 사진가 세바스찬은 언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습을 렌즈에 담았다.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습","blocks":[{"type":"fragment","model":{"text":"언덕 위에서 한가로이 풀을 뜯고 있는 말의 모습","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"Sebastiaen","height":649,"locator":"24F0/production/_97965490_prod-yourshot-534503-10922193_008.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"조엘 피샬은 케냐 마사이 마라 국립공원에서 암사자가 기지개를 켜는 모습을 카메라에 담았다.","blocks":[{"type":"fragment","model":{"text":"조엘 피샬은 케냐 마사이 마라 국립공원에서 암사자가 기지개를 켜는 모습을 카메라에 담았다.","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"암사자가 기지개를 켜는 모습","blocks":[{"type":"fragment","model":{"text":"암사자가 기지개를 켜는 모습","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"Joel Fischer","height":649,"locator":"11784/production/_97965517_prod-yourshot-285286-8144547_006.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"“오늘 아침 인도 델라웨어의 야생동물 보호지역 최고의 순간”이라고 제리 엔덴은 말한다. 그는 “그레이트불루 황새가 몸치장 하는 순간 바람 한점 없이 고요했다”고 한다.","blocks":[{"type":"fragment","model":{"text":"“오늘 아침 인도 델라웨어의 야생동물 보호지역 최고의 순간”이라고 제리 엔덴은 말한다. 그는 “그레이트불루 황새가 몸치장 하는 순간 바람 한점 없이 고요했다”고 한다.","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"그레이트불루 황새가 물위에 있다.","blocks":[{"type":"fragment","model":{"text":"그레이트불루 황새가 물위에 있다.","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Jerry am Ende","height":949,"locator":"7F2C/production/_97965523_prod-yourshot-518010-8364109_007.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"토드 케네디는 호주 서부 상공에서 해변을 따라 걷는 한 무리의 낙타이 모습을 카메라에 담았다.","blocks":[{"type":"fragment","model":{"text":"토드 케네디는 호주 서부 상공에서 해변을 따라 걷는 한 무리의 낙타이 모습을 카메라에 담았다.","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"상공에서 바라 본 호주 케이블 해변. 해변을 따라 낙타 한 무리가 걷고 있다.","blocks":[{"type":"fragment","model":{"text":"상공에서 바라 본 호주 케이블 해변. 해변을 따라 낙타 한 무리가 걷고 있다.","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Todd Kennedy","height":1249,"locator":"18098/production/_97965489_prod-yourshot-1125771-8292384_011.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"아네트 구트만가 러시아의 캄차카반도에서 찍은 사진. 그는 “3개월 된 새끼 곰이 너무 귀여워 달려가 안아주고 싶었다. 근데 어미 곰이 나를 쳐다보고 있어 할 수 없었다”고 한다.","blocks":[{"type":"fragment","model":{"text":"아네트 구트만가 러시아의 캄차카반도에서 찍은 사진. 그는 “3개월 된 새끼 곰이 너무 귀여워 달려가 안아주고 싶었다. 근데 어미 곰이 나를 쳐다보고 있어 할 수 없었다”고 한다.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"강가에 있는 어미 곰과 새끼 곰의 모습.","blocks":[{"type":"fragment","model":{"text":"강가에 있는 어미 곰과 새끼 곰의 모습.","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"anat gutman","height":649,"locator":"15988/production/_97965488_prod-yourshot-1352010-10885652_014.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"미국 북부 캘리포니아 지역에는 매년 12~3월에 특별한 방문객이 온다. 겨울철 서식지를 찾아 날아온 철새들의 모습을 항공기에서 촬영한 모습.","blocks":[{"type":"fragment","model":{"text":"미국 북부 캘리포니아 지역에는 매년 12~3월에 특별한 방문객이 온다. 겨울철 서식지를 찾아 날아온 철새들의 모습을 항공기에서 촬영한 모습.","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"철새들의 비행을 항공촬영한 모습.","blocks":[{"type":"fragment","model":{"text":"철새들의 비행을 항공촬영한 모습.","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"Jassen Todorov","height":649,"locator":"13278/production/_97965487_prod-yourshot-754803-9820883_009.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"서부 호주 항구도시 화이앨라의 바닷속 모습. 카메론 맥팔란은 “매년 교미 때가되면 대왕갑오징어 수만 만리가 몰려온다”며 이 지역은 “단 기간 가장 많은 수의 갑오징어를 볼 수 있는 곳”라고 한다.","blocks":[{"type":"fragment","model":{"text":"서부 호주 항구도시 화이앨라의 바닷속 모습. 카메론 맥팔란은 “매년 교미 때가되면 대왕갑오징어 수만 만리가 몰려온다”며 이 지역은 “단 기간 가장 많은 수의 갑오징어를 볼 수 있는 곳”라고 한다.","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"갑오징어의 모습.","blocks":[{"type":"fragment","model":{"text":"갑오징어의 모습.","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"Cameron McFarlane","height":649,"locator":"F074/production/_97965516_prod-yourshot-899521-10945110_010.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"미국 루이지애나 뉴올리언스의 강가에서 촬영한 이 장면은 눈을 크게 뜨고 보면 수초 아래 악어 한 마리가 보인다. 이 모습을 찍은 프래쉐는 “산책로 밖에서 안전하게 촬영했다”고 덧붙였다.","blocks":[{"type":"fragment","model":{"text":"미국 루이지애나 뉴올리언스의 강가에서 촬영한 이 장면은 눈을 크게 뜨고 보면 수초 아래 악어 한 마리가 보인다. 이 모습을 찍은 프래쉐는 “산책로 밖에서 안전하게 촬영했다”고 덧붙였다.","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"수면위로 모습을 드러내는 악어.","blocks":[{"type":"fragment","model":{"text":"수면위로 모습을 드러내는 악어.","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"Cole Frechou","height":1449,"locator":"13214/production/_97965387_prod-yourshot-1454449-9753307_015.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"애덤 실버만은 이 사진을 자신이 찍은 생물 사진 중 최고로 꼽는다. 그는 “확대 랜즈를 통해 골격 새우의 정교한 모습을 사진에 담았다. 붉은 눈도 볼 수 있고, 특히 카메라를 보는 얼굴과 펼쳐진 다리가 대칭을 이룬다”며 사진을 설명했다.","blocks":[{"type":"fragment","model":{"text":"애덤 실버만은 이 사진을 자신이 찍은 생물 사진 중 최고로 꼽는다. 그는 “확대 랜즈를 통해 골격 새우의 정교한 모습을 사진에 담았다. 붉은 눈도 볼 수 있고, 특히 카메라를 보는 얼굴과 펼쳐진 다리가 대칭을 이룬다”며 사진을 설명했다.","attributes":[]},"id":"mock-id","position":[14,1,1,1,1]}]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"골격새우의 모습","blocks":[{"type":"fragment","model":{"text":"골격새우의 모습","attributes":[]},"id":"mock-id","position":[14,2,1,1,1]}]},"id":"mock-id","position":[14,2,1,1]}]},"id":"mock-id","position":[14,2,1]}]},"id":"mock-id","position":[14,2]},{"type":"rawImage","model":{"copyrightHolder":"Adam Silverman","height":599,"locator":"BCE4/production/_97965384_prod-yourshot-1580916-10801801_016.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[14,3]}]},"id":"mock-id","position":[14]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"사진가 다로치는 이 장면을 담은 순간이 생생하다. 그는 “아침 촬영을 마치고 집으로 가는 길이었다. 갑자기 한 무리의 거위가 눈앞에 펼쳐졌다.” 그는 거위들이 놀라지 않을 위치에 드론을 띄워 촬영했다.","blocks":[{"type":"fragment","model":{"text":"사진가 다로치는 이 장면을 담은 순간이 생생하다. 그는 “아침 촬영을 마치고 집으로 가는 길이었다. 갑자기 한 무리의 거위가 눈앞에 펼쳐졌다.” 그는 거위들이 놀라지 않을 위치에 드론을 띄워 촬영했다.","attributes":[]},"id":"mock-id","position":[15,1,1,1,1]}]},"id":"mock-id","position":[15,1,1,1]}]},"id":"mock-id","position":[15,1,1]}]},"id":"mock-id","position":[15,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"거위의 모습을 드론으로 촬영했다.","blocks":[{"type":"fragment","model":{"text":"거위의 모습을 드론으로 촬영했다.","attributes":[]},"id":"mock-id","position":[15,2,1,1,1]}]},"id":"mock-id","position":[15,2,1,1]}]},"id":"mock-id","position":[15,2,1]}]},"id":"mock-id","position":[15,2]},{"type":"rawImage","model":{"copyrightHolder":"Csaba Daroczi","height":699,"locator":"10B04/production/_97965386_prod-yourshot-1590078-10916974_018.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[15,3]}]},"id":"mock-id","position":[15]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"루마니아의 트란실바니아 지역으로 향하는DN 1A도로. 사진가 스탄은 “그 유명한 드라큘라 백작이 태어난 트란실바니아로 가는 길”이라고 강조했다.","blocks":[{"type":"fragment","model":{"text":"루마니아의 트란실바니아 지역으로 향하는DN 1A도로. 사진가 스탄은 “그 유명한 드라큘라 백작이 태어난 트란실바니아로 가는 길”이라고 강조했다.","attributes":[]},"id":"mock-id","position":[16,1,1,1,1]}]},"id":"mock-id","position":[16,1,1,1]}]},"id":"mock-id","position":[16,1,1]}]},"id":"mock-id","position":[16,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"구불구불한 산악 도로를 하늘에서 본 모습.","blocks":[{"type":"fragment","model":{"text":"구불구불한 산악 도로를 하늘에서 본 모습.","attributes":[]},"id":"mock-id","position":[16,2,1,1,1]}]},"id":"mock-id","position":[16,2,1,1]}]},"id":"mock-id","position":[16,2,1]}]},"id":"mock-id","position":[16,2]},{"type":"rawImage","model":{"copyrightHolder":"Calin Stan","height":719,"locator":"581C/production/_97965522_prod-yourshot-33945-9522446_001.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[16,3]}]},"id":"mock-id","position":[16]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"알랑 보드로는 캐나다 메켄지 산맥의 절경을 담았다. 녹색의 산지와 회색의 기암이 절묘한 조화를 이루고 있다.","blocks":[{"type":"fragment","model":{"text":"알랑 보드로는 캐나다 메켄지 산맥의 절경을 담았다. 녹색의 산지와 회색의 기암이 절묘한 조화를 이루고 있다.","attributes":[]},"id":"mock-id","position":[17,1,1,1,1]}]},"id":"mock-id","position":[17,1,1,1]}]},"id":"mock-id","position":[17,1,1]}]},"id":"mock-id","position":[17,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"형형색색의 산악지대 모습.","blocks":[{"type":"fragment","model":{"text":"형형색색의 산악지대 모습.","attributes":[]},"id":"mock-id","position":[17,2,1,1,1]}]},"id":"mock-id","position":[17,2,1,1]}]},"id":"mock-id","position":[17,2,1]}]},"id":"mock-id","position":[17,2]},{"type":"rawImage","model":{"copyrightHolder":"Alain Boudreau ","height":659,"locator":"B19E/production/_98007454_28455f72-e00c-4671-a3fe-21c830b10602.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[17,3]}]},"id":"mock-id","position":[17]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이. 조수 간만의 차로 생긴 이곳은 신비한 자연경관을 연출한다. 펠릭스는 “만조일 때 백사장의 모래가 웅덩이로 밀려 들어오면 정말 장관이다”고 한다.","blocks":[{"type":"fragment","model":{"text":"노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이. 조수 간만의 차로 생긴 이곳은 신비한 자연경관을 연출한다. 펠릭스는 “만조일 때 백사장의 모래가 웅덩이로 밀려 들어오면 정말 장관이다”고 한다.","attributes":[]},"id":"mock-id","position":[18,1,1,1,1]}]},"id":"mock-id","position":[18,1,1,1]}]},"id":"mock-id","position":[18,1,1]}]},"id":"mock-id","position":[18,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이.","blocks":[{"type":"fragment","model":{"text":"노르웨이 북부 로포텐 제도(Lofoten Islands)의 신비한 물웅덩이.","attributes":[]},"id":"mock-id","position":[18,2,1,1,1]}]},"id":"mock-id","position":[18,2,1,1]}]},"id":"mock-id","position":[18,2,1]}]},"id":"mock-id","position":[18,2]},{"type":"rawImage","model":{"copyrightHolder":"Felix Inden","height":669,"locator":"13E94/production/_97965518_prod-yourshot-64521-10446688_004.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[18,3]}]},"id":"mock-id","position":[18]}]}},"promo":{"headlines":{"shortHeadline":"개구리, 사자, 곰 중 최고의 사진은?","headline":"내셔널지오그래픽 사진 공모작"},"locators":{"assetUri":"/korean/features-41397333","cpsUrn":"urn:bbc:content:assetUri:korean/features-41397333","curie":"http://www.bbc.co.uk/asset/7c7c43a5-7588-7145-b74a-63e687c7b68e"},"summary":"내셔널지오그래픽사가 주최하는 2017년 ‘올해의 자연 사진가’ 공모전이 진행 중이다. 지금까지 제출된 사진 중 에디터가 선정한 최고의 사진을 감상해보자. 공모전 마감은 동부 표준 (EST)시간으로 11월17일 자정이다.","timestamp":1506995464000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg","path":"/cpsprodpb/259A/production/_97862690_prod-yourshot-1352010-10885652_014.jpg","height":549,"width":976,"altText":"Two bears wade in the river.","caption":"Anat Gutman took this image in Kamtsjatka, Russia. \\"The three-month-old cub was so cute I almost dropped the camera and ran to hug him. Almost ... because the mother bear was looking at me suspiciously.\\"","copyrightHolder":"anat gutman","type":"image"},"id":"mock-id","type":"cps"}},"path":"/korean/features-41397333","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [16]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="korean"
+            src="http://localhost:7080/static/js/korean-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

@@ -1,0 +1,2131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /sinhala/world-37657374 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="si"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_sinhala/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="si-LK"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන් - BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/sinhala/world-37657374"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcsinhala"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_sinhala/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcsinhala"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන් - BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2016-10-14T13:28:29.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2016-10-14T13:28:40.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන් - BBC News සිංහල
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/sinhala/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/sinhala/world-37657374"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/sinhala/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/sinhala/world-37657374","publisher":{"@type":"NewsMediaOrganization","name":"BBC News සිංහල","publishingPrinciples":"https://www.bbc.com/sinhala/institutional-50288553","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/sinhala/world-37657374","name":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"},"headline":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්","description":"තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.","datePublished":"2016-10-14T13:28:29.000Z","dateModified":"2016-10-14T13:28:40.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News සිංහල","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"},"noBylinesPolicy":"https://www.bbc.com/sinhala/institutional-50288553#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 ewTDrz"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 gpgNUa"
+                  >
+                    පෞද්ගලිකත්වය (Privacy) හා කුකීස් (Cookies) පිළිබඳ අපගේ ප්‍රතිපත්තිය යාවත්කාලීන කර ඇත.
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dMOVlP"
+                  >
+                    පෞද්ගලිකත්වය (Privacy) හා කුකීස් (Cookies) පිළිබඳ අපගේ ප්‍රතිපත්තියට එක්කර ඇති වැදගත් වෙනස්කම් ඔබට සහ ඔබගේ දත්තවලට අදාළවන්නේ කෙසේදැයි ඔබ දැනුවත්වීම අවශ්‍යය.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jRIFqD"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dDEdiO"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        හරි
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dDEdiO"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        වෙනස් කර ඇත්තේ මොනවාදැයි දැනගන්න
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 ewTDrz"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 gpgNUa"
+                  >
+                    කුකීස් සමග එකඟවන්නේදැයි අපට දන්වන්න
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dMOVlP"
+                  >
+                    අප කුකීස්
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      භාවිත කරන්නේ
+                    </a>
+                    හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jRIFqD"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dDEdiO"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        ඔව්, මම එකඟයි
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dDEdiO"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        නැහැ, සැකසුම වෙත මා ගෙනයන්න
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/sinhala"
+               class="StyledLink-m3awbo-2 cWYfbo"
+            >
+              <svg height="24"
+                   viewbox="0 0 241.23 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gUGyOn"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194.48 10.18a7.32 7.32 0 0 0-2.92-.52h-.16a1.9 1.9 0 0 1 .51-1.31 1.74 1.74 0 0 1 1.29-.47q1.49 0 1.49 1.15a2.65 2.65 0 0 1-.09.58l1.37.22a4.08 4.08 0 0 0 .13-1 2 2 0 0 0-.76-1.7 3.3 3.3 0 0 0-2-.58 3.16 3.16 0 0 0-2.44.92 3.74 3.74 0 0 0-.85 2.64v.79h.46a11.48 11.48 0 0 1 2.83.29 2.92 2.92 0 0 1 1.63 1 3.33 3.33 0 0 1 .54 2.07 3.51 3.51 0 0 1-.64 2.29 2.29 2.29 0 0 1-1.87.77 2.57 2.57 0 0 1-2-.69 3.11 3.11 0 0 1-.64-2.17v-.13H189v.13a3.07 3.07 0 0 1-.66 2.17 2.56 2.56 0 0 1-1.95.69 2.52 2.52 0 0 1-1.92-.73 2.89 2.89 0 0 1-.69-2.06 3.72 3.72 0 0 1 .4-1.79 2.87 2.87 0 0 1 1.12-1.15 4.39 4.39 0 0 1 1.49-.54 14.53 14.53 0 0 1 2.17-.12h.37v-.79a3.73 3.73 0 0 0-.85-2.65 3.18 3.18 0 0 0-2.44-.91 3.21 3.21 0 0 0-2.06.59 2 2 0 0 0-.74 1.67 2.09 2.09 0 0 0 0 .43l1.4-.07a.65.65 0 0 1 0-.12V9a1 1 0 0 1 .36-.79 1.8 1.8 0 0 1 1.13-.29 1.75 1.75 0 0 1 1.28.47 1.91 1.91 0 0 1 .59 1.26h-5.86v1.28h.38a20.2 20.2 0 0 0 2.05-.07 4 4 0 0 0-1.63 1.5 4.17 4.17 0 0 0-.56 2.17 4.2 4.2 0 0 0 1.09 3.06 3.84 3.84 0 0 0 2.89 1.13 4.25 4.25 0 0 0 1.83-.36A4.11 4.11 0 0 0 189.7 17a3.92 3.92 0 0 0 1.44 1.31 4.14 4.14 0 0 0 1.87.4 3.62 3.62 0 0 0 2.83-1.17 4.7 4.7 0 0 0 1.06-3.26 5 5 0 0 0-.6-2.55 3.74 3.74 0 0 0-1.82-1.55zM185.84 6.17a3.16 3.16 0 0 1-.19-1.17 1.79 1.79 0 0 1 1-1.66 8.61 8.61 0 0 1 6.07 0 1.77 1.77 0 0 1 1 1.64 3.16 3.16 0 0 1-.19 1.14l1.32.23a3.76 3.76 0 0 0 .29-1.35 2.94 2.94 0 0 0-1.38-2.58 9.35 9.35 0 0 0-8.13 0A3 3 0 0 0 184.25 5a3.82 3.82 0 0 0 .27 1.4zM204.25 9.95a4 4 0 0 0-2-.51 4.19 4.19 0 0 0-2 .49 3.53 3.53 0 0 0-1.42 1.4 4 4 0 0 0-.51 2 4.1 4.1 0 0 0 .49 2 3.55 3.55 0 0 0 1.37 1.39 4 4 0 0 0 2 .5 3.73 3.73 0 0 0 3.94-3.91 4.18 4.18 0 0 0-.47-2 3.46 3.46 0 0 0-1.4-1.36zm-.25 5.22a2.39 2.39 0 0 1-1.84.72 2.34 2.34 0 0 1-1.82-.71 2.68 2.68 0 0 1-.66-1.89 2.49 2.49 0 0 1 .67-1.82 2.41 2.41 0 0 1 1.81-.68 2.47 2.47 0 0 1 1.84.68 2.43 2.43 0 0 1 .67 1.78 2.71 2.71 0 0 1-.67 1.92zM219.6 6.59a4.75 4.75 0 0 0-3.6 1.56 8.42 8.42 0 0 0-1.93 4.61l1.38.43a1.45 1.45 0 0 1 .47-.28 1.78 1.78 0 0 1 .51-.06q.93 0 .93 1.23a2.86 2.86 0 0 1-1.13 2.4 5.05 5.05 0 0 1-3.14.86 4.58 4.58 0 0 1-3.08-1 3.32 3.32 0 0 1-1.14-2.66 2.5 2.5 0 0 1 .85-2.11 4.46 4.46 0 0 1 2.72-.66h1.67v-.79a3.74 3.74 0 0 0-.85-2.64 3.16 3.16 0 0 0-2.44-.92 3.23 3.23 0 0 0-2.07.59 2 2 0 0 0-.75 1.71 3.45 3.45 0 0 0 .13 1l1.37-.22a2.65 2.65 0 0 1-.09-.58q0-1.15 1.49-1.15a1.75 1.75 0 0 1 1.28.46 1.92 1.92 0 0 1 .52 1.32h-.32a5.83 5.83 0 0 0-3.7 1 3.56 3.56 0 0 0-1.26 3 5.24 5.24 0 0 0 .69 2.76 4.45 4.45 0 0 0 2 1.75 6.93 6.93 0 0 0 3 .6 7.6 7.6 0 0 0 3.08-.57 4.2 4.2 0 0 0 2.62-4 2.86 2.86 0 0 0-.61-1.95 2.13 2.13 0 0 0-1.69-.69 2.43 2.43 0 0 0-.88.16 6.2 6.2 0 0 1 1.48-2.79 3.35 3.35 0 0 1 2.46-1 3.11 3.11 0 0 1 2.62 1.24 5.28 5.28 0 0 1 .95 3.28 6.44 6.44 0 0 1-.45 2.52 3.42 3.42 0 0 1-1.39 1.63 4.47 4.47 0 0 1-2.37.58h-.8L218 18.5a9.55 9.55 0 0 0 1.06.06 5.18 5.18 0 0 0 4-1.61 6.34 6.34 0 0 0 1.48-4.46 6.59 6.59 0 0 0-1.31-4.32 4.47 4.47 0 0 0-3.63-1.58zM241.17 15.28l-1.4.08a7.1 7.1 0 0 1 0 .75 4.49 4.49 0 0 1-1.58 3.67 6.55 6.55 0 0 1-4.29 1.3 6.64 6.64 0 0 1-4.78-1.63 6 6 0 0 1-1.7-4.59 6.8 6.8 0 0 1 1.88-5.11 7.37 7.37 0 0 1 5.36-1.82 6.8 6.8 0 0 1 3.66.79 2.7 2.7 0 0 1 1.22 2.44 2 2 0 0 1-.69 1.63 3.07 3.07 0 0 1-2 .58q-1.93 0-1.93-1.36a1.35 1.35 0 0 1 .15-.65h2.84v-1.3h-7.26v1.3h2.95a2.3 2.3 0 0 0-.1.67 2.39 2.39 0 0 0 .85 2 4 4 0 0 0 2.52.67 4.47 4.47 0 0 0 3.06-1 3.3 3.3 0 0 0 1.09-2.61 3.92 3.92 0 0 0-1.62-3.36 8 8 0 0 0-4.78-1.18 10.06 10.06 0 0 0-4.59 1 7 7 0 0 0-3 2.87 8.82 8.82 0 0 0-1 4.37 7.57 7.57 0 0 0 2 5.66 8.13 8.13 0 0 0 5.94 2 9 9 0 0 0 3.77-.77 5.8 5.8 0 0 0 2.58-2.21 6.26 6.26 0 0 0 .9-3.4 4.66 4.66 0 0 0-.05-.79z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                සිංහල
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 npmEM"
+            >
+              අන්තර්ගතයට පිවිසෙන්න
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 ildFKC"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                අංශ
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    මුල් පිටුව
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala/sri_lanka"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    ශ්‍රී ලංකා
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala/world"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    ලෝකය
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala/51727586"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    විශේෂාංග
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/sinhala"
+                     class="StyledLink-sc-158x7z5-2 gwhkGw"
+                  >
+                    මුල් පිටුව
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/sinhala/sri_lanka"
+                     class="StyledLink-sc-158x7z5-2 gwhkGw"
+                  >
+                    ශ්‍රී ලංකා
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/sinhala/world"
+                     class="StyledLink-sc-158x7z5-2 gwhkGw"
+                  >
+                    ලෝකය
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/sinhala/51727586"
+                     class="StyledLink-sc-158x7z5-2 gwhkGw"
+                  >
+                    විශේෂාංග
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=82&p=world::sinhala.world.photo_gallery.37657374.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:05b2f317-3157-ba41-91ff-2b56612d9725]&x2=[amp]&x3=[news-sinhala]&x4=[si]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[භුමිපාල්+අතුලතේජ්:+සමරු+සේයා+රූ+සටහන්+-+BBC+News+සිංහල]&x11=[2016-10-14T13:28:29.000Z]&x12=[2016-10-14T13:28:40.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 fHAjPU"
+          >
+            භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2016-10-14"
+                class="StyledTimestamp-um718p-0 hrpJVZ"
+          >
+            14 ඔක්තෝබර් 2016
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 eAUrpy">
+            තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/6894/production/_91927762_029063bbc474.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="අමරිකානු හිටපු ජනාධිපති ජෝර්ජ් බුස් සමග භුමිපාල් අතුලතේජ් රජතුමා"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/890A/production/_91928053_029062421afp.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    ඇමරිකාවේ හිටපු ජනාධිපති ජෝර්ජ් බුෂ් සහ භුමිපාල් අතුලතේජ් රජතුමා
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="රුසියානු ජනාධිපති විලද්මීර් පුටින් සමග භුමිපාල් අතුලතේජ් රජතුමා"
+                           attribution="AFP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    රුසියානු ජනාධිපති ව්ලැදිමීර් පූතීන් සමග භුමිපාල් අතුලතේජ් රජතුමා
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග"
+                           attribution="AP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/AC96/production/_91928144_024232892ap.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය."
+                           attribution="AFP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4706/production/_91928181_0242328afp88.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය ."
+                           attribution="AP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1704A/production/_91928249_001844286ap.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය."
+                           attribution="AFP"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ."
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/sinhala"
+               class="StyledLink-m3awbo-2 cWYfbo"
+            >
+              <svg height="24"
+                   viewbox="0 0 241.23 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gUGyOn"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194.48 10.18a7.32 7.32 0 0 0-2.92-.52h-.16a1.9 1.9 0 0 1 .51-1.31 1.74 1.74 0 0 1 1.29-.47q1.49 0 1.49 1.15a2.65 2.65 0 0 1-.09.58l1.37.22a4.08 4.08 0 0 0 .13-1 2 2 0 0 0-.76-1.7 3.3 3.3 0 0 0-2-.58 3.16 3.16 0 0 0-2.44.92 3.74 3.74 0 0 0-.85 2.64v.79h.46a11.48 11.48 0 0 1 2.83.29 2.92 2.92 0 0 1 1.63 1 3.33 3.33 0 0 1 .54 2.07 3.51 3.51 0 0 1-.64 2.29 2.29 2.29 0 0 1-1.87.77 2.57 2.57 0 0 1-2-.69 3.11 3.11 0 0 1-.64-2.17v-.13H189v.13a3.07 3.07 0 0 1-.66 2.17 2.56 2.56 0 0 1-1.95.69 2.52 2.52 0 0 1-1.92-.73 2.89 2.89 0 0 1-.69-2.06 3.72 3.72 0 0 1 .4-1.79 2.87 2.87 0 0 1 1.12-1.15 4.39 4.39 0 0 1 1.49-.54 14.53 14.53 0 0 1 2.17-.12h.37v-.79a3.73 3.73 0 0 0-.85-2.65 3.18 3.18 0 0 0-2.44-.91 3.21 3.21 0 0 0-2.06.59 2 2 0 0 0-.74 1.67 2.09 2.09 0 0 0 0 .43l1.4-.07a.65.65 0 0 1 0-.12V9a1 1 0 0 1 .36-.79 1.8 1.8 0 0 1 1.13-.29 1.75 1.75 0 0 1 1.28.47 1.91 1.91 0 0 1 .59 1.26h-5.86v1.28h.38a20.2 20.2 0 0 0 2.05-.07 4 4 0 0 0-1.63 1.5 4.17 4.17 0 0 0-.56 2.17 4.2 4.2 0 0 0 1.09 3.06 3.84 3.84 0 0 0 2.89 1.13 4.25 4.25 0 0 0 1.83-.36A4.11 4.11 0 0 0 189.7 17a3.92 3.92 0 0 0 1.44 1.31 4.14 4.14 0 0 0 1.87.4 3.62 3.62 0 0 0 2.83-1.17 4.7 4.7 0 0 0 1.06-3.26 5 5 0 0 0-.6-2.55 3.74 3.74 0 0 0-1.82-1.55zM185.84 6.17a3.16 3.16 0 0 1-.19-1.17 1.79 1.79 0 0 1 1-1.66 8.61 8.61 0 0 1 6.07 0 1.77 1.77 0 0 1 1 1.64 3.16 3.16 0 0 1-.19 1.14l1.32.23a3.76 3.76 0 0 0 .29-1.35 2.94 2.94 0 0 0-1.38-2.58 9.35 9.35 0 0 0-8.13 0A3 3 0 0 0 184.25 5a3.82 3.82 0 0 0 .27 1.4zM204.25 9.95a4 4 0 0 0-2-.51 4.19 4.19 0 0 0-2 .49 3.53 3.53 0 0 0-1.42 1.4 4 4 0 0 0-.51 2 4.1 4.1 0 0 0 .49 2 3.55 3.55 0 0 0 1.37 1.39 4 4 0 0 0 2 .5 3.73 3.73 0 0 0 3.94-3.91 4.18 4.18 0 0 0-.47-2 3.46 3.46 0 0 0-1.4-1.36zm-.25 5.22a2.39 2.39 0 0 1-1.84.72 2.34 2.34 0 0 1-1.82-.71 2.68 2.68 0 0 1-.66-1.89 2.49 2.49 0 0 1 .67-1.82 2.41 2.41 0 0 1 1.81-.68 2.47 2.47 0 0 1 1.84.68 2.43 2.43 0 0 1 .67 1.78 2.71 2.71 0 0 1-.67 1.92zM219.6 6.59a4.75 4.75 0 0 0-3.6 1.56 8.42 8.42 0 0 0-1.93 4.61l1.38.43a1.45 1.45 0 0 1 .47-.28 1.78 1.78 0 0 1 .51-.06q.93 0 .93 1.23a2.86 2.86 0 0 1-1.13 2.4 5.05 5.05 0 0 1-3.14.86 4.58 4.58 0 0 1-3.08-1 3.32 3.32 0 0 1-1.14-2.66 2.5 2.5 0 0 1 .85-2.11 4.46 4.46 0 0 1 2.72-.66h1.67v-.79a3.74 3.74 0 0 0-.85-2.64 3.16 3.16 0 0 0-2.44-.92 3.23 3.23 0 0 0-2.07.59 2 2 0 0 0-.75 1.71 3.45 3.45 0 0 0 .13 1l1.37-.22a2.65 2.65 0 0 1-.09-.58q0-1.15 1.49-1.15a1.75 1.75 0 0 1 1.28.46 1.92 1.92 0 0 1 .52 1.32h-.32a5.83 5.83 0 0 0-3.7 1 3.56 3.56 0 0 0-1.26 3 5.24 5.24 0 0 0 .69 2.76 4.45 4.45 0 0 0 2 1.75 6.93 6.93 0 0 0 3 .6 7.6 7.6 0 0 0 3.08-.57 4.2 4.2 0 0 0 2.62-4 2.86 2.86 0 0 0-.61-1.95 2.13 2.13 0 0 0-1.69-.69 2.43 2.43 0 0 0-.88.16 6.2 6.2 0 0 1 1.48-2.79 3.35 3.35 0 0 1 2.46-1 3.11 3.11 0 0 1 2.62 1.24 5.28 5.28 0 0 1 .95 3.28 6.44 6.44 0 0 1-.45 2.52 3.42 3.42 0 0 1-1.39 1.63 4.47 4.47 0 0 1-2.37.58h-.8L218 18.5a9.55 9.55 0 0 0 1.06.06 5.18 5.18 0 0 0 4-1.61 6.34 6.34 0 0 0 1.48-4.46 6.59 6.59 0 0 0-1.31-4.32 4.47 4.47 0 0 0-3.63-1.58zM241.17 15.28l-1.4.08a7.1 7.1 0 0 1 0 .75 4.49 4.49 0 0 1-1.58 3.67 6.55 6.55 0 0 1-4.29 1.3 6.64 6.64 0 0 1-4.78-1.63 6 6 0 0 1-1.7-4.59 6.8 6.8 0 0 1 1.88-5.11 7.37 7.37 0 0 1 5.36-1.82 6.8 6.8 0 0 1 3.66.79 2.7 2.7 0 0 1 1.22 2.44 2 2 0 0 1-.69 1.63 3.07 3.07 0 0 1-2 .58q-1.93 0-1.93-1.36a1.35 1.35 0 0 1 .15-.65h2.84v-1.3h-7.26v1.3h2.95a2.3 2.3 0 0 0-.1.67 2.39 2.39 0 0 0 .85 2 4 4 0 0 0 2.52.67 4.47 4.47 0 0 0 3.06-1 3.3 3.3 0 0 0 1.09-2.61 3.92 3.92 0 0 0-1.62-3.36 8 8 0 0 0-4.78-1.18 10.06 10.06 0 0 0-4.59 1 7 7 0 0 0-3 2.87 8.82 8.82 0 0 0-1 4.37 7.57 7.57 0 0 0 2 5.66 8.13 8.13 0 0 0 5.94 2 9 9 0 0 0 3.77-.77 5.8 5.8 0 0 0 2.58-2.21 6.26 6.26 0 0 0 .9-3.4 4.66 4.66 0 0 0-.05-.79z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                සිංහල
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 jXknTb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/sinhala/institutional-50288553"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    භාවිතයේ කොන්දේසි
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    පෞද්ගලිකත්ව ප්‍රතිපත්තිය
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    කුකීස්
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    බීබීසී අමතන්න
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /sinhala/world-37657374 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="si"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_sinhala/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="si-LK"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන් - BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/sinhala/world-37657374"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcsinhala"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_sinhala/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcsinhala"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන් - BBC News සිංහල"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2016-10-14T13:28:29.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2016-10-14T13:28:40.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
+    <title data-react-helmet="true">
+      භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන් - BBC News සිංහල
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/sinhala/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/sinhala/world-37657374"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/sinhala/world-37657374.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/sinhala/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/sinhala/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/sinhala/world-37657374","publisher":{"@type":"NewsMediaOrganization","name":"BBC News සිංහල","publishingPrinciples":"https://www.bbc.com/sinhala/institutional-50288553","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/sinhala/world-37657374","name":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"},"headline":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්","description":"තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.","datePublished":"2016-10-14T13:28:29.000Z","dateModified":"2016-10-14T13:28:40.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News සිංහල","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png"},"noBylinesPolicy":"https://www.bbc.com/sinhala/institutional-50288553#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/sinhala"
+               class="StyledLink-m3awbo-2 cWYfbo"
+            >
+              <svg height="24"
+                   viewbox="0 0 241.23 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gUGyOn"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194.48 10.18a7.32 7.32 0 0 0-2.92-.52h-.16a1.9 1.9 0 0 1 .51-1.31 1.74 1.74 0 0 1 1.29-.47q1.49 0 1.49 1.15a2.65 2.65 0 0 1-.09.58l1.37.22a4.08 4.08 0 0 0 .13-1 2 2 0 0 0-.76-1.7 3.3 3.3 0 0 0-2-.58 3.16 3.16 0 0 0-2.44.92 3.74 3.74 0 0 0-.85 2.64v.79h.46a11.48 11.48 0 0 1 2.83.29 2.92 2.92 0 0 1 1.63 1 3.33 3.33 0 0 1 .54 2.07 3.51 3.51 0 0 1-.64 2.29 2.29 2.29 0 0 1-1.87.77 2.57 2.57 0 0 1-2-.69 3.11 3.11 0 0 1-.64-2.17v-.13H189v.13a3.07 3.07 0 0 1-.66 2.17 2.56 2.56 0 0 1-1.95.69 2.52 2.52 0 0 1-1.92-.73 2.89 2.89 0 0 1-.69-2.06 3.72 3.72 0 0 1 .4-1.79 2.87 2.87 0 0 1 1.12-1.15 4.39 4.39 0 0 1 1.49-.54 14.53 14.53 0 0 1 2.17-.12h.37v-.79a3.73 3.73 0 0 0-.85-2.65 3.18 3.18 0 0 0-2.44-.91 3.21 3.21 0 0 0-2.06.59 2 2 0 0 0-.74 1.67 2.09 2.09 0 0 0 0 .43l1.4-.07a.65.65 0 0 1 0-.12V9a1 1 0 0 1 .36-.79 1.8 1.8 0 0 1 1.13-.29 1.75 1.75 0 0 1 1.28.47 1.91 1.91 0 0 1 .59 1.26h-5.86v1.28h.38a20.2 20.2 0 0 0 2.05-.07 4 4 0 0 0-1.63 1.5 4.17 4.17 0 0 0-.56 2.17 4.2 4.2 0 0 0 1.09 3.06 3.84 3.84 0 0 0 2.89 1.13 4.25 4.25 0 0 0 1.83-.36A4.11 4.11 0 0 0 189.7 17a3.92 3.92 0 0 0 1.44 1.31 4.14 4.14 0 0 0 1.87.4 3.62 3.62 0 0 0 2.83-1.17 4.7 4.7 0 0 0 1.06-3.26 5 5 0 0 0-.6-2.55 3.74 3.74 0 0 0-1.82-1.55zM185.84 6.17a3.16 3.16 0 0 1-.19-1.17 1.79 1.79 0 0 1 1-1.66 8.61 8.61 0 0 1 6.07 0 1.77 1.77 0 0 1 1 1.64 3.16 3.16 0 0 1-.19 1.14l1.32.23a3.76 3.76 0 0 0 .29-1.35 2.94 2.94 0 0 0-1.38-2.58 9.35 9.35 0 0 0-8.13 0A3 3 0 0 0 184.25 5a3.82 3.82 0 0 0 .27 1.4zM204.25 9.95a4 4 0 0 0-2-.51 4.19 4.19 0 0 0-2 .49 3.53 3.53 0 0 0-1.42 1.4 4 4 0 0 0-.51 2 4.1 4.1 0 0 0 .49 2 3.55 3.55 0 0 0 1.37 1.39 4 4 0 0 0 2 .5 3.73 3.73 0 0 0 3.94-3.91 4.18 4.18 0 0 0-.47-2 3.46 3.46 0 0 0-1.4-1.36zm-.25 5.22a2.39 2.39 0 0 1-1.84.72 2.34 2.34 0 0 1-1.82-.71 2.68 2.68 0 0 1-.66-1.89 2.49 2.49 0 0 1 .67-1.82 2.41 2.41 0 0 1 1.81-.68 2.47 2.47 0 0 1 1.84.68 2.43 2.43 0 0 1 .67 1.78 2.71 2.71 0 0 1-.67 1.92zM219.6 6.59a4.75 4.75 0 0 0-3.6 1.56 8.42 8.42 0 0 0-1.93 4.61l1.38.43a1.45 1.45 0 0 1 .47-.28 1.78 1.78 0 0 1 .51-.06q.93 0 .93 1.23a2.86 2.86 0 0 1-1.13 2.4 5.05 5.05 0 0 1-3.14.86 4.58 4.58 0 0 1-3.08-1 3.32 3.32 0 0 1-1.14-2.66 2.5 2.5 0 0 1 .85-2.11 4.46 4.46 0 0 1 2.72-.66h1.67v-.79a3.74 3.74 0 0 0-.85-2.64 3.16 3.16 0 0 0-2.44-.92 3.23 3.23 0 0 0-2.07.59 2 2 0 0 0-.75 1.71 3.45 3.45 0 0 0 .13 1l1.37-.22a2.65 2.65 0 0 1-.09-.58q0-1.15 1.49-1.15a1.75 1.75 0 0 1 1.28.46 1.92 1.92 0 0 1 .52 1.32h-.32a5.83 5.83 0 0 0-3.7 1 3.56 3.56 0 0 0-1.26 3 5.24 5.24 0 0 0 .69 2.76 4.45 4.45 0 0 0 2 1.75 6.93 6.93 0 0 0 3 .6 7.6 7.6 0 0 0 3.08-.57 4.2 4.2 0 0 0 2.62-4 2.86 2.86 0 0 0-.61-1.95 2.13 2.13 0 0 0-1.69-.69 2.43 2.43 0 0 0-.88.16 6.2 6.2 0 0 1 1.48-2.79 3.35 3.35 0 0 1 2.46-1 3.11 3.11 0 0 1 2.62 1.24 5.28 5.28 0 0 1 .95 3.28 6.44 6.44 0 0 1-.45 2.52 3.42 3.42 0 0 1-1.39 1.63 4.47 4.47 0 0 1-2.37.58h-.8L218 18.5a9.55 9.55 0 0 0 1.06.06 5.18 5.18 0 0 0 4-1.61 6.34 6.34 0 0 0 1.48-4.46 6.59 6.59 0 0 0-1.31-4.32 4.47 4.47 0 0 0-3.63-1.58zM241.17 15.28l-1.4.08a7.1 7.1 0 0 1 0 .75 4.49 4.49 0 0 1-1.58 3.67 6.55 6.55 0 0 1-4.29 1.3 6.64 6.64 0 0 1-4.78-1.63 6 6 0 0 1-1.7-4.59 6.8 6.8 0 0 1 1.88-5.11 7.37 7.37 0 0 1 5.36-1.82 6.8 6.8 0 0 1 3.66.79 2.7 2.7 0 0 1 1.22 2.44 2 2 0 0 1-.69 1.63 3.07 3.07 0 0 1-2 .58q-1.93 0-1.93-1.36a1.35 1.35 0 0 1 .15-.65h2.84v-1.3h-7.26v1.3h2.95a2.3 2.3 0 0 0-.1.67 2.39 2.39 0 0 0 .85 2 4 4 0 0 0 2.52.67 4.47 4.47 0 0 0 3.06-1 3.3 3.3 0 0 0 1.09-2.61 3.92 3.92 0 0 0-1.62-3.36 8 8 0 0 0-4.78-1.18 10.06 10.06 0 0 0-4.59 1 7 7 0 0 0-3 2.87 8.82 8.82 0 0 0-1 4.37 7.57 7.57 0 0 0 2 5.66 8.13 8.13 0 0 0 5.94 2 9 9 0 0 0 3.77-.77 5.8 5.8 0 0 0 2.58-2.21 6.26 6.26 0 0 0 .9-3.4 4.66 4.66 0 0 0-.05-.79z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                සිංහල
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 npmEM"
+            >
+              අන්තර්ගතයට පිවිසෙන්න
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 ildFKC"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  අංශ
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/sinhala"
+                       class="StyledLink-sc-158x7z5-2 gwhkGw"
+                    >
+                      මුල් පිටුව
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/sinhala/sri_lanka"
+                       class="StyledLink-sc-158x7z5-2 gwhkGw"
+                    >
+                      ශ්‍රී ලංකා
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/sinhala/world"
+                       class="StyledLink-sc-158x7z5-2 gwhkGw"
+                    >
+                      ලෝකය
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/sinhala/51727586"
+                       class="StyledLink-sc-158x7z5-2 gwhkGw"
+                    >
+                      විශේෂාංග
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    මුල් පිටුව
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala/sri_lanka"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    ශ්‍රී ලංකා
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala/world"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    ලෝකය
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/sinhala/51727586"
+                     class="StyledDropdownLink-ukxuly-4 cwWrxm"
+                  >
+                    විශේෂාංග
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=82&amp;p=world::sinhala.world.photo_gallery.37657374.page&amp;x1=[urn:bbc:cps:05b2f317-3157-ba41-91ff-2b56612d9725]&amp;x2=[responsive]&amp;x3=[news-sinhala]&amp;x4=[si]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[භුමිපාල්+අතුලතේජ්:+සමරු+සේයා+රූ+සටහන්+-+BBC+News+සිංහල]&amp;x11=[2016-10-14T13:28:29.000Z]&amp;x12=[2016-10-14T13:28:40.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 fHAjPU"
+          >
+            භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2016-10-14"
+                class="StyledTimestamp-um718p-0 hrpJVZ"
+          >
+            14 ඔක්තෝබර් 2016
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 eAUrpy">
+            තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/6894/production/_91927762_029063bbc474.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/6894/production/_91927762_029063bbc474.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/6894/production/_91927762_029063bbc474.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/6894/production/_91927762_029063bbc474.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/6894/production/_91927762_029063bbc474.jpg 800w"
+                         alt="තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/6894/production/_91927762_029063bbc474.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg 800w"
+                         alt="දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17A04/production/_91927769_02906347bbc5.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/890A/production/_91928053_029062421afp.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/890A/production/_91928053_029062421afp.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/890A/production/_91928053_029062421afp.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/890A/production/_91928053_029062421afp.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/890A/production/_91928053_029062421afp.jpg 800w"
+                         alt="අමරිකානු හිටපු ජනාධිපති ජෝර්ජ් බුස් සමග භුමිපාල් අතුලතේජ් රජතුමා"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/890A/production/_91928053_029062421afp.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    ඇමරිකාවේ හිටපු ජනාධිපති ජෝර්ජ් බුෂ් සහ භුමිපාල් අතුලතේජ් රජතුමා
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg 800w"
+                         alt="රුසියානු ජනාධිපති විලද්මීර් පුටින් සමග භුමිපාල් අතුලතේජ් රජතුමා"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14C5A/production/_91928058_029062422afp.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    රුසියානු ජනාධිපති ව්ලැදිමීර් පූතීන් සමග භුමිපාල් අතුලතේජ් රජතුමා
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/AC96/production/_91928144_024232892ap.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/AC96/production/_91928144_024232892ap.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/AC96/production/_91928144_024232892ap.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/AC96/production/_91928144_024232892ap.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/AC96/production/_91928144_024232892ap.jpg 800w"
+                         alt="සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/AC96/production/_91928144_024232892ap.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4706/production/_91928181_0242328afp88.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4706/production/_91928181_0242328afp88.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4706/production/_91928181_0242328afp88.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/4706/production/_91928181_0242328afp88.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/4706/production/_91928181_0242328afp88.jpg 800w"
+                         alt="තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4706/production/_91928181_0242328afp88.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg 800w"
+                         alt="රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/23DE/production/_91928190_029063469bbc.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1704A/production/_91928249_001844286ap.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1704A/production/_91928249_001844286ap.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1704A/production/_91928249_001844286ap.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1704A/production/_91928249_001844286ap.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1704A/production/_91928249_001844286ap.jpg 800w"
+                         alt="භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය ."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1704A/production/_91928249_001844286ap.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg 800w"
+                         alt="භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16CC6/production/_91928339_029062456afp.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ඡායාරූප මූලාශ්‍රය,
+                    </span>
+                    <span lang="en-GB">
+                      AFP
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg 800w"
+                         alt="තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 fiboUO">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ඡායාරූප ශීර්ෂ වැකිය,
+                  </span>
+                  <p>
+                    තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/sinhala"
+               class="StyledLink-m3awbo-2 cWYfbo"
+            >
+              <svg height="24"
+                   viewbox="0 0 241.23 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 gUGyOn"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M194.48 10.18a7.32 7.32 0 0 0-2.92-.52h-.16a1.9 1.9 0 0 1 .51-1.31 1.74 1.74 0 0 1 1.29-.47q1.49 0 1.49 1.15a2.65 2.65 0 0 1-.09.58l1.37.22a4.08 4.08 0 0 0 .13-1 2 2 0 0 0-.76-1.7 3.3 3.3 0 0 0-2-.58 3.16 3.16 0 0 0-2.44.92 3.74 3.74 0 0 0-.85 2.64v.79h.46a11.48 11.48 0 0 1 2.83.29 2.92 2.92 0 0 1 1.63 1 3.33 3.33 0 0 1 .54 2.07 3.51 3.51 0 0 1-.64 2.29 2.29 2.29 0 0 1-1.87.77 2.57 2.57 0 0 1-2-.69 3.11 3.11 0 0 1-.64-2.17v-.13H189v.13a3.07 3.07 0 0 1-.66 2.17 2.56 2.56 0 0 1-1.95.69 2.52 2.52 0 0 1-1.92-.73 2.89 2.89 0 0 1-.69-2.06 3.72 3.72 0 0 1 .4-1.79 2.87 2.87 0 0 1 1.12-1.15 4.39 4.39 0 0 1 1.49-.54 14.53 14.53 0 0 1 2.17-.12h.37v-.79a3.73 3.73 0 0 0-.85-2.65 3.18 3.18 0 0 0-2.44-.91 3.21 3.21 0 0 0-2.06.59 2 2 0 0 0-.74 1.67 2.09 2.09 0 0 0 0 .43l1.4-.07a.65.65 0 0 1 0-.12V9a1 1 0 0 1 .36-.79 1.8 1.8 0 0 1 1.13-.29 1.75 1.75 0 0 1 1.28.47 1.91 1.91 0 0 1 .59 1.26h-5.86v1.28h.38a20.2 20.2 0 0 0 2.05-.07 4 4 0 0 0-1.63 1.5 4.17 4.17 0 0 0-.56 2.17 4.2 4.2 0 0 0 1.09 3.06 3.84 3.84 0 0 0 2.89 1.13 4.25 4.25 0 0 0 1.83-.36A4.11 4.11 0 0 0 189.7 17a3.92 3.92 0 0 0 1.44 1.31 4.14 4.14 0 0 0 1.87.4 3.62 3.62 0 0 0 2.83-1.17 4.7 4.7 0 0 0 1.06-3.26 5 5 0 0 0-.6-2.55 3.74 3.74 0 0 0-1.82-1.55zM185.84 6.17a3.16 3.16 0 0 1-.19-1.17 1.79 1.79 0 0 1 1-1.66 8.61 8.61 0 0 1 6.07 0 1.77 1.77 0 0 1 1 1.64 3.16 3.16 0 0 1-.19 1.14l1.32.23a3.76 3.76 0 0 0 .29-1.35 2.94 2.94 0 0 0-1.38-2.58 9.35 9.35 0 0 0-8.13 0A3 3 0 0 0 184.25 5a3.82 3.82 0 0 0 .27 1.4zM204.25 9.95a4 4 0 0 0-2-.51 4.19 4.19 0 0 0-2 .49 3.53 3.53 0 0 0-1.42 1.4 4 4 0 0 0-.51 2 4.1 4.1 0 0 0 .49 2 3.55 3.55 0 0 0 1.37 1.39 4 4 0 0 0 2 .5 3.73 3.73 0 0 0 3.94-3.91 4.18 4.18 0 0 0-.47-2 3.46 3.46 0 0 0-1.4-1.36zm-.25 5.22a2.39 2.39 0 0 1-1.84.72 2.34 2.34 0 0 1-1.82-.71 2.68 2.68 0 0 1-.66-1.89 2.49 2.49 0 0 1 .67-1.82 2.41 2.41 0 0 1 1.81-.68 2.47 2.47 0 0 1 1.84.68 2.43 2.43 0 0 1 .67 1.78 2.71 2.71 0 0 1-.67 1.92zM219.6 6.59a4.75 4.75 0 0 0-3.6 1.56 8.42 8.42 0 0 0-1.93 4.61l1.38.43a1.45 1.45 0 0 1 .47-.28 1.78 1.78 0 0 1 .51-.06q.93 0 .93 1.23a2.86 2.86 0 0 1-1.13 2.4 5.05 5.05 0 0 1-3.14.86 4.58 4.58 0 0 1-3.08-1 3.32 3.32 0 0 1-1.14-2.66 2.5 2.5 0 0 1 .85-2.11 4.46 4.46 0 0 1 2.72-.66h1.67v-.79a3.74 3.74 0 0 0-.85-2.64 3.16 3.16 0 0 0-2.44-.92 3.23 3.23 0 0 0-2.07.59 2 2 0 0 0-.75 1.71 3.45 3.45 0 0 0 .13 1l1.37-.22a2.65 2.65 0 0 1-.09-.58q0-1.15 1.49-1.15a1.75 1.75 0 0 1 1.28.46 1.92 1.92 0 0 1 .52 1.32h-.32a5.83 5.83 0 0 0-3.7 1 3.56 3.56 0 0 0-1.26 3 5.24 5.24 0 0 0 .69 2.76 4.45 4.45 0 0 0 2 1.75 6.93 6.93 0 0 0 3 .6 7.6 7.6 0 0 0 3.08-.57 4.2 4.2 0 0 0 2.62-4 2.86 2.86 0 0 0-.61-1.95 2.13 2.13 0 0 0-1.69-.69 2.43 2.43 0 0 0-.88.16 6.2 6.2 0 0 1 1.48-2.79 3.35 3.35 0 0 1 2.46-1 3.11 3.11 0 0 1 2.62 1.24 5.28 5.28 0 0 1 .95 3.28 6.44 6.44 0 0 1-.45 2.52 3.42 3.42 0 0 1-1.39 1.63 4.47 4.47 0 0 1-2.37.58h-.8L218 18.5a9.55 9.55 0 0 0 1.06.06 5.18 5.18 0 0 0 4-1.61 6.34 6.34 0 0 0 1.48-4.46 6.59 6.59 0 0 0-1.31-4.32 4.47 4.47 0 0 0-3.63-1.58zM241.17 15.28l-1.4.08a7.1 7.1 0 0 1 0 .75 4.49 4.49 0 0 1-1.58 3.67 6.55 6.55 0 0 1-4.29 1.3 6.64 6.64 0 0 1-4.78-1.63 6 6 0 0 1-1.7-4.59 6.8 6.8 0 0 1 1.88-5.11 7.37 7.37 0 0 1 5.36-1.82 6.8 6.8 0 0 1 3.66.79 2.7 2.7 0 0 1 1.22 2.44 2 2 0 0 1-.69 1.63 3.07 3.07 0 0 1-2 .58q-1.93 0-1.93-1.36a1.35 1.35 0 0 1 .15-.65h2.84v-1.3h-7.26v1.3h2.95a2.3 2.3 0 0 0-.1.67 2.39 2.39 0 0 0 .85 2 4 4 0 0 0 2.52.67 4.47 4.47 0 0 0 3.06-1 3.3 3.3 0 0 0 1.09-2.61 3.92 3.92 0 0 0-1.62-3.36 8 8 0 0 0-4.78-1.18 10.06 10.06 0 0 0-4.59 1 7 7 0 0 0-3 2.87 8.82 8.82 0 0 0-1 4.37 7.57 7.57 0 0 0 2 5.66 8.13 8.13 0 0 0 5.94 2 9 9 0 0 0 3.77-.77 5.8 5.8 0 0 0 2.58-2.21 6.26 6.26 0 0 0 .9-3.4 4.66 4.66 0 0 0-.05-.79z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                සිංහල
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 jXknTb">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 bmlrLC"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/sinhala/institutional-50288553"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    භාවිතයේ කොන්දේසි
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    පෞද්ගලිකත්ව ප්‍රතිපත්තිය
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    කුකීස්
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/contact/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    බීබීසී අමතන්න
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1476451709000,"lastPublished":1476451720000,"lastUpdated":1579166183934,"id":"mock-id","locators":{"assetUri":"/sinhala/world-37657374","cpsUrn":"urn:bbc:content:assetUri:sinhala/world-37657374","curie":"http://www.bbc.co.uk/asset/05b2f317-3157-ba41-91ff-2b56612d9725"},"type":"PGL","createdBy":"sinhala-v6","language":"si","timestamp":1476451709000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"sinhala.world.photo_gallery.37657374.page","cps_asset_id":"37657374"},"tags":{},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්","blocks":[{"type":"fragment","model":{"text":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1476451709000,"lastPublished":1476451720000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.","blocks":[{"type":"fragment","model":{"text":"තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.","blocks":[{"type":"fragment","model":{"text":"තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.","blocks":[{"type":"fragment","model":{"text":"තම අධ්‍යාපන කටයුතු සඳහා ස්විස්ටර්ලන්තය ලන්තයට නැවත ගොස් සිටියදී පැරීසියේ කළ සංචාරයක දී භුමිපාල් රජුට තම අනාගත බිරිඳ මුණ ගැසුණි.","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"6894/production/_91927762_029063bbc474.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.","blocks":[{"type":"fragment","model":{"text":"දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.","blocks":[{"type":"fragment","model":{"text":"දේශපාලන අධිකාරියට ඉහලින් පෙනී සිටි පීතෘවරයෙකු බඳු චරිතයක් හිමිව සිටි භුමිපාල් අතුලතේජ් රජතුමා දේශපාලන කැළඹීම් සහිත අවස්ථාවන් වල දී ඒවාට මැදිහත්වී කටයුතු කළේය.","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"17A04/production/_91927769_02906347bbc5.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ඇමරිකාවේ හිටපු ජනාධිපති ජෝර්ජ් බුෂ් සහ භුමිපාල් අතුලතේජ් රජතුමා","blocks":[{"type":"fragment","model":{"text":"ඇමරිකාවේ හිටපු ජනාධිපති ජෝර්ජ් බුෂ් සහ භුමිපාල් අතුලතේජ් රජතුමා","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"අමරිකානු හිටපු ජනාධිපති ජෝර්ජ් බුස් සමග භුමිපාල් අතුලතේජ් රජතුමා","blocks":[{"type":"fragment","model":{"text":"අමරිකානු හිටපු ජනාධිපති ජෝර්ජ් බුස් සමග භුමිපාල් අතුලතේජ් රජතුමා","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"890A/production/_91928053_029062421afp.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"රුසියානු ජනාධිපති ව්ලැදිමීර් පූතීන් සමග භුමිපාල් අතුලතේජ් රජතුමා","blocks":[{"type":"fragment","model":{"text":"රුසියානු ජනාධිපති ව්ලැදිමීර් පූතීන් සමග භුමිපාල් අතුලතේජ් රජතුමා","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"රුසියානු ජනාධිපති විලද්මීර් පුටින් සමග භුමිපාල් අතුලතේජ් රජතුමා","blocks":[{"type":"fragment","model":{"text":"රුසියානු ජනාධිපති විලද්මීර් පුටින් සමග භුමිපාල් අතුලතේජ් රජතුමා","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP","height":549,"locator":"14C5A/production/_91928058_029062422afp.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග","blocks":[{"type":"fragment","model":{"text":"සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග","blocks":[{"type":"fragment","model":{"text":"සංගීතයට ලැදිකමක් දැක්වූ ඔහු කණ්ඩායම් නායක බෙනි ගුඩ්මාන් සමග","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"AP","height":549,"locator":"AC96/production/_91928144_024232892ap.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.","blocks":[{"type":"fragment","model":{"text":"තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.","blocks":[{"type":"fragment","model":{"text":"තායිලන්ත ව්‍යවස්ථාවට අනුව රාජ්‍යත්වයට හිමිවන්නේ සීමිත බලයක් වුවද බොහෝ තායි ජාතිකයන් අතර ඔහු දේවත්වයෙන් පිදුම් ලැබීය.","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP","height":549,"locator":"4706/production/_91928181_0242328afp88.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.","blocks":[{"type":"fragment","model":{"text":"රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.","blocks":[{"type":"fragment","model":{"text":"රාජ්‍ය පාලනයෙන් තායිලන්තය තුළ මහත් ගෞරවාදරයට පාත්‍රව සිටි එතුමන්ගේ පාලන කාලය තුළ හමුදා කුමන්ත්‍රණ රැසක් සිදුවිය.","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"23DE/production/_91928190_029063469bbc.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .","blocks":[{"type":"fragment","model":{"text":"භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .","blocks":[{"type":"fragment","model":{"text":"භුමිපාල් බිලිඳා උපත ලැබුවේ ඔහුගේ පියා වූ මහිපාල් අතුලතේජ් කුමරු හාවර්ඩ් විශ්ව විද්‍යාලයේ ඉගෙන ගනිමින් සිටියදීය .","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"AP","height":549,"locator":"1704A/production/_91928249_001844286ap.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.","blocks":[{"type":"fragment","model":{"text":"භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.","blocks":[{"type":"fragment","model":{"text":"භුමිපාල් කුමරුගේ පියාගේ මරණින් පසු මව ස්විස්ටර්ලන්තයට ගිය අතර කුමරු අධ්‍යාපනය ලැබුවේ එහිදීය.","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP","height":549,"locator":"16CC6/production/_91928339_029062456afp.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.","blocks":[{"type":"fragment","model":{"text":"තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.","blocks":[{"type":"fragment","model":{"text":"තායි වැසියෝ සිය රජතුමාට අවසන් ගෞරවය දැක්වීම සඳහා නිහඬව සහ සන්සුන්ව දේහය ගෙන ගිය මාර්ගය දෙපස එක්රැස්ව සිටියහ.","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"161D6/production/_91928509_161010055400_thai_people_976x549_epa.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]}]}},"promo":{"headlines":{"shortHeadline":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්","headline":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්"},"locators":{"assetUri":"/sinhala/world-37657374","cpsUrn":"urn:bbc:content:assetUri:sinhala/world-37657374","curie":"http://www.bbc.co.uk/asset/05b2f317-3157-ba41-91ff-2b56612d9725"},"summary":"තායිලන්ත ජනතාව අතර ගරු බුහුමන් ලබමින්, වත්මන් ලෝකයේ වැඩිම කලක් සිහසුන දැරූ පාලකයා වූ භූමිපාල් අතුලතේජ් රජතුමා දිවියෙන් සමු ගන්නා විට අසූ අට වෙනි වියේ පසු විය.","timestamp":1476451709000,"passport":{"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg","path":"/cpsprodpb/113B6/production/_91928507_161012223344_thai_king_bhumibol_adulyadej_in_december_2010_getty_512x288_getty_nocredit.jpg","height":288,"width":512,"altText":"භුමිපාල් අතුලතේජ්: සමරු සේයා රූ සටහන්","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"ලෝකය","uri":"/sinhala/world","type":"simple"},"site":{"subType":"site","name":"පුවත් - බීබීසී සිංහල","uri":"/sinhala","type":"simple"},"groups":[]}},"path":"/sinhala/world-37657374","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [34]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="sinhala"
+            src="http://localhost:7080/static/js/sinhala-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

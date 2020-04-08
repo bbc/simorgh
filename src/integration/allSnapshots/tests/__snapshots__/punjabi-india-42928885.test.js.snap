@@ -1,0 +1,2329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /punjabi/india-42928885 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="pa"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_punjabi/183FF/production/_99872399_pic6.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Amritsar pigeons"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="pa-IN"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ - BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/punjabi/india-42928885"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnewspunjabi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Amritsar pigeons"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_punjabi/183FF/production/_99872399_pic6.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnewspunjabi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ - BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Punjab"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Gujarat"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Deepika Padukone"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Photography"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Maharashtra"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-02-03T12:34:25.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-02-03T14:27:01.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ - BBC News ਪੰਜਾਬੀ
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/punjabi/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/punjabi/india-42928885"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/punjabi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/punjabi/india-42928885","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ਪੰਜਾਬੀ","publishingPrinciples":"https://www.bbc.com/punjabi/institutional-49282853","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/punjabi/india-42928885","name":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ"},"headline":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ","description":"ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ","datePublished":"2018-02-03T12:34:25.000Z","dateModified":"2018-02-03T14:27:01.000Z","about":[{"@type":"Thing","name":"Punjab","sameAs":["http://dbpedia.org/resource/_region"]},{"@type":"Thing","name":"Gujarat","sameAs":["http://dbpedia.org/resource/Gujarat"]},{"@type":"Thing","name":"Deepika Padukone","sameAs":["http://dbpedia.org/resource/Deepika_Padukone"]},{"@type":"Thing","name":"Photography","sameAs":["http://dbpedia.org/resource/Photography"]},{"@type":"Thing","name":"Maharashtra","sameAs":["http://dbpedia.org/resource/Maharashtra"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News ਪੰਜਾਬੀ","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"},"noBylinesPolicy":"https://www.bbc.com/punjabi/institutional-49282853#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 eElGtB"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 beCRFL"
+                  >
+                    ਅਸੀਂ ਆਪਣੀ ਨਿੱਜਤਾ ਤੇ ਕੁਕੀਜ਼ ਪਾਲਿਸੀ ਨੂੰ ਅਪਡੇਟ ਕਰ ਦਿੱਤਾ ਹੈ
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dAwZdH"
+                  >
+                    ਅਸੀਂ ਆਪਣੀ ਨਿੱਜਤਾ ਤੇ ਕੁਕੀਜ਼ ਪਾਲਿਸੀ ਵਿੱਚ ਕੁਝ ਮਹੱਤਵਪੂਰਨ ਬਦਲਾਅ ਕੀਤੇ ਹਨ ਅਤੇ ਅਸੀਂ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹਾਂ, ਤੁਹਾਡੇ ਤੇ ਤੁਹਾਡੇ ਡਾਟਾ ਲਈ ਇਸ ਦੇ ਕੀ ਮਾਅਨੇ ਹਨ।
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iffYYc"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ਓਕੇ
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        ਜਾਣੋ ਕੀ ਬਦਲਿਆ ਹੈ
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 eElGtB"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 beCRFL"
+                  >
+                    ਸਾਨੂੰ ਦੱਸੋ ਜੇ ਤੁਸੀਂ ਕੁਕੀਜ਼ ਲਈ ਸਹਿਮਤ ਹੋ
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 dAwZdH"
+                  >
+                    ਅਸੀਂ ਤੁੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਤਜਰਬਾ ਦੇਣ ਲਈ
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      ਕੁਕੀਜ਼
+                    </a>
+                    ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਸਾਰੀਆਂ ਕੁਕੀਜ਼ ਨਾਲ ਸਹਿਮਤ ਹੋ
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iffYYc"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        ਹਾਂ, ਮੈਂ ਸਹਿਮਤ ਹਾਂ
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 kHMFTx"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        ਨਹੀਂ, ਸੈਟਿੰਗ 'ਚ ਜਾਓ
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/punjabi"
+               class="StyledLink-m3awbo-2 lGveW"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.55 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hoAqTd"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M190 5.74a2.83 2.83 0 0 1-.25-1.13 1.18 1.18 0 0 1 .37-.93 1.57 1.57 0 0 1 1.07-.33 1.6 1.6 0 0 1 1.07.32 1.16 1.16 0 0 1 .37.93 2.83 2.83 0 0 1-.25 1.13l1.34.2a3.94 3.94 0 0 0 .32-1.49 2.13 2.13 0 0 0-.78-1.73 3.17 3.17 0 0 0-2.08-.65 3.1 3.1 0 0 0-2.05.65 2.12 2.12 0 0 0-.79 1.71 3.91 3.91 0 0 0 .32 1.49z">
+                  </path>
+                  <path d="M225.65 7v-.9a8.59 8.59 0 0 0-.28-2.46 2.79 2.79 0 0 0-1-1.46 3.44 3.44 0 0 0-2.07-.56 3.49 3.49 0 0 0-2.55.92 3.36 3.36 0 0 0-.94 2.51 10.84 10.84 0 0 0 .13 1.31l1.53-.15a6.58 6.58 0 0 1-.12-1.14 2.24 2.24 0 0 1 .47-1.56A1.84 1.84 0 0 1 222.2 3a1.69 1.69 0 0 1 1.12.35 1.83 1.83 0 0 1 .58 1 9.05 9.05 0 0 1 .16 2.05V7h-33.61v7.4a6.43 6.43 0 0 1-1.38.63 4.59 4.59 0 0 1-1.34.19 2.6 2.6 0 0 1-1.66-.56 5.14 5.14 0 0 1-1.32-1.82 3.35 3.35 0 0 0 1.08-2.62 5.76 5.76 0 0 0-.24-1.58 7.74 7.74 0 0 0-.66-1.6H182v1.4h1.79a3.44 3.44 0 0 1 .34.87 3.7 3.7 0 0 1 .12.92 2.67 2.67 0 0 1-.32 1.28 4.33 4.33 0 0 1-1 1.21 7.17 7.17 0 0 0 2 2.95 4.33 4.33 0 0 0 2.82 1 6.47 6.47 0 0 0 2.73-.59v3.19H192V8.45h10.42v3.71h-5v-.49a1.29 1.29 0 0 0-.22-.81.75.75 0 0 0-.62-.28 1.64 1.64 0 0 0-.93.37 3.21 3.21 0 0 0-.84.89 1.83 1.83 0 0 0-.33 1 .65.65 0 0 0 .26.55 1.24 1.24 0 0 0 .76.2h.34v5.71h1.58v-5.76h5v5.71H204V8.45h3.2v5.68h1.58V8.45h2.73a4.88 4.88 0 0 0 .56 2.45 3.4 3.4 0 0 0 1.68 1.45 8.77 8.77 0 0 0-1.53 1 5.12 5.12 0 0 0-1 1.1 6.16 6.16 0 0 0 2.1 2.55 5.43 5.43 0 0 0 3.09.88 6.68 6.68 0 0 0 2.59-.48v1.85h1.58V8.45h3.5v10.8h1.58V8.45h1.9V7zM219 15.88a5.55 5.55 0 0 1-2.59.57 3.83 3.83 0 0 1-2-.48 3.91 3.91 0 0 1-1.41-1.49 4.78 4.78 0 0 1 1-.9 4 4 0 0 1 1.09-.5 5.14 5.14 0 0 1 1.37-.16H219zm0-4.31h-2.86a3.87 3.87 0 0 1-1.74-.3 2.13 2.13 0 0 1-.91-1 4.23 4.23 0 0 1-.33-1.83H219z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ਪੰਜਾਬੀ
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 fCBsyw"
+            >
+              ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                ਸੈਕਸ਼ਨਜ਼
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਖ਼ਬਰਾਂ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/media/video"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਵੀਡੀਓ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਭਾਰਤ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/international"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਕੌਮਾਂਤਰੀ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    #ISWOTY
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/punjabi"
+                     class="StyledLink-sc-158x7z5-2 kcRole"
+                  >
+                    ਖ਼ਬਰਾਂ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/punjabi/media/video"
+                     class="StyledLink-sc-158x7z5-2 kcRole"
+                  >
+                    ਵੀਡੀਓ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/punjabi/popular/read"
+                     class="StyledLink-sc-158x7z5-2 kcRole"
+                  >
+                    ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75"
+                     class="StyledLink-sc-158x7z5-2 kcRole"
+                  >
+                    ਭਾਰਤ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/punjabi/international"
+                     class="StyledLink-sc-158x7z5-2 kcRole"
+                  >
+                    ਕੌਮਾਂਤਰੀ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8"
+                     class="StyledLink-sc-158x7z5-2 kcRole"
+                  >
+                    #ISWOTY
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=73&p=india::punjabi.india.photo_gallery.42928885.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:85cd6e44-90b8-b24c-8d0b-0c7bb679be83]&x2=[amp]&x3=[news-punjabi]&x4=[pa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[ਤਸਵੀਰਾਂ:+ਦੇਸ਼+ਦੇ+ਵੱਖ-ਵੱਖ+ਹਿੱਸਿਆਂ+ਤੋਂ+ਬੀਤੇ+ਹਫ਼ਤੇ+ਦੀਆਂ+ਰੋਮਾਂਚਕ+ਘਟਨਾਵਾਂ+-+BBC+News+ਪੰਜਾਬੀ]&x11=[2018-02-03T12:34:25.000Z]&x12=[2018-02-03T14:27:01.000Z]&x13=[Punjab~Gujarat~Deepika+Padukone~Photography~Maharashtra]&x14=[23b55a8e-f58c-404a-92ba-426dc5d00fee~4317a084-9a75-42ad-bf1c-2f13ed498cc1~8b977a7c-a1cf-48b2-94b2-02769fec97ea~ae0d5073-dfeb-4251-b555-0a9c74f3d4e0~b805724b-b4b1-41db-9c16-de0dd571b599]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 cItlcm"
+          >
+            ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-02-03"
+                class="StyledTimestamp-um718p-0 dcdmeJ"
+          >
+            3 ਫ਼ਰਵਰੀ 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 MZjgE">
+            ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Jangam Monk"
+                           attribution="SHAMMI MEHRA/AFP/GETTYIMAGES"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17C1B/production/_99870379_pic5.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      SHAMMI MEHRA/AFP/GETTYIMAGES
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਜਲੰਧਰ ਵਿੱਚ ਮਹਾ ਸ਼ਿਵਰਾਤਰੀ ਮੌਕੇ ਭਜਨ ਕਰਦੇ ਹੋਏ ਜੰਗਮ ਸੰਤ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Amritsar pigeons"
+                           attribution="NARINDER NANU/AFP/GETTYIMAGES"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/43FF/production/_99870471_pic6.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      NARINDER NANU/AFP/GETTYIMAGES
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Tribal festival"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9A53/production/_99870593_pic1.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਤੇਲੰਨਗਾਨਾ ਦੇ ਆਦੀਵਾਸੀ ਮੇਲੇ 'ਮੇਡਾਰਮ ਜਾਤਰਾ' ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੇ ਰੱਬ 'ਸੱਮਾਕਾ ਸਾਰਾਲਾਮਾ' ਦੇ ਦਰਸ਼ਨਾਂ ਲਈ ਕਰੋੜਾਂ ਸ਼ਰਧਾਲੂ ਪਹੁੰਚੇ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Super moon"
+                           attribution="NOAH SEELAM/GETTYIMAGES"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/91BB/production/_99870373_pic2.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      NOAH SEELAM/GETTYIMAGES
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਹੈਦਰਾਬਾਦ ਵਿੱਚ 'ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਦਾ ਨਜ਼ਾਰਾ। ਇਹ ਨਜ਼ਾਰਾ 152 ਸਾਲਾਂ ਬਾਅਦ ਵੇਖਣ ਨੂੰ ਮਿਲਿਆ ਸੀ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 hBfMqP">
+                  <amp-img alt="Thaipoosam Festival"
+                           attribution="Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DFDB/production/_99870375_pic3.jpg"
+                           height="1024"
+                           width="929"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਚਿੰਨੇਈ ਦੇ ਤਿਓਹਾਰ 'ਥਾਈਪੂਸਮ' ਦੌਰਾਨ ਸ਼ੁੱਧੀ ਲਈ ਕੋਇਲੇ 'ਤੇ ਤੁਰਦਾ ਹੋਇਆ ਹਿੰਦੂ ਬੱਚਾ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jkFghX">
+                  <amp-img alt="Lunar Eclipse"
+                           attribution="Madhu India"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12DFB/production/_99870377_pic4.jpg"
+                           height="960"
+                           width="959"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Madhu India
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਸੂਪਰ ਮੂਨ, ਬਲੂ ਮੂਨ ਅਤੇ ਚੰਦਰ ਗ੍ਰਹਿਣ 152 ਸਾਲਾਂ ਬਾਅਦ ਇਕੱਠੇ ਨਜ਼ਰ ਆਏ, ਪੁੰਡੂਚੇਰੀ ਦੇ ਫੋਟੋਗ੍ਰਾਫਰ ਸ਼ਨਮੁਗਾਰਾਜਨ ਨੇ ਇਸ ਨੂੰ ਆਪਣੇ ਕੈਮਰਾ ਵਿੱਚ ਕੈਦ ਕੀਤਾ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Submarine Karanj"
+                           attribution="PUNIT PARANJPE/AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12E5F/production/_99870477_pic9.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      PUNIT PARANJPE/AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਮੁੰਬਈ ਦੇ ਮਾਜ਼ਗਾਓਂ ਡੌਕਯਾਰਡ ਤੋਂ ਅਰੇਬੀਅਨ ਸਮੁੰਦਰ ਵਿੱਚ ਲਾਂਚ ਹੋਈ ਭਾਰਤੀ ਨੇਵੀ ਦੀ ਪਣਡੁੱਬੀ 'ਕਾਰੰਜ'।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Super moon"
+                           attribution="PUNIT PARANJPE/AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17C7F/production/_99870479_pic10.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      PUNIT PARANJPE/AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਮੁੰਬਈ ਦੇ ਛੱਤਰਪਤੀ ਸ਼ਿਵਾਜੀ ਰੇਲਵੇ ਸਟੇਸ਼ਨ 'ਤੇ ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Polio Campaign"
+                           attribution="Kalpit Bhachech"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/921F/production/_99870473_pic7.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Kalpit Bhachech
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪੋਲੀਓ ਬਾਰੇ ਮੁਹਿੰਮ। ਭਾਰਤ ਪਹਿਲਾਂ ਹੀ ਪੋਲੀਓ ਮੁਕਤ ਦੇਸ਼ ਹੈ ਫਿਰ ਵੀ ਸਾਵਧਾਨੀ ਦੇ ਤੌਰ 'ਤੇ ਇਹ ਮੁਹਿੰਮ ਰੱਖੀ ਗਈ ਹੈ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Padmavat row in Ahmedabad"
+                           attribution="Kalpit Bhachech"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E03F/production/_99870475_pic8.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Kalpit Bhachech
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਫਿਲਮ 'ਪਦਮਾਵਤ' ਵਿਵਾਦ ਵਿਚਾਲੇ ਕਰਣੀ ਸੈਨਾ ਦਾ ਬੈਨ ਦੌਰਾਨ ਅਹਿਮਦਾਬਾਦ ਦੇ ਇੱਕ ਮਾਲ ਦੀ ਤਸਵੀਰ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/punjabi"
+               class="StyledLink-m3awbo-2 lGveW"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.55 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hoAqTd"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M190 5.74a2.83 2.83 0 0 1-.25-1.13 1.18 1.18 0 0 1 .37-.93 1.57 1.57 0 0 1 1.07-.33 1.6 1.6 0 0 1 1.07.32 1.16 1.16 0 0 1 .37.93 2.83 2.83 0 0 1-.25 1.13l1.34.2a3.94 3.94 0 0 0 .32-1.49 2.13 2.13 0 0 0-.78-1.73 3.17 3.17 0 0 0-2.08-.65 3.1 3.1 0 0 0-2.05.65 2.12 2.12 0 0 0-.79 1.71 3.91 3.91 0 0 0 .32 1.49z">
+                  </path>
+                  <path d="M225.65 7v-.9a8.59 8.59 0 0 0-.28-2.46 2.79 2.79 0 0 0-1-1.46 3.44 3.44 0 0 0-2.07-.56 3.49 3.49 0 0 0-2.55.92 3.36 3.36 0 0 0-.94 2.51 10.84 10.84 0 0 0 .13 1.31l1.53-.15a6.58 6.58 0 0 1-.12-1.14 2.24 2.24 0 0 1 .47-1.56A1.84 1.84 0 0 1 222.2 3a1.69 1.69 0 0 1 1.12.35 1.83 1.83 0 0 1 .58 1 9.05 9.05 0 0 1 .16 2.05V7h-33.61v7.4a6.43 6.43 0 0 1-1.38.63 4.59 4.59 0 0 1-1.34.19 2.6 2.6 0 0 1-1.66-.56 5.14 5.14 0 0 1-1.32-1.82 3.35 3.35 0 0 0 1.08-2.62 5.76 5.76 0 0 0-.24-1.58 7.74 7.74 0 0 0-.66-1.6H182v1.4h1.79a3.44 3.44 0 0 1 .34.87 3.7 3.7 0 0 1 .12.92 2.67 2.67 0 0 1-.32 1.28 4.33 4.33 0 0 1-1 1.21 7.17 7.17 0 0 0 2 2.95 4.33 4.33 0 0 0 2.82 1 6.47 6.47 0 0 0 2.73-.59v3.19H192V8.45h10.42v3.71h-5v-.49a1.29 1.29 0 0 0-.22-.81.75.75 0 0 0-.62-.28 1.64 1.64 0 0 0-.93.37 3.21 3.21 0 0 0-.84.89 1.83 1.83 0 0 0-.33 1 .65.65 0 0 0 .26.55 1.24 1.24 0 0 0 .76.2h.34v5.71h1.58v-5.76h5v5.71H204V8.45h3.2v5.68h1.58V8.45h2.73a4.88 4.88 0 0 0 .56 2.45 3.4 3.4 0 0 0 1.68 1.45 8.77 8.77 0 0 0-1.53 1 5.12 5.12 0 0 0-1 1.1 6.16 6.16 0 0 0 2.1 2.55 5.43 5.43 0 0 0 3.09.88 6.68 6.68 0 0 0 2.59-.48v1.85h1.58V8.45h3.5v10.8h1.58V8.45h1.9V7zM219 15.88a5.55 5.55 0 0 1-2.59.57 3.83 3.83 0 0 1-2-.48 3.91 3.91 0 0 1-1.41-1.49 4.78 4.78 0 0 1 1-.9 4 4 0 0 1 1.09-.5 5.14 5.14 0 0 1 1.37-.16H219zm0-4.31h-2.86a3.87 3.87 0 0 1-1.74-.3 2.13 2.13 0 0 1-.91-1 4.23 4.23 0 0 1-.33-1.83H219z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ਪੰਜਾਬੀ
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 eBQQeC">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/punjabi/institutional-49282853"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC ਬਾਰੇ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਨਿੱਜਤਾ ਪਾਲਿਸੀ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਕੁਕੀਜ਼
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/punjabi/institutional-42227903"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /punjabi/india-42928885 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="pa"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_punjabi/183FF/production/_99872399_pic6.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Amritsar pigeons"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="pa-IN"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ - BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/punjabi/india-42928885"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnewspunjabi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Amritsar pigeons"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_punjabi/183FF/production/_99872399_pic6.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnewspunjabi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ - BBC News ਪੰਜਾਬੀ"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Punjab"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Gujarat"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Deepika Padukone"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Photography"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Maharashtra"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-02-03T12:34:25.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-02-03T14:27:01.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ - BBC News ਪੰਜਾਬੀ
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/punjabi/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/punjabi/india-42928885"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/punjabi/india-42928885.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/punjabi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/punjabi/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/punjabi/india-42928885","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ਪੰਜਾਬੀ","publishingPrinciples":"https://www.bbc.com/punjabi/institutional-49282853","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/punjabi/india-42928885","name":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ"},"headline":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ","description":"ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ","datePublished":"2018-02-03T12:34:25.000Z","dateModified":"2018-02-03T14:27:01.000Z","about":[{"@type":"Thing","name":"Punjab","sameAs":["http://dbpedia.org/resource/_region"]},{"@type":"Thing","name":"Gujarat","sameAs":["http://dbpedia.org/resource/Gujarat"]},{"@type":"Thing","name":"Deepika Padukone","sameAs":["http://dbpedia.org/resource/Deepika_Padukone"]},{"@type":"Thing","name":"Photography","sameAs":["http://dbpedia.org/resource/Photography"]},{"@type":"Thing","name":"Maharashtra","sameAs":["http://dbpedia.org/resource/Maharashtra"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News ਪੰਜਾਬੀ","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png"},"noBylinesPolicy":"https://www.bbc.com/punjabi/institutional-49282853#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/punjabi"
+               class="StyledLink-m3awbo-2 lGveW"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.55 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hoAqTd"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M190 5.74a2.83 2.83 0 0 1-.25-1.13 1.18 1.18 0 0 1 .37-.93 1.57 1.57 0 0 1 1.07-.33 1.6 1.6 0 0 1 1.07.32 1.16 1.16 0 0 1 .37.93 2.83 2.83 0 0 1-.25 1.13l1.34.2a3.94 3.94 0 0 0 .32-1.49 2.13 2.13 0 0 0-.78-1.73 3.17 3.17 0 0 0-2.08-.65 3.1 3.1 0 0 0-2.05.65 2.12 2.12 0 0 0-.79 1.71 3.91 3.91 0 0 0 .32 1.49z">
+                  </path>
+                  <path d="M225.65 7v-.9a8.59 8.59 0 0 0-.28-2.46 2.79 2.79 0 0 0-1-1.46 3.44 3.44 0 0 0-2.07-.56 3.49 3.49 0 0 0-2.55.92 3.36 3.36 0 0 0-.94 2.51 10.84 10.84 0 0 0 .13 1.31l1.53-.15a6.58 6.58 0 0 1-.12-1.14 2.24 2.24 0 0 1 .47-1.56A1.84 1.84 0 0 1 222.2 3a1.69 1.69 0 0 1 1.12.35 1.83 1.83 0 0 1 .58 1 9.05 9.05 0 0 1 .16 2.05V7h-33.61v7.4a6.43 6.43 0 0 1-1.38.63 4.59 4.59 0 0 1-1.34.19 2.6 2.6 0 0 1-1.66-.56 5.14 5.14 0 0 1-1.32-1.82 3.35 3.35 0 0 0 1.08-2.62 5.76 5.76 0 0 0-.24-1.58 7.74 7.74 0 0 0-.66-1.6H182v1.4h1.79a3.44 3.44 0 0 1 .34.87 3.7 3.7 0 0 1 .12.92 2.67 2.67 0 0 1-.32 1.28 4.33 4.33 0 0 1-1 1.21 7.17 7.17 0 0 0 2 2.95 4.33 4.33 0 0 0 2.82 1 6.47 6.47 0 0 0 2.73-.59v3.19H192V8.45h10.42v3.71h-5v-.49a1.29 1.29 0 0 0-.22-.81.75.75 0 0 0-.62-.28 1.64 1.64 0 0 0-.93.37 3.21 3.21 0 0 0-.84.89 1.83 1.83 0 0 0-.33 1 .65.65 0 0 0 .26.55 1.24 1.24 0 0 0 .76.2h.34v5.71h1.58v-5.76h5v5.71H204V8.45h3.2v5.68h1.58V8.45h2.73a4.88 4.88 0 0 0 .56 2.45 3.4 3.4 0 0 0 1.68 1.45 8.77 8.77 0 0 0-1.53 1 5.12 5.12 0 0 0-1 1.1 6.16 6.16 0 0 0 2.1 2.55 5.43 5.43 0 0 0 3.09.88 6.68 6.68 0 0 0 2.59-.48v1.85h1.58V8.45h3.5v10.8h1.58V8.45h1.9V7zM219 15.88a5.55 5.55 0 0 1-2.59.57 3.83 3.83 0 0 1-2-.48 3.91 3.91 0 0 1-1.41-1.49 4.78 4.78 0 0 1 1-.9 4 4 0 0 1 1.09-.5 5.14 5.14 0 0 1 1.37-.16H219zm0-4.31h-2.86a3.87 3.87 0 0 1-1.74-.3 2.13 2.13 0 0 1-.91-1 4.23 4.23 0 0 1-.33-1.83H219z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ਪੰਜਾਬੀ
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 fCBsyw"
+            >
+              ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  ਸੈਕਸ਼ਨਜ਼
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/punjabi"
+                       class="StyledLink-sc-158x7z5-2 kcRole"
+                    >
+                      ਖ਼ਬਰਾਂ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/punjabi/media/video"
+                       class="StyledLink-sc-158x7z5-2 kcRole"
+                    >
+                      ਵੀਡੀਓ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/punjabi/popular/read"
+                       class="StyledLink-sc-158x7z5-2 kcRole"
+                    >
+                      ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75"
+                       class="StyledLink-sc-158x7z5-2 kcRole"
+                    >
+                      ਭਾਰਤ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/punjabi/international"
+                       class="StyledLink-sc-158x7z5-2 kcRole"
+                    >
+                      ਕੌਮਾਂਤਰੀ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8"
+                       class="StyledLink-sc-158x7z5-2 kcRole"
+                    >
+                      #ISWOTY
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਖ਼ਬਰਾਂ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/media/video"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਵੀਡੀਓ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/topics/5a08f030-710f-4168-acee-67294a90fc75"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਭਾਰਤ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/international"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    ਕੌਮਾਂਤਰੀ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/punjabi/resources/idt-681afed0-03f5-4d5f-a640-3011a722d1c8"
+                     class="StyledDropdownLink-ukxuly-4 caBPMh"
+                  >
+                    #ISWOTY
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=73&amp;p=india::punjabi.india.photo_gallery.42928885.page&amp;x1=[urn:bbc:cps:85cd6e44-90b8-b24c-8d0b-0c7bb679be83]&amp;x2=[responsive]&amp;x3=[news-punjabi]&amp;x4=[pa]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[ਤਸਵੀਰਾਂ:+ਦੇਸ਼+ਦੇ+ਵੱਖ-ਵੱਖ+ਹਿੱਸਿਆਂ+ਤੋਂ+ਬੀਤੇ+ਹਫ਼ਤੇ+ਦੀਆਂ+ਰੋਮਾਂਚਕ+ਘਟਨਾਵਾਂ+-+BBC+News+ਪੰਜਾਬੀ]&amp;x11=[2018-02-03T12:34:25.000Z]&amp;x12=[2018-02-03T14:27:01.000Z]&amp;x13=[Punjab~Gujarat~Deepika+Padukone~Photography~Maharashtra]&amp;x14=[23b55a8e-f58c-404a-92ba-426dc5d00fee~4317a084-9a75-42ad-bf1c-2f13ed498cc1~8b977a7c-a1cf-48b2-94b2-02769fec97ea~ae0d5073-dfeb-4251-b555-0a9c74f3d4e0~b805724b-b4b1-41db-9c16-de0dd571b599]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 cItlcm"
+          >
+            ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-02-03"
+                class="StyledTimestamp-um718p-0 dcdmeJ"
+          >
+            3 ਫ਼ਰਵਰੀ 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 MZjgE">
+            ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17C1B/production/_99870379_pic5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17C1B/production/_99870379_pic5.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17C1B/production/_99870379_pic5.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17C1B/production/_99870379_pic5.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17C1B/production/_99870379_pic5.jpg 800w"
+                         alt="Jangam Monk"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17C1B/production/_99870379_pic5.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      SHAMMI MEHRA/AFP/GETTYIMAGES
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਜਲੰਧਰ ਵਿੱਚ ਮਹਾ ਸ਼ਿਵਰਾਤਰੀ ਮੌਕੇ ਭਜਨ ਕਰਦੇ ਹੋਏ ਜੰਗਮ ਸੰਤ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/43FF/production/_99870471_pic6.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/43FF/production/_99870471_pic6.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/43FF/production/_99870471_pic6.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/43FF/production/_99870471_pic6.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/43FF/production/_99870471_pic6.jpg 800w"
+                         alt="Amritsar pigeons"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/43FF/production/_99870471_pic6.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      NARINDER NANU/AFP/GETTYIMAGES
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/9A53/production/_99870593_pic1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9A53/production/_99870593_pic1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/9A53/production/_99870593_pic1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/9A53/production/_99870593_pic1.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/9A53/production/_99870593_pic1.jpg 800w"
+                         alt="Tribal festival"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9A53/production/_99870593_pic1.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਤੇਲੰਨਗਾਨਾ ਦੇ ਆਦੀਵਾਸੀ ਮੇਲੇ 'ਮੇਡਾਰਮ ਜਾਤਰਾ' ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੇ ਰੱਬ 'ਸੱਮਾਕਾ ਸਾਰਾਲਾਮਾ' ਦੇ ਦਰਸ਼ਨਾਂ ਲਈ ਕਰੋੜਾਂ ਸ਼ਰਧਾਲੂ ਪਹੁੰਚੇ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/91BB/production/_99870373_pic2.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/91BB/production/_99870373_pic2.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/91BB/production/_99870373_pic2.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/91BB/production/_99870373_pic2.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/91BB/production/_99870373_pic2.jpg 800w"
+                         alt="Super moon"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/91BB/production/_99870373_pic2.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      NOAH SEELAM/GETTYIMAGES
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਹੈਦਰਾਬਾਦ ਵਿੱਚ 'ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਦਾ ਨਜ਼ਾਰਾ। ਇਹ ਨਜ਼ਾਰਾ 152 ਸਾਲਾਂ ਬਾਅਦ ਵੇਖਣ ਨੂੰ ਮਿਲਿਆ ਸੀ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 hBfMqP">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/DFDB/production/_99870375_pic3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DFDB/production/_99870375_pic3.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/DFDB/production/_99870375_pic3.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/DFDB/production/_99870375_pic3.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/DFDB/production/_99870375_pic3.jpg 800w"
+                         alt="Thaipoosam Festival"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DFDB/production/_99870375_pic3.jpg"
+                         width="929"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਚਿੰਨੇਈ ਦੇ ਤਿਓਹਾਰ 'ਥਾਈਪੂਸਮ' ਦੌਰਾਨ ਸ਼ੁੱਧੀ ਲਈ ਕੋਇਲੇ 'ਤੇ ਤੁਰਦਾ ਹੋਇਆ ਹਿੰਦੂ ਬੱਚਾ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jkFghX">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12DFB/production/_99870377_pic4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12DFB/production/_99870377_pic4.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12DFB/production/_99870377_pic4.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12DFB/production/_99870377_pic4.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12DFB/production/_99870377_pic4.jpg 800w"
+                         alt="Lunar Eclipse"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12DFB/production/_99870377_pic4.jpg"
+                         width="959"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Madhu India
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਸੂਪਰ ਮੂਨ, ਬਲੂ ਮੂਨ ਅਤੇ ਚੰਦਰ ਗ੍ਰਹਿਣ 152 ਸਾਲਾਂ ਬਾਅਦ ਇਕੱਠੇ ਨਜ਼ਰ ਆਏ, ਪੁੰਡੂਚੇਰੀ ਦੇ ਫੋਟੋਗ੍ਰਾਫਰ ਸ਼ਨਮੁਗਾਰਾਜਨ ਨੇ ਇਸ ਨੂੰ ਆਪਣੇ ਕੈਮਰਾ ਵਿੱਚ ਕੈਦ ਕੀਤਾ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12E5F/production/_99870477_pic9.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12E5F/production/_99870477_pic9.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12E5F/production/_99870477_pic9.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12E5F/production/_99870477_pic9.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12E5F/production/_99870477_pic9.jpg 800w"
+                         alt="Submarine Karanj"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12E5F/production/_99870477_pic9.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      PUNIT PARANJPE/AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਮੁੰਬਈ ਦੇ ਮਾਜ਼ਗਾਓਂ ਡੌਕਯਾਰਡ ਤੋਂ ਅਰੇਬੀਅਨ ਸਮੁੰਦਰ ਵਿੱਚ ਲਾਂਚ ਹੋਈ ਭਾਰਤੀ ਨੇਵੀ ਦੀ ਪਣਡੁੱਬੀ 'ਕਾਰੰਜ'।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17C7F/production/_99870479_pic10.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17C7F/production/_99870479_pic10.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17C7F/production/_99870479_pic10.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17C7F/production/_99870479_pic10.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17C7F/production/_99870479_pic10.jpg 800w"
+                         alt="Super moon"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17C7F/production/_99870479_pic10.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      PUNIT PARANJPE/AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਮੁੰਬਈ ਦੇ ਛੱਤਰਪਤੀ ਸ਼ਿਵਾਜੀ ਰੇਲਵੇ ਸਟੇਸ਼ਨ 'ਤੇ ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/921F/production/_99870473_pic7.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/921F/production/_99870473_pic7.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/921F/production/_99870473_pic7.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/921F/production/_99870473_pic7.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/921F/production/_99870473_pic7.jpg 800w"
+                         alt="Polio Campaign"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/921F/production/_99870473_pic7.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Kalpit Bhachech
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪੋਲੀਓ ਬਾਰੇ ਮੁਹਿੰਮ। ਭਾਰਤ ਪਹਿਲਾਂ ਹੀ ਪੋਲੀਓ ਮੁਕਤ ਦੇਸ਼ ਹੈ ਫਿਰ ਵੀ ਸਾਵਧਾਨੀ ਦੇ ਤੌਰ 'ਤੇ ਇਹ ਮੁਹਿੰਮ ਰੱਖੀ ਗਈ ਹੈ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/E03F/production/_99870475_pic8.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/E03F/production/_99870475_pic8.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/E03F/production/_99870475_pic8.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/E03F/production/_99870475_pic8.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/E03F/production/_99870475_pic8.jpg 800w"
+                         alt="Padmavat row in Ahmedabad"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E03F/production/_99870475_pic8.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ਤਸਵੀਰ ਸਰੋਤ,
+                    </span>
+                    <span lang="en-GB">
+                      Kalpit Bhachech
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 kaNhcD">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    ਤਸਵੀਰ ਕੈਪਸ਼ਨ,
+                  </span>
+                  <p>
+                    ਫਿਲਮ 'ਪਦਮਾਵਤ' ਵਿਵਾਦ ਵਿਚਾਲੇ ਕਰਣੀ ਸੈਨਾ ਦਾ ਬੈਨ ਦੌਰਾਨ ਅਹਿਮਦਾਬਾਦ ਦੇ ਇੱਕ ਮਾਲ ਦੀ ਤਸਵੀਰ।
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/punjabi"
+               class="StyledLink-m3awbo-2 lGveW"
+            >
+              <svg height="24"
+                   viewbox="0 0 227.55 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 hoAqTd"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M190 5.74a2.83 2.83 0 0 1-.25-1.13 1.18 1.18 0 0 1 .37-.93 1.57 1.57 0 0 1 1.07-.33 1.6 1.6 0 0 1 1.07.32 1.16 1.16 0 0 1 .37.93 2.83 2.83 0 0 1-.25 1.13l1.34.2a3.94 3.94 0 0 0 .32-1.49 2.13 2.13 0 0 0-.78-1.73 3.17 3.17 0 0 0-2.08-.65 3.1 3.1 0 0 0-2.05.65 2.12 2.12 0 0 0-.79 1.71 3.91 3.91 0 0 0 .32 1.49z">
+                  </path>
+                  <path d="M225.65 7v-.9a8.59 8.59 0 0 0-.28-2.46 2.79 2.79 0 0 0-1-1.46 3.44 3.44 0 0 0-2.07-.56 3.49 3.49 0 0 0-2.55.92 3.36 3.36 0 0 0-.94 2.51 10.84 10.84 0 0 0 .13 1.31l1.53-.15a6.58 6.58 0 0 1-.12-1.14 2.24 2.24 0 0 1 .47-1.56A1.84 1.84 0 0 1 222.2 3a1.69 1.69 0 0 1 1.12.35 1.83 1.83 0 0 1 .58 1 9.05 9.05 0 0 1 .16 2.05V7h-33.61v7.4a6.43 6.43 0 0 1-1.38.63 4.59 4.59 0 0 1-1.34.19 2.6 2.6 0 0 1-1.66-.56 5.14 5.14 0 0 1-1.32-1.82 3.35 3.35 0 0 0 1.08-2.62 5.76 5.76 0 0 0-.24-1.58 7.74 7.74 0 0 0-.66-1.6H182v1.4h1.79a3.44 3.44 0 0 1 .34.87 3.7 3.7 0 0 1 .12.92 2.67 2.67 0 0 1-.32 1.28 4.33 4.33 0 0 1-1 1.21 7.17 7.17 0 0 0 2 2.95 4.33 4.33 0 0 0 2.82 1 6.47 6.47 0 0 0 2.73-.59v3.19H192V8.45h10.42v3.71h-5v-.49a1.29 1.29 0 0 0-.22-.81.75.75 0 0 0-.62-.28 1.64 1.64 0 0 0-.93.37 3.21 3.21 0 0 0-.84.89 1.83 1.83 0 0 0-.33 1 .65.65 0 0 0 .26.55 1.24 1.24 0 0 0 .76.2h.34v5.71h1.58v-5.76h5v5.71H204V8.45h3.2v5.68h1.58V8.45h2.73a4.88 4.88 0 0 0 .56 2.45 3.4 3.4 0 0 0 1.68 1.45 8.77 8.77 0 0 0-1.53 1 5.12 5.12 0 0 0-1 1.1 6.16 6.16 0 0 0 2.1 2.55 5.43 5.43 0 0 0 3.09.88 6.68 6.68 0 0 0 2.59-.48v1.85h1.58V8.45h3.5v10.8h1.58V8.45h1.9V7zM219 15.88a5.55 5.55 0 0 1-2.59.57 3.83 3.83 0 0 1-2-.48 3.91 3.91 0 0 1-1.41-1.49 4.78 4.78 0 0 1 1-.9 4 4 0 0 1 1.09-.5 5.14 5.14 0 0 1 1.37-.16H219zm0-4.31h-2.86a3.87 3.87 0 0 1-1.74-.3 2.13 2.13 0 0 1-.91-1 4.23 4.23 0 0 1-.33-1.83H219z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ਪੰਜਾਬੀ
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 eBQQeC">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/punjabi/institutional-49282853"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC ਬਾਰੇ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਨਿੱਜਤਾ ਪਾਲਿਸੀ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਕੁਕੀਜ਼
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/punjabi/institutional-42227903"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ਬੀਬੀਸੀ ਨਾਲ ਸੰਪਰਕ ਕਰੋ
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. ਬਾਹਰੀ ਸਾਈਟਾਂ ਦੀ ਸਮਗਰੀ ਲਈ ਬੀਬੀਸੀ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹੈ
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1517661265000,"lastPublished":1517668021000,"lastUpdated":1579165873098,"id":"mock-id","locators":{"assetUri":"/punjabi/india-42928885","cpsUrn":"urn:bbc:content:assetUri:punjabi/india-42928885","curie":"http://www.bbc.co.uk/asset/85cd6e44-90b8-b24c-8d0b-0c7bb679be83"},"type":"PGL","createdBy":"punjabi-v6","language":"pa","timestamp":1517661265000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"punjabi.india.photo_gallery.42928885.page","cps_asset_id":"42928885"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"taggings":[]},"tags":{"about":[{"thingLabel":"Punjab","thingUri":"http://www.bbc.co.uk/things/23b55a8e-f58c-404a-92ba-426dc5d00fee#id","thingId":"23b55a8e-f58c-404a-92ba-426dc5d00fee","thingType":["Thing","Place","news:Place"],"thingSameAs":["http://dbpedia.org/resource/_region"],"topicName":"ਪੰਜਾਬ","topicId":"c8y94yqdnxrt","curationList":[{"curationId":"168ab74f-bae0-4fbd-a110-1220bdca2410","curationType":"vivo-stream"}]},{"thingLabel":"Gujarat","thingUri":"http://www.bbc.co.uk/things/4317a084-9a75-42ad-bf1c-2f13ed498cc1#id","thingId":"4317a084-9a75-42ad-bf1c-2f13ed498cc1","thingType":["Thing","Place","news:Place"],"thingSameAs":["http://dbpedia.org/resource/Gujarat"],"topicName":"ਗੁਜਰਾਤ","topicId":"cpzd4z5z7g0t","curationList":[{"curationId":"403b26d5-30e0-4b91-86d7-4305903c7699","curationType":"vivo-stream"}]},{"thingLabel":"Deepika Padukone","thingUri":"http://www.bbc.co.uk/things/8b977a7c-a1cf-48b2-94b2-02769fec97ea#id","thingId":"8b977a7c-a1cf-48b2-94b2-02769fec97ea","thingType":["Thing","Person"],"thingSameAs":["http://dbpedia.org/resource/Deepika_Padukone"],"topicName":"ਦੀਪਿਕਾ ਪਾਦੁਕੋਨ","topicId":"c5qvpq4d207t","curationList":[{"curationId":"640f3c96-e0fd-479d-bdcd-e7a334b07c41","curationType":"vivo-stream"}]},{"thingLabel":"Photography","thingUri":"http://www.bbc.co.uk/things/ae0d5073-dfeb-4251-b555-0a9c74f3d4e0#id","thingId":"ae0d5073-dfeb-4251-b555-0a9c74f3d4e0","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Photography"],"topicName":"ਫ਼ੋਟੋਗ੍ਰਾਫ਼ੀ","topicId":"cpzd4z5qxqjt","curationList":[{"curationId":"d7cdc72d-c664-4f7a-b40d-b7d11a8e9956","curationType":"vivo-stream"}]},{"thingLabel":"Maharashtra","thingUri":"http://www.bbc.co.uk/things/b805724b-b4b1-41db-9c16-de0dd571b599#id","thingId":"b805724b-b4b1-41db-9c16-de0dd571b599","thingType":["Thing","Place","news:Place"],"thingSameAs":["http://dbpedia.org/resource/Maharashtra"],"topicName":"ਮਹਾਰਾਸ਼ਟਰ","topicId":"c1gdqgzgdgnt","curationList":[{"curationId":"c573b068-d69d-4368-ad16-8dedb35ef949","curationType":"vivo-stream"}]}]},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ","blocks":[{"type":"fragment","model":{"text":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1517661265000,"lastPublished":1517668021000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ","blocks":[{"type":"fragment","model":{"text":"ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਜਲੰਧਰ ਵਿੱਚ ਮਹਾ ਸ਼ਿਵਰਾਤਰੀ ਮੌਕੇ ਭਜਨ ਕਰਦੇ ਹੋਏ ਜੰਗਮ ਸੰਤ।","blocks":[{"type":"fragment","model":{"text":"ਜਲੰਧਰ ਵਿੱਚ ਮਹਾ ਸ਼ਿਵਰਾਤਰੀ ਮੌਕੇ ਭਜਨ ਕਰਦੇ ਹੋਏ ਜੰਗਮ ਸੰਤ।","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Jangam Monk","blocks":[{"type":"fragment","model":{"text":"Jangam Monk","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"SHAMMI MEHRA/AFP/GETTYIMAGES","height":549,"locator":"17C1B/production/_99870379_pic5.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।","blocks":[{"type":"fragment","model":{"text":"ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Amritsar pigeons","blocks":[{"type":"fragment","model":{"text":"Amritsar pigeons","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"NARINDER NANU/AFP/GETTYIMAGES","height":549,"locator":"43FF/production/_99870471_pic6.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਤੇਲੰਨਗਾਨਾ ਦੇ ਆਦੀਵਾਸੀ ਮੇਲੇ 'ਮੇਡਾਰਮ ਜਾਤਰਾ' ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੇ ਰੱਬ 'ਸੱਮਾਕਾ ਸਾਰਾਲਾਮਾ' ਦੇ ਦਰਸ਼ਨਾਂ ਲਈ ਕਰੋੜਾਂ ਸ਼ਰਧਾਲੂ ਪਹੁੰਚੇ।","blocks":[{"type":"fragment","model":{"text":"ਤੇਲੰਨਗਾਨਾ ਦੇ ਆਦੀਵਾਸੀ ਮੇਲੇ 'ਮੇਡਾਰਮ ਜਾਤਰਾ' ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੇ ਰੱਬ 'ਸੱਮਾਕਾ ਸਾਰਾਲਾਮਾ' ਦੇ ਦਰਸ਼ਨਾਂ ਲਈ ਕਰੋੜਾਂ ਸ਼ਰਧਾਲੂ ਪਹੁੰਚੇ।","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Tribal festival","blocks":[{"type":"fragment","model":{"text":"Tribal festival","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"9A53/production/_99870593_pic1.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਹੈਦਰਾਬਾਦ ਵਿੱਚ 'ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਦਾ ਨਜ਼ਾਰਾ। ਇਹ ਨਜ਼ਾਰਾ 152 ਸਾਲਾਂ ਬਾਅਦ ਵੇਖਣ ਨੂੰ ਮਿਲਿਆ ਸੀ।","blocks":[{"type":"fragment","model":{"text":"ਹੈਦਰਾਬਾਦ ਵਿੱਚ 'ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਦਾ ਨਜ਼ਾਰਾ। ਇਹ ਨਜ਼ਾਰਾ 152 ਸਾਲਾਂ ਬਾਅਦ ਵੇਖਣ ਨੂੰ ਮਿਲਿਆ ਸੀ।","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Super moon","blocks":[{"type":"fragment","model":{"text":"Super moon","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"NOAH SEELAM/GETTYIMAGES","height":549,"locator":"91BB/production/_99870373_pic2.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਚਿੰਨੇਈ ਦੇ ਤਿਓਹਾਰ 'ਥਾਈਪੂਸਮ' ਦੌਰਾਨ ਸ਼ੁੱਧੀ ਲਈ ਕੋਇਲੇ 'ਤੇ ਤੁਰਦਾ ਹੋਇਆ ਹਿੰਦੂ ਬੱਚਾ।","blocks":[{"type":"fragment","model":{"text":"ਚਿੰਨੇਈ ਦੇ ਤਿਓਹਾਰ 'ਥਾਈਪੂਸਮ' ਦੌਰਾਨ ਸ਼ੁੱਧੀ ਲਈ ਕੋਇਲੇ 'ਤੇ ਤੁਰਦਾ ਹੋਇਆ ਹਿੰਦੂ ਬੱਚਾ।","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Thaipoosam Festival","blocks":[{"type":"fragment","model":{"text":"Thaipoosam Festival","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Getty Images","height":1024,"locator":"DFDB/production/_99870375_pic3.jpg","originCode":"cpsprodpb","width":929},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਸੂਪਰ ਮੂਨ, ਬਲੂ ਮੂਨ ਅਤੇ ਚੰਦਰ ਗ੍ਰਹਿਣ 152 ਸਾਲਾਂ ਬਾਅਦ ਇਕੱਠੇ ਨਜ਼ਰ ਆਏ, ਪੁੰਡੂਚੇਰੀ ਦੇ ਫੋਟੋਗ੍ਰਾਫਰ ਸ਼ਨਮੁਗਾਰਾਜਨ ਨੇ ਇਸ ਨੂੰ ਆਪਣੇ ਕੈਮਰਾ ਵਿੱਚ ਕੈਦ ਕੀਤਾ।","blocks":[{"type":"fragment","model":{"text":"ਸੂਪਰ ਮੂਨ, ਬਲੂ ਮੂਨ ਅਤੇ ਚੰਦਰ ਗ੍ਰਹਿਣ 152 ਸਾਲਾਂ ਬਾਅਦ ਇਕੱਠੇ ਨਜ਼ਰ ਆਏ, ਪੁੰਡੂਚੇਰੀ ਦੇ ਫੋਟੋਗ੍ਰਾਫਰ ਸ਼ਨਮੁਗਾਰਾਜਨ ਨੇ ਇਸ ਨੂੰ ਆਪਣੇ ਕੈਮਰਾ ਵਿੱਚ ਕੈਦ ਕੀਤਾ।","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Lunar Eclipse","blocks":[{"type":"fragment","model":{"text":"Lunar Eclipse","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Madhu India","height":960,"locator":"12DFB/production/_99870377_pic4.jpg","originCode":"cpsprodpb","width":959},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਮੁੰਬਈ ਦੇ ਮਾਜ਼ਗਾਓਂ ਡੌਕਯਾਰਡ ਤੋਂ ਅਰੇਬੀਅਨ ਸਮੁੰਦਰ ਵਿੱਚ ਲਾਂਚ ਹੋਈ ਭਾਰਤੀ ਨੇਵੀ ਦੀ ਪਣਡੁੱਬੀ 'ਕਾਰੰਜ'।","blocks":[{"type":"fragment","model":{"text":"ਮੁੰਬਈ ਦੇ ਮਾਜ਼ਗਾਓਂ ਡੌਕਯਾਰਡ ਤੋਂ ਅਰੇਬੀਅਨ ਸਮੁੰਦਰ ਵਿੱਚ ਲਾਂਚ ਹੋਈ ਭਾਰਤੀ ਨੇਵੀ ਦੀ ਪਣਡੁੱਬੀ 'ਕਾਰੰਜ'।","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Submarine Karanj","blocks":[{"type":"fragment","model":{"text":"Submarine Karanj","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"PUNIT PARANJPE/AFP/Getty Images","height":549,"locator":"12E5F/production/_99870477_pic9.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਮੁੰਬਈ ਦੇ ਛੱਤਰਪਤੀ ਸ਼ਿਵਾਜੀ ਰੇਲਵੇ ਸਟੇਸ਼ਨ 'ਤੇ ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ।","blocks":[{"type":"fragment","model":{"text":"ਮੁੰਬਈ ਦੇ ਛੱਤਰਪਤੀ ਸ਼ਿਵਾਜੀ ਰੇਲਵੇ ਸਟੇਸ਼ਨ 'ਤੇ ਸੂਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ।","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Super moon","blocks":[{"type":"fragment","model":{"text":"Super moon","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"PUNIT PARANJPE/AFP/Getty Images","height":549,"locator":"17C7F/production/_99870479_pic10.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪੋਲੀਓ ਬਾਰੇ ਮੁਹਿੰਮ। ਭਾਰਤ ਪਹਿਲਾਂ ਹੀ ਪੋਲੀਓ ਮੁਕਤ ਦੇਸ਼ ਹੈ ਫਿਰ ਵੀ ਸਾਵਧਾਨੀ ਦੇ ਤੌਰ 'ਤੇ ਇਹ ਮੁਹਿੰਮ ਰੱਖੀ ਗਈ ਹੈ।","blocks":[{"type":"fragment","model":{"text":"ਅਹਿਮਦਾਬਾਦ ਵਿੱਚ ਪੋਲੀਓ ਬਾਰੇ ਮੁਹਿੰਮ। ਭਾਰਤ ਪਹਿਲਾਂ ਹੀ ਪੋਲੀਓ ਮੁਕਤ ਦੇਸ਼ ਹੈ ਫਿਰ ਵੀ ਸਾਵਧਾਨੀ ਦੇ ਤੌਰ 'ਤੇ ਇਹ ਮੁਹਿੰਮ ਰੱਖੀ ਗਈ ਹੈ।","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Polio Campaign","blocks":[{"type":"fragment","model":{"text":"Polio Campaign","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"Kalpit Bhachech","height":549,"locator":"921F/production/_99870473_pic7.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ਫਿਲਮ 'ਪਦਮਾਵਤ' ਵਿਵਾਦ ਵਿਚਾਲੇ ਕਰਣੀ ਸੈਨਾ ਦਾ ਬੈਨ ਦੌਰਾਨ ਅਹਿਮਦਾਬਾਦ ਦੇ ਇੱਕ ਮਾਲ ਦੀ ਤਸਵੀਰ।","blocks":[{"type":"fragment","model":{"text":"ਫਿਲਮ 'ਪਦਮਾਵਤ' ਵਿਵਾਦ ਵਿਚਾਲੇ ਕਰਣੀ ਸੈਨਾ ਦਾ ਬੈਨ ਦੌਰਾਨ ਅਹਿਮਦਾਬਾਦ ਦੇ ਇੱਕ ਮਾਲ ਦੀ ਤਸਵੀਰ।","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Padmavat row in Ahmedabad","blocks":[{"type":"fragment","model":{"text":"Padmavat row in Ahmedabad","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"Kalpit Bhachech","height":549,"locator":"E03F/production/_99870475_pic8.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]}]}},"promo":{"headlines":{"shortHeadline":"ਤਸਵੀਰਾਂ ਰਾਹੀਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਖ਼ਾਸ ਘਟਨਾਵਾਂ","headline":"ਤਸਵੀਰਾਂ: ਦੇਸ਼ ਦੇ ਵੱਖ-ਵੱਖ ਹਿੱਸਿਆਂ ਤੋਂ ਬੀਤੇ ਹਫ਼ਤੇ ਦੀਆਂ ਰੋਮਾਂਚਕ ਘਟਨਾਵਾਂ"},"locators":{"assetUri":"/punjabi/india-42928885","cpsUrn":"urn:bbc:content:assetUri:punjabi/india-42928885","curie":"http://www.bbc.co.uk/asset/85cd6e44-90b8-b24c-8d0b-0c7bb679be83"},"summary":"ਪਿਛਲੇ ਹਫਤੇ ਦੁਨੀਆਂ ਨੇ ਵੇਖਿਆ 'ਸੁਪਰ ਬਲੂ ਬਲੱਡ ਮੂਨ' ਅਤੇ ਹੋਰ ਕੀ ਕੁਝ, ਤਸਵੀਰਾਂ 'ਚ","timestamp":1517661265000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/183FF/production/_99872399_pic6.jpg","path":"/cpsprodpb/183FF/production/_99872399_pic6.jpg","height":549,"width":976,"altText":"Amritsar pigeons","caption":"ਅੰਮ੍ਰਿ੍ਤਸਰ ਵਿੱਚ ਕਬੂਤਰਾਂ ਨੂੰ ਦਾਣੇ ਪਾਂਦੇ ਹੋਏ ਇੱਕ ਪੰਜਾਬੀ ਮੁੰਡਾ।","copyrightHolder":"NARINDER NANU/AFP/GETTYIMAGES","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"ਇੰਡੀਆ","uri":"/punjabi/india","type":"simple"},"site":{"subType":"site","name":"BBC ਪੰਜਾਬੀ","uri":"/punjabi","type":"simple"},"groups":[]}},"path":"/punjabi/india-42928885","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [29]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="punjabi"
+            src="http://localhost:7080/static/js/punjabi-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

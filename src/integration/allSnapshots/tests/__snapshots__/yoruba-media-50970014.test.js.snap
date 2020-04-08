@@ -1,0 +1,2153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /yoruba/media-50970014 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="yo"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_yoruba/1367E/production/_110368497_sar5.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="ile arugbo"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="yo"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin! - BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/yoruba/media-50970014"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="ile arugbo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_yoruba/1367E/production/_110368497_sar5.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin! - BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Society"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Nigeria politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Kwara state"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2020-01-02T07:05:57.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2020-01-02T07:10:34.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin! - BBC News Yorùbá
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/yoruba/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/yoruba/media-50970014"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/yoruba/media-50970014"
+          hreflang="yo"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/yoruba/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/yoruba/media-50970014","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Yorùbá","publishingPrinciples":"https://www.bbc.com/yoruba/institutional-48528718","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/yoruba/media-50970014","name":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!"},"headline":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!","description":"Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.","datePublished":"2020-01-02T07:05:57.000Z","dateModified":"2020-01-02T07:10:34.000Z","about":[{"@type":"Thing","name":"Society","sameAs":["http://dbpedia.org/resource/Society"]},{"@type":"Thing","name":"Politics","sameAs":["http://dbpedia.org/resource/Politics"]},{"@type":"Thing","name":"Nigeria politics","sameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"]},{"@type":"Thing","name":"Kwara state","sameAs":["http://dbpedia.org/resource/Kwara_State"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Yorùbá","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"},"noBylinesPolicy":"https://www.bbc.com/yoruba/institutional-48528718#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Àgbéga ti bá ìlànà àgbékalẹ̀ ojú òpó ìdákọ́ńkọ́ àti ayélujára wa
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    A ṣe àwọn àyípadà pàtàkì sáwọn ìlànà àgbékalẹ̀ òpó ìdákọ́ńkọ́ àti ayélujára wa, a sì fẹ́ kẹ mọ̀ ipa tí èyí yóò ní lórí yín àti détà tẹ̀ ń lò.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        Ó dára bẹ́ẹ̀
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Ẹ ṣe ìwádìí ohun tó yípadà
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Ẹ jẹ́ ká mọ̀ pé ẹ faramọ́ ìlànà òpó ìtàkún àgbáyé wa
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    À ń lo
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      fún ìlànà òpó ìtàkùn àgbáyé
+                    </a>
+                    láti jẹ́ kẹ ní ìrírí tó dára jùlọ lójú òpó ìtàkùn àgbáyé. Ẹ jọ̀wọ́, ẹ jẹ́ ká mọ tẹ bá faramọ gbogbo àwọn ìlàná òpó ìtàkùn àgbáyé wọnyí.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Bẹ́ẹ̀ni, mo fara mọ́ ọ
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Rárá, ẹ gbé mi padà sí ojú òpó àtúntò (setting)
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/yoruba"
+               class="StyledLink-m3awbo-2 vxQyD"
+            >
+              <svg height="24"
+                   viewbox="0 0 250 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iQTlla"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M191.6 6.3h1.84l-3.91 5v5.59H188v-5.61l-3.91-5h1.83l2.83 3.65zM199.69 6.15a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.61-3.85 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.09-1.55zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.18zM208.14 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.51-.83a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM225.32 6.3h1.52v6a7.14 7.14 0 0 1-.18 1.84 4 4 0 0 1-.44 1 3.32 3.32 0 0 1-.64.74 5.59 5.59 0 0 1-6.6 0 3.41 3.41 0 0 1-.64-.75 3.87 3.87 0 0 1-.43-1 7.49 7.49 0 0 1-.17-1.88v-6h1.52v6a4.46 4.46 0 0 0 .34 2.07 2.43 2.43 0 0 0 1 .93 3.6 3.6 0 0 0 1.64.35 3.32 3.32 0 0 0 2.19-.7 2.18 2.18 0 0 0 .64-.89 5.51 5.51 0 0 0 .2-1.76zM233.53 16.87H230V6.3h2.77a4.82 4.82 0 0 1 2 .35 2.53 2.53 0 0 1 1.5 2.35 2.3 2.3 0 0 1-1.61 2.23 3.27 3.27 0 0 1 1.84 1 2.48 2.48 0 0 1 .68 1.76 2.58 2.58 0 0 1-.42 1.45 3 3 0 0 1-1.22 1 4.51 4.51 0 0 1-2.01.43zm-.76-9.23h-1.3v3.18h1a2.55 2.55 0 0 0 1.72-.46 1.54 1.54 0 0 0 .51-1.2q.01-1.51-1.93-1.51zm.11 4.53h-1.42v3.35H233a4.87 4.87 0 0 0 1.68-.19 1.6 1.6 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.5 1.5 0 0 0-.28-.89 1.68 1.68 0 0 0-.81-.6 5 5 0 0 0-1.69-.19zM242.91 6.24H244l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83z">
+                  </path>
+                  <path d="M221.81 2.49l1 2.28H222l-1.75-2.28zM245.22 2.49l-1.72 2.28h-.85l1-2.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Yorùbá
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Fò kọjá sí nnkan tí ó wà nínú rẹ̀
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Àwọn abala
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Ìròyìn
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Eré ìdárayá
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Fídíò
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Èyí to gbajúmọ̀ jù
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/yoruba"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Ìròyìn
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Eré ìdárayá
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/yoruba/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Fídíò
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/yoruba/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Èyí to gbajúmọ̀ jù
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=107&p=embedded_media::yoruba.embedded_media.photo_gallery.50970014.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:f7937009-e80f-a74b-9226-d36edc716ad5]&x2=[amp]&x3=[news-yoruba]&x4=[yo]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Ilé+Arugbo+Saraki:+Ramoni+padà+wólé+arúgbó+ní+Ilọrin!+-+BBC+News+Yorùbá]&x11=[2020-01-02T07:05:57.000Z]&x12=[2020-01-02T07:10:34.000Z]&x13=[Society~Politics~Nigeria+politics~Kwara+state]&x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~7d65828a-85c1-41f4-96cf-c758da75e401~cece4fd8-a9a3-4b50-bbc7-406ba2bccccb]&x16=[WS%20-%20Update%20me]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2020-01-02"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            2 Sẹ́rẹ́ 2020
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/3706/production/_110368041_sar1.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Laago merin idaji oni ni ijọba gbe katakata wa wo ile Wrugbo ni Ilorin
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8526/production/_110368043_sar3.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ile arugbo loke to wa nitosi Radio Kwara ni ijọba Ramoni Razaki wo
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D346/production/_110368045_sar4.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Gomina Abdul Razaq fihan pe ijọba amuni-mu-oogun ni ijọba ki ijoba to ba wa lori aleefa lasiko ki asiko
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1367E/production/_110368497_sar5.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1849E/production/_110368499_sar6.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ilé arugbo di ohun itan ni Kwara, Bukola Saraki ko ri nkan ṣe sii
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/295A/production/_110368501_sar8.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Gomina Rasaq ko gbọ ọrọ sawọn arugbo Kwara lẹnu o wo ile naa
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/777A/production/_110368503_sar9.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Awọn ara Ilorin ko ri nkankan ṣe si aṣẹ gomina Razak ti Kwara, onikaluku fọwọ lẹran ni
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C59A/production/_110368505_sar10.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Lati ipilẹ ni wọn ti wo ile Arugbo Ilorin ti ọrọ si pin bayii
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1235A/production/_110368547_sar11.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ko si ẹni to lagbara kọja ijọba to ba n tukọ orilẹ ede tabi ipinlẹ kan. Ramoni wole arugbo Ilorin pari
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/15622/production/_110368578_lo1.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Tokada-tokada ni wọn fi wo ile naa lai ku nkan pẹlu awọn nkan inu rẹ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ile arugbo"
+                           attribution="Kwara Govt"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/218A/production/_110368580_or1.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Oríṣun àwòrán,
+                    </span>
+                    <span lang="en-GB">
+                      Kwara Govt
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ijoba Kwara naa fi atẹjade tiwọn sita pe ijọba lo ni ilẹ ti Baba Oloye Sarki fi kọ ile arugbo si tẹlẹ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/yoruba"
+               class="StyledLink-m3awbo-2 vxQyD"
+            >
+              <svg height="24"
+                   viewbox="0 0 250 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iQTlla"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M191.6 6.3h1.84l-3.91 5v5.59H188v-5.61l-3.91-5h1.83l2.83 3.65zM199.69 6.15a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.61-3.85 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.09-1.55zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.18zM208.14 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.51-.83a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM225.32 6.3h1.52v6a7.14 7.14 0 0 1-.18 1.84 4 4 0 0 1-.44 1 3.32 3.32 0 0 1-.64.74 5.59 5.59 0 0 1-6.6 0 3.41 3.41 0 0 1-.64-.75 3.87 3.87 0 0 1-.43-1 7.49 7.49 0 0 1-.17-1.88v-6h1.52v6a4.46 4.46 0 0 0 .34 2.07 2.43 2.43 0 0 0 1 .93 3.6 3.6 0 0 0 1.64.35 3.32 3.32 0 0 0 2.19-.7 2.18 2.18 0 0 0 .64-.89 5.51 5.51 0 0 0 .2-1.76zM233.53 16.87H230V6.3h2.77a4.82 4.82 0 0 1 2 .35 2.53 2.53 0 0 1 1.5 2.35 2.3 2.3 0 0 1-1.61 2.23 3.27 3.27 0 0 1 1.84 1 2.48 2.48 0 0 1 .68 1.76 2.58 2.58 0 0 1-.42 1.45 3 3 0 0 1-1.22 1 4.51 4.51 0 0 1-2.01.43zm-.76-9.23h-1.3v3.18h1a2.55 2.55 0 0 0 1.72-.46 1.54 1.54 0 0 0 .51-1.2q.01-1.51-1.93-1.51zm.11 4.53h-1.42v3.35H233a4.87 4.87 0 0 0 1.68-.19 1.6 1.6 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.5 1.5 0 0 0-.28-.89 1.68 1.68 0 0 0-.81-.6 5 5 0 0 0-1.69-.19zM242.91 6.24H244l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83z">
+                  </path>
+                  <path d="M221.81 2.49l1 2.28H222l-1.75-2.28zM245.22 2.49l-1.72 2.28h-.85l1-2.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Yorùbá
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/yoruba/institutional-48528718"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Ìlànà Lílò
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Nípa BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Òfin Àṣírí
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/yoruba/institutional-43091540"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kàn sí BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /yoruba/media-50970014 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="yo"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_yoruba/1367E/production/_110368497_sar5.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="ile arugbo"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="yo"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin! - BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/yoruba/media-50970014"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="ile arugbo"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_yoruba/1367E/production/_110368497_sar5.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin! - BBC News Yorùbá"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Society"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Nigeria politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Kwara state"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2020-01-02T07:05:57.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2020-01-02T07:10:34.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin! - BBC News Yorùbá
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/yoruba/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/yoruba/media-50970014"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/yoruba/media-50970014"
+          hreflang="yo"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/yoruba/media-50970014.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/yoruba/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/yoruba/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/yoruba/media-50970014","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Yorùbá","publishingPrinciples":"https://www.bbc.com/yoruba/institutional-48528718","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/yoruba/media-50970014","name":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!"},"headline":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!","description":"Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.","datePublished":"2020-01-02T07:05:57.000Z","dateModified":"2020-01-02T07:10:34.000Z","about":[{"@type":"Thing","name":"Society","sameAs":["http://dbpedia.org/resource/Society"]},{"@type":"Thing","name":"Politics","sameAs":["http://dbpedia.org/resource/Politics"]},{"@type":"Thing","name":"Nigeria politics","sameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"]},{"@type":"Thing","name":"Kwara state","sameAs":["http://dbpedia.org/resource/Kwara_State"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Yorùbá","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"},"noBylinesPolicy":"https://www.bbc.com/yoruba/institutional-48528718#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/yoruba"
+               class="StyledLink-m3awbo-2 vxQyD"
+            >
+              <svg height="24"
+                   viewbox="0 0 250 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iQTlla"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M191.6 6.3h1.84l-3.91 5v5.59H188v-5.61l-3.91-5h1.83l2.83 3.65zM199.69 6.15a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.61-3.85 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.09-1.55zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.18zM208.14 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.51-.83a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM225.32 6.3h1.52v6a7.14 7.14 0 0 1-.18 1.84 4 4 0 0 1-.44 1 3.32 3.32 0 0 1-.64.74 5.59 5.59 0 0 1-6.6 0 3.41 3.41 0 0 1-.64-.75 3.87 3.87 0 0 1-.43-1 7.49 7.49 0 0 1-.17-1.88v-6h1.52v6a4.46 4.46 0 0 0 .34 2.07 2.43 2.43 0 0 0 1 .93 3.6 3.6 0 0 0 1.64.35 3.32 3.32 0 0 0 2.19-.7 2.18 2.18 0 0 0 .64-.89 5.51 5.51 0 0 0 .2-1.76zM233.53 16.87H230V6.3h2.77a4.82 4.82 0 0 1 2 .35 2.53 2.53 0 0 1 1.5 2.35 2.3 2.3 0 0 1-1.61 2.23 3.27 3.27 0 0 1 1.84 1 2.48 2.48 0 0 1 .68 1.76 2.58 2.58 0 0 1-.42 1.45 3 3 0 0 1-1.22 1 4.51 4.51 0 0 1-2.01.43zm-.76-9.23h-1.3v3.18h1a2.55 2.55 0 0 0 1.72-.46 1.54 1.54 0 0 0 .51-1.2q.01-1.51-1.93-1.51zm.11 4.53h-1.42v3.35H233a4.87 4.87 0 0 0 1.68-.19 1.6 1.6 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.5 1.5 0 0 0-.28-.89 1.68 1.68 0 0 0-.81-.6 5 5 0 0 0-1.69-.19zM242.91 6.24H244l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83z">
+                  </path>
+                  <path d="M221.81 2.49l1 2.28H222l-1.75-2.28zM245.22 2.49l-1.72 2.28h-.85l1-2.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Yorùbá
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Fò kọjá sí nnkan tí ó wà nínú rẹ̀
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Àwọn abala
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/yoruba"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Ìròyìn
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Eré ìdárayá
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/yoruba/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Fídíò
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/yoruba/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Èyí to gbajúmọ̀ jù
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Ìròyìn
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Eré ìdárayá
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Fídíò
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/yoruba/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Èyí to gbajúmọ̀ jù
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=107&amp;p=embedded_media::yoruba.embedded_media.photo_gallery.50970014.page&amp;x1=[urn:bbc:cps:f7937009-e80f-a74b-9226-d36edc716ad5]&amp;x2=[responsive]&amp;x3=[news-yoruba]&amp;x4=[yo]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[Ilé+Arugbo+Saraki:+Ramoni+padà+wólé+arúgbó+ní+Ilọrin!+-+BBC+News+Yorùbá]&amp;x11=[2020-01-02T07:05:57.000Z]&amp;x12=[2020-01-02T07:10:34.000Z]&amp;x13=[Society~Politics~Nigeria+politics~Kwara+state]&amp;x14=[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~7d65828a-85c1-41f4-96cf-c758da75e401~cece4fd8-a9a3-4b50-bbc7-406ba2bccccb]&amp;x16=[WS%20-%20Update%20me]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2020-01-02"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            2 Sẹ́rẹ́ 2020
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/3706/production/_110368041_sar1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/3706/production/_110368041_sar1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/3706/production/_110368041_sar1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/3706/production/_110368041_sar1.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/3706/production/_110368041_sar1.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/3706/production/_110368041_sar1.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Laago merin idaji oni ni ijọba gbe katakata wa wo ile Wrugbo ni Ilorin
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8526/production/_110368043_sar3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8526/production/_110368043_sar3.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8526/production/_110368043_sar3.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8526/production/_110368043_sar3.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8526/production/_110368043_sar3.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8526/production/_110368043_sar3.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ile arugbo loke to wa nitosi Radio Kwara ni ijọba Ramoni Razaki wo
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/D346/production/_110368045_sar4.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/D346/production/_110368045_sar4.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/D346/production/_110368045_sar4.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/D346/production/_110368045_sar4.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/D346/production/_110368045_sar4.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D346/production/_110368045_sar4.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Gomina Abdul Razaq fihan pe ijọba amuni-mu-oogun ni ijọba ki ijoba to ba wa lori aleefa lasiko ki asiko
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1367E/production/_110368497_sar5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1367E/production/_110368497_sar5.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1367E/production/_110368497_sar5.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1367E/production/_110368497_sar5.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1367E/production/_110368497_sar5.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1367E/production/_110368497_sar5.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1849E/production/_110368499_sar6.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1849E/production/_110368499_sar6.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1849E/production/_110368499_sar6.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1849E/production/_110368499_sar6.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1849E/production/_110368499_sar6.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1849E/production/_110368499_sar6.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ilé arugbo di ohun itan ni Kwara, Bukola Saraki ko ri nkan ṣe sii
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/295A/production/_110368501_sar8.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/295A/production/_110368501_sar8.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/295A/production/_110368501_sar8.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/295A/production/_110368501_sar8.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/295A/production/_110368501_sar8.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/295A/production/_110368501_sar8.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Gomina Rasaq ko gbọ ọrọ sawọn arugbo Kwara lẹnu o wo ile naa
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/777A/production/_110368503_sar9.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/777A/production/_110368503_sar9.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/777A/production/_110368503_sar9.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/777A/production/_110368503_sar9.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/777A/production/_110368503_sar9.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/777A/production/_110368503_sar9.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Awọn ara Ilorin ko ri nkankan ṣe si aṣẹ gomina Razak ti Kwara, onikaluku fọwọ lẹran ni
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/C59A/production/_110368505_sar10.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/C59A/production/_110368505_sar10.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/C59A/production/_110368505_sar10.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/C59A/production/_110368505_sar10.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/C59A/production/_110368505_sar10.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C59A/production/_110368505_sar10.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Lati ipilẹ ni wọn ti wo ile Arugbo Ilorin ti ọrọ si pin bayii
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1235A/production/_110368547_sar11.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1235A/production/_110368547_sar11.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1235A/production/_110368547_sar11.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1235A/production/_110368547_sar11.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1235A/production/_110368547_sar11.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1235A/production/_110368547_sar11.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ko si ẹni to lagbara kọja ijọba to ba n tukọ orilẹ ede tabi ipinlẹ kan. Ramoni wole arugbo Ilorin pari
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/15622/production/_110368578_lo1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/15622/production/_110368578_lo1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/15622/production/_110368578_lo1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/15622/production/_110368578_lo1.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/15622/production/_110368578_lo1.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/15622/production/_110368578_lo1.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Tokada-tokada ni wọn fi wo ile naa lai ku nkan pẹlu awọn nkan inu rẹ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/218A/production/_110368580_or1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/218A/production/_110368580_or1.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/218A/production/_110368580_or1.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/218A/production/_110368580_or1.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/218A/production/_110368580_or1.jpg 800w"
+                         alt="ile arugbo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/218A/production/_110368580_or1.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Oríṣun àwòrán,
+                    </span>
+                    <span lang="en-GB">
+                      Kwara Govt
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Àkọlé àwòrán,
+                  </span>
+                  <p>
+                    Ijoba Kwara naa fi atẹjade tiwọn sita pe ijọba lo ni ilẹ ti Baba Oloye Sarki fi kọ ile arugbo si tẹlẹ.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/yoruba"
+               class="StyledLink-m3awbo-2 vxQyD"
+            >
+              <svg height="24"
+                   viewbox="0 0 250 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 iQTlla"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M191.6 6.3h1.84l-3.91 5v5.59H188v-5.61l-3.91-5h1.83l2.83 3.65zM199.69 6.15a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.61-3.85 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.09-1.55zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.18zM208.14 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.51-.83a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM225.32 6.3h1.52v6a7.14 7.14 0 0 1-.18 1.84 4 4 0 0 1-.44 1 3.32 3.32 0 0 1-.64.74 5.59 5.59 0 0 1-6.6 0 3.41 3.41 0 0 1-.64-.75 3.87 3.87 0 0 1-.43-1 7.49 7.49 0 0 1-.17-1.88v-6h1.52v6a4.46 4.46 0 0 0 .34 2.07 2.43 2.43 0 0 0 1 .93 3.6 3.6 0 0 0 1.64.35 3.32 3.32 0 0 0 2.19-.7 2.18 2.18 0 0 0 .64-.89 5.51 5.51 0 0 0 .2-1.76zM233.53 16.87H230V6.3h2.77a4.82 4.82 0 0 1 2 .35 2.53 2.53 0 0 1 1.5 2.35 2.3 2.3 0 0 1-1.61 2.23 3.27 3.27 0 0 1 1.84 1 2.48 2.48 0 0 1 .68 1.76 2.58 2.58 0 0 1-.42 1.45 3 3 0 0 1-1.22 1 4.51 4.51 0 0 1-2.01.43zm-.76-9.23h-1.3v3.18h1a2.55 2.55 0 0 0 1.72-.46 1.54 1.54 0 0 0 .51-1.2q.01-1.51-1.93-1.51zm.11 4.53h-1.42v3.35H233a4.87 4.87 0 0 0 1.68-.19 1.6 1.6 0 0 0 .71-.6 1.57 1.57 0 0 0 .27-.88 1.5 1.5 0 0 0-.28-.89 1.68 1.68 0 0 0-.81-.6 5 5 0 0 0-1.69-.19zM242.91 6.24H244l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83z">
+                  </path>
+                  <path d="M221.81 2.49l1 2.28H222l-1.75-2.28zM245.22 2.49l-1.72 2.28h-.85l1-2.28z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Yorùbá
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/yoruba/institutional-48528718"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Ìdí tí ẹ fi le è nígbàagbọ́ nínú ìròyìn BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Ìlànà Lílò
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Nípa BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Òfin Àṣírí
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/yoruba/institutional-43091540"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kàn sí BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1577948757000,"lastPublished":1577949034000,"lastUpdated":1577949042967,"id":"mock-id","locators":{"assetUri":"/yoruba/media-50970014","cpsUrn":"urn:bbc:content:assetUri:yoruba/media-50970014","curie":"http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5"},"type":"PGL","createdBy":"yoruba-v6","language":"yo","timestamp":1577948757000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"yoruba.embedded_media.photo_gallery.50970014.page","cps_asset_id":"50970014"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}],"taggings":[]},"tags":{"about":[{"thingLabel":"Society","thingUri":"http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id","thingId":"5307a8d9-f620-40f5-92d4-f99c919a6ffa","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Society","http://www.wikidata.org/entity/Q8425"]},{"thingLabel":"Politics","thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id","thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Politics"],"topicName":"Eto Iselu","topicId":"cyx5k5r3g5nt","curationList":[{"curationId":"d7bd2a05-896d-4dc9-97b2-d2cd8a92b142","curationType":"vivo-stream"}]},{"thingLabel":"Nigeria politics","thingUri":"http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id","thingId":"7d65828a-85c1-41f4-96cf-c758da75e401","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"],"topicName":"Eto Iselu Naijiria","topicId":"c404v45pnr8t","curationList":[{"curationId":"ac23e408-552d-4b5c-b801-c268843ef02e","curationType":"vivo-stream"}]},{"thingLabel":"Kwara state","thingUri":"http://www.bbc.co.uk/things/cece4fd8-a9a3-4b50-bbc7-406ba2bccccb#id","thingId":"cece4fd8-a9a3-4b50-bbc7-406ba2bccccb","thingType":["Thing","Place","geoname:GeoTagConcept"],"thingSameAs":["http://dbpedia.org/resource/Kwara_State","http://sws.geonames.org/2332785/"],"topicName":"Ipinlẹ Kwara","topicId":"cr50y0714pnt","curationList":[{"curationId":"626f5391-5064-45e3-9dfb-150ae09cd7c9","curationType":"vivo-stream"}]}]},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!","blocks":[{"type":"fragment","model":{"text":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1577948757000,"lastPublished":1577949034000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.","blocks":[{"type":"fragment","model":{"text":"Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Laago merin idaji oni ni ijọba gbe katakata wa wo ile Wrugbo ni Ilorin","blocks":[{"type":"fragment","model":{"text":"Laago merin idaji oni ni ijọba gbe katakata wa wo ile Wrugbo ni Ilorin","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"3706/production/_110368041_sar1.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ile arugbo loke to wa nitosi Radio Kwara ni ijọba Ramoni Razaki wo","blocks":[{"type":"fragment","model":{"text":"Ile arugbo loke to wa nitosi Radio Kwara ni ijọba Ramoni Razaki wo","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"8526/production/_110368043_sar3.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Gomina Abdul Razaq fihan pe ijọba amuni-mu-oogun ni ijọba ki ijoba to ba wa lori aleefa lasiko ki asiko","blocks":[{"type":"fragment","model":{"text":"Gomina Abdul Razaq fihan pe ijọba amuni-mu-oogun ni ijọba ki ijoba to ba wa lori aleefa lasiko ki asiko","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"D346/production/_110368045_sar4.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic","blocks":[{"type":"fragment","model":{"text":"Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"1367E/production/_110368497_sar5.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ilé arugbo di ohun itan ni Kwara, Bukola Saraki ko ri nkan ṣe sii","blocks":[{"type":"fragment","model":{"text":"Ilé arugbo di ohun itan ni Kwara, Bukola Saraki ko ri nkan ṣe sii","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"1849E/production/_110368499_sar6.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Gomina Rasaq ko gbọ ọrọ sawọn arugbo Kwara lẹnu o wo ile naa","blocks":[{"type":"fragment","model":{"text":"Gomina Rasaq ko gbọ ọrọ sawọn arugbo Kwara lẹnu o wo ile naa","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"295A/production/_110368501_sar8.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Awọn ara Ilorin ko ri nkankan ṣe si aṣẹ gomina Razak ti Kwara, onikaluku fọwọ lẹran ni","blocks":[{"type":"fragment","model":{"text":"Awọn ara Ilorin ko ri nkankan ṣe si aṣẹ gomina Razak ti Kwara, onikaluku fọwọ lẹran ni","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"777A/production/_110368503_sar9.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Lati ipilẹ ni wọn ti wo ile Arugbo Ilorin ti ọrọ si pin bayii","blocks":[{"type":"fragment","model":{"text":"Lati ipilẹ ni wọn ti wo ile Arugbo Ilorin ti ọrọ si pin bayii","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"C59A/production/_110368505_sar10.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ko si ẹni to lagbara kọja ijọba to ba n tukọ orilẹ ede tabi ipinlẹ kan. Ramoni wole arugbo Ilorin pari","blocks":[{"type":"fragment","model":{"text":"Ko si ẹni to lagbara kọja ijọba to ba n tukọ orilẹ ede tabi ipinlẹ kan. Ramoni wole arugbo Ilorin pari","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"1235A/production/_110368547_sar11.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Tokada-tokada ni wọn fi wo ile naa lai ku nkan pẹlu awọn nkan inu rẹ.","blocks":[{"type":"fragment","model":{"text":"Tokada-tokada ni wọn fi wo ile naa lai ku nkan pẹlu awọn nkan inu rẹ.","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"15622/production/_110368578_lo1.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ijoba Kwara naa fi atẹjade tiwọn sita pe ijọba lo ni ilẹ ti Baba Oloye Sarki fi kọ ile arugbo si tẹlẹ.","blocks":[{"type":"fragment","model":{"text":"Ijoba Kwara naa fi atẹjade tiwọn sita pe ijọba lo ni ilẹ ti Baba Oloye Sarki fi kọ ile arugbo si tẹlẹ.","attributes":[]},"id":"mock-id","position":[14,1,1,1,1]}]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ile arugbo","blocks":[{"type":"fragment","model":{"text":"ile arugbo","attributes":[]},"id":"mock-id","position":[14,2,1,1,1]}]},"id":"mock-id","position":[14,2,1,1]}]},"id":"mock-id","position":[14,2,1]}]},"id":"mock-id","position":[14,2]},{"type":"rawImage","model":{"copyrightHolder":"Kwara Govt","height":549,"locator":"218A/production/_110368580_or1.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[14,3]}]},"id":"mock-id","position":[14]}]}},"promo":{"headlines":{"shortHeadline":"Ìjọba Gomina Raman Razak padà wólé arúgbó ní Ilọrin!","headline":"Ilé Arugbo Saraki: Ramoni padà wólé arúgbó ní Ilọrin!"},"locators":{"assetUri":"/yoruba/media-50970014","cpsUrn":"urn:bbc:content:assetUri:yoruba/media-50970014","curie":"http://www.bbc.co.uk/asset/f7937009-e80f-a74b-9226-d36edc716ad5"},"summary":"Laago mẹrin idaji aarọ yii ni ijọba wa wo ile arugbo ti Bukola Saraki ni kí wọn ma wo tẹlẹ, ọrọ bẹ́yìn yọ.","timestamp":1577948757000,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}],"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/1367E/production/_110368497_sar5.jpg","path":"/cpsprodpb/1367E/production/_110368497_sar5.jpg","height":549,"width":976,"altText":"ile arugbo","caption":"Goo goo go ni awọn eeyan duro kaakiri agbegbe yii lẹbaa Civil service clinic","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Media","uri":"/yoruba/media","type":"simple"},"site":{"subType":"site","name":"BBC News Yorùbá","uri":"/yoruba","type":"simple"},"groups":[]}},"path":"/yoruba/media-50970014","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [52]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="yoruba"
+            src="http://localhost:7080/static/js/yoruba-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

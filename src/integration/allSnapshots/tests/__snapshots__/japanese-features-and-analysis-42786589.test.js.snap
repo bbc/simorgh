@@ -1,0 +1,3205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /japanese/features-and-analysis-42786589 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="ja"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_japanese/9D58/production/_99708204_nkski.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ja-JP"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="【写真で見る】　北朝鮮の豪華スキーリゾート - BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/japanese/features-and-analysis-42786589"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnewsjapan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_japanese/9D58/production/_99708204_nkski.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnewsjapan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="【写真で見る】　北朝鮮の豪華スキーリゾート - BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews/"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-01-23T08:58:39.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-01-23T09:07:48.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      【写真で見る】　北朝鮮の豪華スキーリゾート - BBCニュース
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/japanese/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/japanese/features-and-analysis-42786589"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/japanese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/japanese/features-and-analysis-42786589","publisher":{"@type":"NewsMediaOrganization","name":"BBCニュース","publishingPrinciples":"https://www.bbc.com/japanese/help-49677253","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/japanese/features-and-analysis-42786589","name":"【写真で見る】　北朝鮮の豪華スキーリゾート"},"headline":"【写真で見る】　北朝鮮の豪華スキーリゾート","description":"韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。","datePublished":"2018-01-23T08:58:39.000Z","dateModified":"2018-01-23T09:07:48.000Z","author":{"@type":"NewsMediaOrganization","name":"BBCニュース","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"},"noBylinesPolicy":"https://www.bbc.com/japanese/help-49677253#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 joBpTY"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    個人情報とクッキーの方針を更新しました
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    本サイトの個人情報とクッキーに関する方針に重要な変更を加えました。これがあなたとあなたの情報にどう関わるか、こちらで説明します。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        OK
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        変更点を見る
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 joBpTY"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 bTxfUP"
+                  >
+                    クッキー使用に同意するか教えてください
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    本サイトでは最高のオンライン体験をご提供するため
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      クッキー
+                    </a>
+                    を使用しています。すべてのクッキー使用に同意するか教えてください。
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        はい、同意します
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 dguCpL"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        いいえ、設定ページを開いてください
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/japanese"
+               class="StyledLink-m3awbo-2 fQCBhT"
+            >
+              <svg height="24"
+                   viewbox="0 0 229.49 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kpIXQh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.53 6.3H186v10.43a5.84 5.84 0 0 1-.3 2.16 2.43 2.43 0 0 1-1 1.12 3 3 0 0 1-1.6.42h-.49L182.4 19h.39a2.46 2.46 0 0 0 1-.16 1.15 1.15 0 0 0 .54-.56 4.58 4.58 0 0 0 .2-1.7zM192.62 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13H191l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM200.41 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.41-.44 1.56 1.56 0 0 0 .5-1.25q.01-1.62-2-1.62zM211.84 6.23h1.06l4.74 10.63h-1.54l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM228.05 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ニュース
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bzivsr"
+            >
+              コンテンツへ移動
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 gAGcRq"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                ジャンル
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/japanese"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    ホーム
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    日本
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    アジア
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    イギリス
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    アメリカ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/features_and_analysis"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    解説・読み物
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/video"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    ビデオ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbcworldnews-japan.com/"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    ワールドニュースTV
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/japanese"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    ホーム
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    日本
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    アジア
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    イギリス
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    アメリカ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbc.com/japanese/features_and_analysis"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    解説・読み物
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbc.com/japanese/video"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    ビデオ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="https://www.bbcworldnews-japan.com/"
+                     class="StyledLink-sc-158x7z5-2 lkMPdT"
+                  >
+                    ワールドニュースTV
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598290&s2=56&p=features_and_analysis::japanese.features_and_analysis.photo_gallery.42786589.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:87f2cb7c-c85a-9e4c-b90a-4e18789d256c]&x2=[amp]&x3=[news-japanese]&x4=[ja]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[【写真で見る】+北朝鮮の豪華スキーリゾート+-+BBCニュース]&x11=[2018-01-23T08:58:39.000Z]&x12=[2018-01-23T09:07:48.000Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 kxHRkS"
+          >
+            【写真で見る】　北朝鮮の豪華スキーリゾート
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-01-23"
+                class="StyledTimestamp-um718p-0 cpjikG"
+          >
+            23 一月 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 gcZAza">
+            韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="This photo taken on February 20, 2017 shows a general view of the Masikryong ski resort, near North Korea's east coast port city of Wonsan."
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4F38/production/_99708202_forbbconly.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    今年の冬季五輪は来月、韓国・平昌で開催されるが、予想外にも北朝鮮の五輪参加が決まり、北朝鮮でも練習や文化イベントが計画されている。韓国政府や大会関係者らが3日間の訪問で視察する場所の一つが馬息嶺スキー場だ。写真はいずれも昨年2月撮影。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="This photo taken on February 19, 2017 shows members of a 'ski camp' at the Masikryong ski resort"
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    北朝鮮初のスキー場、馬息嶺は2013年に建設されたた。国内では北朝鮮の指導者、金正恩氏の主な偉業の一つとうたわれている。2017年2月撮影の写真から、近代的な施設の様子がうかがえる。韓国は合同練習のため、スキーの代表選手たちを馬息嶺に派遣する予定だ。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="In this photo taken on February 20, 2017, Kim Chol-Nam, 30, poses for a portrait at the ski hire desk"
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    チケット売り場の価格表には、外国人旅行者用のリフトの1日パスとスキー用具の貸し出し金額が80ドル（約8900円）、北朝鮮人用が40ドル（約4400円）と書かれている。北朝鮮の平均的市民の給料約1カ月分だ。北朝鮮は旅行者から外貨を稼ぐため、このスキー場を建設した。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="This photo taken on February 19, 2017 shows a general view of the lobby of the Masikryong ski resort"
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    1400平方メートルのこのリゾートは、東部沿岸・元山市の近くにある。北朝鮮の対外宣伝サイト「朝鮮の今日」は、「世界最高のスキーリゾート」と呼ぶ。しかし人権団体は、この施設が強制労働者を使っている可能性があると指摘している。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="This photo taken on February 19, 2017 shows a room at the Masikryong ski resort,"
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    寝室をのぞいてみよう。北朝鮮にしては、ぜいたくな施設なのが分かる。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="This photo taken on February 19, 2017 shows North Korean visitors posing on a snowmobile at the Masikryong ski resort,"
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    このリゾートには、スキーコースが10カ所ある。また、カナダのスノーモービル「スキードゥー」などの最新設備もあるようだ。しかし、だとすると、北朝鮮への機材提供を禁止する国連制裁との兼ね合いはどうなっているのか。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="In this photo taken on February 19, 2017, Pak Han-Song, 11, poses for a portrait on a beginner's slope at the Masikryong"
+                           attribution="AFP/Getty Images"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    北朝鮮によると、総工費約3億ドル（約330億円）のこのリゾートの利用者は、毎年7万人。平昌冬季五輪は来月9日から25日まで予定されている。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 cqWrro"
+                    >
+                      関連コンテンツ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="South and North Korean officials shake hands during talks in Panmunjom. Photo: 17 January 2018"
+                                 attribution="Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/190E/production/_99641460_mediaitem99641459.jpg"
+                                 height="432"
+                                 width="768"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42728031?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        南北統一旗で平昌五輪入場へ　韓国外相、南北対話は「曇りのない目で」 　
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      日米外相らが南北対話進展は北朝鮮の「時間稼ぎ」だと警告していることについて、韓国の康京和（カンギョンファ）外相はBBCに対して、高官級の南北対話は「曇りのない目で」冷静に続けると述べた。
+                    </p>
+                    <time datetime="2018-01-18"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月18日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。"
+                                 attribution="韓国の康京和（カン・ギョンファ）外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/6CBA/production/_99643872_p05v8gmx.jpg"
+                                 height="576"
+                                 width="1024"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 bgxvOA"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 32"
+                                 width="12px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                            >
+                              <polygon points="3,32 29,16 3,0">
+                              </polygon>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/video-42728658?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ビデオ
+                            ,
+                          </span>
+                          <span>
+                            韓国外相「機会を最大限に活用」　北朝鮮との協議めぐり
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。
+                    </p>
+                    <time datetime="2018-01-18"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月18日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Kim Jong-un"
+                                 attribution="Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1502E/production/_99626068_hi044085774.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42714565?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        日本政府、北朝鮮の「微笑外交」に警鐘
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      日本の河野太郎外相は16日午前（日本時間17日未明）、カナダ・バンクーバーで開かれた北朝鮮問題に関する外相会合で、北朝鮮による最近の「微笑外交」が目くらましになってはならないと警告し、南北対話が制裁緩和につながってはならないと強調した。
+                    </p>
+                    <time datetime="2018-01-17"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月17日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Announcement of false alarm sent to people in Hawaii"
+                                 attribution="Reuters"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16F57/production/_99593049_mediaitem99591111.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42685367?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        米ハワイ州に警報システム改修の要請、弾道ミサイル誤報で
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      米ハワイ州政府が13日に「弾道ミサイル接近中」という緊急警報を誤って発信した問題で、米連邦通信委員会（FCC）は、同州の警報システムにはこうしたミスを防ぐ「適切」な防止策が欠けていると批判し、修正を求めた。
+                    </p>
+                    <time datetime="2018-01-15"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月15日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="South Korean Unification Minister and chief delegate Cho Myoung-gyon (L) shakes hands with his North Korean counterpart Ri Son-gwon"
+                                 attribution="Reuters"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/41C0/production/_99523861_mediaitem99523860.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42630814?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        南北閣僚級会談、軍事当局者の協議にも合意
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      9日に板門店で開かれた韓国と北朝鮮の2年ぶりの南北高位級当局者協議で、双方は軍事的な緊張緩和のため軍事当局者の協議も開催すると合意した。これに先立ち北朝鮮は、2月に開かれる平昌冬季五輪に選手団を派遣すると表明していた。
+                    </p>
+                    <time datetime="2018-01-10"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月10日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="South Korean Unification Minister and chief delegate Cho Myoung-gyon (R) shakes hands with his North Korean counterpart Ri Son-gwon"
+                                 attribution="EPA"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/14B7D/production/_99516848_hi043927882-1.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42617448?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        北朝鮮、平昌冬季五輪に選手団派遣の意向
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      韓国政府は9日、北朝鮮が2月に開かれる平昌冬季五輪に選手団を派遣する意向を示したと発表した。
+                    </p>
+                    <time datetime="2018-01-09"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月9日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Red button isolated on white - Stock image"
+                                 attribution="ptasha"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/2746/production/_99445001_istock-585171778.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42550711?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        「僕の核ボタンの方が大きい」　金委員長発言にトランプ氏反応
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      ドナルド・トランプ米大統領は2日、北朝鮮の金正恩（キム・ジョンウン）朝鮮労働党委員長が自分の机には常に核兵器発射のボタンがあると述べたことに対し、自分の核兵器ボタンの方が「はるかに大きく、強力だ」とツイッターに投稿した。
+                    </p>
+                    <time datetime="2018-01-03"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月3日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="People watch a television news broadcast showing North Korean leader Kim Jong-Un&quot;s New Year&quot;s speech, at a railway station in Seoul on January 1, 2018."
+                                 attribution="Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/9814/production/_99423983_hi043792947.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42532301?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        核のボタンは自分の机の上に　金正恩氏、オリーブの枝も
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      北朝鮮の最高指導者・金正恩氏の新年のあいさつには、核攻撃の警告と、平和的解決のために差し伸べる「オリーブの枝」が共に含まれていた。
+                    </p>
+                    <time datetime="2018-01-01"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月1日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Composite showing North Korean missile developers Ri Pyong-chol and Kim Jong-sik"
+                                 attribution="Reuters"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17B03/production/_99372079_mediaitem99372078.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42489867?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        米政府、北朝鮮のミサイル開発高官2人に独自制裁　金氏側近
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      米財務省は26日、核・ミサイルの開発を主導したとして、北朝鮮高官2人への制裁を発表した。
+                    </p>
+                    <time datetime="2017-12-27"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2017年12月27日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="In this handout photo provided by the South Korean Defense Ministry on August 10, 2015, South Korean soldiers patrol near the scene where planted landmines exploded on August 4, maiming two soldiers on border patrol in the demilitarized zone dividing North and South Korea, on 9 August 2015 in Paju, South Korea."
+                                 attribution="AFP/Getty Images"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1F22/production/_99307970_gettyimages-483542422.jpg"
+                                 height="549"
+                                 width="976"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42435860?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        北朝鮮兵士脱北　北の捜索に韓国が警告射撃
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      北朝鮮の兵士が21日朝に非武装地帯（DMZ）を越え韓国側に逃亡した際、兵士を捜索する北朝鮮警備兵に向け韓国側が警告射撃していたことが明らかになった。
+                    </p>
+                    <time datetime="2017-12-21"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2017年12月21日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。"
+                                 attribution="H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジ"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsprodpb/F33A/production/_99266226_p05rhx9s.jpg"
+                                 height="576"
+                                 width="1024"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 bgxvOA"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 32"
+                                 width="12px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                            >
+                              <polygon points="3,32 29,16 3,0">
+                              </polygon>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/video-42408315?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ビデオ
+                            ,
+                          </span>
+                          <span>
+                            「北朝鮮に非核化強制できる準備を」　米大統領補佐官インタビュー
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。
+                    </p>
+                    <time datetime="2017-12-19"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2017年12月19日
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/japanese"
+               class="StyledLink-m3awbo-2 fQCBhT"
+            >
+              <svg height="24"
+                   viewbox="0 0 229.49 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kpIXQh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.53 6.3H186v10.43a5.84 5.84 0 0 1-.3 2.16 2.43 2.43 0 0 1-1 1.12 3 3 0 0 1-1.6.42h-.49L182.4 19h.39a2.46 2.46 0 0 0 1-.16 1.15 1.15 0 0 0 .54-.56 4.58 4.58 0 0 0 .2-1.7zM192.62 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13H191l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM200.41 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.41-.44 1.56 1.56 0 0 0 .5-1.25q.01-1.62-2-1.62zM211.84 6.23h1.06l4.74 10.63h-1.54l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM228.05 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ニュース
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 cjCeMo">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/japanese/help-49677253"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBCニュースが信頼できる理由
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/japanese/help/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    利用条件
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbcworldnews-japan.com/about_us/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBCについて
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/japanese/help/privacy"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    個人情報取り扱い方針
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    クッキー
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/contact"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBCに連絡する
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBCは外部サイトの内容に責任を負いません。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  本サイトの外部リンク方針はこちら
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /japanese/features-and-analysis-42786589 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="ja"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_japanese/9D58/production/_99708204_nkski.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="ja-JP"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="【写真で見る】　北朝鮮の豪華スキーリゾート - BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/japanese/features-and-analysis-42786589"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbcnewsjapan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_japanese/9D58/production/_99708204_nkski.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbcnewsjapan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="【写真で見る】　北朝鮮の豪華スキーリゾート - BBCニュース"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews/"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2018-01-23T08:58:39.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2018-01-23T09:07:48.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      【写真で見る】　北朝鮮の豪華スキーリゾート - BBCニュース
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/japanese/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/japanese/features-and-analysis-42786589"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/japanese/features-and-analysis-42786589.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/japanese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/japanese/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/japanese/features-and-analysis-42786589","publisher":{"@type":"NewsMediaOrganization","name":"BBCニュース","publishingPrinciples":"https://www.bbc.com/japanese/help-49677253","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/japanese/features-and-analysis-42786589","name":"【写真で見る】　北朝鮮の豪華スキーリゾート"},"headline":"【写真で見る】　北朝鮮の豪華スキーリゾート","description":"韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。","datePublished":"2018-01-23T08:58:39.000Z","dateModified":"2018-01-23T09:07:48.000Z","author":{"@type":"NewsMediaOrganization","name":"BBCニュース","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"},"noBylinesPolicy":"https://www.bbc.com/japanese/help-49677253#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/japanese"
+               class="StyledLink-m3awbo-2 fQCBhT"
+            >
+              <svg height="24"
+                   viewbox="0 0 229.49 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kpIXQh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.53 6.3H186v10.43a5.84 5.84 0 0 1-.3 2.16 2.43 2.43 0 0 1-1 1.12 3 3 0 0 1-1.6.42h-.49L182.4 19h.39a2.46 2.46 0 0 0 1-.16 1.15 1.15 0 0 0 .54-.56 4.58 4.58 0 0 0 .2-1.7zM192.62 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13H191l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM200.41 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.41-.44 1.56 1.56 0 0 0 .5-1.25q.01-1.62-2-1.62zM211.84 6.23h1.06l4.74 10.63h-1.54l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM228.05 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ニュース
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 bzivsr"
+            >
+              コンテンツへ移動
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 gAGcRq"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  ジャンル
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/japanese"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      ホーム
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      日本
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      アジア
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      イギリス
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      アメリカ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbc.com/japanese/features_and_analysis"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      解説・読み物
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbc.com/japanese/video"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      ビデオ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="https://www.bbcworldnews-japan.com/"
+                       class="StyledLink-sc-158x7z5-2 lkMPdT"
+                    >
+                      ワールドニュースTV
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/japanese"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    ホーム
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    日本
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    アジア
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    イギリス
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    アメリカ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/features_and_analysis"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    解説・読み物
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbc.com/japanese/video"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    ビデオ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="https://www.bbcworldnews-japan.com/"
+                     class="StyledDropdownLink-ukxuly-4 iRgmBP"
+                  >
+                    ワールドニュースTV
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598290&amp;s2=56&amp;p=features_and_analysis::japanese.features_and_analysis.photo_gallery.42786589.page&amp;x1=[urn:bbc:cps:87f2cb7c-c85a-9e4c-b90a-4e18789d256c]&amp;x2=[responsive]&amp;x3=[news-japanese]&amp;x4=[ja]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[【写真で見る】+北朝鮮の豪華スキーリゾート+-+BBCニュース]&amp;x11=[2018-01-23T08:58:39.000Z]&amp;x12=[2018-01-23T09:07:48.000Z]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 kxHRkS"
+          >
+            【写真で見る】　北朝鮮の豪華スキーリゾート
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2018-01-23"
+                class="StyledTimestamp-um718p-0 cpjikG"
+          >
+            23 一月 2018
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 gcZAza">
+            韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4F38/production/_99708202_forbbconly.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4F38/production/_99708202_forbbconly.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4F38/production/_99708202_forbbconly.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/4F38/production/_99708202_forbbconly.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/4F38/production/_99708202_forbbconly.jpg 800w"
+                         alt="This photo taken on February 20, 2017 shows a general view of the Masikryong ski resort, near North Korea's east coast port city of Wonsan."
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4F38/production/_99708202_forbbconly.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    今年の冬季五輪は来月、韓国・平昌で開催されるが、予想外にも北朝鮮の五輪参加が決まり、北朝鮮でも練習や文化イベントが計画されている。韓国政府や大会関係者らが3日間の訪問で視察する場所の一つが馬息嶺スキー場だ。写真はいずれも昨年2月撮影。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg 800w"
+                         alt="This photo taken on February 19, 2017 shows members of a 'ski camp' at the Masikryong ski resort"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    北朝鮮初のスキー場、馬息嶺は2013年に建設されたた。国内では北朝鮮の指導者、金正恩氏の主な偉業の一つとうたわれている。2017年2月撮影の写真から、近代的な施設の様子がうかがえる。韓国は合同練習のため、スキーの代表選手たちを馬息嶺に派遣する予定だ。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg 800w"
+                         alt="In this photo taken on February 20, 2017, Kim Chol-Nam, 30, poses for a portrait at the ski hire desk"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    チケット売り場の価格表には、外国人旅行者用のリフトの1日パスとスキー用具の貸し出し金額が80ドル（約8900円）、北朝鮮人用が40ドル（約4400円）と書かれている。北朝鮮の平均的市民の給料約1カ月分だ。北朝鮮は旅行者から外貨を稼ぐため、このスキー場を建設した。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg 800w"
+                         alt="This photo taken on February 19, 2017 shows a general view of the lobby of the Masikryong ski resort"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    1400平方メートルのこのリゾートは、東部沿岸・元山市の近くにある。北朝鮮の対外宣伝サイト「朝鮮の今日」は、「世界最高のスキーリゾート」と呼ぶ。しかし人権団体は、この施設が強制労働者を使っている可能性があると指摘している。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg 800w"
+                         alt="This photo taken on February 19, 2017 shows a room at the Masikryong ski resort,"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    寝室をのぞいてみよう。北朝鮮にしては、ぜいたくな施設なのが分かる。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg 800w"
+                         alt="This photo taken on February 19, 2017 shows North Korean visitors posing on a snowmobile at the Masikryong ski resort,"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    このリゾートには、スキーコースが10カ所ある。また、カナダのスノーモービル「スキードゥー」などの最新設備もあるようだ。しかし、だとすると、北朝鮮への機材提供を禁止する国連制裁との兼ね合いはどうなっているのか。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg 800w"
+                         alt="In this photo taken on February 19, 2017, Pak Han-Song, 11, poses for a portrait on a beginner's slope at the Masikryong"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      画像提供
+                    </span>
+                    <span lang="en-GB">
+                      AFP/Getty Images
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 GjrxH">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    画像説明
+                  </span>
+                  <p>
+                    北朝鮮によると、総工費約3億ドル（約330億円）のこのリゾートの利用者は、毎年7万人。平昌冬季五輪は来月9日から25日まで予定されている。
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 kXOyLn">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 cqWrro"
+                    >
+                      関連コンテンツ
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42728031?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        南北統一旗で平昌五輪入場へ　韓国外相、南北対話は「曇りのない目で」 　
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      日米外相らが南北対話進展は北朝鮮の「時間稼ぎ」だと警告していることについて、韓国の康京和（カンギョンファ）外相はBBCに対して、高官級の南北対話は「曇りのない目で」冷静に続けると述べた。
+                    </p>
+                    <time datetime="2018-01-18"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月18日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 bgxvOA"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 32"
+                                 width="12px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                            >
+                              <polygon points="3,32 29,16 3,0">
+                              </polygon>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/video-42728658?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ビデオ
+                            ,
+                          </span>
+                          <span>
+                            韓国外相「機会を最大限に活用」　北朝鮮との協議めぐり
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。
+                    </p>
+                    <time datetime="2018-01-18"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月18日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42714565?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        日本政府、北朝鮮の「微笑外交」に警鐘
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      日本の河野太郎外相は16日午前（日本時間17日未明）、カナダ・バンクーバーで開かれた北朝鮮問題に関する外相会合で、北朝鮮による最近の「微笑外交」が目くらましになってはならないと警告し、南北対話が制裁緩和につながってはならないと強調した。
+                    </p>
+                    <time datetime="2018-01-17"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月17日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42685367?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        米ハワイ州に警報システム改修の要請、弾道ミサイル誤報で
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      米ハワイ州政府が13日に「弾道ミサイル接近中」という緊急警報を誤って発信した問題で、米連邦通信委員会（FCC）は、同州の警報システムにはこうしたミスを防ぐ「適切」な防止策が欠けていると批判し、修正を求めた。
+                    </p>
+                    <time datetime="2018-01-15"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月15日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42630814?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        南北閣僚級会談、軍事当局者の協議にも合意
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      9日に板門店で開かれた韓国と北朝鮮の2年ぶりの南北高位級当局者協議で、双方は軍事的な緊張緩和のため軍事当局者の協議も開催すると合意した。これに先立ち北朝鮮は、2月に開かれる平昌冬季五輪に選手団を派遣すると表明していた。
+                    </p>
+                    <time datetime="2018-01-10"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月10日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42617448?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        北朝鮮、平昌冬季五輪に選手団派遣の意向
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      韓国政府は9日、北朝鮮が2月に開かれる平昌冬季五輪に選手団を派遣する意向を示したと発表した。
+                    </p>
+                    <time datetime="2018-01-09"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月9日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42550711?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        「僕の核ボタンの方が大きい」　金委員長発言にトランプ氏反応
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      ドナルド・トランプ米大統領は2日、北朝鮮の金正恩（キム・ジョンウン）朝鮮労働党委員長が自分の机には常に核兵器発射のボタンがあると述べたことに対し、自分の核兵器ボタンの方が「はるかに大きく、強力だ」とツイッターに投稿した。
+                    </p>
+                    <time datetime="2018-01-03"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月3日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42532301?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        核のボタンは自分の机の上に　金正恩氏、オリーブの枝も
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      北朝鮮の最高指導者・金正恩氏の新年のあいさつには、核攻撃の警告と、平和的解決のために差し伸べる「オリーブの枝」が共に含まれていた。
+                    </p>
+                    <time datetime="2018-01-01"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2018年1月1日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42489867?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        米政府、北朝鮮のミサイル開発高官2人に独自制裁　金氏側近
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      米財務省は26日、核・ミサイルの開発を主導したとして、北朝鮮高官2人への制裁を発表した。
+                    </p>
+                    <time datetime="2017-12-27"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2017年12月27日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/42435860?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        北朝鮮兵士脱北　北の捜索に韓国が警告射撃
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      北朝鮮の兵士が21日朝に非武装地帯（DMZ）を越え韓国側に逃亡した際、兵士を捜索する北朝鮮警備兵に向け韓国側が警告射撃していたことが明らかになった。
+                    </p>
+                    <time datetime="2017-12-21"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2017年12月21日
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 bgxvOA"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 32"
+                                 width="12px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                            >
+                              <polygon points="3,32 29,16 3,0">
+                              </polygon>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 liqqmH">
+                      <a href="/japanese/video-42408315?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ビデオ
+                            ,
+                          </span>
+                          <span>
+                            「北朝鮮に非核化強制できる準備を」　米大統領補佐官インタビュー
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 bVsCdr">
+                      H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。
+                    </p>
+                    <time datetime="2017-12-19"
+                          class="StyledTimestamp-um718p-0 bVEkui"
+                    >
+                      2017年12月19日
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/japanese"
+               class="StyledLink-m3awbo-2 fQCBhT"
+            >
+              <svg height="24"
+                   viewbox="0 0 229.49 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kpIXQh"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M184.53 6.3H186v10.43a5.84 5.84 0 0 1-.3 2.16 2.43 2.43 0 0 1-1 1.12 3 3 0 0 1-1.6.42h-.49L182.4 19h.39a2.46 2.46 0 0 0 1-.16 1.15 1.15 0 0 0 .54-.56 4.58 4.58 0 0 0 .2-1.7zM192.62 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13H191l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM200.41 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.41-.44 1.56 1.56 0 0 0 .5-1.25q.01-1.62-2-1.62zM211.84 6.23h1.06l4.74 10.63h-1.54l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM228.05 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ニュース
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 cjCeMo">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/japanese/help-49677253"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBCニュースが信頼できる理由
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/japanese/help/terms"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    利用条件
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbcworldnews-japan.com/about_us/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBCについて
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/japanese/help/privacy"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    個人情報取り扱い方針
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    クッキー
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/contact"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBCに連絡する
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. BBCは外部サイトの内容に責任を負いません。
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  本サイトの外部リンク方針はこちら
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1516697919000,"lastPublished":1516698468000,"lastUpdated":1579164262886,"id":"mock-id","locators":{"assetUri":"/japanese/features-and-analysis-42786589","cpsUrn":"urn:bbc:content:assetUri:japanese/features-and-analysis-42786589","curie":"http://www.bbc.co.uk/asset/87f2cb7c-c85a-9e4c-b90a-4e18789d256c"},"type":"PGL","createdBy":"japanese","language":"ja","timestamp":1516697919000,"options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"japanese.features_and_analysis.photo_gallery.42786589.page","cps_asset_id":"42786589"},"tags":{},"version":"v1.1.4","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"南北統一旗で平昌五輪入場へ　韓国外相、南北対話は「曇りのない目で」 　","headline":"南北統一旗で平昌五輪入場へ　韓国外相、南北対話は「曇りのない目で」 　"},"locators":{"assetUri":"/japanese/42728031","cpsUrn":"urn:bbc:content:assetUri:/japanese/42728031"},"summary":"日米外相らが南北対話進展は北朝鮮の「時間稼ぎ」だと警告していることについて、韓国の康京和（カンギョンファ）外相はBBCに対して、高官級の南北対話は「曇りのない目で」冷静に続けると述べた。","timestamp":1516244995000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/190E/production/_99641460_mediaitem99641459.jpg","path":"/cpsprodpb/190E/production/_99641460_mediaitem99641459.jpg","height":432,"width":768,"altText":"South and North Korean officials shake hands during talks in Panmunjom. Photo: 17 January 2018","copyrightHolder":"Getty Images","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"韓国外相「機会を最大限に活用」　北朝鮮との協議めぐり","headline":"韓国外相「機会を最大限に活用」　北朝鮮との協議めぐり"},"locators":{"assetUri":"/japanese/video-42728658","cpsUrn":"urn:bbc:content:assetUri:/japanese/video-42728658"},"summary":"韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。","timestamp":1516260302000,"cpsType":"MAP","media":{"id":"mock-id","subType":"primary","format":"video","externalId":"p05v8gjx","entityType":"Clip","caption":"韓国外相「機会を最大限に活用」　　北朝鮮との協議めぐり","type":"external_vpid"},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/6CBA/production/_99643872_p05v8gmx.jpg","path":"/cpsprodpb/6CBA/production/_99643872_p05v8gmx.jpg","height":576,"width":1024,"altText":"韓国の康外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選手団の参加をめぐる協議について、北朝鮮側にも目算があると認めながらも「この機会を最大限に活用するしかない」と語り、対話の意義を強調した。","copyrightHolder":"韓国の康京和（カン・ギョンファ）外相はBBCとのインタビューで、来月開幕する平昌冬季五輪への北朝鮮選","type":"image"},"mediaType":"Video","id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"日本政府、北朝鮮の「微笑外交」に警鐘","headline":"日本政府、北朝鮮の「微笑外交」に警鐘"},"locators":{"assetUri":"/japanese/42714565","cpsUrn":"urn:bbc:content:assetUri:/japanese/42714565"},"summary":"日本の河野太郎外相は16日午前（日本時間17日未明）、カナダ・バンクーバーで開かれた北朝鮮問題に関する外相会合で、北朝鮮による最近の「微笑外交」が目くらましになってはならないと警告し、南北対話が制裁緩和につながってはならないと強調した。","timestamp":1516173344000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/1502E/production/_99626068_hi044085774.jpg","path":"/cpsprodpb/1502E/production/_99626068_hi044085774.jpg","height":549,"width":976,"altText":"Kim Jong-un","caption":"North Korea has recently moved towards talks with its Southern counterpart","copyrightHolder":"Getty Images","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"米ハワイ州に警報システム改修の要請、弾道ミサイル誤報で","headline":"米ハワイ州に警報システム改修の要請、弾道ミサイル誤報で"},"locators":{"assetUri":"/japanese/42685367","cpsUrn":"urn:bbc:content:assetUri:/japanese/42685367"},"summary":"米ハワイ州政府が13日に「弾道ミサイル接近中」という緊急警報を誤って発信した問題で、米連邦通信委員会（FCC）は、同州の警報システムにはこうしたミスを防ぐ「適切」な防止策が欠けていると批判し、修正を求めた。","timestamp":1515983092000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/16F57/production/_99593049_mediaitem99591111.jpg","path":"/cpsprodpb/16F57/production/_99593049_mediaitem99591111.jpg","height":549,"width":976,"altText":"Announcement of false alarm sent to people in Hawaii","copyrightHolder":"Reuters","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"南北閣僚級会談、軍事当局者の協議にも合意","headline":"南北閣僚級会談、軍事当局者の協議にも合意"},"locators":{"assetUri":"/japanese/42630814","cpsUrn":"urn:bbc:content:assetUri:/japanese/42630814"},"summary":"9日に板門店で開かれた韓国と北朝鮮の2年ぶりの南北高位級当局者協議で、双方は軍事的な緊張緩和のため軍事当局者の協議も開催すると合意した。これに先立ち北朝鮮は、2月に開かれる平昌冬季五輪に選手団を派遣すると表明していた。","timestamp":1515549224000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/41C0/production/_99523861_mediaitem99523860.jpg","path":"/cpsprodpb/41C0/production/_99523861_mediaitem99523860.jpg","height":549,"width":976,"altText":"South Korean Unification Minister and chief delegate Cho Myoung-gyon (L) shakes hands with his North Korean counterpart Ri Son-gwon","copyrightHolder":"Reuters","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"北朝鮮、平昌冬季五輪に選手団派遣の意向","headline":"北朝鮮、平昌冬季五輪に選手団派遣の意向"},"locators":{"assetUri":"/japanese/42617448","cpsUrn":"urn:bbc:content:assetUri:/japanese/42617448"},"summary":"韓国政府は9日、北朝鮮が2月に開かれる平昌冬季五輪に選手団を派遣する意向を示したと発表した。","timestamp":1515477860000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/14B7D/production/_99516848_hi043927882-1.jpg","path":"/cpsprodpb/14B7D/production/_99516848_hi043927882-1.jpg","height":549,"width":976,"altText":"South Korean Unification Minister and chief delegate Cho Myoung-gyon (R) shakes hands with his North Korean counterpart Ri Son-gwon","caption":"The meeting will see both Koreas discuss Pyongyang's possible participation in the Winter Olympics","copyrightHolder":"EPA","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"「僕の核ボタンの方が大きい」　金委員長発言にトランプ氏反応","headline":"「僕の核ボタンの方が大きい」　金委員長発言にトランプ氏反応"},"locators":{"assetUri":"/japanese/42550711","cpsUrn":"urn:bbc:content:assetUri:/japanese/42550711"},"summary":"ドナルド・トランプ米大統領は2日、北朝鮮の金正恩（キム・ジョンウン）朝鮮労働党委員長が自分の机には常に核兵器発射のボタンがあると述べたことに対し、自分の核兵器ボタンの方が「はるかに大きく、強力だ」とツイッターに投稿した。","timestamp":1514971257000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/2746/production/_99445001_istock-585171778.jpg","path":"/cpsprodpb/2746/production/_99445001_istock-585171778.jpg","height":549,"width":976,"altText":"Red button isolated on white - Stock image","copyrightHolder":"ptasha","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"核のボタンは自分の机の上に　金正恩氏、オリーブの枝も","headline":"核のボタンは自分の机の上に　金正恩氏、オリーブの枝も"},"locators":{"assetUri":"/japanese/42532301","cpsUrn":"urn:bbc:content:assetUri:/japanese/42532301"},"summary":"北朝鮮の最高指導者・金正恩氏の新年のあいさつには、核攻撃の警告と、平和的解決のために差し伸べる「オリーブの枝」が共に含まれていた。","timestamp":1514784730000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/9814/production/_99423983_hi043792947.jpg","path":"/cpsprodpb/9814/production/_99423983_hi043792947.jpg","height":549,"width":976,"altText":"People watch a television news broadcast showing North Korean leader Kim Jong-Un\\"s New Year\\"s speech, at a railway station in Seoul on January 1, 2018.","caption":"Residents of South Korea watched the speech from the North's leader","copyrightHolder":"Getty Images","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"米政府、北朝鮮のミサイル開発高官2人に独自制裁　金氏側近","headline":"米政府、北朝鮮のミサイル開発高官2人に独自制裁　金氏側近"},"locators":{"assetUri":"/japanese/42489867","cpsUrn":"urn:bbc:content:assetUri:/japanese/42489867"},"summary":"米財務省は26日、核・ミサイルの開発を主導したとして、北朝鮮高官2人への制裁を発表した。","timestamp":1514340166000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/17B03/production/_99372079_mediaitem99372078.jpg","path":"/cpsprodpb/17B03/production/_99372079_mediaitem99372078.jpg","height":549,"width":976,"altText":"Composite showing North Korean missile developers Ri Pyong-chol and Kim Jong-sik","copyrightHolder":"Reuters","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"北朝鮮兵士脱北　北の捜索に韓国が警告射撃","headline":"北朝鮮兵士脱北　北の捜索に韓国が警告射撃"},"locators":{"assetUri":"/japanese/42435860","cpsUrn":"urn:bbc:content:assetUri:/japanese/42435860"},"summary":"北朝鮮の兵士が21日朝に非武装地帯（DMZ）を越え韓国側に逃亡した際、兵士を捜索する北朝鮮警備兵に向け韓国側が警告射撃していたことが明らかになった。","timestamp":1513846653000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/1F22/production/_99307970_gettyimages-483542422.jpg","path":"/cpsprodpb/1F22/production/_99307970_gettyimages-483542422.jpg","height":549,"width":976,"altText":"In this handout photo provided by the South Korean Defense Ministry on August 10, 2015, South Korean soldiers patrol near the scene where planted landmines exploded on August 4, maiming two soldiers on border patrol in the demilitarized zone dividing North and South Korea, on 9 August 2015 in Paju, South Korea.","copyrightHolder":"AFP/Getty Images","type":"image"},"id":"mock-id","type":"cps"},{"headlines":{"shortHeadline":"「北朝鮮に非核化強制できる準備を」　米大統領補佐官インタビュー","headline":"「北朝鮮に非核化強制できる準備を」　米大統領補佐官インタビュー"},"locators":{"assetUri":"/japanese/video-42408315","cpsUrn":"urn:bbc:content:assetUri:/japanese/video-42408315"},"summary":"H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。","timestamp":1513676944000,"cpsType":"MAP","media":{"id":"mock-id","subType":"primary","format":"video","externalId":"p05rhx5p","entityType":"Clip","caption":"「北朝鮮の非核化強制できる準備を」　米大統領補佐官インタビュー","type":"external_vpid"},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/F33A/production/_99266226_p05rhx9s.jpg","path":"/cpsprodpb/F33A/production/_99266226_p05rhx9s.jpg","height":576,"width":1024,"altText":"H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジョンウン）朝鮮労働党委員長率いる北朝鮮体制の協力がなかったとしても、必要となれば強制的に同国を非核化する準備ができていないくてはならないと述べた。","copyrightHolder":"H・R・マクマスター大統領補佐官（国家安全保障問題担当）はBBCとのインタビューで、金正恩（キム・ジ","type":"image"},"mediaType":"Video","id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"読み物・解説","uri":"/japanese/features_and_analysis","type":"simple"},"site":{"subType":"site","name":"Japanese","uri":"/japanese","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"【写真で見る】　北朝鮮の豪華スキーリゾート","blocks":[{"type":"fragment","model":{"text":"【写真で見る】　北朝鮮の豪華スキーリゾート","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1516697919000,"lastPublished":1516698468000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。","blocks":[{"type":"fragment","model":{"text":"韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"今年の冬季五輪は来月、韓国・平昌で開催されるが、予想外にも北朝鮮の五輪参加が決まり、北朝鮮でも練習や文化イベントが計画されている。韓国政府や大会関係者らが3日間の訪問で視察する場所の一つが馬息嶺スキー場だ。写真はいずれも昨年2月撮影。","blocks":[{"type":"fragment","model":{"text":"今年の冬季五輪は来月、韓国・平昌で開催されるが、予想外にも北朝鮮の五輪参加が決まり、北朝鮮でも練習や文化イベントが計画されている。韓国政府や大会関係者らが3日間の訪問で視察する場所の一つが馬息嶺スキー場だ。写真はいずれも昨年2月撮影。","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This photo taken on February 20, 2017 shows a general view of the Masikryong ski resort, near North Korea's east coast port city of Wonsan.","blocks":[{"type":"fragment","model":{"text":"This photo taken on February 20, 2017 shows a general view of the Masikryong ski resort, near North Korea's east coast port city of Wonsan.","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"4F38/production/_99708202_forbbconly.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"北朝鮮初のスキー場、馬息嶺は2013年に建設されたた。国内では北朝鮮の指導者、金正恩氏の主な偉業の一つとうたわれている。2017年2月撮影の写真から、近代的な施設の様子がうかがえる。韓国は合同練習のため、スキーの代表選手たちを馬息嶺に派遣する予定だ。","blocks":[{"type":"fragment","model":{"text":"北朝鮮初のスキー場、馬息嶺は2013年に建設されたた。国内では北朝鮮の指導者、金正恩氏の主な偉業の一つとうたわれている。2017年2月撮影の写真から、近代的な施設の様子がうかがえる。韓国は合同練習のため、スキーの代表選手たちを馬息嶺に派遣する予定だ。","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This photo taken on February 19, 2017 shows members of a 'ski camp' at the Masikryong ski resort","blocks":[{"type":"fragment","model":{"text":"This photo taken on February 19, 2017 shows members of a 'ski camp' at the Masikryong ski resort","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"C5DA/production/_99705605_b7014169-51e4-4bf1-b596-8fac5fb9719d.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"チケット売り場の価格表には、外国人旅行者用のリフトの1日パスとスキー用具の貸し出し金額が80ドル（約8900円）、北朝鮮人用が40ドル（約4400円）と書かれている。北朝鮮の平均的市民の給料約1カ月分だ。北朝鮮は旅行者から外貨を稼ぐため、このスキー場を建設した。","blocks":[{"type":"fragment","model":{"text":"チケット売り場の価格表には、外国人旅行者用のリフトの1日パスとスキー用具の貸し出し金額が80ドル（約8900円）、北朝鮮人用が40ドル（約4400円）と書かれている。北朝鮮の平均的市民の給料約1カ月分だ。北朝鮮は旅行者から外貨を稼ぐため、このスキー場を建設した。","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"In this photo taken on February 20, 2017, Kim Chol-Nam, 30, poses for a portrait at the ski hire desk","blocks":[{"type":"fragment","model":{"text":"In this photo taken on February 20, 2017, Kim Chol-Nam, 30, poses for a portrait at the ski hire desk","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"ECEA/production/_99705606_3b09cb57-e6ab-4a7e-b991-30c5dc875bf3.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"1400平方メートルのこのリゾートは、東部沿岸・元山市の近くにある。北朝鮮の対外宣伝サイト「朝鮮の今日」は、「世界最高のスキーリゾート」と呼ぶ。しかし人権団体は、この施設が強制労働者を使っている可能性があると指摘している。","blocks":[{"type":"fragment","model":{"text":"1400平方メートルのこのリゾートは、東部沿岸・元山市の近くにある。北朝鮮の対外宣伝サイト「朝鮮の今日」は、「世界最高のスキーリゾート」と呼ぶ。しかし人権団体は、この施設が強制労働者を使っている可能性があると指摘している。","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This photo taken on February 19, 2017 shows a general view of the lobby of the Masikryong ski resort","blocks":[{"type":"fragment","model":{"text":"This photo taken on February 19, 2017 shows a general view of the lobby of the Masikryong ski resort","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"113FA/production/_99705607_691799c1-f3bb-4398-b362-d78fdf7551cd.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"寝室をのぞいてみよう。北朝鮮にしては、ぜいたくな施設なのが分かる。","blocks":[{"type":"fragment","model":{"text":"寝室をのぞいてみよう。北朝鮮にしては、ぜいたくな施設なのが分かる。","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This photo taken on February 19, 2017 shows a room at the Masikryong ski resort,","blocks":[{"type":"fragment","model":{"text":"This photo taken on February 19, 2017 shows a room at the Masikryong ski resort,","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"13B0A/production/_99705608_20982054-3a29-4577-8713-0de7d3f39f1d.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"このリゾートには、スキーコースが10カ所ある。また、カナダのスノーモービル「スキードゥー」などの最新設備もあるようだ。しかし、だとすると、北朝鮮への機材提供を禁止する国連制裁との兼ね合いはどうなっているのか。","blocks":[{"type":"fragment","model":{"text":"このリゾートには、スキーコースが10カ所ある。また、カナダのスノーモービル「スキードゥー」などの最新設備もあるようだ。しかし、だとすると、北朝鮮への機材提供を禁止する国連制裁との兼ね合いはどうなっているのか。","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This photo taken on February 19, 2017 shows North Korean visitors posing on a snowmobile at the Masikryong ski resort,","blocks":[{"type":"fragment","model":{"text":"This photo taken on February 19, 2017 shows North Korean visitors posing on a snowmobile at the Masikryong ski resort,","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"1621A/production/_99705609_c4de76a0-c890-49e8-92dd-ee14ad95cacc.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"北朝鮮によると、総工費約3億ドル（約330億円）のこのリゾートの利用者は、毎年7万人。平昌冬季五輪は来月9日から25日まで予定されている。","blocks":[{"type":"fragment","model":{"text":"北朝鮮によると、総工費約3億ドル（約330億円）のこのリゾートの利用者は、毎年7万人。平昌冬季五輪は来月9日から25日まで予定されている。","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"In this photo taken on February 19, 2017, Pak Han-Song, 11, poses for a portrait on a beginner's slope at the Masikryong","blocks":[{"type":"fragment","model":{"text":"In this photo taken on February 19, 2017, Pak Han-Song, 11, poses for a portrait on a beginner's slope at the Masikryong","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"AFP/Getty Images","height":549,"locator":"0672/production/_99705610_e3b013a8-cd8e-4adc-b8eb-abeb57ac0126.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]}]}},"promo":{"headlines":{"shortHeadline":"【写真で見る】　北朝鮮の豪華スキーリゾート","headline":"【写真で見る】　北朝鮮の豪華スキーリゾート"},"locators":{"assetUri":"/japanese/features-and-analysis-42786589","cpsUrn":"urn:bbc:content:assetUri:japanese/features-and-analysis-42786589","curie":"http://www.bbc.co.uk/asset/87f2cb7c-c85a-9e4c-b90a-4e18789d256c"},"summary":"韓国政府関係者らが平昌冬季五輪に先立ち、北朝鮮の馬息嶺スキー場を訪問する見通しだ。","timestamp":1516697919000,"passport":{"taggings":[]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/9D58/production/_99708204_nkski.jpg","path":"/cpsprodpb/9D58/production/_99708204_nkski.jpg","height":576,"width":1024,"altText":"北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ","caption":"北朝鮮の豪華スキーリゾート　韓国関係者が訪問へ","copyrightHolder":"AFP/Getty Images","type":"image"},"id":"mock-id","type":"cps"}},"path":"/japanese/features-and-analysis-42786589","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [15]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="japanese"
+            src="http://localhost:7080/static/js/japanese-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

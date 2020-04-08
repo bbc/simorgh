@@ -1,0 +1,2929 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /pidgin/23248703 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="pcm"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="pcm"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; < > - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/pidgin/23248703"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; < > - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-09-13T15:31:44.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-11-20T12:24:25.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; &lt; &gt; - BBC News Pidgin
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/pidgin/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/pidgin/23248703"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/23248703","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/23248703","name":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >"},"headline":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","datePublished":"2019-09-13T15:31:44.000Z","dateModified":"2019-11-20T12:24:25.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    We don update our Privacy and Cookies Policy
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        OK
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Find out wetin don change
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Let us know say you agree to cookies
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    We use
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      cookies
+                    </a>
+                    to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Yes, I agree
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        No, cari me go settings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Waka go wetin de inside
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Plenti seshon
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nigeria
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Africa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    World
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Most popular
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Nigeria
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Africa
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/world"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    World
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/pidgin/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Most popular
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Pidgin, Pidgin - Domot, Pidgin - MAP, Pidgin - Domot - MAP, Pidgin - Opinion-category","uid":50924,"title":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &
+          < >","virtualReferrer":"\${documentReferrer}","contentType":"article-media-asset"}}
+        </script>
+      </amp-analytics>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&+
+          <+>+-+BBC+News+Pidgin]&x11=[2019-09-13T15:31:44.000Z]&x12=[2019-11-20T12:24:25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+      >
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; &lt; &gt;
+        </h1>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+              <amp-iframe sandbox="allow-scripts allow-same-origin"
+                          layout="fill"
+                          scrolling="no"
+                          frameborder="0"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"
+                          title="Media player"
+                          allowfullscreen="allowfullscreen"
+              >
+                <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 800w"
+                         layout="fill"
+                         src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"
+                         placeholder="true"
+                         alt
+                         height="16"
+                         width="9"
+                         attribution
+                >
+                </amp-img>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 800w"
+                         alt
+                         src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"
+                         aria-hidden="true"
+                         class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    >
+                    <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        Dem no support media player for your device
+                      </strong>
+                    </div>
+                  </div>
+                </noscript>
+              </amp-iframe>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <strong aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+          >
+            Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; &lt; &gt;
+          </strong>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG">
+          <time datetime="2019-09-13"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            13 September 2019
+          </time>
+          <div>
+            <time datetime="2019-11-20"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
+            >
+              New Informate 20 November 2019
+            </time>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              This is an introduction in bold. &amp; &lt; &gt;
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <h2 id="This-is-a-heading-<->"
+              tabindex="-1"
+              class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+          >
+            This is a heading &amp; &lt; &gt;
+          </h2>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <h2 id="This-is-a-subheading-<->"
+              tabindex="-1"
+              class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+          >
+            This is a subheading &amp; &lt; &gt;
+          </h2>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <h2 id="This-is-a-crosshead-<->"
+              tabindex="-1"
+              class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+          >
+            This is a crosshead &amp; &lt; &gt;
+          </h2>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Bulleted list:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Numbered list:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Lorem ipsum dolor sit amet,
+            <b>
+              consectetur
+            </b>
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            <b>
+              ullamco laboris nisi ut aliquip
+            </b>
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              in voluptate velit esse cillum
+            </i>
+            dolore "eu fugiat nulla" pariatur.
+            <a href="https://bbc.com/pidgin"
+               class="InlineLink-hkwpaz-0 idscKS"
+            >
+              Excepteur
+            </a>
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Testing special characters: !"£$%^&amp;*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Table:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Social media embed:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Quote box:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Correspondent quote box:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Fact box:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            ­
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Lorem ipsum
+            <a href="https://bbc.com/pidgin"
+               class="InlineLink-hkwpaz-0 idscKS"
+            >
+              dolor sit amet
+            </a>
+            , consectetur adipiscing elit
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="psammead"
+                           attribution="Google"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg"
+                           height="576"
+                           width="1024"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Google
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Psammead was named after the mythical sand creature
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="butterfly"
+                           attribution="Butterfly person"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg"
+                           height="360"
+                           width="640"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Butterfly person
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    A pretty little butterfly &amp; &lt; &gt;
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                v3 draft
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is transmission info
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is the footer
+          </p>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 BeqZV"
+                    >
+                      Another thing we de for inside dis tori
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg"
+                                 height="351"
+                                 width="624"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        Police Arrest 3 ontop Anambra Church Attack
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+                    </p>
+                    <time datetime="2017-08-08"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      8th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="Two homosexual men"
+                                 attribution="AFP"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsdevpb/13644/test/_63582497_black-gay.jpg"
+                                 height="351"
+                                 width="624"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+                    </p>
+                    <time datetime="2017-08-08"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      8th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Image gallery
+                            ,
+                          </span>
+                          <span>
+                            Kenya Elections Pictures: 8 August 2017
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      This na some of the picture wey our eye see as Kenya people go vote for election today
+                    </p>
+                    <time datetime="2017-08-08"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      8th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <amp-img alt="BBC MInute"
+                                 attribution="BBC"
+                                 layout="responsive"
+                                 src="https://ichef.bbci.co.uk/news/660/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png"
+                                 height="576"
+                                 width="1024"
+                        >
+                        </amp-img>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 13 12"
+                                 width="13px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                            >
+                              <path d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z">
+                              </path>
+                              <path d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z">
+                              </path>
+                            </svg>
+                            <time datetime="PT15S"
+                                  class="StyledTime-jpt91x-0 bYtFje"
+                            >
+                              0:15
+                            </time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Audio
+                            ,
+                          </span>
+                          <span>
+                            BBC News Pidgin One Minute News
+                          </span>
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            , 0,15
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      All di local and world tori wey you suppose know in 60 seconds!
+                    </p>
+                    <time datetime="2017-08-17"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      17th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-48528766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Why you fit trust BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    How dem dey take use am
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    As e concern BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-42188215"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Call BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. De external site no concern BBC.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  De way wey we de take go external link.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /pidgin/23248703 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="pcm"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="pcm"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; < > - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/pidgin/23248703"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="connectionAltText"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; < > - BBC News Pidgin"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-09-13T15:31:44.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-11-20T12:24:25.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; &lt; &gt; - BBC News Pidgin
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/pidgin/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/pidgin/23248703"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/pidgin/23248703.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/23248703","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/23248703","name":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >"},"headline":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","datePublished":"2019-09-13T15:31:44.000Z","dateModified":"2019-11-20T12:24:25.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Waka go wetin de inside
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Plenti seshon
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Nigeria
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Africa
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/world"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      World
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Video
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Sport
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Entertainment
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/pidgin/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Most popular
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Nigeria
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Africa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/world"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    World
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Video
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Sport
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Entertainment
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/pidgin/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Most popular
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.media_asset.23248703.page&amp;x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&amp;+<+>+-+BBC+News+Pidgin]&amp;x11=[2019-09-13T15:31:44.000Z]&amp;x12=[2019-11-20T12:24:25.000Z]&amp;x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&amp;x17=[Opinion]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-oo43dv-0 jHslwF"
+      >
+        <h1 id="content"
+            tabindex="-1"
+            class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+        >
+          Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; &lt; &gt;
+        </h1>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-7tc6v2-0 kvwPKI">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                      title="Media player"
+                      allow="autoplay; fullscreen"
+                      scrolling="no"
+                      allowfullscreen
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
+              >
+              </iframe>
+              <noscript>
+                <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"
+                       aria-hidden="true"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                  <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                    <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                      Dem no support media player for your device
+                    </strong>
+                  </div>
+                </div>
+              </noscript>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <strong aria-hidden="true"
+                  class="Headline-sc-1kh1qhu-0 hzbExq StyledFauxHeadline-sc-15zvetq-0 jJBkMr"
+          >
+            Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew &amp; &lt; &gt;
+          </strong>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-oo43dv-1 jqCfrG">
+          <time datetime="2019-09-13"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            13 September 2019
+          </time>
+          <div>
+            <time datetime="2019-11-20"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
+            >
+              New Informate 20 November 2019
+            </time>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            <b>
+              This is an introduction in bold. &amp; &lt; &gt;
+            </b>
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <h2 id="This-is-a-heading-<->"
+              tabindex="-1"
+              class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+          >
+            This is a heading &amp; &lt; &gt;
+          </h2>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <h2 id="This-is-a-subheading-<->"
+              tabindex="-1"
+              class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+          >
+            This is a subheading &amp; &lt; &gt;
+          </h2>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <h2 id="This-is-a-crosshead-<->"
+              tabindex="-1"
+              class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+          >
+            This is a crosshead &amp; &lt; &gt;
+          </h2>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is regular paragraph text. "Lorem ipsum dolor sit amet", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Bulleted list:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Numbered list:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="http://www.bbc.com/afrique/23248423"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  &lt;Media Asset Page&gt;
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                <a href="https://bbc.com/pidgin"
+                   class="InlineLink-hkwpaz-0 idscKS"
+                >
+                  this is the link text
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Lorem ipsum dolor sit amet,
+            <b>
+              consectetur
+            </b>
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            <b>
+              ullamco laboris nisi ut aliquip
+            </b>
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            <i class="italic-sc-1a0jt7x-0 bbwGZK">
+              in voluptate velit esse cillum
+            </i>
+            dolore "eu fugiat nulla" pariatur.
+            <a href="https://bbc.com/pidgin"
+               class="InlineLink-hkwpaz-0 idscKS"
+            >
+              Excepteur
+            </a>
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Testing special characters: !"£$%^&amp;*()_+=-{}[]:@~;'#&lt;&gt;?,./\\\`\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Table:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Social media embed:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Quote box:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Correspondent quote box:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Fact box:
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            ­
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Lorem ipsum
+            <a href="https://bbc.com/pidgin"
+               class="InlineLink-hkwpaz-0 idscKS"
+            >
+              dolor sit amet
+            </a>
+            , consectetur adipiscing elit
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg 800w"
+                         alt="psammead"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg"
+                         width="1024"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Google
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    Psammead was named after the mythical sand creature
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg 640w"
+                         alt="butterfly"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg"
+                         width="640"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wia dis foto come from,
+                    </span>
+                    <span lang="en-GB">
+                      Butterfly person
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Wetin we call dis foto,
+                  </span>
+                  <p>
+                    A pretty little butterfly &amp; &lt; &gt;
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <div class="Wrapper-e2169q-0 kopXQT">
+            <ul dir="ltr"
+                role="list"
+                class="BulletedList-sc-13z0d8v-0 zkoYd"
+            >
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                sunt in culpa qui officia deserunt mollit anim id est laborum
+              </li>
+              <li role="listitem"
+                  class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+              >
+                v3 draft
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is transmission info
+          </p>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            This is the footer
+          </p>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 jsgdXU">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 BeqZV"
+                    >
+                      Another thing we de for inside dis tori
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <ul dir="ltr"
+                class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                role="list"
+            >
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        Police Arrest 3 ontop Anambra Church Attack
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp
+                    </p>
+                    <time datetime="2017-08-08"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      8th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.
+                    </p>
+                    <time datetime="2017-08-08"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      8th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 32 26"
+                                 width="16px"
+                                 height="13px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 PhotoMediaIcon-sc-10lpekz-3 eqyZnv"
+                            >
+                              <path d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z">
+                              </path>
+                              <circle cx="20"
+                                      cy="14.02"
+                                      r="5.5"
+                              >
+                              </circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Image gallery
+                            ,
+                          </span>
+                          <span>
+                            Kenya Elections Pictures: 8 August 2017
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      This na some of the picture wey our eye see as Kenya people go vote for election today
+                    </p>
+                    <time datetime="2017-08-08"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      8th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+              <li dir="ltr"
+                  class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
+                  role="listitem"
+              >
+                <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                  <div dir="ltr"
+                       class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                  >
+                    <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                      <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                        <div class="lazyload-placeholder">
+                        </div>
+                      </div>
+                      <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                        <div aria-hidden="true"
+                             dir="ltr"
+                             class="StyledMediaIndicator-sc-1p6h86b-0 iRQPYq"
+                        >
+                          <div class="FlexWrapper-sc-1p6h86b-1 fQsOMp">
+                            <svg viewbox="0 0 13 12"
+                                 width="13px"
+                                 height="12px"
+                                 focusable="false"
+                                 aria-hidden="true"
+                                 class="MediaIcon-sc-10lpekz-0 AudioMediaIcon-sc-10lpekz-2 jqcLqP"
+                            >
+                              <path d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z">
+                              </path>
+                              <path d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z">
+                              </path>
+                            </svg>
+                            <time datetime="PT15S"
+                                  class="StyledTime-jpt91x-0 bYtFje"
+                            >
+                              0:15
+                            </time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div dir="ltr"
+                       class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                  >
+                    <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
+                      <a href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                         class="Link-sc-1dvfmi3-5 yQgSu"
+                      >
+                        <span role="text">
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            Audio
+                            ,
+                          </span>
+                          <span>
+                            BBC News Pidgin One Minute News
+                          </span>
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            , 0,15
+                          </span>
+                        </span>
+                      </a>
+                    </h3>
+                    <p class="Summary-sc-1dvfmi3-4 eaCWBB">
+                      All di local and world tori wey you suppose know in 60 seconds!
+                    </p>
+                    <time datetime="2017-08-17"
+                          class="StyledTimestamp-um718p-0 kVWTyt"
+                    >
+                      17th August 2017
+                    </time>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/pidgin"
+               class="StyledLink-m3awbo-2 cRiIvG"
+            >
+              <svg height="24"
+                   viewbox="0 0 238 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 kxNqFm"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM185.18 16.87V6.28h3.35a3.46 3.46 0 0 1 2.41.82 2.82 2.82 0 0 1 .9 2.19 2.94 2.94 0 0 1-.46 1.63 2.64 2.64 0 0 1-1.26 1 6.42 6.42 0 0 1-2.3.32h-1.12v4.59zm3.09-9.24h-1.57v3.31h1.66a2.1 2.1 0 0 0 1.42-.44 1.56 1.56 0 0 0 .5-1.25q0-1.62-2.01-1.62zM194 6.3h1.51v10.57H194zM198.78 16.85V6.3h3.56a7.51 7.51 0 0 1 3.41.65 4.88 4.88 0 0 1 2 1.9 5.29 5.29 0 0 1 .74 2.74 5.18 5.18 0 0 1-.41 2 5.23 5.23 0 0 1-3 2.85 5.33 5.33 0 0 1-1.1.31 14.65 14.65 0 0 1-1.91.08zm3.41-9.21h-1.89v7.86h1.94a7.75 7.75 0 0 0 1.76-.16 4.12 4.12 0 0 0 1-.39 3.59 3.59 0 0 0 .77-.59 3.92 3.92 0 0 0 1.12-2.87 3.63 3.63 0 0 0-1.15-2.78 3.68 3.68 0 0 0-1-.66 4.07 4.07 0 0 0-1-.34 10.57 10.57 0 0 0-1.56-.07zM216.8 11.66h3.55v4.48a9.68 9.68 0 0 1-3.87.85 5.75 5.75 0 0 1-4.2-1.53 5.07 5.07 0 0 1-1.57-3.78 5.26 5.26 0 0 1 1.63-3.94 5.63 5.63 0 0 1 4.08-1.57 7.22 7.22 0 0 1 1.7.19 13.82 13.82 0 0 1 2 .71V8.6a7.43 7.43 0 0 0-3.75-1.1 4 4 0 0 0-2.92 1.18 3.93 3.93 0 0 0-1.19 2.9 3.9 3.9 0 0 0 1.19 2.94 4.23 4.23 0 0 0 3.06 1.14 7.12 7.12 0 0 0 2.17-.42h.14V13h-2zM223.5 6.3h1.5v10.57h-1.5zM236.65 6.3h1.44v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Pidgin
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-48528766"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Why you fit trust BBC News
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    How dem dey take use am
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    As e concern BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/pidgin/institutional-42188215"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Call BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. De external site no concern BBC.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  De way wey we de take go external link.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1568388704000,"lastPublished":1574252665000,"lastUpdated":1574252675611,"analyticsLabels":{"counterName":"pidgin.media_asset.23248703.page","cps_asset_id":"23248703","cps_asset_type":"map"},"blockTypes":["media","paragraph","heading","subheading","crosshead","list","table","social_embed","quote","pullOut","image"],"createdBy":"pidgin-v6","id":"mock-id","includeComments":false,"language":"pcm","locators":{"assetUri":"/pidgin/23248703","cpsUrn":"urn:bbc:content:assetUri:pidgin/23248703","curie":"http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"},"options":{"allowDateStamp":true,"allowHeadline":false,"allowPrintingSharingLinks":true,"allowRelatedStoriesBox":true,"allowRightHandSide":true,"hasNewsTracker":false,"includeComments":false,"isBreakingNews":false,"isFactCheck":false,"isIgorSeoTagsEnabled":false,"isKeyContent":false},"passport":{"campaigns":[{"campaignId":"5ad8625ac93a9f000eecb253","campaignName":"Inspire me"},{"campaignId":"5ad86285c93a9f000eecb256","campaignName":"Give me perspective"},{"campaignId":"5ad86291c93a9f000eecb257","campaignName":"Keep me on trend"}],"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion","categoryName":"Opinion"},"taggings":[]},"tags":{},"type":"MAP","version":"v1.1.3"},"relatedContent":{"groups":[{"promos":[{"cpsType":"STY","headlines":{"headline":"Police Arrest 3 ontop Anambra Church Attack","shortHeadline":"Anambra Church: Police Arrest 3"},"id":"mock-id","indexImage":{"altText":"One gun enter St. Phillips Church for Ozubulu, Anambra and shoot and kill 11 people, injure 18 others","caption":"Di attack happen for inside St. Philip Catholic Chirch Ozubulu","copyrightHolder":"BBC","height":351,"href":"http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg","id":"mock-id","path":"/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg","subType":"index","type":"image","width":624},"locators":{"assetUri":"/pidgin/tori-23145776","cpsUrn":"urn:bbc:content:assetUri:/pidgin/tori-23145776"},"summary":"Governor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp","timestamp":1502217403000,"type":"cps"},{"cpsType":"STY","headlines":{"headline":"Lagos 'Gay' men Appear for Court, say Dem no dey Guilty","shortHeadline":"Lagos don carry 'gay' men go court"},"id":"mock-id","indexImage":{"altText":"Two homosexual men","caption":"Homosexuality dey illegal for Nigeria","copyrightHolder":"AFP","height":351,"href":"http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg","id":"mock-id","path":"/cpsdevpb/13644/test/_63582497_black-gay.jpg","subType":"index","type":"image","width":624},"locators":{"assetUri":"/pidgin/tori-23143754","cpsUrn":"urn:bbc:content:assetUri:/pidgin/tori-23143754"},"summary":"The men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.","timestamp":1502195579000,"type":"cps"},{"cpsType":"PGL","headlines":{"headline":"Kenya Elections Pictures: 8 August 2017","shortHeadline":"Kenya Decides 2017 in Pictures"},"id":"mock-id","locators":{"assetUri":"/pidgin/23146654","cpsUrn":"urn:bbc:content:assetUri:/pidgin/23146654"},"summary":"This na some of the picture wey our eye see as Kenya people go vote for election today","timestamp":1502222360000,"type":"cps"},{"cpsType":"MAP","headlines":{"headline":"BBC News Pidgin One Minute News","shortHeadline":"BBC News Pidgin One Minute News"},"id":"mock-id","indexImage":{"altText":"BBC MInute","caption":"BBC Pidgin minute","copyrightHolder":"BBC","height":576,"href":"http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png","id":"mock-id","path":"/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png","subType":"index","type":"image","width":1024},"locators":{"assetUri":"/pidgin/media-23147054","cpsUrn":"urn:bbc:content:assetUri:/pidgin/media-23147054"},"media":{"advertising":true,"caption":"The Wold's most interesting stories","embedding":false,"format":"audio","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg","subType":"clip","synopses":{"long":"The Wold's most interesting stories","medium":"The Wold's most interesting stories","short":"The Wold's most interesting stories"},"title":"BBC News Piding One Minute News","type":"media","versions":[{"availableFrom":1502288512000,"availableTerritories":{"nonUk":true,"uk":true,"world":false},"duration":15,"durationISO8601":"PT15S","types":["Original"],"versionId":"p01cqyct","warnings":{}}]},"mediaType":"Audio","summary":"All di local and world tori wey you suppose know in 60 seconds!","timestamp":1502963087000,"type":"cps"}],"type":"see-alsos"}],"section":{"name":"Domot","subType":"index","type":"simple","uri":"/pidgin/front_page"},"site":{"name":"BBC Pidgin","subType":"site","type":"simple","uri":"/pidgin"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","blocks":[{"type":"fragment","model":{"text":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"visuallyHiddenHeadline","id":"mock-id","position":[1]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01kx42s","blocks":[{"type":"aresMedia","model":{"blocks":[{"type":"aresMediaMetadata","blockId":"urn:bbc:ares::clip:p01kx42s","model":{"advertising":true,"embedding":true,"format":"audio_video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg","subType":"clip","synopses":{"short":"short"},"title":"alt-text world service clip","versions":[{"availableFrom":1545304011000,"availableTerritories":{"nonUk":true,"uk":true,"world":false},"duration":5,"durationISO8601":"PT5S","types":["Original"],"versionId":"p01kx42v","warnings":{}}],"available":true},"id":"mock-id","position":[2,1,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"locator":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","originCode":"pips"},"id":"mock-id","position":[2,1,2,1]}]},"id":"mock-id","position":[2,1,2]}]},"id":"mock-id","position":[2,1]}]},"id":"mock-id","position":[2]},{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","blocks":[{"type":"fragment","model":{"text":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","attributes":[]},"id":"mock-id","position":[3,1,1,1]}]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"type":"fauxHeadline","id":"mock-id","position":[3]},{"type":"timestamp","model":{"firstPublished":1568388704000,"lastPublished":1574252665000},"id":"mock-id","position":[4]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is an introduction in bold. & \\u003c >","blocks":[{"type":"fragment","model":{"text":"This is an introduction in bold. & \\u003c >","attributes":["bold"]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]}]},"id":"mock-id","position":[5]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a heading & \\u003c >","blocks":[{"type":"fragment","model":{"text":"This is a heading & \\u003c >","attributes":[]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a subheading & \\u003c >","blocks":[{"type":"fragment","model":{"text":"This is a subheading & \\u003c >","attributes":[]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]}]},"id":"mock-id","position":[7]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a crosshead & \\u003c >","blocks":[{"type":"fragment","model":{"text":"This is a crosshead & \\u003c >","attributes":[]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]}]},"id":"mock-id","position":[8]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is regular paragraph text. \\"Lorem ipsum dolor sit amet\\", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","blocks":[{"type":"fragment","model":{"text":"This is regular paragraph text. \\"Lorem ipsum dolor sit amet\\", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","attributes":[]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]}]},"id":"mock-id","position":[9]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Bulleted list:","blocks":[{"type":"fragment","model":{"text":"Bulleted list:","attributes":[]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]}]},"id":"mock-id","position":[10]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\u003cMedia Asset Page>","blocks":[{"type":"urlLink","model":{"text":"\\u003cMedia Asset Page>","locator":"http://www.bbc.com/afrique/23248423","blocks":[{"type":"fragment","model":{"text":"\\u003cMedia Asset Page>","attributes":[]},"id":"mock-id","position":[11,1,1,1,1,1]}],"isExternal":false},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\u003cMedia Asset Page>","blocks":[{"type":"urlLink","model":{"text":"\\u003cMedia Asset Page>","locator":"http://www.bbc.com/afrique/23248423","blocks":[{"type":"fragment","model":{"text":"\\u003cMedia Asset Page>","attributes":[]},"id":"mock-id","position":[11,1,2,1,1,1]}],"isExternal":false},"id":"mock-id","position":[11,1,2,1,1]}]},"id":"mock-id","position":[11,1,2,1]}]},"id":"mock-id","position":[11,1,2]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\u003cMedia Asset Page>","blocks":[{"type":"urlLink","model":{"text":"\\u003cMedia Asset Page>","locator":"http://www.bbc.com/afrique/23248423","blocks":[{"type":"fragment","model":{"text":"\\u003cMedia Asset Page>","attributes":[]},"id":"mock-id","position":[11,1,3,1,1,1]}],"isExternal":false},"id":"mock-id","position":[11,1,3,1,1]}]},"id":"mock-id","position":[11,1,3,1]}]},"id":"mock-id","position":[11,1,3]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"this is the link text","blocks":[{"type":"urlLink","model":{"text":"this is the link text","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"this is the link text","attributes":[]},"id":"mock-id","position":[11,1,4,1,1,1]}],"isExternal":false},"id":"mock-id","position":[11,1,4,1,1]}]},"id":"mock-id","position":[11,1,4,1]}]},"id":"mock-id","position":[11,1,4]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"this is the link text","blocks":[{"type":"urlLink","model":{"text":"this is the link text","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"this is the link text","attributes":[]},"id":"mock-id","position":[11,1,5,1,1,1]}],"isExternal":false},"id":"mock-id","position":[11,1,5,1,1]}]},"id":"mock-id","position":[11,1,5,1]}]},"id":"mock-id","position":[11,1,5]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"this is the link text","blocks":[{"type":"urlLink","model":{"text":"this is the link text","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"this is the link text","attributes":[]},"id":"mock-id","position":[11,1,6,1,1,1]}],"isExternal":false},"id":"mock-id","position":[11,1,6,1,1]}]},"id":"mock-id","position":[11,1,6,1]}]},"id":"mock-id","position":[11,1,6]}]},"type":"unorderedList","id":"mock-id","position":[11,1]}]},"type":"text","id":"mock-id","position":[11]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Numbered list:","blocks":[{"type":"fragment","model":{"text":"Numbered list:","attributes":[]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]}]},"id":"mock-id","position":[12]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\u003cMedia Asset Page>","blocks":[{"type":"urlLink","model":{"text":"\\u003cMedia Asset Page>","locator":"http://www.bbc.com/afrique/23248423","blocks":[{"type":"fragment","model":{"text":"\\u003cMedia Asset Page>","attributes":[]},"id":"mock-id","position":[13,1,1,1,1,1]}],"isExternal":false},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\u003cMedia Asset Page>","blocks":[{"type":"urlLink","model":{"text":"\\u003cMedia Asset Page>","locator":"http://www.bbc.com/afrique/23248423","blocks":[{"type":"fragment","model":{"text":"\\u003cMedia Asset Page>","attributes":[]},"id":"mock-id","position":[13,1,2,1,1,1]}],"isExternal":false},"id":"mock-id","position":[13,1,2,1,1]}]},"id":"mock-id","position":[13,1,2,1]}]},"id":"mock-id","position":[13,1,2]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\u003cMedia Asset Page>","blocks":[{"type":"urlLink","model":{"text":"\\u003cMedia Asset Page>","locator":"http://www.bbc.com/afrique/23248423","blocks":[{"type":"fragment","model":{"text":"\\u003cMedia Asset Page>","attributes":[]},"id":"mock-id","position":[13,1,3,1,1,1]}],"isExternal":false},"id":"mock-id","position":[13,1,3,1,1]}]},"id":"mock-id","position":[13,1,3,1]}]},"id":"mock-id","position":[13,1,3]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"this is the link text","blocks":[{"type":"urlLink","model":{"text":"this is the link text","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"this is the link text","attributes":[]},"id":"mock-id","position":[13,1,4,1,1,1]}],"isExternal":false},"id":"mock-id","position":[13,1,4,1,1]}]},"id":"mock-id","position":[13,1,4,1]}]},"id":"mock-id","position":[13,1,4]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"this is the link text","blocks":[{"type":"urlLink","model":{"text":"this is the link text","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"this is the link text","attributes":[]},"id":"mock-id","position":[13,1,5,1,1,1]}],"isExternal":false},"id":"mock-id","position":[13,1,5,1,1]}]},"id":"mock-id","position":[13,1,5,1]}]},"id":"mock-id","position":[13,1,5]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"this is the link text","blocks":[{"type":"urlLink","model":{"text":"this is the link text","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"this is the link text","attributes":[]},"id":"mock-id","position":[13,1,6,1,1,1]}],"isExternal":false},"id":"mock-id","position":[13,1,6,1,1]}]},"id":"mock-id","position":[13,1,6,1]}]},"id":"mock-id","position":[13,1,6]}]},"type":"orderedList","id":"mock-id","position":[13,1]}]},"type":"text","id":"mock-id","position":[13]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore \\"eu fugiat nulla\\" pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","blocks":[{"type":"fragment","model":{"text":"Lorem ipsum dolor sit amet, ","attributes":[]},"id":"mock-id","position":[14,1,1]},{"type":"fragment","model":{"text":"consectetur","attributes":["bold"]},"id":"mock-id","position":[14,1,2]},{"type":"fragment","model":{"text":" adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation","attributes":[]},"id":"mock-id","position":[14,1,3]},{"type":"fragment","model":{"text":" ullamco laboris nisi ut aliquip ","attributes":["bold"]},"id":"mock-id","position":[14,1,4]},{"type":"fragment","model":{"text":"ex ea commodo consequat. Duis aute irure dolor in reprehenderit","attributes":[]},"id":"mock-id","position":[14,1,5]},{"type":"fragment","model":{"text":" in voluptate velit esse cillum ","attributes":["italic"]},"id":"mock-id","position":[14,1,6]},{"type":"fragment","model":{"text":"dolore \\"eu fugiat nulla\\" pariatur. ","attributes":[]},"id":"mock-id","position":[14,1,7]},{"type":"urlLink","model":{"text":"Excepteur","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":"Excepteur","attributes":[]},"id":"mock-id","position":[14,1,8,1]}],"isExternal":false},"id":"mock-id","position":[14,1,8]},{"type":"fragment","model":{"text":" sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","attributes":[]},"id":"mock-id","position":[14,1,9]}]},"id":"mock-id","position":[14,1]}]},"id":"mock-id","position":[14]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Testing special characters: !\\"£$%^&*()_+=-{}[]:@~;'#\\u003c>?,./\\\\\`\\\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ","blocks":[{"type":"fragment","model":{"text":"Testing special characters: !\\"£$%^&*()_+=-{}[]:@~;'#\\u003c>?,./\\\\\`\\\\# 7.7 E 2₉₈₇₆₅₄₃₂₁₀⁹⁸⁷⁶⁵⁴³²¹⁰ⁿ☆★ŷŶŵŴÿþýüûúùø÷öõôóòñðïîíìëêéèçæåäãâáßÞÝÜÛÚÙØ×ÖÕÔÓÒÑÐÏÎÍÌËÊÉÈ","attributes":[]},"id":"mock-id","position":[15,1,1]}]},"id":"mock-id","position":[15,1]}]},"id":"mock-id","position":[15]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#","blocks":[{"type":"fragment","model":{"text":"ÇÆÆÅÄÃÂÁÀ¿¾½¼»º¸·¶µ´±°¯®¬«ª©¨§¦¥¤£¢¡ ~#","attributes":[]},"id":"mock-id","position":[16,1,1]}]},"id":"mock-id","position":[16,1]}]},"id":"mock-id","position":[16]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Table:","blocks":[{"type":"fragment","model":{"text":"Table:","attributes":[]},"id":"mock-id","position":[17,1,1]}]},"id":"mock-id","position":[17,1]}]},"id":"mock-id","position":[17]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Social media embed:","blocks":[{"type":"fragment","model":{"text":"Social media embed:","attributes":[]},"id":"mock-id","position":[18,1,1]}]},"id":"mock-id","position":[18,1]}]},"id":"mock-id","position":[18]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Quote box:","blocks":[{"type":"fragment","model":{"text":"Quote box:","attributes":[]},"id":"mock-id","position":[19,1,1]}]},"id":"mock-id","position":[19,1]}]},"id":"mock-id","position":[19]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Correspondent quote box:","blocks":[{"type":"fragment","model":{"text":"Correspondent quote box:","attributes":[]},"id":"mock-id","position":[20,1,1]}]},"id":"mock-id","position":[20,1]}]},"id":"mock-id","position":[20]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Fact box:","blocks":[{"type":"fragment","model":{"text":"Fact box:","attributes":[]},"id":"mock-id","position":[21,1,1]}]},"id":"mock-id","position":[21,1]}]},"id":"mock-id","position":[21]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"­","blocks":[{"type":"fragment","model":{"text":"­","attributes":[]},"id":"mock-id","position":[22,1,1]}]},"id":"mock-id","position":[22,1]}]},"id":"mock-id","position":[22]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","blocks":[{"type":"fragment","model":{"text":"Lorem ipsum","attributes":[]},"id":"mock-id","position":[23,1,1]},{"type":"urlLink","model":{"text":" dolor sit amet","locator":"https://bbc.com/pidgin","blocks":[{"type":"fragment","model":{"text":" dolor sit amet","attributes":[]},"id":"mock-id","position":[23,1,2,1]}],"isExternal":false},"id":"mock-id","position":[23,1,2]},{"type":"fragment","model":{"text":", consectetur adipiscing elit","attributes":[]},"id":"mock-id","position":[23,1,3]}]},"id":"mock-id","position":[23,1]}]},"id":"mock-id","position":[23]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Psammead was named after the mythical sand creature","blocks":[{"type":"fragment","model":{"text":"Psammead was named after the mythical sand creature","attributes":[]},"id":"mock-id","position":[24,1,1,1,1]}]},"id":"mock-id","position":[24,1,1,1]}]},"id":"mock-id","position":[24,1,1]}]},"id":"mock-id","position":[24,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"psammead","blocks":[{"type":"fragment","model":{"text":"psammead","attributes":[]},"id":"mock-id","position":[24,2,1,1,1]}]},"id":"mock-id","position":[24,2,1,1]}]},"id":"mock-id","position":[24,2,1]}]},"id":"mock-id","position":[24,2]},{"type":"rawImage","model":{"copyrightHolder":"Google","height":576,"locator":"5426/test/_63724512_psammead-closeup.jpg","originCode":"cpsdevpb","width":1024},"id":"mock-id","position":[24,3]}]},"id":"mock-id","position":[24]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"A pretty little butterfly & \\u003c >","blocks":[{"type":"fragment","model":{"text":"A pretty little butterfly & \\u003c >","attributes":[]},"id":"mock-id","position":[25,1,1,1,1]}]},"id":"mock-id","position":[25,1,1,1]}]},"id":"mock-id","position":[25,1,1]}]},"id":"mock-id","position":[25,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"butterfly","blocks":[{"type":"fragment","model":{"text":"butterfly","attributes":[]},"id":"mock-id","position":[25,2,1,1,1]}]},"id":"mock-id","position":[25,2,1,1]}]},"id":"mock-id","position":[25,2,1]}]},"id":"mock-id","position":[25,2]},{"type":"rawImage","model":{"copyrightHolder":"Butterfly person","height":360,"locator":"292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg","originCode":"cpsdevpb","width":640},"id":"mock-id","position":[25,3]}]},"id":"mock-id","position":[25]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"sunt in culpa qui officia deserunt mollit anim id est laborum","blocks":[{"type":"fragment","model":{"text":"sunt in culpa qui officia deserunt mollit anim id est laborum","attributes":[]},"id":"mock-id","position":[26,1,1,1,1]}]},"id":"mock-id","position":[26,1,1,1]}]},"id":"mock-id","position":[26,1,1]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"sunt in culpa qui officia deserunt mollit anim id est laborum","blocks":[{"type":"fragment","model":{"text":"sunt in culpa qui officia deserunt mollit anim id est laborum","attributes":[]},"id":"mock-id","position":[26,1,2,1,1]}]},"id":"mock-id","position":[26,1,2,1]}]},"id":"mock-id","position":[26,1,2]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"sunt in culpa qui officia deserunt mollit anim id est laborum","blocks":[{"type":"fragment","model":{"text":"sunt in culpa qui officia deserunt mollit anim id est laborum","attributes":[]},"id":"mock-id","position":[26,1,3,1,1]}]},"id":"mock-id","position":[26,1,3,1]}]},"id":"mock-id","position":[26,1,3]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"v3 draft","blocks":[{"type":"fragment","model":{"text":"v3 draft","attributes":[]},"id":"mock-id","position":[26,1,4,1,1]}]},"id":"mock-id","position":[26,1,4,1]}]},"id":"mock-id","position":[26,1,4]}]},"type":"unorderedList","id":"mock-id","position":[26,1]}]},"type":"text","id":"mock-id","position":[26]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is transmission info ","blocks":[{"type":"fragment","model":{"text":"This is transmission info ","attributes":[]},"id":"mock-id","position":[27,1,1]}]},"id":"mock-id","position":[27,1]}]},"id":"mock-id","position":[27]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is the footer ","blocks":[{"type":"fragment","model":{"text":"This is the footer ","attributes":[]},"id":"mock-id","position":[28,1,1]}]},"id":"mock-id","position":[28,1]}]},"id":"mock-id","position":[28]}]}},"promo":{"headlines":{"headline":"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & \\u003c >","shortHeadline":"First CPS Media Asset Pages Appear on Heloo"},"id":"mock-id","indexImage":{"altText":"connectionAltText","copyrightHolder":"BBC","height":360,"href":"http://b.files.bbci.co.uk/6FC4/test/_63721682_p01kx435.jpg","id":"mock-id","path":"/cpsdevpb/6FC4/test/_63721682_p01kx435.jpg","subType":"index","type":"image","width":640},"locators":{"assetUri":"/pidgin/23248703","cpsUrn":"urn:bbc:content:assetUri:pidgin/23248703","curie":"http://www.bbc.co.uk/asset/5679389a-3ea6-0b40-9de4-f4d33d6bcd9f"},"media":{"advertising":true,"caption":"short","embedding":true,"format":"video","id":"mock-id","imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01kx435.jpg","subType":"clip","synopses":{"short":"short"},"title":"alt-text world service clip","type":"media","versions":[{"availableFrom":1545304011000,"availableTerritories":{"nonUk":true,"uk":true,"world":false},"duration":5,"durationISO8601":"PT5S","types":["Original"],"versionId":"p01kx42v","warnings":{}}]},"passport":{"campaigns":[{"campaignId":"5ad8625ac93a9f000eecb253","campaignName":"Inspire me"},{"campaignId":"5ad86285c93a9f000eecb256","campaignName":"Give me perspective"},{"campaignId":"5ad86291c93a9f000eecb257","campaignName":"Keep me on trend"}],"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Opinion","categoryName":"Opinion"},"taggings":[]},"summary":"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components.","timestamp":1574252675611,"type":"cps"}},"path":"/pidgin/23248703","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [27]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="pidgin"
+            src="http://localhost:7080/static/js/pidgin-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

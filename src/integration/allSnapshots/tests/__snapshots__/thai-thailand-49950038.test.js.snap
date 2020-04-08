@@ -1,0 +1,2591 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /thai/thailand-49950038 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="th"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="th-TH"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/thai/thailand-49950038"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="History"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Thailand"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-10-06T05:14:53.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-07T16:13:46.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/thai/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/thai/thailand-49950038"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/thai/thailand-49950038"
+          hreflang="th"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/thai/thailand-49950038","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ไทย","publishingPrinciples":"https://www.bbc.com/thai/institutional-49281839","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/thai/thailand-49950038","name":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519"},"headline":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519","description":"มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย","datePublished":"2019-10-06T05:14:53.000Z","dateModified":"2019-10-07T16:13:46.000Z","about":[{"@type":"Thing","name":"History","sameAs":["http://dbpedia.org/resource/History"]},{"@type":"Thing","name":"Thailand"},{"@type":"Thing","name":"Politics","sameAs":["http://dbpedia.org/resource/Politics"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News ไทย","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"},"noBylinesPolicy":"https://www.bbc.com/thai/institutional-49281839#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 cNzHxi"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 fdoQdE"
+                  >
+                    เราได้ปรับปรุงนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์แล้ว
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    เราได้แก้ไขข้อมูลที่สำคัญของนโยบายเกี่ยวกับความเป็นส่วนตัวและคุกกีส์ และเราต้องการให้คุณทราบถึง ผลกระทบต่อตัวคุณและข้อมูลของคุณ
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        ตกลง
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        ดูว่ามีอะไรเปลี่ยนแปลงไปบ้าง
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 cNzHxi"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 fdoQdE"
+                  >
+                    กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 keksKX"
+                  >
+                    เราใช้
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      คุกกีส์
+                    </a>
+                    เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 iOCwEu"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        ยอมรับ
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 hUEPzt"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        ไม่ยอมรับ ไปที่การตั้งค่า
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 icaRnC"
+            >
+              ข้ามไปยังเนื้อหา
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 kFmrTl"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                หมวดข่าว
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    หน้าแรก
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ประเทศไทย
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/international"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ต่างประเทศ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิทยาศาสตร์
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    สุขภาพ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/media/video"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิดีโอ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ยอดนิยม
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    หน้าแรก
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    ประเทศไทย
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/international"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    ต่างประเทศ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    วิทยาศาสตร์
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    สุขภาพ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/media/video"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    วิดีโอ
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/thai/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gizuhH"
+                  >
+                    ยอดนิยม
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=90&p=thailand::thai.thailand.photo_gallery.49950038.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:5858e31f-36a4-ac44-ab69-9c340b45dd49]&x2=[amp]&x3=[news-thai]&x4=[th]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[6+ตุลา+:+ธรรมศาสตร์จัดกิจกรรมรำลึก+43+ปี+6+ตุลา+2519+-+BBC+News+ไทย]&x11=[2019-10-06T05:14:53.000Z]&x12=[2019-10-07T16:13:46.000Z]&x13=[History~Thailand~Politics]&x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~1ed75fd4-f992-46db-9859-fb5a7c95da91~75612fa6-147c-4a43-97fa-fcf70d9cced3]&x16=[WS%20-%20Keep%20me%20on%20trend]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 xMIRS"
+          >
+            6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-10-06"
+                class="StyledTimestamp-um718p-0 eUpvhV"
+          >
+            6 ตุลาคม 2019
+          </time>
+          <div>
+            <time datetime="2019-10-07"
+                  class="StyledTimestamp-um718p-0 eUpvhV"
+            >
+              ปรับปรุงแล้ว 7 ตุลาคม 2019
+            </time>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 jjizJv">
+            มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17431/production/_109118259_01.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="สุธรรม"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17819/production/_109118269_06.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="แขวนคอ"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/3F99/production/_109118261_02.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า "ไม่ใช่คนไทย" และ "ฆ่าคอมมิวนิสต์ไม่บาป"
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="หมอสุรพงษ์"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8DB9/production/_109118263_03.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า "ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน"
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="จ่านิว"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DBD9/production/_109118265_04.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล "จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม "กลุ่มคนอยากเลือกตั้ง" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="วางดอกไม้"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4BB5/production/_109118391_05.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ประตูแดง"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4381/production/_109118271_07.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ "เณรถนอม" แล้วนำร่างไปแขวนไว้ที่ "ประตูแดง" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="ประตูแดง"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/91A1/production/_109118273_08.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 kHszGg">
+                  <amp-img alt="ลำโพง"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DFC1/production/_109118275_09.jpg"
+                           height="801"
+                           width="1200"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ "ถูกปิดปากด้วยความรุนแรง"
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 bmpsFS">
+                  <amp-img alt="กางเกง"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12DE1/production/_109118277_10.jpg"
+                           height="800"
+                           width="1200"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="วิดีโอ"
+                           attribution="Thai news Pix"
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17C01/production/_109118279_11.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ "4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร" จัดทำโดยทีมข่าวบีบีซีไทย
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      อ่านข่าวนี้เพิ่มเติม
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="วิดีโอ"
+                               attribution="Wasawat Lukharang/BBC Thai"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/FA34/production/_109125046_hqdefault.jpg"
+                               height="549"
+                               width="976"
+                      >
+                      </amp-img>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                    <a href="/thai/thailand-49902201?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      6 ตุลา : ภารกิจ "สืบต่อความทรงจำ" กับวาระ "รื้อคิดความเป็นไทย" ของ 2 ผู้รอดชีวิต
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                    ในวาระ 43 ปี 6 ตุลา บีบีซีไทยร่วมบันทึกภารกิจภาคต่อของ "ผู้ปราศรัยคนสุดท้าย" ธงชัย วินิจจะกูล กับ "สหายมา" เกษียร เตชะพีระ
+                  </p>
+                  <time datetime="2019-10-04"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    4 ตุลาคม 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hFnQiR">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-49281839"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403477"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เงื่อนไขการใช้งานของ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403476"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เกี่ยวกับบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38497681"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    นโยบายความเป็นส่วนตัว
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-37981748"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ติดต่อบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /thai/thailand-49950038 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="th"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="th-TH"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/thai/thailand-49950038"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_thai/17431/production/_109118259_01.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@bbc_thailand"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="History"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Thailand"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Politics"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2019-10-06T05:14:53.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2019-10-07T16:13:46.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 - BBC News ไทย
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/thai/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/thai/thailand-49950038"
+    >
+    <link data-react-helmet="true"
+          rel="alternate"
+          href="http://localhost:7080/thai/thailand-49950038"
+          hreflang="th"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/thai/thailand-49950038.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/thai/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/thai/thailand-49950038","publisher":{"@type":"NewsMediaOrganization","name":"BBC News ไทย","publishingPrinciples":"https://www.bbc.com/thai/institutional-49281839","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/thai/thailand-49950038","name":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519"},"headline":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519","description":"มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย","datePublished":"2019-10-06T05:14:53.000Z","dateModified":"2019-10-07T16:13:46.000Z","about":[{"@type":"Thing","name":"History","sameAs":["http://dbpedia.org/resource/History"]},{"@type":"Thing","name":"Thailand"},{"@type":"Thing","name":"Politics","sameAs":["http://dbpedia.org/resource/Politics"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News ไทย","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"},"noBylinesPolicy":"https://www.bbc.com/thai/institutional-49281839#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 icaRnC"
+            >
+              ข้ามไปยังเนื้อหา
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 kFmrTl"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  หมวดข่าว
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      หน้าแรก
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      ประเทศไทย
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/international"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      ต่างประเทศ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      วิทยาศาสตร์
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      สุขภาพ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/media/video"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      วิดีโอ
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/thai/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gizuhH"
+                    >
+                      ยอดนิยม
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    หน้าแรก
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ประเทศไทย
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/international"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ต่างประเทศ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิทยาศาสตร์
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    สุขภาพ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/media/video"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    วิดีโอ
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/thai/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 wpXgz"
+                  >
+                    ยอดนิยม
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=90&amp;p=thailand::thai.thailand.photo_gallery.49950038.page&amp;x1=[urn:bbc:cps:5858e31f-36a4-ac44-ab69-9c340b45dd49]&amp;x2=[responsive]&amp;x3=[news-thai]&amp;x4=[th]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[6+ตุลา+:+ธรรมศาสตร์จัดกิจกรรมรำลึก+43+ปี+6+ตุลา+2519+-+BBC+News+ไทย]&amp;x11=[2019-10-06T05:14:53.000Z]&amp;x12=[2019-10-07T16:13:46.000Z]&amp;x13=[History~Thailand~Politics]&amp;x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~1ed75fd4-f992-46db-9859-fb5a7c95da91~75612fa6-147c-4a43-97fa-fcf70d9cced3]&amp;x16=[WS%20-%20Keep%20me%20on%20trend]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 xMIRS"
+          >
+            6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2019-10-06"
+                class="StyledTimestamp-um718p-0 eUpvhV"
+          >
+            6 ตุลาคม 2019
+          </time>
+          <div>
+            <time datetime="2019-10-07"
+                  class="StyledTimestamp-um718p-0 eUpvhV"
+            >
+              ปรับปรุงแล้ว 7 ตุลาคม 2019
+            </time>
+          </div>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 jjizJv">
+            มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17431/production/_109118259_01.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17431/production/_109118259_01.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17431/production/_109118259_01.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17431/production/_109118259_01.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17431/production/_109118259_01.jpg 800w"
+                         alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17431/production/_109118259_01.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17819/production/_109118269_06.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17819/production/_109118269_06.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17819/production/_109118269_06.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17819/production/_109118269_06.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17819/production/_109118269_06.jpg 800w"
+                         alt="สุธรรม"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17819/production/_109118269_06.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/3F99/production/_109118261_02.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/3F99/production/_109118261_02.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/3F99/production/_109118261_02.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/3F99/production/_109118261_02.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/3F99/production/_109118261_02.jpg 800w"
+                         alt="แขวนคอ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/3F99/production/_109118261_02.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า "ไม่ใช่คนไทย" และ "ฆ่าคอมมิวนิสต์ไม่บาป"
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/8DB9/production/_109118263_03.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/8DB9/production/_109118263_03.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/8DB9/production/_109118263_03.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/8DB9/production/_109118263_03.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/8DB9/production/_109118263_03.jpg 800w"
+                         alt="หมอสุรพงษ์"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/8DB9/production/_109118263_03.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า "ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน"
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/DBD9/production/_109118265_04.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DBD9/production/_109118265_04.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/DBD9/production/_109118265_04.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/DBD9/production/_109118265_04.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/DBD9/production/_109118265_04.jpg 800w"
+                         alt="จ่านิว"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DBD9/production/_109118265_04.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล "จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม "กลุ่มคนอยากเลือกตั้ง" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4BB5/production/_109118391_05.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4BB5/production/_109118391_05.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4BB5/production/_109118391_05.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/4BB5/production/_109118391_05.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/4BB5/production/_109118391_05.jpg 800w"
+                         alt="วางดอกไม้"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4BB5/production/_109118391_05.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4381/production/_109118271_07.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4381/production/_109118271_07.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4381/production/_109118271_07.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/4381/production/_109118271_07.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/4381/production/_109118271_07.jpg 800w"
+                         alt="ประตูแดง"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4381/production/_109118271_07.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ "เณรถนอม" แล้วนำร่างไปแขวนไว้ที่ "ประตูแดง" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/91A1/production/_109118273_08.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/91A1/production/_109118273_08.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/91A1/production/_109118273_08.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/91A1/production/_109118273_08.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/91A1/production/_109118273_08.jpg 800w"
+                         alt="ประตูแดง"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/91A1/production/_109118273_08.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 kHszGg">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/DFC1/production/_109118275_09.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DFC1/production/_109118275_09.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/DFC1/production/_109118275_09.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/DFC1/production/_109118275_09.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/DFC1/production/_109118275_09.jpg 800w"
+                         alt="ลำโพง"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/DFC1/production/_109118275_09.jpg"
+                         width="1200"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ "ถูกปิดปากด้วยความรุนแรง"
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 bmpsFS">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12DE1/production/_109118277_10.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12DE1/production/_109118277_10.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12DE1/production/_109118277_10.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12DE1/production/_109118277_10.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12DE1/production/_109118277_10.jpg 800w"
+                         alt="กางเกง"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12DE1/production/_109118277_10.jpg"
+                         width="1200"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17C01/production/_109118279_11.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17C01/production/_109118279_11.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17C01/production/_109118279_11.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17C01/production/_109118279_11.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17C01/production/_109118279_11.jpg 800w"
+                         alt="วิดีโอ"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17C01/production/_109118279_11.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                  <p role="text"
+                     class="Copyright-sc-11lgtw-0 hDvIfz"
+                  >
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      ที่มาของภาพ
+                    </span>
+                    <span lang="en-GB">
+                      Thai news Pix
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bsSGsp">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    คำบรรยายภาพ
+                  </span>
+                  <p>
+                    ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ "4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร" จัดทำโดยทีมข่าวบีบีซีไทย
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <section role="region"
+               aria-labelledby="related-content-heading"
+               class="GridWrapper-sc-12lwanc-0 hgpaqH"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+              <div class="Bar-sc-1x4gwjz-0 fxoZgi">
+              </div>
+              <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexRow-wx5kdp-2 dVBNyZ">
+                    <span dir="ltr"
+                          id="related-content-heading"
+                          class="Title-wx5kdp-4 WYKXP"
+                    >
+                      อ่านข่าวนี้เพิ่มเติม
+                    </span>
+                  </span>
+                </div>
+              </h2>
+            </div>
+            <div class="SingleContentWrapper-sc-1itct8j-2 upQSg">
+              <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
+                <div dir="ltr"
+                     class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
+                >
+                  <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                    </div>
+                    <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
+                    </div>
+                  </div>
+                </div>
+                <div dir="ltr"
+                     class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
+                >
+                  <h3 class="Headline-sc-1dvfmi3-3 icQuSr">
+                    <a href="/thai/thailand-49902201?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                       class="Link-sc-1dvfmi3-5 yQgSu"
+                    >
+                      6 ตุลา : ภารกิจ "สืบต่อความทรงจำ" กับวาระ "รื้อคิดความเป็นไทย" ของ 2 ผู้รอดชีวิต
+                    </a>
+                  </h3>
+                  <p class="Summary-sc-1dvfmi3-4 hMPiip">
+                    ในวาระ 43 ปี 6 ตุลา บีบีซีไทยร่วมบันทึกภารกิจภาคต่อของ "ผู้ปราศรัยคนสุดท้าย" ธงชัย วินิจจะกูล กับ "สหายมา" เกษียร เตชะพีระ
+                  </p>
+                  <time datetime="2019-10-04"
+                        class="StyledTimestamp-um718p-0 eKyewn"
+                  >
+                    4 ตุลาคม 2019
+                  </time>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/thai"
+               class="StyledLink-m3awbo-2 fRVPol"
+            >
+              <svg height="24"
+                   viewbox="0 0 210 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fkvflj"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                  <path d="M186.72 2.18v11a1.69 1.69 0 0 1 .47-.05 1.6 1.6 0 0 1 1.16.46 1.53 1.53 0 0 1 .48 1.14 1.56 1.56 0 0 1-.41 1.1 1.6 1.6 0 0 1-1.07.51 1.36 1.36 0 0 1-.35 0 1.65 1.65 0 0 1-1.29-.55 2 2 0 0 1-.53-1.4V2.18a2.38 2.38 0 0 0-.08-.44.42.42 0 0 0-.3-.14q-.22 0-.47.4a6.07 6.07 0 0 0-.58 1.22l-.18.5h-.92a3.16 3.16 0 0 0-.38-1.46 1.27 1.27 0 0 0-.94-.66l.52-1.36a1.22 1.22 0 0 1 .88.61 3.59 3.59 0 0 1 .45 1.39 4.66 4.66 0 0 1 .65-1.11 1.56 1.56 0 0 1 1-.71h.37a1.41 1.41 0 0 1 1.17.56 2 2 0 0 1 .35 1.2zm1.19 12.58a.68.68 0 0 0-.22-.51.71.71 0 0 0-.51-.21.68.68 0 0 0-.5.21.69.69 0 0 0-.21.5.7.7 0 0 0 .21.51.67.67 0 0 0 .5.22.7.7 0 0 0 .51-.21.69.69 0 0 0 .22-.51zM191.67 10h-.51a1.51 1.51 0 0 1-1.16-.45 1.55 1.55 0 0 1-.46-1.13 1.74 1.74 0 0 1 .33-1 1.25 1.25 0 0 1 .87-.59h.55a1.78 1.78 0 0 1 1.41.57 2 2 0 0 1 .47 1.36v2.15l-.17 1.34.24-.79q0-.16.43-1.12a11.19 11.19 0 0 1 1.48-2.79 3.32 3.32 0 0 1 .55-.55 1.14 1.14 0 0 1 .7-.19 2 2 0 0 1 1.59.68 2.39 2.39 0 0 1 .58 1.65v7.16H197V9q0-.77-.69-.75-.35 0-1.09 1.5a19.71 19.71 0 0 0-.82 1.87 23 23 0 0 0-1 3.73 8.65 8.65 0 0 0-.16 1h-1.55zm-1.21-1.55a.68.68 0 0 0 .21.49.67.67 0 0 0 .49.22.72.72 0 0 0 .51-.21.66.66 0 0 0 .22-.5.7.7 0 0 0-.21-.52.72.72 0 0 0-.52-.21.66.66 0 0 0-.5.22.72.72 0 0 0-.19.48zM206.32 15.08a.6.6 0 0 0 .51-.24.89.89 0 0 0 .16-.56V6.89h1.57v7.63a1.92 1.92 0 0 1-.37 1.19 1.71 1.71 0 0 1-1.45.55h-5.86v-1.18h.63v-1.59a2.34 2.34 0 0 1 .37-1.4 1.65 1.65 0 0 1 1.08-.71 2.17 2.17 0 0 1-1.56-.57 2 2 0 0 1-.6-1.53 2.3 2.3 0 0 1 .91-1.92 3.33 3.33 0 0 1 2.08-.63 2.08 2.08 0 0 1 1.35.42 1.57 1.57 0 0 1 .55 1.28 1.43 1.43 0 0 1-.64 1.31 1.74 1.74 0 0 1-.94.26 1.36 1.36 0 0 1-1.46-.84 1.54 1.54 0 0 1-.1-.55 1.05 1.05 0 0 1 0-.37q-.21 0-.37.35a1.18 1.18 0 0 0-.14.52q0 1.38 1.63 1.61a7.29 7.29 0 0 0 1.06.08h.69v1.07h-.73a1.68 1.68 0 0 0-1.14.34 1.57 1.57 0 0 0-.49 1.23v1.65zm-3-6.64a.67.67 0 0 0 .22.51.72.72 0 0 0 1 0 .68.68 0 0 0 .22-.5.63.63 0 0 0-.73-.71.72.72 0 0 0-.51.21.67.67 0 0 0-.15.49z">
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                ไทย
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 hFnQiR">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-49281839"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403477"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เงื่อนไขการใช้งานของ BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38403476"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    เกี่ยวกับบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-38497681"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    นโยบายความเป็นส่วนตัว
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Cookies
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/thai/institutional-37981748"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    ติดต่อบีบีซี
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1570338893000,"lastPublished":1570464826000,"lastUpdated":1570464832998,"id":"mock-id","locators":{"assetUri":"/thai/thailand-49950038","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49950038","curie":"http://www.bbc.co.uk/asset/5858e31f-36a4-ac44-ab69-9c340b45dd49"},"type":"PGL","createdBy":"thai-v6","language":"th","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"thai.thailand.photo_gallery.49950038.page","cps_asset_id":"49950038"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"tags":{"about":[{"thingLabel":"History","thingUri":"http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id","thingId":"03eb3674-6190-4cd7-8104-1a00991d67a3","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/History","http://www.wikidata.org/entity/Q309"],"topicName":"ประวัติศาสตร์","topicId":"cxnykvnznk2t","curationList":[{"curationId":"516394c7-a483-4070-a947-7dd108c61872","curationType":"vivo-stream"}]},{"thingLabel":"Thailand","thingUri":"http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id","thingId":"1ed75fd4-f992-46db-9859-fb5a7c95da91","thingType":["Thing","Place","geoname:GeoTagConcept"],"thingSameAs":["http://sws.geonames.org/1605651/"],"topicName":"ประเทศไทย","topicId":"cjgn73g98rqt","curationList":[{"curationId":"81f2e8f7-89c1-4c7c-a720-2a22d6437226","curationType":"vivo-stream"}]},{"thingLabel":"Politics","thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id","thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3","thingType":["Thing","Theme"],"thingSameAs":["http://dbpedia.org/resource/Politics"],"topicName":"การเมือง","topicId":"cz74kp7vjzpt","curationList":[{"curationId":"384d96bb-5602-4787-979f-dca814554de3","curationType":"vivo-stream"}]}]},"version":"v1.1.2","blockTypes":["image"],"includeComments":false},"relatedContent":{"groups":[{"type":"see-alsos","promos":[{"headlines":{"shortHeadline":"ภารกิจที่ยังไม่จบในวัยเกษียณของ เกษียร-ธงชัย หลังผ่านความตาย 6 ตุลา 2519","headline":"6 ตุลา : ภารกิจ \\"สืบต่อความทรงจำ\\" กับวาระ \\"รื้อคิดความเป็นไทย\\" ของ 2 ผู้รอดชีวิต"},"locators":{"assetUri":"/thai/thailand-49902201","cpsUrn":"urn:bbc:content:assetUri:/thai/thailand-49902201"},"summary":"ในวาระ 43 ปี 6 ตุลา บีบีซีไทยร่วมบันทึกภารกิจภาคต่อของ \\"ผู้ปราศรัยคนสุดท้าย\\" ธงชัย วินิจจะกูล กับ \\"สหายมา\\" เกษียร เตชะพีระ","timestamp":1570160658000,"cpsType":"STY","indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/FA34/production/_109125046_hqdefault.jpg","path":"/cpsprodpb/FA34/production/_109125046_hqdefault.jpg","height":549,"width":976,"altText":"วิดีโอ","copyrightHolder":"Wasawat Lukharang/BBC Thai","type":"image"},"id":"mock-id","type":"cps"}]}],"section":{"subType":"index","name":"ไทย","uri":"/thai/thailand","type":"simple"},"site":{"subType":"site","name":"บีบีซีไทย","uri":"/thai","type":"simple"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519","blocks":[{"type":"fragment","model":{"text":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1570338893000,"lastPublished":1570464826000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย","blocks":[{"type":"fragment","model":{"text":"มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519","blocks":[{"type":"fragment","model":{"text":"ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์","blocks":[{"type":"fragment","model":{"text":"ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"17431/production/_109118259_01.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์","blocks":[{"type":"fragment","model":{"text":"สุธรรม แสงประทุม (ขวามือ) อดีตเลขาธิการศูนย์กลางนิสิตนักศึกษาแห่งประเทศไทย (ศนท.) และอดีตจำเลยคดีคอมมิวนิสต์ ร่วมทำบุญตักบาตรพระสงฆ์ 19 รูป ที่ ม. ธรรมศาสตร์","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"สุธรรม","blocks":[{"type":"fragment","model":{"text":"สุธรรม","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"17819/production/_109118269_06.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า \\"ไม่ใช่คนไทย\\" และ \\"ฆ่าคอมมิวนิสต์ไม่บาป\\"","blocks":[{"type":"fragment","model":{"text":"ผู้ชุมนุมจำนวนหนึ่งเสียชีวิตเพราะถูกแขวนคอ ท่ามกลางวาทกรรมกล่าวหาขบวนการนักศึกษาว่า \\"ไม่ใช่คนไทย\\" และ \\"ฆ่าคอมมิวนิสต์ไม่บาป\\"","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"แขวนคอ","blocks":[{"type":"fragment","model":{"text":"แขวนคอ","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"3F99/production/_109118261_02.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า \\"ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน\\"","blocks":[{"type":"fragment","model":{"text":"นพ. สุรพงษ์ สืบวงษ์ลี อดีตผู้นำนักศึกษา ปาฐกถารำลึกเหตุการณ์เมื่อ 43 ปีก่อน ระบุตอนหนึ่งว่า \\"ไม่มีใครอยากตาย แต่มีบางคนพร้อมเผชิญหน้ากับความตายแพื่อแลกกับอุดมการณ์ที่ใฝ่ฝัน\\"","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"หมอสุรพงษ์","blocks":[{"type":"fragment","model":{"text":"หมอสุรพงษ์","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"8DB9/production/_109118263_03.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล \\"จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม \\"กลุ่มคนอยากเลือกตั้ง\\" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา","blocks":[{"type":"fragment","model":{"text":"สภานักศึกษา ม. ธรรมศาสตร์ มอบรางวัล \\"จารุพงษ์ ทองสินธุ์ เพื่อประชาธิปไตย” แด่ สิรวิชญ์ เสรีธิวัฒน์ หรือจ่านิว อดีตนักศึกษาคณะรัฐศาสตร์ ม. ธรรมศาสตร์ และนักกิจกรรม \\"กลุ่มคนอยากเลือกตั้ง\\" เพื่อเป็นแบบอย่างให้ผู้อื่นพิทักษ์ประชาธิปไตยและความเป็นธรรมสืบไป สำหรับ จารุพงษ์ ทองสินธุ์ เป็นอดีตนักศึกษาที่เสียชีวิตในเหตุการณ์ 6 ตุลา","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"จ่านิว","blocks":[{"type":"fragment","model":{"text":"จ่านิว","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"DBD9/production/_109118265_04.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519","blocks":[{"type":"fragment","model":{"text":"อดีตคนเดือนตุลา ญาติผู้สูญเสีย นักการเมือง นักศึกษา และประชาชน ร่วมนำดอกไม้วางไว้ที่ประติมานุสรณ์ เพื่อแสดงความไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ 6 ตุลา 2519","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"วางดอกไม้","blocks":[{"type":"fragment","model":{"text":"วางดอกไม้","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"4BB5/production/_109118391_05.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ \\"เณรถนอม\\" แล้วนำร่างไปแขวนไว้ที่ \\"ประตูแดง\\" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน","blocks":[{"type":"fragment","model":{"text":"เหตุฆาตกรรม 2 พนักงานการไฟฟ้าที่ร่วมคัดค้านการกลับเข้าประเทศของ \\"เณรถนอม\\" แล้วนำร่างไปแขวนไว้ที่ \\"ประตูแดง\\" อ. พระประโทน จ. นครปฐม คือชนวนนัดชุมนุมใหญ่ของขบวนการนักศึกษาประชาชน","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ประตูแดง","blocks":[{"type":"fragment","model":{"text":"ประตูแดง","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"4381/production/_109118271_07.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน","blocks":[{"type":"fragment","model":{"text":"ชุมพร ทุมไมย และ วิชัย เกษศรีพงษา เป็นเพื่อนรักกัน และเสียชีวิตพร้อมกันเมื่อ 43 ปีก่อน","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ประตูแดง","blocks":[{"type":"fragment","model":{"text":"ประตูแดง","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"91A1/production/_109118273_08.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ \\"ถูกปิดปากด้วยความรุนแรง\\"","blocks":[{"type":"fragment","model":{"text":"โครงการจัดตั้งพิพิธภัณฑ์ 6 ตุลา ระบุว่า ลำโพงนี้ถูกกระสุนปืนลูกซอง 3 นัด ยิงถล่มในวันที่ 6 ตุลา สื่อถึงการ \\"ถูกปิดปากด้วยความรุนแรง\\"","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ลำโพง","blocks":[{"type":"fragment","model":{"text":"ลำโพง","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":801,"locator":"DFC1/production/_109118275_09.jpg","originCode":"cpsprodpb","width":1200},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา","blocks":[{"type":"fragment","model":{"text":"เสื้อผ้าชุดสุดท้ายที่ ดนัยศักดิ์ เอี่ยมคง นักศึกษา ม. รามคำแหง สวมใส่ ก่อนเสียชีวิตเมื่อ 6 ตุลา 2519 ซึ่งผลชันสูตรระบุสาเหตุเสียชีวิตเพราะถูกยิงที่ต้นขา","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"กางเกง","blocks":[{"type":"fragment","model":{"text":"กางเกง","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":800,"locator":"12DE1/production/_109118277_10.jpg","originCode":"cpsprodpb","width":1200},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ \\"4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร\\" จัดทำโดยทีมข่าวบีบีซีไทย","blocks":[{"type":"fragment","model":{"text":"ประชาชนให้ความสนใจชมวิดีโออธิบายเหตุการณ์ 14 ตุลา และ 6 ตุลา 4 ที่ใช้ชื่อ \\"4 ทศวรรษเหตุการณ์เดือนตุลา คุณจำอย่างไร\\" จัดทำโดยทีมข่าวบีบีซีไทย","attributes":[]},"id":"mock-id","position":[14,1,1,1,1]}]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"วิดีโอ","blocks":[{"type":"fragment","model":{"text":"วิดีโอ","attributes":[]},"id":"mock-id","position":[14,2,1,1,1]}]},"id":"mock-id","position":[14,2,1,1]}]},"id":"mock-id","position":[14,2,1]}]},"id":"mock-id","position":[14,2]},{"type":"rawImage","model":{"copyrightHolder":"Thai news Pix","height":549,"locator":"17C01/production/_109118279_11.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[14,3]}]},"id":"mock-id","position":[14]}]}},"promo":{"headlines":{"shortHeadline":"รำลึก 43 ปี 6 ตุลา","headline":"6 ตุลา : ธรรมศาสตร์จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519"},"locators":{"assetUri":"/thai/thailand-49950038","cpsUrn":"urn:bbc:content:assetUri:thai/thailand-49950038","curie":"http://www.bbc.co.uk/asset/5858e31f-36a4-ac44-ab69-9c340b45dd49"},"summary":"มหาวิทยาลัยธรรมศาสตร์ ซึ่งมีสภาพไม่ต่างจาก “ลานประหาร” ในวันล้อมปราบนักศึกษาและประชาชน ได้จัดกิจกรรมรำลึก 43 ปี 6 ตุลา 2519 มีพิธีทำบุญตักบาตรพระสงฆ์จำนวน 19 รูป พิธีวางพวงมาลาและดอกไม้ ณ ประติมานุสรณ์ และกล่าวไว้อาลัยแด่ผู้เสียชีวิตในเหตุการณ์ พร้อมอ่านรายชื่อของทุกคนด้วย","timestamp":1570464832998,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"}]},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/17431/production/_109118259_01.jpg","path":"/cpsprodpb/17431/production/_109118259_01.jpg","height":549,"width":976,"altText":"ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์","caption":"ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519","copyrightHolder":"Thai news Pix","type":"image"},"id":"mock-id","type":"cps"}},"path":"/thai/thailand-49950038","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [39]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="thai"
+            src="http://localhost:7080/static/js/thai-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;

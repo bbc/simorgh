@@ -1,0 +1,2323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for /afaanoromoo/oduu-41217768 For the AMP platform I can see the server-rendered HTML 1`] = `
+<html lang="om"
+      dir="ltr"
+      amp
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="om-ET"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/afaanoromoo/oduu-41217768"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="History"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Addis Ababa"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-09-21T04:24:34.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-09-21T04:28:11.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/afaanoromoo/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/afaanoromoo/oduu-41217768"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-bind"
+            src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/afaanoromoo/oduu-41217768","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Afaan Oromoo","publishingPrinciples":"https://www.bbc.com/afaanoromoo/institutional-49281861","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/afaanoromoo/oduu-41217768","name":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"},"headline":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","description":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","datePublished":"2017-09-21T04:24:34.000Z","dateModified":"2017-09-21T04:28:11.000Z","about":[{"@type":"Thing","name":"History","sameAs":["http://dbpedia.org/resource/History"]},{"@type":"Thing","name":"Addis Ababa"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Afaan Oromoo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"},"noBylinesPolicy":"https://www.bbc.com/afaanoromoo/institutional-49281861#authorexpertise"}}
+    </script>
+    <style amp-boilerplate>
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    </style>
+    <noscript>
+      <style amp-boilerplate>
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+      </style>
+    </noscript>
+    <script async
+            src="https://cdn.ampproject.org/v0.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-geo"
+            src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-consent"
+            src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
+    >
+    </script>
+    <script async
+            custom-element="amp-analytics"
+            src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"
+    >
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="AmpConsentWrapper-sc-18egs7-0 bfTTJR">
+          <amp-geo layout="nodisplay">
+            <script type="application/json">
+              {"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"]}}
+            </script>
+          </amp-geo>
+          <amp-consent id="consent"
+                       layout="nodisplay"
+          >
+            <script type="application/json">
+              {"consents":{"user-consent":{"promptIfUnknownForGeoGroup":"eea","promptUI":"consent-prompt"}}}
+            </script>
+            <div id="consent-prompt">
+              <div dir="ltr"
+                   id="privacy"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Imaammata mateenyaafi kuus-yadannoo keenyaa haaromsiineera.
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Imaammata mateenyaafi kuus-yaadannoo keenyaarratti jijjirama barbaachisaa muraasa kan taasifne yoo ta'u, kunis siifi daataa keetiif maal jechu akka ta'e akka bartu barbaadna.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:cookie.show, privacy.hide"
+                      >
+                        TOLE
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                         on="tap:cookie.show, privacy.hide"
+                      >
+                        Maaltu akka jijjirame bari
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div dir="ltr"
+                   hidden
+                   id="cookie"
+                   class="Wrapper-sc-7g3fro-0 fOqUqv"
+              >
+                <div dir="ltr"
+                     class="CenterWrapper-sc-7g3fro-1 ggwfud"
+                >
+                  <h2 dir="ltr"
+                      class="Title-sc-7g3fro-2 iqsZpo"
+                  >
+                    Kuus-yaadannoo waliin waliigalu kee haa beeknu
+                  </h2>
+                  <p dir="ltr"
+                     class="ConsentBannerText-sc-7g3fro-4 fkYBRU"
+                  >
+                    Kan nuti
+                    <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
+                      kuus-yaadannoo fayyadamnu
+                    </a>
+                    muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.
+                  </p>
+                  <ul dir="ltr"
+                      class="Options-sc-7g3fro-3 jLugbT"
+                  >
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <button type="button"
+                              on="tap:consent.accept"
+                              data-cookie-banner="accept"
+                      >
+                        Eyyee, walii nan gala.
+                      </button>
+                    </li>
+                    <li dir="ltr"
+                        class="ListItem-sc-7g3fro-5 iOzCnw"
+                    >
+                      <a href="https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                         on="tap:consent.reject"
+                         data-cookie-banner="reject"
+                      >
+                        Lakki, gara bakka itti argamuutti na geessi
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </amp-consent>
+        </div>
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Qabiyyeetti darbi
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             id="si-nav"
+             class="StyledNav-sc-158x7z5-5 jTxPjl"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <amp-state id="menuState">
+              <script type="application/json">
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button type="button"
+                    aria-expanded="false"
+                    data-amp-bind-aria-expanded="menuState.expanded ? &quot;true&quot; : &quot;false&quot;"
+                    on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+        si-nav-dropdown-menu.toggleVisibility,
+        si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+        si-nav.toggleClass(class=si-nav-open)
+      "
+                    dir="ltr"
+                    class="MenuButton-ukxuly-6 dGlJrg"
+            >
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   data-amp-bind-hidden="menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                </path>
+              </svg>
+              <svg focusable="false"
+                   width="2.75rem"
+                   height="2.75rem"
+                   viewbox="0 0 44 44"
+                   aria-hidden="true"
+                   hidden
+                   data-amp-bind-hidden="!menuState.expanded"
+                   class="MenuIcon-sc-1nq0eki-0 gKIQph"
+              >
+                <path d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                      fill-rule="evenodd"
+                >
+                </path>
+              </svg>
+              <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                Kutaawwan
+              </span>
+            </button>
+            <div id="si-nav-dropdown-menu"
+                 hidden
+                 class="AmpDropdown-ukxuly-1 dMLYwY"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Oduu
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Itoophiyaa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Viidiyoo
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Jajjaboo
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div dir="ltr"
+                 id="si-nav-scrollable"
+                 class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz StyledAmpScrollableNavigation-thcau0-0 eHufvQ"
+            >
+              <ul role="list"
+                  class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+              >
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Oduu
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Itoophiyaa
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo/media/video"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Viidiyoo
+                  </a>
+                </li>
+                <li dir="ltr"
+                    role="listitem"
+                    class="StyledListItem-sc-158x7z5-3 COeze"
+                >
+                  <a href="/afaanoromoo/popular/read"
+                     class="StyledLink-sc-158x7z5-2 gLWckh"
+                  >
+                    Jajjaboo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <amp-analytics>
+        <script type="application/json">
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=2&p=news::afaanoromoo.news.photo_gallery.41217768.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:114f54f2-1c3f-5d41-8988-c3330e0c204c]&x2=[amp]&x3=[news-afaanoromoo]&x4=[om]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[Manneen+durii+5+Magaalaa+Finfinnee+keessaa+daawwachuu+qabdan+-+BBC+News+Afaan+Oromoo]&x11=[2017-09-21T04:24:34.000Z]&x12=[2017-09-21T04:28:11.000Z]&x13=[History~Addis+Ababa]&x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~8a760184-c272-42ec-b898-858f069e4422]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2017-09-21"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            21 Fuulbaana 2017
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Masaraa Aaxee Minilik"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Masaraa Aaxee Minilik"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F243/production/_97491026_img_1135.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 kVufGc">
+                  <amp-img alt="Masaraa Aaxee Minilik"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/3547/production/_97493631_img_1065.jpg"
+                           height="4032"
+                           width="3024"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jfWqVJ">
+                  <amp-img alt="Mana Raas Tasamaa Naadoo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16B64/production/_97482039_img_1473.jpg"
+                           height="3024"
+                           width="4032"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mana Raas Tasamaa Naadoo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14063/production/_97491028_img_1454.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jfWqVJ">
+                  <amp-img alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1163C/production/_97482217_img_1620.jpg"
+                           height="3024"
+                           width="4032"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B03F/production/_97491154_img_1576.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg"
+                           height="360"
+                           width="640"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/5027/production/_97491502_img_1386.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/7737/production/_97491503_img_1391.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/EFEB/production/_97491416_img_1371.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12B4B/production/_97491667_img_1394.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mana Luli Raas Siyum Mangashaa"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mana Luli Raas Siyum Mangashaa"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg"
+                           height="360"
+                           width="640"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <amp-img alt="Mana Luli Raas Siyum Mangashaa"
+                           attribution
+                           layout="responsive"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg"
+                           height="549"
+                           width="976"
+                  >
+                  </amp-img>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-49281861"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News maaliif amanuu dandeessa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Haala itti fayyadamaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Waa'ee BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Imaammata mateenyaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuus-yaadannoo
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-42228538"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC qunnami
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Gara geessituu alaatti akkaataa itti hojjennu dubbisi.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`Snapshot test for /afaanoromoo/oduu-41217768 For the Canonical platform I can see the server-rendered HTML 1`] = `
+<html lang="om"
+      class="no-js"
+      dir="ltr"
+>
+  <head>
+    <meta data-react-helmet="true"
+          http-equiv="X-UA-Compatible"
+          content="IE=edge"
+    >
+    <meta data-react-helmet="true"
+          charset="utf-8"
+    >
+    <meta data-react-helmet="true"
+          name="robots"
+          content="noodp,noydir"
+    >
+    <meta data-react-helmet="true"
+          name="theme-color"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+    >
+    <meta data-react-helmet="true"
+          name="apple-mobile-web-app-title"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="application-name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="description"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    >
+    <meta data-react-helmet="true"
+          property="fb:admins"
+          content="100004154058350"
+    >
+    <meta data-react-helmet="true"
+          property="fb:app_id"
+          content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          name="mobile-web-app-capable"
+          content="yes"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileColor"
+          content="#B80000"
+    >
+    <meta data-react-helmet="true"
+          name="msapplication-TileImage"
+          content="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <meta data-react-helmet="true"
+          property="og:description"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    >
+    <meta data-react-helmet="true"
+          property="og:image"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
+    >
+    <meta data-react-helmet="true"
+          property="og:image:alt"
+          content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+    >
+    <meta data-react-helmet="true"
+          property="og:locale"
+          content="om-ET"
+    >
+    <meta data-react-helmet="true"
+          property="og:site_name"
+          content="BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:title"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          property="og:type"
+          content="article"
+    >
+    <meta data-react-helmet="true"
+          property="og:url"
+          content="http://localhost:7080/afaanoromoo/oduu-41217768"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:card"
+          content="summary_large_image"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:creator"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:description"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:alt"
+          content="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:image:src"
+          content="http://ichef.test.bbci.co.uk/news/1024/branded_afaanoromoo/726D/production/_97739292_img_1620.jpg"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:site"
+          content="@BBCNews"
+    >
+    <meta data-react-helmet="true"
+          name="twitter:title"
+          content="Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="History"
+    >
+    <meta data-react-helmet="true"
+          name="article:tag"
+          content="Addis Ababa"
+    >
+    <meta data-react-helmet="true"
+          name="article:author"
+          content="https://www.facebook.com/bbcnews"
+    >
+    <meta data-react-helmet="true"
+          name="article:published_time"
+          content="2017-09-21T04:24:34.000Z"
+    >
+    <meta data-react-helmet="true"
+          name="article:modified_time"
+          content="2017-09-21T04:28:11.000Z"
+    >
+    <link rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <link rel="preconnect"
+          href="https://ichef.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ichef.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="http://localhost:7080"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="http://localhost:7080"
+    >
+    <link rel="preconnect"
+          href="https://logws1363.ati-host.net?"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://logws1363.ati-host.net?"
+    >
+    <title data-react-helmet="true">
+      Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan - BBC News Afaan Oromoo
+    </title>
+    <link data-react-helmet="true"
+          rel="manifest"
+          href="/afaanoromoo/manifest.json"
+    >
+    <link data-react-helmet="true"
+          rel="canonical"
+          href="http://localhost:7080/afaanoromoo/oduu-41217768"
+    >
+    <link data-react-helmet="true"
+          rel="amphtml"
+          href="http://localhost:7080/afaanoromoo/oduu-41217768.amp"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          href="http://localhost:7080/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="96x96"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="128x128"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-128x128.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-144x144.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-152x152.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="192x192"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="384x384"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-384x384.png"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-icon"
+          sizes="512x512"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-72x72.png"
+          sizes="72x72"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-96x96.png"
+          sizes="96x96"
+    >
+    <link data-react-helmet="true"
+          rel="icon"
+          type="image/png"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-192x192.png"
+          sizes="192x192"
+    >
+    <link data-react-helmet="true"
+          rel="apple-touch-startup-image"
+          href="https://news.files.bbci.co.uk/include/articles/public/afaanoromoo/images/icons/icon-512x512.png"
+    >
+    <link data-react-helmet="true"
+          rel="shortcut icon"
+          href="/favicon.ico"
+          type="image/x-icon"
+    >
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/afaanoromoo/oduu-41217768","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Afaan Oromoo","publishingPrinciples":"https://www.bbc.com/afaanoromoo/institutional-49281861","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/afaanoromoo/oduu-41217768","name":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"},"headline":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","description":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","datePublished":"2017-09-21T04:24:34.000Z","dateModified":"2017-09-21T04:28:11.000Z","about":[{"@type":"Thing","name":"History","sameAs":["http://dbpedia.org/resource/History"]},{"@type":"Thing","name":"Addis Ababa"}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Afaan Oromoo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"},"noBylinesPolicy":"https://www.bbc.com/afaanoromoo/institutional-49281861#authorexpertise"}}
+    </script>
+  </head>
+  <body>
+    <div id="root"
+         class="StyledDiv-sc-1dngwtn-0 riLLS"
+    >
+      <header role="banner">
+        <div class="Banner-m3awbo-1 fDRnKv">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+            <a dir="ltr"
+               href="#content"
+               class="SkipLink-wmpyxz-0 foxPXR"
+            >
+              Qabiyyeetti darbi
+            </a>
+          </div>
+        </div>
+        <nav role="navigation"
+             dir="ltr"
+             class="StyledNav-sc-158x7z5-5 dWucaK"
+        >
+          <div class="NavWrapper-sc-158x7z5-0 ermFdP">
+            <div class="ScrollableWrapper-t4argr-0 UDeIc">
+              <button type="button"
+                      aria-expanded="false"
+                      dir="ltr"
+                      class="MenuButton-ukxuly-6 dGlJrg"
+              >
+                <svg focusable="false"
+                     width="2.75rem"
+                     height="2.75rem"
+                     viewbox="0 0 44 44"
+                     aria-hidden="true"
+                     class="MenuIcon-sc-1nq0eki-0 gKIQph"
+                >
+                  <path d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z">
+                  </path>
+                </svg>
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Kutaawwan
+                </span>
+              </button>
+              <div dir="ltr"
+                   class="StyledScrollableNav-sc-1nc6e54-0 hGNZJz"
+              >
+                <ul role="list"
+                    class="StyledUnorderedList-sc-158x7z5-1 ckFfoH"
+                >
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Oduu
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Itoophiyaa
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo/media/video"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Viidiyoo
+                    </a>
+                  </li>
+                  <li dir="ltr"
+                      role="listitem"
+                      class="StyledListItem-sc-158x7z5-3 COeze"
+                  >
+                    <a href="/afaanoromoo/popular/read"
+                       class="StyledLink-sc-158x7z5-2 gLWckh"
+                    >
+                      Jajjaboo
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div height="0"
+                 class="StyledDropdown-ukxuly-0 NlGZD"
+            >
+              <ul role="list"
+                  class="DropdownUl-ukxuly-2 louIo"
+              >
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Oduu
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Itoophiyaa
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/media/video"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Viidiyoo
+                  </a>
+                </li>
+                <li role="listitem"
+                    class="StyledDropdownLi-ukxuly-3 dIsymM"
+                >
+                  <a href="/afaanoromoo/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 ikLbnY"
+                  >
+                    Jajjaboo
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <noscript>
+        <img height="1px"
+             width="1px"
+             alt
+             style="position:absolute"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=2&amp;p=news::afaanoromoo.news.photo_gallery.41217768.page&amp;x1=[urn:bbc:cps:114f54f2-1c3f-5d41-8988-c3330e0c204c]&amp;x2=[responsive]&amp;x3=[news-afaanoromoo]&amp;x4=[om]&amp;x7=[article-photo-gallery]&amp;x8=[simorgh-nojs]&amp;x9=[Manneen+durii+5+Magaalaa+Finfinnee+keessaa+daawwachuu+qabdan+-+BBC+News+Afaan+Oromoo]&amp;x11=[2017-09-21T04:24:34.000Z]&amp;x12=[2017-09-21T04:28:11.000Z]&amp;x13=[History~Addis+Ababa]&amp;x14=[03eb3674-6190-4cd7-8104-1a00991d67a3~8a760184-c272-42ec-b898-858f069e4422]&amp;x17=[News]"
+        >
+      </noscript>
+      <main role="main"
+            class="GridWrapper-sc-12lwanc-0 StyledGrid-yb0sij-0 cmCJrp"
+      >
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+          <h1 id="content"
+              tabindex="-1"
+              class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+          >
+            Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
+          </h1>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-yb0sij-1 gHcAuw">
+          <time datetime="2017-09-21"
+                class="StyledTimestamp-um718p-0 bAgcOD"
+          >
+            21 Fuulbaana 2017
+          </time>
+        </div>
+        <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+          <p class="Paragraph-k859h4-0 hymSIv">
+            Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
+          </p>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
+                         alt="Masaraa Aaxee Minilik"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/F243/production/_97491026_img_1135.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/F243/production/_97491026_img_1135.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/F243/production/_97491026_img_1135.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/F243/production/_97491026_img_1135.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/F243/production/_97491026_img_1135.jpg 800w"
+                         alt="Masaraa Aaxee Minilik"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/F243/production/_97491026_img_1135.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedSmall-sc-12lwanc-1 kfaext">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentSmall-sc-12lwanc-12 cnXUzO">
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 iZBNSB">
+                <div class="ImagePlaceholder-sc-11u25v2-0 kVufGc">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/3547/production/_97493631_img_1065.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/3547/production/_97493631_img_1065.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/3547/production/_97493631_img_1065.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/3547/production/_97493631_img_1065.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/3547/production/_97493631_img_1065.jpg 800w"
+                         alt="Masaraa Aaxee Minilik"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/3547/production/_97493631_img_1065.jpg"
+                         width="3024"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildSmall-sc-12lwanc-7 jJyzGv">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jfWqVJ">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/16B64/production/_97482039_img_1473.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16B64/production/_97482039_img_1473.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/16B64/production/_97482039_img_1473.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/16B64/production/_97482039_img_1473.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/16B64/production/_97482039_img_1473.jpg 800w"
+                         alt="Mana Raas Tasamaa Naadoo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/16B64/production/_97482039_img_1473.jpg"
+                         width="4032"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/14063/production/_97491028_img_1454.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/14063/production/_97491028_img_1454.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/14063/production/_97491028_img_1454.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/14063/production/_97491028_img_1454.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/14063/production/_97491028_img_1454.jpg 800w"
+                         alt="Mana Raas Tasamaa Naadoo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/14063/production/_97491028_img_1454.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 jfWqVJ">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1163C/production/_97482217_img_1620.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1163C/production/_97482217_img_1620.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1163C/production/_97482217_img_1620.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1163C/production/_97482217_img_1620.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1163C/production/_97482217_img_1620.jpg 800w"
+                         alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1163C/production/_97482217_img_1620.jpg"
+                         width="4032"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/B03F/production/_97491154_img_1576.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/B03F/production/_97491154_img_1576.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/B03F/production/_97491154_img_1576.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/B03F/production/_97491154_img_1576.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/B03F/production/_97491154_img_1576.jpg 800w"
+                         alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/B03F/production/_97491154_img_1576.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/D74F/production/_97491155_img_1537.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/D74F/production/_97491155_img_1537.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/D74F/production/_97491155_img_1537.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/D74F/production/_97491155_img_1537.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg 640w"
+                         alt="Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/D74F/production/_97491155_img_1537.jpg"
+                         width="640"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/5027/production/_97491502_img_1386.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/5027/production/_97491502_img_1386.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/5027/production/_97491502_img_1386.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/5027/production/_97491502_img_1386.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/5027/production/_97491502_img_1386.jpg 800w"
+                         alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/5027/production/_97491502_img_1386.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/7737/production/_97491503_img_1391.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7737/production/_97491503_img_1391.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/7737/production/_97491503_img_1391.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7737/production/_97491503_img_1391.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/7737/production/_97491503_img_1391.jpg 800w"
+                         alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/7737/production/_97491503_img_1391.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/EFEB/production/_97491416_img_1371.jpg 800w"
+                         alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/EFEB/production/_97491416_img_1371.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/12B4B/production/_97491667_img_1394.jpg 800w"
+                         alt="Dubbii Hiimaa Mootii Nasiibuu Masqaloo"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12B4B/production/_97491667_img_1394.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg 800w"
+                         alt="Mana Luli Raas Siyum Mangashaa"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg 640w"
+                         alt="Mana Luli Raas Siyum Mangashaa"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg"
+                         width="640"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+          <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+            <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                  <div class="lazyload-placeholder">
+                  </div>
+                  <noscript>
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg 800w"
+                         alt="Mana Luli Raas Siyum Mangashaa"
+                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg"
+                         width="976"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
+                  </noscript>
+                </div>
+              </div>
+              <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                  <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                    Ibsa waa'ee suuraa,
+                  </span>
+                  <p>
+                    Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama
+                  </p>
+                </figcaption>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </main>
+      <footer role="contentinfo">
+        <div class="Banner-m3awbo-1 gpxnCd">
+          <div class="SvgWrapper-m3awbo-0 dPXtDJ">
+            <a href="/afaanoromoo"
+               class="StyledLink-m3awbo-2 idiwrz"
+            >
+              <svg height="24"
+                   viewbox="0 0 318.45 24"
+                   xmlns="http://www.w3.org/2000/svg"
+                   focusable="false"
+                   aria-hidden="true"
+                   class="BrandSvg-m3awbo-3 fiiJxE"
+              >
+                <g fill-rule="evenodd"
+                   stroke="#000"
+                   stroke-width=".335"
+                   style="stroke:#fff"
+                >
+                  <path d="M76.73.28v21.85H53.51V.28zm-4.62 14.58l-.37.23a10.85 10.85 0 0 1-5.53 1.69c-3.8 0-6.31-2.27-6.32-5.55s2.62-5.58 6.22-5.59a10.93 10.93 0 0 1 5.47 1.56l.36.2V4.47l-.16-.06a15.06 15.06 0 0 0-5.65-1.27 9.62 9.62 0 0 0-6.53 2.34 7.9 7.9 0 0 0-2.59 6 7.7 7.7 0 0 0 2.16 5.17A9.1 9.1 0 0 0 66 19.28a12.73 12.73 0 0 0 6-1.37l.14-.07zM50 .28v21.85H26.75V.28zm-5.54 14.48A4.21 4.21 0 0 0 41 10.69a3.87 3.87 0 0 0 1.35-1.08A3.41 3.41 0 0 0 43 7.47a3.8 3.8 0 0 0-1.27-2.85 5.76 5.76 0 0 0-4-1.29h-4.89v15.75h5.81a6.54 6.54 0 0 0 4.46-1.39 3.88 3.88 0 0 0 1.35-2.93z">
+                  </path>
+                  <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
+                  </path>
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM187.89 6.23H189l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM195.73 6.3h5.64v1.34h-4.12v3h4.13v1.35h-4.12v4.93h-1.51zM206.58 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13H202zm2.22 6.15l-1.7-3.82-1.58 3.83zM218.37 6.23h1.06l4.74 10.63h-1.55l-1.41-3.13h-4.51l-1.32 3.13h-1.56zm2.22 6.15l-1.71-3.83-1.58 3.83zM234.57 6.3H236v10.57h-1.3l-7.07-8.14v8.14h-1.42V6.3h1.23l7.13 8.21zM249.32 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.6 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.11 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM257.77 16.87V6.3h2.65a3.82 3.82 0 0 1 2.55.79 2.66 2.66 0 0 1 .94 2.15 2.65 2.65 0 0 1-1.79 2.6 4.69 4.69 0 0 1 1 .91 18.31 18.31 0 0 1 1.36 2q.55.9.89 1.35l.56.76h-1.8l-.46-.7-.09-.13-.29-.42-.47-.77-.52-.84a8.18 8.18 0 0 0-.86-1 3.28 3.28 0 0 0-.7-.56 2.38 2.38 0 0 0-1.06-.17h-.39v4.6zm2-9.29h-.45v3.34h.58a4.27 4.27 0 0 0 1.58-.2 1.48 1.48 0 0 0 .67-.59 1.72 1.72 0 0 0 .24-.9 1.61 1.61 0 0 0-.26-.9 1.42 1.42 0 0 0-.75-.57 5.38 5.38 0 0 0-1.64-.18zM272.6 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM289.45 6.3h1.42v10.57h-1.52V8.64l-3.25 4.09h-.28l-3.29-4.09v8.23H281V6.3h1.43l3.57 4.34zM299.22 6.14a5.68 5.68 0 0 1 4.08 1.56 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.54 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.89-1.17zM312.73 6.14a5.68 5.68 0 0 1 4.08 1.55 5.15 5.15 0 0 1 1.63 3.89 5.06 5.06 0 0 1-1.65 3.87 5.85 5.85 0 0 1-4.14 1.55 5.51 5.51 0 0 1-4-1.53 5.11 5.11 0 0 1-1.59-3.84 5.22 5.22 0 0 1 1.6-3.92 5.59 5.59 0 0 1 4.07-1.57zm.06 1.44a4.1 4.1 0 0 0-3 1.13 3.87 3.87 0 0 0-1.17 2.9 3.8 3.8 0 0 0 1.17 2.85 4.35 4.35 0 0 0 5.89 0 3.87 3.87 0 0 0 1.18-2.88 3.78 3.78 0 0 0-1.18-2.83 4 4 0 0 0-2.88-1.17z">
+                  </path>
+                  <path d="M168.37 0v22.59"
+                        stroke-width="2"
+                  >
+                  </path>
+                </g>
+              </svg>
+              <span role="text"
+                    class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX"
+              >
+                <span lang="en-GB">
+                  BBC News
+                </span>
+                ,
+                Afaan Oromoo
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 gccobV">
+          <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
+            <ul role="list"
+                class="StyledList-sc-2e1ekc-0 gRKcvt"
+            >
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-49281861"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC News maaliif amanuu dandeessa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Haala itti fayyadamaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/aboutthebbc"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Waa'ee BBC
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Imaammata mateenyaa
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    Kuus-yaadannoo
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a href="https://www.bbc.com/afaanoromoo/institutional-42228538"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    BBC qunnami
+                  </span>
+                </a>
+              </li>
+              <li role="listitem"
+                  class="StyledListItem-sc-2e1ekc-1 kUOQdM"
+              >
+                <a lang="en-GB"
+                   href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                   class="StyledLink-nhmg8j-0 dHbSzF"
+                >
+                  <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                    AdChoices / Do Not Sell My Info
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="StyledParagraph-sc-1gggobt-2 jQPFnr">
+              <span lang="en-GB">
+                ©
+              </span>
+              2020 BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.
+              <a href="https://www.bbc.co.uk/help/web/links/"
+                 class="StyledLink-nhmg8j-0 jHQlUp"
+              >
+                <span class="StyleLinkText-nhmg8j-1 fPnERB">
+                  Gara geessituu alaatti akkaataa itti hojjennu dubbisi.
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1505967874000,"lastPublished":1505968091000,"lastUpdated":1563495743899,"id":"mock-id","locators":{"assetUri":"/afaanoromoo/oduu-41217768","cpsUrn":"urn:bbc:content:assetUri:afaanoromoo/oduu-41217768","curie":"http://www.bbc.co.uk/asset/114f54f2-1c3f-5d41-8988-c3330e0c204c"},"type":"PGL","createdBy":"afaan-oromoo-v6","language":"om","options":{"isIgorSeoTagsEnabled":false,"includeComments":false,"allowRightHandSide":true,"isFactCheck":false,"allowDateStamp":true,"suitableForSyndication":true,"hasNewsTracker":false,"allowRelatedStoriesBox":true,"isKeyContent":false,"allowHeadline":true,"allowAdvertising":true,"hasContentWarning":false,"isBreakingNews":false,"allowPrintingSharingLinks":true},"analyticsLabels":{"cps_asset_type":"pgl","counterName":"afaanoromoo.news.photo_gallery.41217768.page","cps_asset_id":"41217768"},"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"}},"tags":{"about":[{"thingLabel":"History","thingUri":"http://www.bbc.co.uk/things/03eb3674-6190-4cd7-8104-1a00991d67a3#id","thingId":"03eb3674-6190-4cd7-8104-1a00991d67a3","thingType":["Theme","Thing"],"thingSameAs":["http://dbpedia.org/resource/History","http://www.wikidata.org/entity/Q309"],"topicName":"Seenaa","topicId":"cz74k705q39t","curationList":[{"curationId":"cdab1c78-4525-4512-9698-7b9e88a04506","curationType":"vivo-stream"}]},{"thingLabel":"Addis Ababa","thingUri":"http://www.bbc.co.uk/things/8a760184-c272-42ec-b898-858f069e4422#id","thingId":"8a760184-c272-42ec-b898-858f069e4422","thingType":["Place","Thing","geoname:GeoTagConcept"],"thingSameAs":["http://sws.geonames.org/344979/"],"topicName":"Finfinnee","topicId":"cg72670d4dpt","curationList":[{"curationId":"c299510a-b7c6-4b1c-86fc-b3027924940c","curationType":"vivo-stream"}]}]},"version":"v1.0.10","blockTypes":["image"],"includeComments":false},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","blocks":[{"type":"fragment","model":{"text":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"timestamp","model":{"firstPublished":1505967874000,"lastPublished":1505968091000},"id":"mock-id","position":[2]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","blocks":[{"type":"fragment","model":{"text":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","attributes":[]},"id":"mock-id","position":[3,1,1]}]},"id":"mock-id","position":[3,1]}]},"id":"mock-id","position":[3]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.","blocks":[{"type":"fragment","model":{"text":"1. Masaraa Aaxee Minilik Manni durii kunis kan bara 1875tti Aaxee Minilkiin ijaarame yoo ta'u, seenaa magaalaa Finfinnee keessattis masaraa jalqabaati. Mana seena qabeessa kanas wayita ammaa kanatti waldaa Qidista Maariyaam Tawaahido Ortodoksii Itoophiyaatu bulchaa jira. Irra caalaan mana kanaas dhoqqee fi dhakaa irraa kan ijaarame yoo ta'u, dhaabbiin isaa muka gaattiiraati. Dagaleen isaas kan hidhame gogaa qotiyyootiin ture.","attributes":[]},"id":"mock-id","position":[4,1,1,1,1]}]},"id":"mock-id","position":[4,1,1,1]}]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Masaraa Aaxee Minilik","blocks":[{"type":"fragment","model":{"text":"Masaraa Aaxee Minilik","attributes":[]},"id":"mock-id","position":[4,2,1,1,1]}]},"id":"mock-id","position":[4,2,1,1]}]},"id":"mock-id","position":[4,2,1]}]},"id":"mock-id","position":[4,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"CB33/production/_97491025_img_1060.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[4,3]}]},"id":"mock-id","position":[4]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.","blocks":[{"type":"fragment","model":{"text":"Dallaa masaraa keessattis manneen sadi ni argamu. Inni jalqabaas mana itti boqonnaa keessummaa yoo ta'u, inni lammaffaan mana ciisaa mootii fi giiftii akkasumas mana faayaan garaa garaa fi meeshaan waraanaa ka'amuudha. Inni sadaffaan ammookutaalee walgahii, bakka itti nyaatamuu, fi bakka dammii fi foon itti olkaa'amuu ammalleenni mul'atu.","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Masaraa Aaxee Minilik","blocks":[{"type":"fragment","model":{"text":"Masaraa Aaxee Minilik","attributes":[]},"id":"mock-id","position":[5,2,1,1,1]}]},"id":"mock-id","position":[5,2,1,1]}]},"id":"mock-id","position":[5,2,1]}]},"id":"mock-id","position":[5,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"F243/production/_97491026_img_1135.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[5,3]}]},"id":"mock-id","position":[5]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.","blocks":[{"type":"fragment","model":{"text":"Akka daawwachistoonni naannawichaa jedhanittis, Aaxee Minilik gara Adawaatti kan duulan masaraadhuma kanaa ka'uun injofannoon boodas asumatti deebii'an jedhama. Kana malees, baargamoon dallaa keessatti mul'atu kanas baargamoowwan Aaxee Minilik biyya Awusitraaliyaatii fidan keessaa akka ta'e dubbatama.","attributes":[]},"id":"mock-id","position":[6,1,1,1,1]}]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Masaraa Aaxee Minilik","blocks":[{"type":"fragment","model":{"text":"Masaraa Aaxee Minilik","attributes":[]},"id":"mock-id","position":[6,2,1,1,1]}]},"id":"mock-id","position":[6,2,1,1]}]},"id":"mock-id","position":[6,2,1]}]},"id":"mock-id","position":[6,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":4032,"locator":"3547/production/_97493631_img_1065.jpg","originCode":"cpsprodpb","width":3024},"id":"mock-id","position":[6,3]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.","blocks":[{"type":"fragment","model":{"text":"2. Mana Raas Tasamaa Naadoo Manni kunis Kutaa magaalaa Lidataa Aanaa 07 naanawa Hospitaala Tiqur Anbasaa Noki bakka gaaziin itti gurguramutti argama. Wayita ammaa kanattis mana barnoota Sadarkaa tokkooffaa Mejar Janaraal YaaYilom Arayaa ta'uun tajaajilaa jira. Bara isaattis faayaawwanii fi ibsaawwan isaa Awuroppaadhaa fiduun kan itti galfaman yoo ta'u, bareeda isaatiin kan ka'ees moggaasa 'Shawaan dinqisiifate' (Shawaan Garamawu) jedhu argate ture. Akkasumas Aaxe Hayilasillaaseen tibba qohpii addaa masaraa isaanitti qabaatan faayaa fi ambooloota asii ergifachaa akka turan illeen ni himama.","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Raas Tasamaa Naadoo","blocks":[{"type":"fragment","model":{"text":"Mana Raas Tasamaa Naadoo","attributes":[]},"id":"mock-id","position":[7,2,1,1,1]}]},"id":"mock-id","position":[7,2,1,1]}]},"id":"mock-id","position":[7,2,1]}]},"id":"mock-id","position":[7,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":3024,"locator":"16B64/production/_97482039_img_1473.jpg","originCode":"cpsprodpb","width":4032},"id":"mock-id","position":[7,3]}]},"id":"mock-id","position":[7]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.","blocks":[{"type":"fragment","model":{"text":"Ambooloonni ibsaa Awuroppaadhaa dhufan isaan kanneen ta'u isaanitiif ragaa qabaachu yoo baatame illeen ammalleen manicha keessatti eddoo garaa garaatti raraafamanii ni mul'atu.","attributes":[]},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Raas Tasamaa Naadoo","blocks":[{"type":"fragment","model":{"text":"Mana Raas Tasamaa Naadoo","attributes":[]},"id":"mock-id","position":[8,2,1,1,1]}]},"id":"mock-id","position":[8,2,1,1]}]},"id":"mock-id","position":[8,2,1]}]},"id":"mock-id","position":[8,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"14063/production/_97491028_img_1454.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[8,3]}]},"id":"mock-id","position":[8]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.","blocks":[{"type":"fragment","model":{"text":"3. Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi Manni durii kunis kan argamu kutaa magaalaa Qiirqoos naannawa Kaazaanchis jedhamutti yoo ta'u, wayita ammaa kanattis mana barnootaa Yelibe Faanaa jedhamuun tajaajilaa jira. Manni kunis bara 1884tti kan ijaarame yoo ta'u, abbaan qabeenya manichaa Axinaafuu Sagadi lola Xaaliyaanii waliin taasifameen Maacoorratti du'aniiru.","attributes":[]},"id":"mock-id","position":[9,1,1,1,1]}]},"id":"mock-id","position":[9,1,1,1]}]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","blocks":[{"type":"fragment","model":{"text":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","attributes":[]},"id":"mock-id","position":[9,2,1,1,1]}]},"id":"mock-id","position":[9,2,1,1]}]},"id":"mock-id","position":[9,2,1]}]},"id":"mock-id","position":[9,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":3024,"locator":"1163C/production/_97482217_img_1620.jpg","originCode":"cpsprodpb","width":4032},"id":"mock-id","position":[9,3]}]},"id":"mock-id","position":[9]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.","blocks":[{"type":"fragment","model":{"text":"Irra caalaan mana kanaas dhakkaa adii fi simintoodhaan kan ijaarameedha. Kutaan jalaa mana durii kanaatis bakka itti bilcheefamu ta'uun tajaajila ture. Dizaayinariin mana kanaas nama Mahaammad Walee jedhamu akka ture ragaaleen ni mul'isu.","attributes":[]},"id":"mock-id","position":[10,1,1,1,1]}]},"id":"mock-id","position":[10,1,1,1]}]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","blocks":[{"type":"fragment","model":{"text":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","attributes":[]},"id":"mock-id","position":[10,2,1,1,1]}]},"id":"mock-id","position":[10,2,1,1]}]},"id":"mock-id","position":[10,2,1]}]},"id":"mock-id","position":[10,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"B03F/production/_97491154_img_1576.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[10,3]}]},"id":"mock-id","position":[10]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.","blocks":[{"type":"fragment","model":{"text":"Kana malees, darbii isa gubbaa irraa kan ittiin gadi gara kuttaa lafa jalaatti bu'amuun sadarkaawwan bareedaas alaa fi keessaan kan ijaarameef yoo ta'u, sababii umurii isaatiin amma duloomaa jira.","attributes":[]},"id":"mock-id","position":[11,1,1,1,1]}]},"id":"mock-id","position":[11,1,1,1]}]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","blocks":[{"type":"fragment","model":{"text":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","attributes":[]},"id":"mock-id","position":[11,2,1,1,1]}]},"id":"mock-id","position":[11,2,1,1]}]},"id":"mock-id","position":[11,2,1]}]},"id":"mock-id","position":[11,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":360,"locator":"D74F/production/_97491155_img_1537.jpg","originCode":"cpsprodpb","width":640},"id":"mock-id","position":[11,3]}]},"id":"mock-id","position":[11]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.","blocks":[{"type":"fragment","model":{"text":"4. Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo Manni kunis kutaa magaalaa Araadaa Aaanaa 07 keessatti kan argamu yoo ta'u, kan ijaaramees bara 1898tti. Abbaa manaa kan turan Dubbii Hiimaa Mootii Nasiibuu Masqaloonis, mootii Aaxee Minilik yammu jalqabaaf mana marii ministirootaa hundeessanitti nama Ministira Murtii jalqabaa ta'uun kan mudamaniidha. Murtiin Dubbii Hiimaa Mootii Nasiibuu Masqaloo dabarsan yeroodhaa gara yerootti cimaa waan tureef himatamtoonni isaan duratti dhiyaachu hin barbaadan ture.","attributes":[]},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]}]},"id":"mock-id","position":[12,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","blocks":[{"type":"fragment","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","attributes":[]},"id":"mock-id","position":[12,2,1,1,1]}]},"id":"mock-id","position":[12,2,1,1]}]},"id":"mock-id","position":[12,2,1]}]},"id":"mock-id","position":[12,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"5027/production/_97491502_img_1386.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[12,3]}]},"id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.","blocks":[{"type":"fragment","model":{"text":"Mannii durii kun abbaa darbii tokko yoo ta'u, jalli isaa akka gola itti bilcheefataniitti tajaajilaa ture. Kutaan jala manichaa ammoo bu'uura cimaa irratti kan ijaarame yoo ta'eeyyuu umurii fi kunuunsi gahaan waan hin tasifamneef baayyee dadhabaa jira.","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","blocks":[{"type":"fragment","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"7737/production/_97491503_img_1391.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.","blocks":[{"type":"fragment","model":{"text":"Wayita ammaa kanattis maatiin 40 olitu mana keessa jiraachaa jira. Naannawa manichaattis manneen dabalataa walitti qabatan baayyeen ijaaramanii jiru. Kana malees, foddaa fi karriwwan mana kanaa irra caalaan sibilatti geedaramanii jiru.","attributes":[]},"id":"mock-id","position":[14,1,1,1,1]}]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","blocks":[{"type":"fragment","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","attributes":[]},"id":"mock-id","position":[14,2,1,1,1]}]},"id":"mock-id","position":[14,2,1,1]}]},"id":"mock-id","position":[14,2,1]}]},"id":"mock-id","position":[14,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"EFEB/production/_97491416_img_1371.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[14,3]}]},"id":"mock-id","position":[14]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.","blocks":[{"type":"fragment","model":{"text":"Mana Dubbii Hiimaa Mootii Nasiibuu Masqaloo kanaaf foyya'iinsi atattamaa yoo taasifame malee manichis ta'e namoonni achi keessa jiraatan balaaf saaxilamu malu.","attributes":[]},"id":"mock-id","position":[15,1,1,1,1]}]},"id":"mock-id","position":[15,1,1,1]}]},"id":"mock-id","position":[15,1,1]}]},"id":"mock-id","position":[15,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","blocks":[{"type":"fragment","model":{"text":"Dubbii Hiimaa Mootii Nasiibuu Masqaloo","attributes":[]},"id":"mock-id","position":[15,2,1,1,1]}]},"id":"mock-id","position":[15,2,1,1]}]},"id":"mock-id","position":[15,2,1]}]},"id":"mock-id","position":[15,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"12B4B/production/_97491667_img_1394.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[15,3]}]},"id":"mock-id","position":[15]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.","blocks":[{"type":"fragment","model":{"text":"5. Mana Luli Raas Siyum Mangashaa Manneen duraan ilaalle dabalate, manni maastar plaanii magaalaatiin akka qabeenyaatti galmeefame kun, mana Luli Raas Siyum Mangashaa naannawa Faransaayitti argamuuhda. Kunis mana viilaa durii isa guddaadha. Haalli ijaarsa isaas kan oggummaa ijaarsa manaa bara sanaa agarsiisuudha.","attributes":[]},"id":"mock-id","position":[16,1,1,1,1]}]},"id":"mock-id","position":[16,1,1,1]}]},"id":"mock-id","position":[16,1,1]}]},"id":"mock-id","position":[16,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Luli Raas Siyum Mangashaa","blocks":[{"type":"fragment","model":{"text":"Mana Luli Raas Siyum Mangashaa","attributes":[]},"id":"mock-id","position":[16,2,1,1,1]}]},"id":"mock-id","position":[16,2,1,1]}]},"id":"mock-id","position":[16,2,1]}]},"id":"mock-id","position":[16,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"46E5/production/_97494181_bdd1df8e-3fc6-4647-8e9c-1bc66b00250a.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[16,3]}]},"id":"mock-id","position":[16]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.","blocks":[{"type":"fragment","model":{"text":"Akkuma Dubbii Hiimaa Mootii Nasiibuu Masqaloo, asis abbootii warraa baayyeetu jiraataachaa jira. Manni tibba tokko mana jireenyaa nama tokko turees har'aa abbootii warraa 30 olitu keessa jiraachaa jira. Naannawa manichaattis manneen hedduun ijaaramanii jiru.","attributes":[]},"id":"mock-id","position":[17,1,1,1,1]}]},"id":"mock-id","position":[17,1,1,1]}]},"id":"mock-id","position":[17,1,1]}]},"id":"mock-id","position":[17,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Luli Raas Siyum Mangashaa","blocks":[{"type":"fragment","model":{"text":"Mana Luli Raas Siyum Mangashaa","attributes":[]},"id":"mock-id","position":[17,2,1,1,1]}]},"id":"mock-id","position":[17,2,1,1]}]},"id":"mock-id","position":[17,2,1]}]},"id":"mock-id","position":[17,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":360,"locator":"6DF5/production/_97494182_3ac899dd-b645-4a7b-b241-9c57e93d80d5.jpg","originCode":"cpsprodpb","width":640},"id":"mock-id","position":[17,3]}]},"id":"mock-id","position":[17]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama","blocks":[{"type":"fragment","model":{"text":"Manneen durii kanneeniif yoo haaromsi atattamaa taasifame malee jireenyi namoota keessa jiraatanii balaa irratti argama","attributes":[]},"id":"mock-id","position":[18,1,1,1,1]}]},"id":"mock-id","position":[18,1,1,1]}]},"id":"mock-id","position":[18,1,1]}]},"id":"mock-id","position":[18,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Mana Luli Raas Siyum Mangashaa","blocks":[{"type":"fragment","model":{"text":"Mana Luli Raas Siyum Mangashaa","attributes":[]},"id":"mock-id","position":[18,2,1,1,1]}]},"id":"mock-id","position":[18,2,1,1]}]},"id":"mock-id","position":[18,2,1]}]},"id":"mock-id","position":[18,2]},{"type":"rawImage","model":{"copyrightHolder":"BBC","height":549,"locator":"9505/production/_97494183_69e57964-8b08-4235-8822-49763fcf8854.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[18,3]}]},"id":"mock-id","position":[18]}]}},"promo":{"headlines":{"shortHeadline":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","headline":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan"},"locators":{"assetUri":"/afaanoromoo/oduu-41217768","cpsUrn":"urn:bbc:content:assetUri:afaanoromoo/oduu-41217768","curie":"http://www.bbc.co.uk/asset/114f54f2-1c3f-5d41-8988-c3330e0c204c"},"summary":"Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan","timestamp":1563495743899,"passport":{"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"}},"indexImage":{"id":"mock-id","subType":"index","href":"http://c.files.bbci.co.uk/726D/production/_97739292_img_1620.jpg","path":"/cpsprodpb/726D/production/_97739292_img_1620.jpg","height":549,"width":976,"altText":"Mana Dubbii Hiimaa Mootii Axinaafuu Sagadi","copyrightHolder":"BBC","type":"image"},"id":"mock-id","type":"cps"},"relatedContent":{"section":{"subType":"index","name":"Oduu","uri":"/afaanoromoo/oduu","type":"simple"},"site":{"subType":"site","name":"BBC Afaan Oromoo","uri":"/afaanoromoo","type":"simple"},"groups":[]}},"path":"/afaanoromoo/oduu-41217768","timeOnServer": "mock-time"}
+    </script>
+    <div>
+      <!--[if !IE]><!-->
+    </div>
+    <script id="__LOADABLE_REQUIRED_CHUNKS__"
+            type="text/javascript"
+            crossorigin="anonymous"
+            defer
+    >
+      [0]
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-1f20a385.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-678f84af.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/vendor-10e2e882.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-d0ae3f07.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="main"
+            src="http://localhost:7080/static/js/main-f71cff67.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <script async
+            data-chunk="afaanoromoo"
+            src="http://localhost:7080/static/js/afaanoromoo-31ecd969.js"
+            crossorigin="anonymous"
+            type="text/javascript"
+            defer
+    >
+    </script>
+    <div>
+    </div>
+    <script type="text/javascript">
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </body>
+</html>
+`;
