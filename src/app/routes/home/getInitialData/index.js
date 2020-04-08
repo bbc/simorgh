@@ -19,7 +19,7 @@ const transformJson = pipe(
 
 export default async ({ path, service, variant = 'default' }) => {
   // should we think of a resusable pattern for using config outside of our react app?
-  // such as const config = await getConfig(service);
+  // such as const config = await getConfig(service, variant);
   const { service: config } = await import(`#lib/config/services/${service}`);
 
   // checklist
