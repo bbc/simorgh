@@ -39,7 +39,6 @@ const HeaderContainer = () => {
         skipLink={skipLink}
         scriptLink={scriptLink && <ScriptLink />}
       />
-      {showNav && <NavigationContainer />}
     </header>
   );
 };
