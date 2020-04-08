@@ -17,8 +17,12 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
+const LIVE_RADIO_ASSET_ID = 'liveradio';
+
+const isLiveRadio = (assetId) => assetId === LIVE_RADIO_ASSET_ID;
+
 const getMediaInfo = (assetId) => ({
-  title: assetId === 'liveradio' ? 'Live radio' : 'On-demand radio',
+  title: isLiveRadio(assetId) ? 'Live radio' : 'On-demand radio',
   type: 'audio',
 });
 
@@ -36,9 +40,13 @@ const InnerWrapper = styled.div`
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - ${GEL_SPACING_QUAD});
+`;
+
+const MediaMessageWrapper = styled(InnerWrapper)`
   position: relative;
   overflow: hidden;
-  height: 165px;
+  min-height: 165px;
+  margin-bottom: ${GEL_SPACING_QUAD};
 `;
 
 const AudioPlayer = ({
@@ -66,17 +74,21 @@ const AudioPlayer = ({
 
     return (
       <OuterWrapper>
-        <InnerWrapper>
+        <MediaMessageWrapper>
           <MediaMessage service={service} message={expiredContentMessage} />
-        </InnerWrapper>
+        </MediaMessageWrapper>
       </OuterWrapper>
     );
   }
 
   if (!isValidPlatform || !masterBrand || !assetId) return null; // potential for logging here
 
+  const mediaId = isLiveRadio(assetId)
+    ? `${masterBrand}/${assetId}/${lang}` // liveradio
+    : `${service}/${masterBrand}/${assetId}/${lang}`; // ondemand
+
   const embedUrl = getEmbedUrl({
-    mediaId: `${masterBrand}/${assetId}/${lang}`,
+    mediaId,
     type: 'media',
     isAmp,
     queryString: location.search,

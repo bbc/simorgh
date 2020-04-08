@@ -207,8 +207,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/afrique/media-52121324', // CPS MAP
+              '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -1786,8 +1789,10 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/japanese/video-52178074', // CPS MAP
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -2281,8 +2286,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/mundo/media-52123665', // CPS MAP
+              '/mundo/noticias/2011/05/110518_video_deforestacion_amazonia_brasil_lav', // TC2 MAP
+            ],
+            enabled: true,
           },
           test: {
             paths: [
@@ -3022,8 +3030,11 @@ module.exports = () => ({
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/portuguese/internacional-51918335', // CPS MAP
+              '/portuguese/noticias/2012/07/120711_video_estomago_camera_cc', // TC2 MAP
+            ],
+            enabled: true,
           },
           test: {
             paths: [
