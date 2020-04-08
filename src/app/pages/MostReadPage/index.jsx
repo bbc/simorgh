@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
@@ -69,6 +69,10 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       {children}
     </>
   );
+
+  MostReadWrapper.propTypes = {
+    children: node.isRequired,
+  };
 
   return (
     <>

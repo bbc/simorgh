@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { Fragment, useContext } from 'react';
-import { string } from 'prop-types';
+import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from 'styled-components';
@@ -120,6 +120,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       {children}
     </FrontPageMostReadSection>
   );
+
+  MostReadWrapper.propTypes = {
+    children: node.isRequired,
+  };
 
   const renderMostRead = () => (
     <MostReadContainer

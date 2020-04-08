@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, node } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -110,6 +110,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       {children}
     </ConstrainedMostReadSection>
   );
+
+  MostReadWrapper.propTypes = {
+    children: node.isRequired,
+  };
 
   return (
     <>
