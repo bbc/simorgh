@@ -17,8 +17,12 @@ const staticAssetsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${pr
 
 const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholder.png`;
 
+const LIVE_RADIO_ASSET_ID = 'liveradio';
+
+const isLiveRadio = (assetId) => assetId === LIVE_RADIO_ASSET_ID;
+
 const getMediaInfo = (assetId) => ({
-  title: assetId === 'liveradio' ? 'Live radio' : 'On-demand radio',
+  title: isLiveRadio(assetId) ? 'Live radio' : 'On-demand radio',
   type: 'audio',
 });
 
@@ -79,8 +83,12 @@ const AudioPlayer = ({
 
   if (!isValidPlatform || !masterBrand || !assetId) return null; // potential for logging here
 
+  const mediaId = isLiveRadio(assetId)
+    ? `${masterBrand}/${assetId}/${lang}` // liveradio
+    : `${service}/${masterBrand}/${assetId}/${lang}`; // ondemand
+
   const embedUrl = getEmbedUrl({
-    mediaId: `${masterBrand}/${assetId}/${lang}`,
+    mediaId,
     type: 'media',
     isAmp,
     queryString: location.search,
