@@ -42,7 +42,7 @@ FeaturesAnalysis.propTypes = {
 };
 
 FeaturesAnalysis.defaultProps = {
-  content: featuresAnalysis, // @TODO: rm this
+  content: featuresAnalysis, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
 };
 
 export default FeaturesAnalysis;
