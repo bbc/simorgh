@@ -6,7 +6,7 @@ import topStories from '#pages/StoryPage/topStories.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
-import CpsAsset from '../CpsAsset';
+import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const TopStories = ({ content }) => {
   const { dir } = useContext(ServiceContext);
@@ -34,7 +34,7 @@ const TopStories = ({ content }) => {
   );
 
   return (
-    <CpsAsset
+    <CpsOnwardJourney
       title="Top Stories"
       a11yAttributes={a11yAttributes}
       content={content}

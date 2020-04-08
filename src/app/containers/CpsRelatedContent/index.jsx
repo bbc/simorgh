@@ -9,7 +9,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
-import CpsAsset from '../CpsAsset';
+import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const formatItem = (item, env) => {
   if (env === 'live') return item;
@@ -72,7 +72,7 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   );
 
   return (
-    <CpsAsset
+    <CpsOnwardJourney
       title={translations.relatedContent}
       a11yAttributes={a11yAttributes}
       content={content}

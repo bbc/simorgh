@@ -6,7 +6,7 @@ import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
-import CpsAsset from '../CpsAsset';
+import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const FeaturesAnalysis = ({ content }) => {
   const { dir } = useContext(ServiceContext);
@@ -33,7 +33,7 @@ const FeaturesAnalysis = ({ content }) => {
   );
 
   return (
-    <CpsAsset
+    <CpsOnwardJourney
       title="Features &amp; Analysis"
       a11yAttributes={a11yAttributes}
       content={content}

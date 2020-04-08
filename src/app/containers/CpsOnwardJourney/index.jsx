@@ -38,7 +38,7 @@ const SingleContentWrapper = styled.div`
   }
 `;
 
-const CpsAsset = ({
+const CpsOnwardJourney = ({
   title,
   content,
   enableGridWrapper,
@@ -47,7 +47,7 @@ const CpsAsset = ({
   singleTransform,
 }) => {
   const { script, service, dir } = useContext(ServiceContext);
-  const CpsAssetWrapper = ({ children }) =>
+  const CpsOnwardJourneyWrapper = ({ children }) =>
     enableGridWrapper ? (
       <GridWrapper {...a11yAttributes}>
         <Wrapper>{children}</Wrapper>
@@ -55,7 +55,7 @@ const CpsAsset = ({
     ) : (
       <Wrapper {...a11yAttributes}>{children}</Wrapper>
     );
-  CpsAssetWrapper.propTypes = {
+  CpsOnwardJourneyWrapper.propTypes = {
     children: node.isRequired,
   };
   if (!content.length) return null;
@@ -65,7 +65,7 @@ const CpsAsset = ({
   const labelId = a11yAttributes['aria-labelledby'];
 
   return (
-    <CpsAssetWrapper>
+    <CpsOnwardJourneyWrapper>
       <Wrapper>
         <StyledSectionLabel
           script={script}
@@ -84,11 +84,11 @@ const CpsAsset = ({
           listTransform(content)
         )}
       </Wrapper>
-    </CpsAssetWrapper>
+    </CpsOnwardJourneyWrapper>
   );
 };
 
-CpsAsset.propTypes = {
+CpsOnwardJourney.propTypes = {
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
   enableGridWrapper: bool,
@@ -101,9 +101,9 @@ CpsAsset.propTypes = {
   singleTransform: func.isRequired,
 };
 
-CpsAsset.defaultProps = {
+CpsOnwardJourney.defaultProps = {
   content: [],
   enableGridWrapper: false,
 };
 
-export default CpsAsset;
+export default CpsOnwardJourney;
