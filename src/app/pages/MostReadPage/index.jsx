@@ -26,7 +26,7 @@ import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
 
-const StyledMain = styled.main`
+const StyledMain = styled.main.attrs({ role: 'main' })`
   flex-grow: 1;
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
@@ -85,7 +85,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         description="mostread"
         openGraphType="website"
       />
-      <StyledMain role="main" dir={dir}>
+      <StyledMain dir={dir}>
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
