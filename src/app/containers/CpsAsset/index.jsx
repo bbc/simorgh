@@ -28,7 +28,7 @@ const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
 `;
 
-// Apply the right padding-top&bottom around the single story promo
+// Apply the correct top & bottom padding around the single story promo
 const SingleContentWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-top: ${GEL_SPACING_DBL};
