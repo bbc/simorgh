@@ -102,7 +102,6 @@ describe('Given I am on a Pidgin article AMP/Canonical page', () => {
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
       skipToContentText: 'Waka go wetin de inside',
-      headlineText: "Adams Oshiomhole say 'I still be APC National Chairman'",
     });
   });
 
