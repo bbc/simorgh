@@ -6,7 +6,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   margin: 0;
   padding: 0;
   grid-auto-flow: column;
-  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  grid-template-rows: repeat(10,auto);
 }
 
 .c9 {
@@ -154,7 +154,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 @media (min-width:80rem) {
   .c5 {
-    width: calc(20%);
+    width: calc(50%);
     display: inline-block;
     vertical-align: top;
   }
@@ -166,166 +166,129 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-@media (max-width:37.4375rem) {
+@media (min-width:37.5rem) {
   .c4 {
-    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    grid-auto-flow: row;
-    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+    grid-template-rows: repeat( 5,auto );
   }
 }
 
 @media (max-width:14.9375rem) {
   .c8 {
-    min-width: 2rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c8 {
-    min-width: 2.6rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c8 {
-    min-width: 2.75rem;
+    min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c8 {
-    min-width: auto;
+    min-width: 4rem;
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:37.5rem) {
   .c8 {
-    min-width: auto;
+    min-width: 2rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c14 {
-    min-width: 2rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c14 {
-    min-width: 2.6rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c14 {
-    min-width: 2.75rem;
+    min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c14 {
-    min-width: 3.75rem;
+    min-width: 4rem;
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:37.5rem) {
   .c14 {
-    min-width: auto;
+    min-width: 4rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c15 {
-    min-width: 2rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c15 {
-    min-width: 2.6rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c15 {
-    min-width: 2.75rem;
+    min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c15 {
-    min-width: auto;
+    min-width: 4rem;
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:37.5rem) {
   .c15 {
-    min-width: 3.9rem;
+    min-width: 4rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c16 {
-    min-width: 2rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c16 {
-    min-width: 2.6rem;
+    min-width: 2.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c16 {
-    min-width: 2.75rem;
+    min-width: 3rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c16 {
-    min-width: 3.75rem;
+    min-width: 4rem;
   }
 }
 
-@media (min-width:80rem) {
+@media (min-width:37.5rem) {
   .c16 {
-    min-width: auto;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c17 {
     min-width: 2rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c17 {
-    min-width: 2.6rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c17 {
-    min-width: 2.75rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c17 {
-    min-width: auto;
-  }
-}
-
-@media (min-width:80rem) {
-  .c17 {
-    min-width: auto;
   }
 }
 
@@ -833,7 +796,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c15"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -874,7 +837,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c16"
+                  class="c15"
                   dir="ltr"
                 >
                   <span
@@ -915,7 +878,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c17"
+                  class="c16"
                   dir="ltr"
                 >
                   <span
@@ -956,7 +919,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c16"
+                  class="c15"
                   dir="ltr"
                 >
                   <span
@@ -997,7 +960,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c17"
+                  class="c16"
                   dir="ltr"
                 >
                   <span
@@ -1038,7 +1001,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c16"
+                  class="c15"
                   dir="ltr"
                 >
                   <span
