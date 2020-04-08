@@ -3197,7 +3197,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c16 {
   margin-bottom: 1rem;
-  z-index: 0;
 }
 
 .c18 {
@@ -6379,7 +6378,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c35 {
   margin-bottom: 1rem;
-  z-index: 0;
 }
 
 .c37 {
