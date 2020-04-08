@@ -12,13 +12,12 @@ import {
 import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
-  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL } from '@bbc/psammead-styles/colours';
-import { getCanon } from '@bbc/gel-foundations/typography';
+import { getParagon } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MostReadContainer from '#containers/MostRead';
@@ -41,14 +40,16 @@ const StyledMain = styled.main`
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     width: 100%; /* Needed for IE11 */
     margin: 0 auto ${GEL_SPACING_TRPL};
-    padding: 0 ${GEL_SPACING_DBL};
-    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
 
-const HeadingOne = styled.h1`
+const HeadingOne = styled.h1.attrs({
+  id: 'content',
+  tabIndex: '-1',
+})`
   color: ${C_METAL};
-  ${({ script }) => script && getCanon(script)};
+  ${({ script }) => script && getParagon(script)};
   ${({ service }) => getSansRegular(service)};
 `;
 
@@ -63,7 +64,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
-      <HeadingOne id="content" tabindex="-1" script={script} service={service}>
+      <HeadingOne script={script} service={service}>
         {header}
       </HeadingOne>
       {children}

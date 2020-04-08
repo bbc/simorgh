@@ -98,8 +98,8 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 
 .c1 {
   color: #6E6E73;
-  font-size: 1.75rem;
-  line-height: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -381,22 +381,21 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   .c0 {
     width: 100%;
     margin: 0 auto 1.5rem;
-    padding: 0 1rem;
-    max-width: 80rem;
+    max-width: 63rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
   .c1 {
-    font-size: 2rem;
-    line-height: 2.25rem;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c1 {
-    font-size: 2.75rem;
-    line-height: 3rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
   }
 }
 
@@ -612,6 +611,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
         <h1
           class="c1"
           id="content"
+          tabindex="-1"
         >
           De one we dem de read well well
         </h1>
