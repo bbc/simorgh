@@ -60,7 +60,7 @@ export const service = {
       seeAll: 'Ver todo',
       home: 'Página de inicio',
       currentPage: 'Página actual',
-      skipLinkText: 'Ir al contenido',
+
       relatedContent: 'Contenido relacionado',
       navMenuText: 'Secciones',
       mediaAssetPage: {
