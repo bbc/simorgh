@@ -1,34 +1,17 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, bool } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import path from 'ramda/src/path';
-import assocPath from 'ramda/src/assocPath';
 
-import { RequestContext } from '#contexts/RequestContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const formatItem = (item, env) => {
-  if (env === 'live') return item;
-
-  // In non-live environments, we need to pass this querystring to ensure
-  // the linked site retrieves its data from the TEST API location
-  const uriSuffix = '?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk';
-  const baseUri = path(['locators', 'assetUri'], item);
-
-  return assocPath(['locators', 'assetUri'], `${baseUri}${uriSuffix}`, item);
-};
-
 const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { dir, translations } = useContext(ServiceContext);
-  const { env } = useContext(RequestContext);
 
-  const singleTransform = (promo) => (
-    <StoryPromo item={formatItem(promo, env)} dir={dir} />
-  );
+  const singleTransform = (promo) => <StoryPromo item={promo} dir={dir} />;
 
   const listTransform = (items) => (
     <Grid
@@ -59,7 +42,7 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
           key={item.id || item.uri}
           dir={dir}
         >
-          <StoryPromo item={formatItem(item, env)} dir={dir} />
+          <StoryPromo item={item} dir={dir} />
         </Grid>
       ))}
     </Grid>
