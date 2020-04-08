@@ -22,6 +22,10 @@ export const getLink = (state, program, service) => {
 };
 
 export default (radioScheduleData, service, currentTime) => {
+  if (!radioScheduleData) {
+    return null;
+  }
+
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
   const latestProgramIndex = findLastIndex(

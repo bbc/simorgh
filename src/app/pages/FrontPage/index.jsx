@@ -73,6 +73,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
+  const radioScheduleData = path(['radioScheduleData'], pageData);
   const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
   const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
 
@@ -117,7 +118,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
               {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
               {onFrontPage && frontPagePosition === group.type && (
-                <RadioScheduleContainer />
+                <RadioScheduleContainer initialData={radioScheduleData} />
               )}
             </Fragment>
           ))}

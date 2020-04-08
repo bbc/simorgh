@@ -91,8 +91,7 @@ const RadioFrequencyLink = styled.a`
   }
 `;
 
-const CanonicalRadioSchedule = ({ endpoint }) => {
-  const [schedule, setRadioSchedule] = useState();
+const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
   const {
     service,
     script,
@@ -104,6 +103,15 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
+
+  const initialSchedules = processRadioSchedule(
+    initialData,
+    service,
+    timeOnServer,
+  );
+
+  const [schedule, setRadioSchedule] = useState(initialSchedules);
+
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(
     null,
@@ -120,24 +128,26 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   useEffect(() => {
-    const handleResponse = async (response) => {
-      const radioScheduleData = await response.json();
-      const timeOnClient = parseInt(moment.utc().format('x'), 10);
-      const schedules = processRadioSchedule(
-        radioScheduleData,
-        service,
-        timeOnServer || timeOnClient,
-      );
-      setRadioSchedule(schedules);
-    };
+    if (!schedule) {
+      const handleResponse = async (response) => {
+        const radioScheduleData = await response.json();
+        const timeOnClient = parseInt(moment.utc().format('x'), 10);
+        const schedules = processRadioSchedule(
+          radioScheduleData,
+          service,
+          timeOnServer || timeOnClient,
+        );
+        setRadioSchedule(schedules);
+      };
 
-    const fetchRadioScheduleData = (pathname) =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch((e) => logger.error(`HTTP Error: "${e}"`));
+      const fetchRadioScheduleData = (pathname) =>
+        fetch(pathname, { mode: 'no-cors' })
+          .then(handleResponse)
+          .catch((e) => logger.error(`HTTP Error: "${e}"`));
 
-    fetchRadioScheduleData(endpoint);
-  }, [endpoint, locale, script, service, timeOnServer, timezone]);
+      fetchRadioScheduleData(endpoint);
+    }
+  }, [endpoint, locale, script, service, timeOnServer, timezone, schedule]);
 
   if (!schedule) {
     return null;
