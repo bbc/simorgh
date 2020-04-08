@@ -72,4 +72,6 @@ export const fetchData = (url) => {
   return fetch(url).then(handleResponse(url)).catch(handleError);
 };
 
-export default (pathname) => fetchData(getUrl(pathname));
+const fetchPageData = (pathname) => fetchData(getUrl(pathname));
+
+export default fetchPageData;
