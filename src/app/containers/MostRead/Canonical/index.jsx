@@ -54,19 +54,20 @@ const CanonicalMostRead = ({
   const [items, setItems] = useState(filteredData);
 
   useEffect(() => {
-    const handleResponse = async (response) => {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-      const mostReadData = await response.json();
-      setItems(filterMostRead({ data: mostReadData, numberOfItems }));
-    };
-    const fetchMostReadData = (pathname) =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch((e) => logger.error(`HTTP Error: "${e}"`));
-
     if (!items) {
+      const handleResponse = async (response) => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        const mostReadData = await response.json();
+        setItems(filterMostRead({ data: mostReadData, numberOfItems }));
+      };
+
+      const fetchMostReadData = (pathname) =>
+        fetch(pathname, { mode: 'no-cors' })
+          .then(handleResponse)
+          .catch((e) => logger.error(`HTTP Error: "${e}"`));
+
       fetchMostReadData(endpoint);
     }
   }, [
