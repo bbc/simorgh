@@ -25,11 +25,7 @@ const formatItem = (item, env) => {
 const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': 'related-content-heading',
-  };
+
   if (!content.length) return null;
 
   const singleTransform = (promo) => (
@@ -73,8 +69,8 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
 
   return (
     <CpsOnwardJourney
+      labelId="related-content-heading"
       title={translations.relatedContent}
-      a11yAttributes={a11yAttributes}
       content={content}
       enableGridWrapper={enableGridWrapper}
       singleTransform={singleTransform}

@@ -39,13 +39,18 @@ const SingleContentWrapper = styled.div`
 `;
 
 const CpsOnwardJourney = ({
+  labelId,
   title,
   content,
   enableGridWrapper,
-  a11yAttributes,
   listTransform,
   singleTransform,
 }) => {
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-labelledby': labelId,
+  };
   const { script, service, dir } = useContext(ServiceContext);
   const CpsOnwardJourneyWrapper = ({ children }) =>
     enableGridWrapper ? (
@@ -61,8 +66,6 @@ const CpsOnwardJourney = ({
   if (!content.length) return null;
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
-
-  const labelId = a11yAttributes['aria-labelledby'];
 
   return (
     <CpsOnwardJourneyWrapper>
@@ -89,14 +92,10 @@ const CpsOnwardJourney = ({
 };
 
 CpsOnwardJourney.propTypes = {
+  labelId: string.isRequired,
   title: string.isRequired,
   content: arrayOf(shape(storyItem)),
   enableGridWrapper: bool,
-  a11yAttributes: shape({
-    as: string,
-    role: string,
-    'aria-labelledby': string,
-  }).isRequired,
   listTransform: func.isRequired,
   singleTransform: func.isRequired,
 };

@@ -10,11 +10,6 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 
 const FeaturesAnalysis = ({ content }) => {
   const { dir } = useContext(ServiceContext);
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': 'features-analysis-heading',
-  };
 
   if (!content.length) return null;
 
@@ -34,8 +29,8 @@ const FeaturesAnalysis = ({ content }) => {
 
   return (
     <CpsOnwardJourney
+      labelId="features-analysis-heading"
       title="Features &amp; Analysis"
-      a11yAttributes={a11yAttributes}
       content={content}
       enableGridWrapper={false}
       singleTransform={singleTransform}

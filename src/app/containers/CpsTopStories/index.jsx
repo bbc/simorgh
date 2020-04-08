@@ -11,12 +11,6 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 const TopStories = ({ content }) => {
   const { dir } = useContext(ServiceContext);
 
-  const a11yAttributes = {
-    as: 'section',
-    role: 'region',
-    'aria-labelledby': 'top-stories-heading',
-  };
-
   if (!content || !content.length) return null;
 
   const singleTransform = (promo) => (
@@ -35,8 +29,8 @@ const TopStories = ({ content }) => {
 
   return (
     <CpsOnwardJourney
+      labelId="top-stories-heading"
       title="Top Stories"
-      a11yAttributes={a11yAttributes}
       content={content}
       enableGridWrapper={false}
       singleTransform={singleTransform}
