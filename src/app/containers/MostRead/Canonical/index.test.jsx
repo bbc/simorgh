@@ -11,6 +11,22 @@ import {
 } from '../utilities/testHelpers';
 import CanonicalMostRead from '.';
 
+/* eslint-disable react/prop-types */
+const MostReadCanonicalWithContext = ({
+  service,
+  endpoint,
+  initialData,
+  wrapper,
+}) => (
+  <ServiceContextProvider service={service}>
+    <CanonicalMostRead
+      endpoint={endpoint}
+      initialData={initialData}
+      wrapper={wrapper}
+    />
+  </ServiceContextProvider>
+);
+
 describe('MostReadContainerCanonical', () => {
   afterEach(() => {
     fetch.resetMocks();
@@ -49,12 +65,11 @@ describe('MostReadContainerCanonical', () => {
         let container;
         await act(async () => {
           container = await render(
-            <ServiceContextProvider service={service}>
-              <CanonicalMostRead
-                endpoint={endpoint}
-                initialData={initialData}
-              />
-            </ServiceContextProvider>,
+            <MostReadCanonicalWithContext
+              service={service}
+              endpoint={endpoint}
+              initialData={initialData}
+            />,
           ).container;
         });
 
@@ -90,11 +105,10 @@ describe('MostReadContainerCanonical', () => {
       let container;
       await act(async () => {
         container = await render(
-          <ServiceContextProvider service={service}>
-            <CanonicalMostRead
-              endpoint={`www.test.bbc.com/${service}/mostread.json`}
-            />
-          </ServiceContextProvider>,
+          <MostReadCanonicalWithContext
+            service={service}
+            endpoint={`www.test.bbc.com/${service}/mostread.json`}
+          />,
         ).container;
       });
 
@@ -120,11 +134,10 @@ describe('MostReadContainerCanonical', () => {
       let container;
       await act(async () => {
         container = await render(
-          <ServiceContextProvider service={service}>
-            <CanonicalMostRead
-              endpoint={`www.test.bbc.com/${service}/mostread.json`}
-            />
-          </ServiceContextProvider>,
+          <MostReadCanonicalWithContext
+            service={service}
+            endpoint={`www.test.bbc.com/${service}/mostread.json`}
+          />,
         ).container;
       });
 
@@ -147,12 +160,11 @@ describe('MostReadContainerCanonical', () => {
       let container;
       await act(async () => {
         container = await render(
-          <ServiceContextProvider service="nepali">
-            <CanonicalMostRead
-              endpoint="www.test.bbc.com/nepali/mostread.json"
-              wrapper={MockWrapper}
-            />
-          </ServiceContextProvider>,
+          <MostReadCanonicalWithContext
+            service="nepali"
+            endpoint="www.test.bbc.com/nepali/mostread.json"
+            wrapper={MockWrapper}
+          />,
         ).container;
       });
 
@@ -167,9 +179,10 @@ describe('MostReadContainerCanonical', () => {
       let container;
       await act(async () => {
         container = await render(
-          <ServiceContextProvider service="arabic">
-            <CanonicalMostRead endpoint="www.test.bbc.com/arabic/mostread.json" />
-          </ServiceContextProvider>,
+          <MostReadCanonicalWithContext
+            service="arabic"
+            endpoint="www.test.bbc.com/arabic/mostread.json"
+          />,
         ).container;
       });
       expect(container).toBeEmpty();
