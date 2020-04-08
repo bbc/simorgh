@@ -19,6 +19,7 @@ import image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
+import TopStories from '#containers/CpsTopStories';
 import FeaturesAnalysis from '#containers/FeaturesAnalysis';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
@@ -207,9 +208,9 @@ const StoryPage = ({ pageData, pathname, location }) => {
           columns={gridColsSecondary}
           parentColumns={gridColumns}
         >
-          <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
-          </ComponentWrapper>
+          <ResponsiveComponentWrapper>
+            <TopStories />
+          </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
             <FeaturesAnalysis />
           </ResponsiveComponentWrapper>
