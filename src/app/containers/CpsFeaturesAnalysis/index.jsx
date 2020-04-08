@@ -11,8 +11,6 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 const FeaturesAnalysis = ({ content }) => {
   const { dir } = useContext(ServiceContext);
 
-  if (!content.length) return null;
-
   const singleTransform = (promo) => (
     <StoryPromo item={promo} dir={dir} displayImage />
   );

@@ -26,8 +26,6 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { dir, translations } = useContext(ServiceContext);
   const { env } = useContext(RequestContext);
 
-  if (!content.length) return null;
-
   const singleTransform = (promo) => (
     <StoryPromo item={formatItem(promo, env)} dir={dir} />
   );
