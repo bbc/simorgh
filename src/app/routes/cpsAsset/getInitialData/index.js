@@ -50,8 +50,8 @@ const transformJson = async (json) => {
   }
 };
 
-export default async (urlPath) => {
-  const { json, ...rest } = await fetchPageData(urlPath);
+export default async ({ path }) => {
+  const { json, ...rest } = await fetchPageData(path);
 
   return {
     ...rest,
