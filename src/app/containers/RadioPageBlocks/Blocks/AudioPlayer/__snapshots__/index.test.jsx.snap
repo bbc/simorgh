@@ -63,7 +63,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko/amp"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko/amp"
               title="Audio player"
             >
               <amp-img
@@ -147,7 +147,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
         allowfullscreen=""
         class="c3"
         scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko"
         title="Audio player"
       />
       <noscript />
@@ -219,7 +219,7 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp"
               title="Audio player"
             >
               <amp-img
@@ -303,7 +303,7 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
         allowfullscreen=""
         class="c3"
         scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om"
         title="Audio player"
       />
       <noscript />
