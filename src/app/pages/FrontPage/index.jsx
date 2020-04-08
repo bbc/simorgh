@@ -89,7 +89,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const renderMostRead = () => (
     <MostReadContainer
       mostReadEndpointOverride={mostReadEndpointOverride}
-      maxTwoColumns
+      columnLayout="twoColumn"
       isOnFrontPage
     />
   );

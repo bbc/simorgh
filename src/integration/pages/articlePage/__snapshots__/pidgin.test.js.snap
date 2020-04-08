@@ -1202,9 +1202,6 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
             </h2>
           </div>
           <div class="ComponentWrapper-w14rad-4 hYrbeW">
-            <h2>
-              This is a component in the second column
-            </h2>
           </div>
         </div>
       </div>
@@ -2375,9 +2372,6 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
             </h2>
           </div>
           <div class="ComponentWrapper-w14rad-4 hYrbeW">
-            <h2>
-              This is a component in the second column
-            </h2>
           </div>
         </div>
       </div>
