@@ -30,6 +30,7 @@
     "test:e2e:interactive": "./scripts/killApp.sh && npm run build && run-p --race start cypress:interactive",
     "test:lint": "eslint --ext .js,jsx,json ./src ./data ./cypress ./.storybook ./webpack** && swagger-cli validate data/schema.yaml && stylelint 'src/**/*.js' 'src/**/*.jsx'",
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
+    "test:structured-data": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po && sdtt -u http://localhost:7080/news/articles/c6v11qzyv8po -i && sdtt -u http://localhost:7080/igbo -i && sdtt -u http://localhost:7080/korean/bbc_korean_radio/liveradio -i && sdtt -u http://localhost:7080/pidgin/23248703 -i && sdtt -u http://localhost:7080/gujarati/other-news-23130286 -i && sdtt -u http://localhost:7080/azeri/multimedia/2015/08/150804_azeri_test -i && sdtt -u http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s -i --schemas AudioObject",
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration:ci": "jest --colors ./src/integration/pages/**/*.test.js",
