@@ -33,6 +33,7 @@ styStories.addDecorator((story) => (
           status={200}
           pageData={pageData}
           service={service}
+          mostReadEndpointOverride="./data/mundo/mostRead/index.json"
         />
       </BrowserRouter>
     );
