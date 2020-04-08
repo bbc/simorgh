@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import styled from 'styled-components';
 import 'isomorphic-fetch';
-import { bool, string, elementType } from 'prop-types';
+import { oneOf, string, elementType } from 'prop-types';
 import {
   MostReadList,
   MostReadItemWrapper,
@@ -36,7 +36,7 @@ const MarginWrapper = styled.div`
 
 const CanonicalMostRead = ({
   endpoint,
-  maxTwoColumns,
+  columnLayout,
   initialData,
   wrapper: Wrapper,
 }) => {
@@ -90,13 +90,13 @@ const CanonicalMostRead = ({
         <MostReadList
           numberOfItems={items.length}
           dir={dir}
-          maxTwoColumns={maxTwoColumns}
+          columnLayout={columnLayout}
         >
           {items.map((item, i) => (
             <MostReadItemWrapper
               dir={dir}
               key={item.id}
-              maxTwoColumns={maxTwoColumns}
+              columnLayout={columnLayout}
             >
               <MostReadRank
                 service={service}
@@ -104,7 +104,7 @@ const CanonicalMostRead = ({
                 listIndex={i + 1}
                 numberOfItems={items.length}
                 dir={dir}
-                maxTwoColumns={maxTwoColumns}
+                columnLayout={columnLayout}
               />
               <MostReadLink
                 dir={dir}
@@ -134,13 +134,13 @@ const CanonicalMostRead = ({
 
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
-  maxTwoColumns: bool,
+  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   initialData: mostReadShape,
   wrapper: elementType,
 };
 
 CanonicalMostRead.defaultProps = {
-  maxTwoColumns: false,
+  columnLayout: 'multiColumn',
   initialData: null,
   wrapper: React.Fragment,
 };

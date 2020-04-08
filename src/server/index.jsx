@@ -23,9 +23,7 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader, {
-  localInjectHostCspHeader,
-} from './utilities/constructCspHeader';
+import injectCspHeader from './utilities/cspHeader';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -42,11 +40,6 @@ const morgan = require('morgan');
 const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
-
-const cspInjectFun =
-  process.env.SIMORGH_APP_ENV === 'local'
-    ? localInjectHostCspHeader
-    : injectCspHeader;
 
 logger.debug(
   `Application outputting logs to directory '${process.env.LOG_DIR}'`,
@@ -94,6 +87,13 @@ const getBuildMetadata = () => {
   const { buildMetadata } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
   return buildMetadata;
 };
+
+const skipMiddleware = (_req, _res, next) => {
+  next();
+};
+
+const injectCspHeaderProdBuild =
+  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')
@@ -246,55 +246,62 @@ server
       });
     },
   )
-  .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-      url,
-      headers,
-    });
-
-    try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
-      const data = await route.getInitialData({ path: url, service });
-      const { status } = data;
-      const bbcOrigin = headers['bbc-origin'];
-
-      data.path = urlPath;
-      data.timeOnServer = Date.now();
-
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
-        url,
-        variant,
-      });
-
-      logger.info(ROUTING_INFORMATION, {
-        url,
-        status,
-        pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
-      });
-
-      if (result.redirectUrl) {
-        res.redirect(301, result.redirectUrl);
-      } else if (result.html) {
-        res.status(status).send(result.html);
-      } else {
-        throw new Error('unknown result');
-      }
-    } catch ({ message, status }) {
-      logger.error(SERVER_SIDE_REQUEST_FAILED, {
-        status: status || 500,
-        message,
+  .get(
+    '/*',
+    injectCspHeaderProdBuild,
+    async ({ url, headers, path: urlPath }, res) => {
+      logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
         url,
         headers,
       });
 
-      // Return an internal server error for any uncaught errors
-      res.status(500).send(message);
-    }
-  });
+      try {
+        const { service, isAmp, route, variant } = getRouteProps(
+          routes,
+          urlPath,
+        );
+        const data = await route.getInitialData(url);
+        const { status } = data;
+        const bbcOrigin = headers['bbc-origin'];
+
+        data.path = urlPath;
+        data.timeOnServer = Date.now();
+
+        const result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+
+        logger.info(ROUTING_INFORMATION, {
+          url,
+          status,
+          pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
+        });
+
+        if (result.redirectUrl) {
+          res.redirect(301, result.redirectUrl);
+        } else if (result.html) {
+          res.status(status).send(result.html);
+        } else {
+          throw new Error('unknown result');
+        }
+      } catch ({ message, status }) {
+        logger.error(SERVER_SIDE_REQUEST_FAILED, {
+          status: status || 500,
+          message,
+          url,
+          headers,
+        });
+
+        // Return an internal server error for any uncaught errors
+        res.status(500).send(message);
+      }
+    },
+  );
 
 export default server;

@@ -203,6 +203,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
+      frontPagePosition: 'top-stories',
       header: 'برنامه‌های رادیو',
     },
     footer: {
@@ -250,6 +251,10 @@ export const service = {
       {
         title: 'صفحه اول',
         url: '/persian',
+      },
+      {
+        title: 'ویروس کرونا',
+        url: '/persian/science-52004647',
       },
       {
         title: 'پخش زنده',
@@ -300,7 +305,7 @@ export const service = {
         url: '/persian/interactivity',
       },
       {
-        title: 'ناظران می‌گویند...',
+        title: 'ناظران می‌گویند',
         url: '/persian/blogs/viewpoints',
       },
       {
