@@ -199,6 +199,7 @@
     "prop-types": "^15.7.2",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^3.5.2",
+    "structured-data-testing-tool": "^4.5.0",
     "stylelint": "^13.2.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
