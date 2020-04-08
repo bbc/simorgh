@@ -33,6 +33,7 @@
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration:ci": "jest --colors ./src/integration/pages/**/*.test.js",
+    "test:integration:allSnapshots": "node ./src/integration/allSnapshots && ./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/allSnapshots/**/*.test.js",
     "test:integration": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/pages/**/*.test.js",
     "test:integration:watch": "npm run test:integration -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
