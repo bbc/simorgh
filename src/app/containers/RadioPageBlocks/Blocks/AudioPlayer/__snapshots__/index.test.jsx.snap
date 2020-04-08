@@ -64,7 +64,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
               src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko/amp"
-              title="Audio player"
+              title="오디오 플레이어"
             >
               <amp-img
                 alt=""
@@ -148,7 +148,7 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
         class="c3"
         scrolling="no"
         src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
-        title="Audio player"
+        title="오디오 플레이어"
       />
       <noscript />
     </div>
