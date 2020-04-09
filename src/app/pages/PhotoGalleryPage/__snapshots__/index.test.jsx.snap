@@ -3197,7 +3197,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 
 .c16 {
   margin-bottom: 1rem;
-  z-index: 0;
 }
 
 .c18 {
@@ -4419,7 +4418,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               >
                                 <a
                                   class="c34"
-                                  href="/pidgin/media-45132087?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/pidgin/media-45132087"
                                 >
                                   <span
                                     role="text"
@@ -4509,7 +4508,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                               >
                                 <a
                                   class="c34"
-                                  href="/pidgin/tori-45242255?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/pidgin/tori-45242255"
                                 >
                                   <span
                                     role="text"
@@ -6379,7 +6378,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
 
 .c35 {
   margin-bottom: 1rem;
-  z-index: 0;
 }
 
 .c37 {
@@ -8343,7 +8341,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-44124647?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-44124647"
                                 >
                                   ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
                                 </a>
@@ -8398,7 +8396,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43540056?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43540056"
                                 >
                                   ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
                                 </a>
@@ -8453,7 +8451,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-44022776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-44022776"
                                 >
                                   Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
                                 </a>
@@ -8508,7 +8506,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43713137?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43713137"
                                 >
                                   Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
                                 </a>
@@ -8563,7 +8561,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-37688691?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-37688691"
                                 >
                                   1918-1991: Bir müstəqilliyin iki bəyanı
                                 </a>
@@ -8618,7 +8616,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-37691096?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-37691096"
                                 >
                                   <span
                                     role="text"
@@ -8684,7 +8682,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43499221?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43499221"
                                 >
                                   1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
                                 </a>
@@ -8739,7 +8737,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-44004471?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-44004471"
                                 >
                                   #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
                                 </a>
@@ -8794,7 +8792,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                               >
                                 <a
                                   class="c54"
-                                  href="/azeri/azerbaijan-43870815?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                                  href="/azeri/azerbaijan-43870815"
                                 >
                                   Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
                                 </a>
