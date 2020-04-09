@@ -44,10 +44,6 @@ describe('CpsRelatedContent', () => {
       promos.length,
     );
 
-    // All related content links should have the x_candy_override querystring in the test environment
-    expect(document.querySelectorAll(`[href*='x_candy_override']`).length).toBe(
-      promos.length,
-    );
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -64,16 +60,6 @@ describe('CpsRelatedContent', () => {
 
     expect(document.querySelector('ul')).toBeNull();
 
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render Story Promo components in Live environment', () => {
-    const { asFragment } = renderRelatedContent({
-      bbcOrigin: 'https://www.bbc.co.uk',
-    });
-
-    // x_candy_override should not be used in the live environment
-    expect(document.querySelector(`[href*='x_candy_override']`)).toBeNull();
     expect(asFragment()).toMatchSnapshot();
   });
 
