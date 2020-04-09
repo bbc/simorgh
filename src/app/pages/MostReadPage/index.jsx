@@ -4,16 +4,16 @@ import { string, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
-  GEL_MARGIN_ABOVE_400PX,
-  GEL_MARGIN_BELOW_400PX,
+  GEL_SPACING,
+  GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL } from '@bbc/psammead-styles/colours';
@@ -28,18 +28,33 @@ import MetadataContainer from '#containers/Metadata';
 
 const StyledMain = styled.main.attrs({ role: 'main' })`
   flex-grow: 1;
+  margin: 0 ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING_DBL};
+  }
+`;
+
+const ConstrainedWrapper = styled.div`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
+    margin-bottom: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUAD};
+    margin-bottom: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUIN};
+    margin-bottom: ${GEL_SPACING_QUIN};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     width: 100%; /* Needed for IE11 */
-    margin: 0 auto ${GEL_SPACING_TRPL};
+    margin: 0 auto ${GEL_SPACING_QUIN};
+    max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
+  }
+`;
+
+const MostReadContentWrapper = styled.div`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    width: 100%; /* Needed for IE11 */
+    margin: 0 auto;
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
 `;
@@ -51,6 +66,8 @@ const HeadingOne = styled.h1.attrs({
   color: ${C_METAL};
   ${({ script }) => script && getParagon(script)};
   ${({ service }) => getSansRegular(service)};
+  margin: 0;
+  padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
 `;
 
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
@@ -63,12 +80,12 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   } = useContext(ServiceContext);
 
   const MostReadWrapper = ({ children }) => (
-    <>
+    <ConstrainedWrapper>
       <HeadingOne script={script} service={service}>
         {header}
       </HeadingOne>
-      {children}
-    </>
+      <MostReadContentWrapper>{children}</MostReadContentWrapper>
+    </ConstrainedWrapper>
   );
 
   MostReadWrapper.propTypes = {
