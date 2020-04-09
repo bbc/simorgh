@@ -190,14 +190,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
 
       <StyledGrid columns={gridColumns} enableGelGutters margins={gridMargins}>
-        <Grid
-          item
-          columns={gridColsMain}
-          startOffset={gridOffset}
-          as="main"
-          role="main"
-        >
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Grid item columns={gridColsMain} startOffset={gridOffset}>
+          <main role="main">
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          </main>
           <CpsRelatedContent content={relatedContent} />
         </Grid>
         <GridSecondaryColumn
