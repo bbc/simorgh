@@ -54,6 +54,7 @@ export default async ({ path, service, variant = 'default' }) => {
       queryString: getQueryString(path),
     });
 
+    // add the base url in the above function rather than concatenting here
     const fetchRadioScheduleData = fetchData(
       `${SIMORGH_BASE_URL}${radioSchedulesUrl}`,
     );

@@ -26,6 +26,7 @@ import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
+import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
 
 const logger = webLogger();
@@ -186,6 +187,11 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
 
 CanonicalRadioSchedule.propTypes = {
   endpoint: string.isRequired,
+  initialData: radioSchedulesShape,
+};
+
+CanonicalRadioSchedule.defaultProps = {
+  initialData: undefined,
 };
 
 export default CanonicalRadioSchedule;

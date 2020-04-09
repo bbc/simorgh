@@ -6,6 +6,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
+import radioSchedulesShape from './utilities/radioScheduleShape';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
 const RadioScheduleContainer = ({
@@ -36,10 +37,12 @@ const RadioScheduleContainer = ({
 
 RadioScheduleContainer.propTypes = {
   radioScheduleEndpointOverride: string,
+  initialData: radioSchedulesShape,
 };
 
 RadioScheduleContainer.defaultProps = {
   radioScheduleEndpointOverride: null,
+  initialData: undefined,
 };
 
 export default RadioScheduleContainer;
