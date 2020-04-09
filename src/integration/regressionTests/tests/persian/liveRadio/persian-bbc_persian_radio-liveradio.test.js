@@ -90,6 +90,31 @@ it('I can see the summary - Canonical', () => {
   );
 });
 
+it('I can see an audio player embed - Canonical', () => {
+  const audioPlayerIframe = canonical.document.querySelector('iframe');
+
+  expect(audioPlayerIframe).toBeInTheDocument();
+  expect(audioPlayerIframe.getAttribute('src')).toMatchInlineSnapshot(
+    `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_persian_radio/liveradio/fa"`,
+  );
+});
+
+it('I can see an audio player image placeholder - AMP', () => {
+  const audioPlaceholderImage = amp.document.querySelector(
+    'amp-img[src="http://localhost:7080/images/amp_audio_placeholder.png"]',
+  );
+
+  expect(audioPlaceholderImage).toBeInTheDocument();
+});
+
+it('I can see an audio player embed - AMP', () => {
+  const audioPlayerIframe = amp.document.querySelector('amp-iframe');
+
+  expect(audioPlayerIframe.getAttribute('src')).toMatchInlineSnapshot(
+    `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_persian_radio/liveradio/fa/amp"`,
+  );
+});
+
 it('I can see the footer copyright - AMP', () => {
   const footerCopyright = amp.document.querySelector('footer div p')
     .textContent;
