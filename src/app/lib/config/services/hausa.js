@@ -245,12 +245,12 @@ export const service = {
         url: '/hausa/wasanni',
       },
       {
-        title: 'Mujalla',
-        url: '/hausa/mujalla',
+        title: 'Nishadi',
+        url: '/hausa/topics/cg726kz37wdt',
       },
       {
         title: 'Cikakkun Rahotanni',
-        url: '/hausa/rahotanni',
+        url: '/hausa/52140979',
       },
       {
         title: 'Bidiyo',
@@ -262,7 +262,7 @@ export const service = {
       },
       {
         title: 'Shirye-shiryen rediyo',
-        url: '/hausa/media-43322903',
+        url: '/hausa/media-52219055',
       },
     ],
   },
