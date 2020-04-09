@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { string, node } from 'prop-types';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
@@ -25,6 +23,7 @@ import mostReadShape from '#containers/MostRead/utilities/mostReadShape';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import MetadataContainer from '#containers/Metadata';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 
 const StyledMain = styled.main.attrs({ role: 'main' })`
   flex-grow: 1;
@@ -35,10 +34,7 @@ const StyledMain = styled.main.attrs({ role: 'main' })`
 `;
 
 const ConstrainedWrapper = styled.div`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
@@ -51,14 +47,6 @@ const ConstrainedWrapper = styled.div`
   }
 `;
 
-const MostReadContentWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 100%; /* Needed for IE11 */
-    margin: 0 auto;
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
-  }
-`;
-
 const HeadingOne = styled.h1.attrs({
   id: 'content',
   tabIndex: '-1',
@@ -68,6 +56,10 @@ const HeadingOne = styled.h1.attrs({
   ${({ service }) => getSansRegular(service)};
   margin: 0;
   padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
+`;
+
+const StyledGelPageGrid = styled(GelPageGrid)`
+  flex-grow: 1;
 `;
 
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
@@ -84,7 +76,42 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
       <HeadingOne script={script} service={service}>
         {header}
       </HeadingOne>
-      <MostReadContentWrapper>{children}</MostReadContentWrapper>
+
+      <StyledGelPageGrid
+        dir={dir}
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+        enableGelGutters
+      >
+        <Grid
+          item
+          dir={dir}
+          startOffset={{
+            group0: 1,
+            group1: 1,
+            group2: 1,
+            group3: 1,
+            group4: 1,
+            group5: 3,
+          }}
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: 6,
+            group5: 12,
+          }}
+        >
+          {children}
+        </Grid>
+      </StyledGelPageGrid>
     </ConstrainedWrapper>
   );
 
@@ -102,7 +129,8 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         description="mostread"
         openGraphType="website"
       />
-      <StyledMain dir={dir}>
+
+      <StyledMain>
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
