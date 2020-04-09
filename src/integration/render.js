@@ -13,14 +13,18 @@ const enhanceGetByText = (getByText) => (text) =>
   });
 
 module.exports = async (path) => {
-  const dom = await JSDOM.fromURL(`http://localhost:7080${path}`);
+  try {
+    const dom = await JSDOM.fromURL(`http://localhost:7080${path}`);
 
-  const queries = within(dom.window.document.body);
+    const queries = within(dom.window.document.body);
 
-  return {
-    window: dom.window,
-    document: dom.window.document,
-    getByTextMultiElement: enhanceGetByText(queries.getByText),
-    ...queries,
-  };
+    return {
+      window: dom.window,
+      document: dom.window.document,
+      getByTextMultiElement: enhanceGetByText(queries.getByText),
+      ...queries,
+    };
+  } catch (e) {
+    console.error(`Error: Visit to http://localhost:7080${path} failed.`);
+  }
 };
