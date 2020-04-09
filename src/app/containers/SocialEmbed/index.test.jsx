@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
 import SocialEmbedContainer from '.';
-import withContexts from './helper.jsx';
+import withContexts from './testHelper';
 import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
 
 describe('SocialEmbedContainer', () => {

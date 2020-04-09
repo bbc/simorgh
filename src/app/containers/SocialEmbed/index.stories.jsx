@@ -4,7 +4,7 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
-import withContexts from './helper.jsx';
+import withContexts from './testHelper';
 import SocialEmbedContainer from '.';
 
 storiesOf('Containers|Social Embed/Canonical', module)
