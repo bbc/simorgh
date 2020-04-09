@@ -72,6 +72,24 @@ it('I can see a headline - Canonical', () => {
   expect(headline).toMatchInlineSnapshot(`"বিবিসি বাংলা"`);
 });
 
+it('I can see the summary - AMP', () => {
+  const summaryEl = amp.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।"`,
+  );
+});
+
+it('I can see the summary - Canonical', () => {
+  const summaryEl = canonical.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"বাংলাদেশ, তার প্রতিবেশী এবং গোটা বিশ্বের সংবাদ পরিবেশন করে। সংবাদদাতার প্রতিবেদন ছাড়াও আছে সাক্ষাৎকার, সংবাদপত্র পর্যালোচনা এবং সরাসরি ফোন-ইন।"`,
+  );
+});
+
 it('I can see the footer copyright - AMP', () => {
   const footerCopyright = amp.document.querySelector('footer div p')
     .textContent;

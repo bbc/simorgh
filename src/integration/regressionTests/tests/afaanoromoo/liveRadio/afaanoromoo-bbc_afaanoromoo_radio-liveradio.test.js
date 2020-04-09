@@ -76,6 +76,20 @@ it('I can see a headline - Canonical', () => {
   expect(headline).toMatchInlineSnapshot(`"Dhaggeeffadhaa"`);
 });
 
+it('I can see the summary - AMP', () => {
+  const summaryEl = amp.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(`"Sagantaawwan keenya"`);
+});
+
+it('I can see the summary - Canonical', () => {
+  const summaryEl = canonical.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(`"Sagantaawwan keenya"`);
+});
+
 it('I can see the footer copyright - AMP', () => {
   const footerCopyright = amp.document.querySelector('footer div p')
     .textContent;

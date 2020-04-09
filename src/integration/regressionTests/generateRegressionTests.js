@@ -35,18 +35,24 @@ const mainContentTests = fs.readFileSync(
   'utf8',
 );
 
+const liveRadioTests = fs.readFileSync(
+  path.join(__dirname, 'liveRadioTests.js'),
+  'utf8',
+);
+
 const footerTests = fs.readFileSync(
   path.join(__dirname, 'footerTests.js'),
   'utf8',
 );
 
-const getTestFileContent = (pathname) => `/**
+const getTestFileContent = ({ pathname, pageType }) => `/**
  * @pathname ${pathname}
  */
 
 ${metadataTests}
 ${headerTests}
 ${mainContentTests}
+${pageType === 'liveRadio' ? liveRadioTests : ''}
 ${footerTests}`;
 
 const getFilePath = (service, pageType, pathname) =>
@@ -67,7 +73,7 @@ const createTestFiles = () => {
     pageTypes.forEach((pageType) => {
       const pathname = pathnames[service][pageType];
       const filePath = getFilePath(service, pageType, pathname);
-      const testFileContent = getTestFileContent(pathname);
+      const testFileContent = getTestFileContent({ pathname, pageType });
 
       fs.mkdirSync(path.join(__dirname, 'tests', service, pageType), {
         recursive: true,

@@ -72,6 +72,24 @@ it('I can see a headline - Canonical', () => {
   expect(headline).toMatchInlineSnapshot(`"बीबीसी हिंदी"`);
 });
 
+it('I can see the summary - AMP', () => {
+  const summaryEl = amp.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"दुनिया और भारत की ख़बरें, विश्लेषण और फ़ीचर. हिंदी में संवाद के सूत्रधार"`,
+  );
+});
+
+it('I can see the summary - Canonical', () => {
+  const summaryEl = canonical.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"दुनिया और भारत की ख़बरें, विश्लेषण और फ़ीचर. हिंदी में संवाद के सूत्रधार"`,
+  );
+});
+
 it('I can see the footer copyright - AMP', () => {
   const footerCopyright = amp.document.querySelector('footer div p')
     .textContent;

@@ -68,6 +68,24 @@ it('I can see a headline - Canonical', () => {
   expect(headline).toMatchInlineSnapshot(`"بی بی سی اردو ریڈیو"`);
 });
 
+it('I can see the summary - AMP', () => {
+  const summaryEl = amp.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے"`,
+  );
+});
+
+it('I can see the summary - Canonical', () => {
+  const summaryEl = canonical.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"اردو زبان کے معتبر ترین خبررساں اداروں میں ایک، بی بی سی اردو کی جانب سے مصدقہ خبریں اور جامع تجزیے"`,
+  );
+});
+
 it('I can see the footer copyright - AMP', () => {
   const footerCopyright = amp.document.querySelector('footer div p')
     .textContent;

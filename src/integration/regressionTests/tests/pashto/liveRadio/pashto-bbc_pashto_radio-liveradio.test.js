@@ -68,6 +68,24 @@ it('I can see a headline - Canonical', () => {
   expect(headline).toMatchInlineSnapshot(`"بي بي سي افغانستان (پښتو خپرونه)"`);
 });
 
+it('I can see the summary - AMP', () => {
+  const summaryEl = amp.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي"`,
+  );
+});
+
+it('I can see the summary - Canonical', () => {
+  const summaryEl = canonical.document.querySelector('main p');
+
+  expect(summaryEl).toBeInTheDocument();
+  expect(summaryEl.textContent).toMatchInlineSnapshot(
+    `"بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي"`,
+  );
+});
+
 it('I can see the footer copyright - AMP', () => {
   const footerCopyright = amp.document.querySelector('footer div p')
     .textContent;
