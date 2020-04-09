@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid from '@bbc/psammead-grid';
+import Grid, { GelPageGrid } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -93,7 +93,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const StyledGrid = styled(Grid)`
+  const StyledGrid = styled(GelPageGrid)`
     flex-grow: 1;
   `;
 
