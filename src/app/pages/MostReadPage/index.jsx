@@ -89,7 +89,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         <MostReadContainer
           mostReadEndpointOverride={mostReadEndpointOverride}
           wrapper={MostReadWrapper}
-          columnLayout="twoColumn"
+          columnLayout="oneColumn"
           initialData={pageData}
         />
       </StyledMain>
