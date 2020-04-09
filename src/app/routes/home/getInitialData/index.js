@@ -46,45 +46,45 @@ export default async ({ path, service, variant = 'default' }) => {
     config,
   );
 
-  const { json, ...rest } = await fetchPageData(path);
+  if (hasRadioSchedule && radioScheduleOnFrontPage) {
+    const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
+    const radioSchedulesUrl = getRadioScheduleEndpoint({
+      service,
+      env: SIMORGH_APP_ENV,
+      queryString: getQueryString(path),
+    });
 
-  if (!(hasRadioSchedule && radioScheduleOnFrontPage)) {
+    const fetchRadioScheduleData = fetchData(
+      `${SIMORGH_BASE_URL}${radioSchedulesUrl}`,
+    );
+
+    const [{ json, ...rest }, radioSchedulesResponse] = await Promise.all([
+      fetchPageData(path),
+      fetchRadioScheduleData,
+    ]);
+    const radioScheduleData = processRadioSchedule(
+      radioSchedulesResponse.json,
+      service,
+      Date.now(),
+    );
+
     return {
       ...rest,
       ...(json && {
         pageData: {
           ...transformJson(json),
+          radioScheduleData,
         },
       }),
     };
   }
 
-  const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
-
-  const radioSchedulesUrl = getRadioScheduleEndpoint({
-    service,
-    env: SIMORGH_APP_ENV,
-    queryString: getQueryString(path),
-  });
-
-  // add the base url in the above function rather than concatenting here
-  // do this in parallel with the page data fetching instead of afterwards.
-  const radioSchedulesResponse = await fetchData(
-    `${SIMORGH_BASE_URL}${radioSchedulesUrl}`,
-  );
-
-  const radioScheduleData = processRadioSchedule(
-    radioSchedulesResponse.json,
-    service,
-    Date.now(),
-  );
-
+  const { json, ...rest } = await fetchPageData(path);
   return {
     ...rest,
     ...(json && {
       pageData: {
         ...transformJson(json),
-        radioScheduleData,
       },
     }),
   };
