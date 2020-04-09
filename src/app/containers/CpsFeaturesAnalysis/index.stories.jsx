@@ -27,7 +27,7 @@ const getFeaturesAnalysis = (platform) => ({ service, dir, data }) => (
 const canonicalFeaturesAnalysis = getFeaturesAnalysis('canonical');
 const ampFeaturesAnalysis = getFeaturesAnalysis('amp');
 
-storiesOf('Containers|Features & Analysis/Canonical', module)
+storiesOf('Containers|CPS Features & Analysis/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .add('igbo (ltr)', () =>
     canonicalFeaturesAnalysis({
@@ -58,7 +58,7 @@ storiesOf('Containers|Features & Analysis/Canonical', module)
     }),
   );
 
-storiesOf('Containers|Features & Analysis/AMP', module)
+storiesOf('Containers|CPS Features & Analysis/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
   .add('igbo (ltr) - amp', () =>
