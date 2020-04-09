@@ -104,13 +104,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
 
   const { timeOnServer } = useContext(RequestContext);
 
-  const initialSchedules = processRadioSchedule(
-    initialData,
-    service,
-    timeOnServer,
-  );
-
-  const [schedule, setRadioSchedule] = useState(initialSchedules);
+  const [schedule, setRadioSchedule] = useState(initialData);
 
   const header = pathOr(null, ['header'], radioSchedule);
   const frequenciesPageUrl = pathOr(

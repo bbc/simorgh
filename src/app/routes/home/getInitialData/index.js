@@ -8,6 +8,7 @@ import squashTopStories from './squashTopStories';
 import addIdsToItems from './addIdsToItems';
 import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
 import { getQueryString } from '#lib/utilities/urlParser';
+import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
@@ -25,10 +26,10 @@ export default async ({ path, service, variant = 'default' }) => {
   // checklist
   // import config for the current service (without bloating the bundle size to 2MB) /
   // only fetch radio schedule data if:
-  //   radio schedules is toggled on for this environment.
+  //   radio schedules is toggled on for this environment. 
   //   the page requires radio schedule data. /
   // if it does, fetch that data /
-  // if we successfully fetch that data, process it (so we don't add 5,500 lines of JSON to the window) and merge into pageData
+  // if we successfully fetch that data, process it (so we don't add 5,500 lines of JSON to the window) and merge into pageData /
   // if we don't successfully fetch the data, don't try and merge it into page data. /
   // make this reusable for other page types that need radio schedules data.
 
@@ -66,12 +67,16 @@ export default async ({ path, service, variant = 'default' }) => {
   });
 
   // add the base url in the above function rather than concatenting here
+  // do this in parallel with the page data fetching instead of afterwards.
   const radioSchedulesResponse = await fetchData(
     `${SIMORGH_BASE_URL}${radioSchedulesUrl}`,
   );
 
-  // do this in parallel with the page data fetching instead of afterwards.
-  const radioScheduleData = radioSchedulesResponse.json;
+  const radioScheduleData = processRadioSchedule(
+    radioSchedulesResponse.json,
+    service,
+    Date.now(),
+  );
 
   return {
     ...rest,
