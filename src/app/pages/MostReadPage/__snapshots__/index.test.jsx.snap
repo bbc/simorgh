@@ -112,66 +112,12 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-@media (max-width:14.9375rem) {
-  .c5 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c5 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c5 {
-    width: calc(100%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c5 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c5 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
-@media (min-width:80rem) {
-  .c5 {
-    width: calc(50%);
-    display: inline-block;
-    vertical-align: top;
-  }
-}
-
 @supports (display:grid) {
   .c5 {
     display: block;
   }
 }
 
-@media (min-width:37.5rem) {
-  .c4 {
-    grid-template-rows: repeat( 5,auto );
-  }
-}
-
 @media (max-width:14.9375rem) {
   .c8 {
     min-width: 2.5rem;
@@ -193,102 +139,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 @media (min-width:37.5rem) {
   .c8 {
     min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c8 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c14 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c14 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c14 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c14 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c15 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c15 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c15 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c15 {
-    min-width: 4rem;
-  }
-}
-
-@media (max-width:14.9375rem) {
-  .c16 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .c16 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .c16 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .c16 {
-    min-width: 2rem;
   }
 }
 
@@ -673,7 +523,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c14"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -755,7 +605,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c14"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -837,7 +687,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c15"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -878,7 +728,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c16"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -919,7 +769,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c15"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -960,7 +810,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c16"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
@@ -1001,7 +851,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 class="c7"
               >
                 <div
-                  class="c15"
+                  class="c8"
                   dir="ltr"
                 >
                   <span
