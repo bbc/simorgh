@@ -13,6 +13,10 @@ import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from './translations';
 
+/**
+ * MAX_WIDTH ensures all provider embeds take up the same width.
+ * NB Tweets max-out at 500px, which is represented as 31.25rem.
+ */
 const MAX_WIDTH = '31.25rem';
 
 const Wrapper = styled.div`
