@@ -233,9 +233,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
-  position: relative;
-  overflow: hidden;
-  height: 165px;
 }
 
 .c4 {
@@ -497,9 +494,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
-  position: relative;
-  overflow: hidden;
-  height: 165px;
 }
 
 .c4 {

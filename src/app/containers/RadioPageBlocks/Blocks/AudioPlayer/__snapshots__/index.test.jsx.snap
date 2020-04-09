@@ -14,9 +14,6 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
-  position: relative;
-  overflow: hidden;
-  height: 165px;
 }
 
 @media (min-width:63rem) {
@@ -99,9 +96,6 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
-  position: relative;
-  overflow: hidden;
-  height: 165px;
 }
 
 .c3 {
@@ -179,9 +173,6 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
-  position: relative;
-  overflow: hidden;
-  height: 165px;
 }
 
 @media (min-width:63rem) {
@@ -255,9 +246,6 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
   flex-shrink: 0;
   width: 50rem;
   max-width: calc(100vw - 2rem);
-  position: relative;
-  overflow: hidden;
-  height: 165px;
 }
 
 .c3 {
