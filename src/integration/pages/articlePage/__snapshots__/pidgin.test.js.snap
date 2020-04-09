@@ -672,216 +672,217 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
       <div class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
            dir="ltr"
       >
-        <main role="main"
-              dir="ltr"
-              class="GridComponent-nf79gm-0 dAItxV"
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 dAItxV"
         >
-          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
-            <h1 id="content"
-                tabindex="-1"
-                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
-            >
-              Adams Oshiomhole say 'I still be APC National Chairman'
-            </h1>
-          </div>
-          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                    <amp-img alt="Comrade Adams Oshiomole"
-                             attribution="Google"
-                             layout="responsive"
-                             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"
-                             height="549"
-                             width="976"
-                    >
-                    </amp-img>
-                    <p role="text"
-                       class="Copyright-sc-11lgtw-0 hDvIfz"
-                    >
+          <main role="main">
+            <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+              <h1 id="content"
+                  tabindex="-1"
+                  class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+              >
+                Adams Oshiomhole say 'I still be APC National Chairman'
+              </h1>
+            </div>
+            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="Comrade Adams Oshiomole"
+                               attribution="Google"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"
+                               height="549"
+                               width="976"
+                      >
+                      </amp-img>
+                      <p role="text"
+                         class="Copyright-sc-11lgtw-0 hDvIfz"
+                      >
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          Wia dis foto come from,
+                        </span>
+                        <span lang="en-GB">
+                          Google
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
                       <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wia dis foto come from,
+                        Wetin we call dis foto,
                       </span>
-                      <span lang="en-GB">
-                        Google
-                      </span>
-                    </p>
+                      <p>
+                        APC Chairman Adams Oshiomhole don be Govnor of Edo State before
+                      </p>
+                    </figcaption>
                   </div>
                 </div>
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                  <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                      Wetin we call dis foto,
-                    </span>
-                    <p>
-                      APC Chairman Adams Oshiomhole don be Govnor of Edo State before
-                    </p>
-                  </figcaption>
-                </div>
+              </figure>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-w14rad-0 kIEFGQ">
+              <time datetime="2020-03-04"
+                    class="StyledTimestamp-um718p-0 bAgcOD"
+              >
+                4 March 2020
+              </time>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                <b>
+                  Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.
+                </b>
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for "stay of execution plus appeal di ruling."
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                "Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party." Ebegbulem tok.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <div class="Wrapper-e2169q-0 kopXQT">
+                <ul dir="ltr"
+                    role="list"
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                >
+                  <li role="listitem"
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                  >
+                    <a href="http://www.bbc.com/pidgin/tori-50389601"
+                       class="InlineLink-hkwpaz-0 idscKS"
+                    >
+                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </figure>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-w14rad-0 kIEFGQ">
-            <time datetime="2020-03-04"
-                  class="StyledTimestamp-um718p-0 bAgcOD"
-            >
-              4 March 2020
-            </time>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              <b>
-                Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.
-              </b>
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for "stay of execution plus appeal di ruling."
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              "Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party." Ebegbulem tok.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <div class="Wrapper-e2169q-0 kopXQT">
-              <ul dir="ltr"
-                  role="list"
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-              >
-                <li role="listitem"
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                >
-                  <a href="http://www.bbc.com/pidgin/tori-50389601"
-                     class="InlineLink-hkwpaz-0 idscKS"
-                  >
-                    How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                  </a>
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, "as a law abiding political party, we go respect all lawful court order."
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <div class="Wrapper-e2169q-0 kopXQT">
-              <ul dir="ltr"
-                  role="list"
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-              >
-                <li role="listitem"
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                >
-                  <a href="http://www.bbc.com/pidgin/tori-50401299"
-                     class="InlineLink-hkwpaz-0 idscKS"
-                  >
-                    "Oshiomhole suspension na 'beer parlour tok"
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                >
-                  <a href="http://www.bbc.com/pidgin/tori-50389601"
-                     class="InlineLink-hkwpaz-0 idscKS"
-                  >
-                    How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                  </a>
-                </li>
-              </ul>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.
+              </p>
             </div>
-          </div>
-          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                    <amp-img alt="Adams Oshiomole"
-                             attribution="Jubril A. Gawat"
-                             layout="responsive"
-                             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
-                             height="549"
-                             width="976"
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, "as a law abiding political party, we go respect all lawful court order."
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <div class="Wrapper-e2169q-0 kopXQT">
+                <ul dir="ltr"
+                    role="list"
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                >
+                  <li role="listitem"
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                  >
+                    <a href="http://www.bbc.com/pidgin/tori-50401299"
+                       class="InlineLink-hkwpaz-0 idscKS"
                     >
-                    </amp-img>
-                    <p role="text"
-                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                      "Oshiomhole suspension na 'beer parlour tok"
+                    </a>
+                  </li>
+                  <li role="listitem"
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                  >
+                    <a href="http://www.bbc.com/pidgin/tori-50389601"
+                       class="InlineLink-hkwpaz-0 idscKS"
                     >
+                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <amp-img alt="Adams Oshiomole"
+                               attribution="Jubril A. Gawat"
+                               layout="responsive"
+                               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+                               height="549"
+                               width="976"
+                      >
+                      </amp-img>
+                      <p role="text"
+                         class="Copyright-sc-11lgtw-0 hDvIfz"
+                      >
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          Wia dis foto come from,
+                        </span>
+                        <span lang="en-GB">
+                          Jubril A. Gawat
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
                       <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wia dis foto come from,
+                        Wetin we call dis foto,
                       </span>
-                      <span lang="en-GB">
-                        Jubril A. Gawat
-                      </span>
-                    </p>
+                      <p>
+                        Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
+                      </p>
+                    </figcaption>
                   </div>
                 </div>
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                  <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                      Wetin we call dis foto,
-                    </span>
-                    <p>
-                      Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-                    </p>
-                  </figcaption>
-                </div>
-              </div>
-            </figure>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <h2 id="How-e-bin-take-start"
-                tabindex="-1"
-                class="SubHeading-sc-1kh1qhu-1 jHLqCp"
-            >
-              How e bin take start
-            </h2>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Di judge fix di case for April 7 and 8, 2020.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.
-            </p>
-          </div>
+              </figure>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <h2 id="How-e-bin-take-start"
+                  tabindex="-1"
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+              >
+                How e bin take start
+              </h2>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Di judge fix di case for April 7 and 8, 2020.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.
+              </p>
+            </div>
+          </main>
           <section role="region"
                    aria-labelledby="related-content-heading"
                    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
@@ -998,7 +999,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
               </ul>
             </div>
           </section>
-        </main>
+        </div>
         <div class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
              dir="ltr"
         >
@@ -1866,216 +1867,217 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
       <div class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
            dir="ltr"
       >
-        <main role="main"
-              dir="ltr"
-              class="GridComponent-nf79gm-0 dAItxV"
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 dAItxV"
         >
-          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
-            <h1 id="content"
-                tabindex="-1"
-                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
-            >
-              Adams Oshiomhole say 'I still be APC National Chairman'
-            </h1>
-          </div>
-          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 800w"
-                         alt="Comrade Adams Oshiomole"
-                         src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"
-                         width="976"
-                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
-                    >
-                    <p role="text"
-                       class="Copyright-sc-11lgtw-0 hDvIfz"
-                    >
-                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wia dis foto come from,
-                      </span>
-                      <span lang="en-GB">
-                        Google
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                  <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                      Wetin we call dis foto,
-                    </span>
-                    <p>
-                      APC Chairman Adams Oshiomhole don be Govnor of Edo State before
-                    </p>
-                  </figcaption>
-                </div>
-              </div>
-            </figure>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-w14rad-0 kIEFGQ">
-            <time datetime="2020-03-04"
-                  class="StyledTimestamp-um718p-0 bAgcOD"
-            >
-              4 March 2020
-            </time>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              <b>
-                Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.
-              </b>
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for "stay of execution plus appeal di ruling."
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              "Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party." Ebegbulem tok.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <div class="Wrapper-e2169q-0 kopXQT">
-              <ul dir="ltr"
-                  role="list"
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
+          <main role="main">
+            <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+              <h1 id="content"
+                  tabindex="-1"
+                  class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
               >
-                <li role="listitem"
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                >
-                  <a href="http://www.bbc.com/pidgin/tori-50389601"
-                     class="InlineLink-hkwpaz-0 idscKS"
-                  >
-                    How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                  </a>
-                </li>
-              </ul>
+                Adams Oshiomhole say 'I still be APC National Chairman'
+              </h1>
             </div>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, "as a law abiding political party, we go respect all lawful court order."
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <div class="Wrapper-e2169q-0 kopXQT">
-              <ul dir="ltr"
-                  role="list"
-                  class="BulletedList-sc-13z0d8v-0 zkoYd"
-              >
-                <li role="listitem"
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                >
-                  <a href="http://www.bbc.com/pidgin/tori-50401299"
-                     class="InlineLink-hkwpaz-0 idscKS"
-                  >
-                    "Oshiomhole suspension na 'beer parlour tok"
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                >
-                  <a href="http://www.bbc.com/pidgin/tori-50389601"
-                     class="InlineLink-hkwpaz-0 idscKS"
-                  >
-                    How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                    <div class="lazyload-placeholder">
-                    </div>
-                    <noscript>
-                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 800w"
-                           alt="Adams Oshiomole"
-                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 800w"
+                           alt="Comrade Adams Oshiomole"
+                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"
                            width="976"
                            class="StyledImg-sc-7vx2mr-0 dQLeqZ"
                       >
-                    </noscript>
-                    <p role="text"
-                       class="Copyright-sc-11lgtw-0 hDvIfz"
-                    >
+                      <p role="text"
+                         class="Copyright-sc-11lgtw-0 hDvIfz"
+                      >
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          Wia dis foto come from,
+                        </span>
+                        <span lang="en-GB">
+                          Google
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
                       <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wia dis foto come from,
+                        Wetin we call dis foto,
                       </span>
-                      <span lang="en-GB">
-                        Jubril A. Gawat
-                      </span>
-                    </p>
+                      <p>
+                        APC Chairman Adams Oshiomhole don be Govnor of Edo State before
+                      </p>
+                    </figcaption>
                   </div>
                 </div>
-                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                  <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                      Wetin we call dis foto,
-                    </span>
-                    <p>
-                      Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-                    </p>
-                  </figcaption>
-                </div>
+              </figure>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-w14rad-0 kIEFGQ">
+              <time datetime="2020-03-04"
+                    class="StyledTimestamp-um718p-0 bAgcOD"
+              >
+                4 March 2020
+              </time>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                <b>
+                  Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.
+                </b>
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for "stay of execution plus appeal di ruling."
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                "Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party." Ebegbulem tok.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <div class="Wrapper-e2169q-0 kopXQT">
+                <ul dir="ltr"
+                    role="list"
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                >
+                  <li role="listitem"
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                  >
+                    <a href="http://www.bbc.com/pidgin/tori-50389601"
+                       class="InlineLink-hkwpaz-0 idscKS"
+                    >
+                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </figure>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <h2 id="How-e-bin-take-start"
-                tabindex="-1"
-                class="SubHeading-sc-1kh1qhu-1 jHLqCp"
-            >
-              How e bin take start
-            </h2>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Di judge fix di case for April 7 and 8, 2020.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo.
-            </p>
-          </div>
-          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-            <p class="Paragraph-k859h4-0 hymSIv">
-              Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.
-            </p>
-          </div>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, "as a law abiding political party, we go respect all lawful court order."
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <div class="Wrapper-e2169q-0 kopXQT">
+                <ul dir="ltr"
+                    role="list"
+                    class="BulletedList-sc-13z0d8v-0 zkoYd"
+                >
+                  <li role="listitem"
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                  >
+                    <a href="http://www.bbc.com/pidgin/tori-50401299"
+                       class="InlineLink-hkwpaz-0 idscKS"
+                    >
+                      "Oshiomhole suspension na 'beer parlour tok"
+                    </a>
+                  </li>
+                  <li role="listitem"
+                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
+                  >
+                    <a href="http://www.bbc.com/pidgin/tori-50389601"
+                       class="InlineLink-hkwpaz-0 idscKS"
+                    >
+                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                      <div class="lazyload-placeholder">
+                      </div>
+                      <noscript>
+                        <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 800w"
+                             alt="Adams Oshiomole"
+                             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+                             width="976"
+                             class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                        >
+                      </noscript>
+                      <p role="text"
+                         class="Copyright-sc-11lgtw-0 hDvIfz"
+                      >
+                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                          Wia dis foto come from,
+                        </span>
+                        <span lang="en-GB">
+                          Jubril A. Gawat
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Wetin we call dis foto,
+                      </span>
+                      <p>
+                        Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
+                      </p>
+                    </figcaption>
+                  </div>
+                </div>
+              </figure>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <h2 id="How-e-bin-take-start"
+                  tabindex="-1"
+                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+              >
+                How e bin take start
+              </h2>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Di judge fix di case for April 7 and 8, 2020.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo.
+              </p>
+            </div>
+            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+              <p class="Paragraph-k859h4-0 hymSIv">
+                Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.
+              </p>
+            </div>
+          </main>
           <section role="region"
                    aria-labelledby="related-content-heading"
                    class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
@@ -2180,7 +2182,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
               </ul>
             </div>
           </section>
-        </main>
+        </div>
         <div class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
              dir="ltr"
         >
