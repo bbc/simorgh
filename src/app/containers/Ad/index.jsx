@@ -11,8 +11,6 @@ const AdContainer = () => {
   const hasAds = pathOr(false, ['hasAds'], ads);
   const { enabled: adsEnabled } = useToggle('ads');
 
-  // AMP does not run the useEffect, so it's defaulting to the hard coded toggle
-  // Currently only enabled for pidgin
   if (!adsEnabled || !hasAds) {
     return null;
   }
