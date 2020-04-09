@@ -15,7 +15,7 @@ const staticMostReadURL = (service, variant) =>
     ? `./data/${service}/mostRead/${variant}.json`
     : `./data/${service}/mostRead/index.json`;
 
-const renderMostReadContainer = (service, variant, maxTwoColumns) => (
+const renderMostReadContainer = (service, variant, columnLayout) => (
   <ToggleContextProvider service={service} origin="https://www.test.bbc.com">
     <RequestContextProvider
       bbcOrigin={`http://localhost/${service}/articles/c0000000000o`}
@@ -30,7 +30,7 @@ const renderMostReadContainer = (service, variant, maxTwoColumns) => (
       <ServiceContextProvider service={service} variant={variant}>
         <MostReadContainer
           mostReadEndpointOverride={staticMostReadURL(service, variant)}
-          maxTwoColumns={maxTwoColumns}
+          columnLayout={columnLayout}
         />
       </ServiceContextProvider>
     </RequestContextProvider>
@@ -46,11 +46,15 @@ const stories = storiesOf(MOST_READ_STORIES, module)
   });
 
 stories.add('Front Page (2 Columns)', ({ service, variant }) => {
-  return renderMostReadContainer(service, variant, true);
+  return renderMostReadContainer(service, variant, 'twoColumn');
 });
 
 stories.add('Article Page (5 Columns)', ({ service, variant }) => {
-  return renderMostReadContainer(service, variant, false);
+  return renderMostReadContainer(service, variant, 'multiColumn');
+});
+
+stories.add('STY Page (1 Column)', ({ service, variant }) => {
+  return renderMostReadContainer(service, variant, 'oneColumn');
 });
 
 buildRTLSubstories(MOST_READ_STORIES);
