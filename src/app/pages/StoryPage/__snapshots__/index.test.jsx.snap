@@ -1263,461 +1263,464 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
               class="c0 c1"
               dir="ltr"
             >
-              <main
+              <div
                 class="c2"
                 dir="ltr"
-                role="main"
               >
-                <div
-                  class="c3"
-                >
-                  <h1
-                    class="c4"
-                    id="content"
-                    tabindex="-1"
-                  >
-                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                  </h1>
-                </div>
-                <div
-                  class="c5 c6"
+                <main
+                  role="main"
                 >
                   <div
-                    class="c7"
+                    class="c3"
                   >
-                    <ul
-                      class="c8"
-                      role="list"
+                    <h1
+                      class="c4"
+                      id="content"
+                      tabindex="-1"
                     >
-                      <li
-                        class="c9"
-                        role="listitem"
-                      >
-                        By Andrew Overtyped Marr
-                      </li>
-                      <li
-                        class="c10"
-                        role="listitem"
-                      >
-                        BBC News - Overtyped
-                      </li>
-                    </ul>
+                      STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                    </h1>
                   </div>
-                </div>
-                <div
-                  class="c11"
-                >
-                  <figure
-                    class="c12"
+                  <div
+                    class="c5 c6"
                   >
                     <div
-                      class="c13"
+                      class="c7"
                     >
-                      <div
-                        class="c14"
+                      <ul
+                        class="c8"
+                        role="list"
                       >
-                        <div
-                          class="c15"
+                        <li
+                          class="c9"
+                          role="listitem"
                         >
-                          <img
-                            alt="Some people at the NTA awards"
-                            class="c16"
-                            src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                            srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                            width="976"
-                          />
-                          <p
-                            class="c17"
-                            role="text"
-                          >
-                            <span
-                              class="c18"
-                            >
-                              Wia dis foto come from, 
-                            </span>
-                            <span
-                              lang="en-GB"
-                            >
-                              Joe Maher
-                            </span>
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="c19"
-                      >
-                        <figcaption
-                          class="c20"
+                          By Andrew Overtyped Marr
+                        </li>
+                        <li
+                          class="c10"
+                          role="listitem"
                         >
-                          <span
-                            class="c18"
-                          >
-                            Wetin we call dis foto, 
-                          </span>
-                          <p>
-                            Some people went to the NTA awards recently.
-                          </p>
-                        </figcaption>
-                      </div>
+                          BBC News - Overtyped
+                        </li>
+                      </ul>
                     </div>
-                  </figure>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    <b>
-                       This is introduction text, it should be bold by default, but also support 
-                    </b>
-                    <a
-                      class="c22"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      inline links
-                    </a>
-                    <b>
-                       to other pages.
-                    </b>
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    <i
-                      class="c23"
-                    >
-                      <b>
-                        This is a subheadline! that has 
-                      </b>
-                    </i>
-                    <a
-                      class="c22"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      a link
-                    </a>
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <div
-                    class="c24"
-                  >
-                    <ul
-                      class="c25"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        This is a unordered list
-                      </li>
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        It can have 
-                        <b>
-                          bold text
-                        </b>
-                         in it
-                      </li>
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        <a
-                          class="c22"
-                          href="https://bbc.com/pidgin/23248703"
-                        >
-                          It can also have links
-                        </a>
-                      </li>
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        <i
-                          class="c23"
-                        >
-                          It can even have italic text in it!
-                        </i>
-                      </li>
-                    </ul>
                   </div>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
+                  <div
+                    class="c11"
                   >
-                    Feta the big cheese macaroni cheese. 
-                    <a
-                      class="c22"
-                      href="https://bbc.com/pidgin/23248703"
-                    >
-                      Caerphilly danish fontina
-                    </a>
-                     queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
-                    <b>
-                      Cow cheeseburger
-                    </b>
-                     stilton emmental.
-                  </p>
-                </div>
-                <div
-                  class="c11"
-                >
-                  <figure
-                    class="c12"
-                  >
-                    <div
-                      class="c13"
+                    <figure
+                      class="c12"
                     >
                       <div
-                        class="c14"
+                        class="c13"
                       >
                         <div
-                          class="c15"
+                          class="c14"
                         >
                           <div
-                            class="lazyload-placeholder"
-                          />
-                          <noscript />
-                          <p
-                            class="c17"
-                            role="text"
+                            class="c15"
+                          >
+                            <img
+                              alt="Some people at the NTA awards"
+                              class="c16"
+                              src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+                              srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
+                              width="976"
+                            />
+                            <p
+                              class="c17"
+                              role="text"
+                            >
+                              <span
+                                class="c18"
+                              >
+                                Wia dis foto come from, 
+                              </span>
+                              <span
+                                lang="en-GB"
+                              >
+                                Joe Maher
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="c19"
+                        >
+                          <figcaption
+                            class="c20"
                           >
                             <span
                               class="c18"
                             >
-                              Wia dis foto come from, 
+                              Wetin we call dis foto, 
                             </span>
-                            <span
-                              lang="en-GB"
-                            >
-                              Joe Maher
-                            </span>
-                          </p>
+                            <p>
+                              Some people went to the NTA awards recently.
+                            </p>
+                          </figcaption>
                         </div>
                       </div>
-                      <div
-                        class="c19"
-                      />
-                    </div>
-                  </figure>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    <b>
-                      Start of localised text
-                    </b>
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    <b>
-                      End of localised text
-                    </b>
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    Rubber cheese macaroni 
-                    <i
-                      class="c23"
-                    >
-                      cheese cottage cheese
-                    </i>
-                    . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <div
-                    class="c24"
-                  >
-                    <ul
-                      class="c25"
-                      dir="ltr"
-                      role="list"
-                    >
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        This is a ordered list
-                      </li>
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        It can have 
-                        <b>
-                          bold text
-                        </b>
-                         in it
-                      </li>
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        <a
-                          class="c22"
-                          href="https://bbc.com/pidgin/23248703"
-                        >
-                          It can also have links
-                        </a>
-                      </li>
-                      <li
-                        class="c26"
-                        role="listitem"
-                      >
-                        <i
-                          class="c23"
-                        >
-                          It can even have italic text in it!
-                        </i>
-                      </li>
-                    </ul>
+                    </figure>
                   </div>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
+                  <div
+                    class="c5"
                   >
-                    Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
-                  </p>
-                </div>
-                <div
-                  class="c27"
-                >
-                  <figure
-                    class="c12"
+                    <p
+                      class="c21"
+                    >
+                      <b>
+                         This is introduction text, it should be bold by default, but also support 
+                      </b>
+                      <a
+                        class="c22"
+                        href="https://bbc.com/pidgin/23248703"
+                      >
+                        inline links
+                      </a>
+                      <b>
+                         to other pages.
+                      </b>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <i
+                        class="c23"
+                      >
+                        <b>
+                          This is a subheadline! that has 
+                        </b>
+                      </i>
+                      <a
+                        class="c22"
+                        href="https://bbc.com/pidgin/23248703"
+                      >
+                        a link
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
                   >
                     <div
-                      class="c28"
+                      class="c24"
                     >
-                      <iframe
-                        allow="autoplay; fullscreen"
-                        allowfullscreen=""
-                        class="c29"
-                        scrolling="no"
-                        src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
-                        title="Media player"
-                      />
-                      <noscript />
+                      <ul
+                        class="c25"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          This is a unordered list
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          It can have 
+                          <b>
+                            bold text
+                          </b>
+                           in it
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <a
+                            class="c22"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            It can also have links
+                          </a>
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <i
+                            class="c23"
+                          >
+                            It can even have italic text in it!
+                          </i>
+                        </li>
+                      </ul>
                     </div>
-                  </figure>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <h2
-                    class="c30"
-                    id="This-is-a-heading"
-                    tabindex="-1"
+                  </div>
+                  <div
+                    class="c5"
                   >
-                    This is a heading!
-                  </h2>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <h2
-                    class="c30"
-                    id="This-is-a-subheading"
-                    tabindex="-1"
-                  >
-                    This is a subheading!
-                  </h2>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <h2
-                    class="c30"
-                    id="This-is-a-crosshead"
-                    tabindex="-1"
-                  >
-                    This is a crosshead!
-                  </h2>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
-                  >
-                    <a
-                      aria-label="This is an external link to google!, outside"
-                      class="c22"
-                      href="https://www.google.com/"
+                    <p
+                      class="c21"
                     >
-                      This is an external link to google!
-                    </a>
-                  </p>
-                </div>
-                <div
-                  class="c5"
-                >
-                  <p
-                    class="c21"
+                      Feta the big cheese macaroni cheese. 
+                      <a
+                        class="c22"
+                        href="https://bbc.com/pidgin/23248703"
+                      >
+                        Caerphilly danish fontina
+                      </a>
+                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                      <b>
+                        Cow cheeseburger
+                      </b>
+                       stilton emmental.
+                    </p>
+                  </div>
+                  <div
+                    class="c11"
                   >
-                    Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
-                  </p>
-                </div>
+                    <figure
+                      class="c12"
+                    >
+                      <div
+                        class="c13"
+                      >
+                        <div
+                          class="c14"
+                        >
+                          <div
+                            class="c15"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                            <noscript />
+                            <p
+                              class="c17"
+                              role="text"
+                            >
+                              <span
+                                class="c18"
+                              >
+                                Wia dis foto come from, 
+                              </span>
+                              <span
+                                lang="en-GB"
+                              >
+                                Joe Maher
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="c19"
+                        />
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <b>
+                        Start of localised text
+                      </b>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <b>
+                        End of localised text
+                      </b>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Rubber cheese macaroni 
+                      <i
+                        class="c23"
+                      >
+                        cheese cottage cheese
+                      </i>
+                      . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <ul
+                        class="c25"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          This is a ordered list
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          It can have 
+                          <b>
+                            bold text
+                          </b>
+                           in it
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <a
+                            class="c22"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            It can also have links
+                          </a>
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <i
+                            class="c23"
+                          >
+                            It can even have italic text in it!
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                    </p>
+                  </div>
+                  <div
+                    class="c27"
+                  >
+                    <figure
+                      class="c12"
+                    >
+                      <div
+                        class="c28"
+                      >
+                        <iframe
+                          allow="autoplay; fullscreen"
+                          allowfullscreen=""
+                          class="c29"
+                          scrolling="no"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          title="Media player"
+                        />
+                        <noscript />
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <h2
+                      class="c30"
+                      id="This-is-a-heading"
+                      tabindex="-1"
+                    >
+                      This is a heading!
+                    </h2>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <h2
+                      class="c30"
+                      id="This-is-a-subheading"
+                      tabindex="-1"
+                    >
+                      This is a subheading!
+                    </h2>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <h2
+                      class="c30"
+                      id="This-is-a-crosshead"
+                      tabindex="-1"
+                    >
+                      This is a crosshead!
+                    </h2>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <a
+                        aria-label="This is an external link to google!, outside"
+                        class="c22"
+                        href="https://www.google.com/"
+                      >
+                        This is an external link to google!
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                    </p>
+                  </div>
+                </main>
                 <section
                   aria-labelledby="related-content-heading"
                   class="c31"
@@ -1757,7 +1760,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     />
                   </div>
                 </section>
-              </main>
+              </div>
               <div
                 class="c40 c41"
                 dir="ltr"
@@ -3574,460 +3577,463 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   class="c0 c1"
                   dir="ltr"
                 >
-                  <main
+                  <div
                     class="c2"
                     dir="ltr"
-                    role="main"
                   >
-                    <div
-                      class="c3"
-                    >
-                      <h1
-                        class="c4"
-                        id="content"
-                        tabindex="-1"
-                      >
-                        STY - Blood pressure drugs dey work better
-                      </h1>
-                    </div>
-                    <div
-                      class="c5 c6"
+                    <main
+                      role="main"
                     >
                       <div
-                        class="c7"
+                        class="c3"
                       >
-                        <ul
-                          class="c8"
-                          role="list"
+                        <h1
+                          class="c4"
+                          id="content"
+                          tabindex="-1"
                         >
-                          <li
-                            class="c9"
-                            role="listitem"
-                          >
-                            By Andrew Overtyped Marr
-                          </li>
-                          <li
-                            class="c10"
-                            role="listitem"
-                          >
-                            BBC News - Overtyped
-                          </li>
-                        </ul>
+                          STY - Blood pressure drugs dey work better
+                        </h1>
                       </div>
-                    </div>
-                    <div
-                      class="c11"
-                    >
-                      <figure
-                        class="c12"
+                      <div
+                        class="c5 c6"
                       >
                         <div
-                          class="c13"
+                          class="c7"
                         >
-                          <div
-                            class="c14"
+                          <ul
+                            class="c8"
+                            role="list"
                           >
-                            <div
-                              class="c15"
+                            <li
+                              class="c9"
+                              role="listitem"
                             >
-                              <img
-                                alt="Some people at the NTA awards"
-                                class="c16"
-                                src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                                srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
-                                width="976"
-                              />
-                              <p
-                                class="c17"
-                                role="text"
-                              >
-                                <span
-                                  class="c18"
-                                >
-                                  Wia dis foto come from, 
-                                </span>
-                                <span
-                                  lang="en-GB"
-                                >
-                                  Joe Maher
-                                </span>
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            class="c19"
-                          >
-                            <figcaption
-                              class="c20"
+                              By Andrew Overtyped Marr
+                            </li>
+                            <li
+                              class="c10"
+                              role="listitem"
                             >
-                              <span
-                                class="c18"
-                              >
-                                Wetin we call dis foto, 
-                              </span>
-                              <p>
-                                Some people went to the NTA awards recently.
-                              </p>
-                            </figcaption>
-                          </div>
+                              BBC News - Overtyped
+                            </li>
+                          </ul>
                         </div>
-                      </figure>
-                    </div>
-                    <div
-                      class="c5 c21"
-                    >
-                      <time
-                        class="c22"
-                        datetime="2019-10-23"
-                      >
-                        23 October 2019
-                      </time>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        <b>
-                           This is introduction text, it should be bold by default, but also support 
-                        </b>
-                        <a
-                          class="c24"
-                          href="https://bbc.com/pidgin/23248703"
-                        >
-                          inline links
-                        </a>
-                        <b>
-                           to other pages.
-                        </b>
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        <i
-                          class="c25"
-                        >
-                          <b>
-                            This is a subheadline! that has 
-                          </b>
-                        </i>
-                        <a
-                          class="c24"
-                          href="https://bbc.com/pidgin/23248703"
-                        >
-                          a link
-                        </a>
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <div
-                        class="c26"
-                      >
-                        <ul
-                          class="c27"
-                          dir="ltr"
-                          role="list"
-                        >
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            This is a unordered list
-                          </li>
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            It can have 
-                            <b>
-                              bold text
-                            </b>
-                             in it
-                          </li>
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            <a
-                              class="c24"
-                              href="https://bbc.com/pidgin/23248703"
-                            >
-                              It can also have links
-                            </a>
-                          </li>
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            <i
-                              class="c25"
-                            >
-                              It can even have italic text in it!
-                            </i>
-                          </li>
-                        </ul>
                       </div>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
+                      <div
+                        class="c11"
                       >
-                        Feta the big cheese macaroni cheese. 
-                        <a
-                          class="c24"
-                          href="https://bbc.com/pidgin/23248703"
-                        >
-                          Caerphilly danish fontina
-                        </a>
-                         queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
-                        <b>
-                          Cow cheeseburger
-                        </b>
-                         stilton emmental.
-                      </p>
-                    </div>
-                    <div
-                      class="c11"
-                    >
-                      <figure
-                        class="c12"
-                      >
-                        <div
-                          class="c13"
+                        <figure
+                          class="c12"
                         >
                           <div
-                            class="c14"
+                            class="c13"
                           >
                             <div
-                              class="c15"
+                              class="c14"
                             >
                               <div
-                                class="lazyload-placeholder"
-                              />
-                              <noscript />
-                              <p
-                                class="c17"
-                                role="text"
+                                class="c15"
+                              >
+                                <img
+                                  alt="Some people at the NTA awards"
+                                  class="c16"
+                                  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
+                                  width="976"
+                                />
+                                <p
+                                  class="c17"
+                                  role="text"
+                                >
+                                  <span
+                                    class="c18"
+                                  >
+                                    Wia dis foto come from, 
+                                  </span>
+                                  <span
+                                    lang="en-GB"
+                                  >
+                                    Joe Maher
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                            <div
+                              class="c19"
+                            >
+                              <figcaption
+                                class="c20"
                               >
                                 <span
                                   class="c18"
                                 >
-                                  Wia dis foto come from, 
+                                  Wetin we call dis foto, 
                                 </span>
-                                <span
-                                  lang="en-GB"
-                                >
-                                  Joe Maher
-                                </span>
-                              </p>
+                                <p>
+                                  Some people went to the NTA awards recently.
+                                </p>
+                              </figcaption>
                             </div>
                           </div>
-                          <div
-                            class="c19"
-                          />
-                        </div>
-                      </figure>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        <b>
-                          Start of localised text
-                        </b>
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        <b>
-                          End of localised text
-                        </b>
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        Rubber cheese macaroni 
-                        <i
-                          class="c25"
-                        >
-                          cheese cottage cheese
-                        </i>
-                        . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <div
-                        class="c26"
-                      >
-                        <ul
-                          class="c27"
-                          dir="ltr"
-                          role="list"
-                        >
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            This is a ordered list
-                          </li>
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            It can have 
-                            <b>
-                              bold text
-                            </b>
-                             in it
-                          </li>
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            <a
-                              class="c24"
-                              href="https://bbc.com/pidgin/23248703"
-                            >
-                              It can also have links
-                            </a>
-                          </li>
-                          <li
-                            class="c28"
-                            role="listitem"
-                          >
-                            <i
-                              class="c25"
-                            >
-                              It can even have italic text in it!
-                            </i>
-                          </li>
-                        </ul>
+                        </figure>
                       </div>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
+                      <div
+                        class="c5 c21"
                       >
-                        Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
-                      </p>
-                    </div>
-                    <div
-                      class="c29"
-                    >
-                      <figure
-                        class="c12"
+                        <time
+                          class="c22"
+                          datetime="2019-10-23"
+                        >
+                          23 October 2019
+                        </time>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <b>
+                             This is introduction text, it should be bold by default, but also support 
+                          </b>
+                          <a
+                            class="c24"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            inline links
+                          </a>
+                          <b>
+                             to other pages.
+                          </b>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <i
+                            class="c25"
+                          >
+                            <b>
+                              This is a subheadline! that has 
+                            </b>
+                          </i>
+                          <a
+                            class="c24"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            a link
+                          </a>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
                       >
                         <div
-                          class="c30"
+                          class="c26"
                         >
-                          <iframe
-                            allow="autoplay; fullscreen"
-                            allowfullscreen=""
-                            class="c31"
-                            scrolling="no"
-                            src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
-                            title="Media player"
-                          />
-                          <noscript />
+                          <ul
+                            class="c27"
+                            dir="ltr"
+                            role="list"
+                          >
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              This is a unordered list
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              It can have 
+                              <b>
+                                bold text
+                              </b>
+                               in it
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <a
+                                class="c24"
+                                href="https://bbc.com/pidgin/23248703"
+                              >
+                                It can also have links
+                              </a>
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <i
+                                class="c25"
+                              >
+                                It can even have italic text in it!
+                              </i>
+                            </li>
+                          </ul>
                         </div>
-                      </figure>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <h2
-                        class="c32"
-                        id="This-is-a-heading"
-                        tabindex="-1"
+                      </div>
+                      <div
+                        class="c5"
                       >
-                        This is a heading!
-                      </h2>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <h2
-                        class="c32"
-                        id="This-is-a-crosshead"
-                        tabindex="-1"
-                      >
-                        This is a crosshead!
-                      </h2>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
-                      >
-                        <a
-                          aria-label="This is an external link to google!, outside"
-                          class="c24"
-                          href="https://www.google.com/"
+                        <p
+                          class="c23"
                         >
-                          This is an external link to google!
-                        </a>
-                      </p>
-                    </div>
-                    <div
-                      class="c5"
-                    >
-                      <p
-                        class="c23"
+                          Feta the big cheese macaroni cheese. 
+                          <a
+                            class="c24"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            Caerphilly danish fontina
+                          </a>
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                          <b>
+                            Cow cheeseburger
+                          </b>
+                           stilton emmental.
+                        </p>
+                      </div>
+                      <div
+                        class="c11"
                       >
-                        Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
-                      </p>
-                    </div>
+                        <figure
+                          class="c12"
+                        >
+                          <div
+                            class="c13"
+                          >
+                            <div
+                              class="c14"
+                            >
+                              <div
+                                class="c15"
+                              >
+                                <div
+                                  class="lazyload-placeholder"
+                                />
+                                <noscript />
+                                <p
+                                  class="c17"
+                                  role="text"
+                                >
+                                  <span
+                                    class="c18"
+                                  >
+                                    Wia dis foto come from, 
+                                  </span>
+                                  <span
+                                    lang="en-GB"
+                                  >
+                                    Joe Maher
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                            <div
+                              class="c19"
+                            />
+                          </div>
+                        </figure>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <b>
+                            Start of localised text
+                          </b>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <b>
+                            End of localised text
+                          </b>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Rubber cheese macaroni 
+                          <i
+                            class="c25"
+                          >
+                            cheese cottage cheese
+                          </i>
+                          . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <div
+                          class="c26"
+                        >
+                          <ul
+                            class="c27"
+                            dir="ltr"
+                            role="list"
+                          >
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              This is a ordered list
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              It can have 
+                              <b>
+                                bold text
+                              </b>
+                               in it
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <a
+                                class="c24"
+                                href="https://bbc.com/pidgin/23248703"
+                              >
+                                It can also have links
+                              </a>
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <i
+                                class="c25"
+                              >
+                                It can even have italic text in it!
+                              </i>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                        </p>
+                      </div>
+                      <div
+                        class="c29"
+                      >
+                        <figure
+                          class="c12"
+                        >
+                          <div
+                            class="c30"
+                          >
+                            <iframe
+                              allow="autoplay; fullscreen"
+                              allowfullscreen=""
+                              class="c31"
+                              scrolling="no"
+                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              title="Media player"
+                            />
+                            <noscript />
+                          </div>
+                        </figure>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <h2
+                          class="c32"
+                          id="This-is-a-heading"
+                          tabindex="-1"
+                        >
+                          This is a heading!
+                        </h2>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <h2
+                          class="c32"
+                          id="This-is-a-crosshead"
+                          tabindex="-1"
+                        >
+                          This is a crosshead!
+                        </h2>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <a
+                            aria-label="This is an external link to google!, outside"
+                            class="c24"
+                            href="https://www.google.com/"
+                          >
+                            This is an external link to google!
+                          </a>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                        </p>
+                      </div>
+                    </main>
                     <section
                       aria-labelledby="related-content-heading"
                       class="c33"
@@ -4067,7 +4073,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         />
                       </div>
                     </section>
-                  </main>
+                  </div>
                   <div
                     class="c42 c43"
                     dir="ltr"
