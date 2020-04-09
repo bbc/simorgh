@@ -28,11 +28,11 @@ export default (radioScheduleData, service, currentTime) => {
 
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
+  const radioSchedules = pathOr([], ['schedules'], radioScheduleData);
+
   const latestProgramIndex = findLastIndex(
     propSatisfies((time) => time < currentTime, 'publishedTimeStart'),
-  )(radioScheduleData.schedules);
-
-  const radioSchedules = radioScheduleData.schedules;
+  )(radioSchedules);
 
   const scheduleDataIsComplete =
     radioSchedules[latestProgramIndex - 2] &&
