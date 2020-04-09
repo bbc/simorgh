@@ -26,12 +26,13 @@ export default async ({ path, service, variant = 'default' }) => {
   // checklist
   // import config for the current service (without bloating the bundle size to 2MB) /
   // only fetch radio schedule data if:
-  //   radio schedules is toggled on for this environment. 
+  //   radio schedules is toggled on for this environment.
   //   the page requires radio schedule data. /
   // if it does, fetch that data /
   // if we successfully fetch that data, process it (so we don't add 5,500 lines of JSON to the window) and merge into pageData /
   // if we don't successfully fetch the data, don't try and merge it into page data. /
   // make this reusable for other page types that need radio schedules data.
+  // find a way to deal with config imports in tests
 
   const hasRadioSchedule = pathOr(
     false,
