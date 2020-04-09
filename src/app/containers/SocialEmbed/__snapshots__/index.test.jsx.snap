@@ -35,27 +35,27 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .c3:not(:focus):not(:active) {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px 1px 1px 1px);
-  clip: rect(1px 1px 1px 1px);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
   clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c4 {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px 1px 1px 1px);
-  clip: rect(1px 1px 1px 1px);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
   clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c0 {
@@ -193,27 +193,27 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
 }
 
 .c3:not(:focus):not(:active) {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px 1px 1px 1px);
-  clip: rect(1px 1px 1px 1px);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
   clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c5 {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px 1px 1px 1px);
-  clip: rect(1px 1px 1px 1px);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
   -webkit-clip: rect(1px,1px,1px,1px);
   clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 .c4 {
@@ -362,6 +362,54 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
 
 exports[`SocialEmbedContainer Canonical should render correctly without an embed block 1`] = `
 .c2 {
+  position: relative;
+}
+
+.c3 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+.c3:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -373,37 +421,36 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   padding: 1rem;
 }
 
-.c2 p {
+.c4 p {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-.c2 a,
-.c2 small {
+.c4 a,
+.c4 small {
   display: block;
 }
 
-.c2 a {
+.c4 a {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2 a > span {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  -webkit-clip: rect(1px 1px 1px 1px);
-  clip: rect(1px 1px 1px 1px);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  white-space: nowrap;
+.c4 a:visited {
+  color: #6E6E73;
 }
 
-.c2 small {
+.c4 a:hover,
+.c4 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 small {
   margin-top: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -430,8 +477,20 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
   min-width: auto !important;
 }
 
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+  }
+}
+
 @media (min-width:20rem) {
-  .c2 {
+  .c4 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -485,17 +544,32 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
     <div
       class="c2"
     >
-      <p>
-        Sorry but we're having trouble displaying this content
-      </p>
       <a
-        href="https://twitter.com/MileyCyrus/status/1237210910835392512"
+        class="c3"
+        href="#skip-twitter-content-d5bccd4e"
       >
-        View content on Twitter
-        <span>
-          , external
-        </span>
+        Skip Twitter content
       </a>
+      <div
+        class="c4"
+      >
+        <p>
+          Sorry but we're having trouble displaying this content
+        </p>
+        <a
+          aria-label="View content on Twitter, external"
+          href="https://twitter.com/MileyCyrus/status/1237210910835392512"
+        >
+          View content on Twitter
+        </a>
+      </div>
+      <p
+        class="c5"
+        id="skip-twitter-content-d5bccd4e"
+        tabindex="-1"
+      >
+        End of Twitter content
+      </p>
     </div>
   </div>
 </div>
