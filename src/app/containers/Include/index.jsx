@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
@@ -25,9 +25,17 @@ const decodeHTML = (str) => {
 
 const IncludeContainer = ({ html, type }) => {
   const { enabled } = useToggle('include');
-  // const [data, setData] = useState('');
-  const [includeHtml, setIncludeHtml] = useState('');
+  const [includeHtml, setIncludeHtml] = useState(html);
   const [scriptTags, setScriptsTags] = useState([]);
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      setIncludeHtml(html);
+    }
+  }, [html]);
 
   const supportedTypes = {
     idt2: 'idt2',
@@ -58,15 +66,15 @@ const IncludeContainer = ({ html, type }) => {
   };
 
   useEffect(() => {
-    setIncludeHtml(html);
-  }, [html]);
+    if (!isInitialMount.current) {
+      const scriptTagRegExp = new RegExp(
+        /<script\b[^>]*>([\s\S]*?)<\/script>/gm,
+      );
+      const scriptTagMatches = includeHtml.matchAll(scriptTagRegExp);
 
-  useEffect(() => {
-    const scriptTagRegExp = new RegExp(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
-    const scriptTagMatches = includeHtml.matchAll(scriptTagRegExp);
-
-    setScriptsTags(Array.from(scriptTagMatches));
-    setIncludeHtml(includeHtml.replace(scriptTagRegExp, ''));
+      setScriptsTags(Array.from(scriptTagMatches));
+      setIncludeHtml(includeHtml.replace(scriptTagRegExp, ''));
+    }
   }, [includeHtml]);
 
   // Keep the DOM up to date with our script tags.
@@ -76,11 +84,9 @@ const IncludeContainer = ({ html, type }) => {
       for (const scriptTag of scriptTags) {
         const [textContent, contents] = scriptTag;
         const srcRegex = new RegExp(/src="(.*?)"/gm);
-        // console.log(Array.from(textContent.matchAll(srcRegex)));
         const [srcContent] = Array.from(textContent.matchAll(srcRegex));
         if (srcContent) {
           const [src] = srcContent.slice(-1);
-
           // eslint-disable-next-line no-await-in-loop
           await createAppendScriptTag('', src);
         } else {
@@ -89,7 +95,9 @@ const IncludeContainer = ({ html, type }) => {
         }
       }
     }
-    placeScriptsOneAfterTheOther();
+    if (!isInitialMount.current) {
+      placeScriptsOneAfterTheOther();
+    }
   }, [scriptTags]);
 
   const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
