@@ -2,8 +2,8 @@
  * @pathname /mundo/noticias-internacional-51266689
  */
 
-// import runCanonicalUserTests from './user.canonical';
-// import runAmpUserTests from './user.amp';
+import runCanonicalUserTests from './user.canonical';
+import runAmpUserTests from './user.amp';
 import {
   runFooterTests,
   runHeaderTests,
@@ -18,9 +18,9 @@ import {
 } from '../../common';
 
 describe('Given I am on a Mundo story AMP page', () => {
-  // describe('When I am using the website', () => {
-  //   runAmpUserTests();
-  // });
+  describe('When I am using the website', () => {
+    runAmpUserTests();
+  });
 
   describe('When the application starts', () => {
     runCoreAmpTests();
@@ -32,13 +32,13 @@ describe('Given I am on a Mundo story AMP page', () => {
 });
 
 describe('Given I am on a Mundo stor Canonical page', () => {
-  // describe('When I am using the website', () => {
-  //   runCanonicalUserTests({
-  //     imageAltText:
-  //       'A person holding a union jack umbrella in front of Big Ben',
-  //     imageCaptionText: 'Llegó el día de la salida de Reino Unido de la UE.',
-  //   });
-  // });
+  describe('When I am using the website', () => {
+    runCanonicalUserTests({
+      imageAltText:
+        'A person holding a union jack umbrella in front of Big Ben',
+      imageCaptionText: 'Llegó el día de la salida de Reino Unido de la UE.',
+    });
+  });
 
   describe('When I am analysing user/performance metrics', () => {
     runCommonCanonicalAnalyticsTests();
