@@ -1,9 +1,13 @@
 import socialEmbed from '.';
-import { twitter, twitterNoEmbed } from './fixtures';
+import pageData from './fixtures';
 
 describe('socialEmbed', () => {
+  const { blocks } = pageData.content;
+  const twitter = blocks[1];
+  const twitterNoEmbed = blocks[3];
+
   it('should convert a social_embed block to Optimo format', () => {
-    expect(socialEmbed(twitter)).toEqual({
+    expect(socialEmbed(twitter, pageData)).toEqual({
       model: {
         blocks: [
           {
@@ -35,13 +39,14 @@ describe('socialEmbed', () => {
               id: '1237210910835392512',
             },
             type: 'twitter',
+            indexOfType: 0,
           },
         ],
       },
       type: 'social_embed',
     });
 
-    expect(socialEmbed(twitterNoEmbed)).toEqual({
+    expect(socialEmbed(twitterNoEmbed, pageData)).toEqual({
       model: {
         blocks: [
           {
@@ -50,6 +55,7 @@ describe('socialEmbed', () => {
               id: '1237210910835392512',
             },
             type: 'twitter',
+            indexOfType: 1,
           },
         ],
       },
