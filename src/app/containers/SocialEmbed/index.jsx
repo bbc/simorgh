@@ -42,8 +42,9 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   if (!blocks || !enabled) return null;
 
-  const { type: provider, model, id: uuid } = blocks[0];
+  const { type: provider, indexOfType, model } = blocks[0];
   const { id, href } = model;
+  const index = indexOfType + 1;
 
   const oEmbed = path(['embed', 'oembed'], model);
 
@@ -51,7 +52,7 @@ const SocialEmbedContainer = ({ blocks }) => {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
     caption: captionTranslations,
-  } = createTranslations(translations);
+  } = createTranslations({ translations, index });
 
   const fallback = {
     ...fallbackTranslations,
@@ -60,7 +61,7 @@ const SocialEmbedContainer = ({ blocks }) => {
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `skip-%provider%-content-${uuid.split('-')[0]}`,
+    endTextId: `skip-%provider%-content-${index}`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;

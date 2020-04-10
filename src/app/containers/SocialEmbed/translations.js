@@ -1,6 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 
-const createTranslations = (translations) => ({
+const createTranslations = ({ translations, index }) => ({
   fallback: {
     text: pathOr(
       "Sorry but we're having trouble displaying this content",
@@ -25,16 +25,16 @@ const createTranslations = (translations) => ({
   },
 
   skipLink: {
-    text: pathOr(
+    text: `${pathOr(
       'Skip %provider_name% content',
       ['socialEmbed', 'skipLink', 'text'],
       translations,
-    ),
-    endTextVisuallyHidden: pathOr(
+    )}, ${index}`,
+    endTextVisuallyHidden: `${pathOr(
       'End of %provider_name% content',
       ['socialEmbed', 'skipLink', 'endTextVisuallyHidden'],
       translations,
-    ),
+    )}, ${index}`,
   },
 
   caption: {

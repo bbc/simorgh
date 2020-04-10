@@ -1,5 +1,6 @@
 export const twitterBlockNoEmbed = {
   type: 'twitter',
+  indexOfType: 0,
   model: {
     href: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
     id: '1237210910835392512',
@@ -10,6 +11,7 @@ export const twitterBlockNoEmbed = {
 
 export const twitterBlock = {
   type: 'twitter',
+  indexOfType: 1,
   model: {
     href: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
     id: '1237210910835392512',

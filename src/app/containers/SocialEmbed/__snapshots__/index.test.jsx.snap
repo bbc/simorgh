@@ -142,9 +142,9 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
           >
             <a
               class="c3"
-              href="#skip-twitter-content-c063a42a"
+              href="#skip-twitter-content-2"
             >
-              Skip Twitter content
+              Skip Twitter content, 2
             </a>
             <amp-twitter
               data-tweetid="1237210910835392512"
@@ -154,10 +154,10 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
             />
             <p
               class="c4"
-              id="skip-twitter-content-c063a42a"
+              id="skip-twitter-content-2"
               tabindex="-1"
             >
-              End of Twitter content
+              End of Twitter content, 2
             </p>
           </div>
         </div>
@@ -319,9 +319,9 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
           >
             <a
               class="c3"
-              href="#skip-twitter-content-c063a42a"
+              href="#skip-twitter-content-2"
             >
-              Skip Twitter content
+              Skip Twitter content, 2
             </a>
             <div
               class="c4"
@@ -347,10 +347,10 @@ exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
             </div>
             <p
               class="c5"
-              id="skip-twitter-content-c063a42a"
+              id="skip-twitter-content-2"
               tabindex="-1"
             >
-              End of Twitter content
+              End of Twitter content, 2
             </p>
           </div>
         </div>
@@ -546,9 +546,9 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
     >
       <a
         class="c3"
-        href="#skip-twitter-content-d5bccd4e"
+        href="#skip-twitter-content-1"
       >
-        Skip Twitter content
+        Skip Twitter content, 1
       </a>
       <div
         class="c4"
@@ -565,10 +565,10 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
       </div>
       <p
         class="c5"
-        id="skip-twitter-content-d5bccd4e"
+        id="skip-twitter-content-1"
         tabindex="-1"
       >
-        End of Twitter content
+        End of Twitter content, 1
       </p>
     </div>
   </div>
