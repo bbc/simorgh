@@ -27,6 +27,7 @@ module.exports = {
         '**/__tests__/**/*.js?(x)',
         '**/?(*.)+(spec|test).js?(x)',
         '!**/src/integration/**/*.{js,jsx}',
+        '!**/scripts/**/*.{js,jsx}',
       ],
       snapshotSerializers: ['enzyme-to-json/serializer'],
       setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
@@ -54,6 +55,29 @@ module.exports = {
       setupFiles: ['./src/testHelpers/jest-setup.js'],
       testMatch: ['**/src/integration/**/*.test.{js,jsx}'],
       snapshotSerializers: ['jest-serializer-html'],
+      setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+      moduleNameMapper: jestDirAlias,
+      transform: {
+        '^.+\\.js$': 'babel-jest',
+        '^.+\\.jsx$': 'babel-jest',
+      },
+    },
+    {
+      displayName: 'Structured Data Tests',
+      reporters: [
+        'default',
+        [
+          'jest-junit',
+          {
+            suiteName: 'Structured Data Tests',
+            outputDirectory: 'reports/jest',
+            uniqueOutputName: 'true',
+            ancestorSeparator: ' › ',
+          },
+        ],
+      ],
+      setupFiles: ['./src/testHelpers/jest-setup.js'],
+      testMatch: ['**/scripts/structuredData.js'],
       setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
       moduleNameMapper: jestDirAlias,
       transform: {
