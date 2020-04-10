@@ -33,9 +33,10 @@
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration:ci": "jest --colors ./src/integration/pages/**/*.test.js",
-    "test:integration:regression:ci": "jest --colors ./src/integration/regressionTests/tests/**/*",
+    "test:integration:regression:ci": "jest --colors --config=jest-integration.config.js ./src/integration/regressionTests/tests/**/*",
     "test:integration": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/pages/**/*.test.js",
     "test:integration:regression": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/regressionTests/tests/**/*",
+    "test:integration:regression:gui": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && npx majestic --app",
     "test:integration:watch": "npm run test:integration -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
@@ -241,5 +242,10 @@
     "commitHash": "383522b",
     "deployEnvironment": "green",
     "version": "1.0.0"
+  },
+  "majestic": {
+    "args": [
+      "--config=./jest.regression.config.js"
+    ]
   }
 }
