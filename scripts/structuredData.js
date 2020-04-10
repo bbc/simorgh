@@ -55,7 +55,7 @@ const checkStructuredData = () => {
       .filter((pageType) => !pageType.startsWith('error'))
       .forEach((pageType) => {
         const paths = getPaths(service, pageType);
-        paths.forEach(async (path) => {
+        paths.forEach((path) => {
           const url = `http://localhost:7080${path}`;
           const pageTypeUrl = `${pageType} - ${url}`;
 
