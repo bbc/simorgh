@@ -27,7 +27,6 @@ module.exports = {
         '**/__tests__/**/*.js?(x)',
         '**/?(*.)+(spec|test).js?(x)',
         '!**/src/integration/**/*.{js,jsx}',
-        '!**/scripts/**/*.{js,jsx}',
       ],
       snapshotSerializers: ['enzyme-to-json/serializer'],
       setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
