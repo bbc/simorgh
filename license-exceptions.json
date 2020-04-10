@@ -59,6 +59,9 @@
     },
     "xmldom@*": {
       "reason": "Dual license under MIT or LGPL; https://github.com/jindw/xmldom/blob/master/LICENSE"
+    },
+    "jmespath@*": {
+      "reason": "Licensed under Apache 2.0; https://github.com/jmespath/jmespath.js/blob/master/LICENSE"
     }
   }
 }
