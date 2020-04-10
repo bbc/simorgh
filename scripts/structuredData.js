@@ -61,12 +61,12 @@ const checkStructuredData = () => {
 
           describe(`${pageTypeUrl}`, () => {
             let result;
-            let allPageResults;
+            let allTests;
 
             beforeEach(async () => {
               result = await validate(url);
 
-              allPageResults = [
+              allTests = [
                 ...result.passed,
                 ...result.warnings,
                 ...result.failed,
@@ -74,9 +74,9 @@ const checkStructuredData = () => {
             });
 
             it('should have correct metadata & structured data', () => {
-              expect(allPageResults).not.toBeUndefined();
-              allPageResults.forEach((pageResult) => {
-                expect(pageResult).hasCorrectMetadata();
+              expect(allTests).not.toBeUndefined();
+              allTests.forEach((test) => {
+                expect(test).hasCorrectMetadata();
               });
             });
           });
