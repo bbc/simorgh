@@ -20,7 +20,7 @@ const testDetails = (test) => {
   return `${test.test} = ${JSON.stringify(test.value)}`;
 };
 
-const checkPage = async (url) => {
+const validate = async (url) => {
   let result;
   try {
     result = await structuredDataTest(url, {
@@ -64,7 +64,7 @@ const checkStructuredData = () => {
             let allPageResults;
 
             beforeEach(async () => {
-              result = await checkPage(url);
+              result = await validate(url);
 
               allPageResults = [
                 ...result.passed,
