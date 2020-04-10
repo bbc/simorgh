@@ -73,7 +73,7 @@ const checkStructuredData = () => {
               ];
             });
 
-            it('should have correct metadata', () => {
+            it('should have correct metadata & structured data', () => {
               expect(allPageResults).not.toBeUndefined();
               allPageResults.forEach((pageResult) => {
                 expect(pageResult).hasCorrectMetadata();
