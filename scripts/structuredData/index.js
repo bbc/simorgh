@@ -87,13 +87,12 @@ expect.extend({
 
 const checkStructuredData = () => {
   Object.keys(services)
-    .filter((service) => service === 'indonesia')
+    // .filter((service) => service === 'indonesia')
     .forEach((service) => {
       const { name: serviceName, variant } = services[service];
       console.log(serviceName);
       const serviceConfig =
         appConfig[serviceName] && appConfig[serviceName][variant];
-      // console.log(serviceConfig);
       Object.keys(services[service].pageTypes)
         .filter((pageType) => !pageType.startsWith('error'))
         // .filter((pageType) => pageType === 'article')
