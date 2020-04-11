@@ -1,5 +1,9 @@
 import { getImageSrc } from './utilities';
 
+const getTitle = (jsonData, serviceConfig) => {
+  return `${jsonData.promo.headlines.headline} - ${serviceConfig.brandName}`;
+};
+
 export default (jsonData, serviceConfig) => {
   return {
     name: 'Twitter',
@@ -22,10 +26,24 @@ export default (jsonData, serviceConfig) => {
         expect: serviceConfig.twitterCreator,
       },
       {
-        name: 'twitter image',
         test: '"twitter:image:src"',
         type: 'metatag',
         expect: getImageSrc(jsonData, serviceConfig),
+      },
+      {
+        test: '"twitter:image:alt"',
+        type: 'metatag',
+        expect: jsonData.promo.indexImage.altText,
+      },
+      {
+        test: '"twitter:title"',
+        type: 'metatag',
+        expect: getTitle(jsonData, serviceConfig),
+      },
+      {
+        test: '"twitter:description"',
+        type: 'metatag',
+        expect: jsonData.promo.summary,
       },
     ],
   };
