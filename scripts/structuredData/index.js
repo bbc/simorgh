@@ -58,7 +58,6 @@ const validate = async (url, serviceConfig) => {
   try {
     result = await structuredDataTest(url, {
       presets: [Google, ...presets],
-      showInfo: true,
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
