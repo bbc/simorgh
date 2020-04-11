@@ -68,6 +68,11 @@ export default (jsonData, serviceConfig, url) => {
         type: 'metatag',
         expect: getType(jsonData),
       },
+      {
+        test: '"og:locale"',
+        type: 'metatag',
+        expect: serviceConfig.locale,
+      },
     ],
   };
 };
