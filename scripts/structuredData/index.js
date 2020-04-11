@@ -87,45 +87,42 @@ expect.extend({
 });
 
 const checkStructuredData = () => {
-  Object.keys(services)
-    // .filter((service) => service === 'indonesia')
-    .forEach((service) => {
-      const { name: serviceName, variant } = services[service];
-      const serviceConfig =
-        appConfig[serviceName] && appConfig[serviceName][variant];
-      Object.keys(services[service].pageTypes)
-        .filter((pageType) => !pageType.startsWith('error'))
-        // .filter((pageType) => pageType === 'article')
-        .forEach((pageType) => {
-          const paths = getPaths(service, pageType);
-          paths.forEach((path) => {
-            const url = `http://localhost:7080${path}`;
-            const pageTypeUrl = `${pageType} - ${url}`;
+  Object.keys(services).forEach((service) => {
+    const { name: serviceName, variant } = services[service];
+    const serviceConfig =
+      appConfig[serviceName] && appConfig[serviceName][variant];
+    Object.keys(services[service].pageTypes)
+      .filter((pageType) => !pageType.startsWith('error'))
+      .forEach((pageType) => {
+        const paths = getPaths(service, pageType);
+        paths.forEach((path) => {
+          const url = `http://localhost:7080${path}`;
+          const pageTypeUrl = `${pageType} - ${url}`;
 
-            describe(`${pageTypeUrl}`, () => {
-              let result;
-              let allTests;
+          describe(`${pageTypeUrl}`, () => {
+            let result;
+            let allTests;
 
-              beforeEach(async () => {
-                result = await validate(url, serviceConfig);
+            beforeEach(async () => {
+              result = await validate(url, serviceConfig);
 
-                allTests = [
-                  ...result.passed,
-                  ...result.warnings,
-                  ...result.failed,
-                ];
-              });
+              allTests = [
+                ...result.passed,
+                ...result.warnings,
+                ...result.failed,
+              ];
+            });
 
-              it('should have correct metadata & structured data', () => {
-                expect(allTests).not.toBeUndefined();
-                allTests.forEach((test) => {
-                  expect(test).hasCorrectMetadata();
-                });
+            it('should have correct metadata & structured data', () => {
+              expect(allTests).not.toBeUndefined();
+              allTests.forEach((test) => {
+                expect(test).hasCorrectMetadata();
               });
             });
           });
         });
-    });
+      });
+  });
 };
 
 checkStructuredData();
