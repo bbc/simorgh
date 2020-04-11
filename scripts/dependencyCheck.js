@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 // eslint-disable no-console
 const path = require('path');
 const depcheck = require('depcheck');
@@ -11,7 +12,7 @@ const options = {
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',
-    'structured-data-testing-tool/presets',
+    'node-fetch',
   ],
 };
 
@@ -30,14 +31,13 @@ depcheck(
 
       return {
         ...obj,
-        key: missing[key],
+        [key]: missing[key],
       };
     }, {});
 
     console.log(`${Object.keys(missingFiltered).length} missing dependencies.`);
     Object.keys(missingFiltered).forEach((key) => {
-      console.log(key);
-      console.log(`  ${missingFiltered[key].join('\n  ')}`);
+      console.log(key, `\n\t${missingFiltered[key].join('\n\t')}`);
     });
 
     if (dependencies.length > 0 || Object.keys(missingFiltered).length > 0) {
