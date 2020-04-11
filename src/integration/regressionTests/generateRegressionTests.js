@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+
+global.Cypress = { env: () => 'local' };
+const getPaths = require('../../../cypress/support/helpers/getPaths');
 const pathnames = require('../../../cypress/support/config/services');
 
 const createTestFile = (filePath, content) => {
@@ -68,19 +71,24 @@ const createTestFiles = () => {
   const services = Object.keys(pathnames);
 
   services.forEach((service) => {
-    const pageTypes = Object.keys(pathnames[service]);
+    const pageTypes = Object.keys(pathnames[service].pageTypes);
 
-    pageTypes.forEach((pageType) => {
-      const pathname = pathnames[service][pageType];
-      const filePath = getFilePath(service, pageType, pathname);
-      const testFileContent = getTestFileContent({ pathname, pageType });
+    pageTypes
+      .filter((pageType) => !pageType.startsWith('error'))
+      .forEach((pageType) => {
+        const paths = getPaths(service, pageType);
 
-      fs.mkdirSync(path.join(__dirname, 'tests', service, pageType), {
-        recursive: true,
+        paths.forEach((pathname) => {
+          const filePath = getFilePath(service, pageType, pathname);
+          const testFileContent = getTestFileContent({ pathname, pageType });
+
+          fs.mkdirSync(path.join(__dirname, 'tests', service, pageType), {
+            recursive: true,
+          });
+
+          return createTestFile(filePath, testFileContent);
+        });
       });
-
-      return createTestFile(filePath, testFileContent);
-    });
   });
 };
 
