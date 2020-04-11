@@ -80,6 +80,7 @@ expect.extend({
     const failMessage = `${chalk.blue(testSummary(test))}\n\t${chalk.red(
       errorDetails(test),
     )}`;
+
     return {
       message: () => (pass ? passMessage : failMessage),
       pass,
