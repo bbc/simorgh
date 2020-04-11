@@ -11,6 +11,7 @@ const options = {
     'isarray',
     'jest-environment-jsdom',
     '@testing-library/dom',
+    'structured-data-testing-tool/presets',
   ],
 };
 
