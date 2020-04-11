@@ -42,7 +42,7 @@ const getPresets = (jsonData, serviceConfig, url) => {
   return [
     twitterPresets(jsonData, serviceConfig),
     facebookPresets(jsonData, serviceConfig, url),
-    metatagPresets(jsonData, serviceConfig, url),
+    metatagPresets(jsonData, serviceConfig),
   ];
 };
 
