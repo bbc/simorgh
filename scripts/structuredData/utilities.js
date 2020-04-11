@@ -19,3 +19,30 @@ export const getImageAltText = (jsonData, serviceConfig) => {
     ? indexImage.altText
     : serviceConfig.defaultImageAltText;
 };
+
+export const getDescription = (jsonData) => {
+  const promoSummary = path(['promo', 'summary'], jsonData);
+  const metadataSummary = path(['metadata', 'summary'], jsonData);
+  return promoSummary || metadataSummary;
+};
+
+export const getTitle = (jsonData, serviceConfig) => {
+  const headline = path(['promo', 'headlines', 'headline'], jsonData);
+  const seoHeadline = path(['promo', 'headlines', 'seoHeadline'], jsonData);
+  const { frontPageTitle } = serviceConfig;
+  const promoName = path(['promo', 'name'], jsonData);
+
+  const pageTypeTitle = {
+    MAP: headline,
+    STY: headline,
+    PGL: headline,
+    article: seoHeadline,
+    'WS-LIVE': promoName,
+    IDX: frontPageTitle,
+    WSRADIO: headline,
+  };
+
+  return `${pageTypeTitle[jsonData.metadata.type]} - ${
+    serviceConfig.brandName
+  }`;
+};

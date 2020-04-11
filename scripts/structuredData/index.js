@@ -1,7 +1,8 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
 import fetch from 'node-fetch';
-import twitterPresets from './presets';
+import twitterPresets from './twitter';
+import facebookPresets from './facebook';
 
 const chalk = require('chalk');
 const { structuredDataTest } = require('structured-data-testing-tool');
@@ -38,26 +39,29 @@ const errorDetails = (test) => {
   }
 };
 
-const mapPresets = (jsonData, serviceConfig) => {
-  return twitterPresets(jsonData, serviceConfig);
+const mapPresets = (jsonData, serviceConfig, url) => {
+  return [
+    twitterPresets(jsonData, serviceConfig),
+    facebookPresets(jsonData, serviceConfig, url),
+  ];
 };
 
-const getPresets = (pageType, jsonData, serviceConfig) => {
-  return mapPresets(jsonData, serviceConfig);
+const getPresets = (jsonData, serviceConfig, url) => {
+  return mapPresets(jsonData, serviceConfig, url);
 };
 
-const validate = async (url, pageType, serviceConfig) => {
+const validate = async (url, serviceConfig) => {
   let result;
   const dataPath = `${url}.json`;
 
   const response = await fetch(dataPath);
   const jsonData = await response.json();
 
-  const presets = getPresets(pageType, jsonData, serviceConfig);
+  const presets = getPresets(jsonData, serviceConfig, url);
 
   try {
     result = await structuredDataTest(url, {
-      presets: [Google, SocialMedia, presets],
+      presets: [Google, SocialMedia, ...presets],
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
@@ -87,7 +91,7 @@ expect.extend({
 
 const checkStructuredData = () => {
   Object.keys(services)
-    // .filter((service) => service === 'pidgin')
+    .filter((service) => service === 'indonesia')
     .forEach((service) => {
       const { name: serviceName, variant } = services[service];
       console.log(serviceName);
@@ -108,7 +112,7 @@ const checkStructuredData = () => {
               let allTests;
 
               beforeEach(async () => {
-                result = await validate(url, pageType, serviceConfig);
+                result = await validate(url, serviceConfig);
 
                 allTests = [
                   ...result.passed,
@@ -122,13 +126,6 @@ const checkStructuredData = () => {
                 allTests.forEach((test) => {
                   expect(test).hasCorrectMetadata();
                 });
-
-                // console.log(chalk.green(`Passed: ${result.passed.length}`));
-                // const failures = result.warnings.length + result.failed.length;
-
-                // if (failures > 0) {
-                //   console.log(chalk.red(`Failed: ${failures}`));
-                // }
               });
             });
           });
