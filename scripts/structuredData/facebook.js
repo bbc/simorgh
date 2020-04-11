@@ -6,7 +6,6 @@ import {
 } from './utilities';
 
 const getType = (jsonData) => {
-  console.log(jsonData.metadata.type);
   switch (jsonData.metadata.type) {
     case 'MAP':
     case 'PGL':

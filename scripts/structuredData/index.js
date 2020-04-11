@@ -3,6 +3,7 @@
 import fetch from 'node-fetch';
 import twitterPresets from './twitter';
 import facebookPresets from './facebook';
+import metatagPresets from './metatags';
 
 const chalk = require('chalk');
 const { structuredDataTest } = require('structured-data-testing-tool');
@@ -43,6 +44,7 @@ const getPresets = (jsonData, serviceConfig, url) => {
   return [
     twitterPresets(jsonData, serviceConfig),
     facebookPresets(jsonData, serviceConfig, url),
+    metatagPresets(jsonData, serviceConfig, url),
   ];
 };
 
@@ -87,7 +89,7 @@ expect.extend({
 
 const checkStructuredData = () => {
   Object.keys(services)
-    // .filter((service) => service === 'indonesia')
+    .filter((service) => service === 'indonesia')
     .forEach((service) => {
       const { name: serviceName, variant } = services[service];
       console.log(serviceName);
