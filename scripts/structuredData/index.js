@@ -39,15 +39,11 @@ const errorDetails = (test) => {
   }
 };
 
-const mapPresets = (jsonData, serviceConfig, url) => {
+const getPresets = (jsonData, serviceConfig, url) => {
   return [
     twitterPresets(jsonData, serviceConfig),
     facebookPresets(jsonData, serviceConfig, url),
   ];
-};
-
-const getPresets = (jsonData, serviceConfig, url) => {
-  return mapPresets(jsonData, serviceConfig, url);
 };
 
 const validate = async (url, serviceConfig) => {
