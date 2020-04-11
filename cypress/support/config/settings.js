@@ -73,6 +73,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      onDemandRadioEpisode: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/w3cszx1y'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mediaAssetPage: {
         environments: {
           live: {

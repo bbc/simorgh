@@ -35,7 +35,7 @@
     "test:integration:ci": "jest --colors ./src/integration/pages/**/*.test.js",
     "test:integration:regression:ci": "jest --colors ./src/integration/regressionTests/tests/**/*",
     "test:integration": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/pages/**/*.test.js",
-    "test:integration:regression": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/regressionTests/tests/**/*",
+    "test:integration:regression": "node ./src/integration/regressionTests/generateRegressionTests.js && ./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/regressionTests/tests/**/*",
     "test:integration:regression:gui": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && npx majestic --app",
     "test:integration:watch": "npm run test:integration -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
