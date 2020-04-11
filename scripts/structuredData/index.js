@@ -43,12 +43,7 @@ const mapPresets = (jsonData, serviceConfig) => {
 };
 
 const getPresets = (pageType, jsonData, serviceConfig) => {
-  switch (pageType) {
-    case 'mediaAssetPage':
-      return mapPresets(jsonData, serviceConfig);
-    default:
-      return null;
-  }
+  return mapPresets(jsonData, serviceConfig);
 };
 
 const validate = async (url, pageType, serviceConfig) => {
@@ -92,13 +87,16 @@ expect.extend({
 
 const checkStructuredData = () => {
   Object.keys(services)
-    .filter((service) => service === 'pidgin')
+    // .filter((service) => service === 'pidgin')
     .forEach((service) => {
       const { name: serviceName, variant } = services[service];
-      const serviceConfig = appConfig[serviceName][variant];
+      console.log(serviceName);
+      const serviceConfig =
+        appConfig[serviceName] && appConfig[serviceName][variant];
+      // console.log(serviceConfig);
       Object.keys(services[service].pageTypes)
         .filter((pageType) => !pageType.startsWith('error'))
-        .filter((pageType) => pageType === 'mediaAssetPage')
+        // .filter((pageType) => pageType === 'article')
         .forEach((pageType) => {
           const paths = getPaths(service, pageType);
           paths.forEach((path) => {
@@ -124,6 +122,13 @@ const checkStructuredData = () => {
                 allTests.forEach((test) => {
                   expect(test).hasCorrectMetadata();
                 });
+
+                // console.log(chalk.green(`Passed: ${result.passed.length}`));
+                // const failures = result.warnings.length + result.failed.length;
+
+                // if (failures > 0) {
+                //   console.log(chalk.red(`Failed: ${failures}`));
+                // }
               });
             });
           });
