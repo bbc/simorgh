@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 /**
  * @pathname /tigrinya/bbc_tigrinya_radio/liveradio
  */

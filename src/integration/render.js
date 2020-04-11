@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable consistent-return */
 const { JSDOM } = require('jsdom');
 const { within } = require('@testing-library/dom');
 

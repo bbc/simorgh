@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 /**
  * @pathname /tigrinya/news-49944566
  */
