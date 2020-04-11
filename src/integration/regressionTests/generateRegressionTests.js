@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const pathnames = require('./pathnames');
+const pathnames = require('../../../cypress/support/config/services');
 
 const createTestFile = (filePath, content) => {
   return new Promise((resolve, reject) => {
