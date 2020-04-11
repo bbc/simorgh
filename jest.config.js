@@ -76,7 +76,7 @@ module.exports = {
         ],
       ],
       setupFiles: ['./src/testHelpers/jest-setup.js'],
-      testMatch: ['**/scripts/structuredData.js'],
+      testMatch: ['**/scripts/structuredData/index.js'],
       setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
       moduleNameMapper: jestDirAlias,
       transform: {
