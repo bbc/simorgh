@@ -7,7 +7,7 @@ import metatagPresets from './metatags';
 
 const chalk = require('chalk');
 const { structuredDataTest } = require('structured-data-testing-tool');
-const { Google, SocialMedia } = require('structured-data-testing-tool/presets');
+const { Google } = require('structured-data-testing-tool/presets');
 
 jest.requireActual('node-fetch');
 
@@ -32,10 +32,10 @@ const testDetails = (test) => {
 };
 
 const errorDetails = (test) => {
-  const { error } = test;
+  const { error, expect } = test;
   if (error) {
     return `${chalk.cyan(error.message)}\n\tExpected: ${JSON.stringify(
-      error.expected,
+      expect,
     )}\n\tActual: ${JSON.stringify(error.found)}`;
   }
 };
@@ -59,7 +59,7 @@ const validate = async (url, serviceConfig) => {
 
   try {
     result = await structuredDataTest(url, {
-      presets: [Google, SocialMedia, ...presets],
+      presets: [Google, ...presets],
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
