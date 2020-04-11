@@ -1,4 +1,3 @@
-/* eslint-disable no-irregular-whitespace */
 /**
  * @pathname /tigrinya/articles/ck62z3rjwdeo
  */

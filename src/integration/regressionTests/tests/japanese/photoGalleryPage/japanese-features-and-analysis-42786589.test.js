@@ -1,4 +1,3 @@
-/* eslint-disable no-irregular-whitespace */
 /**
  * @pathname /japanese/features-and-analysis-42786589
  */

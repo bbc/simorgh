@@ -3,5 +3,8 @@
     "amp": true,
     "canonical": true,
     "document": "off"
+  },
+  "rules": {
+    "no-irregular-whitespace": "off"
   }
 }
