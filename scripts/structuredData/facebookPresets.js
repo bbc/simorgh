@@ -6,15 +6,7 @@ import {
 } from './utilities';
 
 const getType = (jsonData) => {
-  switch (jsonData.metadata.type) {
-    case 'MAP':
-    case 'PGL':
-    case 'STY':
-    case 'article':
-      return 'article';
-    default:
-      return 'website';
-  }
+  return jsonData.promo.type === 'cps' ? 'article' : 'website';
 };
 
 const facebookPresets = (jsonData, serviceConfig, url) => {
