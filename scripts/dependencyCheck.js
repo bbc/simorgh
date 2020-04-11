@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-// eslint-disable no-console
 const path = require('path');
 const depcheck = require('depcheck');
 
