@@ -17,7 +17,7 @@ const getType = (jsonData) => {
   }
 };
 
-export default (jsonData, serviceConfig, url) => {
+const facebookPresets = (jsonData, serviceConfig, url) => {
   return {
     name: 'Facebook',
     description: 'Facebook Presets',
@@ -76,3 +76,5 @@ export default (jsonData, serviceConfig, url) => {
     ],
   };
 };
+
+export default facebookPresets;

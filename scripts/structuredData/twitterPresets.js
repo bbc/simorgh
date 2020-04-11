@@ -5,7 +5,7 @@ import {
   getTitle,
 } from './utilities';
 
-export default (jsonData, serviceConfig) => {
+const twitterPresets = (jsonData, serviceConfig) => {
   return {
     name: 'Twitter',
     description: 'Twitter Presets',
@@ -49,3 +49,5 @@ export default (jsonData, serviceConfig) => {
     ],
   };
 };
+
+export default twitterPresets;

@@ -1,25 +1,23 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
 import fetch from 'node-fetch';
-import twitterPresets from './twitter';
-import facebookPresets from './facebook';
-import metatagPresets from './metatags';
+import { Google } from 'structured-data-testing-tool/presets';
+import { cyan, blue, red } from 'chalk';
+import { structuredDataTest } from 'structured-data-testing-tool';
 
-const chalk = require('chalk');
-const { structuredDataTest } = require('structured-data-testing-tool');
-const { Google } = require('structured-data-testing-tool/presets');
+import twitterPresets from './twitterPresets';
+import facebookPresets from './facebookPresets';
+import metatagPresets from './metatagPresets';
 
-jest.requireActual('node-fetch');
+import getPaths from '../../cypress/support/helpers/getPaths';
+import services from '../../cypress/support/config/services';
+import appConfig from '../../src/server/utilities/serviceConfigs';
 
 global.Cypress = {
   env: () => {
     return 'local';
   },
 };
-
-const getPaths = require('../../cypress/support/helpers/getPaths');
-const services = require('../../cypress/support/config/services');
-const appConfig = require('../../src/server/utilities/serviceConfigs').default;
 
 const testSummary = (test) => {
   return `${test.group ? test.group : ''} ${
@@ -34,7 +32,7 @@ const testDetails = (test) => {
 const errorDetails = (test) => {
   const { error, expect } = test;
   if (error) {
-    return `${chalk.cyan(error.message)}\n\tExpected: ${JSON.stringify(
+    return `${cyan(error.message)}\n\tExpected: ${JSON.stringify(
       expect,
     )}\n\tActual: ${JSON.stringify(error.found)}`;
   }
@@ -60,6 +58,7 @@ const validate = async (url, serviceConfig) => {
   try {
     result = await structuredDataTest(url, {
       presets: [Google, ...presets],
+      showInfo: true,
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
@@ -73,11 +72,11 @@ const validate = async (url, serviceConfig) => {
 expect.extend({
   hasCorrectMetadata(test) {
     const { passed: pass } = test;
-    const passMessage = `${chalk.blue(testSummary(test))}\n\t${chalk.cyan(
+    const passMessage = `${blue(testSummary(test))}\n\t${cyan(
       testDetails(test),
     )}`;
 
-    const failMessage = `${chalk.blue(testSummary(test))}\n\t${chalk.red(
+    const failMessage = `${blue(testSummary(test))}\n\t${red(
       errorDetails(test),
     )}`;
 

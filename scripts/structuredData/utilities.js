@@ -1,14 +1,18 @@
-/* eslint-disable import/prefer-default-export */
 import path from 'ramda/src/path';
-import getBrandedImage from '../../cypress/support/helpers/getBrandedImage';
+import { getImageParts } from '../../src/app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 
 const isCps = (jsonData) => jsonData.promo.type === 'cps';
+
+const getBrandedImage = ({ service, imagePath }) => {
+  const [, locator] = getImageParts(imagePath);
+  return `http://ichef.test.bbci.co.uk/news/1024/branded_${service}/${locator}`;
+};
 
 export const getImageSrc = (jsonData, serviceConfig) => {
   const imagePath = path(['promo', 'indexImage', 'path'], jsonData);
 
   return imagePath && isCps(jsonData)
-    ? getBrandedImage({ imagePath, serviceName: serviceConfig.service })
+    ? getBrandedImage({ imagePath, service: serviceConfig.service })
     : serviceConfig.defaultImage;
 };
 

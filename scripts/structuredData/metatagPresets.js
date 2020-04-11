@@ -1,16 +1,10 @@
-/* eslint-disable no-unused-vars */
-import {
-  getImageSrc,
-  getImageAltText,
-  getDescription,
-  getTitle,
-} from './utilities';
+import { getDescription } from './utilities';
 
 const getTileImage = (serviceConfig) => {
   return `https://news.files.bbci.co.uk/include/articles/public/${serviceConfig.service}/images/icons/icon-144x144.png`;
 };
 
-export default (jsonData, serviceConfig, url) => {
+const metatagPresets = (jsonData, serviceConfig) => {
   return {
     name: 'Metatags',
     description: 'Metatags Presets',
@@ -69,3 +63,5 @@ export default (jsonData, serviceConfig, url) => {
     ],
   };
 };
+
+export default metatagPresets;
