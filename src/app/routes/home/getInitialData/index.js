@@ -41,9 +41,7 @@ export default async ({ path, service, variant }) => {
   return {
     ...rest,
     ...(json && {
-      pageData: {
-        ...transformJson(json),
-      },
+      pageData: transformJson(json),
     }),
   };
 };
