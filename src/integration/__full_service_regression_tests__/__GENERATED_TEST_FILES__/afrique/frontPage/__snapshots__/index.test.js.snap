@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/afrique"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
+
+exports[`Header Branding 1`] = `"BBC News, Afrique"`;
+
+exports[`Heading level 1 1`] = `"BBC News, Afrique - Accueil"`;
+
+exports[`Lang attribute 1`] = `"fr"`;
+
+exports[`OG description 1`] = `"BBC Afrique, le service en langue française de la BBC, vous offre toute l'actualité en Afrique et dans le monde. Politique, sport, culture, articles, photos, vidéo et radio. Une offre multimédia complète: une fenêtre sur l'Afrique et sur le monde."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Afrique"`;
+
+exports[`OG locale 1`] = `"fr"`;
+
+exports[`OG site name 1`] = `"BBC News Afrique"`;
+
+exports[`OG title 1`] = `"Accueil - BBC News Afrique"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/afrique"`;
+
+exports[`Page title 1`] = `"Accueil - BBC News Afrique"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Aller au contenu"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcafrique"`;
+
+exports[`Twitter description 1`] = `"BBC Afrique, le service en langue française de la BBC, vous offre toute l'actualité en Afrique et dans le monde. Politique, sport, culture, articles, photos, vidéo et radio. Une offre multimédia complète: une fenêtre sur l'Afrique et sur le monde."`;
+
+exports[`Twitter image alt 1`] = `"BBC News Afrique"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png"`;
+
+exports[`Twitter site 1`] = `"@bbcafrique"`;
+
+exports[`Twitter title 1`] = `"Accueil - BBC News Afrique"`;

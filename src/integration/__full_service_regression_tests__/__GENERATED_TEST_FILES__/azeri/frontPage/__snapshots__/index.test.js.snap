@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/azeri"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC kənar saytların məzmununa məsul deyil. Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun."`;
+
+exports[`Header Branding 1`] = `"BBC News, Azərbaycanca"`;
+
+exports[`Heading level 1 1`] = `"BBC News, Azərbaycanca - Xəbərlər"`;
+
+exports[`Lang attribute 1`] = `"az"`;
+
+exports[`OG description 1`] = `"BBC News Azərbaycanca öz səhifələrində Azərbaycan və dünyadan bu günün xəbərləri və şərhlərini təqdim edir. Visit BBC News Azeri for the latest from Azerbaijan, Armenia, Georgia."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Azərbaycanca"`;
+
+exports[`OG locale 1`] = `"az-AZ"`;
+
+exports[`OG site name 1`] = `"BBC News Azərbaycanca"`;
+
+exports[`OG title 1`] = `"Xəbərlər, Qaynar Xəbərlər, Analiz, Video - BBC News Azərbaycanca"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/azeri"`;
+
+exports[`Page title 1`] = `"Xəbərlər, Qaynar Xəbərlər, Analiz, Video - BBC News Azərbaycanca"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Mətnə keçid"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcazeri"`;
+
+exports[`Twitter description 1`] = `"BBC News Azərbaycanca öz səhifələrində Azərbaycan və dünyadan bu günün xəbərləri və şərhlərini təqdim edir. Visit BBC News Azeri for the latest from Azerbaijan, Armenia, Georgia."`;
+
+exports[`Twitter image alt 1`] = `"BBC News Azərbaycanca"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png"`;
+
+exports[`Twitter site 1`] = `"@bbcazeri"`;
+
+exports[`Twitter title 1`] = `"Xəbərlər, Qaynar Xəbərlər, Analiz, Video - BBC News Azərbaycanca"`;

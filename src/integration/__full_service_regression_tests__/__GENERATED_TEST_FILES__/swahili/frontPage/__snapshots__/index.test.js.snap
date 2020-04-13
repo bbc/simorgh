@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/swahili"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC haihusiki na taarifa za kutoka mitandao ya nje. Soma kuhusu mtazamo wetu wa viambatanishi vya nje."`;
+
+exports[`Header Branding 1`] = `"BBC News, Swahili"`;
+
+exports[`Heading level 1 1`] = `"BBC News, Swahili - Habari"`;
+
+exports[`Lang attribute 1`] = `"sw"`;
+
+exports[`OG description 1`] = `"Hii ni tovuti ya idhaa ya Kiswahili ya BBC ambayo hukuletea habari na makala kutoka Afrika na kote duniani kwa lugha ya Kiswahili. Tembelea tovuti hii pia kusikiliza vipindi vya redio."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Swahili"`;
+
+exports[`OG locale 1`] = `"sw-KE"`;
+
+exports[`OG site name 1`] = `"BBC News Swahili"`;
+
+exports[`OG title 1`] = `"Swahili - BBC News Swahili"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/swahili"`;
+
+exports[`Page title 1`] = `"Swahili - BBC News Swahili"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Ruka hadi maelezo"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcswahili"`;
+
+exports[`Twitter description 1`] = `"Hii ni tovuti ya idhaa ya Kiswahili ya BBC ambayo hukuletea habari na makala kutoka Afrika na kote duniani kwa lugha ya Kiswahili. Tembelea tovuti hii pia kusikiliza vipindi vya redio."`;
+
+exports[`Twitter image alt 1`] = `"BBC News Swahili"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png"`;
+
+exports[`Twitter site 1`] = `"@bbcswahili"`;
+
+exports[`Twitter title 1`] = `"Swahili - BBC News Swahili"`;

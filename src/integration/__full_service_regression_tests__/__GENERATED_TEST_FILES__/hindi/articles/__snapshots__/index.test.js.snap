@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/hindi/articles/c0469479x9xo"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+
+exports[`Header Branding 1`] = `"BBC News, हिंदी"`;
+
+exports[`Heading level 1 1`] = `"यह इस परीक्षण लेख का शीर्षक है"`;
+
+exports[`Lang attribute 1`] = `"hi"`;
+
+exports[`OG description 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`OG image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`OG locale 1`] = `"hi-IN"`;
+
+exports[`OG site name 1`] = `"BBC News हिंदी"`;
+
+exports[`OG title 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL - BBC News हिंदी"`;
+
+exports[`OG type 1`] = `"article"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/hindi/articles/c0469479x9xo"`;
+
+exports[`Page title 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL - BBC News हिंदी"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"सामग्री को स्किप करें"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbchindi"`;
+
+exports[`Twitter description 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL"`;
+
+exports[`Twitter image alt 1`] = `"BBC News हिंदी"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Twitter site 1`] = `"@bbchindi"`;
+
+exports[`Twitter title 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL - BBC News हिंदी"`;

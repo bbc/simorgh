@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/urdu"`;
+
+exports[`Dir attribute 1`] = `"rtl"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+
+exports[`Header Branding 1`] = `"BBC News, اردو"`;
+
+exports[`Heading level 1 1`] = `"BBC News, اردو - صفحۂ اول"`;
+
+exports[`Lang attribute 1`] = `"ur"`;
+
+exports[`OG description 1`] = `"تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"`;
+
+exports[`OG image alt 1`] = `"BBC News اردو"`;
+
+exports[`OG locale 1`] = `"ur"`;
+
+exports[`OG site name 1`] = `"BBC News اردو"`;
+
+exports[`OG title 1`] = `"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/urdu"`;
+
+exports[`Page title 1`] = `"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"مواد پر جائیں"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcurdu"`;
+
+exports[`Twitter description 1`] = `"تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"`;
+
+exports[`Twitter image alt 1`] = `"BBC News اردو"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"`;
+
+exports[`Twitter site 1`] = `"@bbcurdu"`;
+
+exports[`Twitter title 1`] = `"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو"`;

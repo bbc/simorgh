@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC对外部网站内容不负责任。 阅读了解我们对待外部链接的做法。"`;
+
+exports[`Header Branding 1`] = `"BBC News, 中文"`;
+
+exports[`Heading level 1 1`] = `"SIMP - 花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"`;
+
+exports[`Lang attribute 1`] = `"zh-hans"`;
+
+exports[`OG description 1`] = `"花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`OG image alt 1`] = `"BBC News 中文"`;
+
+exports[`OG locale 1`] = `"zh-hans"`;
+
+exports[`OG site name 1`] = `"BBC News 中文"`;
+
+exports[`OG title 1`] = `"花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典 - BBC News 中文"`;
+
+exports[`OG type 1`] = `"article"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp"`;
+
+exports[`Page title 1`] = `"花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典 - BBC News 中文"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"跳过此内容"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcchinese"`;
+
+exports[`Twitter description 1`] = `"花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典"`;
+
+exports[`Twitter image alt 1`] = `"BBC News 中文"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`Twitter site 1`] = `"@bbcchinese"`;
+
+exports[`Twitter title 1`] = `"花木兰真人版：迪士尼斥巨资集结明星重拍的中国经典 - BBC News 中文"`;

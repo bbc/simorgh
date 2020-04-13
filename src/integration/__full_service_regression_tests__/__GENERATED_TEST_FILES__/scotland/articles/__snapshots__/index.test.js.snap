@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+
+exports[`Header Branding 1`] = `"BBC Scotland"`;
+
+exports[`Heading level 1 1`] = `"This is the headline of this test article"`;
+
+exports[`Lang attribute 1`] = `"en-gb"`;
+
+exports[`OG description 1`] = `"This is the SEO headline of this test article"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"`;
+
+exports[`OG image alt 1`] = `"BBC Scotland"`;
+
+exports[`OG locale 1`] = `"en_GB"`;
+
+exports[`OG site name 1`] = `"BBC Scotland"`;
+
+exports[`OG title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
+
+exports[`OG type 1`] = `"article"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/scotland/articles/czwj5l0n210o"`;
+
+exports[`Page title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Skip to content"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@BBCScotland"`;
+
+exports[`Twitter description 1`] = `"This is the SEO headline of this test article"`;
+
+exports[`Twitter image alt 1`] = `"BBC Scotland"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"`;
+
+exports[`Twitter site 1`] = `"@BBCScotland"`;
+
+exports[`Twitter title 1`] = `"This is the SEO headline of this test article - BBC Scotland"`;

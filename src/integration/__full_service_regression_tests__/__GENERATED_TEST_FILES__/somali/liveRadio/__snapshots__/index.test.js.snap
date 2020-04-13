@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/somali/bbc_somali_radio/liveradio"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+
+exports[`Header Branding 1`] = `"BBC News, Somali"`;
+
+exports[`Heading level 1 1`] = `"Raadiyaha BBC Soomaali"`;
+
+exports[`Lang attribute 1`] = `"so"`;
+
+exports[`OG description 1`] = `"Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/somali.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Somali"`;
+
+exports[`OG locale 1`] = `"so-SO"`;
+
+exports[`OG site name 1`] = `"BBC News Somali"`;
+
+exports[`OG title 1`] = `"Raadiyaha BBC Soomaali - BBC News Somali"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/somali/bbc_somali_radio/liveradio"`;
+
+exports[`Page title 1`] = `"Raadiyaha BBC Soomaali - BBC News Somali"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"U gudub qaybta macluumaadka"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcsomali"`;
+
+exports[`Twitter description 1`] = `"Wararka iyo xaaladda taagan ee dunida oo dhan, faallo, muusig, madadaallo iyo cayaaro."`;
+
+exports[`Twitter image alt 1`] = `"BBC News Somali"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/somali.png"`;
+
+exports[`Twitter site 1`] = `"@bbcsomali"`;
+
+exports[`Twitter title 1`] = `"Raadiyaha BBC Soomaali - BBC News Somali"`;

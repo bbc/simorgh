@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/uzbek"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. Би-би-си ташқи сайтлар мазмуни учун масъул эмас. Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг"`;
+
+exports[`Header Branding 1`] = `"BBC News, O'zbek"`;
+
+exports[`Heading level 1 1`] = `"BBC News, O'zbek - Бош саҳифа"`;
+
+exports[`Lang attribute 1`] = `"uz-Cyrl"`;
+
+exports[`OG description 1`] = `"BBC Uzbek ( Би-би-си Ўзбек хизмати) Ўзбекистон, минтақа ва жаҳон янгиликлари учун холис ҳамда ишончли манбадир"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"`;
+
+exports[`OG image alt 1`] = `"BBC News O'zbek"`;
+
+exports[`OG locale 1`] = `"uz-UZ"`;
+
+exports[`OG site name 1`] = `"BBC News O'zbek"`;
+
+exports[`OG title 1`] = `"Бош саҳифа - BBC News O'zbek"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/uzbek"`;
+
+exports[`Page title 1`] = `"Бош саҳифа - BBC News O'zbek"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Саҳифага ўтиш"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcuzbek"`;
+
+exports[`Twitter description 1`] = `"BBC Uzbek ( Би-би-си Ўзбек хизмати) Ўзбекистон, минтақа ва жаҳон янгиликлари учун холис ҳамда ишончли манбадир"`;
+
+exports[`Twitter image alt 1`] = `"BBC News O'zbek"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png"`;
+
+exports[`Twitter site 1`] = `"@bbcuzbek"`;
+
+exports[`Twitter title 1`] = `"Бош саҳифа - BBC News O'zbek"`;

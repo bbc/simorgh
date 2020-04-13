@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/nepali"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 २०१९ बीबीसी। अन्य वेबसाइटका सामग्रीहरूका लागि बीबीसी जिम्मेवार छैन। बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।"`;
+
+exports[`Header Branding 1`] = `"BBC News, नेपाली"`;
+
+exports[`Heading level 1 1`] = `"BBC News, नेपाली - होमपेज"`;
+
+exports[`Lang attribute 1`] = `"ne"`;
+
+exports[`OG description 1`] = `"बीबीसी नेपाली सेवाले विश्व घटनाका साथै स्थानीय र क्षेत्रीय घटनाका विश्वसनीय समाचार प्रस्तुत गर्दछ।"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"`;
+
+exports[`OG image alt 1`] = `"BBC News नेपाली"`;
+
+exports[`OG locale 1`] = `"ne-NP"`;
+
+exports[`OG site name 1`] = `"BBC News नेपाली"`;
+
+exports[`OG title 1`] = `"मुख पृष्ठ - BBC News नेपाली"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/nepali"`;
+
+exports[`Page title 1`] = `"मुख पृष्ठ - BBC News नेपाली"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"सामग्रीमा जानुहोस्"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcnepali"`;
+
+exports[`Twitter description 1`] = `"बीबीसी नेपाली सेवाले विश्व घटनाका साथै स्थानीय र क्षेत्रीय घटनाका विश्वसनीय समाचार प्रस्तुत गर्दछ।"`;
+
+exports[`Twitter image alt 1`] = `"BBC News नेपाली"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png"`;
+
+exports[`Twitter site 1`] = `"@bbcnepali"`;
+
+exports[`Twitter title 1`] = `"मुख पृष्ठ - BBC News नेपाली"`;

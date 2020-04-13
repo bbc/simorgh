@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/arabic/articles/c1er5mjnznzo"`;
+
+exports[`Dir attribute 1`] = `"rtl"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+
+exports[`Header Branding 1`] = `"BBC News, عربي"`;
+
+exports[`Heading level 1 1`] = `"هذا هو عنوان هذا المقال الاختبار"`;
+
+exports[`Lang attribute 1`] = `"ar"`;
+
+exports[`OG description 1`] = `"هذا هو عنوان هذا المقال الاختبار"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+
+exports[`OG image alt 1`] = `"BBC News عربي"`;
+
+exports[`OG locale 1`] = `"ar"`;
+
+exports[`OG site name 1`] = `"BBC News عربي"`;
+
+exports[`OG title 1`] = `"هذا هو عنوان هذا المقال الاختبار - BBC News عربي"`;
+
+exports[`OG type 1`] = `"article"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/arabic/articles/c1er5mjnznzo"`;
+
+exports[`Page title 1`] = `"هذا هو عنوان هذا المقال الاختبار - BBC News عربي"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"إذهب الى المحتوى"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@BBCArabic"`;
+
+exports[`Twitter description 1`] = `"هذا هو عنوان هذا المقال الاختبار"`;
+
+exports[`Twitter image alt 1`] = `"BBC News عربي"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+
+exports[`Twitter site 1`] = `"@BBCArabic"`;
+
+exports[`Twitter title 1`] = `"هذا هو عنوان هذا المقال الاختبار - BBC News عربي"`;

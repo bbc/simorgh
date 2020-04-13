@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/kyrgyz"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+
+exports[`Header Branding 1`] = `"BBC News, Кыргыз КызMATы"`;
+
+exports[`Heading level 1 1`] = `"BBC News, Кыргыз КызMATы - Башталгыч бет"`;
+
+exports[`Lang attribute 1`] = `"ky"`;
+
+exports[`OG description 1`] = `"Дүйнөлүк кабарлар, саясат, экономика, спорт, Кыргызстандагы урунттуу окуялар, аналитика, жаңылыктар, соңку кабарлар, маектер. Би-Би-Си Кыргыз кызматынын сайтынан окуңуз."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Кыргыз КызMATы"`;
+
+exports[`OG locale 1`] = `"ky-KG"`;
+
+exports[`OG site name 1`] = `"BBC News Кыргыз Кызматы"`;
+
+exports[`OG title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/kyrgyz"`;
+
+exports[`Page title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Сайтка өтүү"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbckyrgyz"`;
+
+exports[`Twitter description 1`] = `"Дүйнөлүк кабарлар, саясат, экономика, спорт, Кыргызстандагы урунттуу окуялар, аналитика, жаңылыктар, соңку кабарлар, маектер. Би-Би-Си Кыргыз кызматынын сайтынан окуңуз."`;
+
+exports[`Twitter image alt 1`] = `"BBC News Кыргыз КызMATы"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+
+exports[`Twitter site 1`] = `"@bbckyrgyz"`;
+
+exports[`Twitter title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;

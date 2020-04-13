@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/persian/bbc_persian_radio/liveradio"`;
+
+exports[`Dir attribute 1`] = `"rtl"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Header Branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Heading level 1 1`] = `"رادیو فارسی بی‌بی‌سی"`;
+
+exports[`Lang attribute 1`] = `"fa"`;
+
+exports[`OG description 1`] = `"مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`OG image alt 1`] = `"BBC News فارسی"`;
+
+exports[`OG locale 1`] = `"fa"`;
+
+exports[`OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`OG title 1`] = `"رادیو فارسی بی‌بی‌سی - BBC News فارسی"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/persian/bbc_persian_radio/liveradio"`;
+
+exports[`Page title 1`] = `"رادیو فارسی بی‌بی‌سی - BBC News فارسی"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`Twitter description 1`] = `"مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است."`;
+
+exports[`Twitter image alt 1`] = `"BBC News فارسی"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`Twitter title 1`] = `"رادیو فارسی بی‌بی‌سی - BBC News فارسی"`;

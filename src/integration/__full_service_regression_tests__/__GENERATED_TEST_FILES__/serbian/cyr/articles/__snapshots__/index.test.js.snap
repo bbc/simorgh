@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/serbian/articles/c805k05kr73o/cyr"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. ББЦ није одговоран за садржај других сајтова. Прочитајте наша правила о линковању других сајтова."`;
+
+exports[`Header Branding 1`] = `"BBC News, на српском"`;
+
+exports[`Heading level 1 1`] = `"CYR - Ратови звезда: Нишки џедаји помажу децу без родитеља"`;
+
+exports[`Lang attribute 1`] = `"sr-cyrl"`;
+
+exports[`OG description 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`OG image alt 1`] = `"ББЦ News на српском"`;
+
+exports[`OG locale 1`] = `"sr-cyrl"`;
+
+exports[`OG site name 1`] = `"BBC News на српском"`;
+
+exports[`OG title 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља - BBC News на српском"`;
+
+exports[`OG type 1`] = `"article"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/serbian/articles/c805k05kr73o/cyr"`;
+
+exports[`Page title 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља - BBC News на српском"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Пређите на садржај"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcnasrpskom"`;
+
+exports[`Twitter description 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља"`;
+
+exports[`Twitter image alt 1`] = `"ББЦ News на српском"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+
+exports[`Twitter site 1`] = `"@bbcnasrpskom"`;
+
+exports[`Twitter title 1`] = `"Ратови звезда: Нишки џедаји помажу децу без родитеља - BBC News на српском"`;

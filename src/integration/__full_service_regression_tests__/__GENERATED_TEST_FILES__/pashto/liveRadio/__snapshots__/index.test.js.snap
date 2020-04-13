@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/liveradio"`;
+
+exports[`Dir attribute 1`] = `"rtl"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+
+exports[`Header Branding 1`] = `"BBC News, پښتو"`;
+
+exports[`Heading level 1 1`] = `"بي بي سي افغانستان (پښتو خپرونه)"`;
+
+exports[`Lang attribute 1`] = `"ps"`;
+
+exports[`OG description 1`] = `"بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+
+exports[`OG image alt 1`] = `"BBC News پښتو"`;
+
+exports[`OG locale 1`] = `"ps"`;
+
+exports[`OG site name 1`] = `"BBC News پښتو"`;
+
+exports[`OG title 1`] = `"بي بي سي افغانستان (پښتو خپرونه) - BBC News پښتو"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_radio/liveradio"`;
+
+exports[`Page title 1`] = `"بي بي سي افغانستان (پښتو خپرونه) - BBC News پښتو"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"مطلب ته ورشئ"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcpashto"`;
+
+exports[`Twitter description 1`] = `"بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي"`;
+
+exports[`Twitter image alt 1`] = `"BBC News پښتو"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+
+exports[`Twitter site 1`] = `"@bbcpashto"`;
+
+exports[`Twitter title 1`] = `"بي بي سي افغانستان (پښتو خپرونه) - BBC News پښتو"`;

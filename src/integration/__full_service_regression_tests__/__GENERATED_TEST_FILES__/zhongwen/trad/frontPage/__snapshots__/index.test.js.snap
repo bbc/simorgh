@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/zhongwen/trad"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC對外部網站內容不負責任。 閱讀了解我們對待外部鏈接的做法。"`;
+
+exports[`Header Branding 1`] = `"BBC News, 中文"`;
+
+exports[`Heading level 1 1`] = `"BBC News, 中文 - 主頁"`;
+
+exports[`Lang attribute 1`] = `"zh-Hant"`;
+
+exports[`OG description 1`] = `"BBC中文網是面向全球華人並每日更新的新聞資訊網站，提供客觀及時和凖確的內容以及對新聞故事的深入分析和評論。我們也提供繁體版臉書。"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`OG image alt 1`] = `"BBC News 中文"`;
+
+exports[`OG locale 1`] = `"zh-hant"`;
+
+exports[`OG site name 1`] = `"BBC News 中文"`;
+
+exports[`OG title 1`] = `"主頁 - BBC News 中文"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/zhongwen/trad"`;
+
+exports[`Page title 1`] = `"主頁 - BBC News 中文"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"跳過此內容"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcchinese"`;
+
+exports[`Twitter description 1`] = `"BBC中文網是面向全球華人並每日更新的新聞資訊網站，提供客觀及時和凖確的內容以及對新聞故事的深入分析和評論。我們也提供繁體版臉書。"`;
+
+exports[`Twitter image alt 1`] = `"BBC News 中文"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`Twitter site 1`] = `"@bbcchinese"`;
+
+exports[`Twitter title 1`] = `"主頁 - BBC News 中文"`;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`Header Branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`Heading level 1 1`] = `"Radio BBC Gahuza"`;
+
+exports[`Lang attribute 1`] = `"rw"`;
+
+exports[`OG description 1`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`OG locale 1`] = `"rw-RW"`;
+
+exports[`OG site name 1`] = `"BBC News Gahuza"`;
+
+exports[`OG title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/liveradio"`;
+
+exports[`Page title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Simbira ku birimwo"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcgahuza"`;
+
+exports[`Twitter description 1`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
+
+exports[`Twitter image alt 1`] = `"BBC News Gahuza"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`Twitter site 1`] = `"@bbcgahuza"`;
+
+exports[`Twitter title 1`] = `"Radio BBC Gahuza - BBC News Gahuza"`;

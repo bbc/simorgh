@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/yoruba"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. BBC kò mọ̀ nípa àwọn ohun tí ó wà ní àwọn ojú òpó tí ó wà ní ìta. Ọwọ́ tí a fi mú ìbáṣepọ̀ ti ìta."`;
+
+exports[`Header Branding 1`] = `"BBC News, Yorùbá"`;
+
+exports[`Heading level 1 1`] = `"BBC News, Yorùbá - Ìròyìn"`;
+
+exports[`Lang attribute 1`] = `"yo"`;
+
+exports[`OG description 1`] = `"Ibí yìí lo ti máa rí ojúlówó ìròyìn àjáàbalẹ̀ lórí ojú ọjọ́, ètò ọrọ̀ ajé, ìdánilárayá, òṣèlú, ìròyìn àgbáyé ní ìṣẹ́jú kan àtàwọn míràn. BBC Yorùbá máa ń ṣe ìròyìn àkànṣe, fídíò, ọ̀rọ̀ ẹnu, fọ́tò tó jojú ní gbèsè àti itọ́ni onísọ̀rọ̀-ǹ-gbèsì tó dáńtọ́"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Yorùbá"`;
+
+exports[`OG locale 1`] = `"yo"`;
+
+exports[`OG site name 1`] = `"BBC News Yorùbá"`;
+
+exports[`OG title 1`] = `"Àbáwọlé - BBC News Yorùbá"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/yoruba"`;
+
+exports[`Page title 1`] = `"Àbáwọlé - BBC News Yorùbá"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Fò kọjá sí nnkan tí ó wà nínú rẹ̀"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Twitter description 1`] = `"Ibí yìí lo ti máa rí ojúlówó ìròyìn àjáàbalẹ̀ lórí ojú ọjọ́, ètò ọrọ̀ ajé, ìdánilárayá, òṣèlú, ìròyìn àgbáyé ní ìṣẹ́jú kan àtàwọn míràn. BBC Yorùbá máa ń ṣe ìròyìn àkànṣe, fídíò, ọ̀rọ̀ ẹnu, fọ́tò tó jojú ní gbèsè àti itọ́ni onísọ̀rọ̀-ǹ-gbèsì tó dáńtọ́"`;
+
+exports[`Twitter image alt 1`] = `"BBC News Yorùbá"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png"`;
+
+exports[`Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Twitter title 1`] = `"Àbáwọlé - BBC News Yorùbá"`;

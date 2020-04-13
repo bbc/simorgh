@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti. Gara geessituu alaatti akkaataa itti hojjennu dubbisi."`;
+
+exports[`Header Branding 1`] = `"BBC News, Afaan Oromoo"`;
+
+exports[`Heading level 1 1`] = `"Dhaggeeffadhaa"`;
+
+exports[`Lang attribute 1`] = `"om"`;
+
+exports[`OG description 1`] = `"Sagantaawwan keenya"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Afaan Oromoo"`;
+
+exports[`OG locale 1`] = `"om-ET"`;
+
+exports[`OG site name 1`] = `"BBC News Afaan Oromoo"`;
+
+exports[`OG title 1`] = `"Dhaggeeffadhaa - BBC News Afaan Oromoo"`;
+
+exports[`OG type 1`] = `"website"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/afaanoromoo/bbc_afaanoromoo_radio/liveradio"`;
+
+exports[`Page title 1`] = `"Dhaggeeffadhaa - BBC News Afaan Oromoo"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Qabiyyeetti darbi"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Twitter description 1`] = `"Sagantaawwan keenya"`;
+
+exports[`Twitter image alt 1`] = `"BBC News Afaan Oromoo"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png"`;
+
+exports[`Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Twitter title 1`] = `"Dhaggeeffadhaa - BBC News Afaan Oromoo"`;

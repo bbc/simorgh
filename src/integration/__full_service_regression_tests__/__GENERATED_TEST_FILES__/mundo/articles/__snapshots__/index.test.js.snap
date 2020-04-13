@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical link 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+
+exports[`Dir attribute 1`] = `"ltr"`;
+
+exports[`FB admins 1`] = `"100004154058350"`;
+
+exports[`FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Footer Copyright 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`Header Branding 1`] = `"BBC News, Mundo"`;
+
+exports[`Heading level 1 1`] = `"Este es el titular de este artículo de prueba."`;
+
+exports[`Lang attribute 1`] = `"es"`;
+
+exports[`OG description 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+
+exports[`OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+
+exports[`OG image alt 1`] = `"BBC News Mundo"`;
+
+exports[`OG locale 1`] = `"es-005"`;
+
+exports[`OG site name 1`] = `"BBC News Mundo"`;
+
+exports[`OG title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+
+exports[`OG type 1`] = `"article"`;
+
+exports[`OG url 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+
+exports[`Page title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+
+exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Skip to content link 1`] = `"Ir al contenido"`;
+
+exports[`Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Twitter creator 1`] = `"@bbcmundo"`;
+
+exports[`Twitter description 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+
+exports[`Twitter image alt 1`] = `"BBC News Mundo"`;
+
+exports[`Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+
+exports[`Twitter site 1`] = `"@bbcmundo"`;
+
+exports[`Twitter title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
