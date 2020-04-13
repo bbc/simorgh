@@ -6,7 +6,7 @@ import filterEmptyGroupItems from './filterEmptyGroupItems';
 import squashTopStories from './squashTopStories';
 import addIdsToItems from './addIdsToItems';
 import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
-import withRadioSchedules from '../../utils/withRadioSchedules';
+import withRadioSchedule from '../../utils/withRadioSchedule';
 import getConfig from '#lib/config/services/getConfig';
 
 const transformJson = pipe(
@@ -35,7 +35,7 @@ export default async ({ path, service, variant }) => {
   const pageHasRadioSchedule = hasRadioSchedule && radioScheduleOnFrontPage;
 
   const { json, ...rest } = pageHasRadioSchedule
-    ? await withRadioSchedules(fetchPageData(path), service, path)
+    ? await withRadioSchedule(fetchPageData(path), service, path)
     : await fetchPageData(path);
 
   return {
