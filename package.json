@@ -119,7 +119,7 @@
     "ramda": "^0.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0",
     "react-lazyload": "^2.6.7",
     "react-router": "^5.1.2",
     "react-router-config": "^5.1.1",
