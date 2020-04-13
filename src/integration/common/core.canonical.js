@@ -1,11 +1,11 @@
-export default ({ service }) => {
+export default () => {
   it('Bundle scripts are loaded', () => {
     const bundleScriptMatcher = new RegExp(
-      `(\\/static\\/js\\/(main|vendor|${service})-\\w+\\.\\w+\\.js)`,
+      `(\\/static\\/js\\/(main|vendor|${global.service})-\\w+\\.\\w+\\.js)`,
       'g',
     );
     const bbcOriginScripts = Array.from(
-      canonical.document.querySelectorAll('script[src]'),
+      document.querySelectorAll('script[src]'),
     ).filter((script) =>
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
@@ -15,13 +15,13 @@ export default ({ service }) => {
     });
   });
 
-  it('The service bundle is loaded', () => {
+  it('Service bundle is loaded', () => {
     const bundleScriptMatcher = new RegExp(
-      `(\\/static\\/js\\/(${service})-\\w+\\.\\w+\\.js)`,
+      `(\\/static\\/js\\/(${global.service})-\\w+\\.\\w+\\.js)`,
       'g',
     );
     const bbcOriginScripts = Array.from(
-      canonical.document.querySelectorAll('script[src]'),
+      document.querySelectorAll('script[src]'),
     ).filter((script) =>
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
