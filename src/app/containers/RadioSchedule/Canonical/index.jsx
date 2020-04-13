@@ -142,7 +142,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
 
       fetchRadioScheduleData(endpoint);
     }
-  }, [endpoint, locale, script, service, timeOnServer, timezone, schedule]);
+  }, [endpoint, service, timeOnServer, schedule]);
 
   if (!schedule) {
     return null;
