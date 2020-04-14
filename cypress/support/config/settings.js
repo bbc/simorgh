@@ -3426,11 +3426,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/serbian/cyr/23279016'], // video
+            paths: ['/serbian/cyr/23279016'], // CPS video
             enabled: true,
           },
           local: {
-            paths: ['/serbian/cyr/23279016'], // video
+            paths: ['/serbian/cyr/23279016'], // CPS video
             enabled: true,
           },
         },
@@ -3537,11 +3537,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/serbian/lat/23279016'], // video
+            paths: ['/serbian/lat/23279016'], // CPS video
             enabled: true,
           },
           local: {
-            paths: ['/serbian/lat/23279016'], // video
+            paths: ['/serbian/lat/23279016'], // CPS video
             enabled: true,
           },
         },
@@ -4804,8 +4804,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/ukchina/trad/23279012', // CPS
-              '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2
+              '/ukchina/trad/23279012', // CPS video
+              '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
             enabled: true,
           },
@@ -5555,13 +5555,13 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/zhongwen/simp/uk-23283128', // Audio
+              '/zhongwen/simp/uk-23283128', // CPS Audio
             ],
             enabled: true,
           },
           local: {
             paths: [
-              '/zhongwen/simp/uk-23283128', // Audio
+              '/zhongwen/simp/uk-23283128', // CPS Audio
             ],
             enabled: true,
           },
@@ -5669,11 +5669,11 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/zhongwen/trad/uk-23283128'], // Audio
+            paths: ['/zhongwen/trad/uk-23283128'], // CPS Audio
             enabled: true,
           },
           local: {
-            paths: ['/zhongwen/trad/uk-23283128'], // Audio
+            paths: ['/zhongwen/trad/uk-23283128'], // CPS Audio
             enabled: true,
           },
         },
