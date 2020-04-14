@@ -670,7 +670,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
         </script>
       </amp-analytics>
       <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
+           class="GridComponent-nf79gm-0 bsUMYC GelPageGrid-ylca1m-0 StyledGrid-w14rad-2 hKRVOp"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 dAItxV"
@@ -1865,7 +1865,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
         >
       </noscript>
       <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
+           class="GridComponent-nf79gm-0 bsUMYC GelPageGrid-ylca1m-0 StyledGrid-w14rad-2 hKRVOp"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 dAItxV"
