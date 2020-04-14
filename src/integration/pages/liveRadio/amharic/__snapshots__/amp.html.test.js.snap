@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Full page HTML 1`] = `
-<html lang="ko"
+<html lang="am"
       class="no-js"
       dir="ltr"
 >
@@ -27,15 +27,15 @@ exports[`Full page HTML 1`] = `
     >
     <meta data-react-helmet="true"
           name="apple-mobile-web-app-title"
-          content="BBC News 코리아"
+          content="BBC News አማርኛ"
     >
     <meta data-react-helmet="true"
           name="application-name"
-          content="BBC News 코리아"
+          content="BBC News አማርኛ"
     >
     <meta data-react-helmet="true"
           name="description"
-          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+          content="ዝግጅቶቻችንን’"
     >
     <meta data-react-helmet="true"
           property="fb:admins"
@@ -55,31 +55,31 @@ exports[`Full page HTML 1`] = `
     >
     <meta data-react-helmet="true"
           name="msapplication-TileImage"
-          content="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+          content="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
     >
     <meta data-react-helmet="true"
           property="og:description"
-          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+          content="ዝግጅቶቻችንን’"
     >
     <meta data-react-helmet="true"
           property="og:image"
-          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
     >
     <meta data-react-helmet="true"
           property="og:image:alt"
-          content="BBC News 코리아"
+          content="BBC News አማርኛ"
     >
     <meta data-react-helmet="true"
           property="og:locale"
-          content="ko-KO"
+          content="am-ET"
     >
     <meta data-react-helmet="true"
           property="og:site_name"
-          content="BBC News 코리아"
+          content="BBC News አማርኛ"
     >
     <meta data-react-helmet="true"
           property="og:title"
-          content="BBC 코리아 라디오 - BBC News 코리아"
+          content="ያድምጡ - BBC News አማርኛ"
     >
     <meta data-react-helmet="true"
           property="og:type"
@@ -87,7 +87,7 @@ exports[`Full page HTML 1`] = `
     >
     <meta data-react-helmet="true"
           property="og:url"
-          content="http://localhost:7080/korean/bbc_korean_radio/liveradio"
+          content="http://localhost:7080/amharic/bbc_amharic_radio/liveradio"
     >
     <meta data-react-helmet="true"
           name="twitter:card"
@@ -99,15 +99,15 @@ exports[`Full page HTML 1`] = `
     >
     <meta data-react-helmet="true"
           name="twitter:description"
-          content="세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"
+          content="ዝግጅቶቻችንን’"
     >
     <meta data-react-helmet="true"
           name="twitter:image:alt"
-          content="BBC News 코리아"
+          content="BBC News አማርኛ"
     >
     <meta data-react-helmet="true"
           name="twitter:image:src"
-          content="https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"
     >
     <meta data-react-helmet="true"
           name="twitter:site"
@@ -115,7 +115,7 @@ exports[`Full page HTML 1`] = `
     >
     <meta data-react-helmet="true"
           name="twitter:title"
-          content="BBC 코리아 라디오 - BBC News 코리아"
+          content="ያድምጡ - BBC News አማርኛ"
     >
     <link rel="shortcut icon"
           href="/favicon.ico"
@@ -142,86 +142,100 @@ exports[`Full page HTML 1`] = `
     <link rel="dns-prefetch"
           href="https://logws1363.ati-host.net?"
     >
+    <link rel="preconnect"
+          href="https://gel.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://gel.files.bbci.co.uk"
+    >
+    <link rel="preconnect"
+          href="https://ws-downloads.files.bbci.co.uk"
+          crossorigin="anonymous"
+    >
+    <link rel="dns-prefetch"
+          href="https://ws-downloads.files.bbci.co.uk"
+    >
     <title data-react-helmet="true">
-      BBC 코리아 라디오 - BBC News 코리아
+      ያድምጡ - BBC News አማርኛ
     </title>
     <link data-react-helmet="true"
           rel="manifest"
-          href="/korean/manifest.json"
+          href="/amharic/manifest.json"
     >
     <link data-react-helmet="true"
           rel="canonical"
-          href="http://localhost:7080/korean/bbc_korean_radio/liveradio"
+          href="http://localhost:7080/amharic/bbc_amharic_radio/liveradio"
     >
     <link data-react-helmet="true"
           rel="amphtml"
-          href="http://localhost:7080/korean/bbc_korean_radio/liveradio.amp"
+          href="http://localhost:7080/amharic/bbc_amharic_radio/liveradio.amp"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
-          href="http://localhost:7080/korean/images/icons/icon-192x192.png"
+          href="http://localhost:7080/amharic/images/icons/icon-192x192.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="72x72"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="96x96"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="128x128"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-128x128.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-128x128.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="144x144"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-144x144.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-144x144.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="152x152"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-152x152.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-152x152.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="192x192"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="384x384"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-384x384.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-384x384.png"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
           sizes="512x512"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
     >
     <link data-react-helmet="true"
           rel="icon"
           type="image/png"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-72x72.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-72x72.png"
           sizes="72x72"
     >
     <link data-react-helmet="true"
           rel="icon"
           type="image/png"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-96x96.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-96x96.png"
           sizes="96x96"
     >
     <link data-react-helmet="true"
           rel="icon"
           type="image/png"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-192x192.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-192x192.png"
           sizes="192x192"
     >
     <link data-react-helmet="true"
           rel="apple-touch-startup-image"
-          href="https://news.files.bbci.co.uk/include/articles/public/korean/images/icons/icon-512x512.png"
+          href="https://news.files.bbci.co.uk/include/articles/public/amharic/images/icons/icon-512x512.png"
     >
     <link data-react-helmet="true"
           rel="shortcut icon"
@@ -231,7 +245,7 @@ exports[`Full page HTML 1`] = `
     <script data-react-helmet="true"
             type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/bbc_korean_radio/liveradio","name":"BBC 코리아 라디오"}}
+      {"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/amharic/bbc_amharic_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/amharic/institutional-49283133","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/amharic/bbc_amharic_radio/liveradio","name":"ያድምጡ"}}
     </script>
   </head>
   <body>
@@ -241,15 +255,15 @@ exports[`Full page HTML 1`] = `
       <header role="banner">
         <div class="Banner-m3awbo-1 fDRnKv">
           <div class="SvgWrapper-m3awbo-0 dPXtDJ">
-            <a href="/korean"
-               class="StyledLink-m3awbo-2 cUhFgi"
+            <a href="/amharic"
+               class="StyledLink-m3awbo-2 dVRWFA"
             >
               <svg height="24"
-                   viewbox="0 0 233.01 24"
+                   viewbox="0 0 223.29 24"
                    xmlns="http://www.w3.org/2000/svg"
                    focusable="false"
                    aria-hidden="true"
-                   class="BrandSvg-m3awbo-3 gTUCvL"
+                   class="BrandSvg-m3awbo-3 eHcbpx"
               >
                 <g fill-rule="evenodd"
                    stroke="#000"
@@ -260,13 +274,11 @@ exports[`Full page HTML 1`] = `
                   </path>
                   <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
                   </path>
-                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM190.23 17.89a8.48 8.48 0 0 0-.79-3.1 5 5 0 0 0-2-2.07l-.11-.06-2.12 5.23h-1.45L187 10h-.16a4.2 4.2 0 0 1-1.74-.36 1.92 1.92 0 0 1-.88-.94 4.27 4.27 0 0 1-.32-1.7V6h1.32v1a3.29 3.29 0 0 0 .18 1.21 1.25 1.25 0 0 0 .57.66 2.89 2.89 0 0 0 1.28.2h1.55l-1 2.56h.1a5.16 5.16 0 0 1 2.59 2.28 10.27 10.27 0 0 1 1.09 4zM199.94 17.89l2.53-6.13h-1.07a2.5 2.5 0 0 1-1.75-.57 2.14 2.14 0 0 1-.65-1.64v-.56l.17-2.08h-1.87v5a6.07 6.07 0 0 1-1.44.93 4.22 4.22 0 0 1-1.76.35 2.74 2.74 0 0 1-2.14-.82 3.5 3.5 0 0 1-.74-2.41 4.16 4.16 0 0 1 .49-2 3.4 3.4 0 0 1 1.41-1.37 4.47 4.47 0 0 1 2.12-.59h6.53c2 0 3 .74 3 2.27a4.58 4.58 0 0 1-.18 1.13 17.59 17.59 0 0 1-.71 2l-2.65 6.5zm-4.65-11a2.69 2.69 0 0 0-2.07.78 3.21 3.21 0 0 0-.72 2.33 2.74 2.74 0 0 0 .44 1.66 1.46 1.46 0 0 0 1.23.6 3.42 3.42 0 0 0 1-.12 2.28 2.28 0 0 0 .79-.42v-4.8zm5.07 1.88v.6a1.35 1.35 0 0 0 .44 1.14 2.53 2.53 0 0 0 1.51.33h.56v-.07c.25-.66.41-1.1.48-1.36a5.81 5.81 0 0 0 .16-.67 3.07 3.07 0 0 0 0-.47 1.3 1.3 0 0 0-.4-1 1.79 1.79 0 0 0-1.11-.35h-1.44zM212.92 19.25a1.13 1.13 0 0 1-.78-.35 2 2 0 0 1-.54-.92v-.08h-1.17a7 7 0 0 1-2.52-.34 2.15 2.15 0 0 1-1.16-1.1 5.52 5.52 0 0 1-.37-2.26V13a14 14 0 0 1 .49-4.13 4 4 0 0 1 1.51-2.18 4.83 4.83 0 0 1 2.75-.7h1.68l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.57-.9v-.08h-.45a2.8 2.8 0 0 0-2.61 1.47 9.94 9.94 0 0 0-.81 4.64v1.34a4.17 4.17 0 0 0 .24 1.58 1.52 1.52 0 0 0 .79.81 4.55 4.55 0 0 0 1.74.24h1.12v-.08a2 2 0 0 1 .54-.93 1.12 1.12 0 0 1 .77-.35h.19l-.25 1.77.26 1.84zM218.52 17.89v-3.78h-2.79V13a5 5 0 0 1 .71-2.81 3.4 3.4 0 0 1 2-1.41h.08v-2h-1.92v.08a1.67 1.67 0 0 1-.52.81 1.2 1.2 0 0 1-.79.3h-.19l.25-1.53-.25-1.57h.19a1.2 1.2 0 0 1 .79.3 1.7 1.7 0 0 1 .53.82v.08h5.16v-.08a1.68 1.68 0 0 1 .53-.83 1.22 1.22 0 0 1 .78-.29h.19L223 6.39l.29 1.61h-.19a1.21 1.21 0 0 1-.79-.29 1.68 1.68 0 0 1-.53-.82v-.08h-1.92v1.77h1.49l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.55-.94v-.08h-.42a2.36 2.36 0 0 0-1.95.87 3.91 3.91 0 0 0-.69 2.47v.38h2.79v4.69z">
                   </path>
                   <path d="M168.37 0v22.59"
                         stroke-width="2"
                   >
-                  </path>
-                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
                   </path>
                 </g>
               </svg>
@@ -277,14 +289,14 @@ exports[`Full page HTML 1`] = `
                   BBC News
                 </span>
                 ,
-                코리아
+                አማርኛ
               </span>
             </a>
             <a dir="ltr"
                href="#content"
-               class="SkipLink-wmpyxz-0 dUSIGf"
+               class="SkipLink-wmpyxz-0 cVAqlL"
             >
-              내용으로 건너뛰기
+              ወደ ዋናው ይዘት ይለፉ
             </a>
           </div>
         </div>
@@ -310,7 +322,7 @@ exports[`Full page HTML 1`] = `
                   </path>
                 </svg>
                 <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                  섹션
+                  ክፍሎች
                 </span>
               </button>
               <div dir="ltr"
@@ -323,40 +335,40 @@ exports[`Full page HTML 1`] = `
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 COeze"
                   >
-                    <a href="/korean"
-                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    <a href="/amharic"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
                     >
-                      뉴스
+                      ዜና
                     </a>
                   </li>
                   <li dir="ltr"
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 COeze"
                   >
-                    <a href="/korean/media/video"
-                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    <a href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
                     >
-                      비디오
+                      ኢትዮጵያ
                     </a>
                   </li>
                   <li dir="ltr"
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 COeze"
                   >
-                    <a href="/korean/downloads"
-                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    <a href="/amharic/media/video"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
                     >
-                      다운로드
+                      ቪዲዮ
                     </a>
                   </li>
                   <li dir="ltr"
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 COeze"
                   >
-                    <a href="/korean/popular/read"
-                       class="StyledLink-sc-158x7z5-2 gvYbSn"
+                    <a href="/amharic/popular/read"
+                       class="StyledLink-sc-158x7z5-2 dGwkJs"
                     >
-                      TOP 뉴스
+                      በጣም የተወደዱ
                     </a>
                   </li>
                 </ul>
@@ -371,37 +383,37 @@ exports[`Full page HTML 1`] = `
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/korean"
-                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  <a href="/amharic"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
                   >
-                    뉴스
+                    ዜና
                   </a>
                 </li>
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/korean/media/video"
-                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  <a href="/amharic/topics/e986aff5-6b26-4638-b468-371d1d9617b4"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
                   >
-                    비디오
+                    ኢትዮጵያ
                   </a>
                 </li>
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/korean/downloads"
-                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  <a href="/amharic/media/video"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
                   >
-                    다운로드
+                    ቪዲዮ
                   </a>
                 </li>
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/korean/popular/read"
-                     class="StyledDropdownLink-ukxuly-4 aqqdZ"
+                  <a href="/amharic/popular/read"
+                     class="StyledDropdownLink-ukxuly-4 hVdNGG"
                   >
-                    TOP 뉴스
+                    በጣም የተወደዱ
                   </a>
                 </li>
               </ul>
@@ -414,7 +426,7 @@ exports[`Full page HTML 1`] = `
              width="1px"
              alt
              style="position:absolute"
-             src="https://logws1363.ati-host.net?s=598343&amp;s2=57&amp;p=korean.bbc_korean_radio.liveradio.page&amp;x1=[urn:bbc:ares::ws_live:bbc_korean_radio]&amp;x2=[responsive]&amp;x3=[news-korean]&amp;x4=[ko]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[BBC+코리아+라디오+-+BBC+News+코리아]"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=4&amp;p=amharic.bbc_amharic_radio.liveradio.page&amp;x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&amp;x2=[responsive]&amp;x3=[news-amharic]&amp;x4=[am]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[ያድምጡ+-+BBC+News+አማርኛ]"
         >
       </noscript>
       <main role="main"
@@ -426,17 +438,17 @@ exports[`Full page HTML 1`] = `
         >
           <h1 id="content"
               tabindex="-1"
-              class="Headline-sc-1kh1qhu-0 krtLLo"
+              class="Headline-sc-1kh1qhu-0 cWPJOi"
           >
-            BBC 코리아 라디오
+            ያድምጡ
           </h1>
-          <p class="Paragraph-k859h4-0 Kskll">
-            세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다
+          <p class="Paragraph-k859h4-0 cnKvCl">
+            ዝግጅቶቻችንን’
           </p>
           <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
             <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
-                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                         title="Audio player"
                         allow="autoplay; fullscreen"
                         scrolling="no"
@@ -446,9 +458,9 @@ exports[`Full page HTML 1`] = `
                 </iframe>
                 <noscript>
                   <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
-                    <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
+                    <div class="MessageWrapper-sc-1pnftlt-1 CXSTp">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        사용 기기에서 미디어 재생이 지원되지 않습니다
+                        የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።
                       </strong>
                     </div>
                   </div>
@@ -461,15 +473,15 @@ exports[`Full page HTML 1`] = `
       <footer role="contentinfo">
         <div class="Banner-m3awbo-1 gpxnCd">
           <div class="SvgWrapper-m3awbo-0 dPXtDJ">
-            <a href="/korean"
-               class="StyledLink-m3awbo-2 cUhFgi"
+            <a href="/amharic"
+               class="StyledLink-m3awbo-2 dVRWFA"
             >
               <svg height="24"
-                   viewbox="0 0 233.01 24"
+                   viewbox="0 0 223.29 24"
                    xmlns="http://www.w3.org/2000/svg"
                    focusable="false"
                    aria-hidden="true"
-                   class="BrandSvg-m3awbo-3 gTUCvL"
+                   class="BrandSvg-m3awbo-3 eHcbpx"
               >
                 <g fill-rule="evenodd"
                    stroke="#000"
@@ -480,13 +492,11 @@ exports[`Full page HTML 1`] = `
                   </path>
                   <path d="M41.57 14.45a1.86 1.86 0 0 1-.63 1.45 3.85 3.85 0 0 1-2.6.72h-2.68v-4.3h2.56a4.45 4.45 0 0 1 2.57.62 1.76 1.76 0 0 1 .78 1.51zM39.4 9.31a1.84 1.84 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57h-1.9v4.07H37a4.21 4.21 0 0 0 2.4-.56zM23.22.28v21.85H0V.28zM17.7 14.76a4.21 4.21 0 0 0-3.43-4.07 3.86 3.86 0 0 0 1.35-1.08 3.41 3.41 0 0 0 .65-2.13A3.8 3.8 0 0 0 15 4.63a5.76 5.76 0 0 0-4-1.29H6v15.74h5.9a6.54 6.54 0 0 0 4.46-1.39 3.89 3.89 0 0 0 1.34-2.93z">
                   </path>
-                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74z">
+                  <path d="M12.64 9.31a1.85 1.85 0 0 0 .74-1.63 1.66 1.66 0 0 0-.53-1.31 3 3 0 0 0-2.05-.57H8.91v4.07h1.3a4.21 4.21 0 0 0 2.43-.56zM14 12.94a4.45 4.45 0 0 0-2.57-.62H8.91v4.29h2.68a3.85 3.85 0 0 0 2.6-.72 1.86 1.86 0 0 0 .63-1.45 1.76 1.76 0 0 0-.82-1.5zM101 3.34h2.15v15.78h-1.94L90.69 7v12.12h-2.12V3.34h1.83L101 15.6zM107.26 3.34h8.95v2h-6.69v4.81H116v2h-6.46v4.9h6.9v2h-9.16zM140.33 3.34h2.25l-6.38 15.85h-.5l-5.16-12.84-5.21 12.84h-.49l-6.36-15.85h2.28l4.35 10.88 4.38-10.88h2.14L136 14.22zM148.7 12.51l-1.72-1a7.8 7.8 0 0 1-2.3-1.94 3.68 3.68 0 0 1-.68-2.2 3.88 3.88 0 0 1 1.29-3 4.83 4.83 0 0 1 3.36-1.16 6.36 6.36 0 0 1 3.63 1.11v2.49a5.23 5.23 0 0 0-3.67-1.64 3 3 0 0 0-1.82.51 1.55 1.55 0 0 0-.71 1.32 2 2 0 0 0 .52 1.33 6.6 6.6 0 0 0 1.69 1.3l1.73 1q2.89 1.73 2.89 4.39a4 4 0 0 1-1.27 3.08 4.65 4.65 0 0 1-3.3 1.19 6.94 6.94 0 0 1-4.26-1.44V15a5.32 5.32 0 0 0 4.24 2.32 2.66 2.66 0 0 0 1.77-.59 1.85 1.85 0 0 0 .71-1.48q-.02-1.45-2.1-2.74zM190.23 17.89a8.48 8.48 0 0 0-.79-3.1 5 5 0 0 0-2-2.07l-.11-.06-2.12 5.23h-1.45L187 10h-.16a4.2 4.2 0 0 1-1.74-.36 1.92 1.92 0 0 1-.88-.94 4.27 4.27 0 0 1-.32-1.7V6h1.32v1a3.29 3.29 0 0 0 .18 1.21 1.25 1.25 0 0 0 .57.66 2.89 2.89 0 0 0 1.28.2h1.55l-1 2.56h.1a5.16 5.16 0 0 1 2.59 2.28 10.27 10.27 0 0 1 1.09 4zM199.94 17.89l2.53-6.13h-1.07a2.5 2.5 0 0 1-1.75-.57 2.14 2.14 0 0 1-.65-1.64v-.56l.17-2.08h-1.87v5a6.07 6.07 0 0 1-1.44.93 4.22 4.22 0 0 1-1.76.35 2.74 2.74 0 0 1-2.14-.82 3.5 3.5 0 0 1-.74-2.41 4.16 4.16 0 0 1 .49-2 3.4 3.4 0 0 1 1.41-1.37 4.47 4.47 0 0 1 2.12-.59h6.53c2 0 3 .74 3 2.27a4.58 4.58 0 0 1-.18 1.13 17.59 17.59 0 0 1-.71 2l-2.65 6.5zm-4.65-11a2.69 2.69 0 0 0-2.07.78 3.21 3.21 0 0 0-.72 2.33 2.74 2.74 0 0 0 .44 1.66 1.46 1.46 0 0 0 1.23.6 3.42 3.42 0 0 0 1-.12 2.28 2.28 0 0 0 .79-.42v-4.8zm5.07 1.88v.6a1.35 1.35 0 0 0 .44 1.14 2.53 2.53 0 0 0 1.51.33h.56v-.07c.25-.66.41-1.1.48-1.36a5.81 5.81 0 0 0 .16-.67 3.07 3.07 0 0 0 0-.47 1.3 1.3 0 0 0-.4-1 1.79 1.79 0 0 0-1.11-.35h-1.44zM212.92 19.25a1.13 1.13 0 0 1-.78-.35 2 2 0 0 1-.54-.92v-.08h-1.17a7 7 0 0 1-2.52-.34 2.15 2.15 0 0 1-1.16-1.1 5.52 5.52 0 0 1-.37-2.26V13a14 14 0 0 1 .49-4.13 4 4 0 0 1 1.51-2.18 4.83 4.83 0 0 1 2.75-.7h1.68l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.57-.9v-.08h-.45a2.8 2.8 0 0 0-2.61 1.47 9.94 9.94 0 0 0-.81 4.64v1.34a4.17 4.17 0 0 0 .24 1.58 1.52 1.52 0 0 0 .79.81 4.55 4.55 0 0 0 1.74.24h1.12v-.08a2 2 0 0 1 .54-.93 1.12 1.12 0 0 1 .77-.35h.19l-.25 1.77.26 1.84zM218.52 17.89v-3.78h-2.79V13a5 5 0 0 1 .71-2.81 3.4 3.4 0 0 1 2-1.41h.08v-2h-1.92v.08a1.67 1.67 0 0 1-.52.81 1.2 1.2 0 0 1-.79.3h-.19l.25-1.53-.25-1.57h.19a1.2 1.2 0 0 1 .79.3 1.7 1.7 0 0 1 .53.82v.08h5.16v-.08a1.68 1.68 0 0 1 .53-.83 1.22 1.22 0 0 1 .78-.29h.19L223 6.39l.29 1.61h-.19a1.21 1.21 0 0 1-.79-.29 1.68 1.68 0 0 1-.53-.82v-.08h-1.92v1.77h1.49l.31 2.25h-.19a1.09 1.09 0 0 1-.76-.34 2.14 2.14 0 0 1-.55-.94v-.08h-.42a2.36 2.36 0 0 0-1.95.87 3.91 3.91 0 0 0-.69 2.47v.38h2.79v4.69z">
                   </path>
                   <path d="M168.37 0v22.59"
                         stroke-width="2"
                   >
-                  </path>
-                  <path d="M197.21 16.31v1.23h-15.44v-1.23h6V12h1.56v4.28zm-3.43-7.44V6.12h-10.2V4.89h11.74v1.56a32.82 32.82 0 0 1-.72 7.67l-1.54-.18a33.2 33.2 0 0 0 .61-3.9l-10.32.53-.23-1.29zM202.24 14.56a51.94 51.94 0 0 0 8.3-.59l.15 1.23a51.3 51.3 0 0 1-8.61.61h-1.41V9.49H207V6.05h-6.34V4.82h7.92v5.9h-6.3zM213.7 3.27V19.8h-1.56V3.27zM225.89 10.32c0 3.51-1.77 5.75-4.28 5.75s-4.3-2.24-4.3-5.75 1.79-5.75 4.3-5.75 4.28 2.23 4.28 5.75zm-1.49 0c0-2.67-1.16-4.39-2.8-4.39s-2.82 1.73-2.82 4.39 1.16 4.41 2.82 4.41 2.8-1.73 2.8-4.41zm8.6.83h-2.82v8.64h-1.56V3.31h1.56v6.56H233z">
                   </path>
                 </g>
               </svg>
@@ -497,12 +507,12 @@ exports[`Full page HTML 1`] = `
                   BBC News
                 </span>
                 ,
-                코리아
+                አማርኛ
               </span>
             </a>
           </div>
         </div>
-        <div class="SitewideLinksWrapper-sc-1gggobt-0 kzZWAD">
+        <div class="SitewideLinksWrapper-sc-1gggobt-0 iXrFjz">
           <div class="ConstrainedWrapper-sc-1gggobt-1 bpERjU">
             <ul role="list"
                 class="StyledList-sc-2e1ekc-0 gRKcvt"
@@ -510,66 +520,66 @@ exports[`Full page HTML 1`] = `
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.com/korean/institutional-49283197"
+                <a href="https://www.bbc.com/amharic/institutional-49283133"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    BBC News를 신뢰할 수 있는 이유
+                    ቢቢሲን ለምን ማመን እንደሚገባዎ
                   </span>
                 </a>
               </li>
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.co.uk/usingthebbc/terms/"
+                <a href="https://www.bbc.com/usingthebbc/terms/"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    이용 약관
+                    የአጠቃቀም ደንብ
                   </span>
                 </a>
               </li>
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.co.uk/aboutthebbc"
+                <a href="https://www.bbc.com/aboutthebbc"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    BBC 소개
+                    ስለ ቢቢሲ
                   </span>
                 </a>
               </li>
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.co.uk/usingthebbc/privacy/"
+                <a href="https://www.bbc.com/usingthebbc/privacy/"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    개인정보취급방침
+                    የፕራይቬሲ ፖሊሲ
                   </span>
                 </a>
               </li>
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.co.uk/usingthebbc/cookies/"
+                <a href="https://www.bbc.com/usingthebbc/cookies/"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    쿠키정책
+                    ኩኪዎች
                   </span>
                 </a>
               </li>
               <li role="listitem"
                   class="StyledListItem-sc-2e1ekc-1 kUOQdM"
               >
-                <a href="https://www.bbc.com/korean/institutional-42224941"
+                <a href="https://www.bbc.com/amharic/institutional-42228117"
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    고객센터
+                    ቢቢሲን ያግኙ
                   </span>
                 </a>
               </li>
@@ -590,12 +600,12 @@ exports[`Full page HTML 1`] = `
               <span lang="en-GB">
                 ©
               </span>
-              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም.
               <a href="https://www.bbc.co.uk/help/web/links/"
                  class="StyledLink-nhmg8j-0 jHQlUp"
               >
                 <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                  ስለ ውጪ ሊንኮች ያለን አቀራረብ
                 </span>
               </a>
             </p>
@@ -604,7 +614,7 @@ exports[`Full page HTML 1`] = `
       </footer>
     </div>
     <script>
-      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"BBC 코리아 라디오","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_korean_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_korean_radio"},"type":"WS-LIVE","createdBy":"korean","language":"ko","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"BBC 코리아 라디오 - BBC News 코리아","pageIdentifier":"korean.bbc_korean_radio.liveradio.page","producerId":"57","contentType":"player-live","producer":"KOREAN"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"BBC 코리아 라디오","summary":"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다","uri":"/korean/bbc_korean_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"korean","uri":"/korean","type":"simple"},"groups":[]}},"path":"/korean/bbc_korean_radio/liveradio","timeOnServer": "mock-time"}
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"ያድምጡ","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"ዝግጅቶቻችንን’","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_amharic_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_amharic_radio"},"type":"WS-LIVE","createdBy":"amharic","language":"am","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"ያድምጡ - BBC News አማርኛ","pageIdentifier":"amharic.bbc_amharic_radio.liveradio.page","producerId":"4","contentType":"player-live","producer":"AMHARIC"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"ያድምጡ","summary":"ዝግጅቶቻችንን’","uri":"/amharic/bbc_amharic_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"amharic","uri":"/amharic","type":"simple"},"groups":[]}},"path":"/amharic/bbc_amharic_radio/liveradio","timeOnServer": "mock-time"}
     </script>
     <div>
       <!--[if !IE]><!-->
@@ -614,7 +624,7 @@ exports[`Full page HTML 1`] = `
             crossorigin="anonymous"
             defer
     >
-      [16]
+      [2]
     </script>
     <script async
             data-chunk="main"
@@ -673,8 +683,8 @@ exports[`Full page HTML 1`] = `
     >
     </script>
     <script async
-            data-chunk="korean"
-            src="http://localhost:7080/static/js/korean-31ecd969.js"
+            data-chunk="amharic"
+            src="http://localhost:7080/static/js/amharic-31ecd969.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer

@@ -1,6 +1,6 @@
 /**
- * @service amharic
- * @pathname /amharic/bbc_amharic_radio/liveradio
+ * @service korean
+ * @pathname /korean/bbc_korean_radio/liveradio
  */
 
 import runCoreTests from '../../../common/core.canonical';
@@ -14,6 +14,6 @@ it('Audio player embed', () => {
 
   expect(audioPlayerIframe).toBeInTheDocument();
   expect(audioPlayerIframe.getAttribute('src')).toMatchInlineSnapshot(
-    `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"`,
+    `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"`,
   );
 });
