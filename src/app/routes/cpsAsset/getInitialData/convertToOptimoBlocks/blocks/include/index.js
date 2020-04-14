@@ -3,25 +3,17 @@ import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 
-// this defaults all VJ, IDT2 and IDT1 includes to the specified urls for now
-// should be removed once mozart routes have been created
-const includeUrls = {
-  vj: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html',
-  idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
-  idt1: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt1.html',
-};
+const buildIncludeUrl = (href, type) => {
+  const resolvers = {
+    idt1: '',
+    idt2: '/html',
+    vj: '',
+  };
 
-/* This ensures the Include markup is encoded before being added
-   in the page data because serializing window.SIMORGH_DATA with an html string
-    as part of the JSON will result in having some characters unescaped.
-*/
-const encodeHTML = (str) =>
-  String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+  const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
+
+  return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
+};
 
 const fetchMarkup = async (url) => {
   try {
@@ -33,7 +25,7 @@ const fetchMarkup = async (url) => {
       throw new Error(`Failed to fetch include at: ${url}`);
     } else {
       const html = await res.text();
-      return encodeHTML(html);
+      return html;
     }
   } catch (e) {
     logger.error(
@@ -79,9 +71,8 @@ const convertInclude = async ({ href, type, ...rest }) => {
   return {
     type,
     model: {
-      href: includeUrls[includeType],
-      // `includeUrls[includeType]` here should be replaced with `href` once mozart routes have been created.
-      html: await fetchMarkup(includeUrls[includeType]),
+      href,
+      html: await fetchMarkup(buildIncludeUrl(href, includeType)),
       type: includeType,
       ...rest,
     },

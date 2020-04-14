@@ -5,9 +5,9 @@ import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
 
 /* The Include html which we are getting would be encoded
-   so that html characters are escaped when serializing the page data.
-   This function ensures that it gets decoded back to an html string.
- */
+so that html characters are escaped when serializing the page data.
+This function ensures that it gets decoded back to an html string.
+*/
 const decodeHTML = (str) => {
   const replacedParts = {
     '&quot;': '"',
