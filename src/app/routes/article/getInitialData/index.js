@@ -13,7 +13,7 @@ const transformJson = pipe(
 );
 
 export default async (path) => {
-  const { json, ...rest } = await fetchPageData(path);
+  const { json, ...rest } = await fetchPageData({ path });
 
   return {
     ...rest,
