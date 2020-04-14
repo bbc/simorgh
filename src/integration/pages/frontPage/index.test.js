@@ -3,11 +3,11 @@
  * @pathname /arabic
  */
 
-import runA11yTests from '../../../common/a11y';
-import runHeaderTests from '../../../common/header';
-import runFootertests from '../../../common/footer';
-import runSEOtests from '../../../common/SEO';
-import runPerformanceTests from '../../../common/performance';
+import runA11yTests from '../../common/a11y';
+import runHeaderTests from '../../common/header';
+import runFootertests from '../../common/footer';
+import runSEOtests from '../../common/SEO';
+import runPerformanceTests from '../../common/performance';
 
 runA11yTests();
 runHeaderTests();

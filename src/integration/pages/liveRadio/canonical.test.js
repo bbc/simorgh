@@ -3,8 +3,8 @@
  * @pathname /korean/bbc_korean_radio/liveradio
  */
 
-import runCoreTests from '../../../common/core.canonical';
-import runAnalyticsTests from '../../../common/analytics.canonical';
+import runCoreTests from '../../common/core.canonical';
+import runAnalyticsTests from '../../common/analytics.canonical';
 
 runCoreTests();
 runAnalyticsTests();

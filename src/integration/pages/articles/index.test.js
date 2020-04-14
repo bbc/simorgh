@@ -1,13 +1,13 @@
 /**
- * @service mundo
- * @pathname /mundo/articles/ce42wzqr2mko
+ * @service pidgin
+ * @pathname /pidgin/tori-51745682
  */
 
-import runA11yTests from '../../../common/a11y';
-import runHeaderTests from '../../../common/header';
-import runFootertests from '../../../common/footer';
-import runSEOtests from '../../../common/SEO';
-import runPerformanceTests from '../../../common/performance';
+import runA11yTests from '../../common/a11y';
+import runHeaderTests from '../../common/header';
+import runFootertests from '../../common/footer';
+import runSEOtests from '../../common/SEO';
+import runPerformanceTests from '../../common/performance';
 
 runA11yTests();
 runHeaderTests();
@@ -24,12 +24,12 @@ it('Image with caption', () => {
   expect(imageEl).toBeInTheDocument();
   expect(imageEl).toBeTruthy();
   expect(imageEl.getAttribute('src')).toMatchInlineSnapshot(
-    `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`,
+    `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`,
   );
 
   expect(imageCaptionEl).toBeInTheDocument();
   expect(imageCaptionEl.textContent).toBeTruthy();
   expect(imageCaptionEl.textContent).toMatchInlineSnapshot(
-    `"Pie de foto, Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título."`,
+    `"Wetin we call dis foto, APC Chairman Adams Oshiomhole don be Govnor of Edo State before"`,
   );
 });

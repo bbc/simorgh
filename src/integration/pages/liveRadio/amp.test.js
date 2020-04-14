@@ -1,10 +1,10 @@
 /**
- * @service amharic
- * @pathname /amharic/bbc_amharic_radio/liveradio
+ * @service korean
+ * @pathname /korean/bbc_korean_radio/liveradio
  */
 
-import runCoreTests from '../../../common/core.amp';
-import runAnalyticsTests from '../../../common/analytics.amp';
+import runCoreTests from '../../common/core.amp';
+import runAnalyticsTests from '../../common/analytics.amp';
 
 runCoreTests();
 runAnalyticsTests();
@@ -21,6 +21,6 @@ it('Audio player embed', () => {
   const audioPlayerIframe = document.querySelector('amp-iframe');
 
   expect(audioPlayerIframe.getAttribute('src')).toMatchInlineSnapshot(
-    `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"`,
+    `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"`,
   );
 });

@@ -3,6 +3,6 @@
  * @pathname /arabic
  */
 
-import runFullPageHtmlTest from '../../../common/fullPageHtml';
+import runFullPageHtmlTest from '../../common/fullPageHtml';
 
 runFullPageHtmlTest();
