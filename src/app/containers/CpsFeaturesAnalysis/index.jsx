@@ -2,24 +2,24 @@ import React, { useContext } from 'react';
 import { arrayOf, shape } from 'prop-types';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
-import topStories from '#pages/StoryPage/topStories.json';
+import featuresAnalysis from '#pages/StoryPage/featuresAnalysis.json';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import StoryPromo from '../StoryPromo';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 
-const TopStories = ({ content }) => {
+const FeaturesAnalysis = ({ content }) => {
   const { dir } = useContext(ServiceContext);
 
   const singleTransform = (promo) => (
-    <StoryPromo item={promo} dir={dir} displayImage={false} />
+    <StoryPromo item={promo} dir={dir} displayImage />
   );
 
   const listTransform = (items) => (
     <StoryPromoUl>
       {items.map((item) => (
         <StoryPromoLi key={item.id || item.uri}>
-          {singleTransform(item)}
+          <StoryPromo item={item} dir={dir} displayImage />
         </StoryPromoLi>
       ))}
     </StoryPromoUl>
@@ -27,8 +27,8 @@ const TopStories = ({ content }) => {
 
   return (
     <CpsOnwardJourney
-      labelId="top-stories-heading"
-      title="Top Stories"
+      labelId="features-analysis-heading"
+      title="Features &amp; Analysis"
       content={content}
       enableGridWrapper={false}
       singleTransform={singleTransform}
@@ -37,12 +37,12 @@ const TopStories = ({ content }) => {
   );
 };
 
-TopStories.propTypes = {
+FeaturesAnalysis.propTypes = {
   content: arrayOf(shape(storyItem)),
 };
 
-TopStories.defaultProps = {
-  content: topStories, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
+FeaturesAnalysis.defaultProps = {
+  content: featuresAnalysis, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
 };
 
-export default TopStories;
+export default FeaturesAnalysis;
