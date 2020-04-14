@@ -3426,12 +3426,12 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/serbian/cyr/23279016'],
+            paths: ['/serbian/cyr/23279016'], // video
             enabled: true,
           },
           local: {
-            paths: ['/serbian/cyr/23279016'], // Once support for variants is available: '/serbian/cyr/srbija-49427344'
-            enabled: false,
+            paths: ['/serbian/cyr/23279016'], // video
+            enabled: true,
           },
         },
         smoke: false,
@@ -3537,12 +3537,12 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/serbian/lat/23279016'],
+            paths: ['/serbian/lat/23279016'], // video
             enabled: true,
           },
           local: {
-            paths: ['/serbian/lat/23279016'],
-            enabled: false,
+            paths: ['/serbian/lat/23279016'], // video
+            enabled: true,
           },
         },
         smoke: false,
@@ -4687,14 +4687,17 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/ukchina/simp/23279012', // CPS
-              '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2
+              '/ukchina/simp/23279012', // CPS video
+              '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
             enabled: true,
           },
           local: {
-            paths: ['/ukchina/simp/23279012'],
-            enabled: false,
+            paths: [
+              '/ukchina/simp/23279012', // CPS video
+              '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -4807,8 +4810,11 @@ module.exports = () => ({
             enabled: true,
           },
           local: {
-            paths: ['/ukchina/trad/23279012'], // Enable once variants supported '/ukchina/trad/49375846'
-            enabled: false,
+            paths: [
+              '/ukchina/trad/23279012', // CPS video
+              '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5548,12 +5554,16 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/zhongwen/simp/uk-23283128'],
+            paths: [
+              '/zhongwen/simp/uk-23283128', // Audio
+            ],
             enabled: true,
           },
           local: {
-            paths: ['/zhongwen/simp/uk-23283128'],
-            enabled: false,
+            paths: [
+              '/zhongwen/simp/uk-23283128', // Audio
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5659,12 +5669,12 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/zhongwen/trad/uk-23283128'],
+            paths: ['/zhongwen/trad/uk-23283128'], // Audio
             enabled: true,
           },
           local: {
-            paths: ['/zhongwen/trad/uk-23283128'], // Once variant support is available '/zhongwen/trad/chinese-news-49631219'
-            enabled: false,
+            paths: ['/zhongwen/trad/uk-23283128'], // Audio
+            enabled: true,
           },
         },
         smoke: false,
