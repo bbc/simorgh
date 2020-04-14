@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
+exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
 .c2 {
   height: 165px;
   position: relative;
@@ -60,7 +60,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko/amp"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko/amp"
               title="Audio player"
             >
               <amp-img
@@ -82,7 +82,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for amp 1`] = `
 </html>
 `;
 
-exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
+exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] = `
 .c2 {
   height: 165px;
   position: relative;
@@ -141,7 +141,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
         allowfullscreen=""
         class="c3"
         scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/externalId/id/ko"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko"
         title="Audio player"
       />
       <noscript />
@@ -150,7 +150,7 @@ exports[`MediaPageBlocks LiveRadio should render correctly for canonical 1`] = `
 </div>
 `;
 
-exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for amp 1`] = `
+exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for amp 1`] = `
 <html>
   <head>
     <script
@@ -210,7 +210,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
               layout="fill"
               sandbox="allow-scripts allow-same-origin"
               scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om/amp"
+              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp"
               title="Audio player"
             >
               <amp-img
@@ -232,7 +232,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
 </html>
 `;
 
-exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for canonical 1`] = `
+exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for canonical 1`] = `
 .c2 {
   height: 165px;
   position: relative;
@@ -291,7 +291,7 @@ exports[`MediaPageBlocks LiveRadio when externalId is bbc_oromo_radio it is over
         allowfullscreen=""
         class="c3"
         scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_afaanoromoo_radio/id/om"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om"
         title="Audio player"
       />
       <noscript />
