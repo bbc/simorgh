@@ -246,7 +246,7 @@ export const service = {
       },
       {
         title: 'Nishadi',
-        url: '/hausa/topics/cg726kz37wdt',
+        url: '/hausa/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
       },
       {
         title: 'Cikakkun Rahotanni',
