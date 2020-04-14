@@ -13,6 +13,17 @@ export default ({ skipToContentText, headlineText }) => {
         expect(skipToContentEl.getAttribute('href')).toBe('#content');
         expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
       });
+
+      if (headlineText) {
+        it('I can see a headline in the main content of the page', () => {
+          const { getByText } = within(
+            page.document.querySelector('h1[id="content"]'),
+          );
+          const mainContentEl = getByText(headlineText);
+
+          expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
+        });
+      }
     });
   });
 };
