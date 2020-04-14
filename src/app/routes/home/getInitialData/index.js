@@ -34,6 +34,7 @@ export default async ({ path, service, variant }) => {
 
   const pageHasRadioSchedule = hasRadioSchedule && radioScheduleOnFrontPage;
 
+  // const { json, ...rest } = await fetchPageData(path);
   const { json, ...rest } = pageHasRadioSchedule
     ? await withRadioSchedule(fetchPageData(path), service, path)
     : await fetchPageData(path);

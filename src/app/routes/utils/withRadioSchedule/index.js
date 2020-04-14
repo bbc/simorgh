@@ -25,12 +25,10 @@ const withRadioSchedules = async (pageDataPromise, service, path) => {
     service,
     env: SIMORGH_APP_ENV,
     queryString: getQueryString(path),
+    baseUrl: SIMORGH_BASE_URL,
   });
 
-  // add the base url in the above function rather than concatenting here
-  const radioSchedulePromise = fetchData(
-    `${SIMORGH_BASE_URL}${radioScheduleUrl}`,
-  );
+  const radioSchedulePromise = fetchData(radioScheduleUrl);
 
   const [{ json, ...rest }, radioScheduleResponse] = await Promise.all([
     pageDataPromise,
