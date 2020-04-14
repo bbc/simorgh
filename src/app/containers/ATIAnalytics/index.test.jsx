@@ -5,7 +5,7 @@ import { isNull, suppressPropWarnings } from '@bbc/psammead-test-helpers';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import mapAssetData from '#pages/MediaAssetPage/fixtureData.json';
 import pglAssetData from '#pages/PhotoGalleryPage/fixtureData.json';
-import styAssetData from '#pages/StoryPage/fixtureData.json';
+import styAssetData from '#pages/StoryPage/fixtureData/mundo.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ATIAnalytics from '.';
