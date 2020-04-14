@@ -14,12 +14,13 @@ const defaultToggles = {
 
 const label = 'Include';
 const options = {
-  idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
+  idt2:
+    'https://www.test.bbc.com/ws/includes/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/html',
   vj:
     'https://www.test.bbc.com/ws/includes/include/vjamericas/169-brazil-pensions-reform/portuguese/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app-pensoes_ui943.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app-pensoes_ui943.png',
 };
 const defaultValue =
-  'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html';
+  'https://www.test.bbc.com/ws/includes/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/html';
 const groupId = 'GROUP-ID1';
 
 const multipleOptions = {
