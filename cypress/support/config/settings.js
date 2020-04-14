@@ -3374,7 +3374,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/cyr/23279016'],
             enabled: false,
           },
           local: {
