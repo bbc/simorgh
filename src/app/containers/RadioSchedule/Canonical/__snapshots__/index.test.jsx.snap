@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical RadioSchedule renders correctly for a service with a radio schedule and page frequency URL 1`] = `
+exports[`Canonical RadioSchedule With initial data renders correctly for a service with initial data 1`] = `
 .c15 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -1278,7 +1278,7 @@ exports[`Canonical RadioSchedule renders correctly for a service with a radio sc
 </section>
 `;
 
-exports[`Canonical RadioSchedule renders correctly for a service with initial data 1`] = `
+exports[`Canonical RadioSchedule Without initial data renders correctly for a service with a radio schedule and page frequency URL 1`] = `
 .c15 {
   vertical-align: middle;
   margin: 0 0.25rem;
