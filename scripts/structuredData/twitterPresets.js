@@ -1,9 +1,9 @@
-import {
+const {
   getImageSrc,
   getImageAltText,
   getDescription,
   getTitle,
-} from './utilities';
+} = require('./utilities');
 
 const twitterPresets = (jsonData, serviceConfig) => {
   return {
@@ -57,4 +57,4 @@ const twitterPresets = (jsonData, serviceConfig) => {
   };
 };
 
-export default twitterPresets;
+module.exports = twitterPresets;

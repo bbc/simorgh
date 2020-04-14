@@ -1,14 +1,18 @@
-import path from 'ramda/src/path';
-import { getImageParts } from '../../src/app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
+const path = require('ramda/src/path');
 
 const isCps = (jsonData) => jsonData.promo.type === 'cps';
 
+const removeLeadingSlash = (string) => string.replace(/^\/+/, '');
+
 const getBrandedImage = ({ service, imagePath }) => {
-  const [, locator] = getImageParts(imagePath);
+  const pathWithoutLeadingSlash = removeLeadingSlash(imagePath);
+  const [, ...locatorParts] = pathWithoutLeadingSlash.split('/');
+  const locator = locatorParts.join('/');
+
   return `http://ichef.test.bbci.co.uk/news/1024/branded_${service}/${locator}`;
 };
 
-export const getImageSrc = (jsonData, serviceConfig) => {
+const getImageSrc = (jsonData, serviceConfig) => {
   const imagePath = path(['promo', 'indexImage', 'path'], jsonData);
 
   return imagePath && isCps(jsonData)
@@ -16,7 +20,7 @@ export const getImageSrc = (jsonData, serviceConfig) => {
     : serviceConfig.defaultImage;
 };
 
-export const getImageAltText = (jsonData, serviceConfig) => {
+const getImageAltText = (jsonData, serviceConfig) => {
   const indexImage = path(['promo', 'indexImage'], jsonData);
 
   return indexImage && isCps(jsonData) && indexImage.altText
@@ -24,13 +28,13 @@ export const getImageAltText = (jsonData, serviceConfig) => {
     : serviceConfig.defaultImageAltText;
 };
 
-export const getDescription = (jsonData) => {
+const getDescription = (jsonData) => {
   const promoSummary = path(['promo', 'summary'], jsonData);
   const metadataSummary = path(['metadata', 'summary'], jsonData);
   return promoSummary || metadataSummary;
 };
 
-export const getTitle = (jsonData, serviceConfig) => {
+const getTitle = (jsonData, serviceConfig) => {
   const headline = path(['promo', 'headlines', 'headline'], jsonData);
   const seoHeadline = path(['promo', 'headlines', 'seoHeadline'], jsonData);
   const { frontPageTitle } = serviceConfig;
@@ -49,4 +53,11 @@ export const getTitle = (jsonData, serviceConfig) => {
   return `${pageTypeTitle[jsonData.metadata.type]} - ${
     serviceConfig.brandName
   }`;
+};
+
+module.s = {
+  getImageSrc,
+  getImageAltText,
+  getDescription,
+  getTitle,
 };

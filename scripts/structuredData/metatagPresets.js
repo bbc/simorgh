@@ -1,4 +1,4 @@
-import { getDescription } from './utilities';
+const { getDescription } = require('./utilities');
 
 const getTileImage = (serviceConfig) => {
   return `https://news.files.bbci.co.uk/include/articles/public/${serviceConfig.service}/images/icons/icon-144x144.png`;
@@ -74,4 +74,4 @@ const metatagPresets = (jsonData, serviceConfig) => {
   };
 };
 
-export default metatagPresets;
+module.exports = metatagPresets;

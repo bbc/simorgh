@@ -1,9 +1,9 @@
-import {
+const {
   getImageSrc,
   getImageAltText,
   getDescription,
   getTitle,
-} from './utilities';
+} = require('./utilities');
 
 const getType = (jsonData) => {
   return jsonData.promo.type === 'cps' ? 'article' : 'website';
@@ -79,4 +79,4 @@ const facebookPresets = (jsonData, serviceConfig, url) => {
   };
 };
 
-export default facebookPresets;
+module.exports = facebookPresets;
