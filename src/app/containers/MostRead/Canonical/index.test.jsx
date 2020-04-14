@@ -1,99 +1,191 @@
 import React from 'react';
-import { render, wait } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import arabicMostReadData from '#data/arabic/mostRead';
-import { service as arabicConfig } from '#app/lib/config/services/arabic';
+import pidginMostReadData from '#data/pidgin/mostRead';
+import nepaliMostReadData from '#data/nepali/mostRead';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
   setStaleLastRecordTimeStamp,
-  MostReadWithContext,
 } from '../utilities/testHelpers';
+import CanonicalMostRead from '.';
 
-const services = {
-  arabic: {
-    variant: null,
-    data: arabicMostReadData,
-    config: arabicConfig.default,
-    expectedLastUpdated: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
-  },
-};
+/* eslint-disable react/prop-types */
+const MostReadCanonicalWithContext = ({
+  service,
+  endpoint,
+  initialData,
+  wrapper,
+}) => (
+  <ServiceContextProvider service={service}>
+    <CanonicalMostRead
+      endpoint={endpoint}
+      initialData={initialData}
+      wrapper={wrapper}
+    />
+  </ServiceContextProvider>
+);
 
 describe('MostReadContainerCanonical', () => {
   afterEach(() => {
     fetch.resetMocks();
   });
 
-  Object.keys(services).forEach((service) => {
-    it(`should render items without timestamps for ${service}`, async () => {
-      const { variant, data: mostReadData, config } = services[service];
-      const { header, numberOfItems } = config.mostRead;
+  [
+    {
+      description: 'should render 10 list items for pidgin from fetched data',
+      service: 'pidgin',
+      numberOfItems: 10,
+      mostReadData: pidginMostReadData,
+      endpoint: 'www.test.bbc.com/pidgin/mostread.json',
+    },
+    {
+      description: 'should render 5 list items for nepali from server data',
+      service: 'nepali',
+      numberOfItems: 5,
+      mostReadData: nepaliMostReadData,
+      endpoint: 'www.test.bbc.com/nepali/mostread.json',
+      initialData: nepaliMostReadData,
+    },
+  ].forEach(
+    ({
+      description,
+      service,
+      numberOfItems,
+      mostReadData,
+      endpoint,
+      initialData,
+    }) => {
+      it(description, async () => {
+        fetch.mockResponse(
+          JSON.stringify(setFreshPromoTimestamp(mostReadData)),
+        );
 
-      fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
+        let container;
+        await act(async () => {
+          container = await render(
+            <MostReadCanonicalWithContext
+              service={service}
+              endpoint={endpoint}
+              initialData={initialData}
+            />,
+          ).container;
+        });
 
-      const { container } = render(
-        <MostReadWithContext
-          service={service}
-          variant={variant}
-          mostReadToggle
-        />,
-      );
-
-      await wait(() => {
-        expect(container.querySelector('h2').textContent).toEqual(header);
         expect(container.querySelectorAll('li').length).toEqual(numberOfItems);
-        expect(container.querySelectorAll('time').length).toEqual(0);
+        expect(container.querySelectorAll('li a').length).toEqual(
+          numberOfItems,
+        );
+
+        if (initialData) {
+          expect(fetch).not.toBeCalled();
+        } else {
+          expect(fetch).toBeCalled();
+        }
       });
-    });
+    },
+  );
 
-    it(`should render items with timestamps as they are older than 60 days for ${service}`, async () => {
-      const {
-        variant,
-        data: mostReadData,
-        config,
-        expectedLastUpdated,
-      } = services[service];
-      const mostReadHeader = config.mostRead.header;
-
+  [
+    {
+      service: 'pidgin',
+      expectedTime: 'De one we dem update for: 11th January 1970',
+      mostReadData: pidginMostReadData,
+    },
+    {
+      service: 'arabic',
+      expectedTime: 'آخر تحديث 11 يناير/ كانون الثاني 1970',
+      mostReadData: arabicMostReadData,
+    },
+  ].forEach(({ service, expectedTime, mostReadData }) => {
+    it(`should render last updated ${service} when promo timestamp is stale`, async () => {
       fetch.mockResponse(JSON.stringify(setStalePromoTimestamp(mostReadData)));
 
-      const { container } = render(
-        <MostReadWithContext
-          service={service}
-          variant={variant}
-          mostReadToggle
-        />,
-      );
-
-      await wait(() => {
-        expect(container.querySelector('h2').textContent).toEqual(
-          mostReadHeader,
-        );
-        expect(container.querySelectorAll('li').length).toEqual(
-          config.mostRead.numberOfItems,
-        );
-        expect(container.querySelectorAll('time')[0].textContent).toEqual(
-          expectedLastUpdated,
-        );
+      let container;
+      await act(async () => {
+        container = await render(
+          <MostReadCanonicalWithContext
+            service={service}
+            endpoint={`www.test.bbc.com/${service}/mostread.json`}
+          />,
+        ).container;
       });
+
+      expect(container.querySelectorAll('time')[0].textContent).toEqual(
+        expectedTime,
+      );
+    });
+  });
+
+  [
+    {
+      service: 'pidgin',
+      mostReadData: pidginMostReadData,
+    },
+    {
+      service: 'arabic',
+      mostReadData: arabicMostReadData,
+    },
+  ].forEach(({ service, mostReadData }) => {
+    it(`should not render last updated for ${service} when promo timestamp is fresh`, async () => {
+      fetch.mockResponse(JSON.stringify(setFreshPromoTimestamp(mostReadData)));
+
+      let container;
+      await act(async () => {
+        container = await render(
+          <MostReadCanonicalWithContext
+            service={service}
+            endpoint={`www.test.bbc.com/${service}/mostread.json`}
+          />,
+        ).container;
+      });
+
+      expect(container.querySelectorAll('time').length).toEqual(0);
     });
 
-    it(`should not render most read when lastRecordTimeStamp is not fresh for ${service}`, async () => {
-      const { variant, data: mostReadData } = services[service];
-
+    it(`should render with wrapper`, async () => {
       fetch.mockResponse(
-        JSON.stringify(setStaleLastRecordTimeStamp(mostReadData)),
-      );
-      const { container } = render(
-        <MostReadWithContext
-          service={service}
-          variant={variant}
-          mostReadToggle
-        />,
+        JSON.stringify(setFreshPromoTimestamp(nepaliMostReadData)),
       );
 
-      await wait(() => {
-        expect(container.innerHTML).toEqual('');
+      /* eslint-disable-next-line react/prop-types */
+      const MockWrapper = ({ children }) => (
+        <div>
+          <h1>Most Read</h1>
+          {children}
+        </div>
+      );
+
+      let container;
+      await act(async () => {
+        container = await render(
+          <MostReadCanonicalWithContext
+            service="nepali"
+            endpoint="www.test.bbc.com/nepali/mostread.json"
+            wrapper={MockWrapper}
+          />,
+        ).container;
       });
+
+      expect(container.querySelector('h1').textContent).toEqual('Most Read');
+    });
+
+    it(`should not render most read when lastRecordTimeStamp is not fresh`, async () => {
+      fetch.mockResponse(
+        JSON.stringify(setStaleLastRecordTimeStamp(arabicMostReadData)),
+      );
+
+      let container;
+      await act(async () => {
+        container = await render(
+          <MostReadCanonicalWithContext
+            service="arabic"
+            endpoint="www.test.bbc.com/arabic/mostread.json"
+          />,
+        ).container;
+      });
+      expect(container).toBeEmpty();
     });
   });
 });
