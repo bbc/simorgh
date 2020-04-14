@@ -2,7 +2,7 @@
 export const formatDateNumeric = 'YYYY-MM-DD';
 
 // 22 March 2019
-export const formatDate = 'D MMMM YYYY';
+export const formatDate = 'LL';
 
 // 22 March 2019, 17:05 BST
-export const formatDateAndTime = 'D MMMM YYYY, HH:mm z';
+export const formatDateAndTime = 'LLL';
