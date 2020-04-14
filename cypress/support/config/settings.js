@@ -5556,12 +5556,14 @@ module.exports = () => ({
           test: {
             paths: [
               '/zhongwen/simp/uk-23283128', // CPS Audio
+              '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
             ],
             enabled: true,
           },
           local: {
             paths: [
               '/zhongwen/simp/uk-23283128', // CPS Audio
+              '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
             ],
             enabled: true,
           },
@@ -5669,11 +5671,17 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/zhongwen/trad/uk-23283128'], // CPS Audio
+            paths: [
+              '/zhongwen/trad/uk-23283128', // CPS Audio
+              '/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
+            ],
             enabled: true,
           },
           local: {
-            paths: ['/zhongwen/trad/uk-23283128'], // CPS Audio
+            paths: [
+              '/zhongwen/trad/uk-23283128', // CPS Audio
+              '/zhongwen/trad/multimedia/2016/11/161107_tc2_testmap1', // TC2 Video
+            ],
             enabled: true,
           },
         },
