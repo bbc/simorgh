@@ -83,7 +83,7 @@ const run = async () => {
     failed: results.map((result) => result.failed).flat(),
     warnings: results.map((result) => result.warnings).flat(),
     optional: results.map((result) => result.optional).flat(),
-    schemas: results.map((result) => result.schemas),
+    schemas: [...new Set(results.map((result) => result.schemas).flat())],
     structuredData: Object.assign(
       ...results.map((result) => result.structuredData),
     ),
