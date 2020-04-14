@@ -30,10 +30,10 @@ const withRadioSchedules = async (pageDataPromise, service, path) => {
 
   const radioSchedulePromise = fetchData(radioScheduleUrl);
 
-  const [{ json, ...rest }, radioScheduleResponse] = await Promise.all([
-    pageDataPromise,
-    radioSchedulePromise,
-  ]);
+  const [
+    { json: pageJSON, ...rest },
+    radioScheduleResponse,
+  ] = await Promise.all([pageDataPromise, radioSchedulePromise]);
 
   const radioScheduleData = processRadioSchedule(
     radioScheduleResponse.json,
@@ -43,7 +43,7 @@ const withRadioSchedules = async (pageDataPromise, service, path) => {
 
   return {
     ...rest,
-    json: { ...json, radioScheduleData },
+    ...(pageJSON && { json: { ...pageJSON, radioScheduleData } }),
   };
 };
 
