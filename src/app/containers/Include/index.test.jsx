@@ -12,7 +12,7 @@ const defaultToggleState = {
 
 const toggleStateFalse = {
   include: {
-    enabled: true,
+    enabled: false,
   },
 };
 
