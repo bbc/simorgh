@@ -2,6 +2,7 @@
 /* eslint-disable no-console */
 const fetch = require('node-fetch');
 const { structuredDataTest } = require('structured-data-testing-tool');
+const { Google } = require('structured-data-testing-tool/presets');
 const { printTestResults } = require('structured-data-testing-tool/lib/cli');
 
 const twitterPresets = require('./twitterPresets');
@@ -36,8 +37,7 @@ const validate = async (url, serviceConfig) => {
 
   try {
     result = await structuredDataTest(url, {
-      presets: [...presets],
-      auto: false,
+      presets: [Google, ...presets],
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
