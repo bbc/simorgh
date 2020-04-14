@@ -34,6 +34,8 @@ export const getType = (pageType, shorthand = false) => {
       return 'article-media-asset';
     case 'media':
       return 'Live Radio';
+    case 'mostRead':
+      return 'Most Read';
     default:
       return null;
   }
