@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser And using AMP I can see the server-rendered HTML 1`] = `
 <html lang="ar"
       dir="rtl"
       amp
@@ -4522,7 +4522,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
 </html>
 `;
 
-exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser And using Canonical I can see the server-rendered HTML 1`] = `
 <html lang="ar"
       class="no-js"
       dir="rtl"
