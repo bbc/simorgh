@@ -297,12 +297,12 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                   <h2 dir="ltr"
                       class="Title-sc-7g3fro-2 bTxfUP"
                   >
-                    개인정보와 쿠키 처리방침을 변경했습니다
+                    개인 정보와 쿠키 처리 방침이 업데이트되었습니다
                   </h2>
                   <p dir="ltr"
                      class="ConsentBannerText-sc-7g3fro-4 keksKX"
                   >
-                    변경된 개인정보와 쿠키 처리방침이 이용자에게 어떤 영향을 미칠지 알려드립니다
+                    개인 정보와 쿠키 처리 방침에서 주요 변경 사항과 이 변경 사항이 이용자와 이용자의 정보에 가질 영향에 대해 알려드리고자 합니다.
                   </p>
                   <ul dir="ltr"
                       class="Options-sc-7g3fro-3 iOCwEu"
@@ -313,7 +313,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                       <button type="button"
                               on="tap:cookie.show, privacy.hide"
                       >
-                        알겠습니다
+                        네
                       </button>
                     </li>
                     <li dir="ltr"
@@ -339,16 +339,16 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                   <h2 dir="ltr"
                       class="Title-sc-7g3fro-2 bTxfUP"
                   >
-                    쿠키생성에 동의하시나요
+                    쿠키 수집에 동의하십니까?
                   </h2>
                   <p dir="ltr"
                      class="ConsentBannerText-sc-7g3fro-4 keksKX"
                   >
-                    BBC는 이용자의 최적의 온라인 경험을 위해
+                    BBC는 이용자에게 최적의 온라인 경험을 제공하기 위해
                     <a href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/">
                       쿠키
                     </a>
-                    정보를 수집합니다. 쿠키생성에 동의하시는지 알려주세요
+                    정보를 이용합니다. 쿠키 수집에 동의하십니까?
                   </p>
                   <ul dir="ltr"
                       class="Options-sc-7g3fro-3 iOCwEu"
@@ -370,7 +370,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                          on="tap:consent.reject"
                          data-cookie-banner="reject"
                       >
-                        아니요, 재 세팅 하겠습니다
+                        아니요, 설정 화면으로 이동합니다
                       </a>
                     </li>
                   </ul>
@@ -424,7 +424,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                href="#content"
                class="SkipLink-wmpyxz-0 dUSIGf"
             >
-              내용으로 건너뛰기
+              내용 보기
             </a>
           </div>
         </div>
@@ -610,7 +610,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                             scrolling="no"
                             frameborder="0"
                             src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"
-                            title="Audio player"
+                            title="오디오 플레이어"
                             allowfullscreen="allowfullscreen"
                 >
                   <amp-img layout="fill"
@@ -774,12 +774,12 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
               <span lang="en-GB">
                 ©
               </span>
-              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다
               <a href="https://www.bbc.co.uk/help/web/links/"
                  class="StyledLink-nhmg8j-0 jHQlUp"
               >
                 <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                  외부 링크에 대한 본사 정책 보기
                 </span>
               </a>
             </p>
@@ -1075,7 +1075,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
                href="#content"
                class="SkipLink-wmpyxz-0 dUSIGf"
             >
-              내용으로 건너뛰기
+              내용 보기
             </a>
           </div>
         </div>
@@ -1228,7 +1228,7 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
             <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
-                        title="Audio player"
+                        title="오디오 플레이어"
                         allow="autoplay; fullscreen"
                         scrolling="no"
                         allowfullscreen
@@ -1381,12 +1381,12 @@ exports[`Given I am on the Korean live radio page AMP/Canonical When I view the 
               <span lang="en-GB">
                 ©
               </span>
-              2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.
+              2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다
               <a href="https://www.bbc.co.uk/help/web/links/"
                  class="StyledLink-nhmg8j-0 jHQlUp"
               >
                 <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                  외부 콘텐츠 링크에 대한 본사 정책 보기.
+                  외부 링크에 대한 본사 정책 보기
                 </span>
               </a>
             </p>
