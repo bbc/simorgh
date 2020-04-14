@@ -4,28 +4,9 @@ import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
 
-/* The Include html which we are getting would be encoded
-so that html characters are escaped when serializing the page data.
-This function ensures that it gets decoded back to an html string.
-*/
-const decodeHTML = (str) => {
-  const replacedParts = {
-    '&quot;': '"',
-    '&#39;': "'",
-    '&amp;': '&',
-    '&lt;': '<',
-    '&gt;': '>',
-  };
-  const replacementsRegex = new RegExp(
-    Object.keys(replacedParts).join('|'),
-    'gi',
-  );
-  return str.replace(replacementsRegex, (match) => replacedParts[match]);
-};
-
-const IncludeContainer = ({ html, type }) => {
+const IncludeContainer = ({ html = '', type }) => {
   const { enabled } = useToggle('include');
-  const [includeHtml, setIncludeHtml] = useState(html);
+  const [includeHtml, setIncludeHtml] = useState(html || '');
   const [scriptTags, setScriptsTags] = useState([]);
   const isInitialMount = useRef(true);
 
@@ -33,7 +14,7 @@ const IncludeContainer = ({ html, type }) => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
     } else {
-      setIncludeHtml(html);
+      setIncludeHtml(html || '');
     }
   }, [html]);
 
@@ -41,6 +22,8 @@ const IncludeContainer = ({ html, type }) => {
     idt2: 'idt2',
     vj: 'vj',
   };
+
+  const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
 
   const createAppendScriptTag = (code, src) => {
     return new Promise((resolve, reject) => {
@@ -100,8 +83,6 @@ const IncludeContainer = ({ html, type }) => {
     }
   }, [scriptTags]);
 
-  const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
-
   if (shouldNotRenderInclude) {
     return null;
   }
@@ -110,17 +91,19 @@ const IncludeContainer = ({ html, type }) => {
     <GridItemConstrainedMedium>
       <div
         suppressHydrationWarning
-        dangerouslySetInnerHTML={{ __html: decodeHTML(includeHtml) }}
+        dangerouslySetInnerHTML={{ __html: includeHtml }}
       />
     </GridItemConstrainedMedium>
   );
 };
 
 IncludeContainer.propTypes = {
-  html: string.isRequired,
+  html: string,
   type: string.isRequired,
 };
 
-IncludeContainer.defaultProps = {};
+IncludeContainer.defaultProps = {
+  html: null,
+};
 
 export default IncludeContainer;
