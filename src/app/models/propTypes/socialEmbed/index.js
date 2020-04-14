@@ -1,9 +1,10 @@
-import { string, shape, arrayOf } from 'prop-types';
+import { string, shape, arrayOf, number } from 'prop-types';
 
 const socialEmbedBlockPropTypes = {
   blocks: arrayOf(
     shape({
       type: string.isRequired,
+      indexOfType: number.isRequired,
       model: shape({
         id: string.isRequired,
         href: string.isRequired,
