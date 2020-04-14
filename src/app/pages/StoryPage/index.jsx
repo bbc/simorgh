@@ -20,7 +20,7 @@ import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import TopStories from '#containers/CpsTopStories';
-import FeaturesAnalysis from '#containers/FeaturesAnalysis';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
@@ -197,15 +197,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         enableGelGutters
         margins={gridMargins}
       >
-        <Grid
-          item
-          dir={dir}
-          columns={gridColsMain}
-          startOffset={gridOffset}
-          as="main"
-          role="main"
-        >
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
+          <main role="main">
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          </main>
           <CpsRelatedContent content={relatedContent} />
         </Grid>
         <GridSecondaryColumn
