@@ -345,6 +345,31 @@ describe('StoryPromo Container', () => {
       });
     });
 
+    [
+      {
+        service: 'pashto',
+        expectationFirstJan2020: '۱۱ مرغومی ۱۳۹۸ - جنوري ۱، ۲۰۲۰',
+      },
+      {
+        service: 'persian',
+        expectationFirstJan2020: '۱۱ دی ۱۳۹۸ - ۱ ژانویه ۲۰۲۰',
+      },
+    ].forEach(({ service, expectationFirstJan2020 }) => {
+      it(`should render time element with multiple calendars for ${service} Story Promo`, () => {
+        const firstJan2020 = 1577836800000;
+        const newItem = {
+          ...cpsItem,
+          timestamp: firstJan2020,
+        };
+        const { container } = render(
+          <WrappedStoryPromo service={service} item={newItem} />,
+        );
+        expect(container.getElementsByTagName('time')[0].innerHTML).toEqual(
+          expectationFirstJan2020,
+        );
+      });
+    });
+
     it('should render img with src & alt when platform is canonical', () => {
       const { container } = render(
         <WrappedStoryPromo item={cpsItem} lazyLoadImage={false} />,
