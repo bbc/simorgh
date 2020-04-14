@@ -4686,7 +4686,10 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/ukchina/simp/23279012'],
+            paths: [
+              '/ukchina/simp/23279012', // CPS
+              '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2
+            ],
             enabled: false,
           },
           local: {
@@ -4797,7 +4800,10 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/ukchina/trad/23279012'],
+            paths: [
+              '/ukchina/trad/23279012', // CPS
+              '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2
+            ],
             enabled: false,
           },
           local: {
