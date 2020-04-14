@@ -670,10 +670,10 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
         </script>
       </amp-analytics>
       <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC GelPageGrid-ylca1m-0 StyledGrid-w14rad-2 hKRVOp"
+           class="GridComponent-nf79gm-0 bsUMYC GelPageGrid-ylca1m-0 StyledGrid-w14rad-2 bSgPAN"
       >
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 dAItxV"
+             class="GridComponent-nf79gm-0 cQThrI"
         >
           <main role="main">
             <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
@@ -1001,7 +1001,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
           </section>
         </div>
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
+             class="GridComponent-nf79gm-0 jlvNId GridSecondaryColumn-w14rad-3 hVwiYk"
         >
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
@@ -1865,10 +1865,10 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
         >
       </noscript>
       <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC GelPageGrid-ylca1m-0 StyledGrid-w14rad-2 hKRVOp"
+           class="GridComponent-nf79gm-0 bsUMYC GelPageGrid-ylca1m-0 StyledGrid-w14rad-2 bSgPAN"
       >
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 dAItxV"
+             class="GridComponent-nf79gm-0 cQThrI"
         >
           <main role="main">
             <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
@@ -2184,7 +2184,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
           </section>
         </div>
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
+             class="GridComponent-nf79gm-0 jlvNId GridSecondaryColumn-w14rad-3 hVwiYk"
         >
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
