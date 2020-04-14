@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -95,8 +95,16 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
+  const storyPageGelMaxWidths = css`
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin: 0 auto;
+      max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+    }
+  `;
+
   const StyledGrid = styled(GelPageGrid)`
     flex-grow: 1;
+    ${storyPageGelMaxWidths}
   `;
 
   const GridSecondaryColumn = styled(Grid)`
@@ -146,7 +154,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group2: 1,
     group3: 1,
     group4: 1,
-    group5: 3,
+    group5: 1,
   };
 
   const gridColsMain = {
@@ -155,7 +163,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group2: 8,
     group3: 8,
     group4: 8,
-    group5: 5,
+    group5: 8,
   };
 
   const gridColsSecondary = {
@@ -164,7 +172,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group2: 8,
     group3: 8,
     group4: 4,
-    group5: 3,
+    group5: 4,
   };
 
   return (
@@ -196,6 +204,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         columns={gridColumns}
         enableGelGutters
         margins={gridMargins}
+        hasMaxWidths
       >
         <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
           <main role="main">
