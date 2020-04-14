@@ -669,8 +669,8 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
           {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=70&p=news::pidgin.news.story.51745682.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:53870d86-88c5-6f4d-a260-f97c68606458]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Adams+Oshiomhole+say+'I+still+be+APC+National+Chairman'+-+BBC+News+Pidgin]&x11=[2020-03-04T18:58:43.000Z]&x12=[2020-03-04T19:27:57.000Z]&x13=[Nigeria~Nigeria+politics]&x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~7d65828a-85c1-41f4-96cf-c758da75e401]&x16=[WS%20-%20Keep%20me%20on%20trend~WS%20-%20Update%20me]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
-      <div class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
-           dir="ltr"
+      <div dir="ltr"
+           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 dAItxV"
@@ -1000,8 +1000,8 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
             </div>
           </section>
         </div>
-        <div class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
-             dir="ltr"
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
         >
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
@@ -1864,8 +1864,8 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
              src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=news::pidgin.news.story.51745682.page&amp;x1=[urn:bbc:cps:53870d86-88c5-6f4d-a260-f97c68606458]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Adams+Oshiomhole+say+'I+still+be+APC+National+Chairman'+-+BBC+News+Pidgin]&amp;x11=[2020-03-04T18:58:43.000Z]&amp;x12=[2020-03-04T19:27:57.000Z]&amp;x13=[Nigeria~Nigeria+politics]&amp;x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~7d65828a-85c1-41f4-96cf-c758da75e401]&amp;x16=[WS%20-%20Keep%20me%20on%20trend~WS%20-%20Update%20me]&amp;x17=[News]"
         >
       </noscript>
-      <div class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
-           dir="ltr"
+      <div dir="ltr"
+           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 dAItxV"
@@ -2183,8 +2183,8 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
             </div>
           </section>
         </div>
-        <div class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
-             dir="ltr"
+        <div dir="ltr"
+             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
         >
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
