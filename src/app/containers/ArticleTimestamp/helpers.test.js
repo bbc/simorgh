@@ -111,8 +111,8 @@ describe('ArticleTimestamp helper functions', () => {
       global.Date.now = realDateNow;
     });
     const dateFormats = {
-      date: 'D MMMM YYYY',
-      dateTimeTimezone: 'D MMMM YYYY, HH:mm z',
+      date: 'LL',
+      dateTimeTimezone: 'LLL',
     };
     it(`should return date format when firstPublished is not today`, () => {
       const firstPublished = timestampGenerator({ days: 5 });

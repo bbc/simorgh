@@ -438,14 +438,14 @@ exports[`Media Asset Page should render component 1`] = `
                   class="StyledTimestamp-um718p-0 bAgcOD"
                   datetime="2019-09-13"
                 >
-                  13 September 2019
+                  13th September 2019
                 </time>
                 <div>
                   <time
                     class="StyledTimestamp-um718p-0 bAgcOD"
                     datetime="2019-11-20"
                   >
-                    New Informate 20 November 2019
+                    New Informate 20th November 2019
                   </time>
                 </div>
               </div>
