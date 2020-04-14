@@ -4,12 +4,7 @@ exports[`IncludeContainer should not render any HTML for an unsupported include 
 
 exports[`IncludeContainer should not render any HTML when html prop is empty 1`] = `<div />`;
 
-exports[`IncludeContainer should not render any HTML when html prop is null 1`] = `
-"[31m[1mTest failed because a React warning was detected. Please fix the following:[22m[39m
-[31mWarning: Failed prop type: The prop \`html\` is marked as required in \`IncludeContainer\`, but its value is \`null\`.[39m
-[31m    in IncludeContainer (created by IncludeContainerWithMockContext)[39m
-[31m    in IncludeContainerWithMockContext[39m"
-`;
+exports[`IncludeContainer should not render any HTML when html prop is null 1`] = `<div />`;
 
 exports[`IncludeContainer should not render any HTML when include toggle is disabled 1`] = `
 <div>
