@@ -190,6 +190,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
+      frontPagePosition: 'top-stories',
       header: 'Vipindi vya Redio',
     },
     footer: {
