@@ -46,11 +46,23 @@ describe('IncludeContainer', () => {
   });
 
   it('should not render any HTML when html prop is null', async () => {
+    const factory = () =>
+      render(
+        <IncludeContainerWithMockContext
+          toggleState={defaultToggleState}
+          type="idt2"
+          html={null}
+        />,
+      );
+    expect(factory).toThrowErrorMatchingSnapshot();
+  });
+
+  it('should not render any HTML when html prop is empty', async () => {
     const { container } = render(
       <IncludeContainerWithMockContext
         toggleState={defaultToggleState}
         type="idt2"
-        html={null}
+        html=""
       />,
     );
     expect(container).toMatchSnapshot();
