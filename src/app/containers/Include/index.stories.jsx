@@ -15,7 +15,8 @@ const defaultToggles = {
 const label = 'Include';
 const options = {
   idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
-  vj: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/vj.html',
+  vj:
+    'https://www.test.bbc.com/ws/includes/include/vjamericas/169-brazil-pensions-reform/portuguese/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app-pensoes_ui943.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app-pensoes_ui943.png',
 };
 const defaultValue =
   'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html';
