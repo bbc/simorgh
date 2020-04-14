@@ -1,6 +1,6 @@
 export default () => {
-  it('I can see the data collected with ATI analytics', () => {
-    const noscriptImage = canonical.document.querySelector('noscript img');
+  it('Canonical ATI analytics', () => {
+    const noscriptImage = document.querySelector('noscript img');
 
     expect(noscriptImage.tagName).toEqual('IMG');
     expect(noscriptImage.getAttribute('width')).toEqual('1px');
