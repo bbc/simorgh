@@ -12,7 +12,7 @@ const getBrandedImage = ({ service, imagePath }) => {
   return `http://ichef.test.bbci.co.uk/news/1024/branded_${service}/${locator}`;
 };
 
-const getImageSrc = (jsonData, serviceConfig) => {
+const getImageSrc = (jsonData, serviceConfig = {}) => {
   const imagePath = path(['promo', 'indexImage', 'path'], jsonData);
 
   return imagePath && isCps(jsonData)
@@ -20,7 +20,7 @@ const getImageSrc = (jsonData, serviceConfig) => {
     : serviceConfig.defaultImage;
 };
 
-const getImageAltText = (jsonData, serviceConfig) => {
+const getImageAltText = (jsonData, serviceConfig = {}) => {
   const indexImage = path(['promo', 'indexImage'], jsonData);
 
   return indexImage && isCps(jsonData) && indexImage.altText
@@ -34,7 +34,7 @@ const getDescription = (jsonData) => {
   return promoSummary || metadataSummary;
 };
 
-const getTitle = (jsonData, serviceConfig) => {
+const getTitle = (jsonData, serviceConfig = {}) => {
   const headline = path(['promo', 'headlines', 'headline'], jsonData);
   const seoHeadline = path(['promo', 'headlines', 'seoHeadline'], jsonData);
   const { frontPageTitle } = serviceConfig;
@@ -55,7 +55,7 @@ const getTitle = (jsonData, serviceConfig) => {
   }`;
 };
 
-module.s = {
+module.exports = {
   getImageSrc,
   getImageAltText,
   getDescription,

@@ -5,11 +5,11 @@ const {
   getTitle,
 } = require('./utilities');
 
-const twitterPresets = (jsonData, serviceConfig) => {
+const twitterPresets = ({ jsonData, serviceConfig = {}, url }) => {
   return {
     name: 'Twitter',
     description: 'Twitter Presets',
-    group: 'Twitter',
+    group: `Twitter: ${url}`,
     tests: [
       {
         test: '"twitter:card"',

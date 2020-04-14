@@ -1,17 +1,12 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
-import fetch from 'node-fetch';
-import { Google } from 'structured-data-testing-tool/presets';
-import { cyan, blue, red } from 'chalk';
-import { structuredDataTest } from 'structured-data-testing-tool';
+const fetch = require('node-fetch');
+const { structuredDataTest } = require('structured-data-testing-tool');
+const { printTestResults } = require('structured-data-testing-tool/lib/cli');
 
-import twitterPresets from './twitterPresets';
-import facebookPresets from './facebookPresets';
-import metatagPresets from './metatagPresets';
-
-import getPaths from '../../cypress/support/helpers/getPaths';
-import services from '../../cypress/support/config/services';
-import appConfig from '../../src/server/utilities/serviceConfigs';
+const twitterPresets = require('./twitterPresets');
+const facebookPresets = require('./facebookPresets');
+const metatagPresets = require('./metatagPresets');
 
 global.Cypress = {
   env: () => {
@@ -19,30 +14,14 @@ global.Cypress = {
   },
 };
 
-const testSummary = (test) => {
-  return `${test.group ? test.group : ''} ${
-    test.description ? test.description : ''
-  }`;
-};
-
-const testDetails = (test) => {
-  return `${test.test} = ${JSON.stringify(test.value)}`;
-};
-
-const errorDetails = (test) => {
-  const { error, expect } = test;
-  if (error) {
-    return `${cyan(error.message)}\n\tExpected: ${JSON.stringify(
-      expect,
-    )}\n\tActual: ${JSON.stringify(error.found)}`;
-  }
-};
+const getPaths = require('../../cypress/support/helpers/getPaths');
+const services = require('../../cypress/support/config/services');
 
 const getPresets = (jsonData, serviceConfig, url) => {
   return [
-    twitterPresets(jsonData, serviceConfig),
-    facebookPresets(jsonData, serviceConfig, url),
-    metatagPresets(jsonData, serviceConfig),
+    twitterPresets({ jsonData, serviceConfig, url }),
+    facebookPresets({ jsonData, serviceConfig, url }),
+    metatagPresets({ jsonData, serviceConfig, url }),
   ];
 };
 
@@ -57,7 +36,8 @@ const validate = async (url, serviceConfig) => {
 
   try {
     result = await structuredDataTest(url, {
-      presets: [Google, ...presets],
+      presets: [...presets],
+      auto: false,
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
@@ -68,61 +48,50 @@ const validate = async (url, serviceConfig) => {
   return result;
 };
 
-expect.extend({
-  hasCorrectMetadata(test) {
-    const { passed: pass } = test;
-    const passMessage = `${blue(testSummary(test))}\n\t${cyan(
-      testDetails(test),
-    )}`;
-
-    const failMessage = `${blue(testSummary(test))}\n\t${red(
-      errorDetails(test),
-    )}`;
-
-    return {
-      message: () => (pass ? passMessage : failMessage),
-      pass,
-    };
-  },
-});
-
-const checkStructuredData = () => {
+const getUrls = () => {
+  const urlsToValidate = {};
   Object.keys(services).forEach((service) => {
-    const { name: serviceName, variant } = services[service];
-    const serviceConfig =
-      appConfig[serviceName] && appConfig[serviceName][variant];
+    urlsToValidate[service] = [];
     Object.keys(services[service].pageTypes)
       .filter((pageType) => !pageType.startsWith('error'))
       .forEach((pageType) => {
         const paths = getPaths(service, pageType);
-        paths.forEach((path) => {
-          const url = `http://localhost:7080${path}`;
-          const pageTypeUrl = `${pageType} - ${url}`;
+        const urls = paths.map((path) => `http://localhost:7080${path}`);
 
-          describe(`${pageTypeUrl}`, () => {
-            let result;
-            let allTests;
-
-            beforeEach(async () => {
-              result = await validate(url, serviceConfig);
-
-              allTests = [
-                ...result.passed,
-                ...result.warnings,
-                ...result.failed,
-              ];
-            });
-
-            it('should have correct metadata & structured data', () => {
-              expect(allTests).not.toBeUndefined();
-              allTests.forEach((test) => {
-                expect(test).hasCorrectMetadata();
-              });
-            });
-          });
-        });
+        urlsToValidate[service] = [urlsToValidate[service], urls].flat();
       });
+  });
+  return urlsToValidate;
+};
+
+const checkStructuredData = async (urls) => {
+  const urlsToValidate = Object.values(urls).flat();
+
+  return Promise.all(urlsToValidate.map((url) => validate(url)))
+    .then((results) => {
+      return results;
+    })
+    .catch((error) => console.error(error));
+};
+
+const run = async () => {
+  const results = await checkStructuredData(getUrls());
+
+  const overallResult = {
+    tests: results.map((result) => result.tests).flat(),
+    passed: results.map((result) => result.passed).flat(),
+    failed: results.map((result) => result.failed).flat(),
+    warnings: results.map((result) => result.warnings).flat(),
+    optional: results.map((result) => result.optional).flat(),
+    schemas: results.map((result) => result.schemas),
+    structuredData: Object.assign(
+      ...results.map((result) => result.structuredData),
+    ),
+  };
+
+  printTestResults(overallResult, {
+    showInfo: true,
   });
 };
 
-checkStructuredData();
+run();

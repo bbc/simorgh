@@ -4,11 +4,11 @@ const getTileImage = (serviceConfig) => {
   return `https://news.files.bbci.co.uk/include/articles/public/${serviceConfig.service}/images/icons/icon-144x144.png`;
 };
 
-const metatagPresets = (jsonData, serviceConfig) => {
+const metatagPresets = ({ jsonData, serviceConfig = {}, url }) => {
   return {
     name: 'Metatags',
     description: 'Metatags Presets',
-    group: 'Metatags',
+    group: `Metatags: ${url}`,
     tests: [
       {
         test: '"X-UA-Compatible"',

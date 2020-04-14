@@ -9,21 +9,21 @@ const getType = (jsonData) => {
   return jsonData.promo.type === 'cps' ? 'article' : 'website';
 };
 
-const facebookPresets = (jsonData, serviceConfig, url) => {
+const facebookPresets = ({ jsonData, serviceConfig = {}, url }) => {
   return {
     name: 'Facebook',
     description: 'Facebook Presets',
-    group: 'Facebook',
+    group: `Facebook: ${url}`,
     tests: [
       {
         test: '"fb:admins"',
-        description: 'must have admin id',
+        description: 'must have Facebook admin id',
         type: 'metatag',
         expect: '100004154058350',
       },
       {
         test: '"fb:app_id"',
-        description: 'must have application id',
+        description: 'must have Facebook application id',
         type: 'metatag',
         expect: '1609039196070050',
       },
