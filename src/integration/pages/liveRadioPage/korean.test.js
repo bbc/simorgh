@@ -122,7 +122,6 @@ describe('Given I am on the Korean Live Radio page', () => {
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
       skipToContentText: '내용으로 건너뛰기',
-      headlineText: 'BBC 코리아 라디오',
     });
   });
 

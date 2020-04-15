@@ -149,7 +149,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/ko',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko',
     );
   });
 
@@ -172,7 +172,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/w3cszwcg/ko/amp',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp',
     );
   });
 

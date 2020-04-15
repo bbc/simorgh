@@ -615,7 +615,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
             ዝግጅቶቻችንን’
           </p>
           <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
-            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <amp-iframe sandbox="allow-scripts allow-same-origin"
                             layout="fill"
@@ -643,7 +643,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
                       >
                       <div class="MessageWrapper-sc-1pnftlt-1 CXSTp">
                         <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                          This audio cannot play in your browser. Please enable JavaScript or try a different browser.
+                          የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።
                         </strong>
                       </div>
                     </div>
@@ -1247,7 +1247,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
             ዝግጅቶቻችንን’
           </p>
           <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
-            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                         title="Audio player"
@@ -1261,7 +1261,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
                   <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
                     <div class="MessageWrapper-sc-1pnftlt-1 CXSTp">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        This audio cannot play in your browser. Please enable JavaScript or try a different browser.
+                        የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።
                       </strong>
                     </div>
                   </div>

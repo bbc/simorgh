@@ -121,7 +121,6 @@ describe('Given I am on the Amharic Live Radio page', () => {
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
       skipToContentText: 'ወደ ዋናው ይዘት ይለፉ',
-      headlineText: 'ያድምጡ',
     });
   });
 

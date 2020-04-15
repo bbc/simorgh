@@ -603,7 +603,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
             세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다
           </p>
           <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
-            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <amp-iframe sandbox="allow-scripts allow-same-origin"
                             layout="fill"
@@ -631,7 +631,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
                       >
                       <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
                         <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                          This audio cannot play in your browser. Please enable JavaScript or try a different browser.
+                          사용 기기에서 미디어 재생이 지원되지 않습니다
                         </strong>
                       </div>
                     </div>
@@ -1225,7 +1225,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
             세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다
           </p>
           <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
-            <div class="InnerWrapper-sc-14jc12g-1 jOkzyC">
+            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
               <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
                 <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
                         title="Audio player"
@@ -1239,7 +1239,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
                   <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
                     <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        This audio cannot play in your browser. Please enable JavaScript or try a different browser.
+                        사용 기기에서 미디어 재생이 지원되지 않습니다
                       </strong>
                     </div>
                   </div>

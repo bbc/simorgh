@@ -1115,9 +1115,9 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                aria-labelledby="related-content-heading"
                class="GridWrapper-sc-12lwanc-0 hgpaqH"
       >
-        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
-          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
-            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -1164,7 +1164,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/tori-23145776"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         Police Arrest 3 ontop Anambra Church Attack
@@ -1208,7 +1208,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/tori-23143754"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
@@ -1266,7 +1266,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/23146654"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         <span role="text">
@@ -1342,7 +1342,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/media-23147054"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         <span role="text">
@@ -2458,9 +2458,9 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                aria-labelledby="related-content-heading"
                class="GridWrapper-sc-12lwanc-0 hgpaqH"
       >
-        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
-          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR">
-            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc">
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -2501,7 +2501,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/tori-23145776"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         Police Arrest 3 ontop Anambra Church Attack
@@ -2539,7 +2539,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/tori-23143754"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
@@ -2597,7 +2597,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/23146654"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         <span role="text">
@@ -2667,7 +2667,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                        class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
                   >
                     <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                      <a href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                      <a href="/pidgin/media-23147054"
                          class="Link-sc-1dvfmi3-5 yQgSu"
                       >
                         <span role="text">
