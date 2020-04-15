@@ -559,7 +559,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
     <h2
       class="c2"
     >
-      <span
+      <div
         class="c3"
       >
         <span
@@ -573,7 +573,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             الأكثر قراءة
           </span>
         </span>
-      </span>
+      </div>
     </h2>
   </div>
   <div

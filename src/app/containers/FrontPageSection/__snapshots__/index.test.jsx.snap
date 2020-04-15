@@ -699,7 +699,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
     <h2
       class="c3"
     >
-      <span
+      <div
         class="c4"
       >
         <span
@@ -713,7 +713,7 @@ exports[`FrontPageSection Container snapshots should render correctly for canoni
             Top Stories
           </span>
         </span>
-      </span>
+      </div>
     </h2>
   </div>
   <div
@@ -1661,7 +1661,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
     <h2
       class="c3"
     >
-      <span
+      <div
         class="c4"
       >
         <span
@@ -1675,7 +1675,7 @@ exports[`FrontPageSection Container snapshots should render correctly with a lin
             Top Stories
           </span>
         </span>
-      </span>
+      </div>
     </h2>
   </div>
   <ul
@@ -2174,7 +2174,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
     <h2
       class="c3"
     >
-      <span
+      <div
         class="c4"
       >
         <span
@@ -2188,7 +2188,7 @@ exports[`FrontPageSection Container snapshots should render with only one item 1
             Top Stories
           </span>
         </span>
-      </span>
+      </div>
     </h2>
   </div>
   <div
@@ -2897,7 +2897,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
     <h2
       class="c2"
     >
-      <span
+      <div
         class="c3"
       >
         <span
@@ -2911,7 +2911,7 @@ exports[`FrontPageSection Container snapshots should render without a bar 1`] = 
             Top Stories
           </span>
         </span>
-      </span>
+      </div>
     </h2>
   </div>
   <ul

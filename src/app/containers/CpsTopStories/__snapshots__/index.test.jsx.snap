@@ -19,7 +19,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <span
+          <div
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -33,7 +33,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 Top Stories
               </span>
             </span>
-          </span>
+          </div>
         </h2>
       </div>
       <ul
@@ -135,7 +135,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         <h2
           class="Heading-sc-1x4gwjz-2 eZofTG"
         >
-          <span
+          <div
             class="FlexColumn-wx5kdp-0 dgpsiS"
           >
             <span
@@ -149,7 +149,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 Top Stories
               </span>
             </span>
-          </span>
+          </div>
         </h2>
       </div>
       <div
