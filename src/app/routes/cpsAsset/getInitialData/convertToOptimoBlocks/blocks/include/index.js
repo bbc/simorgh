@@ -42,7 +42,10 @@ const fetchMarkup = async (url) => {
   }
 };
 
-const convertInclude = async ({ href, type, ...rest }) => {
+const convertInclude = async ({ href: fullHref, type, ...rest }) => {
+  // We want to strip and remove the GET parameters from the include href
+  const [href] = fullHref.split('?');
+
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
@@ -63,7 +66,6 @@ const convertInclude = async ({ href, type, ...rest }) => {
 
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
-
   if (!includeType) {
     return null;
   }
