@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given I am on a Pidgin article AMP/Canonical page When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Pidgin Article page When I view the source code in the browser And using AMP I can see the server-rendered HTML 1`] = `
 <html lang="pcm"
       dir="ltr"
       amp
@@ -35,7 +35,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           name="description"
-          content="Oga Oshiomhole don cari di mata go Court of Appeal."
+          content="This is the SEO headline of this test article"
     >
     <meta data-react-helmet="true"
           property="fb:admins"
@@ -59,15 +59,15 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           property="og:description"
-          content="Oga Oshiomhole don cari di mata go Court of Appeal."
+          content="This is the SEO headline of this test article"
     >
     <meta data-react-helmet="true"
           property="og:image"
-          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
     >
     <meta data-react-helmet="true"
           property="og:image:alt"
-          content="Adams Oshiomole"
+          content="BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           property="og:locale"
@@ -79,7 +79,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           property="og:title"
-          content="Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"
+          content="This is the SEO headline of this test article - BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           property="og:type"
@@ -87,7 +87,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           property="og:url"
-          content="http://localhost:7080/pidgin/tori-51745682"
+          content="http://localhost:7080/pidgin/articles/cwl08rd38l6o"
     >
     <meta data-react-helmet="true"
           name="twitter:card"
@@ -99,15 +99,15 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           name="twitter:description"
-          content="Oga Oshiomhole don cari di mata go Court of Appeal."
+          content="This is the SEO headline of this test article"
     >
     <meta data-react-helmet="true"
           name="twitter:image:alt"
-          content="Adams Oshiomole"
+          content="BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           name="twitter:image:src"
-          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
     >
     <meta data-react-helmet="true"
           name="twitter:site"
@@ -115,27 +115,19 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           name="twitter:title"
-          content="Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"
-    >
-    <meta data-react-helmet="true"
-          name="article:tag"
-          content="Nigeria"
-    >
-    <meta data-react-helmet="true"
-          name="article:tag"
-          content="Nigeria politics"
+          content="This is the SEO headline of this test article - BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           name="article:author"
           content="https://www.facebook.com/bbcnews"
     >
     <meta data-react-helmet="true"
-          name="article:published_time"
-          content="2020-03-04T18:58:43.000Z"
+          name="article:modified_time"
+          content="2019-09-27T15:56:33.775Z"
     >
     <meta data-react-helmet="true"
-          name="article:modified_time"
-          content="2020-03-04T19:27:57.000Z"
+          name="article:published_time"
+          content="2019-07-12T13:00:04.940Z"
     >
     <link rel="shortcut icon"
           href="/favicon.ico"
@@ -163,7 +155,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
           href="https://logws1363.ati-host.net?"
     >
     <title data-react-helmet="true">
-      Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin
+      This is the SEO headline of this test article - BBC News Pidgin
     </title>
     <link data-react-helmet="true"
           rel="manifest"
@@ -171,7 +163,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <link data-react-helmet="true"
           rel="canonical"
-          href="http://localhost:7080/pidgin/tori-51745682"
+          href="http://localhost:7080/pidgin/articles/cwl08rd38l6o"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
@@ -253,7 +245,18 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     <script data-react-helmet="true"
             type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"ReportageNewsArticle","url":"http://localhost:7080/pidgin/tori-51745682","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/tori-51745682","name":"Adams Oshiomhole say 'I still be APC National Chairman'"},"headline":"Adams Oshiomhole say 'I still be APC National Chairman'","description":"Oga Oshiomhole don cari di mata go Court of Appeal.","datePublished":"2020-03-04T18:58:43.000Z","dateModified":"2020-03-04T19:27:57.000Z","about":[{"@type":"Thing","name":"Nigeria"},{"@type":"Thing","name":"Nigeria politics","sameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/articles/cwl08rd38l6o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/articles/cwl08rd38l6o","name":"This is the SEO headline of this test article"},"headline":"This is the SEO headline of this test article","datePublished":"2019-07-12T13:00:04.940Z","dateModified":"2019-09-27T15:56:33.775Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/cwl08rd38l6o/p01k6msp/pcm/amp"}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-iframe"
+            src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"
+    >
     </script>
     <style amp-boilerplate>
       body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
@@ -666,546 +669,172 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
       </header>
       <amp-analytics>
         <script type="application/json">
-          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=70&p=news::pidgin.news.story.51745682.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:53870d86-88c5-6f4d-a260-f97c68606458]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Adams+Oshiomhole+say+'I+still+be+APC+National+Chairman'+-+BBC+News+Pidgin]&x11=[2020-03-04T18:58:43.000Z]&x12=[2020-03-04T19:27:57.000Z]&x13=[Nigeria~Nigeria+politics]&x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~7d65828a-85c1-41f4-96cf-c758da75e401]&x16=[WS%20-%20Keep%20me%20on%20trend~WS%20-%20Update%20me]&x17=[News]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
+          {"transport":{"beacon":false,"xhrpost":false,"image":true},"requests":{"base":"https://logws1363.ati-host.net?","pageview":"\${base}s=598343&s2=70&p=pidgin.articles.cwl08rd38l6o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:cwl08rd38l6o]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[This+is+the+SEO+headline+of+this+test+article]&x11=[2019-07-12T13:00:04.940Z]&x12=[2019-09-27T15:56:33.775Z]"},"triggers":{"trackPageview":{"on":"visible","request":"pageview"}}}
         </script>
       </amp-analytics>
-      <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
+      <amp-analytics type="chartbeat">
+        <script type="application/json">
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Pidgin, Pidgin - ART","uid":50924,"title":"This is the SEO headline of this test article","virtualReferrer":"\${documentReferrer}","contentType":"New Article"}}
+        </script>
+      </amp-analytics>
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
       >
-        <div dir="ltr"
-             class="GridComponent-nf79gm-0 dAItxV"
-        >
-          <main role="main">
-            <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
-              <h1 id="content"
-                  tabindex="-1"
-                  class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
-              >
-                Adams Oshiomhole say 'I still be APC National Chairman'
-              </h1>
-            </div>
-            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                      <amp-img alt="Comrade Adams Oshiomole"
-                               attribution="Google"
-                               layout="responsive"
-                               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"
-                               height="549"
-                               width="976"
-                      >
-                      </amp-img>
-                      <p role="text"
-                         class="Copyright-sc-11lgtw-0 hDvIfz"
-                      >
-                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Wia dis foto come from,
-                        </span>
-                        <span lang="en-GB">
-                          Google
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wetin we call dis foto,
-                      </span>
-                      <p>
-                        APC Chairman Adams Oshiomhole don be Govnor of Edo State before
-                      </p>
-                    </figcaption>
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+            >
+              This is the headline of this test article
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="Map of France showing Paris and Cognac"
+                             attribution
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg"
+                             height="351"
+                             width="624"
+                    >
+                    </amp-img>
                   </div>
                 </div>
-              </figure>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-w14rad-0 kIEFGQ">
-              <time datetime="2020-03-04"
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wetin we call dis foto,
+                    </span>
+                    <p>
+                      This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-12"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
+            >
+              12 July 2019
+            </time>
+            <div>
+              <time datetime="2019-09-27"
                     class="StyledTimestamp-um718p-0 bAgcOD"
               >
-                4 March 2020
+                New Informate 27 September 2019
               </time>
             </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                <b>
-                  Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.
-                </b>
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for "stay of execution plus appeal di ruling."
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                "Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party." Ebegbulem tok.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <div class="Wrapper-e2169q-0 kopXQT">
-                <ul dir="ltr"
-                    role="list"
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
-                >
-                  <li role="listitem"
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                  >
-                    <a href="http://www.bbc.com/pidgin/tori-50389601"
-                       class="InlineLink-hkwpaz-0 idscKS"
-                    >
-                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, "as a law abiding political party, we go respect all lawful court order."
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <div class="Wrapper-e2169q-0 kopXQT">
-                <ul dir="ltr"
-                    role="list"
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
-                >
-                  <li role="listitem"
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                  >
-                    <a href="http://www.bbc.com/pidgin/tori-50401299"
-                       class="InlineLink-hkwpaz-0 idscKS"
-                    >
-                      "Oshiomhole suspension na 'beer parlour tok"
-                    </a>
-                  </li>
-                  <li role="listitem"
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                  >
-                    <a href="http://www.bbc.com/pidgin/tori-50389601"
-                       class="InlineLink-hkwpaz-0 idscKS"
-                    >
-                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                      <amp-img alt="Adams Oshiomole"
-                               attribution="Jubril A. Gawat"
-                               layout="responsive"
-                               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
-                               height="549"
-                               width="976"
-                      >
-                      </amp-img>
-                      <p role="text"
-                         class="Copyright-sc-11lgtw-0 hDvIfz"
-                      >
-                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Wia dis foto come from,
-                        </span>
-                        <span lang="en-GB">
-                          Jubril A. Gawat
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wetin we call dis foto,
-                      </span>
-                      <p>
-                        Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-                      </p>
-                    </figcaption>
-                  </div>
-                </div>
-              </figure>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <h2 id="How-e-bin-take-start"
-                  tabindex="-1"
-                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
-              >
-                How e bin take start
-              </h2>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Di judge fix di case for April 7 and 8, 2020.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.
-              </p>
-            </div>
-          </main>
-          <section role="region"
-                   aria-labelledby="related-content-heading"
-                   class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
-          >
-            <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-              <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
-                <div class="Bar-sc-1x4gwjz-0 jsgdXU">
-                </div>
-                <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
-                    <span class="FlexRow-wx5kdp-2 dVBNyZ">
-                      <span dir="ltr"
-                            id="related-content-heading"
-                            class="Title-wx5kdp-4 BeqZV"
-                      >
-                        Another thing we de for inside dis tori
-                      </span>
-                    </span>
-                  </span>
-                </h2>
-              </div>
-              <ul dir="ltr"
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-                  role="list"
-              >
-                <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-                    role="listitem"
-                >
-                  <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                    <div dir="ltr"
-                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                    >
-                      <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                        <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                          <amp-img alt="APC National Chairman Adams Oshiomhole dey tok to tori pipo"
-                                   attribution="Getty Images"
-                                   layout="responsive"
-                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/12EB7/production/_102659477_50942662-594x594.jpg"
-                                   height="549"
-                                   width="976"
-                          >
-                          </amp-img>
-                        </div>
-                        <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                        </div>
-                      </div>
-                    </div>
-                    <div dir="ltr"
-                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                    >
-                      <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                        <a href="/pidgin/tori-51739326"
-                           class="Link-sc-1dvfmi3-5 yQgSu"
-                        >
-                          Oshiomole collect warning from court to stop to dey parade as APC national chairman
-                        </a>
-                      </h3>
-                      <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                        Federal Capital Territory High Court grant order to stop Adams Oshiomhole from parading imself as APC National Chairman.
-                      </p>
-                      <time datetime="2020-03-04"
-                            class="StyledTimestamp-um718p-0 kVWTyt"
-                      >
-                        4th March 2020
-                      </time>
-                    </div>
-                  </div>
-                </li>
-                <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-                    role="listitem"
-                >
-                  <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                    <div dir="ltr"
-                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                    >
-                      <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                        <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                          <amp-img alt="APC National Chairman Adams Oshiomhole dey tok to tori pipo"
-                                   attribution="Getty Images"
-                                   layout="responsive"
-                                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/12EB7/production/_102659477_50942662-594x594.jpg"
-                                   height="549"
-                                   width="976"
-                          >
-                          </amp-img>
-                        </div>
-                        <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                        </div>
-                      </div>
-                    </div>
-                    <div dir="ltr"
-                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                    >
-                      <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                        <a href="/pidgin/tori-50389601"
-                           class="Link-sc-1dvfmi3-5 yQgSu"
-                        >
-                          APC National Chairman Adams Oshiomhole don chop suspension
-                        </a>
-                      </h3>
-                      <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                        Adams Oshiomhole, di national chairman of Nigeria ruling party don chop suspension.
-                      </p>
-                      <time datetime="2019-11-13"
-                            class="StyledTimestamp-um718p-0 kVWTyt"
-                      >
-                        13th November 2019
-                      </time>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-        <div dir="ltr"
-             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
-        >
-          <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
-            <section role="region"
-                     aria-labelledby="top-stories-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
-            >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
-                  <div class="Bar-sc-1x4gwjz-0 jsgdXU">
-                  </div>
-                  <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
-                      <span class="FlexRow-wx5kdp-2 dVBNyZ">
-                        <span dir="ltr"
-                              id="top-stories-heading"
-                              class="Title-wx5kdp-4 BeqZV"
-                        >
-                          Top Stories
-                        </span>
-                      </span>
-                    </span>
-                  </h2>
-                </div>
-                <ul role="list"
-                    class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-                >
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 gejHzT">
-                          <a href="/mundo/noticias-internacional-51939501"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 hTsuvP">
-                          Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 gejHzT">
-                          <a href="/pidgin/tori-51945757"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            Nigeria don get five new cases of Coronavirus - See how e happun
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 hTsuvP">
-                          Nigeria Health say di patients from UK and America travel come di kontri.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
           </div>
-          <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
-            <section role="region"
-                     aria-labelledby="features-analysis-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
-            >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
-                  <div class="Bar-sc-1x4gwjz-0 jsgdXU">
-                  </div>
-                  <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
-                      <span class="FlexRow-wx5kdp-2 dVBNyZ">
-                        <span dir="ltr"
-                              id="features-analysis-heading"
-                              class="Title-wx5kdp-4 BeqZV"
-                        >
-                          Features &amp; Analysis
-                        </span>
-                      </span>
-                    </span>
-                  </h2>
-                </div>
-                <ul role="list"
-                    class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-                >
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                      >
-                        <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                          <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                            <amp-img alt="Some people at the NTA awards"
-                                     attribution="Joe Maher"
-                                     layout="responsive"
-                                     src="https://ichef.bbci.co.uk/news/660/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
-                                     height="549"
-                                     width="976"
-                            >
-                            </amp-img>
-                          </div>
-                          <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                          </div>
-                        </div>
-                      </div>
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                          <a href="/igbo/afirika-23252735"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                          This is a test asset used in Simorgh, please do not edit it without asking.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                      >
-                        <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                          <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                            <amp-img alt="Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya."
-                                     attribution="BBC"
-                                     layout="responsive"
-                                     src="https://ichef.bbci.co.uk/news/660/cpsprodpb/D035/production/_108810335_mugabe2.jpg"
-                                     height="549"
-                                     width="976"
-                            >
-                            </amp-img>
-                          </div>
-                          <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                          </div>
-                        </div>
-                      </div>
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                          <a href="/igbo/afirika-49666505"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            Robert Mugabe: Zimbabwe eferela nwa amadi a aka
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                          Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 hymSIv">
+              This is a text block, which contains a url link to
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                the BBC Weather homepage
+              </a>
+              .
+            </p>
           </div>
-          <div class="ComponentWrapper-w14rad-4 hYrbeW">
-            <h2>
-              This is a component in the second column
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <amp-iframe sandbox="allow-scripts allow-same-origin"
+                            layout="fill"
+                            scrolling="no"
+                            frameborder="0"
+                            src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/cwl08rd38l6o/p01k6msp/pcm/amp"
+                            title="Media player"
+                            allowfullscreen="allowfullscreen"
+                >
+                  <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           layout="fill"
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           placeholder="true"
+                           alt
+                           height="16"
+                           width="9"
+                           attribution
+                  >
+                  </amp-img>
+                  <noscript>
+                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                      <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                           alt
+                           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                           aria-hidden="true"
+                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                      >
+                      <div class="MessageWrapper-sc-1pnftlt-1 bHbRwS">
+                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                          Dem no support media player for your device
+                        </strong>
+                      </div>
+                    </div>
+                  </noscript>
+                </amp-iframe>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Wetin we call dis Video,
+                </span>
+                <p>
+                  This is a video block containing a video about ants
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="This-is-a-subheadline-block"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+            >
+              This is a subheadline block
             </h2>
           </div>
-          <div class="ComponentWrapper-w14rad-4 hYrbeW">
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <amp-img alt="Footballers after a match"
+                             attribution="Getty Images"
+                             layout="responsive"
+                             src="https://ichef.bbci.co.uk/news/640/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg"
+                             height="1152"
+                             width="2048"
+                    >
+                    </amp-img>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Wia dis foto come from,
+                      </span>
+                      <span lang="en-GB">
+                        Getty Images
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 hymSIv">
+              This test article has been created so that we can run automated end-to-end tests on our website.
+            </p>
           </div>
         </div>
-      </div>
+      </main>
       <footer role="contentinfo">
         <div class="Banner-m3awbo-1 gpxnCd">
           <div class="SvgWrapper-m3awbo-0 dPXtDJ">
@@ -1353,7 +982,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
 </html>
 `;
 
-exports[`Given I am on a Pidgin article AMP/Canonical page When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Pidgin Article page When I view the source code in the browser And using Canonical I can see the server-rendered HTML 1`] = `
 <html lang="pcm"
       class="no-js"
       dir="ltr"
@@ -1388,7 +1017,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           name="description"
-          content="Oga Oshiomhole don cari di mata go Court of Appeal."
+          content="This is the SEO headline of this test article"
     >
     <meta data-react-helmet="true"
           property="fb:admins"
@@ -1412,15 +1041,15 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           property="og:description"
-          content="Oga Oshiomhole don cari di mata go Court of Appeal."
+          content="This is the SEO headline of this test article"
     >
     <meta data-react-helmet="true"
           property="og:image"
-          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
     >
     <meta data-react-helmet="true"
           property="og:image:alt"
-          content="Adams Oshiomole"
+          content="BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           property="og:locale"
@@ -1432,7 +1061,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           property="og:title"
-          content="Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"
+          content="This is the SEO headline of this test article - BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           property="og:type"
@@ -1440,7 +1069,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           property="og:url"
-          content="http://localhost:7080/pidgin/tori-51745682"
+          content="http://localhost:7080/pidgin/articles/cwl08rd38l6o"
     >
     <meta data-react-helmet="true"
           name="twitter:card"
@@ -1452,15 +1081,15 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           name="twitter:description"
-          content="Oga Oshiomhole don cari di mata go Court of Appeal."
+          content="This is the SEO headline of this test article"
     >
     <meta data-react-helmet="true"
           name="twitter:image:alt"
-          content="Adams Oshiomole"
+          content="BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           name="twitter:image:src"
-          content="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
+          content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
     >
     <meta data-react-helmet="true"
           name="twitter:site"
@@ -1468,27 +1097,19 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <meta data-react-helmet="true"
           name="twitter:title"
-          content="Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"
-    >
-    <meta data-react-helmet="true"
-          name="article:tag"
-          content="Nigeria"
-    >
-    <meta data-react-helmet="true"
-          name="article:tag"
-          content="Nigeria politics"
+          content="This is the SEO headline of this test article - BBC News Pidgin"
     >
     <meta data-react-helmet="true"
           name="article:author"
           content="https://www.facebook.com/bbcnews"
     >
     <meta data-react-helmet="true"
-          name="article:published_time"
-          content="2020-03-04T18:58:43.000Z"
+          name="article:modified_time"
+          content="2019-09-27T15:56:33.775Z"
     >
     <meta data-react-helmet="true"
-          name="article:modified_time"
-          content="2020-03-04T19:27:57.000Z"
+          name="article:published_time"
+          content="2019-07-12T13:00:04.940Z"
     >
     <link rel="shortcut icon"
           href="/favicon.ico"
@@ -1516,7 +1137,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
           href="https://logws1363.ati-host.net?"
     >
     <title data-react-helmet="true">
-      Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin
+      This is the SEO headline of this test article - BBC News Pidgin
     </title>
     <link data-react-helmet="true"
           rel="manifest"
@@ -1524,11 +1145,11 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     >
     <link data-react-helmet="true"
           rel="canonical"
-          href="http://localhost:7080/pidgin/tori-51745682"
+          href="http://localhost:7080/pidgin/articles/cwl08rd38l6o"
     >
     <link data-react-helmet="true"
           rel="amphtml"
-          href="http://localhost:7080/pidgin/tori-51745682.amp"
+          href="http://localhost:7080/pidgin/articles/cwl08rd38l6o.amp"
     >
     <link data-react-helmet="true"
           rel="apple-touch-icon"
@@ -1604,7 +1225,12 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
     <script data-react-helmet="true"
             type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"ReportageNewsArticle","url":"http://localhost:7080/pidgin/tori-51745682","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/tori-51745682","name":"Adams Oshiomhole say 'I still be APC National Chairman'"},"headline":"Adams Oshiomhole say 'I still be APC National Chairman'","description":"Oga Oshiomhole don cari di mata go Court of Appeal.","datePublished":"2020-03-04T18:58:43.000Z","dateModified":"2020-03-04T19:27:57.000Z","about":[{"@type":"Thing","name":"Nigeria"},{"@type":"Thing","name":"Nigeria politics","sameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"]}],"author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+      {"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/pidgin/articles/cwl08rd38l6o","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/pidgin/articles/cwl08rd38l6o","name":"This is the SEO headline of this test article"},"headline":"This is the SEO headline of this test article","datePublished":"2019-07-12T13:00:04.940Z","dateModified":"2019-09-27T15:56:33.775Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
+    </script>
+    <script data-react-helmet="true"
+            type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"VideoObject","name":"Five things ants can teach us about management","description":"They may be tiny, but us humans could learn a thing or two from ants.","duration":"PT3M11S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01k6mtv.jpg","uploadDate":"2018-10-22T14:35:32.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/articles/cwl08rd38l6o/p01k6msp/pcm"}
     </script>
   </head>
   <body>
@@ -1861,522 +1487,177 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
              width="1px"
              alt
              style="position:absolute"
-             src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=news::pidgin.news.story.51745682.page&amp;x1=[urn:bbc:cps:53870d86-88c5-6f4d-a260-f97c68606458]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[Adams+Oshiomhole+say+'I+still+be+APC+National+Chairman'+-+BBC+News+Pidgin]&amp;x11=[2020-03-04T18:58:43.000Z]&amp;x12=[2020-03-04T19:27:57.000Z]&amp;x13=[Nigeria~Nigeria+politics]&amp;x14=[3d5d5e30-dd50-4041-96d5-c970b20005b9~7d65828a-85c1-41f4-96cf-c758da75e401]&amp;x16=[WS%20-%20Keep%20me%20on%20trend~WS%20-%20Update%20me]&amp;x17=[News]"
+             src="https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.articles.cwl08rd38l6o.page&amp;x1=[urn:bbc:optimo:cwl08rd38l6o]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[This+is+the+SEO+headline+of+this+test+article]&amp;x11=[2019-07-12T13:00:04.940Z]&amp;x12=[2019-09-27T15:56:33.775Z]"
         >
       </noscript>
-      <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
+      <main role="main"
+            class="StyledMain-sc-1onvfv8-0 hAQCOp"
       >
-        <div dir="ltr"
-             class="GridComponent-nf79gm-0 dAItxV"
-        >
-          <main role="main">
-            <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
-              <h1 id="content"
-                  tabindex="-1"
-                  class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
-              >
-                Adams Oshiomhole say 'I still be APC National Chairman'
-              </h1>
-            </div>
-            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg 800w"
-                           alt="Comrade Adams Oshiomole"
-                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"
-                           width="976"
-                           class="StyledImg-sc-7vx2mr-0 dQLeqZ"
-                      >
-                      <p role="text"
-                         class="Copyright-sc-11lgtw-0 hDvIfz"
-                      >
-                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Wia dis foto come from,
-                        </span>
-                        <span lang="en-GB">
-                          Google
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wetin we call dis foto,
-                      </span>
-                      <p>
-                        APC Chairman Adams Oshiomhole don be Govnor of Edo State before
-                      </p>
-                    </figcaption>
+        <div class="GridWrapper-sc-12lwanc-0 hgpaqH">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
+            <h1 id="content"
+                tabindex="-1"
+                class="Headline-sc-1kh1qhu-0 StyledHeadline-sc-1ffcmag-0 jsOCZS"
+            >
+              This is the headline of this test article
+            </h1>
+          </div>
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg 624w"
+                         alt="Map of France showing Paris and Cognac"
+                         src="https://ichef.bbci.co.uk/news/640/cpsdevpb/2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg"
+                         width="624"
+                         class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                    >
                   </div>
                 </div>
-              </figure>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi StyledTimestamp-w14rad-0 kIEFGQ">
-              <time datetime="2020-03-04"
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                  <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Wetin we call dis foto,
+                    </span>
+                    <p>
+                      This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.
+                    </p>
+                  </figcaption>
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="PopOutAtGroup5-sc-12lwanc-13 fvtaWN">
+            <time datetime="2019-07-12"
+                  class="StyledTimestamp-um718p-0 bAgcOD"
+            >
+              12 July 2019
+            </time>
+            <div>
+              <time datetime="2019-09-27"
                     class="StyledTimestamp-um718p-0 bAgcOD"
               >
-                4 March 2020
+                New Informate 27 September 2019
               </time>
             </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                <b>
-                  Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.
-                </b>
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for "stay of execution plus appeal di ruling."
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                "Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party." Ebegbulem tok.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <div class="Wrapper-e2169q-0 kopXQT">
-                <ul dir="ltr"
-                    role="list"
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
-                >
-                  <li role="listitem"
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                  >
-                    <a href="http://www.bbc.com/pidgin/tori-50389601"
-                       class="InlineLink-hkwpaz-0 idscKS"
-                    >
-                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, "as a law abiding political party, we go respect all lawful court order."
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <div class="Wrapper-e2169q-0 kopXQT">
-                <ul dir="ltr"
-                    role="list"
-                    class="BulletedList-sc-13z0d8v-0 zkoYd"
-                >
-                  <li role="listitem"
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                  >
-                    <a href="http://www.bbc.com/pidgin/tori-50401299"
-                       class="InlineLink-hkwpaz-0 idscKS"
-                    >
-                      "Oshiomhole suspension na 'beer parlour tok"
-                    </a>
-                  </li>
-                  <li role="listitem"
-                      class="BulletedListItem-sc-13z0d8v-1 kHsWph"
-                  >
-                    <a href="http://www.bbc.com/pidgin/tori-50389601"
-                       class="InlineLink-hkwpaz-0 idscKS"
-                    >
-                      How Nigeria ruling APC Chairmo Oshiomhole chop suspension
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
-              <figure class="Figure-sc-6a3dhy-0 gJUCFc">
-                <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
-                    <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                      <div class="lazyload-placeholder">
-                      </div>
-                      <noscript>
-                        <img srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg 800w"
-                             alt="Adams Oshiomole"
-                             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"
-                             width="976"
-                             class="StyledImg-sc-7vx2mr-0 dQLeqZ"
-                        >
-                      </noscript>
-                      <p role="text"
-                         class="Copyright-sc-11lgtw-0 hDvIfz"
-                      >
-                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Wia dis foto come from,
-                        </span>
-                        <span lang="en-GB">
-                          Jubril A. Gawat
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
-                    <figcaption class="Caption-sc-16x70so-0 bjgllj">
-                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                        Wetin we call dis foto,
-                      </span>
-                      <p>
-                        Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-                      </p>
-                    </figcaption>
-                  </div>
-                </div>
-              </figure>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <h2 id="How-e-bin-take-start"
-                  tabindex="-1"
-                  class="SubHeading-sc-1kh1qhu-1 jHLqCp"
-              >
-                How e bin take start
-              </h2>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Di judge fix di case for April 7 and 8, 2020.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo.
-              </p>
-            </div>
-            <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
-              <p class="Paragraph-k859h4-0 hymSIv">
-                Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.
-              </p>
-            </div>
-          </main>
-          <section role="region"
-                   aria-labelledby="related-content-heading"
-                   class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
-          >
-            <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-              <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
-                <div class="Bar-sc-1x4gwjz-0 jsgdXU">
-                </div>
-                <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
-                    <span class="FlexRow-wx5kdp-2 dVBNyZ">
-                      <span dir="ltr"
-                            id="related-content-heading"
-                            class="Title-wx5kdp-4 BeqZV"
-                      >
-                        Another thing we de for inside dis tori
-                      </span>
-                    </span>
-                  </span>
-                </h2>
-              </div>
-              <ul dir="ltr"
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
-                  role="list"
-              >
-                <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-                    role="listitem"
-                >
-                  <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                    <div dir="ltr"
-                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                    >
-                      <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                        <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                          <div class="lazyload-placeholder">
-                          </div>
-                        </div>
-                        <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                        </div>
-                      </div>
-                    </div>
-                    <div dir="ltr"
-                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                    >
-                      <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                        <a href="/pidgin/tori-51739326"
-                           class="Link-sc-1dvfmi3-5 yQgSu"
-                        >
-                          Oshiomole collect warning from court to stop to dey parade as APC national chairman
-                        </a>
-                      </h3>
-                      <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                        Federal Capital Territory High Court grant order to stop Adams Oshiomhole from parading imself as APC National Chairman.
-                      </p>
-                      <time datetime="2020-03-04"
-                            class="StyledTimestamp-um718p-0 kVWTyt"
-                      >
-                        4th March 2020
-                      </time>
-                    </div>
-                  </div>
-                </li>
-                <li dir="ltr"
-                    class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
-                    role="listitem"
-                >
-                  <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                    <div dir="ltr"
-                         class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                    >
-                      <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                        <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                          <div class="lazyload-placeholder">
-                          </div>
-                        </div>
-                        <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                        </div>
-                      </div>
-                    </div>
-                    <div dir="ltr"
-                         class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                    >
-                      <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                        <a href="/pidgin/tori-50389601"
-                           class="Link-sc-1dvfmi3-5 yQgSu"
-                        >
-                          APC National Chairman Adams Oshiomhole don chop suspension
-                        </a>
-                      </h3>
-                      <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                        Adams Oshiomhole, di national chairman of Nigeria ruling party don chop suspension.
-                      </p>
-                      <time datetime="2019-11-13"
-                            class="StyledTimestamp-um718p-0 kVWTyt"
-                      >
-                        13th November 2019
-                      </time>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-        <div dir="ltr"
-             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
-        >
-          <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
-            <section role="region"
-                     aria-labelledby="top-stories-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
-            >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
-                  <div class="Bar-sc-1x4gwjz-0 jsgdXU">
-                  </div>
-                  <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
-                      <span class="FlexRow-wx5kdp-2 dVBNyZ">
-                        <span dir="ltr"
-                              id="top-stories-heading"
-                              class="Title-wx5kdp-4 BeqZV"
-                        >
-                          Top Stories
-                        </span>
-                      </span>
-                    </span>
-                  </h2>
-                </div>
-                <ul role="list"
-                    class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-                >
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 gejHzT">
-                          <a href="/mundo/noticias-internacional-51939501"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 hTsuvP">
-                          Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 gCyGvI"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 gejHzT">
-                          <a href="/pidgin/tori-51945757"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            Nigeria don get five new cases of Coronavirus - See how e happun
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 hTsuvP">
-                          Nigeria Health say di patients from UK and America travel come di kontri.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
           </div>
-          <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
-            <section role="region"
-                     aria-labelledby="features-analysis-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
-            >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
-                  <div class="Bar-sc-1x4gwjz-0 jsgdXU">
-                  </div>
-                  <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
-                      <span class="FlexRow-wx5kdp-2 dVBNyZ">
-                        <span dir="ltr"
-                              id="features-analysis-heading"
-                              class="Title-wx5kdp-4 BeqZV"
-                        >
-                          Features &amp; Analysis
-                        </span>
-                      </span>
-                    </span>
-                  </h2>
-                </div>
-                <ul role="list"
-                    class="StoryPromoUl-sc-171lqjd-1 isCYWc"
-                >
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                      >
-                        <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                          <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                            <div class="lazyload-placeholder">
-                            </div>
-                          </div>
-                          <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                          </div>
-                        </div>
-                      </div>
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                          <a href="/igbo/afirika-23252735"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                          This is a test asset used in Simorgh, please do not edit it without asking.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                  <li role="listitem"
-                      class="StoryPromoLi-sc-171lqjd-0 jTGbev"
-                  >
-                    <div class="StoryPromoWrapper-sc-1dvfmi3-0 buBJys">
-                      <div dir="ltr"
-                           class="ImageGridItem-sc-1xk56cj-0 fNYKlW"
-                      >
-                        <div class="ImageContentsWrapper-sc-1dvfmi3-1 cinwNl">
-                          <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
-                            <div class="lazyload-placeholder">
-                            </div>
-                          </div>
-                          <div class="ImageOverlayWrapper-sc-1dvfmi3-2 dqBekx">
-                          </div>
-                        </div>
-                      </div>
-                      <div dir="ltr"
-                           class="TextGridItem-sc-1lkbq5i-0 jJWtYv"
-                      >
-                        <h3 class="Headline-sc-1dvfmi3-3 hSJrur">
-                          <a href="/igbo/afirika-49666505"
-                             class="Link-sc-1dvfmi3-5 yQgSu"
-                          >
-                            Robert Mugabe: Zimbabwe eferela nwa amadi a aka
-                          </a>
-                        </h3>
-                        <p class="Summary-sc-1dvfmi3-4 eaCWBB">
-                          Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
-                        </p>
-                        <time datetime="2020-02-03"
-                              class="StyledTimestamp-um718p-0 kVWTyt"
-                        >
-                          3rd February 2020
-                        </time>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 hymSIv">
+              This is a text block, which contains a url link to
+              <a href="https://www.bbc.co.uk/weather"
+                 class="InlineLink-hkwpaz-0 idscKS"
+              >
+                the BBC Weather homepage
+              </a>
+              .
+            </p>
           </div>
-          <div class="ComponentWrapper-w14rad-4 hYrbeW">
-            <h2>
-              This is a component in the second column
+          <div class="GridItemConstrainedMediumNoMargin-sc-12lwanc-3 ijtfss">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
+                <div class="StyledPlaceholder-sc-11nyhtu-0 dDNqOp">
+                  <div class="GuidanceWrapper-sc-1wm6qsk-0 bbhfNU">
+                    <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO guidance-message"
+                            aria-hidden="true"
+                    >
+                      Contains strong language and adult humour.
+                    </strong>
+                    <noscript class="StyledNoScript-sc-1wm6qsk-2 fsOOOd">
+                      <strong class="GuidanceMessage-sc-1wm6qsk-1 iYcpPO">
+                        Dem no support media player for your device
+                      </strong>
+                    </noscript>
+                  </div>
+                  <button class="Button-sc-34e3rb-0 eSkqnH StyledPlayButton-sc-11nyhtu-1 bBTuxK">
+                    <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                      Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
+                    </span>
+                    <div aria-hidden="true"
+                         class="IconWrapper-sc-34e3rb-1 jGavfg"
+                    >
+                      <svg viewbox="0 0 32 32"
+                           width="12px"
+                           height="12px"
+                           focusable="false"
+                           aria-hidden="true"
+                           class="MediaIcon-sc-10lpekz-0 VideoMediaIcon-sc-10lpekz-1 gUVBrE"
+                      >
+                        <polygon points="3,32 29,16 3,0">
+                        </polygon>
+                      </svg>
+                    </div>
+                    <time datetime="PT3M11S"
+                          aria-hidden="true"
+                          class="TimeDuration-sc-34e3rb-2 cZLyLe"
+                    >
+                      03:11
+                    </time>
+                  </button>
+                  <img srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+                       alt
+                       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+                       class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                  >
+                </div>
+              </div>
+              <figcaption class="Caption-sc-16x70so-0 bjgllj">
+                <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                  Wetin we call dis Video,
+                </span>
+                <p>
+                  This is a video block containing a video about ants
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <h2 id="This-is-a-subheadline-block"
+                tabindex="-1"
+                class="SubHeading-sc-1kh1qhu-1 jHLqCp"
+            >
+              This is a subheadline block
             </h2>
           </div>
-          <div class="ComponentWrapper-w14rad-4 hYrbeW">
+          <div class="GridItemConstrainedLargeNoMargin-sc-12lwanc-5 tOkbK">
+            <figure class="Figure-sc-6a3dhy-0 gJUCFc">
+              <div class="NestedGridParentLarge-sc-12lwanc-10 hfLVVX">
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 fkKpIa">
+                  <div class="ImagePlaceholder-sc-11u25v2-0 fNqlUz">
+                    <div class="lazyload-placeholder">
+                    </div>
+                    <noscript>
+                      <img srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg 800w"
+                           alt="Footballers after a match"
+                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg"
+                           width="2048"
+                           class="StyledImg-sc-7vx2mr-0 dQLeqZ"
+                      >
+                    </noscript>
+                    <p role="text"
+                       class="Copyright-sc-11lgtw-0 hDvIfz"
+                    >
+                      <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                        Wia dis foto come from,
+                      </span>
+                      <span lang="en-GB">
+                        Getty Images
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="NestedGridItemChildLarge-sc-12lwanc-9 ichKJL">
+                </div>
+              </div>
+            </figure>
+          </div>
+          <div class="GridItemConstrainedMedium-sc-12lwanc-2 fVauYi">
+            <p class="Paragraph-k859h4-0 hymSIv">
+              This test article has been created so that we can run automated end-to-end tests on our website.
+            </p>
           </div>
         </div>
-      </div>
+      </main>
       <footer role="contentinfo">
         <div class="Banner-m3awbo-1 gpxnCd">
           <div class="SvgWrapper-m3awbo-0 dPXtDJ">
@@ -2521,7 +1802,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
       </footer>
     </div>
     <script>
-      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"firstPublished":1583348323000,"lastPublished":1583350077000,"lastUpdated":1583350085159,"analyticsLabels":{"counterName":"pidgin.news.story.51745682.page","cps_asset_id":"51745682","cps_asset_type":"sty"},"blockTypes":["image","paragraph","list","crosshead"],"createdBy":"pidgin-v6","id":"mock-id","includeComments":false,"language":"pcm","locators":{"assetId":"51745682","assetUri":"/pidgin/tori-51745682","cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-51745682","curie":"http://www.bbc.co.uk/asset/53870d86-88c5-6f4d-a260-f97c68606458"},"options":{"allowAdvertising":true,"allowDateStamp":true,"allowHeadline":true,"allowPrintingSharingLinks":true,"allowRelatedStoriesBox":true,"allowRightHandSide":true,"hasContentWarning":false,"hasNewsTracker":false,"includeComments":false,"isBreakingNews":false,"isFactCheck":false,"isIgorSeoTagsEnabled":false,"isKeyContent":false,"suitableForSyndication":true},"passport":{"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"},{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}],"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"taggings":[]},"tags":{"about":[{"curationList":[{"curationId":"30600bd9-ac23-45c9-948a-55fe7e115078","curationType":"vivo-stream"}],"thingId":"3d5d5e30-dd50-4041-96d5-c970b20005b9","thingLabel":"Nigeria","thingSameAs":["http://sws.geonames.org/2328926/"],"thingType":["Thing","Place","geoname:GeoTagConcept"],"thingUri":"http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id","topicId":"c2dwqd1zr92t","topicName":"Nigeria"},{"curationList":[{"curationId":"0d50dd92-bc57-4142-9487-d43f46026ad0","curationType":"vivo-stream"}],"thingId":"7d65828a-85c1-41f4-96cf-c758da75e401","thingLabel":"Nigeria politics","thingSameAs":["http://dbpedia.org/resource/Politics_of_Nigeria"],"thingType":["Thing","Theme"],"thingUri":"http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id","topicId":"c95y35z683nt","topicName":"Nigeria politics"}]},"timestamp":1583349971000,"type":"STY","version":"v1.1.6"},"relatedContent":{"groups":[{"promos":[{"cpsType":"STY","headlines":{"headline":"Oshiomole collect warning from court to stop to dey parade as APC national chairman","shortHeadline":"Court suspend Oshiomole as APC national chairman"},"id":"mock-id","indexImage":{"altText":"APC National Chairman Adams Oshiomhole dey tok to tori pipo","caption":"APC Chairman Adams Oshiomhole don be Govnor of Edo State before","copyrightHolder":"Getty Images","height":549,"href":"http://c.files.bbci.co.uk/12EB7/production/_102659477_50942662-594x594.jpg","id":"mock-id","path":"/cpsprodpb/12EB7/production/_102659477_50942662-594x594.jpg","subType":"index","type":"image","width":976},"language":"pcm","locators":{"assetUri":"/pidgin/tori-51739326","cpsUrn":"urn:bbc:content:assetUri:/pidgin/tori-51739326"},"summary":"Federal Capital Territory High Court grant order to stop Adams Oshiomhole from parading imself as APC National Chairman.","timestamp":1583325106000,"type":"cps"},{"cpsType":"STY","headlines":{"headline":"APC National Chairman Adams Oshiomhole don chop suspension","shortHeadline":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension"},"id":"mock-id","indexImage":{"altText":"APC National Chairman Adams Oshiomhole dey tok to tori pipo","caption":"APC chairman Adams Oshiomhole","copyrightHolder":"Getty Images","height":549,"href":"http://c.files.bbci.co.uk/12EB7/production/_102659477_50942662-594x594.jpg","id":"mock-id","path":"/cpsprodpb/12EB7/production/_102659477_50942662-594x594.jpg","subType":"index","type":"image","width":976},"language":"pcm","locators":{"assetUri":"/pidgin/tori-50389601","cpsUrn":"urn:bbc:content:assetUri:/pidgin/tori-50389601"},"summary":"Adams Oshiomhole, di national chairman of Nigeria ruling party don chop suspension.","timestamp":1573624168000,"type":"cps"}],"type":"see-alsos"}],"section":{"name":"Tori","subType":"index","type":"simple","uri":"/pidgin/tori"},"site":{"name":"BBC Pidgin","subType":"site","type":"simple","uri":"/pidgin"}},"content":{"model":{"blocks":[{"model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Adams Oshiomhole say 'I still be APC National Chairman'","blocks":[{"type":"fragment","model":{"text":"Adams Oshiomhole say 'I still be APC National Chairman'","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"type":"headline","id":"mock-id","position":[1]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"APC Chairman Adams Oshiomhole don be Govnor of Edo State before","blocks":[{"type":"fragment","model":{"text":"APC Chairman Adams Oshiomhole don be Govnor of Edo State before","attributes":[]},"id":"mock-id","position":[2,1,1,1,1]}]},"id":"mock-id","position":[2,1,1,1]}]},"id":"mock-id","position":[2,1,1]}]},"id":"mock-id","position":[2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Comrade Adams Oshiomole","blocks":[{"type":"fragment","model":{"text":"Comrade Adams Oshiomole","attributes":[]},"id":"mock-id","position":[2,2,1,1,1]}]},"id":"mock-id","position":[2,2,1,1]}]},"id":"mock-id","position":[2,2,1]}]},"id":"mock-id","position":[2,2]},{"type":"rawImage","model":{"copyrightHolder":"Google","height":549,"locator":"1317C/production/_111140287_oshiobaba.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[2,3]}]},"id":"mock-id","position":[2]},{"type":"timestamp","model":{"firstPublished":1583348323000,"lastPublished":1583350077000},"id":"mock-id","position":[3]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.","blocks":[{"type":"fragment","model":{"text":"Adams Oshiomhole wey chop high court order on Wednesday say make im no parade himsef again as national chairman of Nigeria ruling political party; All Progressive Congress (APC), don beat chest come outside  say im still be di national chairmo of di party.","attributes":["bold"]},"id":"mock-id","position":[4,1,1]}]},"id":"mock-id","position":[4,1]}]},"id":"mock-id","position":[4]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for \\"stay of execution plus appeal di ruling.\\"","blocks":[{"type":"fragment","model":{"text":"Oga Oshiomhole, through im press secretary, Simon Ebegbulem, tell BBC Pidgin say, dem don already carri di mata go Court of Appeal for \\"stay of execution plus appeal di ruling.\\"","attributes":[]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]}]},"id":"mock-id","position":[5]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"\\"Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party.\\" Ebegbulem tok.","blocks":[{"type":"fragment","model":{"text":"\\"Wit di process wey currently dey before di Appeal Court, Comrade Adams Oshiohmole, still remain di national chairman of di party.\\" Ebegbulem tok.","attributes":[]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.","blocks":[{"type":"fragment","model":{"text":"On Wednesday, Abuja High Court give order make Adams Oshiomhole stop to dey parade imself as di National Chairman of di ruling All Progressives Congress (APC for Nigeria.","attributes":[]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]}]},"id":"mock-id","position":[7]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension","blocks":[{"type":"urlLink","model":{"text":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension","locator":"http://www.bbc.com/pidgin/tori-50389601","blocks":[{"type":"fragment","model":{"text":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension","attributes":[]},"id":"mock-id","position":[8,1,1,1,1,1]}],"isExternal":false},"id":"mock-id","position":[8,1,1,1,1]}]},"id":"mock-id","position":[8,1,1,1]}]},"id":"mock-id","position":[8,1,1]}]},"type":"unorderedList","id":"mock-id","position":[8,1]}]},"type":"text","id":"mock-id","position":[8]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.","blocks":[{"type":"fragment","model":{"text":"Meanwhile di Acting National Secretary of di APC, Victor Giadom, bin tell BBC Pidgin say di party accept di earlier court decision to suspend Adams Oshiomhole as di party national chairman.","attributes":[]},"id":"mock-id","position":[9,1,1]}]},"id":"mock-id","position":[9,1]}]},"id":"mock-id","position":[9]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, \\"as a law abiding political party, we go respect all lawful court order.\\"","blocks":[{"type":"fragment","model":{"text":"Di party national secretary say, since na competent court of justice give order for di suspension of oga Oshiomhole, \\"as a law abiding political party, we go respect all lawful court order.\\"","attributes":[]},"id":"mock-id","position":[10,1,1]}]},"id":"mock-id","position":[10,1]}]},"id":"mock-id","position":[10]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.","blocks":[{"type":"fragment","model":{"text":"Oga Giadom say, di National Working Committee go get to meet togeda to decide weda or not dem go appeal.","attributes":[]},"id":"mock-id","position":[11,1,1]}]},"id":"mock-id","position":[11,1]}]},"id":"mock-id","position":[11]},{"model":{"blocks":[{"model":{"blocks":[{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"\\"Oshiomhole suspension na 'beer parlour tok\\"","blocks":[{"type":"urlLink","model":{"text":"\\"Oshiomhole suspension na 'beer parlour tok\\"","locator":"http://www.bbc.com/pidgin/tori-50401299","blocks":[{"type":"fragment","model":{"text":"\\"Oshiomhole suspension na 'beer parlour tok\\"","attributes":[]},"id":"mock-id","position":[12,1,1,1,1,1]}],"isExternal":false},"id":"mock-id","position":[12,1,1,1,1]}]},"id":"mock-id","position":[12,1,1,1]}]},"id":"mock-id","position":[12,1,1]},{"type":"listItem","model":{"blocks":[{"type":"paragraph","model":{"text":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension","blocks":[{"type":"urlLink","model":{"text":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension","locator":"http://www.bbc.com/pidgin/tori-50389601","blocks":[{"type":"fragment","model":{"text":"How Nigeria ruling APC Chairmo Oshiomhole chop suspension","attributes":[]},"id":"mock-id","position":[12,1,2,1,1,1]}],"isExternal":false},"id":"mock-id","position":[12,1,2,1,1]}]},"id":"mock-id","position":[12,1,2,1]}]},"id":"mock-id","position":[12,1,2]}]},"type":"unorderedList","id":"mock-id","position":[12,1]}]},"type":"text","id":"mock-id","position":[12]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .","blocks":[{"type":"fragment","model":{"text":"Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party .","attributes":[]},"id":"mock-id","position":[13,1,1,1,1]}]},"id":"mock-id","position":[13,1,1,1]}]},"id":"mock-id","position":[13,1,1]}]},"id":"mock-id","position":[13,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Adams Oshiomole","blocks":[{"type":"fragment","model":{"text":"Adams Oshiomole","attributes":[]},"id":"mock-id","position":[13,2,1,1,1]}]},"id":"mock-id","position":[13,2,1,1]}]},"id":"mock-id","position":[13,2,1]}]},"id":"mock-id","position":[13,2]},{"type":"rawImage","model":{"copyrightHolder":"Jubril A. Gawat","height":549,"locator":"747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg","originCode":"cpsprodpb","width":976},"id":"mock-id","position":[13,3]}]},"id":"mock-id","position":[13]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"How e bin take start","blocks":[{"type":"fragment","model":{"text":"How e bin take start","attributes":[]},"id":"mock-id","position":[14,1,1,1]}]},"id":"mock-id","position":[14,1,1]}]},"id":"mock-id","position":[14,1]}]},"id":"mock-id","position":[14]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.","blocks":[{"type":"fragment","model":{"text":"Justice Danlami Senchi wey give di court order on Wednesday say di political parties must obey dia constitution and as im ward bin don suspend Oshiomhole, im no suppose dey function as di National Chairman of di party pending wen dem go hear di mata.","attributes":[]},"id":"mock-id","position":[15,1,1]}]},"id":"mock-id","position":[15,1]}]},"id":"mock-id","position":[15]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Di judge fix di case for April 7 and 8, 2020.","blocks":[{"type":"fragment","model":{"text":"Di judge fix di case for April 7 and 8, 2020.","attributes":[]},"id":"mock-id","position":[16,1,1]}]},"id":"mock-id","position":[16,1]}]},"id":"mock-id","position":[16]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party . ","blocks":[{"type":"fragment","model":{"text":"Na for November 2019 Adams Oshiomhole,bin first chop suspension as di national chairman of Nigeria ruling party from im native branch wey be Edo State chapter of di All Progressives Congress Party . ","attributes":[]},"id":"mock-id","position":[17,1,1]}]},"id":"mock-id","position":[17,1]}]},"id":"mock-id","position":[17]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo. ","blocks":[{"type":"fragment","model":{"text":"Dat time, di chairmen of APC, for 18 Local Goment Areas for di state pass vote of no confidence for Oga Oshiomhole on Tuesday, di State APC Chairman, Aslem Ojezu tell tori pipo. ","attributes":[]},"id":"mock-id","position":[18,1,1]}]},"id":"mock-id","position":[18,1]}]},"id":"mock-id","position":[18]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.","blocks":[{"type":"fragment","model":{"text":"Tori be say oga Adams  Oshiomhole and Osho baba as some pipo dey call am and im state Govnor Godwin Obaseki dey get some kain quanta on top who dey in charge for di state.","attributes":[]},"id":"mock-id","position":[19,1,1]}]},"id":"mock-id","position":[19,1]}]},"id":"mock-id","position":[19]}]}},"promo":{"headlines":{"headline":"Adams Oshiomhole say 'I still be APC National Chairman'","shortHeadline":"I still be APC National Chairman - Oshiomhole"},"id":"mock-id","indexImage":{"altText":"Adams Oshiomole","caption":"APC Chairman Adams Oshiomhole don be Govnor of Edo State before","copyrightHolder":"Jubril A. Gawat","height":549,"href":"http://c.files.bbci.co.uk/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg","id":"mock-id","path":"/cpsprodpb/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg","subType":"index","type":"image","width":976},"language":"pcm","locators":{"assetId":"51745682","assetUri":"/pidgin/tori-51745682","cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-51745682","curie":"http://www.bbc.co.uk/asset/53870d86-88c5-6f4d-a260-f97c68606458"},"passport":{"campaigns":[{"campaignId":"5a988e3e39461b000e9dabfb","campaignName":"WS - Keep me on trend"},{"campaignId":"5a988e4739461b000e9dabfc","campaignName":"WS - Update me"}],"category":{"categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News","categoryName":"News"},"taggings":[]},"summary":"Oga Oshiomhole don cari di mata go Court of Appeal.","timestamp":1583349971000,"type":"cps"}},"path":"/pidgin/tori-51745682","timeOnServer": "mock-time"}
+      window.SIMORGH_DATA={"status":200,"pageData":{"metadata":{"id":"mock-id","locators":{"optimoUrn":"urn:bbc:optimo:asset:cwl08rd38l6o"},"type":"article","createdBy":"Pidgin","language":"pcm","lastUpdated":1569599796757,"firstPublished":1562936404940,"lastPublished":1569599793775,"options":{},"analyticsLabels":{},"passport":{"language":"pcm","home":"http://www.bbc.co.uk/ontologies/passport/home/Pidgin"},"tags":{},"version":"v1.1.2","blockTypes":["headline","text","paragraph","fragment","image","caption","altText","rawImage","urlLink","video","subheadline"]},"content":{"model":{"blocks":[{"type":"headline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is the headline of this test article","blocks":[{"type":"fragment","model":{"text":"This is the headline of this test article","attributes":[]},"id":"mock-id","position":[1,1,1,1]}]},"id":"mock-id","position":[1,1,1]}]},"id":"mock-id","position":[1,1]}]},"id":"mock-id","position":[1]},{"type":"image","model":{"blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.","blocks":[{"type":"fragment","model":{"text":"This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption.","attributes":[]},"id":"mock-id","position":[2,1,1,1,1]}]},"id":"mock-id","position":[2,1,1,1]}]},"id":"mock-id","position":[2,1,1]}]},"id":"mock-id","position":[2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Map of France showing Paris and Cognac","blocks":[{"type":"fragment","model":{"text":"Map of France showing Paris and Cognac","attributes":[]},"id":"mock-id","position":[2,2,1,1,1]}]},"id":"mock-id","position":[2,2,1,1]}]},"id":"mock-id","position":[2,2,1]}]},"id":"mock-id","position":[2,2]},{"type":"rawImage","model":{"width":624,"height":351,"locator":"2d93/test/494cb5d0-dee2-11e9-b23c-f1ac9644bb55.jpg","originCode":"cpsdevpb","copyrightHolder":"BBC"},"id":"mock-id","position":[2,3]}]},"id":"mock-id","position":[2]},{"type":"timestamp","model":{"firstPublished":1562936404940,"lastPublished":1569599793775},"id":"mock-id","position":[3]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a text block, which contains a url link to the BBC Weather homepage.","blocks":[{"type":"fragment","model":{"text":"This is a text block, which contains a url link to ","attributes":[]},"id":"mock-id","position":[4,1,1]},{"type":"urlLink","model":{"text":"the BBC Weather homepage","blocks":[{"type":"fragment","model":{"text":"the BBC Weather homepage","attributes":[]},"id":"mock-id","position":[4,1,2,1]}],"locator":"https://www.bbc.co.uk/weather","isExternal":false},"id":"mock-id","position":[4,1,2]},{"type":"fragment","model":{"text":".","attributes":[]},"id":"mock-id","position":[4,1,3]}]},"id":"mock-id","position":[4,1]}]},"id":"mock-id","position":[4]},{"type":"video","model":{"locator":"urn:bbc:pips:pid:p01k6msm","blocks":[{"type":"caption","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a video block containing a video about ants","blocks":[{"type":"fragment","model":{"text":"This is a video block containing a video about ants","attributes":[]},"id":"mock-id","position":[5,1,1,1,1]}]},"id":"mock-id","position":[5,1,1,1]}]},"id":"mock-id","position":[5,1,1]}]},"id":"mock-id","position":[5,1]},{"type":"aresMedia","model":{"blocks":[{"blockId":"urn:bbc:ares::clip:p01k6msm","type":"aresMediaMetadata","model":{"id":"mock-id","subType":"clip","format":"audio_video","title":"Five things ants can teach us about management","synopses":{"short":"They may be tiny, but us humans could learn a thing or two from ants."},"imageUrl":"ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg","imageCopyright":"BBC","embedding":true,"advertising":true,"versions":[{"versionId":"p01k6msp","types":["Original"],"duration":191,"durationISO8601":"PT3M11S","warnings":{"short":"Contains strong language and adult humour.","long":"Contains strong language and adult humour."},"availableTerritories":{"uk":true,"nonUk":true},"availableFrom":1540218932000}],"syndication":{"destinations":[]}},"id":"mock-id","position":[5,2,1]},{"type":"image","model":{"blocks":[{"type":"rawImage","model":{"width":1920,"height":1080,"locator":"ichef.test.bbci.co.uk/images/ic/$widthxn/p01k6mtv.jpg","originCode":"mpv","copyrightHolder":"BBC"},"id":"mock-id","position":[5,2,2,1]},{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Ants","blocks":[{"type":"fragment","model":{"text":"Ants","attributes":[]},"id":"mock-id","position":[5,2,2,2,1,1,1]}]},"id":"mock-id","position":[5,2,2,2,1,1]}]},"id":"mock-id","position":[5,2,2,2,1]}]},"id":"mock-id","position":[5,2,2,2]}]},"id":"mock-id","position":[5,2,2]}]},"id":"mock-id","position":[5,2]}]},"id":"mock-id","position":[5]},{"type":"subheadline","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This is a subheadline block","blocks":[{"type":"fragment","model":{"text":"This is a subheadline block","attributes":[]},"id":"mock-id","position":[6,1,1,1]}]},"id":"mock-id","position":[6,1,1]}]},"id":"mock-id","position":[6,1]}]},"id":"mock-id","position":[6]},{"type":"image","model":{"blocks":[{"type":"altText","model":{"blocks":[{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"Footballers after a match","blocks":[{"type":"fragment","model":{"text":"Footballers after a match","attributes":[]},"id":"mock-id","position":[7,1,1,1,1]}]},"id":"mock-id","position":[7,1,1,1]}]},"id":"mock-id","position":[7,1,1]}]},"id":"mock-id","position":[7,1]},{"type":"rawImage","model":{"width":2048,"height":1152,"locator":"c413/test/e53a84e0-dee7-11e9-b23c-f1ac9644bb55.jpg","originCode":"cpsdevpb","copyrightHolder":"Getty Images"},"id":"mock-id","position":[7,2]}]},"id":"mock-id","position":[7]},{"type":"text","model":{"blocks":[{"type":"paragraph","model":{"text":"This test article has been created so that we can run automated end-to-end tests on our website.","blocks":[{"type":"fragment","model":{"text":"This test article has been created so that we can run automated end-to-end tests on our website.","attributes":[]},"id":"mock-id","position":[8,1,1]}]},"id":"mock-id","position":[8,1]}]},"id":"mock-id","position":[8]}]}},"promo":{"headlines":{"seoHeadline":"This is the SEO headline of this test article"},"locators":{"optimoUrn":"urn:bbc:optimo:asset:cwl08rd38l6o"},"summary":"","timestamp":1569599793775,"id":"mock-id","type":"cps"},"relatedContent":{"site":{"subType":"site","name":"Pidgin","uri":"/pidgin","type":"simple"},"groups":[]}},"path":"/pidgin/articles/cwl08rd38l6o","timeOnServer": "mock-time"}
     </script>
     <div>
       <!--[if !IE]><!-->

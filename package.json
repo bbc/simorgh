@@ -7,7 +7,8 @@
     "amp:validate": "wait-on -t 20000 http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/news/articles/c6v11qzyv8po.amp && amphtml-validator http://localhost:7080/igbo.amp && amphtml-validator http://localhost:7080/korean/bbc_korean_radio/liveradio.amp && amphtml-validator http://localhost:7080/pidgin/23248703.amp && amphtml-validator http://localhost:7080/azeri/multimedia/2015/08/150804_azeri_test.amp",
     "bbcA11y": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && bbc-a11y",
     "bbcA11y:ci": "wait-on -t 20000 http://localhost:7080/news/articles/cn7k01xp8kxo && xvfb-run -a bbc-a11y",
-    "build": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack && node ./scripts/bundleSize.js",
+    "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
+    "build": "npm run build:local && node ./scripts/bundleSize.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
@@ -33,7 +34,7 @@
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration:ci": "jest --colors ./src/integration/pages/**/*.test.js",
-    "test:integration": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/pages/**/*.test.js",
+    "test:integration": "./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --colors ./src/integration/pages/**/*.test.js",
     "test:integration:watch": "npm run test:integration -- --watch",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --env.config='server'"
