@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
@@ -33,8 +34,12 @@ const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
   pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
 
 const AudioPlayerWrapper = styled.div`
-  width: calc(100% + ${GEL_SPACING_QUAD});
-  margin-left: -${GEL_SPACING_DBL};
+  width: calc(100% + ${GEL_SPACING_DBL});
+  margin-left: -${GEL_SPACING};
+  @media (min-width: 25rem) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin-left: -${GEL_SPACING_DBL};
+  }
 `;
 
 const MediaMessageWrapper = styled.div`
