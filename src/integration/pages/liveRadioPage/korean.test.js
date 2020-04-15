@@ -39,7 +39,7 @@ describe('Given I am on the Korean AMP Live Radio page', () => {
 
   describe('When I am using assistive technology', () => {
     runAmpA11yTests({
-      mediaPlayerTitle: 'Audio player',
+      mediaPlayerTitle: '오디오 플레이어',
     });
   });
 });
@@ -62,7 +62,7 @@ describe('Given I am on the Korean Canonical Live Radio page', () => {
 
   describe('When I am using assistive technology', () => {
     runCanonicalA11yTests({
-      mediaPlayerTitle: 'Audio player',
+      mediaPlayerTitle: '오디오 플레이어',
     });
   });
 });
@@ -70,7 +70,7 @@ describe('Given I am on the Korean Canonical Live Radio page', () => {
 describe('Given I am on the Korean Live Radio page', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
-      skipToContentText: '내용으로 건너뛰기',
+      skipToContentText: '내용 보기',
     });
 
     runUserTests({
@@ -79,8 +79,8 @@ describe('Given I am on the Korean Live Radio page', () => {
     });
 
     runFooterTests({
-      copyrightText:
-        '© 2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다. 외부 콘텐츠 링크에 대한 본사 정책 보기.',
+      copyrightAndExternalLinkingText:
+        '© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기',
       brandingLink: '/korean',
     });
   });
@@ -121,7 +121,7 @@ describe('Given I am on the Korean Live Radio page', () => {
 
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
-      skipToContentText: '내용으로 건너뛰기',
+      skipToContentText: '내용 보기',
     });
   });
 
