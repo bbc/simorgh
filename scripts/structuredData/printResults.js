@@ -26,11 +26,10 @@ const errorDetails = (test) => {
 };
 
 const printFailures = (overallResult) => {
-  console.log(overallResult.failed);
   const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
   errorsWarnings.forEach((failure) => {
     console.log(
-      `${red('✕')} ${red(testSummary(failure))}\n    ${errorDetails(failure)}`,
+      `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)}`,
     );
   });
 };
