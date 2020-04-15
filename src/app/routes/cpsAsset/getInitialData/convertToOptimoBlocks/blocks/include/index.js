@@ -10,10 +10,7 @@ const buildIncludeUrl = (href, type) => {
     vj: '',
   };
 
-  const strippedHref = href.split('?')[0];
-  const withTrailingHref = href.startsWith('/')
-    ? strippedHref
-    : `/${strippedHref}`;
+  const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
 
   return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 };
@@ -45,12 +42,15 @@ const fetchMarkup = async (url) => {
   }
 };
 
-const convertInclude = async ({ href, type, ...rest }) => {
+const convertInclude = async ({ href: hrefWithParams, type, ...rest }) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
     include: 'vj',
   };
+
+  // This strips the GET query params from the href
+  const href = hrefWithParams && hrefWithParams.split('?')[0];
 
   // This determines if the href has a leading '/'
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
