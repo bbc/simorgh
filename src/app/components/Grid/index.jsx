@@ -17,13 +17,8 @@ const gelMaxWidths = css`
   }
 `;
 
-/*
-  hasMaxWidths prop has nothing to do with @bbc/psammead-grid but is used here to prevent
-  `gelMaxWidths` from getting applied to pages with specific max-width requirement
-  eg, for the story page, gel group 4 and above should all have same max-widths.
- */
 export const GelPageGrid = styled(Grid)`
-  ${({ hasMaxWidths }) => (hasMaxWidths ? '' : gelMaxWidths)}
+  ${gelMaxWidths}
 `;
 
 export default Grid;

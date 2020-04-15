@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -95,16 +95,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const storyPageGelMaxWidths = css`
+  const StoryPageGrid = styled(Grid)`
+    flex-grow: 1;
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       margin: 0 auto;
       max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
     }
-  `;
-
-  const StyledGrid = styled(GelPageGrid)`
-    flex-grow: 1;
-    ${storyPageGelMaxWidths}
   `;
 
   const GridSecondaryColumn = styled(Grid)`
@@ -199,12 +195,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <ATIAnalytics data={pageData} />
 
-      <StyledGrid
+      <StoryPageGrid
         dir={dir}
         columns={gridColumns}
         enableGelGutters
         margins={gridMargins}
-        hasMaxWidths
       >
         <Grid item dir={dir} columns={gridColsMain} startOffset={gridOffset}>
           <main role="main">
@@ -234,7 +229,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             />
           </ComponentWrapper>
         </GridSecondaryColumn>
-      </StyledGrid>
+      </StoryPageGrid>
     </>
   );
 };
