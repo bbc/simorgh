@@ -12,7 +12,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runSnapshotTests,
 } from '../../common';
 
@@ -84,7 +84,7 @@ describe('Given I am on a Pidgin Frontpage AMP/Canonical page', () => {
     });
 
     describe('When optimising the application performance', () => {
-      runPerformaceTests();
+      runPerformanceTests();
     });
 
     describe('When I am using assistive technology', () => {
