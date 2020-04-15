@@ -52,7 +52,7 @@ Object.keys(config)
               visitPage(path, pageType);
             });
 
-            it.only(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
+            it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
               // Accept privacy banner
               getPrivacyBannerAccept(service, variant).click();
 
@@ -82,25 +82,21 @@ Object.keys(config)
               // Checks correct url variant has persisted
               assertURLContains(product, otherVariant);
 
-              // Find first MAP on home page and click it
-              cy.get('div[class^="StyledMediaIndicator"]')
-                .first()
-                .parentsUntil('li[class^="StoryPromoLi"]')
-                .within(() => {
-                  cy.get('a[class^="Link"]').click();
-                });
+              // Find first MAP on home page within a StoryPromoLi item and click it
+              cy.get('li[class^="StoryPromoLi"]').within(() => {
+                cy.get('div[class^="StyledMediaIndicator"]')
+                  .first()
+                  .parentsUntil('li[class^="StoryPromoLi"]')
+                  .within(() => {
+                    cy.get('a[class^="Link"]').click();
+                  });
+              });
 
               // Checks correct cookie has persisted
               assertScriptCookie(product, otherVariant);
 
               // Checks correct url variant has persisted
               assertURLContains(product, otherVariant);
-
-              // // Navigates back to the original page, but for other variant
-              // visitPage(
-              //   path.replace(`/${variant}`, `/${otherVariant}`),
-              //   pageType,
-              // );
 
               // Clicks script switcher to original variant
               clickScriptSwitcher(variant);
