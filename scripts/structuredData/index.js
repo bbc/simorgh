@@ -1,6 +1,5 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
-const fetch = require('node-fetch');
 const { structuredDataTest } = require('structured-data-testing-tool');
 const { Google, SocialMedia } = require('structured-data-testing-tool/presets');
 const {
@@ -8,7 +7,6 @@ const {
   printStatistics,
   printPassing,
 } = require('./printResults');
-const getSchemas = require('./schemas');
 
 global.Cypress = {
   env: () => {
@@ -21,17 +19,10 @@ const services = require('../../cypress/support/config/services');
 
 const validate = async (url) => {
   let result;
-  const dataPath = `${url}.json`;
-
-  const response = await fetch(dataPath);
-  const jsonData = await response.json();
-
-  const schemas = getSchemas(jsonData);
 
   try {
     result = await structuredDataTest(url, {
       presets: [Google, SocialMedia],
-      schemas,
       auto: false,
     });
   } catch (error) {
