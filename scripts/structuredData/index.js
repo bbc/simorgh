@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-param-reassign */
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
 const { structuredDataTest } = require('structured-data-testing-tool');
@@ -75,7 +77,7 @@ const combineResults = (results, urls) => {
 };
 
 const printResults = (overallResult) => {
-  printPassing(overallResult.passed);
+  printPassing(overallResult);
   printFailures(overallResult);
   printStatistics(overallResult);
 };

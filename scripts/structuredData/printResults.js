@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
 const { cyan, red, green, bold } = require('chalk');
@@ -27,15 +28,18 @@ const errorDetails = (test) => {
 
 const printFailures = (overallResult) => {
   const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
-  errorsWarnings.forEach((failure) => {
+  errorsWarnings.forEach((failure, index) => {
+    failure.url = index;
     console.log(
-      `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)}`,
+      `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)} ${
+        failure.url
+      }`,
     );
   });
 };
 
-const printPassing = (passed) => {
-  passed.forEach((pass) => {
+const printPassing = (overallResult) => {
+  overallResult.passed.forEach((pass) => {
     console.log(`${green('✓', testSummary(pass))}\n    ${testDetails(pass)}`);
   });
 };
