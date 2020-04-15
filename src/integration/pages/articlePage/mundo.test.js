@@ -57,7 +57,7 @@ describe('Given I am on a Mundo article AMP/Canonical page', () => {
     });
 
     runFooterTests({
-      copyrightText:
+      copyrightAndExternalLinkingText:
         '© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos.',
       brandingLink: '/mundo',
     });

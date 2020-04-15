@@ -64,8 +64,8 @@ describe('Given I am on the Korean live radio page AMP/Canonical', () => {
     });
 
     runFooterTests({
-      copyrightText:
-        '© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다',
+      copyrightAndExternalLinkingText:
+        '© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기',
       brandingLink: '/korean',
     });
   });
