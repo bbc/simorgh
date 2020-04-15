@@ -10,28 +10,28 @@ import {
 } from '../utilities/cookiePrivacyBanner';
 
 const assertURLContains = (product, variantValue) => {
-  cy.url().should(url => {
+  cy.url().should((url) => {
     url.includes(`${product}/${variantValue}/`);
   });
 };
 
-const hasVariant = service => {
+const hasVariant = (service) => {
   return config[service] && config[service].variant !== 'default';
 };
 
 Object.keys(config)
   .filter(hasVariant)
-  .forEach(service => {
+  .forEach((service) => {
     Object.keys(config[service].pageTypes)
       .filter(
-        pageType =>
+        (pageType) =>
           serviceHasPageType(service, pageType) && !pageType.includes('error'),
       )
-      .forEach(pageType => {
+      .forEach((pageType) => {
         const paths = getPaths(service, pageType);
         paths
-          .map(path => `${path}.amp`)
-          .forEach(path => {
+          .map((path) => `${path}.amp`)
+          .forEach((path) => {
             const { variant } = config[service];
             const product = config[service].name;
             const otherVariant = appConfig[product][variant].scriptLink.variant;
