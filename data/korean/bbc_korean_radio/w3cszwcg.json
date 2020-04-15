@@ -36,7 +36,22 @@
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05gxl34.png",
         "embedding": false,
         "advertising": false,
-        "versions": [],
+        "versions": [
+          {
+            "versionId": "w4hqvfn5",
+            "types": ["Original"],
+            "duration": 1140,
+            "durationISO8601": "PT19M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1584123540000,
+            "availableFrom": 1583509740000
+          }
+        ],
         "imageCopyright": null
       }
     ]
