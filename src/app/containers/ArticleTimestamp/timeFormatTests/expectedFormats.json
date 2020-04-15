@@ -156,7 +156,7 @@
       "one hour ago": "1時間前",
       "five hours ago": "5時間前",
       "exact date": "11 十月 2018",
-      "exact date and time with timezone": "12 七月 2019, 21:55 JST"
+      "exact date and time with timezone": "2019年7月12日 21:55"
     }
   },
   "korean": {
@@ -166,7 +166,7 @@
       "one hour ago": "한 시간 전",
       "five hours ago": "5시간 전",
       "exact date": "11 10월 2018",
-      "exact date and time with timezone": "12 7월 2019, 21:55 KST"
+      "exact date and time with timezone": "2019년 7월 12일 오후 9:55"
     }
   },
   "kyrgyz": {
@@ -404,7 +404,7 @@
       "one hour ago": "1 小时前",
       "five hours ago": "5 小时前",
       "exact date": "10 十月 2018",
-      "exact date and time with timezone": "12 七月 2019, 12:55 GMT"
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
     },
     "trad": {
       "one minute ago": "1 分钟前",
@@ -412,7 +412,7 @@
       "one hour ago": "1 小时前",
       "five hours ago": "5 小时前",
       "exact date": "10 十月 2018",
-      "exact date and time with timezone": "12 七月 2019, 12:55 GMT"
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
     }
   },
   "ukrainian": {
@@ -472,7 +472,7 @@
       "one hour ago": "1 小时前",
       "five hours ago": "5 小时前",
       "exact date": "10 十月 2018",
-      "exact date and time with timezone": "12 七月 2019, 12:55 GMT"
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
     },
     "trad": {
       "one minute ago": "1 分钟前",
@@ -480,7 +480,7 @@
       "one hour ago": "1 小时前",
       "five hours ago": "5 小时前",
       "exact date": "10 十月 2018",
-      "exact date and time with timezone": "12 七月 2019, 12:55 GMT"
+      "exact date and time with timezone": "2019年7月12日下午12点55分"
     }
   }
 }
