@@ -13,11 +13,11 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on a Mundo article AMP page', () => {
+describe('Given I am on a Mundo AMP Article page', () => {
   describe('When I am using the website', () => {
     runAmpUserTests();
   });
@@ -31,7 +31,7 @@ describe('Given I am on a Mundo article AMP page', () => {
   });
 });
 
-describe('Given I am on a Mundo article Canonical page', () => {
+describe('Given I am on a Mundo Canonical Article page', () => {
   describe('When I am using the website', () => {
     runCanonicalUserTests({
       imageAltText:
@@ -50,7 +50,7 @@ describe('Given I am on a Mundo article Canonical page', () => {
   });
 });
 
-describe('Given I am on a Mundo article AMP/Canonical page', () => {
+describe('Given I am on a Mundo Article page', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
       skipToContentText: 'Ir al contenido',
@@ -95,10 +95,10 @@ describe('Given I am on a Mundo article AMP/Canonical page', () => {
       linkedData:
         '{"@context":"http://schema.org","@type":"Article","url":"http://localhost:7080/mundo/articles/ce42wzqr2mko","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","publishingPrinciples":"https://www.bbc.com/mundo/institucional-51359666","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/mundo/articles/ce42wzqr2mko","name":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"},"headline":"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas","datePublished":"2019-10-04T10:58:46.977Z","dateModified":"2019-10-04T10:58:46.977Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Mundo","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"},"noBylinesPolicy":"https://www.bbc.com/mundo/institucional-51359666#authorexpertise"}}',
     });
+  });
 
-    describe('When optimising the application performance', () => {
-      runPerformaceTests();
-    });
+  describe('When optimising the application performance', () => {
+    runPerformanceTests();
   });
 
   describe('When I am using assistive technology', () => {
