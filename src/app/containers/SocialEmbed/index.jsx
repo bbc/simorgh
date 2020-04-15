@@ -19,12 +19,11 @@ import createTranslations from './translations';
  */
 const MAX_WIDTH = '31.25rem';
 
-const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: ${GEL_SPACING_TRPL};
-  max-width: ${MAX_WIDTH};
-
+/**
+ * providerStyles normalises styles applied to oEmbeds by certain
+ * providers. This gives us a good foundation for further styling.
+ */
+const providerStyles = `
   .twitter-tweet,
   .instagram-media {
     margin-top: 0 !important;
@@ -33,6 +32,14 @@ const Wrapper = styled.div`
   .instagram-media {
     min-width: auto !important;
   }
+`;
+
+const Wrapper = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: ${GEL_SPACING_TRPL};
+  max-width: ${MAX_WIDTH};
+  ${providerStyles}
 `;
 
 const SocialEmbedContainer = ({ blocks }) => {
