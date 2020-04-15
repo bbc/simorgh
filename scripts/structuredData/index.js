@@ -61,14 +61,14 @@ const checkStructuredData = async (urls) => {
     .catch((error) => console.error(error));
 };
 
-const combineResults = (results, urls) => {
+const aggregateResults = (results) => {
   return {
-    urls: Object.values(urls).flat(),
+    urls: results.map((result) => result.url),
     tests: results.map((result) => result.tests).flat(),
     passed: results.map((result) => result.passed).flat(),
-    failed: results.map((result) => result.failed).flat(),
-    warnings: results.map((result) => result.warnings).flat(),
-    optional: results.map((result) => result.optional).flat(),
+    failed: results
+      .map((result) => [...result.failed, ...result.warnings])
+      .flat(),
     schemas: [...new Set(results.map((result) => result.schemas).flat())],
     structuredData: Object.assign(
       ...results.map((result) => result.structuredData),
@@ -83,16 +83,14 @@ const printResults = (overallResult) => {
 };
 
 const exit = (overallResult) => {
-  const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
-  if (errorsWarnings.length > 0) {
+  if (overallResult.failed > 0) {
     process.exit(1);
   }
 };
 
 const run = async () => {
-  const urls = getUrls();
-  const results = await checkStructuredData(urls);
-  const overallResult = combineResults(results, urls);
+  const results = await checkStructuredData(getUrls());
+  const overallResult = aggregateResults(results);
 
   printResults(overallResult);
 

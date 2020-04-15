@@ -27,8 +27,7 @@ const errorDetails = (test) => {
 };
 
 const printFailures = (overallResult) => {
-  const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
-  errorsWarnings.forEach((failure, index) => {
+  overallResult.failed.forEach((failure, index) => {
     failure.url = index;
     console.log(
       `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)} ${
@@ -45,8 +44,8 @@ const printPassing = (overallResult) => {
 };
 
 const printStatistics = (overallResults) => {
-  const errorsWarnings = [...overallResults.failed, ...overallResults.warnings];
-  const totalTests = overallResults.passed.length + errorsWarnings.length;
+  const totalTests =
+    overallResults.passed.length + overallResults.failed.length;
 
   console.log(bold(`\nStatistics\n`));
   console.log(`      Number of URLs:`, `${overallResults.urls.length || 0}`);
@@ -78,8 +77,10 @@ const printStatistics = (overallResults) => {
 
   console.log(
     `      Failed:`,
-    `\t${errorsWarnings.length}`,
-    `\t(${Math.floor((errorsWarnings.length / totalTests) * 100) || 0}%)`,
+    `\t${overallResults.failed.length}`,
+    `\t(${
+      Math.floor((overallResults.failed.length / totalTests) * 100) || 0
+    }%)`,
   );
   console.log('');
 };
