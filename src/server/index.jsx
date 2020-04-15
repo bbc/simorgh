@@ -260,7 +260,7 @@ server
           routes,
           urlPath,
         );
-        const data = await route.getInitialData(url);
+        const data = await route.getInitialData({ path: url, service });
         const { status } = data;
         const bbcOrigin = headers['bbc-origin'];
 
