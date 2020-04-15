@@ -55,7 +55,7 @@ describe('Given I am on the Korean live radio Canonical page', () => {
 describe('Given I am on the Korean live radio page AMP/Canonical', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
-      skipToContentText: '내용으로 건너뛰기',
+      skipToContentText: '내용 보기',
     });
 
     runUserTests({
