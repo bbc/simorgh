@@ -22,26 +22,26 @@ const assertScriptCookie = (product, cookieValue) => {
 };
 
 const assertURLContains = (product, variantValue) => {
-  cy.url().should(url => {
+  cy.url().should((url) => {
     url.includes(`${product}/${variantValue}/`);
   });
 };
 
-const hasVariant = service => {
+const hasVariant = (service) => {
   return config[service] && config[service].variant !== 'default';
 };
 
 Object.keys(config)
   .filter(hasVariant)
-  .forEach(service => {
+  .forEach((service) => {
     Object.keys(config[service].pageTypes)
       .filter(
-        pageType =>
+        (pageType) =>
           serviceHasPageType(service, pageType) && !pageType.includes('error'),
       )
-      .forEach(pageType => {
+      .forEach((pageType) => {
         const paths = getPaths(service, pageType);
-        paths.forEach(path => {
+        paths.forEach((path) => {
           const { variant } = config[service];
           const product = config[service].name;
           const otherVariant = appConfig[product][variant].scriptLink.variant;
@@ -52,7 +52,7 @@ Object.keys(config)
               visitPage(path, pageType);
             });
 
-            it(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
+            it.only(`should change to the correct script when switching script between ${variant} and ${otherVariant}`, () => {
               // Accept privacy banner
               getPrivacyBannerAccept(service, variant).click();
 
@@ -71,17 +71,36 @@ Object.keys(config)
               // Checks URL is in other variant
               assertURLContains(product, otherVariant);
 
-              // Navigate to home page
-              visitPage(`${product}/${otherVariant}`, pageType);
+              // Navigate to home page by clicking link in the banner
+              cy.get('div[class^="Banner"]').within(() => {
+                cy.get(`a[href="/${product}"]`).first().click();
+              });
 
               // Checks correct cookie has persisted
               assertScriptCookie(product, otherVariant);
 
-              // Navigates back to the original page, but for other variant
-              visitPage(
-                path.replace(`/${variant}`, `/${otherVariant}`),
-                pageType,
-              );
+              // Checks correct url variant has persisted
+              assertURLContains(product, otherVariant);
+
+              // Find first MAP on home page and click it
+              cy.get('div[class^="StyledMediaIndicator"]')
+                .first()
+                .parentsUntil('li[class^="StoryPromoLi"]')
+                .within(() => {
+                  cy.get('a[class^="Link"]').click();
+                });
+
+              // Checks correct cookie has persisted
+              assertScriptCookie(product, otherVariant);
+
+              // Checks correct url variant has persisted
+              assertURLContains(product, otherVariant);
+
+              // // Navigates back to the original page, but for other variant
+              // visitPage(
+              //   path.replace(`/${variant}`, `/${otherVariant}`),
+              //   pageType,
+              // );
 
               // Clicks script switcher to original variant
               clickScriptSwitcher(variant);
