@@ -10,7 +10,6 @@ const getConfig = async (service, variant = 'default') => {
     const { service: config } = await import(`#lib/config/services/${service}`);
     serviceConfig = config;
   } catch (error) {
-    // maybe don't error to console here, or only do it in dev mode.
     // eslint-disable-next-line no-console
     console.error(
       `getConfig could not find config for the requested service: ${service}.`,
