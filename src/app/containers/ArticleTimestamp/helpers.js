@@ -17,7 +17,7 @@ export const isToday = (timestamp) => isSameDay(Date.now(), timestamp);
 export const formatType = ({
   lastPublished = null,
   firstPublished,
-  datetimeLocale,
+  datetimeLocale = 'en-gb',
 }) => {
   if (isToday(lastPublished) || isToday(firstPublished)) {
     if (
