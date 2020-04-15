@@ -130,6 +130,7 @@ const testRenderedData = ({
       service={service}
       scripts="__mock_script_elements__"
       styleTags={<style />}
+      hasAds={false}
     />,
   );
 
@@ -895,6 +896,7 @@ describe('Server', () => {
             service={service}
             scripts="__mock_script_elements__"
             styleTags={<style />}
+            hasAds={false}
           />,
         );
 

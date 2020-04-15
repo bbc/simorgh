@@ -81,8 +81,6 @@ const renderDocument = async ({
   const assetOrigins = getAssetOrigins(service);
   const serviceHasAds = await getServiceWithAds(service);
 
-  console.log('IN renderDocument', serviceHasAds);
-
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assetOrigins={assetOrigins}
