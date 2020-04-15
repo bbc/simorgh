@@ -13,8 +13,8 @@ describe('withRadioSchedule', () => {
     fetchMock.restore();
   });
 
-  describe('pageData and radioSchedule promises resolves with data', () => {
-    it('should merge radioScheduleData into pageData', async () => {
+  describe('page data and radio schedule promises resolve with data', () => {
+    it('should merge radio schedule data into page data', async () => {
       fetchMock.mock(
         'http://localhost/hausa/bbc_hausa_radio/schedule.json',
         radioScheduleJson,
@@ -35,8 +35,8 @@ describe('withRadioSchedule', () => {
     });
   });
 
-  describe('if either pageData or radioSchedule promise fails', () => {
-    it('should not merge radioScheduleData into pageData if radio schedule promise fails', async () => {
+  describe('if either page data or radio schedule fetch returns non-ok status code', () => {
+    it('should not merge radio schedule data into page data if radio schedule fetch returns non-ok status code', async () => {
       fetchMock.mock(
         'http://localhost/hausa/bbc_hausa_radio/schedule.json',
         404,
@@ -56,7 +56,7 @@ describe('withRadioSchedule', () => {
       expect(rest.status).toBe(200);
     });
 
-    it('should not merge radioScheduleData into pageData if pageData promise fails', async () => {
+    it('should not merge radio schedule data into page data if page data fetch returns non-ok status code', async () => {
       fetchMock.mock(
         'http://localhost/hausa/bbc_hausa_radio/schedule.json',
         radioScheduleJson,
@@ -76,7 +76,7 @@ describe('withRadioSchedule', () => {
       expect(status).toBe(404);
     });
 
-    it('should not merge radioScheduleData into pageData if both pageData and radioSchedule promise fails', async () => {
+    it('should not merge radio schedule data into page data if both page data and radio schedule return non-ok status code', async () => {
       fetchMock.mock(
         'http://localhost/hausa/bbc_hausa_radio/schedule.json',
         404,
@@ -94,6 +94,27 @@ describe('withRadioSchedule', () => {
 
       expect(json).toBeUndefined();
       expect(status).toBe(404);
+    });
+
+    describe('fetch API promises rejected', () => {
+      it('should return page data without radio schedules if radio schedule fetch promise is rejected', async () => {
+        fetchMock.mock('http://localhost/hausa/bbc_hausa_radio/schedule.json', {
+          throws: 'Server not found',
+        });
+
+        const {
+          json: { radioScheduleData, foo },
+          ...rest
+        } = await withRadioSchedule(
+          pageDataPromise,
+          'hausa',
+          'http://localhost/mock-frontpage-path',
+        );
+
+        expect(radioScheduleData).toBeNull();
+        expect(foo).toBe('bar');
+        expect(rest.status).toBe(200);
+      });
     });
   });
 });
