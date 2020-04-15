@@ -14,17 +14,20 @@ const testDetails = (test) => {
 
 const errorDetails = (test) => {
   const { error, expect } = test;
-  if (error) {
-    return `${cyan(error.message)}\n\tExpected: ${JSON.stringify(
+  const errorMessage = error ? cyan(error.message) : '';
+  if (expect && error.found) {
+    return `${errorMessage}\n\tExpected: ${JSON.stringify(
       expect,
       null,
       2,
     )}\n\tActual: ${JSON.stringify(error.found)}`;
   }
+  return errorMessage;
 };
 
-const printFailures = (failures) => {
-  failures.forEach((failure) => {
+const printFailures = (overallResult) => {
+  const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
+  errorsWarnings.forEach((failure) => {
     console.log(
       `${red('✕')} ${red(testSummary(failure))}\n    ${errorDetails(failure)}`,
     );
@@ -38,12 +41,11 @@ const printPassing = (passed) => {
 };
 
 const printStatistics = (overallResults) => {
-  const totalTests =
-    overallResults.passed.length +
-    overallResults.failed.length +
-    overallResults.warnings.length;
+  const errorsWarnings = [...overallResults.failed, ...overallResults.warnings];
+  const totalTests = overallResults.passed.length + errorsWarnings.length;
 
   console.log(bold(`\nStatistics\n`));
+  console.log(`      Number of URLs:`, `${overallResults.urls.length || 0}`);
   console.log(
     `  Number of Metatags:`,
     `${Object.keys(overallResults.structuredData.metatags).length || 0}`,
@@ -63,26 +65,17 @@ const printStatistics = (overallResults) => {
   console.log(bold(`Results\n`));
 
   console.log(
-    `    Passed:`,
-    `${overallResults.passed.length}`,
+    `      Passed:`,
+    `\t${overallResults.passed.length}`,
     `\t(${
       Math.floor((overallResults.passed.length / totalTests) * 100) || 0
     }%)`,
   );
 
   console.log(
-    `    Warnings:`,
-    `${overallResults.warnings.length}`,
-    `\t(${
-      Math.floor((overallResults.warnings.length / totalTests) * 100) || 0
-    }%)`,
-  );
-  console.log(
-    `    Failed:`,
-    `${overallResults.failed.length}`,
-    `\t(${
-      Math.floor((overallResults.failed.length / totalTests) * 100) || 0
-    }%)`,
+    `      Failed:`,
+    `\t${errorsWarnings.length}`,
+    `\t(${Math.floor((errorsWarnings.length / totalTests) * 100) || 0}%)`,
   );
   console.log('');
 };
