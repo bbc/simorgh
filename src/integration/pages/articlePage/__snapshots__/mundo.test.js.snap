@@ -1985,7 +1985,7 @@ exports[`Given I am on a Mundo article AMP/Canonical page When I view the source
             crossorigin="anonymous"
             defer
     >
-      [21]
+      [19]
     </script>
     <script async
             data-chunk="main"

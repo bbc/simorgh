@@ -2531,7 +2531,7 @@ exports[`Given I am on a Pidgin article AMP/Canonical page When I view the sourc
             crossorigin="anonymous"
             defer
     >
-      [27]
+      [25]
     </script>
     <script async
             data-chunk="main"

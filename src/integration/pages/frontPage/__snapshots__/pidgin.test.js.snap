@@ -5068,7 +5068,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
             crossorigin="anonymous"
             defer
     >
-      [27]
+      [25]
     </script>
     <script async
             data-chunk="main"
