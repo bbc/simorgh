@@ -8,7 +8,7 @@ import 'moment/locale/fr';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `fr`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
