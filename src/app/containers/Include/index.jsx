@@ -7,9 +7,8 @@ import useToggle from '#hooks/useToggle';
 const IncludeContainer = ({ html = '', type }) => {
   const scriptTagRegExp = new RegExp(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
   const { enabled } = useToggle('include');
-  const [originalHtml, setOriginalHtml] = useState(html || '');
   const [ssrHtml, setSsrHtml] = useState(
-    originalHtml.replace(scriptTagRegExp, ''),
+    (html || '').replace(scriptTagRegExp, ''),
   );
 
   const supportedTypes = {
@@ -44,11 +43,10 @@ const IncludeContainer = ({ html = '', type }) => {
 
   // Keep the DOM up to date with our script tags.
   useEffect(() => {
-    setOriginalHtml(html || '');
+    const originalHtml = html || '';
     setSsrHtml(originalHtml.replace(scriptTagRegExp, ''));
     const scriptTagMatches = originalHtml.matchAll(scriptTagRegExp);
     const scriptTags = Array.from(scriptTagMatches);
-    console.log({ html });
     async function placeScriptsOneAfterTheOther() {
       // eslint-disable-next-line no-restricted-syntax
       for (const scriptTag of scriptTags) {
@@ -66,7 +64,7 @@ const IncludeContainer = ({ html = '', type }) => {
       }
     }
     placeScriptsOneAfterTheOther();
-  }, [html, originalHtml, scriptTagRegExp]);
+  }, [html, ssrHtml, scriptTagRegExp]);
 
   if (shouldNotRenderInclude) {
     return null;

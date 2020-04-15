@@ -2,7 +2,6 @@ export default `
 <script>
     window.vjConfigObject = window.vjConfigObject || {};
     window.vjConfigObject['newsspec-22766-democrats-app'] = {
-        "newsspec-22766-democrats-app": {
           "js": true,
           "output": {
             "wrapper": "embed"
@@ -179,8 +178,7 @@ export default `
           "pathToWrapperAssets": "https://news.test.files.bbci.co.uk/include/newsspec/22766-democrats/assets/embed",
           "pathToInclude": "https://news.test.files.bbci.co.uk/include/newsspec/22766-democrats/mundo/app/embed",
           "pathToWrapperAssetsToInclude": "https://news.test.files.bbci.co.uk/include/newsspec/22766-democrats/mundo/app/embed"
-        }
-      };
+        };
 </script>
 <link rel="stylesheet" href="https://news.test.files.bbci.co.uk/include/newsspec/22766-democrats/assets/embed/css/inline.css">
 <div id="responsive-embed-newsspec-22766-democrats-app" class="bbc-news-vj-embed-wrapper">
