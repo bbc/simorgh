@@ -23,7 +23,6 @@ const validate = async (url) => {
   try {
     result = await structuredDataTest(url, {
       presets: [Google, SocialMedia],
-      auto: false,
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
