@@ -328,7 +328,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                   <h2 dir="rtl"
                       class="Title-sc-7g3fro-2 kcHhsl"
                   >
-                    ما سیاست‌های حفظ حریم خصوصی و کوکی‌های (Cookies) خود را به روز کرده‌ایم
+                    ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم
                   </h2>
                   <p dir="rtl"
                      class="ConsentBannerText-sc-7g3fro-4 feAsrw"
@@ -370,7 +370,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                   <h2 dir="rtl"
                       class="Title-sc-7g3fro-2 kcHhsl"
                   >
-                    آیا با دریافت کوکی‌های ما (Cookies) موافقید؟
+                    آیا با دریافت کوکی‌های ما موافقید؟
                   </h2>
                   <p dir="rtl"
                      class="ConsentBannerText-sc-7g3fro-4 feAsrw"
