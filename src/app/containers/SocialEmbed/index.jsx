@@ -43,8 +43,11 @@ const SocialEmbedContainer = ({ blocks }) => {
   if (!blocks || !enabled) return null;
 
   const { type: provider, indexOfType, model } = blocks[0];
-  const { id, href } = model;
   const index = indexOfType + 1;
+
+  const id = path(['id'], model);
+  const href = path(['href'], model);
+  if (!id || !href) return null;
 
   const oEmbed = path(['embed', 'oembed'], model);
 
