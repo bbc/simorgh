@@ -1,5 +1,5 @@
 import pathOr from 'ramda/src/pathOr';
-import { mostReadRecordIsFresh } from '../utilities';
+import { mostReadRecordIsFresh } from '.';
 
 const mostReadItems = ({ data, numberOfItems }) => {
   if (!data) {

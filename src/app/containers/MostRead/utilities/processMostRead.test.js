@@ -1,6 +1,6 @@
-import filterMostRead from './filterMostRead';
+import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
-import { setStaleLastRecordTimeStamp } from '../utilities/testHelpers';
+import { setStaleLastRecordTimeStamp } from './testHelpers';
 
 const expectedPidginData = [
   {
@@ -91,7 +91,7 @@ describe('filterMostRead', () => {
     },
   ].forEach(({ description, data, numberOfItems, expectedReturn }) => {
     it(description, () => {
-      expect(filterMostRead({ data, numberOfItems })).toEqual(expectedReturn);
+      expect(processMostRead({ data, numberOfItems })).toEqual(expectedReturn);
     });
   });
 });

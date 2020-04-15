@@ -20,7 +20,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import webLogger from '#lib/logger.web';
 import { shouldRenderLastUpdated } from '../utilities';
 import LastUpdated from './LastUpdated';
-import filterMostRead from './filterMostRead';
+import processMostRead from '../utilities/processMostRead';
 import mostReadShape from '../utilities/mostReadShape';
 
 const logger = webLogger();
@@ -49,7 +49,7 @@ const CanonicalMostRead = ({
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
 
-  const filteredData = filterMostRead({ data: initialData, numberOfItems });
+  const filteredData = processMostRead({ data: initialData, numberOfItems });
 
   const [items, setItems] = useState(filteredData);
 
@@ -60,7 +60,7 @@ const CanonicalMostRead = ({
           throw Error(response.statusText);
         }
         const mostReadData = await response.json();
-        setItems(filterMostRead({ data: mostReadData, numberOfItems }));
+        setItems(processMostRead({ data: mostReadData, numberOfItems }));
       };
 
       const fetchMostReadData = (pathname) =>
