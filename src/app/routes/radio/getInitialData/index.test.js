@@ -4,7 +4,7 @@ import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
 fetch.mockResponse(JSON.stringify(liveRadioJson));
 
 it('should return essential data for a page to render', async () => {
-  const { pageData } = await getInitialData('mock-live-radio-path');
+  const { pageData } = await getInitialData({ path: 'mock-live-radio-path' });
 
   expect(pageData.promo.name).toEqual('BBC 코리아 라디오');
   expect(pageData.metadata.language).toEqual('ko');
