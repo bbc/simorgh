@@ -140,7 +140,7 @@ describe('StoryPromo Container', () => {
       ).toEqual('7 Ọgọọst 2019');
 
       const newsContainer = render(
-        <WrappedStoryPromo serv ice="news" item={cpsItem} />,
+        <WrappedStoryPromo service="news" item={cpsItem} />,
       ).container;
       expect(newsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 May 2019',
