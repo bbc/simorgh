@@ -6,6 +6,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { string, bool } from 'prop-types';
 import {
   CanonicalMediaPlayer,
@@ -36,7 +37,7 @@ const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
 const AudioPlayerWrapper = styled.div`
   width: calc(100% + ${GEL_SPACING_DBL});
   margin-left: -${GEL_SPACING};
-  @media (min-width: 25rem) {
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: calc(100% + ${GEL_SPACING_QUAD});
     margin-left: -${GEL_SPACING_DBL};
   }
