@@ -5,7 +5,7 @@ const longDatetimeLocales = ['ja', 'ko', 'zh-cn'];
 
 // 22 March 2019
 export const formatDate = (datetimeLocale) => {
-  if ([longDatetimeLocales].includes(datetimeLocale)) {
+  if (longDatetimeLocales.includes(datetimeLocale)) {
     return 'LL';
   }
   return 'D MMMM YYYY';
