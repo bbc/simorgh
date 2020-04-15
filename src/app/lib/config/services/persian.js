@@ -61,9 +61,9 @@ export const service = {
       relatedContent: 'مطالب مرتبط',
       navMenuText: 'صفحه ها',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'پخش صدا و تصویر',
+        audioPlayer: 'پخش صدا',
+        videoPlayer: 'پخش ویدیو',
       },
       error: {
         404: {
@@ -148,7 +148,8 @@ export const service = {
         },
       },
       media: {
-        noJs: 'پخش این فایل در دستگاه شما پشتیبانی نمی شود.',
+        noJs:
+          'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
         contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
@@ -171,25 +172,24 @@ export const service = {
         listen: 'بشنوید',
         watch: 'ببینید',
         liveLabel: 'زنده',
-        nextLabel: 'NEXT',
+        nextLabel: 'بعدی',
         previousRadioShow: 'برنامه رادیویی قبلی',
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'توضیح ویدئو، ',
-          text: 'هشدار: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+          textPrefixVisuallyHidden: 'توضیح ویدیو، ',
+          text: 'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
         },
         fallback: {
           text: 'محتوا در دسترس نیست',
           linkText: 'در %provider_name% بیشتر ببینید',
           linkTextSuffixVisuallyHidden: '، لینک خارجی',
-          warningText:
-            'توضیح: محتوای مربوط به طرف ثالث ممکن است شامل آگهی باشد',
+          warningText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
         },
         skipLink: {
-          text: 'بگذر از پست %provider_name%',
+          text: 'رد شدن از پست %provider_name%',
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
       },
@@ -231,7 +231,7 @@ export const service = {
         },
         {
           href: 'https://www.bbc.co.uk/usingthebbc/cookies/',
-          text: 'Cookies',
+          text: 'کوکی ها',
         },
         {
           href: 'https://www.bbc.com/persian/institutional-37542244',
