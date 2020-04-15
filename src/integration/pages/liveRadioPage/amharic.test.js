@@ -5,6 +5,9 @@
 import runUserTests from './user';
 import runUserAmpTests from './user.amp';
 import runUserCanonicalTests from './user.canonical';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
+
 import {
   runFooterTests,
   runHeaderTests,
@@ -18,7 +21,7 @@ import {
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on the Amharic live radio AMP page', () => {
+describe('Given I am on the Amharic AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
@@ -33,9 +36,15 @@ describe('Given I am on the Amharic live radio AMP page', () => {
   describe('When I am analysing user/performance metrics', () => {
     runCommonAmpAnalyticsTests();
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Audio player',
+    });
+  });
 });
 
-describe('Given I am on the Amharic live radio Canonical page', () => {
+describe('Given I am on the Amharic Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
@@ -50,9 +59,15 @@ describe('Given I am on the Amharic live radio Canonical page', () => {
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'amharic' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Audio player',
+    });
+  });
 });
 
-describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
+describe('Given I am on the Amharic Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'ያድምጡ',

@@ -5,6 +5,9 @@
 import runUserTests from './user';
 import runUserAmpTests from './user.amp';
 import runUserCanonicalTests from './user.canonical';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
+
 import {
   runFooterTests,
   runHeaderTests,
@@ -18,7 +21,7 @@ import {
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on the Korean live radio AMP page', () => {
+describe('Given I am on the Korean AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
@@ -33,9 +36,15 @@ describe('Given I am on the Korean live radio AMP page', () => {
   describe('When I am analysing user/performance metrics', () => {
     runCommonAmpAnalyticsTests();
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Audio player',
+    });
+  });
 });
 
-describe('Given I am on the Korean live radio Canonical page', () => {
+describe('Given I am on the Korean Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
@@ -50,9 +59,15 @@ describe('Given I am on the Korean live radio Canonical page', () => {
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'korean' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Audio player',
+    });
+  });
 });
 
-describe('Given I am on the Korean live radio page AMP/Canonical', () => {
+describe('Given I am on the Korean Live Radio page', () => {
   describe('When I am using the website', () => {
     runHeaderTests({
       skipToContentText: '내용 보기',
