@@ -26,6 +26,7 @@ const errorDetails = (test) => {
 };
 
 const printFailures = (overallResult) => {
+  console.log(overallResult.failed);
   const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
   errorsWarnings.forEach((failure) => {
     console.log(

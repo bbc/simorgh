@@ -1,17 +1,13 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 const { structuredDataTest } = require('structured-data-testing-tool');
-const { Google } = require('structured-data-testing-tool/presets');
+const { Google, SocialMedia } = require('structured-data-testing-tool/presets');
 const {
   printFailures,
   printStatistics,
   printPassing,
 } = require('./printResults');
-
-const twitterPresets = require('./twitterPresets');
-const facebookPresets = require('./facebookPresets');
-const metatagPresets = require('./metatagPresets');
 
 global.Cypress = {
   env: () => {
@@ -22,26 +18,16 @@ global.Cypress = {
 const getPaths = require('../../cypress/support/helpers/getPaths');
 const services = require('../../cypress/support/config/services');
 
-const getPresets = (jsonData, serviceConfig, url) => {
-  return [
-    twitterPresets({ jsonData, serviceConfig, url }),
-    facebookPresets({ jsonData, serviceConfig, url }),
-    metatagPresets({ jsonData, serviceConfig, url }),
-  ];
-};
-
-const validate = async (url, serviceConfig) => {
+const validate = async (url) => {
   let result;
-  const dataPath = `${url}.json`;
+  // const dataPath = `${url}.json`;
 
-  const response = await fetch(dataPath);
-  const jsonData = await response.json();
-
-  const presets = getPresets(jsonData, serviceConfig, url);
+  // const response = await fetch(dataPath);
+  // const jsonData = await response.json();
 
   try {
     result = await structuredDataTest(url, {
-      presets: [Google, ...presets],
+      presets: [Google, SocialMedia],
     });
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
@@ -78,10 +64,9 @@ const checkStructuredData = async (urls) => {
     .catch((error) => console.error(error));
 };
 
-const run = async () => {
-  const results = await checkStructuredData(getUrls());
-
-  const overallResult = {
+const combineResults = (results, urls) => {
+  return {
+    urls: Object.values(urls).flat(),
     tests: results.map((result) => result.tests).flat(),
     passed: results.map((result) => result.passed).flat(),
     failed: results.map((result) => result.failed).flat(),
@@ -92,10 +77,29 @@ const run = async () => {
       ...results.map((result) => result.structuredData),
     ),
   };
+};
 
+const printResults = (overallResult) => {
   printPassing(overallResult.passed);
-  printFailures(overallResult.failed);
+  printFailures(overallResult);
   printStatistics(overallResult);
+};
+
+const exit = (overallResult) => {
+  const errorsWarnings = [...overallResult.failed, ...overallResult.warnings];
+  if (errorsWarnings.length > 0) {
+    process.exit(1);
+  }
+};
+
+const run = async () => {
+  const urls = getUrls();
+  const results = await checkStructuredData(urls);
+  const overallResult = combineResults(results, urls);
+
+  printResults(overallResult);
+
+  exit(overallResult);
 };
 
 run();
