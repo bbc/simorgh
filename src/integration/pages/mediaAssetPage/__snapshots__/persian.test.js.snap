@@ -900,7 +900,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                           scrolling="no"
                           frameborder="0"
                           src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"
-                          title="Media player"
+                          title="پخش صدا و تصویر"
                           allowfullscreen="allowfullscreen"
               >
                 <amp-img srcset="https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01lmkk5.jpg 800w"
@@ -923,7 +923,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                     >
                     <div class="MessageWrapper-sc-1pnftlt-1 eEPsMW">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        پخش این فایل در دستگاه شما پشتیبانی نمی شود.
+                        برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
                       </strong>
                     </div>
                   </div>
@@ -1047,7 +1047,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    Cookies
+                    کوکی ها
                   </span>
                 </a>
               </li>
@@ -1823,7 +1823,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
           <figure class="Figure-sc-6a3dhy-0 gJUCFc">
             <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
               <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa"
-                      title="Media player"
+                      title="پخش صدا و تصویر"
                       allow="autoplay; fullscreen"
                       scrolling="no"
                       allowfullscreen
@@ -1840,7 +1840,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                   >
                   <div class="MessageWrapper-sc-1pnftlt-1 eEPsMW">
                     <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                      پخش این فایل در دستگاه شما پشتیبانی نمی شود.
+                      برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
                     </strong>
                   </div>
                 </div>
@@ -1963,7 +1963,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    Cookies
+                    کوکی ها
                   </span>
                 </a>
               </li>

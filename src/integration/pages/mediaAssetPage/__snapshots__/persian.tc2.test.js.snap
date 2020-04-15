@@ -900,7 +900,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                           scrolling="no"
                           frameborder="0"
                           src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/persian/iran/2016/09/160907_tc2_testmap1/17698244/fa/amp"
-                          title="Media player"
+                          title="پخش صدا و تصویر"
                           allowfullscreen="allowfullscreen"
               >
                 <amp-img srcset="http://localhost:7080/images/media_placeholder.png 240w, http://localhost:7080/images/media_placeholder.png 320w, http://localhost:7080/images/media_placeholder.png 480w, http://localhost:7080/images/media_placeholder.png 624w, http://localhost:7080/images/media_placeholder.png 800w"
@@ -923,7 +923,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                     >
                     <div class="MessageWrapper-sc-1pnftlt-1 eEPsMW">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        پخش این فایل در دستگاه شما پشتیبانی نمی شود.
+                        برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
                       </strong>
                     </div>
                   </div>
@@ -1052,7 +1052,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    Cookies
+                    کوکی ها
                   </span>
                 </a>
               </li>
@@ -1828,7 +1828,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
           <figure class="Figure-sc-6a3dhy-0 gJUCFc">
             <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
               <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/persian/iran/2016/09/160907_tc2_testmap1/17698244/fa"
-                      title="Media player"
+                      title="پخش صدا و تصویر"
                       allow="autoplay; fullscreen"
                       scrolling="no"
                       allowfullscreen
@@ -1845,7 +1845,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   >
                   <div class="MessageWrapper-sc-1pnftlt-1 eEPsMW">
                     <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                      پخش این فایل در دستگاه شما پشتیبانی نمی شود.
+                      برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
                     </strong>
                   </div>
                 </div>
@@ -1973,7 +1973,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    Cookies
+                    کوکی ها
                   </span>
                 </a>
               </li>
