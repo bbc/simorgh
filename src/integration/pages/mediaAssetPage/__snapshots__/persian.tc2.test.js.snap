@@ -2029,7 +2029,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
             crossorigin="anonymous"
             defer
     >
-      [26]
+      [24]
     </script>
     <script async
             data-chunk="main"

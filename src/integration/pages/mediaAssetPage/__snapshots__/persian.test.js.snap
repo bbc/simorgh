@@ -2019,7 +2019,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
             crossorigin="anonymous"
             defer
     >
-      [26]
+      [24]
     </script>
     <script async
             data-chunk="main"
