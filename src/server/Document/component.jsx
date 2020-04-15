@@ -7,6 +7,7 @@ import {
   AMP_GEO_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
+  AMP_AD,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
@@ -66,6 +67,7 @@ const Document = ({
         {isAmp && (
           <>
             {AMP_JS}
+            {AMP_AD}
             {AMP_GEO_JS}
             {AMP_CONSENT_JS}
             {AMP_ANALYTICS_JS}
