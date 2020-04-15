@@ -1,17 +1,24 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
-const { cyan, red, bold } = require('chalk');
+const { cyan, red, green, bold } = require('chalk');
 
 const testSummary = (test) => {
   return `${test.group ? test.group : ''} ${
     test.description ? test.description : ''
   }`;
 };
+
+const testDetails = (test) => {
+  return `${cyan(test.test)}\n\t└─${JSON.stringify(test.value, null, 2)}`;
+};
+
 const errorDetails = (test) => {
   const { error, expect } = test;
   if (error) {
     return `${cyan(error.message)}\n\tExpected: ${JSON.stringify(
       expect,
+      null,
+      2,
     )}\n\tActual: ${JSON.stringify(error.found)}`;
   }
 };
@@ -21,6 +28,12 @@ const printFailures = (failures) => {
     console.log(
       `${red('✕')} ${red(testSummary(failure))}\n    ${errorDetails(failure)}`,
     );
+  });
+};
+
+const printPassing = (passed) => {
+  passed.forEach((pass) => {
+    console.log(`${green('✓', testSummary(pass))}\n    ${testDetails(pass)}`);
   });
 };
 
@@ -44,7 +57,6 @@ const printStatistics = (overallResults) => {
     `${overallResults.schemas.join(', ') || 0}`,
   );
 
-  console.log(`  Optional tests run:`, `${overallResults.optional.length}`);
   console.log(` Pass/Fail tests run:`, `${totalTests}`);
   console.log('');
 
@@ -77,5 +89,6 @@ const printStatistics = (overallResults) => {
 
 module.exports = {
   printFailures,
+  printPassing,
   printStatistics,
 };

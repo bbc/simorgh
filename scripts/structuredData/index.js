@@ -3,7 +3,11 @@
 const fetch = require('node-fetch');
 const { structuredDataTest } = require('structured-data-testing-tool');
 const { Google } = require('structured-data-testing-tool/presets');
-const { printFailures, printStatistics } = require('./printResults');
+const {
+  printFailures,
+  printStatistics,
+  printPassing,
+} = require('./printResults');
 
 const twitterPresets = require('./twitterPresets');
 const facebookPresets = require('./facebookPresets');
@@ -89,6 +93,7 @@ const run = async () => {
     ),
   };
 
+  printPassing(overallResult.passed);
   printFailures(overallResult.failed);
   printStatistics(overallResult);
 };
