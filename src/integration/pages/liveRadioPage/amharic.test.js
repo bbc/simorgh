@@ -79,7 +79,7 @@ describe('Given I am on the Amharic Live Radio page', () => {
     });
 
     runFooterTests({
-      copyrightText:
+      copyrightAndExternalLinkingText:
         '© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       brandingLink: '/amharic',
     });
