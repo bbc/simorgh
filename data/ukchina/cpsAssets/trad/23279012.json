@@ -1,0 +1,177 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "advertising": true,
+        "caption": "Test UK China",
+        "embedding": true,
+        "format": "video",
+        "id": "p01plpyx",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+        "subType": "clip",
+        "synopses": {
+          "long": "Test UK China",
+          "medium": "Test UK China",
+          "short": "Test UK China"
+        },
+        "title": "Test UK China",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1575388995000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true,
+              "world": false
+            },
+            "duration": 29,
+            "durationISO8601": "PT29S",
+            "types": ["Original"],
+            "versionId": "p01plpyz",
+            "warnings": {}
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "即便在提倡生態保護的今天，老虎和其他瀕危物種還是會遭到人類的捕殺。對於這種現象，最好問一問偷獵者為什麼這樣做。只有充分理解他們的動機，才有望改變這種行為。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "老虎已經成為全球性瀕危物種。孟加拉國曾經生存著大量老虎，但現在數量已經不足100頭，其中大多數分佈於該國南部申達本（Sundarbans）地區廣袤的紅樹林地帶。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "在英國殖民時期，肆無忌憚的捕獵行為曾經導致申達本老虎數量劇減。1974年，政府規定獵虎為非法行為。但是自那時起，不法分子的偷獵行為卻一直肆虐不已，從而導致申達本地區老虎數量持續下降。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "為什麼他們要獵殺老虎？",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "《羚羊》（Oryx）雜誌2016年10月號刊登了由英國坎特伯雷肯特大學科研人員賽米婭·賽義夫（Samia Saif）撰寫的一篇文章。文章指出，人們在申達本地區偷獵老虎主要是出於四大原因。",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "分享此項報導 關於分享",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "ukchinatrad.media_asset.23279012.page",
+      "cps_asset_id": "23279012",
+      "cps_asset_type": "map"
+    },
+    "blockTypes": ["media", "paragraph"],
+    "createdBy": "ukchina-traditional-v6",
+    "firstPublished": 1585039496000,
+    "id": "urn:bbc:ares::asset:ukchina/trad/23279012",
+    "includeComments": false,
+    "language": "zh-Hant",
+    "lastPublished": 1585040273000,
+    "lastUpdated": 1585040281239,
+    "locators": {
+      "assetId": "23279012",
+      "assetUri": "/ukchina/trad/23279012",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/23279012",
+      "curie": "http://www.bbc.co.uk/asset/fcd02dcc-c7e7-f544-8999-8270fa95dab8"
+    },
+    "options": {
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false
+    },
+    "tags": {},
+    "timestamp": 1585039496000,
+    "type": "MAP",
+    "version": "v1.1.8"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "誰是獵殺孟加拉虎的真正元 MAP TEST 1",
+      "shortHeadline": "誰是獵殺孟加拉虎的真正元 MAP TEST 1"
+    },
+    "id": "urn:bbc:ares::asset:ukchina/trad/23279012",
+    "indexImage": {
+      "altText": "corona",
+      "caption": "corona",
+      "copyrightHolder": "BBC",
+      "height": 351,
+      "href": "http://b.files.bbci.co.uk/B3D1/test/_63733064_coronavirus.jpg",
+      "id": "63733064",
+      "path": "/cpsdevpb/B3D1/test/_63733064_coronavirus.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 624
+    },
+    "language": "zh-Hant",
+    "locators": {
+      "assetId": "23279012",
+      "assetUri": "/ukchina/trad/23279012",
+      "cpsUrn": "urn:bbc:content:assetUri:ukchina/trad/23279012",
+      "curie": "http://www.bbc.co.uk/asset/fcd02dcc-c7e7-f544-8999-8270fa95dab8"
+    },
+    "media": {
+      "advertising": true,
+      "caption": "Test UK China",
+      "embedding": true,
+      "format": "video",
+      "id": "p01plpyx",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+      "subType": "clip",
+      "synopses": {
+        "long": "Test UK China",
+        "medium": "Test UK China",
+        "short": "Test UK China"
+      },
+      "title": "Test UK China",
+      "type": "media",
+      "versions": [
+        {
+          "availableFrom": 1575388995000,
+          "availableTerritories": { "nonUk": true, "uk": true, "world": false },
+          "duration": 29,
+          "durationISO8601": "PT29S",
+          "types": ["Original"],
+          "versionId": "p01plpyz",
+          "warnings": {}
+        }
+      ]
+    },
+    "passport": { "taggings": [] },
+    "summary": "誰是獵殺孟加拉虎的真正元 MAP TEST 1",
+    "timestamp": 1585039496000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "主頁",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukchina/trad/front_page"
+    },
+    "site": {
+      "name": "BBC英倫網",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukchina/trad"
+    }
+  }
+}
