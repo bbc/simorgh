@@ -34,7 +34,10 @@ let pageData;
 beforeEach(async () => {
   fetch.mockResponse(JSON.stringify(frontPageDataPidgin));
 
-  const response = await getInitialData('some-front-page-path');
+  const response = await getInitialData({
+    path: 'some-front-page-path',
+    service: 'pidgin',
+  });
 
   pageData = response.pageData;
 
