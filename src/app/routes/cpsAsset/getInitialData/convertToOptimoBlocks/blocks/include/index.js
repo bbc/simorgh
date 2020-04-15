@@ -10,7 +10,10 @@ const buildIncludeUrl = (href, type) => {
     vj: '',
   };
 
-  const withTrailingHref = href.startsWith('/') ? href : `/${href}`;
+  const strippedHref = href.split('?')[0];
+  const withTrailingHref = href.startsWith('/')
+    ? strippedHref
+    : `/${strippedHref}`;
 
   return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 };
@@ -42,10 +45,7 @@ const fetchMarkup = async (url) => {
   }
 };
 
-const convertInclude = async ({ href: fullHref, type, ...rest }) => {
-  // We want to strip and remove the GET parameters from the include href
-  const [href] = fullHref.split('?');
-
+const convertInclude = async ({ href, type, ...rest }) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
