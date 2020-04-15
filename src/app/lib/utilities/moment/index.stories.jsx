@@ -510,9 +510,9 @@ Object.keys(services).forEach((service) => {
     .filter((variant) => services[service][variant].datetimeLocale)
     .forEach((variant) => {
       const serviceName = capitalizeService(service);
-      const { dir } = services[service][variant];
-      const { lang } = services[service][variant];
-      const serviceLocale = services[service][variant].datetimeLocale;
+      const { dir, lang, datetimeLocale: serviceLocale } = services[service][
+        variant
+      ];
       const storyTitle = `${serviceName} - ${serviceLocale} ${
         variant !== 'default' ? `(${variant})` : ''
       }`;
