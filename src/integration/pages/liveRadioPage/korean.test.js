@@ -39,7 +39,7 @@ describe('Given I am on the Korean AMP Live Radio page', () => {
 
   describe('When I am using assistive technology', () => {
     runAmpA11yTests({
-      mediaPlayerTitle: 'Audio player',
+      mediaPlayerTitle: '오디오 플레이어',
     });
   });
 });
@@ -62,7 +62,7 @@ describe('Given I am on the Korean Canonical Live Radio page', () => {
 
   describe('When I am using assistive technology', () => {
     runCanonicalA11yTests({
-      mediaPlayerTitle: 'Audio player',
+      mediaPlayerTitle: '오디오 플레이어',
     });
   });
 });
