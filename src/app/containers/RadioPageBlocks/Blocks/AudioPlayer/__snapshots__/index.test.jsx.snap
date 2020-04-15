@@ -9,13 +9,20 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
 }
 
 .c0 {
-  width: calc(100% + 2rem);
-  margin-left: -1rem;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
 }
 
 @media (min-width:63rem) {
   .c1 {
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
   }
 }
 
@@ -71,8 +78,8 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
 }
 
 .c0 {
-  width: calc(100% + 2rem);
-  margin-left: -1rem;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
 }
 
 .c2 {
@@ -88,6 +95,13 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
 @media (min-width:63rem) {
   .c1 {
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
   }
 }
 
@@ -128,13 +142,20 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
 }
 
 .c0 {
-  width: calc(100% + 2rem);
-  margin-left: -1rem;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
 }
 
 @media (min-width:63rem) {
   .c1 {
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
   }
 }
 
@@ -181,8 +202,8 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
 }
 
 .c0 {
-  width: calc(100% + 2rem);
-  margin-left: -1rem;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
 }
 
 .c2 {
@@ -198,6 +219,13 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
 @media (min-width:63rem) {
   .c1 {
     margin-bottom: 2rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c0 {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
   }
 }
 
