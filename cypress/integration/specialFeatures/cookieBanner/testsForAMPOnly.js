@@ -6,7 +6,7 @@ import serviceHasPageType from '../../../support/helpers/serviceHasPageType';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
-const serviceFilter = service =>
+const serviceFilter = (service) =>
   Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
 
 const getPrivacyBanner = (service, variant) =>
@@ -53,12 +53,12 @@ const visitPage = (pageType, path) => {
 
 Object.keys(config)
   .filter(serviceFilter)
-  .forEach(service => {
+  .forEach((service) => {
     Object.keys(config[service].pageTypes)
-      .filter(pageType => serviceHasPageType(service, pageType))
-      .forEach(pageType => {
+      .filter((pageType) => serviceHasPageType(service, pageType))
+      .forEach((pageType) => {
         const paths = getPaths(service, pageType);
-        paths.forEach(path => {
+        paths.forEach((path) => {
           describeForEuOnly(
             `Amp Cookie Banner Test for ${service} ${pageType} ${path}`,
             () => {

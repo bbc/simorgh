@@ -149,6 +149,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText:
+            'BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -159,6 +176,8 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
+      frontPagePosition: 'top-stories',
       header: 'BBC 코리아 라디오',
     },
     footer: {

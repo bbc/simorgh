@@ -161,6 +161,22 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Video caption, ',
+          text: 'Warning: Third party content may contain adverts',
+        },
+        fallback: {
+          text: 'Content is not available',
+          linkText: 'View content on %provider_name%',
+          linkTextSuffixVisuallyHidden: ', external',
+          warningText: 'De external site no concern BBC.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     mostRead: {
       header: 'De one we dem de read well well',

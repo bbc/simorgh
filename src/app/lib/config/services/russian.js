@@ -17,7 +17,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `ru`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -44,8 +44,9 @@ export const service = {
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcrussian',
     twitterSite: '@bbcrussian',
-    noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
+    noBylinesPolicy:
+      'https://www.bbc.com/russian/institutional-50098149#authorexpertise',
+    publishingPrinciples: 'https://www.bbc.com/russian/institutional-50098149',
     isTrustProjectParticipant: true,
     script: cyrillicAndLatin,
     manifestPath: '/manifest.json',
@@ -167,11 +168,28 @@ export const service = {
         },
         listen: 'Слушать',
         watch: 'Смотреть',
-        liveLabel: 'Прямой эфир',
-        nextLabel: 'NEXT',
+        liveLabel: 'LIVE',
+        nextLabel: 'Дальше',
         previousRadioShow: 'Предыдущая передача',
         nextRadioShow: 'Следующая передача',
         duration: 'Продолжительность',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Подпись к видео, ',
+          text: 'Внимание: Контент других сайтов может содержать рекламу.',
+        },
+        fallback: {
+          text: 'Контент недоступен',
+          linkText: 'Смотреть еще в %provider_name%',
+          linkTextSuffixVisuallyHidden: ', внешняя ссылка',
+          warningText:
+            'Би-би-си на несет ответственности за содержание других сайтов.',
+        },
+        skipLink: {
+          text: 'Пропустить контент из %provider_name%',
+          endTextVisuallyHidden: 'Контент из %provider_name% окончен',
+        },
       },
     },
     brandSVG,
@@ -186,7 +204,7 @@ export const service = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/russian/institutional-50098149',
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {

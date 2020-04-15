@@ -158,6 +158,22 @@ export const service = {
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Insiguro ya video, ',
+          text: "Uragaba: Ibitangwa n'izindi mbuga bishobora kubamwo gutangaza",
+        },
+        fallback: {
+          text: 'Ibi ntibiboneka',
+          linkText: 'Raba ibindi kuri %provider_name%',
+          linkTextSuffixVisuallyHidden: ', bivuye ahandi',
+          warningText: 'BBC ntibazwa ibivuye ku zindi mbuga.',
+        },
+        skipLink: {
+          text: 'Tambuka %provider_name% ubutumwa',
+          endTextVisuallyHidden: 'Impera ya %provider_name% ubutumwa',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -168,6 +184,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: false,
     },
     footer: {
       trustProjectLink: {

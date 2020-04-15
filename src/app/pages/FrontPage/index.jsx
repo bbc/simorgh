@@ -20,6 +20,7 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -65,12 +66,15 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLocalizedName,
     translations,
     frontPageTitle,
+    radioSchedule,
   } = useContext(ServiceContext);
   const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
+  const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
+  const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -81,12 +85,12 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
-    findIndex(group => group.type === 'useful-links')(groups) > -1;
+    findIndex((group) => group.type === 'useful-links')(groups) > -1;
 
   const renderMostRead = () => (
     <MostReadContainer
       mostReadEndpointOverride={mostReadEndpointOverride}
-      maxTwoColumns
+      columnLayout="twoColumn"
       isOnFrontPage
     />
   );
@@ -112,7 +116,9 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               <FrontPageSection group={group} sectionNumber={index} />
-              {group.type === 'top-stories' && <RadioScheduleContainer />}
+              {onFrontPage && frontPagePosition === group.type && (
+                <RadioScheduleContainer />
+              )}
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}

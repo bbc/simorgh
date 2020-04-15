@@ -104,7 +104,6 @@ describe('Given I am on a Mundo article AMP/Canonical page', () => {
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
       skipToContentText: 'Ir al contenido',
-      headlineText: 'Este es el titular de este artículo de prueba.',
     });
   });
 

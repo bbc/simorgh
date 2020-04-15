@@ -165,9 +165,7 @@
               "versions": [
                 {
                   "versionId": "p07gpyft",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 95,
                   "durationISO8601": "PT1M35S",
                   "warnings": {},
@@ -235,9 +233,7 @@
               "versions": [
                 {
                   "versionId": "p07gqj4y",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 81,
                   "durationISO8601": "PT1M21S",
                   "warnings": {},
@@ -650,9 +646,7 @@
               "versions": [
                 {
                   "versionId": "p07gl84q",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 90,
                   "durationISO8601": "PT1M30S",
                   "warnings": {},
@@ -719,9 +713,7 @@
               "versions": [
                 {
                   "versionId": "p07gl658",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 59,
                   "durationISO8601": "PT59S",
                   "warnings": {},
@@ -788,9 +780,7 @@
               "versions": [
                 {
                   "versionId": "p07gl5g0",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 54,
                   "durationISO8601": "PT54S",
                   "warnings": {},
@@ -958,9 +948,7 @@
               "versions": [
                 {
                   "versionId": "p07gh2lx",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 150,
                   "durationISO8601": "PT2M30S",
                   "warnings": {},
@@ -1027,9 +1015,7 @@
               "versions": [
                 {
                   "versionId": "p07gd8g8",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 259,
                   "durationISO8601": "PT4M19S",
                   "warnings": {},
@@ -1097,9 +1083,7 @@
               "versions": [
                 {
                   "versionId": "p07ggm6g",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 38,
                   "durationISO8601": "PT38S",
                   "warnings": {},
@@ -1166,9 +1150,7 @@
               "versions": [
                 {
                   "versionId": "p07g9l12",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 82,
                   "durationISO8601": "PT1M22S",
                   "warnings": {},
@@ -1236,9 +1218,7 @@
               "versions": [
                 {
                   "versionId": "p07g9jlp",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 94,
                   "durationISO8601": "PT1M34S",
                   "warnings": {},
@@ -1305,9 +1285,7 @@
               "versions": [
                 {
                   "versionId": "p07fr9z5",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 249,
                   "durationISO8601": "PT4M9S",
                   "warnings": {},
@@ -1374,9 +1352,7 @@
               "versions": [
                 {
                   "versionId": "p07fy79x",
-                  "types": [
-                    "Editorial"
-                  ],
+                  "types": ["Editorial"],
                   "duration": 58,
                   "durationISO8601": "PT58S",
                   "warnings": {},
@@ -1443,9 +1419,7 @@
               "versions": [
                 {
                   "versionId": "p07g27vk",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 33,
                   "durationISO8601": "PT33S",
                   "warnings": {},
@@ -1512,9 +1486,7 @@
               "versions": [
                 {
                   "versionId": "p07fycs7",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 65,
                   "durationISO8601": "PT1M5S",
                   "warnings": {},
@@ -1581,9 +1553,7 @@
               "versions": [
                 {
                   "versionId": "p07fr31t",
-                  "types": [
-                    "Original"
-                  ],
+                  "types": ["Original"],
                   "duration": 122,
                   "durationISO8601": "PT2M2S",
                   "warnings": {},

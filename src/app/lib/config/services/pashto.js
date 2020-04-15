@@ -166,6 +166,23 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'د ویډیو تشریح ',
+          text: 'خبرداری:‌ ښايي درېیمګړي ته اړوند منځپانګه کې اعلانونه وي',
+        },
+        fallback: {
+          text: 'منځپانګه نه شته',
+          linkText: 'په %provider_name% کې نور وګورئ',
+          linkTextSuffixVisuallyHidden: ' بهرنی',
+          warningText:
+            ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
+        },
+        skipLink: {
+          text: 'Skip %provider_name% post',
+          endTextVisuallyHidden: 'End of %provider_name% post',
+        },
+      },
     },
     brandSVG,
     mostRead: {
@@ -176,6 +193,8 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
+      onFrontPage: true,
+      frontPagePosition: 'top-stories',
       frequenciesPageUrl: '/pashto/institutional/2012/03/000001_frequencies',
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',

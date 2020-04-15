@@ -38,27 +38,64 @@ const consoleTransport = new (transports.Console)({
 });
 
 const customFormatting = printf(
-  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
+  (data) => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
 );
 
 // e.g. outputs 'Article/index.jsx'
-const folderAndFilename = name => {
+const folderAndFilename = (name) => {
   const fileparts = name.split(path.sep);
   return fileparts.splice(-2).join(path.sep);
 };
 
-const logger = callingFile => {
+const logToFile = (callingFile) => {
   createLogDirectory(LOG_DIR);
 
   return createLogger({
     format: combine(
       label({ label: folderAndFilename(callingFile) }),
       simple(),
-      timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+      timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
       customFormatting,
     ),
     transports: [fileTransport, consoleTransport],
   });
 };
+
+const logEventMessage = (event, message) => {
+  const logObject = {
+    event,
+    message,
+  };
+
+  return JSON.stringify(logObject, null, 2);
+};
+
+class Logger {
+  constructor(callingFile) {
+    const fileLogger = logToFile(callingFile);
+
+    this.error = (event, message) => {
+      fileLogger.error(logEventMessage(event, message));
+    };
+
+    this.warn = (event, message) => {
+      fileLogger.warn(logEventMessage(event, message));
+    };
+
+    this.info = (event, message) => {
+      fileLogger.info(logEventMessage(event, message));
+    };
+
+    this.debug = (event, message) => {
+      fileLogger.debug(logEventMessage(event, message));
+    };
+
+    this.verbose = (event, message) => {
+      fileLogger.log(logEventMessage(event, message));
+    };
+  }
+}
+
+const logger = (callingFile) => new Logger(callingFile);
 
 module.exports = logger;

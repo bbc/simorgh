@@ -93,7 +93,7 @@ describe('App', () => {
       describe('rejected loadInitialData', () => {
         it('should set state to the error', async () => {
           route.getInitialData.mockImplementation(() => {
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
               setTimeout(
                 () =>
                   resolve({
@@ -169,7 +169,7 @@ describe('App', () => {
           };
 
           route.getInitialData.mockImplementation(() => {
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
               setTimeout(() => resolve(data), 600);
             });
           });
@@ -182,7 +182,10 @@ describe('App', () => {
 
           expect.assertions(3);
 
-          expect(route.getInitialData).toHaveBeenCalledWith(pathname);
+          expect(route.getInitialData).toHaveBeenCalledWith({
+            path: pathname,
+            service: 'news',
+          });
 
           // start data fetch and set loading to true
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(

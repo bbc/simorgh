@@ -971,13 +971,13 @@ exports[`Media Asset Page should render component 1`] = `
               role="region"
             >
               <div
-                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
               >
                 <div
-                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-sc-1itct8j-0 jJqbCR"
+                  class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
                 >
                   <div
-                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-sc-1itct8j-1 hlmzdc"
+                    class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA"
                   >
                     <div
                       class="Bar-sc-1x4gwjz-0 jsgdXU"
@@ -1008,7 +1008,7 @@ exports[`Media Asset Page should render component 1`] = `
                     role="list"
                   >
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1043,7 +1043,7 @@ exports[`Media Asset Page should render component 1`] = `
                           >
                             <a
                               class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/tori-23145776?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              href="/pidgin/tori-23145776"
                             >
                               Police Arrest 3 ontop Anambra Church Attack
                             </a>
@@ -1063,7 +1063,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </li>
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1098,7 +1098,7 @@ exports[`Media Asset Page should render component 1`] = `
                           >
                             <a
                               class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/tori-23143754?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              href="/pidgin/tori-23143754"
                             >
                               Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                             </a>
@@ -1118,7 +1118,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </li>
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1177,7 +1177,7 @@ exports[`Media Asset Page should render component 1`] = `
                           >
                             <a
                               class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/23146654?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              href="/pidgin/23146654"
                             >
                               <span
                                 role="text"
@@ -1208,7 +1208,7 @@ exports[`Media Asset Page should render component 1`] = `
                       </div>
                     </li>
                     <li
-                      class="StoryPromoLi-sc-171lqjd-0 dqJaJG GridComponent-nf79gm-0 hgNruo"
+                      class="StoryPromoLi-sc-171lqjd-0 jTGbev GridComponent-nf79gm-0 hgNruo"
                       dir="ltr"
                       role="listitem"
                     >
@@ -1275,7 +1275,7 @@ exports[`Media Asset Page should render component 1`] = `
                           >
                             <a
                               class="Link-sc-1dvfmi3-5 yQgSu"
-                              href="/pidgin/media-23147054?_x_candy_override=https%3A%2F%2Fapi.test.bbc.co.uk"
+                              href="/pidgin/media-23147054"
                             >
                               <span
                                 role="text"

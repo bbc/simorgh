@@ -6,7 +6,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import CpsMetadata from './index';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
-const getISOStringDate = date => new Date(date).toISOString();
+const getISOStringDate = (date) => new Date(date).toISOString();
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
@@ -35,7 +35,7 @@ const mapProps = {
   imageAltText: 'connectionAltText',
 };
 
-const renderMetadataToDocument = async Component => {
+const renderMetadataToDocument = async (Component) => {
   render(Component);
 
   await waitForDomChange({
@@ -61,7 +61,7 @@ describe('CpsMetadata get branded image', () => {
       document.querySelectorAll(
         'head > meta[name^="article:"], head > meta[property*="image"], head > meta[name*="image"]',
       ),
-    ).map(tag =>
+    ).map((tag) =>
       tag.hasAttribute('property')
         ? {
             property: tag.getAttribute('property'),

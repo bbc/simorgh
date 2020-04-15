@@ -1,13 +1,12 @@
-export default ({ skipToContentText, headlineText }) => {
-  [amp, canonical].forEach(page => {
+export default ({ skipToContentText }) => {
+  [amp, canonical].forEach((page) => {
     describe(`And using ${page.platform}`, () => {
       it('I can see a skip to content link that links to the main content of the page', () => {
         const skipToContentEl = page.getByText(skipToContentText);
-        const mainContentEl = page.getByText(headlineText);
-
+        const h1El = page.document.querySelector('h1');
         expect(skipToContentEl.getAttribute('href')).toBe('#content');
-        expect(mainContentEl.getAttribute('id')).toBe('content');
-        expect(mainContentEl.getAttribute('tabindex')).toBe('-1');
+        expect(h1El.getAttribute('id')).toBe('content');
+        expect(h1El.getAttribute('tabindex')).toBe('-1');
       });
     });
   });

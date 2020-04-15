@@ -115,7 +115,7 @@ const noHeadlineNoAssetTypeItem = {
   headlines: undefined,
 };
 
-const allowedItemsTest = value => {
+const allowedItemsTest = (value) => {
   it(`should return right allowed items for ${value} stories for first section`, () => {
     expect(getAllowedItems(numberOfStories[value].input, true)).toStrictEqual(
       numberOfStories[value].expectedFrontSectionAllowedItems,
@@ -132,7 +132,7 @@ const allowedItemsTest = value => {
 describe('Story allowed items', () => {
   describe('assertions', () => {
     describe('getAllowedItems', () => {
-      Object.keys(numberOfStories).forEach(value => allowedItemsTest(value));
+      Object.keys(numberOfStories).forEach((value) => allowedItemsTest(value));
     });
 
     describe('removeFirstSlotRadioBulletin', () => {

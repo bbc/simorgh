@@ -17,7 +17,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: false,
+      hasAds: true,
     },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
@@ -165,6 +165,23 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+      },
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Legenda do vídeo, ',
+          text: 'Alerta: Conteúdo de terceiros pode conter publicidade',
+        },
+        fallback: {
+          text: 'Conteúdo não disponível',
+          linkText: 'Veja mais em %provider_name%',
+          linkTextSuffixVisuallyHidden: ', externo',
+          warningText:
+            'A BBC não se responsabiliza pelo conteúdo de sites externos.',
+        },
+        skipLink: {
+          text: 'Pule %provider_name% post',
+          endTextVisuallyHidden: 'Final de %provider_name% post',
+        },
       },
     },
     brandSVG,

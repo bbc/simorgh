@@ -2,6 +2,7 @@ import express from 'express';
 import compression from 'compression';
 import expressStaticGzip from 'express-static-gzip';
 import path from 'path';
+import pathOr from 'ramda/src/pathOr';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -22,9 +23,15 @@ import nodeLogger from '#lib/logger.node';
 import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader, {
-  localInjectHostCspHeader,
-} from './utilities/constructCspHeader';
+import injectCspHeader from './utilities/cspHeader';
+import {
+  SERVICE_WORKER_SENDFILE_ERROR,
+  MANIFEST_SENDFILE_ERROR,
+  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
+  SERVER_SIDE_REQUEST_FAILED,
+  LOCAL_SENDFILE_ERROR,
+  ROUTING_INFORMATION,
+} from '#lib/logger.const';
 
 const fs = require('fs');
 
@@ -34,13 +41,8 @@ const logger = nodeLogger(__filename);
 
 const publicDirectory = 'build/public';
 
-const cspInjectFun =
-  process.env.SIMORGH_APP_ENV === 'local'
-    ? localInjectHostCspHeader
-    : injectCspHeader;
-
 logger.debug(
-  `Application outputting logs to directory "${process.env.LOG_DIR}"`,
+  `Application outputting logs to directory '${process.env.LOG_DIR}'`,
 );
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["write"] }] */
@@ -86,6 +88,13 @@ const getBuildMetadata = () => {
   return buildMetadata;
 };
 
+const skipMiddleware = (_req, _res, next) => {
+  next();
+};
+
+const injectCspHeaderProdBuild =
+  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+
 server
   .disable('x-powered-by')
   .use(
@@ -112,18 +121,9 @@ if (process.env.SIMORGH_APP_ENV !== 'local') {
  * Local env routes - fixture data
  */
 const sendDataFile = (res, dataFilePath, next) => {
-  res.sendFile(dataFilePath, {}, sendErr => {
+  res.sendFile(dataFilePath, {}, (sendErr) => {
     if (sendErr) {
-      logger.error(
-        JSON.stringify(
-          {
-            event: 'local_sendfile_error',
-            message: sendErr,
-          },
-          null,
-          2,
-        ),
-      );
+      logger.error(LOCAL_SENDFILE_ERROR, { error: sendErr });
       next(sendErr);
     }
   });
@@ -226,18 +226,9 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 server
   .get([articleSwPath, frontPageSwPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
-    res.sendFile(swPath, {}, error => {
+    res.sendFile(swPath, {}, (error) => {
       if (error) {
-        logger.error(
-          JSON.stringify(
-            {
-              event: 'server_sendfile_error_sw',
-              message: error,
-            },
-            null,
-            2,
-          ),
-        );
+        logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
         res.status(500).send('Unable to find service worker.');
       }
     });
@@ -247,73 +238,70 @@ server
     async ({ params }, res) => {
       const { service } = params;
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-      res.sendFile(manifestPath, {}, error => {
+      res.sendFile(manifestPath, {}, (error) => {
         if (error) {
-          console.log(error); // eslint-disable-line no-console
+          logger.error(MANIFEST_SENDFILE_ERROR, { error });
           res.status(500).send('Unable to find manifest.');
         }
       });
     },
   )
-  .get('/*', cspInjectFun, async ({ url, headers, path: urlPath }, res) => {
-    logger.info(
-      JSON.stringify(
-        {
-          event: 'ssr_request_received',
-          url,
-          urlPath,
-          headers,
-        },
-        null,
-        2,
-      ),
-    );
-
-    try {
-      const { service, isAmp, route, variant } = getRouteProps(routes, urlPath);
-      const data = await route.getInitialData(url);
-      const { status } = data;
-      const bbcOrigin = headers['bbc-origin'];
-
-      data.path = urlPath;
-      data.timeOnServer = Date.now();
-
-      const result = await renderDocument({
-        bbcOrigin,
-        data,
-        isAmp,
-        routes,
-        service,
+  .get(
+    '/*',
+    injectCspHeaderProdBuild,
+    async ({ url, headers, path: urlPath }, res) => {
+      logger.info(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
         url,
-        variant,
+        headers,
       });
 
-      if (result.redirectUrl) {
-        res.redirect(301, result.redirectUrl);
-      } else if (result.html) {
-        res.status(status).send(result.html);
-      } else {
-        throw new Error('unknown result');
-      }
-    } catch ({ message, status }) {
-      logger.error(
-        JSON.stringify(
-          {
-            event: 'ssr_request_failed',
-            status: status || 500,
-            message,
-            url,
-            urlPath,
-            headers,
-          },
-          null,
-          2,
-        ),
-      );
+      try {
+        const { service, isAmp, route, variant } = getRouteProps(
+          routes,
+          urlPath,
+        );
+        const data = await route.getInitialData({ path: url, service });
+        const { status } = data;
+        const bbcOrigin = headers['bbc-origin'];
 
-      // Return an internal server error for any uncaught errors
-      res.status(500).send(message);
-    }
-  });
+        data.path = urlPath;
+        data.timeOnServer = Date.now();
+
+        const result = await renderDocument({
+          bbcOrigin,
+          data,
+          isAmp,
+          routes,
+          service,
+          url,
+          variant,
+        });
+
+        logger.info(ROUTING_INFORMATION, {
+          url,
+          status,
+          pageType: pathOr('Error', ['pageData', 'metadata', 'type'], data),
+        });
+
+        if (result.redirectUrl) {
+          res.redirect(301, result.redirectUrl);
+        } else if (result.html) {
+          res.status(status).send(result.html);
+        } else {
+          throw new Error('unknown result');
+        }
+      } catch ({ message, status }) {
+        logger.error(SERVER_SIDE_REQUEST_FAILED, {
+          status: status || 500,
+          message,
+          url,
+          headers,
+        });
+
+        // Return an internal server error for any uncaught errors
+        res.status(500).send(message);
+      }
+    },
+  );
 
 export default server;

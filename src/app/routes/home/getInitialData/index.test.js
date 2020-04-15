@@ -4,7 +4,7 @@ import frontPageJson from '#data/pidgin/frontpage/index.json';
 fetch.mockResponse(JSON.stringify(frontPageJson));
 
 it('should return essential data for a page to render', async () => {
-  const { pageData } = await getInitialData('mock-frontpage-path');
+  const { pageData } = await getInitialData({ path: 'mock-frontpage-path' });
 
   expect(pageData.metadata.language).toEqual('pcm');
   expect(pageData.metadata.summary).toEqual(

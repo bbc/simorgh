@@ -22,10 +22,7 @@
       "cps_asset_id": "17698019",
       "cps_asset_type": "map"
     },
-    "blockTypes": [
-      "legacyMedia",
-      "paragraph"
-    ],
+    "blockTypes": ["legacyMedia", "paragraph"],
     "createdBy": "bengali",
     "firstPublished": 1470237945000,
     "id": "urn:bbc:ares::asset:bengali/multimedia/2016/08/160803_tc2_testmap1",

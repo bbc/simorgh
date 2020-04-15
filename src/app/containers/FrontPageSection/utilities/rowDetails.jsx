@@ -1,7 +1,7 @@
 import flatten from 'ramda/src/flatten';
 import { TopRow, LeadingRow, RegularRow } from '../../FrontPageStoryRows';
 
-const getFirstRowComponent = rowLength => {
+const getFirstRowComponent = (rowLength) => {
   switch (rowLength) {
     case 1:
       return TopRow;
@@ -21,14 +21,14 @@ const getFirstRowComponent = rowLength => {
  *   RowComponent: the React component that displays the row
  * }]
  */
-const getRowDetails = rows => {
+const getRowDetails = (rows) => {
   const firstRow = {
     stories: rows.firstRow,
     RowComponent: getFirstRowComponent(rows.firstRow.length),
     displayImages: true,
   };
 
-  const regularRows = rows.regularRows.map(row => ({
+  const regularRows = rows.regularRows.map((row) => ({
     stories: row,
     RowComponent: RegularRow,
     displayImages: true,
@@ -41,7 +41,7 @@ const getRowDetails = rows => {
   };
 
   return flatten([firstRow, regularRows, noImageRow]).filter(
-    row => row.stories !== null && row.stories.length !== 0,
+    (row) => row.stories !== null && row.stories.length !== 0,
   );
 };
 
