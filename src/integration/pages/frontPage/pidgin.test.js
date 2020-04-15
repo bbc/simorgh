@@ -47,7 +47,7 @@ describe('Given I am on a Pidgin Frontpage AMP/Canonical page', () => {
     });
     runCanonicalUserTests();
     runFooterTests({
-      copyrightText:
+      copyrightAndExternalLinkingText:
         '© 2020 BBC. De external site no concern BBC. De way wey we de take go external link.',
       brandingLink: '/pidgin',
     });
