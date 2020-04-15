@@ -76,7 +76,7 @@ describe('Given I am on a Persian TC2 Media Asset Page', () => {
     });
 
     runFooterTests({
-      copyrightText:
+      copyrightAndExternalLinkingText:
         '© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر.',
       brandingLink: '/persian',
     });
