@@ -52,7 +52,7 @@ describe('SocialEmbedContainer – createTranslations', () => {
       fallback: {
         linkText: 'View content on %provider_name%',
         linkTextSuffixVisuallyHidden: ', external',
-        text: "Sorry but we're having trouble displaying this content",
+        text: 'Content is not available',
         warningText: null,
       },
       skipLink: {

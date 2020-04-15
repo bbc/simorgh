@@ -3,7 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 const createTranslations = ({ translations, index }) => ({
   fallback: {
     text: pathOr(
-      "Sorry but we're having trouble displaying this content",
+      'Content is not available',
       ['socialEmbed', 'fallback', 'text'],
       translations,
     ),

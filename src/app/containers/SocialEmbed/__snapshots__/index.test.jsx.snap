@@ -554,7 +554,7 @@ exports[`SocialEmbedContainer Canonical should render correctly without an embed
         class="c4"
       >
         <p>
-          Sorry but we're having trouble displaying this content
+          Content is not available
         </p>
         <a
           aria-label="View content on Twitter, external"
