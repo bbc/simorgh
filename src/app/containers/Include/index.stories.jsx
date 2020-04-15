@@ -5,6 +5,8 @@ import { storiesOf } from '@storybook/react';
 import fetch from 'isomorphic-fetch';
 import Include from '.';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import idt2Html from './fixture/idt2';
+import vjHtml from './fixture/vj';
 
 const defaultToggles = {
   include: {
@@ -13,13 +15,16 @@ const defaultToggles = {
 };
 
 const label = 'Include';
-const options = {
-  idt2: 'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html',
-  vj:
-    'https://www.test.bbc.com/ws/includes/include/vjamericas/169-brazil-pensions-reform/portuguese/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app-pensoes_ui943.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app-pensoes_ui943.png',
+
+const htmlOptions = {
+  idt2: idt2Html,
+  vj: vjHtml,
 };
-const defaultValue =
-  'https://simorgh-include-test.s3-eu-west-1.amazonaws.com/idt2.html';
+
+const options = {
+  idt2: 'idt2',
+  vj: 'vj',
+};
 const groupId = 'GROUP-ID1';
 
 const multipleOptions = {
@@ -27,24 +32,15 @@ const multipleOptions = {
     'https://www.test.bbc.com/ws/includes/include/newsspec/22766-democrats/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-test/app_launcher2_640-mundo_aldmj.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-test/app_launcher2_640-mundo_aldmj.png',
 };
 
-const defaultValue1 =
-  'https://www.test.bbc.com/ws/includes/include/vjeastasia/185-timeline-generator/nepali/china_4th_june_nepali?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/include/vjeastasia/185-timeline-generator/assets/china_4th_june_burmese-project-assets/img/100.jpg&app-clickable=true&amp-clickable=true&amp-image-height=689&amp-image-width=1024&amp-image=https://news.files.bbci.co.uk/include/vjeastasia/185-timeline-generator/assets/china_4th_june_burmese-project-assets/img/100.jpg';
+const defaultValue1 = 'idt2';
 
 storiesOf('Containers|Include', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .add('default', () => {
-    const href = select(label, options, defaultValue, groupId);
+    const option = select(label, options, defaultValue1, groupId);
 
-    const [html, setHtml] = useState('');
-
-    useEffect(() => {
-      const fetchInclude = async () => {
-        const response = await fetch(href);
-        setHtml(await response.text());
-      };
-      fetchInclude();
-    }, [href]);
+    const html = htmlOptions[option];
 
     return (
       <ToggleContextProvider
