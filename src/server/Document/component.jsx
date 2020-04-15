@@ -7,7 +7,7 @@ import {
   AMP_GEO_JS,
   AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
-  AMP_AD,
+  AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
@@ -23,6 +23,7 @@ const Document = ({
   helmet,
   isAmp,
   scripts,
+  hasAds,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
@@ -67,7 +68,7 @@ const Document = ({
         {isAmp && (
           <>
             {AMP_JS}
-            {AMP_AD}
+            {hasAds && AMP_ADS_JS}
             {AMP_GEO_JS}
             {AMP_CONSENT_JS}
             {AMP_ANALYTICS_JS}
