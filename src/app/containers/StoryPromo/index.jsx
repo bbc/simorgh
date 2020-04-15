@@ -104,7 +104,11 @@ const StoryPromoContainer = ({
     item,
     isAssetTypeCode,
   );
+
+  const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
   const summary = pathOr(null, ['summary'], item);
+  const promoSummary = overtypedSummary || summary;
+
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
 
@@ -142,14 +146,14 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {summary && displaySummary && (
+      {promoSummary && displaySummary && (
         <Summary
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
         >
-          {summary}
+          {promoSummary}
         </Summary>
       )}
       {timestamp && !isStoryPromoPodcast && !isLive && (
