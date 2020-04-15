@@ -11,9 +11,8 @@ import RadioPageBlocks from '../../containers/RadioPageBlocks';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
 const RadioPage = ({ pageData }) => {
-  const blocks = path(['content', 'blocks'], pageData);
-  const promo = path(['promo'], pageData);
-  const metadata = path(['metadata'], pageData);
+  const { language, name, summary, content } = pageData;
+  const blocks = path(['blocks'], content);
   const { dir } = useContext(ServiceContext);
   const StyledGelPageGrid = styled(GelPageGrid)`
     flex-grow: 1;
@@ -23,12 +22,12 @@ const RadioPage = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={promo.name}
-        lang={metadata.language}
-        description={promo.summary}
+        title={name}
+        lang={language}
+        description={summary}
         openGraphType="website"
       />
-      <LinkedData type="RadioChannel" seoTitle={promo.name} />
+      <LinkedData type="RadioChannel" seoTitle={name} />
 
       <StyledGelPageGrid
         forwardedAs="main"
@@ -78,10 +77,9 @@ RadioPage.propTypes = {
       id: string,
       tags: object,
     }),
-    promo: shape({
-      subtype: string,
-      name: string,
-    }),
+    language: string,
+    name: string,
+    summary: string,
     content: shape({
       blocks: arrayOf(
         shape({
