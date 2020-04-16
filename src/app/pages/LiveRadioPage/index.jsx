@@ -10,7 +10,7 @@ import LinkedData from '../../containers/LinkedData';
 import RadioPageBlocks from '../../containers/RadioPageBlocks';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const RadioPage = ({ pageData }) => {
+const LiveRadioPage = ({ pageData }) => {
   const { language, name, summary, content } = pageData;
   const blocks = path(['blocks'], content);
   const { dir } = useContext(ServiceContext);
@@ -71,7 +71,7 @@ const RadioPage = ({ pageData }) => {
   );
 };
 
-RadioPage.propTypes = {
+LiveRadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
       id: string,
@@ -94,4 +94,4 @@ RadioPage.propTypes = {
   }).isRequired,
 };
 
-export default RadioPage;
+export default LiveRadioPage;
