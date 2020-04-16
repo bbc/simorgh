@@ -81,6 +81,29 @@ const testCases = [
     },
   },
   {
+    description: `should build a CANONICAL url for on-demand/live radio in test environment with live override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}${embedUrlLiveOverride}`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      mediaId,
+      type: 'media',
+      queryString: '',
+    },
+  },
+  {
+    description: `should build an AMP url for on-demand/live radio in test environment with live override`,
+    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/media/${mediaId}/amp${embedUrlLiveOverride}`,
+    environment: 'test',
+    before: setEnvironment,
+    embedObject: {
+      isAmp: true,
+      mediaId,
+      type: 'media',
+      queryString: '',
+    },
+  },
+  {
     description: `should build a CANONICAL url for articles in live environment`,
     expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'live',

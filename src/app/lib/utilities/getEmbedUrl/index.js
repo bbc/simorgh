@@ -5,16 +5,19 @@ const AV_ROUTE = 'ws/av-embeds';
 const LIVE_URL = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
-const shouldOverrideMorphEnv = (queryString) => {
+const shouldOverrideMorphEnv = (queryString, type) => {
   if (isLive()) {
     return false;
   }
 
-  return Boolean(queryString) && queryString.includes('renderer_env=live');
+  return (
+    (Boolean(queryString) && queryString.includes('renderer_env=live')) ||
+    type === 'media'
+  );
 };
 
 export default ({ type, mediaId, isAmp = false, queryString }) => {
-  const morphEnvOverride = shouldOverrideMorphEnv(queryString)
+  const morphEnvOverride = shouldOverrideMorphEnv(queryString, type)
     ? '?morph_env=live'
     : '';
   const ampSection = isAmp ? '/amp' : '';
