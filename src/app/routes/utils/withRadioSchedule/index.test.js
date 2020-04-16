@@ -1,6 +1,6 @@
 import fetchMock from 'fetch-mock';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
-import { DATA_NOT_FOUND, DATA_FETCH_ERROR } from '#lib/logger.const';
+import { DATA_FETCH_ERROR } from '#lib/logger.const';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
 import withRadioSchedule from '.';
 
@@ -61,9 +61,9 @@ describe('withRadioSchedule', () => {
       expect(foo).toBe('bar');
       expect(rest.status).toBe(200);
 
-      expect(loggerMock.error).toBeCalledWith(DATA_NOT_FOUND, {
-        status: 404,
-        url: 'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+        error:
+          'Error: Unexpected upstream response (HTTP status code 404) when requesting http://localhost/hausa/bbc_hausa_radio/schedule.json',
       });
     });
 
@@ -106,9 +106,9 @@ describe('withRadioSchedule', () => {
       expect(json).toBeUndefined();
       expect(status).toBe(404);
 
-      expect(loggerMock.error).toBeCalledWith(DATA_NOT_FOUND, {
-        status: 404,
-        url: 'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+        error:
+          'Error: Unexpected upstream response (HTTP status code 404) when requesting http://localhost/hausa/bbc_hausa_radio/schedule.json',
       });
     });
 

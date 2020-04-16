@@ -67,11 +67,12 @@ const handleError = (e) => {
   };
 };
 
-export const fetchData = (url) => {
+const fetchData = (pathname) => {
+  const url = getUrl(pathname);
+
   logger.info(DATA_REQUEST_RECEIVED, { url });
+
   return fetch(url).then(handleResponse(url)).catch(handleError);
 };
 
-const fetchPageData = (pathname) => fetchData(getUrl(pathname));
-
-export default fetchPageData;
+export default fetchData;
