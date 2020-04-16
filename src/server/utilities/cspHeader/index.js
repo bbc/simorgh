@@ -109,7 +109,21 @@ const directives = {
   },
   imgSrc: {
     ampLive: [
-      // not currently used since is identical to canonical
+      'https://ichef.bbci.co.uk',
+      'https://ping.chartbeat.net',
+      'https://a1.api.bbc.co.uk/hit.xiti',
+      'https://news.files.bbci.co.uk',
+      'https://*.akstat.io',
+      'https://r.bbci.co.uk',
+      'https://pagead2.googlesyndication.com', // ads
+      'https://securepubads.g.doubleclick.net', // ads
+      'https://tpc.googlesyndication.com', // ads
+      'https://www.google.com', // ads
+      'https://via.placeholder.com', // ads
+      'https://i.ytimg.com', // Social Embeds, <amp-youtube />
+      'https://www.instagram.com', // Social Embeds, <amp-instagram />
+      'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
+      "data: 'self'",
     ],
     canonicalLive: [
       'https://ichef.bbci.co.uk',
@@ -126,7 +140,26 @@ const directives = {
       "data: 'self'", // needed at the end to maintain proper order
     ],
     ampNonLive: [
-      // not currently used since is identical to canonical
+      'https://ichef.bbci.co.uk', // Images
+      'https://ichef.test.bbci.co.uk', // Images
+      'https://ping.chartbeat.net', // Chartbeat
+      'https://a1.api.bbc.co.uk/hit.xiti', // ATI analytics
+      'https://logws1363.ati-host.net', // ATI analytics
+      'https://news.files.bbci.co.uk', // Static Assets
+      'https://news.test.files.bbci.co.uk', // Static Assets
+      'https://*.akstat.io', //
+      'https://r.bbci.co.uk', //
+      'https://pagead2.googlesyndication.com', // ads
+      'https://securepubads.g.doubleclick.net', // ads
+      'https://tpc.googlesyndication.com', // ads
+      'https://www.google.com', // ads
+      'https://via.placeholder.com', // ads
+      'http://b.files.bbci.co.uk', // localhost http connection for image
+      'http://ping.chartbeat.net', // localhost prod build
+      'https://i.ytimg.com', // Social Embeds, <amp-youtube />
+      'https://www.instagram.com', // Social Embeds, <amp-instagram />
+      'https://*.cdninstagram.com', // Social Embeds, <amp-instagram />
+      "data: 'self'",
     ],
     canonicalNonLive: [
       'https://ichef.bbci.co.uk', // Images
