@@ -614,7 +614,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
           <p class="Paragraph-k859h4-0 cnKvCl">
             ዝግጅቶቻችንን’
           </p>
-          <div class="AudioPlayerWrapper-sc-14jc12g-0 hIcedm">
+          <div class="AudioPlayerWrapper-sc-14jc12g-0 hQQApa">
             <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
               <amp-iframe sandbox="allow-scripts allow-same-origin"
                           layout="fill"
@@ -1244,7 +1244,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
           <p class="Paragraph-k859h4-0 cnKvCl">
             ዝግጅቶቻችንን’
           </p>
-          <div class="AudioPlayerWrapper-sc-14jc12g-0 hIcedm">
+          <div class="AudioPlayerWrapper-sc-14jc12g-0 hQQApa">
             <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
               <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
                       title="Audio player"
