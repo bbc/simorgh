@@ -21,32 +21,31 @@ export const getLink = (state, program, service) => {
     : `${url}/${program.episode.pid}`;
 };
 
-export default (radioScheduleData, service, currentTime) => {
-  if (!radioScheduleData) {
+export default (data, service, currentTime) => {
+  if (!data) {
     return null;
   }
 
+  const { schedules = [] } = data;
+
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
-  const radioSchedules = pathOr([], ['schedules'], radioScheduleData);
-
   const latestProgramIndex = findLastIndex(
     propSatisfies((time) => time < currentTime, 'publishedTimeStart'),
-  )(radioSchedules);
+  )(schedules);
 
   const scheduleDataIsComplete =
-    radioSchedules[latestProgramIndex - 2] &&
-    radioSchedules[latestProgramIndex + 1];
-  const schedulesToShow = scheduleDataIsComplete && [
-    radioSchedules[latestProgramIndex],
-    radioSchedules[latestProgramIndex - 1],
-    radioSchedules[latestProgramIndex - 2],
-    radioSchedules[latestProgramIndex + 1],
+    schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+  const programsToShow = scheduleDataIsComplete && [
+    schedules[latestProgramIndex],
+    schedules[latestProgramIndex - 1],
+    schedules[latestProgramIndex - 2],
+    schedules[latestProgramIndex + 1],
   ];
 
-  const schedules =
-    schedulesToShow &&
-    schedulesToShow.map((program) => {
+  const processedSchedule =
+    programsToShow &&
+    programsToShow.map((program) => {
       const currentState = getProgramState(
         currentTime,
         program.publishedTimeStart,
@@ -66,5 +65,5 @@ export default (radioScheduleData, service, currentTime) => {
       };
     });
 
-  return schedules;
+  return processedSchedule;
 };

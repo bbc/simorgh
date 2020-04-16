@@ -17,10 +17,10 @@ const transformJson = pipe(
   filterGroupsWithoutStraplines,
 );
 
-export default async ({ path, service, variant }) => {
+export const hasRadioSchedule = async (service, variant) => {
   const config = await getConfig(service, variant);
 
-  const hasRadioSchedule = pathOr(
+  const serviceHasRadioSchedule = pathOr(
     false,
     ['radioSchedule', 'hasRadioSchedule'],
     config,
@@ -32,7 +32,11 @@ export default async ({ path, service, variant }) => {
     config,
   );
 
-  const pageHasRadioSchedule = hasRadioSchedule && radioScheduleOnFrontPage;
+  return serviceHasRadioSchedule && radioScheduleOnFrontPage;
+};
+
+export default async ({ path, service, variant }) => {
+  const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
 
   const { json, ...rest } = pageHasRadioSchedule
     ? await withRadioSchedule(fetchPageData(path), service, path)

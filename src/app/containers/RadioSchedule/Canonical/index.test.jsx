@@ -1,4 +1,5 @@
 import React from 'react';
+import fetchMock from 'fetch-mock';
 import { render, wait } from '@testing-library/react';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
@@ -7,13 +8,17 @@ import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
 
 describe('Canonical RadioSchedule', () => {
-  afterEach(() => {
-    fetch.resetMocks();
+  beforeEach(() => {
+    process.env.SIMORGH_BASE_URL = 'http://localhost';
+    fetchMock.restore();
   });
 
   describe('With initial data', () => {
-    it('renders correctly for a service with initial data', async () => {
-      fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
+    it('renders correctly for a service', async () => {
+      fetchMock.mock(
+        'http://localhost/arabic/bbc_arabic_radio/schedule.json',
+        arabicRadioScheduleData,
+      );
       const initialData = processRadioSchedule(
         arabicRadioScheduleData,
         'arabic',
@@ -26,7 +31,11 @@ describe('Canonical RadioSchedule', () => {
           radioScheduleToggle
         />,
       );
-      expect(fetch).not.toBeCalled();
+      expect(
+        fetchMock.calls(
+          'http://localhost/arabic/bbc_arabic_radio/schedule.json',
+        ).length,
+      ).toBeFalsy();
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
@@ -87,16 +96,24 @@ describe('Canonical RadioSchedule', () => {
 
   describe('Without initial data', () => {
     it('renders correctly for a service with a radio schedule and page frequency URL', async () => {
-      fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
+      fetchMock.mock(
+        '/arabic/bbc_arabic_radio/schedule.json',
+        arabicRadioScheduleData,
+      );
 
       await matchSnapshotAsync(
         <RadioSchedulesWithContext service="arabic" radioScheduleToggle />,
       );
-      expect(fetch).toBeCalled();
+      expect(
+        fetchMock.calls('/arabic/bbc_arabic_radio/schedule.json').length,
+      ).toBeTruthy();
     });
 
     it('contains four programs for a service with a radio schedule', async () => {
-      fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
+      fetchMock.mock(
+        '/arabic/bbc_arabic_radio/schedule.json',
+        arabicRadioScheduleData,
+      );
       const { container } = render(
         <RadioSchedulesWithContext service="arabic" radioScheduleToggle />,
       );
@@ -107,11 +124,9 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains less than 4 programs', async () => {
-      fetch.mockResponse(
-        JSON.stringify({
-          schedules: arabicRadioScheduleData.schedules.slice(0, 2),
-        }),
-      );
+      fetchMock.mock('/arabic/bbc_arabic_radio/schedule.json', {
+        schedules: arabicRadioScheduleData.schedules.slice(0, 2),
+      });
       const { container } = render(
         <RadioSchedulesWithContext service="arabic" />,
       );
@@ -121,14 +136,38 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
-      fetch.mockResponse(
-        JSON.stringify({
-          schedules: [],
-        }),
-      );
+      fetchMock.mock('/arabic/bbc_arabic_radio/schedule.json', {
+        schedules: [],
+      });
       const { container } = render(
         <RadioSchedulesWithContext service="arabic" />,
       );
+      await wait(() => {
+        expect(container).toBeEmpty();
+      });
+    });
+
+    it('does not render when data fetched returns non-ok status code', async () => {
+      fetchMock.mock('/arabic/bbc_arabic_radio/schedule.json', 404);
+
+      const { container } = render(
+        <RadioSchedulesWithContext service="arabic" />,
+      );
+
+      await wait(() => {
+        expect(container).toBeEmpty();
+      });
+    });
+
+    it('does not render when data fetch is rejected', async () => {
+      fetchMock.mock('/arabic/bbc_arabic_radio/schedule.json', {
+        throws: 'Server not found',
+      });
+
+      const { container } = render(
+        <RadioSchedulesWithContext service="arabic" />,
+      );
+
       await wait(() => {
         expect(container).toBeEmpty();
       });

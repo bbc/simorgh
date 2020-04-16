@@ -28,6 +28,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
+import { DATA_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
@@ -99,52 +100,61 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
     dir,
     timezone,
     locale,
-    radioSchedule,
+    radioSchedule: radioScheduleConfig,
     translations,
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
 
-  const [schedule, setRadioSchedule] = useState(initialData);
+  const [radioSchedule, setRadioSchedule] = useState(initialData);
 
-  const header = pathOr(null, ['header'], radioSchedule);
+  const header = pathOr(null, ['header'], radioScheduleConfig);
   const frequenciesPageUrl = pathOr(
     null,
     ['frequenciesPageUrl'],
-    radioSchedule,
+    radioScheduleConfig,
   );
   const frequenciesPageLabel = pathOr(
     null,
     ['frequenciesPageLabel'],
-    radioSchedule,
+    radioScheduleConfig,
   );
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   useEffect(() => {
-    if (!schedule) {
+    if (!radioSchedule) {
       const handleResponse = async (response) => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+
         const radioScheduleData = await response.json();
         const timeOnClient = parseInt(moment.utc().format('x'), 10);
-        const schedules = processRadioSchedule(
+        const processedSchedule = processRadioSchedule(
           radioScheduleData,
           service,
           timeOnServer || timeOnClient,
         );
-        setRadioSchedule(schedules);
+        setRadioSchedule(processedSchedule);
       };
 
       const fetchRadioScheduleData = (pathname) =>
         fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse)
-          .catch((e) => logger.error(`HTTP Error: "${e}"`));
+          .catch((error) => {
+            logger.error(DATA_FETCH_ERROR, {
+              url: pathname,
+              error,
+            });
+          });
 
       fetchRadioScheduleData(endpoint);
     }
-  }, [endpoint, service, timeOnServer, schedule]);
+  }, [endpoint, service, timeOnServer, radioSchedule]);
 
-  if (!schedule) {
+  if (!radioSchedule) {
     return null;
   }
 
@@ -162,7 +172,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper>
         <RadioSchedule
-          schedules={schedule}
+          schedules={radioSchedule}
           locale={locale}
           timezone={timezone}
           script={script}

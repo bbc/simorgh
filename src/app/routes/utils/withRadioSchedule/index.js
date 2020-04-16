@@ -3,7 +3,7 @@ import { fetchData } from '../fetchPageData';
 import { getQueryString } from '#lib/utilities/urlParser';
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
 
-const withRadioSchedules = async (pageDataPromise, service, path) => {
+const withRadioSchedule = async (pageDataPromise, service, path) => {
   const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
 
   const radioScheduleUrl = getRadioScheduleEndpoint({
@@ -32,4 +32,4 @@ const withRadioSchedules = async (pageDataPromise, service, path) => {
   };
 };
 
-export default withRadioSchedules;
+export default withRadioSchedule;
