@@ -14,19 +14,19 @@ jobs:
   include:
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: 'Unit Tests and storybook e2e'
+      name: 'Unit Tests'
       install: npm ci
       script:
         - npm run test
     - stage: test
       if: type = push OR (pull_request AND fork = true)
-      name: 'Production CI tests'
+      name: 'Production Tests (excludes E2Es)'
       install: npm ci
       addons:
         chrome: stable
       script:
         - npm run build
         - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run test:ci
+        - npm run test:ci
 notifications:
   email: false
