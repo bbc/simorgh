@@ -14,6 +14,9 @@ developmentTests:
 productionTests:
 	npm run build && npm run test:ci;
 
+smokeE2Es:
+	npm run build && npm run start & CYPRESS_SMOKE=true npm run cypress:ci
+
 testE2Es:
 	CYPRESS_SMOKE=false CYPRESS_APP_ENV=test npm run cypress
 

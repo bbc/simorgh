@@ -31,6 +31,12 @@ def runProductionTests(){
   sh 'npm prune --production'
 }
 
+def runSmokeE2Es(){
+  sh 'make install'
+  sh 'make smokeE2Es'
+  sh 'npm prune --production'
+}
+
 def getCommitInfo = {
   appGitCommit = sh(returnStdout: true, script: "git rev-parse HEAD")
   appGitCommitAuthor = sh(returnStdout: true, script: "git --no-pager show -s --format='%an' ${appGitCommit}").trim()
@@ -151,6 +157,20 @@ pipeline {
           }
           steps {
             runProductionTests()
+          }
+        }
+        stage ('Run Smoke E2Es') {
+          when {
+            expression { env.BRANCH_NAME == 'latest' }
+          }
+          agent {
+            docker {
+              image "${nodeImage}"
+              args '-u root -v /etc/pki:/certs'
+            }
+          }
+          steps {
+            runSmokeE2Es()
           }
         }
       }
