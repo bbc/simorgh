@@ -358,6 +358,8 @@ describe('legacyAssetPagePath', () => {
     '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
     '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
     '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
+    '/ukchina/simp/cool_britannia/people_in_uk/2016/09/160927_people_lord_mayor',
+    '/ukchina/simp/elt/english_now/2014/12/141205_media_english_hiv',
   ];
 
   shouldMatchValidRoutes(validRoutes, legacyAssetPagePath);
