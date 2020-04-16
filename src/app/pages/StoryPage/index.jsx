@@ -223,9 +223,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <FeaturesAnalysis />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
-          </ComponentWrapper>
-          <ComponentWrapper>
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}
               columnLayout="oneColumn"
