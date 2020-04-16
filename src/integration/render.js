@@ -38,11 +38,17 @@ const faultTolerantDomFetch = (url) =>
 
         resolve(dom);
       } catch (error) {
-        if (operation.retry(error)) {
-          return;
+        const isSocketHangUpError = error
+          .toString()
+          .includes('Error: socket hang up');
+
+        if (isSocketHangUpError) {
+          if (operation.retry(error)) {
+            return;
+          }
         }
 
-        reject(operation.mainError());
+        reject(error);
       }
     });
   });

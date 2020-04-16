@@ -29,12 +29,12 @@ it('should return DOM from a given url path', async () => {
   expect(pageTitle).toBe('Some HTML');
 });
 
-it('should retry to render the DOM if network request fails', async () => {
+it('should retry to render the DOM if socket hang up error occurs', async () => {
   JSDOM.fromURL = jest
     .fn()
-    .mockRejectedValueOnce(new Error('Async error'))
-    .mockRejectedValueOnce(new Error('Async error'))
-    .mockRejectedValueOnce(new Error('Async error'))
+    .mockRejectedValueOnce(new Error('socket hang up'))
+    .mockRejectedValueOnce(new Error('socket hang up'))
+    .mockRejectedValueOnce(new Error('socket hang up'))
     .mockResolvedValue(
       new JSDOM(
         `<html><head><title>Some HTML</title></head><body></body></html>`,
@@ -57,4 +57,10 @@ it('should retry to render the DOM if network request fails', async () => {
     'Retry attempts: 3',
   );
   expect(pageTitle).toBe('Some HTML');
+});
+
+it('should not retry if failure is not a socket hang up error and throw error as normal', async () => {
+  JSDOM.fromURL = jest.fn().mockRejectedValueOnce(new Error('Some error'));
+
+  await expect(render('/some/path')).rejects.toThrow();
 });
