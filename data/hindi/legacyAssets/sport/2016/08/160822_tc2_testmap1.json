@@ -1,0 +1,158 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/hindi/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
+        "id": "17698163",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+          "id": "17698163",
+          "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "अमरीकी तैराकों के रियो में लूटपाट की झूठी कहानी पर अमरीकी ओलंपिक एसोसिएशन ने ब्राज़ील से मांगी माफी.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17698163", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "hindi",
+    "firstPublished": 1471879748000,
+    "id": "urn:bbc:ares::asset:hindi/sport/2016/08/160822_tc2_testmap1",
+    "includeComments": false,
+    "language": "hi",
+    "lastPublished": 1471879748000,
+    "lastUpdated": 1585590680693,
+    "locators": {
+      "assetId": "17698163",
+      "assetUri": "/hindi/sport/2016/08/160822_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/sport/2016/08/160822_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/e2d17af6-687a-11e6-b84d-d6e07ecad303"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1471879748000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "रियो में अमरीकी तैराकों ने बोला झूठ",
+      "shortHeadline": "रियो में अमरीकी तैराकों ने बोला झूठ"
+    },
+    "id": "urn:bbc:ares::asset:hindi/sport/2016/08/160822_tc2_testmap1",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "Getty",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
+      "id": "d5e212",
+      "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_144x81_getty_nocredit.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "hi",
+    "locators": {
+      "assetId": "17698163",
+      "assetUri": "/hindi/sport/2016/08/160822_tc2_testmap1",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/sport/2016/08/160822_tc2_testmap1",
+      "curie": "http://www.bbc.co.uk/asset/e2d17af6-687a-11e6-b84d-d6e07ecad303"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/hindi/meta/dps/junk/2016/08/emp/160822_tc2_testmap1.emp.xml",
+      "id": "17698163",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+        "id": "17698163",
+        "path": "/amz/worldservice/test/assets/images/2015/01/08/150108141819_serena_williams_640x360_getty_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/hindi/dps/junk/2016/08/hd_boris_upsot_hl_1300_22_2_105_5244812_toprores_160822_tc2_testmap1_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "अमरीकी तैराकों के रियो में लूटपाट की झूठी कहानी पर अमरीकी ओलंपिक एसोसिएशन ने ब्राज़ील से मांगी माफी.",
+    "timestamp": 1471879748000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "खेल",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/hindi/sport"
+    },
+    "site": {
+      "name": "BBCHindi.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/hindi"
+    }
+  }
+}
