@@ -3558,7 +3558,7 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/serbian/srbija-46748932/lat'],
+            paths: ['/serbian/lat/srbija-46748932'],
             enabled: true,
           },
         },
