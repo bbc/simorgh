@@ -97,8 +97,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const StoryPageGrid = styled(Grid)`
     flex-grow: 1;
+    width: 100%; /* Needed for IE11 */
+    margin: 0 auto;
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      margin: 0 auto;
       max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
     }
   `;
