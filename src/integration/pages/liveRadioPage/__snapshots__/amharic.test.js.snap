@@ -614,16 +614,23 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
           <p class="Paragraph-k859h4-0 cnKvCl">
             ዝግጅቶቻችንን’
           </p>
-          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
-            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
-              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
-                <amp-iframe sandbox="allow-scripts allow-same-origin"
-                            layout="fill"
-                            scrolling="no"
-                            frameborder="0"
-                            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
-                            title="Audio player"
-                            allowfullscreen="allowfullscreen"
+          <div class="AudioPlayerWrapper-sc-14jc12g-0 hQQApa">
+            <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+              <amp-iframe sandbox="allow-scripts allow-same-origin"
+                          layout="fill"
+                          scrolling="no"
+                          frameborder="0"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+                          title="Audio player"
+                          allowfullscreen="allowfullscreen"
+              >
+                <amp-img layout="fill"
+                         src="http://localhost:7080/images/amp_audio_placeholder.png"
+                         placeholder="true"
+                         alt
+                         height="16"
+                         width="9"
+                         attribution
                 >
                   <amp-img layout="fill"
                            src="http://localhost:7080/images/amp_audio_placeholder.png"
@@ -1246,24 +1253,22 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
           <p class="Paragraph-k859h4-0 cnKvCl">
             ዝግጅቶቻችንን’
           </p>
-          <div class="OuterWrapper-sc-14jc12g-0 jqXnEt">
-            <div class="InnerWrapper-sc-14jc12g-1 gIGkYn">
-              <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
-                <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
-                        title="Audio player"
-                        allow="autoplay; fullscreen"
-                        scrolling="no"
-                        allowfullscreen
-                        class="StyledIframe-fuo2ed-0 dIyDYU"
-                >
-                </iframe>
-                <noscript>
-                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
-                    <div class="MessageWrapper-sc-1pnftlt-1 CXSTp">
-                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።
-                      </strong>
-                    </div>
+          <div class="AudioPlayerWrapper-sc-14jc12g-0 hQQApa">
+            <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
+              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+                      title="Audio player"
+                      allow="autoplay; fullscreen"
+                      scrolling="no"
+                      allowfullscreen
+                      class="StyledIframe-fuo2ed-0 dIyDYU"
+              >
+              </iframe>
+              <noscript>
+                <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                  <div class="MessageWrapper-sc-1pnftlt-1 CXSTp">
+                    <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                      የእርሶ መሳሪያ ሚዲያ ፕሌይ ባክን ማጫወት ኣልተቻለም።
+                    </strong>
                   </div>
                 </noscript>
               </div>
