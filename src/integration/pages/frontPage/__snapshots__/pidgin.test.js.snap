@@ -749,7 +749,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Top-stories"
@@ -758,7 +758,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Top tori
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <div class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc">
@@ -846,7 +846,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Cluster-1"
@@ -855,7 +855,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Yarn Me Tori
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -1052,7 +1052,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                    aria-labelledby="Section-1"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -1069,7 +1069,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                         See everitin
                       </span>
                     </span>
-                  </span>
+                  </div>
                 </a>
               </h2>
             </div>
@@ -1175,7 +1175,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Section-2"
@@ -1184,7 +1184,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Ginger me
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -1586,7 +1586,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Section-3"
@@ -1595,7 +1595,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Informate me
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -1832,7 +1832,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Special-reports-2"
@@ -1841,7 +1841,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Special reports 2
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -2122,7 +2122,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Frequency-info"
@@ -2131,7 +2131,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       2018 World Cup
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -2537,7 +2537,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Podcasts"
@@ -2546,7 +2546,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Podcast
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <div class="SpacingDiv-sc-1t555e8-2 eeEZOm">
@@ -3267,7 +3267,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Top-stories"
@@ -3276,7 +3276,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Top tori
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <div class="FirstSectionTopMargin-sc-1t555e8-1 gTFeDc">
@@ -3358,7 +3358,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Cluster-1"
@@ -3367,7 +3367,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Yarn Me Tori
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -3540,7 +3540,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                    aria-labelledby="Section-1"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -3557,7 +3557,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                         See everitin
                       </span>
                     </span>
-                  </span>
+                  </div>
                 </a>
               </h2>
             </div>
@@ -3651,7 +3651,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Section-2"
@@ -3660,7 +3660,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Ginger me
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -4032,7 +4032,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Section-3"
@@ -4041,7 +4041,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Informate me
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -4248,7 +4248,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Special-reports-2"
@@ -4257,7 +4257,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Special reports 2
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -4502,7 +4502,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Frequency-info"
@@ -4511,7 +4511,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       2018 World Cup
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <ul dir="ltr"
@@ -4869,7 +4869,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <span class="FlexColumn-wx5kdp-0 dgpsiS">
+                <div class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="Podcasts"
@@ -4878,7 +4878,7 @@ exports[`Given I am on a Pidgin Frontpage AMP/Canonical page When a search engin
                       Podcast
                     </span>
                   </span>
-                </span>
+                </div>
               </h2>
             </div>
             <div class="SpacingDiv-sc-1t555e8-2 eeEZOm">
