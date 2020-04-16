@@ -3,7 +3,7 @@ import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import routes from '#app/routes';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
-/* Guidelines to follow when updating the CSP Header can be found here: 
+/* Guidelines to follow when updating the CSP Header can be found here:
 https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/updating-csp.md */
 
 const directives = {
