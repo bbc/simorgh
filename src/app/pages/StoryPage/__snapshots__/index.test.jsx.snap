@@ -2,7 +2,136 @@
 
 exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  .c25 {
+  .c30 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
+.c23 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c5 {
+  grid-column: 1 / span 6;
+}
+
+.c13 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c21 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c22 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c22:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c22:focus,
+.c22:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c12 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c18 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c17 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c20 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c20 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c20 i {
+  font-style: normal;
+}
+
+.c15 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -15,7 +144,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-.c22 {
+.c16 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+  -webkit-animation: eMLfYp 0.2s linear;
+  animation: eMLfYp 0.2s linear;
+  -webkit-transition: visibility 0.2s linear;
+  transition: visibility 0.2s linear;
+}
+
+.c50 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -25,7 +164,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-style: normal;
 }
 
-.c8 {
+.c28 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -35,7 +180,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-direction: column;
 }
 
-.c9 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +199,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: baseline;
 }
 
-.c10 {
+.c38 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -74,49 +219,49 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   align-items: center;
 }
 
-.c6 {
+.c34 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c4 {
+.c32 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c7 {
+.c35 {
   margin: 0;
   padding: 0;
 }
 
-.c16 {
+.c44 {
   padding: 0.5rem 0 1rem;
 }
 
-.c16:first-child {
+.c44:first-child {
   padding-top: 0;
 }
 
-.c16:last-child {
+.c44:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c15 {
+.c43 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c23 {
+.c51 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c18 {
+.c46 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -124,40 +269,40 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   width: 100%;
 }
 
-.c18 >div {
+.c46 >div {
   vertical-align: middle;
 }
 
-.c18 >div {
+.c46 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c18 svg {
+.c46 svg {
   margin: 0;
 }
 
-.c27 {
+.c54 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c17 {
+.c45 {
   position: relative;
 }
 
-.c24 {
+.c52 {
   position: relative;
 }
 
-.c26 > * {
+.c53 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c19 {
+.c47 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -169,7 +314,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   display: inline;
 }
 
-.c28 {
+.c55 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -180,7 +325,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   line-height: 1.25rem;
 }
 
-.c21 {
+.c49 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -192,7 +337,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-top: 0.5rem;
 }
 
-.c29 {
+.c56 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -203,14 +348,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   padding-bottom: 0.5rem;
 }
 
-.c20 {
+.c48 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c20:before {
+.c48:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -222,22 +367,92 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.c20:hover,
-.c20:focus {
+.c48:hover,
+.c48:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c20:visited {
+.c48:visited {
   color: #6E6E73;
 }
 
-.c3 {
+.c25 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c25 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c26 {
   margin-bottom: 1rem;
 }
 
-.c5 {
+.c24 {
+  margin-bottom: 1.5rem;
+}
+
+.c27 {
+  margin-top: 0.5rem;
+}
+
+.c27 figure {
+  padding-bottom: 0;
+}
+
+.c31 {
+  margin-bottom: 1rem;
+}
+
+.c33 {
   margin-top: 0;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+.c9 {
+  color: #404040;
+}
+
+.c10 {
+  color: #5A5A5A;
+}
+
+.c6 {
+  padding-bottom: 1rem;
 }
 
 .c1 {
@@ -247,24 +462,261 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   flex-grow: 1;
 }
 
-.c30 {
+.c57 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c14 {
+.c42 {
   margin-bottom: 1.5rem;
 }
 
+.c29 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c22 {
+  .c30 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c30 {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c5 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c11 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:79.9375rem) {
+  .c13 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c20 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c20 {
+    padding: 0.5rem 0 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c50 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c22 {
+  .c50 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -356,7 +808,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width:14.9375rem) {
-  .c12 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -364,7 +816,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c12 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -372,7 +824,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -380,7 +832,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c40 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -388,7 +840,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c12 {
+  .c40 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -396,7 +848,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c40 {
     width: calc(25%);
     display: inline-block;
     vertical-align: top;
@@ -404,13 +856,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display:grid) {
-  .c12 {
+  .c40 {
     display: block;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c37 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -419,39 +871,39 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c38 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c38 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c38 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c38 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c6 {
+  .c34 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c34 {
     position: absolute;
     left: 0;
     right: 0;
@@ -460,63 +912,63 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c32 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c32 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c16 {
+  .c44 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c44 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c16 {
+  .c44 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16:first-child {
+  .c44:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c51 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
+  .c51 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c46 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c18 {
+  .c46 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -524,7 +976,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
+  .c46 {
     display: block;
     width: initial;
     padding: initial;
@@ -534,13 +986,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c54 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c27 {
+  .c54 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -548,7 +1000,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c27 {
+  .c54 {
     display: block;
     width: initial;
     padding: initial;
@@ -557,7 +1009,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c45 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -565,159 +1017,228 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width:25rem) {
-  .c26 {
+  .c53 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c26 > * {
+  .c53 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c47 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c47 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c55 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c55 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c49 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c49 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c21 {
+  .c49 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c21 {
+  .c49 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c56 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c56 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c29 {
+  .c56 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c56 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c25 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c3 {
+  .c27 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c3 {
+  .c27 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c3 {
+  .c27 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c27 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
+  .c27 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c27 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c27 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c31 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c31 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c31 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c31 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c31 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c31 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c39 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c11 {
+  .c39 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c6 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c41 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c14 {
+  .c42 {
     padding: 1rem;
   }
 }
@@ -748,32 +1269,483 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
               >
                 <main
                   role="main"
-                />
-                <section
-                  aria-labelledby="related-content-heading"
-                  class="c3"
-                  role="region"
                 >
                   <div
                     class="c3"
                   >
+                    <h1
+                      class="c4"
+                      id="content"
+                      tabindex="-1"
+                    >
+                      STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                    </h1>
+                  </div>
+                  <div
+                    class="c5 c6"
+                  >
                     <div
-                      class="c4 c5"
+                      class="c7"
+                    >
+                      <ul
+                        class="c8"
+                        role="list"
+                      >
+                        <li
+                          class="c9"
+                          role="listitem"
+                        >
+                          By Andrew Overtyped Marr
+                        </li>
+                        <li
+                          class="c10"
+                          role="listitem"
+                        >
+                          BBC News - Overtyped
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="c11"
+                  >
+                    <figure
+                      class="c12"
                     >
                       <div
-                        class="c6"
-                      />
-                      <h2
-                        class="c7"
+                        class="c13"
                       >
                         <div
-                          class="c8"
+                          class="c14"
                         >
-                          <span
-                            class="c9"
+                          <div
+                            class="c15"
+                          >
+                            <img
+                              alt="Some people at the NTA awards"
+                              class="c16"
+                              src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+                              srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
+                              width="976"
+                            />
+                            <p
+                              class="c17"
+                              role="text"
+                            >
+                              <span
+                                class="c18"
+                              >
+                                Wia dis foto come from, 
+                              </span>
+                              <span
+                                lang="en-GB"
+                              >
+                                Joe Maher
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="c19"
+                        >
+                          <figcaption
+                            class="c20"
                           >
                             <span
-                              class="c10"
+                              class="c18"
+                            >
+                              Wetin we call dis foto, 
+                            </span>
+                            <p>
+                              Some people went to the NTA awards recently.
+                            </p>
+                          </figcaption>
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <b>
+                         This is introduction text, it should be bold by default, but also support 
+                      </b>
+                      <a
+                        class="c22"
+                        href="https://bbc.com/pidgin/23248703"
+                      >
+                        inline links
+                      </a>
+                      <b>
+                         to other pages.
+                      </b>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <i
+                        class="c23"
+                      >
+                        <b>
+                          This is a subheadline! that has 
+                        </b>
+                      </i>
+                      <a
+                        class="c22"
+                        href="https://bbc.com/pidgin/23248703"
+                      >
+                        a link
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <ul
+                        class="c25"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          This is a unordered list
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          It can have 
+                          <b>
+                            bold text
+                          </b>
+                           in it
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <a
+                            class="c22"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            It can also have links
+                          </a>
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <i
+                            class="c23"
+                          >
+                            It can even have italic text in it!
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Feta the big cheese macaroni cheese. 
+                      <a
+                        class="c22"
+                        href="https://bbc.com/pidgin/23248703"
+                      >
+                        Caerphilly danish fontina
+                      </a>
+                       queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                      <b>
+                        Cow cheeseburger
+                      </b>
+                       stilton emmental.
+                    </p>
+                  </div>
+                  <div
+                    class="c11"
+                  >
+                    <figure
+                      class="c12"
+                    >
+                      <div
+                        class="c13"
+                      >
+                        <div
+                          class="c14"
+                        >
+                          <div
+                            class="c15"
+                          >
+                            <div
+                              class="lazyload-placeholder"
+                            />
+                            <noscript />
+                            <p
+                              class="c17"
+                              role="text"
+                            >
+                              <span
+                                class="c18"
+                              >
+                                Wia dis foto come from, 
+                              </span>
+                              <span
+                                lang="en-GB"
+                              >
+                                Joe Maher
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          class="c19"
+                        />
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <b>
+                        Start of localised text
+                      </b>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Minista nọ n'isi ụlọọrụ ahụ bụ Hadi Sirika sị na ya agaghị atụrụ ndị mmadụ asị na ya gaghaị arụcha ya bụ ọdọụgbọelụ na Disemba dịka ha kwuburu mana ya ga-eburu isi ụlọọrụ ya ga-gwunye n'Enugu ịhụ na ha rụchara n'Apreelụ.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <b>
+                        End of localised text
+                      </b>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Rubber cheese macaroni 
+                      <i
+                        class="c23"
+                      >
+                        cheese cottage cheese
+                      </i>
+                      . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <div
+                      class="c24"
+                    >
+                      <ul
+                        class="c25"
+                        dir="ltr"
+                        role="list"
+                      >
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          This is a ordered list
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          It can have 
+                          <b>
+                            bold text
+                          </b>
+                           in it
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <a
+                            class="c22"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            It can also have links
+                          </a>
+                        </li>
+                        <li
+                          class="c26"
+                          role="listitem"
+                        >
+                          <i
+                            class="c23"
+                          >
+                            It can even have italic text in it!
+                          </i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                    </p>
+                  </div>
+                  <div
+                    class="c27"
+                  >
+                    <figure
+                      class="c12"
+                    >
+                      <div
+                        class="c28"
+                      >
+                        <iframe
+                          allow="autoplay; fullscreen"
+                          allowfullscreen=""
+                          class="c29"
+                          scrolling="no"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
+                          title="Media player"
+                        />
+                        <noscript />
+                      </div>
+                    </figure>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <h2
+                      class="c30"
+                      id="This-is-a-heading"
+                      tabindex="-1"
+                    >
+                      This is a heading!
+                    </h2>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <h2
+                      class="c30"
+                      id="This-is-a-subheading"
+                      tabindex="-1"
+                    >
+                      This is a subheading!
+                    </h2>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <h2
+                      class="c30"
+                      id="This-is-a-crosshead"
+                      tabindex="-1"
+                    >
+                      This is a crosshead!
+                    </h2>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      <a
+                        aria-label="This is an external link to google!, outside"
+                        class="c22"
+                        href="https://www.google.com/"
+                      >
+                        This is an external link to google!
+                      </a>
+                    </p>
+                  </div>
+                  <div
+                    class="c5"
+                  >
+                    <p
+                      class="c21"
+                    >
+                      Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                    </p>
+                  </div>
+                </main>
+                <section
+                  aria-labelledby="related-content-heading"
+                  class="c31"
+                  role="region"
+                >
+                  <div
+                    class="c31"
+                  >
+                    <div
+                      class="c32 c33"
+                    >
+                      <div
+                        class="c34"
+                      />
+                      <h2
+                        class="c35"
+                      >
+                        <div
+                          class="c36"
+                        >
+                          <span
+                            class="c37"
+                          >
+                            <span
+                              class="c38"
                               dir="ltr"
                               id="related-content-heading"
                             >
@@ -784,43 +1756,43 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <div
-                      class="c11"
+                      class="c39"
                     />
                   </div>
                 </section>
               </div>
               <div
-                class="c12 c13"
+                class="c40 c41"
                 dir="ltr"
               >
                 <div
-                  class="c14"
+                  class="c42"
                 >
                   <section
                     aria-labelledby="top-stories-heading"
-                    class="c3"
+                    class="c31"
                     role="region"
                   >
                     <div
-                      class="c3"
+                      class="c31"
                     >
                       <div
-                        class="c4 c5"
+                        class="c32 c33"
                       >
                         <div
-                          class="c6"
+                          class="c34"
                         />
                         <h2
-                          class="c7"
+                          class="c35"
                         >
                           <div
-                            class="c8"
+                            class="c36"
                           >
                             <span
-                              class="c9"
+                              class="c37"
                             >
                               <span
-                                class="c10"
+                                class="c38"
                                 dir="ltr"
                                 id="top-stories-heading"
                               >
@@ -831,37 +1803,37 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </h2>
                       </div>
                       <ul
-                        class="c15"
+                        class="c43"
                         role="list"
                       >
                         <li
-                          class="c16"
+                          class="c44"
                           role="listitem"
                         >
                           <div
-                            class="c17"
+                            class="c45"
                           >
                             <div
-                              class="c18"
+                              class="c46"
                               dir="ltr"
                             >
                               <h3
-                                class="c19"
+                                class="c47"
                               >
                                 <a
-                                  class="c20"
+                                  class="c48"
                                   href="/mundo/noticias-internacional-51939501"
                                 >
                                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                                 </a>
                               </h3>
                               <p
-                                class="c21"
+                                class="c49"
                               >
                                 Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
                               </p>
                               <time
-                                class="c22"
+                                class="c50"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -870,33 +1842,33 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           </div>
                         </li>
                         <li
-                          class="c16"
+                          class="c44"
                           role="listitem"
                         >
                           <div
-                            class="c17"
+                            class="c45"
                           >
                             <div
-                              class="c18"
+                              class="c46"
                               dir="ltr"
                             >
                               <h3
-                                class="c19"
+                                class="c47"
                               >
                                 <a
-                                  class="c20"
+                                  class="c48"
                                   href="/pidgin/tori-51945757"
                                 >
                                   Nigeria don get five new cases of Coronavirus - See how e happun
                                 </a>
                               </h3>
                               <p
-                                class="c21"
+                                class="c49"
                               >
                                 Nigeria Health say di patients from UK and America travel come di kontri.
                               </p>
                               <time
-                                class="c22"
+                                class="c50"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -909,33 +1881,33 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="c14"
+                  class="c42"
                 >
                   <section
                     aria-labelledby="features-analysis-heading"
-                    class="c3"
+                    class="c31"
                     role="region"
                   >
                     <div
-                      class="c3"
+                      class="c31"
                     >
                       <div
-                        class="c4 c5"
+                        class="c32 c33"
                       >
                         <div
-                          class="c6"
+                          class="c34"
                         />
                         <h2
-                          class="c7"
+                          class="c35"
                         >
                           <div
-                            class="c8"
+                            class="c36"
                           >
                             <span
-                              class="c9"
+                              class="c37"
                             >
                               <span
-                                class="c10"
+                                class="c38"
                                 dir="ltr"
                                 id="features-analysis-heading"
                               >
@@ -946,56 +1918,56 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </h2>
                       </div>
                       <ul
-                        class="c15"
+                        class="c43"
                         role="list"
                       >
                         <li
-                          class="c16"
+                          class="c44"
                           role="listitem"
                         >
                           <div
-                            class="c17"
+                            class="c45"
                           >
                             <div
-                              class="c23"
+                              class="c51"
                               dir="ltr"
                             >
                               <div
-                                class="c24"
+                                class="c52"
                               >
                                 <div
-                                  class="c25"
+                                  class="c15"
                                 >
                                   <div
                                     class="lazyload-placeholder"
                                   />
                                 </div>
                                 <div
-                                  class="c26"
+                                  class="c53"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c27"
+                              class="c54"
                               dir="ltr"
                             >
                               <h3
-                                class="c28"
+                                class="c55"
                               >
                                 <a
-                                  class="c20"
+                                  class="c48"
                                   href="/igbo/afirika-23252735"
                                 >
                                   STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                 </a>
                               </h3>
                               <p
-                                class="c29"
+                                class="c56"
                               >
                                 This is a test asset used in Simorgh, please do not edit it without asking.
                               </p>
                               <time
-                                class="c22"
+                                class="c50"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -1004,52 +1976,52 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           </div>
                         </li>
                         <li
-                          class="c16"
+                          class="c44"
                           role="listitem"
                         >
                           <div
-                            class="c17"
+                            class="c45"
                           >
                             <div
-                              class="c23"
+                              class="c51"
                               dir="ltr"
                             >
                               <div
-                                class="c24"
+                                class="c52"
                               >
                                 <div
-                                  class="c25"
+                                  class="c15"
                                 >
                                   <div
                                     class="lazyload-placeholder"
                                   />
                                 </div>
                                 <div
-                                  class="c26"
+                                  class="c53"
                                 />
                               </div>
                             </div>
                             <div
-                              class="c27"
+                              class="c54"
                               dir="ltr"
                             >
                               <h3
-                                class="c28"
+                                class="c55"
                               >
                                 <a
-                                  class="c20"
+                                  class="c48"
                                   href="/igbo/afirika-49666505"
                                 >
                                   Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                 </a>
                               </h3>
                               <p
-                                class="c29"
+                                class="c56"
                               >
                                 Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                               </p>
                               <time
-                                class="c22"
+                                class="c50"
                                 datetime="2020-02-03"
                               >
                                 3rd February 2020
@@ -1062,14 +2034,14 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="c30"
+                  class="c57"
                 >
                   <h2>
                     This is a component in the second column
                   </h2>
                 </div>
                 <div
-                  class="c30"
+                  class="c57"
                 />
               </div>
             </div>
@@ -1082,7 +2054,136 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
+.c32 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  margin: 0;
+  padding: 1.5rem 0;
+}
+
 .c25 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.c5 {
+  grid-column: 1 / span 6;
+}
+
+.c13 {
+  display: grid;
+  grid-column-gap: 1rem;
+}
+
+.c4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #3F3F42;
+  display: block;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c23 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #3F3F42;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c24 {
+  color: #222222;
+  border-bottom: 1px solid #B80000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c24:visited {
+  color: #6E6E73;
+  border-bottom: 1px solid #6E6E73;
+}
+
+.c24:focus,
+.c24:hover {
+  border-bottom: 2px solid #B80000;
+  color: #B80000;
+}
+
+.c12 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
+.c18 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c17 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  background-color: rgba(34,34,34,0.75);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0.25rem 0.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+}
+
+.c20 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6E6E73;
+  padding: 0.5rem 0.5rem 0;
+  width: 100%;
+}
+
+.c20 > p {
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+
+.c20 > p:last-child {
+  padding-bottom: 0;
+}
+
+.c20 i {
+  font-style: normal;
+}
+
+.c15 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1095,7 +2196,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
+.c16 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+  -webkit-animation: eMLfYp 0.2s linear;
+  animation: eMLfYp 0.2s linear;
+  -webkit-transition: visibility 0.2s linear;
+  transition: visibility 0.2s linear;
+}
+
 .c22 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 0.25rem;
+}
+
+.c22:last-child {
+  padding-bottom: 1rem;
+}
+
+.c52 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1105,7 +2231,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-style: normal;
 }
 
-.c8 {
+.c30 {
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1115,7 +2247,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-direction: column;
 }
 
-.c9 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1134,7 +2266,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: baseline;
 }
 
-.c10 {
+.c40 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1154,49 +2286,49 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c36 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-.c4 {
+.c34 {
   position: relative;
   z-index: 0;
   margin-top: 2rem;
 }
 
-.c7 {
+.c37 {
   margin: 0;
   padding: 0;
 }
 
-.c16 {
+.c46 {
   padding: 0.5rem 0 1rem;
 }
 
-.c16:first-child {
+.c46:first-child {
   padding-top: 0;
 }
 
-.c16:last-child {
+.c46:last-child {
   padding-bottom: 0;
   border: none;
 }
 
-.c15 {
+.c45 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.c23 {
+.c53 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-.c18 {
+.c48 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1204,40 +2336,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   width: 100%;
 }
 
-.c18 >div {
+.c48 >div {
   vertical-align: middle;
 }
 
-.c18 >div {
+.c48 >div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.c18 svg {
+.c48 svg {
   margin: 0;
 }
 
-.c27 {
+.c56 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-.c17 {
+.c47 {
   position: relative;
 }
 
-.c24 {
+.c54 {
   position: relative;
 }
 
-.c26 > * {
+.c55 > * {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.c19 {
+.c49 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1249,7 +2381,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: inline;
 }
 
-.c28 {
+.c57 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1260,7 +2392,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 {
+.c51 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1272,7 +2404,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-top: 0.5rem;
 }
 
-.c29 {
+.c58 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1283,14 +2415,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.c20 {
+.c50 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c20:before {
+.c50:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1302,22 +2434,96 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.c20:hover,
-.c20:focus {
+.c50:hover,
+.c50:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c20:visited {
+.c50:visited {
   color: #6E6E73;
 }
 
-.c3 {
+.c27 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.c27 > li::before {
+  content: ' ';
+  display: inline-block;
+  width: 2rem;
+  background: url('data:image/svg+xml,%3Csvg%20height%3D%2710%27%20width%3D%2710%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cstyle%3E%40media%20screen%20and%20%28-ms-high-contrast%3A%20active%29%7Bsvg%7Bfill%3A%20%23fff%7D%7D%3C%2Fstyle%3E%3Ccircle%20cx%3D%275%27%20cy%3D%275%27%20r%3D%273%27%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') no-repeat center;
+  margin-left: -2rem;
+}
+
+.c28 {
   margin-bottom: 1rem;
 }
 
-.c5 {
+.c26 {
+  margin-bottom: 1.5rem;
+}
+
+.c29 {
+  margin-top: 0.5rem;
+}
+
+.c29 figure {
+  padding-bottom: 0;
+}
+
+.c33 {
+  margin-bottom: 1rem;
+}
+
+.c35 {
   margin-top: 0;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+}
+
+.c9 {
+  color: #404040;
+}
+
+.c10 {
+  color: #5A5A5A;
+}
+
+.c21 {
+  padding-bottom: 1rem;
+}
+
+.c6 {
+  padding-bottom: 1rem;
 }
 
 .c1 {
@@ -1327,13 +2533,250 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   flex-grow: 1;
 }
 
-.c30 {
+.c59 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.c14 {
+.c44 {
   margin-bottom: 1.5rem;
+}
+
+.c31 {
+  border: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c32 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c32 {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c5 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c5 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c5 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c5 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c5 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c5 {
+    max-width: initial;
+  }
+}
+
+@media (max-width:63rem) {
+  .c3 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c3 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c3 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c3 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c3 {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c11 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c11 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c11 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c14 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c14 {
+    grid-column: 1 / span 12;
+  }
+}
+
+@media (max-width:37.4375rem) {
+  .c19 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c19 {
+    grid-column: 1 / span 5;
+  }
+}
+
+@media (min-width:80rem) {
+  .c19 {
+    grid-column: 1 / span 10;
+  }
+}
+
+@media (max-width:79.9375rem) {
+  .c13 {
+    grid-template-columns: repeat(6,1fr);
+  }
+}
+
+@media (min-width:80rem) {
+  .c13 {
+    grid-template-columns: repeat(12,1fr);
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c4 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c4 {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c20 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c20 {
+    padding: 0.5rem 1rem 0;
+  }
+}
+
+@media (min-width:63rem) {
+  .c20 {
+    padding: 0.5rem 0 0;
+  }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
@@ -1345,6 +2788,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:37.5rem) {
   .c22 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c52 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c52 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1436,7 +2893,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width:14.9375rem) {
-  .c12 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1444,7 +2901,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
-  .c12 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1452,7 +2909,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
-  .c12 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1460,7 +2917,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c12 {
+  .c42 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1468,7 +2925,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c12 {
+  .c42 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -1476,7 +2933,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:80rem) {
-  .c12 {
+  .c42 {
     width: calc(25%);
     display: inline-block;
     vertical-align: top;
@@ -1484,13 +2941,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display:grid) {
-  .c12 {
+  .c42 {
     display: block;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c9 {
+  .c39 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1499,39 +2956,39 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c10 {
+  .c40 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c40 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c40 {
     margin: 0;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c10 {
+  .c40 {
     padding-right: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active) {
-  .c6 {
+  .c36 {
     border-color: windowText;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c6 {
+  .c36 {
     position: absolute;
     left: 0;
     right: 0;
@@ -1540,63 +2997,63 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c4 {
+  .c34 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c34 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width:62.9375rem) {
-  .c16 {
+  .c46 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c16 {
+  .c46 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c16 {
+  .c46 {
     padding: 0 0 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c16:first-child {
+  .c46:first-child {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c23 {
+  .c53 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c23 {
+  .c53 {
     width: initial;
     grid-column: 1 / span 2;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c18 {
+  .c48 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c18 {
+  .c48 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1604,7 +3061,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c18 {
+  .c48 {
     display: block;
     width: initial;
     padding: initial;
@@ -1614,13 +3071,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:37.5rem) {
-  .c27 {
+  .c56 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c27 {
+  .c56 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1628,7 +3085,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c27 {
+  .c56 {
     display: block;
     width: initial;
     padding: initial;
@@ -1637,7 +3094,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns:fit-content(200px)) {
-  .c17 {
+  .c47 {
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-column-gap: 0.5rem;
@@ -1645,159 +3102,234 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:25rem) {
-  .c26 {
+  .c55 {
     position: absolute;
     bottom: 0;
   }
 }
 
 @media (max-width:24.9375rem) {
-  .c26 > * {
+  .c55 > * {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c19 {
+  .c49 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c19 {
+  .c49 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c28 {
+  .c57 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c28 {
+  .c57 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c21 {
+  .c51 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c21 {
+  .c51 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c21 {
+  .c51 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c21 {
+  .c51 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:20rem) and (max-width:37.4375rem) {
-  .c29 {
+  .c58 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c29 {
+  .c58 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width:37.4375rem) {
-  .c29 {
+  .c58 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width:63rem) {
-  .c29 {
+  .c58 {
     display: none;
     visibility: hidden;
+  }
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c27 {
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (max-width:63rem) {
-  .c3 {
+  .c29 {
     grid-column: 1 / span 6;
   }
 }
 
 @media (min-width:63rem) and (max-width:79.9375rem) {
-  .c3 {
+  .c29 {
     grid-column: 3 / span 6;
   }
 }
 
 @media (min-width:80rem) {
-  .c3 {
+  .c29 {
     grid-column: 6 / span 12;
   }
 }
 
 @media (max-width:25rem) {
-  .c3 {
+  .c29 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:62.9375rem) {
-  .c3 {
+  .c29 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:25rem) {
+  .c29 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c29 {
+    padding-top: 0.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width:63rem) {
+  .c33 {
+    grid-column: 1 / span 6;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c33 {
+    grid-column: 3 / span 6;
+  }
+}
+
+@media (min-width:80rem) {
+  .c33 {
+    grid-column: 6 / span 12;
+  }
+}
+
+@media (max-width:25rem) {
+  .c33 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c33 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width:37.5rem) {
-  .c3 {
+  .c33 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .c11 {
+  .c41 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c11 {
+  .c41 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c8 {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c21 {
     padding-bottom: 1.5rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c13 {
+  .c6 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c43 {
     margin-top: 2rem;
   }
 }
 
 @media (min-width:63rem) {
-  .c14 {
+  .c44 {
     padding: 1rem;
   }
 }
@@ -2017,6 +3549,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     >
       {"@context":"http://schema.org","@type":"NewsArticle","url":"https://www.test.bbc.com/pidgin/world-23252817","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pidgin/world-23252817","name":"STY - Blood pressure drugs dey work better"},"headline":"STY - Blood pressure drugs dey work better","description":"This is a test asset used in Simorgh, please do not edit it without asking.","datePublished":"2019-10-23T12:39:30.000Z","dateModified":"2019-10-23T12:39:32.000Z","author":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"noBylinesPolicy":"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise"}}
     </script>
+    <script
+      type="application/ld+json"
+    >
+      {"@context":"http://schema.org","@type":"AudioObject","name":"Подкаст \\"Разговоры с арбитром\\": чемпионский парад \\"Ливерпуля\\"","description":"Сева Бойко рассказывает о том, как в Ливерпуле отметили победу в Лиге чемпионов.","duration":"PT32M41S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mr7dp.jpg","uploadDate":"2019-06-06T11:16:49.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"}
+    </script>
   </head>
   <body>
     <div>
@@ -2046,32 +3583,482 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <main
                       role="main"
-                    />
-                    <section
-                      aria-labelledby="related-content-heading"
-                      class="c3"
-                      role="region"
                     >
                       <div
                         class="c3"
                       >
+                        <h1
+                          class="c4"
+                          id="content"
+                          tabindex="-1"
+                        >
+                          STY - Blood pressure drugs dey work better
+                        </h1>
+                      </div>
+                      <div
+                        class="c5 c6"
+                      >
                         <div
-                          class="c4 c5"
+                          class="c7"
+                        >
+                          <ul
+                            class="c8"
+                            role="list"
+                          >
+                            <li
+                              class="c9"
+                              role="listitem"
+                            >
+                              By Andrew Overtyped Marr
+                            </li>
+                            <li
+                              class="c10"
+                              role="listitem"
+                            >
+                              BBC News - Overtyped
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="c11"
+                      >
+                        <figure
+                          class="c12"
                         >
                           <div
-                            class="c6"
-                          />
-                          <h2
-                            class="c7"
+                            class="c13"
                           >
                             <div
-                              class="c8"
+                              class="c14"
                             >
-                              <span
-                                class="c9"
+                              <div
+                                class="c15"
+                              >
+                                <img
+                                  alt="Some people at the NTA awards"
+                                  class="c16"
+                                  src="https://ichef.bbci.co.uk/news/640/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg"
+                                  srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
+                                  width="976"
+                                />
+                                <p
+                                  class="c17"
+                                  role="text"
+                                >
+                                  <span
+                                    class="c18"
+                                  >
+                                    Wia dis foto come from, 
+                                  </span>
+                                  <span
+                                    lang="en-GB"
+                                  >
+                                    Joe Maher
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                            <div
+                              class="c19"
+                            >
+                              <figcaption
+                                class="c20"
                               >
                                 <span
-                                  class="c10"
+                                  class="c18"
+                                >
+                                  Wetin we call dis foto, 
+                                </span>
+                                <p>
+                                  Some people went to the NTA awards recently.
+                                </p>
+                              </figcaption>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+                      <div
+                        class="c5 c21"
+                      >
+                        <time
+                          class="c22"
+                          datetime="2019-10-23"
+                        >
+                          23 October 2019
+                        </time>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <b>
+                             This is introduction text, it should be bold by default, but also support 
+                          </b>
+                          <a
+                            class="c24"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            inline links
+                          </a>
+                          <b>
+                             to other pages.
+                          </b>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <i
+                            class="c25"
+                          >
+                            <b>
+                              This is a subheadline! that has 
+                            </b>
+                          </i>
+                          <a
+                            class="c24"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            a link
+                          </a>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <div
+                          class="c26"
+                        >
+                          <ul
+                            class="c27"
+                            dir="ltr"
+                            role="list"
+                          >
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              This is a unordered list
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              It can have 
+                              <b>
+                                bold text
+                              </b>
+                               in it
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <a
+                                class="c24"
+                                href="https://bbc.com/pidgin/23248703"
+                              >
+                                It can also have links
+                              </a>
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <i
+                                class="c25"
+                              >
+                                It can even have italic text in it!
+                              </i>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Feta the big cheese macaroni cheese. 
+                          <a
+                            class="c24"
+                            href="https://bbc.com/pidgin/23248703"
+                          >
+                            Caerphilly danish fontina
+                          </a>
+                           queso blue castello fromage frais when the cheese comes out everybody's happy cheese triangles port-salut. Cheese slices stinking bishop pecorino cottage cheese cheese and biscuits cheese and wine chalk and cheese cream cheese. 
+                          <b>
+                            Cow cheeseburger
+                          </b>
+                           stilton emmental.
+                        </p>
+                      </div>
+                      <div
+                        class="c11"
+                      >
+                        <figure
+                          class="c12"
+                        >
+                          <div
+                            class="c13"
+                          >
+                            <div
+                              class="c14"
+                            >
+                              <div
+                                class="c15"
+                              >
+                                <div
+                                  class="lazyload-placeholder"
+                                />
+                                <noscript />
+                                <p
+                                  class="c17"
+                                  role="text"
+                                >
+                                  <span
+                                    class="c18"
+                                  >
+                                    Wia dis foto come from, 
+                                  </span>
+                                  <span
+                                    lang="en-GB"
+                                  >
+                                    Joe Maher
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                            <div
+                              class="c19"
+                            />
+                          </div>
+                        </figure>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <b>
+                            Start of localised text
+                          </b>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Dem say di medicine dey offer more protection against heart attack and stroke, if you take am before you go sleep instead of for morning, dat na wetin new study suggest.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <b>
+                            End of localised text
+                          </b>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Rubber cheese macaroni 
+                          <i
+                            class="c25"
+                          >
+                            cheese cottage cheese
+                          </i>
+                          . Caerphilly gouda ricotta st. agur blue cheese cheese strings taleggio feta say cheese. The big cheese cheeseburger fondue dolcelatte fromage frais chalk and cheese cheese slices cheddar. Airedale macaroni cheese cheese strings fromage frais.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <div
+                          class="c26"
+                        >
+                          <ul
+                            class="c27"
+                            dir="ltr"
+                            role="list"
+                          >
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              This is a ordered list
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              It can have 
+                              <b>
+                                bold text
+                              </b>
+                               in it
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <a
+                                class="c24"
+                                href="https://bbc.com/pidgin/23248703"
+                              >
+                                It can also have links
+                              </a>
+                            </li>
+                            <li
+                              class="c28"
+                              role="listitem"
+                            >
+                              <i
+                                class="c25"
+                              >
+                                It can even have italic text in it!
+                              </i>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Cauliflower cheese bocconcini hard cheese. Port-salut ricotta rubber cheese pecorino queso say cheese danish fontina parmesan. Port-salut lancashire pecorino say cheese stilton jarlsberg when the cheese comes out everybody's happy chalk and cheese. Squirty cheese cheese triangles swiss blue castello fromage mozzarella macaroni cheese cottage cheese. Chalk and cheese parmesan lancashire fondue.
+                        </p>
+                      </div>
+                      <div
+                        class="c29"
+                      >
+                        <figure
+                          class="c12"
+                        >
+                          <div
+                            class="c30"
+                          >
+                            <iframe
+                              allow="autoplay; fullscreen"
+                              allowfullscreen=""
+                              class="c31"
+                              scrolling="no"
+                              src="https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
+                              title="Media player"
+                            />
+                            <noscript />
+                          </div>
+                        </figure>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <h2
+                          class="c32"
+                          id="This-is-a-heading"
+                          tabindex="-1"
+                        >
+                          This is a heading!
+                        </h2>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Squirty cheese dolcelatte say cheese. Brie cut the cheese fondue cow queso cheese on toast dolcelatte chalk and cheese. Queso roquefort manchego pecorino cheese strings manchego melted cheese halloumi. Cream cheese when the cheese comes out everybody's happy rubber cheese macaroni cheese blue castello cheeseburger caerphilly lancashire. Fondue blue castello.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <h2
+                          class="c32"
+                          id="This-is-a-crosshead"
+                          tabindex="-1"
+                        >
+                          This is a crosshead!
+                        </h2>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Brie parmesan camembert de normandie. Cottage cheese mozzarella cheesy grin red leicester hard cheese cheesy feet taleggio ricotta. Melted cheese say cheese cut the cheese brie cheese and biscuits cheese slices boursin squirty cheese. Say cheese camembert de normandie.
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          <a
+                            aria-label="This is an external link to google!, outside"
+                            class="c24"
+                            href="https://www.google.com/"
+                          >
+                            This is an external link to google!
+                          </a>
+                        </p>
+                      </div>
+                      <div
+                        class="c5"
+                      >
+                        <p
+                          class="c23"
+                        >
+                          Cheese strings stilton cheesy feet. Cheese strings fondue cow fromage edam halloumi cut the cheese cream cheese. Melted cheese brie rubber cheese parmesan cut the cheese queso st. agur blue cheese dolcelatte. Port-salut croque monsieur cheese and wine cheese triangles cheesy grin.
+                        </p>
+                      </div>
+                    </main>
+                    <section
+                      aria-labelledby="related-content-heading"
+                      class="c33"
+                      role="region"
+                    >
+                      <div
+                        class="c33"
+                      >
+                        <div
+                          class="c34 c35"
+                        >
+                          <div
+                            class="c36"
+                          />
+                          <h2
+                            class="c37"
+                          >
+                            <div
+                              class="c38"
+                            >
+                              <span
+                                class="c39"
+                              >
+                                <span
+                                  class="c40"
                                   dir="ltr"
                                   id="related-content-heading"
                                 >
@@ -2082,43 +4069,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </h2>
                         </div>
                         <div
-                          class="c11"
+                          class="c41"
                         />
                       </div>
                     </section>
                   </div>
                   <div
-                    class="c12 c13"
+                    class="c42 c43"
                     dir="ltr"
                   >
                     <div
-                      class="c14"
+                      class="c44"
                     >
                       <section
                         aria-labelledby="top-stories-heading"
-                        class="c3"
+                        class="c33"
                         role="region"
                       >
                         <div
-                          class="c3"
+                          class="c33"
                         >
                           <div
-                            class="c4 c5"
+                            class="c34 c35"
                           >
                             <div
-                              class="c6"
+                              class="c36"
                             />
                             <h2
-                              class="c7"
+                              class="c37"
                             >
                               <div
-                                class="c8"
+                                class="c38"
                               >
                                 <span
-                                  class="c9"
+                                  class="c39"
                                 >
                                   <span
-                                    class="c10"
+                                    class="c40"
                                     dir="ltr"
                                     id="top-stories-heading"
                                   >
@@ -2129,37 +4116,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </h2>
                           </div>
                           <ul
-                            class="c15"
+                            class="c45"
                             role="list"
                           >
                             <li
-                              class="c16"
+                              class="c46"
                               role="listitem"
                             >
                               <div
-                                class="c17"
+                                class="c47"
                               >
                                 <div
-                                  class="c18"
+                                  class="c48"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c19"
+                                    class="c49"
                                   >
                                     <a
-                                      class="c20"
+                                      class="c50"
                                       href="/mundo/noticias-internacional-51939501"
                                     >
                                       China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                                     </a>
                                   </h3>
                                   <p
-                                    class="c21"
+                                    class="c51"
                                   >
                                     Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.
                                   </p>
                                   <time
-                                    class="c22"
+                                    class="c52"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -2168,33 +4155,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </div>
                             </li>
                             <li
-                              class="c16"
+                              class="c46"
                               role="listitem"
                             >
                               <div
-                                class="c17"
+                                class="c47"
                               >
                                 <div
-                                  class="c18"
+                                  class="c48"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c19"
+                                    class="c49"
                                   >
                                     <a
-                                      class="c20"
+                                      class="c50"
                                       href="/pidgin/tori-51945757"
                                     >
                                       Nigeria don get five new cases of Coronavirus - See how e happun
                                     </a>
                                   </h3>
                                   <p
-                                    class="c21"
+                                    class="c51"
                                   >
                                     Nigeria Health say di patients from UK and America travel come di kontri.
                                   </p>
                                   <time
-                                    class="c22"
+                                    class="c52"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -2207,33 +4194,33 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c14"
+                      class="c44"
                     >
                       <section
                         aria-labelledby="features-analysis-heading"
-                        class="c3"
+                        class="c33"
                         role="region"
                       >
                         <div
-                          class="c3"
+                          class="c33"
                         >
                           <div
-                            class="c4 c5"
+                            class="c34 c35"
                           >
                             <div
-                              class="c6"
+                              class="c36"
                             />
                             <h2
-                              class="c7"
+                              class="c37"
                             >
                               <div
-                                class="c8"
+                                class="c38"
                               >
                                 <span
-                                  class="c9"
+                                  class="c39"
                                 >
                                   <span
-                                    class="c10"
+                                    class="c40"
                                     dir="ltr"
                                     id="features-analysis-heading"
                                   >
@@ -2244,56 +4231,56 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </h2>
                           </div>
                           <ul
-                            class="c15"
+                            class="c45"
                             role="list"
                           >
                             <li
-                              class="c16"
+                              class="c46"
                               role="listitem"
                             >
                               <div
-                                class="c17"
+                                class="c47"
                               >
                                 <div
-                                  class="c23"
+                                  class="c53"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c24"
+                                    class="c54"
                                   >
                                     <div
-                                      class="c25"
+                                      class="c15"
                                     >
                                       <div
                                         class="lazyload-placeholder"
                                       />
                                     </div>
                                     <div
-                                      class="c26"
+                                      class="c55"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c27"
+                                  class="c56"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c28"
+                                    class="c57"
                                   >
                                     <a
-                                      class="c20"
+                                      class="c50"
                                       href="/igbo/afirika-23252735"
                                     >
                                       STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                                     </a>
                                   </h3>
                                   <p
-                                    class="c29"
+                                    class="c58"
                                   >
                                     This is a test asset used in Simorgh, please do not edit it without asking.
                                   </p>
                                   <time
-                                    class="c22"
+                                    class="c52"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -2302,52 +4289,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               </div>
                             </li>
                             <li
-                              class="c16"
+                              class="c46"
                               role="listitem"
                             >
                               <div
-                                class="c17"
+                                class="c47"
                               >
                                 <div
-                                  class="c23"
+                                  class="c53"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="c24"
+                                    class="c54"
                                   >
                                     <div
-                                      class="c25"
+                                      class="c15"
                                     >
                                       <div
                                         class="lazyload-placeholder"
                                       />
                                     </div>
                                     <div
-                                      class="c26"
+                                      class="c55"
                                     />
                                   </div>
                                 </div>
                                 <div
-                                  class="c27"
+                                  class="c56"
                                   dir="ltr"
                                 >
                                   <h3
-                                    class="c28"
+                                    class="c57"
                                   >
                                     <a
-                                      class="c20"
+                                      class="c50"
                                       href="/igbo/afirika-49666505"
                                     >
                                       Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                                     </a>
                                   </h3>
                                   <p
-                                    class="c29"
+                                    class="c58"
                                   >
                                     Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.
                                   </p>
                                   <time
-                                    class="c22"
+                                    class="c52"
                                     datetime="2020-02-03"
                                   >
                                     3rd February 2020
@@ -2360,14 +4347,14 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </section>
                     </div>
                     <div
-                      class="c30"
+                      class="c59"
                     >
                       <h2>
                         This is a component in the second column
                       </h2>
                     </div>
                     <div
-                      class="c30"
+                      class="c59"
                     />
                   </div>
                 </div>
