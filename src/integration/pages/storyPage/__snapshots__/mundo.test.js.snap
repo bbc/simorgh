@@ -1757,7 +1757,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                 <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                 </div>
                 <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span class="FlexRow-wx5kdp-2 dVBNyZ">
                       <span dir="ltr"
                             id="related-content-heading"
@@ -1766,7 +1766,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                         Contenido relacionado
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </h2>
               </div>
               <ul dir="ltr"
@@ -1922,7 +1922,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="top-stories-heading"
@@ -1931,7 +1931,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                           Top Stories
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
@@ -2001,7 +2001,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="features-analysis-heading"
@@ -2010,7 +2010,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                           Features &amp; Analysis
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
@@ -3896,7 +3896,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                 <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                 </div>
                 <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span class="FlexRow-wx5kdp-2 dVBNyZ">
                       <span dir="ltr"
                             id="related-content-heading"
@@ -3905,7 +3905,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                         Contenido relacionado
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </h2>
               </div>
               <ul dir="ltr"
@@ -4043,7 +4043,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="top-stories-heading"
@@ -4052,7 +4052,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                           Top Stories
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
@@ -4122,7 +4122,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                    <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                    <span class="FlexColumn-wx5kdp-0 dgpsiS">
                       <span class="FlexRow-wx5kdp-2 dVBNyZ">
                         <span dir="ltr"
                               id="features-analysis-heading"
@@ -4131,7 +4131,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                           Features &amp; Analysis
                         </span>
                       </span>
-                    </div>
+                    </span>
                   </h2>
                 </div>
                 <ul role="list"
