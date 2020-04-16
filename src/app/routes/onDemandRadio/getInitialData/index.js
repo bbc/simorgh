@@ -1,5 +1,6 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
+import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 
 const getBrandTitle = path(['metadata', 'title']);
 const getLanguage = path(['metadata', 'language']);
@@ -27,7 +28,9 @@ const getEpisodeAvailableUntil = path([
 ]);
 
 export default async ({ path: pathname }) => {
-  const { json, ...rest } = await fetchPageData(pathname);
+  const { json, ...rest } = await fetchPageData(
+    overrideRendererOnTest(pathname),
+  );
 
   return {
     ...rest,
