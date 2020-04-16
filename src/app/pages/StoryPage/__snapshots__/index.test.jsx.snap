@@ -460,6 +460,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .c57 {
@@ -1233,7 +1235,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:63rem) {
   .c1 {
-    margin: 0 auto;
     max-width: 63rem;
   }
 }
@@ -2538,6 +2539,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .c59 {
@@ -3331,7 +3334,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:63rem) {
   .c1 {
-    margin: 0 auto;
     max-width: 63rem;
   }
 }
