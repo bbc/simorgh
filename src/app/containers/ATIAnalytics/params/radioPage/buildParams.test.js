@@ -12,6 +12,7 @@ const radio = {
   language: 'language',
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
+  contentType: 'player-live',
 };
 
 const requestContext = {

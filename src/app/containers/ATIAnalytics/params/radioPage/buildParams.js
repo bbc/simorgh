@@ -13,12 +13,12 @@ export const buildRadioATIParams = (
     service,
   } = serviceContext;
 
-  const { id, language, pageTitle, pageIdentifier } = pageData;
+  const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
 
   return {
     appName: atiAnalyticsAppName,
     contentId: id,
-    contentType: 'player-live',
+    contentType,
     language,
     pageIdentifier,
     pageTitle,
