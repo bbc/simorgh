@@ -1,0 +1,576 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialEmbedContainer AMP should render correctly 1`] = `
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-twitter"
+      src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"
+    />
+  </head>
+  <body>
+    .c2 {
+  position: relative;
+}
+
+.c3 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+.c3:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
+.c1 .twitter-tweet,
+.c1 .instagram-media {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.c1 .instagram-media {
+  min-width: auto !important;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <a
+              class="c3"
+              href="#skip-twitter-content-2"
+            >
+              Skip Twitter content, 2
+            </a>
+            <amp-twitter
+              data-tweetid="1237210910835392512"
+              height="9"
+              layout="responsive"
+              width="16"
+            />
+            <p
+              class="c4"
+              id="skip-twitter-content-2"
+              tabindex="-1"
+            >
+              End of Twitter content, 2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`SocialEmbedContainer Canonical should render correctly 1`] = `
+.c2 {
+  position: relative;
+}
+
+.c3 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+.c3:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
+.c1 .twitter-tweet,
+.c1 .instagram-media {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.c1 .instagram-media {
+  min-width: auto !important;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<html>
+  <head>
+    <script
+      async="true"
+      src="https://platform.twitter.com/widgets.js"
+    />
+  </head>
+  <body>
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <div
+            class="c2"
+          >
+            <a
+              class="c3"
+              href="#skip-twitter-content-2"
+            >
+              Skip Twitter content, 2
+            </a>
+            <div
+              class="c4"
+            >
+              <blockquote
+                class="twitter-tweet"
+              >
+                <p
+                  dir="ltr"
+                  lang="en"
+                >
+                  Australia: Due to the recommendations of local, state, federal and international government authorities, including the Center for Disease Control, to reduce potential health risks in response to the current global health crisis, we are no longer traveling to Aus for the show.
+                </p>
+                — Miley Ray Cyrus (@MileyCyrus) 
+                <a
+                  href="https://twitter.com/MileyCyrus/status/1237210910835392512?ref_src=twsrc%5Etfw"
+                >
+                  March 10, 2020
+                </a>
+              </blockquote>
+              
+
+            </div>
+            <p
+              class="c5"
+              id="skip-twitter-content-2"
+              tabindex="-1"
+            >
+              End of Twitter content, 2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+`;
+
+exports[`SocialEmbedContainer Canonical should render correctly without an embed block 1`] = `
+.c2 {
+  position: relative;
+}
+
+.c3 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+.c3:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  -webkit-clip: rect(1px,1px,1px,1px);
+  clip: rect(1px,1px,1px,1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.c4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  border: 0.0625rem solid #AEAEB5;
+  border-radius: 0.5rem;
+  color: #222222;
+  padding: 1rem;
+}
+
+.c4 p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.c4 a,
+.c4 small {
+  display: block;
+}
+
+.c4 a {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4 a:visited {
+  color: #6E6E73;
+}
+
+.c4 a:hover,
+.c4 a:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 small {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.c0 {
+  grid-column: 1 / span 6;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+}
+
+.c1 .twitter-tweet,
+.c1 .instagram-media {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.c1 .instagram-media {
+  min-width: auto !important;
+}
+
+@media (min-width:20rem) and (max-width:37.4375rem) {
+  .c3 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c3 {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (min-width:20rem) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width:25rem) {
+  .c0 {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:62.9375rem) {
+  .c0 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c0 {
+    grid-column: 1 / span 5;
+    max-width: 83.33%;
+  }
+}
+
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c0 {
+    grid-column: 3 / span 5;
+    max-width: 37.75rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c0 {
+    grid-column: 6 / span 10;
+    max-width: 38.5rem;
+  }
+}
+
+@supports (display:grid) {
+  .c0 {
+    max-width: initial;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <a
+        class="c3"
+        href="#skip-twitter-content-1"
+      >
+        Skip Twitter content, 1
+      </a>
+      <div
+        class="c4"
+      >
+        <p>
+          Content is not available
+        </p>
+        <a
+          aria-label="View content on Twitter, external"
+          href="https://twitter.com/MileyCyrus/status/1237210910835392512"
+        >
+          View content on Twitter
+        </a>
+      </div>
+      <p
+        class="c5"
+        id="skip-twitter-content-1"
+        tabindex="-1"
+      >
+        End of Twitter content, 1
+      </p>
+    </div>
+  </div>
+</div>
+`;

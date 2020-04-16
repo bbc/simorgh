@@ -352,7 +352,7 @@ describe('StoryPromo Container', () => {
     [
       {
         service: 'pashto',
-        expectationFirstJan2020: '۱۱ مرغومی ۱۳۹۸ - جنوري ۱، ۲۰۲۰',
+        expectationFirstJan2020: '۱۱ مرغومی ۱۳۹۸ - ۱ جنوري ۲۰۲۰',
       },
       {
         service: 'persian',
