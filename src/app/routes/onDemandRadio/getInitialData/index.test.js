@@ -8,7 +8,7 @@ const spy = jest.spyOn(fetchPageData, 'default');
 
 describe('ODRadioGetInitialData', () => {
   afterEach(() => {
-    process.env = env;
+    process.env = { ...env };
     jest.clearAllMocks();
   });
 

@@ -4,7 +4,7 @@ const { env } = process;
 
 describe('overrideRendererOnTest', () => {
   afterEach(() => {
-    process.env = env;
+    process.env = { ...env };
   });
 
   it('should add override query to full url', () => {

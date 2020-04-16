@@ -8,7 +8,7 @@ const spy = jest.spyOn(fetchPageData, 'default');
 
 describe('LiveRadioGetInitialData', () => {
   afterEach(() => {
-    process.env = env;
+    process.env = { ...env };
     jest.clearAllMocks();
   });
 
