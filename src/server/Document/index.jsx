@@ -12,7 +12,6 @@ import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
 
 export const getServiceWithAds = async (service, variant = 'default') => {
-  // What if variant is not default?
   let serviceConfig;
 
   try {
@@ -35,6 +34,7 @@ const renderDocument = async ({
   routes,
   service,
   url,
+  variant,
 }) => {
   const sheet = new ServerStyleSheet();
 
@@ -78,7 +78,7 @@ const renderDocument = async ({
   });
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
-  const serviceHasAds = await getServiceWithAds(service);
+  const serviceHasAds = await getServiceWithAds(service, variant);
 
   const doc = renderToStaticMarkup(
     <DocumentComponent
