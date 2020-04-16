@@ -215,9 +215,10 @@ export const generateFrameSrc = ({ isAmp, isLive }) => {
   return directives.frameSrc.canonicalLive;
 };
 
-// img-src currently doesn't vary between Amp and Canonical
-export const generateImgSrc = ({ isLive }) => {
-  if (!isLive) return directives.imgSrc.canonicalNonLive;
+export const generateImgSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.imgSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.imgSrc.ampLive;
   return directives.imgSrc.canonicalLive;
 };
 
@@ -243,7 +244,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'connect-src': generateConnectSrc({ isAmp, isLive }),
     'font-src': generateFontSrc(),
     'frame-src': generateFrameSrc({ isAmp, isLive }),
-    'img-src': generateImgSrc({ isLive }),
+    'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
     'style-src': generateStyleSrc(),
     'worker-src': generateWorkerSrc({ isAmp }),
