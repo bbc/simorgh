@@ -2107,11 +2107,6 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
             </section>
           </div>
           <div class="ComponentWrapper-w14rad-4 hYrbeW">
-            <h2>
-              This is a component in the second column
-            </h2>
-          </div>
-          <div class="ComponentWrapper-w14rad-4 hYrbeW">
           </div>
         </div>
       </div>
@@ -4219,11 +4214,6 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                 </ul>
               </div>
             </section>
-          </div>
-          <div class="ComponentWrapper-w14rad-4 hYrbeW">
-            <h2>
-              This is a component in the second column
-            </h2>
           </div>
           <div class="ComponentWrapper-w14rad-4 hYrbeW">
           </div>

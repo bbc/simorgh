@@ -588,7 +588,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
       </amp-analytics>
       <main role="main"
             dir="ltr"
-            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 hzCstj"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 kMhoTR"
@@ -620,31 +620,22 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
                          width="9"
                          attribution
                 >
-                  <amp-img layout="fill"
-                           src="http://localhost:7080/images/amp_audio_placeholder.png"
-                           placeholder="true"
-                           alt
-                           height="16"
-                           width="9"
-                           attribution
-                  >
-                  </amp-img>
-                  <noscript>
-                    <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
-                      <img alt
-                           src="http://localhost:7080/images/amp_audio_placeholder.png"
-                           aria-hidden="true"
-                           class="StyledImg-sc-7vx2mr-0 hIxkbt"
-                      >
-                      <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
-                        <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                          사용 기기에서 미디어 재생이 지원되지 않습니다
-                        </strong>
-                      </div>
+                </amp-img>
+                <noscript>
+                  <div class="StyledWrapper-sc-1pnftlt-0 jywlaE">
+                    <img alt
+                         src="http://localhost:7080/images/amp_audio_placeholder.png"
+                         aria-hidden="true"
+                         class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                    >
+                    <div class="MessageWrapper-sc-1pnftlt-1 ktBRKg">
+                      <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
+                        사용 기기에서 미디어 재생이 지원되지 않습니다
+                      </strong>
                     </div>
-                  </noscript>
-                </amp-iframe>
-              </div>
+                  </div>
+                </noscript>
+              </amp-iframe>
             </div>
           </div>
         </div>
@@ -1217,7 +1208,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
       </noscript>
       <main role="main"
             dir="ltr"
-            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 fIPmtH"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 hzCstj"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 kMhoTR"
@@ -1248,8 +1239,8 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
                       사용 기기에서 미디어 재생이 지원되지 않습니다
                     </strong>
                   </div>
-                </noscript>
-              </div>
+                </div>
+              </noscript>
             </div>
           </div>
         </div>
