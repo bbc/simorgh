@@ -76,6 +76,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
   const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
 
+  console.log('GROUPS: ', groups);
+
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
     <span role="text">
