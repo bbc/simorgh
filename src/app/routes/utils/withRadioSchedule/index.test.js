@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
+import loggerMock from '#testHelpers/loggerMock';
 import { DATA_NOT_FOUND, DATA_FETCH_ERROR } from '#lib/logger.const';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
 import withRadioSchedule from '.';
