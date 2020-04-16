@@ -1,0 +1,168 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "aspectRatio": "16:9",
+        "format": "video",
+        "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
+        "id": "17694217",
+        "image": {
+          "altText": "",
+          "copyrightHolder": "",
+          "height": 360,
+          "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+          "id": "17694217",
+          "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+          "subType": "thumbnail",
+          "type": "image",
+          "width": 640
+        },
+        "live": false,
+        "playlist": [
+          {
+            "bitrate": "168000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
+          },
+          {
+            "bitrate": "320000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
+          },
+          {
+            "bitrate": "904000",
+            "format": "mp4",
+            "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
+          }
+        ],
+        "subType": "primary",
+        "type": "legacyMedia"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "قال المرصد السوري لحقوق الانسان المعارض ومقره بريطانيا إن أكثر من 1300 شخص، نحو ثلثيهم من المسلحين، قتلوا في سوريا منذ انطلاق الحملة الجوية الروسية في الـ 30 من أيلول / سبتمبر الماضي.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "ويبلغ الرقم الذي نشره المرصد اليوم ضعف الرقم الذي اعلن عنه في آخر تقرير نشره منذ 3 اسابيع.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "وقال المرصد إنه وثّق 1331 حالة وفاة نتيجة الغارات الجوية الروسية، معظمها لمسلحين من التنظيم الذي يطلق على نفسه اسم &quot;الدولة الاسلامية&quot; (داعش) وغيره من التنظيمات الجهادية.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": { "cps_asset_id": "17694217", "cps_asset_type": "map" },
+    "blockTypes": ["legacyMedia", "paragraph"],
+    "createdBy": "arabic_1024",
+    "firstPublished": 1448014173000,
+    "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
+    "includeComments": false,
+    "language": "ar",
+    "lastPublished": 1448014173000,
+    "lastUpdated": 1585904875448,
+    "locators": {
+      "assetId": "17694217",
+      "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
+      "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowRightHandSide": true,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "suitableForSyndication": false
+    },
+    "tags": {},
+    "timestamp": 1448014173000,
+    "type": "MAP",
+    "version": "v1.1.10"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+      "shortHeadline": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها"
+    },
+    "id": "urn:bbc:ares::asset:arabic/worldnews/2015/11/151120_t_arabic_av",
+    "indexImage": {
+      "altText": "",
+      "copyrightHolder": "BBC World Service",
+      "height": 81,
+      "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+      "id": "d5e228",
+      "path": "/amz/worldservice/test/assets/images/2014/09/22/140922130059_144x81.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 144
+    },
+    "language": "ar",
+    "locators": {
+      "assetId": "17694217",
+      "assetUri": "/arabic/worldnews/2015/11/151120_t_arabic_av",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/worldnews/2015/11/151120_t_arabic_av",
+      "curie": "http://www.bbc.co.uk/asset/22d6ef3c-8f6e-11e5-b707-b2517c19ac20"
+    },
+    "media": {
+      "aspectRatio": "16:9",
+      "format": "video",
+      "href": "http://a.files.bbci.co.uk/worldservice/test/arabic/meta/dps/junk/2015/11/emp/151120_t_arabic_av.emp.xml",
+      "id": "17694217",
+      "image": {
+        "altText": "",
+        "copyrightHolder": "",
+        "height": 360,
+        "href": "http://a.files.bbci.co.uk/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+        "id": "17694217",
+        "path": "/amz/worldservice/test/assets/images/2014/11/11/141111124420_bbc_generic_video_640x360_bbc_nocredit.jpg",
+        "subType": "thumbnail",
+        "type": "image",
+        "width": 640
+      },
+      "live": false,
+      "playlist": [
+        {
+          "bitrate": "168000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_lo.mp4"
+        },
+        {
+          "bitrate": "320000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_med.mp4"
+        },
+        {
+          "bitrate": "904000",
+          "format": "mp4",
+          "url": "https://wsodprogrf.akamaized.net/arabic/dps/junk/2015/11/fizzy_drinks_pt_br3_151120_t_arabic_av_16x9_hi.mp4"
+        }
+      ],
+      "subType": "primary",
+      "type": "legacyMedia"
+    },
+    "passport": { "taggings": [] },
+    "summary": "شركة شارب للإلكترونيات تحث موظفيها على شراء منتجاتها",
+    "timestamp": 1448014173000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [],
+    "section": {
+      "name": "العالم",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/arabic/worldnews"
+    },
+    "site": {
+      "name": "BBCArabic.com",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/arabic"
+    }
+  }
+}
