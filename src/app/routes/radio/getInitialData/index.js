@@ -14,7 +14,7 @@ const getPageIdentifier = path([
   'pageIdentifier',
 ]);
 
-export default async (pathname) => {
+export default async ({ path: pathname }) => {
   const { json, ...rest } = await fetchPageData(pathname);
   const contentData = path(['content'], json);
 
