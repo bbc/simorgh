@@ -3,6 +3,10 @@ import React, { useRef, useEffect } from 'react';
 import { string } from 'prop-types';
 import { GridItemConstrainedMedium } from '#lib/styledGrid';
 import useToggle from '#hooks/useToggle';
+import {
+  createAppendScriptByCode,
+  createAppendScriptBySrc,
+} from './createAppendScript';
 
 const IncludeContainer = ({ html = '', type }) => {
   const scriptTagRegExp = new RegExp(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
@@ -15,29 +19,6 @@ const IncludeContainer = ({ html = '', type }) => {
   };
 
   const shouldNotRenderInclude = !enabled || !html || !supportedTypes[type];
-
-  const createAppendScriptTag = (code, src) => {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      if (src) {
-        script.src = src;
-        // eslint-disable-next-line func-names
-        script.onload = function () {
-          resolve();
-        };
-      } else if (code) {
-        script.appendChild(document.createTextNode(code));
-      }
-      // eslint-disable-next-line func-names
-      script.onerror = function () {
-        reject();
-      };
-      document.body.append(script);
-      if (code) {
-        resolve();
-      }
-    });
-  };
 
   // Keep the DOM up to date with our script tags.
   useEffect(() => {
@@ -54,10 +35,10 @@ const IncludeContainer = ({ html = '', type }) => {
         if (srcContent) {
           const [src] = srcContent.slice(-1);
           // eslint-disable-next-line no-await-in-loop
-          await createAppendScriptTag('', src);
+          await createAppendScriptBySrc('', src);
         } else {
           // eslint-disable-next-line no-await-in-loop
-          await createAppendScriptTag(contents);
+          await createAppendScriptByCode(contents);
         }
       }
     }
