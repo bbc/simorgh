@@ -61,7 +61,7 @@ export const blockBase = (blockType, blockModel) => ({
   model: blockModel,
 });
 
-export const blockArrayModel = (arrayOfBlocks) => ({
+export const blockArrayModel = arrayOfBlocks => ({
   blocks: arrayOfBlocks,
 });
 
@@ -77,21 +77,20 @@ export const rawVideoModel = (
   duration: videoDuration,
 });
 
-export const rawImageModel = (imageLocator) => ({
+export const rawImageModel = imageLocator => ({
   locator: imageLocator,
 });
 
 export const stdArrayModelBlock = (blockType, modelArray) =>
   blockBase(blockType, blockArrayModel(modelArray));
 
-export const rawVideoBlock = (model) => blockBase(rawVideoType, model);
+export const rawVideoBlock = model => blockBase(rawVideoType, model);
 
-export const rawImageBlock = (model) => blockBase(rawImageType, model);
+export const rawImageBlock = model => blockBase(rawImageType, model);
 
-export const imageBlock = (rawBlock) =>
-  stdArrayModelBlock(imageType, [rawBlock]);
+export const imageBlock = rawBlock => stdArrayModelBlock(imageType, [rawBlock]);
 
-export const imageBlocks = (rawBlocks) =>
+export const imageBlocks = rawBlocks =>
   stdArrayModelBlock(imageType, rawBlocks);
 
 export const videoBlock = (rawVBlock, imgBlock) =>
@@ -102,7 +101,7 @@ export const simpleListBlock = (listItems, isOrdered) => ({
   model: {
     type: isOrdered ? orderedListType : unorderedListType,
     model: {
-      blocks: listItems.map((listItem) => ({
+      blocks: listItems.map(listItem => ({
         type: listItemType,
         model: singleParagraphBlock(listItem),
       })),

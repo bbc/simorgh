@@ -10,9 +10,10 @@ import { ToggleContext } from '#contexts/ToggleContext';
  * @param {Function} Component A React component.
  * @param {Object} Configuration A configuration object.
  */
-const withContexts = (Component, { isAmp, isEnabled, service = 'news' }) => (
-  props,
-) => (
+const withContexts = (
+  Component,
+  { isAmp, isEnabled, service = 'news' },
+) => props => (
   <RequestContextProvider
     isAmp={isAmp}
     pageType="STY"
