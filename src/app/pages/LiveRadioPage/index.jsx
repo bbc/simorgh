@@ -10,13 +10,15 @@ import LinkedData from '../../containers/LinkedData';
 import RadioPageBlocks from '../../containers/RadioPageBlocks';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
+const StyledGelPageGrid = styled(GelPageGrid)`
+  width: 100%;
+`;
+
 const LiveRadioPage = ({ pageData }) => {
   const { language, name, summary, content } = pageData;
   const blocks = path(['blocks'], content);
   const { dir } = useContext(ServiceContext);
-  const StyledGelPageGrid = styled(GelPageGrid)`
-    flex-grow: 1;
-  `;
+
   return (
     <>
       <ATIAnalytics data={pageData} />
