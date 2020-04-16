@@ -27,12 +27,9 @@ const errorDetails = (test) => {
 };
 
 const printFailures = (overallResult) => {
-  overallResult.failed.forEach((failure, index) => {
-    failure.url = index;
+  overallResult.failed.forEach((failure) => {
     console.log(
-      `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)} ${
-        failure.url
-      }`,
+      `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)}`,
     );
   });
 };

@@ -37,17 +37,19 @@ const validate = async (url) => {
 
 const getUrls = () => {
   const urlsToValidate = {};
-  Object.keys(services).forEach((service) => {
-    urlsToValidate[service] = [];
-    Object.keys(services[service].pageTypes)
-      .filter((pageType) => !pageType.startsWith('error'))
-      .forEach((pageType) => {
-        const paths = getPaths(service, pageType);
-        const urls = paths.map((path) => `http://localhost:7080${path}`);
+  Object.keys(services)
+    .filter((service) => service === 'persian')
+    .forEach((service) => {
+      urlsToValidate[service] = [];
+      Object.keys(services[service].pageTypes)
+        .filter((pageType) => !pageType.startsWith('error'))
+        .forEach((pageType) => {
+          const paths = getPaths(service, pageType);
+          const urls = paths.map((path) => `http://localhost:7080${path}`);
 
-        urlsToValidate[service] = [urlsToValidate[service], urls].flat();
-      });
-  });
+          urlsToValidate[service] = [urlsToValidate[service], urls].flat();
+        });
+    });
   return urlsToValidate;
 };
 
@@ -62,6 +64,8 @@ const checkStructuredData = async (urls) => {
 };
 
 const aggregateResults = (results) => {
+  console.log(JSON.stringify(results, null, 2));
+
   return {
     urls: results.map((result) => result.url),
     tests: results.map((result) => result.tests).flat(),
