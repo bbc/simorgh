@@ -180,7 +180,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'top-stories',
+      frontPagePosition: 'feature-main',
       header: 'BBC 코리아 라디오',
     },
     footer: {

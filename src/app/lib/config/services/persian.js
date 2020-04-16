@@ -203,7 +203,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'top-stories',
+      frontPagePosition: '',
       header: 'برنامه‌های رادیو',
     },
     footer: {
