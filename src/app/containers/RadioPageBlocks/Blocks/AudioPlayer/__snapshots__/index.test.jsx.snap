@@ -1,37 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
-.c2 {
+.c1 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c1 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c0 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c1 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width:25rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -51,30 +42,26 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
         <div
           class="c1"
         >
-          <div
-            class="c2"
+          <amp-iframe
+            allowfullscreen="allowfullscreen"
+            frameborder="0"
+            layout="fill"
+            sandbox="allow-scripts allow-same-origin"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko/amp"
+            title="오디오 플레이어"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
+            <amp-img
+              alt=""
+              attribution=""
+              height="16"
               layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko/amp"
-              title="오디오 플레이어"
-            >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
-                layout="fill"
-                placeholder="true"
-                src="http://localhost:7080/images/amp_audio_placeholder.png"
-                width="9"
-              />
-              <noscript />
-            </amp-iframe>
-          </div>
+              placeholder="true"
+              src="http://localhost:7080/images/amp_audio_placeholder.png"
+              width="9"
+            />
+            <noscript />
+          </amp-iframe>
         </div>
       </div>
     </div>
@@ -83,22 +70,19 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for amp 1`] = `
 `;
 
 exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] = `
-.c2 {
+.c1 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c1 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c0 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
-.c3 {
+.c2 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -109,21 +93,15 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c1 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width:25rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -133,19 +111,15 @@ exports[`MediaPageBlocks AudioPlayer should render correctly for canonical 1`] =
   <div
     class="c1"
   >
-    <div
+    <iframe
+      allow="autoplay; fullscreen"
+      allowfullscreen=""
       class="c2"
-    >
-      <iframe
-        allow="autoplay; fullscreen"
-        allowfullscreen=""
-        class="c3"
-        scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko"
-        title="오디오 플레이어"
-      />
-      <noscript />
-    </div>
+      scrolling="no"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko"
+      title="오디오 플레이어"
+    />
+    <noscript />
   </div>
 </div>
 `;
@@ -160,37 +134,28 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
     />
   </head>
   <body>
-    .c2 {
+    .c1 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c1 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c0 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c1 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width:25rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -201,30 +166,26 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
         <div
           class="c1"
         >
-          <div
-            class="c2"
+          <amp-iframe
+            allowfullscreen="allowfullscreen"
+            frameborder="0"
+            layout="fill"
+            sandbox="allow-scripts allow-same-origin"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp"
+            title="Audio player"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
+            <amp-img
+              alt=""
+              attribution=""
+              height="16"
               layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om/amp"
-              title="Audio player"
-            >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
-                layout="fill"
-                placeholder="true"
-                src="http://localhost:7080/images/amp_audio_placeholder.png"
-                width="9"
-              />
-              <noscript />
-            </amp-iframe>
-          </div>
+              placeholder="true"
+              src="http://localhost:7080/images/amp_audio_placeholder.png"
+              width="9"
+            />
+            <noscript />
+          </amp-iframe>
         </div>
       </div>
     </div>
@@ -233,22 +194,19 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
 `;
 
 exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is overriden to bbc_afaanoromoo_radio should render correctly for canonical 1`] = `
-.c2 {
+.c1 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c1 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c0 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
-.c3 {
+.c2 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -259,21 +217,15 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
 }
 
 @media (min-width:63rem) {
-  .c2 {
+  .c1 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width:25rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -283,19 +235,15 @@ exports[`MediaPageBlocks AudioPlayer when externalId is bbc_oromo_radio it is ov
   <div
     class="c1"
   >
-    <div
+    <iframe
+      allow="autoplay; fullscreen"
+      allowfullscreen=""
       class="c2"
-    >
-      <iframe
-        allow="autoplay; fullscreen"
-        allowfullscreen=""
-        class="c3"
-        scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om"
-        title="Audio player"
-      />
-      <noscript />
-    </div>
+      scrolling="no"
+      src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/id/om"
+      title="Audio player"
+    />
+    <noscript />
   </div>
 </div>
 `;
