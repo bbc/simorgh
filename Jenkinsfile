@@ -132,7 +132,7 @@ pipeline {
       }
       failFast true
       parallel {
-        stage ('Test Development') {
+        stage ('Unit Tests') {
           agent {
             docker {
               image "${nodeImage}"
@@ -148,7 +148,7 @@ pipeline {
             }
           }
         }
-        stage ('Test Production') {
+        stage ('Production Tests (excludes Smoke E2Es)') {
           agent {
             docker {
               image "${nodeImage}"
@@ -157,20 +157,6 @@ pipeline {
           }
           steps {
             runProductionTests()
-          }
-        }
-        stage ('Run Smoke E2Es') {
-          when {
-            expression { env.BRANCH_NAME == 'latest' }
-          }
-          agent {
-            docker {
-              image "${nodeImage}"
-              args '-u root -v /etc/pki:/certs'
-            }
-          }
-          steps {
-            runSmokeE2Es()
           }
         }
       }
@@ -187,7 +173,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'latest' }
       }
       parallel {
-        stage ('Test Development') {
+        stage ('Unit Tests') {
           agent {
             docker {
               image "${nodeImage}"
@@ -202,7 +188,7 @@ pipeline {
             }
           }
         }
-        stage ('Test Production and Zip Production') {
+        stage ('Production Tests, Smoke E2Es and Zip Generation') {
           agent {
             docker {
               image "${nodeImage}"
@@ -212,6 +198,7 @@ pipeline {
           steps {
             // Testing
             runProductionTests()
+            runSmokeE2Es()
 
             script {
               getCommitInfo()
@@ -231,7 +218,7 @@ pipeline {
             sh "rm -rf pack"
           }
         }
-        stage ('Build storybook dist') {
+        stage ('Build Storybook') {
           agent {
             docker {
               image "${nodeImage}"
