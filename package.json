@@ -199,6 +199,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.2",
     "prop-types": "^15.7.2",
+    "retry": "^0.12.0",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^3.5.2",
     "stylelint": "^13.2.1",
