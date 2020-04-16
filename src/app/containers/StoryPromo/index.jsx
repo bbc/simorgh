@@ -106,8 +106,15 @@ const StoryPromoContainer = ({
   );
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
-  const summary = pathOr(null, ['summary'], item);
-  const promoSummary = overtypedSummary || summary;
+  const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
+
+  let promoSummary;
+  if (overtypedSummary && !hasWhiteSpaces) {
+    promoSummary = overtypedSummary;
+  } else {
+    const summary = pathOr(null, ['summary'], item);
+    promoSummary = summary;
+  }
 
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
