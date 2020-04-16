@@ -36,10 +36,10 @@ const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
 
 const AudioPlayerWrapper = styled.div`
   width: calc(100% + ${GEL_SPACING_DBL});
-  margin-left: -${GEL_SPACING};
+  margin: 0 -${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: calc(100% + ${GEL_SPACING_QUAD});
-    margin-left: -${GEL_SPACING_DBL};
+    margin: 0 -${GEL_SPACING_DBL};
   }
 `;
 
