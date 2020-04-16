@@ -19,10 +19,10 @@ const faultTolerantDomFetch = (url) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
-      retries: 10,
-      factor: 1.5,
+      retries: 5,
+      factor: 1,
       minTimeout: oneSecond,
-      maxTimeout: 10 * oneSecond,
+      maxTimeout: oneSecond,
     });
 
     operation.attempt(async (currentAttempt) => {
