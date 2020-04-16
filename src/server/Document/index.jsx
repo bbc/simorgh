@@ -11,7 +11,7 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
 
-const getServiceWithAds = async (service, variant = 'default') => {
+export const getServiceWithAds = async (service, variant = 'default') => {
   // What if variant is not default?
   let serviceConfig;
 
@@ -24,9 +24,8 @@ const getServiceWithAds = async (service, variant = 'default') => {
       `getConfig could not find config for the requested service: ${service}.`,
     );
   }
-  const b = pathOr(false, [variant, 'ads', 'hasAds'], serviceConfig);
-  // console.log('---', b);
-  return b;
+
+  return pathOr(false, [variant, 'ads', 'hasAds'], serviceConfig);
 };
 
 const renderDocument = async ({
