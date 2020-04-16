@@ -5,6 +5,9 @@
 import runUserTests from './user';
 import runUserAmpTests from './user.amp';
 import runUserCanonicalTests from './user.canonical';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
+
 import {
   runFooterTests,
   runHeaderTests,
@@ -12,13 +15,13 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runCommonAmpAnalyticsTests,
   runCommonCanonicalAnalyticsTests,
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on the Amharic live radio AMP page', () => {
+describe('Given I am on the Amharic AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
@@ -33,9 +36,15 @@ describe('Given I am on the Amharic live radio AMP page', () => {
   describe('When I am analysing user/performance metrics', () => {
     runCommonAmpAnalyticsTests();
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: 'Audio player',
+    });
+  });
 });
 
-describe('Given I am on the Amharic live radio Canonical page', () => {
+describe('Given I am on the Amharic Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
@@ -50,9 +59,15 @@ describe('Given I am on the Amharic live radio Canonical page', () => {
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'amharic' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: 'Audio player',
+    });
+  });
 });
 
-describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
+describe('Given I am on the Amharic Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserTests({
       headlineText: 'ያድምጡ',
@@ -64,7 +79,7 @@ describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
     });
 
     runFooterTests({
-      copyrightText:
+      copyrightAndExternalLinkingText:
         '© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       brandingLink: '/amharic',
     });
@@ -97,10 +112,10 @@ describe('Given I am on the Amharic live radio AMP/Canonical page', () => {
       linkedData:
         '{"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/amharic/bbc_amharic_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News አማርኛ","publishingPrinciples":"https://www.bbc.com/amharic/institutional-49283133","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/amharic/bbc_amharic_radio/liveradio","name":"ያድምጡ"}}',
     });
+  });
 
-    describe('When optimising the application performance', () => {
-      runPerformaceTests();
-    });
+  describe('When optimising the application performance', () => {
+    runPerformanceTests();
   });
 
   describe('When I am using assistive technology', () => {

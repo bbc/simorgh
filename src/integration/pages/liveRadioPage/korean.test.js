@@ -5,6 +5,9 @@
 import runUserTests from './user';
 import runUserAmpTests from './user.amp';
 import runUserCanonicalTests from './user.canonical';
+import runCanonicalA11yTests from './a11y.canonical';
+import runAmpA11yTests from './a11y.amp';
+
 import {
   runFooterTests,
   runHeaderTests,
@@ -12,13 +15,13 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runCommonAmpAnalyticsTests,
   runCommonCanonicalAnalyticsTests,
   runSnapshotTests,
 } from '../../common';
 
-describe('Given I am on the Korean live radio AMP page', () => {
+describe('Given I am on the Korean AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
@@ -33,9 +36,15 @@ describe('Given I am on the Korean live radio AMP page', () => {
   describe('When I am analysing user/performance metrics', () => {
     runCommonAmpAnalyticsTests();
   });
+
+  describe('When I am using assistive technology', () => {
+    runAmpA11yTests({
+      mediaPlayerTitle: '오디오 플레이어',
+    });
+  });
 });
 
-describe('Given I am on the Korean live radio Canonical page', () => {
+describe('Given I am on the Korean Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
@@ -50,22 +59,28 @@ describe('Given I am on the Korean live radio Canonical page', () => {
   describe('When the application starts', () => {
     runCoreCanonicalTests({ service: 'korean' });
   });
+
+  describe('When I am using assistive technology', () => {
+    runCanonicalA11yTests({
+      mediaPlayerTitle: '오디오 플레이어',
+    });
+  });
 });
 
-describe('Given I am on the Korean live radio page AMP/Canonical', () => {
+describe('Given I am on the Korean Live Radio page', () => {
   describe('When I am using the website', () => {
+    runHeaderTests({
+      skipToContentText: '내용 보기',
+    });
+
     runUserTests({
       headlineText: 'BBC 코리아 라디오',
       summaryText: '세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다',
     });
 
-    runHeaderTests({
-      skipToContentText: '내용으로 건너뛰기',
-    });
-
     runFooterTests({
-      copyrightText:
-        '© 2020 BBC. BBC는 외부 인터넷 사이트 및 콘텐츠에 대한 책임을 지지않습니다. 외부 콘텐츠 링크에 대한 본사 정책 보기.',
+      copyrightAndExternalLinkingText:
+        '© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기',
       brandingLink: '/korean',
     });
   });
@@ -98,15 +113,15 @@ describe('Given I am on the Korean live radio page AMP/Canonical', () => {
       linkedData:
         '{"@context":"http://schema.org","@type":"RadioChannel","url":"http://localhost:7080/korean/bbc_korean_radio/liveradio","publisher":{"@type":"NewsMediaOrganization","name":"BBC News 코리아","publishingPrinciples":"https://www.bbc.com/korean/institutional-49283197","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/korean/bbc_korean_radio/liveradio","name":"BBC 코리아 라디오"}}',
     });
+  });
 
-    describe('When optimising the application performance', () => {
-      runPerformaceTests();
-    });
+  describe('When optimising the application performance', () => {
+    runPerformanceTests();
   });
 
   describe('When I am using assistive technology', () => {
     runCommonA11yTests({
-      skipToContentText: '내용으로 건너뛰기',
+      skipToContentText: '내용 보기',
     });
   });
 

@@ -191,7 +191,8 @@
       {
         "href": "https://www.youtube.com/watch?v=nKSZ-QzamhU",
         "source": "youtube",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "nKSZ-QzamhU"
       },
       {
         "text": "Desde la entrada en vigor de este mercado único en 1993, &quot;los ciudadanos europeos pueden vivir, trabajar, estudiar o hacer negocios con libertad&quot; en cualquier otro Estado de la UE.",
@@ -641,17 +642,20 @@
       {
         "href": "https://www.youtube.com/watch?v=dDLDuv7LH48&t=30s",
         "source": "youtube",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "dDLDuv7LH48"
       },
       {
         "href": "https://www.youtube.com/watch?v=SON0H-nAbZw",
         "source": "youtube",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "SON0H-nAbZw"
       },
       {
         "href": "https://www.youtube.com/watch?v=DSeuPF0Fn_g",
         "source": "youtube",
-        "type": "social_embed"
+        "type": "social_embed",
+        "id": "DSeuPF0Fn_g"
       }
     ]
   },

@@ -12,7 +12,7 @@ import {
   runCommonA11yTests,
   runCoreAmpTests,
   runCoreCanonicalTests,
-  runPerformaceTests,
+  runPerformanceTests,
   runSnapshotTests,
 } from '../../common';
 
@@ -47,7 +47,7 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     });
     runCanonicalUserTests();
     runFooterTests({
-      copyrightText:
+      copyrightAndExternalLinkingText:
         '© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية.',
       brandingLink: '/arabic',
     });
@@ -84,7 +84,7 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     });
 
     describe('When optimising the application performance', () => {
-      runPerformaceTests();
+      runPerformanceTests();
     });
   });
 
