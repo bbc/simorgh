@@ -23,6 +23,7 @@
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "start": "NODE_ENV=production node build/server.js",
+    "stop": "./scripts/killApp.sh",
     "storybook": "start-storybook -p 9001 -s .storybook/static -c .storybook",
     "test": "npm run test:lint && npm run test:dependencies && npm run test:unit && npm run build -- --hide-modules --colors && run-p --race start amp:validate && run-p --race start test:integration:ci",
     "test:ci": "npm run start & npm install --no-save bbc-a11y@latest npm-run-all@latest puppeteer@latest audit-ci@latest && npm run test:integration:ci && test:puppeteer && run-p bbcA11y:ci lighthouse && audit-ci --low --whitelist acorn minimist",
