@@ -23,7 +23,7 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 };
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1;
+  width: 100%;
 `;
 
 const renderEpisode = (
