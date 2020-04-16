@@ -85,7 +85,7 @@ module.exports = () => ({
             paths: [
               '/afaanoromoo/23149891', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afaanoromoo/23149891'], // CPS MAP with video clip
@@ -352,7 +352,7 @@ module.exports = () => ({
             paths: [
               '/amharic/news-23263266', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/amharic/news-23263266'], // CPS MAP with video clip
@@ -602,7 +602,7 @@ module.exports = () => ({
               '/azeri/azerbaijan-23257464', // CPS MAP with video clip
               '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -738,7 +738,7 @@ module.exports = () => ({
               '/bengali/media-23269006', // CPS MAP with video clip
               '/bengali/multimedia/2016/08/160803_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -874,7 +874,7 @@ module.exports = () => ({
               '/burmese/media-23269011', // CPS MAP with video clip
               '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -1175,7 +1175,7 @@ module.exports = () => ({
             paths: [
               '/gujarati/other-news-23130286', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/gujarati/other-news-23130286'], // CPS MAP with video clip
@@ -1308,7 +1308,7 @@ module.exports = () => ({
               '/hausa/23269030', // CPS MAP with video clip
               '/hausa/multimedia/2016/07/160714_tc2_audiomap', // TC2 MAP with audio clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -1559,7 +1559,7 @@ module.exports = () => ({
             paths: [
               '/igbo/media-23256786', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/igbo/media-23256786'], // CPS MAP with video clip
@@ -1692,7 +1692,7 @@ module.exports = () => ({
               '/indonesia/media-23269037', // CPS MAP with video clip
               '/indonesia/olahraga/2016/10/161003_tc2_videomap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -1941,7 +1941,7 @@ module.exports = () => ({
             paths: [
               '/korean/media-23248686', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/korean/media-23248686'], // CPS MAP with video clip
@@ -2074,7 +2074,7 @@ module.exports = () => ({
               '/kyrgyz/media-23257484', // CPS MAP with video clip
               '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -2192,7 +2192,7 @@ module.exports = () => ({
             paths: [
               '/marathi/media-23127353', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/marathi/media-23127353'], // CPS MAP with video clip
@@ -2492,7 +2492,7 @@ module.exports = () => ({
               '/nepali/media-23269034', // CPS MAP with audio clip
               '/nepali/multimedia/2016/07/160725_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -2936,7 +2936,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
@@ -3170,7 +3170,7 @@ module.exports = () => ({
             paths: [
               '/punjabi/media-23248705', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/punjabi/media-23248705'], // CPS MAP with video clip
@@ -3683,7 +3683,7 @@ module.exports = () => ({
               '/sinhala/world-23257567', // CPS MAP with video clip
               '/sinhala/multimedia/2016/03/160323_si_test_audio_map', // TC2 MAP with audio clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -3818,7 +3818,7 @@ module.exports = () => ({
               '/somali/hayadeed-23269042', // CPS MAP with video clip
               '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -3968,7 +3968,7 @@ module.exports = () => ({
               '/swahili/media-23268999', // CPS MAP with live stream
               '/swahili/michezo/2016/07/160713_tc2_testmap2', // TC2 MAP with audio clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -4104,7 +4104,7 @@ module.exports = () => ({
               '/tamil/india-23268994', // CPS MAP with video clip
               '/tamil/global/2016/08/160822_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -4222,7 +4222,7 @@ module.exports = () => ({
             paths: [
               '/telugu/international-23263261', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/telugu/international-23263261'], // CPS MAP with video clip
@@ -4337,7 +4337,7 @@ module.exports = () => ({
             paths: [
               '/thai/23122810', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/thai/23122810'], // CPS MAP with video clip
@@ -4468,7 +4468,7 @@ module.exports = () => ({
             paths: [
               '/tigrinya/news-23263262', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/tigrinya/news-23263262'], // CPS MAP with video clip
@@ -4585,7 +4585,7 @@ module.exports = () => ({
               '/turkce/media-23268997', // CPS MAP with audio clip
               '/turkce/multimedya/2016/05/160524_tc2_testmap1', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -5078,7 +5078,7 @@ module.exports = () => ({
               '/urdu/world-23268929', // CPS MAP with video clip
               '/urdu/sport/2016/09/160902_tc2_testmap2', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -5338,7 +5338,7 @@ module.exports = () => ({
               '/vietnamese/media-23257614', // CPS MAP with video clip
               '/vietnamese/sport/2016/09/160922_tc2_testmap2', // TC2 MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -5456,7 +5456,7 @@ module.exports = () => ({
             paths: [
               '/yoruba/media-23256797', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/yoruba/media-23256797'], // CPS MAP with video clip
