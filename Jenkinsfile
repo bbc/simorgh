@@ -132,7 +132,7 @@ pipeline {
       }
       failFast true
       parallel {
-        stage ('Unit Tests') {
+        stage ('Development Tests') {
           agent {
             docker {
               image "${nodeImage}"
@@ -148,7 +148,7 @@ pipeline {
             }
           }
         }
-        stage ('Production Tests (excludes Smoke E2Es)') {
+        stage ('Production Tests') {
           agent {
             docker {
               image "${nodeImage}"
@@ -173,7 +173,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'latest' }
       }
       parallel {
-        stage ('Unit Tests') {
+        stage ('Development Tests') {
           agent {
             docker {
               image "${nodeImage}"
@@ -188,7 +188,7 @@ pipeline {
             }
           }
         }
-        stage ('Production Tests, Smoke E2Es and Zip Generation') {
+        stage ('Production & Smoke E2E Tests, Zip Generation') {
           agent {
             docker {
               image "${nodeImage}"
