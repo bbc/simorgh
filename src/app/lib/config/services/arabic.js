@@ -52,7 +52,7 @@ export const service = {
       brandLogoColour: `${C_WHITE}`,
     },
     translations: {
-      seeAll: 'إظهر الكل',
+      seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
