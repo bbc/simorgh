@@ -14,18 +14,22 @@ export const isSameDay = (dayToCompare, timestamp) => {
 
 export const isToday = (timestamp) => isSameDay(Date.now(), timestamp);
 
-export const formatType = ({ lastPublished = null, firstPublished }) => {
+export const formatType = ({
+  lastPublished = null,
+  firstPublished,
+  datetimeLocale = 'en-gb',
+}) => {
   if (isToday(lastPublished) || isToday(firstPublished)) {
     if (
       lastPublished &&
       firstPublished &&
       !isSameDay(lastPublished, firstPublished)
     ) {
-      return formatDate;
+      return formatDate(datetimeLocale);
     }
-    return formatDateAndTime;
+    return formatDateAndTime(datetimeLocale);
   }
-  return formatDate;
+  return formatDate(datetimeLocale);
 };
 
 export const isValidDateTime = (dateTime) => {
