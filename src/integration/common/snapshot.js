@@ -32,7 +32,7 @@ const getHtmlString = (doc) => doc.querySelector('html').outerHTML;
 
 export default () => {
   [canonical, amp].forEach((page) => {
-    describe(`For the ${page.platform} platform`, () => {
+    describe(`And using ${page.platform}`, () => {
       const htmlString = getHtmlString(page.document);
       const fixedHtml = getFixedHtml(htmlString);
       const doc = new JSDOM(fixedHtml).window.document; // clone so we don't mutate the dom shared across tests
