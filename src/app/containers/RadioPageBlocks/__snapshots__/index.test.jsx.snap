@@ -22,7 +22,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
 
 .c2 {
   width: calc(100% + 1rem);
-  margin-left: -0.5rem;
+  margin: 0 -0.5rem;
 }
 
 .c1 {
@@ -65,7 +65,7 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
 @media (min-width:25rem) {
   .c2 {
     width: calc(100% + 2rem);
-    margin-left: -1rem;
+    margin: 0 -1rem;
   }
 }
 
@@ -160,7 +160,7 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
 
 .c2 {
   width: calc(100% + 1rem);
-  margin-left: -0.5rem;
+  margin: 0 -0.5rem;
 }
 
 .c1 {
@@ -213,7 +213,7 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
 @media (min-width:25rem) {
   .c2 {
     width: calc(100% + 2rem);
-    margin-left: -1rem;
+    margin: 0 -1rem;
   }
 }
 
