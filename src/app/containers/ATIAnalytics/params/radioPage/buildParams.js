@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
 
@@ -14,15 +13,15 @@ export const buildRadioATIParams = (
     service,
   } = serviceContext;
 
-  const { metadata } = pageData;
+  const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: metadata.id,
-    contentType: 'player-live',
-    language: metadata.language,
-    pageIdentifier: path(['analyticsLabels', 'pageIdentifier'], metadata),
-    pageTitle: path(['analyticsLabels', 'pageTitle'], metadata),
+    contentId: id,
+    contentType,
+    language,
+    pageIdentifier,
+    pageTitle,
     producerId: atiAnalyticsProducerId,
     libraryVersion: LIBRARY_VERSION,
     statsDestination,
