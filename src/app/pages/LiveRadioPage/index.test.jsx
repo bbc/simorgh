@@ -3,11 +3,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import RadioPage from '.';
+import LiveRadioPage from '.';
 import amharicPageData from '#data/amharic/bbc_amharic_radio/liveradio';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import getInitialData from '#app/routes/radio/getInitialData';
+import getInitialData from '#app/routes/liveRadio/getInitialData';
 
 fetch.mockResponse(JSON.stringify(amharicPageData));
 
@@ -37,7 +37,7 @@ describe('Radio Page Main', () => {
             statusCode={200}
           >
             <BrowserRouter>
-              <RadioPage service="amharic" pageData={pageData} />
+              <LiveRadioPage service="amharic" pageData={pageData} />
             </BrowserRouter>
           </RequestContextProvider>
         </ServiceContextProvider>
@@ -63,7 +63,7 @@ describe('Radio Page Main', () => {
             statusCode={200}
           >
             <BrowserRouter>
-              <RadioPage service="amharic" pageData={pageData} />
+              <LiveRadioPage service="amharic" pageData={pageData} />
             </BrowserRouter>
           </RequestContextProvider>
         </ServiceContextProvider>
