@@ -1,12 +1,14 @@
 export default () => {
-  it('Skip to content link', () => {
-    const skipToContentEl = document.querySelector('[href="#content"]');
-    const h1El = document.querySelector('h1');
+  describe('A11y', () => {
+    it('Skip to content link', () => {
+      const skipToContentEl = document.querySelector('[href="#content"]');
+      const h1El = document.querySelector('h1');
 
-    expect(h1El.getAttribute('id')).toBe('content');
-    expect(h1El.getAttribute('tabindex')).toBe('-1');
-    expect(skipToContentEl).toBeInTheDocument();
-    expect(skipToContentEl.textContent).toBeTruthy();
-    expect(skipToContentEl.textContent).toMatchSnapshot();
+      expect(h1El.getAttribute('id')).toBe('content');
+      expect(h1El.getAttribute('tabindex')).toBe('-1');
+      expect(skipToContentEl).toBeInTheDocument();
+      expect(skipToContentEl.textContent).toBeTruthy();
+      expect(skipToContentEl.textContent).toMatchSnapshot();
+    });
   });
 };

@@ -1,12 +1,14 @@
 export default () => {
-  it('Canonical ATI analytics', () => {
-    const noscriptImage = document.querySelector('noscript img');
+  describe('Canonical analytics', () => {
+    it('ATI', () => {
+      const noscriptImage = document.querySelector('noscript img');
 
-    expect(noscriptImage.tagName).toEqual('IMG');
-    expect(noscriptImage.getAttribute('width')).toEqual('1px');
-    expect(noscriptImage.getAttribute('height')).toEqual('1px');
-    expect(noscriptImage.getAttribute('src')).toMatch(
-      'https://logws1363.ati-host.net?',
-    );
+      expect(noscriptImage.tagName).toEqual('IMG');
+      expect(noscriptImage.getAttribute('width')).toEqual('1px');
+      expect(noscriptImage.getAttribute('height')).toEqual('1px');
+      expect(noscriptImage.getAttribute('src')).toMatch(
+        'https://logws1363.ati-host.net?',
+      );
+    });
   });
 };
