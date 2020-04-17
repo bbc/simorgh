@@ -1,6 +1,6 @@
 const { jestDirAlias } = require('./dirAlias');
 
-const baseProjectConfig = {
+const unitTests = {
   setupFiles: ['./src/testHelpers/jest-setup.js'],
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
@@ -9,10 +9,6 @@ const baseProjectConfig = {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.jsx$': 'babel-jest',
   },
-};
-
-const unitTests = {
-  ...baseProjectConfig,
   displayName: 'Unit Tests',
   collectCoverageFrom: [
     '**/(src|scripts)/**/*.{js,jsx}',
@@ -20,7 +16,6 @@ const unitTests = {
     '!**/*.stories.jsx',
     '!**/src/integration/**/*.{js,jsx}',
   ],
-  setupFiles: ['./src/testHelpers/jest-setup.js'],
   testMatch: [
     '**/__tests__/**/*.js?(x)',
     '**/?(*.)+(spec|test).js?(x)',
@@ -29,23 +24,23 @@ const unitTests = {
 };
 
 const ampIntegrationTests = {
-  ...baseProjectConfig,
   displayName: 'Integration Tests - AMP',
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'amp',
   },
-  testMatch: ['**/src/integration/**/*[^.canonical].test.js'],
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  testMatch: ['**/src/integration/**/*.test.js'],
 };
 
 const canonicalIntegrationTests = {
-  ...baseProjectConfig,
   displayName: 'Integration Tests - Canonical',
   testEnvironment: './src/integration/integrationTestEnvironment.js',
   testEnvironmentOptions: {
     platform: 'canonical',
   },
-  testMatch: ['**/src/integration/**/*[^.amp].test.js'],
+  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
+  testMatch: ['**/src/integration/**/*.test.js'],
 };
 
 module.exports = {
