@@ -99,7 +99,6 @@ describe('Render Document', () => {
         scripts: '__mock_script_elements__',
         service: 'news',
         styleTags: '__mock_style_tags__',
-        hasAds: false,
       });
 
       expect(
