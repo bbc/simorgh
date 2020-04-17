@@ -11,6 +11,7 @@ import {
   getRadioAndTVRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
+  getCatchAllServicePath,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -32,6 +33,9 @@ export const frontPageManifestPath = getManifestRegex(allServices);
 
 export const cpsAssetPagePath = getCpsAssetRegex(allServices);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
+
+export const catchAllServicePath = getCatchAllServicePath(allServices);
+export const catchAllServiceDataPath = `${catchAllServicePath}.json`;
 
 export const liveRadioPath = getLiveRadioRegex(allServices);
 export const liveRadioDataPath = `${liveRadioPath}.json`;

@@ -8,6 +8,7 @@ const articleLocalRegex = 'articles|erthyglau|sgeulachdan';
 const mediaIdRegex = '[a-z0-9]+';
 const mediaServiceIdRegex = 'bbc_[a-z]+_radio|bbc_[a-z]+_tv';
 const errorCodeRegex = '404|500';
+const anyCharsRegex = '*{0,}';
 
 const getServiceRegex = (services) => services.join('|');
 
@@ -64,4 +65,9 @@ export const getRadioAndTVRegex = (services) => {
 export const getErrorPageRegex = (services) => {
   const serviceRegex = getServiceRegex(services);
   return `/:service(${serviceRegex})/:errorCode(${errorCodeRegex}):variant(${variantRegex})?`;
+};
+
+export const getCatchAllServicePath = (services) => {
+  const serviceRegex = getServiceRegex(services);
+  return `/:service(${serviceRegex}):variant(${variantRegex})?:pathparam(${anyCharsRegex}):amp(${ampRegex})?`;
 };

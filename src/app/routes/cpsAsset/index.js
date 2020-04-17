@@ -9,7 +9,7 @@ import {
   PhotoGalleryPage,
   StoryPage,
 } from '#pages';
-import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
+import { catchAllServicePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
@@ -34,7 +34,7 @@ const CpsAsset = (props) => {
 };
 
 export default {
-  path: [cpsAssetPagePath, legacyAssetPagePath],
+  path: [catchAllServicePath],
   exact: true,
   component: memo(CpsAsset, pageIsSame),
   getInitialData,
