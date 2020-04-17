@@ -46,6 +46,10 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
           content="1609039196070050"
     >
     <meta data-react-helmet="true"
+          property="fb:pages"
+          content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+    >
+    <meta data-react-helmet="true"
           name="mobile-web-app-capable"
           content="yes"
     >
@@ -600,7 +604,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </amp-analytics>
       <main role="main"
             dir="ltr"
-            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 hzCstj"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-o3papn-0 jbscCF"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 kMhoTR"
@@ -843,6 +847,10 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
     <meta data-react-helmet="true"
           property="fb:app_id"
           content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          property="fb:pages"
+          content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
     >
     <meta data-react-helmet="true"
           name="mobile-web-app-capable"
@@ -1230,7 +1238,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </noscript>
       <main role="main"
             dir="ltr"
-            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 hzCstj"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-o3papn-0 jbscCF"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 kMhoTR"
@@ -1411,7 +1419,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </footer>
     </div>
     <script>
-      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"ያድምጡ","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"ዝግጅቶቻችንን’","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_amharic_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_amharic_radio"},"type":"WS-LIVE","createdBy":"amharic","language":"am","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"ያድምጡ - BBC News አማርኛ","pageIdentifier":"amharic.bbc_amharic_radio.liveradio.page","producerId":"4","contentType":"player-live","producer":"AMHARIC"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"ያድምጡ","summary":"ዝግጅቶቻችንን’","uri":"/amharic/bbc_amharic_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"amharic","uri":"/amharic","type":"simple"},"groups":[]}},"path":"/amharic/bbc_amharic_radio/liveradio","timeOnServer": "mock-time"}
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"ያድምጡ","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"ዝግጅቶቻችንን’","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_amharic_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"language":"am","id":"mock-id","name":"ያድምጡ","summary":"ዝግጅቶቻችንን’","pageTitle":"ያድምጡ - BBC News አማርኛ","contentType":"player-live","pageIdentifier":"amharic.bbc_amharic_radio.liveradio.page"},"path":"/amharic/bbc_amharic_radio/liveradio","timeOnServer": "mock-time"}
     </script>
     <div>
       <!--[if !IE]><!-->

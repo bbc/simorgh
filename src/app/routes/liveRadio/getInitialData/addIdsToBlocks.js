@@ -6,14 +6,14 @@ import uuid from 'uuid';
 
 const addIdToBlock = (block) => ({ ...block, uuid: uuid() });
 
-const getBlocks = path(['content', 'blocks']);
+const getBlocks = path(['blocks']);
 
 const mapBlocks = pipe(getBlocks, map(addIdToBlock));
 
 export default (jsonRaw) =>
   mergeDeepLeft(
     {
-      content: { blocks: mapBlocks(jsonRaw) },
+      blocks: mapBlocks(jsonRaw),
     },
     jsonRaw,
   );
