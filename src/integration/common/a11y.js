@@ -1,14 +1,19 @@
 export default () => {
   describe('A11y', () => {
-    it('Skip to content link', () => {
+    it('I can see the skip to content link', () => {
       const skipToContentEl = document.querySelector('[href="#content"]');
-      const h1El = document.querySelector('h1');
 
-      expect(h1El.getAttribute('id')).toBe('content');
-      expect(h1El.getAttribute('tabindex')).toBe('-1');
       expect(skipToContentEl).toBeInTheDocument();
       expect(skipToContentEl.textContent).toBeTruthy();
       expect(skipToContentEl.textContent).toMatchSnapshot();
+    });
+
+    it('Headline in main content', () => {
+      const accessibleH1El = document.querySelector(
+        'h1[id="content"][tabindex="-1"]',
+      );
+
+      expect(accessibleH1El).toBeInTheDocument();
     });
   });
 };

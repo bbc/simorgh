@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`Media Asset Page Footer I can see the copyright text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Media Asset Page Media player A11y I can read the media player title 1`] = `"پخش این فایل در دستگاه شما پشتیبانی نمی شود."`;
+
+exports[`Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+
+exports[`Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
+
+exports[`Media Asset Page SEO Lang attribute 1`] = `"fa"`;
+
+exports[`Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
+
+exports[`Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+
+exports[`Media Asset Page SEO OG image alt 1`] = `"Trump getting upset"`;
+
+exports[`Media Asset Page SEO OG locale 1`] = `"fa"`;
+
+exports[`Media Asset Page SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`Media Asset Page SEO OG title 1`] = `"Trump long headline - BBC News فارسی"`;
+
+exports[`Media Asset Page SEO OG type 1`] = `"article"`;
+
+exports[`Media Asset Page SEO OG url 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+
+exports[`Media Asset Page SEO Page title 1`] = `"Trump long headline - BBC News فارسی"`;
+
+exports[`Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Media Asset Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Media Asset Page SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`Media Asset Page SEO Twitter description 1`] = `"Trump summary text"`;
+
+exports[`Media Asset Page SEO Twitter image alt 1`] = `"Trump getting upset"`;
+
+exports[`Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+
+exports[`Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`Media Asset Page SEO Twitter title 1`] = `"Trump long headline - BBC News فارسی"`;

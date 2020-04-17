@@ -5,5 +5,7 @@
 
 import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
 
-runCoreAmpTests();
-runAmpAnalyticsTests();
+describe('AMP Front page', () => {
+  runCoreAmpTests();
+  runAmpAnalyticsTests();
+});

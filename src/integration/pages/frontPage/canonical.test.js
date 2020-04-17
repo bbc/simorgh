@@ -8,5 +8,7 @@ import {
   runCanonicalAnalyticsTests,
 } from '../../common';
 
-runCoreCanonicalTests();
-runCanonicalAnalyticsTests();
+describe('Canonical Front page', () => {
+  runCoreCanonicalTests();
+  runCanonicalAnalyticsTests();
+});

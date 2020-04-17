@@ -27,6 +27,7 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
+import SocialEmbed from '#containers/SocialEmbed';
 import {
   getFirstPublished,
   getLastPublished,
@@ -77,6 +78,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     version: (props) => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: (props) => <StyledByline {...props} />,
     include: (props) => <Include {...props} />,
+    social_embed: (props) => <SocialEmbed {...props} />,
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -215,9 +217,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <ResponsiveComponentWrapper>
             <FeaturesAnalysis />
           </ResponsiveComponentWrapper>
-          <ComponentWrapper>
-            <h2>This is a component in the second column</h2>
-          </ComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer
               mostReadEndpointOverride={mostReadEndpointOverride}

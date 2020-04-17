@@ -5,9 +5,12 @@
 
 import { runCommonCrossPlatformTests } from '../../common';
 
-runCommonCrossPlatformTests();
+describe('Front page', () => {
+  runCommonCrossPlatformTests();
 
-it('I can see at least one section', () => {
-  const sect = document.querySelector('section');
-  expect(sect).toBeInTheDocument();
+  it('I can see at least one section', () => {
+    const sect = document.querySelector('section');
+
+    expect(sect).toBeInTheDocument();
+  });
 });

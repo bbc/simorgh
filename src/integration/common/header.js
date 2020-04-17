@@ -1,6 +1,6 @@
 export default () => {
   describe('Header', () => {
-    it('Branding', () => {
+    it('I can see the branding', () => {
       const logo = document.querySelector('header svg');
 
       expect(logo).toBeInTheDocument();

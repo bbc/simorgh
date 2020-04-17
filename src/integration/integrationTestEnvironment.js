@@ -1,5 +1,5 @@
 const JsdomEnvironment = require('jest-environment-jsdom');
-const { JSDOM } = require('jsdom');
+const fetchDom = require('./fetchDom');
 
 class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
@@ -17,7 +17,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     await super.setup();
 
     try {
-      const dom = await JSDOM.fromURL(this.url);
+      const dom = await fetchDom(this.url);
 
       Object.defineProperties(this.global, {
         service: { value: this.service },
@@ -25,7 +25,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         document: { value: dom.window.document },
       });
     } catch (e) {
-      throw new Error(e);
+      console.error(e);
     }
   }
 
