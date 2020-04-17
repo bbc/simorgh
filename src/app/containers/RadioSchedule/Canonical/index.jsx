@@ -125,9 +125,11 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
 
   useEffect(() => {
     if (!radioSchedule) {
-      const handleResponse = async (response) => {
+      const handleResponse = (url) => async (response) => {
         if (!response.ok) {
-          throw Error(response.statusText);
+          throw Error(
+            `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
+          );
         }
 
         const radioScheduleData = await response.json();
@@ -142,12 +144,18 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
 
       const fetchRadioScheduleData = (pathname) =>
         fetch(pathname, { mode: 'no-cors' })
-          .then(handleResponse)
+          .then(handleResponse(pathname))
           .catch((error) => {
-            logger.error(DATA_FETCH_ERROR, {
-              url: pathname,
-              error,
-            });
+            logger.error(
+              JSON.stringify(
+                {
+                  event: DATA_FETCH_ERROR,
+                  message: error.toString(),
+                },
+                null,
+                2,
+              ),
+            );
           });
 
       fetchRadioScheduleData(endpoint);
