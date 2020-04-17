@@ -8,7 +8,7 @@ exports[`Article Page amp Core AMP AMP Geo config 1`] = `"{\\"ISOCountryGroups\\
 
 exports[`Article Page amp Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Article Page amp Footer I can see the copyright text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Article Page amp Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Article Page amp Header I can see the branding 1`] = `"BBC News, Mundo"`;
 

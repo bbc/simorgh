@@ -8,7 +8,7 @@ exports[`Front Page amp Core AMP AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":
 
 exports[`Front Page amp Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Front Page amp Footer I can see the copyright text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Front Page amp Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Front Page amp Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 

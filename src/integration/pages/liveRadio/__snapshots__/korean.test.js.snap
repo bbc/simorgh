@@ -8,7 +8,7 @@ exports[`Live Radio Page amp Core AMP AMP Geo config 1`] = `"{\\"ISOCountryGroup
 
 exports[`Live Radio Page amp Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
 
-exports[`Live Radio Page amp Footer I can see the copyright text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
+exports[`Live Radio Page amp Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`Live Radio Page amp Header I can see the branding 1`] = `"BBC News, 코리아"`;
 

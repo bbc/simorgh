@@ -8,7 +8,7 @@ exports[`Media Asset Page amp Core AMP AMP Geo config 1`] = `"{\\"ISOCountryGrou
 
 exports[`Media Asset Page amp Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Media Asset Page amp Footer I can see the copyright text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Media Asset Page amp Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Media Asset Page amp Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
