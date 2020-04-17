@@ -753,7 +753,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
     <h2
       class="c3"
     >
-      <div
+      <span
         class="c4"
       >
         <span
@@ -767,7 +767,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             أحدث نشرة أخبار
           </span>
         </span>
-      </div>
+      </span>
     </h2>
   </div>
   <div
