@@ -1,3 +1,15 @@
+import runA11yTests from '../../common/a11y';
+import runHeaderTests from '../../common/header';
+import runFootertests from '../../common/footer';
+import runSEOtests from '../../common/SEO';
+import runPerformanceTests from '../../common/performance';
+
+runA11yTests();
+runHeaderTests();
+runFootertests();
+runSEOtests();
+runPerformanceTests();
+
 it('Headline', () => {
   const h1El = document.querySelector('h1[id="content"]');
 
