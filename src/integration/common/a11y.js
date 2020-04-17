@@ -1,5 +1,5 @@
 export default () => {
-  describe('A11y', () => {
+  describe('a11y', () => {
     it('I can see the skip to content link', () => {
       const skipToContentEl = document.querySelector('[href="#content"]');
 
