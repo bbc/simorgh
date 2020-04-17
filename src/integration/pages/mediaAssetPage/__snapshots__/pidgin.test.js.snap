@@ -1125,7 +1125,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="related-content-heading"
@@ -1134,7 +1134,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                       Another thing we de for inside dis tori
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="ltr"
@@ -2472,7 +2472,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="ltr"
                           id="related-content-heading"
@@ -2481,7 +2481,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                       Another thing we de for inside dis tori
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="ltr"
