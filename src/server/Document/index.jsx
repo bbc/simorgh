@@ -4,28 +4,11 @@ import path from 'path';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import pathOr from 'ramda/src/pathOr';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 
 import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
-
-export const getServiceWithAds = async (service, variant = 'default') => {
-  let serviceConfig;
-
-  try {
-    const { service: config } = await import(`#lib/config/services/${service}`);
-    serviceConfig = config;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(
-      `getConfig could not find config for the requested service: ${service}.`,
-    );
-  }
-
-  return pathOr(false, [variant, 'ads', 'hasAds'], serviceConfig);
-};
 
 const renderDocument = async ({
   bbcOrigin,
@@ -34,7 +17,6 @@ const renderDocument = async ({
   routes,
   service,
   url,
-  variant,
 }) => {
   const sheet = new ServerStyleSheet();
 
@@ -78,7 +60,6 @@ const renderDocument = async ({
   });
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
-  const serviceHasAds = await getServiceWithAds(service, variant);
 
   const doc = renderToStaticMarkup(
     <DocumentComponent
@@ -90,7 +71,6 @@ const renderDocument = async ({
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
-      hasAds={serviceHasAds}
     />,
   );
 

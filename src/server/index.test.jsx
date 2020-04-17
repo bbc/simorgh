@@ -9,7 +9,6 @@ import routes from '../app/routes';
 import { localBaseUrl } from '../testHelpers/config';
 import services from './utilities/serviceConfigs';
 import * as renderDocument from './Document';
-// import { getServiceWithAds } from './Document';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -88,7 +87,6 @@ jest.mock('./styles', () => ({
 }));
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
-const getServiceWithAdsSpy = jest.spyOn(renderDocument, 'getServiceWithAds');
 
 const makeRequest = async (requestPath) => request(server).get(requestPath);
 
@@ -100,7 +98,6 @@ const testRenderedData = ({
   isAmp,
   successDataResponse,
   variant,
-  hasAds,
 }) => async () => {
   const { text, status } = await makeRequest(url);
 
@@ -123,24 +120,6 @@ const testRenderedData = ({
 
   expect(reactDomServer.renderToString).toHaveBeenCalledWith(<h1>Mock app</h1>);
 
-  if (hasAds) {
-    console.log('-->>', hasAds);
-
-    expect(getServiceWithAdsSpy).toReturn(true);
-    expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
-      <Document
-        app="<h1>Mock app</h1>"
-        assetOrigins={assetOrigins}
-        data={successDataResponse}
-        helmet={{ head: 'tags' }}
-        isAmp={isAmp}
-        service={service}
-        scripts="__mock_script_elements__"
-        styleTags={<style />}
-        hasAds={true}
-      />,
-    );
-  }
   expect(reactDomServer.renderToStaticMarkup).toHaveBeenCalledWith(
     <Document
       app="<h1>Mock app</h1>"
@@ -151,7 +130,6 @@ const testRenderedData = ({
       service={service}
       scripts="__mock_script_elements__"
       styleTags={<style />}
-      hasAds={false}
     />,
   );
 
@@ -819,26 +797,22 @@ describe('Server', () => {
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
-    hasAds: true,
   });
   testAssetPages({
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
-    hasAds: true,
     queryString: QUERY_STRING,
   });
   testAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
-    hasAds: true,
   });
   testAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
-    hasAds: true,
     queryString: QUERY_STRING,
   });
   testAssetPages({
@@ -921,7 +895,6 @@ describe('Server', () => {
             service={service}
             scripts="__mock_script_elements__"
             styleTags={<style />}
-            hasAds={false}
           />,
         );
 
