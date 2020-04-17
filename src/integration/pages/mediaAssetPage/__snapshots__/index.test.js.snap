@@ -67,3 +67,67 @@ exports[`Media Asset Page amp SEO Twitter image src 1`] = `"http://ichef.test.bb
 exports[`Media Asset Page amp SEO Twitter site 1`] = `"@BBCNews"`;
 
 exports[`Media Asset Page amp SEO Twitter title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+
+exports[`Media Asset Page canonical A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+
+exports[`Media Asset Page canonical Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`Media Asset Page canonical Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+
+exports[`Media Asset Page canonical Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`Media Asset Page canonical I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
+
+exports[`Media Asset Page canonical I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+
+exports[`Media Asset Page canonical I can see the related content 1`] = `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017Lagos 'Gay' men Appear for Court, say Dem no dey GuiltyThe men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.8th August 2017Image gallery, Kenya Elections Pictures: 8 August 2017This na some of the picture wey our eye see as Kenya people go vote for election today8th August 20170:15Audio, BBC News Pidgin One Minute News, 0,15All di local and world tori wey you suppose know in 60 seconds!17th August 2017"`;
+
+exports[`Media Asset Page canonical I can see the timestamp 1`] = `"13 September 2019"`;
+
+exports[`Media Asset Page canonical Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
+
+exports[`Media Asset Page canonical SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
+
+exports[`Media Asset Page canonical SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Media Asset Page canonical SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Media Asset Page canonical SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Media Asset Page canonical SEO Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+
+exports[`Media Asset Page canonical SEO Lang attribute 1`] = `"pcm"`;
+
+exports[`Media Asset Page canonical SEO OG description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+
+exports[`Media Asset Page canonical SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+
+exports[`Media Asset Page canonical SEO OG image alt 1`] = `"connectionAltText"`;
+
+exports[`Media Asset Page canonical SEO OG locale 1`] = `"pcm"`;
+
+exports[`Media Asset Page canonical SEO OG site name 1`] = `"BBC News Pidgin"`;
+
+exports[`Media Asset Page canonical SEO OG title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+
+exports[`Media Asset Page canonical SEO OG type 1`] = `"article"`;
+
+exports[`Media Asset Page canonical SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
+
+exports[`Media Asset Page canonical SEO Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+
+exports[`Media Asset Page canonical SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Media Asset Page canonical SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Media Asset Page canonical SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Media Asset Page canonical SEO Twitter description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+
+exports[`Media Asset Page canonical SEO Twitter image alt 1`] = `"connectionAltText"`;
+
+exports[`Media Asset Page canonical SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+
+exports[`Media Asset Page canonical SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Media Asset Page canonical SEO Twitter title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;

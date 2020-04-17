@@ -12,8 +12,6 @@ export default () => {
     expect(imageEl).toBeInTheDocument();
     expect(imageCaptionEl).toBeInTheDocument();
     expect(imageCaptionEl.textContent).toBeTruthy();
-    expect(imageCaptionEl.textContent).toMatchInlineSnapshot(
-      `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`,
-    );
+    expect(imageCaptionEl.textContent).toMatchSnapshot();
   });
 };
