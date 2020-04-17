@@ -4360,7 +4360,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         <h2
                           class="c20"
                         >
-                          <div
+                          <span
                             class="c21"
                           >
                             <span
@@ -4374,7 +4374,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                                 Another thing we de for inside dis tori
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -8283,7 +8283,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         <h2
                           class="c39"
                         >
-                          <div
+                          <span
                             class="c40"
                           >
                             <span
@@ -8297,7 +8297,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                                 Bu barədə daha geniş
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
