@@ -169,8 +169,8 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
-      'https://*.akstat.io', //
-      'https://r.bbci.co.uk', //
+      'https://*.akstat.io',
+      'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads
@@ -191,8 +191,8 @@ const directives = {
       'https://logws1363.ati-host.net', // ATI analytics
       'https://news.files.bbci.co.uk', // Static Assets
       'https://news.test.files.bbci.co.uk', // Static Assets
-      'https://*.akstat.io', //
-      'https://r.bbci.co.uk', //
+      'https://*.akstat.io',
+      'https://r.bbci.co.uk',
       'https://pagead2.googlesyndication.com', // ads
       'https://securepubads.g.doubleclick.net', // ads
       'https://tpc.googlesyndication.com', // ads

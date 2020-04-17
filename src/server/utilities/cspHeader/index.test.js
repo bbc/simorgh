@@ -213,8 +213,8 @@ describe('cspHeader', () => {
         'https://logws1363.ati-host.net',
         'https://news.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
-        'https://*.akstat.io', //
-        'https://r.bbci.co.uk', //
+        'https://*.akstat.io',
+        'https://r.bbci.co.uk',
         'https://pagead2.googlesyndication.com',
         'https://securepubads.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
@@ -295,8 +295,8 @@ describe('cspHeader', () => {
         'https://logws1363.ati-host.net',
         'https://news.files.bbci.co.uk',
         'https://news.test.files.bbci.co.uk',
-        'https://*.akstat.io', //
-        'https://r.bbci.co.uk', //
+        'https://*.akstat.io',
+        'https://r.bbci.co.uk',
         'https://pagead2.googlesyndication.com',
         'https://securepubads.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
