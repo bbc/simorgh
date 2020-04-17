@@ -10,14 +10,17 @@ import LinkedData from '../../containers/LinkedData';
 import RadioPageBlocks from '../../containers/RadioPageBlocks';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
+const StyledGelPageGrid = styled(GelPageGrid)`
+  width: 100%;
+  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
+`;
+
 const RadioPage = ({ pageData }) => {
   const blocks = path(['content', 'blocks'], pageData);
   const promo = path(['promo'], pageData);
   const metadata = path(['metadata'], pageData);
   const { dir } = useContext(ServiceContext);
-  const StyledGelPageGrid = styled(GelPageGrid)`
-    flex-grow: 1;
-  `;
+
   return (
     <>
       <ATIAnalytics data={pageData} />

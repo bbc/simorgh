@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { shape, string } from 'prop-types';
 import { mediaPlayerMetadata } from './helpers/metadata';

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-/* eslint-disable consistent-return */
 const { JSDOM } = require('jsdom');
 const { within } = require('@testing-library/dom');
+const retry = require('retry');
 
 const enhanceGetByText = (getByText) => (text) =>
   getByText((content, node) => {
@@ -14,10 +14,47 @@ const enhanceGetByText = (getByText) => (text) =>
     return nodeHasText && childrenDontHaveText;
   });
 
+const faultTolerantDomFetch = (url) =>
+  new Promise((resolve, reject) => {
+    const oneSecond = 1000;
+    const operation = retry.operation({
+      retries: 5,
+      factor: 1,
+      minTimeout: oneSecond,
+      maxTimeout: oneSecond,
+    });
+
+    operation.attempt(async (currentAttempt) => {
+      if (currentAttempt > 1) {
+        console.warn(
+          `Error getting DOM from ${url}`,
+          `Retry attempts: ${currentAttempt - 1}`,
+        );
+      }
+
+      try {
+        const dom = await JSDOM.fromURL(url);
+
+        resolve(dom);
+      } catch (error) {
+        const isSocketHangUpError = error
+          .toString()
+          .includes('Error: socket hang up');
+
+        if (isSocketHangUpError) {
+          if (operation.retry(error)) {
+            return;
+          }
+        }
+
+        reject(error);
+      }
+    });
+  });
+
 module.exports = async (path) => {
   try {
-    const dom = await JSDOM.fromURL(`http://localhost:7080${path}`);
-
+    const dom = await faultTolerantDomFetch(`http://localhost:7080${path}`);
     const queries = within(dom.window.document.body);
 
     return {
@@ -26,7 +63,7 @@ module.exports = async (path) => {
       getByTextMultiElement: enhanceGetByText(queries.getByText),
       ...queries,
     };
-  } catch (e) {
-    console.error(`Error: Visit to http://localhost:7080${path} failed.`);
+  } catch (error) {
+    throw new Error(error);
   }
 };
