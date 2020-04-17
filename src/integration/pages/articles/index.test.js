@@ -10,17 +10,8 @@ import runCanonicalTests from './canonicalTests';
 describe('Article Page', () => {
   describe(platform, () => {
     runCrossPlatformTests();
+
+    // eslint-disable-next-line no-unused-expressions
+    platform === 'amp' ? runAmpTests() : runCanonicalTests();
   });
-
-  if (platform === 'amp') {
-    describe(platform, () => {
-      runAmpTests();
-    });
-  }
-
-  if (platform === 'canonical') {
-    describe(platform, () => {
-      runCanonicalTests();
-    });
-  }
 });
