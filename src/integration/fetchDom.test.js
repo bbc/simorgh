@@ -5,7 +5,7 @@
 /* eslint-disable no-console */
 
 import { JSDOM } from 'jsdom';
-import render from './render';
+import fetchDom from './fetchDom';
 
 const showWarningsInConsole = false; // set to true if you want to see the retry messages in the console when running tests
 const { warn } = console;
@@ -23,8 +23,8 @@ it('should return DOM from a given url path', async () => {
         `<html><head><title>Some HTML</title></head><body></body></html>`,
       ),
     );
-  const result = await render('/some/path');
-  const pageTitle = result.document.querySelector('title').textContent;
+  const dom = await fetchDom('http://localhost:7080/some/path');
+  const pageTitle = dom.window.document.querySelector('title').textContent;
 
   expect(pageTitle).toBe('Some HTML');
 });
@@ -41,8 +41,8 @@ it('should retry to render the DOM if socket hang up error occurs', async () => 
       ),
     );
 
-  const result = await render('/some/path');
-  const pageTitle = result.document.querySelector('title').textContent;
+  const dom = await fetchDom('/some/path');
+  const pageTitle = dom.window.document.querySelector('title').textContent;
 
   expect(console.warn).toHaveBeenCalledWith(
     'Error getting DOM from http://localhost:7080/some/path',
@@ -62,5 +62,5 @@ it('should retry to render the DOM if socket hang up error occurs', async () => 
 it('should not retry if failure is not a socket hang up error and throw error as normal', async () => {
   JSDOM.fromURL = jest.fn().mockRejectedValueOnce(new Error('Some error'));
 
-  await expect(render('/some/path')).rejects.toThrow();
+  await expect(fetchDom('http://localhost:7080/some/path')).rejects.toThrow();
 });

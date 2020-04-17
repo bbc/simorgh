@@ -1,13 +1,13 @@
 /**
- * @service arabic
- * @pathname /arabic
+ * @service mundo
+ * @pathname /mundo/articles/ce42wzqr2mko
  */
 
 import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe('Front Page', () => {
+describe('Article Page', () => {
   describe(platform, () => {
     runCrossPlatformTests();
   });

@@ -1,13 +1,13 @@
 /**
- * @service arabic
- * @pathname /arabic
+ * @service korean
+ * @pathname /korean/bbc_korean_radio/liveradio
  */
 
 import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe('Front Page', () => {
+describe('Live Radio Page', () => {
   describe(platform, () => {
     runCrossPlatformTests();
   });

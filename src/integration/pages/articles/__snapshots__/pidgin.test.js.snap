@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Page amp A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+
+exports[`Article Page amp Core AMP AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Article Page amp Core AMP AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Article Page amp Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`Article Page amp Footer I can see the copyright text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+
+exports[`Article Page amp Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+
+exports[`Article Page amp I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`;
+
+exports[`Article Page amp I can see an image with a caption 2`] = `"Wetin we call dis foto, APC Chairman Adams Oshiomhole don be Govnor of Edo State before"`;
+
+exports[`Article Page amp SEO Canonical link 1`] = `"http://localhost:7080/pidgin/tori-51745682"`;
+
+exports[`Article Page amp SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Article Page amp SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Article Page amp SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Article Page amp SEO Heading level 1 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman'"`;
+
+exports[`Article Page amp SEO Lang attribute 1`] = `"pcm"`;
+
+exports[`Article Page amp SEO OG description 1`] = `"Oga Oshiomhole don cari di mata go Court of Appeal."`;
+
+exports[`Article Page amp SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"`;
+
+exports[`Article Page amp SEO OG image alt 1`] = `"Adams Oshiomole"`;
+
+exports[`Article Page amp SEO OG locale 1`] = `"pcm"`;
+
+exports[`Article Page amp SEO OG site name 1`] = `"BBC News Pidgin"`;
+
+exports[`Article Page amp SEO OG title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
+
+exports[`Article Page amp SEO OG type 1`] = `"article"`;
+
+exports[`Article Page amp SEO OG url 1`] = `"http://localhost:7080/pidgin/tori-51745682"`;
+
+exports[`Article Page amp SEO Page title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
+
+exports[`Article Page amp SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Article Page amp SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Article Page amp SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Article Page amp SEO Twitter description 1`] = `"Oga Oshiomhole don cari di mata go Court of Appeal."`;
+
+exports[`Article Page amp SEO Twitter image alt 1`] = `"Adams Oshiomole"`;
+
+exports[`Article Page amp SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"`;
+
+exports[`Article Page amp SEO Twitter site 1`] = `"@BBCNews"`;
+
+exports[`Article Page amp SEO Twitter title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;

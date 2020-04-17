@@ -1,13 +1,13 @@
 /**
- * @service arabic
- * @pathname /arabic
+ * @service pidgin
+ * @pathname /pidgin/tori-51745682
  */
 
 import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe('Front Page', () => {
+describe('Article Page', () => {
   describe(platform, () => {
     runCrossPlatformTests();
   });
