@@ -1738,7 +1738,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       <h2
                         class="c35"
                       >
-                        <div
+                        <span
                           class="c36"
                         >
                           <span
@@ -1752,7 +1752,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               Another thing we de for inside dis tori
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <div
@@ -1785,7 +1785,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         <h2
                           class="c35"
                         >
-                          <div
+                          <span
                             class="c36"
                           >
                             <span
@@ -1799,7 +1799,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Top Stories
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -1900,7 +1900,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         <h2
                           class="c35"
                         >
-                          <div
+                          <span
                             class="c36"
                           >
                             <span
@@ -1914,7 +1914,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 Features & Analysis
                               </span>
                             </span>
-                          </div>
+                          </span>
                         </h2>
                       </div>
                       <ul
@@ -2032,13 +2032,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </ul>
                     </div>
                   </section>
-                </div>
-                <div
-                  class="c57"
-                >
-                  <h2>
-                    This is a component in the second column
-                  </h2>
                 </div>
                 <div
                   class="c57"
@@ -3461,6 +3454,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
       property="fb:app_id"
     />
     <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
+    />
+    <meta
       content="yes"
       name="mobile-web-app-capable"
     />
@@ -4051,7 +4048,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           <h2
                             class="c37"
                           >
-                            <div
+                            <span
                               class="c38"
                             >
                               <span
@@ -4065,7 +4062,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                   Another thing we de for inside dis tori
                                 </span>
                               </span>
-                            </div>
+                            </span>
                           </h2>
                         </div>
                         <div
@@ -4098,7 +4095,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             <h2
                               class="c37"
                             >
-                              <div
+                              <span
                                 class="c38"
                               >
                                 <span
@@ -4112,7 +4109,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Top Stories
                                   </span>
                                 </span>
-                              </div>
+                              </span>
                             </h2>
                           </div>
                           <ul
@@ -4213,7 +4210,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             <h2
                               class="c37"
                             >
-                              <div
+                              <span
                                 class="c38"
                               >
                                 <span
@@ -4227,7 +4224,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                     Features & Analysis
                                   </span>
                                 </span>
-                              </div>
+                              </span>
                             </h2>
                           </div>
                           <ul
@@ -4345,13 +4342,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           </ul>
                         </div>
                       </section>
-                    </div>
-                    <div
-                      class="c59"
-                    >
-                      <h2>
-                        This is a component in the second column
-                      </h2>
                     </div>
                     <div
                       class="c59"

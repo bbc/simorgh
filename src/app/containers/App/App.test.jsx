@@ -182,7 +182,10 @@ describe('App', () => {
 
           expect.assertions(3);
 
-          expect(route.getInitialData).toHaveBeenCalledWith(pathname);
+          expect(route.getInitialData).toHaveBeenCalledWith({
+            path: pathname,
+            service: 'news',
+          });
 
           // start data fetch and set loading to true
           expect(reactRouterConfig.renderRoutes).toHaveBeenNthCalledWith(
