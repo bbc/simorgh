@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Canonical ATI analytics 1`] = `"https://logws1363.ati-host.net?s=598343&s2=57&p=korean.bbc_korean_radio.liveradio.page&x1=[urn:bbc:ares::ws_live:bbc_korean_radio]&x2=[responsive]&x3=[news-korean]&x4=[ko]&x7=[player-live]&x8=[simorgh-nojs]&x9=[BBC+코리아+라디오+-+BBC+News+코리아]"`;

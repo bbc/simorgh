@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Canonical ATI analytics 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=pidgin.articles.cwl08rd38l6o.page&x1=[urn:bbc:optimo:cwl08rd38l6o]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[article]&x8=[simorgh-nojs]&x9=[This+is+the+SEO+headline+of+this+test+article]&x11=[2019-07-12T13:00:04.940Z]&x12=[2019-09-27T15:56:33.775Z]"`;

@@ -1,55 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer Copyright 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Story Page canonical Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=62&p=world::mundo.world.story.51266689.page&x1=[urn:bbc:cps:faf2993a-dcc0-0746-81a6-a6aca4cd59b1]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x7=[article]&x8=[simorgh-nojs]&x9=[Brexit:+qué+cambiará+para+visitar,+trabajar+y+estudiar+en+Reino+Unido+tras+la+salida+del+país+de+la+Unión+Europea+-+BBC+News+Mundo]&x11=[2020-01-30T06:35:49.000Z]&x12=[2020-01-31T23:08:08.000Z]&x13=[Europe~United+Kingdom~Culture~European+Union~Economics~Brexit]&x14=[0b0bfd5a-81b8-43fa-91fc-57f1fcd24487~2e91364c-5c77-4660-b76e-d76202785e64~6a73afa3-ea6b-45c1-80bb-49060b99f864~9a18805c-fb88-40ba-9763-bcc121d5d55c~ca170ae3-99c1-48db-9b67-2866f85e7342~f94293fd-ff83-400e-8bc0-89ec01930fce]&x16=[WS%20-%20Give%20me%20perspective]&x17=[Explainer]"`;
 
-exports[`Header Branding 1`] = `"BBC News, Mundo"`;
+exports[`Story Page canonical Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
-exports[`SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+exports[`Story Page canonical Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
-exports[`SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+exports[`Story Page canonical I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
-exports[`SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+exports[`Story Page canonical I can see the headline 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
-exports[`SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
+exports[`Story Page canonical I can see the timestamp 1`] = `"30 enero 2020"`;
 
-exports[`SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`Story Page canonical SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
 
-exports[`SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
+exports[`Story Page canonical SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
 
-exports[`SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"es-005"`;
+exports[`Story Page canonical SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
 
-exports[`SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Mundo"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
 
-exports[`SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
-exports[`SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
-exports[`SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"es-005"`;
 
-exports[`SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Mundo"`;
 
-exports[`SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcmundo"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
 
-exports[`SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
+exports[`Story Page canonical SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
-exports[`SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
 
-exports[`SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@bbcmundo"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcmundo"`;
 
-exports[`SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
 
-exports[`SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
-exports[`SEO & Social Media Metadata dir attribute 1`] = `"ltr"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
-exports[`SEO & Social Media Metadata heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@bbcmundo"`;
 
-exports[`SEO & Social Media Metadata lang attribute 1`] = `"es"`;
+exports[`Story Page canonical SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
 
-exports[`SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+exports[`Story Page canonical SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
-exports[`SEO & Social Media Metadata title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+exports[`Story Page canonical SEO & Social Media Metadata dir attribute 1`] = `"ltr"`;
 
-exports[`a11y - Skip to content link 1`] = `"Ir al contenido"`;
+exports[`Story Page canonical SEO & Social Media Metadata heading level 1 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
+
+exports[`Story Page canonical SEO & Social Media Metadata lang attribute 1`] = `"es"`;
+
+exports[`Story Page canonical SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Story Page canonical SEO & Social Media Metadata title 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea - BBC News Mundo"`;
+
+exports[`Story Page canonical a11y I can see the skip to content link 1`] = `"Ir al contenido"`;

@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`AMP ATI analytics 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=70&p=pidgin.articles.cwl08rd38l6o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:cwl08rd38l6o]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[This+is+the+SEO+headline+of+this+test+article]&x11=[2019-07-12T13:00:04.940Z]&x12=[2019-09-27T15:56:33.775Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
-
-exports[`AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
-
-exports[`AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
