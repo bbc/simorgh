@@ -55,8 +55,8 @@ describe('Index Alsos', () => {
       );
 
       const firstListItem = container.querySelector('li');
-      const healine = firstListItem.getElementsByTagName('span')[2].innerHTML;
-      expect(healine).toEqual('APC ba ta isa ta kore ni ba – Buba Galadima');
+      const headline = firstListItem.getElementsByTagName('span')[2].innerHTML;
+      expect(headline).toEqual('APC ba ta isa ta kore ni ba – Buba Galadima');
     });
 
     it('should render an overtyped headline', () => {
