@@ -1,8 +1,3 @@
-/**
- * @service pidgin
- * @pathname /pidgin/tori-51745682
- */
-
 import runA11yTests from '../../common/a11y';
 import runHeaderTests from '../../common/header';
 import runFootertests from '../../common/footer';
@@ -21,15 +16,13 @@ it('Image with caption', () => {
   );
   const imageCaptionEl = document.querySelector('main figure figcaption');
 
-  expect(imageEl).toBeInTheDocument();
-  expect(imageEl).toBeTruthy();
-  expect(imageEl.getAttribute('src')).toMatchInlineSnapshot(
-    `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`,
-  );
+  if (imageEl && imageCaptionEl) {
+    expect(imageEl).toBeInTheDocument();
+    expect(imageEl).toBeTruthy();
+    expect(imageEl.getAttribute('src')).toMatchInlineSnapshot();
 
-  expect(imageCaptionEl).toBeInTheDocument();
-  expect(imageCaptionEl.textContent).toBeTruthy();
-  expect(imageCaptionEl.textContent).toMatchInlineSnapshot(
-    `"Wetin we call dis foto, APC Chairman Adams Oshiomhole don be Govnor of Edo State before"`,
-  );
+    expect(imageCaptionEl).toBeInTheDocument();
+    expect(imageCaptionEl.textContent).toBeTruthy();
+    expect(imageCaptionEl.textContent).toMatchInlineSnapshot();
+  }
 });
