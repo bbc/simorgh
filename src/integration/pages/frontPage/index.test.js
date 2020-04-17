@@ -1,3 +1,8 @@
+/**
+ * @service arabic
+ * @pathname /arabic
+ */
+
 import runA11yTests from '../../common/a11y';
 import runHeaderTests from '../../common/header';
 import runFootertests from '../../common/footer';
