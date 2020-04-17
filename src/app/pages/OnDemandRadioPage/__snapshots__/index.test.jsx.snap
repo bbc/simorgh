@@ -266,6 +266,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 .c1 {
   width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 @supports (display:grid) {
@@ -533,6 +537,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 .c1 {
   width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 @supports (display:grid) {
@@ -965,6 +973,10 @@ exports[`OnDemand Radio Page  should not show the audio player if it is not avai
 
 .c1 {
   width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 @supports (display:grid) {
@@ -1189,6 +1201,10 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 .c1 {
   width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 @supports (display:grid) {
