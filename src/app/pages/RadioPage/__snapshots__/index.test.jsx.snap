@@ -249,6 +249,10 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 
 .c1 {
   width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 @supports (display:grid) {
@@ -494,6 +498,10 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 
 .c1 {
   width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .c7 {
