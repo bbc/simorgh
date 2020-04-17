@@ -1,7 +1,12 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { string, bool } from 'prop-types';
 import {
   CanonicalMediaPlayer,
@@ -29,22 +34,17 @@ const getMediaInfo = (assetId) => ({
 const getMasterBrand = (masterBrand, liveRadioIdOverrides) =>
   pathOr(masterBrand, ['masterBrand', masterBrand], liveRadioIdOverrides);
 
-const OuterWrapper = styled.div`
-  @media (min-width: 63rem) {
-    display: flex;
-    justify-content: center;
+const AudioPlayerWrapper = styled.div`
+  width: calc(100% + ${GEL_SPACING_DBL});
+  margin: 0 -${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(100% + ${GEL_SPACING_QUAD});
+    margin: 0 -${GEL_SPACING_DBL};
   }
 `;
 
-const InnerWrapper = styled.div`
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - ${GEL_SPACING_QUAD});
-`;
-
-const MediaMessageWrapper = styled(InnerWrapper)`
+const MediaMessageWrapper = styled.div`
   position: relative;
-  overflow: hidden;
   min-height: 165px;
   margin-bottom: ${GEL_SPACING_QUAD};
 `;
@@ -77,11 +77,9 @@ const AudioPlayer = ({
     );
 
     return (
-      <OuterWrapper>
-        <MediaMessageWrapper>
-          <MediaMessage service={service} message={expiredContentMessage} />
-        </MediaMessageWrapper>
-      </OuterWrapper>
+      <MediaMessageWrapper>
+        <MediaMessage service={service} message={expiredContentMessage} />
+      </MediaMessageWrapper>
     );
   }
 
@@ -105,33 +103,31 @@ const AudioPlayer = ({
   );
 
   return (
-    <OuterWrapper>
-      <InnerWrapper>
-        {isAmp ? (
-          <AmpMediaPlayer
-            placeholderSrc={audioPlaceholderImageSrc}
-            src={embedUrl}
-            title={iframeTitle}
-            id={idAttr}
-            skin="audio"
-            noJsMessage={noJsMessage}
-            service={service}
-          />
-        ) : (
-          <CanonicalMediaPlayer
-            showPlaceholder={false}
-            src={embedUrl}
-            title={iframeTitle}
-            id={idAttr}
-            skin="audio"
-            service={service}
-            mediaInfo={mediaInfo}
-            noJsMessage={noJsMessage}
-            noJsClassName="no-js"
-          />
-        )}
-      </InnerWrapper>
-    </OuterWrapper>
+    <AudioPlayerWrapper>
+      {isAmp ? (
+        <AmpMediaPlayer
+          placeholderSrc={audioPlaceholderImageSrc}
+          src={embedUrl}
+          title={iframeTitle}
+          id={idAttr}
+          skin="audio"
+          noJsMessage={noJsMessage}
+          service={service}
+        />
+      ) : (
+        <CanonicalMediaPlayer
+          showPlaceholder={false}
+          src={embedUrl}
+          title={iframeTitle}
+          id={idAttr}
+          skin="audio"
+          service={service}
+          mediaInfo={mediaInfo}
+          noJsMessage={noJsMessage}
+          noJsClassName="no-js"
+        />
+      )}
+    </AudioPlayerWrapper>
   );
 };
 

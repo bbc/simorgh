@@ -63,7 +63,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       <h2
                         class="Heading-sc-1x4gwjz-2 eZofTG"
                       >
-                        <div
+                        <span
                           class="FlexColumn-wx5kdp-0 dgpsiS"
                         >
                           <span
@@ -77,7 +77,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               Top tori
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <div
@@ -202,7 +202,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       <h2
                         class="Heading-sc-1x4gwjz-2 eZofTG"
                       >
-                        <div
+                        <span
                           class="FlexColumn-wx5kdp-0 dgpsiS"
                         >
                           <span
@@ -216,7 +216,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               2018 World Cup
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <ul
@@ -723,7 +723,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                       <h2
                         class="Heading-sc-1x4gwjz-2 eZofTG"
                       >
-                        <div
+                        <span
                           class="FlexColumn-wx5kdp-0 dgpsiS"
                         >
                           <span
@@ -737,7 +737,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               De one we dem de read well well
                             </span>
                           </span>
-                        </div>
+                        </span>
                       </h2>
                     </div>
                     <div
