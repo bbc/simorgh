@@ -7,6 +7,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     const { platform } = config.testEnvironmentOptions;
     const { pathname, service } = context.docblockPragmas;
 
+    this.platform = platform;
     this.service = service;
     this.url = `http://localhost:7080${pathname}${
       platform === 'amp' ? '.amp' : ''
@@ -23,6 +24,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         service: { value: this.service },
         window: { value: dom.window },
         document: { value: dom.window.document },
+        platform: { value: this.platform },
       });
     } catch (e) {
       console.error(e);

@@ -1,13 +1,8 @@
-/**
- * @service mundo
- * @pathname /mundo/noticias-internacional-51266689
- */
-
 import { runCommonCrossPlatformTests } from '../../common';
 
-runCommonCrossPlatformTests();
+export default () => {
+  runCommonCrossPlatformTests();
 
-describe('Story page', () => {
   it('I can see an image with a caption', () => {
     const imageEl = document.querySelector(
       'main figure img, main figure amp-img',
@@ -15,10 +10,11 @@ describe('Story page', () => {
     const imageCaptionEl = document.querySelector('main figure figcaption');
 
     expect(imageEl).toBeInTheDocument();
+    expect(imageEl).toBeTruthy();
+    expect(imageEl.getAttribute('src')).toMatchSnapshot();
+
     expect(imageCaptionEl).toBeInTheDocument();
     expect(imageCaptionEl.textContent).toBeTruthy();
-    expect(imageCaptionEl.textContent).toMatchInlineSnapshot(
-      `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`,
-    );
+    expect(imageCaptionEl.textContent).toMatchSnapshot();
   });
-});
+};

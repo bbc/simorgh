@@ -1,11 +1,6 @@
-/**
- * @service korean
- * @pathname /korean/bbc_korean_radio/liveradio
- */
-
 import { runCommonCrossPlatformTests, runMediaPlayerTests } from '../../common';
 
-describe('Live Radio', () => {
+export default () => {
   runCommonCrossPlatformTests();
   runMediaPlayerTests();
 
@@ -14,7 +9,7 @@ describe('Live Radio', () => {
 
     expect(h1El).toBeInTheDocument();
     expect(h1El).toBeTruthy();
-    expect(h1El.textContent).toMatchInlineSnapshot(`"BBC 코리아 라디오"`);
+    expect(h1El.textContent).toMatchSnapshot();
   });
 
   it('I can see the summary', () => {
@@ -22,16 +17,12 @@ describe('Live Radio', () => {
 
     expect(summaryEl).toBeInTheDocument();
     expect(summaryEl).toBeTruthy();
-    expect(summaryEl.textContent).toMatchInlineSnapshot(
-      `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`,
-    );
+    expect(summaryEl.textContent).toMatchSnapshot();
   });
 
   it('I can see the audio player embed', () => {
     const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
 
-    expect(audioPlayerIframe.getAttribute('src')).toMatchInlineSnapshot(
-      `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"`,
-    );
+    expect(audioPlayerIframe.getAttribute('src')).toMatchSnapshot();
   });
-});
+};

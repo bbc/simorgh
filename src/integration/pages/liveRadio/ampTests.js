@@ -1,11 +1,6 @@
-/**
- * @service korean
- * @pathname /korean/bbc_korean_radio/liveradio
- */
-
 import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
 
-describe('AMP Live Radio', () => {
+export default () => {
   runCoreAmpTests();
   runAmpAnalyticsTests();
 
@@ -16,4 +11,4 @@ describe('AMP Live Radio', () => {
 
     expect(audioPlaceholderImage).toBeInTheDocument();
   });
-});
+};

@@ -1,11 +1,6 @@
-/**
- * @service pidgin
- * @pathname /pidgin
- */
-
 import { runCommonCrossPlatformTests } from '../../common';
 
-describe('Front page', () => {
+export default () => {
   runCommonCrossPlatformTests();
 
   it('I can see at least one section', () => {
@@ -13,4 +8,4 @@ describe('Front page', () => {
 
     expect(sect).toBeInTheDocument();
   });
-});
+};

@@ -1,14 +1,9 @@
-/**
- * @service pidgin
- * @pathname /pidgin
- */
-
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
 } from '../../common';
 
-describe('Canonical Front page', () => {
+export default () => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
-});
+};
