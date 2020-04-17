@@ -34,9 +34,11 @@ const IncludeContainer = ({ html = '', type }) => {
         const [srcContent] = Array.from(textContent.matchAll(srcRegex));
         if (srcContent) {
           const [src] = srcContent.slice(-1);
-          // eslint-disable-next-line no-await-in-loop
-          await createAppendScriptBySrc('', src);
-        } else {
+          if (src) {
+            // eslint-disable-next-line no-await-in-loop
+            await createAppendScriptBySrc(src);
+          }
+        } else if (contents) {
           // eslint-disable-next-line no-await-in-loop
           await createAppendScriptByCode(contents);
         }
