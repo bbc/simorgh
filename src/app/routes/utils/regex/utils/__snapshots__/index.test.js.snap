@@ -6,6 +6,8 @@ exports[`regex utils snapshots should create expected regex from getArticleRegex
 
 exports[`regex utils snapshots should create expected regex from getArticleSwRegex 1`] = `"/:service(news|persian|igbo)/:local(articles|erthyglau|sgeulachdan)/sw.js"`;
 
+exports[`regex utils snapshots should create expected regex from getCatchAllServicePath 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?:pathparam(.{0,}):amp(.amp)?"`;
+
 exports[`regex utils snapshots should create expected regex from getCpsAssetRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/:assetUri([a-z-_]{0,}[0-9]{8,}):amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getErrorPageRegex 1`] = `"/:service(news|persian|igbo)/:errorCode(404|500):variant(/simp|/trad|/cyr|/lat)?"`;

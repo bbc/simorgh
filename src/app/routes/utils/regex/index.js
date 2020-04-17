@@ -6,11 +6,9 @@ import {
   getFrontPageRegex,
   getSwRegex,
   getManifestRegex,
-  getCpsAssetRegex,
   getLiveRadioRegex,
   getRadioAndTVRegex,
   getErrorPageRegex,
-  getLegacyAssetRegex,
   getCatchAllServicePath,
 } from './utils';
 
@@ -31,9 +29,6 @@ export const frontPageDataPath = `${frontPagePath}.json`;
 export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);
 
-export const cpsAssetPagePath = getCpsAssetRegex(allServices);
-export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
-
 export const catchAllServicePath = getCatchAllServicePath(allServices);
 export const catchAllServiceDataPath = `${catchAllServicePath}.json`;
 
@@ -45,6 +40,3 @@ export const radioAndTvDataPath = `${radioAndTvPath}.json`;
 
 export const errorPagePath = getErrorPageRegex(allServices);
 export const mostReadDataRegexPath = `/:service(${serviceRegex})/${mostRead}:variant(${variantRegex})?.json`;
-
-export const legacyAssetPagePath = getLegacyAssetRegex(allServices);
-export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;

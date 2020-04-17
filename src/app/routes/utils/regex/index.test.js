@@ -4,17 +4,15 @@ import {
   articleDataPath,
   articleSwPath,
   articleManifestPath,
+  catchAllServicePath,
+  catchAllServiceDataPath,
   frontPagePath,
   frontPageDataPath,
   frontPageManifestPath,
   frontPageSwPath,
-  cpsAssetPagePath,
-  cpsAssetPageDataPath,
   liveRadioPath,
   radioAndTvPath,
   mostReadDataRegexPath,
-  legacyAssetPagePath,
-  legacyAssetPageDataPath,
 } from './index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -289,8 +287,8 @@ describe('liveRadioRegexPathsArray', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, liveRadioPath);
 });
 
-describe('cpsAssetPagePath', () => {
-  const validRoutes = [
+describe('catchAllServicePath', () => {
+  const validCpsRoutes = [
     '/pidgin/12345678',
     '/pidgin/12345678.amp',
     '/pidgin/tori-49450859',
@@ -306,26 +304,21 @@ describe('cpsAssetPagePath', () => {
     '/zhongwen/simp/test-12345678.amp',
   ];
 
-  shouldMatchValidRoutes(validRoutes, cpsAssetPagePath);
+  shouldMatchValidRoutes(validCpsRoutes, catchAllServicePath);
 
-  // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
-  const inValidRoutes = [
-    '/pidgin/1234567',
-    '/pidgin/12345678/.amp',
-    '/blah/12345678',
-    '/pidgin/test-494859',
-    '/blah/test-49450859',
-    '/pidgin/test-49450859/.amp',
-    '/pidgin/test-49450859/',
-    '/pidgin/test-494859.amp',
-    // Below are legacy asset routes - should not match CPS routes
+  const validLegacyAssetRoutes = [
     '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
     '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
+    '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
   ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPagePath);
+
+  shouldMatchValidRoutes(validLegacyAssetRoutes, catchAllServicePath);
+
+  const inValidRoutes = ['/blah/12345678', '/blah/test-49450859'];
+  shouldNotMatchInvalidRoutes(inValidRoutes, catchAllServiceDataPath);
 });
 
-describe('cpsAssetPageDataPath', () => {
+describe('catchAllServiceDataPath', () => {
   const validRoutes = [
     '/pidgin/12345678.json',
     '/pidgin/test-49450859.json',
@@ -335,55 +328,15 @@ describe('cpsAssetPageDataPath', () => {
     '/zhongwen/trad/test-12345678.json',
   ];
 
-  shouldMatchValidRoutes(validRoutes, cpsAssetPageDataPath);
+  shouldMatchValidRoutes(validRoutes, catchAllServiceDataPath);
 
-  // According to CPS a valid assetUri should have 8 digits or more and CPS index is optional
-  const inValidRoutes = [
-    '/pidgin/1234567.json',
-    '/pidgin/12345678',
-    '/pidgin/test-494859.json',
-    '/blah/test-49450859.json',
-    '/pidgin/test-49450859',
-    '/pidgin/test-49450859/.json',
-    '/pidgin/test-494859.amp.json',
-    // Below are legacy asset routes - should not match CPS routes
-    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl.json',
-    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery.json',
-  ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, cpsAssetPageDataPath);
-});
-
-describe('legacyAssetPagePath', () => {
-  const validRoutes = [
-    '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl',
-    '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery',
-    '/zhongwen/simp/multimedia/2016/05/160511_vid_cultural_revolution_explainer',
-  ];
-
-  shouldMatchValidRoutes(validRoutes, legacyAssetPagePath);
-
-  const inValidRoutes = [
-    // Must be a 4 digit year after category
-    '/sinhala/category/15/02/150218_mahinda_rally_sl',
-    // Asset URI begin with a 6 digit date
-    '/hausa/multimedia/2014/05/hip_hop_40years_gallery',
-  ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, legacyAssetPagePath);
-});
-
-describe('legacyAssetPageDataPath', () => {
-  const validRoutes = [
+  const validLegacyAssetRoutes = [
     '/sinhala/sri_lanka/2015/02/150218_mahinda_rally_sl.json',
     '/hausa/multimedia/2014/05/140528_hip_hop_40years_gallery.json',
   ];
 
-  shouldMatchValidRoutes(validRoutes, legacyAssetPageDataPath);
+  shouldMatchValidRoutes(validLegacyAssetRoutes, catchAllServiceDataPath);
 
-  const inValidRoutes = [
-    // Must be a 4 digit year after category
-    '/sinhala/category/15/02/150218_mahinda_rally_sl.json',
-    // Asset URI begin with a 6 digit date
-    '/hausa/multimedia/2014/05/hip_hop_40years_gallery.json',
-  ];
-  shouldNotMatchInvalidRoutes(inValidRoutes, legacyAssetPageDataPath);
+  const inValidRoutes = ['/blah/test-49450859.json'];
+  shouldNotMatchInvalidRoutes(inValidRoutes, catchAllServiceDataPath);
 });
