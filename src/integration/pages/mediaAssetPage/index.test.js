@@ -1,3 +1,8 @@
+/**
+ * @service pidgin
+ * @pathname /pidgin/23248703
+ */
+
 import runA11yTests from '../../common/a11y';
 import runHeaderTests from '../../common/header';
 import runFootertests from '../../common/footer';
@@ -15,7 +20,9 @@ it('Headline', () => {
 
   expect(h1El).toBeInTheDocument();
   expect(h1El).toBeTruthy();
-  expect(h1El.textContent).toMatchInlineSnapshot();
+  expect(h1El.textContent).toMatchInlineSnapshot(
+    `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`,
+  );
 });
 
 it('Timestamp', () => {
@@ -23,7 +30,7 @@ it('Timestamp', () => {
 
   expect(timestampEl).toBeInTheDocument();
   expect(timestampEl.textContent).toBeTruthy();
-  expect(timestampEl.textContent).toMatchInlineSnapshot();
+  expect(timestampEl.textContent).toMatchInlineSnapshot(`"13 September 2019"`);
 });
 
 it('Bulleted List Item', () => {
@@ -32,7 +39,12 @@ it('Bulleted List Item', () => {
   if (bulletedListEl) {
     expect(bulletedListEl).toBeInTheDocument();
     expect(bulletedListEl.textContent).toBeTruthy();
-    expect(bulletedListEl.textContent).toMatchInlineSnapshot();
+    expect(bulletedListEl.textContent).toMatchInlineSnapshot(`
+      <Media asset
+             page
+      >
+      </Media>
+    `);
   }
 });
 
@@ -42,6 +54,8 @@ it('Related Content', () => {
   if (relatedContentListEl) {
     expect(relatedContentListEl).toBeInTheDocument();
     expect(relatedContentListEl.textContent).toBeTruthy();
-    expect(relatedContentListEl.textContent).toMatchInlineSnapshot();
+    expect(relatedContentListEl.textContent).toMatchInlineSnapshot(
+      `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017"`,
+    );
   }
 });
