@@ -1,53 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
-
-exports[`Dir attribute 1`] = `"ltr"`;
-
-exports[`FB admins 1`] = `"100004154058350"`;
-
-exports[`FB app ID 1`] = `"1609039196070050"`;
-
 exports[`Footer Copyright 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Header Branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
 
-exports[`Lang attribute 1`] = `"pcm"`;
+exports[`SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
 
-exports[`OG description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+exports[`SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
 
-exports[`OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
 
-exports[`OG image alt 1`] = `"connectionAltText"`;
+exports[`SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
-exports[`OG locale 1`] = `"pcm"`;
+exports[`SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"connectionAltText"`;
 
-exports[`OG site name 1`] = `"BBC News Pidgin"`;
+exports[`SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"pcm"`;
 
-exports[`OG title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Pidgin"`;
 
-exports[`OG type 1`] = `"article"`;
+exports[`SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
 
-exports[`OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
+exports[`SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
 
-exports[`Page title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
 
-exports[`Skip to content link 1`] = `"Waka go wetin de inside"`;
+exports[`SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCNews"`;
 
-exports[`Twitter card 1`] = `"summary_large_image"`;
+exports[`SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
 
-exports[`Twitter creator 1`] = `"@BBCNews"`;
+exports[`SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"connectionAltText"`;
 
-exports[`Twitter description 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+exports[`SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
-exports[`Twitter image alt 1`] = `"connectionAltText"`;
+exports[`SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@BBCNews"`;
 
-exports[`Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
 
-exports[`Twitter site 1`] = `"@BBCNews"`;
+exports[`SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Twitter title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`SEO & Social Media Metadata dir attribute 1`] = `"ltr"`;
+
+exports[`SEO & Social Media Metadata heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+
+exports[`SEO & Social Media Metadata lang attribute 1`] = `"pcm"`;
+
+exports[`SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`SEO & Social Media Metadata title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+
+exports[`a11y - Skip to content link 1`] = `"Waka go wetin de inside"`;

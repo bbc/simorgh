@@ -1,5 +1,5 @@
 export default () => {
-  it('Skip to content link', () => {
+  it('a11y - Skip to content link', () => {
     const skipToContentEl = document.querySelector('[href="#content"]');
     const h1El = document.querySelector('h1');
 
