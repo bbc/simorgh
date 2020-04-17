@@ -13,19 +13,16 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
   padding: 2rem 0;
 }
 
-.c4 {
+.c3 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c3 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c2 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c1 {
@@ -60,21 +57,15 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width:25rem) {
   .c2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -120,30 +111,26 @@ exports[`Radio Page Blocks should match snapshot for AMP 1`] = `
         <div
           class="c3"
         >
-          <div
-            class="c4"
+          <amp-iframe
+            allowfullscreen="allowfullscreen"
+            frameborder="0"
+            layout="fill"
+            sandbox="allow-scripts allow-same-origin"
+            scrolling="no"
+            src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+            title="Audio player"
           >
-            <amp-iframe
-              allowfullscreen="allowfullscreen"
-              frameborder="0"
+            <amp-img
+              alt=""
+              attribution=""
+              height="16"
               layout="fill"
-              sandbox="allow-scripts allow-same-origin"
-              scrolling="no"
-              src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
-              title="Audio player"
-            >
-              <amp-img
-                alt=""
-                attribution=""
-                height="16"
-                layout="fill"
-                placeholder="true"
-                src="http://localhost:7080/images/amp_audio_placeholder.png"
-                width="9"
-              />
-              <noscript />
-            </amp-iframe>
-          </div>
+              placeholder="true"
+              src="http://localhost:7080/images/amp_audio_placeholder.png"
+              width="9"
+            />
+            <noscript />
+          </amp-iframe>
         </div>
       </div>
     </div>
@@ -164,19 +151,16 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   padding: 2rem 0;
 }
 
-.c4 {
+.c3 {
   height: 165px;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.c3 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 50rem;
-  max-width: calc(100vw - 2rem);
+.c2 {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
 }
 
 .c1 {
@@ -190,7 +174,7 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.c5 {
+.c4 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -221,21 +205,15 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
 }
 
 @media (min-width:63rem) {
-  .c4 {
+  .c3 {
     margin-bottom: 2rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width:25rem) {
   .c2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
   }
 }
 
@@ -272,19 +250,15 @@ exports[`Radio Page Blocks should match snapshot for Canonical 1`] = `
     <div
       class="c3"
     >
-      <div
+      <iframe
+        allow="autoplay; fullscreen"
+        allowfullscreen=""
         class="c4"
-      >
-        <iframe
-          allow="autoplay; fullscreen"
-          allowfullscreen=""
-          class="c5"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
-          title="Audio player"
-        />
-        <noscript />
-      </div>
+        scrolling="no"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+        title="Audio player"
+      />
+      <noscript />
     </div>
   </div>
 </div>
