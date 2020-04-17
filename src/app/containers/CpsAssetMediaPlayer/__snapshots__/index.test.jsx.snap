@@ -123,11 +123,6 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
     <script
       type="application/ld+json"
     >
-      {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/123456789/p01kx42v/en-GB/amp"}
-    </script>
-    <script
-      type="application/ld+json"
-    >
       {"@context":"http://schema.org","@type":"VideoObject","name":"alt-text world service clip","description":"short","duration":"PT5S","thumbnailUrl":"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg","uploadDate":"2018-12-20T11:06:51.000Z","embedURL":"https://polling.test.bbc.co.uk/ws/av-embeds/cps/russian/multimedia/2016/05/160505_v_diving_record/p01kx42v/en-GB"}
     </script>
   </head>
