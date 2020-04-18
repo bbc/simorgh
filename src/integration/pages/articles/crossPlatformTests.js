@@ -15,6 +15,8 @@ export default () => {
 
     expect(imageCaptionEl).toBeInTheDocument();
     expect(imageCaptionEl.textContent).toBeTruthy();
-    expect(imageCaptionEl.textContent).toMatchSnapshot();
+    expect(imageCaptionEl.textContent).toMatchInlineSnapshot(
+      `"Pie de foto, Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título."`,
+    );
   });
 };

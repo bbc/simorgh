@@ -26,7 +26,7 @@ export default () => {
     const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
 
     expect(audioPlayerIframe.getAttribute('src')).toMatchInlineSnapshot(
-      `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"`,
+      `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"`,
     );
   });
 };
