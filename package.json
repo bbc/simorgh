@@ -34,7 +34,7 @@
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
-    "test:integration": "./scripts/killApp.sh && npm run build && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --ci --runInBand --colors ./src/integration/pages/**/*",
+    "test:integration": "./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --runInBand --colors ./src/integration/pages/**/*",
     "test:integration:ci": "jest --ci --runInBand --colors ./src/integration/pages/**/*",
     "test:integration:watch": "npm run test:integration -- --watch",
     "test:integration:all-services": "npm run build:test:integration:all-services && ./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --ci --runInBand --colors ./src/integration/__full_service_regression_tests__/__GENERATED_TEST_FILES__/**/*",

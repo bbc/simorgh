@@ -6,20 +6,14 @@ import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe('Story Page', () => {
-  describe(platform, () => {
-    runCrossPlatformTests();
-  });
+describe(`Story Page - ${platform} - `, () => {
+  runCrossPlatformTests();
 
   if (platform === 'amp') {
-    describe(platform, () => {
-      runAmpTests();
-    });
+    runAmpTests();
   }
 
   if (platform === 'canonical') {
-    describe(platform, () => {
-      runCanonicalTests();
-    });
+    runCanonicalTests();
   }
 });

@@ -31,6 +31,7 @@ const ampIntegrationTests = {
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/**/*.test.js'],
+  snapshotResolver: './src/integration/snapshotResolver.amp.js',
 };
 
 const canonicalIntegrationTests = {
@@ -41,6 +42,7 @@ const canonicalIntegrationTests = {
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/**/*.test.js'],
+  snapshotResolver: './src/integration/snapshotResolver.canonical.js',
 };
 
 module.exports = {

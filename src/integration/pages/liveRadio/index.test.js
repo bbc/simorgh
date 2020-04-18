@@ -7,20 +7,14 @@ import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe('Live Radio Page', () => {
-  describe(platform, () => {
-    runCrossPlatformTests();
-  });
+describe(`Live Radio Page - ${platform} - `, () => {
+  runCrossPlatformTests();
 
   if (platform === 'amp') {
-    describe(platform, () => {
-      runAmpTests();
-    });
+    runAmpTests();
   }
 
   if (platform === 'canonical') {
-    describe(platform, () => {
-      runCanonicalTests();
-    });
+    runCanonicalTests();
   }
 });

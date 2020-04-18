@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Page - canonical -  A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
+
+exports[`Article Page - canonical -  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
+
+exports[`Article Page - canonical -  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+
+exports[`Article Page - canonical -  Header I can see the branding 1`] = `"BBC News, Mundo"`;
+
+exports[`Article Page - canonical -  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`Article Page - canonical -  SEO Canonical link 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+
+exports[`Article Page - canonical -  SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Article Page - canonical -  SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Article Page - canonical -  SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Article Page - canonical -  SEO Heading level 1 1`] = `"Este es el titular de este artículo de prueba."`;
+
+exports[`Article Page - canonical -  SEO Lang attribute 1`] = `"es"`;
+
+exports[`Article Page - canonical -  SEO OG description 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+
+exports[`Article Page - canonical -  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+
+exports[`Article Page - canonical -  SEO OG image alt 1`] = `"BBC News Mundo"`;
+
+exports[`Article Page - canonical -  SEO OG locale 1`] = `"es-005"`;
+
+exports[`Article Page - canonical -  SEO OG site name 1`] = `"BBC News Mundo"`;
+
+exports[`Article Page - canonical -  SEO OG title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+
+exports[`Article Page - canonical -  SEO OG type 1`] = `"article"`;
+
+exports[`Article Page - canonical -  SEO OG url 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+
+exports[`Article Page - canonical -  SEO Page title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+
+exports[`Article Page - canonical -  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Article Page - canonical -  SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Article Page - canonical -  SEO Twitter creator 1`] = `"@bbcmundo"`;
+
+exports[`Article Page - canonical -  SEO Twitter description 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+
+exports[`Article Page - canonical -  SEO Twitter image alt 1`] = `"BBC News Mundo"`;
+
+exports[`Article Page - canonical -  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+
+exports[`Article Page - canonical -  SEO Twitter site 1`] = `"@bbcmundo"`;
+
+exports[`Article Page - canonical -  SEO Twitter title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
