@@ -17,7 +17,7 @@ const servicesConfig = require('../../../cypress/support/config/services');
 const GENERATED_TEST_FILES_DIR = '__GENERATED_TEST_FILES__';
 
 rimraf.sync(path.join(__dirname, GENERATED_TEST_FILES_DIR));
-console.log(path.join(__dirname, '..'));
+const generatedTestDir = path.join('.', GENERATED_TEST_FILES_DIR);
 
 const buildIntegrationTests = async ({
   service,
@@ -56,6 +56,15 @@ const buildIntegrationTests = async ({
               _node.source.value = `../../${variant ? '../' : ''}${
                 _node.source.value
               }`;
+            }
+            if (/^\.\//.test(_node.source.value)) {
+              const importFile = _node.source.value.substring(2);
+              const relativePath = path.relative(
+                generatedTestDir,
+                `../pages/${pageType}/`,
+              );
+              const replaceImport = `../../${relativePath}/${importFile}`;
+              _node.source.value = `${variant ? '../' : ''}${replaceImport}`;
             }
           },
         });
