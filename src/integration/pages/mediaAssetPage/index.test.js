@@ -7,7 +7,7 @@ import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe(`Media Asset Page - ${platform} -`, () => {
+describe(`Media Asset Page -`, () => {
   runCrossPlatformTests();
 
   if (platform === 'amp') {

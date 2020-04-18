@@ -7,7 +7,7 @@ import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe(`Live Radio Page - ${platform} -`, () => {
+describe(`Live Radio Page -`, () => {
   runCrossPlatformTests();
 
   if (platform === 'amp') {
