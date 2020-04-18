@@ -1,55 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Front Page - canonical -  A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
-
-exports[`Front Page - canonical -  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
+exports[`Front Page - canonical -  Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=5&p=arabic.page&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[responsive]&x3=[news-arabic]&x4=[ar]&x7=[index-home]&x8=[simorgh-nojs]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]"`;
 
 exports[`Front Page - canonical -  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Front Page - canonical -  Header I can see the branding 1`] = `"BBC News, عربي"`;
 
-exports[`Front Page - canonical -  SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
 
-exports[`Front Page - canonical -  SEO Dir attribute 1`] = `"rtl"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
 
-exports[`Front Page - canonical -  SEO FB admins 1`] = `"100004154058350"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
 
-exports[`Front Page - canonical -  SEO FB app ID 1`] = `"1609039196070050"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
 
-exports[`Front Page - canonical -  SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
-exports[`Front Page - canonical -  SEO Lang attribute 1`] = `"ar"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News عربي"`;
 
-exports[`Front Page - canonical -  SEO OG description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"ar"`;
 
-exports[`Front Page - canonical -  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News عربي"`;
 
-exports[`Front Page - canonical -  SEO OG image alt 1`] = `"BBC News عربي"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Front Page - canonical -  SEO OG locale 1`] = `"ar"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
 
-exports[`Front Page - canonical -  SEO OG site name 1`] = `"BBC News عربي"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/arabic"`;
 
-exports[`Front Page - canonical -  SEO OG title 1`] = `"الرئيسية - BBC News عربي"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
 
-exports[`Front Page - canonical -  SEO OG type 1`] = `"website"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCArabic"`;
 
-exports[`Front Page - canonical -  SEO OG url 1`] = `"http://localhost:7080/arabic"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
 
-exports[`Front Page - canonical -  SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News عربي"`;
 
-exports[`Front Page - canonical -  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
 
-exports[`Front Page - canonical -  SEO Twitter card 1`] = `"summary_large_image"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@BBCArabic"`;
 
-exports[`Front Page - canonical -  SEO Twitter creator 1`] = `"@BBCArabic"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"الرئيسية - BBC News عربي"`;
 
-exports[`Front Page - canonical -  SEO Twitter description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/arabic"`;
 
-exports[`Front Page - canonical -  SEO Twitter image alt 1`] = `"BBC News عربي"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata dir attribute 1`] = `"rtl"`;
 
-exports[`Front Page - canonical -  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
 
-exports[`Front Page - canonical -  SEO Twitter site 1`] = `"@BBCArabic"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata lang attribute 1`] = `"ar"`;
 
-exports[`Front Page - canonical -  SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
+exports[`Front Page - canonical -  SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - canonical -  SEO & Social Media Metadata title 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`Front Page - canonical -  a11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;

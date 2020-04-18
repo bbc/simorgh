@@ -1,67 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Live Radio Page - amp -  A11y I can see the skip to content link 1`] = `"내용 보기"`;
+exports[`Live Radio Page - amp -  AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=57&p=korean.bbc_korean_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_korean_radio]&x2=[amp]&x3=[news-korean]&x4=[ko]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[BBC+코리아+라디오+-+BBC+News+코리아]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
 
 exports[`Live Radio Page - amp -  Core AMP AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
 
 exports[`Live Radio Page - amp -  Core AMP AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
 
-exports[`Live Radio Page - amp -  Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
-
 exports[`Live Radio Page - amp -  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`Live Radio Page - amp -  Header I can see the branding 1`] = `"BBC News, 코리아"`;
-
-exports[`Live Radio Page - amp -  I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"`;
 
 exports[`Live Radio Page - amp -  I can see the headline 1`] = `"BBC 코리아 라디오"`;
 
 exports[`Live Radio Page - amp -  I can see the summary 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
 
-exports[`Live Radio Page - amp -  Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"`;
+exports[`Live Radio Page - amp -  Media player I can see an iframe with url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"`;
 
-exports[`Live Radio Page - amp -  SEO Canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
+exports[`Live Radio Page - amp -  Media player a11y assistive technology can read the media player title 1`] = `"오디오 플레이어"`;
 
-exports[`Live Radio Page - amp -  SEO Dir attribute 1`] = `"ltr"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
 
-exports[`Live Radio Page - amp -  SEO FB admins 1`] = `"100004154058350"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
 
-exports[`Live Radio Page - amp -  SEO FB app ID 1`] = `"1609039196070050"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
 
-exports[`Live Radio Page - amp -  SEO Heading level 1 1`] = `"BBC 코리아 라디오"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
 
-exports[`Live Radio Page - amp -  SEO Lang attribute 1`] = `"ko"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"`;
 
-exports[`Live Radio Page - amp -  SEO OG description 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News 코리아"`;
 
-exports[`Live Radio Page - amp -  SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"ko-KO"`;
 
-exports[`Live Radio Page - amp -  SEO OG image alt 1`] = `"BBC News 코리아"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News 코리아"`;
 
-exports[`Live Radio Page - amp -  SEO OG locale 1`] = `"ko-KO"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
 
-exports[`Live Radio Page - amp -  SEO OG site name 1`] = `"BBC News 코리아"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
 
-exports[`Live Radio Page - amp -  SEO OG title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 
-exports[`Live Radio Page - amp -  SEO OG type 1`] = `"website"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
 
-exports[`Live Radio Page - amp -  SEO OG url 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcnews"`;
 
-exports[`Live Radio Page - amp -  SEO Page title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
 
-exports[`Live Radio Page - amp -  SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News 코리아"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter card 1`] = `"summary_large_image"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter creator 1`] = `"@bbcnews"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@bbcnews"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter description 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter image alt 1`] = `"BBC News 코리아"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata dir attribute 1`] = `"ltr"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter site 1`] = `"@bbcnews"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata heading level 1 1`] = `"BBC 코리아 라디오"`;
 
-exports[`Live Radio Page - amp -  SEO Twitter title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata lang attribute 1`] = `"ko"`;
+
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Live Radio Page - amp -  SEO & Social Media Metadata title 1`] = `"BBC 코리아 라디오 - BBC News 코리아"`;
+
+exports[`Live Radio Page - amp -  a11y I can see the skip to content link 1`] = `"내용 보기"`;
