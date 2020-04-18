@@ -4,10 +4,12 @@ export default () => {
   runCoreAmpTests();
   runAmpAnalyticsTests();
 
-  it('I can see the media player placeholder image', () => {
-    const placeholderImage = document.querySelector(`amp-img`);
+  describe('Media Player -', () => {
+    it('I can see the placeholder image', () => {
+      const placeholderImage = document.querySelector(`amp-img`);
 
-    expect(placeholderImage).toBeInTheDocument();
-    expect(placeholderImage.getAttribute('src')).toMatchSnapshot();
+      expect(placeholderImage).toBeInTheDocument();
+      expect(placeholderImage.getAttribute('src')).toMatchSnapshot();
+    });
   });
 };
