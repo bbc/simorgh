@@ -17,6 +17,7 @@ const servicesConfig = require('../../../cypress/support/config/services');
 const GENERATED_TEST_FILES_DIR = '__GENERATED_TEST_FILES__';
 
 rimraf.sync(path.join(__dirname, GENERATED_TEST_FILES_DIR));
+console.log(path.join(__dirname, '..'));
 
 const buildIntegrationTests = async ({
   service,
