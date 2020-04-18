@@ -2,6 +2,8 @@
 
 exports[`Live Radio Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=57&p=korean.bbc_korean_radio.liveradio.page&x1=[urn:bbc:ares::ws_live:bbc_korean_radio]&x2=[responsive]&x3=[news-korean]&x4=[ko]&x7=[player-live]&x8=[simorgh-nojs]&x9=[BBC+코리아+라디오+-+BBC+News+코리아]"`;
 
+exports[`Live Radio Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
+
 exports[`Live Radio Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`Live Radio Page - Header - I can see the branding 1`] = `"BBC News, 코리아"`;
