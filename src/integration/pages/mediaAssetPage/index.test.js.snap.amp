@@ -8,6 +8,8 @@ exports[`Media Asset Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":
 
 exports[`Media Asset Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
+exports[`Media Asset Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Media Asset Page - Footer - I can see a link with title 1`] = `"Why you fit trust BBC News"`;
 
 exports[`Media Asset Page - Footer - I can see a link with title 2`] = `"How dem dey take use am"`;

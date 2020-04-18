@@ -8,6 +8,8 @@ exports[`Article Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"
 
 exports[`Article Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
+exports[`Article Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Article Page - Footer - I can see a link with title 1`] = `"Por qué puedes confiar en la BBC"`;
 
 exports[`Article Page - Footer - I can see a link with title 2`] = `"Términos de uso"`;

@@ -4,6 +4,8 @@ exports[`Front Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host
 
 exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
 exports[`Front Page - Footer - I can see a link with title 1`] = `"لماذا يمكنك الإعتماد على أخبار بي بي سي"`;
 
 exports[`Front Page - Footer - I can see a link with title 2`] = `"شروط الاستخدام"`;
