@@ -8,6 +8,14 @@ exports[`Media Asset Page - canonical -  Footer I can see the footer copyright a
 
 exports[`Media Asset Page - canonical -  Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
+exports[`Media Asset Page - canonical -  I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
+
+exports[`Media Asset Page - canonical -  I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+
+exports[`Media Asset Page - canonical -  I can see the related content 1`] = `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017Lagos 'Gay' men Appear for Court, say Dem no dey GuiltyThe men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.8th August 2017Image gallery, Kenya Elections Pictures: 8 August 2017This na some of the picture wey our eye see as Kenya people go vote for election today8th August 20170:15Audio, BBC News Pidgin One Minute News, 0,15All di local and world tori wey you suppose know in 60 seconds!17th August 2017"`;
+
+exports[`Media Asset Page - canonical -  I can see the timestamp 1`] = `"13 September 2019"`;
+
 exports[`Media Asset Page - canonical -  Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
 
 exports[`Media Asset Page - canonical -  SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;

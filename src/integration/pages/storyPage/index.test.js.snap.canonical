@@ -8,6 +8,8 @@ exports[`Story Page - canonical -  Footer I can see the footer copyright and ext
 
 exports[`Story Page - canonical -  Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
+exports[`Story Page - canonical -  I can see an image with a caption 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
+
 exports[`Story Page - canonical -  SEO Canonical link 1`] = `"http://localhost:7080/mundo/noticias-internacional-51266689"`;
 
 exports[`Story Page - canonical -  SEO Dir attribute 1`] = `"ltr"`;
