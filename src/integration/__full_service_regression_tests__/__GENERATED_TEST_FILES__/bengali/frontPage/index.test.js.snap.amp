@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=31&p=bengali.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3a1d10ad-4f72-4ff6-e050-380a4e807657]&x2=[amp]&x3=[news-bengali]&x4=[bn]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[খবর,+সর্বশেষ+খবর,+ব্রেকিং+নিউজ+|+News,+latest+news,+breaking+news+-+BBC+News+বাংলা]&x11=[1970-01-18T00:42:23.120Z]&x12=[1970-01-19T02:08:46.351Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Front Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Front Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/bengali"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"ব্যবহারের শর্তাবলী"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"বিবিসি সম্পর্কে"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"প্রিভেসি নীতি"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"কুকিজ"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"বিবিসির সঙ্গে যোগাযোগ করুন"`;
+
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/bengali/institutional-50409861"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/bengali/institutional-37289190"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/bengali/institutional-37289764"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/bengali/institutional-37289766"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/bengali/institutional-37289967"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/contact/"`;
+
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়। বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"বর্তমান পেজ, মূলপাতা"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"ভিডিও"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"বর্তমান পেজ, মূলপাতা"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"ভিডিও"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/bengali"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"/bengali/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"/bengali"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"/bengali/media/video"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, বাংলা"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর, প্রতিবেদন, বিশ্লেষণ, সাক্ষাৎকার, ভিডিও, অডিও এবং ফিচারের জন্য বিবিসি বাংলার ওয়েবসাইটে আসুন। খেলাধুলা, বিনোদন, ব্যবসা-বাণিজ্য, বিজ্ঞান, প্রযুক্তি এবং স্বাস্থ্য সহ নানা বিষয়ে ফিচার ও বিশ্লেষণও থাকে আমাদের পাতায়।"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News বাংলা"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"bn-BD"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News বাংলা"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/bengali"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcbangla"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"বাংলাদেশ এবং বিশ্বের সর্বশেষ খবর, প্রতিবেদন, বিশ্লেষণ, সাক্ষাৎকার, ভিডিও, অডিও এবং ফিচারের জন্য বিবিসি বাংলার ওয়েবসাইটে আসুন। খেলাধুলা, বিনোদন, ব্যবসা-বাণিজ্য, বিজ্ঞান, প্রযুক্তি এবং স্বাস্থ্য সহ নানা বিষয়ে ফিচার ও বিশ্লেষণও থাকে আমাদের পাতায়।"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News বাংলা"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcbangla"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/bengali"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, বাংলা - মূলপাতা"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"bn"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news - BBC News বাংলা"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"সরাসরি কনটেন্টে যান"`;

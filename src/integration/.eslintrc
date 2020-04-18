@@ -1,5 +1,8 @@
 {
   "globals": {
     "platform": true
+  },
+  "rules": {
+    "import/newline-after-import": "off"
   }
 }

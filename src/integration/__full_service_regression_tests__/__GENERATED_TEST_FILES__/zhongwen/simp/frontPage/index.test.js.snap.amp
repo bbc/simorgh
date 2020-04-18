@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=38&p=zhongwensimp.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:426d2030-e2dc-5202-e050-380a4e80578d]&x2=[amp]&x3=[news-zhongwen]&x4=[zh-Hans]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[主页+-+BBC+News+中文]&x11=[2016-11-29T14:34:24.000Z]&x12=[2019-09-08T18:37:27.000Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Front Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Front Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/zhongwen"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"BBC值得信赖的原因"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"使用条款"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"隐私政策"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"Cookies"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"联络BBC"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/zhongwen/simp/institutional-51359584"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/zhongwen/simp/institutional-38652837"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/zhongwen/simp/institutional-38652843"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/zhongwen/simp/institutional-38664417"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC对外部网站内容不负责任。 阅读了解我们对待外部链接的做法。"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"目前页面, 主页"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"国际"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"两岸"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"英国"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 5`] = `"评论"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 6`] = `"科技"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 7`] = `"财经"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 8`] = `"视频材料"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 9`] = `"BBC英伦网"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 10`] = `"目前页面, 主页"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 11`] = `"国际"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 12`] = `"两岸"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 13`] = `"英国"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 14`] = `"评论"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 15`] = `"科技"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 16`] = `"财经"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 17`] = `"视频材料"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 18`] = `"BBC英伦网"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/zhongwen/simp"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"/zhongwen/simp/world"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"/zhongwen/simp/chinese_news"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"/zhongwen/simp/uk"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 5`] = `"/zhongwen/simp/indepth"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 6`] = `"/zhongwen/simp/science"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 7`] = `"/zhongwen/simp/business"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 8`] = `"/zhongwen/simp/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 9`] = `"http://www.bbc.co.uk/ukchina/simp"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 10`] = `"/zhongwen/simp"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 11`] = `"/zhongwen/simp/world"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 12`] = `"/zhongwen/simp/chinese_news"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 13`] = `"/zhongwen/simp/uk"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 14`] = `"/zhongwen/simp/indepth"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 15`] = `"/zhongwen/simp/science"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 16`] = `"/zhongwen/simp/business"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 17`] = `"/zhongwen/simp/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 18`] = `"http://www.bbc.co.uk/ukchina/simp"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, 中文"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"BBC中文网是面向全球华人并每日更新的新闻资讯网站，提供客观及时和准确的内容以及对新闻故事的深入分析和评论。我们也提供繁体版脸书。"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News 中文"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"zh-hans"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News 中文"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"主页 - BBC News 中文"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/zhongwen/simp"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcchinese"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"BBC中文网是面向全球华人并每日更新的新闻资讯网站，提供客观及时和准确的内容以及对新闻故事的深入分析和评论。我们也提供繁体版脸书。"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News 中文"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcchinese"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"主页 - BBC News 中文"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/zhongwen/simp"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, 中文 - 主页"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"zh-Hans"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"主页 - BBC News 中文"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"跳过此内容"`;

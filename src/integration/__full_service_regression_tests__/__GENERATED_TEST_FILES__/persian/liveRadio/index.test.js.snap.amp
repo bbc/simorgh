@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Live Radio Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=69&p=persian.bbc_dari_radio.liveradio.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:ares::ws_live:bbc_dari_radio]&x2=[amp]&x3=[news-persian]&x4=[fa]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-live]&x8=[simorgh]&x9=[بی+بی+سی+افغانستان+(برنامه+های+دری)+-+BBC+News+فارسی]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Live Radio Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Live Radio Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Live Radio Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`Live Radio Page - Footer - I can click the external link 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 1`] = `"چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 2`] = `"شرایط استفاده"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 3`] = `"درباره بی بی سی"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 4`] = `"سیاست حفظ حریم خصوصی"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 5`] = `"Cookies"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 6`] = `"تماس با بی بی سی"`;
+
+exports[`Live Radio Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/persian/institutional-49283091"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/persian/institutional-37474133"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/persian/institutional-37474136"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/persian/institutional-37540067"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/persian/institutional-37542244"`;
+
+exports[`Live Radio Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Live Radio Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 1`] = `"صفحه اول"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 2`] = `"ویروس کرونا"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 3`] = `"پخش زنده"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 4`] = `"ویدیو"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 5`] = `"تلویزیون"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 6`] = `"رادیو"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 7`] = `"ايران"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 8`] = `"افغانستان"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 9`] = `"جهان"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 10`] = `"هنر"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 11`] = `"ورزش"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 12`] = `"اقتصاد"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 13`] = `"دانش"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 14`] = `"شما"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 15`] = `"ناظران می‌گویند"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 16`] = `"صفحات ویژه"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 17`] = `"وبلاگ‌ها"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 18`] = `"آموزش زبان انگلیسی"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 19`] = `"صفحه اول"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 20`] = `"ویروس کرونا"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 21`] = `"پخش زنده"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 22`] = `"ویدیو"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 23`] = `"تلویزیون"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 24`] = `"رادیو"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 25`] = `"ايران"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 26`] = `"افغانستان"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 27`] = `"جهان"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 28`] = `"هنر"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 29`] = `"ورزش"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 30`] = `"اقتصاد"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 31`] = `"دانش"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 32`] = `"شما"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 33`] = `"ناظران می‌گویند"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 34`] = `"صفحات ویژه"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 35`] = `"وبلاگ‌ها"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with title 36`] = `"آموزش زبان انگلیسی"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 1`] = `"/persian"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 2`] = `"/persian/science-52004647"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 3`] = `"/persian/media-49522521"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 4`] = `"/persian/media/video"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 5`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 6`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 7`] = `"/persian/iran"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 8`] = `"/persian/afghanistan"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 9`] = `"/persian/world"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 10`] = `"/persian/arts"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 11`] = `"/persian/sport"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 12`] = `"/persian/business"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 13`] = `"/persian/science"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 14`] = `"/persian/interactivity"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 15`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 16`] = `"/persian/world-37434378"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 17`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 18`] = `"/persian/learningenglish"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 19`] = `"/persian"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 20`] = `"/persian/science-52004647"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 21`] = `"/persian/media-49522521"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 22`] = `"/persian/media/video"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 23`] = `"/persian/tv-and-radio-37434377"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 24`] = `"/persian/tv-and-radio-37434376"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 25`] = `"/persian/iran"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 26`] = `"/persian/afghanistan"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 27`] = `"/persian/world"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 28`] = `"/persian/arts"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 29`] = `"/persian/sport"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 30`] = `"/persian/business"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 31`] = `"/persian/science"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 32`] = `"/persian/interactivity"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 33`] = `"/persian/blogs/viewpoints"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 34`] = `"/persian/world-37434378"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 35`] = `"/persian/services/2012/01/000000_blogs_list"`;
+
+exports[`Live Radio Page - Header - I can see a navigation link with url 36`] = `"/persian/learningenglish"`;
+
+exports[`Live Radio Page - Header - I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`Live Radio Page - I can see the headline 1`] = `"بی بی سی افغانستان (برنامه های دری)"`;
+
+exports[`Live Radio Page - I can see the summary 1`] = `"بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان."`;
+
+exports[`Live Radio Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_dari_radio/liveradio/fa/amp"`;
+
+exports[`Live Radio Page - Media player - a11y - assistive technology can read the media player title 1`] = `"Audio player"`;
+
+exports[`Live Radio Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Live Radio Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Live Radio Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان."`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News فارسی"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"fa"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News فارسی"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"بی بی سی افغانستان (برنامه های دری) - BBC News فارسی"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Live Radio Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/persian/bbc_dari_radio/liveradio"`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcpersian"`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان."`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News فارسی"`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcpersian"`;
+
+exports[`Live Radio Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"بی بی سی افغانستان (برنامه های دری) - BBC News فارسی"`;
+
+exports[`Live Radio Page - SEO - canonical link 1`] = `"http://localhost:7080/persian/bbc_dari_radio/liveradio"`;
+
+exports[`Live Radio Page - SEO - dir attribute 1`] = `"rtl"`;
+
+exports[`Live Radio Page - SEO - heading level 1 1`] = `"بی بی سی افغانستان (برنامه های دری)"`;
+
+exports[`Live Radio Page - SEO - lang attribute 1`] = `"fa"`;
+
+exports[`Live Radio Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Live Radio Page - SEO - title 1`] = `"بی بی سی افغانستان (برنامه های دری) - BBC News فارسی"`;
+
+exports[`Live Radio Page - a11y - I can see the skip to content link 1`] = `"مشاهده محتوا"`;

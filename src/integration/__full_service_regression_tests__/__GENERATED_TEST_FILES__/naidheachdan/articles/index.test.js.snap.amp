@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598292&s2=79&p=naidheachdan.articles.c18q7nedn2ko.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c18q7nedn2ko]&x2=[amp]&x3=[news-naidheachdan]&x4=[gd]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Seo+an+ceann-naidheachd+SEO+‘son+an+artaigil+seo]&x11=[2019-07-13T12:48:34.054Z]&x12=[2019-10-11T14:52:07.001Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Article Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Article Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Article Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/naidheachdan"`;
+
+exports[`Article Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Article Page - Footer - I can see a link with title 1`] = `"Carson as urrainear earbsa a chur sa BhBC"`;
+
+exports[`Article Page - Footer - I can see a link with title 2`] = `"Teirmean Cleachdaidh"`;
+
+exports[`Article Page - Footer - I can see a link with title 3`] = `"Mun BhBC"`;
+
+exports[`Article Page - Footer - I can see a link with title 4`] = `"Poileasaidh Prìobhaideachd"`;
+
+exports[`Article Page - Footer - I can see a link with title 5`] = `"Dàta-brabhsair"`;
+
+exports[`Article Page - Footer - I can see a link with title 6`] = `"Cuir fios dhan BhBC"`;
+
+exports[`Article Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Article Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/news/help-41670342"`;
+
+exports[`Article Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/terms"`;
+
+exports[`Article Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/aboutthebbc"`;
+
+exports[`Article Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/privacy/"`;
+
+exports[`Article Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Article Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/contact/"`;
+
+exports[`Article Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Article Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Chan eil am BBC an urra ris na tha a' nochdadh air làraichean-lìn air an taobh a-muigh Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 1`] = `"Alba"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 2`] = `"Scotland News"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 3`] = `"Alba"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 4`] = `"Scotland News"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 1`] = `"/naidheachdan"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 2`] = `"/news/scotland"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 3`] = `"/naidheachdan"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 4`] = `"/news/scotland"`;
+
+exports[`Article Page - Header - I can see the branding 1`] = `"BBC News, Naidheachdan"`;
+
+exports[`Article Page - I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/d1c1/test/67369410-ec36-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`Article Page - I can see an image with a caption 2`] = `"Tiotal an deilbh, ‘S e dealbh deuchainn a tha seo, còraichean glèidhte aig a’ BhBC, a’ sealltainn mapa den Fhraing. Tha an dealbh anns na trì blocaichean aig an toiseach leis an tiotal seo."`;
+
+exports[`Article Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Article Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Article Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC Naidheachdan"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"gd"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC Naidheachdan"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"`;
+
+exports[`Article Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Article Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcnaidheachdan"`;
+
+exports[`Article Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC Naidheachdan"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png"`;
+
+exports[`Article Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcnaidheachdan"`;
+
+exports[`Article Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"`;
+
+exports[`Article Page - SEO - canonical link 1`] = `"http://localhost:7080/naidheachdan/sgeulachdan/c18q7nedn2ko"`;
+
+exports[`Article Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Article Page - SEO - heading level 1 1`] = `"Seo an ceann-naidheachd don artaigil deuchainn"`;
+
+exports[`Article Page - SEO - lang attribute 1`] = `"gd"`;
+
+exports[`Article Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Article Page - SEO - title 1`] = `"Seo an ceann-naidheachd SEO ‘son an artaigil seo - BBC Naidheachdan"`;
+
+exports[`Article Page - a11y - I can see the skip to content link 1`] = `"Air adhart"`;

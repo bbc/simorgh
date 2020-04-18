@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=54&p=indonesia.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3ebbece6-2467-d8a1-e050-380a4e800be8]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[Berita+-+BBC+News+Indonesia]&x11=[1970-01-18T02:06:05.453Z]&x12=[1970-01-19T02:08:47.240Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Front Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Front Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.com/indonesia/institutional/2011/02/000001_links"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"Alasan Anda dapat mempercayai BBC News"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"Peraturan Penggunaan"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"Mengenai BBC"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"Kebijakan tentang Privasi"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"Cookies"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"Hubungi BBC"`;
+
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/indonesia/institutional-49283175"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/indonesia/institutional-37818421"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/indonesia/institutional-37818424"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/indonesia/institutional-37818425"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/indonesia/institutional-37818427"`;
+
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"Halaman saat ini, Berita"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"Indonesia"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"Dunia"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"Viral"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 5`] = `"Liputan Mendalam"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 6`] = `"Majalah"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 7`] = `"Halaman saat ini, Berita"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 8`] = `"Indonesia"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 9`] = `"Dunia"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 10`] = `"Viral"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 11`] = `"Liputan Mendalam"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 12`] = `"Majalah"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/indonesia"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"/indonesia/dunia"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 5`] = `"/indonesia/laporan-khusus-51267199"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 6`] = `"/indonesia/majalah-51456120"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 7`] = `"/indonesia"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 8`] = `"/indonesia/topics/cjgn7k8yx4gt"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 9`] = `"/indonesia/dunia"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 10`] = `"/indonesia/topics/cn5w7g2nq6dt"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 11`] = `"/indonesia/laporan-khusus-51267199"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 12`] = `"/indonesia/majalah-51456120"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, Indonesia"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"Berbagai laporan mendalam yang membahas teknologi dan ilmu pengetahuan dalam tahap riset, penerapan, maupun konsep."`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News Indonesia"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"id-ID"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Indonesia"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Berita - BBC News Indonesia"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/indonesia"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcindonesia"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"Berbagai laporan mendalam yang membahas teknologi dan ilmu pengetahuan dalam tahap riset, penerapan, maupun konsep."`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News Indonesia"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcindonesia"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Berita - BBC News Indonesia"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/indonesia"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, Indonesia - Berita"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"id"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"Berita - BBC News Indonesia"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"Langsung ke konten"`;

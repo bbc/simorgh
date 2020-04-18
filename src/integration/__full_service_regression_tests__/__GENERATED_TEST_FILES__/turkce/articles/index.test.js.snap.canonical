@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=92&p=turkce.articles.c8q1ze59n25o.page&x1=[urn:bbc:optimo:c8q1ze59n25o]&x2=[responsive]&x3=[news-turkce]&x4=[tr]&x7=[article]&x8=[simorgh-nojs]&x9=[Bu+test+makalesi,+web+sitemizde+otomatik+uçtan+uca+testler+yapabilmemiz]&x11=[2019-10-04T11:25:14.938Z]&x12=[2019-10-04T11:25:14.938Z]"`;
+
+exports[`Article Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/turkce"`;
+
+exports[`Article Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Article Page - Footer - I can see a link with title 1`] = `"Neden BBC'ye güvenebilirsiniz"`;
+
+exports[`Article Page - Footer - I can see a link with title 2`] = `"Kullanım koşulları"`;
+
+exports[`Article Page - Footer - I can see a link with title 3`] = `"Gizlilik politikası"`;
+
+exports[`Article Page - Footer - I can see a link with title 4`] = `"Çerezler"`;
+
+exports[`Article Page - Footer - I can see a link with title 5`] = `"BBC'yle temas kurun"`;
+
+exports[`Article Page - Footer - I can see a link with title 6`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Article Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/turkce/kurumsal-50221017"`;
+
+exports[`Article Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/turkce/kurumsal-36765772"`;
+
+exports[`Article Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/turkce/kurumsal-36765774"`;
+
+exports[`Article Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Article Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/turkce/kurumsal-36767474"`;
+
+exports[`Article Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Article Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC, link verilen internet sitelerinin içeriğinden sorumlu değildir. Link verilen internet sitelerine yaklaşımımız."`;
+
+exports[`Article Page - Header - I can see a navigation link with title 1`] = `"Haberler"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 2`] = `"Video"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 3`] = `"Dergi"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 4`] = `"Spor"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 5`] = `"Ekonomi"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 6`] = `"Bilim"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 7`] = `"Teknoloji"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 8`] = `"Sağlık"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 9`] = `"Haberler"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 10`] = `"Video"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 11`] = `"Dergi"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 12`] = `"Spor"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 13`] = `"Ekonomi"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 14`] = `"Bilim"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 15`] = `"Teknoloji"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 16`] = `"Sağlık"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 1`] = `"/turkce"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 2`] = `"/turkce/media/video"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 3`] = `"/turkce/dergi"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 4`] = `"/turkce/spor"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 5`] = `"/turkce/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 6`] = `"/turkce/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 7`] = `"/turkce/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 8`] = `"/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 9`] = `"/turkce"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 10`] = `"/turkce/media/video"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 11`] = `"/turkce/dergi"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 12`] = `"/turkce/spor"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 13`] = `"/turkce/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 14`] = `"/turkce/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 15`] = `"/turkce/topics/31684f19-84d6-41f6-b033-7ae08098572a"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 16`] = `"/turkce/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Article Page - Header - I can see the branding 1`] = `"BBC News, Türkçe"`;
+
+exports[`Article Page - I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/1aa0/test/4d6f49e0-e697-11e9-88d6-81aa2ccc6d4c.jpg"`;
+
+exports[`Article Page - I can see an image with a caption 2`] = `"Fotoğraf altı yazısı, Bu test resmi, BBC telif hakkı, Fransa'nın bir haritasını gösterir. Resim ilk üç blokta ve bu başlığa sahip."`;
+
+exports[`Article Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Article Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Article Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News Türkçe"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"tr-TR"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Türkçe"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz - BBC News Türkçe"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/turkce/articles/c8q1ze59n25o"`;
+
+exports[`Article Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Article Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcturkce"`;
+
+exports[`Article Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News Türkçe"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png"`;
+
+exports[`Article Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcturkce"`;
+
+exports[`Article Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz - BBC News Türkçe"`;
+
+exports[`Article Page - SEO - canonical link 1`] = `"http://localhost:7080/turkce/articles/c8q1ze59n25o"`;
+
+exports[`Article Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Article Page - SEO - heading level 1 1`] = `"Bu, test makalesinin başlığı"`;
+
+exports[`Article Page - SEO - lang attribute 1`] = `"tr"`;
+
+exports[`Article Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Article Page - SEO - title 1`] = `"Bu test makalesi, web sitemizde otomatik uçtan uca testler yapabilmemiz - BBC News Türkçe"`;
+
+exports[`Article Page - a11y - I can see the skip to content link 1`] = `"İçeriğe götür"`;

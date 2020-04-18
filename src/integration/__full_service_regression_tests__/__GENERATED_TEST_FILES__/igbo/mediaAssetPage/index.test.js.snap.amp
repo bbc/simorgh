@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Media Asset Page - AMP analytics ATI 1`] = `"{\\"vars\\":{\\"domain\\":\\"test.bbc.co.uk\\",\\"sections\\":\\"Igbo, Igbo - Media, Igbo - MAP, Igbo - Media - MAP, Igbo - undefined-category\\",\\"uid\\":50924,\\"title\\":\\"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa\\",\\"virtualReferrer\\":\\"\${documentReferrer}\\",\\"contentType\\":\\"article-media-asset\\"}}"`;
+
+exports[`Media Asset Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Media Asset Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Media Asset Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/igbo"`;
+
+exports[`Media Asset Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 1`] = `"Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 2`] = `"Usoro Ojiji"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 3`] = `"Gbasara BBC"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 4`] = `"Iwu Nzuzo"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 5`] = `"Kuki"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 6`] = `"Kpọtụrụ BBC"`;
+
+exports[`Media Asset Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/igbo/institutional-48529074"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 2`] = `"https://www.bbc.co.uk/usingthebbc/terms"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 3`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 4`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/igbo/institutional-43090448"`;
+
+exports[`Media Asset Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Media Asset Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga. Usoro anyị maka njikọ dị na mpụga."`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 1`] = `"Akụkọ"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 2`] = `"Egwuregwu"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 3`] = `"Ihe nkiri"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 4`] = `"Nke ka ewuewu"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 5`] = `"Akụkọ"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 6`] = `"Egwuregwu"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 7`] = `"Ihe nkiri"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with title 8`] = `"Nke ka ewuewu"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 1`] = `"/igbo"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 2`] = `"/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 3`] = `"/igbo/media/video"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 4`] = `"/igbo/popular/read"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 5`] = `"/igbo"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 6`] = `"/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 7`] = `"/igbo/media/video"`;
+
+exports[`Media Asset Page - Header - I can see a navigation link with url 8`] = `"/igbo/popular/read"`;
+
+exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, Ìgbò"`;
+
+exports[`Media Asset Page - I can see the bulleted list item 1`] = `"Ọgba mbọ: Etu m si bido ịgba mbọ (numbered list) Lee nri ogbenye 10 ọgaranya na-eriziLoveth sị na kama ọ ga-anọ na nkịtị na o bidoro na-esi nakwa na-ere ọkpa n'ụzọ pụrụiche nke mere ka amara ọkpa ya na Legọs."`;
+
+exports[`Media Asset Page - I can see the headline 1`] = `"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"`;
+
+exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"`;
+
+exports[`Media Asset Page - I can see the related content 1`] = `"Image gallery, A n̄€w t€st ass€t, ị́ṅ prọ́gress - ụ̄¶dọ́t€dSụ́m̀m̄ary fọ̀r t€st ass€t. Pl€ase ị̄gn̄ọ̄r€.24 Ọktọba 20170:16Vidio, teṅst da¶ta fm̀or thm̄e vin̄deo1, 0,16tes€t datụa fo¶r thọ̄e videụụ̀1225 Ọktọba 2017"`;
+
+exports[`Media Asset Page - I can see the timestamp 1`] = `"27 Nọvemba 2019"`;
+
+exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/igbo/media-23256786/p01kx42v/ig/amp"`;
+
+exports[`Media Asset Page - Media player - a11y - assistive technology can read the media player title 1`] = `"Media player"`;
+
+exports[`Media Asset Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Media Asset Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Media Asset Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_igbo/13D0A/test/_63726118_p01kx435.jpg"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"connectionAltText"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"ig"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Ìgbò"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+
+exports[`Media Asset Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/igbo/media-23256786"`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCNews"`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"Loveth Ifunanya Chinyere bụ ọkaiwu na-eme ọfụma ọrụ kọwara ihe mere o ji hapụ ọrụ ya bido ire ọkpa."`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"connectionAltText"`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_igbo/13D0A/test/_63726118_p01kx435.jpg"`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@BBCNews"`;
+
+exports[`Media Asset Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"`;
+
+exports[`Media Asset Page - SEO - canonical link 1`] = `"http://localhost:7080/igbo/media-23256786"`;
+
+exports[`Media Asset Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Media Asset Page - SEO - heading level 1 1`] = `"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa"`;
+
+exports[`Media Asset Page - SEO - lang attribute 1`] = `"ig"`;
+
+exports[`Media Asset Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Media Asset Page - SEO - title 1`] = `"Ọgba mbọ: Onye ọkaiwu na-ere ọkpa - BBC News Ìgbò"`;
+
+exports[`Media Asset Page - a11y - I can see the skip to content link 1`] = `"Wụga n’ọdịnaya"`;

@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=95&p=urdu.page&x1=[urn:bbc:cps:3d1502ce-7d77-f9bf-e050-380a4e8011de]&x2=[responsive]&x3=[news-urdu]&x4=[ur]&x7=[index-home]&x8=[simorgh-nojs]&x9=[خبریں،+تازہ+خبریں،+بریکنگ+نیو+|+News,+latest+news,+breaking+news+-+BBC+News+اردو]&x11=[1970-01-18T01:35:50.213Z]&x12=[1970-01-19T02:08:51.656Z]"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"استعمال کے ضوابط"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"بی بی سی کے بارے میں"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"پرائیویسی پالیسی"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"کوکیز"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"بی بی سی سے رابطہ کریں"`;
+
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/urdu/institutional-49282935"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/urdu/institutional-37588278"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/urdu/institutional-37588280"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/urdu/institutional-37588282"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/urdu/institutional-37588285"`;
+
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"موجودہ صفحہ, صفحۂ اول"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"پاکستان"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"آس پاس"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"ورلڈ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 5`] = `"کھیل"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 6`] = `"فن فنکار"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 7`] = `"سائنس"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 8`] = `"ویڈیو"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 9`] = `"پنجابی ويڈیو"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 10`] = `"موجودہ صفحہ, صفحۂ اول"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 11`] = `"پاکستان"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 12`] = `"آس پاس"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 13`] = `"ورلڈ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 14`] = `"کھیل"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 15`] = `"فن فنکار"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 16`] = `"سائنس"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 17`] = `"ویڈیو"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 18`] = `"پنجابی ويڈیو"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/urdu"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"/urdu/pakistan"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"/urdu/regional"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"/urdu/world"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 5`] = `"/urdu/sport"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 6`] = `"/urdu/entertainment"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 7`] = `"/urdu/science"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 8`] = `"/urdu/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 9`] = `"/urdu/punjabi_video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 10`] = `"/urdu"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 11`] = `"/urdu/pakistan"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 12`] = `"/urdu/regional"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 13`] = `"/urdu/world"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 14`] = `"/urdu/sport"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 15`] = `"/urdu/entertainment"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 16`] = `"/urdu/science"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 17`] = `"/urdu/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 18`] = `"/urdu/punjabi_video"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, اردو"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News اردو"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"ur"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News اردو"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/urdu"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcurdu"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"تازہ ترین خبروں، ویڈیوز اور آڈیوز کے لیے بی بی سی اردو پر آئیے۔ بی بی سی اردو دنیا بھر کی خبروں کے حصول کے لیے ایک قابلِ اعتماد ویب سائٹ ہے۔"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News اردو"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcurdu"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/urdu"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"rtl"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, اردو - صفحۂ اول"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"ur"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"خبریں، تازہ خبریں، بریکنگ نیو | News, latest news, breaking news - BBC News اردو"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"مواد پر جائیں"`;

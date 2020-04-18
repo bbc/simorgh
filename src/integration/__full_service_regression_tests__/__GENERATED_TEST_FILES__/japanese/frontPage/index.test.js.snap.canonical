@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598290&s2=56&p=japanese.page&x1=[urn:bbc:cps:19bd183d-7b2f-3423-e050-380a4e8062eb]&x2=[responsive]&x3=[news-japanese]&x4=[ja]&x7=[index-home]&x8=[simorgh-nojs]&x9=[ホーム+-+BBCニュース]&x11=[1970-01-17T16:01:24.262Z]&x12=[1970-01-19T02:08:49.828Z]"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/japanese"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"BBCニュースが信頼できる理由"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"利用条件"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"BBCについて"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"個人情報取り扱い方針"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"クッキー"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"BBCに連絡する"`;
+
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/japanese/help-49677253"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/japanese/help/terms"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbcworldnews-japan.com/about_us/"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/japanese/help/privacy"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.co.uk/contact"`;
+
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC.　BBCは外部サイトの内容に責任を負いません。 本サイトの外部リンク方針はこちら"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"現在のページ, ホーム"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"日本"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"アジア"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"イギリス"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 5`] = `"アメリカ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 6`] = `"解説・読み物"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 7`] = `"ビデオ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 8`] = `"ワールドニュースTV"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 9`] = `"現在のページ, ホーム"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 10`] = `"日本"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 11`] = `"アジア"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 12`] = `"イギリス"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 13`] = `"アメリカ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 14`] = `"解説・読み物"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 15`] = `"ビデオ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 16`] = `"ワールドニュースTV"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/japanese"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 5`] = `"https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 6`] = `"https://www.bbc.com/japanese/features_and_analysis"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 7`] = `"https://www.bbc.com/japanese/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 8`] = `"https://www.bbcworldnews-japan.com/"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 9`] = `"/japanese"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 10`] = `"https://www.bbc.com/japanese/topics/3f53c272-5b8f-4a4f-99de-a857d6726c5b"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 11`] = `"https://www.bbc.com/japanese/topics/ba90754a-9033-4e9c-990b-d1139e5070a3"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 12`] = `"https://www.bbc.com/japanese/topics/2e91364c-5c77-4660-b76e-d76202785e64"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 13`] = `"https://www.bbc.com/japanese/topics/82857f8e-8134-462a-bb32-b7b14f4eab75"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 14`] = `"https://www.bbc.com/japanese/features_and_analysis"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 15`] = `"https://www.bbc.com/japanese/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 16`] = `"https://www.bbcworldnews-japan.com/"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, ニュース"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"BBCニュースが伝える世界の動き、BBCニュースならではの視点を日本語でお届けします。世界各地で取材する日々の出来事、世界の人が注目している話題の紹介や解説を、日本語の記事、ビデオ、写真ギャラリーなどで"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBCニュース"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"ja-JP"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBCニュース"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"最新ニュース - BBCニュース"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/japanese"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcnewsjapan"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"BBCニュースが伝える世界の動き、BBCニュースならではの視点を日本語でお届けします。世界各地で取材する日々の出来事、世界の人が注目している話題の紹介や解説を、日本語の記事、ビデオ、写真ギャラリーなどで"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBCニュース"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcnewsjapan"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"最新ニュース - BBCニュース"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/japanese"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, ニュース - ホーム"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"ja"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"最新ニュース - BBCニュース"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"コンテンツへ移動"`;

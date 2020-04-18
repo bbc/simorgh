@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=52&p=hindi.articles.c0469479x9xo.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:c0469479x9xo]&x2=[amp]&x3=[news-hindi]&x4=[hi]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[इंग्लैंड-न्यूज़ीलैंड+के+फ़ाइनल+में+पहुंचने+पर+पाकिस्तानी+खुश+क्यों+हैं?+#SOCIAL]&x11=[2019-07-12T14:36:49.748Z]&x12=[2019-07-12T14:36:49.748Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Article Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Article Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Article Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/hindi"`;
+
+exports[`Article Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Article Page - Footer - I can see a link with title 1`] = `"आप बीबीसी पर क्यों भरोसा कर सकते हैं"`;
+
+exports[`Article Page - Footer - I can see a link with title 2`] = `"इस्तेमाल की शर्तें"`;
+
+exports[`Article Page - Footer - I can see a link with title 3`] = `"बीबीसी के बारे में"`;
+
+exports[`Article Page - Footer - I can see a link with title 4`] = `"निजता की नीति"`;
+
+exports[`Article Page - Footer - I can see a link with title 5`] = `"कुकीज़"`;
+
+exports[`Article Page - Footer - I can see a link with title 6`] = `"बीबीसी से संपर्क करें"`;
+
+exports[`Article Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Article Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/hindi/institutional-50223932"`;
+
+exports[`Article Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/hindi/institutional-37342293"`;
+
+exports[`Article Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/hindi/institutional-37343168"`;
+
+exports[`Article Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/hindi/institutional-37342614"`;
+
+exports[`Article Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Article Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/hindi/institutional-37342616"`;
+
+exports[`Article Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Article Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. बाहरी साइटों की सामग्री के लिए बीबीसी ज़िम्मेदार नहीं है. बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें."`;
+
+exports[`Article Page - Header - I can see a navigation link with title 1`] = `"होम पेज"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 2`] = `"भारत"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 3`] = `"विदेश"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 4`] = `"मनोरंजन"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 5`] = `"खेल"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 6`] = `"विज्ञान-टेक्नॉलॉजी"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 7`] = `"सोशल"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 8`] = `"वीडियो"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 9`] = `"बीबीसी स्पेशल"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 10`] = `"#ISWOTY"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 11`] = `"होम पेज"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 12`] = `"भारत"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 13`] = `"विदेश"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 14`] = `"मनोरंजन"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 15`] = `"खेल"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 16`] = `"विज्ञान-टेक्नॉलॉजी"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 17`] = `"सोशल"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 18`] = `"वीडियो"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 19`] = `"बीबीसी स्पेशल"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 20`] = `"#ISWOTY"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 1`] = `"/hindi"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 2`] = `"/hindi/india"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 3`] = `"/hindi/international"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 4`] = `"/hindi/entertainment"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 5`] = `"/hindi/sport"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 6`] = `"/hindi/science"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 7`] = `"/hindi/social"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 8`] = `"/hindi/media/video"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 9`] = `"/hindi/in_depth"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 10`] = `"/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 11`] = `"/hindi"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 12`] = `"/hindi/india"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 13`] = `"/hindi/international"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 14`] = `"/hindi/entertainment"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 15`] = `"/hindi/sport"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 16`] = `"/hindi/science"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 17`] = `"/hindi/social"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 18`] = `"/hindi/media/video"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 19`] = `"/hindi/in_depth"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 20`] = `"/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537"`;
+
+exports[`Article Page - Header - I can see the branding 1`] = `"BBC News, हिंदी"`;
+
+exports[`Article Page - I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/83a7/test/2d0fbac0-fcb0-11e9-9afe-1371928331c5.jpg"`;
+
+exports[`Article Page - I can see an image with a caption 2`] = `"इमेज कैप्शन, यह परीक्षण छवि, कॉपीराइट बीबीसी, फ्रांस का नक्शा दिखाता है। छवि पहले तीन ब्लॉकों में है और इसका शीर्षक है।"`;
+
+exports[`Article Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Article Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Article Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News हिंदी"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"hi-IN"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News हिंदी"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL - BBC News हिंदी"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/hindi/articles/c0469479x9xo"`;
+
+exports[`Article Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Article Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbchindi"`;
+
+exports[`Article Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News हिंदी"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+
+exports[`Article Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbchindi"`;
+
+exports[`Article Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL - BBC News हिंदी"`;
+
+exports[`Article Page - SEO - canonical link 1`] = `"http://localhost:7080/hindi/articles/c0469479x9xo"`;
+
+exports[`Article Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Article Page - SEO - heading level 1 1`] = `"यह इस परीक्षण लेख का शीर्षक है"`;
+
+exports[`Article Page - SEO - lang attribute 1`] = `"hi"`;
+
+exports[`Article Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Article Page - SEO - title 1`] = `"इंग्लैंड-न्यूज़ीलैंड के फ़ाइनल में पहुंचने पर पाकिस्तानी खुश क्यों हैं? #SOCIAL - BBC News हिंदी"`;
+
+exports[`Article Page - a11y - I can see the skip to content link 1`] = `"सामग्री को स्किप करें"`;

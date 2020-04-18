@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=40&p=gahuza.articles.cey23zx8wx8o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:optimo:cey23zx8wx8o]&x2=[amp]&x3=[news-gahuza]&x4=[rw]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Abarihimbye+turi+kumwe+muri+iki+kiganiro+barabidusobanurira+neza.]&x11=[2019-07-12T12:59:18.638Z]&x12=[2019-07-12T12:59:18.638Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Article Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Article Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Article Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Article Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Article Page - Footer - I can see a link with title 1`] = `"Igituma ushobora kwizera BBC News"`;
+
+exports[`Article Page - Footer - I can see a link with title 2`] = `"Ingingo zo gukoresha urubuga"`;
+
+exports[`Article Page - Footer - I can see a link with title 3`] = `"Ibijanye na BBC"`;
+
+exports[`Article Page - Footer - I can see a link with title 4`] = `"Ibigenga n'ubuzima bwite"`;
+
+exports[`Article Page - Footer - I can see a link with title 5`] = `"Cookies"`;
+
+exports[`Article Page - Footer - I can see a link with title 6`] = `"Vugana na BBC"`;
+
+exports[`Article Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Article Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/gahuza/institutional-49283343"`;
+
+exports[`Article Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/gahuza/institutional-35754053"`;
+
+exports[`Article Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/gahuza/institutional-35754055"`;
+
+exports[`Article Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/gahuza/institutional-35754059"`;
+
+exports[`Article Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Article Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/gahuza/institutional-35754061"`;
+
+exports[`Article Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Article Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 1`] = `"Urupapuro rw'itangiriro"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 2`] = `"Amakuru"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 3`] = `"Imikino"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 4`] = `"Video"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 5`] = `"Urupapuro rw'itangiriro"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 6`] = `"Amakuru"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 7`] = `"Imikino"`;
+
+exports[`Article Page - Header - I can see a navigation link with title 8`] = `"Video"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 1`] = `"/gahuza"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 2`] = `"/gahuza/amakuru"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 3`] = `"/gahuza/imikino"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 4`] = `"/gahuza/media/video"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 5`] = `"/gahuza"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 6`] = `"/gahuza/amakuru"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 7`] = `"/gahuza/imikino"`;
+
+exports[`Article Page - Header - I can see a navigation link with url 8`] = `"/gahuza/media/video"`;
+
+exports[`Article Page - Header - I can see the branding 1`] = `"BBC News, Gahuza"`;
+
+exports[`Article Page - I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/1bed/test/e2f3a520-e137-11e9-b23c-f1ac9644bb55.jpg"`;
+
+exports[`Article Page - I can see an image with a caption 2`] = `"Insiguro y'isanamu, Abarihimbye turi kumwe muri iki kiganiro, barabidusobanurira neza."`;
+
+exports[`Article Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Article Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Article Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News Gahuza"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"rw-RW"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Gahuza"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza. - BBC News Gahuza"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+
+exports[`Article Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/gahuza/articles/cey23zx8wx8o"`;
+
+exports[`Article Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Article Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcgahuza"`;
+
+exports[`Article Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza."`;
+
+exports[`Article Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News Gahuza"`;
+
+exports[`Article Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+
+exports[`Article Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcgahuza"`;
+
+exports[`Article Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza. - BBC News Gahuza"`;
+
+exports[`Article Page - SEO - canonical link 1`] = `"http://localhost:7080/gahuza/articles/cey23zx8wx8o"`;
+
+exports[`Article Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Article Page - SEO - heading level 1 1`] = `
+"Mwaramukanye amahoro mwese muteze amatwi
+
+"
+`;
+
+exports[`Article Page - SEO - lang attribute 1`] = `"rw"`;
+
+exports[`Article Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Article Page - SEO - title 1`] = `"Abarihimbye turi kumwe muri iki kiganiro barabidusobanurira neza. - BBC News Gahuza"`;
+
+exports[`Article Page - a11y - I can see the skip to content link 1`] = `"Simbira ku birimwo"`;

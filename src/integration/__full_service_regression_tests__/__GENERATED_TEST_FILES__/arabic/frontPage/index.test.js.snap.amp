@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - AMP analytics ATI 1`] = `"{\\"transport\\":{\\"beacon\\":false,\\"xhrpost\\":false,\\"image\\":true},\\"requests\\":{\\"base\\":\\"https://logws1363.ati-host.net?\\",\\"pageview\\":\\"\${base}s=598343&s2=5&p=arabic.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]\\"},\\"triggers\\":{\\"trackPageview\\":{\\"on\\":\\"visible\\",\\"request\\":\\"pageview\\"}}}"`;
+
+exports[`Front Page - Core AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`Front Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"لماذا يمكنك الإعتماد على أخبار بي بي سي"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"شروط الاستخدام"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"عن بي بي سي"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"سياسة الخصوصية"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"ملفات الارتباط Cookies"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"اتصل بـ بي بي سي"`;
+
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
+
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"الصفحة الحالية, رئيسية"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"شرق أوسط"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"عالم"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"علوم وتكنولوجيا"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 5`] = `"صحة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 6`] = `"اقتصاد"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 7`] = `"فنون"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 8`] = `"رياضة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 9`] = `"مجلة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 10`] = `"مرأة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 11`] = `"فيديو"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 12`] = `"صحافة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 13`] = `"برامجنا"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 14`] = `"ترند"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 15`] = `"حوارات"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 16`] = `"ملفات"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 17`] = `"الصفحة الحالية, رئيسية"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 18`] = `"شرق أوسط"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 19`] = `"عالم"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 20`] = `"علوم وتكنولوجيا"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 21`] = `"صحة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 22`] = `"اقتصاد"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 23`] = `"فنون"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 24`] = `"رياضة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 25`] = `"مجلة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 26`] = `"مرأة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 27`] = `"فيديو"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 28`] = `"صحافة"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 29`] = `"برامجنا"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 30`] = `"ترند"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 31`] = `"حوارات"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 32`] = `"ملفات"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/arabic"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"/arabic/middleeast"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"/arabic/world"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"/arabic/scienceandtech"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 5`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 6`] = `"/arabic/business"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 7`] = `"/arabic/artandculture"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 8`] = `"/arabic/sports"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 9`] = `"/arabic/magazine"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 10`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 11`] = `"/arabic/media"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 12`] = `"/arabic/inthepress"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 13`] = `"/arabic/tv-and-radio-37728883"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 14`] = `"/arabic/trending"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 15`] = `"/arabic/interactivity"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 16`] = `"/arabic/in_depth"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 17`] = `"/arabic"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 18`] = `"/arabic/middleeast"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 19`] = `"/arabic/world"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 20`] = `"/arabic/scienceandtech"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 21`] = `"/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 22`] = `"/arabic/business"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 23`] = `"/arabic/artandculture"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 24`] = `"/arabic/sports"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 25`] = `"/arabic/magazine"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 26`] = `"/arabic/topics/e45cb5f8-3c87-4ebd-ac1c-058e9be22862"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 27`] = `"/arabic/media"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 28`] = `"/arabic/inthepress"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 29`] = `"/arabic/tv-and-radio-37728883"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 30`] = `"/arabic/trending"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 31`] = `"/arabic/interactivity"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 32`] = `"/arabic/in_depth"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, عربي"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News عربي"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"ar"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News عربي"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/arabic"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCArabic"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News عربي"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@BBCArabic"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/arabic"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"rtl"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"ar"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;

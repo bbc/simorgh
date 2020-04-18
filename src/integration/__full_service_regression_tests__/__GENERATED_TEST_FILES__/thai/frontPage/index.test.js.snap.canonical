@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Front Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=90&p=thai.page&x1=[urn:bbc:cps:3fd51a2d-70f9-c435-e050-380a4e80342f]&x2=[responsive]&x3=[news-thai]&x4=[th]&x7=[index-home]&x8=[simorgh-nojs]&x9=[หน้าแรก+-+BBC+News+ไทย]&x11=[2016-10-27T10:36:34.000Z]&x12=[2019-08-19T10:06:08.000Z]"`;
+
+exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
+
+exports[`Front Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Front Page - Footer - I can see a link with title 1`] = `"ทำไมคุณจึงไว้วางใจ บีบีซี นิวส์ ได้"`;
+
+exports[`Front Page - Footer - I can see a link with title 2`] = `"เงื่อนไขการใช้งานของ BBC"`;
+
+exports[`Front Page - Footer - I can see a link with title 3`] = `"เกี่ยวกับบีบีซี"`;
+
+exports[`Front Page - Footer - I can see a link with title 4`] = `"นโยบายความเป็นส่วนตัว"`;
+
+exports[`Front Page - Footer - I can see a link with title 5`] = `"Cookies"`;
+
+exports[`Front Page - Footer - I can see a link with title 6`] = `"ติดต่อบีบีซี"`;
+
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/thai/institutional-49281839"`;
+
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/thai/institutional-38403477"`;
+
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/thai/institutional-38403476"`;
+
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/thai/institutional-38497681"`;
+
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/thai/institutional-37981748"`;
+
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก."`;
+
+exports[`Front Page - Header - I can see a navigation link with title 1`] = `"หน้าปัจจุบัน, หน้าแรก"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 2`] = `"ประเทศไทย"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 3`] = `"ต่างประเทศ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 4`] = `"วิทยาศาสตร์"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 5`] = `"สุขภาพ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 6`] = `"วิดีโอ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 7`] = `"ยอดนิยม"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 8`] = `"หน้าปัจจุบัน, หน้าแรก"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 9`] = `"ประเทศไทย"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 10`] = `"ต่างประเทศ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 11`] = `"วิทยาศาสตร์"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 12`] = `"สุขภาพ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 13`] = `"วิดีโอ"`;
+
+exports[`Front Page - Header - I can see a navigation link with title 14`] = `"ยอดนิยม"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 1`] = `"/thai"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 2`] = `"/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 3`] = `"/thai/international"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 4`] = `"/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 5`] = `"/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 6`] = `"/thai/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 7`] = `"/thai/popular/read"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 8`] = `"/thai"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 9`] = `"/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 10`] = `"/thai/international"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 11`] = `"/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 12`] = `"/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 13`] = `"/thai/media/video"`;
+
+exports[`Front Page - Header - I can see a navigation link with url 14`] = `"/thai/popular/read"`;
+
+exports[`Front Page - Header - I can see the branding 1`] = `"BBC News, ไทย"`;
+
+exports[`Front Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Front Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Front Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News ไทย"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"th-TH"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News ไทย"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"website"`;
+
+exports[`Front Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/thai"`;
+
+exports[`Front Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Front Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbc_thailand"`;
+
+exports[`Front Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"บีบีซีไทย นำเสนอข่าวสารที่เชื่อถือได้จากไทยและทุกมุมโลก"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News ไทย"`;
+
+exports[`Front Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/thai.png"`;
+
+exports[`Front Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbc_thailand"`;
+
+exports[`Front Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"`;
+
+exports[`Front Page - SEO - canonical link 1`] = `"http://localhost:7080/thai"`;
+
+exports[`Front Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Front Page - SEO - heading level 1 1`] = `"BBC News, ไทย - หน้าแรก"`;
+
+exports[`Front Page - SEO - lang attribute 1`] = `"th"`;
+
+exports[`Front Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Front Page - SEO - title 1`] = `"ข่าว ข่าววันนี้ ข่าวล่าสุด วีดีโอ - BBC News ไทย"`;
+
+exports[`Front Page - a11y - I can see the skip to content link 1`] = `"ข้ามไปยังเนื้อหา"`;

@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=53&p=africa::igbo.africa.story.23252735.page&x1=[urn:bbc:cps:954b3c17-7900-9342-aa1a-6857067770d7]&x2=[responsive]&x3=[news-igbo]&x4=[ig]&x7=[article]&x8=[simorgh-nojs]&x9=[STY+-+Ọrụ+bekee+na+ịrụrụ+onwe+gị+ọrụ,+kedụ+nk?+-+BBC+News+Ìgbò]&x11=[2019-10-23T12:18:59.000Z]&x12=[2019-10-23T12:19:07.000Z]&x13=[World+Cup]&x14=[de6a07ff-47ff-4551-9b71-7494a71aceac]&x16=[Amuse%20me]&x17=[News]"`;
+
+exports[`Story Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/igbo"`;
+
+exports[`Story Page - Footer - I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
+
+exports[`Story Page - Footer - I can see a link with title 1`] = `"Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News"`;
+
+exports[`Story Page - Footer - I can see a link with title 2`] = `"Usoro Ojiji"`;
+
+exports[`Story Page - Footer - I can see a link with title 3`] = `"Gbasara BBC"`;
+
+exports[`Story Page - Footer - I can see a link with title 4`] = `"Iwu Nzuzo"`;
+
+exports[`Story Page - Footer - I can see a link with title 5`] = `"Kuki"`;
+
+exports[`Story Page - Footer - I can see a link with title 6`] = `"Kpọtụrụ BBC"`;
+
+exports[`Story Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Story Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/igbo/institutional-48529074"`;
+
+exports[`Story Page - Footer - I can see a link with url 2`] = `"https://www.bbc.co.uk/usingthebbc/terms"`;
+
+exports[`Story Page - Footer - I can see a link with url 3`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Story Page - Footer - I can see a link with url 4`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Story Page - Footer - I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Story Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/igbo/institutional-43090448"`;
+
+exports[`Story Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Story Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC anaghị ahụta maka ọdịnaya nke saịtị ndị dị na mpụga. Usoro anyị maka njikọ dị na mpụga."`;
+
+exports[`Story Page - Header - I can see a navigation link with title 1`] = `"Akụkọ"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 2`] = `"Egwuregwu"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 3`] = `"Ihe nkiri"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 4`] = `"Nke ka ewuewu"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 5`] = `"Akụkọ"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 6`] = `"Egwuregwu"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 7`] = `"Ihe nkiri"`;
+
+exports[`Story Page - Header - I can see a navigation link with title 8`] = `"Nke ka ewuewu"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 1`] = `"/igbo"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 2`] = `"/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 3`] = `"/igbo/media/video"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 4`] = `"/igbo/popular/read"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 5`] = `"/igbo"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 6`] = `"/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 7`] = `"/igbo/media/video"`;
+
+exports[`Story Page - Header - I can see a navigation link with url 8`] = `"/igbo/popular/read"`;
+
+exports[`Story Page - Header - I can see the branding 1`] = `"BBC News, Ìgbò"`;
+
+exports[`Story Page - I can see an image with a caption 1`] = `"Nkọwa foto, Some people went to the NTA awards recently."`;
+
+exports[`Story Page - I can see the headline 1`] = `"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"`;
+
+exports[`Story Page - I can see the timestamp 1`] = `"23 Ọktọba 2019"`;
+
+exports[`Story Page - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+
+exports[`Story Page - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+
+exports[`Story Page - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"This is a test asset used in Simorgh, please do not edit it without asking."`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_igbo/6ACE/test/_63724372_gettyimages-1098075358.jpg"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"Some people at the NTA awards"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"ig"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Ìgbò"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk? - BBC News Ìgbò"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+
+exports[`Story Page - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/igbo/afirika-23252735"`;
+
+exports[`Story Page - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+
+exports[`Story Page - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCNews"`;
+
+exports[`Story Page - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"This is a test asset used in Simorgh, please do not edit it without asking."`;
+
+exports[`Story Page - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"Some people at the NTA awards"`;
+
+exports[`Story Page - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_igbo/6ACE/test/_63724372_gettyimages-1098075358.jpg"`;
+
+exports[`Story Page - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@BBCNews"`;
+
+exports[`Story Page - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk? - BBC News Ìgbò"`;
+
+exports[`Story Page - SEO - canonical link 1`] = `"http://localhost:7080/igbo/afirika-23252735"`;
+
+exports[`Story Page - SEO - dir attribute 1`] = `"ltr"`;
+
+exports[`Story Page - SEO - heading level 1 1`] = `"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?"`;
+
+exports[`Story Page - SEO - lang attribute 1`] = `"ig"`;
+
+exports[`Story Page - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+
+exports[`Story Page - SEO - title 1`] = `"STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk? - BBC News Ìgbò"`;
+
+exports[`Story Page - a11y - I can see the skip to content link 1`] = `"Wụga n’ọdịnaya"`;
