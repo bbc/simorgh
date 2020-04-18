@@ -8,20 +8,20 @@ export default () => {
       expect(logo.parentNode.textContent).toMatchSnapshot();
     });
 
-    it('I can see the navigation', () => {
-      const navigationItemEls = document.querySelector(
-        'header nav ul > li > a',
-      );
+    const navigationItemEls = document.querySelector('header nav ul > li > a');
 
-      expect(navigationItemEls).toBeInTheDocument();
-    });
+    if (navigationItemEls) {
+      it('I can see the navigation', () => {
+        expect(navigationItemEls).toBeInTheDocument();
+      });
+    }
 
-    it('I can see a skip to content link', () => {
-      const skipToContentEl = document.querySelector(
-        'header [href="#content"]',
-      );
+    const skipToContentEl = document.querySelector('header [href="#content"]');
 
-      expect(skipToContentEl).toBeInTheDocument();
-    });
+    if (skipToContentEl) {
+      it('I can see a skip to content link', () => {
+        expect(skipToContentEl).toBeInTheDocument();
+      });
+    }
   });
 };
