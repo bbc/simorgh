@@ -19,9 +19,6 @@ jobs:
       addons:
         chrome: stable
       script:
-        - npm run test
-        - npm run build
-        - npm prune --production
-        - CYPRESS_SKIP_EU=true npm run test:ci
+        - npm run test && npm run build && npm prune --production && CYPRESS_SKIP_EU=true npm run test:ci
 notifications:
   email: false
