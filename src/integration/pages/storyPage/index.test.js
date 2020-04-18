@@ -7,4 +7,4 @@ import runCrossPlatformTests from './crossPlatformTests';
 
 describe(`Story Page - ${platform} - `, () => {
   runCrossPlatformTests();
- });
+});
