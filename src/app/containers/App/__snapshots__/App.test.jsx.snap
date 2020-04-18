@@ -1,28 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should return rendered routes 1`] = `
-<App
-  bbcOrigin="https://www.bbc.co.uk"
-  history={
-    Object {
-      "action": "POP",
-    }
-  }
-  initialData={
-    Object {
-      "pageData": "Some initial data",
-      "timeOnServer": 1582534951721,
-    }
-  }
-  location={
-    Object {
-      "pathname": "pathnameOne",
-    }
-  }
-  routes={Array []}
->
-  <h1>
-    Some initial data
-  </h1>
-</App>
-`;
+exports[`App should return rendered routes 1`] = `ReactWrapper {}`;
