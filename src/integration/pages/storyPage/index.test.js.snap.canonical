@@ -4,33 +4,33 @@ exports[`Story Page - Canonical analytics ATI 1`] = `"https://logws1363.ati-host
 
 exports[`Story Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Story Page - Footer - I can see site wide links 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
+exports[`Story Page - Footer - I can see a link with title 1`] = `"Por qué puedes confiar en la BBC"`;
 
-exports[`Story Page - Footer - I can see site wide links 2`] = `"Por qué puedes confiar en la BBC"`;
+exports[`Story Page - Footer - I can see a link with title 2`] = `"Términos de uso"`;
 
-exports[`Story Page - Footer - I can see site wide links 3`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
+exports[`Story Page - Footer - I can see a link with title 3`] = `"Sobre la BBC"`;
 
-exports[`Story Page - Footer - I can see site wide links 4`] = `"Términos de uso"`;
+exports[`Story Page - Footer - I can see a link with title 4`] = `"Política de privacidad"`;
 
-exports[`Story Page - Footer - I can see site wide links 5`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
+exports[`Story Page - Footer - I can see a link with title 5`] = `"Cookies"`;
 
-exports[`Story Page - Footer - I can see site wide links 6`] = `"Sobre la BBC"`;
+exports[`Story Page - Footer - I can see a link with title 6`] = `"Contacta a la BBC"`;
 
-exports[`Story Page - Footer - I can see site wide links 7`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
+exports[`Story Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
 
-exports[`Story Page - Footer - I can see site wide links 8`] = `"Política de privacidad"`;
+exports[`Story Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/mundo/institucional-51359666"`;
 
-exports[`Story Page - Footer - I can see site wide links 9`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`Story Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/mundo/institucional-36400005"`;
 
-exports[`Story Page - Footer - I can see site wide links 10`] = `"Cookies"`;
+exports[`Story Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/mundo/institucional-36400007"`;
 
-exports[`Story Page - Footer - I can see site wide links 11`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
+exports[`Story Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/mundo/institucional-36400009"`;
 
-exports[`Story Page - Footer - I can see site wide links 12`] = `"Contacta a la BBC"`;
+exports[`Story Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`Story Page - Footer - I can see site wide links 13`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Story Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/mundo/institucional-36400011"`;
 
-exports[`Story Page - Footer - I can see site wide links 14`] = `"AdChoices / Do Not Sell My Info"`;
+exports[`Story Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
 exports[`Story Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 

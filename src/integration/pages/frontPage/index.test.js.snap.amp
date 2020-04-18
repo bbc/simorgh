@@ -8,33 +8,33 @@ exports[`Front Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"ee
 
 exports[`Front Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Front Page - Footer - I can see site wide links 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
+exports[`Front Page - Footer - I can see a link with title 1`] = `"لماذا يمكنك الإعتماد على أخبار بي بي سي"`;
 
-exports[`Front Page - Footer - I can see site wide links 2`] = `"لماذا يمكنك الإعتماد على أخبار بي بي سي"`;
+exports[`Front Page - Footer - I can see a link with title 2`] = `"شروط الاستخدام"`;
 
-exports[`Front Page - Footer - I can see site wide links 3`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
+exports[`Front Page - Footer - I can see a link with title 3`] = `"عن بي بي سي"`;
 
-exports[`Front Page - Footer - I can see site wide links 4`] = `"شروط الاستخدام"`;
+exports[`Front Page - Footer - I can see a link with title 4`] = `"سياسة الخصوصية"`;
 
-exports[`Front Page - Footer - I can see site wide links 5`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
+exports[`Front Page - Footer - I can see a link with title 5`] = `"ملفات الارتباط Cookies"`;
 
-exports[`Front Page - Footer - I can see site wide links 6`] = `"عن بي بي سي"`;
+exports[`Front Page - Footer - I can see a link with title 6`] = `"اتصل بـ بي بي سي"`;
 
-exports[`Front Page - Footer - I can see site wide links 7`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
+exports[`Front Page - Footer - I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
 
-exports[`Front Page - Footer - I can see site wide links 8`] = `"سياسة الخصوصية"`;
+exports[`Front Page - Footer - I can see a link with url 1`] = `"https://www.bbc.com/arabic/institutional-49283069"`;
 
-exports[`Front Page - Footer - I can see site wide links 9`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
+exports[`Front Page - Footer - I can see a link with url 2`] = `"https://www.bbc.com/arabic/institutional-37731351"`;
 
-exports[`Front Page - Footer - I can see site wide links 10`] = `"ملفات الارتباط Cookies"`;
+exports[`Front Page - Footer - I can see a link with url 3`] = `"https://www.bbc.com/arabic/institutional-37731352"`;
 
-exports[`Front Page - Footer - I can see site wide links 11`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
+exports[`Front Page - Footer - I can see a link with url 4`] = `"https://www.bbc.com/arabic/institutional-37731353"`;
 
-exports[`Front Page - Footer - I can see site wide links 12`] = `"اتصل بـ بي بي سي"`;
+exports[`Front Page - Footer - I can see a link with url 5`] = `"https://www.bbc.com/usingthebbc/cookies/"`;
 
-exports[`Front Page - Footer - I can see site wide links 13`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+exports[`Front Page - Footer - I can see a link with url 6`] = `"https://www.bbc.com/arabic/institutional-37731355"`;
 
-exports[`Front Page - Footer - I can see site wide links 14`] = `"AdChoices / Do Not Sell My Info"`;
+exports[`Front Page - Footer - I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
 
 exports[`Front Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 

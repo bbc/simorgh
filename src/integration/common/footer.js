@@ -23,14 +23,19 @@ export default () => {
       expect(brandingImageEl).toBeInTheDocument();
     });
 
-    it('I can see site wide links', () => {
-      const siteLinkEls = document.querySelectorAll('footer ul > li > a');
-
-      siteLinkEls.forEach((siteLink) => {
-        expect(siteLink).toBeInTheDocument();
-        expect(siteLink.getAttribute('href')).toMatchSnapshot();
-        expect(siteLink.textContent).toBeTruthy();
-        expect(siteLink.textContent).toMatchSnapshot();
+    const footerLinks = document.querySelectorAll('footer ul > li > a');
+    footerLinks.forEach((link) => {
+      describe('I can see a link', () => {
+        beforeEach(() => {
+          expect(link).toBeInTheDocument();
+        });
+        it('with title', () => {
+          expect(link.textContent).toBeTruthy();
+          expect(link.textContent).toMatchSnapshot();
+        });
+        it('with url', () => {
+          expect(link.getAttribute('href')).toMatchSnapshot();
+        });
       });
     });
   });
