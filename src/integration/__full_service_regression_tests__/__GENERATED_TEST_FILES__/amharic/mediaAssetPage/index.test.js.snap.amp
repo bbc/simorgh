@@ -76,9 +76,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, �
 
 exports[`Media Asset Page - I can see the headline 1`] = `"Amharic test MAP A vertical video pretending to be a cat short synopsis"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01n71w7.jpg"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"29 ጥር 2020"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01n71w7.jpg"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/amharic/news-23263266/p01n40vq/am/amp"`;
 

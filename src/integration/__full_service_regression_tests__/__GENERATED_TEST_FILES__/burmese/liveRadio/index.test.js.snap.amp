@@ -98,6 +98,8 @@ exports[`Live Radio Page - I can see the headline 1`] = `"ဘီဘီစီ မ
 
 exports[`Live Radio Page - I can see the summary 1`] = `"နေ့စဉ် ပြည်တွင်း ပြည်ပ သတင်းနဲ့ သုံးသပ်ချက်များ၊ ပညာရေး၊ ကျန်းမာရေး၊ အားကစား၊ နည်းပညာ အစီအစဉ်များ နဲ့ မျက်မှောက်ရေးရာ ဆွေးနွေးခန်းများ"`;
 
+exports[`Live Radio Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/amp_audio_placeholder.png"`;
+
 exports[`Live Radio Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_burmese_radio/liveradio/my/amp"`;
 
 exports[`Live Radio Page - Media player - a11y - assistive technology can read the media player title 1`] = `"အသံဖိုင်ပလေယာ"`;

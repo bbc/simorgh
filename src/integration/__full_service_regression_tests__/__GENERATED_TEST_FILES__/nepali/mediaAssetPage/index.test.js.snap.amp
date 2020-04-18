@@ -76,9 +76,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, �
 
 exports[`Media Asset Page - I can see the headline 1`] = `"बलिउड नृत्यद्वारा उपचार"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"२५ जुलाई २०१६"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/nepali/multimedia/2016/07/160725_tc2_testmap1/17697967/ne/amp"`;
 

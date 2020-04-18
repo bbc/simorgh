@@ -92,9 +92,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, Az
 
 exports[`Media Asset Page - I can see the headline 1`] = `"test1"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"4 Avqust 2015"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/azeri/multimedia/2015/08/150804_azeri_test/17692696/az/amp"`;
 

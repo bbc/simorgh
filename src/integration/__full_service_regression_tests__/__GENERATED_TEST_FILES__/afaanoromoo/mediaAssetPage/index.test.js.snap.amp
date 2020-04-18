@@ -76,9 +76,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, Af
 
 exports[`Media Asset Page - I can see the headline 1`] = `"Quba abbudduu miilaatiin dorggommiin akka jiru beektuu?"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01cynqv.jpg"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"24 Hagayya 2017"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01cynqv.jpg"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/afaanoromoo/23149891/p01cynmg/om/amp"`;
 

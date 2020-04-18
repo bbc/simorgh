@@ -78,11 +78,11 @@ exports[`Media Asset Page - I can see the bulleted list item 1`] = `"Ǹjẹ́ o 
 
 exports[`Media Asset Page - I can see the headline 1`] = `"Cancer: Àṣe ara mi ni iso ti n run gbogbo bí mo ṣe n ṣèrànwọ́ lórí jẹjẹrẹ"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"`;
-
 exports[`Media Asset Page - I can see the related content 1`] = `"Àtẹ Àwòrán, tẸ́st in prọ́Ọ̀gerssẹ́ẹ̀ 1tẸ̀st summary, plẹ̀asẹ̀ ignỌ̀rẹ́27 Bélú 20172:32Fídíò, Njẹ o ti lọ se iforukọsilẹ pẹlu ajọ INEC fun kaadi ididbo rẹ?, 2,32Ajọ INEC n tẹsiju ninu pinpin kaadi ididbo27 Sẹ́rẹ́ 2018"`;
 
 exports[`Media Asset Page - I can see the timestamp 1`] = `"27 Bélú 2019"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p01kx435.jpg"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/yoruba/media-23256797/p01kx42v/yo/amp"`;
 

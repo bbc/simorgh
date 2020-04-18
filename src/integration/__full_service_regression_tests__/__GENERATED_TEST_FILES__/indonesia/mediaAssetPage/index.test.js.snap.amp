@@ -92,9 +92,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, In
 
 exports[`Media Asset Page - I can see the headline 1`] = `"Surat Alex, anak usia enam tahun: Pak Presiden Obama, tolong jemput anak Suriah"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"3 Oktober 2016"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/indonesia/olahraga/2016/10/161003_tc2_videomap1/17698522/id/amp"`;
 

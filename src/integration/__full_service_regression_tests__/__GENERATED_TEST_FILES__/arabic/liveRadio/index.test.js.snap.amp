@@ -174,6 +174,8 @@ exports[`Live Radio Page - I can see the headline 1`] = `"إذاعة بي بي �
 
 exports[`Live Radio Page - I can see the summary 1`] = `"خدمة إخبارية على مدار الساعة و برامج حوارية وتفاعلية تناقش قضايا المنطقة والعالم وباقة من البرامج المنوعة من إذاعة بي بي سي"`;
 
+exports[`Live Radio Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/amp_audio_placeholder.png"`;
+
 exports[`Live Radio Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_arabic_radio/liveradio/ar/amp"`;
 
 exports[`Live Radio Page - Media player - a11y - assistive technology can read the media player title 1`] = `"مشغل ملف صوتي"`;

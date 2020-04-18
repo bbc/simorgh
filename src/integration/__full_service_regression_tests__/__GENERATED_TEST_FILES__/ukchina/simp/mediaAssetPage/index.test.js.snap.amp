@@ -64,9 +64,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC, 英伦�
 
 exports[`Media Asset Page - I can see the headline 1`] = `"誰是獵殺孟加拉虎的真正元 MAP TEST 1"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"2020年3月24日"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"https://ichef.test.bbci.co.uk/images/ic/1024x576/p012zl0f.jpg"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/ukchina/simp/23279012/p01plpyz/zh-hans/amp"`;
 

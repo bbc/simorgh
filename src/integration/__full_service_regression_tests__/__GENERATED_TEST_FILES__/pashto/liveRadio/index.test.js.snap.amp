@@ -118,6 +118,8 @@ exports[`Live Radio Page - I can see the headline 1`] = `"بي بي سي افغ�
 
 exports[`Live Radio Page - I can see the summary 1`] = `"بي بي سي د افغانستان لپاره کورني، سیمه ییز او نړیوال وروستي او کره خبرونه د هر اړخېزو څېړونو او شننو سره تاسې ته وړاندې کوي. په پښتو او دري ژبو بېلا بېلې سیاسي، اقتصادي، ټولنېزې او روزنیزې خپرونې هر ورځ د سهار له ۵ بجو نه د شپې تر ۱۲ بجو پورې خپروي"`;
 
+exports[`Live Radio Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/amp_audio_placeholder.png"`;
+
 exports[`Live Radio Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_pashto_radio/liveradio/ps/amp"`;
 
 exports[`Live Radio Page - Media player - a11y - assistive technology can read the media player title 1`] = `"Audio player"`;

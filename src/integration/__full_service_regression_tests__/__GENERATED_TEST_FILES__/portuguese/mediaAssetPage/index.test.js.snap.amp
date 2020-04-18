@@ -124,9 +124,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, Br
 
 exports[`Media Asset Page - I can see the headline 1`] = `"map 'Minha vida corre perigo': a troca de e-mails que desencadeou os Panama Papers"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"6 maio 2016"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/portuguese/revista/2016/05/160506_tc2_map_0605/17697275/pt-BR/amp"`;
 

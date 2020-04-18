@@ -112,9 +112,9 @@ exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, �
 
 exports[`Media Asset Page - I can see the headline 1`] = `"美国亚裔社群电话催票显实力"`;
 
-exports[`Media Asset Page - I can see the media player placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
-
 exports[`Media Asset Page - I can see the timestamp 1`] = `"2016年11月7日"`;
+
+exports[`Media Asset Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/media_placeholder.png"`;
 
 exports[`Media Asset Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/legacy/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1/17698911/zh-hans/amp"`;
 

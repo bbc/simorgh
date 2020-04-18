@@ -118,6 +118,8 @@ exports[`Live Radio Page - I can see the headline 1`] = `"பிபிசி த
 
 exports[`Live Radio Page - I can see the summary 1`] = `"சர்வதேச, இந்திய, இலங்கை செய்திகள் மற்றும் நடப்புத் தகவல்களை வழங்கும் ஓர் நிகழ்ச்சி. அறிவியல், விளையாட்டு, கலை, கலாச்சாரம் மற்றும் பொழுதுபோக்கு தொடர்பான செய்திகளும் இதில் இடம்பெறும். சிற்றலை வானொலியிலும் பிபிசிதமிழ்.காம் இணையதளத்திலும் இதைக் கேட்கலாம்."`;
 
+exports[`Live Radio Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/amp_audio_placeholder.png"`;
+
 exports[`Live Radio Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_tamil_radio/liveradio/ta/amp"`;
 
 exports[`Live Radio Page - Media player - a11y - assistive technology can read the media player title 1`] = `"கேட்பொலி பிளேயர்"`;

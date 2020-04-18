@@ -110,6 +110,8 @@ exports[`Live Radio Page - I can see the headline 1`] = `"Би-Би-Си Кыр�
 
 exports[`Live Radio Page - I can see the summary 1`] = `"Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде"`;
 
+exports[`Live Radio Page - Media Player - I can see the placeholder image 1`] = `"http://localhost:7080/images/amp_audio_placeholder.png"`;
+
 exports[`Live Radio Page - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_kyrgyz_radio/liveradio/ky/amp"`;
 
 exports[`Live Radio Page - Media player - a11y - assistive technology can read the media player title 1`] = `"Audio player"`;
