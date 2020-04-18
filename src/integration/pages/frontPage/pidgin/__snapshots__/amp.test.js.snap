@@ -98,6 +98,34 @@ exports[`AMP Front Page Footer I can click on the BBC branding and it would take
 
 exports[`AMP Front Page Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
+exports[`AMP Front Page Footer I can see a link with title 1`] = `"Why you fit trust BBC News"`;
+
+exports[`AMP Front Page Footer I can see a link with title 2`] = `"How dem dey take use am"`;
+
+exports[`AMP Front Page Footer I can see a link with title 3`] = `"As e concern BBC"`;
+
+exports[`AMP Front Page Footer I can see a link with title 4`] = `"Privacy Policy"`;
+
+exports[`AMP Front Page Footer I can see a link with title 5`] = `"Cookies"`;
+
+exports[`AMP Front Page Footer I can see a link with title 6`] = `"Call BBC"`;
+
+exports[`AMP Front Page Footer I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`AMP Front Page Footer I can see a link with url 1`] = `"https://www.bbc.com/pidgin/institutional-48528766"`;
+
+exports[`AMP Front Page Footer I can see a link with url 2`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`AMP Front Page Footer I can see a link with url 3`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`AMP Front Page Footer I can see a link with url 4`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`AMP Front Page Footer I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`AMP Front Page Footer I can see a link with url 6`] = `"https://www.bbc.com/pidgin/institutional-42188215"`;
+
+exports[`AMP Front Page Footer I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Front Page Header I can see a navigation link with title 1`] = `"Page where you dey, Home"`;

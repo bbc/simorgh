@@ -78,6 +78,34 @@ exports[`AMP Media Asset Page Footer I can click on the BBC branding and it woul
 
 exports[`AMP Media Asset Page Footer I can click the external link 1`] = `"https://www.bbc.com/persian/institutional/2011/04/000001_links"`;
 
+exports[`AMP Media Asset Page Footer I can see a link with title 1`] = `"چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with title 2`] = `"شرایط استفاده"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with title 3`] = `"درباره بی بی سی"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with title 4`] = `"سیاست حفظ حریم خصوصی"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with title 5`] = `"کوکی ها"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with title 6`] = `"تماس با بی بی سی"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 1`] = `"https://www.bbc.com/persian/institutional-49283091"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 2`] = `"https://www.bbc.com/persian/institutional-37474133"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 3`] = `"https://www.bbc.com/persian/institutional-37474136"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 4`] = `"https://www.bbc.com/persian/institutional-37540067"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 6`] = `"https://www.bbc.com/persian/institutional-37542244"`;
+
+exports[`AMP Media Asset Page Footer I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
 exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Media Asset Page Header I can see a navigation link with title 1`] = `"صفحه اول"`;

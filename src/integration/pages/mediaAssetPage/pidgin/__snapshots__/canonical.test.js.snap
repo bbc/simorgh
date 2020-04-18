@@ -8,6 +8,34 @@ exports[`Canonical Media Asset Page Footer I can click on the BBC branding and i
 
 exports[`Canonical Media Asset Page Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
+exports[`Canonical Media Asset Page Footer I can see a link with title 1`] = `"Why you fit trust BBC News"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with title 2`] = `"How dem dey take use am"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with title 3`] = `"As e concern BBC"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with title 4`] = `"Privacy Policy"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with title 5`] = `"Cookies"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with title 6`] = `"Call BBC"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 1`] = `"https://www.bbc.com/pidgin/institutional-48528766"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 2`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 3`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 4`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 6`] = `"https://www.bbc.com/pidgin/institutional-42188215"`;
+
+exports[`Canonical Media Asset Page Footer I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
 exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Media Asset Page Header I can see a navigation link with title 1`] = `"Home"`;

@@ -28,5 +28,21 @@ export default () => {
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
       expect(brandingImageEl).toBeInTheDocument();
     });
+
+    const footerLinks = document.querySelectorAll('footer ul > li > a');
+    footerLinks.forEach(link => {
+      describe('I can see a link', () => {
+        beforeEach(() => {
+          expect(link).toBeInTheDocument();
+        });
+        it('with title', () => {
+          expect(link.textContent).toBeTruthy();
+          expect(link.textContent).toMatchSnapshot();
+        });
+        it('with url', () => {
+          expect(link.getAttribute('href')).toMatchSnapshot();
+        });
+      });
+    });
   });
 };

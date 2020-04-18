@@ -98,6 +98,34 @@ exports[`AMP Live Radio Footer I can click on the BBC branding and it would take
 
 exports[`AMP Live Radio Footer I can click the external link 1`] = `"https://www.bbc.co.uk/help/web/links/"`;
 
+exports[`AMP Live Radio Footer I can see a link with title 1`] = `"BBC News를 신뢰할 수 있는 이유"`;
+
+exports[`AMP Live Radio Footer I can see a link with title 2`] = `"이용 약관"`;
+
+exports[`AMP Live Radio Footer I can see a link with title 3`] = `"BBC 소개"`;
+
+exports[`AMP Live Radio Footer I can see a link with title 4`] = `"개인정보취급방침"`;
+
+exports[`AMP Live Radio Footer I can see a link with title 5`] = `"쿠키정책"`;
+
+exports[`AMP Live Radio Footer I can see a link with title 6`] = `"고객센터"`;
+
+exports[`AMP Live Radio Footer I can see a link with title 7`] = `"AdChoices / Do Not Sell My Info"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 1`] = `"https://www.bbc.com/korean/institutional-49283197"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 2`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 3`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 4`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 5`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 6`] = `"https://www.bbc.com/korean/institutional-42224941"`;
+
+exports[`AMP Live Radio Footer I can see a link with url 7`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
 exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`AMP Live Radio Header I can see a navigation link with title 1`] = `"뉴스"`;
