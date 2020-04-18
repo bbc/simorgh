@@ -22,5 +22,16 @@ export default () => {
       expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
       expect(brandingImageEl).toBeInTheDocument();
     });
+
+    it('I can see site wide links', () => {
+      const siteLinkEls = document.querySelectorAll('footer ul > li > a');
+
+      siteLinkEls.forEach((siteLink) => {
+        expect(siteLink).toBeInTheDocument();
+        expect(siteLink.getAttribute('href')).toMatchSnapshot();
+        expect(siteLink.textContent).toBeTruthy();
+        expect(siteLink.textContent).toMatchSnapshot();
+      });
+    });
   });
 };

@@ -8,6 +8,34 @@ exports[`Media Asset Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":
 
 exports[`Media Asset Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
+exports[`Media Asset Page - Footer - I can see site wide links 1`] = `"https://www.bbc.com/pidgin/institutional-48528766"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 2`] = `"Why you fit trust BBC News"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 3`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 4`] = `"How dem dey take use am"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 5`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 6`] = `"As e concern BBC"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 7`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 8`] = `"Privacy Policy"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 9`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 10`] = `"Cookies"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 11`] = `"https://www.bbc.com/pidgin/institutional-42188215"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 12`] = `"Call BBC"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 13`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Media Asset Page - Footer - I can see site wide links 14`] = `"AdChoices / Do Not Sell My Info"`;
+
 exports[`Media Asset Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Media Asset Page - Header - I can see the branding 1`] = `"BBC News, Pidgin"`;

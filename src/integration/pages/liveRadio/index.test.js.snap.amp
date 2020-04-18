@@ -8,6 +8,34 @@ exports[`Live Radio Page - Core AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{
 
 exports[`Live Radio Page - Footer - I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
 
+exports[`Live Radio Page - Footer - I can see site wide links 1`] = `"https://www.bbc.com/korean/institutional-49283197"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 2`] = `"BBC News를 신뢰할 수 있는 이유"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 3`] = `"https://www.bbc.co.uk/usingthebbc/terms/"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 4`] = `"이용 약관"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 5`] = `"https://www.bbc.co.uk/aboutthebbc"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 6`] = `"BBC 소개"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 7`] = `"https://www.bbc.co.uk/usingthebbc/privacy/"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 8`] = `"개인정보취급방침"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 9`] = `"https://www.bbc.co.uk/usingthebbc/cookies/"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 10`] = `"쿠키정책"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 11`] = `"https://www.bbc.com/korean/institutional-42224941"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 12`] = `"고객센터"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 13`] = `"https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"`;
+
+exports[`Live Radio Page - Footer - I can see site wide links 14`] = `"AdChoices / Do Not Sell My Info"`;
+
 exports[`Live Radio Page - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`Live Radio Page - Header - I can see the branding 1`] = `"BBC News, 코리아"`;
