@@ -7,11 +7,13 @@ import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe('Article Page', () => {
-  describe(platform, () => {
-    runCrossPlatformTests();
+describe(`Article Page - ${platform} - `, () => {
+  runCrossPlatformTests();
 
-    // eslint-disable-next-line no-unused-expressions
-    platform === 'amp' ? runAmpTests() : runCanonicalTests();
-  });
+  if (platform === 'amp') {
+    runAmpTests();
+  }
+  if (platform === 'canonical') {
+    runCanonicalTests();
+  }
 });

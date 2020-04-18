@@ -5,8 +5,6 @@
 
 import runCrossPlatformTests from './crossPlatformTests';
 
-describe('Story Page', () => {
-  describe(platform, () => {
-    runCrossPlatformTests();
-  });
-});
+describe(`Story Page - ${platform} - `, () => {
+  runCrossPlatformTests();
+ });
