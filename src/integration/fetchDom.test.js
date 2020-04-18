@@ -41,7 +41,7 @@ it('should retry to render the DOM if socket hang up error occurs', async () => 
       ),
     );
 
-  const dom = await fetchDom('/some/path');
+  const dom = await fetchDom('http://localhost:7080/some/path');
   const pageTitle = dom.window.document.querySelector('title').textContent;
 
   expect(console.warn).toHaveBeenCalledWith(
