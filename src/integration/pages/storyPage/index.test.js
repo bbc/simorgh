@@ -7,7 +7,7 @@ import runCrossPlatformTests from './crossPlatformTests';
 import runAmpTests from './ampTests';
 import runCanonicalTests from './canonicalTests';
 
-describe(`Story Page - ${platform} - `, () => {
+describe(`Story Page - ${platform} -`, () => {
   runCrossPlatformTests();
 
   if (platform === 'amp') {

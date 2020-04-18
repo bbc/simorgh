@@ -1,5 +1,5 @@
 export default () => {
-  describe('Header', () => {
+  describe('Header -', () => {
     it('I can see the branding', () => {
       const logo = document.querySelector('header svg');
 

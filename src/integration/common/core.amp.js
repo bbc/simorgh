@@ -1,6 +1,6 @@
 export default () => {
   describe('Core AMP', () => {
-    it('Core scripts', () => {
+    it('Scripts', () => {
       const ampScripts = [
         'https://cdn.ampproject.org/v0.js',
         'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
@@ -15,14 +15,14 @@ export default () => {
       });
     });
 
-    it('AMP Geo config', () => {
+    it('Geo config', () => {
       expect(
         document.querySelector('body amp-geo > script[type="application/json"]')
           .textContent,
       ).toMatchSnapshot();
     });
 
-    it('AMP Consent config', () => {
+    it('Consent config', () => {
       expect(
         document.querySelector(
           'body amp-consent > script[type="application/json"]',

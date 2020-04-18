@@ -1,6 +1,6 @@
 export default () => {
-  describe('Media player', () => {
-    describe('a11y', () => {
+  describe('Media player -', () => {
+    describe('a11y -', () => {
       it('assistive technology can read the media player title', () => {
         const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
 
@@ -10,7 +10,7 @@ export default () => {
       });
     });
 
-    it('I can see an iframe with url', () => {
+    it('I can see an iframe with a url', () => {
       const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
 
       expect(mediaPlayerEl).toBeInTheDocument();

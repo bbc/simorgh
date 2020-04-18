@@ -4,7 +4,7 @@ export default () => {
   runCoreAmpTests();
   runAmpAnalyticsTests();
 
-  it('Media player placeholder image', () => {
+  it('I can see the media player placeholder image', () => {
     const placeholderImage = document.querySelector(`amp-img`);
 
     expect(placeholderImage).toBeInTheDocument();

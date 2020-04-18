@@ -1,69 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Media Asset Page - canonical -  Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=pidgin.media_asset.23248703.page&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&+<+>+-+BBC+News+Pidgin]&x11=[2019-09-13T15:31:44.000Z]&x12=[2019-11-20T12:24:25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]"`;
+exports[`Media Asset Page - canonical - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=pidgin.media_asset.23248703.page&x1=[urn:bbc:cps:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[article-media-asset]&x8=[simorgh-nojs]&x9=[Simorgh:+Media+Pod+Build+First+CPS+Media+Asset+Page+in+Simorgh+with+the+Help+of+Drew+&+<+>+-+BBC+News+Pidgin]&x11=[2019-09-13T15:31:44.000Z]&x12=[2019-11-20T12:24:25.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]"`;
 
-exports[`Media Asset Page - canonical -  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Media Asset Page - canonical - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
-exports[`Media Asset Page - canonical -  Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`Media Asset Page - canonical - Header - I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`Media Asset Page - canonical -  I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
+exports[`Media Asset Page - canonical - I can see the bulleted list item 1`] = `"<Media Asset Page><Media Asset Page><Media Asset Page>this is the link textthis is the link textthis is the link text"`;
 
-exports[`Media Asset Page - canonical -  I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`Media Asset Page - canonical - I can see the headline 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
 
-exports[`Media Asset Page - canonical -  I can see the related content 1`] = `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017Lagos 'Gay' men Appear for Court, say Dem no dey GuiltyThe men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.8th August 2017Image gallery, Kenya Elections Pictures: 8 August 2017This na some of the picture wey our eye see as Kenya people go vote for election today8th August 20170:15Audio, BBC News Pidgin One Minute News, 0,15All di local and world tori wey you suppose know in 60 seconds!17th August 2017"`;
+exports[`Media Asset Page - canonical - I can see the related content 1`] = `"Police Arrest 3 ontop Anambra Church AttackGovernor Willie Obiano of Anambra State bin don promise say government go handle the matter sharp, sharp8th August 2017Lagos 'Gay' men Appear for Court, say Dem no dey GuiltyThe men wey dem arrest almost one week ago don say dem no dey guilty, as court order dem to go for sexual rehabilitation.8th August 2017Image gallery, Kenya Elections Pictures: 8 August 2017This na some of the picture wey our eye see as Kenya people go vote for election today8th August 20170:15Audio, BBC News Pidgin One Minute News, 0,15All di local and world tori wey you suppose know in 60 seconds!17th August 2017"`;
 
-exports[`Media Asset Page - canonical -  I can see the timestamp 1`] = `"13 September 2019"`;
+exports[`Media Asset Page - canonical - I can see the timestamp 1`] = `"13 September 2019"`;
 
-exports[`Media Asset Page - canonical -  Media player I can see an iframe with url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
+exports[`Media Asset Page - canonical - Media player - I can see an iframe with a url 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
 
-exports[`Media Asset Page - canonical -  Media player a11y assistive technology can read the media player title 1`] = `"Media player"`;
+exports[`Media Asset Page - canonical - Media player - a11y - assistive technology can read the media player title 1`] = `"Media player"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"connectionAltText"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"connectionAltText"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"pcm"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"pcm"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Pidgin"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Pidgin"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/pidgin/23248703"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCNews"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@BBCNews"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"This week, CPS media assets were visible in Simorgh for the first time. The pages were built out in a matter of weeks using existing Psammead Components."`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"connectionAltText"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"connectionAltText"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@BBCNews"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@BBCNews"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`Media Asset Page - canonical - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
+exports[`Media Asset Page - canonical - SEO - canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata dir attribute 1`] = `"ltr"`;
+exports[`Media Asset Page - canonical - SEO - dir attribute 1`] = `"ltr"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
+exports[`Media Asset Page - canonical - SEO - heading level 1 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < >"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata lang attribute 1`] = `"pcm"`;
+exports[`Media Asset Page - canonical - SEO - lang attribute 1`] = `"pcm"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+exports[`Media Asset Page - canonical - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
 
-exports[`Media Asset Page - canonical -  SEO & Social Media Metadata title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
+exports[`Media Asset Page - canonical - SEO - title 1`] = `"Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh with the Help of Drew & < > - BBC News Pidgin"`;
 
-exports[`Media Asset Page - canonical -  a11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+exports[`Media Asset Page - canonical - a11y - I can see the skip to content link 1`] = `"Waka go wetin de inside"`;

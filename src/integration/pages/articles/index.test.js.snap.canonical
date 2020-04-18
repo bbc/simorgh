@@ -1,61 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Article Page - canonical -  Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=62&p=mundo.articles.ce42wzqr2mko.page&x1=[urn:bbc:optimo:ce42wzqr2mko]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x7=[article]&x8=[simorgh-nojs]&x9=[Este+artículo+de+prueba+ha+sido+creado+para+que+podamos+ejecutar+pruebas]&x11=[2019-10-04T10:58:46.977Z]&x12=[2019-10-04T10:58:46.977Z]"`;
+exports[`Article Page - canonical - Canonical analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=62&p=mundo.articles.ce42wzqr2mko.page&x1=[urn:bbc:optimo:ce42wzqr2mko]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x7=[article]&x8=[simorgh-nojs]&x9=[Este+artículo+de+prueba+ha+sido+creado+para+que+podamos+ejecutar+pruebas]&x11=[2019-10-04T10:58:46.977Z]&x12=[2019-10-04T10:58:46.977Z]"`;
 
-exports[`Article Page - canonical -  Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Article Page - canonical - Footer - I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
-exports[`Article Page - canonical -  Header I can see the branding 1`] = `"BBC News, Mundo"`;
+exports[`Article Page - canonical - Header - I can see the branding 1`] = `"BBC News, Mundo"`;
 
-exports[`Article Page - canonical -  I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;
+exports[`Article Page - canonical - I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsdevpb/ee58/test/4a2f4c00-e695-11e9-88d6-81aa2ccc6d4c.jpg"`;
 
-exports[`Article Page - canonical -  I can see an image with a caption 2`] = `"Pie de foto, Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título."`;
+exports[`Article Page - canonical - I can see an image with a caption 2`] = `"Pie de foto, Esta imagen de prueba, copyright BBC, muestra un mapa de Francia. La imagen está en los primeros tres bloques y tiene este título."`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
+exports[`Article Page - canonical - SEO - Social Media - Facebook admins - meta[property="fb:admins"] 1`] = `"100004154058350"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
+exports[`Article Page - canonical - SEO - Social Media - Facebook application ID - meta[property="fb:app_id"] 1`] = `"1609039196070050"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
+exports[`Article Page - canonical - SEO - Social Media - Facebook pages - meta[property="fb:pages"] 1`] = `"285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph description - meta[property="og:description"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph description - meta[property="og:description"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph image - meta[property="og:image"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News Mundo"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph image alt text - meta[property="og:image:alt"] 1`] = `"BBC News Mundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph locale - meta[property="og:locale"] 1`] = `"es-005"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph locale - meta[property="og:locale"] 1`] = `"es-005"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Mundo"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph site name (meta[property="og:site_name"]) 1`] = `"BBC News Mundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph title - meta[property="og:title"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph title - meta[property="og:title"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph type - meta[property="og:type"] 1`] = `"article"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+exports[`Article Page - canonical - SEO - Social Media - OpenGraph url (meta[property="og:url"]) 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter card - meta[name="twitter:card"] 1`] = `"summary_large_image"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcmundo"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter creator - meta[name="twitter:creator"] 1`] = `"@bbcmundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter description - meta[name="twitter:description"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter description - meta[name="twitter:description"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News Mundo"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter image alt text - meta[name="twitter:image:alt"] 1`] = `"BBC News Mundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter image src - meta[name="twitter:image:src"] 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter site - meta[name="twitter:site"] 1`] = `"@bbcmundo"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter site - meta[name="twitter:site"] 1`] = `"@bbcmundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata Twitter title - meta[name="twitter:title"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+exports[`Article Page - canonical - SEO - Social Media - Twitter title - meta[name="twitter:title"] 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata canonical link 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
+exports[`Article Page - canonical - SEO - canonical link 1`] = `"http://localhost:7080/mundo/articles/ce42wzqr2mko"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata dir attribute 1`] = `"ltr"`;
+exports[`Article Page - canonical - SEO - dir attribute 1`] = `"ltr"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata heading level 1 1`] = `"Este es el titular de este artículo de prueba."`;
+exports[`Article Page - canonical - SEO - heading level 1 1`] = `"Este es el titular de este artículo de prueba."`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata lang attribute 1`] = `"es"`;
+exports[`Article Page - canonical - SEO - lang attribute 1`] = `"es"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
+exports[`Article Page - canonical - SEO - robots - meta[name="robots"] 1`] = `"noodp,noydir"`;
 
-exports[`Article Page - canonical -  SEO & Social Media Metadata title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
+exports[`Article Page - canonical - SEO - title 1`] = `"Este artículo de prueba ha sido creado para que podamos ejecutar pruebas - BBC News Mundo"`;
 
-exports[`Article Page - canonical -  a11y I can see the skip to content link 1`] = `"Ir al contenido"`;
+exports[`Article Page - canonical - a11y - I can see the skip to content link 1`] = `"Ir al contenido"`;
