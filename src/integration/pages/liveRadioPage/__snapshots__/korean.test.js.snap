@@ -608,7 +608,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
                           layout="fill"
                           scrolling="no"
                           frameborder="0"
-                          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live"
                           title="오디오 플레이어"
                           allowfullscreen="allowfullscreen"
               >
@@ -1224,7 +1224,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
           </p>
           <div class="AudioPlayerWrapper-sc-14jc12g-0 hQQApa">
             <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
-              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"
                       title="오디오 플레이어"
                       allow="autoplay; fullscreen"
                       scrolling="no"
@@ -1405,7 +1405,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-253ae210.js"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1413,7 +1413,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            src="http://localhost:7080/static/js/vendor-d939e436.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
