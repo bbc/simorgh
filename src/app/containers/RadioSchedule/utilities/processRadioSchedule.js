@@ -15,10 +15,9 @@ export const getProgramState = (currentTime, startTime, endTime) => {
 };
 
 export const getLink = (state, program, service) => {
+  const pid = pathOr('', ['episode', 'pid'], program);
   const url = `/${service}/${program.serviceId}`;
-  return state === 'live'
-    ? `${url}/liveradio`
-    : `${url}/${program.episode.pid}`;
+  return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
 
 export default (data, service, currentTime) => {
@@ -45,7 +44,7 @@ export default (data, service, currentTime) => {
 
   const processedSchedule =
     programsToShow &&
-    programsToShow.map((program) => {
+    programsToShow.map((program = {}) => {
       const currentState = getProgramState(
         currentTime,
         program.publishedTimeStart,
@@ -60,7 +59,7 @@ export default (data, service, currentTime) => {
         brandTitle: pathOr(null, ['brand', 'title'], program),
         episodeTitle: pathOr(null, ['episode', 'presentationTitle'], program),
         summary: pathOr(null, ['episode', 'synopses', 'short'], program),
-        duration: pathOr(null, ['publishedTimeDuration'], program),
+        duration: pathOr('', ['publishedTimeDuration'], program),
         durationLabel: 'Duration',
       };
     });

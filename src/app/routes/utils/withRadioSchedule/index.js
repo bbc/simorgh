@@ -38,7 +38,7 @@ const withRadioSchedule = async (pageDataPromise, service, path) => {
     baseUrl: SIMORGH_BASE_URL,
   });
 
-  logger.info(DATA_REQUEST_RECEIVED, { radioScheduleUrl });
+  logger.info(DATA_REQUEST_RECEIVED, { url: radioScheduleUrl });
   const radioSchedulePromise = fetchData(radioScheduleUrl);
 
   const [{ json: pageData, ...rest }, radioScheduleJson] = await Promise.all([
