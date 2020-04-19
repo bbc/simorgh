@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
+
+exports[`AMP Media Asset Page AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`AMP Media Asset Page AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+
+exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
+
+exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline"`;
+
+exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
+
+exports[`AMP Media Asset Page Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
+
+exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+
+exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`AMP Media Asset Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
+
+exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
+
+exports[`AMP Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
+
+exports[`AMP Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+
+exports[`AMP Media Asset Page SEO OG image alt 1`] = `"Trump getting upset"`;
+
+exports[`AMP Media Asset Page SEO OG locale 1`] = `"fa"`;
+
+exports[`AMP Media Asset Page SEO OG site name 1`] = `"BBC News فارسی"`;
+
+exports[`AMP Media Asset Page SEO OG title 1`] = `"Trump long headline - BBC News فارسی"`;
+
+exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
+
+exports[`AMP Media Asset Page SEO OG url 1`] = `"http://localhost:7080/persian/iran-23231114"`;
+
+exports[`AMP Media Asset Page SEO Page title 1`] = `"Trump long headline - BBC News فارسی"`;
+
+exports[`AMP Media Asset Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP Media Asset Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Media Asset Page SEO Twitter creator 1`] = `"@bbcpersian"`;
+
+exports[`AMP Media Asset Page SEO Twitter description 1`] = `"Trump summary text"`;
+
+exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"Trump getting upset"`;
+
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+
+exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
+
+exports[`AMP Media Asset Page SEO Twitter title 1`] = `"Trump long headline - BBC News فارسی"`;

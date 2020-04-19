@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CANONICAL Live Radio A11y I can see the skip to content link 1`] = `"ወደ ዋናው ይዘት ይለፉ"`;
+
+exports[`CANONICAL Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/amharic"`;
+
+exports[`CANONICAL Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
+
+exports[`CANONICAL Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
+
+exports[`CANONICAL Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"`;
+
+exports[`CANONICAL Live Radio I can see the headline 1`] = `"ያድምጡ"`;
+
+exports[`CANONICAL Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;
+
+exports[`CANONICAL Live Radio Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"`;
+
+exports[`CANONICAL Live Radio SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
+
+exports[`CANONICAL Live Radio SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`CANONICAL Live Radio SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`CANONICAL Live Radio SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`CANONICAL Live Radio SEO Heading level 1 1`] = `"ያድምጡ"`;
+
+exports[`CANONICAL Live Radio SEO Lang attribute 1`] = `"am"`;
+
+exports[`CANONICAL Live Radio SEO OG description 1`] = `"ዝግጅቶቻችንን’"`;
+
+exports[`CANONICAL Live Radio SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"`;
+
+exports[`CANONICAL Live Radio SEO OG image alt 1`] = `"BBC News አማርኛ"`;
+
+exports[`CANONICAL Live Radio SEO OG locale 1`] = `"am-ET"`;
+
+exports[`CANONICAL Live Radio SEO OG site name 1`] = `"BBC News አማርኛ"`;
+
+exports[`CANONICAL Live Radio SEO OG title 1`] = `"ያድምጡ - BBC News አማርኛ"`;
+
+exports[`CANONICAL Live Radio SEO OG type 1`] = `"website"`;
+
+exports[`CANONICAL Live Radio SEO OG url 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
+
+exports[`CANONICAL Live Radio SEO Page title 1`] = `"ያድምጡ - BBC News አማርኛ"`;
+
+exports[`CANONICAL Live Radio SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`CANONICAL Live Radio SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`CANONICAL Live Radio SEO Twitter creator 1`] = `"@bbcnews"`;
+
+exports[`CANONICAL Live Radio SEO Twitter description 1`] = `"ዝግጅቶቻችንን’"`;
+
+exports[`CANONICAL Live Radio SEO Twitter image alt 1`] = `"BBC News አማርኛ"`;
+
+exports[`CANONICAL Live Radio SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"`;
+
+exports[`CANONICAL Live Radio SEO Twitter site 1`] = `"@bbcnews"`;
+
+exports[`CANONICAL Live Radio SEO Twitter title 1`] = `"ያድምጡ - BBC News አማርኛ"`;

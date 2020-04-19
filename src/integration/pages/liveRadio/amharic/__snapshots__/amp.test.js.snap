@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Live Radio A11y I can see the skip to content link 1`] = `"ወደ ዋናው ይዘት ይለፉ"`;
+
+exports[`AMP Live Radio AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+
+exports[`AMP Live Radio AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+
+exports[`AMP Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/amharic"`;
+
+exports[`AMP Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. ቢቢሲ ከሌሎች ድረ-ገጾች ለሚመጡ መረጃዎች ሀላፊነት አይወስድም. ስለ ውጪ ሊንኮች ያለን አቀራረብ"`;
+
+exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
+
+exports[`AMP Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"`;
+
+exports[`AMP Live Radio I can see the headline 1`] = `"ያድምጡ"`;
+
+exports[`AMP Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;
+
+exports[`AMP Live Radio Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"`;
+
+exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
+
+exports[`AMP Live Radio SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP Live Radio SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP Live Radio SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP Live Radio SEO Heading level 1 1`] = `"ያድምጡ"`;
+
+exports[`AMP Live Radio SEO Lang attribute 1`] = `"am"`;
+
+exports[`AMP Live Radio SEO OG description 1`] = `"ዝግጅቶቻችንን’"`;
+
+exports[`AMP Live Radio SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"`;
+
+exports[`AMP Live Radio SEO OG image alt 1`] = `"BBC News አማርኛ"`;
+
+exports[`AMP Live Radio SEO OG locale 1`] = `"am-ET"`;
+
+exports[`AMP Live Radio SEO OG site name 1`] = `"BBC News አማርኛ"`;
+
+exports[`AMP Live Radio SEO OG title 1`] = `"ያድምጡ - BBC News አማርኛ"`;
+
+exports[`AMP Live Radio SEO OG type 1`] = `"website"`;
+
+exports[`AMP Live Radio SEO OG url 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
+
+exports[`AMP Live Radio SEO Page title 1`] = `"ያድምጡ - BBC News አማርኛ"`;
+
+exports[`AMP Live Radio SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP Live Radio SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP Live Radio SEO Twitter creator 1`] = `"@bbcnews"`;
+
+exports[`AMP Live Radio SEO Twitter description 1`] = `"ዝግጅቶቻችንን’"`;
+
+exports[`AMP Live Radio SEO Twitter image alt 1`] = `"BBC News አማርኛ"`;
+
+exports[`AMP Live Radio SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png"`;
+
+exports[`AMP Live Radio SEO Twitter site 1`] = `"@bbcnews"`;
+
+exports[`AMP Live Radio SEO Twitter title 1`] = `"ያድምጡ - BBC News አማርኛ"`;

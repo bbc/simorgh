@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CANONICAL Front Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
+
+exports[`CANONICAL Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
+
+exports[`CANONICAL Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+
+exports[`CANONICAL Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
+
+exports[`CANONICAL Front Page SEO Canonical link 1`] = `"http://localhost:7080/arabic"`;
+
+exports[`CANONICAL Front Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`CANONICAL Front Page SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`CANONICAL Front Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`CANONICAL Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
+
+exports[`CANONICAL Front Page SEO Lang attribute 1`] = `"ar"`;
+
+exports[`CANONICAL Front Page SEO OG description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
+
+exports[`CANONICAL Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+
+exports[`CANONICAL Front Page SEO OG image alt 1`] = `"BBC News عربي"`;
+
+exports[`CANONICAL Front Page SEO OG locale 1`] = `"ar"`;
+
+exports[`CANONICAL Front Page SEO OG site name 1`] = `"BBC News عربي"`;
+
+exports[`CANONICAL Front Page SEO OG title 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`CANONICAL Front Page SEO OG type 1`] = `"website"`;
+
+exports[`CANONICAL Front Page SEO OG url 1`] = `"http://localhost:7080/arabic"`;
+
+exports[`CANONICAL Front Page SEO Page title 1`] = `"الرئيسية - BBC News عربي"`;
+
+exports[`CANONICAL Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`CANONICAL Front Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`CANONICAL Front Page SEO Twitter creator 1`] = `"@BBCArabic"`;
+
+exports[`CANONICAL Front Page SEO Twitter description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
+
+exports[`CANONICAL Front Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
+
+exports[`CANONICAL Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+
+exports[`CANONICAL Front Page SEO Twitter site 1`] = `"@BBCArabic"`;
+
+exports[`CANONICAL Front Page SEO Twitter title 1`] = `"الرئيسية - BBC News عربي"`;
