@@ -1,5 +1,5 @@
 export default () => {
-  describe('Canonical analytics', () => {
+  describe('Analytics', () => {
     it('ATI', () => {
       const noscriptImage = document.querySelector('noscript img');
 

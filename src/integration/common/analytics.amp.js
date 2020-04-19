@@ -1,5 +1,5 @@
 export default () => {
-  describe('AMP analytics', () => {
+  describe('Analytics', () => {
     it('ATI', () => {
       expect(
         document.querySelector('amp-analytics script[type="application/json"]')
