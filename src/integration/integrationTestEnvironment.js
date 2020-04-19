@@ -7,8 +7,9 @@ const camelCaseToText = (camelCase) => {
   return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
-const getPageType = (testPath) => {
-  const [pageType] = testPath.match(/(?<=\/integration\/pages\/).+?(?=\/)/);
+const getPageTypeFromTestPath = (testPath) => {
+  const [pageType] = testPath.match(/(?<=\/integration\/pages\/).+?(?=\/)/g) ||
+    testPath.match(/(?<=\/__GENERATED_TEST_FILES__\/.+?\/).+?(?=\/)/g) || [''];
 
   return pageType;
 };
@@ -18,7 +19,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     super(config, context);
     const { platform } = config.testEnvironmentOptions;
     const { pathname, service } = context.docblockPragmas;
-    const pageType = getPageType(context.testPath);
+    const pageType = getPageTypeFromTestPath(context.testPath);
 
     this.pageType = camelCaseToText(pageType);
     this.platform = platform;
