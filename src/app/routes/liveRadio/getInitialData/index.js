@@ -1,6 +1,7 @@
 import path from 'ramda/src/path';
 import fetchPageData from '../../utils/fetchPageData';
 import addIdsToBlocks from './addIdsToBlocks';
+import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 
 const getLanguage = path(['metadata', 'language']);
 const getMetaDataId = path(['metadata', 'id']);
@@ -15,7 +16,9 @@ const getPageIdentifier = path([
 ]);
 
 export default async ({ path: pathname }) => {
-  const { json, ...rest } = await fetchPageData(pathname);
+  const { json, ...rest } = await fetchPageData(
+    overrideRendererOnTest(pathname),
+  );
   const contentData = path(['content'], json);
 
   return {
