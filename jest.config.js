@@ -30,7 +30,7 @@ const ampIntegrationTests = {
     platform: 'amp',
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  testMatch: ['**/src/integration/**/*.test.js'],
+  testMatch: ['**/src/integration/**/*[^.canonical].test.js'],
 };
 
 const canonicalIntegrationTests = {
@@ -40,7 +40,7 @@ const canonicalIntegrationTests = {
     platform: 'canonical',
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  testMatch: ['**/src/integration/**/*.test.js'],
+  testMatch: ['**/src/integration/**/*[^.amp].test.js'],
 };
 
 module.exports = {
