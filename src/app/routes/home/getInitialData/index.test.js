@@ -2,9 +2,9 @@ import fetchMock from 'fetch-mock';
 import getInitialData, { hasRadioSchedule } from '.';
 import frontPageJson from '#data/hausa/frontpage/index.json';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
-import getConfig from '#lib/config/services/getConfig';
+import getConfig from '../../utils/getConfig';
 
-jest.mock('#lib/config/services/getConfig', () => jest.fn());
+jest.mock('../../utils/getConfig', () => jest.fn());
 
 describe('Get initial data from front page', () => {
   beforeEach(() => {

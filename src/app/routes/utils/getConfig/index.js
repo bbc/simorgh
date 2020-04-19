@@ -1,4 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 /* This function allows for a dynamic import of service config outside of
 the react application (for example, for server side data fetching). Within
@@ -9,14 +12,18 @@ const getConfig = async (service, variant = 'default') => {
   try {
     const { service: config } = await import(`#lib/config/services/${service}`);
     serviceConfig = config;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(
-      `getConfig could not find config for the requested service: ${service}.`,
-    );
+  } catch (e) {
+    logger.error(`Error retrieving config for ${service}`);
+    return {};
   }
 
-  return pathOr({}, [variant], serviceConfig);
+  const variantConfig = pathOr(null, [variant], serviceConfig);
+
+  if (!variantConfig) {
+    logger.error(`No config found for ${service} variant ${variant}`);
+  }
+
+  return variantConfig || {};
 };
 
 export default getConfig;

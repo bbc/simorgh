@@ -7,7 +7,7 @@ import squashTopStories from './squashTopStories';
 import addIdsToItems from './addIdsToItems';
 import filterGroupsWithoutStraplines from './filterGroupsWithoutStraplines';
 import withRadioSchedule from '../../utils/withRadioSchedule';
-import getConfig from '#lib/config/services/getConfig';
+import getConfig from '../../utils/getConfig';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
