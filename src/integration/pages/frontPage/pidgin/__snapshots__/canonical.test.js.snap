@@ -20,6 +20,8 @@ exports[`CANONICAL Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Hom
 
 exports[`CANONICAL Front Page SEO Lang attribute 1`] = `"pcm"`;
 
+exports[`CANONICAL Front Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"WebPage\\",\\"url\\":\\"http://localhost:7080/pidgin\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/pidgin/institutional-48528766\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/pidgin\\",\\"name\\":\\"Domot\\"}}"`;
+
 exports[`CANONICAL Front Page SEO OG description 1`] = `"We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."`;
 
 exports[`CANONICAL Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;

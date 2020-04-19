@@ -176,8 +176,9 @@ export default () => {
         'script[type="application/ld+json"]',
       );
 
-      expect(linkedDataEl).toBeTruthy();
-      expect(linkedDataEl).toMatchSnapshot();
+      expect(linkedDataEl).toBeInTheDocument();
+      expect(linkedDataEl.textContent).toBeTruthy();
+      expect(linkedDataEl.textContent).toMatchSnapshot();
     });
   });
 };

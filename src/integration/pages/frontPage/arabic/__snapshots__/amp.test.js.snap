@@ -24,6 +24,8 @@ exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الر�
 
 exports[`AMP Front Page SEO Lang attribute 1`] = `"ar"`;
 
+exports[`AMP Front Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"WebPage\\",\\"url\\":\\"http://localhost:7080/arabic\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News عربي\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/arabic/institutional-49283069\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/arabic\\",\\"name\\":\\"الرئيسية\\"}}"`;
+
 exports[`AMP Front Page SEO OG description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
 
 exports[`AMP Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;

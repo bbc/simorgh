@@ -26,6 +26,8 @@ exports[`CANONICAL Media Asset Page SEO Heading level 1 1`] = `"Trump long headl
 
 exports[`CANONICAL Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
+exports[`CANONICAL Media Asset Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"Article\\",\\"url\\":\\"http://localhost:7080/persian/iran-23231114\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News فارسی\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/persian/institutional-49283091\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/persian/iran-23231114\\",\\"name\\":\\"Trump long headline\\"},\\"headline\\":\\"Trump long headline\\",\\"datePublished\\":\\"2019-02-15T12:47:51.000Z\\",\\"dateModified\\":\\"2019-02-15T12:47:54.000Z\\",\\"author\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News فارسی\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\"},\\"noBylinesPolicy\\":\\"https://www.bbc.com/persian/institutional-49283091#authorexpertise\\"}}"`;
+
 exports[`CANONICAL Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
 
 exports[`CANONICAL Media Asset Page SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
