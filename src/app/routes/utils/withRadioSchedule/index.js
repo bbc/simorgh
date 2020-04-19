@@ -3,7 +3,7 @@ import nodeLogger from '#lib/logger.node';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 import { getQueryString } from '#lib/utilities/urlParser';
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
-import { DATA_FETCH_ERROR } from '#lib/logger.const';
+import { DATA_REQUEST_RECEIVED, DATA_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -38,6 +38,7 @@ const withRadioSchedule = async (pageDataPromise, service, path) => {
     baseUrl: SIMORGH_BASE_URL,
   });
 
+  logger.info(DATA_REQUEST_RECEIVED, { radioScheduleUrl });
   const radioSchedulePromise = fetchData(radioScheduleUrl);
 
   const [{ json: pageData, ...rest }, radioScheduleJson] = await Promise.all([

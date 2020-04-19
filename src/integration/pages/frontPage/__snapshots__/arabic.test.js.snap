@@ -5591,7 +5591,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
           >
             <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu RadioScheduleSectionLabel-f8vxqz-2 bKHBEG">
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Radio-Schedule"
@@ -5600,7 +5600,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       أحدث نشرة أخبار
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <div class="RadioScheduleWrapper-f8vxqz-1 hFZkwU">
