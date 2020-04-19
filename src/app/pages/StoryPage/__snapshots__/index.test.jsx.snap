@@ -460,6 +460,8 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .c57 {
@@ -793,9 +795,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
   .c2 {
-    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
+    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 16.666666666666668%;
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -849,7 +851,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width:80rem) {
   .c40 {
-    width: calc(25%);
+    width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
   }
@@ -1228,6 +1230,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width:63rem) {
   .c6 {
     padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width:63rem) {
+  .c1 {
+    max-width: 63rem;
   }
 }
 
@@ -2524,6 +2532,8 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .c59 {
@@ -2871,9 +2881,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
   .c2 {
-    width: calc(5/12*(100% - 12 * 1rem) + 4 * 1rem );
+    width: calc(8/12*(100% - 12 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
-    margin-left: 16.666666666666668%;
+    margin-left: 0%;
     display: inline-block;
     vertical-align: top;
   }
@@ -2927,7 +2937,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width:80rem) {
   .c42 {
-    width: calc(25%);
+    width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
   }
@@ -3316,6 +3326,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width:63rem) {
+  .c1 {
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:63rem) {
   .c43 {
     margin-top: 2rem;
   }
@@ -3452,6 +3468,10 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
     <meta
       content="1609039196070050"
       property="fb:app_id"
+    />
+    <meta
+      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+      property="fb:pages"
     />
     <meta
       content="yes"
