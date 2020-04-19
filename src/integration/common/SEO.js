@@ -170,5 +170,14 @@ export default () => {
       expect(metaTagContent).toBeTruthy();
       expect(metaTagContent).toMatchSnapshot();
     });
+
+    it('Linked data', () => {
+      const linkedDataEl = document.querySelector(
+        'script[type="application/ld+json"]',
+      );
+
+      expect(linkedDataEl).toBeTruthy();
+      expect(linkedDataEl).toMatchSnapshot();
+    });
   });
 };
