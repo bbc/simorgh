@@ -17,7 +17,7 @@ export const buildRadioATIParams = (
 
   const isLiveRadio = contentType === 'player-live';
 
-  const getContentId = (assetType) => {
+  const getContentId = assetType => {
     const guid = id.split('/').pop();
     const contentId = `urn:bbc:${assetType}:`.concat(guid);
     return contentId;
