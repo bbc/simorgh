@@ -1,6 +1,6 @@
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 
 export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
@@ -15,7 +15,7 @@ export const getProgramState = (currentTime, startTime, endTime) => {
 };
 
 export const getLink = (state, program, service) => {
-  const pid = pathOr('', ['episode', 'pid'], program);
+  const pid = path(['episode', 'pid'], program);
   const url = `/${service}/${program.serviceId}`;
   return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
@@ -45,21 +45,28 @@ export default (data, service, currentTime) => {
   const processedSchedule =
     programsToShow &&
     programsToShow.map((program = {}) => {
+      const {
+        publishedTimeStart,
+        publishedTimeEnd,
+        publishedTimeDuration,
+      } = program;
+
       const currentState = getProgramState(
         currentTime,
-        program.publishedTimeStart,
-        program.publishedTimeEnd,
+        publishedTimeStart,
+        publishedTimeEnd,
         service,
       );
+
       return {
-        id: pathOr(null, ['broadcast', 'pid'], program),
+        id: path(['broadcast', 'pid'], program),
         state: currentState,
-        startTime: pathOr(null, ['publishedTimeStart'], program),
+        startTime: publishedTimeStart,
         link: getLink(currentState, program, service),
-        brandTitle: pathOr(null, ['brand', 'title'], program),
-        episodeTitle: pathOr(null, ['episode', 'presentationTitle'], program),
-        summary: pathOr(null, ['episode', 'synopses', 'short'], program),
-        duration: pathOr('', ['publishedTimeDuration'], program),
+        brandTitle: path(['brand', 'title'], program),
+        episodeTitle: path(['episode', 'presentationTitle'], program),
+        summary: path(['episode', 'synopses', 'short'], program),
+        duration: publishedTimeDuration || '',
         durationLabel: 'Duration',
       };
     });

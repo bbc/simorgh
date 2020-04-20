@@ -20,7 +20,6 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import pathOr from 'ramda/src/pathOr';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrontPageSection from '#containers/FrontPageSection';
@@ -74,8 +73,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
   const radioScheduleData = path(['radioScheduleData'], pageData);
-  const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
-  const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
+  const radioScheduleOnPage = path(['onFrontPage'], radioSchedule);
+  const radioSchedulePosition = path(['frontPagePosition'], radioSchedule);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -116,7 +115,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {onFrontPage && frontPagePosition === group.type && (
+              {radioScheduleOnPage && radioSchedulePosition === group.type && (
                 <RadioScheduleContainer initialData={radioScheduleData} />
               )}
               <FrontPageSection group={group} sectionNumber={index} />

@@ -100,7 +100,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
     dir,
     timezone,
     locale,
-    radioSchedule: radioScheduleConfig,
+    radioSchedule: radioScheduleConfig = {},
     translations,
   } = useContext(ServiceContext);
 
@@ -108,17 +108,11 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
 
   const [radioSchedule, setRadioSchedule] = useState(initialData);
 
-  const header = pathOr(null, ['header'], radioScheduleConfig);
-  const frequenciesPageUrl = pathOr(
-    null,
-    ['frequenciesPageUrl'],
-    radioScheduleConfig,
-  );
-  const frequenciesPageLabel = pathOr(
-    null,
-    ['frequenciesPageLabel'],
-    radioScheduleConfig,
-  );
+  const {
+    header,
+    frequenciesPageUrl,
+    frequenciesPageLabel,
+  } = radioScheduleConfig;
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);

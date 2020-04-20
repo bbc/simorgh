@@ -1,4 +1,4 @@
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
@@ -17,7 +17,7 @@ const getConfig = async (service, variant = 'default') => {
     return {};
   }
 
-  const variantConfig = pathOr(null, [variant], serviceConfig);
+  const variantConfig = path([variant], serviceConfig);
 
   if (!variantConfig) {
     logger.error(`No config found for ${service} variant ${variant}`);
