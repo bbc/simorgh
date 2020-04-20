@@ -11,13 +11,13 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
 import blocksSingleFragment from './testHelpers';
 
-const HeadingsContainerWithContext = (data) => (
+const HeadingsContainerWithContext = data => (
   <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
     <HeadingsContainer {...data} />
   </ServiceContext.Provider>
 );
 
-const getId = (enzymeWrapper) => enzymeWrapper[0].children[0].attribs.id;
+const getId = enzymeWrapper => enzymeWrapper[0].children[0].attribs.id;
 
 const textItalicFragmentPart = (text1, text2Italic, text3) => [
   {

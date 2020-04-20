@@ -7,9 +7,7 @@ import pageData from './fixtureData';
 
 const pglStories = storiesOf('Pages|Photo Gallery Page', module);
 
-pglStories.addDecorator((story) => (
-  <WithTimeMachine>{story()}</WithTimeMachine>
-));
+pglStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 pglStories.add('Azeri', () => {
   return (
