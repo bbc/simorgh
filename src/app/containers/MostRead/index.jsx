@@ -5,7 +5,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
-import getMostReadEndpoint from '#lib/utilities/getMostReadUrls';
+import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
