@@ -68,7 +68,7 @@ export const getErrorPageRegex = (services) => {
 
 export const getMostReadPageRegex = (services) => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/popular/read`;
+  return `/:service(${serviceRegex}):variant(${variantRegex})?/popular/read`;
 };
 
 export const getMostReadDataRegex = (services) => {
