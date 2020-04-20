@@ -255,6 +255,12 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
     </script>
     <script data-react-helmet="true"
             async
+            custom-element="amp-ad"
+            src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            async
             custom-element="amp-access"
             src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
     >
