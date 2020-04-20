@@ -16,9 +16,8 @@ const getPageIdentifier = path([
 ]);
 
 export default async ({ path: pathname }) => {
-  const { json, ...rest } = await fetchPageData(
-    overrideRendererOnTest(pathname),
-  );
+  const liveRadioDataPath = overrideRendererOnTest(pathname);
+  const { json, ...rest } = await fetchPageData(liveRadioDataPath);
   const contentData = path(['content'], json);
 
   return {

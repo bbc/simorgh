@@ -6,7 +6,7 @@ fetch.mockResponse(JSON.stringify(onDemandRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 
-describe('ODRadioGetInitialData', () => {
+describe('Get initial data for on demand radio', () => {
   afterEach(() => {
     process.env = { ...env };
     jest.clearAllMocks();

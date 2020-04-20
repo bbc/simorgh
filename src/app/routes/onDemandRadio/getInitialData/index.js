@@ -28,9 +28,8 @@ const getEpisodeAvailableUntil = path([
 ]);
 
 export default async ({ path: pathname }) => {
-  const { json, ...rest } = await fetchPageData(
-    overrideRendererOnTest(pathname),
-  );
+  const onDemandRadioDataPath = overrideRendererOnTest(pathname);
+  const { json, ...rest } = await fetchPageData(onDemandRadioDataPath);
 
   return {
     ...rest,
