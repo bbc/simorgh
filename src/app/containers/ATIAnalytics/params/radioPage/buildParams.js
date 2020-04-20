@@ -26,7 +26,8 @@ export const buildRadioATIParams = (
   return {
     appName: atiAnalyticsAppName,
     contentId: isLiveRadio ? id : getContentId('pips'),
-    contentType,
+    // workaround until ARES have corrected onDemand contentType to player-episode
+    contentType: isLiveRadio ? contentType : 'player-episode',
     language,
     pageIdentifier,
     pageTitle,

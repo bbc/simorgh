@@ -66,7 +66,7 @@ const validOnDemandURLParams = {
 };
 
 describe('buildRadioATIParams', () => {
-  it('should return the right object for live radio', () => {
+  it('should return the correct object for live radio', () => {
     const result = buildRadioATIParams(
       liveRadio,
       requestContext,
@@ -75,7 +75,7 @@ describe('buildRadioATIParams', () => {
     expect(result).toEqual(validLiveRadioURLParams);
   });
 
-  it('should return the right object for onDemand radio', () => {
+  it('should return the correct object for onDemand radio', () => {
     const result = buildRadioATIParams(
       onDemandRadio,
       requestContext,
@@ -86,7 +86,7 @@ describe('buildRadioATIParams', () => {
 });
 
 describe('buildRadioATIUrl', () => {
-  it('should return the right url for live radio', () => {
+  it('should return the correct url for live radio', () => {
     const result = buildRadioATIUrl(liveRadio, requestContext, serviceContext);
     expect(result).toEqual(
       [
@@ -109,7 +109,7 @@ describe('buildRadioATIUrl', () => {
     );
   });
 
-  it('should return the right url for onDemand radio', () => {
+  it('should return the correct url for onDemand radio', () => {
     const result = buildRadioATIUrl(
       onDemandRadio,
       requestContext,
