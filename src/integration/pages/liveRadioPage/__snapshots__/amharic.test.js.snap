@@ -1433,7 +1433,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-0f485567.js"
+            src="http://localhost:7080/static/js/vendor-253ae210.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
@@ -1441,7 +1441,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
     </script>
     <script async
             data-chunk="main"
-            src="http://localhost:7080/static/js/vendor-d939e436.js"
+            src="http://localhost:7080/static/js/vendor-0f485567.js"
             crossorigin="anonymous"
             type="text/javascript"
             defer
