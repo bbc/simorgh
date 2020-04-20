@@ -12,7 +12,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     it('should render a description for the page', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const descriptionBlock = body.content.blocks.find(
-          (block) => block.role === 'introduction',
+          block => block.role === 'introduction',
         );
         const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
 

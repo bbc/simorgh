@@ -1,6 +1,6 @@
 import { matchPath } from 'react-router';
 
-export default (pathRegex) => ({ path: pathname }) => {
+export default pathRegex => ({ path: pathname }) => {
   const { params } = matchPath(pathname, {
     path: pathRegex,
   });

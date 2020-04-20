@@ -49,7 +49,7 @@ const NavigationContainer = () => {
   }
 
   const activeIndex = navigation.findIndex(
-    (link) => `${origin}${link.url}` === canonicalLink,
+    link => `${origin}${link.url}` === canonicalLink,
   );
 
   const scrollableListItems = (

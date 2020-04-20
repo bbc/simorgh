@@ -496,19 +496,19 @@ ShowMoment.propTypes = {
 
 const editorialStories = storiesOf('Moment Locales/Editorial view', module)
   .addParameters({ chromatic: { disable: true } })
-  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>);
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 const developerStories = storiesOf('Moment Locales/Developer view', module)
   .addParameters({ chromatic: { disable: true } })
-  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>);
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
-const capitalizeService = (service) =>
+const capitalizeService = service =>
   service.charAt(0).toUpperCase() + service.slice(1);
 
-Object.keys(services).forEach((service) => {
+Object.keys(services).forEach(service => {
   Object.keys(services[service])
-    .filter((variant) => services[service][variant].datetimeLocale)
-    .forEach((variant) => {
+    .filter(variant => services[service][variant].datetimeLocale)
+    .forEach(variant => {
       const serviceName = capitalizeService(service);
       const { dir, lang, datetimeLocale: serviceLocale } = services[service][
         variant
@@ -523,7 +523,7 @@ Object.keys(services).forEach((service) => {
           lang={lang}
           name={serviceName}
           locale={serviceLocale}
-          moments={methods.filter((method) =>
+          moments={methods.filter(method =>
             editorialWhitelist.includes(method.what),
           )}
         />

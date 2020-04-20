@@ -4,18 +4,18 @@ const { JSDOM } = require('jsdom');
 const { within } = require('@testing-library/dom');
 const retry = require('retry');
 
-const enhanceGetByText = (getByText) => (text) =>
+const enhanceGetByText = getByText => text =>
   getByText((content, node) => {
     const hasText = ({ textContent }) => textContent === text;
     const nodeHasText = hasText(node);
     const childrenDontHaveText = Array.from(node.children).every(
-      (child) => !hasText(child),
+      child => !hasText(child),
     );
 
     return nodeHasText && childrenDontHaveText;
   });
 
-const faultTolerantDomFetch = (url) =>
+const faultTolerantDomFetch = url =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -25,7 +25,7 @@ const faultTolerantDomFetch = (url) =>
       maxTimeout: oneSecond,
     });
 
-    operation.attempt(async (currentAttempt) => {
+    operation.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
         console.warn(
           `Error getting DOM from ${url}`,
@@ -53,7 +53,7 @@ const faultTolerantDomFetch = (url) =>
     });
   });
 
-module.exports = async (path) => {
+module.exports = async path => {
   try {
     const dom = await faultTolerantDomFetch(`http://localhost:7080${path}`);
     const queries = within(dom.window.document.body);
