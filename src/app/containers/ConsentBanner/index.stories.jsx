@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-const getConsentBanner = (platform) => (
+const getConsentBanner = platform => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       platform={platform}

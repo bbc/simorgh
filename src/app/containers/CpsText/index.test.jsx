@@ -12,7 +12,7 @@ const listItemBlock = (id = null, listBlocks) => ({
   id,
   type: 'listItem',
   model: {
-    blocks: listBlocks.map((blocks) => paragraphBlock(id, blocks)),
+    blocks: listBlocks.map(blocks => paragraphBlock(id, blocks)),
   },
 });
 

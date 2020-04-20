@@ -4,7 +4,7 @@ export const getIconAssetUrl = (service, size) =>
   `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
 
 const createIconLinks = (service, iconSizes, iconType) => {
-  return iconSizes.map((size) => {
+  return iconSizes.map(size => {
     const iconAssetUrl = getIconAssetUrl(service, size);
     const key = `${service}-${size}`;
 
@@ -31,7 +31,7 @@ export const getIconLinks = (service, iconSizes) => {
     return null;
   }
   const iconTypes = Object.keys(iconSizes);
-  return iconTypes.map((iconType) => {
+  return iconTypes.map(iconType => {
     return createIconLinks(service, iconSizes[iconType], iconType);
   });
 };
@@ -43,7 +43,7 @@ export const renderAmpHtml = (ampLink, isAmp) => {
   return <link rel="amphtml" href={ampLink} />;
 };
 
-export const getAppleTouchUrl = (service) => {
+export const getAppleTouchUrl = service => {
   return [
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
@@ -52,7 +52,7 @@ export const getAppleTouchUrl = (service) => {
   ].join('');
 };
 
-export const renderAlternateLinks = (link) => (
+export const renderAlternateLinks = link => (
   <link
     rel="alternate"
     href={link.href}

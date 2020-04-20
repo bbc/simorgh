@@ -260,9 +260,7 @@ describe('Chartbeat utilities', () => {
     it('should return correct title when pageType is media (Live radio)', () => {
       const pageType = 'media';
       const pageData = {
-        promo: {
-          name: 'Live Radio Page Title',
-        },
+        name: 'Live Radio Page Title',
       };
 
       expect(getTitle(pageType, pageData)).toBe('Live Radio Page Title');
@@ -387,9 +385,7 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: 'media',
         data: {
-          promo: {
-            name: 'Live Radio Page Title',
-          },
+          name: 'Live Radio Page Title',
         },
         brandName: '',
         chartbeatDomain: 'korean.bbc.co.uk',
