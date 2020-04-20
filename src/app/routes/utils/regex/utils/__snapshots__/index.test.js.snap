@@ -20,7 +20,7 @@ exports[`regex utils snapshots should create expected regex from getManifestRege
 
 exports[`regex utils snapshots should create expected regex from getMostReadDataRegex 1`] = `"/:service(news|persian|igbo)/mostread:variant(/simp|/trad|/cyr|/lat)?.json"`;
 
-exports[`regex utils snapshots should create expected regex from getMostReadPageRegex 1`] = `"/:service(news|persian|igbo)/popular/read"`;
+exports[`regex utils snapshots should create expected regex from getMostReadPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/popular/read"`;
 
 exports[`regex utils snapshots should create expected regex from getRadioAndTVRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio|bbc_[a-z]+_tv)/:mediaId([a-z0-9]+):amp(.amp)?"`;
 
