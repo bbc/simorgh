@@ -6,7 +6,7 @@ It is not meant to be an exhaustive guide to carrying out reviews - there are al
 
 ## Why review code?
 
-Reviewing code can sometimes help to catch bugs earlier in the development life cycle when [they *may* be cheaper to fix](http://thklein.com/cost-of-defect/). Even then, it is not realistic to expect most defects to be caught this way. In large, distributed teams like ours, the main objective of code reviews is *communication*.
+Reviewing code can sometimes help to catch bugs earlier in the development life cycle when [they _may_ be cheaper to fix](http://thklein.com/cost-of-defect/). Even then, it is not realistic to expect most defects to be caught this way. In large, distributed teams like ours, the main objective of code reviews is _communication_.
 
 Code reviews are an indispensible tool for spreading knowledge and ideas between teams. A [2013 study at Microsoft](https://www.microsoft.com/en-us/research/publication/expectations-outcomes-and-challenges-of-modern-code-review/) found that while ‘finding defects’ was the most commonly-given reason for doing code reviews, the most frequent actual outcomes were sharing understanding and introducing other types of code improvement. Communication in code review can take many forms: from an ‘FYI’, to sharing new approaches and best practices, to improving documentation and code readability (communicating to future developers).
 
@@ -21,11 +21,11 @@ We believe that being able to review code effectively is a vital part of any sof
 **Approvals**
 GitHub supports the concept of 'approvals'. Our repos generally require **two** approving reviews before a change can be merged on GitHub. Approvals should usually come from people who were not directly involved in implementing the change.
 
-
 - Anyone can approve a PR, regardless of seniority or experience
 - Approving a PR does not mean that it cannot be improved upon in some way
 - Similarly, approving a PR does not mean you will be held personally responsible for it
-    - If problems are found later, we'll fix them together, work out what went wrong and try to do better next time.
+  - If problems are found later, we'll fix them together, work out what went wrong and try to do better next time.
+
 ## Our approach to reviewing code
 
 Code reviews are not an exercise in scoring points or proving that the reviewer knows better than the author - they are about trying to help each other to make the best quality work we can. Ideally, both author and reviewer come away from a code review having both made a positive contribution to the result and learned something along the way.
@@ -46,7 +46,7 @@ We strive for quality but we do not aim for perfection ('perfect' code does not 
 
 Pair programming and swarming/mobbing during the implementation phase are approaches that can reduce the time spent on lengthy in-depth code reviews later on, because more of the necessary communication has already happened. More people contributing to the solution may help to catch some types of issues before code review. Seeking alignment through early collaboration can therefore minimise the back-and-forth sometimes seen in code reviews.
 
-These collaboration techniques can be especially useful when there's a high degree of unfamiliarity - in the work, the tech or individuals in the team. 
+These collaboration techniques can be especially useful when there's a high degree of unfamiliarity - in the work, the tech or individuals in the team.
 
 ## If you need a review
 
@@ -54,22 +54,20 @@ If it’s your first experience of code review, don’t worry. Getting used to h
 
 There are some simple things you can do that will make it easier for someone to review your code. Remember to check:
 
-
 - Have you linked to the GitHub issue that describes the problem you were trying to solve/feature you were trying to build? If there isn't one, create it - often taking a few minutes to summarise the requirement and a ‘definition of done’ can help avoid oversights in the implementation.
-    - If you can't, or the change is so trivial it's unnecessary, say "no issue" (but ensure the requirements are clearly described on the PR).
+  - If you can't, or the change is so trivial it's unnecessary, say "no issue" (but ensure the requirements are clearly described on the PR).
 - Could the change be broken down into smaller PRs that can be reviewed separately/in parallel? A common, quite reasonable reaction from a reviewer to a PR that changes many hundreds of lines of code is, "This is a big one! I'll do it later when I have more time." Shorter PRs often get attention quicker because they are simpler to understand and therefore review.
 - Does the PR have a clear and succinct title? This will help people quickly understand the aim of the change when looking at lists of PRs
 - Have you included a more detailed summary of the code changes made (and why) along with any additional context that would help a reader? Making life as easy as possible for the reviewer will probably mean the PR gets reviewed faster. Things to consider include:
-    - Useful links (e.g. test URLs, links to relevant parts of API documentation)
-    - Related PRs or other work for comparison
-    - Screenshots (these often paint a thousand words)
+  - Useful links (e.g. test URLs, links to relevant parts of API documentation)
+  - Related PRs or other work for comparison
+  - Screenshots (these often paint a thousand words)
 - Have you completed the PR checklist in full? If there are items you're not sure about, leave a comment next to them so the reviewer knows you haven't just ignored them.
 
 **Responding to comments**
 Just as with receiving any feedback, having comments made on your work can sometimes be challenging. This is a normal human reaction and can affect engineers at all stages of their careers.
 
 Some things to consider when responding to code reviews:
-
 
 - We can all feel quite attached to code we write, but try taking a step back and not being protective of your particular solution.
 - Try to understand the views of the person who has written the comment - it might mean additional work, but could their suggested change help in the long run?
@@ -98,7 +96,6 @@ As already mentioned, code reviews are a great way to learn about the codebase a
 
 Another way reviewers can use questions is to ensure that we have considered the problem from all the angles. Code review is a good time to think again about performance, security, accessibility, testing and other [non-functional requirements](https://en.wikipedia.org/wiki/Non-functional_requirement) that might have been overlooked. For example:
 
-
 - Is this going to be accessible to all users?
 - Would it be a good idea to run some performance/load tests on this?
 - Is there a plan to add or update the documentation?
@@ -118,13 +115,12 @@ When carrying out code reviews we should always be empathetic towards the other 
 
 ![https://xkcd.com/1513/](https://imgs.xkcd.com/comics/code_quality.png)
 
-
 Particular care should be taken if the author is a new contributor who might be unfamiliar with the codebase/our approach. While maintaining our high standards, we should work extra hard to ensure their experience of having their first efforts reviewed is a positive one that leaves them wanting to contribute again.
 
 **Pair and swarm**
 Reviewing is sometimes easier if you do it together. Find another developer to pair with on the review - this could be someone more familiar with the code being changed, but it doesn't have to be. Compare your observations and discuss your ideas together before one person adds comments to the PR.
 
-*Swarm reviews* involving a larger group of reviewers can also be effective, especially for more complex pieces of work. The author should join the review too - this is so they can answer clarifying questions asked by the reviewers, explain context behind the work and the approach taken. Having a person who isn’t an author ‘lead’ swarm reviews can be useful - they can share their screen as they look at the PR and think aloud whilst reviewing the work. It is especially helpful when the lead reviewer in the swarm is the person who is least familiar with the code - they can ask lots of questions
+_Swarm reviews_ involving a larger group of reviewers can also be effective, especially for more complex pieces of work. The author should join the review too - this is so they can answer clarifying questions asked by the reviewers, explain context behind the work and the approach taken. Having a person who isn’t an author ‘lead’ swarm reviews can be useful - they can share their screen as they look at the PR and think aloud whilst reviewing the work. It is especially helpful when the lead reviewer in the swarm is the person who is least familiar with the code - they can ask lots of questions
 
 **Automate it!**
 Linting code is a job for robots. If you find yourself pointing out the same things over and over again, think about whether that could be implemented as a linter rule, or some other kind of automated check. That way future reviews will be easier and more consistent.
@@ -132,12 +128,12 @@ Linting code is a job for robots. If you find yourself pointing out the same thi
 **Offer links and examples**
 When referring to an established idea or technique, link to a page that explains it succinctly. Better still, find an example in the codebase (or another familiar codebase) to link to. Offer such alternatives without insisting upon them. They may have already been considered and discounted for good reason.
 
-If you are proposing a specific code change, try to give enough information for the author to understand it and implement it if needed. Direct GitHub PR ‘suggestions’ are often welcomed by authors - but consider if it would still help to explain *why* you’re suggesting the change.
+If you are proposing a specific code change, try to give enough information for the author to understand it and implement it if needed. Direct GitHub PR ‘suggestions’ are often welcomed by authors - but consider if it would still help to explain _why_ you’re suggesting the change.
 
 Failing this, adding a small pseudo-code fragment is often a great way to illustrate the idea.
 
 **Go beyond LGTM**
-When approving a simple PR, the classic *looks good to me* is sometimes enough, but the best reviews are more than a rubber stamp. For example, you can include a description of what you did to verify that the change was correct (again, screenshots may save typing) that can be repeated by others. Or, you can applaud anything about the work you thought that was particularly good so the author knows it’s worth doing next time.
+When approving a simple PR, the classic _looks good to me_ is sometimes enough, but the best reviews are more than a rubber stamp. For example, you can include a description of what you did to verify that the change was correct (again, screenshots may save typing) that can be repeated by others. Or, you can applaud anything about the work you thought that was particularly good so the author knows it’s worth doing next time.
 
 **Be flexible**
 Sometimes serious issues are found during code review that need to be addressed before the change can be merged. But often this is not the case. Ask, could the code be merged without addressing these comments? If it can, create follow-up tasks that can be picked up afterwards and link them to the PR. It’s often quicker and more effective for reviewers to create these tasks.
@@ -145,7 +141,7 @@ Sometimes serious issues are found during code review that need to be addressed 
 **Take care with evaluations**
 It's important to remember that many labels given to code are subjective, or at least have no universally agreed meaning. Often they depend heavily on the context of the work as well as each developers’ background and stylistic preferences. Remember that no two developers will ever solve any non-trivial problem the same way.
 
-One person’s *explicit* may be too *verbose* for others. *Consistency* is often prized, but when does it become *repetitious?* A suggestion to make something more *concise* might come at the expense of making it *less readable* for some. How *clean* is clean?
+One person’s _explicit_ may be too _verbose_ for others. _Consistency_ is often prized, but when does it become _repetitious?_ A suggestion to make something more _concise_ might come at the expense of making it _less readable_ for some. How _clean_ is clean?
 
 Such evaluations have their uses, but we should recognise them for what they are, and when making them consider that other points of view may be possible. Often there is no quick way to resolve these dilemmas other than to simply talk it through.
 
