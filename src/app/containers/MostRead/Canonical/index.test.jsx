@@ -23,7 +23,7 @@ describe('MostReadContainerCanonical', () => {
     fetch.resetMocks();
   });
 
-  Object.keys(services).forEach((service) => {
+  Object.keys(services).forEach(service => {
     it(`should render items without timestamps for ${service}`, async () => {
       const { variant, data: mostReadData, config } = services[service];
       const { header, numberOfItems } = config.mostRead;

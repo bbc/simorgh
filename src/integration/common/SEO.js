@@ -23,7 +23,7 @@ export default ({
   twitterTitle,
   linkedData,
 }) => {
-  [amp, canonical].forEach((page) => {
+  [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {
       it('it can see the page title', () => {
         expect(page.document.title).toEqual(pageTitle);

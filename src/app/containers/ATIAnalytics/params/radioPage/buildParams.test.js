@@ -7,12 +7,20 @@ analyticsUtils.getPublishedDatetime = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
-const radio = {
+const liveRadio = {
   id: 'id',
   language: 'language',
   pageIdentifier: 'pageIdentifier',
   pageTitle: 'pageTitle',
   contentType: 'player-live',
+};
+
+const onDemandRadio = {
+  id: 'id',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  contentType: 'player-episode',
 };
 
 const requestContext = {
@@ -29,7 +37,7 @@ const serviceContext = {
   service: 'service',
 };
 
-const validURLParams = {
+const validLiveRadioURLParams = {
   appName: serviceContext.atiAnalyticsAppName,
   contentId: 'id',
   contentType: 'player-live',
@@ -43,16 +51,43 @@ const validURLParams = {
   service: 'service',
 };
 
+const validOnDemandURLParams = {
+  appName: serviceContext.atiAnalyticsAppName,
+  contentId: 'urn:bbc:pips:id',
+  contentType: 'player-episode',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  producerId: serviceContext.atiAnalyticsProducerId,
+  statsDestination: requestContext.statsDestination,
+  libraryVersion: analyticsUtils.LIBRARY_VERSION,
+  platform: requestContext.platform,
+  service: 'service',
+};
+
 describe('buildRadioATIParams', () => {
-  it('should return the right object', () => {
-    const result = buildRadioATIParams(radio, requestContext, serviceContext);
-    expect(result).toEqual(validURLParams);
+  it('should return the correct object for live radio', () => {
+    const result = buildRadioATIParams(
+      liveRadio,
+      requestContext,
+      serviceContext,
+    );
+    expect(result).toEqual(validLiveRadioURLParams);
+  });
+
+  it('should return the correct object for onDemand radio', () => {
+    const result = buildRadioATIParams(
+      onDemandRadio,
+      requestContext,
+      serviceContext,
+    );
+    expect(result).toEqual(validOnDemandURLParams);
   });
 });
 
 describe('buildRadioATIUrl', () => {
-  it('should return the right url', () => {
-    const result = buildRadioATIUrl(radio, requestContext, serviceContext);
+  it('should return the correct url for live radio', () => {
+    const result = buildRadioATIUrl(liveRadio, requestContext, serviceContext);
     expect(result).toEqual(
       [
         's=598285',
@@ -68,6 +103,33 @@ describe('buildRadioATIUrl', () => {
         'x4=[language]',
         'x5=[http://localhost/]',
         'x7=[player-live]',
+        'x8=[simorgh]',
+        'x9=[pageTitle]',
+      ].join('&'),
+    );
+  });
+
+  it('should return the correct url for onDemand radio', () => {
+    const result = buildRadioATIUrl(
+      onDemandRadio,
+      requestContext,
+      serviceContext,
+    );
+    expect(result).toEqual(
+      [
+        's=598285',
+        's2=atiAnalyticsProducerId',
+        'p=pageIdentifier',
+        'r=0x0x24x24',
+        're=1024x768',
+        'hl=00-00-00',
+        'lng=en-US',
+        'x1=[urn:bbc:pips:id]',
+        'x2=[responsive]',
+        'x3=[atiAnalyticsAppName]',
+        'x4=[language]',
+        'x5=[http://localhost/]',
+        'x7=[player-episode]',
         'x8=[simorgh]',
         'x9=[pageTitle]',
       ].join('&'),
