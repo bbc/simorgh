@@ -104,7 +104,18 @@ const StoryPromoContainer = ({
     item,
     isAssetTypeCode,
   );
-  const summary = pathOr(null, ['summary'], item);
+
+  const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
+  const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
+
+  let promoSummary;
+  if (overtypedSummary && !hasWhiteSpaces) {
+    promoSummary = overtypedSummary;
+  } else {
+    const summary = pathOr(null, ['summary'], item);
+    promoSummary = summary;
+  }
+
   const timestamp = pathOr(null, ['timestamp'], item);
   const relatedItems = pathOr(null, ['relatedItems'], item);
 
@@ -142,14 +153,14 @@ const StoryPromoContainer = ({
           </Link>
         </Headline>
       )}
-      {summary && displaySummary && (
+      {promoSummary && displaySummary && (
         <Summary
           script={script}
           service={service}
           promoType={promoType}
           promoHasImage={displayImage}
         >
-          {summary}
+          {promoSummary}
         </Summary>
       )}
       {timestamp && !isStoryPromoPodcast && !isLive && (
