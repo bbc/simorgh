@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index Alsos should render multiple correctly 1`] = `
+exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
 .c7 {
   vertical-align: middle;
   margin: 0 0.25rem;
@@ -193,7 +193,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
         <span
           class="c8"
         >
-          Yaushe Obasanjo ya fara yi wa shugabannin kasa baki?
+          Overtyped headline
         </span>
       </a>
     </li>
@@ -201,7 +201,7 @@ exports[`Index Alsos should render multiple correctly 1`] = `
 </div>
 `;
 
-exports[`Index Alsos should render one correctly 1`] = `
+exports[`Index Alsos Snapshots should render one correctly 1`] = `
 .c6 {
   vertical-align: middle;
   margin: 0 0.25rem;

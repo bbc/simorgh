@@ -23,7 +23,8 @@ const getEpisodeAvailability = (availableFrom, availableUntil) => {
 };
 
 const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1;
+  width: 100%;
+  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
 const renderEpisode = (
