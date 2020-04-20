@@ -76,7 +76,15 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
       <IndexAlsosWrapper>
         {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map((item) => {
           const { id, cpsType, mediaType } = item;
+
           const headline = pathOr(null, ['headlines', 'headline'], item);
+          const overtypedHeadline = pathOr(
+            null,
+            ['headlines', 'overtyped'],
+            item,
+          );
+          const indexAlsoHeadline = overtypedHeadline || headline;
+
           const url = pathOr(null, ['locators', 'assetUri'], item);
           const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator({
             cpsType,
@@ -98,7 +106,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
               mediaIndicator={indexAlsoMediaIndicator}
               mediaType={indexAlsoMediaType}
             >
-              {headline}
+              {indexAlsoHeadline}
             </IndexAlsoItem>
           );
         })}

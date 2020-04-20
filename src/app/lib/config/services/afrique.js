@@ -27,7 +27,7 @@ export const service = {
     videoCaptionOffscreenText: 'Légende vidéo, ',
     audioCaptionOffscreenText: 'Légende audio, ',
     defaultCaptionOffscreenText: 'Légende, ',
-    imageCopyrightOffscreenText: 'Image source, ',
+    imageCopyrightOffscreenText: 'Crédit photo, ',
     locale: `fr`,
     datetimeLocale: `fr`,
     service: 'afrique',
@@ -56,16 +56,16 @@ export const service = {
       relatedContent: 'Lire plus',
       navMenuText: 'Rubriques',
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Lecteur média',
+        audioPlayer: 'Lecteur audio',
+        videoPlayer: 'Lecteur vidéo',
       },
       error: {
         404: {
           statusCode: '404',
           title: 'La page ne peut pas être trouvée',
           message:
-            "Désolé, nous ne pouvons pas afficher la page que vous cherchez. Essayez s'il vous plaît:",
+            "Désolé, nous ne pouvons pas afficher la page que vous cherchez. Essayez s'il vous plaît:",
           solutions: [
             "Double vérification de l'url",
             "Cliquez sur le bouton d'actualisation de votre navigateur",
@@ -160,13 +160,13 @@ export const service = {
           subtitle:
             'Cash éco vous propose chaque jour un résumé de l’actualité économique et financière.',
         },
-        listen: 'Listen',
+        listen: 'Ecoutez',
         watch: 'Suivez',
         liveLabel: 'EN DIRECT',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'SUIVANT',
+        previousRadioShow: 'Emission de radio précédente',
+        nextRadioShow: 'Emission de radio suivante',
+        duration: 'Durée',
       },
       socialEmbed: {
         caption: {

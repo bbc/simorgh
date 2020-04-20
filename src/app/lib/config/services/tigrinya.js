@@ -113,7 +113,7 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: "ኩኪስ' ንምጥቃም ከም ዝተሰማማዕኩም ኣፍልጡና",
+          title: "ኩኪስ' ንምጥቃም ከም ዝተሰማማዕኩም ኣፍልጡና",
           description: {
             uk: {
               first: 'ኣብ መርበብ ሓበሬታና ዝበለጸ ኣገልግሎት መታን ክትረኽቡ ኢና ',
