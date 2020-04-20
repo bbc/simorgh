@@ -17,7 +17,7 @@ jest.mock('../utilities/getAssetOrigins', () => () => '__mock_asset_origins__');
 
 jest.mock('@loadable/server', () => ({
   ChunkExtractor: jest.fn().mockImplementation(() => ({
-    collectChunks: (arg) => arg,
+    collectChunks: arg => arg,
     getScriptElements: () => '__mock_script_elements__',
   })),
 }));
@@ -64,7 +64,7 @@ describe('Render Document', () => {
     delete process.env.SIMORGH_APP_ENV;
   });
 
-  it('should render correctly', (done) => {
+  it('should render correctly', done => {
     renderDocument({
       bbcOrigin: 'https://www.test.bbc.co.uk',
       data: { test: 'data' },
@@ -72,7 +72,7 @@ describe('Render Document', () => {
       routes: ['someRoute'],
       service: 'news',
       url: '/',
-    }).then((document) => {
+    }).then(document => {
       expect(document.html).toEqual(
         '<!doctype html><html lang="en-GB"></html>',
       );

@@ -1,4 +1,4 @@
-const getMetaTagContent = (selector) =>
+const getMetaTagContent = selector =>
   document.querySelector(selector).getAttribute('content');
 
 export default () => {

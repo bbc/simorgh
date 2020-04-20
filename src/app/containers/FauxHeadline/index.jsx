@@ -12,7 +12,7 @@ import Blocks from '../Blocks';
 import { GridItemConstrainedLarge } from '#lib/styledGrid';
 
 // missing CSS 'display: block;' in psammead branch `explicitly-set-h1-styles-display-and-font-weight`
-const FauxHeadline = (props) => <Headline as="strong" {...props} />;
+const FauxHeadline = props => <Headline as="strong" {...props} />;
 
 const StyledFauxHeadline = styled(FauxHeadline)`
   padding: ${GEL_SPACING_QUAD} 0;

@@ -12,7 +12,7 @@ export default ({ hasScriptFonts = false } = {}) => {
           : []),
       ];
 
-      resources.forEach((resource) => {
+      resources.forEach(resource => {
         const resourceEls = Array.from(
           document.querySelectorAll(`head link[href="${resource}"]`),
         );
