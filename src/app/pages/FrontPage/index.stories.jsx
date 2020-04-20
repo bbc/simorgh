@@ -27,12 +27,12 @@ const serviceConfigs = {
   serbian: serbianConfig,
 };
 
-const stories = storiesOf('Pages|Front Page', module).addDecorator((story) => (
+const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
-Object.keys(serviceDataSets).forEach((service) => {
-  Object.keys(serviceDataSets[service]).forEach((variant) => {
+Object.keys(serviceDataSets).forEach(service => {
+  Object.keys(serviceDataSets[service]).forEach(variant => {
     stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => (
       <BrowserRouter>
         <FrontPage

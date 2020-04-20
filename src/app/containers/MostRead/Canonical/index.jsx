@@ -55,7 +55,7 @@ const CanonicalMostRead = ({
 
   useEffect(() => {
     if (!items) {
-      const handleResponse = async (response) => {
+      const handleResponse = async response => {
         if (!response.ok) {
           throw Error(response.statusText);
         }
@@ -63,10 +63,10 @@ const CanonicalMostRead = ({
         setItems(processMostRead({ data: mostReadData, numberOfItems }));
       };
 
-      const fetchMostReadData = (pathname) =>
+      const fetchMostReadData = pathname =>
         fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse)
-          .catch((e) => logger.error(`HTTP Error: "${e}"`));
+          .catch(e => logger.error(`HTTP Error: "${e}"`));
 
       fetchMostReadData(endpoint);
     }

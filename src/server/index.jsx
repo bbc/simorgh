@@ -121,7 +121,7 @@ if (process.env.SIMORGH_APP_ENV !== 'local') {
  * Local env routes - fixture data
  */
 const sendDataFile = (res, dataFilePath, next) => {
-  res.sendFile(dataFilePath, {}, (sendErr) => {
+  res.sendFile(dataFilePath, {}, sendErr => {
     if (sendErr) {
       logger.error(LOCAL_SENDFILE_ERROR, { error: sendErr });
       next(sendErr);
@@ -226,7 +226,7 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
 server
   .get([articleSwPath, frontPageSwPath], (req, res) => {
     const swPath = `${__dirname}/public/sw.js`;
-    res.sendFile(swPath, {}, (error) => {
+    res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
         res.status(500).send('Unable to find service worker.');
@@ -238,7 +238,7 @@ server
     async ({ params }, res) => {
       const { service } = params;
       const manifestPath = `${__dirname}/public/${service}/manifest.json`;
-      res.sendFile(manifestPath, {}, (error) => {
+      res.sendFile(manifestPath, {}, error => {
         if (error) {
           logger.error(MANIFEST_SENDFILE_ERROR, { error });
           res.status(500).send('Unable to find manifest.');

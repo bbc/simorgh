@@ -3,7 +3,7 @@ import appToggles from '../../../support/helpers/useAppToggles';
 import { getBlockData } from './helpers';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
-const serviceHasFigure = (service) =>
+const serviceHasFigure = service =>
   ['arabic', 'news', 'pashto', 'persian', 'urdu'].includes(service);
 
 // For testing important features that differ between services, e.g. Timestamps.
@@ -66,7 +66,7 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
                     'div[class^="StyledVideoContainer"] iframe[class^="i-amphtml-fill-content"]',
                   )
                     .scrollIntoView()
-                    .then(($iframe) => {
+                    .then($iframe => {
                       cy.wrap($iframe.prop('contentWindow'), {
                         // `timeout` only applies to the methods chained below.
                         // `its()` benefits from this, and will wait up to 8s

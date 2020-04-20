@@ -39,10 +39,10 @@ const MostReadWithContext = ({
   </ToggleContext.Provider>
 );
 
-const shouldRenderMostRead = (container) =>
+const shouldRenderMostRead = container =>
   expect(container.querySelector('ol')).toBeInTheDocument();
 
-const shouldNotRenderMostRead = (container) =>
+const shouldNotRenderMostRead = container =>
   expect(container.querySelector('ol')).not.toBeInTheDocument();
 
 describe('MostReadContainerCanonical Assertion', () => {

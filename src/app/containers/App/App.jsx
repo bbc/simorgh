@@ -61,7 +61,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       } = getRouteProps(routes, location.pathname);
 
       let loaderTimeout;
-      const loaderPromise = new Promise((resolve) => {
+      const loaderPromise = new Promise(resolve => {
         loaderTimeout = setTimeout(resolve, 500);
       });
 
@@ -88,7 +88,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
           service: nextService,
           variant: nextVariant,
         })
-        .then((data) => {
+        .then(data => {
           clearTimeout(loaderTimeout);
           shouldSetFocus.current = true;
           setState({

@@ -5,7 +5,7 @@ const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 
-const setEnvironment = (environment) => {
+const setEnvironment = environment => {
   process.env.SIMORGH_APP_ENV = environment;
 };
 
