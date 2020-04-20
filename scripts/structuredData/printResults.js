@@ -35,8 +35,11 @@ const printFailures = (overallResult) => {
 };
 
 const printPassing = (overallResult) => {
-  overallResult.passed.forEach((pass) => {
-    console.log(`${green('✓', testSummary(pass))}\n    ${testDetails(pass)}`);
+  overallResult.forEach((result) => {
+    console.log(green(result.url));
+    result.passed.forEach((pass) => {
+      console.log(`${green('✓', testSummary(pass))}\n    ${testDetails(pass)}`);
+    });
   });
 };
 
