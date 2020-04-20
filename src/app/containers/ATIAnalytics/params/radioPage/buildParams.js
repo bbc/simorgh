@@ -15,9 +15,17 @@ export const buildRadioATIParams = (
 
   const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
 
+  const isLiveRadio = contentType === 'player-live';
+
+  const getContentId = (assetType) => {
+    const guid = id.split('/').pop();
+    const contentId = `urn:bbc:${assetType}:`.concat(guid);
+    return contentId;
+  };
+
   return {
     appName: atiAnalyticsAppName,
-    contentId: id,
+    contentId: isLiveRadio ? id : getContentId('pips'),
     contentType,
     language,
     pageIdentifier,
