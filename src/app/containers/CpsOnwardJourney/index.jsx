@@ -15,7 +15,8 @@ import {
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridWrapper } from '#lib/styledGrid';
+import { GridItemConstrainedLarge } from '#app/components/Grid';
 
 const Wrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
@@ -69,16 +70,15 @@ const CpsOnwardJourney = ({
 
   return (
     <CpsOnwardJourneyWrapper>
+      <StyledSectionLabel
+        script={script}
+        service={service}
+        dir={dir}
+        labelId={labelId}
+      >
+        {title}
+      </StyledSectionLabel>
       <Wrapper>
-        <StyledSectionLabel
-          script={script}
-          service={service}
-          dir={dir}
-          labelId={labelId}
-        >
-          {title}
-        </StyledSectionLabel>
-
         {hasSingleContent ? (
           <SingleContentWrapper>
             {singleTransform(singleContent)}
