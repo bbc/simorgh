@@ -1,12 +1,12 @@
 import Url from 'url-parse';
 import isLive from '#lib/utilities/isLive';
 
-const getQueryString = (query) => {
-  const params = Object.keys(query).map((key) => `${key}=${query[key]}`);
+const getQueryString = query => {
+  const params = Object.keys(query).map(key => `${key}=${query[key]}`);
   return params.join('&');
 };
 
-export const addOverrideQuery = (path) => {
+export const addOverrideQuery = path => {
   const url = new Url(path, true);
   const { query } = url;
   const searchString = getQueryString({ ...query, renderer_env: 'live' });
@@ -15,7 +15,7 @@ export const addOverrideQuery = (path) => {
   return `${pathName}?${searchString}`;
 };
 
-const overrideRendererOnTest = (path) =>
+const overrideRendererOnTest = path =>
   isLive() ? path : addOverrideQuery(path);
 
 export default overrideRendererOnTest;
