@@ -9,6 +9,7 @@ import list from './blocks/list';
 import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import include from './blocks/include';
+import socialEmbed from './blocks/socialEmbed';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 const nodeLogger = require('#lib/logger.node');
@@ -32,6 +33,7 @@ const typesToConvert = {
   version,
   legacyMedia,
   include,
+  social_embed: socialEmbed,
 };
 
 const parseBlockByType = (block, json) => {
@@ -48,13 +50,13 @@ const parseBlockByType = (block, json) => {
   return parsedBlock;
 };
 
-const convertToOptimoBlocks = async (jsonRaw) => {
+const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
 
   const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = await Promise.all(
-    blocks.map((block) => parseBlockByType(block, json)),
+    blocks.map(block => parseBlockByType(block, json)),
   );
 
   return {

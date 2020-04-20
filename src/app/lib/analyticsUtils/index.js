@@ -4,7 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import onClient from '../utilities/onClient';
 
-export const getDestination = (statsDestination) => {
+export const getDestination = statsDestination => {
   const destinationIDs = {
     NEWS_PS: 598285,
     NEWS_LANGUAGES_PS: 598291,
@@ -25,10 +25,10 @@ export const getDestination = (statsDestination) => {
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
-export const getAppType = (platform) =>
+export const getAppType = platform =>
   platform === 'amp' ? 'amp' : 'responsive';
 
-export const isLocServeCookieSet = (platform) => {
+export const isLocServeCookieSet = platform => {
   if (platform === 'amp') {
     return false;
   }
@@ -40,7 +40,7 @@ export const isLocServeCookieSet = (platform) => {
   return null;
 };
 
-export const getScreenInfo = (platform) => {
+export const getScreenInfo = platform => {
   if (platform === 'amp') {
     return `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`;
   }
@@ -60,7 +60,7 @@ export const getScreenInfo = (platform) => {
   return null;
 };
 
-export const getBrowserViewPort = (platform) => {
+export const getBrowserViewPort = platform => {
   if (platform === 'amp') {
     return `\${availableScreenWidth}x\${availableScreenHeight}`;
   }
@@ -74,7 +74,7 @@ export const getBrowserViewPort = (platform) => {
   return null;
 };
 
-export const getCurrentTime = (platform) => {
+export const getCurrentTime = platform => {
   if (platform === 'amp') {
     return `\${timestamp}`;
   }
@@ -91,7 +91,7 @@ export const getCurrentTime = (platform) => {
   return null;
 };
 
-export const getDeviceLanguage = (platform) => {
+export const getDeviceLanguage = platform => {
   if (platform === 'amp') {
     // Using browserlanguage since AMP doesn't have access to device language
     return `\${browserLanguage}`;
@@ -104,7 +104,7 @@ export const getDeviceLanguage = (platform) => {
   return null;
 };
 
-export const getHref = (platform) => {
+export const getHref = platform => {
   if (platform === 'amp') {
     return `\${sourceUrl}`;
   }
@@ -146,12 +146,12 @@ export const getAtUserId = () => {
   return val;
 };
 
-export const sanitise = (initialString) =>
+export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '+') : null;
 
-const isValidDateTime = (dateTime) => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
+const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
 
-const getISODate = (unixTimestamp) => {
+const getISODate = unixTimestamp => {
   const date = new Date(unixTimestamp);
   return date.toISOString();
 };
@@ -171,7 +171,7 @@ export const getContentId = (assetType, pageData) => {
   return contentId;
 };
 
-export const getProducer = (service) => {
+export const getProducer = service => {
   const producers = {
     igbo: '53',
     news: '64',
@@ -276,7 +276,7 @@ export const getThingAttributes = (attribute, articleData) => {
   if (things) {
     const attributes = [];
 
-    things.forEach((thing) => {
+    things.forEach(thing => {
       if (thing[attribute]) {
         attributes.push(thing[attribute].trim().replace(/\s/g, '+'));
       }

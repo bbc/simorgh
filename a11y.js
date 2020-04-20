@@ -46,7 +46,7 @@ const pageTypes = {
   ],
   liveRadio: [
     '/html/head/iframe',
-    "//div[@id='root']/main/div/div/div/div/iframe",
+    "//div[@id='root']/main/div/div/div/iframe",
     "//div[@id='root']/header/nav/div/div[1]/div/ul",
   ],
   photoGalleryPage: [

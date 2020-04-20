@@ -6,7 +6,7 @@ import { useRef, useEffect } from 'react';
  * ie. `usePrevious(someProp)` returns `prevProps.someProp`.
  * @param {Any} value of any given type
  */
-const usePrevious = (value) => {
+const usePrevious = value => {
   const ref = useRef(null);
   useEffect(() => {
     return () => {

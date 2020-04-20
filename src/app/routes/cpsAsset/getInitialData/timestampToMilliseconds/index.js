@@ -6,15 +6,15 @@ import pipe from 'ramda/src/pipe';
 // This standardises that by assuming any timestamp before 1973 needs converted to ms
 const MINIMUM_TIMESTAMP_VALUE = 100000000000; // March 1973
 
-const isInSeconds = (timestamp) =>
+const isInSeconds = timestamp =>
   timestamp && timestamp < MINIMUM_TIMESTAMP_VALUE;
 
-const convertToMilliseconds = (timestamp) => timestamp * 1000;
+const convertToMilliseconds = timestamp => timestamp * 1000;
 
-const standardiseTimestamp = (timestamp) =>
+const standardiseTimestamp = timestamp =>
   isInSeconds(timestamp) ? convertToMilliseconds(timestamp) : timestamp;
 
-const standardiseMetadataTimestamps = (json) => {
+const standardiseMetadataTimestamps = json => {
   if (!json.metadata) return json;
 
   return mergeDeepLeft(
@@ -29,12 +29,12 @@ const standardiseMetadataTimestamps = (json) => {
   );
 };
 
-const standardisePromoTimestamp = (item) => ({
+const standardisePromoTimestamp = item => ({
   ...item,
   timestamp: standardiseTimestamp(item.timestamp),
 });
 
-const standardisePromoTimestamps = (json) => {
+const standardisePromoTimestamps = json => {
   const relatedContentGroup = path(['relatedContent', 'groups', 0], json);
 
   if (!relatedContentGroup || !Array.isArray(relatedContentGroup.promos))

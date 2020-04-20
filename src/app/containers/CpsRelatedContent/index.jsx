@@ -11,9 +11,9 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 const CpsRelatedContent = ({ content, enableGridWrapper }) => {
   const { dir, translations } = useContext(ServiceContext);
 
-  const singleTransform = (promo) => <StoryPromo item={promo} dir={dir} />;
+  const singleTransform = promo => <StoryPromo item={promo} dir={dir} />;
 
-  const listTransform = (items) => (
+  const listTransform = items => (
     <Grid
       columns={{
         group0: 6,
@@ -27,7 +27,7 @@ const CpsRelatedContent = ({ content, enableGridWrapper }) => {
       enableGelGutters
       dir={dir}
     >
-      {items.map((item) => (
+      {items.map(item => (
         <Grid
           item
           columns={{

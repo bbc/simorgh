@@ -18,7 +18,7 @@ const buildSectionArr = (service, value, type) => [
 
 const buildSectionItem = (service, type) => [`${service} - ${type}`];
 
-const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 export const getSylphidCookie = () =>
   onClient() ? Cookie.get(ID_COOKIE) : null;
@@ -50,7 +50,7 @@ export const buildSections = ({
   const addProducer = producer && service !== producer;
   const serviceCap = capitalize(service);
   const type = getType(pageType, true);
-  const appendCategory = (name) => `${name}-category`;
+  const appendCategory = name => `${name}-category`;
 
   switch (pageType) {
     case 'MAP':
@@ -89,7 +89,7 @@ export const getTitle = (pageType, pageData, brandName) => {
     case 'MAP':
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'media':
-      return path(['promo', 'name'], pageData);
+      return path(['name'], pageData);
     default:
       return null;
   }

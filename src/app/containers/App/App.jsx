@@ -61,7 +61,7 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
       } = getRouteProps(routes, location.pathname);
 
       let loaderTimeout;
-      const loaderPromise = new Promise((resolve) => {
+      const loaderPromise = new Promise(resolve => {
         loaderTimeout = setTimeout(resolve, 500);
       });
 
@@ -82,24 +82,26 @@ export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
         });
       });
 
-      route.getInitialData(location.pathname).then((data) => {
-        clearTimeout(loaderTimeout);
-        shouldSetFocus.current = true;
-        setState({
-          service: nextService,
-          variant: nextVariant,
-          id: nextId,
-          assetUri: nextAssetUri,
-          isAmp: nextIsAmp,
-          pageType: route.pageType,
-          loading: false,
-          pageData: path(['pageData'], data),
-          status: path(['status'], data),
-          error: path(['error'], data),
-          errorCode: null,
-          timeOnServer: path(['timeOnServer'], data),
+      route
+        .getInitialData({ path: location.pathname, service: nextService })
+        .then(data => {
+          clearTimeout(loaderTimeout);
+          shouldSetFocus.current = true;
+          setState({
+            service: nextService,
+            variant: nextVariant,
+            id: nextId,
+            assetUri: nextAssetUri,
+            isAmp: nextIsAmp,
+            pageType: route.pageType,
+            loading: false,
+            pageData: path(['pageData'], data),
+            status: path(['status'], data),
+            error: path(['error'], data),
+            errorCode: null,
+            timeOnServer: path(['timeOnServer'], data),
+          });
         });
-      });
     }
   }, [routes, location.pathname]);
 
