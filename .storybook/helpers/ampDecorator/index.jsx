@@ -13,7 +13,7 @@ import {
   Contains AMP required markup https://www.ampproject.org/docs/fundamentals/spec#required-markup
 */
 
-const AmpDecorator = (storyFn) => (
+const AmpDecorator = storyFn => (
   <div>
     <Helmet htmlAttributes={{ amp: '' }}>
       <link rel="canonical" href="http://foobar.com" />

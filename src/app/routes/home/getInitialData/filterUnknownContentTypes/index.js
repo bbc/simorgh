@@ -13,19 +13,19 @@ const contentTypes = [
   'Podcast',
 ];
 
-const filterUnknownContentTypes = (data) => {
+const filterUnknownContentTypes = data => {
   const groups = pathOr(null, ['content', 'groups'], data);
 
   if (!groups) {
     return data;
   }
 
-  const newGroups = groups.map((group) => {
+  const newGroups = groups.map(group => {
     // avoid eslint complaints about 'no-param-reassign'
     const newGroup = group;
 
     if (Array.isArray(group.items)) {
-      newGroup.items = group.items.filter((item) => {
+      newGroup.items = group.items.filter(item => {
         const itemType = item.assetTypeCode || item.cpsType;
         const isValidItemType = whitelist.includes(itemType);
         const isValidContentType =
