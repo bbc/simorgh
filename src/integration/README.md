@@ -219,17 +219,3 @@ Here are some possible answers:
 - ### Content in an iframe I want to test is not in the DOM
 
   This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as [Cypress](what-is-cypress).
-
-- ### The `getByText` query is not working
-
-  getByText has a limitation where it cannot select text that spans mulitple elements. In these cases you can use `getByTextMultiElement`
-
-- ### The `getByAltText` query is not working for AMP
-
-  AMP has some custom components which are transformed by the AMP library on the client side into something that the web-browser can understand. One of these components is `amp-img`. The problem is the `getByAltText` queries the DOM for an `img` element with an `alt` attribute that matches the provided alt-text so the `amp-img` element is not picked up. The current solution is to use `document.querySelector` and search for the `amp-img` element combined with an attribute selector, for example:
-
-  ```js
-  const image = amp.document.querySelector(`amp-img[alt="${imageAltText}"]`);
-  ```
-
-  This could be another issue that will be fixed by client side rendering with JSDOM.
