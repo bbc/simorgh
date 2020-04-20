@@ -1,4 +1,4 @@
-const getBaseUrl = (origin) => {
+const getBaseUrl = origin => {
   let base = 'https://www.bbc';
   let tld = '.com';
 

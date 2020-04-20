@@ -66,12 +66,12 @@ const ampAdPropsDesktop = ({ service }) => ({
   json: JSON.stringify(constructAdJsonData({ service })),
 });
 
-const AMP_ACCESS_DATA = (endpoint) => ({
+const AMP_ACCESS_DATA = endpoint => ({
   authorization: endpoint,
   noPingback: true,
 });
 
-const AMP_ACCESS_FETCH = (service) => {
+const AMP_ACCESS_FETCH = service => {
   const togglesEndpoint = `${process.env.SIMORGH_TOGGLES_URL}/toggles?application=simorgh&service=${service}&geoiplookup=true`;
 
   return (

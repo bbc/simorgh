@@ -50,13 +50,13 @@ const parseBlockByType = (block, json) => {
   return parsedBlock;
 };
 
-const convertToOptimoBlocks = async (jsonRaw) => {
+const convertToOptimoBlocks = async jsonRaw => {
   const json = clone(jsonRaw);
 
   const blocks = pathOr([], ['content', 'blocks'], json);
 
   const parsedBlocks = await Promise.all(
-    blocks.map((block) => parseBlockByType(block, json)),
+    blocks.map(block => parseBlockByType(block, json)),
   );
 
   return {

@@ -38,16 +38,16 @@ const consoleTransport = new (transports.Console)({
 });
 
 const customFormatting = printf(
-  (data) => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
+  data => `${data.timestamp} ${data.level} [${data.label}] ${data.message}`,
 );
 
 // e.g. outputs 'Article/index.jsx'
-const folderAndFilename = (name) => {
+const folderAndFilename = name => {
   const fileparts = name.split(path.sep);
   return fileparts.splice(-2).join(path.sep);
 };
 
-const logToFile = (callingFile) => {
+const logToFile = callingFile => {
   createLogDirectory(LOG_DIR);
 
   return createLogger({
@@ -96,6 +96,6 @@ class Logger {
   }
 }
 
-const logger = (callingFile) => new Logger(callingFile);
+const logger = callingFile => new Logger(callingFile);
 
 module.exports = logger;

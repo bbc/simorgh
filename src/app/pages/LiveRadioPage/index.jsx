@@ -12,12 +12,12 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 const StyledGelPageGrid = styled(GelPageGrid)`
   width: 100%;
+  flex-grow: 1; /* needed to ensure footer positions at bottom of viewport */
 `;
 
-const RadioPage = ({ pageData }) => {
-  const blocks = path(['content', 'blocks'], pageData);
-  const promo = path(['promo'], pageData);
-  const metadata = path(['metadata'], pageData);
+const LiveRadioPage = ({ pageData }) => {
+  const { language, name, summary, content } = pageData;
+  const blocks = path(['blocks'], content);
   const { dir } = useContext(ServiceContext);
 
   return (
@@ -25,12 +25,12 @@ const RadioPage = ({ pageData }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <MetadataContainer
-        title={promo.name}
-        lang={metadata.language}
-        description={promo.summary}
+        title={name}
+        lang={language}
+        description={summary}
         openGraphType="website"
       />
-      <LinkedData type="RadioChannel" seoTitle={promo.name} />
+      <LinkedData type="RadioChannel" seoTitle={name} />
 
       <StyledGelPageGrid
         forwardedAs="main"
@@ -74,16 +74,15 @@ const RadioPage = ({ pageData }) => {
   );
 };
 
-RadioPage.propTypes = {
+LiveRadioPage.propTypes = {
   pageData: shape({
     metadata: shape({
       id: string,
       tags: object,
     }),
-    promo: shape({
-      subtype: string,
-      name: string,
-    }),
+    language: string,
+    name: string,
+    summary: string,
     content: shape({
       blocks: arrayOf(
         shape({
@@ -98,4 +97,4 @@ RadioPage.propTypes = {
   }).isRequired,
 };
 
-export default RadioPage;
+export default LiveRadioPage;

@@ -25,7 +25,7 @@ const insertBlockPositioning = ({ model }, positionArr = []) => {
  * denoting its ordinal position in an array.
  * @param {Object} obj
  */
-const applyBlockPositioning = (obj) => {
+const applyBlockPositioning = obj => {
   const json = deepClone(obj);
   const content = pathOr(null, ['content'], obj);
 

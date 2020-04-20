@@ -1,5 +1,5 @@
 export default ({ headlineText, summaryText }) => {
-  [amp, canonical].forEach((page) => {
+  [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {
       it('I can see the headline', () => {
         const headlineEl = page.getByText(headlineText);
