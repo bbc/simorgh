@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { string, shape, arrayOf, bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';

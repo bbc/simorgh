@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, node, shape, arrayOf } from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import {
@@ -14,6 +14,8 @@ import {
 const ENGLISH_SERVICES = ['news'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
 const FACEBOOK_APP_ID = 1609039196070050;
+const FACEBOOK_PAGES =
+  '285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812';
 const iconSizes = {
   'apple-touch-icon': [
     '72x72',
@@ -122,6 +124,7 @@ const MetadataContainer = ({
       <meta name="description" content={description} />
       <meta property="fb:admins" content={FACEBOOK_ADMIN_ID} />
       <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
+      <meta property="fb:pages" content={FACEBOOK_PAGES} />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-TileColor" content={themeColor} />
       <meta
