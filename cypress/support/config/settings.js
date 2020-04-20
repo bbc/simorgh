@@ -76,12 +76,12 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/w3cszx1y'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           test: {
-            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/w3cszx1y'],
-            enabled: true,
+            paths: [],
+            enabled: false,
           },
           local: {
             paths: ['/afaanoromoo/bbc_afaanoromoo_radio/w3cszx1y'],
@@ -224,11 +224,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/afrique/bbc_afrique_radio/w172x601yx5z2n1'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/afrique/bbc_afrique_radio/w172x601yx5z2n1'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -377,11 +377,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/amharic/bbc_amharic_radio/w3csz5r9'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/amharic/bbc_amharic_radio/w3csz5r9'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -525,11 +525,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/arabic/bbc_arabic_radio/w3ct01yb'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/arabic/bbc_arabic_radio/w3ct01yb'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -796,11 +796,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/bengali/bbc_bangla_radio/w172x0562jxntqx'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/bengali/bbc_bangla_radio/w172x0562jxntqx'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -949,11 +949,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/burmese/bbc_burmese_radio/w3csz62h'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/burmese/bbc_burmese_radio/w3csz62h'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -1150,11 +1150,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -1419,11 +1419,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/hausa/bbc_hausa_radio/w3cszrwm'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/hausa/bbc_hausa_radio/w3cszrwm'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -1572,11 +1572,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -1838,11 +1838,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/indonesia/bbc_indonesian_radio/w172x6r5000f38s'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/w172x6r5000f38s'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -2107,11 +2107,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/korean/bbc_korean_radio/w3cszwcg'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/korean/bbc_korean_radio/w3cszwcg'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -2255,11 +2255,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/w3cszwmc'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/w3cszwmc'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -2693,11 +2693,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/nepali/bbc_nepali_radio/w172x83pnptp1s8'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/nepali/bbc_nepali_radio/w172x83pnptp1s8'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -2894,11 +2894,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/pashto/bbc_pashto_radio/w172x8nvf4bchz5'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/pashto/bbc_pashto_radio/w172x8nvf4bchz5'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -3056,17 +3056,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: [
-              '/persian/bbc_persian_radio/w172x32355t5635',
-              '/persian/bbc_dari_radio/w3csz7mf',
-            ],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: [
-              '/persian/bbc_persian_radio/w172x32355t5635',
-              '/persian/bbc_dari_radio/w3csz7mf',
-            ],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -3952,11 +3946,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/sinhala/bbc_sinhala_radio/w172x8zn8th1lwb'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/sinhala/bbc_sinhala_radio/w172x8zn8th1lwb'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -4104,11 +4098,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/somali/bbc_somali_radio/w172x90wfxd2qh4'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/somali/bbc_somali_radio/w172x90wfxd2qh4'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -4272,11 +4266,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/swahili/bbc_swahili_radio/w172x94ky63591m'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/swahili/bbc_swahili_radio/w172x94ky63591m'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -4425,11 +4419,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/tamil/bbc_tamil_radio/w172x966tn9jwmh'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/tamil/bbc_tamil_radio/w172x966tn9jwmh'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -4810,11 +4804,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/w3cszzz1'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/w3cszzz1'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -5439,11 +5433,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/urdu/bbc_urdu_radio/w172x9dx052c8sr'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/urdu/bbc_urdu_radio/w172x9dx052c8sr'],
+            paths: [],
             enabled: false,
           },
           local: {
@@ -5592,11 +5586,11 @@ module.exports = () => ({
       onDemandRadioEpisode: {
         environments: {
           live: {
-            paths: ['/uzbek/bbc_uzbek_radio/w172x9f9qjcq3lm'],
+            paths: [],
             enabled: false,
           },
           test: {
-            paths: ['/uzbek/bbc_uzbek_radio/w172x9f9qjcq3lm'],
+            paths: [],
             enabled: false,
           },
           local: {
