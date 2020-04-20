@@ -158,7 +158,7 @@ export const buildATIPageTrackPath = ({
       key: 'x16',
       description: 'campaigns',
       value: (Array.isArray(campaigns) ? campaigns : [])
-        .map((campaign) => campaign.campaignName.replace(spaceRegex, '%20'))
+        .map(campaign => campaign.campaignName.replace(spaceRegex, '%20'))
         .join('~'),
       wrap: true,
     },

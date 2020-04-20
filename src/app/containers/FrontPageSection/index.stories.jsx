@@ -10,7 +10,7 @@ import russianData from '#data/russian/frontpage/index.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const getSection = (platform) => (service, data) => (
+const getSection = platform => (service, data) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
@@ -36,7 +36,7 @@ storiesOf('Containers|Front Page Section/Canonical', module)
     getCanonicalSection(
       'pidgin',
       pidginData.content.groups.find(
-        (sec) => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+        sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
       ),
     ),
   )
@@ -44,7 +44,7 @@ storiesOf('Containers|Front Page Section/Canonical', module)
     getCanonicalSection(
       'igbo',
       russianData.content.groups.find(
-        (sec) => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
+        sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
       ),
     ),
   );
@@ -60,7 +60,7 @@ storiesOf('Containers|Front Page Section/AMP', module)
     getAmpSection(
       'pidgin',
       pidginData.content.groups.find(
-        (sec) => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+        sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
       ),
     ),
   )
@@ -68,7 +68,7 @@ storiesOf('Containers|Front Page Section/AMP', module)
     getAmpSection(
       'igbo',
       russianData.content.groups.find(
-        (sec) => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
+        sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
       ),
     ),
   );
