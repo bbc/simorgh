@@ -120,7 +120,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   useEffect(() => {
-    const handleResponse = async (response) => {
+    const handleResponse = async response => {
       const radioScheduleData = await response.json();
       const timeOnClient = parseInt(moment.utc().format('x'), 10);
       const schedules = processRadioSchedule(
@@ -131,10 +131,10 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
       setRadioSchedule(schedules);
     };
 
-    const fetchRadioScheduleData = (pathname) =>
+    const fetchRadioScheduleData = pathname =>
       fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
-        .catch((e) => logger.error(`HTTP Error: "${e}"`));
+        .catch(e => logger.error(`HTTP Error: "${e}"`));
 
     fetchRadioScheduleData(endpoint);
   }, [endpoint, locale, script, service, timeOnServer, timezone]);

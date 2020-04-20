@@ -23,7 +23,7 @@ const baseUrl = onClient()
   ? getBaseUrl(window.location.origin)
   : process.env.SIMORGH_BASE_URL;
 
-export const getUrl = (pathname) => {
+export const getUrl = pathname => {
   if (!pathname) return '';
 
   const params = isLive() ? '' : getQueryString(pathname);
@@ -32,7 +32,7 @@ export const getUrl = (pathname) => {
   return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
 };
 
-const handleResponse = (url) => async (response) => {
+const handleResponse = url => async response => {
   const { status } = response;
 
   if (upstreamStatusCodesToPropagate.includes(status)) {
@@ -56,7 +56,7 @@ const handleResponse = (url) => async (response) => {
   );
 };
 
-const handleError = (e) => {
+const handleError = e => {
   const error = e.toString();
 
   logger.error(DATA_FETCH_ERROR, { error });
@@ -67,7 +67,7 @@ const handleError = (e) => {
   };
 };
 
-const fetchData = (pathname) => {
+const fetchData = pathname => {
   const url = getUrl(pathname);
 
   logger.info(DATA_REQUEST_RECEIVED, { url });

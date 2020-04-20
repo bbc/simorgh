@@ -1,7 +1,7 @@
 export const getBlockByType = (blocks, blockType) => {
   let blockData;
 
-  blocks.forEach((block) => {
+  blocks.forEach(block => {
     if (!blockData && block.type === blockType) {
       blockData = block;
     }

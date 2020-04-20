@@ -15,7 +15,7 @@ const buildIncludeUrl = (href, type) => {
   return `${process.env.SIMORGH_INCLUDES_BASE_URL}${withTrailingHref}${resolvers[type]}`;
 };
 
-const fetchMarkup = async (url) => {
+const fetchMarkup = async url => {
   try {
     /* The timeout value here is arbitrary and subject to change. It's purpose is to ensure that pending promises do not delay page rendering on the server.
       Using isomorphic-fetch means we use window.fetch, which does not have a timeout option, on the client and node-fetch, which does, on the server.
@@ -42,18 +42,21 @@ const fetchMarkup = async (url) => {
   }
 };
 
-const convertInclude = async ({ href, type, ...rest }) => {
+const convertInclude = async ({ href: hrefWithParams, type, ...rest }) => {
   const supportedTypes = {
     indepthtoolkit: 'idt1',
     idt2: 'idt2',
     include: 'vj',
   };
 
+  // This strips the GET query params from the href
+  const href = hrefWithParams && hrefWithParams.split('?')[0];
+
   // This determines if the href has a leading '/'
   const hrefTypePostion = () => (href.indexOf('/') === 0 ? 1 : 0);
 
   // This checks if the supportedType is in the correct position of the href
-  const hrefIsSupported = () => (supportedType) =>
+  const hrefIsSupported = () => supportedType =>
     href && href.startsWith(supportedType, hrefTypePostion());
 
   // This extracts the type from the href
@@ -63,7 +66,6 @@ const convertInclude = async ({ href, type, ...rest }) => {
 
   // This determines if the type is supported and returns the include type name
   const includeType = supportedTypes[typeExtraction];
-
   if (!includeType) {
     return null;
   }

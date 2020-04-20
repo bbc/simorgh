@@ -5,6 +5,7 @@ export default ({
   language,
   fbAdmins,
   fbAppId,
+  fbPages,
   ogImage,
   ogImageAlt,
   ogLocale,
@@ -22,7 +23,7 @@ export default ({
   twitterTitle,
   linkedData,
 }) => {
-  [amp, canonical].forEach((page) => {
+  [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {
       it('it can see the page title', () => {
         expect(page.document.title).toEqual(pageTitle);
@@ -70,6 +71,9 @@ export default ({
         const fbAppIdEl = page.document.querySelector(
           'meta[property="fb:app_id"]',
         );
+        const fbPagesEl = page.document.querySelector(
+          'meta[property="fb:pages"]',
+        );
         const ogImageEl = page.document.querySelector(
           'meta[property="og:image"]',
         );
@@ -116,6 +120,7 @@ export default ({
 
         expect(fbAdminsEl.getAttribute('content')).toBe(fbAdmins);
         expect(fbAppIdEl.getAttribute('content')).toBe(fbAppId);
+        expect(fbPagesEl.getAttribute('content')).toBe(fbPages);
         expect(ogImageEl.getAttribute('content')).toBe(ogImage);
         expect(ogImageAltEl.getAttribute('content')).toBe(ogImageAlt);
         expect(ogLocaleEl.getAttribute('content')).toBe(ogLocale);
