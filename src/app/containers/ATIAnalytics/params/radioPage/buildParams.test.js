@@ -8,14 +8,11 @@ analyticsUtils.getPublishedDatetime = jest
   .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 const radio = {
-  metadata: {
-    id: 'id',
-    language: 'language',
-    analyticsLabels: {
-      pageIdentifier: 'pageIdentifier',
-      pageTitle: 'pageTitle',
-    },
-  },
+  id: 'id',
+  language: 'language',
+  pageIdentifier: 'pageIdentifier',
+  pageTitle: 'pageTitle',
+  contentType: 'player-live',
 };
 
 const requestContext = {
