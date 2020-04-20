@@ -23,9 +23,11 @@ For tests that can be run in both platforms, we should add these tests to a file
 ```js
 export default () => {
   it('I can see the headline', () => {
-    const headlineEl = document.getByText(headlineText);
+    const h1El = document.querySelector('h1');
 
-    expect(headlineEl).toBeInTheDocument();
+    expect(h1El).toBeInTheDocument();
+    expect(h1El).toBeTruthy();
+    expect(h1El.textContent).toMatchSnapshot();
   });
 };
 ```
@@ -168,23 +170,39 @@ You might then think it makes sense to only write integration tests but there ar
 
 A docblock pragma is a specially-formatted comment at the top of a test file. We can use docblock pragmas to alter the environment that tests run in.
 
-## What is the Given-When-Then stuff all about?
-
-The Given-When-Then formula is a template intended to guide the writing of acceptance tests for a user story.
-
-- (Given) some context
-- (When) some action is carried out
-- (Then) a particular set of consequences can be observed
-
-An example:
-
-- Given I am on a Mundo article canonical page
-- When I am using the website
-- Then I can see an image with a caption.
-
 ## What is a snapshot?
 
-This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of the underlying DOM tree that is used to catch unexpected changes.
+This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of a result that is typically returned from a function. This could even be HTML returned from DOM query selector e.g.
+
+```js
+it('should render the headline', () => {
+  expect(document.querySelector('h1').outerHTML).toMatchSnapshot();
+});
+```
+
+The above would create a file in a colocated `__snapshots__` directory
+
+```
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the headline`] = `
+<h1 id="content"
+       "tabindex="-1"
+>
+  <span role="text">
+    <span lang="en-GB">
+      BBC News
+    </span>
+    ,
+    Pidgin
+    -
+    Home
+  </span>
+</h1>
+`;
+```
+
+It's recommended not to snapshot large parts of the DOM because this creates brittle tests i.e. these tests would break often because the DOM changes whenever someone changes something such as a React component's structure and styles, translation configs and feature toggles. It is better to have smaller and more focused snapshots. More info on this approach can be found in this article [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing).
 
 ## What is Cypress
 
