@@ -14,37 +14,89 @@ This will build and run the application that the tests will run against.
 
 ## How to write tests
 
-An example of a test that would check a headline renders in the document on both AMP and canonical platforms would look like this:
+We need to write tests for both our AMP and canonical platforms. There are tests that can be written to test both platforms (cross platform tests), some tests for canonical only, and some tests for AMP only.
+
+#### Cross platform tests
+
+For tests that can be run in both platforms, we should add these tests to a file called `crossPlatformTests.js`. An example of a cross platform test would be like
+
+```js
+export default () => {
+  it('I can see the headline', () => {
+    const headlineEl = document.getByText(headlineText);
+
+    expect(headlineEl).toBeInTheDocument();
+  });
+};
+```
+
+#### AMP only tests
+
+For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of a cross platform test would be like
+
+```js
+export default () => {
+  describe('Analytics', () => {
+    it('ATI', () => {
+      expect(
+        document.querySelector('amp-analytics script[type="application/json"]')
+          .textContent,
+      ).toMatch('https://logws1363.ati-host.net?');
+    });
+  });
+};
+```
+
+#### Canonical only tests
+
+For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a cross platform test would be like
+
+```js
+export default () => {
+  describe('Analytics', () => {
+    it('ATI', () => {
+      const noscriptImage = document.querySelector('noscript img');
+
+      expect(noscriptImage.tagName).toEqual('IMG');
+      expect(noscriptImage.getAttribute('width')).toEqual('1px');
+      expect(noscriptImage.getAttribute('height')).toEqual('1px');
+      expect(noscriptImage.getAttribute('src')).toMatch(
+        'https://logws1363.ati-host.net?',
+      );
+    });
+  });
+};
+```
+
+For Jest to run the tests in these files we need to create a `*(amp|canonical).test.js` file that will import and call the test functions. We use `amp.test.js` to run the tests on the AMP platform and `canonical.test.js` to run the tests on the canonical platform. For example a file name `amp.test.js` with the contents:
 
 ```js
 /**
- * @pathname /mundo/articles/ce42wzqr2mko
+ * @service pidgin
+ * @pathname /pidgin/23248703
  */
 
-[amp, canonical].forEach((page) => {
-  it('I can see the headline', () => {
-    const headlineEl = page.getByText(headlineText);
+import runCrossPlatformTests from '../crossPlatformTests';
+import runAmpTests from '../ampTests';
 
-    expect(headlineEl).toBeInTheDocument();
+describe(platform.toUpperCase(), () => {
+  describe(pageType, () => {
+    runCrossPlatformTests();
+    runAmpTests();
   });
 });
 ```
 
-In the above example we have specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
+In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
 
-Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs both an AMP and canonical url. JSDOM then visits both urls to get the DOM trees that we can use to run our tests against. The AMP DOM and the canonical DOM is available on the global scope across all files used in a test. We can run the same test for AMP and canonical by putting them in an array and iterating on the array. If we only want to run a test on a single platform, for example amp, then we can just do:
+Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 
-```js
-/**
- * @pathname /mundo/articles/ce42wzqr2mko
- */
+Note we have also specified a `service` docblock pragma. The service is parsed and added to the global scope of every test file. This can come in handy for tests where you need to know the service. There are other useful variables added to the global scope:
 
-it('I can see the headline', () => {
-  const headlineEl = canonical.getByText(headlineText);
-
-  expect(headlineEl).toBeInTheDocument();
-});
-```
+- `pageType` - The page type which is parsed from the test file path.
+- `service` - The service of the currently running page test.
+- `document` - The `document` object of the current page. You can use this to query the DOM and assert the correct things are in the page.
+- `platform` - The current platform (`amp` or `canonical`)
 
 Tests for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
 
@@ -60,27 +112,17 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 |  ├── onDemandRadioPage
 ```
 
-within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amharic.test.js`, `korean.test.js` where we are testing the Amharic and Korean live radio pages respectively.
+within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amp.test.js`, `canonical.test.js`. To test the `amharic` service we have created a directory specifically for this and located the AMP and canonical test files within.
 
 ```
 └── liveRadioPage
-   ├── __snapshots__
-   |  ├── amharic.test.js.snap
-   |  └── korean.test.js.snap
-   ├── amharic.test.js
-   ├── korean.test.js
-   ├── user.amp.js
-   ├── user.canonical.js
-   └── user.js
+   ├── amharic
+   |  ├── amp.test.js
+   |  └── canonical.test.js
+   ├── ampTests.js
+   ├── canonicalTests.js
+   └── crossPlatformTests.js
 ```
-
-Each page type's test file will have specific user tests, for example in the context of a live radio page, we want to test that a user can see a headline, a description of the live radio stream and a media player.
-
-We define these tests inside of the `user.js` file and import them into each page type test file `amharic.test.js`, `korean.test.js`. Sometimes the UI or UX is slightly different between AMP and canonical. In these cases we have different files for each - `user.amp.js` and `user.canonical.js`. User tests should be focussed on testing things on the page that a user can see or interact with. They should not contain anything to do with SEO, analytics or checking scripts are in the page.
-
-User tests are the most important tests we write because this is who we build software for. We should also consider a11y tests in our user tests.
-
-We can make use of DOM Testing Library to write better user tests. The main utilities it provides involve querying the DOM in a way that's similar to how the user finds elements on the page e.g. `getByText('This is the headline text')`. This is preferred over something like `document.querySelector('.headline')`. This also makes our user tests more maintainable in the long run as refactors to our components, for example a class name change, don't break our tests and slow us down. When testing something like SEO, something that you cannot see or interact with, then `document.querySelector` is the go to method for querying the DOM.
 
 All page types have some common UI and functionality. Tests for the common stuff are located in `src/app/integration/common`:
 
@@ -95,8 +137,7 @@ All page types have some common UI and functionality. Tests for the common stuff
 |  ├── footer.js
 |  ├── header.js
 |  ├── index.js
-|  ├── performance.js
-|  └── snapshot.js
+|  └── performance.js
 ```
 
 As you can see, common UI and functionality includes header and footer UI, analytics reporting, SEO etc. We can import these in each page type's test file to run these tests.
