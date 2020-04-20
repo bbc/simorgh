@@ -185,7 +185,7 @@ The above would create a file in a colocated `__snapshots__` directory
 ```
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the headline`] = `
+exports[`I can see the headline`] = `
 <h1 id="content"
        "tabindex="-1"
 >
@@ -203,6 +203,28 @@ exports[`should render the headline`] = `
 ```
 
 It's recommended not to snapshot large parts of the DOM because this creates brittle tests i.e. these tests would break often because the DOM changes whenever someone changes something such as a React component's structure and styles, translation configs and feature toggles. It is better to have smaller and more focused snapshots. More info on this approach can be found in this article [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing).
+
+An even better example of asserting a headline is on the page
+
+```js
+it('I can see the headline', () => {
+  const h1El = document.querySelector('h1');
+
+  expect(h1El).toBeInTheDocument(); // check the headline element is in the document
+  expect(h1El.getAttribute('id')).toBe('content'); // check for the id attribute
+  expect(h1El.getAttribute('tabindex')).toBe('-1'); // check for the tabindex attribute
+  expect(h1El).toBeTruthy(); // check there is some text inside the element
+  expect(h1El.textContent).toMatchSnapshot(); // snapshot the value so that we have a baseline to fail the test if it ever unexpectedly changes
+});
+```
+
+This would produce the following snapshot:
+
+```
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I can see the headline`] = `BBC News, Pidgin - Home`;
+```
 
 ## What is Cypress
 
