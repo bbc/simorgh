@@ -34,7 +34,7 @@ export default () => {
 
 #### AMP only tests
 
-For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of a cross platform test would be like
+For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of an AMP test would be like
 
 ```js
 export default () => {
@@ -51,7 +51,7 @@ export default () => {
 
 #### Canonical only tests
 
-For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a cross platform test would be like
+For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a canonical test would be like
 
 ```js
 export default () => {
