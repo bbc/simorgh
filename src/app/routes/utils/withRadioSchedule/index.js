@@ -7,8 +7,8 @@ import { DATA_REQUEST_RECEIVED, DATA_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
-const fetchData = (url) => {
-  const handleResponse = async (response) => {
+const fetchData = url => {
+  const handleResponse = async response => {
     const { status } = response;
 
     if (!response.ok) {
@@ -20,7 +20,7 @@ const fetchData = (url) => {
     return response.json();
   };
 
-  const handleError = (e) => {
+  const handleError = e => {
     const error = e.toString();
     logger.error(DATA_FETCH_ERROR, { error });
   };
