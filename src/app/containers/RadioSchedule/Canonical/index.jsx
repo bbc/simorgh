@@ -28,7 +28,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
-import { DATA_FETCH_ERROR } from '#lib/logger.const';
+import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
@@ -143,7 +143,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
             logger.error(
               JSON.stringify(
                 {
-                  event: DATA_FETCH_ERROR,
+                  event: RADIO_SCHEDULE_FETCH_ERROR,
                   message: error.toString(),
                 },
                 null,

@@ -1,6 +1,6 @@
 import fetchMock from 'fetch-mock';
 import loggerMock from '#testHelpers/loggerMock';
-import { DATA_FETCH_ERROR } from '#lib/logger.const';
+import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
 import withRadioSchedule from '.';
 
@@ -8,6 +8,9 @@ const pageDataPromise = Promise.resolve({
   json: { foo: 'bar' },
   status: 200,
 });
+
+const service = 'hausa';
+const path = 'http://localhost/mock-frontpage-path';
 
 describe('withRadioSchedule', () => {
   beforeEach(() => {
@@ -29,11 +32,11 @@ describe('withRadioSchedule', () => {
       const {
         json: { radioScheduleData, foo },
         ...rest
-      } = await withRadioSchedule(
+      } = await withRadioSchedule({
         pageDataPromise,
-        'hausa',
-        'http://localhost/mock-frontpage-path',
-      );
+        service,
+        path,
+      });
 
       expect(radioScheduleData.length).toBeTruthy();
       expect(foo).toBe('bar');
@@ -51,17 +54,13 @@ describe('withRadioSchedule', () => {
       const {
         json: { radioScheduleData, foo },
         ...rest
-      } = await withRadioSchedule(
-        pageDataPromise,
-        'hausa',
-        'http://localhost/mock-frontpage-path',
-      );
+      } = await withRadioSchedule({ pageDataPromise, service, path });
 
       expect(radioScheduleData).toBeNull();
       expect(foo).toBe('bar');
       expect(rest.status).toBe(200);
 
-      expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+      expect(loggerMock.error).toBeCalledWith(RADIO_SCHEDULE_FETCH_ERROR, {
         error:
           'Error: Unexpected upstream response (HTTP status code 404) when requesting http://localhost/hausa/bbc_hausa_radio/schedule.json',
       });
@@ -77,11 +76,11 @@ describe('withRadioSchedule', () => {
         status: 404,
       });
 
-      const { json, status } = await withRadioSchedule(
-        failedPageDataPromise,
-        'hausa',
-        'http://localhost/mock-frontpage-path',
-      );
+      const { json, status } = await withRadioSchedule({
+        pageDataPromise: failedPageDataPromise,
+        service,
+        path,
+      });
 
       expect(json).toBeUndefined();
       expect(status).toBe(404);
@@ -97,16 +96,16 @@ describe('withRadioSchedule', () => {
         status: 404,
       });
 
-      const { json, status } = await withRadioSchedule(
-        failedPageDataPromise,
-        'hausa',
-        'http://localhost/mock-frontpage-path',
-      );
+      const { json, status } = await withRadioSchedule({
+        pageDataPromise: failedPageDataPromise,
+        service,
+        path,
+      });
 
       expect(json).toBeUndefined();
       expect(status).toBe(404);
 
-      expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+      expect(loggerMock.error).toBeCalledWith(RADIO_SCHEDULE_FETCH_ERROR, {
         error:
           'Error: Unexpected upstream response (HTTP status code 404) when requesting http://localhost/hausa/bbc_hausa_radio/schedule.json',
       });
@@ -121,17 +120,17 @@ describe('withRadioSchedule', () => {
         const {
           json: { radioScheduleData, foo },
           ...rest
-        } = await withRadioSchedule(
+        } = await withRadioSchedule({
           pageDataPromise,
-          'hausa',
-          'http://localhost/mock-frontpage-path',
-        );
+          service,
+          path,
+        });
 
         expect(radioScheduleData).toBeNull();
         expect(foo).toBe('bar');
         expect(rest.status).toBe(200);
 
-        expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {
+        expect(loggerMock.error).toBeCalledWith(RADIO_SCHEDULE_FETCH_ERROR, {
           error: 'Server not found',
         });
       });

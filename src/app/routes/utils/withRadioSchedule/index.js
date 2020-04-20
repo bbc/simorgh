@@ -3,7 +3,10 @@ import nodeLogger from '#lib/logger.node';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 import { getQueryString } from '#lib/utilities/urlParser';
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
-import { DATA_REQUEST_RECEIVED, DATA_FETCH_ERROR } from '#lib/logger.const';
+import {
+  RADIO_SCHEDULE_REQUEST_RECEIVED,
+  RADIO_SCHEDULE_FETCH_ERROR,
+} from '#lib/logger.const';
 
 const logger = nodeLogger(__filename);
 
@@ -22,13 +25,13 @@ const fetchData = url => {
 
   const handleError = e => {
     const error = e.toString();
-    logger.error(DATA_FETCH_ERROR, { error });
+    logger.error(RADIO_SCHEDULE_FETCH_ERROR, { error });
   };
 
   return fetch(url).then(handleResponse).catch(handleError);
 };
 
-const withRadioSchedule = async (pageDataPromise, service, path) => {
+const withRadioSchedule = async ({ pageDataPromise, service, path }) => {
   const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
 
   const radioScheduleUrl = getRadioScheduleEndpoint({
@@ -38,7 +41,7 @@ const withRadioSchedule = async (pageDataPromise, service, path) => {
     baseUrl: SIMORGH_BASE_URL,
   });
 
-  logger.info(DATA_REQUEST_RECEIVED, { url: radioScheduleUrl });
+  logger.info(RADIO_SCHEDULE_REQUEST_RECEIVED, { url: radioScheduleUrl });
   const radioSchedulePromise = fetchData(radioScheduleUrl);
 
   const [{ json: pageData, ...rest }, radioScheduleJson] = await Promise.all([
