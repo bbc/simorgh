@@ -8,10 +8,10 @@ export default ({ audioEmbedUrl }) => {
   });
 
   it('I can see an audio player embed', () => {
-    const audioPlaceholderImage = amp.document.querySelector(
+    const audioPlayer = amp.document.querySelector(
       `amp-iframe[src="${audioEmbedUrl}"]`,
     );
 
-    expect(audioPlaceholderImage).toBeInTheDocument();
+    expect(audioPlayer).toBeInTheDocument();
   });
 };
