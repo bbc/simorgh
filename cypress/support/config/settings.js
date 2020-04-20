@@ -389,7 +389,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
