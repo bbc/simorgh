@@ -7,7 +7,7 @@ import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
-const getTopStories = (platform) => ({ service, dir, data }) => (
+const getTopStories = platform => ({ service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
     <ServiceContextProvider service={service}>

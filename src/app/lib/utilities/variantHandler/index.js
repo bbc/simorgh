@@ -14,12 +14,11 @@ const variantCookieConfig = {
   zhongwen: 'chinese',
 };
 
-export const getVariantCookieName = (service) =>
+export const getVariantCookieName = service =>
   pathOr(service, [service], variantCookieConfig);
 
 // Remove leading slash from variant
-export const variantSanitiser = (variant) =>
-  variant && variant.replace('/', '');
+export const variantSanitiser = variant => variant && variant.replace('/', '');
 
 // If service has variants, use it or default to first variant in array
 // If service doesnt have variants, return 'default'
