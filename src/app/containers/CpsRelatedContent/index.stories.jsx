@@ -11,7 +11,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 const pidginRelatedContentData = pidginData.relatedContent.groups[0].promos;
 const arabicRelatedContentData = arabicData.relatedContent.groups[0].promos;
 
-const getRelatedContent = (platform) => ({ service, dir, data }) => (
+const getRelatedContent = platform => ({ service, dir, data }) => (
   <div dir={dir}>
     {/* The above simulates dir being added at the page level */}
     <ServiceContextProvider service={service}>

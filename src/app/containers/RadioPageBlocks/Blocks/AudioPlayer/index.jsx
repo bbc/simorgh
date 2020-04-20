@@ -24,9 +24,9 @@ const audioPlaceholderImageSrc = `${staticAssetsPath}images/amp_audio_placeholde
 
 const LIVE_RADIO_ASSET_ID = 'liveradio';
 
-const isLiveRadio = (assetId) => assetId === LIVE_RADIO_ASSET_ID;
+const isLiveRadio = assetId => assetId === LIVE_RADIO_ASSET_ID;
 
-const getMediaInfo = (assetId) => ({
+const getMediaInfo = assetId => ({
   title: isLiveRadio(assetId) ? 'Live radio' : 'On-demand radio',
   type: 'audio',
 });

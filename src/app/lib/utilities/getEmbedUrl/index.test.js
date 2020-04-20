@@ -6,7 +6,7 @@ const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
 const embedUrlLiveOverride = '?morph_env=live';
 
-const setEnvironment = (environment) => {
+const setEnvironment = environment => {
   process.env.SIMORGH_APP_ENV = environment;
 };
 

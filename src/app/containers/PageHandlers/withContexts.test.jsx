@@ -13,7 +13,7 @@ import { UserContext } from '#contexts/UserContext';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
-getOriginContext.mockImplementation((origin) => ({
+getOriginContext.mockImplementation(origin => ({
   isUK: true,
   origin,
 }));
@@ -74,7 +74,7 @@ describe('withContexts HOC', () => {
 
     const pageTypes = ['article', 'frontPage', 'chicken'];
 
-    pageTypes.forEach((pageType) => {
+    pageTypes.forEach(pageType => {
       it(`passing pageType==${pageType} should pass along`, () => {
         const fixture = {
           bbcOrigin: 'https://www.bbc.com',

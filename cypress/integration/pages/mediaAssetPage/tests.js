@@ -1,4 +1,4 @@
-const getParagraphText = (blocks) => {
+const getParagraphText = blocks => {
   const textReplacements = {
     '&quot;': '"',
     '&amp;': '&',
@@ -12,11 +12,11 @@ const getParagraphText = (blocks) => {
   );
 
   return blocks
-    .find((el) => el.type === 'paragraph' && el.markupType === 'plain_text')
-    .text.replace(replacementsRegex, (match) => textReplacements[match]);
+    .find(el => el.type === 'paragraph' && el.markupType === 'plain_text')
+    .text.replace(replacementsRegex, match => textReplacements[match]);
 };
 
-const extractHrefAttribute = (textBlock) => {
+const extractHrefAttribute = textBlock => {
   return textBlock.text.match(/href="([^"]*)/)[1];
 };
 
@@ -38,7 +38,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     it('should render a paragraph, which contains/displays styled text', () => {
       cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
         const textCheck = body.content.blocks.find(
-          (el) => el.type === 'paragraph' && el.markupType === 'plain_text',
+          el => el.type === 'paragraph' && el.markupType === 'plain_text',
         );
         if (textCheck) {
           const text = getParagraphText(body.content.blocks);
@@ -55,7 +55,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
 
       if (isLegacyAsset) {
         cy.request(`${requestPath}.json`).then(({ body }) => {
-          const textWithPlainTextLinkTag = body.content.blocks.find((block) => {
+          const textWithPlainTextLinkTag = body.content.blocks.find(block => {
             return block.text && block.text.includes('</link>');
           });
           if (textWithPlainTextLinkTag) {
