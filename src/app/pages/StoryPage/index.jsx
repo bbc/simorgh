@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid from '@bbc/psammead-grid';
+import Grid from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -97,8 +97,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const StyledGrid = styled(Grid)`
+  const StoryPageGrid = styled(Grid)`
     flex-grow: 1;
+    width: 100%; /* Needed for IE11 */
+    margin: 0 auto;
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+    }
   `;
 
   const GridSecondaryColumn = styled(Grid)`
@@ -148,7 +153,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group2: 1,
     group3: 1,
     group4: 1,
-    group5: 3,
+    group5: 1,
   };
 
   const gridColsMain = {
@@ -157,7 +162,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group2: 8,
     group3: 8,
     group4: 8,
-    group5: 5,
+    group5: 8,
   };
 
   const gridColsSecondary = {
@@ -166,7 +171,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     group2: 8,
     group3: 8,
     group4: 4,
-    group5: 3,
+    group5: 4,
   };
 
   return (
@@ -193,7 +198,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <ATIAnalytics data={pageData} />
 
-      <StyledGrid
+      <StoryPageGrid
         dir={dir}
         columns={gridColumns}
         enableGelGutters
@@ -224,7 +229,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             />
           </ComponentWrapper>
         </GridSecondaryColumn>
-      </StyledGrid>
+      </StoryPageGrid>
     </>
   );
 };
