@@ -129,7 +129,7 @@
     "styled-components": "^4.4.1",
     "styled-normalize": "^8.0.7",
     "url-parse": "^1.4.7",
-    "uuid": "^3.4.0",
+    "uuid": "^7.0.3",
     "winston": "^3.2.1"
   },
   "devDependencies": {
