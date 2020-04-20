@@ -604,7 +604,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </amp-analytics>
       <main role="main"
             dir="ltr"
-            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 cPPVag"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-o3papn-0 jbscCF"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 kMhoTR"
@@ -1238,7 +1238,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </noscript>
       <main role="main"
             dir="ltr"
-            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-sc-1539sby-0 cPPVag"
+            class="GridComponent-nf79gm-0 iakllL GelPageGrid-ylca1m-0 StyledGelPageGrid-o3papn-0 jbscCF"
       >
         <div dir="ltr"
              class="GridComponent-nf79gm-0 kMhoTR"
@@ -1419,7 +1419,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </footer>
     </div>
     <script>
-      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"ያድምጡ","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"ዝግጅቶቻችንን’","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_amharic_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"metadata":{"id":"mock-id","locators":{"pipsUrn":"urn:bbc:pips:bbc_amharic_radio"},"type":"WS-LIVE","createdBy":"amharic","language":"am","lastUpdated":0,"firstPublished":0,"lastPublished":0,"options":{},"analyticsLabels":{"pageTitle":"ያድምጡ - BBC News አማርኛ","pageIdentifier":"amharic.bbc_amharic_radio.liveradio.page","producerId":"4","contentType":"player-live","producer":"AMHARIC"},"tags":{},"version":"1.1.2","blockTypes":["heading","version","paragraph"]},"promo":{"name":"ያድምጡ","summary":"ዝግጅቶቻችንን’","uri":"/amharic/bbc_amharic_radio/liveradio","contentType":"WS-LIVE","id":"mock-id","type":"link"},"relatedContent":{"site":{"subType":"simple","name":"amharic","uri":"/amharic","type":"simple"},"groups":[]}},"path":"/amharic/bbc_amharic_radio/liveradio","timeOnServer": "mock-time"}
+      window.SIMORGH_DATA={"status":200,"pageData":{"content":{"blocks":[{"text":"ያድምጡ","markupType":"plain_text","type":"heading","uuid":"mock-uuid"},{"text":"ዝግጅቶቻችንን’","type":"paragraph","uuid":"mock-uuid"},{"id":"mock-id","subType":"primary","format":"audio","externalId":"bbc_amharic_radio","duration":"PT0S","caption":"","embedding":false,"available":true,"live":true,"type":"version","uuid":"mock-uuid"}]},"language":"am","id":"mock-id","name":"ያድምጡ","summary":"ዝግጅቶቻችንን’","pageTitle":"ያድምጡ - BBC News አማርኛ","contentType":"player-live","pageIdentifier":"amharic.bbc_amharic_radio.liveradio.page"},"path":"/amharic/bbc_amharic_radio/liveradio","timeOnServer": "mock-time"}
     </script>
     <div>
       <!--[if !IE]><!-->
