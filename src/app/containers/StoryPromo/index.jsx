@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { shape, bool, oneOf, oneOfType } from 'prop-types';
