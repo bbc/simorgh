@@ -87,7 +87,7 @@ describe(platform.toUpperCase(), () => {
 });
 ```
 
-In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
+In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
 
 Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 
