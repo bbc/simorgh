@@ -4,7 +4,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-export const setStalePromoTimestamp = (mostReadData) => {
+export const setStalePromoTimestamp = mostReadData => {
   const oldTimestamp = 864691200; // 27/05/1997
   const updatedMostReadData = mostReadData;
 
@@ -14,7 +14,7 @@ export const setStalePromoTimestamp = (mostReadData) => {
   return updatedMostReadData;
 };
 
-export const setFreshPromoTimestamp = (mostReadData) => {
+export const setFreshPromoTimestamp = mostReadData => {
   const freshDate = new Date();
   const updatedMostReadData = mostReadData;
 
@@ -26,14 +26,14 @@ export const setFreshPromoTimestamp = (mostReadData) => {
   return updatedMostReadData;
 };
 
-export const setStaleLastRecordTimeStamp = (mostReadData) => {
+export const setStaleLastRecordTimeStamp = mostReadData => {
   const updatedMostReadData = mostReadData;
   updatedMostReadData.lastRecordTimeStamp = '2019-11-06T16:28:00Z';
 
   return updatedMostReadData;
 };
 
-const getToggleState = (enabled) => ({
+const getToggleState = enabled => ({
   mostRead: { enabled },
 });
 

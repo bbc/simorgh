@@ -1,8 +1,10 @@
-export default ({ copyrightText, brandingLink }) => {
-  [amp, canonical].forEach((page) => {
+export default ({ copyrightAndExternalLinkingText, brandingLink }) => {
+  [amp, canonical].forEach(page => {
     describe(`And using ${page.platform}`, () => {
-      it('I can see the footer copyright text', () => {
-        const copyrightEl = page.getByTextMultiElement(copyrightText);
+      it('I can see the footer copyright and external linking text', () => {
+        const copyrightEl = page.getByTextMultiElement(
+          copyrightAndExternalLinkingText,
+        );
 
         expect(copyrightEl).toBeInTheDocument();
       });

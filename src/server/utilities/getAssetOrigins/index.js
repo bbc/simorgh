@@ -6,7 +6,7 @@ const FONTS_ORIGINS = [
   'https://ws-downloads.files.bbci.co.uk',
 ];
 
-const getAssetOrigins = (service) => {
+const getAssetOrigins = service => {
   const assetOrigins = [
     IMAGES_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,

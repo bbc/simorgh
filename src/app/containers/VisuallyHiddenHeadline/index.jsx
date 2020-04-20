@@ -4,7 +4,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
 
-const VisuallyHiddenHeadline = (props) => (
+const VisuallyHiddenHeadline = props => (
   <VisuallyHiddenText as="h1" {...props} />
 );
 

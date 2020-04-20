@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser For the AMP platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser And using AMP I can see the server-rendered HTML 1`] = `
 <html lang="ar"
       dir="rtl"
       amp
@@ -44,6 +44,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
     <meta data-react-helmet="true"
           property="fb:app_id"
           content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          property="fb:pages"
+          content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
     >
     <meta data-react-helmet="true"
           name="mobile-web-app-capable"
@@ -248,6 +252,18 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
             type="application/ld+json"
     >
       {"@context":"http://schema.org","@type":"WebPage","url":"http://localhost:7080/arabic","publisher":{"@type":"NewsMediaOrganization","name":"BBC News عربي","publishingPrinciples":"https://www.bbc.com/arabic/institutional-49283069","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/arabic","name":"الرئيسية"}}
+    </script>
+    <script data-react-helmet="true"
+            async
+            custom-element="amp-access"
+            src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
+    >
+    </script>
+    <script data-react-helmet="true"
+            id="amp-access"
+            type="application/json"
+    >
+      {"authorization":"https://toggles.test.api.bbci.co.uk/toggles?application=simorgh&service=arabic&geoiplookup=true","noPingback":true}
     </script>
     <style amp-boilerplate>
       body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
@@ -857,6 +873,48 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
           </span>
         </h1>
         <div class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu">
+          <div amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+               amp-access-hide="true"
+          >
+            <div class="StyledAd-lj1cbr-0 fajsfm">
+              <amp-ad media="(max-width: 599px)"
+                      type="doubleclick"
+                      width="320"
+                      height="50"
+                      data-multi-size="320x50,300x50"
+                      data-slot="/4817/bbccom.test.site.amp.news"
+                      data-amp-slot-index="0"
+                      data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+                      json="{&quot;targeting&quot;:{&quot;slot&quot;:&quot;leaderboard&quot;,&quot;asset_type&quot;:&quot;index&quot;,&quot;channel&quot;:&quot;arabic&quot;}}"
+              >
+                <amp-img placeholder="true"
+                         width="320"
+                         height="50"
+                         src="https://via.placeholder.com/320x50"
+                         layout="responsive"
+                >
+                </amp-img>
+              </amp-ad>
+              <amp-ad media="(min-width: 600px)"
+                      type="doubleclick"
+                      width="970"
+                      height="250"
+                      data-multi-size="970x250,728x90"
+                      data-slot="/4817/bbccom.test.site.amp.news"
+                      data-amp-slot-index="0"
+                      data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+                      json="{&quot;targeting&quot;:{&quot;slot&quot;:&quot;leaderboard&quot;,&quot;asset_type&quot;:&quot;index&quot;,&quot;channel&quot;:&quot;arabic&quot;}}"
+              >
+                <amp-img placeholder="true"
+                         width="970"
+                         height="250"
+                         src="https://via.placeholder.com/970x250"
+                         layout="responsive"
+                >
+                </amp-img>
+              </amp-ad>
+            </div>
+          </div>
           <section role="region"
                    aria-labelledby="Top-stories"
                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"
@@ -865,7 +923,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Top-stories"
@@ -874,7 +932,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       الخبر الرئيسي
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <div class="FirstSectionTopMargin-sc-1t555e8-1 czsSMn">
@@ -1209,7 +1267,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="WatchListen"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -1223,10 +1281,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -1710,7 +1768,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Special-reports-1"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -1724,10 +1782,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -1785,7 +1843,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-1"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -1799,10 +1857,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -1860,7 +1918,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-2"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -1874,10 +1932,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -1935,7 +1993,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-3"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -1949,10 +2007,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2010,7 +2068,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-4"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2024,10 +2082,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2085,7 +2143,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-5"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2099,10 +2157,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2160,7 +2218,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-6"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2174,10 +2232,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2235,7 +2293,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Programmes"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2249,10 +2307,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2426,7 +2484,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="The-papers"
@@ -2435,7 +2493,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       عرض الصحف
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="rtl"
@@ -2544,7 +2602,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Verticals"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2558,10 +2616,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2671,7 +2729,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Interactivity"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2685,10 +2743,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2798,7 +2856,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Blogs"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2812,10 +2870,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -2925,7 +2983,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Picture-galleries"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -2939,10 +2997,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -3270,7 +3328,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="AV-stories-live"
@@ -3279,7 +3337,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       مباشر
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="rtl"
@@ -3396,7 +3454,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Features"
@@ -3405,7 +3463,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       اخترنا لكم
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="rtl"
@@ -3822,7 +3880,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Frequency-info"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -3836,10 +3894,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -4303,7 +4361,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Useful-links"
@@ -4312,7 +4370,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       روابط لبي بي سي
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <div data-e2e="useful-links"
@@ -4522,7 +4580,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
 </html>
 `;
 
-exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser For the Canonical platform I can see the server-rendered HTML 1`] = `
+exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the source code in the browser And using Canonical I can see the server-rendered HTML 1`] = `
 <html lang="ar"
       class="no-js"
       dir="rtl"
@@ -4566,6 +4624,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
     <meta data-react-helmet="true"
           property="fb:app_id"
           content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          property="fb:pages"
+          content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
     >
     <meta data-react-helmet="true"
           name="mobile-web-app-capable"
@@ -5224,7 +5286,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Top-stories"
@@ -5233,7 +5295,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       الخبر الرئيسي
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <div class="FirstSectionTopMargin-sc-1t555e8-1 czsSMn">
@@ -5543,7 +5605,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="WatchListen"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -5557,10 +5619,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6008,7 +6070,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Special-reports-1"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6022,10 +6084,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6077,7 +6139,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-1"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6091,10 +6153,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6146,7 +6208,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-2"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6160,10 +6222,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6215,7 +6277,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-3"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6229,10 +6291,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6284,7 +6346,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-4"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6298,10 +6360,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6353,7 +6415,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-5"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6367,10 +6429,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6422,7 +6484,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Showcase-6"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6436,10 +6498,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6491,7 +6553,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Programmes"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6505,10 +6567,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6670,7 +6732,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="The-papers"
@@ -6679,7 +6741,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       عرض الصحف
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="rtl"
@@ -6776,7 +6838,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Verticals"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6790,10 +6852,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -6891,7 +6953,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Interactivity"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -6905,10 +6967,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -7006,7 +7068,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Blogs"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -7020,10 +7082,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -7121,7 +7183,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Picture-galleries"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -7135,10 +7197,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -7436,7 +7498,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="AV-stories-live"
@@ -7445,7 +7507,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       مباشر
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="rtl"
@@ -7562,7 +7624,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Features"
@@ -7571,7 +7633,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       اخترنا لكم
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <ul dir="rtl"
@@ -7934,7 +7996,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                    aria-labelledby="Frequency-info"
                    class="SectionLabelLink-wx5kdp-1 hlUWNS"
                 >
-                  <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                  <span class="FlexColumn-wx5kdp-0 dgpsiS">
                     <span role="text"
                           class="FlexRow-wx5kdp-2 FlexTextRow-wx5kdp-3 jvseIt"
                     >
@@ -7948,10 +8010,10 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             aria-hidden="true"
                             class="IndexLinkCta-wx5kdp-5 cJgQtE"
                       >
-                        إظهر الكل
+                        المزيد
                       </span>
                     </span>
-                  </div>
+                  </span>
                 </a>
               </h2>
             </div>
@@ -8355,7 +8417,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
               <div class="Bar-sc-1x4gwjz-0 kXOyLn">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
-                <div class="FlexColumn-wx5kdp-0 dgpsiS">
+                <span class="FlexColumn-wx5kdp-0 dgpsiS">
                   <span class="FlexRow-wx5kdp-2 dVBNyZ">
                     <span dir="rtl"
                           id="Useful-links"
@@ -8364,7 +8426,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       روابط لبي بي سي
                     </span>
                   </span>
-                </div>
+                </span>
               </h2>
             </div>
             <div data-e2e="useful-links"

@@ -4,9 +4,8 @@ const mediaId = 'foo/bar';
 const legacyId = 'russian/multimedia/2016/05/160505_v_diving_record/123/ru';
 const liveOverrideParam = '?renderer_env=live';
 const testOverrideParam = '?renderer_env=test';
-const embedUrlLiveOverride = '?morph_env=live';
 
-const setEnvironment = (environment) => {
+const setEnvironment = environment => {
   process.env.SIMORGH_APP_ENV = environment;
 };
 
@@ -59,7 +58,7 @@ const testCases = [
   },
   {
     description: `should build a CANONICAL url for articles in test environment with live override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}${embedUrlLiveOverride}`,
+    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {
@@ -70,7 +69,7 @@ const testCases = [
   },
   {
     description: `should build an AMP url for articles in test environment with live override`,
-    expected: `https://polling.test.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp${embedUrlLiveOverride}`,
+    expected: `https://polling.bbc.co.uk/ws/av-embeds/articles/${mediaId}/amp`,
     environment: 'test',
     before: setEnvironment,
     embedObject: {

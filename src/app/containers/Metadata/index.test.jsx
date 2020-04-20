@@ -15,7 +15,7 @@ import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';
 
-const getArticleMetadataProps = (data) => ({
+const getArticleMetadataProps = data => ({
   title: data.promo.headlines.seoHeadline,
   lang: data.metadata.passport.language,
   description: data.promo.summary,
@@ -146,7 +146,7 @@ it('should render the alternate links', async () => {
   await renderMetadataToDocument();
   const actual = Array.from(
     document.querySelectorAll('head > link[rel="alternate"]'),
-  ).map((tag) => ({
+  ).map(tag => ({
     href: tag.getAttribute('href'),
     hreflang: tag.getAttribute('hreflang'),
   }));
@@ -172,7 +172,7 @@ it('should render the apple touch icons', async () => {
   await renderMetadataToDocument();
   const actual = Array.from(
     document.querySelectorAll('head > link[rel="apple-touch-icon"]'),
-  ).map((tag) => ({
+  ).map(tag => ({
     href: tag.getAttribute('href'),
     sizes: tag.getAttribute('sizes'),
   }));
@@ -230,7 +230,7 @@ it('should render the icons', async () => {
   await renderMetadataToDocument();
   const actual = Array.from(
     document.querySelectorAll('head > link[rel="icon"]'),
-  ).map((tag) => ({
+  ).map(tag => ({
     href: tag.getAttribute('href'),
     type: tag.getAttribute('type'),
     sizes: tag.getAttribute('sizes'),
@@ -349,9 +349,15 @@ it('should render the facebook metatags', async () => {
   const fbAppId = document
     .querySelector('head > meta[property="fb:app_id"]')
     .getAttribute('content');
+  const fbPages = document
+    .querySelector('head > meta[property="fb:pages"]')
+    .getAttribute('content');
 
   expect(fbAdminId).toEqual('100004154058350');
   expect(fbAppId).toEqual('1609039196070050');
+  expect(fbPages).toEqual(
+    '285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812',
+  );
 });
 
 it('should render the mobile-web-app-capable meta tag', async () => {
@@ -386,7 +392,7 @@ it('should render the OG metatags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[property^="og:"]'),
-  ).map((tag) => ({
+  ).map(tag => ({
     property: tag.getAttribute('property'),
     content: tag.getAttribute('content'),
   }));
@@ -416,7 +422,7 @@ it('should render the twitter metatags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[name^="twitter"]'),
-  ).map((tag) => ({
+  ).map(tag => ({
     name: tag.getAttribute('name'),
     content: tag.getAttribute('content'),
   }));
@@ -442,7 +448,7 @@ it('should render the LDP tags', async () => {
 
   const actual = Array.from(
     document.querySelectorAll('head > meta[name^="article:tag"]'),
-  ).map((tag) => ({
+  ).map(tag => ({
     name: tag.getAttribute('name'),
     content: tag.getAttribute('content'),
   }));
@@ -464,7 +470,7 @@ it('should render the default service image as open graph image', async () => {
     document.querySelectorAll(
       'head > meta[property*="image"], head > meta[name*="image"]',
     ),
-  ).map((tag) =>
+  ).map(tag =>
     tag.hasAttribute('property')
       ? {
           property: tag.getAttribute('property'),
@@ -497,7 +503,7 @@ it('should render the open graph image if provided', async () => {
     document.querySelectorAll(
       'head > meta[property*="image"], head > meta[name*="image"]',
     ),
-  ).map((tag) =>
+  ).map(tag =>
     tag.hasAttribute('property')
       ? {
           property: tag.getAttribute('property'),

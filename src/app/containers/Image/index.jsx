@@ -16,7 +16,7 @@ const LAZYLOAD_FROM_BLOCK = 3;
 
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
-const getCopyright = (copyrightHolder) => {
+const getCopyright = copyrightHolder => {
   if (copyrightHolder === 'BBC') {
     return null;
   }
@@ -24,7 +24,7 @@ const getCopyright = (copyrightHolder) => {
   return copyrightHolder;
 };
 
-const shouldLazyLoad = (position) =>
+const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
 const ImageContainer = ({ blocks, position }) => {
