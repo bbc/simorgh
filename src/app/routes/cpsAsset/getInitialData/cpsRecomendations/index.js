@@ -1,85 +1,71 @@
 import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
+import { optimoSubheadline } from '../convertToOptimoBlocks/utils/helpers';
 
-const getSixthParagraphIndex = (originalBlocks) => {
-  const blocks = deepClone(originalBlocks);
-  const p = blocks.reduce(
-    (acc, block, index) => {
-      const { type, position } = block;
-      const count = acc.processedBlocks.length;
-      if (count >= 6) {
-        console.log('peeeeeyyyyyeeeeer ===>', type, count);
-        return acc;
-      }
-      console.log('IN LOOP ===>', index, type, count);
-      let targetIndex;
-      let processedBlocks = [];
-      if (type === 'image') {
-        console.log(
-          'COUNTING ===>',
-          index,
-          type,
-          count,
-          position[0],
-          position[1],
-        );
-        processedBlocks = [...acc.processedBlocks, block];
-        targetIndex = index;
-      }
+const isCpsParagraph = (block) => {
+  /* In CPS the following blocks are considered paragraphs
+    Image, Audio, Video, Paragraph
+  */
+  const mediaTypes = ['image', 'audio', 'video'];
+  if (mediaTypes.includes(block.type)) return true;
 
-      if (type === 'text') {
-        console.log(
-          'COUNTING ===>',
-          index,
-          type,
-          count,
-          position[0],
-          position[1],
-        );
-        const paragraphBlocks = path(['model', 'blocks'], block).filter(
-          (blk) => blk.type === 'paragraph',
-        );
-        if (paragraphBlocks.length) {
-          processedBlocks = [...acc.processedBlocks, block];
-          targetIndex = index;
-        }
-      }
-      console.log('LOOP END c ===>', processedBlocks.length);
-      console.log('LOOP END p ===>', acc.processedBlocks.length);
-      return {
-        targetIndex,
-        processedBlocks,
-      };
-    },
-    {
-      targetIndex: 0,
-      processedBlocks: [],
-    },
-  );
-  console.log('peeeeeeeeeer ===>', p);
-  console.log('pllleeeeeeeeeer ===>', p.processedBlocks.length);
-  return [p.targetIndex, p.processedBlocks];
+  if (block.type === 'text') {
+    const paragraphBlocks = path(['model', 'blocks'], block).filter(
+      (b) => b.type === 'paragraph',
+    );
+    return !!paragraphBlocks.length;
+  }
+  return false;
 };
 
-const insertAfterSixthParagraph = (targetBlock, blocks) => {
-  const [i, j] = getSixthParagraphIndex(blocks);
-  const [a, b] = splitAt(i, blocks);
-  return [...a, { ...targetBlock, ticks: j }, ...b];
+const getNthCpsParagraphIndex = (blocks, n) => {
+  let indexCount = 0; // maybe make it the lastt block just incase there's no paragraph blocks
+  let paragraphCount = 0;
+  blocks.some((block, index) => {
+    if (isCpsParagraph(block)) {
+      paragraphCount += 1;
+    }
+    if (paragraphCount === n) {
+      indexCount = index;
+      return true;
+    }
+    indexCount += 1;
+    return false;
+  });
+  return indexCount;
 };
 
-const cpsOnlyOnwardJourneys = (originalJson) => {
+const insertRecommendationsBlock = (recommendations, blocks) => {
+  // get the index of the 7th paragraph
+  const reccomendationIndex = getNthCpsParagraphIndex(blocks, 7) + 1;
+
+  // split blocks at the index of the 7th paragraph
+  const [a, b] = splitAt(reccomendationIndex, blocks);
+
+  // reconstruct
+  return [...a, { ...recommendations }, ...b];
+};
+
+const cpsRecomendations = (originalJson) => {
   const json = deepClone(originalJson);
   const blocks = path(['content', 'model', 'blocks'], json);
 
-  const rec = {
-    type: 'rec',
-    blocks: [],
-  };
+  const block = optimoSubheadline([
+    {
+      fragments: [
+        {
+          fragment: 'RECOMMENDATIONS SHOULD APPEAR HERE',
+          attributes: [],
+        },
+      ],
+      text: 'RECOMMENDATIONS SHOULD APPEAR HERE',
+    },
+  ]);
 
-  json.content.model.blocks = insertAfterSixthParagraph(rec, blocks);
+  json.content.model.blocks = insertRecommendationsBlock(block, blocks);
 
   return json;
 };
 
-export default cpsOnlyOnwardJourneys;
+export default cpsRecomendations;
