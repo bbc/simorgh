@@ -202,7 +202,7 @@
     "retry": "^0.12.0",
     "start-server-webpack-plugin": "^2.2.5",
     "storybook-chromatic": "^3.5.2",
-    "stylelint": "^13.3.0",
+    "stylelint": "^13.3.2",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
