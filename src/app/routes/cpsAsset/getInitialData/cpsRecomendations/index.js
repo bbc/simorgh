@@ -49,7 +49,12 @@ const insertRecommendationsBlock = (recommendations, blocks) => {
 
 const cpsRecomendations = (originalJson) => {
   const json = deepClone(originalJson);
+  const pageType = path(['metadata', 'type'], json);
   const blocks = path(['content', 'model', 'blocks'], json);
+
+  if (pageType !== 'STY' || !blocks) {
+    return json;
+  }
 
   const block = optimoSubheadline([
     {
