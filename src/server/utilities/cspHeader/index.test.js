@@ -81,11 +81,7 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      styleSrcExpectation: [
-        'https://news.files.bbci.co.uk',
-        'https://platform.twitter.com',
-        "'unsafe-inline'",
-      ],
+      styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -237,11 +233,7 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
       ],
-      styleSrcExpectation: [
-        'https://news.files.bbci.co.uk',
-        'https://platform.twitter.com',
-        "'unsafe-inline'",
-      ],
+      styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
       workerSrcExpectation: ['blob:'],
     },
     {
@@ -388,7 +380,9 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this styleSrc`, () => {
-          expect(generateStyleSrc({})).toEqual(styleSrcExpectation);
+          expect(generateStyleSrc({ isAmp, isLive })).toEqual(
+            styleSrcExpectation,
+          );
         });
 
         it(`Then it has this workerSrc`, () => {

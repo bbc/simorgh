@@ -259,6 +259,26 @@ const directives = {
       "'unsafe-inline'",
     ],
   },
+  styleSrc: {
+    ampLive: [
+      'https://news.files.bbci.co.uk', // STY include styles
+      "'unsafe-inline'",
+    ],
+    canonicalLive: [
+      'https://news.files.bbci.co.uk', // STY include styles
+      'https://platform.twitter.com', // Social Embeds
+      "'unsafe-inline'",
+    ],
+    ampNonLive: [
+      'https://news.files.bbci.co.uk', // STY include styles
+      "'unsafe-inline'",
+    ],
+    canonicalNonLive: [
+      'https://news.files.bbci.co.uk', // STY include styles
+      'https://platform.twitter.com', // Social Embeds
+      "'unsafe-inline'",
+    ],
+  },
 };
 
 export const generateChildSrc = ({ isAmp }) => (isAmp ? ['blob:'] : ["'self'"]);
@@ -298,11 +318,12 @@ export const generateScriptSrc = ({ isAmp, isLive }) => {
   return directives.scriptSrc.canonicalLive;
 };
 
-export const generateStyleSrc = () => [
-  'https://news.files.bbci.co.uk', // STY include styles
-  'https://platform.twitter.com', // Social Embeds
-  "'unsafe-inline'",
-];
+export const generateStyleSrc = ({ isAmp, isLive }) => {
+  if (!isLive && isAmp) return directives.styleSrc.ampNonLive;
+  if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive;
+  if (isLive && isAmp) return directives.styleSrc.ampLive;
+  return directives.styleSrc.canonicalLive;
+};
 
 export const generateWorkerSrc = ({ isAmp }) =>
   isAmp ? ['blob:'] : ["'self'"];
@@ -316,7 +337,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'frame-src': generateFrameSrc({ isAmp, isLive }),
     'img-src': generateImgSrc({ isAmp, isLive }),
     'script-src': generateScriptSrc({ isAmp, isLive }),
-    'style-src': generateStyleSrc(),
+    'style-src': generateStyleSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
   },
 });
