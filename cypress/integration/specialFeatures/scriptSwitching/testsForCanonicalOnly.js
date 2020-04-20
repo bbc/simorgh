@@ -9,6 +9,10 @@ import {
   getCookieBannerAccept,
 } from '../utilities/cookiePrivacyBanner';
 
+const STORY_PROMO_LIST_ITEM_SELECTOR = 'li[class^="StoryPromoLi"]';
+
+const STYLED_MEDIA_INDICATOR_SELECTOR = 'div[class^="StyledMediaIndicator"]';
+
 const assertScriptCookie = (product, cookieValue) => {
   const cookieSuffix = ['ukchina', 'zhongwen'].includes(product)
     ? 'chinese'
@@ -22,26 +26,58 @@ const assertScriptCookie = (product, cookieValue) => {
 };
 
 const assertURLContains = (product, variantValue) => {
-  cy.url().should((url) => {
+  cy.url().should(url => {
     url.includes(`${product}/${variantValue}/`);
   });
 };
 
-const hasVariant = (service) => {
+const assertScriptSwitchButton = (service, variantValue) => {
+  cy.get('header[role="banner"]').within(() => {
+    cy.contains(appConfig[config[service].name][variantValue].scriptLink.text);
+  });
+};
+
+const clickHomePageLink = product => {
+  cy.get('div[class^="Banner"]').within(() => {
+    cy.get(`a[href="/${product}"]`).first().click();
+  });
+};
+
+const clickFirstLink = () => {
+  cy.get('a[class^="Link"]').first().click();
+};
+
+const findAndClickFirstMapLink = () => {
+  cy.get(STYLED_MEDIA_INDICATOR_SELECTOR).then($styledMediaIndicators => {
+    if ($styledMediaIndicators.length > 0) {
+      cy.get(STYLED_MEDIA_INDICATOR_SELECTOR)
+        .first()
+        .parentsUntil(STORY_PROMO_LIST_ITEM_SELECTOR)
+        .within(() => {
+          clickFirstLink();
+        });
+    } else {
+      // If a MAP item isn't found on the home page, click the first promo item.
+      clickFirstLink();
+    }
+  });
+};
+
+const hasVariant = service => {
   return config[service] && config[service].variant !== 'default';
 };
 
 Object.keys(config)
   .filter(hasVariant)
-  .forEach((service) => {
+  .forEach(service => {
     Object.keys(config[service].pageTypes)
       .filter(
-        (pageType) =>
+        pageType =>
           serviceHasPageType(service, pageType) && !pageType.includes('error'),
       )
-      .forEach((pageType) => {
+      .forEach(pageType => {
         const paths = getPaths(service, pageType);
-        paths.forEach((path) => {
+        paths.forEach(path => {
           const { variant } = config[service];
           const product = config[service].name;
           const otherVariant = appConfig[product][variant].scriptLink.variant;
@@ -62,6 +98,9 @@ Object.keys(config)
               // Checks URL is in current variant
               assertURLContains(product, variant);
 
+              // Assert the script switch button is correct for variant
+              assertScriptSwitchButton(service, variant);
+
               // Clicks script switcher
               clickScriptSwitcher(otherVariant);
 
@@ -71,10 +110,11 @@ Object.keys(config)
               // Checks URL is in other variant
               assertURLContains(product, otherVariant);
 
+              // Assert the script switch button is for other variant
+              assertScriptSwitchButton(service, otherVariant);
+
               // Navigate to home page by clicking link in the banner
-              cy.get('div[class^="Banner"]').within(() => {
-                cy.get(`a[href="/${product}"]`).first().click();
-              });
+              clickHomePageLink(product);
 
               // Checks correct cookie has persisted
               assertScriptCookie(product, otherVariant);
@@ -82,14 +122,15 @@ Object.keys(config)
               // Checks correct url variant has persisted
               assertURLContains(product, otherVariant);
 
-              // Find first MAP on home page within a StoryPromoLi item and click it
-              cy.get('li[class^="StoryPromoLi"]').within(() => {
-                cy.get('div[class^="StyledMediaIndicator"]')
-                  .first()
-                  .parentsUntil('li[class^="StoryPromoLi"]')
-                  .within(() => {
-                    cy.get('a[class^="Link"]').click();
-                  });
+              // Finding a link to click on the home page
+              cy.get(STORY_PROMO_LIST_ITEM_SELECTOR).within(() => {
+                // If it is a MAP test, find first MAP within a StoryPromoLi item and click it
+                if (pageType === 'mediaAssetPage') {
+                  findAndClickFirstMapLink();
+                } else {
+                  // If it isn't a MAP page being tested, click the first promo item
+                  clickFirstLink();
+                }
               });
 
               // Checks correct cookie has persisted
