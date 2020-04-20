@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import { shape, bool, oneOf, oneOfType } from 'prop-types';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import Timestamp from '@bbc/psammead-timestamp-container';
@@ -72,6 +74,10 @@ StoryPromoImage.defaultProps = {
   }),
 };
 
+const StyledLink = styled(Link)`
+  overflow-wrap: break-word;
+`;
+
 const StoryPromoContainer = ({
   item,
   promoType,
@@ -136,7 +142,7 @@ const StoryPromoContainer = ({
           promoType={promoType}
           promoHasImage={displayImage}
         >
-          <Link href={url}>
+          <StyledLink href={url}>
             {isLive ? (
               <LiveLabel
                 service={service}
@@ -150,7 +156,7 @@ const StoryPromoContainer = ({
             ) : (
               linkcontents
             )}
-          </Link>
+          </StyledLink>
         </Headline>
       )}
       {promoSummary && displaySummary && (

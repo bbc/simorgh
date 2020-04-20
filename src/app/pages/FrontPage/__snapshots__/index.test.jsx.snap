@@ -113,7 +113,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             class="Headline-sc-1dvfmi3-3 fccgro"
                           >
                             <a
-                              class="Link-sc-1dvfmi3-5 yQgSu"
+                              class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                               href="/pidgin/live/tori-48591362"
                             >
                               <span
@@ -254,7 +254,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44416820"
                               >
                                 Take dis predictor choose who go reach World Cup final
@@ -330,7 +330,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="http://www.bbc.com/pidgin"
                               >
                                 Audio promo
@@ -385,7 +385,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44439411"
                               >
                                 World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
@@ -435,7 +435,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup
@@ -485,7 +485,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup as a feature
@@ -558,7 +558,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44425543"
                               >
                                 Select your best ever African 11 players for World Cup - Video
@@ -608,7 +608,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="https://www.bbc.com/pidgin/sport-44214129"
                               >
                                 World Cup 2018: Di top stars wey no dey go World Cup
@@ -686,7 +686,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                               class="Headline-sc-1dvfmi3-3 hSJrur"
                             >
                               <a
-                                class="Link-sc-1dvfmi3-5 yQgSu"
+                                class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                                 href="http://www.bbc.com/azeri"
                               >
                                 Gallery promo
