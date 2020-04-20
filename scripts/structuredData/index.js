@@ -32,6 +32,7 @@ const validate = async (url) => {
     }
   }
 
+  result.url = url;
   return result;
 };
 
@@ -64,8 +65,6 @@ const checkStructuredData = async (urls) => {
 };
 
 const aggregateResults = (results) => {
-  console.log(JSON.stringify(results, null, 2));
-
   return {
     urls: results.map((result) => result.url),
     tests: results.map((result) => result.tests).flat(),
@@ -81,7 +80,7 @@ const aggregateResults = (results) => {
 };
 
 const printResults = (overallResult) => {
-  printPassing(overallResult);
+  // printPassing(overallResult);
   printFailures(overallResult);
   printStatistics(overallResult);
 };
@@ -97,6 +96,7 @@ const run = async () => {
   const overallResult = aggregateResults(results);
 
   printResults(overallResult);
+  printPassing(results);
 
   exit(overallResult);
 };
