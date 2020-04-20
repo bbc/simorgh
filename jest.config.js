@@ -14,12 +14,12 @@ const unitTests = {
     '**/(src|scripts)/**/*.{js,jsx}',
     '!**/src/testHelpers/**',
     '!**/*.stories.jsx',
-    '!**/src/integration/**/*.{js,jsx}',
+    '!**/src/integration/!(utils)/**/*',
   ],
   testMatch: [
     '**/__tests__/**/*.js?(x)',
     '**/?(*.)+(spec|test).js?(x)',
-    '!**/src/integration/**/*',
+    '!**/src/integration/!(utils)/**/*',
   ],
 };
 
@@ -30,7 +30,7 @@ const ampIntegrationTests = {
     platform: 'amp',
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  testMatch: ['**/src/integration/**/*[^.canonical].test.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*[^.canonical].test.js'],
 };
 
 const canonicalIntegrationTests = {
@@ -40,7 +40,7 @@ const canonicalIntegrationTests = {
     platform: 'canonical',
   },
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-  testMatch: ['**/src/integration/**/*[^.amp].test.js'],
+  testMatch: ['**/src/integration/!(utils)/**/*[^.amp].test.js'],
 };
 
 module.exports = {

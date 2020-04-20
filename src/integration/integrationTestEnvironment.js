@@ -1,18 +1,7 @@
 const JsdomEnvironment = require('jest-environment-jsdom');
-const fetchDom = require('./fetchDom');
-
-const camelCaseToText = (camelCase) => {
-  const text = camelCase.replace(/([A-Z])/g, ' $1');
-
-  return text.charAt(0).toUpperCase() + text.slice(1);
-};
-
-const getPageTypeFromTestPath = (testPath) => {
-  const [pageType] = testPath.match(/(?<=\/integration\/pages\/).+?(?=\/)/g) ||
-    testPath.match(/(?<=\/__GENERATED_TEST_FILES__\/.+?\/).+?(?=\/)/g) || [''];
-
-  return pageType;
-};
+const fetchDom = require('./utils/fetchDom');
+const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');
+const camelCaseToText = require('./utils/camelCaseToText');
 
 class IntegrationTestEnvironment extends JsdomEnvironment {
   constructor(config, context) {
