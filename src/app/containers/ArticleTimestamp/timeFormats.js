@@ -4,7 +4,7 @@ export const formatDateNumeric = 'YYYY-MM-DD';
 const longDatetimeLocales = ['ja', 'ko', 'zh-cn'];
 
 // 22 March 2019
-export const formatDate = (datetimeLocale) => {
+export const formatDate = datetimeLocale => {
   if (longDatetimeLocales.includes(datetimeLocale)) {
     return 'LL';
   }
@@ -12,7 +12,7 @@ export const formatDate = (datetimeLocale) => {
 };
 
 // 22 March 2019, 17:05 BST
-export const formatDateAndTime = (datetimeLocale) => {
+export const formatDateAndTime = datetimeLocale => {
   if (longDatetimeLocales.includes(datetimeLocale)) {
     return 'LLL';
   }

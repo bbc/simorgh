@@ -11,13 +11,13 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 const TopStories = ({ content }) => {
   const { dir } = useContext(ServiceContext);
 
-  const singleTransform = (promo) => (
+  const singleTransform = promo => (
     <StoryPromo item={promo} dir={dir} displayImage={false} />
   );
 
-  const listTransform = (items) => (
+  const listTransform = items => (
     <StoryPromoUl>
-      {items.map((item) => (
+      {items.map(item => (
         <StoryPromoLi key={item.id || item.uri}>
           {singleTransform(item)}
         </StoryPromoLi>
