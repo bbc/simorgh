@@ -9,6 +9,7 @@ import list from './blocks/list';
 import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import include from './blocks/include';
+import socialEmbed from './blocks/socialEmbed';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 const nodeLogger = require('#lib/logger.node');
@@ -32,6 +33,7 @@ const typesToConvert = {
   version,
   legacyMedia,
   include,
+  social_embed: socialEmbed,
 };
 
 const parseBlockByType = (block, json) => {

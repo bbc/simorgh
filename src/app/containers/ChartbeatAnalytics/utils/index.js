@@ -91,7 +91,7 @@ export const getTitle = (pageType, pageData, brandName) => {
     case 'MAP':
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'media':
-      return path(['promo', 'name'], pageData);
+      return path(['name'], pageData);
     default:
       return null;
   }
