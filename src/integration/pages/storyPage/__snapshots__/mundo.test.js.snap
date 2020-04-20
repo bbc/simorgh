@@ -788,10 +788,10 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
         </script>
       </amp-analytics>
       <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
+           class="GridComponent-nf79gm-0 bsUMYC StoryPageGrid-w14rad-2 gKhgR"
       >
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 dAItxV"
+             class="GridComponent-nf79gm-0 cQThrI"
         >
           <main role="main">
             <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
@@ -1914,7 +1914,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           </section>
         </div>
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
+             class="GridComponent-nf79gm-0 jlvNId GridSecondaryColumn-w14rad-3 hVwiYk"
         >
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
@@ -2887,10 +2887,10 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
         >
       </noscript>
       <div dir="ltr"
-           class="GridComponent-nf79gm-0 bsUMYC StyledGrid-w14rad-2 jEEgFp"
+           class="GridComponent-nf79gm-0 bsUMYC StoryPageGrid-w14rad-2 gKhgR"
       >
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 dAItxV"
+             class="GridComponent-nf79gm-0 cQThrI"
         >
           <main role="main">
             <div class="GridItemConstrainedLarge-sc-12lwanc-4 gVouae">
@@ -4039,7 +4039,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           </section>
         </div>
         <div dir="ltr"
-             class="GridComponent-nf79gm-0 bnZTyZ GridSecondaryColumn-w14rad-3 hVwiYk"
+             class="GridComponent-nf79gm-0 jlvNId GridSecondaryColumn-w14rad-3 hVwiYk"
         >
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
