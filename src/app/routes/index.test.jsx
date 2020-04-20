@@ -17,7 +17,7 @@ import featureIndexPageJson from '#data/afrique/cpsAssets/48465371.json';
 
 afterEach(() => jest.clearAllMocks());
 
-const getMatchingRoute = (pathname) =>
+const getMatchingRoute = pathname =>
   routes.find(({ path }) =>
     matchPath(pathname, {
       path,
