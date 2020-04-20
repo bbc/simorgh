@@ -546,12 +546,18 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/world-23278971', // CPS audio
+              '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/world-23278971', // CPS audio
+              '/arabic/worldnews/2015/11/151120_t_arabic_av', // TC2 video
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1587,12 +1593,18 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/23201477', // CPS video
+              '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/23201477', // CPS video
+              '/hindi/sport/2016/08/160822_tc2_testmap1', // TC2 video
+            ],
+            enabled: true,
           },
         },
         smoke: false,
