@@ -46,6 +46,10 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
           content="1609039196070050"
     >
     <meta data-react-helmet="true"
+          property="fb:pages"
+          content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
+    >
+    <meta data-react-helmet="true"
           name="mobile-web-app-capable"
           content="yes"
     >
@@ -328,7 +332,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <h2 dir="rtl"
                       class="Title-sc-7g3fro-2 kcHhsl"
                   >
-                    ما سیاست‌های حفظ حریم خصوصی و کوکی‌های (Cookies) خود را به روز کرده‌ایم
+                    ما سیاست‌های حفظ حریم خصوصی و کوکی‌های خود را به روز کرده‌ایم
                   </h2>
                   <p dir="rtl"
                      class="ConsentBannerText-sc-7g3fro-4 feAsrw"
@@ -370,7 +374,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <h2 dir="rtl"
                       class="Title-sc-7g3fro-2 kcHhsl"
                   >
-                    آیا با دریافت کوکی‌های ما (Cookies) موافقید؟
+                    آیا با دریافت کوکی‌های ما موافقید؟
                   </h2>
                   <p dir="rtl"
                      class="ConsentBannerText-sc-7g3fro-4 feAsrw"
@@ -532,7 +536,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <a href="/persian/science-52004647"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
-                    ویروس کرونا
+                    کرونا
                   </a>
                 </li>
                 <li role="listitem"
@@ -637,15 +641,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/persian/interactivity"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    شما
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
                   <a href="/persian/blogs/viewpoints"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
@@ -668,15 +663,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
                     وبلاگ‌ها
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
-                  <a href="/persian/learningenglish"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    آموزش زبان انگلیسی
                   </a>
                 </li>
               </ul>
@@ -705,7 +691,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <a href="/persian/science-52004647"
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
-                    ویروس کرونا
+                    کرونا
                   </a>
                 </li>
                 <li dir="rtl"
@@ -822,16 +808,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                     role="listitem"
                     class="StyledListItem-sc-158x7z5-3 bmJgVu"
                 >
-                  <a href="/persian/interactivity"
-                     class="StyledLink-sc-158x7z5-2 gFuYXv"
-                  >
-                    شما
-                  </a>
-                </li>
-                <li dir="rtl"
-                    role="listitem"
-                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                >
                   <a href="/persian/blogs/viewpoints"
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
@@ -856,16 +832,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
                     وبلاگ‌ها
-                  </a>
-                </li>
-                <li dir="rtl"
-                    role="listitem"
-                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                >
-                  <a href="/persian/learningenglish"
-                     class="StyledLink-sc-158x7z5-2 gFuYXv"
-                  >
-                    آموزش زبان انگلیسی
                   </a>
                 </li>
               </ul>
@@ -900,7 +866,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                           scrolling="no"
                           frameborder="0"
                           src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/persian/iran/2016/09/160907_tc2_testmap1/17698244/fa/amp"
-                          title="Media player"
+                          title="پخش صدا و تصویر"
                           allowfullscreen="allowfullscreen"
               >
                 <amp-img srcset="http://localhost:7080/images/media_placeholder.png 240w, http://localhost:7080/images/media_placeholder.png 320w, http://localhost:7080/images/media_placeholder.png 480w, http://localhost:7080/images/media_placeholder.png 624w, http://localhost:7080/images/media_placeholder.png 800w"
@@ -923,7 +889,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                     >
                     <div class="MessageWrapper-sc-1pnftlt-1 eEPsMW">
                       <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                        پخش این فایل در دستگاه شما پشتیبانی نمی شود.
+                        برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
                       </strong>
                     </div>
                   </div>
@@ -1052,7 +1018,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    Cookies
+                    کوکی ها
                   </span>
                 </a>
               </li>
@@ -1145,6 +1111,10 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
     <meta data-react-helmet="true"
           property="fb:app_id"
           content="1609039196070050"
+    >
+    <meta data-react-helmet="true"
+          property="fb:pages"
+          content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
     >
     <meta data-react-helmet="true"
           name="mobile-web-app-capable"
@@ -1468,7 +1438,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                     <a href="/persian/science-52004647"
                        class="StyledLink-sc-158x7z5-2 gFuYXv"
                     >
-                      ویروس کرونا
+                      کرونا
                     </a>
                   </li>
                   <li dir="rtl"
@@ -1585,16 +1555,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 bmJgVu"
                   >
-                    <a href="/persian/interactivity"
-                       class="StyledLink-sc-158x7z5-2 gFuYXv"
-                    >
-                      شما
-                    </a>
-                  </li>
-                  <li dir="rtl"
-                      role="listitem"
-                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                  >
                     <a href="/persian/blogs/viewpoints"
                        class="StyledLink-sc-158x7z5-2 gFuYXv"
                     >
@@ -1621,16 +1581,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                       وبلاگ‌ها
                     </a>
                   </li>
-                  <li dir="rtl"
-                      role="listitem"
-                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                  >
-                    <a href="/persian/learningenglish"
-                       class="StyledLink-sc-158x7z5-2 gFuYXv"
-                    >
-                      آموزش زبان انگلیسی
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -1655,7 +1605,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   <a href="/persian/science-52004647"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
-                    ویروس کرونا
+                    کرونا
                   </a>
                 </li>
                 <li role="listitem"
@@ -1760,15 +1710,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/persian/interactivity"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    شما
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
                   <a href="/persian/blogs/viewpoints"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
@@ -1791,15 +1732,6 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
                     وبلاگ‌ها
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
-                  <a href="/persian/learningenglish"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    آموزش زبان انگلیسی
                   </a>
                 </li>
               </ul>
@@ -1828,7 +1760,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
           <figure class="Figure-sc-6a3dhy-0 gJUCFc">
             <div class="StyledVideoContainer-sc-13p1a4d-0 bpuDKK">
               <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/legacy/persian/iran/2016/09/160907_tc2_testmap1/17698244/fa"
-                      title="Media player"
+                      title="پخش صدا و تصویر"
                       allow="autoplay; fullscreen"
                       scrolling="no"
                       allowfullscreen
@@ -1845,7 +1777,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                   >
                   <div class="MessageWrapper-sc-1pnftlt-1 eEPsMW">
                     <strong class="StyledMessage-sc-1pnftlt-2 iRlUPR">
-                      پخش این فایل در دستگاه شما پشتیبانی نمی شود.
+                      برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
                     </strong>
                   </div>
                 </div>
@@ -1973,7 +1905,7 @@ exports[`Given I am on a Persian TC2 Media Asset Page When I view the source cod
                    class="StyledLink-nhmg8j-0 dHbSzF"
                 >
                   <span class="StyleLinkText-nhmg8j-1 fPnERB">
-                    Cookies
+                    کوکی ها
                   </span>
                 </a>
               </li>

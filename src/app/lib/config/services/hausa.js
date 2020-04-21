@@ -188,10 +188,13 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'top-stories',
+      frontPagePosition: 'feature-main',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {
@@ -245,12 +248,12 @@ export const service = {
         url: '/hausa/wasanni',
       },
       {
-        title: 'Mujalla',
-        url: '/hausa/mujalla',
+        title: 'Nishadi',
+        url: '/hausa/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
       },
       {
         title: 'Cikakkun Rahotanni',
-        url: '/hausa/rahotanni',
+        url: '/hausa/52140979',
       },
       {
         title: 'Bidiyo',
@@ -262,7 +265,7 @@ export const service = {
       },
       {
         title: 'Shirye-shiryen rediyo',
-        url: '/hausa/media-43322903',
+        url: '/hausa/media-52219055',
       },
     ],
   },

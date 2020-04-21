@@ -27,6 +27,9 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
+  recommendations: {
+    hasStoryRecommendations: false,
+  },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
@@ -111,6 +114,10 @@ export const service = {
       {
         title: 'Početna strana',
         url: '/serbian/lat',
+      },
+      {
+        title: 'Korona virus',
+        url: '/serbian/lat/srbija-52197807',
       },
       {
         title: 'Srbija',
@@ -336,6 +343,10 @@ export const service = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
+      },
+      {
+        title: 'Корона вирус',
+        url: '/serbian/cyr/srbija-52197807',
       },
       {
         title: 'Србија',

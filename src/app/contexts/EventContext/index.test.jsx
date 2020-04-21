@@ -46,7 +46,7 @@ describe('EventContext', () => {
         <ul>
           {Object.entries(handlerMap).map(([key, values]) => (
             <li key={key}>
-              {key}:{values.map((v) => v.toString()).join('\n')}
+              {key}:{values.map(v => v.toString()).join('\n')}
             </li>
           ))}
         </ul>
@@ -78,7 +78,7 @@ describe('EventContext', () => {
         </EventContextProvider>,
       );
 
-      window.matches = (selector) => ['my-test-component'].includes(selector);
+      window.matches = selector => ['my-test-component'].includes(selector);
       window.dispatchEvent(new Event('click'));
 
       expect(useEffectSpy).toHaveBeenCalled();

@@ -63,8 +63,8 @@ describe('Chartbeat utilities', () => {
       },
       {
         type: 'media',
-        expectedDefaultType: 'Live Radio',
-        expectedShortType: 'Live Radio',
+        expectedDefaultType: 'Radio',
+        expectedShortType: 'Radio',
       },
       {
         type: null,
@@ -159,8 +159,7 @@ describe('Chartbeat utilities', () => {
         service: 'korean',
         pageType: 'media',
         description: 'should return expected section for live radio',
-        expected:
-          'Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown',
+        expected: 'Korean, Korean - Radio',
       },
     ];
 
@@ -260,12 +259,19 @@ describe('Chartbeat utilities', () => {
     it('should return correct title when pageType is media (Live radio)', () => {
       const pageType = 'media';
       const pageData = {
-        promo: {
-          name: 'Live Radio Page Title',
-        },
+        pageTitle: 'Live Radio Page Title',
       };
 
       expect(getTitle(pageType, pageData)).toBe('Live Radio Page Title');
+    });
+
+    it('should return correct title when pageType is media (onDemand radio)', () => {
+      const pageType = 'media';
+      const pageData = {
+        pageTitle: 'OnDemand Radio Page Title',
+      };
+
+      expect(getTitle(pageType, pageData)).toBe('OnDemand Radio Page Title');
     });
   });
 
@@ -387,9 +393,8 @@ describe('Chartbeat utilities', () => {
         platform: 'amp',
         pageType: 'media',
         data: {
-          promo: {
-            name: 'Live Radio Page Title',
-          },
+          pageTitle: 'Live Radio Page Title',
+          contentType: 'player-live',
         },
         brandName: '',
         chartbeatDomain: 'korean.bbc.co.uk',
@@ -404,15 +409,46 @@ describe('Chartbeat utilities', () => {
         idSync: {
           bbc_hid: 'foobar',
         },
-        sections:
-          'Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown',
+        sections: 'Korean, Korean - Radio',
         title: 'Live Radio Page Title',
-        contentType: 'Live Radio',
+        contentType: 'player-live',
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
       };
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
     });
+  });
+
+  it('should return config for amp pages when page type is media (onDemand radio) and env is live', () => {
+    const fixtureData = {
+      isAmp: true,
+      platform: 'amp',
+      pageType: 'media',
+      data: {
+        pageTitle: 'OnDemand Radio Page Title',
+        contentType: 'player-episode',
+      },
+      brandName: '',
+      chartbeatDomain: 'korean.bbc.co.uk',
+      env: 'live',
+      service: 'korean',
+      origin: 'bbc.com',
+      previousPath: '/previous-path',
+    };
+
+    const expectedConfig = {
+      domain: 'korean.bbc.co.uk',
+      idSync: {
+        bbc_hid: 'foobar',
+      },
+      sections: 'Korean, Korean - Radio',
+      title: 'OnDemand Radio Page Title',
+      contentType: 'player-episode',
+      uid: 50924,
+      virtualReferrer: `\${documentReferrer}`,
+    };
+
+    expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
   });
 });
