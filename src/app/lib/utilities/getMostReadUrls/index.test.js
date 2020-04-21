@@ -1,6 +1,6 @@
 import { getMostReadEndpoint, getLocalMostReadEndpoint } from '.';
 
-describe('getRadioScheduleEndpoint', () => {
+describe('getMostReadEndpoint', () => {
   it('should return endpoint when passed service', () => {
     expect(getMostReadEndpoint({ service: 'hausa' })).toBe(
       '/hausa/mostread.json',
@@ -12,13 +12,13 @@ describe('getRadioScheduleEndpoint', () => {
     );
   });
 });
-describe('getLocalRadioScheduleEndpoint', () => {
+describe('getLocalMostReadEndpoint', () => {
   it('should return endpoint when passed service', () => {
     expect(getLocalMostReadEndpoint({ service: 'hausa' })).toBe(
       './data/hausa/mostRead/index.json',
     );
   });
-  it('should return endpoint when passed service & radioService', () => {
+  it('should return endpoint when passed service & variant', () => {
     expect(
       getLocalMostReadEndpoint({
         service: 'serbian',
