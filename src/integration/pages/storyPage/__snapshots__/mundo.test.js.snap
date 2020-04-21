@@ -4383,7 +4383,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
             crossorigin="anonymous"
             defer
     >
-      [21]
+      [19]
     </script>
     <script async
             data-chunk="main"

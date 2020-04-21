@@ -185,6 +185,7 @@ describe('App', () => {
           expect(route.getInitialData).toHaveBeenCalledWith({
             path: pathname,
             service: 'news',
+            variant: 'simp',
           });
 
           // start data fetch and set loading to true

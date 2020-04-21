@@ -26,7 +26,9 @@ import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import processRadioSchedule from '../utilities/processRadioSchedule';
+import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
+import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
@@ -91,55 +93,70 @@ const RadioFrequencyLink = styled.a`
   }
 `;
 
-const CanonicalRadioSchedule = ({ endpoint }) => {
-  const [schedule, setRadioSchedule] = useState();
+const CanonicalRadioSchedule = ({ initialData, endpoint }) => {
   const {
     service,
     script,
     dir,
     timezone,
     locale,
-    radioSchedule,
+    radioSchedule: radioScheduleConfig = {},
     translations,
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
-  const header = pathOr(null, ['header'], radioSchedule);
-  const frequenciesPageUrl = pathOr(
-    null,
-    ['frequenciesPageUrl'],
-    radioSchedule,
-  );
-  const frequenciesPageLabel = pathOr(
-    null,
-    ['frequenciesPageLabel'],
-    radioSchedule,
-  );
+
+  const [radioSchedule, setRadioSchedule] = useState(initialData);
+
+  const {
+    header,
+    frequenciesPageUrl,
+    frequenciesPageLabel,
+  } = radioScheduleConfig;
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   useEffect(() => {
-    const handleResponse = async response => {
-      const radioScheduleData = await response.json();
-      const timeOnClient = parseInt(moment.utc().format('x'), 10);
-      const schedules = processRadioSchedule(
-        radioScheduleData,
-        service,
-        timeOnServer || timeOnClient,
-      );
-      setRadioSchedule(schedules);
-    };
+    if (!radioSchedule) {
+      const handleResponse = url => async response => {
+        if (!response.ok) {
+          throw Error(
+            `Unexpected response (HTTP status code ${response.status}) when requesting ${url}`,
+          );
+        }
 
-    const fetchRadioScheduleData = pathname =>
-      fetch(pathname, { mode: 'no-cors' })
-        .then(handleResponse)
-        .catch(e => logger.error(`HTTP Error: "${e}"`));
+        const radioScheduleData = await response.json();
+        const timeOnClient = parseInt(moment.utc().format('x'), 10);
+        const processedSchedule = processRadioSchedule(
+          radioScheduleData,
+          service,
+          timeOnServer || timeOnClient,
+        );
+        setRadioSchedule(processedSchedule);
+      };
 
-    fetchRadioScheduleData(endpoint);
-  }, [endpoint, locale, script, service, timeOnServer, timezone]);
+      const fetchRadioScheduleData = pathname =>
+        fetch(pathname, { mode: 'no-cors' })
+          .then(handleResponse(pathname))
+          .catch(error => {
+            logger.error(
+              JSON.stringify(
+                {
+                  event: RADIO_SCHEDULE_FETCH_ERROR,
+                  message: error.toString(),
+                },
+                null,
+                2,
+              ),
+            );
+          });
 
-  if (!schedule) {
+      fetchRadioScheduleData(endpoint);
+    }
+  }, [endpoint, service, timeOnServer, radioSchedule]);
+
+  if (!radioSchedule) {
     return null;
   }
 
@@ -157,7 +174,7 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper>
         <RadioSchedule
-          schedules={schedule}
+          schedules={radioSchedule}
           locale={locale}
           timezone={timezone}
           script={script}
@@ -182,6 +199,11 @@ const CanonicalRadioSchedule = ({ endpoint }) => {
 
 CanonicalRadioSchedule.propTypes = {
   endpoint: string.isRequired,
+  initialData: radioSchedulesShape,
+};
+
+CanonicalRadioSchedule.defaultProps = {
+  initialData: undefined,
 };
 
 export default CanonicalRadioSchedule;
