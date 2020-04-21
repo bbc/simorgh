@@ -82,7 +82,7 @@ const printStatistics = results => {
     `${overallResults.schemas.join(', ') || 0}`,
   );
 
-  console.log(` Total tests run:`, `${totalTests}`);
+  console.log(`         Total tests:`, `${totalTests}`);
   console.log('');
 
   console.log(bold(`Results\n`));
