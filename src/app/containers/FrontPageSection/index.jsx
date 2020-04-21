@@ -122,7 +122,12 @@ const renderPromos = (items, isFirstSection, dir) => {
       oneItem={sectionHasSingleStory}
     >
       {sectionHasSingleStory ? (
-        <TopRow stories={items} dir={dir} sectionHasSingleStory />
+        <TopRow
+          isFirstSection={isFirstSection}
+          stories={items}
+          dir={dir}
+          sectionHasSingleStory
+        />
       ) : (
         <Grid
           columns={parentGridColumns}
