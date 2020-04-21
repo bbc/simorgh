@@ -24,7 +24,7 @@ const fetchData = url => {
   };
 
   const handleError = e => {
-    const error = e.toString();
+    const error = e && e.toString();
     logger.error(RADIO_SCHEDULE_FETCH_ERROR, { error });
   };
 
