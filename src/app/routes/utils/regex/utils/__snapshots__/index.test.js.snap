@@ -12,7 +12,7 @@ exports[`regex utils snapshots should create expected regex from getErrorPageReg
 
 exports[`regex utils snapshots should create expected regex from getFrontPageRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?:amp(.amp)?"`;
 
-exports[`regex utils snapshots should create expected regex from getLegacyAssetRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/:assetUri([a-z-_]{1,}/[0-9]{4}/[0-9]{2}/[0-9]{6}[a-z0-9-_]{0,})?:amp(.amp)?"`;
+exports[`regex utils snapshots should create expected regex from getLegacyAssetRegex 1`] = `"/:service(news|persian|igbo):variant(/simp|/trad|/cyr|/lat)?/:assetUri([a-z-_/]{1,}/[0-9]{4}/[0-9]{2}/[0-9]{6}[a-z0-9-_]{0,})?:amp(.amp)?"`;
 
 exports[`regex utils snapshots should create expected regex from getLiveRadioRegex 1`] = `"/:service(news|persian|igbo)/:serviceId(bbc_[a-z]+_radio|bbc_[a-z]+_tv)/:mediaId(liveRadio):amp(.amp)?"`;
 

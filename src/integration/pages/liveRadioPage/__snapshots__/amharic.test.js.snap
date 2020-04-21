@@ -624,7 +624,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
                           layout="fill"
                           scrolling="no"
                           frameborder="0"
-                          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp"
+                          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live"
                           title="Audio player"
                           allowfullscreen="allowfullscreen"
               >
@@ -1254,7 +1254,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
           </p>
           <div class="AudioPlayerWrapper-sc-14jc12g-0 hQQApa">
             <div class="StyledAudioContainer-sc-13p1a4d-1 fmBvXq">
-              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"
+              <iframe src="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live"
                       title="Audio player"
                       allow="autoplay; fullscreen"
                       scrolling="no"
