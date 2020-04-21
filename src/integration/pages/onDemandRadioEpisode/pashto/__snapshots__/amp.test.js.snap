@@ -102,7 +102,7 @@ exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC N
 
 exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"وروستي خبرونه"`;
 
-exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"04/02/2020 GMT"`;
+exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"د نړۍ وروستي خبرونه"`;
 
 exports[`AMP On Demand Radio Episode I can see the episode title 1`] = `"04/02/2020 GMT"`;
 

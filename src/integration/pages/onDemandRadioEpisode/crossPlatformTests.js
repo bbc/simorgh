@@ -16,7 +16,7 @@ export default () => {
   });
 
   it('I can see the episode title', () => {
-    const episodeTitleEl = document.querySelector('main p');
+    const episodeTitleEl = document.querySelectorAll('main p')[0];
 
     expect(episodeTitleEl).toBeInTheDocument();
     expect(episodeTitleEl.textContent).toBeTruthy();
@@ -24,7 +24,7 @@ export default () => {
   });
 
   it('I can see the episode summary', () => {
-    const episodeSummaryEl = document.querySelector('main p');
+    const episodeSummaryEl = document.querySelectorAll('main p')[1];
 
     expect(episodeSummaryEl).toBeInTheDocument();
     expect(episodeSummaryEl.textContent).toBeTruthy();
