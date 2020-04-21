@@ -7620,20 +7620,24 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       </span>
                     </div>
                   </div>
-                  <div class="CardWrapper-sc-6oo8lp-2 gwogdQ">
+                  <div class="CardWrapper-sc-6oo8lp-2 jgjrOO">
                     <div class="TextWrapper-sc-6oo8lp-3 bcFowo">
                       <h3 class="StyledH3-sc-6oo8lp-4 bQOdKp">
                         <a href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                            class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 kzQIZj"
                         >
-                          العالم هذا الصباح
-                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                            ,
-                            02:59
-                            ,
-                          </span>
-                          <span class="TitleWrapper-sc-6oo8lp-0 eEiwMK">
-                            26/03/2020 GMT
+                          <span role="text"
+                                class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                          >
+                            العالم هذا الصباح
+                            <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                              ,
+                              02:59
+                              ,
+                            </span>
+                            <span class="TitleWrapper-sc-6oo8lp-0 eEiwMK">
+                              26 مارس/ آذار 2020
+                            </span>
                           </span>
                         </a>
                       </h3>
@@ -7661,7 +7665,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
                       >
                         <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Duration 2,00,00
+                          Duration 2،00،00
                         </span>
                         <span aria-hidden="true"
                               class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
@@ -7707,20 +7711,24 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       </span>
                     </div>
                   </div>
-                  <div class="CardWrapper-sc-6oo8lp-2 gwogdQ">
+                  <div class="CardWrapper-sc-6oo8lp-2 jgjrOO">
                     <div class="TextWrapper-sc-6oo8lp-3 bcFowo">
                       <h3 class="StyledH3-sc-6oo8lp-4 bQOdKp">
                         <a href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                            class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 kzQIZj"
                         >
-                          موجز الأنباء
-                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                            ,
-                            02:30
-                            ,
-                          </span>
-                          <span class="TitleWrapper-sc-6oo8lp-0 eEiwMK">
-                            26/03/2020 GMT
+                          <span role="text"
+                                class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                          >
+                            موجز الأنباء
+                            <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                              ,
+                              02:30
+                              ,
+                            </span>
+                            <span class="TitleWrapper-sc-6oo8lp-0 eEiwMK">
+                              26 مارس/ آذار 2020
+                            </span>
                           </span>
                         </a>
                       </h3>
@@ -7748,7 +7756,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
                       >
                         <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Duration 02,00
+                          Duration 02،00
                         </span>
                         <span aria-hidden="true"
                               class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
@@ -7794,20 +7802,24 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       </span>
                     </div>
                   </div>
-                  <div class="CardWrapper-sc-6oo8lp-2 gwogdQ">
+                  <div class="CardWrapper-sc-6oo8lp-2 jgjrOO">
                     <div class="TextWrapper-sc-6oo8lp-3 bcFowo">
                       <h3 class="StyledH3-sc-6oo8lp-4 bQOdKp">
                         <a href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                            class="Link-sc-1dvfmi3-5 StyledLink-sc-6oo8lp-1 kzQIZj"
                         >
-                          نشرة الأخبار
-                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                            ,
-                            02:00
-                            ,
-                          </span>
-                          <span class="TitleWrapper-sc-6oo8lp-0 eEiwMK">
-                            26/03/2020 GMT
+                          <span role="text"
+                                class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
+                          >
+                            نشرة الأخبار
+                            <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                              ,
+                              02:00
+                              ,
+                            </span>
+                            <span class="TitleWrapper-sc-6oo8lp-0 eEiwMK">
+                              26 مارس/ آذار 2020
+                            </span>
                           </span>
                         </a>
                       </h3>
@@ -7835,7 +7847,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
                       >
                         <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Duration 06,00
+                          Duration 06،00
                         </span>
                         <span aria-hidden="true"
                               class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"
@@ -7881,22 +7893,26 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                       </span>
                     </div>
                   </div>
-                  <div class="CardWrapper-sc-6oo8lp-2 gwogdQ">
+                  <div class="CardWrapper-sc-6oo8lp-2 jgjrOO">
                     <div class="TextWrapper-sc-6oo8lp-3 bcFowo">
                       <h3 class="StyledH3-sc-6oo8lp-4 dhiUqF">
-                        <span dir="rtl"
-                              class="NextLabel-sc-6oo8lp-5 inodZf"
+                        <span role="text"
+                              class="HeadingContentWrapper-sc-6oo8lp-11 jHsaER"
                         >
-                          لاحق
-                        </span>
-                        العالم هذا الصباح
-                        <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          ,
-                          09:00
-                          ,
-                        </span>
-                        <span class="TitleWrapper-sc-6oo8lp-0 dDIrbk">
-                          01/01/2030 09:00 GMT
+                          <span dir="rtl"
+                                class="NextLabel-sc-6oo8lp-5 inodZf"
+                          >
+                            لاحق
+                          </span>
+                          العالم هذا الصباح
+                          <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
+                            ,
+                            09:00
+                            ,
+                          </span>
+                          <span class="TitleWrapper-sc-6oo8lp-0 dDIrbk">
+                            1 يناير/ كانون الثاني 2030
+                          </span>
                         </span>
                       </h3>
                       <p class="SummaryWrapper-sc-6oo8lp-6 kdiuZL">
@@ -7923,7 +7939,7 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
                             class="DurationWrapper-sc-6oo8lp-9 hWRNdd"
                       >
                         <span class="VisuallyHiddenText-sc-1yjwwa5-0 jFfEvX">
-                          Duration 1,30,30
+                          Duration 1،30،30
                         </span>
                         <span aria-hidden="true"
                               class="DurationTextWrapper-sc-6oo8lp-10 dfaGSJ"

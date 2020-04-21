@@ -104,7 +104,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: 0.0625rem solid transparent;
+  outline: 0.0625rem solid transparent;
   height: 100%;
 }
 
@@ -837,18 +837,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="c21"
                 href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
               >
-                العالم هذا الصباح
                 <span
-                  class="c22"
+                  class=""
+                  role="text"
                 >
-                  , 
-                  02:59
-                  , 
-                </span>
-                <span
-                  class="c23 c24"
-                >
-                  26/03/2020 GMT
+                  العالم هذا الصباح
+                  <span
+                    class="c22"
+                  >
+                    , 
+                    02:59
+                    , 
+                  </span>
+                  <span
+                    class="c23 c24"
+                  >
+                    26 مارس/ آذار 2020
+                  </span>
                 </span>
               </a>
             </h3>
@@ -888,7 +893,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 2,00,00 
+                 Duration 2،00،00 
               </span>
               <span
                 aria-hidden="true"
@@ -959,18 +964,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="c21"
                 href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
               >
-                موجز الأنباء
                 <span
-                  class="c22"
+                  class=""
+                  role="text"
                 >
-                  , 
-                  02:30
-                  , 
-                </span>
-                <span
-                  class="c23 c24"
-                >
-                  26/03/2020 GMT
+                  موجز الأنباء
+                  <span
+                    class="c22"
+                  >
+                    , 
+                    02:30
+                    , 
+                  </span>
+                  <span
+                    class="c23 c24"
+                  >
+                    26 مارس/ آذار 2020
+                  </span>
                 </span>
               </a>
             </h3>
@@ -1010,7 +1020,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 02,00 
+                 Duration 02،00 
               </span>
               <span
                 aria-hidden="true"
@@ -1081,18 +1091,23 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="c21"
                 href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
               >
-                نشرة الأخبار
                 <span
-                  class="c22"
+                  class=""
+                  role="text"
                 >
-                  , 
-                  02:00
-                  , 
-                </span>
-                <span
-                  class="c23 c24"
-                >
-                  26/03/2020 GMT
+                  نشرة الأخبار
+                  <span
+                    class="c22"
+                  >
+                    , 
+                    02:00
+                    , 
+                  </span>
+                  <span
+                    class="c23 c24"
+                  >
+                    26 مارس/ آذار 2020
+                  </span>
                 </span>
               </a>
             </h3>
@@ -1132,7 +1147,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 06,00 
+                 Duration 06،00 
               </span>
               <span
                 aria-hidden="true"
@@ -1200,23 +1215,28 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               class="c30"
             >
               <span
-                class="c31"
-                dir="rtl"
+                class=""
+                role="text"
               >
-                لاحق 
-              </span>
-              العالم هذا الصباح
-              <span
-                class="c22"
-              >
-                , 
-                09:00
-                , 
-              </span>
-              <span
-                class="c23 c32"
-              >
-                01/01/2030 09:00 GMT
+                <span
+                  class="c31"
+                  dir="rtl"
+                >
+                  لاحق 
+                </span>
+                العالم هذا الصباح
+                <span
+                  class="c22"
+                >
+                  , 
+                  09:00
+                  , 
+                </span>
+                <span
+                  class="c23 c32"
+                >
+                  1 يناير/ كانون الثاني 2030
+                </span>
               </span>
             </h3>
             <p
@@ -1255,7 +1275,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               <span
                 class="c22"
               >
-                 Duration 1,30,30 
+                 Duration 1،30،30 
               </span>
               <span
                 aria-hidden="true"
