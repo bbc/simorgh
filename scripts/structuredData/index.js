@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
-const { green } = require('chalk');
+const { green, bgRedBright } = require('chalk');
 const { structuredDataTest } = require('structured-data-testing-tool');
 const { Google, SocialMedia } = require('structured-data-testing-tool/presets');
 const {
@@ -88,7 +88,7 @@ const exit = (results) => {
   const totalFailed = results.map((result) => result.failed).flat();
 
   if (totalFailed.length > 0) {
-    console.error('Tests Failed');
+    console.error(bgRedBright('Tests Failed'));
     process.exit(1);
   }
 };
