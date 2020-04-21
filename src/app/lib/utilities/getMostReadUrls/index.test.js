@@ -18,7 +18,7 @@ describe('getLocalRadioScheduleEndpoint', () => {
       './data/hausa/mostRead/index.json',
     );
   });
-  it('should return endpoint when passed service & radioService', () => {
+  it('should return endpoint when passed service & variant', () => {
     expect(
       getLocalMostReadEndpoint({
         service: 'serbian',
