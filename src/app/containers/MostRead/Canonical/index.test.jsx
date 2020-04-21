@@ -73,7 +73,6 @@ describe('MostReadContainerCanonical', () => {
           ).container;
         });
 
-        expect(container.querySelectorAll('li').length).toEqual(numberOfItems);
         expect(container.querySelectorAll('li a').length).toEqual(
           numberOfItems,
         );
