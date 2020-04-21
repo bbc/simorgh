@@ -2,9 +2,77 @@
 
 exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"مشاهده محتوا"`;
 
-exports[`AMP Media Asset Page AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+exports[`AMP Media Asset Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
 
-exports[`AMP Media Asset Page AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+exports[`AMP Media Asset Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
