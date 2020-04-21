@@ -1,6 +1,5 @@
 module.exports = testPath => {
-  const [pageType] = testPath.match(/(?<=\/integration\/pages\/).+?(?=\/)/g) ||
-    testPath.match(/(?<=\/__GENERATED_TEST_FILES__\/.+?\/).+?(?=\/)/g) || [''];
+  const [pageType] = testPath.match(/(?<=\/integration\/pages\/).+?(?=\/)/g);
 
   return pageType;
 };
