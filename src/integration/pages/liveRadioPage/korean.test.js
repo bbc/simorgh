@@ -25,7 +25,7 @@ describe('Given I am on the Korean AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
-        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp',
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko/amp?morph_env=live',
     });
   });
 
@@ -48,7 +48,7 @@ describe('Given I am on the Korean Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
-        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko',
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live',
     });
   });
 
