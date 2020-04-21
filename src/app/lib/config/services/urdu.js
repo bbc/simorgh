@@ -184,6 +184,9 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/urdu/institutional-49282935',

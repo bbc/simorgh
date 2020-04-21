@@ -198,6 +198,9 @@ export const service = {
       frontPagePosition: 'feature-main',
       header: 'Barnaamijyada Idaacadda',
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/somali/hayadeed-49283375',

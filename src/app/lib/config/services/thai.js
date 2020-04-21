@@ -183,6 +183,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     navigation: [
       {
         title: 'หน้าแรก',

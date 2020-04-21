@@ -30,6 +30,9 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
+  wsoj: {
+    hasRecommendations: false,
+  },
   brandSVG,
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,

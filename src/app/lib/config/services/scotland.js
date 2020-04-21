@@ -169,6 +169,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',

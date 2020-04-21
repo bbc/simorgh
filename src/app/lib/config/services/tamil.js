@@ -194,6 +194,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/tamil/institutional-50288575',
