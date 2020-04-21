@@ -74,11 +74,11 @@ const printStatistics = results => {
     `${Object.keys(overallResults.structuredData.metatags).length || 0}`,
   );
   console.log(
-    `  Schemas in JSON-LD:`,
-    `${Object.keys(overallResults.structuredData.jsonld).length || 0}`,
+    `     JSON-LD schemas:`,
+    `${Object.keys(overallResults.structuredData.jsonld).join(', ') || 0}`,
   );
   console.log(
-    `  Schema.org schemas:`,
+    `  schema.org schemas:`,
     `${overallResults.schemas.join(', ') || 0}`,
   );
 
