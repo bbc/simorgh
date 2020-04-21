@@ -183,6 +183,9 @@ export const service = {
       frontPagePosition: 'responsive-must-see',
       header: 'BBC 코리아 라디오',
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/korean/institutional-49283197',

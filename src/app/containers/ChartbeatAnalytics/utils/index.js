@@ -33,7 +33,7 @@ export const getType = (pageType, shorthand = false) => {
     case 'MAP':
       return 'article-media-asset';
     case 'media':
-      return 'Live Radio';
+      return 'Radio';
     default:
       return null;
   }
@@ -64,10 +64,9 @@ export const buildSections = ({
     case 'media':
       return [
         serviceCap,
-        buildSectionItem(serviceCap, ''),
-        buildSectionItem(serviceCap, 'unknown'),
-        buildSectionItem(serviceCap, 'unknown'),
-        buildSectionItem(serviceCap, 'unknown'),
+        ...(pageType ? buildSectionItem(serviceCap, type) : []),
+        ...(addProducer ? buildSectionArr(serviceCap, producer, type) : []),
+        ...(chapter ? buildSectionArr(serviceCap, chapter, type) : []),
       ].join(', ');
     default:
       return [
@@ -89,10 +88,16 @@ export const getTitle = (pageType, pageData, brandName) => {
     case 'MAP':
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'media':
-      return path(['name'], pageData);
+      return path(['pageTitle'], pageData);
     default:
       return null;
   }
+};
+
+const getRadioContentType = pageData => {
+  const contentType = path(['contentType'], pageData);
+  // workaround until contentType value is fixed by ARES
+  return contentType === 'player-live' ? contentType : 'player-episode';
 };
 
 export const getConfig = ({
@@ -123,16 +128,18 @@ export const getConfig = ({
   });
   const cookie = getSylphidCookie();
   const type = getType(pageType);
+  const contentType = type === 'Radio' ? getRadioContentType(data) : type;
+
   const currentPath = onClient() && window.location.pathname;
   return {
     domain,
     sections,
     uid: chartbeatUID,
     title,
-    virtualReferrer: decodeURIComponent(referrer),
-    ...(isAmp && { contentType: type }),
+    virtualReferrer: referrer,
+    ...(isAmp && { contentType }),
     ...(!isAmp && {
-      type,
+      type: contentType,
       useCanonical,
       path: currentPath,
     }),

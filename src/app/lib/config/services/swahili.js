@@ -193,6 +193,9 @@ export const service = {
       frontPagePosition: 'feature-main',
       header: 'Vipindi vya Redio',
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/swahili/taasisi-49283417',
