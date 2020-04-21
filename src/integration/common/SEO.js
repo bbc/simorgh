@@ -178,7 +178,7 @@ export default () => {
 
       expect(linkedDataEl).toBeInTheDocument();
       expect(linkedDataEl.textContent).toBeTruthy();
-      expect(linkedDataEl.textContent).toMatchSnapshot();
+      expect(JSON.parse(linkedDataEl.textContent)).toMatchSnapshot();
     });
   });
 };
