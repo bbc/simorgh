@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, bool, node, string, func } from 'prop-types';
 import SectionLabel from '@bbc/psammead-section-label';
-import styled from 'styled-components';
-
+import styled, { css } from 'styled-components';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -12,24 +11,71 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-
+import Grid from '@bbc/psammead-grid';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
-import { GridItemConstrainedLarge as Grid } from '#app/components/Grid';
+import { gelGridMargin } from '#app/lib/layoutGrid';
 
-const Wrapper = styled(Grid)`
+const ConstrainedLargeGrid = ({ children, ...restProps }) => (
+  <Grid
+    item
+    {...restProps}
+    columns={{
+      group0: 1,
+      group1: 1,
+      group2: 1,
+      group3: 1,
+      group4: 6,
+      group5: 12,
+    }}
+    margins={{
+      group0: true,
+      group1: true,
+      group2: true,
+      group3: true,
+      group4: false,
+      group5: false,
+    }}
+    startOffset={{
+      group0: 1,
+      group1: 1,
+      group2: 1,
+      group3: 1,
+      group4: 3,
+      group5: 6,
+    }}
+    parentColumns={{
+      group0: 8,
+      group1: 8,
+      group2: 8,
+      group3: 8,
+      group4: 4,
+      group5: 3,
+    }}
+  >
+    {children}
+  </Grid>
+);
+
+ConstrainedLargeGrid.propTypes = {
+  children: node.isRequired,
+};
+
+const gridMarginSmall = css`
   margin-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
-const EnabledWrapper = styled(GridItemConstrainedLarge)`
-  margin-bottom: ${GEL_SPACING_DBL};
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin-bottom: ${GEL_SPACING_TRPL};
-  }
+const Wrapper = styled(ConstrainedLargeGrid)`
+  ${gelGridMargin}
+  ${gridMarginSmall}
+`;
+
+const EnabledGridWrapper = styled(GridItemConstrainedLarge)`
+  ${gridMarginSmall}
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -63,7 +109,7 @@ const CpsOnwardJourney = ({
   const CpsOnwardJourneyWrapper = ({ children }) =>
     enableGridWrapper ? (
       <GridWrapper {...a11yAttributes}>
-        <EnabledWrapper>{children}</EnabledWrapper>
+        <EnabledGridWrapper>{children}</EnabledGridWrapper>
       </GridWrapper>
     ) : (
       <Wrapper {...a11yAttributes}>{children}</Wrapper>
@@ -76,12 +122,12 @@ const CpsOnwardJourney = ({
   const [singleContent] = content;
 
   const CpsOnwardJourneyItemWrapper = enableGridWrapper
-    ? EnabledWrapper
+    ? EnabledGridWrapper
     : Wrapper;
 
   return (
     <CpsOnwardJourneyWrapper>
-      <CpsOnwardJourneyItemWrapper>
+      <CpsOnwardJourneyItemWrapper item>
         <StyledSectionLabel
           script={script}
           service={service}
