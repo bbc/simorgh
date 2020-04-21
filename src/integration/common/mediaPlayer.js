@@ -5,8 +5,8 @@ export default () => {
         const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
 
         expect(mediaPlayerEl).toBeInTheDocument();
-        expect(mediaPlayerEl.getAttribute('src')).toBeTruthy();
-        expect(mediaPlayerEl.getAttribute('src')).toMatchSnapshot();
+        expect(mediaPlayerEl.getAttribute('title')).toBeTruthy();
+        expect(mediaPlayerEl.getAttribute('title')).toMatchSnapshot();
       });
     });
   });
