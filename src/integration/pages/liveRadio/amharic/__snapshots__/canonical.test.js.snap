@@ -2,7 +2,7 @@
 
 exports[`Canonical Live Radio A11y I can see the skip to content link 1`] = `"ወደ ዋናው ይዘት ይለፉ"`;
 
-exports[`Canonical Live Radio Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[responsive]&x3=[news-amharic]&x4=[am]&x7=[player-live]&x8=[simorgh-nojs]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"`;
+exports[`Canonical Live Radio Analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=4&p=amharic.bbc_amharic_radio.liveradio.page&x1=[urn:bbc:ares::ws_live:bbc_amharic_radio]&x2=[responsive]&x3=[news-amharic]&x4=[am]&x7=[player-live]&x8=[simorgh-nojs]&x9=[ያድምጡ+-+BBC+News+አማርኛ]"`;
 
 exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/amharic"`;
 
