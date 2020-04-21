@@ -15,10 +15,17 @@ import {
 
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { GridWrapper } from '#lib/styledGrid';
-import { GridItemConstrainedLarge } from '#app/components/Grid';
+import { GridWrapper, GridItemConstrainedLarge } from '#lib/styledGrid';
+import { GridItemConstrainedLarge as Grid } from '#app/components/Grid';
 
-const Wrapper = styled(GridItemConstrainedLarge)`
+const Wrapper = styled(Grid)`
+  margin-bottom: ${GEL_SPACING_DBL};
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-bottom: ${GEL_SPACING_TRPL};
+  }
+`;
+
+const EnabledWrapper = styled(GridItemConstrainedLarge)`
   margin-bottom: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-bottom: ${GEL_SPACING_TRPL};
@@ -56,7 +63,7 @@ const CpsOnwardJourney = ({
   const CpsOnwardJourneyWrapper = ({ children }) =>
     enableGridWrapper ? (
       <GridWrapper {...a11yAttributes}>
-        <Wrapper>{children}</Wrapper>
+        <EnabledWrapper>{children}</EnabledWrapper>
       </GridWrapper>
     ) : (
       <Wrapper {...a11yAttributes}>{children}</Wrapper>
@@ -68,17 +75,21 @@ const CpsOnwardJourney = ({
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
 
+  const CpsOnwardJourneyItemWrapper = enableGridWrapper
+    ? EnabledWrapper
+    : Wrapper;
+
   return (
     <CpsOnwardJourneyWrapper>
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        labelId={labelId}
-      >
-        {title}
-      </StyledSectionLabel>
-      <Wrapper>
+      <CpsOnwardJourneyItemWrapper>
+        <StyledSectionLabel
+          script={script}
+          service={service}
+          dir={dir}
+          labelId={labelId}
+        >
+          {title}
+        </StyledSectionLabel>
         {hasSingleContent ? (
           <SingleContentWrapper>
             {singleTransform(singleContent)}
@@ -86,7 +97,7 @@ const CpsOnwardJourney = ({
         ) : (
           listTransform(content)
         )}
-      </Wrapper>
+      </CpsOnwardJourneyItemWrapper>
     </CpsOnwardJourneyWrapper>
   );
 };

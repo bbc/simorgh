@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import { node } from 'prop-types';
 import Grid from '@bbc/psammead-grid';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -19,51 +20,53 @@ const gelMaxWidths = css`
   }
 `;
 
-export const GridItemConstrainedLarge = (props) => {
-  const ConstrainedLarge = styled(Grid)`
-    ${gelGridMargin};
-  `;
-  const { children } = props;
-  const gridProps = {
-    columns: {
+const ConstrainedLarge = styled(Grid)`
+  ${gelGridMargin};
+`;
+
+export const GridItemConstrainedLarge = ({ children, ...restProps }) => (
+  <ConstrainedLarge
+    item
+    {...restProps}
+    columns={{
       group0: 1,
       group1: 1,
       group2: 1,
       group3: 1,
       group4: 6,
       group5: 12,
-    },
-    margins: {
+    }}
+    margins={{
       group0: true,
       group1: true,
       group2: true,
       group3: true,
       group4: false,
       group5: false,
-    },
-    startOffset: {
+    }}
+    startOffset={{
       group0: 1,
       group1: 1,
       group2: 1,
       group3: 1,
       group4: 3,
       group5: 6,
-    },
-    // this is specifi
-    parentColumns: {
+    }}
+    parentColumns={{
       group0: 8,
       group1: 8,
       group2: 8,
       group3: 8,
       group4: 4,
       group5: 3,
-    },
-  };
-  return (
-    <ConstrainedLarge item {...gridProps} {...props}>
-      {children}
-    </ConstrainedLarge>
-  );
+    }}
+  >
+    {children}
+  </ConstrainedLarge>
+);
+
+GridItemConstrainedLarge.propTypes = {
+  children: node.isRequired,
 };
 
 export const GelPageGrid = styled(Grid)`
