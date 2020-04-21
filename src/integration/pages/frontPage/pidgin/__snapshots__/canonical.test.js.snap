@@ -1,57 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CANONICAL Front Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`CANONICAL Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`CANONICAL Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
-exports[`CANONICAL Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`CANONICAL Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
+exports[`Canonical Front Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin"`;
 
-exports[`CANONICAL Front Page SEO Dir attribute 1`] = `"ltr"`;
+exports[`Canonical Front Page SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`CANONICAL Front Page SEO FB admins 1`] = `"100004154058350"`;
+exports[`Canonical Front Page SEO FB admins 1`] = `"100004154058350"`;
 
-exports[`CANONICAL Front Page SEO FB app ID 1`] = `"1609039196070050"`;
+exports[`Canonical Front Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`CANONICAL Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Home"`;
+exports[`Canonical Front Page SEO Heading level 1 1`] = `"BBC News, Pidgin - Home"`;
 
-exports[`CANONICAL Front Page SEO Lang attribute 1`] = `"pcm"`;
+exports[`Canonical Front Page SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`CANONICAL Front Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"WebPage\\",\\"url\\":\\"http://localhost:7080/pidgin\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/pidgin/institutional-48528766\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/pidgin\\",\\"name\\":\\"Domot\\"}}"`;
+exports[`Canonical Front Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"WebPage\\",\\"url\\":\\"http://localhost:7080/pidgin\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/pidgin/institutional-48528766\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/pidgin\\",\\"name\\":\\"Domot\\"}}"`;
 
-exports[`CANONICAL Front Page SEO OG description 1`] = `"We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."`;
+exports[`Canonical Front Page SEO OG description 1`] = `"We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."`;
 
-exports[`CANONICAL Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;
+exports[`Canonical Front Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;
 
-exports[`CANONICAL Front Page SEO OG image alt 1`] = `"BBC News Pidgin"`;
+exports[`Canonical Front Page SEO OG image alt 1`] = `"BBC News Pidgin"`;
 
-exports[`CANONICAL Front Page SEO OG locale 1`] = `"pcm"`;
+exports[`Canonical Front Page SEO OG locale 1`] = `"pcm"`;
 
-exports[`CANONICAL Front Page SEO OG site name 1`] = `"BBC News Pidgin"`;
+exports[`Canonical Front Page SEO OG site name 1`] = `"BBC News Pidgin"`;
 
-exports[`CANONICAL Front Page SEO OG title 1`] = `"Domot - BBC News Pidgin"`;
+exports[`Canonical Front Page SEO OG title 1`] = `"Domot - BBC News Pidgin"`;
 
-exports[`CANONICAL Front Page SEO OG type 1`] = `"website"`;
+exports[`Canonical Front Page SEO OG type 1`] = `"website"`;
 
-exports[`CANONICAL Front Page SEO OG url 1`] = `"http://localhost:7080/pidgin"`;
+exports[`Canonical Front Page SEO OG url 1`] = `"http://localhost:7080/pidgin"`;
 
-exports[`CANONICAL Front Page SEO Page title 1`] = `"Domot - BBC News Pidgin"`;
+exports[`Canonical Front Page SEO Page title 1`] = `"Domot - BBC News Pidgin"`;
 
-exports[`CANONICAL Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Front Page SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
-exports[`CANONICAL Front Page SEO Twitter card 1`] = `"summary_large_image"`;
+exports[`Canonical Front Page SEO Twitter card 1`] = `"summary_large_image"`;
 
-exports[`CANONICAL Front Page SEO Twitter creator 1`] = `"@BBCNews"`;
+exports[`Canonical Front Page SEO Twitter creator 1`] = `"@BBCNews"`;
 
-exports[`CANONICAL Front Page SEO Twitter description 1`] = `"We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."`;
+exports[`Canonical Front Page SEO Twitter description 1`] = `"We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join."`;
 
-exports[`CANONICAL Front Page SEO Twitter image alt 1`] = `"BBC News Pidgin"`;
+exports[`Canonical Front Page SEO Twitter image alt 1`] = `"BBC News Pidgin"`;
 
-exports[`CANONICAL Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;
+exports[`Canonical Front Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;
 
-exports[`CANONICAL Front Page SEO Twitter site 1`] = `"@BBCNews"`;
+exports[`Canonical Front Page SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`CANONICAL Front Page SEO Twitter title 1`] = `"Domot - BBC News Pidgin"`;
+exports[`Canonical Front Page SEO Twitter title 1`] = `"Domot - BBC News Pidgin"`;

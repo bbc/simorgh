@@ -1,61 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CANONICAL Articles A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
+exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`CANONICAL Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`CANONICAL Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
-exports[`CANONICAL Articles Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
-exports[`CANONICAL Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`;
+exports[`Canonical Articles I can see an image with a caption 1`] = `"https://ichef.bbci.co.uk/news/640/cpsprodpb/1317C/production/_111140287_oshiobaba.jpg"`;
 
-exports[`CANONICAL Articles I can see an image with a caption 2`] = `"Wetin we call dis foto, APC Chairman Adams Oshiomhole don be Govnor of Edo State before"`;
+exports[`Canonical Articles I can see an image with a caption 2`] = `"Wetin we call dis foto, APC Chairman Adams Oshiomhole don be Govnor of Edo State before"`;
 
-exports[`CANONICAL Articles SEO Canonical link 1`] = `"http://localhost:7080/pidgin/tori-51745682"`;
+exports[`Canonical Articles SEO Canonical link 1`] = `"http://localhost:7080/pidgin/tori-51745682"`;
 
-exports[`CANONICAL Articles SEO Dir attribute 1`] = `"ltr"`;
+exports[`Canonical Articles SEO Dir attribute 1`] = `"ltr"`;
 
-exports[`CANONICAL Articles SEO FB admins 1`] = `"100004154058350"`;
+exports[`Canonical Articles SEO FB admins 1`] = `"100004154058350"`;
 
-exports[`CANONICAL Articles SEO FB app ID 1`] = `"1609039196070050"`;
+exports[`Canonical Articles SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`CANONICAL Articles SEO Heading level 1 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman'"`;
+exports[`Canonical Articles SEO Heading level 1 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman'"`;
 
-exports[`CANONICAL Articles SEO Lang attribute 1`] = `"pcm"`;
+exports[`Canonical Articles SEO Lang attribute 1`] = `"pcm"`;
 
-exports[`CANONICAL Articles SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"ReportageNewsArticle\\",\\"url\\":\\"http://localhost:7080/pidgin/tori-51745682\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/pidgin/institutional-48528766\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/pidgin/tori-51745682\\",\\"name\\":\\"Adams Oshiomhole say 'I still be APC National Chairman'\\"},\\"headline\\":\\"Adams Oshiomhole say 'I still be APC National Chairman'\\",\\"description\\":\\"Oga Oshiomhole don cari di mata go Court of Appeal.\\",\\"datePublished\\":\\"2020-03-04T18:58:43.000Z\\",\\"dateModified\\":\\"2020-03-04T19:27:57.000Z\\",\\"about\\":[{\\"@type\\":\\"Thing\\",\\"name\\":\\"Nigeria\\"},{\\"@type\\":\\"Thing\\",\\"name\\":\\"Nigeria politics\\",\\"sameAs\\":[\\"http://dbpedia.org/resource/Politics_of_Nigeria\\"]}],\\"author\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"noBylinesPolicy\\":\\"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise\\"}}"`;
+exports[`Canonical Articles SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"ReportageNewsArticle\\",\\"url\\":\\"http://localhost:7080/pidgin/tori-51745682\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/pidgin/institutional-48528766\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/pidgin/tori-51745682\\",\\"name\\":\\"Adams Oshiomhole say 'I still be APC National Chairman'\\"},\\"headline\\":\\"Adams Oshiomhole say 'I still be APC National Chairman'\\",\\"description\\":\\"Oga Oshiomhole don cari di mata go Court of Appeal.\\",\\"datePublished\\":\\"2020-03-04T18:58:43.000Z\\",\\"dateModified\\":\\"2020-03-04T19:27:57.000Z\\",\\"about\\":[{\\"@type\\":\\"Thing\\",\\"name\\":\\"Nigeria\\"},{\\"@type\\":\\"Thing\\",\\"name\\":\\"Nigeria politics\\",\\"sameAs\\":[\\"http://dbpedia.org/resource/Politics_of_Nigeria\\"]}],\\"author\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News Pidgin\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png\\"},\\"noBylinesPolicy\\":\\"https://www.bbc.com/pidgin/institutional-48528766#authorexpertise\\"}}"`;
 
-exports[`CANONICAL Articles SEO OG description 1`] = `"Oga Oshiomhole don cari di mata go Court of Appeal."`;
+exports[`Canonical Articles SEO OG description 1`] = `"Oga Oshiomhole don cari di mata go Court of Appeal."`;
 
-exports[`CANONICAL Articles SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"`;
+exports[`Canonical Articles SEO OG image 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"`;
 
-exports[`CANONICAL Articles SEO OG image alt 1`] = `"Adams Oshiomole"`;
+exports[`Canonical Articles SEO OG image alt 1`] = `"Adams Oshiomole"`;
 
-exports[`CANONICAL Articles SEO OG locale 1`] = `"pcm"`;
+exports[`Canonical Articles SEO OG locale 1`] = `"pcm"`;
 
-exports[`CANONICAL Articles SEO OG site name 1`] = `"BBC News Pidgin"`;
+exports[`Canonical Articles SEO OG site name 1`] = `"BBC News Pidgin"`;
 
-exports[`CANONICAL Articles SEO OG title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
+exports[`Canonical Articles SEO OG title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
 
-exports[`CANONICAL Articles SEO OG type 1`] = `"article"`;
+exports[`Canonical Articles SEO OG type 1`] = `"article"`;
 
-exports[`CANONICAL Articles SEO OG url 1`] = `"http://localhost:7080/pidgin/tori-51745682"`;
+exports[`Canonical Articles SEO OG url 1`] = `"http://localhost:7080/pidgin/tori-51745682"`;
 
-exports[`CANONICAL Articles SEO Page title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
+exports[`Canonical Articles SEO Page title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
 
-exports[`CANONICAL Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
+exports[`Canonical Articles SEO Robots meta tag 1`] = `"noodp,noydir"`;
 
-exports[`CANONICAL Articles SEO Twitter card 1`] = `"summary_large_image"`;
+exports[`Canonical Articles SEO Twitter card 1`] = `"summary_large_image"`;
 
-exports[`CANONICAL Articles SEO Twitter creator 1`] = `"@BBCNews"`;
+exports[`Canonical Articles SEO Twitter creator 1`] = `"@BBCNews"`;
 
-exports[`CANONICAL Articles SEO Twitter description 1`] = `"Oga Oshiomhole don cari di mata go Court of Appeal."`;
+exports[`Canonical Articles SEO Twitter description 1`] = `"Oga Oshiomhole don cari di mata go Court of Appeal."`;
 
-exports[`CANONICAL Articles SEO Twitter image alt 1`] = `"Adams Oshiomole"`;
+exports[`Canonical Articles SEO Twitter image alt 1`] = `"Adams Oshiomole"`;
 
-exports[`CANONICAL Articles SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/747F/production/_111132892_4dfb65ac-5870-417e-8e26-4c234e4b1c19.jpg"`;
 
-exports[`CANONICAL Articles SEO Twitter site 1`] = `"@BBCNews"`;
+exports[`Canonical Articles SEO Twitter site 1`] = `"@BBCNews"`;
 
-exports[`CANONICAL Articles SEO Twitter title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
+exports[`Canonical Articles SEO Twitter title 1`] = `"Adams Oshiomhole say 'I still be APC National Chairman' - BBC News Pidgin"`;
