@@ -18,7 +18,7 @@ import {
 } from '../utils/pageTypes';
 
 // CPS Asset Mapping to PageType
-const CpsAsset = (props) => {
+const CpsAsset = props => {
   const type = path(['pageData', 'metadata', 'type'], props);
 
   const PageType = {

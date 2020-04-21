@@ -2,7 +2,7 @@ import React from 'react';
 import { string, element, shape } from 'prop-types';
 import ErrorPage from '#pages/ErrorPage';
 
-const WithError = (Component) => {
+const WithError = Component => {
   const ErrorContainer = ({ error, ...props }) => {
     if (!error) return <Component {...props} />;
     return <ErrorPage errorCode={500} />;

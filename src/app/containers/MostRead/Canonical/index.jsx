@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { bool, string } from 'prop-types';
+import { bool, string, oneOf } from 'prop-types';
 import styled from 'styled-components';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -77,7 +77,7 @@ const ConstrainedMostReadSection = styled(MostReadSection)`
 
 const CanonicalMostRead = ({
   endpoint,
-  maxTwoColumns,
+  columnLayout,
   constrainMaxWidth,
   isOnFrontPage,
 }) => {
@@ -92,7 +92,7 @@ const CanonicalMostRead = ({
   } = useContext(ServiceContext);
 
   useEffect(() => {
-    const handleResponse = async (response) => {
+    const handleResponse = async response => {
       const mostReadData = await response.json();
 
       // The ARES test endpoint for most read renders fixture data, so the data is stale
@@ -121,10 +121,10 @@ const CanonicalMostRead = ({
         setItems(mostReadItems);
       }
     };
-    const fetchMostReadData = (pathname) =>
+    const fetchMostReadData = pathname =>
       fetch(pathname, { mode: 'no-cors' })
         .then(handleResponse)
-        .catch((e) => logger.error(`HTTP Error: "${e}"`));
+        .catch(e => logger.error(`HTTP Error: "${e}"`));
     fetchMostReadData(endpoint);
   }, [
     endpoint,
@@ -162,13 +162,13 @@ const CanonicalMostRead = ({
         <MostReadList
           numberOfItems={items.length}
           dir={dir}
-          maxTwoColumns={maxTwoColumns}
+          columnLayout={columnLayout}
         >
           {items.map((item, i) => (
             <MostReadItemWrapper
               dir={dir}
               key={item.id}
-              maxTwoColumns={maxTwoColumns}
+              columnLayout={columnLayout}
             >
               <MostReadRank
                 service={service}
@@ -176,7 +176,7 @@ const CanonicalMostRead = ({
                 listIndex={i + 1}
                 numberOfItems={items.length}
                 dir={dir}
-                maxTwoColumns={maxTwoColumns}
+                columnLayout={columnLayout}
               />
               <MostReadLink
                 dir={dir}
@@ -198,12 +198,12 @@ const CanonicalMostRead = ({
 CanonicalMostRead.propTypes = {
   endpoint: string.isRequired,
   constrainMaxWidth: bool.isRequired,
-  maxTwoColumns: bool,
+  columnLayout: oneOf(['oneColumn', 'twoColumn', 'multiColumn']),
   isOnFrontPage: bool,
 };
 
 CanonicalMostRead.defaultProps = {
-  maxTwoColumns: false,
+  columnLayout: 'multiColumn',
   isOnFrontPage: false,
 };
 

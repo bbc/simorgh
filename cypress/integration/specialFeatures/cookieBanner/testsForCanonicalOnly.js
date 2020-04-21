@@ -5,7 +5,7 @@ import getPaths from '../../../support/helpers/getPaths';
 
 // Limited to 1 UK & 1 WS service when a smoke test due to time test takes to run per page.
 // This is why this file doesn't check smoke test values.
-const serviceFilter = (service) =>
+const serviceFilter = service =>
   Cypress.env('SMOKE') ? ['news', 'thai'].includes(service) : service;
 
 const assertCookieValue = (cookieName, value) => {
@@ -14,10 +14,10 @@ const assertCookieValue = (cookieName, value) => {
 
 const assertCookieExpiryDate = (cookieName, timestamp) => {
   const testBuffer = 60;
-  cy.getCookie(cookieName).then((c) => {
+  cy.getCookie(cookieName).then(c => {
     expect(c.expiry).to.be.within(
       timestamp - testBuffer,
-      timestamp + testBuffer,
+      parseInt(timestamp + testBuffer, 10),
     );
   });
 };
@@ -65,8 +65,8 @@ const ensureCookieExpiryDates = () => {
   assertCookieExpiryDate('ckns_privacy', inOneYear);
 };
 
-const assertCookieValues = (cookies) => {
-  Object.keys(cookies).forEach((cookie) => {
+const assertCookieValues = cookies => {
+  Object.keys(cookies).forEach(cookie => {
     assertCookieValue(cookie, cookies[cookie]);
   });
 };
@@ -79,12 +79,12 @@ const visitPage = (pageType, path) => {
 
 Object.keys(config)
   .filter(serviceFilter)
-  .forEach((service) => {
+  .forEach(service => {
     Object.keys(config[service].pageTypes)
-      .filter((pageType) => serviceHasPageType(service, pageType))
-      .forEach((pageType) => {
+      .filter(pageType => serviceHasPageType(service, pageType))
+      .forEach(pageType => {
         const paths = getPaths(service, pageType);
-        paths.forEach((path) => {
+        paths.forEach(path => {
           const { variant } = config[service];
 
           describe(`Canonical Cookie Banner Test for ${service} ${pageType} ${path}`, () => {

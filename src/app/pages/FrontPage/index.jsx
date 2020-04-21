@@ -74,6 +74,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const description = path(['metadata', 'summary'], pageData);
   const seoTitle = path(['promo', 'name'], pageData);
   const onFrontPage = pathOr(null, ['onFrontPage'], radioSchedule);
+  const frontPagePosition = pathOr(null, ['frontPagePosition'], radioSchedule);
 
   // eslint-disable-next-line jsx-a11y/aria-role
   const offScreenText = (
@@ -84,12 +85,12 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // Most Read is required to render above useful-links if it exists
   const hasUsefulLinks =
-    findIndex((group) => group.type === 'useful-links')(groups) > -1;
+    findIndex(group => group.type === 'useful-links')(groups) > -1;
 
   const renderMostRead = () => (
     <MostReadContainer
       mostReadEndpointOverride={mostReadEndpointOverride}
-      maxTwoColumns
+      columnLayout="twoColumn"
       isOnFrontPage
     />
   );
@@ -114,10 +115,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              <FrontPageSection group={group} sectionNumber={index} />
-              {onFrontPage && group.type === 'top-stories' && (
+              {onFrontPage && frontPagePosition === group.type && (
                 <RadioScheduleContainer />
               )}
+              <FrontPageSection group={group} sectionNumber={index} />
             </Fragment>
           ))}
           {!hasUsefulLinks && renderMostRead()}

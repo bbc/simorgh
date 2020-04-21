@@ -20,48 +20,77 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   }
 }
 
-<div
-  class="c0"
->
-  <amp-ad
-    data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-    data-amp-slot-index="0"
-    data-multi-size="320x50,300x50"
-    data-slot="/4817/bbccom.test.site.amp.news"
-    height="50"
-    json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-    media="(max-width: 599px)"
-    type="doubleclick"
-    width="320"
-  >
-    <amp-img
-      height="50"
-      layout="responsive"
-      placeholder="true"
-      src="https://via.placeholder.com/320x50"
-      width="320"
+<html>
+  <head>
+    <script
+      async="true"
+      custom-element="amp-ad"
+      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
     />
-  </amp-ad>
-  <amp-ad
-    data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-    data-amp-slot-index="0"
-    data-multi-size="970x250,728x90"
-    data-slot="/4817/bbccom.test.site.amp.news"
-    height="250"
-    json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
-    media="(min-width: 600px)"
-    type="doubleclick"
-    width="970"
-  >
-    <amp-img
-      height="250"
-      layout="responsive"
-      placeholder="true"
-      src="https://via.placeholder.com/970x250"
-      width="970"
+    <script
+      async="true"
+      custom-element="amp-access"
+      src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
     />
-  </amp-ad>
-</div>
+    <script
+      id="amp-access"
+      type="application/json"
+    >
+      {"authorization":"https://mock-toggles-endpoint.bbc.co.uk/toggles?application=simorgh&service=pidgin&geoiplookup=true","noPingback":true}
+    </script>
+  </head>
+  <body>
+    <div>
+      <div
+        amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
+        amp-access-hide="true"
+      >
+        <div
+          class="c0"
+        >
+          <amp-ad
+            data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+            data-amp-slot-index="0"
+            data-multi-size="320x50,300x50"
+            data-slot="/4817/bbccom.test.site.amp.news"
+            height="50"
+            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
+            media="(max-width: 599px)"
+            type="doubleclick"
+            width="320"
+          >
+            <amp-img
+              height="50"
+              layout="responsive"
+              placeholder="true"
+              src="https://via.placeholder.com/320x50"
+              width="320"
+            />
+          </amp-ad>
+          <amp-ad
+            data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
+            data-amp-slot-index="0"
+            data-multi-size="970x250,728x90"
+            data-slot="/4817/bbccom.test.site.amp.news"
+            height="250"
+            json="{\\"targeting\\":{\\"slot\\":\\"leaderboard\\",\\"asset_type\\":\\"index\\",\\"channel\\":\\"pidgin\\"}}"
+            media="(min-width: 600px)"
+            type="doubleclick"
+            width="970"
+          >
+            <amp-img
+              height="250"
+              layout="responsive"
+              placeholder="true"
+              src="https://via.placeholder.com/970x250"
+              width="970"
+            />
+          </amp-ad>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
 `;
 
 exports[`Ad Container Snapshots should not render an AMP ad for News 1`] = `<div />`;

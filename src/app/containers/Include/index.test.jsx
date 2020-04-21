@@ -16,7 +16,7 @@ const toggleStateFalse = {
   },
 };
 
-const fakeMarkup = `&lt;div&gt;Visual Journalism Markup&lt;/div&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;localhost/vj.js&quot;&gt;&lt;/script&gt;`;
+const fakeMarkup = `<div>Visual Journalism Markup</div><script type="text/javascript" src="localhost/vj.js"></script>`;
 // eslint-disable-next-line react/prop-types
 const IncludeContainerWithMockContext = ({ toggleState, html, type }) => (
   <RequestContextProvider

@@ -6,7 +6,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   margin: 0;
   padding: 0;
   grid-auto-flow: column;
-  grid-template-rows: repeat( 5,[col-start] auto [col-end] );
+  grid-template-rows: repeat(10,auto);
 }
 
 .c13 {
@@ -201,64 +201,75 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
   }
 }
 
-@media (max-width:37.4375rem) {
+@media (min-width:37.5rem) {
   .c8 {
-    grid-template-rows: repeat( 10,[col-start] auto [col-end] );
+    grid-template-rows: repeat( 5,auto );
   }
 }
 
 @media (min-width:80rem) {
   .c8 {
     grid-auto-flow: row;
-    grid-template-rows: repeat( 5,[col-start] auto [col-end] );
   }
 }
 
 @media (max-width:14.9375rem) {
   .c12 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c12 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c12 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c12 {
-    min-width: auto;
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c12 {
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c12 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c16 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c16 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c16 {
-    min-width: 2.1rem;
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c16 {
+    min-width: 3rem;
   }
 }
 
@@ -270,31 +281,37 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:80rem) {
   .c16 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c17 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c17 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c17 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c17 {
-    min-width: auto;
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c17 {
+    min-width: 1.5rem;
   }
 }
 
@@ -306,19 +323,25 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (max-width:14.9375rem) {
   .c18 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c18 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c18 {
-    min-width: 2.1rem;
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c18 {
+    min-width: 3rem;
   }
 }
 
@@ -330,37 +353,79 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
 
 @media (min-width:80rem) {
   .c18 {
-    min-width: auto;
+    min-width: 1.5rem;
   }
 }
 
 @media (max-width:14.9375rem) {
   .c19 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:15rem) and (max-width:24.9375rem) {
   .c19 {
-    min-width: 1.8rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:25rem) and (max-width:37.4375rem) {
   .c19 {
-    min-width: 2.1rem;
+    min-width: 2rem;
   }
 }
 
 @media (min-width:37.5rem) {
   .c19 {
-    min-width: auto;
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c19 {
+    min-width: 1.5rem;
   }
 }
 
 @media (min-width:80rem) {
   .c19 {
-    min-width: auto;
+    min-width: 1.5rem;
+  }
+}
+
+@media (max-width:14.9375rem) {
+  .c20 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:15rem) and (max-width:24.9375rem) {
+  .c20 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:25rem) and (max-width:37.4375rem) {
+  .c20 {
+    min-width: 2rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:37.5rem) {
+  .c20 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c20 {
+    min-width: 3rem;
   }
 }
 
@@ -494,7 +559,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
     <h2
       class="c2"
     >
-      <div
+      <span
         class="c3"
       >
         <span
@@ -508,7 +573,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
             الأكثر قراءة
           </span>
         </span>
-      </div>
+      </span>
     </h2>
   </div>
   <div
@@ -807,7 +872,7 @@ exports[`MostReadContainerCanonical Assertion should render most read correctly 
           class="c11"
         >
           <div
-            class="c18"
+            class="c20"
             dir="rtl"
           >
             <span
