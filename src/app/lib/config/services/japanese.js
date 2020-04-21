@@ -178,6 +178,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/japanese/help-49677253',
