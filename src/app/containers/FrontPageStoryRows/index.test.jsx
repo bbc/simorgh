@@ -5,8 +5,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import getNumberPromoFixtures from './testHelpers';
 
-const ImageRow = (props) => <RegularRow displayImages {...props} />;
-const NoImageRow = (props) => <RegularRow {...props} />;
+const ImageRow = props => <RegularRow displayImages {...props} />;
+const NoImageRow = props => <RegularRow {...props} />;
 
 const getRow = (Type, service, dir, number) => (
   <ServiceContextProvider service={service}>

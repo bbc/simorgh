@@ -25,7 +25,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
         });
       }
       it('should only have expected bundle script tags', () => {
-        cy.get('script[src]').each(($p) => {
+        cy.get('script[src]').each($p => {
           if ($p.attr('src').includes(envConfig.assetOrigin)) {
             return expect($p.attr('src')).to.match(
               new RegExp(
@@ -42,7 +42,7 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
         let matches = 0;
 
         cy.get('script[src]')
-          .each(($p) => {
+          .each($p => {
             const match = $p
               .attr('src')
               .match(
