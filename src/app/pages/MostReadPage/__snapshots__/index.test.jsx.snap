@@ -108,13 +108,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   padding: 1.5rem 0 0.5rem;
 }
 
-.c4 {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
 @supports (display:grid) {
   .c3 {
     display: grid;
@@ -292,6 +285,20 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
+@media (min-width:63rem) and (max-width:79.9375rem) {
+  .c4 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width:80rem) {
+  .c4 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
 @media (min-width:25rem) {
   .c0 {
     margin: 0 1rem;
@@ -329,20 +336,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   .c2 {
     font-size: 1.75rem;
     line-height: 2rem;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .c4 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width:80rem) {
-  .c4 {
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
