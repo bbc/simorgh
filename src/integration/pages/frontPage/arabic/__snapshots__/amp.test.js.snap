@@ -6,6 +6,26 @@ exports[`AMP Front Page AMP Consent config 1`] = `"{\\"consents\\":{\\"user-cons
 
 exports[`AMP Front Page AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
 
+exports[`AMP Front Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=5&p=arabic.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
 exports[`AMP Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
