@@ -45,7 +45,7 @@ describe('Given I am on a Pidgin Frontpage AMP/Canonical page', () => {
     runHeaderTests({
       skipToContentText: 'Waka go wetin de inside',
     });
-    runCanonicalUserTests();
+    runCanonicalUserTests({ service: 'pidgin' });
     runFooterTests({
       copyrightAndExternalLinkingText:
         '© 2020 BBC. De external site no concern BBC. De way wey we de take go external link.',

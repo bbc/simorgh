@@ -13,6 +13,8 @@ const getToggleState = enabled => ({
 const RadioSchedulesWithContext = ({
   service,
   radioScheduleToggle = false,
+  isAmp = false,
+  initialData,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -21,7 +23,7 @@ const RadioSchedulesWithContext = ({
     }}
   >
     <RequestContextProvider
-      isAmp={false}
+      isAmp={isAmp}
       pageType="frontPage"
       service={service}
       pathname={`/${service}`}
@@ -29,7 +31,7 @@ const RadioSchedulesWithContext = ({
     >
       <ServiceContextProvider service={service}>
         <BrowserRouter>
-          <RadioScheduleContainer />
+          <RadioScheduleContainer initialData={initialData} />
         </BrowserRouter>
       </ServiceContextProvider>
     </RequestContextProvider>

@@ -6,6 +6,11 @@ describe('getRadioScheduleEndpoint', () => {
       '/hausa/bbc_hausa_radio/schedule.json',
     );
   });
+  it('should return endpoint when passed base URL and service', () => {
+    expect(
+      getRadioScheduleEndpoint({ service: 'hausa', baseUrl: 'bbc.com' }),
+    ).toBe('bbc.com/hausa/bbc_hausa_radio/schedule.json');
+  });
   it('should return endpoint when passed service & radioService', () => {
     expect(
       getRadioScheduleEndpoint({ service: 'persian', radioService: 'dari' }),

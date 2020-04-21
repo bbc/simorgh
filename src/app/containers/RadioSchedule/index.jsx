@@ -6,9 +6,13 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
+import radioSchedulesShape from './utilities/radioScheduleShape';
 import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
 
-const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
+const RadioScheduleContainer = ({
+  initialData,
+  radioScheduleEndpointOverride,
+}) => {
   const { enabled } = useToggle('radioSchedule');
   const { isAmp, env } = useContext(RequestContext);
   const { service, radioSchedule } = useContext(ServiceContext);
@@ -28,15 +32,17 @@ const RadioScheduleContainer = ({ radioScheduleEndpointOverride }) => {
       queryString: location.search,
     });
 
-  return <Canonical endpoint={endpoint} />;
+  return <Canonical endpoint={endpoint} initialData={initialData} />;
 };
 
 RadioScheduleContainer.propTypes = {
   radioScheduleEndpointOverride: string,
+  initialData: radioSchedulesShape,
 };
 
 RadioScheduleContainer.defaultProps = {
   radioScheduleEndpointOverride: null,
+  initialData: undefined,
 };
 
 export default RadioScheduleContainer;
