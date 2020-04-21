@@ -67,6 +67,11 @@ describe('Chartbeat utilities', () => {
         expectedShortType: 'Live Radio',
       },
       {
+        type: 'mostRead',
+        expectedDefaultType: 'Most Read',
+        expectedShortType: 'Most Read',
+      },
+      {
         type: null,
         expectedDefaultType: null,
         expectedShortType: null,
@@ -406,6 +411,39 @@ describe('Chartbeat utilities', () => {
         contentType: 'Live Radio',
         uid: 50924,
         virtualReferrer: `\${documentReferrer}`,
+      };
+
+      expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
+    });
+
+    it('should return config for canonical pages when page type is mostRead and env is not live', () => {
+      const fixtureData = {
+        isAmp: false,
+        platform: 'canonical',
+        pageType: 'mostRead',
+        data: {
+          name: 'Most Read Page Title',
+        },
+        brandName: '',
+        chartbeatDomain: 'korean.bbc.co.uk',
+        env: 'test',
+        service: 'korean',
+        origin: 'test.bbc.com',
+        previousPath: '/previous-path',
+      };
+
+      const expectedConfig = {
+        domain: 'test.bbc.co.uk',
+        idSync: {
+          bbc_hid: 'foobar',
+        },
+        path: '/',
+        sections: 'Korean, Korean - Most Read',
+        type: 'Most Read',
+        title: null,
+        uid: 50924,
+        useCanonical: true,
+        virtualReferrer: 'test.bbc.com/previous-path',
       };
 
       expect(getConfig(fixtureData)).toStrictEqual(expectedConfig);
