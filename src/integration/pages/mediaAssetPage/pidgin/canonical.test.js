@@ -6,7 +6,7 @@
 import runCrossPlatformTests from '../crossPlatformTests';
 import runCanonicalTests from '../canonicalTests';
 
-describe(platform.toUpperCase(), () => {
+describe('Canonical', () => {
   describe(pageType, () => {
     runCrossPlatformTests();
     runCanonicalTests();

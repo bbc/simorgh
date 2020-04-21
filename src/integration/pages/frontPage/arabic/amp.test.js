@@ -6,7 +6,7 @@
 import runCrossPlatformTests from '../crossPlatformTests';
 import runAmpTests from '../ampTests';
 
-describe(platform.toUpperCase(), () => {
+describe('AMP', () => {
   describe(pageType, () => {
     runCrossPlatformTests();
     runAmpTests();

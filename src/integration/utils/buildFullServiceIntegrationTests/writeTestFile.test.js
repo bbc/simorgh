@@ -59,7 +59,7 @@ describe('should generate test files from a given test example', () => {
          
          import runCrossPlatformTests from '../../../../pages/liveRadio/crossPlatformTests';
          import runAmpTests from '../../../../pages/liveRadio/ampTests';
-         describe(platform.toUpperCase(), () => {
+         describe('AMP', () => {
            describe(pageType, () => {
              runCrossPlatformTests();
              runAmpTests();
@@ -99,7 +99,7 @@ describe('should generate test files from a given test example', () => {
        
        import runCrossPlatformTests from '../../../../pages/liveRadio/crossPlatformTests';
        import runCanonicalTests from '../../../../pages/liveRadio/canonicalTests';
-       describe(platform.toUpperCase(), () => {
+       describe('Canonical', () => {
          describe(pageType, () => {
            runCrossPlatformTests();
            runCanonicalTests();
@@ -151,7 +151,7 @@ describe('should generate test files from a given test example for services with
          
          import runCrossPlatformTests from "../../../../../pages/articles/crossPlatformTests"
          import runAmpTests from "../../../../../pages/articles/ampTests"
-         describe(platform.toUpperCase(), () => {
+         describe('AMP', () => {
            describe(pageType, () => {
              runCrossPlatformTests();
              runAmpTests();
@@ -191,7 +191,7 @@ describe('should generate test files from a given test example for services with
        
        import runCrossPlatformTests from "../../../../../pages/articles/crossPlatformTests"
        import runCanonicalTests from "../../../../../pages/articles/canonicalTests"
-       describe(platform.toUpperCase(), () => {
+       describe('Canonical', () => {
          describe(pageType, () => {
            runCrossPlatformTests();
            runCanonicalTests();
