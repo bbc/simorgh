@@ -197,6 +197,9 @@ export const service = {
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
     },
+    recommendations: {
+      hasStoryRecommendations: true,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/arabic/institutional-49283069',
