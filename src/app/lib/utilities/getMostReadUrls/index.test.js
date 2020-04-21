@@ -12,7 +12,7 @@ describe('getRadioScheduleEndpoint', () => {
     );
   });
 });
-describe('getLocalRadioScheduleEndpoint', () => {
+describe('getLocalMostReadEndpoint', () => {
   it('should return endpoint when passed service', () => {
     expect(getLocalMostReadEndpoint({ service: 'hausa' })).toBe(
       './data/hausa/mostRead/index.json',
