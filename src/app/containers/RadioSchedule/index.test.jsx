@@ -18,4 +18,24 @@ describe('RadioScheduleData', () => {
       expect(container).toBeEmpty();
     });
   });
+
+  it('does render when radio schedule toggle is enabled', async () => {
+    fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
+    const { container } = render(
+      <RadioSchedulesWithContext service="arabic" radioScheduleToggle />,
+    );
+    await wait(() => {
+      expect(container.querySelectorAll('li').length).toEqual(4);
+    });
+  });
+
+  it('does not render on AMP pages', async () => {
+    fetch.mockResponse(JSON.stringify(arabicRadioScheduleData));
+    const { container } = render(
+      <RadioSchedulesWithContext service="arabic" radioScheduleToggle isAmp />,
+    );
+    await wait(() => {
+      expect(container).toBeEmpty();
+    });
+  });
 });
