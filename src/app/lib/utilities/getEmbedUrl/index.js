@@ -6,6 +6,8 @@ const LIVE_URL = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
 const shouldOverrideMorphEnv = (queryString, type) => {
+  if (isLive()) return false;
+
   const hasQueryString = Boolean(queryString);
   const isLiveRendererEnv =
     hasQueryString && queryString.includes('renderer_env=live');
