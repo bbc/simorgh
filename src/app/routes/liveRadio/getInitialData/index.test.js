@@ -6,7 +6,7 @@ fetch.mockResponse(JSON.stringify(liveRadioJson));
 const { env } = process;
 const spy = jest.spyOn(fetchPageData, 'default');
 
-describe('Get initial data for live data', () => {
+describe('Get initial data for live radio', () => {
   afterEach(() => {
     process.env = { ...env };
     jest.clearAllMocks();
