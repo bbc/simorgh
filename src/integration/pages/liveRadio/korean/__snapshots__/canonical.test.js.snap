@@ -16,7 +16,7 @@ exports[`Canonical Live Radio I can see the summary 1`] = `"세계와 한반도 
 
 exports[`Canonical Live Radio Media player embed A11y I can read the media player title 1`] = `"오디오 플레이어"`;
 
-exports[`Canonical Live Radio Media player embed A11y I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"`;
+exports[`Canonical Live Radio Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"`;
 
 exports[`Canonical Live Radio SEO Canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 

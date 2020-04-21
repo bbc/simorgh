@@ -22,7 +22,7 @@ exports[`AMP Media Asset Page I can see the timestamp 1`] = `"13 September 2019"
 
 exports[`AMP Media Asset Page Media player embed A11y I can read the media player title 1`] = `"Media player"`;
 
-exports[`AMP Media Asset Page Media player embed A11y I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"`;
+exports[`AMP Media Asset Page Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm/amp"`;
 
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 

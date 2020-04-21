@@ -1,6 +1,6 @@
 export default () => {
   describe('Media player embed', () => {
-    it('I can see the audio player embed', () => {
+    it('I can see the media player embed', () => {
       const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
 
       expect(audioPlayerIframe.getAttribute('src')).toMatchSnapshot();
