@@ -118,7 +118,12 @@ export const getConfig = ({
   mostReadTitle,
 }) => {
   const referrer = getReferrer(platform, origin, previousPath);
-  const title = getTitle({ pageType, data, brandName, title: mostReadTitle });
+  const title = getTitle({
+    pageType,
+    pageData: data,
+    brandName,
+    title: mostReadTitle,
+  });
   const domain = env !== 'live' ? 'test.bbc.co.uk' : chartbeatDomain;
   const sectionName = path(['relatedContent', 'section', 'name'], data);
   const categoryName = path(

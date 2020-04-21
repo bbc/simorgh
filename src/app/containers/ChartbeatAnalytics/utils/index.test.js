@@ -204,9 +204,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is an article title');
       articleUtils.getPromoHeadline = mockGetPromoHeadline;
-      expect(getTitle(pageType, pageData, null)).toBe(
-        'This is an article title',
-      );
+      expect(getTitle({ pageType, pageData })).toBe('This is an article title');
       expect(mockGetPromoHeadline).toHaveBeenCalledTimes(1);
     });
 
@@ -219,7 +217,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is a frontpage title');
       frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle(pageType, pageData, brandName)).toBe(
+      expect(getTitle({ pageType, pageData, brandName })).toBe(
         'This is a frontpage title',
       );
       expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
@@ -234,7 +232,7 @@ describe('Chartbeat utilities', () => {
         .fn()
         .mockImplementation(() => 'This is an index page title');
       frontPageUtils.getPageTitle = mockGetPageTitle;
-      expect(getTitle(pageType, pageData, brandName)).toBe(
+      expect(getTitle({ pageType, pageData, brandName })).toBe(
         'This is an index page title',
       );
       expect(mockGetPageTitle).toHaveBeenCalledTimes(1);
@@ -245,7 +243,7 @@ describe('Chartbeat utilities', () => {
       const pageData = {};
       const brandName = 'BBC News';
 
-      expect(getTitle(pageType, pageData, brandName)).toBe(null);
+      expect(getTitle({ pageType, pageData, brandName })).toBe(null);
     });
 
     it('should return correct title when pageType is MAP', () => {
@@ -258,7 +256,7 @@ describe('Chartbeat utilities', () => {
         },
       };
 
-      expect(getTitle(pageType, pageData)).toBe('MAP Page Title');
+      expect(getTitle({ pageType, pageData })).toBe('MAP Page Title');
     });
 
     it('should return correct title when pageType is media (Live radio)', () => {
@@ -267,7 +265,7 @@ describe('Chartbeat utilities', () => {
         pageTitle: 'Live Radio Page Title',
       };
 
-      expect(getTitle(pageType, pageData)).toBe('Live Radio Page Title');
+      expect(getTitle({ pageType, pageData })).toBe('Live Radio Page Title');
     });
 
     it('should return correct title when pageType is media (onDemand radio)', () => {
@@ -276,7 +274,20 @@ describe('Chartbeat utilities', () => {
         pageTitle: 'OnDemand Radio Page Title',
       };
 
-      expect(getTitle(pageType, pageData)).toBe('OnDemand Radio Page Title');
+      expect(getTitle({ pageType, pageData })).toBe(
+        'OnDemand Radio Page Title',
+      );
+    });
+
+    it('should return correct title when pageType is mostRead', () => {
+      const pageType = 'mostRead';
+      const pageData = {};
+      const brandName = 'BBC News 코리아';
+      const title = 'TOP 뉴스';
+
+      expect(getTitle({ pageType, pageData, brandName, title })).toBe(
+        'TOP 뉴스 - BBC News 코리아',
+      );
     });
   });
 
