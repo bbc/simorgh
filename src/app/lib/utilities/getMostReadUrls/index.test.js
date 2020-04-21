@@ -1,6 +1,6 @@
 import { getMostReadEndpoint, getLocalMostReadEndpoint } from '.';
 
-describe('getRadioScheduleEndpoint', () => {
+describe('getMostReadEndpoint', () => {
   it('should return endpoint when passed service', () => {
     expect(getMostReadEndpoint({ service: 'hausa' })).toBe(
       '/hausa/mostread.json',
