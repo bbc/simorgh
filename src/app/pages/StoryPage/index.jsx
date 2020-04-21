@@ -35,6 +35,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
+import Recommendations from '#containers/Recommendations';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
@@ -78,6 +79,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
+    recommendations: props => (
+      <Recommendations {...props} assetUri={assetUri} />
+    ),
     social_embed: props => <SocialEmbed {...props} />,
   };
 
