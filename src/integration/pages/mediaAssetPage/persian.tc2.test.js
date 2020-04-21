@@ -35,7 +35,7 @@ describe('Given I am on a Persian TC2 AMP Media Asset Page', () => {
 
   describe('When I am using assistive technology', () => {
     runAmpA11yTests({
-      mediaPlayerTitle: 'Media player',
+      mediaPlayerTitle: 'پخش صدا و تصویر',
     });
   });
 });
@@ -58,7 +58,7 @@ describe('Given I am on a Persian TC2 Canonical Media Asset Page', () => {
 
   describe('When I am using assistive technology', () => {
     runCanonicalA11yTests({
-      mediaPlayerTitle: 'Media player',
+      mediaPlayerTitle: 'پخش صدا و تصویر',
     });
   });
 });
