@@ -44,27 +44,44 @@ const getUrls = () => {
   Object.keys(services)
     .filter((service) => service === 'persian')
     .forEach((service) => {
-      urlsToValidate[service] = [];
       Object.keys(services[service].pageTypes)
         .filter((pageType) => !pageType.startsWith('error'))
         .forEach((pageType) => {
           const paths = getPaths(service, pageType);
           const urls = paths.map((path) => `http://localhost:7080${path}`);
 
-          urlsToValidate[service] = [urlsToValidate[service], urls].flat();
+          urlsToValidate[service] = {
+            ...urlsToValidate[service],
+            [pageType]: urls,
+          };
         });
     });
+
   return urlsToValidate;
 };
 
 const checkStructuredData = async (urls) => {
-  const urlsToValidate = Object.values(urls).flat();
+  const urlsForService = Object.values(urls).flat();
 
-  return Promise.all(urlsToValidate.map((url) => validate(url)))
+  const validations = urlsForService.map((serviceUrl) => {
+    const results = [];
+    Object.entries(serviceUrl).forEach((entry) => {
+      const pageType = entry[0];
+      const pageTypeUrls = entry[1];
+      pageTypeUrls.forEach(async (url) => {
+        results.push(validate(url, pageType));
+      });
+    });
+    return results;
+  });
+
+  const overallResult = Promise.all(validations.flat())
     .then((results) => {
       return results;
     })
     .catch((error) => console.error(error));
+
+  return overallResult;
 };
 
 const printResults = (results) => {
