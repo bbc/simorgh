@@ -82,7 +82,7 @@ const printStatistics = results => {
     `${overallResults.schemas.join(', ') || 0}`,
   );
 
-  console.log(` Pass/Fail tests run:`, `${totalTests}`);
+  console.log(` Total tests run:`, `${totalTests}`);
   console.log('');
 
   console.log(bold(`Results\n`));
@@ -91,7 +91,7 @@ const printStatistics = results => {
     `      Passed:`,
     `\t${overallResults.passed.length}`,
     `\t(${
-      Math.floor((overallResults.passed.length / totalTests) * 100) || 0
+      ((overallResults.passed.length / totalTests) * 100).toFixed(2) || 0
     }%)`,
   );
 
@@ -99,7 +99,7 @@ const printStatistics = results => {
     `      Failed:`,
     `\t${overallResults.failed.length}`,
     `\t(${
-      Math.floor((overallResults.failed.length / totalTests) * 100) || 0
+      ((overallResults.failed.length / totalTests) * 100).toFixed(2) || 0
     }%)`,
   );
   console.log('');
