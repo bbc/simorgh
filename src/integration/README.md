@@ -161,10 +161,6 @@ You might then think it makes sense to only write integration tests but there ar
 
 [Jest](https://jestjs.io/en/) is a JavaScript library for creating, running, and structuring tests. We use Jest for our unit and integration tests.
 
-## What is DOM Testing Library?
-
-[DOM Testing Library](https://github.com/testing-library/dom-testing-library) provides testing utilities that encourage good testing practices. It provides methods to query the DOM for nodes in a way that's similar to how the user finds elements on the page. All queries available can be found [here](https://testing-library.com/docs/dom-testing-library/api-queries).
-
 ## What is a docblock pragma?
 
 A docblock pragma is a specially-formatted comment at the top of a test file. We can use docblock pragmas to alter the environment that tests run in.
