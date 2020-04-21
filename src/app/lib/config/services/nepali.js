@@ -235,7 +235,7 @@ export const service = {
         url: '/nepali',
       },
       {
-        title: 'कोरोनाभाइरसको',
+        title: 'कोरोनाभाइरस',
         url: '/nepali/news-51941128',
       },
       {

@@ -233,6 +233,10 @@ export const service = {
         url: '/ukrainian',
       },
       {
+        title: 'Коронавірус',
+        url: '/ukrainian/52118881',
+      },
+      {
         title: 'Наука',
         url: '/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
       },
