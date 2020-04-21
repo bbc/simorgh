@@ -186,6 +186,9 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/gahuza/institutional-49283343',

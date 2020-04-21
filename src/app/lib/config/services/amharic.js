@@ -179,6 +179,9 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/amharic/institutional-49283133',

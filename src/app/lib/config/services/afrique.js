@@ -203,6 +203,9 @@ export const service = {
       frequenciesPageLabel: 'Nos fréquences',
       header: 'Journaux et Magazines',
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/afrique/institutionelles-49283281',
