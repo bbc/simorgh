@@ -536,7 +536,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                   <a href="/persian/science-52004647"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
-                    ویروس کرونا
+                    کرونا
                   </a>
                 </li>
                 <li role="listitem"
@@ -641,15 +641,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/persian/interactivity"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    شما
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
                   <a href="/persian/blogs/viewpoints"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
@@ -672,15 +663,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
                     وبلاگ‌ها
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
-                  <a href="/persian/learningenglish"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    آموزش زبان انگلیسی
                   </a>
                 </li>
               </ul>
@@ -709,7 +691,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                   <a href="/persian/science-52004647"
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
-                    ویروس کرونا
+                    کرونا
                   </a>
                 </li>
                 <li dir="rtl"
@@ -826,16 +808,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                     role="listitem"
                     class="StyledListItem-sc-158x7z5-3 bmJgVu"
                 >
-                  <a href="/persian/interactivity"
-                     class="StyledLink-sc-158x7z5-2 gFuYXv"
-                  >
-                    شما
-                  </a>
-                </li>
-                <li dir="rtl"
-                    role="listitem"
-                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                >
                   <a href="/persian/blogs/viewpoints"
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
@@ -860,16 +832,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                      class="StyledLink-sc-158x7z5-2 gFuYXv"
                   >
                     وبلاگ‌ها
-                  </a>
-                </li>
-                <li dir="rtl"
-                    role="listitem"
-                    class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                >
-                  <a href="/persian/learningenglish"
-                     class="StyledLink-sc-158x7z5-2 gFuYXv"
-                  >
-                    آموزش زبان انگلیسی
                   </a>
                 </li>
               </ul>
@@ -1471,7 +1433,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                     <a href="/persian/science-52004647"
                        class="StyledLink-sc-158x7z5-2 gFuYXv"
                     >
-                      ویروس کرونا
+                      کرونا
                     </a>
                   </li>
                   <li dir="rtl"
@@ -1588,16 +1550,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                       role="listitem"
                       class="StyledListItem-sc-158x7z5-3 bmJgVu"
                   >
-                    <a href="/persian/interactivity"
-                       class="StyledLink-sc-158x7z5-2 gFuYXv"
-                    >
-                      شما
-                    </a>
-                  </li>
-                  <li dir="rtl"
-                      role="listitem"
-                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                  >
                     <a href="/persian/blogs/viewpoints"
                        class="StyledLink-sc-158x7z5-2 gFuYXv"
                     >
@@ -1624,16 +1576,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                       وبلاگ‌ها
                     </a>
                   </li>
-                  <li dir="rtl"
-                      role="listitem"
-                      class="StyledListItem-sc-158x7z5-3 bmJgVu"
-                  >
-                    <a href="/persian/learningenglish"
-                       class="StyledLink-sc-158x7z5-2 gFuYXv"
-                    >
-                      آموزش زبان انگلیسی
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -1658,7 +1600,7 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                   <a href="/persian/science-52004647"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
-                    ویروس کرونا
+                    کرونا
                   </a>
                 </li>
                 <li role="listitem"
@@ -1763,15 +1705,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                 <li role="listitem"
                     class="StyledDropdownLi-ukxuly-3 dIsymM"
                 >
-                  <a href="/persian/interactivity"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    شما
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
                   <a href="/persian/blogs/viewpoints"
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
@@ -1794,15 +1727,6 @@ exports[`Given I am on a Persian Media Asset Page When I view the source code in
                      class="StyledDropdownLink-ukxuly-4 jgeItz"
                   >
                     وبلاگ‌ها
-                  </a>
-                </li>
-                <li role="listitem"
-                    class="StyledDropdownLi-ukxuly-3 dIsymM"
-                >
-                  <a href="/persian/learningenglish"
-                     class="StyledDropdownLink-ukxuly-4 jgeItz"
-                  >
-                    آموزش زبان انگلیسی
                   </a>
                 </li>
               </ul>
