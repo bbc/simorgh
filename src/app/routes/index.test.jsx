@@ -117,7 +117,10 @@ it('should route to and render a front page', async () => {
   fetch.mockResponse(JSON.stringify(frontPageJson));
   const pathname = '/pidgin';
   const { getInitialData, pageType } = getMatchingRoute(pathname);
-  const { pageData } = await getInitialData({ path: pathname });
+  const { pageData } = await getInitialData({
+    path: pathname,
+    service: 'pidgin',
+  });
   const { getByText } = renderRouter({
     pathname,
     pageData,

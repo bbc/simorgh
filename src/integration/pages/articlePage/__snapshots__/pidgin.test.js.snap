@@ -1820,7 +1820,7 @@ exports[`Given I am on a Pidgin Article page When I view the source code in the 
             crossorigin="anonymous"
             defer
     >
-      [27]
+      [25]
     </script>
     <script async
             data-chunk="main"
