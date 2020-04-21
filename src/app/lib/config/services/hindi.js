@@ -193,6 +193,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: true,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/hindi/institutional-50223932',
@@ -241,6 +244,10 @@ export const service = {
         url: '/hindi',
       },
       {
+        title: 'कोरोनावायरस',
+        url: '/hindi/international-51848794',
+      },
+      {
         title: 'भारत',
         url: '/hindi/india',
       },
@@ -271,10 +278,6 @@ export const service = {
       {
         title: 'बीबीसी स्पेशल',
         url: '/hindi/in_depth',
-      },
-      {
-        title: '#ISWOTY',
-        url: '/hindi/resources/idt-a6da5349-3698-4f42-9e5b-35513c8c0537',
       },
     ],
   },

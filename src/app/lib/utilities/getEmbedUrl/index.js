@@ -5,24 +5,28 @@ const AV_ROUTE = 'ws/av-embeds';
 const LIVE_URL = 'https://polling.bbc.co.uk';
 const TEST_URL = 'https://polling.test.bbc.co.uk';
 
-const shouldRenderLiveData = queryString => {
-  if (isLive()) {
+const shouldOverrideMorphEnv = (queryString, type) => {
+  if (isLive()) return false;
+
+  const hasQueryString = Boolean(queryString);
+  const isLiveRendererEnv =
+    hasQueryString && queryString.includes('renderer_env=live');
+  const isMediaType = type === 'media';
+
+  if (isLiveRendererEnv) {
     return true;
   }
 
-  return Boolean(queryString) && queryString.includes('renderer_env=live');
-};
-
-const getBaseUrl = queryString => {
-  if (shouldRenderLiveData(queryString)) {
-    return LIVE_URL;
-  }
-  return TEST_URL;
+  return isMediaType;
 };
 
 export default ({ type, mediaId, isAmp = false, queryString }) => {
-  const baseUrl = getBaseUrl(queryString);
+  const morphEnvOverride = shouldOverrideMorphEnv(queryString, type)
+    ? '?morph_env=live'
+    : '';
+  const ampSection = isAmp ? '/amp' : '';
+  const baseUrl = isLive() ? LIVE_URL : TEST_URL;
   const url = `${baseUrl}/${AV_ROUTE}/${type}/${mediaId}`;
 
-  return isAmp ? `${url}/amp` : url;
+  return `${url}${ampSection}${morphEnvOverride}`;
 };
