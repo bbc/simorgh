@@ -1,15 +1,166 @@
-import getInitialData from '.';
-import frontPageJson from '#data/pidgin/frontpage/index.json';
+import fetchMock from 'fetch-mock';
+import getInitialData, { hasRadioSchedule } from '.';
+import frontPageJson from '#data/hausa/frontpage/index.json';
+import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
+import getConfig from '../../utils/getConfig';
 
-fetch.mockResponse(JSON.stringify(frontPageJson));
+jest.mock('../../utils/getConfig', () => jest.fn());
 
-it('should return essential data for a page to render', async () => {
-  const { pageData } = await getInitialData({ path: 'mock-frontpage-path' });
+describe('Get initial data from front page', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_BASE_URL = 'http://localhost';
+    fetchMock.restore();
+  });
 
-  expect(pageData.metadata.language).toEqual('pcm');
-  expect(pageData.metadata.summary).toEqual(
-    'We dey give una latest tori on top politics, environment, business, sports, entertainment, health, fashion and all di oda things wey dey happen for West and Central Africa come add di rest of di world join. For better informate plus explanation of all di ogbonge tori wey pipo never hear about for inside West and Central Africa, BBC Pidgin dey serve am with video, audio, maps and oda graphics join.',
-  );
-  expect(pageData.promo.name).toEqual('Domot');
-  expect(pageData.content.groups.length).toBeTruthy();
+  it('should return data for a page without radio schedules to render', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: false,
+        onFrontPage: false,
+      },
+    }));
+
+    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    const { pageData } = await getInitialData({
+      path: 'mock-frontpage-path',
+      service: 'hausa',
+    });
+
+    expect(pageData.metadata.language).toEqual('ha');
+    expect(pageData.metadata.summary).toEqual(
+      'Ziyarci shafin BBC Hausa domin samun rahotannin bidiyo da hotuna kan labarun Najeriya da Nijar da ma sauran sassan duniya baki daya.',
+    );
+    expect(pageData.promo.name).toEqual('Labaran Duniya');
+    expect(pageData.content.groups.length).toBeTruthy();
+  });
+
+  it('should return data to render a front page with radio schedules', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: true,
+        onFrontPage: true,
+      },
+    }));
+
+    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      radioScheduleJson,
+    );
+    const { pageData } = await getInitialData({
+      path: 'mock-frontpage-path',
+      service: 'hausa',
+    });
+
+    expect(pageData.metadata.language).toEqual('ha');
+    expect(pageData.metadata.summary).toEqual(
+      'Ziyarci shafin BBC Hausa domin samun rahotannin bidiyo da hotuna kan labarun Najeriya da Nijar da ma sauran sassan duniya baki daya.',
+    );
+    expect(pageData.promo.name).toEqual('Labaran Duniya');
+    expect(pageData.content.groups.length).toBeTruthy();
+
+    expect(pageData.radioScheduleData.length).toBe(4);
+  });
+
+  it('should return data for service with radio schedules, but without radio schedules on front page', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: true,
+        onFrontPage: false,
+      },
+    }));
+
+    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      radioScheduleJson,
+    );
+    const { pageData } = await getInitialData({
+      path: 'mock-frontpage-path',
+      service: 'hausa',
+    });
+
+    expect(pageData.metadata.language).toEqual('ha');
+    expect(pageData.metadata.summary).toEqual(
+      'Ziyarci shafin BBC Hausa domin samun rahotannin bidiyo da hotuna kan labarun Najeriya da Nijar da ma sauran sassan duniya baki daya.',
+    );
+    expect(pageData.promo.name).toEqual('Labaran Duniya');
+    expect(pageData.content.groups.length).toBeTruthy();
+
+    expect(pageData.radioScheduleData).not.toBeTruthy();
+  });
+
+  it('should return page data for misconfigured service without radio schedules, but with radio schedules on front page', async () => {
+    getConfig.mockImplementationOnce(() => ({
+      radioSchedule: {
+        hasRadioSchedule: false,
+        onFrontPage: true,
+      },
+    }));
+
+    fetchMock.mock('http://localhost/mock-frontpage-path.json', frontPageJson);
+    fetchMock.mock(
+      'http://localhost/hausa/bbc_hausa_radio/schedule.json',
+      radioScheduleJson,
+    );
+    const { pageData } = await getInitialData({
+      path: 'mock-frontpage-path',
+      service: 'hausa',
+    });
+
+    expect(pageData.metadata.language).toEqual('ha');
+    expect(pageData.metadata.summary).toEqual(
+      'Ziyarci shafin BBC Hausa domin samun rahotannin bidiyo da hotuna kan labarun Najeriya da Nijar da ma sauran sassan duniya baki daya.',
+    );
+    expect(pageData.promo.name).toEqual('Labaran Duniya');
+    expect(pageData.content.groups.length).toBeTruthy();
+
+    expect(pageData.radioScheduleData).not.toBeTruthy();
+  });
+
+  describe('hasRadioSchedule', () => {
+    it('returns true if service and front page has radio schedule', async () => {
+      getConfig.mockImplementationOnce(() => ({
+        radioSchedule: {
+          hasRadioSchedule: true,
+          onFrontPage: true,
+        },
+      }));
+
+      expect(await hasRadioSchedule('mock-service')).toBe(true);
+    });
+
+    it('returns false if service has radio schedule but front page does not', async () => {
+      getConfig.mockImplementationOnce(() => ({
+        radioSchedule: {
+          hasRadioSchedule: true,
+          onFrontPage: false,
+        },
+      }));
+
+      expect(await hasRadioSchedule('mock-service')).toBe(false);
+    });
+
+    it('returns false if neither service or front page has radio schedule', async () => {
+      getConfig.mockImplementationOnce(() => ({
+        radioSchedule: {
+          hasRadioSchedule: false,
+          onFrontPage: false,
+        },
+      }));
+
+      expect(await hasRadioSchedule('mock-service')).toBe(false);
+    });
+
+    it('returns false if neither service is misconfigured to not have radio schedule, but service has', async () => {
+      getConfig.mockImplementationOnce(() => ({
+        radioSchedule: {
+          hasRadioSchedule: false,
+          onFrontPage: true,
+        },
+      }));
+
+      expect(await hasRadioSchedule('mock-service')).toBe(false);
+    });
+  });
 });
