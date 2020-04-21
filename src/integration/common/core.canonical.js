@@ -31,13 +31,4 @@ export default () => {
 
     expect(serviceScripts.length).toBe(1);
   });
-
-  // it('Page data used for client side app hydration', () => {
-  //   const simorghDataScriptEl = Array.from(
-  //     document.querySelectorAll('script'),
-  //   ).find((script) => script.textContent.startsWith('window.SIMORGH_DATA'));
-
-  //   expect(simorghDataScriptEl).toBeInTheDocument();
-  //   expect(simorghDataScriptEl).toMatchSnapshot();
-  // });
 };
