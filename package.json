@@ -25,7 +25,7 @@
     "start": "NODE_ENV=production node build/server.js",
     "storybook": "start-storybook -p 9001 -s .storybook/static -c .storybook",
     "test": "npm run test:lint && npm run test:dependencies && npm run test:unit && npm run build -- --hide-modules --colors && run-p --race start amp:validate && run-p --race start test:integration:ci",
-    "test:ci": "npm run start & npm install --no-save cypress@3.4.1 bbc-a11y@latest npm-run-all@latest puppeteer@latest audit-ci@latest && npm run test:integration:ci && run-p cypress:ci test:puppeteer && run-p bbcA11y:ci lighthouse && audit-ci --low",
+    "test:ci": "npm run start & npm install --no-save cypress@4.4.0 bbc-a11y@latest npm-run-all@latest puppeteer@latest audit-ci@latest && npm run test:integration:ci && run-p cypress:ci test:puppeteer && run-p bbcA11y:ci lighthouse && audit-ci --low",
     "test:dependencies": "node ./scripts/dependencyCheck",
     "test:e2e": "./scripts/killApp.sh && npm run build && run-p --race start cypress",
     "test:e2e:interactive": "./scripts/killApp.sh && npm run build && run-p --race start cypress:interactive",
