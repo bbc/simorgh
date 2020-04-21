@@ -34,7 +34,7 @@
     "test:puppeteer": "jest --ci --env=jsdom --colors ./puppeteer",
     "test:structured-data": "npm run stop && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && node ./scripts/structuredData/index.js -i",
     "test:structured-data:ci": "node ./scripts/structuredData/index.js",
-    "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"structuredData\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" \"structuredData\"",
+    "test:unit": "test -z $CI && jest --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\" || jest --ci --runInBand --env=jsdom --coverage --colors --testPathIgnorePatterns=\"src/integration\" \"puppeteer\"",
     "test:unit:watch": "npm run test:unit -- --watch",
     "test:integration:ci": "jest --ci --runInBand --colors ./src/integration/pages/**/*.test.js",
     "test:integration": "./scripts/killApp.sh && npm run build:local && (npm run start & wait-on -t 20000 http://localhost:7080/status) && jest --runInBand --colors ./src/integration/pages/**/*.test.js",
