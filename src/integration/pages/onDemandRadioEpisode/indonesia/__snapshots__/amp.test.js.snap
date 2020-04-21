@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP On Demand Radio Episode A11y I can see the skip to content link 1`] = `"Langsung ke konten"`;
+
+exports[`AMP On Demand Radio Episode AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Episode AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Episode Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=54&p=indonesian.bbc_indonesian_radio.w172x6r5000f38s.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172x6r5000f38s]&x2=[amp]&x3=[news-indonesia]&x4=[id]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[Dunia+Pagi+Ini+-+BBC+News+Indonesia]",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
+
+exports[`AMP On Demand Radio Episode Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`AMP On Demand Radio Episode Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+
+exports[`AMP On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
+
+exports[`AMP On Demand Radio Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
+
+exports[`AMP On Demand Radio Episode I can see the episode summary 1`] = `"05/03/2020 GMT"`;
+
+exports[`AMP On Demand Radio Episode I can see the episode title 1`] = `"05/03/2020 GMT"`;
+
+exports[`AMP On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Pemutar Audio"`;
+
+exports[`AMP On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172x6r5000f38s/id/amp?morph_env=live"`;
+
+exports[`AMP On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+
+exports[`AMP On Demand Radio Episode SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`AMP On Demand Radio Episode SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`AMP On Demand Radio Episode SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`AMP On Demand Radio Episode SEO Heading level 1 1`] = `"Dunia Pagi Ini"`;
+
+exports[`AMP On Demand Radio Episode SEO Lang attribute 1`] = `"id"`;
+
+exports[`AMP On Demand Radio Episode SEO OG description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`AMP On Demand Radio Episode SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+
+exports[`AMP On Demand Radio Episode SEO OG image alt 1`] = `"BBC News Indonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO OG locale 1`] = `"id-ID"`;
+
+exports[`AMP On Demand Radio Episode SEO OG site name 1`] = `"BBC News Indonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO OG title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO OG type 1`] = `"website"`;
+
+exports[`AMP On Demand Radio Episode SEO OG url 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+
+exports[`AMP On Demand Radio Episode SEO Page title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter creator 1`] = `"@bbcindonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter image alt 1`] = `"BBC News Indonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter site 1`] = `"@bbcindonesia"`;
+
+exports[`AMP On Demand Radio Episode SEO Twitter title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;

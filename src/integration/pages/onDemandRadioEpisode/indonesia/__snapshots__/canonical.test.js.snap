@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical On Demand Radio Episode A11y I can see the skip to content link 1`] = `"Langsung ke konten"`;
+
+exports[`Canonical On Demand Radio Episode Analytics ATI 1`] = `"https://logws1363.ati-host.net?s=598343&s2=54&p=indonesian.bbc_indonesian_radio.w172x6r5000f38s.page&x1=[urn:bbc:pips:w172x6r5000f38s]&x2=[responsive]&x3=[news-indonesia]&x4=[id]&x7=[player-episode]&x8=[simorgh-nojs]&x9=[Dunia+Pagi+Ini+-+BBC+News+Indonesia]"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Radio Episode Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
+
+exports[`Canonical On Demand Radio Episode Header I can see the branding 1`] = `"BBC News, Indonesia"`;
+
+exports[`Canonical On Demand Radio Episode I can see the brand title 1`] = `"Dunia Pagi Ini"`;
+
+exports[`Canonical On Demand Radio Episode I can see the episode summary 1`] = `"05/03/2020 GMT"`;
+
+exports[`Canonical On Demand Radio Episode I can see the episode title 1`] = `"05/03/2020 GMT"`;
+
+exports[`Canonical On Demand Radio Episode Media player embed A11y I can read the media player title 1`] = `"Pemutar Audio"`;
+
+exports[`Canonical On Demand Radio Episode Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/indonesia/bbc_indonesian_radio/w172x6r5000f38s/id?morph_env=live"`;
+
+exports[`Canonical On Demand Radio Episode SEO Canonical link 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+
+exports[`Canonical On Demand Radio Episode SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical On Demand Radio Episode SEO FB admins 1`] = `"100004154058350"`;
+
+exports[`Canonical On Demand Radio Episode SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical On Demand Radio Episode SEO Heading level 1 1`] = `"Dunia Pagi Ini"`;
+
+exports[`Canonical On Demand Radio Episode SEO Lang attribute 1`] = `"id"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`Canonical On Demand Radio Episode SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG image alt 1`] = `"BBC News Indonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG locale 1`] = `"id-ID"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG site name 1`] = `"BBC News Indonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG type 1`] = `"website"`;
+
+exports[`Canonical On Demand Radio Episode SEO OG url 1`] = `"http://localhost:7080/indonesia/bbc_indonesian_radio/w172x6r5000f38s"`;
+
+exports[`Canonical On Demand Radio Episode SEO Page title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO Robots meta tag 1`] = `"noodp,noydir"`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter creator 1`] = `"@bbcindonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter image alt 1`] = `"BBC News Indonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter site 1`] = `"@bbcindonesia"`;
+
+exports[`Canonical On Demand Radio Episode SEO Twitter title 1`] = `"Dunia Pagi Ini - BBC News Indonesia"`;
