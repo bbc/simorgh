@@ -61,28 +61,5 @@ module.exports = {
         '^.+\\.jsx$': 'babel-jest',
       },
     },
-    {
-      displayName: 'Structured Data Tests',
-      reporters: [
-        'default',
-        [
-          'jest-junit',
-          {
-            suiteName: 'Structured Data Tests',
-            outputDirectory: 'reports/jest',
-            uniqueOutputName: 'true',
-            ancestorSeparator: ' › ',
-          },
-        ],
-      ],
-      setupFiles: ['./src/testHelpers/jest-setup.js'],
-      testMatch: ['**/scripts/structuredData/index.js'],
-      setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
-      moduleNameMapper: jestDirAlias,
-      transform: {
-        '^.+\\.js$': 'babel-jest',
-        '^.+\\.jsx$': 'babel-jest',
-      },
-    },
   ],
 };
