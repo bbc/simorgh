@@ -91,6 +91,8 @@ export const getTitle = (pageType, pageData, brandName) => {
       return path(['promo', 'headlines', 'headline'], pageData);
     case 'media':
       return path(['pageTitle'], pageData);
+    case 'mostRead':
+      return 'Most Read Page';
     default:
       return null;
   }

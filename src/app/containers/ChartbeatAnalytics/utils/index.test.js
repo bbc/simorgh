@@ -448,7 +448,7 @@ describe('Chartbeat utilities', () => {
         path: '/',
         sections: 'Korean, Korean - Most Read',
         type: 'Most Read',
-        title: null,
+        title: 'Most Read Page',
         uid: 50924,
         useCanonical: true,
         virtualReferrer: 'test.bbc.com/previous-path',
