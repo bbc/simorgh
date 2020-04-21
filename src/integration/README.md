@@ -208,7 +208,7 @@ it('I can see the headline', () => {
   expect(h1El).toBeInTheDocument(); // check the headline element is in the document
   expect(h1El.getAttribute('id')).toBe('content'); // check for the id attribute
   expect(h1El.getAttribute('tabindex')).toBe('-1'); // check for the tabindex attribute
-  expect(h1El).toBeTruthy(); // check there is some text inside the element
+  expect(h1El.textContent).toBeTruthy(); // check there is some text inside the element
   expect(h1El.textContent).toMatchSnapshot(); // snapshot the value so that we have a baseline to fail the test if it ever unexpectedly changes
 });
 ```
