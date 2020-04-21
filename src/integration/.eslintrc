@@ -1,6 +1,5 @@
 {
   "globals": {
-    "platform": true,
     "pageType": true
   }
 }
