@@ -167,7 +167,7 @@ A docblock pragma is a specially-formatted comment at the top of a test file. We
 
 ## What is a snapshot?
 
-This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of a result that is typically returned from a function. This could even be HTML returned from DOM query selector e.g.
+This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of a result that is typically returned from a function. This is often the HTML returned from DOM query selector e.g.
 
 ```js
 it('should render the headline', () => {
