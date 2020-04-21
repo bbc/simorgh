@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { AMP_ACCESS_JS } from '@bbc/psammead-assets/amp-boilerplate';
+import {
+  AMP_ACCESS_JS,
+  AMP_ADS_JS,
+} from '@bbc/psammead-assets/amp-boilerplate';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -83,6 +86,7 @@ const AmpAd = ({ service }) => {
   return (
     <>
       <Helmet>
+        {AMP_ADS_JS}
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>

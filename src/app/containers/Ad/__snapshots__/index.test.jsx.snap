@@ -24,6 +24,11 @@ exports[`Ad Container Snapshots should correctly render an AMP ad 1`] = `
   <head>
     <script
       async="true"
+      custom-element="amp-ad"
+      src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+    />
+    <script
+      async="true"
       custom-element="amp-access"
       src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
     />

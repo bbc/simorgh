@@ -587,7 +587,7 @@ exports[`Given I am on the Korean Live Radio page When I view the source code in
       </amp-analytics>
       <amp-analytics type="chartbeat">
         <script type="application/json">
-          {"vars":{"domain":"test.bbc.co.uk","sections":"Korean, Korean - , Korean - unknown, Korean - unknown, Korean - unknown","uid":50924,"title":"BBC 코리아 라디오","virtualReferrer":"\${documentReferrer}","contentType":"Live Radio"}}
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Korean, Korean - Radio","uid":50924,"title":"BBC 코리아 라디오 - BBC News 코리아","virtualReferrer":"\${documentReferrer}","contentType":"player-live"}}
         </script>
       </amp-analytics>
       <main role="main"

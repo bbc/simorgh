@@ -193,6 +193,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: true,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/hindi/institutional-50223932',

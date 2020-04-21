@@ -12,7 +12,7 @@ import withContext from '../../../contexts/utils/withContext';
 export const service = {
   default: {
     ads: {
-      hasAds: arabic,
+      hasAds: false,
     },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -196,6 +196,9 @@ export const service = {
         '/arabic/institutional/2011/01/000000_frequencies_radio',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
+    },
+    recommendations: {
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {
