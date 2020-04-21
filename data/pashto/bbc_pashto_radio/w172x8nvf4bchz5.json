@@ -36,7 +36,12 @@
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02y4nl0.jpg",
         "embedding": false,
         "advertising": false,
-        "versions": [],
+        "versions": [
+          {
+            "availableUntil": 9999999999999,
+            "availableFrom": 1583496180000
+          }
+        ],
         "imageCopyright": null
       }
     ]
