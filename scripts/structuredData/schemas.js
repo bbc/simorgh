@@ -15,13 +15,13 @@ const getSchemas = jsonData => {
       return ['Article', getSchemaForMedia(jsonData)];
     case 'PGL':
       return ['Article'];
-    case 'WS-LIVE':
+    case 'WS-LIVE': // Live Radio
       return ['RadioChannel'];
     case 'IDX':
       return ['WebPage'];
     case 'article':
       return ['Article'];
-    case 'WSRADIO':
+    case 'WSRADIO': // On Demand Radio
       return [];
     default:
       return [];
