@@ -8,13 +8,13 @@ exports[`Canonical Live Radio Footer I can see the footer copyright and external
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
-exports[`Canonical Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"`;
+exports[`Canonical Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live"`;
 
 exports[`Canonical Live Radio I can see the headline 1`] = `"ያድምጡ"`;
 
 exports[`Canonical Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;
 
-exports[`Canonical Live Radio Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am"`;
+exports[`Canonical Live Radio Media player A11y I can read the media player title 1`] = `"Audio player"`;
 
 exports[`Canonical Live Radio SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
 
@@ -28,7 +28,36 @@ exports[`Canonical Live Radio SEO Heading level 1 1`] = `"ያድምጡ"`;
 
 exports[`Canonical Live Radio SEO Lang attribute 1`] = `"am"`;
 
-exports[`Canonical Live Radio SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"RadioChannel\\",\\"url\\":\\"http://localhost:7080/amharic/bbc_amharic_radio/liveradio\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News አማርኛ\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/amharic/institutional-49283133\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/amharic/bbc_amharic_radio/liveradio\\",\\"name\\":\\"ያድምጡ\\"}}"`;
+exports[`Canonical Live Radio SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "RadioChannel",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/amharic/bbc_amharic_radio/liveradio",
+    "@type": "WebPage",
+    "name": "ያድምጡ",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png",
+      "width": 1024,
+    },
+    "name": "BBC News አማርኛ",
+    "publishingPrinciples": "https://www.bbc.com/amharic/institutional-49283133",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png",
+  "url": "http://localhost:7080/amharic/bbc_amharic_radio/liveradio",
+}
+`;
 
 exports[`Canonical Live Radio SEO OG description 1`] = `"ዝግጅቶቻችንን’"`;
 

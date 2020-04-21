@@ -16,7 +16,7 @@ exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline
 
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
 
-exports[`AMP Media Asset Page Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
+exports[`AMP Media Asset Page Media player A11y I can read the media player title 1`] = `"Media player"`;
 
 exports[`AMP Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/persian/iran-23231114"`;
 
@@ -30,7 +30,50 @@ exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"Trump long headline"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
-exports[`AMP Media Asset Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"Article\\",\\"url\\":\\"http://localhost:7080/persian/iran-23231114\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News فارسی\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/persian/institutional-49283091\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/persian/iran-23231114\\",\\"name\\":\\"Trump long headline\\"},\\"headline\\":\\"Trump long headline\\",\\"datePublished\\":\\"2019-02-15T12:47:51.000Z\\",\\"dateModified\\":\\"2019-02-15T12:47:54.000Z\\",\\"author\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News فارسی\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png\\"},\\"noBylinesPolicy\\":\\"https://www.bbc.com/persian/institutional-49283091#authorexpertise\\"}}"`;
+exports[`AMP Media Asset Page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "width": 1024,
+    },
+    "name": "BBC News فارسی",
+    "noBylinesPolicy": "https://www.bbc.com/persian/institutional-49283091#authorexpertise",
+  },
+  "dateModified": "2019-02-15T12:47:54.000Z",
+  "datePublished": "2019-02-15T12:47:51.000Z",
+  "headline": "Trump long headline",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/persian/iran-23231114",
+    "@type": "WebPage",
+    "name": "Trump long headline",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "width": 1024,
+    },
+    "name": "BBC News فارسی",
+    "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+  "url": "http://localhost:7080/persian/iran-23231114",
+}
+`;
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
 

@@ -8,13 +8,13 @@ exports[`Canonical Live Radio Footer I can see the footer copyright and external
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, 코리아"`;
 
-exports[`Canonical Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"`;
+exports[`Canonical Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko?morph_env=live"`;
 
 exports[`Canonical Live Radio I can see the headline 1`] = `"BBC 코리아 라디오"`;
 
 exports[`Canonical Live Radio I can see the summary 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
 
-exports[`Canonical Live Radio Media player A11y I can read the media player title 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"`;
+exports[`Canonical Live Radio Media player A11y I can read the media player title 1`] = `"오디오 플레이어"`;
 
 exports[`Canonical Live Radio SEO Canonical link 1`] = `"http://localhost:7080/korean/bbc_korean_radio/liveradio"`;
 
@@ -28,7 +28,36 @@ exports[`Canonical Live Radio SEO Heading level 1 1`] = `"BBC 코리아 라디�
 
 exports[`Canonical Live Radio SEO Lang attribute 1`] = `"ko"`;
 
-exports[`Canonical Live Radio SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"RadioChannel\\",\\"url\\":\\"http://localhost:7080/korean/bbc_korean_radio/liveradio\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News 코리아\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/korean/institutional-49283197\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/korean.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/korean/bbc_korean_radio/liveradio\\",\\"name\\":\\"BBC 코리아 라디오\\"}}"`;
+exports[`Canonical Live Radio SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "RadioChannel",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
+    "@type": "WebPage",
+    "name": "BBC 코리아 라디오",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+      "width": 1024,
+    },
+    "name": "BBC News 코리아",
+    "publishingPrinciples": "https://www.bbc.com/korean/institutional-49283197",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+  "url": "http://localhost:7080/korean/bbc_korean_radio/liveradio",
+}
+`;
 
 exports[`Canonical Live Radio SEO OG description 1`] = `"세계와 한반도 뉴스를 공정하고 객관적으로 전달해 드립니다"`;
 
