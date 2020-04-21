@@ -18,7 +18,9 @@ exports[`Canonical Media Asset Page I can see the related content 1`] = `"Police
 
 exports[`Canonical Media Asset Page I can see the timestamp 1`] = `"13 September 2019"`;
 
-exports[`Canonical Media Asset Page Media player A11y I can read the media player title 1`] = `"Media player"`;
+exports[`Canonical Media Asset Page Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+
+exports[`Canonical Media Asset Page Media player embed A11y I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"`;
 
 exports[`Canonical Media Asset Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/23248703"`;
 

@@ -1,8 +1,11 @@
-import { runCommonCrossPlatformTests, runMediaPlayerTests } from '../../common';
+import {
+  runCommonCrossPlatformTests,
+  runMediaPlayerEmbedTests,
+} from '../../common';
 
 export default () => {
   runCommonCrossPlatformTests();
-  runMediaPlayerTests();
+  runMediaPlayerEmbedTests();
 
   it('I can see the headline', () => {
     const h1El = document.querySelector('h1');
@@ -18,11 +21,5 @@ export default () => {
     expect(summaryEl).toBeInTheDocument();
     expect(summaryEl).toBeTruthy();
     expect(summaryEl.textContent).toMatchSnapshot();
-  });
-
-  it('I can see the audio player embed', () => {
-    const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
-
-    expect(audioPlayerIframe.getAttribute('src')).toMatchSnapshot();
   });
 };

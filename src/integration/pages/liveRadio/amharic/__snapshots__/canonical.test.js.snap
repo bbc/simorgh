@@ -10,13 +10,13 @@ exports[`Canonical Live Radio Footer I can see the footer copyright and external
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
-exports[`Canonical Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live"`;
-
 exports[`Canonical Live Radio I can see the headline 1`] = `"ያድምጡ"`;
 
 exports[`Canonical Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;
 
-exports[`Canonical Live Radio Media player A11y I can read the media player title 1`] = `"Audio player"`;
+exports[`Canonical Live Radio Media player embed A11y I can read the media player title 1`] = `"Audio player"`;
+
+exports[`Canonical Live Radio Media player embed A11y I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live"`;
 
 exports[`Canonical Live Radio SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
 

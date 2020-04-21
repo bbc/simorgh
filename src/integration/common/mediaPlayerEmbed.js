@@ -1,6 +1,12 @@
 export default () => {
-  describe('Media player', () => {
+  describe('Media player embed', () => {
     describe('A11y', () => {
+      it('I can see the audio player embed', () => {
+        const audioPlayerIframe = document.querySelector('iframe, amp-iframe');
+
+        expect(audioPlayerIframe.getAttribute('src')).toMatchSnapshot();
+      });
+
       it('I can read the media player title', () => {
         const mediaPlayerEl = document.querySelector('iframe, amp-iframe');
 

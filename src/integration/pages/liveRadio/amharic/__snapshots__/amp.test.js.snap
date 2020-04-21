@@ -32,13 +32,13 @@ exports[`AMP Live Radio Footer I can see the footer copyright and external linki
 
 exports[`AMP Live Radio Header I can see the branding 1`] = `"BBC News, አማርኛ"`;
 
-exports[`AMP Live Radio I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live"`;
-
 exports[`AMP Live Radio I can see the headline 1`] = `"ያድምጡ"`;
 
 exports[`AMP Live Radio I can see the summary 1`] = `"ዝግጅቶቻችንን’"`;
 
-exports[`AMP Live Radio Media player A11y I can read the media player title 1`] = `"Audio player"`;
+exports[`AMP Live Radio Media player embed A11y I can read the media player title 1`] = `"Audio player"`;
+
+exports[`AMP Live Radio Media player embed A11y I can see the audio player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live"`;
 
 exports[`AMP Live Radio SEO Canonical link 1`] = `"http://localhost:7080/amharic/bbc_amharic_radio/liveradio"`;
 
