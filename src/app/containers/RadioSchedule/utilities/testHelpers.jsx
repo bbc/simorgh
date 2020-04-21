@@ -5,7 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-const getToggleState = (enabled) => ({
+const getToggleState = enabled => ({
   radioSchedule: { enabled },
 });
 

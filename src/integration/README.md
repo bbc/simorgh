@@ -23,16 +23,18 @@ For tests that can be run in both platforms, we should add these tests to a file
 ```js
 export default () => {
   it('I can see the headline', () => {
-    const headlineEl = document.getByText(headlineText);
+    const h1El = document.querySelector('h1');
 
-    expect(headlineEl).toBeInTheDocument();
+    expect(h1El).toBeInTheDocument();
+    expect(h1El).toBeTruthy();
+    expect(h1El.textContent).toMatchSnapshot();
   });
 };
 ```
 
 #### AMP only tests
 
-For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of a cross platform test would be like
+For tests that should be run only on the AMP platform, we should add these tests to a file called `ampTests.js`. An example of an AMP test would be like
 
 ```js
 export default () => {
@@ -49,7 +51,7 @@ export default () => {
 
 #### Canonical only tests
 
-For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a cross platform test would be like
+For tests that should be run only on the canonical platform, we should add these tests to a file called `canonicalTests.js`. An example of a canonical test would be like
 
 ```js
 export default () => {
@@ -87,7 +89,7 @@ describe(platform.toUpperCase(), () => {
 });
 ```
 
-In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` you will see this is a Mundo article page and it is what we are going to test.
+In the above example we import the cross platform tests and the AMP tests. We have also specified a pathname using a [docblock pragma](#what-is-a-docblock-pragma). The pathname is the part of the url that is everything after `https://bbc.com` and in this example it is `/mundo/articles/ce42wzqr2mko`. If you visit `https://bbc.com/mundo/articles/ce42wzqr2mko` (**NB** this is the canonical url - for the AMP url just add `.amp` on the end) you will see this is a Mundo article page and it is what we are going to test.
 
 Before our tests run, the test environment [setup file](https://github.com/bbc/simorgh/tree/latest/src/integration/integrationTestEnvironment.js) parses the `pathname` dockblock pragma and constructs the url. JSDOM then visits the url to get the DOM trees that we can use to run our tests against.
 
@@ -168,23 +170,61 @@ You might then think it makes sense to only write integration tests but there ar
 
 A docblock pragma is a specially-formatted comment at the top of a test file. We can use docblock pragmas to alter the environment that tests run in.
 
-## What is the Given-When-Then stuff all about?
-
-The Given-When-Then formula is a template intended to guide the writing of acceptance tests for a user story.
-
-- (Given) some context
-- (When) some action is carried out
-- (Then) a particular set of consequences can be observed
-
-An example:
-
-- Given I am on a Mundo article canonical page
-- When I am using the website
-- Then I can see an image with a caption.
-
 ## What is a snapshot?
 
-This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of the underlying DOM tree that is used to catch unexpected changes.
+This is a feature provided by Jest. It's not a snapshot of the graphical UI but a snapshot of a result that is typically returned from a function. This could even be HTML returned from DOM query selector e.g.
+
+```js
+it('should render the headline', () => {
+  expect(document.querySelector('h1').outerHTML).toMatchSnapshot();
+});
+```
+
+The above would create a file in a colocated `__snapshots__` directory
+
+```
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I can see the headline`] = `
+<h1 id="content"
+       "tabindex="-1"
+>
+  <span role="text">
+    <span lang="en-GB">
+      BBC News
+    </span>
+    ,
+    Pidgin
+    -
+    Home
+  </span>
+</h1>
+`;
+```
+
+It's recommended not to snapshot large parts of the DOM because this creates brittle tests i.e. these tests would break often because the DOM changes whenever someone changes something such as a React component's structure and styles, translation configs and feature toggles. It is better to have smaller and more focused snapshots. More info on this approach can be found in this article [Effective Snapshot Testing](https://kentcdodds.com/blog/effective-snapshot-testing).
+
+An even better example of asserting a headline is on the page
+
+```js
+it('I can see the headline', () => {
+  const h1El = document.querySelector('h1');
+
+  expect(h1El).toBeInTheDocument(); // check the headline element is in the document
+  expect(h1El.getAttribute('id')).toBe('content'); // check for the id attribute
+  expect(h1El.getAttribute('tabindex')).toBe('-1'); // check for the tabindex attribute
+  expect(h1El).toBeTruthy(); // check there is some text inside the element
+  expect(h1El.textContent).toMatchSnapshot(); // snapshot the value so that we have a baseline to fail the test if it ever unexpectedly changes
+});
+```
+
+This would produce the following snapshot:
+
+```
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I can see the headline`] = `BBC News, Pidgin - Home`;
+```
 
 ## What is Cypress
 
@@ -201,17 +241,3 @@ Here are some possible answers:
 - ### Content in an iframe I want to test is not in the DOM
 
   This is another current limitation we have. We cannot test the contents that are rendered within an iframe. We can test that the iframe is there though. Testing the iframe `src` url may be sufficient. If this does not provide enough confidence then you should consider writing an end-to-end tests using another tool we use in Simorgh such as [Cypress](what-is-cypress).
-
-- ### The `getByText` query is not working
-
-  getByText has a limitation where it cannot select text that spans mulitple elements. In these cases you can use `getByTextMultiElement`
-
-- ### The `getByAltText` query is not working for AMP
-
-  AMP has some custom components which are transformed by the AMP library on the client side into something that the web-browser can understand. One of these components is `amp-img`. The problem is the `getByAltText` queries the DOM for an `img` element with an `alt` attribute that matches the provided alt-text so the `amp-img` element is not picked up. The current solution is to use `document.querySelector` and search for the `amp-img` element combined with an attribute selector, for example:
-
-  ```js
-  const image = amp.document.querySelector(`amp-img[alt="${imageAltText}"]`);
-  ```
-
-  This could be another issue that will be fixed by client side rendering with JSDOM.

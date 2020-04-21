@@ -11,7 +11,7 @@ const Banner = require('./Banner/index.amp');
 
 Banner.mockImplementation(({ type }) => <div>Amp {type} banner</div>);
 
-const expectNodeToContainInlinedJSON = (node) =>
+const expectNodeToContainInlinedJSON = node =>
   expect(
     node.querySelectorAll('script[type="application/json"]').length,
   ).toEqual(1);

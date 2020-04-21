@@ -43,7 +43,7 @@ jest.mock('react-helmet', () => ({
 
 jest.mock('@loadable/server', () => ({
   ChunkExtractor: () => ({
-    collectChunks: (arg) => arg,
+    collectChunks: arg => arg,
     getScriptElements: () => '__mock_script_elements__',
   }),
 }));
@@ -88,7 +88,7 @@ jest.mock('./styles', () => ({
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
-const makeRequest = async (requestPath) => request(server).get(requestPath);
+const makeRequest = async requestPath => request(server).get(requestPath);
 
 const QUERY_STRING = '?param=test&query=1';
 

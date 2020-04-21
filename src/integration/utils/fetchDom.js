@@ -3,7 +3,7 @@
 const { JSDOM } = require('jsdom');
 const retry = require('retry');
 
-const faultTolerantDomFetch = (url) =>
+const faultTolerantDomFetch = url =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -13,7 +13,7 @@ const faultTolerantDomFetch = (url) =>
       maxTimeout: oneSecond,
     });
 
-    operation.attempt(async (currentAttempt) => {
+    operation.attempt(async currentAttempt => {
       if (currentAttempt > 1) {
         console.warn(
           `Error getting DOM from ${url}`,

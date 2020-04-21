@@ -6,11 +6,11 @@ export default () => {
     );
     const bbcOriginScripts = Array.from(
       document.querySelectorAll('script[src]'),
-    ).filter((script) =>
+    ).filter(script =>
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
 
-    bbcOriginScripts.forEach((bbcOriginScript) => {
+    bbcOriginScripts.forEach(bbcOriginScript => {
       expect(bbcOriginScript.getAttribute('src')).toMatch(bundleScriptMatcher);
     });
   });
@@ -22,10 +22,10 @@ export default () => {
     );
     const bbcOriginScripts = Array.from(
       document.querySelectorAll('script[src]'),
-    ).filter((script) =>
+    ).filter(script =>
       script.getAttribute('src').startsWith('http://localhost:7080'),
     );
-    const serviceScripts = bbcOriginScripts.filter((script) =>
+    const serviceScripts = bbcOriginScripts.filter(script =>
       bundleScriptMatcher.test(script.getAttribute('src')),
     );
 

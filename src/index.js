@@ -18,7 +18,7 @@ const server = http.createServer(app);
 const port = process.env.PORT || 7080;
 let currentApp = app;
 
-server.listen(port, (error) => {
+server.listen(port, error => {
   if (error) {
     logger.error(SERVER_LISTEN_ERROR, {
       error,

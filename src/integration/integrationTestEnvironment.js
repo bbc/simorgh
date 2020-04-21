@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const JsdomEnvironment = require('jest-environment-jsdom');
 const fetchDom = require('./utils/fetchDom');
 const getPageTypeFromTestPath = require('./utils/getPageTypeFromTestPath');

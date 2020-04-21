@@ -23,7 +23,7 @@ const indigo = '#ccccff';
 const violet = '#ccaaee';
 
 const ColouredDiv = styled.div`
-  background-color: ${(props) => props.colour};
+  background-color: ${props => props.colour};
 `;
 
 storiesOf('Grid Examples', module)

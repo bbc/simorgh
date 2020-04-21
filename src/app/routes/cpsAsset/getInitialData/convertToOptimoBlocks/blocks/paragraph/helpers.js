@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import path from 'ramda/src/path';
 
-const boldWrap = (text) => `<bold>${text}</bold>`;
+const boldWrap = text => `<bold>${text}</bold>`;
 
 // CPS encodes some known special characters into HTML entities
 // This function reverses that process, to prepare the text for rendering
@@ -20,10 +20,10 @@ const parseReplacements = (
     Object.keys(replacements).join('|'),
     'gi',
   );
-  return text.replace(replacementsRegex, (match) => replacements[match]);
+  return text.replace(replacementsRegex, match => replacements[match]);
 };
 
-export const processBlock = (_block) => {
+export const processBlock = _block => {
   const block = { ..._block };
 
   if (path(['text'], block)) {
