@@ -3,13 +3,13 @@
 /* eslint-disable no-console */
 const { cyan, red, green, bold } = require('chalk');
 
-const testSummary = (test) => {
+const testSummary = test => {
   return `${test.group ? test.group : ''} ${
     test.description ? test.description : ''
   }`;
 };
 
-const testDetails = (test) => {
+const testDetails = test => {
   return `${cyan('└─', test.test)}\n\t\t└─${JSON.stringify(
     test.value,
     null,
@@ -17,7 +17,7 @@ const testDetails = (test) => {
   )}`;
 };
 
-const errorDetails = (test) => {
+const errorDetails = test => {
   const { error, expect } = test;
   const errorMessage = error ? cyan(error.message) : '';
   if (expect && error.found) {
@@ -30,36 +30,39 @@ const errorDetails = (test) => {
   return errorMessage;
 };
 
-const printFailures = (failed) => {
-  failed.forEach((failure) => {
+const printFailures = failed => {
+  if (failed.length > 0) {
+    console.log(red(`${failed.length} tests failed`));
+  }
+  failed.forEach(failure => {
     console.log(
       `${red('  ✕ ', testSummary(failure))}\n \t${errorDetails(failure)}`,
     );
   });
 };
 
-const printPassing = (passed) => {
-  passed.forEach((pass) => {
+const printPassing = passed => {
+  passed.forEach(pass => {
     console.log(`${green('  ✓ ', testSummary(pass))}\n \t${testDetails(pass)}`);
   });
 };
 
-const aggregateResults = (results) => {
+const aggregateResults = results => {
   return {
-    urls: results.map((result) => result.url),
-    tests: results.map((result) => result.tests).flat(),
-    passed: results.map((result) => result.passed).flat(),
+    urls: results.map(result => result.url),
+    tests: results.map(result => result.tests).flat(),
+    passed: results.map(result => result.passed).flat(),
     failed: results
-      .map((result) => [...result.failed, ...result.warnings])
+      .map(result => [...result.failed, ...result.warnings])
       .flat(),
-    schemas: [...new Set(results.map((result) => result.schemas).flat())],
+    schemas: [...new Set(results.map(result => result.schemas).flat())],
     structuredData: Object.assign(
-      ...results.map((result) => result.structuredData),
+      ...results.map(result => result.structuredData),
     ),
   };
 };
 
-const printStatistics = (results) => {
+const printStatistics = results => {
   const overallResults = aggregateResults(results);
   const totalTests =
     overallResults.passed.length + overallResults.failed.length;
