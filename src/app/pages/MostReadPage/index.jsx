@@ -47,7 +47,7 @@ const ConstrainedWrapper = styled.div`
   }
 `;
 
-const HeadingOne = styled.h1.attrs({
+const MostReadHeader = styled.h1.attrs({
   id: 'content',
   tabIndex: '-1',
 })`
@@ -73,9 +73,9 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <ConstrainedWrapper>
-      <HeadingOne script={script} service={service}>
+      <MostReadHeader script={script} service={service}>
         {header}
-      </HeadingOne>
+      </MostReadHeader>
 
       <StyledGelPageGrid
         dir={dir}
