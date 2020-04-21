@@ -16,16 +16,20 @@ export default () => {
 
   it('AMP Geo config', () => {
     expect(
-      document.querySelector('body amp-geo > script[type="application/json"]')
-        .textContent,
+      JSON.parse(
+        document.querySelector('body amp-geo > script[type="application/json"]')
+          .textContent,
+      ),
     ).toMatchSnapshot();
   });
 
   it('AMP Consent config', () => {
     expect(
-      document.querySelector(
-        'body amp-consent > script[type="application/json"]',
-      ).textContent,
+      JSON.parse(
+        document.querySelector(
+          'body amp-consent > script[type="application/json"]',
+        ).textContent,
+      ),
     ).toMatchSnapshot();
   });
 };

@@ -2,9 +2,97 @@
 
 exports[`AMP Front Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
 
-exports[`AMP Front Page AMP Consent config 1`] = `"{\\"consents\\":{\\"user-consent\\":{\\"promptIfUnknownForGeoGroup\\":\\"eea\\",\\"promptUI\\":\\"consent-prompt\\"}}}"`;
+exports[`AMP Front Page AMP Consent config 1`] = `
+Object {
+  "consents": Object {
+    "user-consent": Object {
+      "promptIfUnknownForGeoGroup": "eea",
+      "promptUI": "consent-prompt",
+    },
+  },
+}
+`;
 
-exports[`AMP Front Page AMP Geo config 1`] = `"{\\"ISOCountryGroups\\":{\\"eea\\":[\\"at\\",\\"ax\\",\\"be\\",\\"bg\\",\\"bl\\",\\"cy\\",\\"cz\\",\\"de\\",\\"dk\\",\\"ea\\",\\"ee\\",\\"es\\",\\"fi\\",\\"fr\\",\\"gb\\",\\"gf\\",\\"gg\\",\\"gi\\",\\"gp\\",\\"gr\\",\\"hr\\",\\"hu\\",\\"ic\\",\\"ie\\",\\"im\\",\\"is\\",\\"it\\",\\"je\\",\\"li\\",\\"lt\\",\\"lu\\",\\"lv\\",\\"mf\\",\\"mq\\",\\"mt\\",\\"nc\\",\\"nl\\",\\"no\\",\\"pf\\",\\"pl\\",\\"pm\\",\\"pt\\",\\"re\\",\\"ro\\",\\"se\\",\\"si\\",\\"sj\\",\\"sk\\",\\"tf\\",\\"va\\",\\"wf\\",\\"yt\\"]}}"`;
+exports[`AMP Front Page AMP Geo config 1`] = `
+Object {
+  "ISOCountryGroups": Object {
+    "eea": Array [
+      "at",
+      "ax",
+      "be",
+      "bg",
+      "bl",
+      "cy",
+      "cz",
+      "de",
+      "dk",
+      "ea",
+      "ee",
+      "es",
+      "fi",
+      "fr",
+      "gb",
+      "gf",
+      "gg",
+      "gi",
+      "gp",
+      "gr",
+      "hr",
+      "hu",
+      "ic",
+      "ie",
+      "im",
+      "is",
+      "it",
+      "je",
+      "li",
+      "lt",
+      "lu",
+      "lv",
+      "mf",
+      "mq",
+      "mt",
+      "nc",
+      "nl",
+      "no",
+      "pf",
+      "pl",
+      "pm",
+      "pt",
+      "re",
+      "ro",
+      "se",
+      "si",
+      "sj",
+      "sk",
+      "tf",
+      "va",
+      "wf",
+      "yt",
+    ],
+  },
+}
+`;
+
+exports[`AMP Front Page Analytics ATI 1`] = `
+Object {
+  "requests": Object {
+    "base": "https://logws1363.ati-host.net?",
+    "pageview": "\${base}s=598343&s2=5&p=arabic.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:cps:3f0c7dec-d826-8578-e050-380a4e807810]&x2=[amp]&x3=[news-arabic]&x4=[ar]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x9=[الرئيسية+-+BBC+News+عربي]&x11=[1970-01-18T02:13:01.429Z]&x12=[1970-01-19T02:08:48.876Z]",
+  },
+  "transport": Object {
+    "beacon": false,
+    "image": true,
+    "xhrpost": false,
+  },
+  "triggers": Object {
+    "trackPageview": Object {
+      "on": "visible",
+      "request": "pageview",
+    },
+  },
+}
+`;
 
 exports[`AMP Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
@@ -24,7 +112,36 @@ exports[`AMP Front Page SEO Heading level 1 1`] = `"BBC News, عربي - الر�
 
 exports[`AMP Front Page SEO Lang attribute 1`] = `"ar"`;
 
-exports[`AMP Front Page SEO Linked data 1`] = `"{\\"@context\\":\\"http://schema.org\\",\\"@type\\":\\"WebPage\\",\\"url\\":\\"http://localhost:7080/arabic\\",\\"publisher\\":{\\"@type\\":\\"NewsMediaOrganization\\",\\"name\\":\\"BBC News عربي\\",\\"publishingPrinciples\\":\\"https://www.bbc.com/arabic/institutional-49283069\\",\\"logo\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png\\"}},\\"image\\":{\\"@type\\":\\"ImageObject\\",\\"width\\":1024,\\"height\\":576,\\"url\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png\\"},\\"thumbnailUrl\\":\\"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png\\",\\"mainEntityOfPage\\":{\\"@type\\":\\"WebPage\\",\\"@id\\":\\"http://localhost:7080/arabic\\",\\"name\\":\\"الرئيسية\\"}}"`;
+exports[`AMP Front Page SEO Linked data 1`] = `
+Object {
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "image": Object {
+    "@type": "ImageObject",
+    "height": 576,
+    "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+    "width": 1024,
+  },
+  "mainEntityOfPage": Object {
+    "@id": "http://localhost:7080/arabic",
+    "@type": "WebPage",
+    "name": "الرئيسية",
+  },
+  "publisher": Object {
+    "@type": "NewsMediaOrganization",
+    "logo": Object {
+      "@type": "ImageObject",
+      "height": 576,
+      "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+      "width": 1024,
+    },
+    "name": "BBC News عربي",
+    "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
+  },
+  "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+  "url": "http://localhost:7080/arabic",
+}
+`;
 
 exports[`AMP Front Page SEO OG description 1`] = `"بي بي سي العربية هي شبكة لنقل الأخبار والمعلومات ومقاطع الفيديو إلى العالم عبر عدة وسائط، تشمل الإنترنت ومواقع التواصل الاجتماعي والراديو والتلفزيون والهواتف المحمولة."`;
 

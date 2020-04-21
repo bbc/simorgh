@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { OnDemandRadioPage } from '..';
-import indonesia from '#data/indonesia/bbc_indonesian_radio/w172x6r5000f38s.json';
-import pashto from '#data/pashto/bbc_pashto_radio/w172x8nvf4bchz5.json';
+import indonesia from './fixtureData/indonesia';
+import pashto from './fixtureData/pashto';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const onDemandRadioFixtures = {

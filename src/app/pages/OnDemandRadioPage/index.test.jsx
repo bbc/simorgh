@@ -55,7 +55,13 @@ jest.mock('../../containers/ChartbeatAnalytics', () => {
   return ChartbeatAnalytics;
 });
 
+const { env } = process;
+
 describe('OnDemand Radio Page ', () => {
+  beforeEach(() => {
+    process.env = { ...env };
+  });
+
   it('should match snapshot for Canonical', async () => {
     const clonedPashtoPageData = clone(pashtoPageData);
     clonedPashtoPageData.content.blocks[0].versions[0] = {
@@ -149,14 +155,34 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko',
+      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko?morph_env=live',
+    );
+  });
+
+  it('should show the audio player on canonical using no override on live', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1583496180000,
+      availableUntil: 9999999999999,
+    };
+    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = await renderPage({ pageData, service: 'korean' });
+    const audioPlayerIframeSrc = container
+      .querySelector('iframe')
+      .getAttribute('src');
+
+    expect(audioPlayerIframeSrc).toEqual(
+      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko',
     );
   });
 
   it('should show the audio player on AMP', async () => {
     const clonedKoreanPageData = clone(koreanPageData);
     clonedKoreanPageData.content.blocks[0].versions[0] = {
-      availableFrom: 1585727821683,
+      availableFrom: 1583496180000,
       availableUntil: 9999999999999,
     };
     const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
@@ -172,7 +198,31 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp',
+      `https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp?morph_env=live`,
+    );
+  });
+
+  it('should show the audio player on AMP using no override on live', async () => {
+    process.env.SIMORGH_APP_ENV = 'live';
+    const clonedKoreanPageData = clone(koreanPageData);
+    clonedKoreanPageData.content.blocks[0].versions[0] = {
+      availableFrom: 1583496180000,
+      availableUntil: 9999999999999,
+    };
+    const koreanPageDataWithAvailableEpisode = clonedKoreanPageData;
+    fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
+    const { pageData } = await getInitialData('some-ondemand-radio-path');
+    const { container } = await renderPage({
+      pageData,
+      service: 'korean',
+      isAmp: true,
+    });
+    const audioPlayerIframeSrc = container
+      .querySelector('amp-iframe')
+      .getAttribute('src');
+
+    expect(audioPlayerIframeSrc).toEqual(
+      'https://polling.bbc.co.uk/ws/av-embeds/media/korean/bbc_korean_radio/w3cszwcg/ko/amp',
     );
   });
 

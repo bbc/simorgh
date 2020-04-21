@@ -1,8 +1,11 @@
-import { runCommonCrossPlatformTests, runMediaPlayerTests } from '../../common';
+import {
+  runCommonCrossPlatformTests,
+  runMediaPlayerEmbedTests,
+} from '../../common';
 
 export default () => {
   runCommonCrossPlatformTests();
-  runMediaPlayerTests();
+  runMediaPlayerEmbedTests();
 
   it('I can see the headline', () => {
     const headlineEl = document.querySelector('h1[id="content"]');
