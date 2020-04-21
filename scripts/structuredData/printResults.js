@@ -68,21 +68,21 @@ const printStatistics = results => {
     overallResults.passed.length + overallResults.failed.length;
 
   console.log(bold(`\nStatistics\n`));
-  console.log(`      Number of URLs:`, `${overallResults.urls.length || 0}`);
+  console.log(`              URLs:`, `${overallResults.urls.length || 0}`);
   console.log(
-    `  Number of Metatags:`,
+    `          Metatags:`,
     `${Object.keys(overallResults.structuredData.metatags).length || 0}`,
   );
   console.log(
-    `     json+ld schemas:`,
+    `   json+ld schemas:`,
     `${Object.keys(overallResults.structuredData.jsonld).join(', ') || 0}`,
   );
   console.log(
-    `  schema.org schemas:`,
+    `schema.org schemas:`,
     `${overallResults.schemas.join(', ') || 0}`,
   );
 
-  console.log(`         Total tests:`, `${totalTests}`);
+  console.log(`       Total Tests:`, `${totalTests}`);
   console.log('');
 
   console.log(bold(`Results\n`));
