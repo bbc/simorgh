@@ -198,7 +198,7 @@ export const service = {
       frontPagePosition: 'feature-main',
       header: 'Barnaamijyada Idaacadda',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

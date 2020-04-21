@@ -193,7 +193,7 @@ export const service = {
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

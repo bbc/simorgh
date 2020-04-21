@@ -183,7 +183,7 @@ export const service = {
       frontPagePosition: 'responsive-must-see',
       header: 'BBC 코리아 라디오',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

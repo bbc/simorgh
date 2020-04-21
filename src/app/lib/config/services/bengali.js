@@ -192,7 +192,7 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

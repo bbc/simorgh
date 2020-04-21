@@ -193,7 +193,7 @@ export const service = {
       frontPagePosition: 'feature-main',
       header: 'Vipindi vya Redio',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

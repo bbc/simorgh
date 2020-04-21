@@ -30,7 +30,7 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
-  wsoj: {
+  recommendations: {
     hasRecommendations: false,
   },
   brandSVG,

@@ -197,7 +197,7 @@ export const service = {
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: true,
     },
     footer: {

@@ -206,7 +206,7 @@ export const service = {
       frontPagePosition: '',
       header: 'برنامه‌های رادیو',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

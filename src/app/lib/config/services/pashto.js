@@ -199,7 +199,7 @@ export const service = {
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

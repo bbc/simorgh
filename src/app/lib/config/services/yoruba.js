@@ -188,7 +188,7 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {

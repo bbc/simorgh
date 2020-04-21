@@ -203,7 +203,7 @@ export const service = {
       frequenciesPageLabel: 'Nos fréquences',
       header: 'Journaux et Magazines',
     },
-    wsoj: {
+    recommendations: {
       hasRecommendations: false,
     },
     footer: {
