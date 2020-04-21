@@ -3,9 +3,10 @@ import { oneOf, string, elementType } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
-import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
 import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import Amp from './Amp';
+import Canonical from './Canonical';
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
@@ -21,7 +22,7 @@ const MostReadContainer = ({
 
   const { enabled } = useToggle('mostRead');
 
-  const mostReadEnabled = !isAmp && enabled && hasMostRead;
+  const mostReadEnabled = enabled && hasMostRead;
 
   if (!mostReadEnabled) {
     return null;
@@ -30,8 +31,10 @@ const MostReadContainer = ({
   const endpoint =
     mostReadEndpointOverride || getMostReadEndpoint({ service, variant });
 
+  const MostRead = isAmp ? Amp : Canonical;
+
   return (
-    <Canonical
+    <MostRead
       initialData={initialData}
       endpoint={endpoint}
       wrapper={wrapper}
