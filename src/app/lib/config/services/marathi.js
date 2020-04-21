@@ -186,6 +186,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',

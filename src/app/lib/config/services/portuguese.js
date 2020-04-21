@@ -194,6 +194,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    wsoj: {
+      hasRecommendations: true,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/portuguese/institutional-50054434',

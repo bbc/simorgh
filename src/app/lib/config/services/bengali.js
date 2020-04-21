@@ -192,6 +192,9 @@ export const service = {
       hasRadioSchedule: true,
       onFrontPage: false,
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/bengali/institutional-50409861',

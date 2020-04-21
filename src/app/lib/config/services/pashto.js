@@ -199,6 +199,9 @@ export const service = {
       frequenciesPageLabel: 'راديويي څپې',
       header: 'تازه خبرونه واورئ',
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/pashto/institutional-49283007',

@@ -206,6 +206,9 @@ export const service = {
       frontPagePosition: '',
       header: 'برنامه‌های رادیو',
     },
+    wsoj: {
+      hasRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/persian/institutional-49283091',
