@@ -177,6 +177,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     navigation: [
       {
         title: 'ਖ਼ਬਰਾਂ',
