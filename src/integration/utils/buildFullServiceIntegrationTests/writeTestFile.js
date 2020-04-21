@@ -7,9 +7,10 @@ const acorn = require('acorn');
 const walk = require('acorn-walk');
 const escodegen = require('escodegen');
 const glob = require('glob');
-
-const FULL_SERVICE_INTEGRATION_TEST_DIR = '__full_service_regression_tests__';
-const GENERATED_TEST_FILES_DIR = '__GENERATED_TEST_FILES__';
+const {
+  FULL_SERVICE_INTEGRATION_TEST_DIR,
+  GENERATED_TEST_FILES_DIR,
+} = require('./constants');
 
 module.exports = ({ service, variant = '', pageType, pathname }) =>
   new Promise(resolve => {

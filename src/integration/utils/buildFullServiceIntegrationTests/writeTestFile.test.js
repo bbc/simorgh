@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import prettier from 'prettier';
-import build from './build';
+import writeTestFile from './writeTestFile';
 
 jest.mock('fs', () => ({
   ...jest.requireActual('fs'),
@@ -23,7 +23,7 @@ afterEach(() => {
 
 describe('should generate test files from a given test example', () => {
   beforeEach(async () => {
-    await build({
+    await writeTestFile({
       service: 'persian',
       pageType: 'liveRadio',
       pathname: '/persian/bbc_persian_radio/liveradio',
@@ -114,7 +114,7 @@ describe('should generate test files from a given test example', () => {
 
 describe('should generate test files from a given test example for services with variants', () => {
   beforeEach(async () => {
-    await build({
+    await writeTestFile({
       service: 'zhongwen',
       pageType: 'articles',
       pathname: '/zhongwen/articles/c3xd4x9prgyo/simp',
