@@ -599,7 +599,7 @@ exports[`Given I am on the Amharic Live Radio page When I view the source code i
       </amp-analytics>
       <amp-analytics type="chartbeat">
         <script type="application/json">
-          {"vars":{"domain":"test.bbc.co.uk","sections":"Amharic, Amharic - , Amharic - unknown, Amharic - unknown, Amharic - unknown","uid":50924,"title":"ያድምጡ","virtualReferrer":"\${documentReferrer}","contentType":"Live Radio"}}
+          {"vars":{"domain":"test.bbc.co.uk","sections":"Amharic, Amharic - Radio","uid":50924,"title":"ያድምጡ - BBC News አማርኛ","virtualReferrer":"\${documentReferrer}","contentType":"player-live"}}
         </script>
       </amp-analytics>
       <main role="main"
