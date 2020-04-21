@@ -74,7 +74,7 @@ const printStatistics = results => {
     `${Object.keys(overallResults.structuredData.metatags).length || 0}`,
   );
   console.log(
-    `     JSON-LD schemas:`,
+    `     json+ld schemas:`,
     `${Object.keys(overallResults.structuredData.jsonld).join(', ') || 0}`,
   );
   console.log(
