@@ -13,7 +13,7 @@ const prettierConfig = prettier.resolveConfig.sync(
   path.join(__dirname, __filename),
 );
 
-const format = (fileContent) =>
+const format = fileContent =>
   prettier.format(fileContent, { parser: 'babel', ...prettierConfig });
 
 afterEach(() => {

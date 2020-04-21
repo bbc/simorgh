@@ -12,7 +12,7 @@ const FULL_SERVICE_INTEGRATION_TEST_DIR = '__full_service_regression_tests__';
 const GENERATED_TEST_FILES_DIR = '__GENERATED_TEST_FILES__';
 
 module.exports = ({ service, variant = '', pageType, pathname }) =>
-  new Promise((resolve) => {
+  new Promise(resolve => {
     glob(
       `../../pages/${pageType}/**/*.test.js`,
       {
@@ -26,8 +26,8 @@ module.exports = ({ service, variant = '', pageType, pathname }) =>
 
         if (!files.length) return;
 
-        const ampTests = files.filter((file) => file.endsWith('amp.test.js'));
-        const canonicalTests = files.filter((file) =>
+        const ampTests = files.filter(file => file.endsWith('amp.test.js'));
+        const canonicalTests = files.filter(file =>
           file.endsWith('canonical.test.js'),
         );
         const testExamplesToGenerateFrom = [
@@ -35,7 +35,7 @@ module.exports = ({ service, variant = '', pageType, pathname }) =>
           ...[canonicalTests[0]],
         ];
 
-        testExamplesToGenerateFrom.forEach((filePath) => {
+        testExamplesToGenerateFrom.forEach(filePath => {
           const fileName = filePath.split('/').pop();
 
           const tests = fs.readFileSync(path.join(__dirname, filePath), 'utf8');

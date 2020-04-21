@@ -18,14 +18,14 @@ rimraf.sync(
   ),
 );
 
-services.forEach((service) => {
+services.forEach(service => {
   if (servicesConfig[service].variants) {
     const variants = Object.keys(servicesConfig[service].variants);
 
-    variants.forEach((variant) => {
+    variants.forEach(variant => {
       const pageTypes = Object.keys(servicesConfig[service].variants[variant]);
 
-      pageTypes.forEach((pageType) => {
+      pageTypes.forEach(pageType => {
         const pathname = servicesConfig[service].variants[variant][pageType];
 
         build({ service, pageType, pathname, variant });
@@ -34,7 +34,7 @@ services.forEach((service) => {
   } else {
     const pageTypes = Object.keys(servicesConfig[service]);
 
-    pageTypes.forEach((pageType) => {
+    pageTypes.forEach(pageType => {
       const pathname = servicesConfig[service][pageType];
 
       build({ service, pageType, pathname });
