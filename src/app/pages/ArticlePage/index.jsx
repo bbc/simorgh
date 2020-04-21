@@ -65,7 +65,7 @@ const MostReadSection = styled.section.attrs(() => ({
   'data-e2e': 'most-read',
 }))``;
 
-const ConstrainedMostReadSection = styled(MostReadSection)`
+const ArticleMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
   }
@@ -98,7 +98,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
 
   const MostReadWrapper = ({ children }) => (
-    <ConstrainedMostReadSection>
+    <ArticleMostReadSection>
       <SectionLabel
         script={script}
         labelId="Most-Read"
@@ -108,7 +108,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </SectionLabel>
       {children}
-    </ConstrainedMostReadSection>
+    </ArticleMostReadSection>
   );
 
   MostReadWrapper.propTypes = {
