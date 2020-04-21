@@ -28,7 +28,7 @@ const baseServiceConfig = {
     hasRadioSchedule: false,
   },
   recommendations: {
-    hasRecommendations: false,
+    hasStoryRecommendations: false,
   },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,

@@ -199,7 +199,7 @@ export const service = {
       header: 'Barnaamijyada Idaacadda',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

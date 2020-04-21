@@ -194,7 +194,7 @@ export const service = {
       header: 'Vipindi vya Redio',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

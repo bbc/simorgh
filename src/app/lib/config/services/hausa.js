@@ -194,7 +194,7 @@ export const service = {
       header: 'Shirye-shiryenmu',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

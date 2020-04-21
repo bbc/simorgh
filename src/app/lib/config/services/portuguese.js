@@ -195,7 +195,7 @@ export const service = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasRecommendations: true,
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {

@@ -184,7 +184,7 @@ export const service = {
       header: 'BBC 코리아 라디오',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

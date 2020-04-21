@@ -187,7 +187,7 @@ export const service = {
       onFrontPage: false,
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

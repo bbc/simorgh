@@ -204,7 +204,7 @@ export const service = {
       header: 'Journaux et Magazines',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

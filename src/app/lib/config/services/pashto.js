@@ -200,7 +200,7 @@ export const service = {
       header: 'تازه خبرونه واورئ',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

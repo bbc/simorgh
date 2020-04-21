@@ -207,7 +207,7 @@ export const service = {
       header: 'برنامه‌های رادیو',
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

@@ -31,7 +31,7 @@ const baseServiceConfig = {
     hasRadioSchedule: false,
   },
   recommendations: {
-    hasRecommendations: false,
+    hasStoryRecommendations: false,
   },
   brandSVG,
   theming: {

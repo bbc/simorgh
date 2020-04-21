@@ -170,7 +170,7 @@ export const service = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasRecommendations: false,
+      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

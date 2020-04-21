@@ -198,7 +198,7 @@ export const service = {
       header: 'أحدث نشرة أخبار',
     },
     recommendations: {
-      hasRecommendations: true,
+      hasStoryRecommendations: true,
     },
     footer: {
       trustProjectLink: {
