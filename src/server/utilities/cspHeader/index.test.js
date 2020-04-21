@@ -35,8 +35,10 @@ describe('cspHeader', () => {
         'https://a1.api.bbc.co.uk/hit.xiti',
         'https://toggles.api.bbci.co.uk',
         'https://cdn.ampproject.org',
+        'https://*.ampproject.net',
         'https://amp-error-reporting.appspot.com',
         'https://www.bbc.co.uk',
+        'https://platform.twitter.com',
         "'self'",
       ],
       defaultSrcExpectation: ["'self'"],
@@ -48,6 +50,9 @@ describe('cspHeader', () => {
         'https://polling.bbc.co.uk',
         'https://securepubads.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
+        'https://www.youtube.com',
+        'https://www.instagram.com',
+        'https://*.ampproject.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -62,6 +67,9 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://www.google.com',
         'https://via.placeholder.com',
+        'https://i.ytimg.com',
+        'https://www.instagram.com',
+        'https://*.cdninstagram.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -69,6 +77,7 @@ describe('cspHeader', () => {
         'https://cdn.ampproject.org',
         'https://*.chartbeat.com',
         'https://*.go-mpulse.net',
+        'https://platform.twitter.com',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -109,6 +118,10 @@ describe('cspHeader', () => {
         'https://emp.bbc.co.uk',
         'https://chartbeat.com',
         'https://*.chartbeat.com',
+        'https://www.youtube.com',
+        'https://platform.twitter.com',
+        'https://www.instagram.com',
+        'https://syndication.twitter.com',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -123,6 +136,10 @@ describe('cspHeader', () => {
         'https://tpc.googlesyndication.com',
         'https://www.google.com',
         'https://via.placeholder.com',
+        'https://syndication.twitter.com',
+        'https://platform.twitter.com',
+        'https://pbs.twimg.com',
+        'https://i.ytimg.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -132,10 +149,18 @@ describe('cspHeader', () => {
         'https://mybbc-analytics.files.bbci.co.uk',
         'https://emp.bbci.co.uk',
         'https://static.bbci.co.uk',
+        'https://platform.twitter.com',
+        'https://www.instagram.com',
+        'http://www.instagram.com',
+        'https://cdn.syndication.twimg.com',
         "'self'",
         "'unsafe-inline'",
       ],
-      styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      styleSrcExpectation: [
+        'https://news.files.bbci.co.uk',
+        'https://platform.twitter.com',
+        "'unsafe-inline'",
+      ],
       workerSrcExpectation: ["'self'"],
     },
     {
@@ -153,10 +178,12 @@ describe('cspHeader', () => {
         'https://pagead2.googlesyndication.com',
         'https://tpc.googlesyndication.com',
         'https://cdn.ampproject.org',
+        'https://*.ampproject.net',
         'https://amp-error-reporting.appspot.com',
         'https://logws1363.ati-host.net',
         'https://toggles.test.api.bbci.co.uk',
         'https://www.bbc.co.uk',
+        'https://platform.twitter.com',
         "'self'",
       ],
       defaultSrcExpectation: ["'self'"],
@@ -169,6 +196,9 @@ describe('cspHeader', () => {
         'https://polling.test.bbc.co.uk',
         'https://securepubads.g.doubleclick.net',
         'https://tpc.googlesyndication.com',
+        'https://www.youtube.com',
+        'https://www.instagram.com',
+        'https://*.ampproject.net',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -188,6 +218,9 @@ describe('cspHeader', () => {
         'https://via.placeholder.com',
         'http://b.files.bbci.co.uk',
         'http://ping.chartbeat.net',
+        'https://i.ytimg.com',
+        'https://www.instagram.com',
+        'https://*.cdninstagram.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -196,6 +229,7 @@ describe('cspHeader', () => {
         'https://cdn.ampproject.org',
         'https://*.chartbeat.com',
         'https://*.go-mpulse.net',
+        'https://platform.twitter.com',
         "'self'",
         "'unsafe-inline'",
       ],
@@ -239,6 +273,10 @@ describe('cspHeader', () => {
         'https://emp.bbc.co.uk',
         'https://chartbeat.com',
         'https://*.chartbeat.com',
+        'https://www.youtube.com',
+        'https://platform.twitter.com',
+        'https://www.instagram.com',
+        'https://syndication.twitter.com',
         "'self'",
       ],
       imgSrcExpectation: [
@@ -258,6 +296,10 @@ describe('cspHeader', () => {
         'https://via.placeholder.com',
         'http://b.files.bbci.co.uk',
         'http://ping.chartbeat.net',
+        'https://syndication.twitter.com',
+        'https://platform.twitter.com',
+        'https://pbs.twimg.com',
+        'https://i.ytimg.com',
         "data: 'self'",
       ],
       scriptSrcExpectation: [
@@ -270,10 +312,18 @@ describe('cspHeader', () => {
         'https://static.bbci.co.uk',
         'http://*.chartbeat.com',
         'http://localhost:1124',
+        'https://platform.twitter.com',
+        'https://www.instagram.com',
+        'http://www.instagram.com',
+        'https://cdn.syndication.twimg.com',
         "'self'",
         "'unsafe-inline'",
       ],
-      styleSrcExpectation: ['https://news.files.bbci.co.uk', "'unsafe-inline'"],
+      styleSrcExpectation: [
+        'https://news.files.bbci.co.uk',
+        'https://platform.twitter.com',
+        "'unsafe-inline'",
+      ],
       workerSrcExpectation: ["'self'"],
     },
   ].forEach(
@@ -330,7 +380,9 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this styleSrc`, () => {
-          expect(generateStyleSrc({})).toEqual(styleSrcExpectation);
+          expect(generateStyleSrc({ isAmp, isLive })).toEqual(
+            styleSrcExpectation,
+          );
         });
 
         it(`Then it has this workerSrc`, () => {

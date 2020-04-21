@@ -253,18 +253,6 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
     >
       {"@context":"http://schema.org","@type":"WebPage","url":"http://localhost:7080/arabic","publisher":{"@type":"NewsMediaOrganization","name":"BBC News عربي","publishingPrinciples":"https://www.bbc.com/arabic/institutional-49283069","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"}},"image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:7080/arabic","name":"الرئيسية"}}
     </script>
-    <script data-react-helmet="true"
-            async
-            custom-element="amp-access"
-            src="https://cdn.ampproject.org/v0/amp-access-0.1.js"
-    >
-    </script>
-    <script data-react-helmet="true"
-            id="amp-access"
-            type="application/json"
-    >
-      {"authorization":"https://toggles.test.api.bbci.co.uk/toggles?application=simorgh&service=arabic&geoiplookup=true","noPingback":true}
-    </script>
     <style amp-boilerplate>
       body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
     </style>
@@ -873,48 +861,6 @@ exports[`Given I am on a Arabic Frontpage AMP/Canonical page When I view the sou
           </span>
         </h1>
         <div class="StyledFrontPageDiv-sc-58u5qv-0 fCyXlu">
-          <div amp-access="toggles.ads.enabled AND geoIp.advertiseCombined"
-               amp-access-hide="true"
-          >
-            <div class="StyledAd-lj1cbr-0 fajsfm">
-              <amp-ad media="(max-width: 599px)"
-                      type="doubleclick"
-                      width="320"
-                      height="50"
-                      data-multi-size="320x50,300x50"
-                      data-slot="/4817/bbccom.test.site.amp.news"
-                      data-amp-slot-index="0"
-                      data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-                      json="{&quot;targeting&quot;:{&quot;slot&quot;:&quot;leaderboard&quot;,&quot;asset_type&quot;:&quot;index&quot;,&quot;channel&quot;:&quot;arabic&quot;}}"
-              >
-                <amp-img placeholder="true"
-                         width="320"
-                         height="50"
-                         src="https://via.placeholder.com/320x50"
-                         layout="responsive"
-                >
-                </amp-img>
-              </amp-ad>
-              <amp-ad media="(min-width: 600px)"
-                      type="doubleclick"
-                      width="970"
-                      height="250"
-                      data-multi-size="970x250,728x90"
-                      data-slot="/4817/bbccom.test.site.amp.news"
-                      data-amp-slot-index="0"
-                      data-a4a-upgrade-type="amp-ad-network-doubleclick-impl"
-                      json="{&quot;targeting&quot;:{&quot;slot&quot;:&quot;leaderboard&quot;,&quot;asset_type&quot;:&quot;index&quot;,&quot;channel&quot;:&quot;arabic&quot;}}"
-              >
-                <amp-img placeholder="true"
-                         width="970"
-                         height="250"
-                         src="https://via.placeholder.com/970x250"
-                         layout="responsive"
-                >
-                </amp-img>
-              </amp-ad>
-            </div>
-          </div>
           <section role="region"
                    aria-labelledby="Top-stories"
                    class="StyledFrontPageSection-sc-1t555e8-0 fVIPmX"

@@ -9,9 +9,7 @@ import persianPageData from './fixtureData/persian';
 
 const styStories = storiesOf('Pages|Story Page', module);
 
-styStories.addDecorator((story) => (
-  <WithTimeMachine>{story()}</WithTimeMachine>
-));
+styStories.addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>);
 
 [
   {

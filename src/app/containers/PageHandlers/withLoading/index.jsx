@@ -2,7 +2,7 @@ import React from 'react';
 import { bool, element } from 'prop-types';
 import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
 
-const WithLoading = (Component) => {
+const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
     if (!loading) return <Component {...props} />;
     return (

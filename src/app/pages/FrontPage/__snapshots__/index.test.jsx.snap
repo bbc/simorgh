@@ -96,8 +96,13 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             <div
                               class="ImagePlaceholder-sc-11u25v2-0 fNqlUz"
                             >
-                              <div
-                                class="lazyload-placeholder"
+                              <img
+                                alt="Senator Ahmad Lawan and Ali Ndume"
+                                class="StyledImg-sc-7vx2mr-0 hIxkbt"
+                                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+                                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg 660w"
+                                width="976"
                               />
                             </div>
                             <div
