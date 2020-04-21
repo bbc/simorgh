@@ -13,7 +13,6 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
     const pageType = getPageTypeFromTestPath(context.testPath);
 
     this.pageType = camelCaseToText(pageType);
-    this.platform = platform;
     this.service = service;
     this.url = `http://localhost:7080${pathname}${
       platform === 'amp' ? '.amp' : ''
@@ -31,7 +30,6 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
         service: { value: this.service },
         window: { value: dom.window },
         document: { value: dom.window.document },
-        platform: { value: this.platform },
       });
     } catch (e) {
       console.error(e);

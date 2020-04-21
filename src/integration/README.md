@@ -81,7 +81,7 @@ For Jest to run the tests in these files we need to create a `*(amp|canonical).t
 import runCrossPlatformTests from '../crossPlatformTests';
 import runAmpTests from '../ampTests';
 
-describe(platform.toUpperCase(), () => {
+describe('AMP', () => {
   describe(pageType, () => {
     runCrossPlatformTests();
     runAmpTests();
@@ -98,7 +98,6 @@ Note we have also specified a `service` docblock pragma. The service is parsed a
 - `pageType` - The page type which is parsed from the test file path.
 - `service` - The service of the currently running page test.
 - `document` - The `document` object of the current page. You can use this to query the DOM and assert the correct things are in the page.
-- `platform` - The current platform (`amp` or `canonical`)
 
 Tests for pages are located in the `src/app/integration/pages` directory within a directory for each page type:
 
