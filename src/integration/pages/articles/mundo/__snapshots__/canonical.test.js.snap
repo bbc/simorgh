@@ -2,6 +2,8 @@
 
 exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Ir al contenido"`;
 
+exports[`Canonical Articles Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=62&p=mundo.articles.ce42wzqr2mko.page&x1=[urn:bbc:optimo:ce42wzqr2mko]&x2=[responsive]&x3=[news-mundo]&x4=[es]&x7=[article]&x8=[simorgh-nojs]&x9=[Este+artículo+de+prueba+ha+sido+creado+para+que+podamos+ejecutar+pruebas]&x11=[2019-10-04T10:58:46.977Z]&x12=[2019-10-04T10:58:46.977Z]"`;
+
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
 exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;

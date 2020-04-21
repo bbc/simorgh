@@ -6,7 +6,7 @@ export default () => {
       expect(noscriptImage.tagName).toEqual('IMG');
       expect(noscriptImage.getAttribute('width')).toEqual('1px');
       expect(noscriptImage.getAttribute('height')).toEqual('1px');
-      expect(noscriptImage.getAttribute('src')).toMatch(
+      expect(noscriptImage.getAttribute('src')).toMatchSnapshot(
         'https://logws1363.ati-host.net?',
       );
     });

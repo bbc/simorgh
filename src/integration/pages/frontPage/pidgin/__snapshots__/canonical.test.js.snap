@@ -2,6 +2,8 @@
 
 exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
+exports[`Canonical Front Page Analytics ATI: https://logws1363.ati-host.net? 1`] = `"https://logws1363.ati-host.net?s=598343&s2=70&p=pidgin.page&x1=[urn:bbc:cps:52f3c7b1-83ed-2338-e050-17ac8045cd94]&x2=[responsive]&x3=[news-pidgin]&x4=[pcm]&x7=[index-home]&x8=[simorgh-nojs]&x9=[Domot+-+BBC+News+Pidgin]&x11=[1970-01-18T08:30:40.608Z]&x12=[1970-01-19T01:24:09.011Z]"`;
+
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
 exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. De external site no concern BBC. De way wey we de take go external link."`;
