@@ -9,11 +9,11 @@ export const blockObjectOfTypesAndModel = (types, model) => ({
 export const blockOfTypesAndModel = (types, model) =>
   shape(blockObjectOfTypesAndModel(types, model));
 
-export const blocksWithTypes = (blockTypes) => ({
+export const blocksWithTypes = blockTypes => ({
   blocks: arrayOf(oneOfType(blockTypes).isRequired).isRequired,
 });
 
-export const arrayOfSpecificBlocks = (propTypeData) => (
+export const arrayOfSpecificBlocks = propTypeData => (
   props,
   key,
   componentName,
@@ -33,7 +33,7 @@ export const arrayOfSpecificBlocks = (propTypeData) => (
   }
 
   // loop through each passed prop in the array and compares them against defined types for that block type
-  propData.forEach((propValue) => {
+  propData.forEach(propValue => {
     // finds the first propType that has a type that matches the type of the passed prop
     const { props: propTypes } = propTypeData.find(
       ({ type }) => type === propValue.type,

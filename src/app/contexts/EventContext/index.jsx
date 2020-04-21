@@ -15,16 +15,16 @@ export const EventContextProvider = ({ children }) => {
     const selectorRef = useRef(selector).current;
     const handlerRef = useRef(handler).current;
     useEffect(() => {
-      setHandlerMap((_map) => ({
+      setHandlerMap(_map => ({
         ..._map,
         [selectorRef]: [...(_map[selectorRef] || []), handlerRef],
       }));
 
       return () => {
-        setHandlerMap((_map) => ({
+        setHandlerMap(_map => ({
           ..._map,
           [selectorRef]: (_map[selectorRef] || []).filter(
-            (h) => h !== handlerRef,
+            h => h !== handlerRef,
           ),
         }));
       };

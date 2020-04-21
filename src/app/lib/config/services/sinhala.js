@@ -192,6 +192,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/sinhala/institutional-50288553',

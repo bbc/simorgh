@@ -4,11 +4,11 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { LiveRadioPage } from '..';
-import indonesia from '#data/indonesia/bbc_indonesian_radio/liveradio.json';
-import korean from '#data/korean/bbc_korean_radio/liveradio.json';
-import tigrinya from '#data/tigrinya/bbc_tigrinya_radio/liveradio.json';
-import afaanoromoo from '#data/afaanoromoo/bbc_afaanoromoo_radio/liveradio.json';
-import amharic from '#data/amharic/bbc_amharic_radio/liveradio.json';
+import indonesia from './fixtureData/indonesia';
+import korean from './fixtureData/korean';
+import tigrinya from './fixtureData/tigrinya';
+import afaanoromoo from './fixtureData/afaanoromoo';
+import amharic from './fixtureData/amharic';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
 const liveRadioFixtures = {
@@ -19,7 +19,7 @@ const liveRadioFixtures = {
   amharic,
 };
 
-const matchFixtures = (service) => ({
+const matchFixtures = service => ({
   params: {
     mediaId: 'liveradio',
     serviceId: {
@@ -35,7 +35,7 @@ const matchFixtures = (service) => ({
 const status = 200;
 
 storiesOf('Pages|Radio Page', module)
-  .addDecorator((story) => <WithTimeMachine>{story()}</WithTimeMachine>)
+  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
   .addDecorator(withKnobs)
   .addDecorator(
     withServicesKnob({

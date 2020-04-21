@@ -28,7 +28,7 @@ describe('useHandlerMap', () => {
   it('should call fn1', () => {
     invoke({
       target: {
-        matches: (attr) => attr === 'a',
+        matches: attr => attr === 'a',
       },
     });
     expect(fn1).toHaveBeenCalled();
@@ -39,7 +39,7 @@ describe('useHandlerMap', () => {
   it('should call fn1 and fn2', () => {
     invoke({
       target: {
-        matches: (attr) => attr === 'a' || attr === 'b',
+        matches: attr => attr === 'a' || attr === 'b',
       },
     });
     expect(fn1).toHaveBeenCalled();
@@ -50,7 +50,7 @@ describe('useHandlerMap', () => {
   it('should call fn3', () => {
     invoke({
       target: {
-        matches: (attr) => attr === 'c',
+        matches: attr => attr === 'c',
       },
     });
     expect(fn3).toHaveBeenCalled();
