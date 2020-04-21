@@ -58,10 +58,6 @@ const MostReadHeader = styled.h1.attrs({
   padding: ${GEL_SPACING_TRPL} 0 ${GEL_SPACING};
 `;
 
-const StyledGelPageGrid = styled(GelPageGrid)`
-  flex-grow: 1;
-`;
-
 const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
   const {
     service,
@@ -77,7 +73,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         {header}
       </MostReadHeader>
 
-      <StyledGelPageGrid
+      <GelPageGrid
         dir={dir}
         columns={{
           group0: 6,
@@ -111,7 +107,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         >
           {children}
         </Grid>
-      </StyledGelPageGrid>
+      </GelPageGrid>
     </ConstrainedWrapper>
   );
 
