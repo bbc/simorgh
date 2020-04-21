@@ -84,7 +84,7 @@ exports[`AMP Media Asset Page I can see the headline 1`] = `"Trump long headline
 
 exports[`AMP Media Asset Page I can see the timestamp 1`] = `"۲۶ بهمن ۱۳۹۷ - ۱۵ فوریه ۲۰۱۹"`;
 
-exports[`AMP Media Asset Page Media player embed A11y I can read the media player title 1`] = `"Media player"`;
+exports[`AMP Media Asset Page Media player embed A11y I can read the media player title 1`] = `"پخش صدا و تصویر"`;
 
 exports[`AMP Media Asset Page Media player embed I can see the media player embed 1`] = `"https://polling.test.bbc.co.uk/ws/av-embeds/cps/persian/iran-23231114/p01lmkjk/fa/amp"`;
 
