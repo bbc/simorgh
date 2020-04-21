@@ -171,14 +171,16 @@ export default () => {
       expect(metaTagContent).toMatchSnapshot();
     });
 
-    it('Linked data', () => {
-      const linkedDataEl = document.querySelector(
-        'script[type="application/ld+json"]',
-      );
+    const linkedDataEl = document.querySelector(
+      'script[type="application/ld+json"]',
+    );
 
-      expect(linkedDataEl).toBeInTheDocument();
-      expect(linkedDataEl.textContent).toBeTruthy();
-      expect(JSON.parse(linkedDataEl.textContent)).toMatchSnapshot();
-    });
+    if (linkedDataEl) {
+      it('Linked data', () => {
+        expect(linkedDataEl).toBeInTheDocument();
+        expect(linkedDataEl.textContent).toBeTruthy();
+        expect(JSON.parse(linkedDataEl.textContent)).toMatchSnapshot();
+      });
+    }
   });
 };
