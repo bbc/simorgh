@@ -25,7 +25,7 @@ describe('Given I am on the Amharic AMP Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserAmpTests({
       audioEmbedUrl:
-        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp',
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am/amp?morph_env=live',
     });
   });
 
@@ -48,7 +48,7 @@ describe('Given I am on the Amharic Canonical Live Radio page', () => {
   describe('When I am using the website', () => {
     runUserCanonicalTests({
       audioEmbedUrl:
-        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am',
+        'https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_amharic_radio/liveradio/am?morph_env=live',
     });
   });
 
