@@ -86,8 +86,13 @@ const printResults = results => {
     } else {
       console.log(green(`${result.passed.length} tests passed`));
     }
+  });
 
-    printFailures(result.failed);
+  results.forEach(result => {
+    if (result.failed.length > 0) {
+      console.log(`\n${result.url}`);
+      printFailures(result.failed);
+    }
   });
 
   printStatistics(results);

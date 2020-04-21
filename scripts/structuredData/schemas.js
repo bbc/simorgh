@@ -1,28 +1,30 @@
 /* eslint-disable consistent-return */
 /* eslint-disable default-case */
 
-const getSchemaForMedia = (jsonData) => {
+const getSchemaForMedia = jsonData => {
   return jsonData.promo.media.format === 'video'
     ? 'VideoObject'
     : 'AudioObject';
 };
 
-const getSchemas = (jsonData) => {
+const getSchemas = jsonData => {
   const pageType = jsonData.metadata.type;
 
   switch (pageType) {
     case 'MAP':
-      return getSchemaForMedia(jsonData);
+      return ['Article', getSchemaForMedia(jsonData)];
     case 'PGL':
-      return 'Article';
+      return ['Article'];
     case 'WS-LIVE':
-      return 'RadioChannel';
+      return ['RadioChannel'];
     case 'IDX':
-      return 'WebPage';
+      return ['WebPage'];
     case 'article':
-      return 'Article';
+      return ['Article'];
     case 'WSRADIO':
-      return 'AudioObject';
+      return [];
+    default:
+      return [];
   }
 };
 
