@@ -2,6 +2,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
+const { green } = require('chalk');
 const { structuredDataTest } = require('structured-data-testing-tool');
 const { Google, SocialMedia } = require('structured-data-testing-tool/presets');
 const {
@@ -29,9 +30,11 @@ const validate = async (url) => {
   } catch (error) {
     if (error.type === 'VALIDATION_FAILED') {
       result = error.res;
+    } else {
+      console.error(error);
+      process.exit(1);
     }
   }
-
   result.url = url;
   return result;
 };
@@ -64,41 +67,39 @@ const checkStructuredData = async (urls) => {
     .catch((error) => console.error(error));
 };
 
-const aggregateResults = (results) => {
-  return {
-    urls: results.map((result) => result.url),
-    tests: results.map((result) => result.tests).flat(),
-    passed: results.map((result) => result.passed).flat(),
-    failed: results
-      .map((result) => [...result.failed, ...result.warnings])
-      .flat(),
-    schemas: [...new Set(results.map((result) => result.schemas).flat())],
-    structuredData: Object.assign(
-      ...results.map((result) => result.structuredData),
-    ),
-  };
+const printResults = (results) => {
+  const showInfo = process.argv[2] && process.argv[2] === '-i';
+
+  results.forEach((result) => {
+    console.log(`\n${result.url}`);
+
+    if (showInfo) {
+      printPassing(result.passed);
+    } else {
+      console.log(green(`${result.passed.length} tests passed`));
+    }
+
+    printFailures(result.failed);
+  });
+
+  printStatistics(results);
 };
 
-const printResults = (overallResult) => {
-  // printPassing(overallResult);
-  printFailures(overallResult);
-  printStatistics(overallResult);
-};
+const exit = (results) => {
+  const totalFailed = results.map((result) => result.failed).flat();
 
-const exit = (overallResult) => {
-  if (overallResult.failed > 0) {
+  if (totalFailed.length > 0) {
+    console.error('Tests Failed');
     process.exit(1);
   }
 };
 
 const run = async () => {
   const results = await checkStructuredData(getUrls());
-  const overallResult = aggregateResults(results);
 
-  printResults(overallResult);
-  printPassing(results);
+  printResults(results);
 
-  exit(overallResult);
+  exit(results);
 };
 
 run();

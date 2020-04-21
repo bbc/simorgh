@@ -10,7 +10,11 @@ const testSummary = (test) => {
 };
 
 const testDetails = (test) => {
-  return `${cyan(test.test)}\n\t└─${JSON.stringify(test.value, null, 2)}`;
+  return `${cyan('└─', test.test)}\n\t\t└─${JSON.stringify(
+    test.value,
+    null,
+    2,
+  )}`;
 };
 
 const errorDetails = (test) => {
@@ -26,24 +30,37 @@ const errorDetails = (test) => {
   return errorMessage;
 };
 
-const printFailures = (overallResult) => {
-  overallResult.failed.forEach((failure) => {
+const printFailures = (failed) => {
+  failed.forEach((failure) => {
     console.log(
-      `${red('✕', testSummary(failure))}\n    ${errorDetails(failure)}`,
+      `${red('  ✕ ', testSummary(failure))}\n \t${errorDetails(failure)}`,
     );
   });
 };
 
-const printPassing = (overallResult) => {
-  overallResult.forEach((result) => {
-    console.log(green(result.url));
-    result.passed.forEach((pass) => {
-      console.log(`${green('✓', testSummary(pass))}\n    ${testDetails(pass)}`);
-    });
+const printPassing = (passed) => {
+  passed.forEach((pass) => {
+    console.log(`${green('  ✓ ', testSummary(pass))}\n \t${testDetails(pass)}`);
   });
 };
 
-const printStatistics = (overallResults) => {
+const aggregateResults = (results) => {
+  return {
+    urls: results.map((result) => result.url),
+    tests: results.map((result) => result.tests).flat(),
+    passed: results.map((result) => result.passed).flat(),
+    failed: results
+      .map((result) => [...result.failed, ...result.warnings])
+      .flat(),
+    schemas: [...new Set(results.map((result) => result.schemas).flat())],
+    structuredData: Object.assign(
+      ...results.map((result) => result.structuredData),
+    ),
+  };
+};
+
+const printStatistics = (results) => {
+  const overallResults = aggregateResults(results);
   const totalTests =
     overallResults.passed.length + overallResults.failed.length;
 
