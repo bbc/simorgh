@@ -68,16 +68,12 @@ export default (data, service, currentTime) => {
       } = program;
 
       const brandTitle = path(['brand', 'title'], program);
-      const episodeTitle = path(['episode', 'presentationTitle'], program);
 
       if (!publishedTimeStart) {
         logProgramError('publishTimeStart field is missing in program');
       }
       if (!brandTitle) {
         logProgramError('title field is missing in program');
-      }
-      if (!episodeTitle) {
-        logProgramError('episodeTitle field is missing in program');
       }
 
       const currentState = getProgramState(
@@ -93,7 +89,6 @@ export default (data, service, currentTime) => {
         startTime: publishedTimeStart,
         link: getLink(currentState, program, service),
         brandTitle,
-        episodeTitle,
         summary: path(['episode', 'synopses', 'short'], program),
         duration: publishedTimeDuration || '',
         durationLabel: 'Duration',
