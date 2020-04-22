@@ -9,10 +9,6 @@ import {
   getCookieBannerAccept,
 } from '../utilities/cookiePrivacyBanner';
 
-const STORY_PROMO_LIST_ITEM_SELECTOR = 'li[class^="StoryPromoLi"]';
-
-const STYLED_MEDIA_INDICATOR_SELECTOR = 'div[class^="StyledMediaIndicator"]';
-
 const assertScriptCookie = (product, cookieValue) => {
   const cookieSuffix = ['ukchina', 'zhongwen'].includes(product)
     ? 'chinese'
@@ -32,14 +28,19 @@ const assertURLContains = (product, variantValue) => {
 };
 
 const assertScriptSwitchButton = (service, variantValue) => {
+  const serviceName = config[service].name;
+  const scriptToSwitchTo =
+    appConfig[serviceName][variantValue].scriptLink.variant;
+
   cy.get('header[role="banner"]').within(() => {
-    cy.contains(appConfig[config[service].name][variantValue].scriptLink.text);
+    cy.get(`a[data-variant="${scriptToSwitchTo}"]`);
   });
 };
 
 const clickHomePageLink = product => {
-  cy.get('div[class^="Banner"]').within(() => {
-    cy.get(`a[href="/${product}"]`).first().click();
+  cy.get('header[role="banner"]').within(() => {
+    // TODO: remove first
+    cy.get(`a[href="/${product}"]`).click();
   });
 };
 
@@ -47,12 +48,12 @@ const clickFirstLink = () => {
   cy.get('a[class^="Link"]').first().click();
 };
 
-const findAndClickFirstMapLink = () => {
-  cy.get(STYLED_MEDIA_INDICATOR_SELECTOR).then($styledMediaIndicators => {
+const clickFirstMapLink = () => {
+  cy.get('div[class^="StyledMediaIndicator"]').then($styledMediaIndicators => {
     if ($styledMediaIndicators.length > 0) {
-      cy.get(STYLED_MEDIA_INDICATOR_SELECTOR)
+      cy.get('div[class^="StyledMediaIndicator"]')
         .first()
-        .parentsUntil(STORY_PROMO_LIST_ITEM_SELECTOR)
+        .parentsUntil('li[class^="StoryPromoLi"]')
         .within(() => {
           clickFirstLink();
         });
@@ -102,8 +103,10 @@ Object.keys(config)
               assertScriptSwitchButton(service, variant);
 
               // Clicks script switcher
+              // TODO: Does it need to have a variant passed in?
               clickScriptSwitcher(otherVariant);
 
+              // TODO: Asset lang is as expected lang="sr-cyrl"
               // Checks cookie is set to other variant
               assertScriptCookie(product, otherVariant);
 
@@ -122,11 +125,12 @@ Object.keys(config)
               // Checks correct url variant has persisted
               assertURLContains(product, otherVariant);
 
+              // TODO: Push this entire block into its own const
               // Finding a link to click on the home page
-              cy.get(STORY_PROMO_LIST_ITEM_SELECTOR).within(() => {
+              cy.get('li[class^="StoryPromoLi"]').within(() => {
                 // If it is a MAP test, find first MAP within a StoryPromoLi item and click it
                 if (pageType === 'mediaAssetPage') {
-                  findAndClickFirstMapLink();
+                  clickFirstMapLink();
                 } else {
                   // If it isn't a MAP page being tested, click the first promo item
                   clickFirstLink();
