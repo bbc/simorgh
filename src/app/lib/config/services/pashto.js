@@ -179,8 +179,8 @@ export const service = {
             ' بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'دې %provider_name% پوسټ نه تېرشئ',
+          endTextVisuallyHidden: 'د ‍پوسټ %provider_name% پای',
         },
       },
     },
