@@ -41,8 +41,4 @@ FeaturesAnalysis.propTypes = {
   content: arrayOf(shape(storyItem)),
 };
 
-FeaturesAnalysis.defaultProps = {
-  content: featuresAnalysis, // TODO: rm this https://github.com/bbc/simorgh/issues/5765
-};
-
 export default FeaturesAnalysis;

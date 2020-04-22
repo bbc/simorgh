@@ -51,6 +51,245 @@ class LoggerStream {
     logger.info(message.substring(0, message.lastIndexOf('\n')));
   }
 }
+const secondaryColumData = {
+  featuresAndAnalysis: [
+    {
+      headlines: {
+        shortHeadline: 'STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?',
+        headline: 'STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?',
+      },
+      locators: {
+        assetUri: '/igbo/afirika-23252735',
+        cpsUrn: 'urn:bbc:content:assetUri:igbo/afirika-23252735',
+        curie:
+          'http://www.bbc.co.uk/asset/954b3c17-7900-9342-aa1a-6857067770d7',
+      },
+      summary:
+        'This is a test asset used in Simorgh, please do not edit it without asking.',
+      timestamp: 1580745507000,
+      byline: {
+        name: 'By Andrew Overtyped Marr',
+        title: 'BBC News - Overtyped',
+        persons: [
+          {
+            name: 'Andrew Marr',
+            function: 'BBC News',
+            thumbnail:
+              'http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/50002000/jpg/_50002170_andrew_marr_112_bbc.jpg',
+          },
+        ],
+      },
+      passport: {
+        category: {
+          categoryId:
+            'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+          categoryName: 'News',
+        },
+        campaigns: [
+          {
+            campaignId: '5ad86270c93a9f000eecb255',
+            campaignName: 'Amuse me',
+          },
+        ],
+      },
+      indexImage: {
+        id: '63724372',
+        subType: 'index',
+        href:
+          'http://b.files.bbci.co.uk/6ACE/test/_63724372_gettyimages-1098075358.jpg',
+        path: '/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg',
+        height: 549,
+        width: 976,
+        altText: 'Some people at the NTA awards',
+        copyrightHolder: 'Joe Maher',
+        type: 'image',
+      },
+      id: 'urn:bbc:ares::asset:igbo/afirika-23252735',
+      type: 'cps',
+    },
+    {
+      headlines: {
+        shortHeadline: 'Zimbabwe eferela Robert Mugabe aka',
+        headline: 'Robert Mugabe: Zimbabwe eferela nwa amadi a aka',
+      },
+      locators: {
+        assetUri: '/igbo/afirika-49666505',
+        cpsUrn: 'urn:bbc:content:assetUri:igbo/afirika-49666505',
+        curie:
+          'http://www.bbc.co.uk/asset/40af9483-cf8c-254f-b5f8-af1fa2a74436',
+      },
+      summary:
+        "Gọọmentị nakwa ndị Zimbabwe pụtara n'igwe iji kwanyere aka chịburu ha bụ Robert Mugabe ugwu ikpeazụ ya na Harare.",
+      timestamp: 1580745507000,
+      passport: {
+        category: {
+          categoryId:
+            'http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature',
+          categoryName: 'Feature',
+        },
+        campaigns: [
+          {
+            campaignId: '5a988e3e39461b000e9dabfb',
+            campaignName: 'WS - Keep me on trend',
+          },
+        ],
+      },
+      indexImage: {
+        id: '108810335',
+        subType: 'index',
+        href:
+          'http://c.files.bbci.co.uk/D035/production/_108810335_mugabe2.jpg',
+        path: '/cpsprodpb/D035/production/_108810335_mugabe2.jpg',
+        height: 549,
+        width: 976,
+        altText:
+          "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+        caption:
+          "Ndị mmadụ na-agụ egwu iji kwanyere Robert Mugabe ugwu n'akwamozu ya.",
+        copyrightHolder: 'BBC',
+        type: 'image',
+      },
+      id: 'urn:bbc:ares::asset:igbo/afirika-49666505',
+      type: 'cps',
+    },
+  ],
+  topStories: [
+    {
+      headlines: {
+        headline:
+          'China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos',
+      },
+      locators: {
+        assetUri: '/mundo/noticias-internacional-51939501',
+        cpsUrn:
+          'urn:bbc:content:assetUri:mundo/noticias-internacional-51939501',
+        assetId: '51939501',
+      },
+      summary:
+        'Un día después de que en Estados Unidos anunciaran que pasan a probar en humanos una posible vacuna para el nuevo coronavirus, diversas instituciones chinas revelaron este martes sus planes para iniciar a partir de abril ensayos clínicos de varias posibles vacunas contra el covid-19.',
+      timestamp: 1580745507000,
+      language: 'es',
+      byline: {
+        name: 'Redacción  ',
+        title: 'BBC News Mundo',
+        persons: [
+          {
+            name: 'Redacción',
+            function: 'BBC News Mundo',
+          },
+        ],
+      },
+      passport: {
+        category: {
+          categoryId:
+            'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+          categoryName: 'News',
+        },
+        campaigns: [
+          {
+            campaignId: '5a988e4739461b000e9dabfc',
+            campaignName: 'WS - Update me',
+          },
+        ],
+        taggings: [],
+      },
+      cpsType: 'STY',
+      indexImage: {
+        id: '111335312',
+        subType: 'index',
+        href:
+          'http://c.files.bbci.co.uk/5369/production/_111335312_gettyimages-1004465280.jpg',
+        path:
+          '/cpsprodpb/5369/production/_111335312_gettyimages-1004465280.jpg',
+        height: 549,
+        width: 976,
+        altText: 'Una mujer china recibe una vacuna.',
+        caption:
+          'China es uno de los países que más se ha implicado en la búsqueda tanto de una vacuna como de métodos de detección del nuevo coronavirus.',
+        copyrightHolder: 'Getty Images',
+      },
+      options: {
+        isBreakingNews: false,
+        isFactCheck: false,
+      },
+      prominence: 'standard',
+      relatedItems: [
+        {
+          headlines: {
+            headline:
+              'Estados Unidos comienza a probar en humanos la primera vacuna contra el coronavirus',
+          },
+          locators: {
+            assetUri: '/mundo/noticias-51921073',
+            cpsUrn: 'urn:bbc:content:assetUri:/mundo/noticias-51921073',
+          },
+          summary:
+            'Un total de 45 voluntarios sanos participarán en un ensayo clínico financiado por el gobierno federal.',
+          timestamp: 1584402419000,
+          language: 'es',
+          cpsType: 'STY',
+          id: 'urn:bbc:ares::asset:mundo/noticias-51921073',
+          type: 'cps',
+        },
+      ],
+      id: 'urn:bbc:ares::asset:mundo/noticias-internacional-51939501',
+      type: 'cps',
+    },
+    {
+      headlines: {
+        headline:
+          'Nigeria don get five new cases of Coronavirus - See how e happun',
+      },
+      locators: {
+        assetUri: '/pidgin/tori-51945757',
+        cpsUrn: 'urn:bbc:content:assetUri:pidgin/tori-51945757',
+        assetId: '51945757',
+      },
+      summary:
+        'Nigeria Health say di patients from UK and America travel come di kontri.',
+      timestamp: 1580745507000,
+      language: 'pcm',
+      passport: {
+        category: {
+          categoryId:
+            'http://www.bbc.co.uk/ontologies/applicationlogic-news/News',
+          categoryName: 'News',
+        },
+        campaigns: [
+          {
+            campaignId: '5a988e2939461b000e9dabf8',
+            campaignName: 'WS - Educate me',
+          },
+          {
+            campaignId: '5a988e3e39461b000e9dabfb',
+            campaignName: 'WS - Keep me on trend',
+          },
+        ],
+        taggings: [],
+      },
+      cpsType: 'STY',
+      indexImage: {
+        id: '111336814',
+        subType: 'index',
+        href:
+          'http://c.files.bbci.co.uk/A387/production/_111336814_39ac4483-c830-4858-85fb-ad8e2608afb4.jpg',
+        path:
+          '/cpsprodpb/A387/production/_111336814_39ac4483-c830-4858-85fb-ad8e2608afb4.jpg',
+        height: 549,
+        width: 976,
+        altText: 'NCDC Oga and Nigeria Health Minister',
+        copyrightHolder: 'BBC',
+      },
+      options: {
+        isBreakingNews: false,
+        isFactCheck: false,
+      },
+      prominence: 'standard',
+      id: 'urn:bbc:ares::asset:pidgin/tori-51945757',
+      type: 'cps',
+    },
+  ],
+};
 
 const constructDataFilePath = ({
   pageType,
@@ -246,6 +485,9 @@ server
       });
     },
   )
+  .get('/:service/testdata.json', async ({ params }, res) => {
+    res.status(200).send(secondaryColumData);
+  })
   .get(
     '/*',
     injectCspHeaderProdBuild,

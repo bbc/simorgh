@@ -15,7 +15,7 @@ import addBylineBlock from './addBylineBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
@@ -27,6 +27,8 @@ export const only = (pageType, transformer) => (pageData, ...args) => {
   const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
   return isCorrectPageType ? transformer(pageData, ...args) : pageData;
 };
+
+const getPageType = (pageData) => path(['metadata', 'type'], pageData);
 
 const processOptimoBlocks = pipe(
   only(MEDIA_ASSET_PAGE, processUnavailableMedia),
@@ -50,13 +52,30 @@ const transformJson = async (json) => {
   }
 };
 
+const getAdditionalData = async (pageData) => {
+  const pageType = getPageType(pageData);
+
+  switch (pageType) {
+    case STORY_PAGE:
+      const { json: secondaryColumData } = await fetchPageData(
+        '/mundo/testdata',
+      );
+      return secondaryColumData;
+    default:
+      return;
+  }
+};
+
 export default async ({ path: pathname }) => {
   const { json, ...rest } = await fetchPageData(pathname);
+  //   const { json: data } = await fetchPageData('/mundo/testdata');
+
+  const additonalData = await getAdditionalData(json);
 
   return {
     ...rest,
     ...(json && {
-      pageData: await transformJson(json),
+      pageData: { ...(await transformJson(json)), additonalData },
     }),
   };
 };

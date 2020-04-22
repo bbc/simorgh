@@ -37,7 +37,11 @@ import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
+const StoryPage = ({
+  pageData,
+  mostReadEndpointOverride,
+  secondaryColumData,
+}) => {
   const { dir } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const category = path(
@@ -62,6 +66,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const {
+    additonalData: { featuresAndAnalysis, topStories },
+  } = pageData;
 
   const componentsToRender = {
     fauxHeadline,
@@ -212,10 +219,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <ResponsiveComponentWrapper>
-            <TopStories />
+            <TopStories content={topStories} />
           </ResponsiveComponentWrapper>
           <ResponsiveComponentWrapper>
-            <FeaturesAnalysis />
+            <FeaturesAnalysis content={featuresAndAnalysis} />
           </ResponsiveComponentWrapper>
           <ComponentWrapper>
             <MostReadContainer
