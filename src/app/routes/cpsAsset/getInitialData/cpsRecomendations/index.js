@@ -1,18 +1,11 @@
 import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
-import { optimoSubheadline } from '../convertToOptimoBlocks/utils/helpers';
 
-const isCpsParagraph = (block) => {
-  /* In CPS the following blocks are considered paragraphs
-    Image, Audio, Video, Paragraph
-  */
-  const mediaTypes = ['image', 'audio', 'video'];
-  if (mediaTypes.includes(block.type)) return true;
-
-  if (block.type === 'text') {
-    const paragraphBlocks = path(['model', 'blocks'], block).filter(
-      (b) => b.type === 'paragraph',
+const isCpsParagraph = cpsBlock => {
+  if (cpsBlock.type === 'text') {
+    const paragraphBlocks = path(['model', 'blocks'], cpsBlock).filter(
+      block => block.type === 'paragraph',
     );
     return !!paragraphBlocks.length;
   }
@@ -35,37 +28,36 @@ const getNthCpsParagraphIndex = (blocks, n) => {
   return indexCount;
 };
 
-const insertRecommendationsBlock = (recommendations, blocks) => {
-  // get the index of the 7th paragraph
-  const recommendationIndex = getNthCpsParagraphIndex(blocks, 7) + 1;
+const insertRecommendationsBlock = (recommendationBlock, blocks) => {
+  // get the index of the 5th paragraph
+  const recommendationIndex = getNthCpsParagraphIndex(blocks, 5) + 1;
 
-  // split blocks at the index of the 7th paragraph
-  const [a, b] = splitAt(recommendationIndex, blocks);
+  // split blocks at the index of the 5th paragraph
+  const parts = splitAt(recommendationIndex, blocks);
 
-  // reconstruct
-  return [...a, { ...recommendations }, ...b];
+  // reconstruct blocks
+  return [...parts[0], { ...recommendationBlock }, ...parts[1]];
 };
 
-const cpsRecommendations = (originalJson) => {
+const cpsRecommendations = originalJson => {
   const json = deepClone(originalJson);
   const pageType = path(['metadata', 'type'], json);
+  const { allowAdvertising } = path(['metadata', 'options'], json);
   const blocks = path(['content', 'model', 'blocks'], json);
 
-  if (pageType !== 'STY' || !blocks) {
+  if (pageType !== 'STY' || !blocks || !allowAdvertising) {
     return json;
   }
 
-  const block = optimoSubheadline([
-    {
-      fragments: [
-        {
-          fragment: 'RECOMMENDATIONS SHOULD APPEAR HERE',
-          attributes: [],
-        },
-      ],
-      text: 'RECOMMENDATIONS SHOULD APPEAR HERE',
+  const { assetUri } = path(['metadata', 'locators'], json);
+
+  const block = {
+    type: 'wsoj',
+    model: {
+      type: 'recommendations',
+      assetUri,
     },
-  ]);
+  };
 
   json.content.model.blocks = insertRecommendationsBlock(block, blocks);
 
