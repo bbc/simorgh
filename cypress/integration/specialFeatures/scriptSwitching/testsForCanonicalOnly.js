@@ -36,11 +36,21 @@ const assertScriptSwitchButton = (service, variantValue) => {
   });
 };
 
-const assertLang = (service, variantValue) => {
-  const expectedLang = appConfig[config[service].name][variantValue].lang;
-  cy.get(`html[lang=${expectedLang}]`);
-  // cy.get('html').should('have.property', 'lang', expectedLang);
+const variantAssertions = (product, service, variantValue) => {
+  // Assert the script switch button is correct for variant
+  assertScriptSwitchButton(service, variantValue);
+  // Assert URL contains correct variant
+  assertURLContains(product, variantValue);
+  // Checks correct variant is saved in cookie
+  assertScriptCookie(product, variantValue);
+  // // Assert lang for page is as expected for variant
+  // assertLang(service, variantValue);
 };
+
+// const assertLang = (service, variantValue) => {
+//   const expectedLang = appConfig[config[service].name][variantValue].lang;
+//   cy.get('html').should('have.property', 'lang', expectedLang);
+// };
 
 const clickHomePageLink = product => {
   cy.get('header[role="banner"]').within(() => {
@@ -98,42 +108,24 @@ Object.keys(config)
               getPrivacyBannerAccept(service, variant).click();
 
               // Accept cookie banner
-              // TODO: What is the difference between service & variant?
               getCookieBannerAccept(service, variant).click();
 
-              // Checks URL is in current variant
-              assertURLContains(product, variant);
-
-              // Assert the script switch button is correct for variant
-              assertScriptSwitchButton(service, variant);
-
-              // Assert lang for page is as expected for variant
-              assertLang(service, variant);
+              // Assert things have been correctly set for this variant
+              // TODO: What is the difference between service & variant?
+              // TODO: How do we make this not assert cookies in the first instance?
+              variantAssertions(product, service, variant);
 
               // Clicks script switcher
               clickScriptSwitcher(otherVariant);
 
-              // TODO: group assertions
-              // Checks cookie is set to other variant
-              assertScriptCookie(product, otherVariant);
-
-              // Checks URL is in other variant
-              assertURLContains(product, otherVariant);
-
-              // Assert the script switch button is for other variant
-              assertScriptSwitchButton(service, otherVariant);
-
-              // Assert the lang for hte page is for other variant
-              assertLang(service, variant);
+              // Assert against other variant after switching script
+              variantAssertions(product, service, otherVariant);
 
               // Navigate to home page by clicking link in the banner
               clickHomePageLink(product);
 
-              // Checks correct cookie has persisted
-              assertScriptCookie(product, otherVariant);
-
-              // Checks correct url variant has persisted
-              assertURLContains(product, otherVariant);
+              // Assert other variant has persisted
+              variantAssertions(product, service, otherVariant);
 
               // TODO: Push this entire block into its own const
               // Finding a link to click on the home page
@@ -147,20 +139,14 @@ Object.keys(config)
                 }
               });
 
-              // Checks correct cookie has persisted
-              assertScriptCookie(product, otherVariant);
-
-              // Checks correct url variant has persisted
-              assertURLContains(product, otherVariant);
+              // Assert other variant has persisted after navigating to new page
+              variantAssertions(product, service, otherVariant);
 
               // Clicks script switcher to original variant
               clickScriptSwitcher(variant);
 
-              // Checks cookie is correct after script switch
-              assertScriptCookie(product, variant);
-
-              // Checks URL is correct variant
-              assertURLContains(product, variant);
+              // Assert variant values have changed after clicking script switcher
+              variantAssertions(product, service, variant);
             });
           });
         });
