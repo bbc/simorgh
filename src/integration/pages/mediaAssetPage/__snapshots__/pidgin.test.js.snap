@@ -2861,7 +2861,7 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
             crossorigin="anonymous"
             defer
     >
-      [27]
+      [25]
     </script>
     <script async
             data-chunk="main"

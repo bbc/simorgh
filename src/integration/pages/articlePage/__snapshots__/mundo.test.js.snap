@@ -1993,7 +1993,7 @@ exports[`Given I am on a Mundo Article page When I view the source code in the b
             crossorigin="anonymous"
             defer
     >
-      [21]
+      [19]
     </script>
     <script async
             data-chunk="main"
