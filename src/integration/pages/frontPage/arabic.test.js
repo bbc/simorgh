@@ -45,7 +45,7 @@ describe('Given I am on a Arabic Frontpage AMP/Canonical page', () => {
     runHeaderTests({
       skipToContentText: 'إذهب الى المحتوى',
     });
-    runCanonicalUserTests();
+    runCanonicalUserTests({ service: 'arabic' });
     runFooterTests({
       copyrightAndExternalLinkingText:
         '© 2020 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية.',
