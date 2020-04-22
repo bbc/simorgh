@@ -1,29 +1,27 @@
-export default ({ copyrightAndExternalLinkingText, brandingLink }) => {
-  [amp, canonical].forEach(page => {
-    describe(`And using ${page.platform}`, () => {
-      it('I can see the footer copyright and external linking text', () => {
-        const copyrightEl = page.getByTextMultiElement(
-          copyrightAndExternalLinkingText,
-        );
+export default () => {
+  describe('Footer', () => {
+    it('I can see the footer copyright and external linking text', () => {
+      const footerCopyrightEl = document.querySelector('footer div p');
 
-        expect(copyrightEl).toBeInTheDocument();
-      });
+      expect(footerCopyrightEl).toBeInTheDocument();
+      expect(footerCopyrightEl.textContent).toBeTruthy();
+      expect(footerCopyrightEl.textContent).toMatchSnapshot();
+    });
 
-      it('I can see the BBC branding', () => {
-        const brandingEl = page.document.querySelector('footer svg');
+    it('I can see the BBC branding', () => {
+      const brandingEl = document.querySelector('footer svg');
 
-        expect(brandingEl).toBeInTheDocument();
-      });
+      expect(brandingEl).toBeInTheDocument();
+    });
 
-      it('I can click on the BBC branding and it would take me to the homepage', () => {
-        const brandingEl = page.document.querySelector('footer svg');
-        const brandingLinkEl = brandingEl.parentNode;
-        const brandingImageEl = brandingLinkEl.querySelector('svg');
+    it('I can click on the BBC branding and it would take me to the homepage', () => {
+      const brandingEl = document.querySelector('footer svg');
+      const brandingLinkEl = brandingEl.parentNode;
+      const brandingImageEl = brandingLinkEl.querySelector('svg');
 
-        expect(brandingLinkEl.tagName).toEqual('A');
-        expect(brandingLinkEl.getAttribute('href')).toEqual(brandingLink);
-        expect(brandingImageEl).toBeInTheDocument();
-      });
+      expect(brandingLinkEl.tagName).toEqual('A');
+      expect(brandingLinkEl.getAttribute('href')).toMatchSnapshot();
+      expect(brandingImageEl).toBeInTheDocument();
     });
   });
 };
