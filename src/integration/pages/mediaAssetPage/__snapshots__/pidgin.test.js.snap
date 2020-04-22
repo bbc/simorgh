@@ -1119,9 +1119,9 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                aria-labelledby="related-content-heading"
                class="GridWrapper-sc-12lwanc-0 hgpaqH"
       >
-        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -2466,9 +2466,9 @@ exports[`Given I am on a Pidgin Media Asset Page When I view the source code in 
                aria-labelledby="related-content-heading"
                class="GridWrapper-sc-12lwanc-0 hgpaqH"
       >
-        <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-          <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+        <div class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB">
+          <div class="GridItemConstrainedLarge-sc-12lwanc-4 EnabledGridWrapper-opyob2-1 JNKTB">
+            <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
               <div class="Bar-sc-1x4gwjz-0 jsgdXU">
               </div>
               <h2 class="Heading-sc-1x4gwjz-2 eZofTG">

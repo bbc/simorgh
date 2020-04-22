@@ -1754,10 +1754,12 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           </main>
           <section role="region"
                    aria-labelledby="related-content-heading"
-                   class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+                   class="Wrapper-opyob2-0 dlivvF"
           >
-            <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-              <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+            <div class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+                 dir="ltr"
+            >
+              <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
                 <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                 </div>
                 <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -1774,7 +1776,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                 </h2>
               </div>
               <ul dir="ltr"
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 euPEjP"
                   role="list"
               >
                 <li dir="ltr"
@@ -1919,10 +1921,12 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
                      aria-labelledby="top-stories-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+                     class="Wrapper-opyob2-0 dlivvF"
             >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+              <div class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+                   dir="ltr"
+              >
+                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -1998,10 +2002,12 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
                      aria-labelledby="features-analysis-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+                     class="Wrapper-opyob2-0 dlivvF"
             >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+              <div class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+                   dir="ltr"
+              >
+                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -3897,10 +3903,12 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           </main>
           <section role="region"
                    aria-labelledby="related-content-heading"
-                   class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+                   class="Wrapper-opyob2-0 dlivvF"
           >
-            <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-              <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+            <div class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+                 dir="ltr"
+            >
+              <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
                 <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                 </div>
                 <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -3917,7 +3925,7 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
                 </h2>
               </div>
               <ul dir="ltr"
-                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 gjgzxV"
+                  class="StoryPromoUl-sc-171lqjd-1 isCYWc GridComponent-nf79gm-0 euPEjP"
                   role="list"
               >
                 <li dir="ltr"
@@ -4044,10 +4052,12 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
                      aria-labelledby="top-stories-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+                     class="Wrapper-opyob2-0 dlivvF"
             >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+              <div class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+                   dir="ltr"
+              >
+                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
@@ -4123,10 +4133,12 @@ exports[`Given I am on a Mundo story AMP/Canonical page When I view the source c
           <div class="ResponsiveComponentWrapper-w14rad-5 hLEbcQ">
             <section role="region"
                      aria-labelledby="features-analysis-heading"
-                     class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB"
+                     class="Wrapper-opyob2-0 dlivvF"
             >
-              <div class="GridItemConstrainedLarge-sc-12lwanc-4 Wrapper-opyob2-0 hwTDOB">
-                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-1 cSEclA">
+              <div class="GridComponent-nf79gm-0 ehIAex Wrapper-opyob2-0 dlivvF"
+                   dir="ltr"
+              >
+                <div class="SectionLabelWrapper-sc-1x4gwjz-1 iLMrCu StyledSectionLabel-opyob2-2 jpnPtT">
                   <div class="Bar-sc-1x4gwjz-0 fxoZgi">
                   </div>
                   <h2 class="Heading-sc-1x4gwjz-2 eZofTG">
