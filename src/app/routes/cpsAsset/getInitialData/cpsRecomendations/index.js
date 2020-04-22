@@ -2,7 +2,7 @@ import path from 'ramda/src/path';
 import deepClone from 'ramda/src/clone';
 import splitAt from 'ramda/src/splitAt';
 
-const isCpsParagraph = cpsBlock => {
+const isCpsParagraphBlock = cpsBlock => {
   if (cpsBlock.type === 'text') {
     const paragraphBlocks = path(['model', 'blocks'], cpsBlock).filter(
       block => block.type === 'paragraph',
@@ -16,7 +16,7 @@ const getNthCpsParagraphIndex = (blocks, n) => {
   let indexCount = 0; // maybe make it the lastt block just incase there's no paragraph blocks
   let paragraphCount = 0;
   blocks.some((block, index) => {
-    if (isCpsParagraph(block)) {
+    if (isCpsParagraphBlock(block)) {
       paragraphCount += 1;
     }
     if (paragraphCount === n) {
