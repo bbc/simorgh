@@ -171,12 +171,15 @@ export const service = {
     brandSVG,
     mostRead: {
       header: '読まれた記事ランキング',
-      lastUpdated: 'Last updated:',
+      lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
+    },
+    recommendations: {
+      hasStoryRecommendations: false,
     },
     footer: {
       trustProjectLink: {

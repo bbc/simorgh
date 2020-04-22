@@ -192,6 +192,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: true,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/mundo/institucional-51359666',
