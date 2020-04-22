@@ -189,6 +189,9 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/ukrainian/institutional-50170368',
@@ -231,6 +234,10 @@ export const service = {
       {
         title: 'Новини',
         url: '/ukrainian',
+      },
+      {
+        title: 'Коронавірус',
+        url: '/ukrainian/52118881',
       },
       {
         title: 'Наука',

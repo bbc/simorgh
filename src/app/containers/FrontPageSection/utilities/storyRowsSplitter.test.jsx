@@ -257,7 +257,7 @@ const numberOfStories = {
   },
 };
 
-const rowsTest = (value) => {
+const rowsTest = value => {
   it(`should return right splitting for ${value} stories for first section`, () => {
     expect(getRows(numberOfStories[value].input, true)).toStrictEqual(
       numberOfStories[value].expectedFirstSection,
@@ -274,7 +274,7 @@ const rowsTest = (value) => {
 describe('Story rows splitter', () => {
   describe('assertions', () => {
     describe('getRows', () => {
-      Object.keys(numberOfStories).forEach((value) => rowsTest(value));
+      Object.keys(numberOfStories).forEach(value => rowsTest(value));
     });
   });
 });

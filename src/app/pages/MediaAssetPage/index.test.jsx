@@ -40,8 +40,8 @@ const createAssetPage = ({ pageData }, service) => (
   </StaticRouter>
 );
 
-jest.mock('#containers/PageHandlers/withPageWrapper', () => (Component) => {
-  const PageWrapperContainer = (props) => (
+jest.mock('#containers/PageHandlers/withPageWrapper', () => Component => {
+  const PageWrapperContainer = props => (
     <div id="PageWrapperContainer">
       <Component {...props} />
     </div>
@@ -50,8 +50,8 @@ jest.mock('#containers/PageHandlers/withPageWrapper', () => (Component) => {
   return PageWrapperContainer;
 });
 
-jest.mock('#containers/PageHandlers/withLoading', () => (Component) => {
-  const LoadingContainer = (props) => (
+jest.mock('#containers/PageHandlers/withLoading', () => Component => {
+  const LoadingContainer = props => (
     <div id="LoadingContainer">
       <Component {...props} />
     </div>
@@ -60,8 +60,8 @@ jest.mock('#containers/PageHandlers/withLoading', () => (Component) => {
   return LoadingContainer;
 });
 
-jest.mock('#containers/PageHandlers/withError', () => (Component) => {
-  const ErrorContainer = (props) => (
+jest.mock('#containers/PageHandlers/withError', () => Component => {
+  const ErrorContainer = props => (
     <div id="ErrorContainer">
       <Component {...props} />
     </div>
@@ -70,8 +70,8 @@ jest.mock('#containers/PageHandlers/withError', () => (Component) => {
   return ErrorContainer;
 });
 
-jest.mock('#containers/PageHandlers/withData', () => (Component) => {
-  const DataContainer = (props) => (
+jest.mock('#containers/PageHandlers/withData', () => Component => {
+  const DataContainer = props => (
     <div id="DataContainer">
       <Component {...props} />
     </div>
@@ -80,8 +80,8 @@ jest.mock('#containers/PageHandlers/withData', () => (Component) => {
   return DataContainer;
 });
 
-jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
-  const ContextsContainer = (props) => (
+jest.mock('#containers/PageHandlers/withContexts', () => Component => {
+  const ContextsContainer = props => (
     <div id="ContextsContainer">
       <Component {...props} />
     </div>
@@ -90,7 +90,7 @@ jest.mock('#containers/PageHandlers/withContexts', () => (Component) => {
   return ContextsContainer;
 });
 
-const escapedText = (text) => {
+const escapedText = text => {
   const textReplacements = {
     '&quot;': '"',
     '&amp;': '&',
@@ -103,7 +103,7 @@ const escapedText = (text) => {
     'gi',
   );
 
-  return text.replace(replacementsRegex, (match) => textReplacements[match]);
+  return text.replace(replacementsRegex, match => textReplacements[match]);
 };
 
 const getBlockTextAtIndex = (index, originalPageData) => {
@@ -137,7 +137,7 @@ describe('Media Asset Page', () => {
       document.querySelectorAll(
         'head > meta[property*="image"], head > meta[name*="image"]',
       ),
-    ).map((tag) =>
+    ).map(tag =>
       tag.hasAttribute('property')
         ? {
             property: tag.getAttribute('property'),
@@ -187,11 +187,11 @@ describe('Media Asset Page', () => {
   describe('AV player', () => {
     let liveStreamSource;
 
-    const getLiveStreamBlock = (processedPageData) => {
+    const getLiveStreamBlock = processedPageData => {
       return path(['content', 'model', 'blocks', 1], processedPageData);
     };
 
-    const getLiveStreamSource = (liveStreamBlock) => {
+    const getLiveStreamSource = liveStreamBlock => {
       return path(
         [
           'model',
@@ -346,12 +346,12 @@ it('should show the media message when there is no media block', async () => {
   const blockTypes = pathOr([], ['metadata', 'blockTypes'], uzbekPageData);
   const uzbekDataWithNoMediaBlock = assocPath(
     ['content', 'blocks'],
-    blocks.filter((block) => block.type !== 'version'),
+    blocks.filter(block => block.type !== 'version'),
     uzbekPageData,
   );
   const uzbekDataWithNoMediaType = assocPath(
     ['metadata', 'blockTypes'],
-    blockTypes.filter((type) => type !== 'version'),
+    blockTypes.filter(type => type !== 'version'),
     uzbekDataWithNoMediaBlock,
   );
 

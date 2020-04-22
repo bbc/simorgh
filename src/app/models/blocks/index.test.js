@@ -16,12 +16,12 @@ const testModel = {
   model: 'TheModel',
 };
 
-const rawBlock = (type) => ({
+const rawBlock = type => ({
   type,
   model: testModel,
 });
 
-const listBlock = (type) => ({
+const listBlock = type => ({
   type: 'text',
   model: {
     type,

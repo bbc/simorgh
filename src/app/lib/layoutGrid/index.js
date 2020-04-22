@@ -142,8 +142,8 @@ export const layoutGridItemMediumNoMargin = css`
     max-width: ${fiveOfSixColumnsMaxWidthGroup4};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) => specifiedOrMaximum(props.gridSpan, 22)};
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props => specifiedOrMaximum(props.gridSpan, 22)};
     max-width: ${tenOfTwelveColumnsMaxWidthGroup5};
   }
 
@@ -195,50 +195,50 @@ export const layoutGridItem = css`
 
 export const nestedGridItemSmallCss = css`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group1 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 4)};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
     ${({ marginLeft = {} }) =>
       marginLeft.group3 ? `margin-left: ${marginLeft.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 4)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group5 || props.gridSpan.default, 8)};
   }
 `;
 
 export const nestedGridItemMediumCss = css`
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 5)};
     ${({ marginLeft = {} }) =>
       marginLeft.group3 ? `margin-left: ${marginLeft.group3}` : ''};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 5)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(
           props.gridSpan.group5 || props.gridSpan.default,
           10,
@@ -248,23 +248,23 @@ export const nestedGridItemMediumCss = css`
 
 export const nestedGridItemLargeCss = css`
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group2 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group3 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(props.gridSpan.group4 || props.gridSpan.default, 6)};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    grid-column: ${(props) => props.gridColumnStart} / span
-      ${(props) =>
+    grid-column: ${props => props.gridColumnStart} / span
+      ${props =>
         specifiedOrMaximum(
           props.gridSpan.group5 || props.gridSpan.default,
           12,

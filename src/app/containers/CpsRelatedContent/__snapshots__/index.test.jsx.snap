@@ -22,7 +22,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -36,7 +36,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <ul
@@ -79,7 +79,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
+                    class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                     href="/pidgin/44508901"
                   >
                     <span
@@ -145,7 +145,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
+                    class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                     href="/pidgin/tori-46975713"
                   >
                     How light companies dey use estimated billing show Nigerians pepper
@@ -200,7 +200,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   class="Headline-sc-1dvfmi3-3 hSJrur"
                 >
                   <a
-                    class="Link-sc-1dvfmi3-5 yQgSu"
+                    class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                     href="/pidgin/tori-42494678"
                   >
                     Nigeria: Wetin 5,222 megawatts electric fit do?
@@ -249,7 +249,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
           <h2
             class="Heading-sc-1x4gwjz-2 eZofTG"
           >
-            <div
+            <span
               class="FlexColumn-wx5kdp-0 dgpsiS"
             >
               <span
@@ -263,7 +263,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   Another thing we de for inside dis tori
                 </span>
               </span>
-            </div>
+            </span>
           </h2>
         </div>
         <div
@@ -299,7 +299,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="Headline-sc-1dvfmi3-3 hSJrur"
               >
                 <a
-                  class="Link-sc-1dvfmi3-5 yQgSu"
+                  class="Link-sc-1dvfmi3-5 StyledLink-sc-16i2p1z-0 eTlRgm"
                   href="/pidgin/44508901"
                 >
                   <span

@@ -40,7 +40,7 @@ const processOptimoBlocks = pipe(
   cpsOnlyOnwardJourneys,
   cpsRecomendations,
 );
-const transformJson = async (json) => {
+const transformJson = async json => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(formattedPageData);

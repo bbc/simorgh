@@ -1,6 +1,6 @@
 import findLastIndex from 'ramda/src/findLastIndex';
 import propSatisfies from 'ramda/src/propSatisfies';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 
 export const getProgramState = (currentTime, startTime, endTime) => {
   const isLive = currentTime < endTime && currentTime > startTime;
@@ -15,52 +15,61 @@ export const getProgramState = (currentTime, startTime, endTime) => {
 };
 
 export const getLink = (state, program, service) => {
+  const pid = path(['episode', 'pid'], program);
   const url = `/${service}/${program.serviceId}`;
-  return state === 'live'
-    ? `${url}/liveradio`
-    : `${url}/${program.episode.pid}`;
+  return state === 'live' ? `${url}/liveradio` : `${url}/${pid}`;
 };
 
-export default (radioScheduleData, service, currentTime) => {
+export default (data, service, currentTime) => {
+  if (!data) {
+    return null;
+  }
+
+  const { schedules = [] } = data;
+
   // finding latest program, that may or may not still be live. this is because there isn't
   // always a live program, in which case we show the most recently played program on demand.
   const latestProgramIndex = findLastIndex(
-    propSatisfies((time) => time < currentTime, 'publishedTimeStart'),
-  )(radioScheduleData.schedules);
-
-  const radioSchedules = radioScheduleData.schedules;
+    propSatisfies(time => time < currentTime, 'publishedTimeStart'),
+  )(schedules);
 
   const scheduleDataIsComplete =
-    radioSchedules[latestProgramIndex - 2] &&
-    radioSchedules[latestProgramIndex + 1];
-  const schedulesToShow = scheduleDataIsComplete && [
-    radioSchedules[latestProgramIndex],
-    radioSchedules[latestProgramIndex - 1],
-    radioSchedules[latestProgramIndex - 2],
-    radioSchedules[latestProgramIndex + 1],
+    schedules[latestProgramIndex - 2] && schedules[latestProgramIndex + 1];
+  const programsToShow = scheduleDataIsComplete && [
+    schedules[latestProgramIndex],
+    schedules[latestProgramIndex - 1],
+    schedules[latestProgramIndex - 2],
+    schedules[latestProgramIndex + 1],
   ];
 
-  const schedules =
-    schedulesToShow &&
-    schedulesToShow.map((program) => {
+  const processedSchedule =
+    programsToShow &&
+    programsToShow.map((program = {}) => {
+      const {
+        publishedTimeStart,
+        publishedTimeEnd,
+        publishedTimeDuration,
+      } = program;
+
       const currentState = getProgramState(
         currentTime,
-        program.publishedTimeStart,
-        program.publishedTimeEnd,
+        publishedTimeStart,
+        publishedTimeEnd,
         service,
       );
+
       return {
-        id: pathOr(null, ['broadcast', 'pid'], program),
+        id: path(['broadcast', 'pid'], program),
         state: currentState,
-        startTime: pathOr(null, ['publishedTimeStart'], program),
+        startTime: publishedTimeStart,
         link: getLink(currentState, program, service),
-        brandTitle: pathOr(null, ['brand', 'title'], program),
-        episodeTitle: pathOr(null, ['episode', 'presentationTitle'], program),
-        summary: pathOr(null, ['episode', 'synopses', 'short'], program),
-        duration: pathOr(null, ['publishedTimeDuration'], program),
+        brandTitle: path(['brand', 'title'], program),
+        episodeTitle: path(['episode', 'presentationTitle'], program),
+        summary: path(['episode', 'synopses', 'short'], program),
+        duration: publishedTimeDuration || '',
         durationLabel: 'Duration',
       };
     });
 
-  return schedules;
+  return processedSchedule;
 };

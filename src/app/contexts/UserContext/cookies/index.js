@@ -8,10 +8,10 @@ export const getCookiePolicy = () => {
   return Cookie.get(POLICY_COOKIE) || '000';
 };
 
-export const personalisationEnabled = (cookiePolicy) =>
+export const personalisationEnabled = cookiePolicy =>
   cookiePolicy && cookiePolicy.length === 3 && cookiePolicy[2] === '1';
 
-export const getPreferredVariant = (service) => {
+export const getPreferredVariant = service => {
   if (!service) return null;
   const VARIANT_COOKIE = `ckps_${getVariantCookieName(service)}`;
 

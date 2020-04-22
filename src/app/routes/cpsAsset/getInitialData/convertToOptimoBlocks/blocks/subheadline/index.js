@@ -4,7 +4,7 @@ import { blockBase } from '#app/models/blocks';
 
 const logger = nodeLogger(__filename);
 
-const convertToSubheadline = async (block) => {
+const convertToSubheadline = async block => {
   const typesArray = ['crosshead', 'heading', 'subheading'];
   if (typesArray.includes(block.type)) {
     const innerParagraph = await convertParagraph(block);

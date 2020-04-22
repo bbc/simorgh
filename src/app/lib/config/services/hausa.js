@@ -139,7 +139,7 @@ export const service = {
       media: {
         noJs: "Na'urarku na da matsalar sauraren sauti",
         contentExpired: 'Yanzu an daina samar da wannan shiri.',
-        audio: 'Sauti',
+        audio: 'Murya',
         photogallery: 'Rumbun hotuna',
         video: 'Bidiyo',
         bbc_hausa_radio: {
@@ -152,13 +152,13 @@ export const service = {
           subtitle:
             "Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako.",
         },
-        listen: 'Listen',
+        listen: 'Saurari',
         watch: 'Kalla',
         liveLabel: 'KAI TSAYE',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'NA GABA',
+        previousRadioShow: 'Shirye-shiryen rediyo da suka gabata',
+        nextRadioShow: 'Shirye-shiryen rediyo na gaba',
+        duration: 'Tsawon lokaci',
       },
       socialEmbed: {
         caption: {
@@ -188,15 +188,18 @@ export const service = {
     radioSchedule: {
       hasRadioSchedule: true,
       onFrontPage: true,
-      frontPagePosition: 'top-stories',
+      frontPagePosition: 'feature-main',
       frequenciesPageUrl: '/hausa/institutional/2011/11/000001_mitocinmu',
       frequenciesPageLabel: 'Mitocinmu da sauko da sautin labarai',
       header: 'Shirye-shiryenmu',
     },
+    recommendations: {
+      hasStoryRecommendations: false,
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/hausa/game-da-mu-49283501',
-        text: 'Me yasa za ka aminta da BBC',
+        text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/help/web/links/',
@@ -205,7 +208,7 @@ export const service = {
       links: [
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377086',
-          text: 'Sharudan yin amfani',
+          text: 'Sharuddan yin amfani',
         },
         {
           href: 'https://www.bbc.com/hausa/game-da-mu-37377088',
@@ -245,12 +248,12 @@ export const service = {
         url: '/hausa/wasanni',
       },
       {
-        title: 'Mujalla',
-        url: '/hausa/mujalla',
+        title: 'Nishadi',
+        url: '/hausa/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
       },
       {
         title: 'Cikakkun Rahotanni',
-        url: '/hausa/rahotanni',
+        url: '/hausa/52140979',
       },
       {
         title: 'Bidiyo',
@@ -262,7 +265,7 @@ export const service = {
       },
       {
         title: 'Shirye-shiryen rediyo',
-        url: '/hausa/media-43322903',
+        url: '/hausa/media-52219055',
       },
     ],
   },
